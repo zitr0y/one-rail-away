@@ -1,0 +1,51 @@
+/**
+ * Type definitions for train network data
+ */
+
+export interface Station {
+  id: string;
+  name: string;
+  lat: number;
+  lon: number;
+  connection_count: number;
+}
+
+export interface Connection {
+  origin_id: string;
+  origin_name: string;
+  destination_id: string;
+  destination_name: string;
+  train_type: string;
+  train_number: string | null;
+  departure_time: string;
+  arrival_time: string;
+  travel_time_minutes: number;
+  distance_km: number;
+  aerial_speed_kmh: number;
+  platform: string | null;
+  delay: number | null;
+}
+
+export interface NetworkData {
+  timestamp: string;
+  origin_station: Station;
+  connections: Connection[];
+  total_connections: number;
+  average_speed_kmh: number;
+  max_speed_kmh: number;
+  max_distance_km: number;
+}
+
+export interface FetchNetworkResponse {
+  success: boolean;
+  message: string;
+  data: NetworkData | null;
+  cached: boolean;
+}
+
+export interface FilterOptions {
+  direct_only: boolean;
+  min_speed_kmh: number | null;
+  max_speed_kmh: number | null;
+  train_types: string[] | null;
+}

@@ -1,0 +1,31 @@
+{
+  "timestamp": "2025-10-18T20:06:48.083974",
+  "origin_station": {
+    "id": "8000098",
+    "name": "Essen Hbf",
+    "lat": 51.4508,
+    "lon": 7.0131,
+    "connection_count": 0
+  },
+  "connections": [
+    {
+      "origin_id": "8000098",
+      "origin_name": "Essen Hbf",
+      "destination_id": "8000207",
+      "destination_name": "Köln Hbf",
+      "train_type": "ICE",
+      "train_number": "844",
+      "departure_time": "2025-10-18T22:02:00",
+      "arrival_time": "2025-10-18T22:18:00",
+      "travel_time_minutes": 16,
+      "distance_km": 56.6,
+      "aerial_speed_kmh": 212.24,
+      "platform": "1",
+      "delay": null
+    }
+  ],
+  "total_connections": 1,
+  "average_speed_kmh": 212.24,
+  "max_speed_kmh": 212.24,
+  "max_distance_km": 56.6
+}
