@@ -176,11 +176,15 @@ class DBAPIClient:
                     data = xmltodict.parse(response.text)
 
                     # Extract train stops
-                    if "timetable" in data and "s" in data["timetable"]:
-                        stops_data = data["timetable"]["s"]
+                    timetable = data.get("timetable")
+                    if timetable and isinstance(timetable, dict) and "s" in timetable:
+                        stops_data = timetable["s"]
                         stops = stops_data if isinstance(stops_data, list) else [stops_data]
 
                         for stop in stops:
+                            if not stop or not isinstance(stop, dict):
+                                continue
+
                             # Only process departures (has 'dp' element)
                             if "dp" not in stop:
                                 continue
@@ -210,6 +214,105 @@ class DBAPIClient:
                 continue
 
         return all_departures
+
+    async def get_full_plan(
+        self,
+        station_id: str,
+        date_str: str,
+        hours: List[int] = None
+    ) -> Dict[str, List[Dict[str, Any]]]:
+        """
+        Get FULL plan data (both arrivals and departures) for a station.
+        Used for matching arrival times at destination stations.
+
+        Args:
+            station_id: EVA number
+            date_str: Date in YYMMDD format
+            hours: List of hours to fetch (0-23). If None, fetches all 24 hours.
+
+        Returns:
+            Dict with 'arrivals' and 'departures' lists
+        """
+        if hours is None:
+            hours = list(range(24))
+
+        all_arrivals = []
+        all_departures = []
+
+        for hour in hours:
+            try:
+                hour_str = f"{hour:02d}"
+                url = f"{self.base_url}/plan/{station_id}/{date_str}/{hour_str}"
+
+                async with httpx.AsyncClient() as client:
+                    response = await client.get(
+                        url,
+                        headers=self.headers,
+                        timeout=30.0
+                    )
+                    response.raise_for_status()
+
+                    # Parse XML response
+                    data = xmltodict.parse(response.text)
+
+                    # Extract train stops
+                    timetable = data.get("timetable")
+                    if timetable and isinstance(timetable, dict) and "s" in timetable:
+                        stops_data = timetable["s"]
+                        stops = stops_data if isinstance(stops_data, list) else [stops_data]
+
+                        for stop in stops:
+                            if not stop or not isinstance(stop, dict):
+                                continue
+
+                            tl = stop.get("tl", {})
+                            train_type = tl.get("@c", "")
+                            train_number = tl.get("@n", "")
+
+                            # Process arrivals
+                            if "ar" in stop:
+                                ar = stop["ar"]
+                                path = ar.get("@ppth", "")
+                                path_stations = path.split("|") if path else []
+
+                                arrival = {
+                                    "id": stop.get("@id", ""),
+                                    "type": train_type,
+                                    "number": train_number,
+                                    "time": ar.get("@pt", ""),
+                                    "platform": ar.get("@pp", ""),
+                                    "path_stations": path_stations,
+                                    "line": ar.get("@l", ""),
+                                }
+                                all_arrivals.append(arrival)
+
+                            # Process departures
+                            if "dp" in stop:
+                                dp = stop["dp"]
+                                path = dp.get("@ppth", "")
+                                path_stations = path.split("|") if path else []
+                                destination = path_stations[-1] if path_stations else ""
+
+                                departure = {
+                                    "id": stop.get("@id", ""),
+                                    "type": train_type,
+                                    "number": train_number,
+                                    "direction": destination,
+                                    "platform": dp.get("@pp", ""),
+                                    "time": dp.get("@pt", ""),
+                                    "destination": destination,
+                                    "path_stations": path_stations,
+                                }
+                                all_departures.append(departure)
+
+            except Exception as e:
+                print(f"Error fetching plan for {station_id}/{date_str}/{hour:02d}: {e}")
+                continue
+
+        return {
+            "arrivals": all_arrivals,
+            "departures": all_departures
+        }
 
     async def search_station(self, query: str) -> List[Dict[str, Any]]:
         """Search for stations in database."""

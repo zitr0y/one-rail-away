@@ -144,3 +144,74 @@ class CacheService:
             # Clear all cache files
             for cache_file in self.data_dir.glob("network_*.json"):
                 cache_file.unlink()
+
+    # Station plan data caching (for real-time arrival optimization)
+
+    def _get_station_plan_cache_path(self, station_eva: str, date_str: str) -> Path:
+        """
+        Get cache file path for station plan data.
+
+        Args:
+            station_eva: Station EVA number
+            date_str: Date string in YYMMDD format
+
+        Returns:
+            Path to cache file
+        """
+        safe_eva = "".join(c if c.isalnum() else "_" for c in station_eva)
+        return self.data_dir / f"plan_{safe_eva}_{date_str}.json"
+
+    def save_station_plan(self, station_eva: str, date_str: str, plan_data: dict) -> None:
+        """
+        Save station plan data to cache.
+
+        Args:
+            station_eva: Station EVA number
+            date_str: Date string in YYMMDD format
+            plan_data: Parsed plan data (list of arrivals and departures)
+        """
+        cache_path = self._get_station_plan_cache_path(station_eva, date_str)
+
+        cache_obj = {
+            "station_eva": station_eva,
+            "date": date_str,
+            "cached_at": datetime.utcnow().isoformat(),
+            "plan_data": plan_data
+        }
+
+        with open(cache_path, 'w', encoding='utf-8') as f:
+            json.dump(cache_obj, f, indent=2, ensure_ascii=False, default=str)
+
+    def load_station_plan(self, station_eva: str, date_str: str) -> Optional[dict]:
+        """
+        Load station plan data from cache.
+
+        Args:
+            station_eva: Station EVA number
+            date_str: Date string in YYMMDD format
+
+        Returns:
+            Plan data dict if found and valid, None otherwise
+        """
+        cache_path = self._get_station_plan_cache_path(station_eva, date_str)
+
+        if not cache_path.exists():
+            return None
+
+        try:
+            with open(cache_path, 'r', encoding='utf-8') as f:
+                cache_obj = json.load(f)
+
+            # Check if cache is still valid
+            cached_at = datetime.fromisoformat(cache_obj["cached_at"])
+            age = datetime.utcnow() - cached_at
+
+            if age < timedelta(hours=config.STATION_PLAN_CACHE_HOURS):
+                return cache_obj["plan_data"]
+            else:
+                # Cache expired
+                return None
+
+        except Exception as e:
+            print(f"Error loading station plan cache for {station_eva}/{date_str}: {e}")
+            return None

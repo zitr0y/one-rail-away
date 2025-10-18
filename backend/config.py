@@ -24,6 +24,11 @@ class Config:
     # Data directory configuration
     DATA_DIR: Path = Path(os.getenv("DATA_DIR", "./data"))
 
+    # Real-time arrival optimization settings
+    TOP_DESTINATIONS_COUNT: int = int(os.getenv("TOP_DESTINATIONS_COUNT", "20"))
+    STATION_PLAN_CACHE_HOURS: int = int(os.getenv("STATION_PLAN_CACHE_HOURS", "24"))
+    MAX_PARALLEL_STATION_FETCHES: int = int(os.getenv("MAX_PARALLEL_STATION_FETCHES", "10"))
+
     @classmethod
     def validate(cls) -> None:
         """Validate that required configuration values are present."""

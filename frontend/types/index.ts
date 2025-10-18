@@ -10,6 +10,14 @@ export interface Station {
   connection_count: number;
 }
 
+export interface RouteWaypoint {
+  station_name: string;
+  lat: number;
+  lon: number;
+  arrival_time: string | null;
+  distance_from_origin_km: number;
+}
+
 export interface Connection {
   origin_id: string;
   origin_name: string;
@@ -24,8 +32,10 @@ export interface Connection {
   travel_time_minutes: number;
   distance_km: number;
   aerial_speed_kmh: number;
+  route_waypoints: RouteWaypoint[];
   platform: string | null;
   delay: number | null;
+  is_real_time: boolean;
 }
 
 export interface NetworkData {

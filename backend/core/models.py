@@ -2,7 +2,7 @@
 Data models for the train network visualization system.
 """
 from datetime import datetime
-from typing import Optional, List
+from typing import Optional, List, Tuple
 from pydantic import BaseModel, Field
 
 
@@ -15,8 +15,17 @@ class Station(BaseModel):
     connection_count: int = Field(default=0, description="Number of connections from this station")
 
 
+class RouteWaypoint(BaseModel):
+    """A waypoint along a train route."""
+    station_name: str = Field(..., description="Station name")
+    lat: float = Field(..., description="Latitude")
+    lon: float = Field(..., description="Longitude")
+    arrival_time: Optional[datetime] = Field(None, description="Estimated arrival time")
+    distance_from_origin_km: float = Field(0.0, description="Cumulative distance from origin")
+
+
 class Connection(BaseModel):
-    """Represents a direct train connection between two stations."""
+    """Represents a train connection between two stations, potentially via intermediate stops."""
     origin_id: str = Field(..., description="Origin station ID")
     origin_name: str = Field(..., description="Origin station name")
     destination_id: str = Field(..., description="Destination station ID")
@@ -37,9 +46,23 @@ class Connection(BaseModel):
     distance_km: float = Field(..., description="Straight-line distance in kilometers")
     aerial_speed_kmh: float = Field(..., description="Aerial speed (distance / time) in km/h")
 
+    # Route path (intermediate stations)
+    route_waypoints: List[RouteWaypoint] = Field(
+        default_factory=list,
+        description="Intermediate stations along the route from origin to destination"
+    )
+
     # Additional metadata
     platform: Optional[str] = Field(None, description="Departure platform")
     delay: Optional[int] = Field(None, description="Delay in minutes")
+    is_real_time: bool = Field(
+        default=False,
+        description="Whether arrival_time is from real API data (True) or estimated (False)"
+    )
+    path_station_names: List[str] = Field(
+        default_factory=list,
+        description="Raw list of station names in the train's path (for rebuilding waypoints)"
+    )
 
 
 class NetworkData(BaseModel):

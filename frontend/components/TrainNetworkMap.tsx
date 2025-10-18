@@ -115,11 +115,24 @@ export default function TrainNetworkMap({
             maxSpeedValue
           );
 
+          // Build route through waypoints
+          const routePositions: [number, number][] = [center]; // Start at origin
+
+          // Add all waypoints
+          if (conn.route_waypoints && conn.route_waypoints.length > 0) {
+            conn.route_waypoints.forEach((waypoint) => {
+              routePositions.push([waypoint.lat, waypoint.lon]);
+            });
+          }
+
+          // End at destination
+          routePositions.push(destPos);
+
           return (
             <div key={`${conn.destination_id}-${idx}`}>
-              {/* Connection line */}
+              {/* Connection line through waypoints */}
               <Polyline
-                positions={[center, destPos]}
+                positions={routePositions}
                 color={color}
                 weight={3}
                 opacity={0.6}
