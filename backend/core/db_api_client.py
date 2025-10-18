@@ -4,38 +4,65 @@ Uses the official DB API Marketplace Timetables API.
 """
 import httpx
 import xmltodict
+import json
+from pathlib import Path
 from typing import Optional, List, Dict, Any
 from datetime import datetime, timedelta
 from config import config
 
 
-# Hardcoded EVA numbers for major German stations
-STATION_EVA_NUMBERS = {
-    "Essen Hbf": "8000098",
-    "Berlin Hbf": "8011160",
-    "München Hbf": "8000261",
-    "Hamburg Hbf": "8002549",
-    "Frankfurt(Main)Hbf": "8000105",
-    "Köln Hbf": "8000207",
-    "Düsseldorf Hbf": "8000085",
-    "Stuttgart Hbf": "8000096",
-    "Hannover Hbf": "8000152",
-    "Nürnberg Hbf": "8000284",
-}
+def load_stations_database() -> tuple[Dict[str, Dict], Dict[str, Dict]]:
+    """
+    Load stations from stations.json file.
+    Returns two dictionaries: one indexed by EVA number, one indexed by name.
+    """
+    stations_file = Path(__file__).parent.parent / "data" / "stations.json"
 
-# Hardcoded coordinates for major stations
-STATION_COORDS = {
-    "8000098": (51.4508, 7.0131),  # Essen Hbf
-    "8011160": (52.5250, 13.3694),  # Berlin Hbf
-    "8000261": (48.1402, 11.5582),  # München Hbf
-    "8002549": (53.5528, 10.0067),  # Hamburg Hbf
-    "8000105": (50.1070, 8.6632),   # Frankfurt Hbf
-    "8000207": (50.9432, 6.9589),   # Köln Hbf
-    "8000085": (51.2199, 6.7942),   # Düsseldorf Hbf
-    "8000096": (48.7840, 9.1816),   # Stuttgart Hbf
-    "8000152": (52.3765, 9.7410),   # Hannover Hbf
-    "8000284": (49.4458, 11.0831),  # Nürnberg Hbf
-}
+    eva_lookup = {}
+    name_lookup = {}
+
+    try:
+        with open(stations_file, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+            stations = data.get("stations", [])
+
+            for station in stations:
+                eva = str(station.get("eva", ""))
+                name = station.get("name", "")
+                lat = station.get("lat", 0.0)
+                lon = station.get("lon", 0.0)
+
+                if eva and name and lat and lon:
+                    station_data = {
+                        "eva": eva,
+                        "name": name,
+                        "lat": lat,
+                        "lon": lon
+                    }
+                    eva_lookup[eva] = station_data
+                    # Index by lowercase name for easier lookup
+                    name_lookup[name.lower()] = station_data
+
+            print(f"Loaded {len(eva_lookup)} stations from database")
+
+    except Exception as e:
+        print(f"Error loading stations database: {e}")
+        # Return at least Essen Hbf as fallback
+        fallback = {
+            "8000098": {
+                "eva": "8000098",
+                "name": "Essen Hbf",
+                "lat": 51.4508,
+                "lon": 7.0131
+            }
+        }
+        return fallback, {"essen hbf": fallback["8000098"]}
+
+    return eva_lookup, name_lookup
+
+
+# Load stations database once at module load
+STATIONS_BY_EVA, STATIONS_BY_NAME = load_stations_database()
 
 
 class DBAPIClient:
@@ -54,114 +81,152 @@ class DBAPIClient:
         }
 
     def get_station_eva(self, station_name: str) -> Optional[str]:
-        """Get EVA number for a station from our hardcoded list."""
-        if station_name in STATION_EVA_NUMBERS:
-            return STATION_EVA_NUMBERS[station_name]
+        """Get EVA number for a station from our database."""
+        # Try exact match first (case-insensitive)
+        station_lower = station_name.lower()
+        if station_lower in STATIONS_BY_NAME:
+            return STATIONS_BY_NAME[station_lower]["eva"]
 
-        for name, eva in STATION_EVA_NUMBERS.items():
-            if name.lower() == station_name.lower():
-                return eva
-
-        for name, eva in STATION_EVA_NUMBERS.items():
-            if station_name.lower() in name.lower() or name.lower() in station_name.lower():
-                return eva
+        # Try partial match
+        for name, data in STATIONS_BY_NAME.items():
+            if station_lower in name or name in station_lower:
+                return data["eva"]
 
         return None
 
     async def get_station_info(self, station_name: str) -> Optional[Dict[str, Any]]:
         """Get station information including coordinates."""
+        # Try to find station by name
+        station_lower = station_name.lower()
+        if station_lower in STATIONS_BY_NAME:
+            station_data = STATIONS_BY_NAME[station_lower]
+            return {
+                "id": station_data["eva"],
+                "name": station_data["name"],
+                "lat": station_data["lat"],
+                "lon": station_data["lon"],
+            }
+
+        # Try partial match
+        for name, data in STATIONS_BY_NAME.items():
+            if station_lower in name or name in station_lower:
+                return {
+                    "id": data["eva"],
+                    "name": data["name"],
+                    "lat": data["lat"],
+                    "lon": data["lon"],
+                }
+
+        # Try by EVA number if provided
         eva = self.get_station_eva(station_name)
-        if not eva:
-            return None
+        if eva and eva in STATIONS_BY_EVA:
+            station_data = STATIONS_BY_EVA[eva]
+            return {
+                "id": station_data["eva"],
+                "name": station_data["name"],
+                "lat": station_data["lat"],
+                "lon": station_data["lon"],
+            }
 
-        lat, lon = STATION_COORDS.get(eva, (0.0, 0.0))
-
-        return {
-            "id": eva,
-            "name": station_name,
-            "lat": lat,
-            "lon": lon,
-        }
+        return None
 
     async def get_departures(
         self,
         station_id: str,
         date: Optional[str] = None,
         time: Optional[str] = None,
-        duration: int = 120
+        duration: int = 720  # 12 hours by default
     ) -> List[Dict[str, Any]]:
         """
         Get departures for a station using the /plan endpoint.
+        Fetches multiple hours to get more comprehensive data.
 
         Args:
             station_id: EVA number
             date: Date (ignored, uses current time)
             time: Time (ignored, uses current time)
-            duration: Minutes of departures (ignored, fetches current hour)
+            duration: Minutes of departures (will fetch enough hours)
 
         Returns:
             List of departure dictionaries
         """
         now = datetime.now()
+        hours_to_fetch = max(4, duration // 60)  # At least 4 hours
 
-        # Format: YYMMDD/HH
-        date_str = now.strftime("%y%m%d")
-        hour_str = now.strftime("%H")
+        all_departures = []
 
-        url = f"{self.base_url}/plan/{station_id}/{date_str}/{hour_str}"
+        # Fetch data for multiple hours
+        for hour_offset in range(hours_to_fetch):
+            try:
+                fetch_time = now + timedelta(hours=hour_offset)
+                date_str = fetch_time.strftime("%y%m%d")
+                hour_str = fetch_time.strftime("%H")
 
-        async with httpx.AsyncClient() as client:
-            response = await client.get(
-                url,
-                headers=self.headers,
-                timeout=30.0
-            )
-            response.raise_for_status()
+                url = f"{self.base_url}/plan/{station_id}/{date_str}/{hour_str}"
 
-            # Parse XML response
-            data = xmltodict.parse(response.text)
+                async with httpx.AsyncClient() as client:
+                    response = await client.get(
+                        url,
+                        headers=self.headers,
+                        timeout=30.0
+                    )
+                    response.raise_for_status()
 
-            # Extract train stops
-            departures = []
-            if "timetable" in data and "s" in data["timetable"]:
-                stops_data = data["timetable"]["s"]
-                stops = stops_data if isinstance(stops_data, list) else [stops_data]
+                    # Parse XML response
+                    data = xmltodict.parse(response.text)
 
-                for stop in stops:
-                    # Only process departures (has 'dp' element)
-                    if "dp" not in stop:
-                        continue
+                    # Extract train stops
+                    if "timetable" in data and "s" in data["timetable"]:
+                        stops_data = data["timetable"]["s"]
+                        stops = stops_data if isinstance(stops_data, list) else [stops_data]
 
-                    dp = stop["dp"]
-                    tl = stop.get("tl", {})
+                        for stop in stops:
+                            # Only process departures (has 'dp' element)
+                            if "dp" not in stop:
+                                continue
 
-                    # Parse path to get destination
-                    path = dp.get("@ppth", "")
-                    destination = path.split("|")[-1] if path else ""
+                            dp = stop["dp"]
+                            tl = stop.get("tl", {})
 
-                    departure = {
-                        "id": stop.get("@id", ""),
-                        "type": tl.get("@c", ""),
-                        "number": tl.get("@n", ""),
-                        "direction": destination,
-                        "platform": dp.get("@pp", ""),
-                        "time": dp.get("@pt", ""),
-                        "destination": destination,
-                    }
-                    departures.append(departure)
+                            # Parse path to get all stations on route and destination
+                            path = dp.get("@ppth", "")
+                            path_stations = path.split("|") if path else []
+                            destination = path_stations[-1] if path_stations else ""
 
-            return departures
+                            departure = {
+                                "id": stop.get("@id", ""),
+                                "type": tl.get("@c", ""),
+                                "number": tl.get("@n", ""),
+                                "direction": destination,
+                                "platform": dp.get("@pp", ""),
+                                "time": dp.get("@pt", ""),
+                                "destination": destination,
+                                "path_stations": path_stations,  # Include full path!
+                            }
+                            all_departures.append(departure)
+
+            except Exception as e:
+                print(f"Error fetching hour {hour_offset}: {e}")
+                continue
+
+        return all_departures
 
     async def search_station(self, query: str) -> List[Dict[str, Any]]:
-        """Search for stations (returns from hardcoded list)."""
+        """Search for stations in database."""
         results = []
         query_lower = query.lower()
 
-        for name, eva in STATION_EVA_NUMBERS.items():
-            if query_lower in name.lower():
-                station_info = await self.get_station_info(name)
-                if station_info:
-                    results.append(station_info)
+        for name, data in STATIONS_BY_NAME.items():
+            if query_lower in name:
+                results.append({
+                    "id": data["eva"],
+                    "name": data["name"],
+                    "lat": data["lat"],
+                    "lon": data["lon"],
+                })
+                # Limit results to avoid overwhelming response
+                if len(results) >= 50:
+                    break
 
         return results
 

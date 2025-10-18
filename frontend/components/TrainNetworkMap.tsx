@@ -38,11 +38,6 @@ interface TrainNetworkMapProps {
   minSpeed: number;
 }
 
-interface DestinationWithCoords extends Connection {
-  destination_lat: number;
-  destination_lon: number;
-}
-
 function MapUpdater({ center, zoom }: { center: [number, number]; zoom: number }) {
   const map = useMap();
   useEffect(() => {
@@ -55,9 +50,7 @@ export default function TrainNetworkMap({
   networkData,
   minSpeed,
 }: TrainNetworkMapProps) {
-  const [destinationsWithCoords, setDestinationsWithCoords] = useState<
-    DestinationWithCoords[]
-  >([]);
+  const [filteredConnections, setFilteredConnections] = useState<Connection[]>([]);
 
   useEffect(() => {
     // Filter and get unique destinations
@@ -68,23 +61,14 @@ export default function TrainNetworkMap({
       (c) => c.aerial_speed_kmh >= minSpeed
     );
 
-    // For now, we need to get destination coordinates
-    // In a real implementation, we would fetch these from the backend
-    // For now, we'll use a simple approach - we can enhance this later
-    const withCoords = filtered.map((conn) => ({
-      ...conn,
-      destination_lat: 0, // Placeholder
-      destination_lon: 0, // Placeholder
-    }));
-
-    setDestinationsWithCoords(withCoords);
+    setFilteredConnections(filtered);
   }, [networkData, minSpeed]);
 
   const origin = networkData.origin_station;
   const center: [number, number] = [origin.lat, origin.lon];
 
   // Calculate min/max speeds for color coding
-  const speeds = destinationsWithCoords.map((c) => c.aerial_speed_kmh);
+  const speeds = filteredConnections.map((c) => c.aerial_speed_kmh);
   const minSpeedValue = speeds.length > 0 ? Math.min(...speeds) : 0;
   const maxSpeedValue = speeds.length > 0 ? Math.max(...speeds) : 300;
 
@@ -114,9 +98,10 @@ export default function TrainNetworkMap({
         </Marker>
 
         {/* Connection lines and destination markers */}
-        {destinationsWithCoords.map((conn, idx) => {
-          if (conn.destination_lat === 0 && conn.destination_lon === 0) {
-            // Skip connections without valid coordinates
+        {filteredConnections.map((conn, idx) => {
+          // Skip connections without valid coordinates
+          if (!conn.destination_lat || !conn.destination_lon ||
+              (conn.destination_lat === 0 && conn.destination_lon === 0)) {
             return null;
           }
 

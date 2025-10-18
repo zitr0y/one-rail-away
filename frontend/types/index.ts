@@ -15,6 +15,8 @@ export interface Connection {
   origin_name: string;
   destination_id: string;
   destination_name: string;
+  destination_lat: number;
+  destination_lon: number;
   train_type: string;
   train_number: string | null;
   departure_time: string;

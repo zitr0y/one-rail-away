@@ -21,6 +21,8 @@ class Connection(BaseModel):
     origin_name: str = Field(..., description="Origin station name")
     destination_id: str = Field(..., description="Destination station ID")
     destination_name: str = Field(..., description="Destination station name")
+    destination_lat: float = Field(..., description="Destination latitude")
+    destination_lon: float = Field(..., description="Destination longitude")
 
     # Train information
     train_type: str = Field(..., description="Type of train (ICE, IC, RE, etc.)")

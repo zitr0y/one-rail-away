@@ -70,19 +70,18 @@ class NetworkService:
     ) -> List[Connection]:
         """Process departure data into Connection objects."""
         connections = []
-        seen_destinations: Set[str] = set()
+        seen_pairs: Set[tuple] = set()  # Track (train_number, destination) pairs
 
         for departure in departures[:max_connections] if max_connections else departures:
             try:
-                destination_name = departure.get("destination", "")
-                if not destination_name or destination_name in seen_destinations:
-                    continue
+                # Get all stations in the path for this train
+                path_stations = departure.get("path_stations", [])
+                if not path_stations:
+                    # Fallback to just destination
+                    path_stations = [departure.get("destination", "")]
 
-                # Get destination station info
-                dest_station = await self.get_station_info(destination_name)
-                if not dest_station or (dest_station.lat == 0.0 and dest_station.lon == 0.0):
-                    # Skip if we don't have coordinates for this destination
-                    continue
+                train_number = departure.get("number", "")
+                train_type = departure.get("type", "")
 
                 # Parse departure time from format: YYMMDDhhmm
                 time_str = departure.get("time", "")
@@ -94,45 +93,59 @@ class NetworkService:
                 except ValueError:
                     continue
 
-                # Calculate distance
-                distance_km = self._calculate_distance(
-                    origin_station.lat, origin_station.lon,
-                    dest_station.lat, dest_station.lon
-                )
+                # Check each station in the path
+                for dest_name in path_stations:
+                    # Create unique key
+                    pair_key = (train_number, dest_name)
+                    if pair_key in seen_pairs:
+                        continue
 
-                if distance_km <= 0:
-                    continue
+                    # Get destination station info
+                    dest_station = await self.get_station_info(dest_name)
+                    if not dest_station or (dest_station.lat == 0.0 and dest_station.lon == 0.0):
+                        # Skip if we don't have coordinates
+                        continue
 
-                # Estimate travel time based on train type
-                train_type = departure.get("type", "")
-                avg_speed = self._estimate_speed(train_type)
-                travel_time_minutes = int((distance_km / avg_speed) * 60)
+                    # Calculate distance
+                    distance_km = self._calculate_distance(
+                        origin_station.lat, origin_station.lon,
+                        dest_station.lat, dest_station.lon
+                    )
 
-                if travel_time_minutes <= 0:
-                    continue
+                    if distance_km <= 0:
+                        continue
 
-                arrival_datetime = departure_datetime + timedelta(minutes=travel_time_minutes)
-                aerial_speed_kmh = (distance_km / travel_time_minutes) * 60
+                    # Estimate travel time based on train type
+                    avg_speed = self._estimate_speed(train_type)
+                    travel_time_minutes = int((distance_km / avg_speed) * 60)
 
-                # Create connection
-                connection = Connection(
-                    origin_id=origin_station.id,
-                    origin_name=origin_station.name,
-                    destination_id=dest_station.id,
-                    destination_name=dest_station.name,
-                    train_type=train_type,
-                    train_number=departure.get("number"),
-                    departure_time=departure_datetime,
-                    arrival_time=arrival_datetime,
-                    travel_time_minutes=travel_time_minutes,
-                    distance_km=round(distance_km, 2),
-                    aerial_speed_kmh=round(aerial_speed_kmh, 2),
-                    platform=departure.get("platform"),
-                    delay=None,
-                )
+                    if travel_time_minutes <= 0:
+                        continue
 
-                connections.append(connection)
-                seen_destinations.add(destination_name)
+                    arrival_datetime = departure_datetime + timedelta(minutes=travel_time_minutes)
+                    aerial_speed_kmh = (distance_km / travel_time_minutes) * 60
+
+                    # Create connection
+                    connection = Connection(
+                        origin_id=origin_station.id,
+                        origin_name=origin_station.name,
+                        destination_id=dest_station.id,
+                        destination_name=dest_station.name,
+                        destination_lat=dest_station.lat,
+                        destination_lon=dest_station.lon,
+                        train_type=train_type,
+                        train_number=train_number,
+                        departure_time=departure_datetime,
+                        arrival_time=arrival_datetime,
+                        travel_time_minutes=travel_time_minutes,
+                        distance_km=round(distance_km, 2),
+                        aerial_speed_kmh=round(aerial_speed_kmh, 2),
+                        platform=departure.get("platform"),
+                        delay=None,
+                    )
+
+                    connections.append(connection)
+                    seen_pairs.add(pair_key)
 
             except Exception as e:
                 print(f"Error processing departure: {e}")
@@ -150,6 +163,7 @@ class NetworkService:
             "RB": 80.0,    # Regional train
             "S": 60.0,     # S-Bahn
         }
+        print("the speeds are a lie!")
         return speeds.get(train_type, 100.0)
 
     def _calculate_distance(self, lat1: float, lon1: float, lat2: float, lon2: float) -> float:

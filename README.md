@@ -2,14 +2,29 @@
 
 A full-stack application for visualizing train network connections and aerial speeds across Germany using Deutsche Bahn API data.
 
+## ⚠️ Current Status
+
+**🔴 IN DEVELOPMENT** - Core functionality works but has limitations. See [CURRENT_STATUS.md](CURRENT_STATUS.md) for details.
+
+**What Works:**
+- ✅ Real train departure data from Deutsche Bahn API
+- ✅ Interactive map with Leaflet
+- ✅ Connection statistics and filtering
+- ✅ Data caching
+
+**Known Issues:**
+- ⚠️ Travel times are **estimated** (not real arrival times from API)
+- ⚠️ Limited to 10 hardcoded major stations
+- ⚠️ Destination markers not showing on map (needs fix)
+- Does not refresh cache
+
 ## Features
 
-- Interactive geographic map showing train connections
+- Interactive geographic map showing train connections from Essen Hbf
 - Color-coded visualization based on aerial speed (straight-line distance / travel time)
 - Filter connections by minimum speed threshold
 - Display statistics: total connections, average speed, max speed, max distance
-- Data caching to reduce API calls
-- Support for different starting stations (default: Essen Hbf)
+- Data caching to reduce API calls (12 hours of data per fetch)
 
 ## Project Structure
 
