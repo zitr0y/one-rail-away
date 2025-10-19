@@ -29,6 +29,11 @@ class Config:
     STATION_PLAN_CACHE_HOURS: int = int(os.getenv("STATION_PLAN_CACHE_HOURS", "24"))
     MAX_PARALLEL_STATION_FETCHES: int = int(os.getenv("MAX_PARALLEL_STATION_FETCHES", "10"))
 
+    # Multi-hop connection settings
+    MAX_CHANGEOVERS_LIMIT: int = int(os.getenv("MAX_CHANGEOVERS_LIMIT", "5"))
+    DEFAULT_MIN_TRANSFER_TIME: int = int(os.getenv("DEFAULT_MIN_TRANSFER_TIME", "5"))
+    MAX_ROUTES_PER_DESTINATION: int = int(os.getenv("MAX_ROUTES_PER_DESTINATION", "3"))
+
     @classmethod
     def validate(cls) -> None:
         """Validate that required configuration values are present."""

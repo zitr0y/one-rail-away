@@ -25,16 +25,29 @@ export default function Home() {
   const [minSpeed, setMinSpeed] = useState<number>(0);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
+  const [maxChangeovers, setMaxChangeovers] = useState<number>(0);
+  const [minTransferTime, setMinTransferTime] = useState<number>(5);
+  const [selectedStationName, setSelectedStationName] = useState<string>("Essen Hbf");
 
-  const fetchNetworkData = async (stationName: string = "Essen Hbf") => {
+  const fetchNetworkData = async (
+    stationName: string = selectedStationName,
+    forceRefresh: boolean = false
+  ) => {
     setIsLoading(true);
     setError(null);
 
     try {
-      const response = await apiClient.fetchNetwork(stationName, false);
+      const response = await apiClient.fetchNetwork(
+        stationName,
+        forceRefresh,
+        maxChangeovers,
+        minTransferTime,
+        3 // max routes per destination
+      );
 
       if (response.success && response.data) {
         setNetworkData(response.data);
+        setSelectedStationName(response.data.origin_station.name);
         setMinSpeed(0); // Reset filter
       } else {
         setError(response.message || "Failed to fetch network data");
@@ -49,6 +62,11 @@ export default function Home() {
     }
   };
 
+  const handleStationSelectAndFetch = (stationName: string) => {
+    setSelectedStationName(stationName);
+    fetchNetworkData(stationName, false);
+  };
+
   return (
     <div className="h-screen flex">
       {/* Sidebar */}
@@ -57,9 +75,13 @@ export default function Home() {
           networkData={networkData}
           minSpeed={minSpeed}
           onMinSpeedChange={setMinSpeed}
-          onRefresh={() =>
-            fetchNetworkData(networkData?.origin_station.name || "Essen Hbf")
-          }
+          maxChangeovers={maxChangeovers}
+          onMaxChangeoversChange={setMaxChangeovers}
+          minTransferTime={minTransferTime}
+          onMinTransferTimeChange={setMinTransferTime}
+          selectedStationName={selectedStationName}
+          onStationSelectAndFetch={handleStationSelectAndFetch}
+          onRefresh={() => fetchNetworkData(selectedStationName, false)}
           isLoading={isLoading}
         />
       </div>
@@ -84,7 +106,11 @@ export default function Home() {
         )}
 
         {networkData ? (
-          <TrainNetworkMap networkData={networkData} minSpeed={minSpeed} />
+          <TrainNetworkMap
+            networkData={networkData}
+            minSpeed={minSpeed}
+            onStationClick={handleStationSelectAndFetch}
+          />
         ) : (
           <div className="h-full w-full flex items-center justify-center bg-gray-100">
             <div className="text-center">

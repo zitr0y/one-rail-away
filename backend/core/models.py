@@ -1,6 +1,8 @@
 """
 Data models for the train network visualization system.
 """
+from __future__ import annotations
+
 from datetime import datetime
 from typing import Optional, List, Tuple
 from pydantic import BaseModel, Field
@@ -69,10 +71,12 @@ class NetworkData(BaseModel):
     """Represents the complete network data for a station."""
     timestamp: datetime = Field(default_factory=datetime.utcnow, description="When data was fetched")
     origin_station: Station = Field(..., description="The origin station")
-    connections: List[Connection] = Field(default_factory=list, description="List of all connections")
+    connections: List[Connection] = Field(default_factory=list, description="List of all direct connections")
+    multi_hop_routes: List[MultiHopRoute] = Field(default_factory=list, description="List of multi-hop routes")
 
     # Statistics
-    total_connections: int = Field(default=0, description="Total number of connections")
+    total_connections: int = Field(default=0, description="Total number of direct connections")
+    total_multi_hop_routes: int = Field(default=0, description="Total number of multi-hop routes")
     average_speed_kmh: float = Field(default=0.0, description="Average aerial speed")
     max_speed_kmh: float = Field(default=0.0, description="Maximum aerial speed")
     max_distance_km: float = Field(default=0.0, description="Maximum distance")
@@ -83,12 +87,78 @@ class NetworkData(BaseModel):
             return
 
         self.total_connections = len(self.connections)
+        self.total_multi_hop_routes = len(self.multi_hop_routes)
         speeds = [c.aerial_speed_kmh for c in self.connections]
         distances = [c.distance_km for c in self.connections]
 
         self.average_speed_kmh = sum(speeds) / len(speeds) if speeds else 0.0
         self.max_speed_kmh = max(speeds) if speeds else 0.0
         self.max_distance_km = max(distances) if distances else 0.0
+
+
+class ConnectionLeg(BaseModel):
+    """A single leg/segment of a multi-hop journey."""
+    origin_id: str = Field(..., description="Origin station ID for this leg")
+    origin_name: str = Field(..., description="Origin station name for this leg")
+    destination_id: str = Field(..., description="Destination station ID for this leg")
+    destination_name: str = Field(..., description="Destination station name for this leg")
+
+    # Train information
+    train_type: str = Field(..., description="Type of train (ICE, IC, RE, etc.)")
+    train_number: Optional[str] = Field(None, description="Train number/line")
+
+    # Timing information
+    departure_time: datetime = Field(..., description="Departure time for this leg")
+    arrival_time: datetime = Field(..., description="Arrival time for this leg")
+    travel_time_minutes: int = Field(..., description="Travel time for this leg in minutes")
+
+    # Geographic data
+    distance_km: float = Field(..., description="Distance for this leg in kilometers")
+    aerial_speed_kmh: float = Field(..., description="Aerial speed for this leg in km/h")
+
+    # Additional metadata
+    platform: Optional[str] = Field(None, description="Departure platform")
+
+
+class TransferInfo(BaseModel):
+    """Information about a transfer/changeover between legs."""
+    station_id: str = Field(..., description="Station where transfer occurs")
+    station_name: str = Field(..., description="Station name")
+    station_lat: float = Field(..., description="Station latitude")
+    station_lon: float = Field(..., description="Station longitude")
+    arrival_time: datetime = Field(..., description="Arrival time of incoming leg")
+    departure_time: datetime = Field(..., description="Departure time of outgoing leg")
+    waiting_time_minutes: int = Field(..., description="Waiting time at this station in minutes")
+    arrival_platform: Optional[str] = Field(None, description="Arrival platform")
+    departure_platform: Optional[str] = Field(None, description="Departure platform")
+
+
+class MultiHopRoute(BaseModel):
+    """A complete journey consisting of multiple connection legs with changeovers."""
+    origin_id: str = Field(..., description="Overall journey origin station ID")
+    origin_name: str = Field(..., description="Overall journey origin station name")
+    destination_id: str = Field(..., description="Overall journey destination station ID")
+    destination_name: str = Field(..., description="Overall journey destination station name")
+    destination_lat: float = Field(..., description="Final destination latitude")
+    destination_lon: float = Field(..., description="Final destination longitude")
+
+    # Journey legs and transfers
+    legs: List[ConnectionLeg] = Field(..., description="List of connection legs in order")
+    transfers: List[TransferInfo] = Field(default_factory=list, description="List of transfers/changeovers")
+
+    # Overall journey metrics
+    total_travel_time_minutes: int = Field(..., description="Total journey time including transfers")
+    total_distance_km: float = Field(..., description="Total distance across all legs")
+    total_waiting_time_minutes: int = Field(default=0, description="Total waiting time at all transfers")
+    number_of_changeovers: int = Field(..., description="Number of changeovers/transfers")
+    average_aerial_speed_kmh: float = Field(..., description="Average aerial speed across entire journey")
+
+    # Timing
+    departure_time: datetime = Field(..., description="Overall journey start time")
+    arrival_time: datetime = Field(..., description="Overall journey end time")
+
+    # Metadata
+    is_real_time: bool = Field(default=True, description="Whether all legs use real API data")
 
 
 class StationSummary(BaseModel):

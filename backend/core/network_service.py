@@ -8,8 +8,8 @@ from typing import List, Dict, Optional, Set, Tuple
 from collections import Counter
 from geopy.distance import geodesic
 
-from core.db_api_client import DBAPIClient, STATIONS_BY_NAME
-from core.models import Station, Connection, NetworkData, RouteWaypoint
+from core.db_api_client import DBAPIClient, STATIONS_BY_NAME, STATIONS_BY_EVA
+from core.models import Station, Connection, NetworkData, RouteWaypoint, MultiHopRoute, ConnectionLeg, TransferInfo
 from core.cache_service import CacheService
 from config import config
 
@@ -42,7 +42,10 @@ class NetworkService:
     async def fetch_network_data(
         self,
         station_name: str = "Essen Hbf",
-        max_connections: Optional[int] = None
+        max_connections: Optional[int] = None,
+        max_changeovers: int = 0,
+        min_transfer_time: int = None,
+        max_routes_per_destination: int = None
     ) -> NetworkData:
         """
         Fetch complete network data for a station.
@@ -52,6 +55,7 @@ class NetworkService:
         2. Extract ALL unique destinations
         3. Fetch arrival data for ALL destinations (parallel + cached)
         4. Build connections ONLY when we have real arrival data
+        5. Optionally find multi-hop routes with changeovers
         """
         # Get origin station info
         origin_station = await self.get_station_info(station_name)
@@ -81,16 +85,281 @@ class NetworkService:
 
         print(f"\n✅ Created {len(connections)} connections (100% real data, no estimates!)\n")
 
+        # Find multi-hop routes if requested
+        multi_hop_routes = []
+        if max_changeovers > 0:
+            multi_hop_routes = await self.find_multi_hop_routes(
+                origin_station=origin_station,
+                direct_connections=connections,
+                max_changeovers=max_changeovers,
+                min_transfer_time=min_transfer_time or config.DEFAULT_MIN_TRANSFER_TIME,
+                max_routes_per_destination=max_routes_per_destination or config.MAX_ROUTES_PER_DESTINATION,
+                date_str=date_str
+            )
+            print(f"✅ Found {len(multi_hop_routes)} multi-hop routes\n")
+
         # Create network data object
         network_data = NetworkData(
             origin_station=origin_station,
-            connections=connections
+            connections=connections,
+            multi_hop_routes=multi_hop_routes
         )
 
         # Calculate statistics
         network_data.calculate_statistics()
 
         return network_data
+
+    async def find_multi_hop_routes(
+        self,
+        origin_station: Station,
+        direct_connections: List[Connection],
+        max_changeovers: int,
+        min_transfer_time: int,
+        max_routes_per_destination: int,
+        date_str: str
+    ) -> List[MultiHopRoute]:
+        """
+        Find multi-hop routes with changeovers using BFS expansion.
+
+        Algorithm:
+        1. Start with direct connections (0 changeovers)
+        2. For each level (1 to max_changeovers):
+           - For each route from previous level
+           - Fetch connections from that route's destination
+           - Match valid transfers (min transfer time)
+           - Build new multi-hop routes
+        3. Rank by: fewest changeovers → fastest average aerial speed
+        4. Return top N routes per destination
+        """
+        print(f"\n=== FINDING MULTI-HOP ROUTES (max {max_changeovers} changeovers) ===")
+
+        # Track all routes by final destination
+        routes_by_destination: Dict[str, List[MultiHopRoute]] = {}
+
+        # Convert direct connections to single-leg MultiHopRoutes (depth 0)
+        current_level_routes: List[MultiHopRoute] = []
+        for conn in direct_connections:
+            leg = ConnectionLeg(
+                origin_id=conn.origin_id,
+                origin_name=conn.origin_name,
+                destination_id=conn.destination_id,
+                destination_name=conn.destination_name,
+                train_type=conn.train_type,
+                train_number=conn.train_number,
+                departure_time=conn.departure_time,
+                arrival_time=conn.arrival_time,
+                travel_time_minutes=conn.travel_time_minutes,
+                distance_km=conn.distance_km,
+                aerial_speed_kmh=conn.aerial_speed_kmh,
+                platform=conn.platform
+            )
+
+            route = MultiHopRoute(
+                origin_id=origin_station.id,
+                origin_name=origin_station.name,
+                destination_id=conn.destination_id,
+                destination_name=conn.destination_name,
+                destination_lat=conn.destination_lat,
+                destination_lon=conn.destination_lon,
+                legs=[leg],
+                transfers=[],
+                total_travel_time_minutes=conn.travel_time_minutes,
+                total_distance_km=conn.distance_km,
+                total_waiting_time_minutes=0,
+                number_of_changeovers=0,
+                average_aerial_speed_kmh=conn.aerial_speed_kmh,
+                departure_time=conn.departure_time,
+                arrival_time=conn.arrival_time,
+                is_real_time=conn.is_real_time
+            )
+
+            current_level_routes.append(route)
+
+            # Add to routes by destination
+            if conn.destination_id not in routes_by_destination:
+                routes_by_destination[conn.destination_id] = []
+            routes_by_destination[conn.destination_id].append(route)
+
+        print(f"Level 0: {len(current_level_routes)} direct connections")
+
+        # Expand routes level by level
+        for changeover_level in range(1, max_changeovers + 1):
+            print(f"\nLevel {changeover_level}: Expanding routes...")
+
+            next_level_routes: List[MultiHopRoute] = []
+
+            # Get unique intermediate stations from current level
+            intermediate_stations: Set[str] = set()
+            for route in current_level_routes:
+                intermediate_stations.add(route.destination_id)
+
+            print(f"  Fetching connections from {len(intermediate_stations)} intermediate stations...")
+
+            # Fetch connections from all intermediate stations
+            station_connections: Dict[str, List[Connection]] = {}
+            for station_eva in intermediate_stations:
+                try:
+                    # Fetch departures from this intermediate station
+                    departures = await self.api_client.get_departures(station_eva)
+
+                    # Extract destinations
+                    dest_evas = self._extract_all_destinations(departures)
+
+                    # Fetch destination plans
+                    dest_plans = await self._fetch_all_destination_plans(dest_evas, date_str)
+
+                    # Build connections
+                    station_info = STATIONS_BY_EVA.get(station_eva)
+                    if not station_info:
+                        continue
+
+                    intermediate_station = Station(
+                        id=station_eva,
+                        name=station_info["name"],
+                        lat=station_info["lat"],
+                        lon=station_info["lon"]
+                    )
+
+                    connections = await self._build_connections_from_real_data(
+                        intermediate_station,
+                        departures,
+                        dest_plans,
+                        None  # No limit
+                    )
+
+                    station_connections[station_eva] = connections
+
+                except Exception as e:
+                    print(f"  Error fetching connections for {station_eva}: {e}")
+                    continue
+
+            print(f"  Successfully fetched connections from {len(station_connections)} stations")
+
+            # Try to extend each route from previous level
+            extensions_count = 0
+            for base_route in current_level_routes:
+                intermediate_eva = base_route.destination_id
+
+                if intermediate_eva not in station_connections:
+                    continue
+
+                # Try to connect with each outgoing connection
+                for next_conn in station_connections[intermediate_eva]:
+                    # Validate transfer time
+                    transfer_minutes = int((next_conn.departure_time - base_route.arrival_time).total_seconds() / 60)
+
+                    if transfer_minutes < min_transfer_time:
+                        continue  # Too short transfer time
+
+                    if transfer_minutes > 180:  # Max 3 hours waiting
+                        continue
+
+                    # Skip if going back to origin (no loops)
+                    if next_conn.destination_id == origin_station.id:
+                        continue
+
+                    # Skip if already visited this station in the route
+                    visited_stations = {leg.destination_id for leg in base_route.legs}
+                    if next_conn.destination_id in visited_stations:
+                        continue
+
+                    # Create new leg
+                    new_leg = ConnectionLeg(
+                        origin_id=next_conn.origin_id,
+                        origin_name=next_conn.origin_name,
+                        destination_id=next_conn.destination_id,
+                        destination_name=next_conn.destination_name,
+                        train_type=next_conn.train_type,
+                        train_number=next_conn.train_number,
+                        departure_time=next_conn.departure_time,
+                        arrival_time=next_conn.arrival_time,
+                        travel_time_minutes=next_conn.travel_time_minutes,
+                        distance_km=next_conn.distance_km,
+                        aerial_speed_kmh=next_conn.aerial_speed_kmh,
+                        platform=next_conn.platform
+                    )
+
+                    # Get station info for transfer
+                    transfer_station_info = STATIONS_BY_EVA.get(intermediate_eva, {})
+
+                    # Create transfer info
+                    transfer = TransferInfo(
+                        station_id=intermediate_eva,
+                        station_name=base_route.destination_name,
+                        station_lat=transfer_station_info.get("lat", 0.0),
+                        station_lon=transfer_station_info.get("lon", 0.0),
+                        arrival_time=base_route.arrival_time,
+                        departure_time=next_conn.departure_time,
+                        waiting_time_minutes=transfer_minutes,
+                        arrival_platform=base_route.legs[-1].platform,
+                        departure_platform=next_conn.platform
+                    )
+
+                    # Create extended route
+                    new_legs = base_route.legs + [new_leg]
+                    new_transfers = base_route.transfers + [transfer]
+
+                    total_distance = base_route.total_distance_km + next_conn.distance_km
+                    total_travel_time = int((next_conn.arrival_time - base_route.departure_time).total_seconds() / 60)
+                    total_waiting = base_route.total_waiting_time_minutes + transfer_minutes
+
+                    avg_aerial_speed = (total_distance / total_travel_time) * 60 if total_travel_time > 0 else 0
+
+                    extended_route = MultiHopRoute(
+                        origin_id=origin_station.id,
+                        origin_name=origin_station.name,
+                        destination_id=next_conn.destination_id,
+                        destination_name=next_conn.destination_name,
+                        destination_lat=next_conn.destination_lat,
+                        destination_lon=next_conn.destination_lon,
+                        legs=new_legs,
+                        transfers=new_transfers,
+                        total_travel_time_minutes=total_travel_time,
+                        total_distance_km=round(total_distance, 2),
+                        total_waiting_time_minutes=total_waiting,
+                        number_of_changeovers=changeover_level,
+                        average_aerial_speed_kmh=round(avg_aerial_speed, 2),
+                        departure_time=base_route.departure_time,
+                        arrival_time=next_conn.arrival_time,
+                        is_real_time=base_route.is_real_time and next_conn.is_real_time
+                    )
+
+                    next_level_routes.append(extended_route)
+
+                    # Add to routes by destination
+                    if next_conn.destination_id not in routes_by_destination:
+                        routes_by_destination[next_conn.destination_id] = []
+                    routes_by_destination[next_conn.destination_id].append(extended_route)
+
+                    extensions_count += 1
+
+            print(f"  Created {extensions_count} new routes with {changeover_level} changeover(s)")
+
+            current_level_routes = next_level_routes
+
+            if not next_level_routes:
+                print(f"  No more routes to expand at level {changeover_level}")
+                break
+
+        # Rank and select top N routes per destination
+        # Ranking: fewest changeovers → fastest average aerial speed
+        final_routes: List[MultiHopRoute] = []
+
+        for dest_id, routes in routes_by_destination.items():
+            # Sort by changeovers (ascending) then by average aerial speed (descending)
+            sorted_routes = sorted(
+                routes,
+                key=lambda r: (r.number_of_changeovers, -r.average_aerial_speed_kmh)
+            )
+
+            # Take top N
+            top_routes = sorted_routes[:max_routes_per_destination]
+            final_routes.extend(top_routes)
+
+        print(f"\n✅ Selected {len(final_routes)} routes across {len(routes_by_destination)} destinations")
+
+        return final_routes
 
     def _extract_all_destinations(self, departures: List[Dict]) -> List[str]:
         """Extract all unique destination station EVA numbers from departures."""
@@ -120,6 +389,12 @@ class NetworkService:
         """
         print(f"\n=== FETCHING PLANS FOR {len(destination_evas)} DESTINATIONS ===")
 
+        # Only fetch current and future hours to avoid 404s for past data
+        current_hour = datetime.now().hour
+        # Fetch from current hour through next 12 hours (wrapping to next day if needed)
+        hours_to_fetch = [(current_hour + i) % 24 for i in range(13)]
+        print(f"Fetching hours: {hours_to_fetch}")
+
         # Limit parallelism to avoid overwhelming the API
         semaphore = asyncio.Semaphore(config.MAX_PARALLEL_STATION_FETCHES)
 
@@ -131,9 +406,9 @@ class NetworkService:
                 if cached_plan is not None:
                     return (eva, cached_plan)
 
-                # Fetch from API
+                # Fetch from API - only fetch current and future hours
                 try:
-                    plan_data = await self.api_client.get_full_plan(eva, date_str)
+                    plan_data = await self.api_client.get_full_plan(eva, date_str, hours_to_fetch)
                     # Cache it
                     self.cache_service.save_station_plan(eva, date_str, plan_data)
                     return (eva, plan_data)
@@ -550,6 +825,10 @@ class NetworkService:
         Returns:
             Dict mapping EVA -> plan_data (with 'arrivals' and 'departures')
         """
+        # Only fetch current and future hours to avoid 404s
+        current_hour = datetime.now().hour
+        hours_to_fetch = [(current_hour + i) % 24 for i in range(13)]
+
         semaphore = asyncio.Semaphore(config.MAX_PARALLEL_STATION_FETCHES)
 
         async def fetch_one(eva: str) -> Tuple[str, Optional[Dict]]:
@@ -564,7 +843,7 @@ class NetworkService:
                 # Fetch from API
                 print(f"  [API FETCH] {eva}")
                 try:
-                    plan_data = await self.api_client.get_full_plan(eva, date_str)
+                    plan_data = await self.api_client.get_full_plan(eva, date_str, hours_to_fetch)
                     # Cache it
                     self.cache_service.save_station_plan(eva, date_str, plan_data)
                     return (eva, plan_data)

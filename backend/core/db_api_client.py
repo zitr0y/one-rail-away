@@ -227,8 +227,9 @@ class DBAPIClient:
 
         Args:
             station_id: EVA number
-            date_str: Date in YYMMDD format
+            date_str: Date in YYMMDD format for the starting day
             hours: List of hours to fetch (0-23). If None, fetches all 24 hours.
+                   Hours that wrap past midnight will automatically use the next day's date.
 
         Returns:
             Dict with 'arrivals' and 'departures' lists
@@ -239,10 +240,23 @@ class DBAPIClient:
         all_arrivals = []
         all_departures = []
 
+        # Parse the base date
+        base_date = datetime.strptime(date_str, "%y%m%d")
+        current_hour = datetime.now().hour
+
         for hour in hours:
             try:
+                # If this hour is less than the current hour and we're iterating forward,
+                # it means we've wrapped to the next day
+                if hour < current_hour and hours[0] >= current_hour:
+                    # This hour is on the next day
+                    fetch_date = base_date + timedelta(days=1)
+                    fetch_date_str = fetch_date.strftime("%y%m%d")
+                else:
+                    fetch_date_str = date_str
+
                 hour_str = f"{hour:02d}"
-                url = f"{self.base_url}/plan/{station_id}/{date_str}/{hour_str}"
+                url = f"{self.base_url}/plan/{station_id}/{fetch_date_str}/{hour_str}"
 
                 async with httpx.AsyncClient() as client:
                     response = await client.get(
