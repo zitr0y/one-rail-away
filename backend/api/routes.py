@@ -7,7 +7,7 @@ from pydantic import BaseModel
 
 from core.network_service import NetworkService
 from core.cache_service import CacheService
-from core.models import NetworkData, Connection
+from core.models import NetworkData, Connection, TrainCategory
 from core.db_api_client import STATIONS_BY_NAME, STATIONS_BY_EVA
 from config import config
 
@@ -27,6 +27,11 @@ class FetchNetworkRequest(BaseModel):
     max_changeovers: int = 0  # 0 = direct connections only
     min_transfer_time: Optional[int] = None  # Minutes, defaults to config value
     max_routes_per_destination: Optional[int] = None  # Defaults to config value
+
+    # New filtering options
+    show_only_hubs_and_endpoints: Optional[bool] = None  # If None, uses config default
+    deutschland_ticket_only: bool = False  # Only show trains valid for Deutschland-Ticket
+    train_categories: Optional[List[TrainCategory]] = None  # Filter by train category (regional, intercity)
 
 
 class FetchNetworkResponse(BaseModel):
@@ -74,7 +79,10 @@ async def fetch_network(request: FetchNetworkRequest):
             max_connections=request.max_connections,
             max_changeovers=min(request.max_changeovers, config.MAX_CHANGEOVERS_LIMIT),
             min_transfer_time=request.min_transfer_time,
-            max_routes_per_destination=request.max_routes_per_destination
+            max_routes_per_destination=request.max_routes_per_destination,
+            show_only_hubs_and_endpoints=request.show_only_hubs_and_endpoints,
+            deutschland_ticket_only=request.deutschland_ticket_only,
+            train_categories=request.train_categories
         )
 
         # Cache the data

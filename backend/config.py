@@ -34,6 +34,10 @@ class Config:
     DEFAULT_MIN_TRANSFER_TIME: int = int(os.getenv("DEFAULT_MIN_TRANSFER_TIME", "5"))
     MAX_ROUTES_PER_DESTINATION: int = int(os.getenv("MAX_ROUTES_PER_DESTINATION", "3"))
 
+    # Station display and filtering settings
+    DEFAULT_SHOW_ONLY_HUBS_AND_ENDPOINTS: bool = os.getenv("DEFAULT_SHOW_ONLY_HUBS_AND_ENDPOINTS", "true").lower() == "true"
+    HUB_STATION_MIN_NEIGHBORS: int = int(os.getenv("HUB_STATION_MIN_NEIGHBORS", "3"))  # Stations with 3+ neighbors are hubs
+
     @classmethod
     def validate(cls) -> None:
         """Validate that required configuration values are present."""

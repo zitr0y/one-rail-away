@@ -8,8 +8,11 @@ from typing import List, Dict, Optional, Set, Tuple
 from collections import Counter
 from geopy.distance import geodesic
 
-from core.db_api_client import DBAPIClient, STATIONS_BY_NAME, STATIONS_BY_EVA
-from core.models import Station, Connection, NetworkData, RouteWaypoint, MultiHopRoute, ConnectionLeg, TransferInfo
+from core.db_api_client import DBAPIClient, STATIONS_BY_NAME, STATIONS_BY_EVA, get_all_related_evas
+from core.models import (
+    Station, Connection, NetworkData, RouteWaypoint, MultiHopRoute,
+    ConnectionLeg, TransferInfo, classify_train_type, is_deutschland_ticket_valid
+)
 from core.cache_service import CacheService
 from config import config
 
@@ -45,7 +48,10 @@ class NetworkService:
         max_connections: Optional[int] = None,
         max_changeovers: int = 0,
         min_transfer_time: int = None,
-        max_routes_per_destination: int = None
+        max_routes_per_destination: int = None,
+        show_only_hubs_and_endpoints: Optional[bool] = None,
+        deutschland_ticket_only: bool = False,
+        train_categories: Optional[List[str]] = None
     ) -> NetworkData:
         """
         Fetch complete network data for a station.
@@ -62,14 +68,125 @@ class NetworkService:
         if not origin_station:
             raise ValueError(f"Station '{station_name}' not found")
 
-        # Fetch departures from origin
+        # Fetch departures from origin - including ALL related platforms/sections
         print(f"\n=== FETCHING DEPARTURES FROM {station_name} ===")
-        departures = await self.api_client.get_departures(origin_station.id)
-        print(f"Found {len(departures)} departures")
 
-        # Extract all unique destinations from these departures
-        all_destination_evas = self._extract_all_destinations(departures)
-        print(f"Found {len(all_destination_evas)} unique destination stations")
+        # Get all related EVAs for the origin station (handles fragmented stations)
+        origin_evas = get_all_related_evas(origin_station.id)
+        if len(origin_evas) > 1:
+            print(f"Origin station has {len(origin_evas)} related platforms/sections:")
+            for eva in origin_evas:
+                station_info = STATIONS_BY_EVA.get(eva, {})
+                print(f"  - {eva}: {station_info.get('name', 'Unknown')}")
+
+        # Fetch departures from ALL origin platforms
+        all_departures = []
+        for eva in origin_evas:
+            try:
+                eva_departures = await self.api_client.get_departures(eva)
+                all_departures.extend(eva_departures)
+                if len(origin_evas) > 1:
+                    station_info = STATIONS_BY_EVA.get(eva, {})
+                    print(f"  Fetched {len(eva_departures)} departures from {station_info.get('name', eva)}")
+            except Exception as e:
+                print(f"  Error fetching from {eva}: {e}")
+
+        # Deduplicate: same train might appear in multiple platform feeds
+        seen = set()
+        departures = []
+        for dep in all_departures:
+            # Use train number + time + destination as unique key
+            key = (dep.get('number'), dep.get('time'), dep.get('destination'))
+            if key not in seen:
+                seen.add(key)
+                departures.append(dep)
+
+        if len(all_departures) > len(departures):
+            print(f"Deduplicated: {len(all_departures)} → {len(departures)} unique departures")
+        else:
+            print(f"Total departures from all platforms: {len(departures)}")
+
+        # EARLY FILTERING: Filter departures by train type BEFORE extracting destinations
+        # This prevents us from fetching data for stations we won't use anyway
+        print(f"\n=== EARLY FILTERING: Train Type ===")
+        if deutschland_ticket_only:
+            print(f"  Deutschland-Ticket filter: ON")
+        if train_categories:
+            print(f"  Train categories: {train_categories}")
+
+        departures = self._filter_departures_by_train_type(
+            departures=departures,
+            deutschland_ticket_only=deutschland_ticket_only,
+            train_categories=train_categories
+        )
+        print(f"After train type filtering: {len(departures)} departures kept")
+
+        # Determine if we should use hub/endpoint filtering
+        if show_only_hubs_and_endpoints is None:
+            show_only_hubs_and_endpoints = config.DEFAULT_SHOW_ONLY_HUBS_AND_ENDPOINTS
+
+        # TWO-SWEEP TOPOLOGY ANALYSIS (if hub/endpoint filtering enabled)
+        neighbor_graph = None  # Will be populated if filtering is enabled
+        if show_only_hubs_and_endpoints:
+            # Extract stations that appear in origin's departures (for final filtering)
+            origin_connected_stations = self._extract_stations_from_departures(departures)
+            print(f"\nOrigin-connected stations: {len(origin_connected_stations)} (from departure paths)")
+
+            # FIRST SWEEP: Build initial neighbor graph from origin departures
+            print(f"\n=== FIRST SWEEP: Building neighbor graph ===")
+            print(f"Analyzing {len(departures)} departure paths...")
+            neighbor_graph = self._build_neighbor_graph_from_departures(departures)
+
+            print(f"Built neighbor graph: {len(neighbor_graph)} stations")
+
+            hubs, endpoints = self._identify_hubs_and_endpoints(neighbor_graph)
+            print(f"  Hubs (3+ neighbors): {len(hubs)} stations")
+            print(f"  Endpoints (1 neighbor): {len(endpoints)} stations")
+
+            # Count pass-through stations for logging
+            pass_through = len(neighbor_graph) - len(hubs) - len(endpoints)
+            print(f"  Pass-through (2 neighbors): {pass_through} stations")
+
+            # SECOND SWEEP: Enhance graph by fetching from hubs and endpoints
+            print(f"\n=== SECOND SWEEP: Enhancing graph ===")
+            second_sweep_stations = hubs + endpoints
+
+            neighbor_graph = await self._enhance_graph_with_second_sweep(
+                neighbor_graph=neighbor_graph,
+                stations_to_sweep=second_sweep_stations,
+                deutschland_ticket_only=deutschland_ticket_only,
+                train_categories=train_categories,
+                date_str=datetime.now().strftime("%y%m%d")
+            )
+
+            # Recount after enhancement
+            print(f"\nEnhanced neighbor graph: {len(neighbor_graph)} stations")
+            hubs_after, endpoints_after = self._identify_hubs_and_endpoints(neighbor_graph)
+            print(f"  Hubs (3+ neighbors): {len(hubs_after)} stations (↑{len(hubs_after) - len(hubs)})")
+            print(f"  Endpoints (1 neighbor): {len(endpoints_after)} stations (↑{len(endpoints_after) - len(endpoints)})")
+
+            # FINAL FILTER: Only keep hubs and endpoints that are connected to origin
+            print(f"\n=== FINAL FILTER: Hubs + Endpoints (origin-connected only) ===")
+            all_destination_evas, filter_stats = self._filter_graph_to_hubs_and_endpoints(
+                neighbor_graph,
+                origin_connected_stations=origin_connected_stations
+            )
+            print(f"Destinations to fetch: {len(all_destination_evas)} stations")
+            print(f"  (Filtered to only stations reachable from {station_name})")
+            print(f"\nFiltering breakdown:")
+            print(f"  Total in graph: {filter_stats['total']}")
+            print(f"  Pass-through (2 neighbors): {filter_stats['pass_through']} (excluded)")
+            print(f"  Not origin-connected: {filter_stats['not_connected']} (excluded)")
+            print(f"  Kept (hubs + endpoints, origin-connected): {len(all_destination_evas)}")
+
+            # Safety check: if we filtered everything out, fall back to all destinations
+            if len(all_destination_evas) == 0:
+                print(f"⚠️ Warning: Filter too aggressive, falling back to all destinations")
+                all_destination_evas = self._extract_all_destinations(departures)
+        else:
+            # Original behavior: extract all destinations
+            all_destination_evas = self._extract_all_destinations(departures)
+            print(f"Found {len(all_destination_evas)} unique destination stations")
 
         # Fetch arrival data for ALL destinations (parallel + cached)
         date_str = datetime.now().strftime("%y%m%d")
@@ -80,10 +197,14 @@ class NetworkService:
             origin_station,
             departures,
             destination_plans,
-            max_connections
+            max_connections,
+            neighbor_graph=neighbor_graph  # Pass for debugging stats
         )
 
         print(f"\n✅ Created {len(connections)} connections (100% real data, no estimates!)\n")
+
+        # Note: Filtering now happens BEFORE fetching data (early filtering)
+        # This improves performance by not fetching data we don't need
 
         # Find multi-hop routes if requested
         multi_hop_routes = []
@@ -97,6 +218,9 @@ class NetworkService:
                 date_str=date_str
             )
             print(f"✅ Found {len(multi_hop_routes)} multi-hop routes\n")
+
+        # Analyze station neighbors and mark hubs/endpoints
+        self._analyze_station_neighbors(origin_station, connections)
 
         # Create network data object
         network_data = NetworkData(
@@ -386,8 +510,22 @@ class NetworkService:
         """
         Fetch arrival/departure plans for ALL destination stations.
         Uses parallel fetching with caching - much faster than sequential!
+
+        IMPORTANT: Handles station fragmentation by fetching all related EVAs
+        (e.g., Berlin Hbf, Berlin Hbf (S-Bahn), Berlin Hbf (tief) all share arrivals)
         """
         print(f"\n=== FETCHING PLANS FOR {len(destination_evas)} DESTINATIONS ===")
+
+        # Expand to include all related EVAs (handles station fragmentation)
+        eva_to_related = {}  # Maps each EVA to all its related EVAs
+        all_evas_to_fetch = set()
+
+        for eva in destination_evas:
+            related = get_all_related_evas(eva)
+            eva_to_related[eva] = related
+            all_evas_to_fetch.update(related)
+
+        print(f"Expanded to {len(all_evas_to_fetch)} EVAs (including related platforms/sections)")
 
         # Only fetch current and future hours to avoid 404s for past data
         current_hour = datetime.now().hour
@@ -398,34 +536,96 @@ class NetworkService:
         # Limit parallelism to avoid overwhelming the API
         semaphore = asyncio.Semaphore(config.MAX_PARALLEL_STATION_FETCHES)
 
-        async def fetch_one(eva: str) -> Tuple[str, Optional[Dict]]:
+        # Track cache performance
+        cache_hits = 0
+        api_fetches = 0
+
+        async def fetch_one(eva: str) -> Tuple[str, Optional[Dict], str]:
             """Fetch plan data for one station with rate limiting."""
+            nonlocal cache_hits, api_fetches
+
             async with semaphore:
                 # Check cache first
                 cached_plan = self.cache_service.load_station_plan(eva, date_str)
                 if cached_plan is not None:
-                    return (eva, cached_plan)
+                    cache_hits += 1
+                    return (eva, cached_plan, "CACHED")
 
                 # Fetch from API - only fetch current and future hours
                 try:
                     plan_data = await self.api_client.get_full_plan(eva, date_str, hours_to_fetch)
                     # Cache it
                     self.cache_service.save_station_plan(eva, date_str, plan_data)
-                    return (eva, plan_data)
+                    api_fetches += 1
+                    return (eva, plan_data, "API")
                 except Exception as e:
-                    return (eva, None)
+                    # Get station name for error logging
+                    station_info = STATIONS_BY_EVA.get(eva, {})
+                    station_name = station_info.get("name", eva)
+                    print(f"  ERROR: {eva} ({station_name}): {e}")
+                    return (eva, None, "ERROR")
 
-        # Fetch all in parallel
-        results = await asyncio.gather(*[fetch_one(eva) for eva in destination_evas])
+        # Fetch all related EVAs in parallel
+        results = await asyncio.gather(*[fetch_one(eva) for eva in all_evas_to_fetch])
 
-        # Build result dict
-        destination_plans = {eva: plan for eva, plan in results if plan is not None}
+        # Build fetched plans dict (EVA -> plan data)
+        fetched_plans = {eva: plan for eva, plan, status in results if plan is not None}
 
-        cache_hits = sum(1 for eva, plan in results if plan is not None and self.cache_service.load_station_plan(eva, date_str) is not None)
-        api_fetches = len(destination_plans) - cache_hits
+        # Map each original destination EVA to aggregated plan from all related EVAs
+        destination_plans = {}
+        aggregation_debug_samples = []  # Track some examples for verification
 
-        print(f"  Cache hits: {cache_hits}, API fetches: {api_fetches}")
-        print(f"  Successfully loaded plans for {len(destination_plans)}/{len(destination_evas)} stations\n")
+        for original_eva, related_evas in eva_to_related.items():
+            # Aggregate arrivals and departures from all related EVAs
+            combined_arrivals = []
+            combined_departures = []
+            per_eva_counts = []  # For debugging aggregation
+
+            for related_eva in related_evas:
+                if related_eva in fetched_plans:
+                    plan = fetched_plans[related_eva]
+                    arrivals_count = len(plan.get("arrivals", []))
+                    departures_count = len(plan.get("departures", []))
+                    combined_arrivals.extend(plan.get("arrivals", []))
+                    combined_departures.extend(plan.get("departures", []))
+
+                    if arrivals_count > 0 or departures_count > 0:
+                        station_info = STATIONS_BY_EVA.get(related_eva, {})
+                        per_eva_counts.append((station_info.get("name", related_eva), arrivals_count, departures_count))
+
+            # Store combined plan under original EVA
+            if combined_arrivals or combined_departures:
+                destination_plans[original_eva] = {
+                    "arrivals": combined_arrivals,
+                    "departures": combined_departures
+                }
+
+                # Debug: track aggregation for stations with multiple platforms
+                if len(related_evas) > 1 and len(per_eva_counts) > 1:
+                    main_station_info = STATIONS_BY_EVA.get(original_eva, {})
+                    main_name = main_station_info.get("name", original_eva)
+                    aggregation_debug_samples.append((main_name, len(combined_arrivals), per_eva_counts))
+
+        # Calculate stats
+        errors = sum(1 for _, plan, status in results if status == "ERROR")
+
+        print(f"\nDestination plans cache performance:")
+        print(f"  Cache hits: {cache_hits}")
+        print(f"  API fetches: {api_fetches}")
+        print(f"  Errors: {errors}")
+        print(f"  Successfully loaded plans for {len(destination_plans)}/{len(destination_evas)} destinations")
+        print(f"  (Aggregated from {len(fetched_plans)} platform/section EVAs)")
+
+        # Show aggregation examples to verify it's working
+        if aggregation_debug_samples:
+            print(f"\n✓ Verified arrival aggregation for {len(aggregation_debug_samples)} multi-platform stations:")
+            for station_name, total_arrivals, per_eva in aggregation_debug_samples[:5]:
+                print(f"  {station_name}: {total_arrivals} total arrivals from {len(per_eva)} platforms")
+                for name, arr_count, dep_count in per_eva:
+                    print(f"    - {name}: {arr_count} arrivals, {dep_count} departures")
+            if len(aggregation_debug_samples) > 5:
+                print(f"  ... and {len(aggregation_debug_samples) - 5} more multi-platform stations")
+        print()
 
         return destination_plans
 
@@ -434,15 +634,32 @@ class NetworkService:
         origin_station: Station,
         departures: List[Dict],
         destination_plans: Dict[str, Dict],
-        max_connections: Optional[int] = None
+        max_connections: Optional[int] = None,
+        neighbor_graph: Optional[Dict[str, Set[str]]] = None
     ) -> List[Connection]:
         """
         Build connections ONLY when we have real arrival data.
         No fake estimates - if we don't have the destination's arrival data, we skip it.
+
+        Args:
+            neighbor_graph: Optional graph for debugging stats (shows neighbor counts)
         """
         print("=== BUILDING CONNECTIONS FROM REAL DATA ===")
         connections = []
         seen_pairs: Set[tuple] = set()  # Track (train_number, destination_eva)
+
+        # Debug stats
+        missing_plan_count = 0
+        missing_arrival_count = 0
+        successful_match_count = 0
+
+        # Track specific problematic destinations
+        missing_plan_destinations = Counter()  # dest_name -> count
+        missing_arrival_destinations = Counter()  # dest_name -> count
+
+        # Track neighbor counts for missing destinations (for analysis)
+        missing_plan_neighbor_counts = Counter()  # neighbor_count -> count
+        missing_arrival_neighbor_counts = Counter()  # neighbor_count -> count
 
         for departure in departures:
             path_stations = departure.get("path_stations", [])
@@ -479,18 +696,42 @@ class NetworkService:
 
                 # CRITICAL: Only proceed if we have destination plan data
                 if dest_eva not in destination_plans:
+                    missing_plan_count += 1
+                    missing_plan_destinations[dest_name] += 1
+
+                    # Track neighbor count for analysis
+                    if neighbor_graph and dest_eva in neighbor_graph:
+                        neighbor_count = len(neighbor_graph[dest_eva])
+                        missing_plan_neighbor_counts[neighbor_count] += 1
+                    else:
+                        missing_plan_neighbor_counts["unknown"] += 1
+
                     continue
 
                 # Try to find matching arrival in destination's plan
                 arrival_time = self._find_arrival_time(
                     destination_plans[dest_eva],
                     train_number,
-                    departure_datetime
+                    departure_datetime,
+                    debug_station=dest_name,  # Enable debugging for specific stations
+                    train_type=train_type  # For S-Bahn specific debugging
                 )
 
                 # If no real arrival time found, SKIP this connection
                 if not arrival_time:
+                    missing_arrival_count += 1
+                    missing_arrival_destinations[dest_name] += 1
+
+                    # Track neighbor count for analysis
+                    if neighbor_graph and dest_eva in neighbor_graph:
+                        neighbor_count = len(neighbor_graph[dest_eva])
+                        missing_arrival_neighbor_counts[neighbor_count] += 1
+                    else:
+                        missing_arrival_neighbor_counts["unknown"] += 1
+
                     continue
+
+                successful_match_count += 1
 
                 # Create destination station object
                 dest_station = Station(
@@ -558,16 +799,96 @@ class NetworkService:
             if max_connections and len(connections) >= max_connections:
                 break
 
+        # Print debugging summary
+        print(f"\n=== CONNECTION MATCHING STATISTICS ===")
+        print(f"  Successful matches: {successful_match_count}")
+        print(f"  Missing destination plans: {missing_plan_count}")
+        print(f"  Missing arrival times: {missing_arrival_count}")
+        print(f"  Total connections created: {len(connections)}")
+
+        if missing_plan_count > 0 or missing_arrival_count > 0:
+            print(f"\n💡 Missing connections could be due to:")
+
+            if missing_plan_count > 0:
+                print(f"  • Destinations not in fetch list ({missing_plan_count} occurrences)")
+
+                # Show neighbor count distribution
+                if neighbor_graph and missing_plan_neighbor_counts:
+                    print(f"\n    Neighbor count distribution (missing plans):")
+                    sorted_counts = sorted(missing_plan_neighbor_counts.items(),
+                                         key=lambda x: x[0] if isinstance(x[0], int) else 999)
+                    for neighbor_count, occurrence_count in sorted_counts:
+                        if neighbor_count == 2:
+                            print(f"      {neighbor_count} neighbors (pass-through): {occurrence_count} stations ⬅️  FILTERED OUT")
+                        elif neighbor_count == "unknown":
+                            print(f"      Unknown: {occurrence_count} stations (not in graph)")
+                        else:
+                            print(f"      {neighbor_count} neighbors: {occurrence_count} stations")
+
+                top_missing_plans = missing_plan_destinations.most_common(10)
+                if top_missing_plans:
+                    print(f"\n    Top destinations missing plans:")
+                    for dest_name, count in top_missing_plans:
+                        print(f"      - {dest_name}: {count}x")
+
+            if missing_arrival_count > 0:
+                print(f"\n  • Train arrivals outside time window ({missing_arrival_count} occurrences)")
+
+                # Show neighbor count distribution
+                if neighbor_graph and missing_arrival_neighbor_counts:
+                    print(f"\n    Neighbor count distribution (missing arrivals):")
+                    sorted_counts = sorted(missing_arrival_neighbor_counts.items(),
+                                         key=lambda x: x[0] if isinstance(x[0], int) else 999)
+                    for neighbor_count, occurrence_count in sorted_counts:
+                        if neighbor_count == 2:
+                            print(f"      {neighbor_count} neighbors (pass-through): {occurrence_count} occurrences ⬅️  But why fetched?")
+                        elif neighbor_count == "unknown":
+                            print(f"      Unknown: {occurrence_count} occurrences (not in graph)")
+                        else:
+                            print(f"      {neighbor_count} neighbors: {occurrence_count} occurrences")
+
+                top_missing_arrivals = missing_arrival_destinations.most_common(10)
+                if top_missing_arrivals:
+                    print(f"\n    Top destinations with missing arrivals:")
+                    for dest_name, count in top_missing_arrivals:
+                        print(f"      - {dest_name}: {count}x")
+
+                print(f"\n    ℹ️  Common causes:")
+                print(f"       - Train arrives outside fetched time window (current + 13 hours)")
+                print(f"       - Train number changes mid-route (e.g., S-Bahn line renumbering)")
+                print(f"       - Station fragmentation we didn't catch")
+
         return connections
 
     def _find_arrival_time(
         self,
         destination_plan: Dict,
         train_number: str,
-        departure_time: datetime
+        departure_time: datetime,
+        debug_station: str = None,
+        train_type: str = None
     ) -> Optional[datetime]:
         """Find the arrival time for a specific train at the destination station."""
         arrivals = destination_plan.get("arrivals", [])
+
+        # Debug mode for specific stations of interest OR S-Bahn at major stations
+        is_sbahn = train_type and train_type.upper() == 'S'
+        is_major_station = debug_station and any(name in debug_station.lower() for name in
+                                              ['friedrichstraße', 'ostkreuz', 'westkreuz', 'alexanderplatz'])
+        enable_debug = (debug_station and any(name in debug_station.lower() for name in
+                                              ['berlin', 'bologna', 'münchen', 'muenchen', 'arnhem']))
+
+        # Extra verbose for S-Bahn at problem stations
+        enable_sbahn_debug = is_sbahn and is_major_station
+
+        if enable_debug:
+            print(f"    🔍 Looking for train {train_type} {train_number} at {debug_station}")
+            print(f"       Departing at: {departure_time.strftime('%Y-%m-%d %H:%M')}")
+            print(f"       Checking {len(arrivals)} arrivals (aggregated from all related platforms/sections)")
+
+        if enable_sbahn_debug and not enable_debug:
+            print(f"    🚆 S-Bahn debug: Looking for S {train_number} at {debug_station}")
+            print(f"       Departure time: {departure_time.strftime('%H:%M')}, checking {len(arrivals)} arrivals")
 
         for arrival in arrivals:
             if arrival.get("number") == train_number:
@@ -580,12 +901,51 @@ class NetworkService:
                         # Sanity check: arrival should be after departure
                         time_diff = (arrival_dt - departure_time).total_seconds() / 60
 
-                        # Should be within reasonable range (5 min to 24 hours)
-                        if 5 <= time_diff <= 1440:
+                        # Should be within reasonable range (1 min to 24 hours)
+                        # Note: S-Bahn stations can be 1-2 minutes apart!
+                        if 1 <= time_diff <= 1440:
+                            if enable_debug:
+                                print(f"       ✓ Found match! Arrives at: {arrival_dt.strftime('%Y-%m-%d %H:%M')} (travel: {int(time_diff)}min)")
                             return arrival_dt
+                        elif enable_debug:
+                            print(f"       ✗ Time diff out of range: {int(time_diff)}min")
 
-                    except ValueError:
+                    except ValueError as e:
+                        if enable_debug:
+                            print(f"       ✗ Failed to parse time: {time_str}")
                         continue
+
+        if enable_debug:
+            print(f"       ✗ No matching arrival found")
+            if len(arrivals) > 0:
+                sample = arrivals[:3]
+                print(f"       Sample of available trains:")
+                for arr in sample:
+                    print(f"         - {arr.get('type', '?')} {arr.get('number', '?')} at {arr.get('time', '?')}")
+
+        # S-Bahn specific debugging - show what S-Bahn trains ARE arriving
+        if enable_sbahn_debug:
+            # Find S-Bahn arrivals around the expected time
+            expected_time_range = 30  # minutes
+            sbahn_arrivals = []
+            for arr in arrivals:
+                if arr.get('type', '').upper() == 'S':
+                    time_str = arr.get('time', '')
+                    if len(time_str) == 10:
+                        try:
+                            arr_time = datetime.strptime(time_str, "%y%m%d%H%M")
+                            time_diff = (arr_time - departure_time).total_seconds() / 60
+                            if -5 <= time_diff <= expected_time_range:
+                                sbahn_arrivals.append((arr.get('number'), arr_time, time_diff))
+                        except:
+                            pass
+
+            if sbahn_arrivals:
+                print(f"       ⚠️  S-Bahn MISMATCH: Looking for S {train_number}, but found these S-Bahn arrivals:")
+                for num, arr_time, diff in sbahn_arrivals[:5]:
+                    print(f"         - S {num} arriving at {arr_time.strftime('%H:%M')} (+{int(diff)}min)")
+            else:
+                print(f"       ⚠️  NO S-Bahn arrivals found within {expected_time_range} minutes of departure")
 
         return None
 
@@ -777,6 +1137,375 @@ class NetworkService:
 
         return waypoints
 
+    def _analyze_station_neighbors(self, origin_station: Station, connections: List[Connection]) -> None:
+        """
+        Analyze connections to determine station neighbor count and mark hubs/endpoints.
+
+        A station is considered:
+        - A HUB if it has 3 or more unique destination neighbors
+        - An ENDPOINT if it has exactly 1 unique destination neighbor
+
+        Args:
+            origin_station: The origin station to analyze
+            connections: List of connections from this station
+        """
+        # Count unique destination stations
+        unique_destinations = set()
+        for conn in connections:
+            unique_destinations.add(conn.destination_id)
+
+        neighbor_count = len(unique_destinations)
+
+        # Update origin station metadata
+        origin_station.neighbor_count = neighbor_count
+        origin_station.is_hub = neighbor_count >= config.HUB_STATION_MIN_NEIGHBORS
+        origin_station.is_endpoint = neighbor_count == 1
+
+        print(f"\n=== STATION ANALYSIS ===")
+        print(f"Station: {origin_station.name}")
+        print(f"Unique Neighbors: {neighbor_count}")
+        print(f"Is Hub: {origin_station.is_hub}")
+        print(f"Is Endpoint: {origin_station.is_endpoint}\n")
+
+    def _build_neighbor_graph_from_departures(
+        self,
+        departures: List[Dict],
+        debug: bool = False
+    ) -> Dict[str, Set[str]]:
+        """
+        Build neighbor graph from departure path_stations using immediate neighbor logic.
+
+        For path ["A", "B", "C", "D"]:
+        - A neighbors: {B}
+        - B neighbors: {A, C}
+        - C neighbors: {B, D}
+        - D neighbors: {C}
+
+        Args:
+            departures: List of departure dictionaries from API
+            debug: Enable detailed debugging output
+
+        Returns:
+            Dict mapping EVA number to set of neighbor EVA numbers
+        """
+        neighbor_graph: Dict[str, Set[str]] = {}
+        unresolved_stations = Counter()  # Track stations we can't resolve
+
+        for departure in departures:
+            path_stations = departure.get("path_stations", [])
+            if len(path_stations) < 2:
+                continue
+
+            train_type = departure.get("type", "")
+            train_number = departure.get("number", "")
+
+            # Build immediate neighbor relationships
+            for i in range(len(path_stations) - 1):
+                station_a_name = path_stations[i]
+                station_b_name = path_stations[i + 1]
+
+                # Resolve to EVA numbers
+                station_a_info = STATIONS_BY_NAME.get(station_a_name.lower())
+                station_b_info = STATIONS_BY_NAME.get(station_b_name.lower())
+
+                # Debug: Track unresolved stations
+                if not station_a_info:
+                    unresolved_stations[station_a_name] += 1
+                    if debug:
+                        print(f"  ⚠️  Cannot resolve: '{station_a_name}' ({train_type} {train_number})")
+                if not station_b_info:
+                    unresolved_stations[station_b_name] += 1
+                    if debug:
+                        print(f"  ⚠️  Cannot resolve: '{station_b_name}' ({train_type} {train_number})")
+
+                if not station_a_info or not station_b_info:
+                    continue
+
+                eva_a = station_a_info.get("eva")
+                eva_b = station_b_info.get("eva")
+
+                if not eva_a or not eva_b:
+                    if debug:
+                        print(f"  ⚠️  Missing EVA: '{station_a_name}' or '{station_b_name}'")
+                    continue
+
+                # Add bidirectional neighbor relationship
+                if eva_a not in neighbor_graph:
+                    neighbor_graph[eva_a] = set()
+                if eva_b not in neighbor_graph:
+                    neighbor_graph[eva_b] = set()
+
+                neighbor_graph[eva_a].add(eva_b)
+                neighbor_graph[eva_b].add(eva_a)
+
+        # Report unresolved stations
+        if unresolved_stations:
+            print(f"\n⚠️  UNRESOLVED STATIONS: {len(unresolved_stations)} unique station names couldn't be matched")
+            top_unresolved = unresolved_stations.most_common(10)
+            for station_name, count in top_unresolved:
+                print(f"  '{station_name}': {count} occurrences")
+            if len(unresolved_stations) > 10:
+                print(f"  ... and {len(unresolved_stations) - 10} more")
+
+        return neighbor_graph
+
+    def _identify_hubs_and_endpoints(
+        self,
+        neighbor_graph: Dict[str, Set[str]]
+    ) -> Tuple[List[str], List[str]]:
+        """
+        Identify hubs (3+ neighbors) and endpoints (1 neighbor) from graph.
+
+        Args:
+            neighbor_graph: Dict mapping EVA to set of neighbor EVAs
+
+        Returns:
+            Tuple of (hub_evas, endpoint_evas)
+        """
+        hubs = []
+        endpoints = []
+
+        for eva, neighbors in neighbor_graph.items():
+            neighbor_count = len(neighbors)
+
+            if neighbor_count >= 3:
+                hubs.append(eva)
+            elif neighbor_count == 1:
+                endpoints.append(eva)
+            # Skip stations with exactly 2 neighbors (pass-through)
+
+        return hubs, endpoints
+
+    async def _enhance_graph_with_second_sweep(
+        self,
+        neighbor_graph: Dict[str, Set[str]],
+        stations_to_sweep: List[str],
+        deutschland_ticket_only: bool,
+        train_categories: Optional[List[str]],
+        date_str: str
+    ) -> Dict[str, Set[str]]:
+        """
+        Enhance neighbor graph by fetching departures from hubs and endpoints.
+
+        Second sweep reveals connections we couldn't see from origin alone.
+
+        Args:
+            neighbor_graph: Initial graph from first sweep
+            stations_to_sweep: List of EVA numbers to fetch (hubs + endpoints)
+            deutschland_ticket_only: Apply Deutschland-Ticket filter
+            train_categories: Apply train category filter
+            date_str: Date for caching
+
+        Returns:
+            Enhanced neighbor graph
+        """
+        total = len(stations_to_sweep)
+        print(f"Fetching departures for {total} stations (hubs + endpoints)...")
+
+        cache_hits = 0
+        api_fetches = 0
+
+        for idx, station_eva in enumerate(stations_to_sweep, 1):
+            try:
+                # Fetch from all related EVAs (handles fragmented stations)
+                related_evas = get_all_related_evas(station_eva)
+                all_station_departures = []
+
+                for eva in related_evas:
+                    # Check cache first!
+                    cached_plan = self.cache_service.load_station_plan(eva, date_str)
+
+                    if cached_plan is not None:
+                        # Extract departures from cached plan
+                        eva_departures = cached_plan.get("departures", [])
+                        all_station_departures.extend(eva_departures)
+                        cache_hits += 1
+                        cache_status = "CACHED"
+                    else:
+                        # Cache miss - fetch from API
+                        eva_departures = await self.api_client.get_departures(eva)
+                        all_station_departures.extend(eva_departures)
+
+                        # Cache the departures for future use
+                        plan_data = {
+                            "departures": eva_departures,
+                            "arrivals": []  # Don't have arrivals from get_departures
+                        }
+                        self.cache_service.save_station_plan(eva, date_str, plan_data)
+
+                        api_fetches += 1
+                        cache_status = "API"
+
+                # Deduplicate
+                seen = set()
+                station_departures = []
+                for dep in all_station_departures:
+                    key = (dep.get('number'), dep.get('time'), dep.get('destination'))
+                    if key not in seen:
+                        seen.add(key)
+                        station_departures.append(dep)
+
+                # Apply same train type filters as first sweep
+                filtered_departures = self._filter_departures_by_train_type(
+                    departures=station_departures,
+                    deutschland_ticket_only=deutschland_ticket_only,
+                    train_categories=train_categories
+                )
+
+                # Get station name for logging
+                station_info = STATIONS_BY_EVA.get(station_eva, {})
+                station_name = station_info.get("name", station_eva)
+
+                platforms_note = f" (from {len(related_evas)} platforms)" if len(related_evas) > 1 else ""
+                print(f"  [{idx}/{total}] {station_name}{platforms_note}: "
+                      f"{len(station_departures)} departures → {len(filtered_departures)} after filter")
+
+                # Build graph from these departures
+                enhanced_graph = self._build_neighbor_graph_from_departures(filtered_departures)
+
+                # Merge into main graph
+                for eva, neighbors in enhanced_graph.items():
+                    if eva not in neighbor_graph:
+                        neighbor_graph[eva] = set()
+                    neighbor_graph[eva].update(neighbors)
+
+            except Exception as e:
+                station_info = STATIONS_BY_EVA.get(station_eva, {})
+                station_name = station_info.get("name", station_eva)
+                print(f"  [{idx}/{total}] {station_eva} ({station_name}): ERROR - {e}")
+                continue
+
+        print(f"\nSecond sweep cache performance: {cache_hits} hits, {api_fetches} API calls")
+        return neighbor_graph
+
+    def _extract_stations_from_departures(
+        self,
+        departures: List[Dict]
+    ) -> Set[str]:
+        """
+        Extract all unique station EVAs that appear in departure path_stations.
+
+        Args:
+            departures: List of departure dictionaries
+
+        Returns:
+            Set of EVA numbers that appear in at least one departure path
+        """
+        stations_in_paths = set()
+
+        for departure in departures:
+            path_stations = departure.get("path_stations", [])
+            for station_name in path_stations:
+                station_info = STATIONS_BY_NAME.get(station_name.lower())
+                if station_info and station_info.get("eva"):
+                    stations_in_paths.add(station_info["eva"])
+
+        return stations_in_paths
+
+    def _filter_graph_to_hubs_and_endpoints(
+        self,
+        neighbor_graph: Dict[str, Set[str]],
+        origin_connected_stations: Optional[Set[str]] = None
+    ) -> Tuple[List[str], Dict[str, int]]:
+        """
+        Filter graph to only hubs (3+ neighbors) and endpoints (1 neighbor).
+
+        Optionally filter to only stations connected to origin (appear in origin's departure paths).
+
+        Args:
+            neighbor_graph: Complete neighbor graph
+            origin_connected_stations: Set of stations that appear in origin's departure paths
+
+        Returns:
+            Tuple of (filtered_evas, stats_dict)
+        """
+        filtered = []
+        stats = {
+            'total': len(neighbor_graph),
+            'pass_through': 0,
+            'not_connected': 0,
+            'hubs_kept': 0,
+            'endpoints_kept': 0
+        }
+
+        for eva, neighbors in neighbor_graph.items():
+            neighbor_count = len(neighbors)
+
+            # Must be hub or endpoint
+            if neighbor_count != 1 and neighbor_count < 3:
+                stats['pass_through'] += 1
+                continue  # Skip pass-through stations (2 neighbors)
+
+            # If we have origin-connected filter, only include those stations
+            if origin_connected_stations is not None:
+                if eva not in origin_connected_stations:
+                    stats['not_connected'] += 1
+                    continue  # Skip stations not connected to origin
+
+            filtered.append(eva)
+
+            if neighbor_count == 1:
+                stats['endpoints_kept'] += 1
+            elif neighbor_count >= 3:
+                stats['hubs_kept'] += 1
+
+        return filtered, stats
+
+    def _filter_departures_by_train_type(
+        self,
+        departures: List[Dict],
+        deutschland_ticket_only: bool = False,
+        train_categories: Optional[List[str]] = None
+    ) -> List[Dict]:
+        """
+        Filter departures by train type BEFORE extracting destinations.
+        This is a critical performance optimization - we avoid fetching data for trains we won't use.
+
+        Args:
+            departures: List of departure dictionaries from API
+            deutschland_ticket_only: Only include trains valid for Deutschland-Ticket
+            train_categories: Filter by train categories (e.g., ["regional", "intercity"])
+
+        Returns:
+            Filtered list of departures
+        """
+        if not deutschland_ticket_only and not train_categories:
+            return departures  # No filtering needed
+
+        filtered = []
+        rejected_types = Counter()  # Track which train types were rejected
+
+        for departure in departures:
+            train_type = departure.get("type", "")
+            if not train_type:
+                continue
+
+            rejected = False
+
+            # Check Deutschland-Ticket validity
+            if deutschland_ticket_only:
+                if not is_deutschland_ticket_valid(train_type):
+                    rejected_types[train_type] += 1
+                    rejected = True
+
+            # Check train category
+            if not rejected and train_categories:
+                category = classify_train_type(train_type)
+                if category not in train_categories:
+                    rejected_types[train_type] += 1
+                    rejected = True
+
+            if not rejected:
+                filtered.append(departure)
+
+        # Debug output: show rejected train types
+        if rejected_types:
+            rejected_list = [f"{train_type} ({count})" for train_type, count in rejected_types.most_common()]
+            print(f"  Rejected train types: {', '.join(rejected_list)}")
+
+        print(f"  Train type filter: {len(filtered)}/{len(departures)} departures kept")
+        return filtered
+
     # Real-time arrival optimization methods
 
     def _identify_top_destinations(
@@ -887,8 +1616,9 @@ class NetworkService:
                         # Sanity check: arrival should be after departure
                         time_diff = (arrival_dt - connection.departure_time).total_seconds() / 60
 
-                        # Should be within reasonable range (5 min to 24 hours)
-                        if 5 <= time_diff <= 1440:
+                        # Should be within reasonable range (1 min to 24 hours)
+                        # Note: S-Bahn stations can be 1-2 minutes apart!
+                        if 1 <= time_diff <= 1440:
                             return arrival_dt
 
                     except ValueError:

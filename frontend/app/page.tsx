@@ -4,9 +4,9 @@
  * Main page - Train Network Visualization
  */
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
-import type { NetworkData } from "@/types";
+import type { NetworkData, TrainCategory } from "@/types";
 import { apiClient } from "@/lib/api";
 import FilterPanel from "@/components/FilterPanel";
 
@@ -29,6 +29,25 @@ export default function Home() {
   const [minTransferTime, setMinTransferTime] = useState<number>(5);
   const [selectedStationName, setSelectedStationName] = useState<string>("Essen Hbf");
 
+  // New filter states
+  const [showOnlyHubsAndEndpoints, setShowOnlyHubsAndEndpoints] = useState<boolean>(true);
+  const [deutschlandTicketOnly, setDeutschlandTicketOnly] = useState<boolean>(false);
+  const [trainCategories, setTrainCategories] = useState<TrainCategory[]>(["regional", "intercity", "other"]);
+
+  // Auto-refresh when filters change (but only if data already loaded)
+  useEffect(() => {
+    if (networkData && !isLoading) {
+      console.log("Filters changed, refreshing network data...");
+      fetchNetworkData(selectedStationName, false);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [
+    showOnlyHubsAndEndpoints,
+    deutschlandTicketOnly,
+    trainCategories
+    // Note: Exclude minSpeed (client-side only), maxChangeovers, minTransferTime (not affecting backend yet)
+  ]);
+
   const fetchNetworkData = async (
     stationName: string = selectedStationName,
     forceRefresh: boolean = false
@@ -42,7 +61,10 @@ export default function Home() {
         forceRefresh,
         maxChangeovers,
         minTransferTime,
-        3 // max routes per destination
+        3, // max routes per destination
+        showOnlyHubsAndEndpoints,
+        deutschlandTicketOnly,
+        trainCategories.length > 0 ? trainCategories : undefined
       );
 
       if (response.success && response.data) {
@@ -83,6 +105,12 @@ export default function Home() {
           onStationSelectAndFetch={handleStationSelectAndFetch}
           onRefresh={() => fetchNetworkData(selectedStationName, false)}
           isLoading={isLoading}
+          showOnlyHubsAndEndpoints={showOnlyHubsAndEndpoints}
+          onShowOnlyHubsAndEndpointsChange={setShowOnlyHubsAndEndpoints}
+          deutschlandTicketOnly={deutschlandTicketOnly}
+          onDeutschlandTicketOnlyChange={setDeutschlandTicketOnly}
+          trainCategories={trainCategories}
+          onTrainCategoriesChange={setTrainCategories}
         />
       </div>
 

@@ -31,13 +31,15 @@ def load_stations_database() -> tuple[Dict[str, Dict], Dict[str, Dict]]:
                 name = station.get("name", "")
                 lat = station.get("lat", 0.0)
                 lon = station.get("lon", 0.0)
+                meta_evas = station.get("meta_evas", [])
 
                 if eva and name and lat and lon:
                     station_data = {
                         "eva": eva,
                         "name": name,
                         "lat": lat,
-                        "lon": lon
+                        "lon": lon,
+                        "meta_evas": [str(e) for e in meta_evas]  # Store related EVA numbers
                     }
                     eva_lookup[eva] = station_data
                     # Index by lowercase name for easier lookup
@@ -63,6 +65,30 @@ def load_stations_database() -> tuple[Dict[str, Dict], Dict[str, Dict]]:
 
 # Load stations database once at module load
 STATIONS_BY_EVA, STATIONS_BY_NAME = load_stations_database()
+
+
+def get_all_related_evas(eva: str) -> List[str]:
+    """
+    Get all related EVA numbers for a station (including the station itself and its meta_evas).
+
+    This handles station fragmentation where one logical station has multiple EVA numbers
+    for different platforms/sections (e.g., Berlin Hbf, Berlin Hbf (S-Bahn), Berlin Hbf (tief)).
+
+    Args:
+        eva: The EVA number to lookup
+
+    Returns:
+        List of all related EVA numbers (including the input EVA)
+    """
+    related_evas = {eva}  # Start with the given EVA
+
+    station_data = STATIONS_BY_EVA.get(eva)
+    if station_data:
+        # Add all meta_evas from this station
+        meta_evas = station_data.get("meta_evas", [])
+        related_evas.update(meta_evas)
+
+    return list(related_evas)
 
 
 class DBAPIClient:

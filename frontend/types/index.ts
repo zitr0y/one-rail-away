@@ -8,6 +8,9 @@ export interface Station {
   lat: number;
   lon: number;
   connection_count: number;
+  neighbor_count: number;
+  is_hub: boolean;
+  is_endpoint: boolean;
 }
 
 export interface RouteWaypoint {
@@ -17,6 +20,8 @@ export interface RouteWaypoint {
   arrival_time: string | null;
   distance_from_origin_km: number;
 }
+
+export type TrainCategory = "regional" | "intercity" | "other";
 
 export interface Connection {
   origin_id: string;

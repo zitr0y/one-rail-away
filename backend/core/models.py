@@ -5,7 +5,64 @@ from __future__ import annotations
 
 from datetime import datetime
 from typing import Optional, List, Tuple
+from enum import Enum
 from pydantic import BaseModel, Field
+
+
+class TrainCategory(str, Enum):
+    """Train category classification."""
+    REGIONAL = "regional"  # S-Bahn, RB, RE, etc.
+    INTERCITY = "intercity"  # IC, ICE, Eurostar, NJ, etc.
+    OTHER = "other"  # Everything else
+
+
+# Regional train types (valid for Deutschland-Ticket)
+REGIONAL_TRAIN_TYPES = {
+    "S", "RB", "RE", "IRE", "MEX", "ALX", "BOB", "BRB", "MRB",
+    "ERB", "ABR", "VBG", "SBB", "STB", "VEN", "VIA", "ZUG"
+}
+
+
+# Inter-city train types (NOT valid for Deutschland-Ticket)
+INTERCITY_TRAIN_TYPES = {
+    "IC", "ICE", "EC", "EN", "CNL", "NJ", "RJ", "TGV", "EST", "THA", "RJX", "FLX", "ECE", "D", "WB"
+}
+
+
+def classify_train_type(train_type: str) -> TrainCategory:
+    """
+    Classify a train type into a category.
+
+    Args:
+        train_type: The train type string (e.g., "ICE", "RE", "S")
+
+    Returns:
+        TrainCategory enum value
+    """
+    train_type_upper = train_type.upper().strip()
+
+    if train_type_upper in REGIONAL_TRAIN_TYPES:
+        return TrainCategory.REGIONAL
+    elif train_type_upper in INTERCITY_TRAIN_TYPES:
+        return TrainCategory.INTERCITY
+    else:
+        return TrainCategory.OTHER
+
+
+def is_deutschland_ticket_valid(train_type: str) -> bool:
+    """
+    Check if a train type is valid for Deutschland-Ticket.
+
+    Deutschland-Ticket is valid for regional trains only (S, RB, RE, etc.)
+    but NOT for inter-city trains (IC, ICE, etc.)
+
+    Args:
+        train_type: The train type string
+
+    Returns:
+        True if valid for Deutschland-Ticket, False otherwise
+    """
+    return classify_train_type(train_type) == TrainCategory.REGIONAL
 
 
 class Station(BaseModel):
@@ -15,6 +72,9 @@ class Station(BaseModel):
     lat: float = Field(..., description="Latitude")
     lon: float = Field(..., description="Longitude")
     connection_count: int = Field(default=0, description="Number of connections from this station")
+    neighbor_count: int = Field(default=0, description="Number of neighboring stations (unique destinations)")
+    is_hub: bool = Field(default=False, description="Whether this station is a hub (3+ neighbors)")
+    is_endpoint: bool = Field(default=False, description="Whether this station is an endpoint (1 neighbor only)")
 
 
 class RouteWaypoint(BaseModel):

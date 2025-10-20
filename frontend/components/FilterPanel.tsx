@@ -4,7 +4,7 @@
  * Filter and statistics panel component
  */
 
-import type { NetworkData, SearchStationResult } from "@/types";
+import type { NetworkData, SearchStationResult, TrainCategory } from "@/types";
 import { formatSpeed, formatDistance } from "@/lib/utils";
 import StationSearch from "./StationSearch";
 
@@ -20,6 +20,12 @@ interface FilterPanelProps {
   onStationSelectAndFetch: (stationName: string) => void;
   onRefresh: () => void;
   isLoading: boolean;
+  showOnlyHubsAndEndpoints: boolean;
+  onShowOnlyHubsAndEndpointsChange: (show: boolean) => void;
+  deutschlandTicketOnly: boolean;
+  onDeutschlandTicketOnlyChange: (only: boolean) => void;
+  trainCategories: TrainCategory[];
+  onTrainCategoriesChange: (categories: TrainCategory[]) => void;
 }
 
 export default function FilterPanel({
@@ -34,6 +40,12 @@ export default function FilterPanel({
   onStationSelectAndFetch,
   onRefresh,
   isLoading,
+  showOnlyHubsAndEndpoints,
+  onShowOnlyHubsAndEndpointsChange,
+  deutschlandTicketOnly,
+  onDeutschlandTicketOnlyChange,
+  trainCategories,
+  onTrainCategoriesChange,
 }: FilterPanelProps) {
 
   const handleRefresh = () => {
@@ -42,6 +54,14 @@ export default function FilterPanel({
 
   const handleStationSearchSelect = (station: SearchStationResult) => {
     onStationSelectAndFetch(station.name);
+  };
+
+  const handleTrainCategoryToggle = (category: TrainCategory) => {
+    if (trainCategories.includes(category)) {
+      onTrainCategoriesChange(trainCategories.filter((c) => c !== category));
+    } else {
+      onTrainCategoriesChange([...trainCategories, category]);
+    }
   };
 
   if (!networkData) {
@@ -63,6 +83,91 @@ export default function FilterPanel({
                 Selected: <span className="font-medium">{selectedStationName}</span>
               </p>
             )}
+          </div>
+
+          {/* Train Filters */}
+          <div className="bg-white rounded-lg p-4 space-y-4">
+            <h3 className="font-bold text-sm">Train Filters</h3>
+
+            {/* Deutschland-Ticket Filter */}
+            <div className="flex items-center">
+              <input
+                type="checkbox"
+                id="deutschlandTicket"
+                checked={deutschlandTicketOnly}
+                onChange={(e) => onDeutschlandTicketOnlyChange(e.target.checked)}
+                className="mr-2 h-4 w-4 text-blue-600"
+              />
+              <label htmlFor="deutschlandTicket" className="text-sm">
+                Deutschland-Ticket only
+              </label>
+            </div>
+
+            {/* Train Category Filters */}
+            <div>
+              <label className="block text-sm font-medium mb-2">
+                Train Categories
+              </label>
+              <div className="space-y-2">
+                <div className="flex items-center">
+                  <input
+                    type="checkbox"
+                    id="categoryRegional"
+                    checked={trainCategories.includes("regional")}
+                    onChange={() => handleTrainCategoryToggle("regional")}
+                    className="mr-2 h-4 w-4 text-blue-600"
+                  />
+                  <label htmlFor="categoryRegional" className="text-sm">
+                    Regional (S, RB, RE)
+                  </label>
+                </div>
+                <div className="flex items-center">
+                  <input
+                    type="checkbox"
+                    id="categoryIntercity"
+                    checked={trainCategories.includes("intercity")}
+                    onChange={() => handleTrainCategoryToggle("intercity")}
+                    className="mr-2 h-4 w-4 text-blue-600"
+                  />
+                  <label htmlFor="categoryIntercity" className="text-sm">
+                    Inter-City (IC, ICE)
+                  </label>
+                </div>
+                <div className="flex items-center">
+                  <input
+                    type="checkbox"
+                    id="categoryOther"
+                    checked={trainCategories.includes("other")}
+                    onChange={() => handleTrainCategoryToggle("other")}
+                    className="mr-2 h-4 w-4 text-blue-600"
+                  />
+                  <label htmlFor="categoryOther" className="text-sm">
+                    Other trains
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Station Display Settings */}
+          <div className="bg-white rounded-lg p-4 space-y-4">
+            <h3 className="font-bold text-sm">Station Display</h3>
+
+            <div className="flex items-center">
+              <input
+                type="checkbox"
+                id="hubsAndEndpoints"
+                checked={showOnlyHubsAndEndpoints}
+                onChange={(e) => onShowOnlyHubsAndEndpointsChange(e.target.checked)}
+                className="mr-2 h-4 w-4 text-blue-600"
+              />
+              <label htmlFor="hubsAndEndpoints" className="text-sm">
+                Show only hubs and endpoints
+              </label>
+            </div>
+            <p className="text-xs text-gray-500">
+              Reduces visual clutter and computation time by only showing major stations
+            </p>
           </div>
 
           {/* Multi-hop settings */}
@@ -193,6 +298,91 @@ export default function FilterPanel({
         <h3 className="font-bold mb-3">Filters</h3>
 
         <div className="space-y-4">
+          {/* Train Filters */}
+          <div className="pb-4 border-b border-gray-200">
+            <h4 className="font-semibold text-sm mb-3">Train Filters</h4>
+
+            {/* Deutschland-Ticket Filter */}
+            <div className="flex items-center mb-3">
+              <input
+                type="checkbox"
+                id="deutschlandTicketData"
+                checked={deutschlandTicketOnly}
+                onChange={(e) => onDeutschlandTicketOnlyChange(e.target.checked)}
+                className="mr-2 h-4 w-4 text-blue-600"
+              />
+              <label htmlFor="deutschlandTicketData" className="text-sm">
+                Deutschland-Ticket only
+              </label>
+            </div>
+
+            {/* Train Category Filters */}
+            <div>
+              <label className="block text-sm font-medium mb-2">
+                Train Categories
+              </label>
+              <div className="space-y-2">
+                <div className="flex items-center">
+                  <input
+                    type="checkbox"
+                    id="categoryRegionalData"
+                    checked={trainCategories.includes("regional")}
+                    onChange={() => handleTrainCategoryToggle("regional")}
+                    className="mr-2 h-4 w-4 text-blue-600"
+                  />
+                  <label htmlFor="categoryRegionalData" className="text-sm">
+                    Regional (S, RB, RE)
+                  </label>
+                </div>
+                <div className="flex items-center">
+                  <input
+                    type="checkbox"
+                    id="categoryIntercityData"
+                    checked={trainCategories.includes("intercity")}
+                    onChange={() => handleTrainCategoryToggle("intercity")}
+                    className="mr-2 h-4 w-4 text-blue-600"
+                  />
+                  <label htmlFor="categoryIntercityData" className="text-sm">
+                    Inter-City (IC, ICE)
+                  </label>
+                </div>
+                <div className="flex items-center">
+                  <input
+                    type="checkbox"
+                    id="categoryOtherData"
+                    checked={trainCategories.includes("other")}
+                    onChange={() => handleTrainCategoryToggle("other")}
+                    className="mr-2 h-4 w-4 text-blue-600"
+                  />
+                  <label htmlFor="categoryOtherData" className="text-sm">
+                    Other trains
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Station Display */}
+          <div className="pb-4 border-b border-gray-200">
+            <h4 className="font-semibold text-sm mb-3">Station Display</h4>
+
+            <div className="flex items-center">
+              <input
+                type="checkbox"
+                id="hubsAndEndpointsData"
+                checked={showOnlyHubsAndEndpoints}
+                onChange={(e) => onShowOnlyHubsAndEndpointsChange(e.target.checked)}
+                className="mr-2 h-4 w-4 text-blue-600"
+              />
+              <label htmlFor="hubsAndEndpointsData" className="text-sm">
+                Show only hubs and endpoints
+              </label>
+            </div>
+            <p className="text-xs text-gray-500 mt-1">
+              Reduces visual clutter by only showing major stations
+            </p>
+          </div>
+
           {/* Multi-hop controls */}
           <div>
             <label className="block text-sm font-medium mb-2">
