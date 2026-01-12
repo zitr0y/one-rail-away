@@ -4,7 +4,7 @@ Data models for the train network visualization system.
 from __future__ import annotations
 
 from datetime import datetime
-from typing import Optional, List, Tuple
+from typing import Optional, List
 from enum import Enum
 from pydantic import BaseModel, Field
 

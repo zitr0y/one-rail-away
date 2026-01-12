@@ -159,8 +159,6 @@ class DBAPIClient:
     async def get_departures(
         self,
         station_id: str,
-        date: Optional[str] = None,
-        time: Optional[str] = None,
         duration: int = 720  # 12 hours by default
     ) -> List[Dict[str, Any]]:
         """

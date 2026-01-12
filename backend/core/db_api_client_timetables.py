@@ -154,9 +154,7 @@ class DBAPIClient:
     async def get_departures(
         self,
         station_id: str,
-        date: Optional[str] = None,
-        time: Optional[str] = None
-    ) -> List[Dict[str, Any]]:
+        ) -> List[Dict[str, Any]]:
         """
         Get departures for a station (wraps get_plan_data).
 
