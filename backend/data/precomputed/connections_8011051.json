@@ -1,0 +1,14 @@
+{
+  "station": {
+    "eva": "8011051",
+    "name": "Apolda",
+    "lat": 51.03094,
+    "lon": 11.526136
+  },
+  "computed_at": "2026-01-12T15:49:14.551355Z",
+  "connections": [],
+  "statistics": {
+    "total_destinations": 0,
+    "avg_speed_kmh": 0
+  }
+}

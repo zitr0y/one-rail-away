@@ -2,6 +2,7 @@
 Deutsche Bahn Timetables API client with proper authentication.
 Uses the official DB API Marketplace Timetables API.
 """
+
 import httpx
 import xmltodict
 import json
@@ -22,7 +23,7 @@ def load_stations_database() -> tuple[Dict[str, Dict], Dict[str, Dict]]:
     name_lookup = {}
 
     try:
-        with open(stations_file, 'r', encoding='utf-8') as f:
+        with open(stations_file, "r", encoding="utf-8") as f:
             data = json.load(f)
             stations = data.get("stations", [])
 
@@ -39,7 +40,9 @@ def load_stations_database() -> tuple[Dict[str, Dict], Dict[str, Dict]]:
                         "name": name,
                         "lat": lat,
                         "lon": lon,
-                        "meta_evas": [str(e) for e in meta_evas]  # Store related EVA numbers
+                        "meta_evas": [
+                            str(e) for e in meta_evas
+                        ],  # Store related EVA numbers
                     }
                     eva_lookup[eva] = station_data
                     # Index by lowercase name for easier lookup
@@ -55,7 +58,7 @@ def load_stations_database() -> tuple[Dict[str, Dict], Dict[str, Dict]]:
                 "eva": "8000098",
                 "name": "Essen Hbf",
                 "lat": 51.4508,
-                "lon": 7.0131
+                "lon": 7.0131,
             }
         }
         return fallback, {"essen hbf": fallback["8000098"]}
@@ -78,7 +81,8 @@ def get_all_related_evas(eva: str) -> List[str]:
         eva: The EVA number to lookup
 
     Returns:
-        List of all related EVA numbers (including the input EVA)
+        List of all related EVA numbers (including the input EVA).
+        Only returns German station EVAs (starting with "80").
     """
     related_evas = {eva}  # Start with the given EVA
 
@@ -88,7 +92,17 @@ def get_all_related_evas(eva: str) -> List[str]:
         meta_evas = station_data.get("meta_evas", [])
         related_evas.update(meta_evas)
 
-    return list(related_evas)
+    # Filter to only include German station EVAs (start with "80")
+    # and EVAs that exist in our stations database
+    german_evas = [
+        e for e in related_evas if e.startswith("80") and e in STATIONS_BY_EVA
+    ]
+
+    # Always include the original EVA if it's German
+    if eva.startswith("80") and eva not in german_evas:
+        german_evas.append(eva)
+
+    return german_evas if german_evas else [eva]
 
 
 class DBAPIClient:
@@ -159,7 +173,7 @@ class DBAPIClient:
     async def get_departures(
         self,
         station_id: str,
-        duration: int = 720  # 12 hours by default
+        duration: int = 720,  # 12 hours by default
     ) -> List[Dict[str, Any]]:
         """
         Get departures for a station using the /plan endpoint.
@@ -189,11 +203,7 @@ class DBAPIClient:
                 url = f"{self.base_url}/plan/{station_id}/{date_str}/{hour_str}"
 
                 async with httpx.AsyncClient() as client:
-                    response = await client.get(
-                        url,
-                        headers=self.headers,
-                        timeout=30.0
-                    )
+                    response = await client.get(url, headers=self.headers, timeout=30.0)
                     response.raise_for_status()
 
                     # Parse XML response
@@ -203,7 +213,9 @@ class DBAPIClient:
                     timetable = data.get("timetable")
                     if timetable and isinstance(timetable, dict) and "s" in timetable:
                         stops_data = timetable["s"]
-                        stops = stops_data if isinstance(stops_data, list) else [stops_data]
+                        stops = (
+                            stops_data if isinstance(stops_data, list) else [stops_data]
+                        )
 
                         for stop in stops:
                             if not stop or not isinstance(stop, dict):
@@ -240,10 +252,7 @@ class DBAPIClient:
         return all_departures
 
     async def get_full_plan(
-        self,
-        station_id: str,
-        date_str: str,
-        hours: List[int] = None
+        self, station_id: str, date_str: str, hours: List[int] = None
     ) -> Dict[str, List[Dict[str, Any]]]:
         """
         Get FULL plan data (both arrivals and departures) for a station.
@@ -283,11 +292,7 @@ class DBAPIClient:
                 url = f"{self.base_url}/plan/{station_id}/{fetch_date_str}/{hour_str}"
 
                 async with httpx.AsyncClient() as client:
-                    response = await client.get(
-                        url,
-                        headers=self.headers,
-                        timeout=30.0
-                    )
+                    response = await client.get(url, headers=self.headers, timeout=30.0)
                     response.raise_for_status()
 
                     # Parse XML response
@@ -297,7 +302,9 @@ class DBAPIClient:
                     timetable = data.get("timetable")
                     if timetable and isinstance(timetable, dict) and "s" in timetable:
                         stops_data = timetable["s"]
-                        stops = stops_data if isinstance(stops_data, list) else [stops_data]
+                        stops = (
+                            stops_data if isinstance(stops_data, list) else [stops_data]
+                        )
 
                         for stop in stops:
                             if not stop or not isinstance(stop, dict):
@@ -344,33 +351,9 @@ class DBAPIClient:
                                 all_departures.append(departure)
 
             except Exception as e:
-                print(f"Error fetching plan for {station_id}/{date_str}/{hour:02d}: {e}")
+                print(
+                    f"Error fetching plan for {station_id}/{date_str}/{hour:02d}: {e}"
+                )
                 continue
 
-        return {
-            "arrivals": all_arrivals,
-            "departures": all_departures
-        }
-
-    async def search_station(self, query: str) -> List[Dict[str, Any]]:
-        """Search for stations in database."""
-        results = []
-        query_lower = query.lower()
-
-        for name, data in STATIONS_BY_NAME.items():
-            if query_lower in name:
-                results.append({
-                    "id": data["eva"],
-                    "name": data["name"],
-                    "lat": data["lat"],
-                    "lon": data["lon"],
-                })
-                # Limit results to avoid overwhelming response
-                if len(results) >= 50:
-                    break
-
-        return results
-
-    async def get_station_by_name(self, name: str) -> Optional[Dict[str, Any]]:
-        """Get station by name."""
-        return await self.get_station_info(name)
+        return {"arrivals": all_arrivals, "departures": all_departures}

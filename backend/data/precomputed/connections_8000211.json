@@ -1,0 +1,57 @@
+{
+  "station": {
+    "eva": "8000211",
+    "name": "Krefeld Hbf",
+    "lat": 51.325717,
+    "lon": 6.569885
+  },
+  "computed_at": "2026-01-12T15:48:55.134907Z",
+  "connections": [
+    {
+      "destination_id": "8000174",
+      "destination_name": "Viersen",
+      "destination_lat": 51.254947,
+      "destination_lon": 6.403896,
+      "train_type": "ICE",
+      "train_number": "1544",
+      "departure_time": "20:08",
+      "arrival_time": "20:19",
+      "travel_time_minutes": 11,
+      "distance_km": 14.0,
+      "aerial_speed_kmh": 76.38,
+      "daily_frequency": 1
+    },
+    {
+      "destination_id": "8000253",
+      "destination_name": "Mönchengladbach Hbf",
+      "destination_lat": 51.196583,
+      "destination_lon": 6.446111,
+      "train_type": "ICE",
+      "train_number": "1544",
+      "departure_time": "20:08",
+      "arrival_time": "20:28",
+      "travel_time_minutes": 20,
+      "distance_km": 16.76,
+      "aerial_speed_kmh": 50.29,
+      "daily_frequency": 1
+    },
+    {
+      "destination_id": "8000207",
+      "destination_name": "Köln Hbf",
+      "destination_lat": 50.94303,
+      "destination_lon": 6.958729,
+      "train_type": "ICE",
+      "train_number": "1544",
+      "departure_time": "20:08",
+      "arrival_time": "21:19",
+      "travel_time_minutes": 71,
+      "distance_km": 50.53,
+      "aerial_speed_kmh": 42.7,
+      "daily_frequency": 1
+    }
+  ],
+  "statistics": {
+    "total_destinations": 3,
+    "avg_speed_kmh": 56.46
+  }
+}

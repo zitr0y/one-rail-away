@@ -1,0 +1,14 @@
+{
+  "station": {
+    "eva": "8000318",
+    "name": "Rheydt Hbf",
+    "lat": 51.163027,
+    "lon": 6.439564
+  },
+  "computed_at": "2026-01-12T15:49:31.498002Z",
+  "connections": [],
+  "statistics": {
+    "total_destinations": 0,
+    "avg_speed_kmh": 0
+  }
+}

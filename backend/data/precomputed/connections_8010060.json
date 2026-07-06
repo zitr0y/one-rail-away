@@ -1,0 +1,99 @@
+{
+  "station": {
+    "eva": "8010060",
+    "name": "Brandenburg Hbf",
+    "lat": 52.400554,
+    "lon": 12.566138
+  },
+  "computed_at": "2026-01-12T15:43:33.031520Z",
+  "connections": [
+    {
+      "destination_id": "8010224",
+      "destination_name": "Magdeburg Hbf",
+      "destination_lat": 52.1305112,
+      "destination_lon": 11.626963,
+      "train_type": "IC",
+      "train_number": "2232",
+      "departure_time": "18:19",
+      "arrival_time": "19:08",
+      "travel_time_minutes": 49,
+      "distance_km": 70.81,
+      "aerial_speed_kmh": 86.71,
+      "daily_frequency": 2
+    },
+    {
+      "destination_id": "8010224",
+      "destination_name": "Magdeburg Hbf",
+      "destination_lat": 52.1305112,
+      "destination_lon": 11.626963,
+      "train_type": "ICE",
+      "train_number": "1540",
+      "departure_time": "00:41",
+      "arrival_time": "01:21",
+      "travel_time_minutes": 40,
+      "distance_km": 70.81,
+      "aerial_speed_kmh": 106.21,
+      "daily_frequency": 2
+    },
+    {
+      "destination_id": "8000049",
+      "destination_name": "Braunschweig Hbf",
+      "destination_lat": 52.252218,
+      "destination_lon": 10.540295,
+      "train_type": "ICE",
+      "train_number": "1540",
+      "departure_time": "00:41",
+      "arrival_time": "02:08",
+      "travel_time_minutes": 87,
+      "distance_km": 139.09,
+      "aerial_speed_kmh": 95.93,
+      "daily_frequency": 1
+    },
+    {
+      "destination_id": "8000152",
+      "destination_name": "Hannover Hbf",
+      "destination_lat": 52.376761,
+      "destination_lon": 9.741021,
+      "train_type": "ICE",
+      "train_number": "1540",
+      "departure_time": "00:41",
+      "arrival_time": "02:42",
+      "travel_time_minutes": 121,
+      "distance_km": 192.34,
+      "aerial_speed_kmh": 95.38,
+      "daily_frequency": 1
+    },
+    {
+      "destination_id": "8000252",
+      "destination_name": "Minden(Westf)",
+      "destination_lat": 52.290138,
+      "destination_lon": 8.934728,
+      "train_type": "ICE",
+      "train_number": "1540",
+      "departure_time": "00:41",
+      "arrival_time": "03:32",
+      "travel_time_minutes": 171,
+      "distance_km": 247.75,
+      "aerial_speed_kmh": 86.93,
+      "daily_frequency": 1
+    },
+    {
+      "destination_id": "8000263",
+      "destination_name": "Münster(Westf)Hbf",
+      "destination_lat": 51.956566,
+      "destination_lon": 7.635715,
+      "train_type": "ICE",
+      "train_number": "1540",
+      "departure_time": "00:41",
+      "arrival_time": "04:34",
+      "travel_time_minutes": 233,
+      "distance_km": 340.79,
+      "aerial_speed_kmh": 87.76,
+      "daily_frequency": 1
+    }
+  ],
+  "statistics": {
+    "total_destinations": 5,
+    "avg_speed_kmh": 93.15
+  }
+}

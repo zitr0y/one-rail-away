@@ -1,0 +1,14 @@
+{
+  "station": {
+    "eva": "8000084",
+    "name": "Düren",
+    "lat": 50.809517,
+    "lon": 6.482451
+  },
+  "computed_at": "2026-01-12T15:44:38.525750Z",
+  "connections": [],
+  "statistics": {
+    "total_destinations": 0,
+    "avg_speed_kmh": 0
+  }
+}

@@ -1,12 +1,14 @@
 """
 Debug script to see what the API actually returns
 """
+
 import asyncio
 import httpx
 import xmltodict
 import json
 from datetime import datetime
 from config import config
+
 
 async def fetch_and_dump():
     """Fetch raw API data and dump it"""
@@ -60,6 +62,7 @@ async def fetch_and_dump():
                 # Look for journey reference
                 if "@l" in dp:
                     print(f"\nJourney reference found: {dp['@l']}")
+
 
 if __name__ == "__main__":
     asyncio.run(fetch_and_dump())

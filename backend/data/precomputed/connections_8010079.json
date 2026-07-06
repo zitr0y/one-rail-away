@@ -1,0 +1,14 @@
+{
+  "station": {
+    "eva": "8010079",
+    "name": "Doberlug-Kirchhain",
+    "lat": 51.620576,
+    "lon": 13.564241
+  },
+  "computed_at": "2026-01-12T15:45:17.657848Z",
+  "connections": [],
+  "statistics": {
+    "total_destinations": 0,
+    "avg_speed_kmh": 0
+  }
+}

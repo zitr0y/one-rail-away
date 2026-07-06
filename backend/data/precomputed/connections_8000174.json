@@ -1,0 +1,43 @@
+{
+  "station": {
+    "eva": "8000174",
+    "name": "Viersen",
+    "lat": 51.254947,
+    "lon": 6.403896
+  },
+  "computed_at": "2026-01-12T15:46:13.791490Z",
+  "connections": [
+    {
+      "destination_id": "8000253",
+      "destination_name": "Mönchengladbach Hbf",
+      "destination_lat": 51.196583,
+      "destination_lon": 6.446111,
+      "train_type": "ICE",
+      "train_number": "1544",
+      "departure_time": "20:20",
+      "arrival_time": "20:28",
+      "travel_time_minutes": 8,
+      "distance_km": 7.13,
+      "aerial_speed_kmh": 53.49,
+      "daily_frequency": 1
+    },
+    {
+      "destination_id": "8000207",
+      "destination_name": "Köln Hbf",
+      "destination_lat": 50.94303,
+      "destination_lon": 6.958729,
+      "train_type": "ICE",
+      "train_number": "1544",
+      "departure_time": "20:20",
+      "arrival_time": "21:19",
+      "travel_time_minutes": 59,
+      "distance_km": 52.1,
+      "aerial_speed_kmh": 52.99,
+      "daily_frequency": 1
+    }
+  ],
+  "statistics": {
+    "total_destinations": 2,
+    "avg_speed_kmh": 53.24
+  }
+}

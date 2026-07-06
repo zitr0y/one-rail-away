@@ -1,0 +1,14 @@
+{
+  "station": {
+    "eva": "8000014",
+    "name": "Aulendorf",
+    "lat": 47.953052,
+    "lon": 9.644046
+  },
+  "computed_at": "2026-01-12T15:49:29.520644Z",
+  "connections": [],
+  "statistics": {
+    "total_destinations": 0,
+    "avg_speed_kmh": 0
+  }
+}

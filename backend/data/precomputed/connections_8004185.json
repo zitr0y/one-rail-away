@@ -1,0 +1,14 @@
+{
+  "station": {
+    "eva": "8004185",
+    "name": "Murnau",
+    "lat": 47.682266,
+    "lon": 11.192628
+  },
+  "computed_at": "2026-01-12T15:39:33.536575Z",
+  "connections": [],
+  "statistics": {
+    "total_destinations": 0,
+    "avg_speed_kmh": 0
+  }
+}

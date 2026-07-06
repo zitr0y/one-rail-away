@@ -1,0 +1,14 @@
+{
+  "station": {
+    "eva": "8010382",
+    "name": "Wittenberge",
+    "lat": 53.003115,
+    "lon": 11.762871
+  },
+  "computed_at": "2026-01-12T15:40:54.072551Z",
+  "connections": [],
+  "statistics": {
+    "total_destinations": 0,
+    "avg_speed_kmh": 0
+  }
+}

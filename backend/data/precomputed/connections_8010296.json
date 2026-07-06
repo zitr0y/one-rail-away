@@ -1,0 +1,14 @@
+{
+  "station": {
+    "eva": "8010296",
+    "name": "Rathenow",
+    "lat": 52.59964,
+    "lon": 12.35484
+  },
+  "computed_at": "2026-01-12T15:43:42.573977Z",
+  "connections": [],
+  "statistics": {
+    "total_destinations": 0,
+    "avg_speed_kmh": 0
+  }
+}

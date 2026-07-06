@@ -1,0 +1,14 @@
+{
+  "station": {
+    "eva": "8003545",
+    "name": "Langenhagen Mitte",
+    "lat": 52.440279,
+    "lon": 9.725427
+  },
+  "computed_at": "2026-01-12T15:52:01.995840Z",
+  "connections": [],
+  "statistics": {
+    "total_destinations": 0,
+    "avg_speed_kmh": 0
+  }
+}

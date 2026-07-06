@@ -2,6 +2,45 @@
  * Type definitions for train network data
  */
 
+// Pre-computed data types
+export interface StationSummary {
+  eva: string;
+  name: string;
+  lat: number;
+  lon: number;
+}
+
+export interface PrecomputedConnection {
+  destination_id: string;
+  destination_name: string;
+  destination_lat: number;
+  destination_lon: number;
+  distance_km: number;
+  travel_time_minutes: number;
+  aerial_speed_kmh: number;
+  train_type: string;
+  train_number: string;
+  departure_time: string;
+  arrival_time: string;
+  daily_frequency: number;
+}
+
+export interface PrecomputedConnectionsResponse {
+  station: {
+    eva: string;
+    name: string;
+    lat: number;
+    lon: number;
+  };
+  connections: PrecomputedConnection[];
+  computed_at: string;
+}
+
+export interface AvailableStationsResponse {
+  stations: StationSummary[];
+  total: number;
+}
+
 export interface Station {
   id: string;
   name: string;

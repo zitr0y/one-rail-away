@@ -1,0 +1,14 @@
+{
+  "station": {
+    "eva": "8000181",
+    "name": "Husum",
+    "lat": 54.4720826,
+    "lon": 9.05595303
+  },
+  "computed_at": "2026-01-12T15:41:39.693751Z",
+  "connections": [],
+  "statistics": {
+    "total_destinations": 0,
+    "avg_speed_kmh": 0
+  }
+}

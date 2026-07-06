@@ -1,0 +1,14 @@
+{
+  "station": {
+    "eva": "8010109",
+    "name": "Flughafen BER - Terminal 5 (Schönefeld)",
+    "lat": 52.391062,
+    "lon": 13.51271
+  },
+  "computed_at": "2026-01-12T15:54:05.197952Z",
+  "connections": [],
+  "statistics": {
+    "total_destinations": 0,
+    "avg_speed_kmh": 0
+  }
+}

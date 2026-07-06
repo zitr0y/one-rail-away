@@ -1,0 +1,14 @@
+{
+  "station": {
+    "eva": "8005609",
+    "name": "Sonthofen",
+    "lat": 47.5132841,
+    "lon": 10.2720934
+  },
+  "computed_at": "2026-01-12T15:39:14.019307Z",
+  "connections": [],
+  "statistics": {
+    "total_destinations": 0,
+    "avg_speed_kmh": 0
+  }
+}

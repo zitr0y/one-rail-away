@@ -1,12 +1,12 @@
 "use client";
 
 /**
- * Main page - Train Network Visualization
+ * Main page - Train Network Visualization (simplified for pre-computed data)
  */
 
 import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
-import type { NetworkData, TrainCategory } from "@/types";
+import type { StationSummary, PrecomputedConnection } from "@/types";
 import { apiClient } from "@/lib/api";
 import FilterPanel from "@/components/FilterPanel";
 
@@ -21,72 +21,67 @@ const TrainNetworkMap = dynamic(() => import("@/components/TrainNetworkMap"), {
 });
 
 export default function Home() {
-  const [networkData, setNetworkData] = useState<NetworkData | null>(null);
+  // Available stations (loaded once on mount)
+  const [availableStations, setAvailableStations] = useState<StationSummary[]>([]);
+  const [isLoadingStations, setIsLoadingStations] = useState(true);
+
+  // Selected station and its connections
+  const [selectedStation, setSelectedStation] = useState<StationSummary | null>(null);
+  const [connections, setConnections] = useState<PrecomputedConnection[] | null>(null);
+
+  // Client-side filter
   const [minSpeed, setMinSpeed] = useState<number>(0);
-  const [isLoading, setIsLoading] = useState<boolean>(false);
+
+  // Error state
   const [error, setError] = useState<string | null>(null);
-  const [maxChangeovers, setMaxChangeovers] = useState<number>(0);
-  const [minTransferTime, setMinTransferTime] = useState<number>(5);
-  const [selectedStationName, setSelectedStationName] = useState<string>("Essen Hbf");
 
-  // New filter states
-  const [showOnlyHubsAndEndpoints, setShowOnlyHubsAndEndpoints] = useState<boolean>(true);
-  const [deutschlandTicketOnly, setDeutschlandTicketOnly] = useState<boolean>(false);
-  const [trainCategories, setTrainCategories] = useState<TrainCategory[]>(["regional", "intercity", "other"]);
-
-  // Auto-refresh when filters change (but only if data already loaded)
+  // Load available stations on mount
   useEffect(() => {
-    if (networkData && !isLoading) {
-      console.log("Filters changed, refreshing network data...");
-      fetchNetworkData(selectedStationName, false);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [
-    showOnlyHubsAndEndpoints,
-    deutschlandTicketOnly,
-    trainCategories
-    // Note: Exclude minSpeed (client-side only), maxChangeovers, minTransferTime (not affecting backend yet)
-  ]);
+    const loadStations = async () => {
+      try {
+        setIsLoadingStations(true);
+        const response = await apiClient.getAvailableStations();
+        setAvailableStations(response.stations || []);
+      } catch (err) {
+        setError(
+          err instanceof Error ? err.message : "Failed to load available stations"
+        );
+        console.error("Error loading stations:", err);
+      } finally {
+        setIsLoadingStations(false);
+      }
+    };
 
-  const fetchNetworkData = async (
-    stationName: string = selectedStationName,
-    forceRefresh: boolean = false
-  ) => {
-    setIsLoading(true);
+    loadStations();
+  }, []);
+
+  // Load connections when station is selected
+  const handleStationSelect = async (station: StationSummary) => {
+    setSelectedStation(station);
     setError(null);
+    setMinSpeed(0); // Reset filter
 
     try {
-      const response = await apiClient.fetchNetwork(
-        stationName,
-        forceRefresh,
-        maxChangeovers,
-        minTransferTime,
-        3, // max routes per destination
-        showOnlyHubsAndEndpoints,
-        deutschlandTicketOnly,
-        trainCategories.length > 0 ? trainCategories : undefined
-      );
-
-      if (response.success && response.data) {
-        setNetworkData(response.data);
-        setSelectedStationName(response.data.origin_station.name);
-        setMinSpeed(0); // Reset filter
-      } else {
-        setError(response.message || "Failed to fetch network data");
-      }
+      const response = await apiClient.getStationConnections(station.eva);
+      setConnections(response.connections);
     } catch (err) {
       setError(
-        err instanceof Error ? err.message : "An unexpected error occurred"
+        err instanceof Error ? err.message : "Failed to load connections"
       );
-      console.error("Error fetching network data:", err);
-    } finally {
-      setIsLoading(false);
+      setConnections(null);
+      console.error("Error loading connections:", err);
     }
   };
 
-  const handleStationSelectAndFetch = (stationName: string) => {
-    setSelectedStationName(stationName);
-    fetchNetworkData(stationName, false);
+  // Handle clicking a station on the map
+  const handleMapStationClick = (stationId: string) => {
+    // Find the station in available stations
+    const station = availableStations.find((s) => s.eva === stationId);
+    if (station) {
+      handleStationSelect(station);
+    } else {
+      setError(`Station ${stationId} is not available in pre-computed data`);
+    }
   };
 
   return (
@@ -94,23 +89,13 @@ export default function Home() {
       {/* Sidebar */}
       <div className="w-96 border-r border-gray-200 flex-shrink-0">
         <FilterPanel
-          networkData={networkData}
+          availableStations={availableStations}
+          selectedStation={selectedStation}
+          onStationSelect={handleStationSelect}
+          isLoadingStations={isLoadingStations}
+          connections={connections}
           minSpeed={minSpeed}
           onMinSpeedChange={setMinSpeed}
-          maxChangeovers={maxChangeovers}
-          onMaxChangeoversChange={setMaxChangeovers}
-          minTransferTime={minTransferTime}
-          onMinTransferTimeChange={setMinTransferTime}
-          selectedStationName={selectedStationName}
-          onStationSelectAndFetch={handleStationSelectAndFetch}
-          onRefresh={() => fetchNetworkData(selectedStationName, false)}
-          isLoading={isLoading}
-          showOnlyHubsAndEndpoints={showOnlyHubsAndEndpoints}
-          onShowOnlyHubsAndEndpointsChange={setShowOnlyHubsAndEndpoints}
-          deutschlandTicketOnly={deutschlandTicketOnly}
-          onDeutschlandTicketOnlyChange={setDeutschlandTicketOnly}
-          trainCategories={trainCategories}
-          onTrainCategoriesChange={setTrainCategories}
         />
       </div>
 
@@ -127,34 +112,33 @@ export default function Home() {
                 onClick={() => setError(null)}
                 className="ml-4 text-red-700 hover:text-red-900"
               >
-                ✕
+                X
               </button>
             </div>
           </div>
         )}
 
-        {networkData ? (
+        {selectedStation && connections ? (
           <TrainNetworkMap
-            networkData={networkData}
+            originStation={selectedStation}
+            connections={connections}
             minSpeed={minSpeed}
-            onStationClick={handleStationSelectAndFetch}
+            onStationClick={handleMapStationClick}
           />
         ) : (
           <div className="h-full w-full flex items-center justify-center bg-gray-100">
-            <div className="text-center">
+            <div className="text-center max-w-md px-4">
               <h1 className="text-3xl font-bold mb-4 text-gray-800">
                 Train Network Speed Map
               </h1>
-              <p className="text-gray-600 mb-8">
+              <p className="text-gray-600 mb-4">
                 Visualize train connections and aerial speeds across Germany
               </p>
-              <button
-                onClick={() => fetchNetworkData()}
-                disabled={isLoading}
-                className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 disabled:bg-gray-400 font-medium"
-              >
-                {isLoading ? "Loading..." : "Load Essen Hbf Network"}
-              </button>
+              <p className="text-sm text-gray-500">
+                {isLoadingStations
+                  ? "Loading available stations..."
+                  : `Select one of ${availableStations.length} stations from the dropdown to begin`}
+              </p>
             </div>
           </div>
         )}

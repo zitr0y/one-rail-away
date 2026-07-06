@@ -6,3 +6,6 @@ python-dotenv
 geopy
 httpx
 xmltodict
+
+
+# mamba activate trainmap

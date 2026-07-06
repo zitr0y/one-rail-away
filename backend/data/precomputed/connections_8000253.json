@@ -1,0 +1,29 @@
+{
+  "station": {
+    "eva": "8000253",
+    "name": "Mönchengladbach Hbf",
+    "lat": 51.196583,
+    "lon": 6.446111
+  },
+  "computed_at": "2026-01-12T15:41:43.271411Z",
+  "connections": [
+    {
+      "destination_id": "8000207",
+      "destination_name": "Köln Hbf",
+      "destination_lat": 50.94303,
+      "destination_lon": 6.958729,
+      "train_type": "ICE",
+      "train_number": "1544",
+      "departure_time": "20:33",
+      "arrival_time": "21:19",
+      "travel_time_minutes": 46,
+      "distance_km": 45.68,
+      "aerial_speed_kmh": 59.58,
+      "daily_frequency": 1
+    }
+  ],
+  "statistics": {
+    "total_destinations": 1,
+    "avg_speed_kmh": 59.58
+  }
+}

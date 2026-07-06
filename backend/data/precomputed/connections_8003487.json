@@ -1,0 +1,14 @@
+{
+  "station": {
+    "eva": "8003487",
+    "name": "Hannover Messe/Laatzen",
+    "lat": 52.316899,
+    "lon": 9.792863
+  },
+  "computed_at": "2026-01-12T15:51:50.379839Z",
+  "connections": [],
+  "statistics": {
+    "total_destinations": 0,
+    "avg_speed_kmh": 0
+  }
+}

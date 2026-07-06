@@ -1,0 +1,99 @@
+{
+  "station": {
+    "eva": "8000800",
+    "name": "Norden",
+    "lat": 53.588196,
+    "lon": 7.218913
+  },
+  "computed_at": "2026-01-12T15:52:54.641788Z",
+  "connections": [
+    {
+      "destination_id": "8004449",
+      "destination_name": "Norddeich",
+      "destination_lat": 53.621579,
+      "destination_lon": 7.160824,
+      "train_type": "IC",
+      "train_number": "2202",
+      "departure_time": "16:05",
+      "arrival_time": "16:16",
+      "travel_time_minutes": 11,
+      "distance_km": 5.35,
+      "aerial_speed_kmh": 29.17,
+      "daily_frequency": 3
+    },
+    {
+      "destination_id": "8007768",
+      "destination_name": "Norddeich Mole",
+      "destination_lat": 53.624315,
+      "destination_lon": 7.158806,
+      "train_type": "IC",
+      "train_number": "2202",
+      "departure_time": "16:05",
+      "arrival_time": "16:16",
+      "travel_time_minutes": 11,
+      "distance_km": 5.66,
+      "aerial_speed_kmh": 30.85,
+      "daily_frequency": 3
+    },
+    {
+      "destination_id": "8007768",
+      "destination_name": "Norddeich Mole",
+      "destination_lat": 53.624315,
+      "destination_lon": 7.158806,
+      "train_type": "IC",
+      "train_number": "1140",
+      "departure_time": "17:51",
+      "arrival_time": "18:02",
+      "travel_time_minutes": 11,
+      "distance_km": 5.66,
+      "aerial_speed_kmh": 30.85,
+      "daily_frequency": 3
+    },
+    {
+      "destination_id": "8004449",
+      "destination_name": "Norddeich",
+      "destination_lat": 53.621579,
+      "destination_lon": 7.160824,
+      "train_type": "IC",
+      "train_number": "2036",
+      "departure_time": "20:08",
+      "arrival_time": "20:20",
+      "travel_time_minutes": 12,
+      "distance_km": 5.35,
+      "aerial_speed_kmh": 26.73,
+      "daily_frequency": 3
+    },
+    {
+      "destination_id": "8007768",
+      "destination_name": "Norddeich Mole",
+      "destination_lat": 53.624315,
+      "destination_lon": 7.158806,
+      "train_type": "IC",
+      "train_number": "2036",
+      "departure_time": "20:08",
+      "arrival_time": "20:20",
+      "travel_time_minutes": 12,
+      "distance_km": 5.66,
+      "aerial_speed_kmh": 28.28,
+      "daily_frequency": 3
+    },
+    {
+      "destination_id": "8004449",
+      "destination_name": "Norddeich",
+      "destination_lat": 53.621579,
+      "destination_lon": 7.160824,
+      "train_type": "IC",
+      "train_number": "2034",
+      "departure_time": "22:08",
+      "arrival_time": "22:14",
+      "travel_time_minutes": 6,
+      "distance_km": 5.35,
+      "aerial_speed_kmh": 53.47,
+      "daily_frequency": 3
+    }
+  ],
+  "statistics": {
+    "total_destinations": 2,
+    "avg_speed_kmh": 33.23
+  }
+}

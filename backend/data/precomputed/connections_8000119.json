@@ -1,0 +1,14 @@
+{
+  "station": {
+    "eva": "8000119",
+    "name": "Geltendorf",
+    "lat": 48.1059912,
+    "lon": 11.0374552
+  },
+  "computed_at": "2026-01-12T15:48:44.448793Z",
+  "connections": [],
+  "statistics": {
+    "total_destinations": 0,
+    "avg_speed_kmh": 0
+  }
+}

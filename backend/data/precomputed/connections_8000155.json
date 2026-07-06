@@ -1,0 +1,14 @@
+{
+  "station": {
+    "eva": "8000155",
+    "name": "Heide(Holst)",
+    "lat": 54.193563,
+    "lon": 9.101029
+  },
+  "computed_at": "2026-01-12T15:52:20.968063Z",
+  "connections": [],
+  "statistics": {
+    "total_destinations": 0,
+    "avg_speed_kmh": 0
+  }
+}

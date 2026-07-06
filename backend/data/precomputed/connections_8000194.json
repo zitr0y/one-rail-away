@@ -1,0 +1,14 @@
+{
+  "station": {
+    "eva": "8000194",
+    "name": "Kaufbeuren",
+    "lat": 47.875432,
+    "lon": 10.629496
+  },
+  "computed_at": "2026-01-12T15:49:27.617899Z",
+  "connections": [],
+  "statistics": {
+    "total_destinations": 0,
+    "avg_speed_kmh": 0
+  }
+}

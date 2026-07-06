@@ -1,0 +1,99 @@
+{
+  "station": {
+    "eva": "8000082",
+    "name": "Düsseldorf Flughafen",
+    "lat": 51.292009,
+    "lon": 6.786836
+  },
+  "computed_at": "2026-01-12T15:50:30.399274Z",
+  "connections": [
+    {
+      "destination_id": "8000085",
+      "destination_name": "Düsseldorf Hbf",
+      "destination_lat": 51.219962,
+      "destination_lon": 6.794319,
+      "train_type": "ICE",
+      "train_number": "921",
+      "departure_time": "02:51",
+      "arrival_time": "03:00",
+      "travel_time_minutes": 9,
+      "distance_km": 8.03,
+      "aerial_speed_kmh": 53.55,
+      "daily_frequency": 1
+    },
+    {
+      "destination_id": "8000207",
+      "destination_name": "Köln Hbf",
+      "destination_lat": 50.94303,
+      "destination_lon": 6.958729,
+      "train_type": "ICE",
+      "train_number": "921",
+      "departure_time": "02:51",
+      "arrival_time": "03:26",
+      "travel_time_minutes": 35,
+      "distance_km": 40.65,
+      "aerial_speed_kmh": 69.68,
+      "daily_frequency": 1
+    },
+    {
+      "destination_id": "8000044",
+      "destination_name": "Bonn Hbf",
+      "destination_lat": 50.732008,
+      "destination_lon": 7.097136,
+      "train_type": "ICE",
+      "train_number": "921",
+      "departure_time": "02:51",
+      "arrival_time": "04:11",
+      "travel_time_minutes": 80,
+      "distance_km": 66.0,
+      "aerial_speed_kmh": 49.5,
+      "daily_frequency": 1
+    },
+    {
+      "destination_id": "8000310",
+      "destination_name": "Remagen",
+      "destination_lat": 50.5770029,
+      "destination_lon": 7.23026991,
+      "train_type": "ICE",
+      "train_number": "921",
+      "departure_time": "02:51",
+      "arrival_time": "04:25",
+      "travel_time_minutes": 94,
+      "distance_km": 85.43,
+      "aerial_speed_kmh": 54.53,
+      "daily_frequency": 1
+    },
+    {
+      "destination_id": "8000331",
+      "destination_name": "Andernach",
+      "destination_lat": 50.434542,
+      "destination_lon": 7.404839,
+      "train_type": "ICE",
+      "train_number": "921",
+      "departure_time": "02:51",
+      "arrival_time": "04:40",
+      "travel_time_minutes": 109,
+      "distance_km": 104.84,
+      "aerial_speed_kmh": 57.71,
+      "daily_frequency": 1
+    },
+    {
+      "destination_id": "8000206",
+      "destination_name": "Koblenz Hbf",
+      "destination_lat": 50.350929,
+      "destination_lon": 7.588345,
+      "train_type": "ICE",
+      "train_number": "921",
+      "departure_time": "02:51",
+      "arrival_time": "04:57",
+      "travel_time_minutes": 126,
+      "distance_km": 118.95,
+      "aerial_speed_kmh": 56.64,
+      "daily_frequency": 1
+    }
+  ],
+  "statistics": {
+    "total_destinations": 6,
+    "avg_speed_kmh": 56.94
+  }
+}

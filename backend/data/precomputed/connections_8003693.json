@@ -1,0 +1,141 @@
+{
+  "station": {
+    "eva": "8003693",
+    "name": "Lindau-Reutin",
+    "lat": 47.552384,
+    "lon": 9.703292
+  },
+  "computed_at": "2026-01-12T15:49:25.749166Z",
+  "connections": [
+    {
+      "destination_id": "8000249",
+      "destination_name": "Memmingen",
+      "destination_lat": 47.985581,
+      "destination_lon": 10.186853,
+      "train_type": "ECE",
+      "train_number": "195",
+      "departure_time": "17:10",
+      "arrival_time": "17:58",
+      "travel_time_minutes": 48,
+      "distance_km": 60.28,
+      "aerial_speed_kmh": 75.35,
+      "daily_frequency": 3
+    },
+    {
+      "destination_id": "8000057",
+      "destination_name": "Buchloe",
+      "destination_lat": 48.033723,
+      "destination_lon": 10.716217,
+      "train_type": "ECE",
+      "train_number": "195",
+      "departure_time": "17:10",
+      "arrival_time": "18:23",
+      "travel_time_minutes": 73,
+      "distance_km": 92.86,
+      "aerial_speed_kmh": 76.33,
+      "daily_frequency": 3
+    },
+    {
+      "destination_id": "8098261",
+      "destination_name": "München Hbf Gl.27-36",
+      "destination_lat": 48.141529,
+      "destination_lon": 11.556708,
+      "train_type": "ECE",
+      "train_number": "195",
+      "departure_time": "17:10",
+      "arrival_time": "19:04",
+      "travel_time_minutes": 114,
+      "distance_km": 153.4,
+      "aerial_speed_kmh": 80.74,
+      "daily_frequency": 3
+    },
+    {
+      "destination_id": "8000249",
+      "destination_name": "Memmingen",
+      "destination_lat": 47.985581,
+      "destination_lon": 10.186853,
+      "train_type": "ECE",
+      "train_number": "197",
+      "departure_time": "19:10",
+      "arrival_time": "19:58",
+      "travel_time_minutes": 48,
+      "distance_km": 60.28,
+      "aerial_speed_kmh": 75.35,
+      "daily_frequency": 3
+    },
+    {
+      "destination_id": "8000057",
+      "destination_name": "Buchloe",
+      "destination_lat": 48.033723,
+      "destination_lon": 10.716217,
+      "train_type": "ECE",
+      "train_number": "197",
+      "departure_time": "19:10",
+      "arrival_time": "20:23",
+      "travel_time_minutes": 73,
+      "distance_km": 92.86,
+      "aerial_speed_kmh": 76.33,
+      "daily_frequency": 3
+    },
+    {
+      "destination_id": "8098261",
+      "destination_name": "München Hbf Gl.27-36",
+      "destination_lat": 48.141529,
+      "destination_lon": 11.556708,
+      "train_type": "ECE",
+      "train_number": "197",
+      "departure_time": "19:10",
+      "arrival_time": "21:04",
+      "travel_time_minutes": 114,
+      "distance_km": 153.4,
+      "aerial_speed_kmh": 80.74,
+      "daily_frequency": 3
+    },
+    {
+      "destination_id": "8000249",
+      "destination_name": "Memmingen",
+      "destination_lat": 47.985581,
+      "destination_lon": 10.186853,
+      "train_type": "ECE",
+      "train_number": "199",
+      "departure_time": "21:10",
+      "arrival_time": "21:58",
+      "travel_time_minutes": 48,
+      "distance_km": 60.28,
+      "aerial_speed_kmh": 75.35,
+      "daily_frequency": 3
+    },
+    {
+      "destination_id": "8000057",
+      "destination_name": "Buchloe",
+      "destination_lat": 48.033723,
+      "destination_lon": 10.716217,
+      "train_type": "ECE",
+      "train_number": "199",
+      "departure_time": "21:10",
+      "arrival_time": "22:23",
+      "travel_time_minutes": 73,
+      "distance_km": 92.86,
+      "aerial_speed_kmh": 76.33,
+      "daily_frequency": 3
+    },
+    {
+      "destination_id": "8098261",
+      "destination_name": "München Hbf Gl.27-36",
+      "destination_lat": 48.141529,
+      "destination_lon": 11.556708,
+      "train_type": "ECE",
+      "train_number": "199",
+      "departure_time": "21:10",
+      "arrival_time": "23:04",
+      "travel_time_minutes": 114,
+      "distance_km": 153.4,
+      "aerial_speed_kmh": 80.74,
+      "daily_frequency": 3
+    }
+  ],
+  "statistics": {
+    "total_destinations": 3,
+    "avg_speed_kmh": 77.47
+  }
+}

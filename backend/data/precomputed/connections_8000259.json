@@ -1,0 +1,14 @@
+{
+  "station": {
+    "eva": "8000259",
+    "name": "Mülheim(Ruhr)Hbf",
+    "lat": 51.431342,
+    "lon": 6.88651
+  },
+  "computed_at": "2026-01-12T15:46:26.759168Z",
+  "connections": [],
+  "statistics": {
+    "total_destinations": 0,
+    "avg_speed_kmh": 0
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "station": {
+    "eva": "8000176",
+    "name": "Homburg(Saar)Hbf",
+    "lat": 49.328082,
+    "lon": 7.337035
+  },
+  "computed_at": "2026-01-12T15:51:32.554666Z",
+  "connections": [
+    {
+      "destination_id": "8000323",
+      "destination_name": "Saarbrücken Hbf",
+      "destination_lat": 49.241065,
+      "destination_lon": 6.991021,
+      "train_type": "ICE",
+      "train_number": "562",
+      "departure_time": "18:56",
+      "arrival_time": "19:17",
+      "travel_time_minutes": 21,
+      "distance_km": 26.97,
+      "aerial_speed_kmh": 77.06,
+      "daily_frequency": 3
+    },
+    {
+      "destination_id": "8000323",
+      "destination_name": "Saarbrücken Hbf",
+      "destination_lat": 49.241065,
+      "destination_lon": 6.991021,
+      "train_type": "ICE",
+      "train_number": "1090",
+      "departure_time": "21:56",
+      "arrival_time": "22:16",
+      "travel_time_minutes": 20,
+      "distance_km": 26.97,
+      "aerial_speed_kmh": 80.91,
+      "daily_frequency": 3
+    },
+    {
+      "destination_id": "8000323",
+      "destination_name": "Saarbrücken Hbf",
+      "destination_lat": 49.241065,
+      "destination_lon": 6.991021,
+      "train_type": "ICE",
+      "train_number": "935",
+      "departure_time": "23:06",
+      "arrival_time": "23:29",
+      "travel_time_minutes": 23,
+      "distance_km": 26.97,
+      "aerial_speed_kmh": 70.36,
+      "daily_frequency": 3
+    }
+  ],
+  "statistics": {
+    "total_destinations": 1,
+    "avg_speed_kmh": 76.11
+  }
+}

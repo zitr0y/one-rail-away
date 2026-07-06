@@ -1,0 +1,14 @@
+{
+  "station": {
+    "eva": "8001839",
+    "name": "Erkelenz",
+    "lat": 51.0765972,
+    "lon": 6.32163405
+  },
+  "computed_at": "2026-01-12T15:45:48.444146Z",
+  "connections": [],
+  "statistics": {
+    "total_destinations": 0,
+    "avg_speed_kmh": 0
+  }
+}

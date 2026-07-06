@@ -1,0 +1,14 @@
+{
+  "station": {
+    "eva": "800802",
+    "name": "Durlach Bahnhof, Karlsruhe",
+    "lat": 49.001117,
+    "lon": 8.462444
+  },
+  "computed_at": "2026-01-12T15:54:08.939551Z",
+  "connections": [],
+  "statistics": {
+    "total_destinations": 0,
+    "avg_speed_kmh": 0
+  }
+}

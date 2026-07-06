@@ -1,0 +1,113 @@
+{
+  "station": {
+    "eva": "8012763",
+    "name": "Ribnitz-Damgarten West",
+    "lat": 54.239176,
+    "lon": 12.436965
+  },
+  "computed_at": "2026-01-12T15:49:11.108724Z",
+  "connections": [
+    {
+      "destination_id": "8010355",
+      "destination_name": "Velgast",
+      "destination_lat": 54.277316,
+      "destination_lon": 12.803137,
+      "train_type": "IC",
+      "train_number": "2262",
+      "departure_time": "16:13",
+      "arrival_time": "16:25",
+      "travel_time_minutes": 12,
+      "distance_km": 24.24,
+      "aerial_speed_kmh": 121.19,
+      "daily_frequency": 2
+    },
+    {
+      "destination_id": "8010338",
+      "destination_name": "Stralsund Hbf",
+      "destination_lat": 54.308626,
+      "destination_lon": 13.077321,
+      "train_type": "IC",
+      "train_number": "2262",
+      "departure_time": "16:13",
+      "arrival_time": "16:41",
+      "travel_time_minutes": 28,
+      "distance_km": 42.43,
+      "aerial_speed_kmh": 90.91,
+      "daily_frequency": 2
+    },
+    {
+      "destination_id": "8010033",
+      "destination_name": "Bergen auf Rügen",
+      "destination_lat": 54.4205,
+      "destination_lon": 13.417821,
+      "train_type": "IC",
+      "train_number": "2262",
+      "departure_time": "16:13",
+      "arrival_time": "17:09",
+      "travel_time_minutes": 56,
+      "distance_km": 66.93,
+      "aerial_speed_kmh": 71.71,
+      "daily_frequency": 1
+    },
+    {
+      "destination_id": "8011191",
+      "destination_name": "Ostseebad Binz",
+      "destination_lat": 54.404819,
+      "destination_lon": 13.600507,
+      "train_type": "IC",
+      "train_number": "2262",
+      "departure_time": "16:13",
+      "arrival_time": "17:42",
+      "travel_time_minutes": 89,
+      "distance_km": 77.92,
+      "aerial_speed_kmh": 52.53,
+      "daily_frequency": 1
+    },
+    {
+      "destination_id": "8010355",
+      "destination_name": "Velgast",
+      "destination_lat": 54.277316,
+      "destination_lon": 12.803137,
+      "train_type": "IC",
+      "train_number": "2264",
+      "departure_time": "20:10",
+      "arrival_time": "20:32",
+      "travel_time_minutes": 22,
+      "distance_km": 24.24,
+      "aerial_speed_kmh": 66.1,
+      "daily_frequency": 2
+    },
+    {
+      "destination_id": "8010338",
+      "destination_name": "Stralsund Hbf",
+      "destination_lat": 54.308626,
+      "destination_lon": 13.077321,
+      "train_type": "IC",
+      "train_number": "2264",
+      "departure_time": "20:10",
+      "arrival_time": "20:43",
+      "travel_time_minutes": 33,
+      "distance_km": 42.43,
+      "aerial_speed_kmh": 77.14,
+      "daily_frequency": 2
+    },
+    {
+      "destination_id": "8010139",
+      "destination_name": "Greifswald",
+      "destination_lat": 54.092923,
+      "destination_lon": 13.370262,
+      "train_type": "IC",
+      "train_number": "2264",
+      "departure_time": "20:10",
+      "arrival_time": "21:04",
+      "travel_time_minutes": 54,
+      "distance_km": 63.09,
+      "aerial_speed_kmh": 70.1,
+      "daily_frequency": 1
+    }
+  ],
+  "statistics": {
+    "total_destinations": 5,
+    "avg_speed_kmh": 78.53
+  }
+}

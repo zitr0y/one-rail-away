@@ -1,0 +1,14 @@
+{
+  "station": {
+    "eva": "8006369",
+    "name": "Westerland(Sylt)",
+    "lat": 54.906839,
+    "lon": 8.310925
+  },
+  "computed_at": "2026-01-12T15:43:27.248465Z",
+  "connections": [],
+  "statistics": {
+    "total_destinations": 0,
+    "avg_speed_kmh": 0
+  }
+}

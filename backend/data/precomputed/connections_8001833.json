@@ -1,0 +1,14 @@
+{
+  "station": {
+    "eva": "8001833",
+    "name": "Ergenzingen",
+    "lat": 48.489534,
+    "lon": 8.809857
+  },
+  "computed_at": "2026-01-12T15:45:03.464888Z",
+  "connections": [],
+  "statistics": {
+    "total_destinations": 0,
+    "avg_speed_kmh": 0
+  }
+}

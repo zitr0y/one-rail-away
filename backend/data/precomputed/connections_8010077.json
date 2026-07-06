@@ -1,0 +1,14 @@
+{
+  "station": {
+    "eva": "8010077",
+    "name": "Dessau Hbf",
+    "lat": 51.839865,
+    "lon": 12.234945
+  },
+  "computed_at": "2026-01-12T15:41:16.414076Z",
+  "connections": [],
+  "statistics": {
+    "total_destinations": 0,
+    "avg_speed_kmh": 0
+  }
+}

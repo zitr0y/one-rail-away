@@ -1,0 +1,14 @@
+{
+  "station": {
+    "eva": "8000276",
+    "name": "Neuwied",
+    "lat": 50.431466,
+    "lon": 7.473132
+  },
+  "computed_at": "2026-01-12T15:44:32.046894Z",
+  "connections": [],
+  "statistics": {
+    "total_destinations": 0,
+    "avg_speed_kmh": 0
+  }
+}

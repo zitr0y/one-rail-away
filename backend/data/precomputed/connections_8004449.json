@@ -1,0 +1,43 @@
+{
+  "station": {
+    "eva": "8004449",
+    "name": "Norddeich",
+    "lat": 53.621579,
+    "lon": 7.160824
+  },
+  "computed_at": "2026-01-12T15:45:15.992070Z",
+  "connections": [
+    {
+      "destination_id": "8007768",
+      "destination_name": "Norddeich Mole",
+      "destination_lat": 53.624315,
+      "destination_lon": 7.158806,
+      "train_type": "IC",
+      "train_number": "2202",
+      "departure_time": "16:13",
+      "arrival_time": "16:16",
+      "travel_time_minutes": 3,
+      "distance_km": 0.33,
+      "aerial_speed_kmh": 6.65,
+      "daily_frequency": 2
+    },
+    {
+      "destination_id": "8007768",
+      "destination_name": "Norddeich Mole",
+      "destination_lat": 53.624315,
+      "destination_lon": 7.158806,
+      "train_type": "IC",
+      "train_number": "2036",
+      "departure_time": "20:16",
+      "arrival_time": "20:20",
+      "travel_time_minutes": 4,
+      "distance_km": 0.33,
+      "aerial_speed_kmh": 4.99,
+      "daily_frequency": 2
+    }
+  ],
+  "statistics": {
+    "total_destinations": 1,
+    "avg_speed_kmh": 5.82
+  }
+}

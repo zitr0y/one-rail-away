@@ -1,0 +1,14 @@
+{
+  "station": {
+    "eva": "8010324",
+    "name": "Schwerin Hbf",
+    "lat": 53.634739,
+    "lon": 11.407455
+  },
+  "computed_at": "2026-01-12T15:52:58.567973Z",
+  "connections": [],
+  "statistics": {
+    "total_destinations": 0,
+    "avg_speed_kmh": 0
+  }
+}

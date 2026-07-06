@@ -1,0 +1,113 @@
+{
+  "station": {
+    "eva": "8010066",
+    "name": "Bützow",
+    "lat": 53.8371137,
+    "lon": 11.9981942
+  },
+  "computed_at": "2026-01-12T15:45:20.120686Z",
+  "connections": [
+    {
+      "destination_id": "8010018",
+      "destination_name": "Bad Kleinen",
+      "destination_lat": 53.766974,
+      "destination_lon": 11.466925,
+      "train_type": "IC",
+      "train_number": "2265",
+      "departure_time": "17:19",
+      "arrival_time": "17:47",
+      "travel_time_minutes": 28,
+      "distance_km": 35.86,
+      "aerial_speed_kmh": 76.85,
+      "daily_frequency": 1
+    },
+    {
+      "destination_id": "8000237",
+      "destination_name": "Lübeck Hbf",
+      "destination_lat": 53.867547,
+      "destination_lon": 10.669821,
+      "train_type": "IC",
+      "train_number": "2265",
+      "departure_time": "17:19",
+      "arrival_time": "18:41",
+      "travel_time_minutes": 82,
+      "distance_km": 87.48,
+      "aerial_speed_kmh": 64.01,
+      "daily_frequency": 1
+    },
+    {
+      "destination_id": "8002549",
+      "destination_name": "Hamburg Hbf",
+      "destination_lat": 53.552736,
+      "destination_lon": 10.006909,
+      "train_type": "IC",
+      "train_number": "2265",
+      "departure_time": "17:19",
+      "arrival_time": "19:37",
+      "travel_time_minutes": 138,
+      "distance_km": 135.28,
+      "aerial_speed_kmh": 58.82,
+      "daily_frequency": 1
+    },
+    {
+      "destination_id": "8010304",
+      "destination_name": "Rostock Hbf",
+      "destination_lat": 54.078246,
+      "destination_lon": 12.131079,
+      "train_type": "IC",
+      "train_number": "2264",
+      "departure_time": "19:00",
+      "arrival_time": "19:29",
+      "travel_time_minutes": 29,
+      "distance_km": 28.22,
+      "aerial_speed_kmh": 58.39,
+      "daily_frequency": 1
+    },
+    {
+      "destination_id": "8010355",
+      "destination_name": "Velgast",
+      "destination_lat": 54.277316,
+      "destination_lon": 12.803137,
+      "train_type": "IC",
+      "train_number": "2264",
+      "departure_time": "19:00",
+      "arrival_time": "20:32",
+      "travel_time_minutes": 92,
+      "distance_km": 71.97,
+      "aerial_speed_kmh": 46.93,
+      "daily_frequency": 1
+    },
+    {
+      "destination_id": "8010338",
+      "destination_name": "Stralsund Hbf",
+      "destination_lat": 54.308626,
+      "destination_lon": 13.077321,
+      "train_type": "IC",
+      "train_number": "2264",
+      "departure_time": "19:00",
+      "arrival_time": "20:43",
+      "travel_time_minutes": 103,
+      "distance_km": 88.0,
+      "aerial_speed_kmh": 51.26,
+      "daily_frequency": 1
+    },
+    {
+      "destination_id": "8010139",
+      "destination_name": "Greifswald",
+      "destination_lat": 54.092923,
+      "destination_lon": 13.370262,
+      "train_type": "IC",
+      "train_number": "2264",
+      "departure_time": "19:00",
+      "arrival_time": "21:04",
+      "travel_time_minutes": 124,
+      "distance_km": 94.44,
+      "aerial_speed_kmh": 45.7,
+      "daily_frequency": 1
+    }
+  ],
+  "statistics": {
+    "total_destinations": 7,
+    "avg_speed_kmh": 57.42
+  }
+}

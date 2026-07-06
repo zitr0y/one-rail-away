@@ -1,0 +1,14 @@
+{
+  "station": {
+    "eva": "8000077",
+    "name": "Donaueschingen",
+    "lat": 47.9478993,
+    "lon": 8.49878848
+  },
+  "computed_at": "2026-01-12T15:51:17.614447Z",
+  "connections": [],
+  "statistics": {
+    "total_destinations": 0,
+    "avg_speed_kmh": 0
+  }
+}

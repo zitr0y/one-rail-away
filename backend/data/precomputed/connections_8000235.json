@@ -1,0 +1,14 @@
+{
+  "station": {
+    "eva": "8000235",
+    "name": "Ludwigsburg",
+    "lat": 48.891862,
+    "lon": 9.18542
+  },
+  "computed_at": "2026-01-12T15:41:02.107803Z",
+  "connections": [],
+  "statistics": {
+    "total_destinations": 0,
+    "avg_speed_kmh": 0
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "station": {
+    "eva": "8000086",
+    "name": "Duisburg Hbf",
+    "lat": 51.429785,
+    "lon": 6.775903
+  },
+  "computed_at": "2026-01-12T15:38:29.502704Z",
+  "connections": [
+    {
+      "destination_id": "8000211",
+      "destination_name": "Krefeld Hbf",
+      "destination_lat": 51.325717,
+      "destination_lon": 6.569885,
+      "train_type": "ICE",
+      "train_number": "1544",
+      "departure_time": "19:38",
+      "arrival_time": "20:04",
+      "travel_time_minutes": 26,
+      "distance_km": 18.43,
+      "aerial_speed_kmh": 42.54,
+      "daily_frequency": 1
+    },
+    {
+      "destination_id": "8000174",
+      "destination_name": "Viersen",
+      "destination_lat": 51.254947,
+      "destination_lon": 6.403896,
+      "train_type": "ICE",
+      "train_number": "1544",
+      "departure_time": "19:38",
+      "arrival_time": "20:19",
+      "travel_time_minutes": 41,
+      "distance_km": 32.41,
+      "aerial_speed_kmh": 47.43,
+      "daily_frequency": 1
+    },
+    {
+      "destination_id": "8000253",
+      "destination_name": "Mönchengladbach Hbf",
+      "destination_lat": 51.196583,
+      "destination_lon": 6.446111,
+      "train_type": "ICE",
+      "train_number": "1544",
+      "departure_time": "19:38",
+      "arrival_time": "20:28",
+      "travel_time_minutes": 50,
+      "distance_km": 34.67,
+      "aerial_speed_kmh": 41.6,
+      "daily_frequency": 1
+    },
+    {
+      "destination_id": "8000207",
+      "destination_name": "Köln Hbf",
+      "destination_lat": 50.94303,
+      "destination_lon": 6.958729,
+      "train_type": "ICE",
+      "train_number": "1544",
+      "departure_time": "19:38",
+      "arrival_time": "21:19",
+      "travel_time_minutes": 101,
+      "distance_km": 55.64,
+      "aerial_speed_kmh": 33.05,
+      "daily_frequency": 2
+    },
+    {
+      "destination_id": "8000085",
+      "destination_name": "Düsseldorf Hbf",
+      "destination_lat": 51.219962,
+      "destination_lon": 6.794319,
+      "train_type": "ICE",
+      "train_number": "544",
+      "departure_time": "20:59",
+      "arrival_time": "21:20",
+      "travel_time_minutes": 21,
+      "distance_km": 23.38,
+      "aerial_speed_kmh": 66.8,
+      "daily_frequency": 1
+    },
+    {
+      "destination_id": "8000207",
+      "destination_name": "Köln Hbf",
+      "destination_lat": 50.94303,
+      "destination_lon": 6.958729,
+      "train_type": "ICE",
+      "train_number": "544",
+      "departure_time": "20:59",
+      "arrival_time": "21:45",
+      "travel_time_minutes": 46,
+      "distance_km": 55.64,
+      "aerial_speed_kmh": 72.57,
+      "daily_frequency": 2
+    },
+    {
+      "destination_id": "8000080",
+      "destination_name": "Dortmund Hbf",
+      "destination_lat": 51.517896,
+      "destination_lon": 7.45929,
+      "train_type": "ICE",
+      "train_number": "526",
+      "departure_time": "23:15",
+      "arrival_time": "00:00",
+      "travel_time_minutes": 45,
+      "distance_km": 48.48,
+      "aerial_speed_kmh": 64.64,
+      "daily_frequency": 1
+    }
+  ],
+  "statistics": {
+    "total_destinations": 6,
+    "avg_speed_kmh": 52.66
+  }
+}

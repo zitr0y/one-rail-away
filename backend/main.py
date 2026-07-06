@@ -1,6 +1,7 @@
 """
 Main entry point for the train network visualization backend.
 """
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from config import config
@@ -12,13 +13,16 @@ config.validate()
 app = FastAPI(
     title="Train Network Visualization API",
     description="API for visualizing train network connections from Essen HBF",
-    version="0.1.0"
+    version="0.1.0",
 )
 
 # Add CORS middleware for frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://localhost:3001"],  # Next.js dev server
+    allow_origins=[
+        "http://localhost:3000",
+        "http://localhost:3001",
+    ],  # Next.js dev server
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -34,7 +38,7 @@ async def root():
     return {
         "message": "Train Network Visualization API",
         "status": "running",
-        "docs": "/docs"
+        "docs": "/docs",
     }
 
 
@@ -46,4 +50,5 @@ async def health_check():
 
 if __name__ == "__main__":
     import uvicorn
+
     uvicorn.run(app, host="0.0.0.0", port=8000)

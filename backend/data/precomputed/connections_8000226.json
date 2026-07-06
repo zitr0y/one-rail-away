@@ -1,0 +1,14 @@
+{
+  "station": {
+    "eva": "8000226",
+    "name": "Lehrte",
+    "lat": 52.376722,
+    "lon": 9.974599
+  },
+  "computed_at": "2026-01-12T15:37:02.823721Z",
+  "connections": [],
+  "statistics": {
+    "total_destinations": 0,
+    "avg_speed_kmh": 0
+  }
+}

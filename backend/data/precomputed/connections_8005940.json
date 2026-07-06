@@ -1,0 +1,14 @@
+{
+  "station": {
+    "eva": "8005940",
+    "name": "Übersee",
+    "lat": 47.822083,
+    "lon": 12.487401
+  },
+  "computed_at": "2026-01-12T15:54:17.654735Z",
+  "connections": [],
+  "statistics": {
+    "total_destinations": 0,
+    "avg_speed_kmh": 0
+  }
+}

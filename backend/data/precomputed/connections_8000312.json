@@ -1,0 +1,14 @@
+{
+  "station": {
+    "eva": "8000312",
+    "name": "Rendsburg",
+    "lat": 54.302262,
+    "lon": 9.671134
+  },
+  "computed_at": "2026-01-12T15:45:06.233434Z",
+  "connections": [],
+  "statistics": {
+    "total_destinations": 0,
+    "avg_speed_kmh": 0
+  }
+}

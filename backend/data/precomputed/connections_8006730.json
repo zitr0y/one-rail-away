@@ -1,0 +1,14 @@
+{
+  "station": {
+    "eva": "8006730",
+    "name": "Neu-Ulm",
+    "lat": 48.393493,
+    "lon": 10.0057661
+  },
+  "computed_at": "2026-01-12T15:48:16.237824Z",
+  "connections": [],
+  "statistics": {
+    "total_destinations": 0,
+    "avg_speed_kmh": 0
+  }
+}

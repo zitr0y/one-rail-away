@@ -1,0 +1,14 @@
+{
+  "station": {
+    "eva": "8000090",
+    "name": "Eichenberg",
+    "lat": 51.374823,
+    "lon": 9.921482
+  },
+  "computed_at": "2026-01-12T15:37:15.294515Z",
+  "connections": [],
+  "statistics": {
+    "total_destinations": 0,
+    "avg_speed_kmh": 0
+  }
+}

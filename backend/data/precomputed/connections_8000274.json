@@ -1,0 +1,14 @@
+{
+  "station": {
+    "eva": "8000274",
+    "name": "Neuss Hbf",
+    "lat": 51.204351,
+    "lon": 6.684527
+  },
+  "computed_at": "2026-01-12T15:46:41.038314Z",
+  "connections": [],
+  "statistics": {
+    "total_destinations": 0,
+    "avg_speed_kmh": 0
+  }
+}

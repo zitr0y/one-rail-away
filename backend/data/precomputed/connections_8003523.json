@@ -1,0 +1,14 @@
+{
+  "station": {
+    "eva": "8003523",
+    "name": "Langen(Hess)",
+    "lat": 49.993612,
+    "lon": 8.656787
+  },
+  "computed_at": "2026-01-12T15:49:41.221001Z",
+  "connections": [],
+  "statistics": {
+    "total_destinations": 0,
+    "avg_speed_kmh": 0
+  }
+}

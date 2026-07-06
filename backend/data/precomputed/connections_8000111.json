@@ -1,0 +1,14 @@
+{
+  "station": {
+    "eva": "8000111",
+    "name": "Friedberg(Hess)",
+    "lat": 50.332606,
+    "lon": 8.762056
+  },
+  "computed_at": "2026-01-12T15:46:57.696660Z",
+  "connections": [],
+  "statistics": {
+    "total_destinations": 0,
+    "avg_speed_kmh": 0
+  }
+}

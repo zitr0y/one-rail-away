@@ -1,0 +1,99 @@
+{
+  "station": {
+    "eva": "8011044",
+    "name": "Anklam",
+    "lat": 53.856102,
+    "lon": 13.701827
+  },
+  "computed_at": "2026-01-12T15:45:38.856700Z",
+  "connections": [
+    {
+      "destination_id": "8010396",
+      "destination_name": "Züssow",
+      "destination_lat": 53.973879,
+      "destination_lon": 13.548191,
+      "train_type": "ICE",
+      "train_number": "930",
+      "departure_time": "16:58",
+      "arrival_time": "17:08",
+      "travel_time_minutes": 10,
+      "distance_km": 16.55,
+      "aerial_speed_kmh": 99.27,
+      "daily_frequency": 2
+    },
+    {
+      "destination_id": "8010139",
+      "destination_name": "Greifswald",
+      "destination_lat": 54.092923,
+      "destination_lon": 13.370262,
+      "train_type": "ICE",
+      "train_number": "930",
+      "departure_time": "16:58",
+      "arrival_time": "17:21",
+      "travel_time_minutes": 23,
+      "distance_km": 34.18,
+      "aerial_speed_kmh": 89.16,
+      "daily_frequency": 2
+    },
+    {
+      "destination_id": "8010338",
+      "destination_name": "Stralsund Hbf",
+      "destination_lat": 54.308626,
+      "destination_lon": 13.077321,
+      "train_type": "ICE",
+      "train_number": "930",
+      "departure_time": "16:58",
+      "arrival_time": "17:45",
+      "travel_time_minutes": 47,
+      "distance_km": 64.86,
+      "aerial_speed_kmh": 82.81,
+      "daily_frequency": 2
+    },
+    {
+      "destination_id": "8010396",
+      "destination_name": "Züssow",
+      "destination_lat": 53.973879,
+      "destination_lon": 13.548191,
+      "train_type": "ICE",
+      "train_number": "838",
+      "departure_time": "18:58",
+      "arrival_time": "19:08",
+      "travel_time_minutes": 10,
+      "distance_km": 16.55,
+      "aerial_speed_kmh": 99.27,
+      "daily_frequency": 2
+    },
+    {
+      "destination_id": "8010139",
+      "destination_name": "Greifswald",
+      "destination_lat": 54.092923,
+      "destination_lon": 13.370262,
+      "train_type": "ICE",
+      "train_number": "838",
+      "departure_time": "18:58",
+      "arrival_time": "19:21",
+      "travel_time_minutes": 23,
+      "distance_km": 34.18,
+      "aerial_speed_kmh": 89.16,
+      "daily_frequency": 2
+    },
+    {
+      "destination_id": "8010338",
+      "destination_name": "Stralsund Hbf",
+      "destination_lat": 54.308626,
+      "destination_lon": 13.077321,
+      "train_type": "ICE",
+      "train_number": "838",
+      "departure_time": "18:58",
+      "arrival_time": "19:46",
+      "travel_time_minutes": 48,
+      "distance_km": 64.86,
+      "aerial_speed_kmh": 81.08,
+      "daily_frequency": 2
+    }
+  ],
+  "statistics": {
+    "total_destinations": 3,
+    "avg_speed_kmh": 90.12
+  }
+}

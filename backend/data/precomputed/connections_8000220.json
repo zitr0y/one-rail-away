@@ -1,0 +1,14 @@
+{
+  "station": {
+    "eva": "8000220",
+    "name": "Weilheim(Oberbay)",
+    "lat": 47.845363,
+    "lon": 11.14286
+  },
+  "computed_at": "2026-01-12T15:45:35.390099Z",
+  "connections": [],
+  "statistics": {
+    "total_destinations": 0,
+    "avg_speed_kmh": 0
+  }
+}

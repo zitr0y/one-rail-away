@@ -1,0 +1,14 @@
+{
+  "station": {
+    "eva": "8010217",
+    "name": "Lübben(Spreewald)",
+    "lat": 51.939737,
+    "lon": 13.877182
+  },
+  "computed_at": "2026-01-12T15:46:03.243502Z",
+  "connections": [],
+  "statistics": {
+    "total_destinations": 0,
+    "avg_speed_kmh": 0
+  }
+}

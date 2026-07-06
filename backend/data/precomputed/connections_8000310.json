@@ -1,0 +1,141 @@
+{
+  "station": {
+    "eva": "8000310",
+    "name": "Remagen",
+    "lat": 50.5770029,
+    "lon": 7.23026991
+  },
+  "computed_at": "2026-01-12T15:43:57.331994Z",
+  "connections": [
+    {
+      "destination_id": "8000331",
+      "destination_name": "Andernach",
+      "destination_lat": 50.434542,
+      "destination_lon": 7.404839,
+      "train_type": "ICE",
+      "train_number": "554",
+      "departure_time": "21:56",
+      "arrival_time": "22:07",
+      "travel_time_minutes": 11,
+      "distance_km": 20.11,
+      "aerial_speed_kmh": 109.7,
+      "daily_frequency": 1
+    },
+    {
+      "destination_id": "8000206",
+      "destination_name": "Koblenz Hbf",
+      "destination_lat": 50.350929,
+      "destination_lon": 7.588345,
+      "train_type": "ICE",
+      "train_number": "554",
+      "departure_time": "21:56",
+      "arrival_time": "22:22",
+      "travel_time_minutes": 26,
+      "distance_km": 35.76,
+      "aerial_speed_kmh": 82.52,
+      "daily_frequency": 1
+    },
+    {
+      "destination_id": "8000044",
+      "destination_name": "Bonn Hbf",
+      "destination_lat": 50.732008,
+      "destination_lon": 7.097136,
+      "train_type": "ICE",
+      "train_number": "920",
+      "departure_time": "01:22",
+      "arrival_time": "01:36",
+      "travel_time_minutes": 14,
+      "distance_km": 19.65,
+      "aerial_speed_kmh": 84.2,
+      "daily_frequency": 1
+    },
+    {
+      "destination_id": "8000207",
+      "destination_name": "Köln Hbf",
+      "destination_lat": 50.94303,
+      "destination_lon": 6.958729,
+      "train_type": "ICE",
+      "train_number": "920",
+      "departure_time": "01:22",
+      "arrival_time": "02:05",
+      "travel_time_minutes": 43,
+      "distance_km": 45.0,
+      "aerial_speed_kmh": 62.79,
+      "daily_frequency": 1
+    },
+    {
+      "destination_id": "8000085",
+      "destination_name": "Düsseldorf Hbf",
+      "destination_lat": 51.219962,
+      "destination_lon": 6.794319,
+      "train_type": "ICE",
+      "train_number": "920",
+      "departure_time": "01:22",
+      "arrival_time": "02:31",
+      "travel_time_minutes": 69,
+      "distance_km": 77.82,
+      "aerial_speed_kmh": 67.67,
+      "daily_frequency": 1
+    },
+    {
+      "destination_id": "8000080",
+      "destination_name": "Dortmund Hbf",
+      "destination_lat": 51.517896,
+      "destination_lon": 7.45929,
+      "train_type": "ICE",
+      "train_number": "920",
+      "departure_time": "01:22",
+      "arrival_time": "03:39",
+      "travel_time_minutes": 137,
+      "distance_km": 105.9,
+      "aerial_speed_kmh": 46.38,
+      "daily_frequency": 1
+    },
+    {
+      "destination_id": "8000149",
+      "destination_name": "Hamm(Westf)Hbf",
+      "destination_lat": 51.678078,
+      "destination_lon": 7.807821,
+      "train_type": "ICE",
+      "train_number": "920",
+      "departure_time": "01:22",
+      "arrival_time": "03:57",
+      "travel_time_minutes": 155,
+      "distance_km": 128.99,
+      "aerial_speed_kmh": 49.93,
+      "daily_frequency": 1
+    },
+    {
+      "destination_id": "8000263",
+      "destination_name": "Münster(Westf)Hbf",
+      "destination_lat": 51.956566,
+      "destination_lon": 7.635715,
+      "train_type": "ICE",
+      "train_number": "920",
+      "departure_time": "01:22",
+      "arrival_time": "04:18",
+      "travel_time_minutes": 176,
+      "distance_km": 156.07,
+      "aerial_speed_kmh": 53.2,
+      "daily_frequency": 1
+    },
+    {
+      "destination_id": "8000294",
+      "destination_name": "Osnabrück Hbf",
+      "destination_lat": 52.272851,
+      "destination_lon": 8.061781,
+      "train_type": "ICE",
+      "train_number": "920",
+      "departure_time": "01:22",
+      "arrival_time": "04:48",
+      "travel_time_minutes": 206,
+      "distance_km": 197.34,
+      "aerial_speed_kmh": 57.48,
+      "daily_frequency": 1
+    }
+  ],
+  "statistics": {
+    "total_destinations": 9,
+    "avg_speed_kmh": 68.21
+  }
+}

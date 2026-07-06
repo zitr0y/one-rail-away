@@ -1,0 +1,14 @@
+{
+  "station": {
+    "eva": "8003303",
+    "name": "Klanxbüll",
+    "lat": 54.861997,
+    "lon": 8.676454
+  },
+  "computed_at": "2026-01-12T15:39:17.703639Z",
+  "connections": [],
+  "statistics": {
+    "total_destinations": 0,
+    "avg_speed_kmh": 0
+  }
+}

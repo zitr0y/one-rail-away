@@ -1,0 +1,99 @@
+{
+  "station": {
+    "eva": "8003330",
+    "name": "Köln/Bonn Flughafen",
+    "lat": 50.878901,
+    "lon": 7.119302
+  },
+  "computed_at": "2026-01-12T15:50:49.031194Z",
+  "connections": [
+    {
+      "destination_id": "8000207",
+      "destination_name": "Köln Hbf",
+      "destination_lat": 50.94303,
+      "destination_lon": 6.958729,
+      "train_type": "ICE",
+      "train_number": "524",
+      "departure_time": "23:27",
+      "arrival_time": "23:40",
+      "travel_time_minutes": 13,
+      "distance_km": 13.36,
+      "aerial_speed_kmh": 61.65,
+      "daily_frequency": 1
+    },
+    {
+      "destination_id": "8005556",
+      "destination_name": "Siegburg/Bonn",
+      "destination_lat": 50.793915,
+      "destination_lon": 7.203026,
+      "train_type": "ICE",
+      "train_number": "827",
+      "departure_time": "03:32",
+      "arrival_time": "03:41",
+      "travel_time_minutes": 9,
+      "distance_km": 11.14,
+      "aerial_speed_kmh": 74.29,
+      "daily_frequency": 1
+    },
+    {
+      "destination_id": "8000667",
+      "destination_name": "Montabaur",
+      "destination_lat": 50.444834,
+      "destination_lon": 7.825333,
+      "train_type": "ICE",
+      "train_number": "827",
+      "departure_time": "03:32",
+      "arrival_time": "04:04",
+      "travel_time_minutes": 32,
+      "distance_km": 69.45,
+      "aerial_speed_kmh": 130.22,
+      "daily_frequency": 1
+    },
+    {
+      "destination_id": "8003680",
+      "destination_name": "Limburg Süd",
+      "destination_lat": 50.382498,
+      "destination_lon": 8.096112,
+      "train_type": "ICE",
+      "train_number": "827",
+      "departure_time": "03:32",
+      "arrival_time": "04:16",
+      "travel_time_minutes": 44,
+      "distance_km": 88.46,
+      "aerial_speed_kmh": 120.63,
+      "daily_frequency": 1
+    },
+    {
+      "destination_id": "8070003",
+      "destination_name": "Frankfurt(M) Flughafen Fernbf",
+      "destination_lat": 50.053167,
+      "destination_lon": 8.570185,
+      "train_type": "ICE",
+      "train_number": "827",
+      "departure_time": "03:32",
+      "arrival_time": "04:36",
+      "travel_time_minutes": 64,
+      "distance_km": 138.01,
+      "aerial_speed_kmh": 129.39,
+      "daily_frequency": 1
+    },
+    {
+      "destination_id": "8000105",
+      "destination_name": "Frankfurt(Main)Hbf",
+      "destination_lat": 50.107145,
+      "destination_lon": 8.663789,
+      "train_type": "ICE",
+      "train_number": "827",
+      "departure_time": "03:32",
+      "arrival_time": "04:48",
+      "travel_time_minutes": 76,
+      "distance_km": 139.21,
+      "aerial_speed_kmh": 109.9,
+      "daily_frequency": 1
+    }
+  ],
+  "statistics": {
+    "total_destinations": 6,
+    "avg_speed_kmh": 104.35
+  }
+}

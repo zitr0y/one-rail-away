@@ -1,0 +1,99 @@
+{
+  "station": {
+    "eva": "8001083",
+    "name": "Bonn-Beuel",
+    "lat": 50.738476,
+    "lon": 7.127657
+  },
+  "computed_at": "2026-01-12T15:43:20.030855Z",
+  "connections": [
+    {
+      "destination_id": "8000206",
+      "destination_name": "Koblenz Hbf",
+      "destination_lat": 50.350929,
+      "destination_lon": 7.588345,
+      "train_type": "NJ",
+      "train_number": "403",
+      "departure_time": "00:04",
+      "arrival_time": "00:47",
+      "travel_time_minutes": 43,
+      "distance_km": 54.08,
+      "aerial_speed_kmh": 75.46,
+      "daily_frequency": 1
+    },
+    {
+      "destination_id": "8000240",
+      "destination_name": "Mainz Hbf",
+      "destination_lat": 50.001117,
+      "destination_lon": 8.25872,
+      "train_type": "NJ",
+      "train_number": "403",
+      "departure_time": "00:04",
+      "arrival_time": "02:09",
+      "travel_time_minutes": 125,
+      "distance_km": 114.9,
+      "aerial_speed_kmh": 55.15,
+      "daily_frequency": 1
+    },
+    {
+      "destination_id": "8000244",
+      "destination_name": "Mannheim Hbf",
+      "destination_lat": 49.479354,
+      "destination_lon": 8.468921,
+      "train_type": "NJ",
+      "train_number": "403",
+      "departure_time": "00:04",
+      "arrival_time": "03:15",
+      "travel_time_minutes": 191,
+      "distance_km": 169.76,
+      "aerial_speed_kmh": 53.33,
+      "daily_frequency": 1
+    },
+    {
+      "destination_id": "8000191",
+      "destination_name": "Karlsruhe Hbf",
+      "destination_lat": 48.993515,
+      "destination_lon": 8.402181,
+      "train_type": "NJ",
+      "train_number": "403",
+      "departure_time": "00:04",
+      "arrival_time": "04:00",
+      "travel_time_minutes": 236,
+      "distance_km": 214.62,
+      "aerial_speed_kmh": 54.56,
+      "daily_frequency": 1
+    },
+    {
+      "destination_id": "8000774",
+      "destination_name": "Baden-Baden",
+      "destination_lat": 48.790327,
+      "destination_lon": 8.190831,
+      "train_type": "NJ",
+      "train_number": "403",
+      "departure_time": "00:04",
+      "arrival_time": "04:25",
+      "travel_time_minutes": 261,
+      "distance_km": 229.82,
+      "aerial_speed_kmh": 52.83,
+      "daily_frequency": 1
+    },
+    {
+      "destination_id": "8000290",
+      "destination_name": "Offenburg",
+      "destination_lat": 48.476475,
+      "destination_lon": 7.946723,
+      "train_type": "NJ",
+      "train_number": "403",
+      "departure_time": "00:04",
+      "arrival_time": "04:50",
+      "travel_time_minutes": 286,
+      "distance_km": 258.45,
+      "aerial_speed_kmh": 54.22,
+      "daily_frequency": 1
+    }
+  ],
+  "statistics": {
+    "total_destinations": 6,
+    "avg_speed_kmh": 57.59
+  }
+}

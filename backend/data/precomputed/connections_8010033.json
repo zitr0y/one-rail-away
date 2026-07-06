@@ -1,0 +1,29 @@
+{
+  "station": {
+    "eva": "8010033",
+    "name": "Bergen auf Rügen",
+    "lat": 54.4205,
+    "lon": 13.417821
+  },
+  "computed_at": "2026-01-12T15:47:36.261483Z",
+  "connections": [
+    {
+      "destination_id": "8011191",
+      "destination_name": "Ostseebad Binz",
+      "destination_lat": 54.404819,
+      "destination_lon": 13.600507,
+      "train_type": "IC",
+      "train_number": "2262",
+      "departure_time": "17:15",
+      "arrival_time": "17:42",
+      "travel_time_minutes": 27,
+      "distance_km": 11.99,
+      "aerial_speed_kmh": 26.64,
+      "daily_frequency": 1
+    }
+  ],
+  "statistics": {
+    "total_destinations": 1,
+    "avg_speed_kmh": 26.64
+  }
+}

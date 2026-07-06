@@ -1,0 +1,14 @@
+{
+  "station": {
+    "eva": "8002206",
+    "name": "Geilenkirchen",
+    "lat": 50.961039,
+    "lon": 6.124518
+  },
+  "computed_at": "2026-01-12T15:45:50.198229Z",
+  "connections": [],
+  "statistics": {
+    "total_destinations": 0,
+    "avg_speed_kmh": 0
+  }
+}

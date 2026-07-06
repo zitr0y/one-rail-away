@@ -1,0 +1,14 @@
+{
+  "station": {
+    "eva": "8000197",
+    "name": "Kempten(Allgäu)Hbf",
+    "lat": 47.711745,
+    "lon": 10.31761
+  },
+  "computed_at": "2026-01-12T15:52:46.880280Z",
+  "connections": [],
+  "statistics": {
+    "total_destinations": 0,
+    "avg_speed_kmh": 0
+  }
+}

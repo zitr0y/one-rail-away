@@ -1,0 +1,14 @@
+{
+  "station": {
+    "eva": "8000045",
+    "name": "Boppard Hbf",
+    "lat": 50.2314224,
+    "lon": 7.58601397
+  },
+  "computed_at": "2026-01-12T15:47:30.154016Z",
+  "connections": [],
+  "statistics": {
+    "total_destinations": 0,
+    "avg_speed_kmh": 0
+  }
+}

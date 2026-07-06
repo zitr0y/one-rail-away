@@ -1,0 +1,14 @@
+{
+  "station": {
+    "eva": "8002159",
+    "name": "Furth im Wald",
+    "lat": 49.309812,
+    "lon": 12.838811
+  },
+  "computed_at": "2026-01-12T15:44:14.977487Z",
+  "connections": [],
+  "statistics": {
+    "total_destinations": 0,
+    "avg_speed_kmh": 0
+  }
+}

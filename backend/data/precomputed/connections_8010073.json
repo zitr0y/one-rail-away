@@ -1,0 +1,14 @@
+{
+  "station": {
+    "eva": "8010073",
+    "name": "Cottbus Hbf",
+    "lat": 51.750957,
+    "lon": 14.324162
+  },
+  "computed_at": "2026-01-12T15:50:22.140554Z",
+  "connections": [],
+  "statistics": {
+    "total_destinations": 0,
+    "avg_speed_kmh": 0
+  }
+}

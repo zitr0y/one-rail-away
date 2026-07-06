@@ -1,0 +1,85 @@
+{
+  "station": {
+    "eva": "8005776",
+    "name": "Stuttgart-Vaihingen",
+    "lat": 48.726279,
+    "lon": 9.113226
+  },
+  "computed_at": "2026-01-12T15:42:19.680849Z",
+  "connections": [
+    {
+      "destination_id": "8001055",
+      "destination_name": "Böblingen",
+      "destination_lat": 48.687888,
+      "destination_lon": 9.004432,
+      "train_type": "IC",
+      "train_number": "281",
+      "departure_time": "16:41",
+      "arrival_time": "16:48",
+      "travel_time_minutes": 7,
+      "distance_km": 9.07,
+      "aerial_speed_kmh": 77.78,
+      "daily_frequency": 1
+    },
+    {
+      "destination_id": "8000177",
+      "destination_name": "Horb",
+      "destination_lat": 48.441471,
+      "destination_lon": 8.688982,
+      "train_type": "IC",
+      "train_number": "281",
+      "departure_time": "16:41",
+      "arrival_time": "17:13",
+      "travel_time_minutes": 32,
+      "distance_km": 44.53,
+      "aerial_speed_kmh": 83.49,
+      "daily_frequency": 1
+    },
+    {
+      "destination_id": "8000322",
+      "destination_name": "Rottweil",
+      "destination_lat": 48.165304,
+      "destination_lon": 8.639295,
+      "train_type": "IC",
+      "train_number": "281",
+      "departure_time": "16:41",
+      "arrival_time": "17:42",
+      "travel_time_minutes": 61,
+      "distance_km": 71.56,
+      "aerial_speed_kmh": 70.38,
+      "daily_frequency": 1
+    },
+    {
+      "destination_id": "8000163",
+      "destination_name": "Tuttlingen",
+      "destination_lat": 47.980579,
+      "destination_lon": 8.798542,
+      "train_type": "IC",
+      "train_number": "281",
+      "departure_time": "16:41",
+      "arrival_time": "18:00",
+      "travel_time_minutes": 79,
+      "distance_km": 86.14,
+      "aerial_speed_kmh": 65.42,
+      "daily_frequency": 1
+    },
+    {
+      "destination_id": "8000073",
+      "destination_name": "Singen(Hohentwiel)",
+      "destination_lat": 47.7588801,
+      "destination_lon": 8.84126902,
+      "train_type": "IC",
+      "train_number": "281",
+      "departure_time": "16:41",
+      "arrival_time": "18:26",
+      "travel_time_minutes": 105,
+      "distance_km": 109.45,
+      "aerial_speed_kmh": 62.54,
+      "daily_frequency": 1
+    }
+  ],
+  "statistics": {
+    "total_destinations": 5,
+    "avg_speed_kmh": 71.92
+  }
+}

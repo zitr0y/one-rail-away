@@ -1,0 +1,57 @@
+{
+  "station": {
+    "eva": "8011162",
+    "name": "Berlin Ostkreuz",
+    "lat": 52.503037,
+    "lon": 13.469105
+  },
+  "computed_at": "2026-01-12T15:46:07.557224Z",
+  "connections": [
+    {
+      "destination_id": "8010255",
+      "destination_name": "Berlin Ostbahnhof",
+      "destination_lat": 52.5104881,
+      "destination_lon": 13.4346807,
+      "train_type": "EC",
+      "train_number": "40",
+      "departure_time": "22:05",
+      "arrival_time": "22:09",
+      "travel_time_minutes": 4,
+      "distance_km": 2.48,
+      "aerial_speed_kmh": 37.2,
+      "daily_frequency": 1
+    },
+    {
+      "destination_id": "8098160",
+      "destination_name": "Berlin Hbf",
+      "destination_lat": 52.525592,
+      "destination_lon": 13.369545,
+      "train_type": "EC",
+      "train_number": "40",
+      "departure_time": "22:05",
+      "arrival_time": "22:17",
+      "travel_time_minutes": 12,
+      "distance_km": 7.21,
+      "aerial_speed_kmh": 36.05,
+      "daily_frequency": 1
+    },
+    {
+      "destination_id": "8010406",
+      "destination_name": "Berlin Zoologischer Garten",
+      "destination_lat": 52.5073407,
+      "destination_lon": 13.3324447,
+      "train_type": "EC",
+      "train_number": "40",
+      "departure_time": "22:05",
+      "arrival_time": "22:26",
+      "travel_time_minutes": 21,
+      "distance_km": 9.29,
+      "aerial_speed_kmh": 26.55,
+      "daily_frequency": 1
+    }
+  ],
+  "statistics": {
+    "total_destinations": 3,
+    "avg_speed_kmh": 33.27
+  }
+}

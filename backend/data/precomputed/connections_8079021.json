@@ -1,0 +1,14 @@
+{
+  "station": {
+    "eva": "8079021",
+    "name": "Maasbüll(b Niebüll)",
+    "lat": 54.75445,
+    "lon": 8.812742
+  },
+  "computed_at": "2026-01-12T15:38:08.712065Z",
+  "connections": [],
+  "statistics": {
+    "total_destinations": 0,
+    "avg_speed_kmh": 0
+  }
+}

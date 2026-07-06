@@ -1,0 +1,29 @@
+{
+  "station": {
+    "eva": "8000029",
+    "name": "Bebra",
+    "lat": 50.969568,
+    "lon": 9.797788
+  },
+  "computed_at": "2026-01-12T15:38:33.519463Z",
+  "connections": [
+    {
+      "destination_id": "8003200",
+      "destination_name": "Kassel-Wilhelmshöhe",
+      "destination_lat": 51.3125585,
+      "destination_lon": 9.44711566,
+      "train_type": "IC",
+      "train_number": "2150",
+      "departure_time": "20:28",
+      "arrival_time": "21:07",
+      "travel_time_minutes": 39,
+      "distance_km": 45.37,
+      "aerial_speed_kmh": 69.8,
+      "daily_frequency": 1
+    }
+  ],
+  "statistics": {
+    "total_destinations": 1,
+    "avg_speed_kmh": 69.8
+  }
+}

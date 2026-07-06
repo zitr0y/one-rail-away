@@ -1,0 +1,99 @@
+{
+  "station": {
+    "eva": "8000323",
+    "name": "Saarbrücken Hbf",
+    "lat": 49.241065,
+    "lon": 6.991021
+  },
+  "computed_at": "2026-01-12T15:48:48.649371Z",
+  "connections": [
+    {
+      "destination_id": "8000189",
+      "destination_name": "Kaiserslautern Hbf",
+      "destination_lat": 49.4358593,
+      "destination_lon": 7.76862681,
+      "train_type": "ICE",
+      "train_number": "9555",
+      "departure_time": "19:00",
+      "arrival_time": "19:36",
+      "travel_time_minutes": 36,
+      "distance_km": 60.52,
+      "aerial_speed_kmh": 100.87,
+      "daily_frequency": 2
+    },
+    {
+      "destination_id": "8000244",
+      "destination_name": "Mannheim Hbf",
+      "destination_lat": 49.479354,
+      "destination_lon": 8.468921,
+      "train_type": "ICE",
+      "train_number": "9555",
+      "departure_time": "19:00",
+      "arrival_time": "20:16",
+      "travel_time_minutes": 76,
+      "distance_km": 110.58,
+      "aerial_speed_kmh": 87.3,
+      "daily_frequency": 2
+    },
+    {
+      "destination_id": "8000105",
+      "destination_name": "Frankfurt(Main)Hbf",
+      "destination_lat": 50.107145,
+      "destination_lon": 8.663789,
+      "train_type": "ICE",
+      "train_number": "9555",
+      "departure_time": "19:00",
+      "arrival_time": "21:13",
+      "travel_time_minutes": 133,
+      "distance_km": 154.45,
+      "aerial_speed_kmh": 69.68,
+      "daily_frequency": 2
+    },
+    {
+      "destination_id": "8000189",
+      "destination_name": "Kaiserslautern Hbf",
+      "destination_lat": 49.4358593,
+      "destination_lon": 7.76862681,
+      "train_type": "ICE",
+      "train_number": "9557",
+      "departure_time": "20:59",
+      "arrival_time": "21:35",
+      "travel_time_minutes": 36,
+      "distance_km": 60.52,
+      "aerial_speed_kmh": 100.87,
+      "daily_frequency": 2
+    },
+    {
+      "destination_id": "8000244",
+      "destination_name": "Mannheim Hbf",
+      "destination_lat": 49.479354,
+      "destination_lon": 8.468921,
+      "train_type": "ICE",
+      "train_number": "9557",
+      "departure_time": "20:59",
+      "arrival_time": "22:16",
+      "travel_time_minutes": 77,
+      "distance_km": 110.58,
+      "aerial_speed_kmh": 86.17,
+      "daily_frequency": 2
+    },
+    {
+      "destination_id": "8000105",
+      "destination_name": "Frankfurt(Main)Hbf",
+      "destination_lat": 50.107145,
+      "destination_lon": 8.663789,
+      "train_type": "ICE",
+      "train_number": "9557",
+      "departure_time": "20:59",
+      "arrival_time": "23:13",
+      "travel_time_minutes": 134,
+      "distance_km": 154.45,
+      "aerial_speed_kmh": 69.16,
+      "daily_frequency": 2
+    }
+  ],
+  "statistics": {
+    "total_destinations": 3,
+    "avg_speed_kmh": 85.67
+  }
+}

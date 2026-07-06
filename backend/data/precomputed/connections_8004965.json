@@ -1,0 +1,14 @@
+{
+  "station": {
+    "eva": "8004965",
+    "name": "Ravensburg",
+    "lat": 47.784481,
+    "lon": 9.6061
+  },
+  "computed_at": "2026-01-12T15:36:03.823764Z",
+  "connections": [],
+  "statistics": {
+    "total_destinations": 0,
+    "avg_speed_kmh": 0
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "station": {
+    "eva": "8099508",
+    "name": "Hannover-Wülfel",
+    "lat": 52.32499,
+    "lon": 9.7885
+  },
+  "computed_at": "2026-01-12T15:52:56.489757Z",
+  "connections": [],
+  "statistics": {
+    "total_destinations": 0,
+    "avg_speed_kmh": 0
+  }
+}

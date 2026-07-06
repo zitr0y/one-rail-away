@@ -1,0 +1,71 @@
+{
+  "station": {
+    "eva": "8000127",
+    "name": "Göppingen",
+    "lat": 48.700027,
+    "lon": 9.651969
+  },
+  "computed_at": "2026-01-12T15:46:24.927171Z",
+  "connections": [
+    {
+      "destination_id": "8000170",
+      "destination_name": "Ulm Hbf",
+      "destination_lat": 48.3993985,
+      "destination_lon": 9.98260796,
+      "train_type": "NJ",
+      "train_number": "237",
+      "departure_time": "21:13",
+      "arrival_time": "21:51",
+      "travel_time_minutes": 38,
+      "distance_km": 41.39,
+      "aerial_speed_kmh": 65.36,
+      "daily_frequency": 1
+    },
+    {
+      "destination_id": "8000013",
+      "destination_name": "Augsburg Hbf",
+      "destination_lat": 48.365441,
+      "destination_lon": 10.88557,
+      "train_type": "NJ",
+      "train_number": "237",
+      "departure_time": "21:13",
+      "arrival_time": "22:50",
+      "travel_time_minutes": 97,
+      "distance_km": 98.41,
+      "aerial_speed_kmh": 60.87,
+      "daily_frequency": 1
+    },
+    {
+      "destination_id": "8000262",
+      "destination_name": "München Ost",
+      "destination_lat": 48.12744,
+      "destination_lon": 11.604971,
+      "train_type": "NJ",
+      "train_number": "237",
+      "departure_time": "21:13",
+      "arrival_time": "23:51",
+      "travel_time_minutes": 158,
+      "distance_km": 157.97,
+      "aerial_speed_kmh": 59.99,
+      "daily_frequency": 1
+    },
+    {
+      "destination_id": "8000320",
+      "destination_name": "Rosenheim",
+      "destination_lat": 47.850018,
+      "destination_lon": 12.119202,
+      "train_type": "NJ",
+      "train_number": "237",
+      "departure_time": "21:13",
+      "arrival_time": "00:31",
+      "travel_time_minutes": 198,
+      "distance_km": 206.08,
+      "aerial_speed_kmh": 62.45,
+      "daily_frequency": 1
+    }
+  ],
+  "statistics": {
+    "total_destinations": 4,
+    "avg_speed_kmh": 62.17
+  }
+}

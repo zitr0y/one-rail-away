@@ -1,0 +1,85 @@
+{
+  "station": {
+    "eva": "8003866",
+    "name": "Marienhafe",
+    "lat": 53.5192358,
+    "lon": 7.27436006
+  },
+  "computed_at": "2026-01-12T15:48:23.701677Z",
+  "connections": [
+    {
+      "destination_id": "8000800",
+      "destination_name": "Norden",
+      "destination_lat": 53.588196,
+      "destination_lon": 7.218913,
+      "train_type": "IC",
+      "train_number": "2036",
+      "departure_time": "19:59",
+      "arrival_time": "20:06",
+      "travel_time_minutes": 7,
+      "distance_km": 8.51,
+      "aerial_speed_kmh": 72.94,
+      "daily_frequency": 2
+    },
+    {
+      "destination_id": "8004449",
+      "destination_name": "Norddeich",
+      "destination_lat": 53.621579,
+      "destination_lon": 7.160824,
+      "train_type": "IC",
+      "train_number": "2036",
+      "departure_time": "19:59",
+      "arrival_time": "20:20",
+      "travel_time_minutes": 21,
+      "distance_km": 13.65,
+      "aerial_speed_kmh": 39.0,
+      "daily_frequency": 2
+    },
+    {
+      "destination_id": "8007768",
+      "destination_name": "Norddeich Mole",
+      "destination_lat": 53.624315,
+      "destination_lon": 7.158806,
+      "train_type": "IC",
+      "train_number": "2036",
+      "departure_time": "19:59",
+      "arrival_time": "20:20",
+      "travel_time_minutes": 21,
+      "distance_km": 13.98,
+      "aerial_speed_kmh": 39.94,
+      "daily_frequency": 1
+    },
+    {
+      "destination_id": "8000800",
+      "destination_name": "Norden",
+      "destination_lat": 53.588196,
+      "destination_lon": 7.218913,
+      "train_type": "IC",
+      "train_number": "2034",
+      "departure_time": "21:59",
+      "arrival_time": "22:06",
+      "travel_time_minutes": 7,
+      "distance_km": 8.51,
+      "aerial_speed_kmh": 72.94,
+      "daily_frequency": 2
+    },
+    {
+      "destination_id": "8004449",
+      "destination_name": "Norddeich",
+      "destination_lat": 53.621579,
+      "destination_lon": 7.160824,
+      "train_type": "IC",
+      "train_number": "2034",
+      "departure_time": "21:59",
+      "arrival_time": "22:14",
+      "travel_time_minutes": 15,
+      "distance_km": 13.65,
+      "aerial_speed_kmh": 54.6,
+      "daily_frequency": 2
+    }
+  ],
+  "statistics": {
+    "total_destinations": 3,
+    "avg_speed_kmh": 55.88
+  }
+}
