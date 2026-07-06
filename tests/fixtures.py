@@ -1,3 +1,22 @@
+r"""Hand-verified fixture GTFS world: two feeds (landia, borderia) for pipeline correctness tests.
+
+Stations (UIC): Alpha 1111111, Beta 2222222, Gamma 3333333 (in BOTH feeds — border-station
+merge case: landia stop_id "st:3333333", borderia "bs-3333333"), Delta 4444444 (borderia only).
+
+Verified timetable truths (sample date 2026-07-14, a Tuesday; 10-min minimum transfer):
+- Alpha->Beta nonstop: best 50 min (IC 101 12:00->12:50); IC 100 (08:00->09:00) also direct;
+  direct_per_day = 2.
+- Alpha->Gamma nonstop: IC 100 08:00->10:00 = 120 min. The IC 100 -> IC 300 transfer at Beta
+  (arr 09:00, dep 09:05) is ILLEGAL (5 min < 10), so no 2-train journey beats the direct.
+- Alpha->Delta: only via IC 100 -> TGV 10 (30-min transfer at Gamma, legal, requires the UIC
+  merge of Gamma across feeds): 08:00->12:00 = 240 min, 2 trains. Not reachable nonstop.
+- Beta->Gamma nonstop: best is IC 100 boarded MID-ROUTE at Beta (09:02->10:00, 58 min), NOT
+  IC 300 (09:05->10:05, 60 min); direct_per_day = 2. Do not assert "best Beta->Gamma = 60 min".
+  IC 300's purpose in this fixture is the 5-min transfer rejection above.
+- RB 1 (Alpha 07:00 -> Beta 08:30) must be filtered out by landia's route_allow (^IC\b, ^TGV\b).
+- Nothing reaches Alpha from Delta (no return trips exist).
+"""
+
 import io
 import zipfile
 from pathlib import Path
