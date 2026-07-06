@@ -1,0 +1,34 @@
+[feeds.db_fern]
+url = "https://download.gtfs.de/germany/fv_free/latest.zip"
+country = "DE"
+license = "CC BY 4.0 - verify commercial terms before monetizing (fallback: DELFI NAP)"
+route_allow = ["^ICE?\\b", "^ECE?\\b", "^NJ\\b", "^RJX?\\b", "^FLX\\b", "^TGV\\b", "^EST\\b"]
+uic_regex = "(\\d{7})"
+
+[feeds.sncf]
+url = "https://eu.ftp.opendatasoft.com/sncf/gtfs/export_gtfs_voyages.zip"
+country = "FR"
+license = "ODbL (transport.data.gouv.fr)"
+route_allow = ["^TGV", "^INTERCIT", "^OUIGO", "^EUROSTAR", "^ICE", "^LYRIA"]
+uic_regex = "87(\\d{5})$"
+
+[feeds.oebb]
+url = "https://static.web.oebb.at/open-data/soll-fahrplan-gtfs/GTFS_Fahrplan_2026.zip"
+country = "AT"
+license = "CC BY 4.0"
+route_allow = ["^RJX?\\b", "^ICE?\\b", "^ECE?\\b", "^NJ\\b", "^D\\b"]
+uic_regex = "(\\d{7})"
+
+[feeds.sbb]
+url = "https://data.opentransportdata.swiss/dataset/timetable-2026-gtfs2020/permalink"
+country = "CH"
+license = "Open data (opentransportdata.swiss)"
+route_allow = ["^ICE?\\b", "^ECE?\\b", "^TGV", "^RJX?\\b", "^NJ\\b", "^IR\\b"]
+uic_regex = "(\\d{7})"
+
+[feeds.ns]
+url = "https://gtfs.ovapi.nl/nl/gtfs-nl.zip"
+country = "NL"
+license = "CC0 (ovapi)"
+route_allow = ["^Intercity", "^ICE?\\b", "^Eurostar", "^Nightjet"]
+uic_regex = "(\\d{7})"
