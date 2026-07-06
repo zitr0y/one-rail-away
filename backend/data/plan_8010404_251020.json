@@ -1,0 +1,2212 @@
+{
+  "station_eva": "8010404",
+  "date": "251020",
+  "cached_at": "2025-10-20T15:36:07.690885",
+  "plan_data": {
+    "departures": [
+      {
+        "id": "-5912934085958744877-2510201604-1",
+        "type": "RE",
+        "number": "92327",
+        "direction": "Dallgow-Döberitz",
+        "platform": "3",
+        "time": "2510201757",
+        "destination": "Dallgow-Döberitz",
+        "path_stations": [
+          "Dallgow-Döberitz"
+        ]
+      },
+      {
+        "id": "8620056342390804768-2510201707-4",
+        "type": "RE",
+        "number": "62024",
+        "direction": "Flughafen BER",
+        "platform": "5",
+        "time": "2510201723",
+        "destination": "Flughafen BER",
+        "path_stations": [
+          "Berlin Zoologischer Garten",
+          "Berlin Hbf",
+          "Berlin Friedrichstraße",
+          "Berlin Alexanderplatz",
+          "Berlin Ostbahnhof",
+          "Berlin Ostkreuz",
+          "Flughafen BER"
+        ]
+      },
+      {
+        "id": "-2736577397224135219-2510201635-11",
+        "type": "RB",
+        "number": "18264",
+        "direction": "Berlin Gesundbrunnen",
+        "platform": "6",
+        "time": "2510201727",
+        "destination": "Berlin Gesundbrunnen",
+        "path_stations": [
+          "Berlin Jungfernheide",
+          "Berlin Gesundbrunnen"
+        ]
+      },
+      {
+        "id": "-1360629902197387952-2510201343-9",
+        "type": "ICE",
+        "number": "941",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "5",
+        "time": "2510201800",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "-5225265888807154878-2510201248-10",
+        "type": "ICE",
+        "number": "549",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "5",
+        "time": "2510201700",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "-4972973488175603045-2510201200-12",
+        "type": "IC",
+        "number": "147",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "5",
+        "time": "2510201732",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "9028525417583405518-2510201013-15",
+        "type": "ICE",
+        "number": "370",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "6",
+        "time": "2510201718",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "4759800543808762026-2510201738-3",
+        "type": "RB",
+        "number": "18625",
+        "direction": "Berlin Südkreuz",
+        "platform": "6",
+        "time": "2510201757",
+        "destination": "Berlin Südkreuz",
+        "path_stations": [
+          "Berlin Jungfernheide",
+          "Berlin Hbf",
+          "Berlin Potsdamer Platz",
+          "Berlin Südkreuz"
+        ]
+      },
+      {
+        "id": "-3034206107369764844-2510201738-2",
+        "type": "ICE",
+        "number": "1716",
+        "direction": "Hamburg-Altona",
+        "platform": "3",
+        "time": "2510201748",
+        "destination": "Hamburg-Altona",
+        "path_stations": [
+          "Stendal Hbf",
+          "Salzwedel",
+          "Uelzen",
+          "Hamburg Hbf",
+          "Hamburg-Altona"
+        ]
+      },
+      {
+        "id": "-5055283992035375388-2510201714-3",
+        "type": "RB",
+        "number": "18267",
+        "direction": "Potsdam Hbf",
+        "platform": "3",
+        "time": "2510201730",
+        "destination": "Potsdam Hbf",
+        "path_stations": [
+          "Berlin-Staaken",
+          "Dallgow-Döberitz",
+          "Elstal",
+          "Wustermark",
+          "Priort",
+          "Marquardt",
+          "Golm",
+          "Potsdam Park Sanssouci",
+          "Potsdam Charlottenhof",
+          "Potsdam Hbf"
+        ]
+      },
+      {
+        "id": "852036326275903126-2510201421-8",
+        "type": "ICE",
+        "number": "1631",
+        "direction": "Berlin Hbf",
+        "platform": "6",
+        "time": "2510201712",
+        "destination": "Berlin Hbf",
+        "path_stations": [
+          "Berlin Hbf"
+        ]
+      },
+      {
+        "id": "1690497143864597407-2510201732-3",
+        "type": "ICE",
+        "number": "854",
+        "direction": "Wuppertal Hbf",
+        "platform": "4",
+        "time": "2510201800",
+        "destination": "Wuppertal Hbf",
+        "path_stations": [
+          "Wolfsburg Hbf",
+          "Hannover Hbf",
+          "Hamm(Westf)Hbf",
+          "Hagen Hbf",
+          "Wuppertal Hbf"
+        ]
+      },
+      {
+        "id": "8490668252821457676-2510201741-2",
+        "type": "ICE",
+        "number": "1154",
+        "direction": "Bonn Hbf",
+        "platform": "4",
+        "time": "2510201751",
+        "destination": "Bonn Hbf",
+        "path_stations": [
+          "Köln Hbf",
+          "Bonn Hbf"
+        ]
+      },
+      {
+        "id": "8210477890964980741-2510201632-3",
+        "type": "ICE",
+        "number": "544",
+        "direction": "Köln Hbf",
+        "platform": "4",
+        "time": "2510201700",
+        "destination": "Köln Hbf",
+        "path_stations": [
+          "Wolfsburg Hbf",
+          "Hannover Hbf",
+          "Minden(Westf)",
+          "Bielefeld Hbf",
+          "Dortmund Hbf",
+          "Essen Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Hbf",
+          "Köln Hbf"
+        ]
+      },
+      {
+        "id": "6202916625163174173-2510201724-2",
+        "type": "ICE",
+        "number": "695",
+        "direction": "Stuttgart Hbf",
+        "platform": "4",
+        "time": "2510201735",
+        "destination": "Stuttgart Hbf",
+        "path_stations": [
+          "Stendal Hbf",
+          "Wolfsburg Hbf",
+          "Braunschweig Hbf",
+          "Hildesheim Hbf",
+          "Göttingen",
+          "Kassel-Wilhelmshöhe",
+          "Fulda",
+          "Frankfurt(Main)Hbf",
+          "Mannheim Hbf",
+          "Stuttgart Hbf"
+        ]
+      },
+      {
+        "id": "6944185201288381463-2510201632-8",
+        "type": "RE",
+        "number": "3176",
+        "direction": "Berlin Südkreuz",
+        "platform": "5",
+        "time": "2510201751",
+        "destination": "Berlin Südkreuz",
+        "path_stations": [
+          "Berlin Jungfernheide",
+          "Berlin Hbf",
+          "Berlin Potsdamer Platz",
+          "Berlin Südkreuz"
+        ]
+      },
+      {
+        "id": "-7239123561973496948-2510201657-1",
+        "type": "RE",
+        "number": "3126",
+        "direction": "Cottbus Hbf",
+        "platform": "6",
+        "time": "2510201704",
+        "destination": "Cottbus Hbf",
+        "path_stations": [
+          "Berlin-Charlottenburg",
+          "Berlin Zoologischer Garten",
+          "Berlin Hbf",
+          "Berlin Friedrichstraße",
+          "Berlin Alexanderplatz",
+          "Berlin Ostbahnhof",
+          "Berlin Ostkreuz",
+          "Königs Wusterhausen",
+          "Brand Tropical Islands",
+          "Lübben(Spreewald)",
+          "Lübbenau(Spreewald)",
+          "Raddusch",
+          "Vetschau",
+          "Kunersdorf",
+          "Cottbus Hbf"
+        ]
+      },
+      {
+        "id": "7671463160625027485-2510200955-6",
+        "type": "ICE",
+        "number": "9591",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "6",
+        "time": "2510201748",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "1860742173081826953-2510201644-8",
+        "type": "RE",
+        "number": "62027",
+        "direction": "Elstal",
+        "platform": "3",
+        "time": "2510201738",
+        "destination": "Elstal",
+        "path_stations": [
+          "Berlin-Staaken",
+          "Dallgow-Döberitz",
+          "Elstal"
+        ]
+      },
+      {
+        "id": "-7719408948975833498-2510201641-5",
+        "type": "RB",
+        "number": "18622",
+        "direction": "Wustermark",
+        "platform": "3",
+        "time": "2510201703",
+        "destination": "Wustermark",
+        "path_stations": [
+          "Berlin-Staaken",
+          "Dallgow-Döberitz",
+          "Elstal",
+          "Wustermark"
+        ]
+      },
+      {
+        "id": "-420450620611785097-2510201647-5",
+        "type": "RE",
+        "number": "3157",
+        "direction": "Rathenow",
+        "platform": "3",
+        "time": "2510201708",
+        "destination": "Rathenow",
+        "path_stations": [
+          "Berlin-Staaken",
+          "Dallgow-Döberitz",
+          "Elstal",
+          "Wustermark",
+          "Buschow",
+          "Nennhausen",
+          "Rathenow"
+        ]
+      },
+      {
+        "id": "4251988685605862791-2510201732-3",
+        "type": "ICE",
+        "number": "844",
+        "direction": "Köln Hbf",
+        "platform": "4",
+        "time": "2510201800",
+        "destination": "Köln Hbf",
+        "path_stations": [
+          "Wolfsburg Hbf",
+          "Hannover Hbf",
+          "Hamm(Westf)Hbf",
+          "Dortmund Hbf",
+          "Essen Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf",
+          "Köln Hbf"
+        ]
+      },
+      {
+        "id": "8855692517420642780-2510201645-3",
+        "type": "ICE",
+        "number": "554",
+        "direction": "Köln Hbf",
+        "platform": "4",
+        "time": "2510201712",
+        "destination": "Köln Hbf",
+        "path_stations": [
+          "Hannover Hbf",
+          "Hagen Hbf",
+          "Wuppertal Hbf",
+          "Köln Hbf"
+        ]
+      },
+      {
+        "id": "-4020550040361167307-2510201345-7",
+        "type": "ICE",
+        "number": "951",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "5",
+        "time": "2510201800",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "-7044479639794506131-2510201521-7",
+        "type": "IC",
+        "number": "2475",
+        "direction": "Magdeburg Hbf",
+        "platform": "4",
+        "time": "2510201743",
+        "destination": "Magdeburg Hbf",
+        "path_stations": [
+          "Stendal Hbf",
+          "Magdeburg Hbf"
+        ]
+      },
+      {
+        "id": "2194870834977343793-2510201735-11",
+        "type": "RB",
+        "number": "18266",
+        "direction": "Berlin Gesundbrunnen",
+        "platform": "5",
+        "time": "2510201828",
+        "destination": "Berlin Gesundbrunnen",
+        "path_stations": [
+          "Berlin Jungfernheide",
+          "Berlin Gesundbrunnen"
+        ]
+      },
+      {
+        "id": "-6270903731699972278-2510201445-6",
+        "type": "ICE",
+        "number": "651",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "6",
+        "time": "2510201849",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "7054965822476343973-2510201757-1",
+        "type": "RE",
+        "number": "3128",
+        "direction": "Cottbus Hbf",
+        "platform": "6",
+        "time": "2510201804",
+        "destination": "Cottbus Hbf",
+        "path_stations": [
+          "Berlin-Charlottenburg",
+          "Berlin Zoologischer Garten",
+          "Berlin Hbf",
+          "Berlin Friedrichstraße",
+          "Berlin Alexanderplatz",
+          "Berlin Ostbahnhof",
+          "Berlin Ostkreuz",
+          "Königs Wusterhausen",
+          "Brand Tropical Islands",
+          "Lübben(Spreewald)",
+          "Lübbenau(Spreewald)",
+          "Raddusch",
+          "Vetschau",
+          "Kolkwitz",
+          "Cottbus Hbf"
+        ]
+      },
+      {
+        "id": "2536661623828971725-2510201807-4",
+        "type": "RE",
+        "number": "62026",
+        "direction": "Flughafen BER",
+        "platform": "5",
+        "time": "2510201822",
+        "destination": "Flughafen BER",
+        "path_stations": [
+          "Berlin Zoologischer Garten",
+          "Berlin Hbf",
+          "Berlin Friedrichstraße",
+          "Berlin Alexanderplatz",
+          "Berlin Ostbahnhof",
+          "Berlin Ostkreuz",
+          "Flughafen BER"
+        ]
+      },
+      {
+        "id": "-8203578369052827954-2510201817-3",
+        "type": "ICE",
+        "number": "877",
+        "direction": "Frankfurt(Main)Hbf",
+        "platform": "4",
+        "time": "2510201845",
+        "destination": "Frankfurt(Main)Hbf",
+        "path_stations": [
+          "Wolfsburg Hbf",
+          "Braunschweig Hbf",
+          "Hildesheim Hbf",
+          "Göttingen",
+          "Kassel-Wilhelmshöhe",
+          "Fulda",
+          "Hanau Hbf",
+          "Frankfurt(Main)Hbf"
+        ]
+      },
+      {
+        "id": "-7147339730808320662-2510201802-8",
+        "type": "RE",
+        "number": "3158",
+        "direction": "Berlin Südkreuz",
+        "platform": "5",
+        "time": "2510201852",
+        "destination": "Berlin Südkreuz",
+        "path_stations": [
+          "Berlin Jungfernheide",
+          "Berlin Hbf",
+          "Berlin Potsdamer Platz",
+          "Berlin Südkreuz"
+        ]
+      },
+      {
+        "id": "909759495485484647-2510201741-5",
+        "type": "RB",
+        "number": "18624",
+        "direction": "Wustermark",
+        "platform": "3",
+        "time": "2510201803",
+        "destination": "Wustermark",
+        "path_stations": [
+          "Berlin-Staaken",
+          "Dallgow-Döberitz",
+          "Elstal",
+          "Wustermark"
+        ]
+      },
+      {
+        "id": "-1360629902197387952-2510201343-9",
+        "type": "ICE",
+        "number": "941",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "5",
+        "time": "2510201800",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "-3642361880164599102-2510201201-18",
+        "type": "IC",
+        "number": "2431",
+        "direction": "Cottbus Hbf",
+        "platform": "",
+        "time": "2510201843",
+        "destination": "Cottbus Hbf",
+        "path_stations": [
+          "Berlin Zoologischer Garten",
+          "Berlin Hbf",
+          "Berlin Ostbahnhof",
+          "Berlin Ostkreuz",
+          "Königs Wusterhausen",
+          "Lübben(Spreewald)",
+          "Lübbenau(Spreewald)",
+          "Cottbus Hbf"
+        ]
+      },
+      {
+        "id": "-3876277476123700807-2510201247-12",
+        "type": "ICE",
+        "number": "1051",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "6",
+        "time": "2510201832",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "9114645463875829957-2510201747-5",
+        "type": "RE",
+        "number": "3179",
+        "direction": "Stendal Hbf",
+        "platform": "3",
+        "time": "2510201809",
+        "destination": "Stendal Hbf",
+        "path_stations": [
+          "Berlin-Staaken",
+          "Dallgow-Döberitz",
+          "Elstal",
+          "Wustermark",
+          "Buschow",
+          "Nennhausen",
+          "Rathenow",
+          "Stendal Hbf"
+        ]
+      },
+      {
+        "id": "6078091544773212843-2510201538-5",
+        "type": "ICE",
+        "number": "1615",
+        "direction": "Berlin Hbf",
+        "platform": "5",
+        "time": "2510201812",
+        "destination": "Berlin Hbf",
+        "path_stations": [
+          "Berlin Hbf"
+        ]
+      },
+      {
+        "id": "-7249450723487868865-2510201843-1",
+        "type": "RE",
+        "number": "62431",
+        "direction": "Cottbus Hbf",
+        "platform": "",
+        "time": "2510201843",
+        "destination": "Cottbus Hbf",
+        "path_stations": [
+          "Berlin Zoologischer Garten",
+          "Berlin Hbf",
+          "Berlin Ostbahnhof",
+          "Berlin Ostkreuz",
+          "Königs Wusterhausen",
+          "Lübben(Spreewald)",
+          "Lübbenau(Spreewald)",
+          "Cottbus Hbf"
+        ]
+      },
+      {
+        "id": "1690497143864597407-2510201732-3",
+        "type": "ICE",
+        "number": "854",
+        "direction": "Wuppertal Hbf",
+        "platform": "4",
+        "time": "2510201800",
+        "destination": "Wuppertal Hbf",
+        "path_stations": [
+          "Wolfsburg Hbf",
+          "Hannover Hbf",
+          "Hamm(Westf)Hbf",
+          "Hagen Hbf",
+          "Wuppertal Hbf"
+        ]
+      },
+      {
+        "id": "7188954872564278301-2510201451-9",
+        "type": "ICE",
+        "number": "641",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "5",
+        "time": "2510201900",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "5684021401707670638-2510201837-2",
+        "type": "ICE",
+        "number": "1706",
+        "direction": "Hamburg-Altona",
+        "platform": "3",
+        "time": "2510201849",
+        "destination": "Hamburg-Altona",
+        "path_stations": [
+          "Stendal Hbf",
+          "Salzwedel",
+          "Lüneburg",
+          "Hamburg Hbf",
+          "Hamburg-Altona"
+        ]
+      },
+      {
+        "id": "-4406100967731209074-2510201704-1",
+        "type": "RE",
+        "number": "92329",
+        "direction": "Dallgow-Döberitz",
+        "platform": "3",
+        "time": "2510201857",
+        "destination": "Dallgow-Döberitz",
+        "path_stations": [
+          "Dallgow-Döberitz"
+        ]
+      },
+      {
+        "id": "-263789116210700888-2510201753-3",
+        "type": "ICE",
+        "number": "742",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "4",
+        "time": "2510201826",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Stendal Hbf",
+          "Hannover Hbf",
+          "Bünde(Westf)",
+          "Osnabrück Hbf",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "8983673647294408675-2510200842-21",
+        "type": "ICE",
+        "number": "1218",
+        "direction": "Berlin Hbf",
+        "platform": "6",
+        "time": "2510201824",
+        "destination": "Berlin Hbf",
+        "path_stations": [
+          "Berlin Hbf"
+        ]
+      },
+      {
+        "id": "4251988685605862791-2510201732-3",
+        "type": "ICE",
+        "number": "844",
+        "direction": "Köln Hbf",
+        "platform": "4",
+        "time": "2510201800",
+        "destination": "Köln Hbf",
+        "path_stations": [
+          "Wolfsburg Hbf",
+          "Hannover Hbf",
+          "Hamm(Westf)Hbf",
+          "Dortmund Hbf",
+          "Essen Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf",
+          "Köln Hbf"
+        ]
+      },
+      {
+        "id": "1131574480602817578-2510201744-8",
+        "type": "RE",
+        "number": "62029",
+        "direction": "Elstal",
+        "platform": "3",
+        "time": "2510201838",
+        "destination": "Elstal",
+        "path_stations": [
+          "Berlin-Staaken",
+          "Dallgow-Döberitz",
+          "Elstal"
+        ]
+      },
+      {
+        "id": "-2818151692476083876-2510201838-3",
+        "type": "RB",
+        "number": "18627",
+        "direction": "Berlin Südkreuz",
+        "platform": "6",
+        "time": "2510201858",
+        "destination": "Berlin Südkreuz",
+        "path_stations": [
+          "Berlin Jungfernheide",
+          "Berlin Hbf",
+          "Berlin Potsdamer Platz",
+          "Berlin Südkreuz"
+        ]
+      },
+      {
+        "id": "-6781373489913831436-2510201814-3",
+        "type": "RB",
+        "number": "18269",
+        "direction": "Potsdam Hbf",
+        "platform": "3",
+        "time": "2510201830",
+        "destination": "Potsdam Hbf",
+        "path_stations": [
+          "Berlin-Staaken",
+          "Dallgow-Döberitz",
+          "Elstal",
+          "Wustermark",
+          "Priort",
+          "Marquardt",
+          "Golm",
+          "Potsdam Park Sanssouci",
+          "Potsdam Charlottenhof",
+          "Potsdam Hbf"
+        ]
+      },
+      {
+        "id": "-4020550040361167307-2510201345-7",
+        "type": "ICE",
+        "number": "951",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "5",
+        "time": "2510201800",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "3742440961287674842-2510201832-3",
+        "type": "ICE",
+        "number": "542",
+        "direction": "Köln Hbf",
+        "platform": "4",
+        "time": "2510201900",
+        "destination": "Köln Hbf",
+        "path_stations": [
+          "Wolfsburg Hbf",
+          "Hannover Hbf",
+          "Minden(Westf)",
+          "Bielefeld Hbf",
+          "Dortmund Hbf",
+          "Essen Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Hbf",
+          "Köln Hbf"
+        ]
+      },
+      {
+        "id": "1727073522629915379-2510201925-2",
+        "type": "ICE",
+        "number": "687",
+        "direction": "Frankfurt(Main)Hbf",
+        "platform": "",
+        "time": "2510201935",
+        "destination": "Frankfurt(Main)Hbf",
+        "path_stations": [
+          "Stendal Hbf",
+          "Wolfsburg Hbf",
+          "Braunschweig Hbf",
+          "Hildesheim Hbf",
+          "Göttingen",
+          "Eichenberg",
+          "Fulda",
+          "Frankfurt(Main)Hbf"
+        ]
+      },
+      {
+        "id": "-4659876279235164279-2510201832-8",
+        "type": "RE",
+        "number": "3178",
+        "direction": "Berlin Südkreuz",
+        "platform": "5",
+        "time": "2510201951",
+        "destination": "Berlin Südkreuz",
+        "path_stations": [
+          "Berlin Jungfernheide",
+          "Berlin Hbf",
+          "Berlin Potsdamer Platz",
+          "Berlin Südkreuz"
+        ]
+      },
+      {
+        "id": "5623851777441217347-2510201804-1",
+        "type": "RE",
+        "number": "92331",
+        "direction": "Dallgow-Döberitz",
+        "platform": "3",
+        "time": "2510201957",
+        "destination": "Dallgow-Döberitz",
+        "path_stations": [
+          "Dallgow-Döberitz"
+        ]
+      },
+      {
+        "id": "-2721294798420893082-2510201844-8",
+        "type": "RE",
+        "number": "62031",
+        "direction": "Elstal",
+        "platform": "3",
+        "time": "2510201939",
+        "destination": "Elstal",
+        "path_stations": [
+          "Berlin-Staaken",
+          "Dallgow-Döberitz",
+          "Elstal"
+        ]
+      },
+      {
+        "id": "5701347044418282694-2510201616-9",
+        "type": "ICE",
+        "number": "1633",
+        "direction": "Berlin Hbf",
+        "platform": "5",
+        "time": "2510201913",
+        "destination": "Berlin Hbf",
+        "path_stations": [
+          "Berlin Hbf"
+        ]
+      },
+      {
+        "id": "-6034408938541575596-2510201938-3",
+        "type": "RB",
+        "number": "18629",
+        "direction": "Berlin Südkreuz",
+        "platform": "5",
+        "time": "2510201957",
+        "destination": "Berlin Südkreuz",
+        "path_stations": [
+          "Berlin Jungfernheide",
+          "Berlin Hbf",
+          "Berlin Potsdamer Platz",
+          "Berlin Südkreuz"
+        ]
+      },
+      {
+        "id": "6378881227509878523-2510201550-8",
+        "type": "ICE",
+        "number": "943",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "6",
+        "time": "2510202000",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "4961782681481677440-2510200959-22",
+        "type": "ICE",
+        "number": "278",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "6",
+        "time": "2510201917",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "-5571151066405643883-2510201324-9",
+        "type": "ICE",
+        "number": "1034",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "6",
+        "time": "2510201948",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "-5069143517080929104-2510201907-4",
+        "type": "RE",
+        "number": "62028",
+        "direction": "Flughafen BER",
+        "platform": "5",
+        "time": "2510201923",
+        "destination": "Flughafen BER",
+        "path_stations": [
+          "Berlin Zoologischer Garten",
+          "Berlin Hbf",
+          "Berlin Friedrichstraße",
+          "Berlin Alexanderplatz",
+          "Berlin Ostbahnhof",
+          "Berlin Ostkreuz",
+          "Flughafen BER"
+        ]
+      },
+      {
+        "id": "7043396718381329906-2510201835-11",
+        "type": "RB",
+        "number": "18268",
+        "direction": "Berlin Gesundbrunnen",
+        "platform": "6",
+        "time": "2510201927",
+        "destination": "Berlin Gesundbrunnen",
+        "path_stations": [
+          "Berlin Jungfernheide",
+          "Berlin Gesundbrunnen"
+        ]
+      },
+      {
+        "id": "5254069718021379768-2510201400-12",
+        "type": "IC",
+        "number": "149",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "5",
+        "time": "2510201932",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "624684981040080406-2510201934-3",
+        "type": "ICE",
+        "number": "842",
+        "direction": "Köln Hbf",
+        "platform": "4",
+        "time": "2510202000",
+        "destination": "Köln Hbf",
+        "path_stations": [
+          "Wolfsburg Hbf",
+          "Hannover Hbf",
+          "Minden(Westf)",
+          "Bielefeld Hbf",
+          "Hamm(Westf)Hbf",
+          "Dortmund Hbf",
+          "Essen Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf",
+          "Köln Hbf"
+        ]
+      },
+      {
+        "id": "4628797216718709444-2510201353-9",
+        "type": "ICE",
+        "number": "706",
+        "direction": "Hamburg-Altona",
+        "platform": "3",
+        "time": "2510201949",
+        "destination": "Hamburg-Altona",
+        "path_stations": [
+          "Stendal Hbf",
+          "Salzwedel",
+          "Uelzen",
+          "Hamburg Hbf",
+          "Hamburg Dammtor",
+          "Hamburg-Altona"
+        ]
+      },
+      {
+        "id": "-8488844539277976383-2510201844-3",
+        "type": "ICE",
+        "number": "552",
+        "direction": "Köln Hbf",
+        "platform": "4",
+        "time": "2510201912",
+        "destination": "Köln Hbf",
+        "path_stations": [
+          "Hannover Hbf",
+          "Hagen Hbf",
+          "Wuppertal Hbf",
+          "Köln Hbf"
+        ]
+      },
+      {
+        "id": "-4238333687665108313-2510201847-5",
+        "type": "RE",
+        "number": "3159",
+        "direction": "Rathenow",
+        "platform": "3",
+        "time": "2510201908",
+        "destination": "Rathenow",
+        "path_stations": [
+          "Berlin-Staaken",
+          "Dallgow-Döberitz",
+          "Elstal",
+          "Wustermark",
+          "Buschow",
+          "Nennhausen",
+          "Rathenow"
+        ]
+      },
+      {
+        "id": "137726261770665329-2510201857-1",
+        "type": "RE",
+        "number": "3130",
+        "direction": "Cottbus Hbf",
+        "platform": "6",
+        "time": "2510201904",
+        "destination": "Cottbus Hbf",
+        "path_stations": [
+          "Berlin-Charlottenburg",
+          "Berlin Zoologischer Garten",
+          "Berlin Hbf",
+          "Berlin Friedrichstraße",
+          "Berlin Alexanderplatz",
+          "Berlin Ostbahnhof",
+          "Berlin Ostkreuz",
+          "Königs Wusterhausen",
+          "Brand Tropical Islands",
+          "Lübben(Spreewald)",
+          "Lübbenau(Spreewald)",
+          "Raddusch",
+          "Vetschau",
+          "Kunersdorf",
+          "Cottbus Hbf"
+        ]
+      },
+      {
+        "id": "1501575717703377286-2510201841-5",
+        "type": "RB",
+        "number": "18626",
+        "direction": "Wustermark",
+        "platform": "3",
+        "time": "2510201903",
+        "destination": "Wustermark",
+        "path_stations": [
+          "Berlin-Staaken",
+          "Dallgow-Döberitz",
+          "Elstal",
+          "Wustermark"
+        ]
+      },
+      {
+        "id": "1494377583683787990-2510201916-3",
+        "type": "RB",
+        "number": "18271",
+        "direction": "Potsdam Hbf",
+        "platform": "3",
+        "time": "2510201930",
+        "destination": "Potsdam Hbf",
+        "path_stations": [
+          "Berlin-Staaken",
+          "Dallgow-Döberitz",
+          "Elstal",
+          "Wustermark",
+          "Priort",
+          "Marquardt",
+          "Golm",
+          "Potsdam Park Sanssouci",
+          "Potsdam Charlottenhof",
+          "Potsdam Hbf"
+        ]
+      },
+      {
+        "id": "7188954872564278301-2510201451-9",
+        "type": "ICE",
+        "number": "641",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "5",
+        "time": "2510201900",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "-107298036587741504-2510201545-7",
+        "type": "ICE",
+        "number": "953",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "6",
+        "time": "2510202000",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "3742440961287674842-2510201832-3",
+        "type": "ICE",
+        "number": "542",
+        "direction": "Köln Hbf",
+        "platform": "4",
+        "time": "2510201900",
+        "destination": "Köln Hbf",
+        "path_stations": [
+          "Wolfsburg Hbf",
+          "Hannover Hbf",
+          "Minden(Westf)",
+          "Bielefeld Hbf",
+          "Dortmund Hbf",
+          "Essen Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Hbf",
+          "Köln Hbf"
+        ]
+      },
+      {
+        "id": "2869769973922245820-2510202032-3",
+        "type": "ICE",
+        "number": "540",
+        "direction": "Oldenburg(Oldb)Hbf",
+        "platform": "4",
+        "time": "2510202100",
+        "destination": "Oldenburg(Oldb)Hbf",
+        "path_stations": [
+          "Stendal Hbf",
+          "Wolfsburg Hbf",
+          "Hannover Hbf",
+          "Nienburg(Weser)",
+          "Verden(Aller)",
+          "Bremen Hbf",
+          "Delmenhorst",
+          "Oldenburg(Oldb)Hbf"
+        ]
+      },
+      {
+        "id": "3845640765503284488-2510202038-2",
+        "type": "ICE",
+        "number": "1734",
+        "direction": "Hamburg-Altona",
+        "platform": "3",
+        "time": "2510202049",
+        "destination": "Hamburg-Altona",
+        "path_stations": [
+          "Stendal Hbf",
+          "Salzwedel",
+          "Lüneburg",
+          "Hamburg Hbf",
+          "Hamburg-Altona"
+        ]
+      },
+      {
+        "id": "8740070721521818538-2510202007-4",
+        "type": "RE",
+        "number": "62030",
+        "direction": "Flughafen BER",
+        "platform": "6",
+        "time": "2510202021",
+        "destination": "Flughafen BER",
+        "path_stations": [
+          "Berlin Zoologischer Garten",
+          "Berlin Hbf",
+          "Berlin Friedrichstraße",
+          "Berlin Alexanderplatz",
+          "Berlin Ostbahnhof",
+          "Berlin Ostkreuz",
+          "Flughafen BER"
+        ]
+      },
+      {
+        "id": "2586815115940275104-2510201944-8",
+        "type": "RE",
+        "number": "62033",
+        "direction": "Elstal",
+        "platform": "4",
+        "time": "2510202038",
+        "destination": "Elstal",
+        "path_stations": [
+          "Berlin-Staaken",
+          "Dallgow-Döberitz",
+          "Elstal"
+        ]
+      },
+      {
+        "id": "-157208555968192668-2510201644-6",
+        "type": "ICE",
+        "number": "653",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "6",
+        "time": "2510202048",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "6617695006145501165-2510201941-5",
+        "type": "RB",
+        "number": "18628",
+        "direction": "Wustermark",
+        "platform": "3",
+        "time": "2510202003",
+        "destination": "Wustermark",
+        "path_stations": [
+          "Berlin-Staaken",
+          "Dallgow-Döberitz",
+          "Elstal",
+          "Wustermark"
+        ]
+      },
+      {
+        "id": "-1843217256996335197-2510201935-11",
+        "type": "RB",
+        "number": "18270",
+        "direction": "Berlin Gesundbrunnen",
+        "platform": "6",
+        "time": "2510202029",
+        "destination": "Berlin Gesundbrunnen",
+        "path_stations": [
+          "Berlin Jungfernheide",
+          "Berlin Gesundbrunnen"
+        ]
+      },
+      {
+        "id": "4083739950560377043-2510201246-15",
+        "type": "ICE",
+        "number": "596",
+        "direction": "Berlin Hbf",
+        "platform": "5",
+        "time": "2510202025",
+        "destination": "Berlin Hbf",
+        "path_stations": [
+          "Berlin Hbf"
+        ]
+      },
+      {
+        "id": "6378881227509878523-2510201550-8",
+        "type": "ICE",
+        "number": "943",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "6",
+        "time": "2510202000",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "5852253877677390662-2510201904-1",
+        "type": "RE",
+        "number": "92333",
+        "direction": "Dallgow-Döberitz",
+        "platform": "3",
+        "time": "2510202055",
+        "destination": "Dallgow-Döberitz",
+        "path_stations": [
+          "Dallgow-Döberitz"
+        ]
+      },
+      {
+        "id": "-5511541014003594580-2510201652-9",
+        "type": "ICE",
+        "number": "643",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "5",
+        "time": "2510202100",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin Zoologischer Garten",
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "7389501989890790418-2510202002-8",
+        "type": "RE",
+        "number": "3160",
+        "direction": "Berlin Südkreuz",
+        "platform": "5",
+        "time": "2510202052",
+        "destination": "Berlin Südkreuz",
+        "path_stations": [
+          "Berlin Jungfernheide",
+          "Berlin Hbf",
+          "Berlin Potsdamer Platz",
+          "Berlin Südkreuz"
+        ]
+      },
+      {
+        "id": "5735453695384784814-2510201445-11",
+        "type": "ICE",
+        "number": "1053",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "5",
+        "time": "2510202032",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "3691871730918186499-2510202013-3",
+        "type": "RB",
+        "number": "18273",
+        "direction": "Potsdam Hbf",
+        "platform": "3",
+        "time": "2510202030",
+        "destination": "Potsdam Hbf",
+        "path_stations": [
+          "Berlin-Staaken",
+          "Dallgow-Döberitz",
+          "Elstal",
+          "Wustermark",
+          "Priort",
+          "Marquardt",
+          "Golm",
+          "Potsdam Park Sanssouci",
+          "Potsdam Charlottenhof",
+          "Potsdam Hbf"
+        ]
+      },
+      {
+        "id": "-4599931227724882544-2510202038-3",
+        "type": "RB",
+        "number": "18631",
+        "direction": "Berlin Südkreuz",
+        "platform": "6",
+        "time": "2510202058",
+        "destination": "Berlin Südkreuz",
+        "path_stations": [
+          "Berlin Jungfernheide",
+          "Berlin Hbf",
+          "Berlin Potsdamer Platz",
+          "Berlin Südkreuz"
+        ]
+      },
+      {
+        "id": "624684981040080406-2510201934-3",
+        "type": "ICE",
+        "number": "842",
+        "direction": "Köln Hbf",
+        "platform": "4",
+        "time": "2510202000",
+        "destination": "Köln Hbf",
+        "path_stations": [
+          "Wolfsburg Hbf",
+          "Hannover Hbf",
+          "Minden(Westf)",
+          "Bielefeld Hbf",
+          "Hamm(Westf)Hbf",
+          "Dortmund Hbf",
+          "Essen Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf",
+          "Köln Hbf"
+        ]
+      },
+      {
+        "id": "3293420129703424318-2510201957-1",
+        "type": "RE",
+        "number": "3132",
+        "direction": "Cottbus Hbf",
+        "platform": "5",
+        "time": "2510202004",
+        "destination": "Cottbus Hbf",
+        "path_stations": [
+          "Berlin-Charlottenburg",
+          "Berlin Zoologischer Garten",
+          "Berlin Hbf",
+          "Berlin Friedrichstraße",
+          "Berlin Alexanderplatz",
+          "Berlin Ostbahnhof",
+          "Berlin Ostkreuz",
+          "Königs Wusterhausen",
+          "Brand Tropical Islands",
+          "Lübben(Spreewald)",
+          "Lübbenau(Spreewald)",
+          "Raddusch",
+          "Vetschau",
+          "Kolkwitz",
+          "Cottbus Hbf"
+        ]
+      },
+      {
+        "id": "-3725059071757178768-2510201949-5",
+        "type": "RE",
+        "number": "3181",
+        "direction": "Stendal Hbf",
+        "platform": "3",
+        "time": "2510202009",
+        "destination": "Stendal Hbf",
+        "path_stations": [
+          "Berlin-Staaken",
+          "Dallgow-Döberitz",
+          "Elstal",
+          "Wustermark",
+          "Buschow",
+          "Nennhausen",
+          "Rathenow",
+          "Stendal Hbf"
+        ]
+      },
+      {
+        "id": "-2352178830845622438-2510201735-6",
+        "type": "ICE",
+        "number": "1617",
+        "direction": "Berlin Hbf",
+        "platform": "6",
+        "time": "2510202008",
+        "destination": "Berlin Hbf",
+        "path_stations": [
+          "Berlin Hbf"
+        ]
+      },
+      {
+        "id": "8849850357444188253-2510202016-4",
+        "type": "ICE",
+        "number": "879",
+        "direction": "Kassel-Wilhelmshöhe",
+        "platform": "4",
+        "time": "2510202046",
+        "destination": "Kassel-Wilhelmshöhe",
+        "path_stations": [
+          "Wolfsburg Hbf",
+          "Braunschweig Hbf",
+          "Hildesheim Hbf",
+          "Göttingen",
+          "Kassel-Wilhelmshöhe"
+        ]
+      },
+      {
+        "id": "-107298036587741504-2510201545-7",
+        "type": "ICE",
+        "number": "953",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "6",
+        "time": "2510202000",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "2869769973922245820-2510202032-3",
+        "type": "ICE",
+        "number": "540",
+        "direction": "Oldenburg(Oldb)Hbf",
+        "platform": "4",
+        "time": "2510202100",
+        "destination": "Oldenburg(Oldb)Hbf",
+        "path_stations": [
+          "Stendal Hbf",
+          "Wolfsburg Hbf",
+          "Hannover Hbf",
+          "Nienburg(Weser)",
+          "Verden(Aller)",
+          "Bremen Hbf",
+          "Delmenhorst",
+          "Oldenburg(Oldb)Hbf"
+        ]
+      },
+      {
+        "id": "5743374173774587554-2510202107-4",
+        "type": "RE",
+        "number": "62032",
+        "direction": "Berlin-Lichtenberg",
+        "platform": "5",
+        "time": "2510202123",
+        "destination": "Berlin-Lichtenberg",
+        "path_stations": [
+          "Berlin Jungfernheide",
+          "Berlin Gesundbrunnen",
+          "Berlin-Lichtenberg"
+        ]
+      },
+      {
+        "id": "7941445502228145274-2510202057-1",
+        "type": "RE",
+        "number": "3134",
+        "direction": "Cottbus Hbf",
+        "platform": "6",
+        "time": "2510202104",
+        "destination": "Cottbus Hbf",
+        "path_stations": [
+          "Berlin-Charlottenburg",
+          "Berlin Zoologischer Garten",
+          "Berlin Hbf",
+          "Berlin Friedrichstraße",
+          "Berlin Alexanderplatz",
+          "Berlin Ostbahnhof",
+          "Berlin Ostkreuz",
+          "Königs Wusterhausen",
+          "Brand Tropical Islands",
+          "Lübben(Spreewald)",
+          "Lübbenau(Spreewald)",
+          "Raddusch",
+          "Vetschau",
+          "Kunersdorf",
+          "Cottbus Hbf"
+        ]
+      },
+      {
+        "id": "-4795573960898992874-2510202137-2",
+        "type": "ICE",
+        "number": "1712",
+        "direction": "Hamburg-Altona",
+        "platform": "3",
+        "time": "2510202147",
+        "destination": "Hamburg-Altona",
+        "path_stations": [
+          "Stendal Hbf",
+          "Salzwedel",
+          "Uelzen",
+          "Hamburg-Harburg",
+          "Hamburg Hbf",
+          "Hamburg Dammtor",
+          "Hamburg-Altona"
+        ]
+      },
+      {
+        "id": "5511449091386928938-2510202035-11",
+        "type": "RB",
+        "number": "18272",
+        "direction": "Berlin Gesundbrunnen",
+        "platform": "6",
+        "time": "2510202127",
+        "destination": "Berlin Gesundbrunnen",
+        "path_stations": [
+          "Berlin Jungfernheide",
+          "Berlin Gesundbrunnen"
+        ]
+      },
+      {
+        "id": "-5511541014003594580-2510201652-9",
+        "type": "ICE",
+        "number": "643",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "5",
+        "time": "2510202100",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin Zoologischer Garten",
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "8156111849493311226-2510201802-2",
+        "type": "ICE",
+        "number": "1032",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "5",
+        "time": "2510202149",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "-130190603183544299-2510201600-12",
+        "type": "IC",
+        "number": "241",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "5",
+        "time": "2510202132",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin Zoologischer Garten",
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "-1001326572688500578-2510202041-5",
+        "type": "RB",
+        "number": "18630",
+        "direction": "Wustermark",
+        "platform": "3",
+        "time": "2510202103",
+        "destination": "Wustermark",
+        "path_stations": [
+          "Berlin-Staaken",
+          "Dallgow-Döberitz",
+          "Elstal",
+          "Wustermark"
+        ]
+      },
+      {
+        "id": "6650457238952290678-2510202033-7",
+        "type": "RE",
+        "number": "3180",
+        "direction": "Berlin Südkreuz",
+        "platform": "6",
+        "time": "2510202151",
+        "destination": "Berlin Südkreuz",
+        "path_stations": [
+          "Berlin Jungfernheide",
+          "Berlin Hbf",
+          "Berlin Potsdamer Platz",
+          "Berlin Südkreuz"
+        ]
+      },
+      {
+        "id": "-1815896018063012568-2510202044-8",
+        "type": "RE",
+        "number": "62035",
+        "direction": "Elstal",
+        "platform": "3",
+        "time": "2510202138",
+        "destination": "Elstal",
+        "path_stations": [
+          "Berlin-Staaken",
+          "Dallgow-Döberitz",
+          "Elstal"
+        ]
+      },
+      {
+        "id": "6170002538724052342-2510201413-15",
+        "type": "ICE",
+        "number": "276",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "6",
+        "time": "2510202117",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "747345460180818384-2510202047-5",
+        "type": "RE",
+        "number": "3161",
+        "direction": "Rathenow",
+        "platform": "3",
+        "time": "2510202108",
+        "destination": "Rathenow",
+        "path_stations": [
+          "Berlin-Staaken",
+          "Dallgow-Döberitz",
+          "Elstal",
+          "Wustermark",
+          "Buschow",
+          "Nennhausen",
+          "Rathenow"
+        ]
+      },
+      {
+        "id": "3499338043235512572-2510201937-5",
+        "type": "ICE",
+        "number": "609",
+        "direction": "Berlin Südkreuz",
+        "platform": "5",
+        "time": "2510202159",
+        "destination": "Berlin Südkreuz",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Südkreuz"
+        ]
+      },
+      {
+        "id": "-3851151041923621842-2510201836-6",
+        "type": "ICE",
+        "number": "599",
+        "direction": "Berlin Hbf",
+        "platform": "5",
+        "time": "2510202113",
+        "destination": "Berlin Hbf",
+        "path_stations": [
+          "Berlin Hbf"
+        ]
+      },
+      {
+        "id": "2121877044531283563-2510202113-4",
+        "type": "ICE",
+        "number": "840",
+        "direction": "Hannover Hbf",
+        "platform": "4",
+        "time": "2510202142",
+        "destination": "Hannover Hbf",
+        "path_stations": [
+          "Stendal Hbf",
+          "Wolfsburg Hbf",
+          "Hannover Hbf"
+        ]
+      },
+      {
+        "id": "-2226467865786714148-2510202238-2",
+        "type": "ICE",
+        "number": "700",
+        "direction": "Hamburg-Altona",
+        "platform": "3",
+        "time": "2510202249",
+        "destination": "Hamburg-Altona",
+        "path_stations": [
+          "Stendal Hbf",
+          "Salzwedel",
+          "Uelzen",
+          "Hamburg-Harburg",
+          "Hamburg Hbf",
+          "Hamburg Dammtor",
+          "Hamburg-Altona"
+        ]
+      },
+      {
+        "id": "450159185692254127-2510202206-8",
+        "type": "RE",
+        "number": "3162",
+        "direction": "Berlin Hbf",
+        "platform": "6",
+        "time": "2510202252",
+        "destination": "Berlin Hbf",
+        "path_stations": [
+          "Berlin Jungfernheide",
+          "Berlin Hbf"
+        ]
+      },
+      {
+        "id": "9016403526930832374-2510201845-6",
+        "type": "ICE",
+        "number": "655",
+        "direction": "Berlin Hbf",
+        "platform": "6",
+        "time": "2510202246",
+        "destination": "Berlin Hbf",
+        "path_stations": [
+          "Berlin Hbf"
+        ]
+      },
+      {
+        "id": "-8275737537227179086-2510201750-9",
+        "type": "ICE",
+        "number": "945",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "5",
+        "time": "2510202209",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin Zoologischer Garten",
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "-4550645364654346112-2510201745-8",
+        "type": "ICE",
+        "number": "955",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "5",
+        "time": "2510202209",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin Zoologischer Garten",
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "856602161279574018-2510202237-1",
+        "type": "RE",
+        "number": "62037",
+        "direction": "Wustermark",
+        "platform": "4",
+        "time": "2510202237",
+        "destination": "Wustermark",
+        "path_stations": [
+          "Berlin-Staaken",
+          "Dallgow-Döberitz",
+          "Elstal",
+          "Wustermark"
+        ]
+      },
+      {
+        "id": "6820683611065917887-2510202145-5",
+        "type": "RE",
+        "number": "3183",
+        "direction": "Stendal Hbf",
+        "platform": "3",
+        "time": "2510202209",
+        "destination": "Stendal Hbf",
+        "path_stations": [
+          "Berlin-Staaken",
+          "Dallgow-Döberitz",
+          "Elstal",
+          "Wustermark",
+          "Buschow",
+          "Nennhausen",
+          "Rathenow",
+          "Stendal Hbf"
+        ]
+      },
+      {
+        "id": "4447890004106418758-2510201852-9",
+        "type": "ICE",
+        "number": "645",
+        "direction": "Berlin Hbf",
+        "platform": "5",
+        "time": "2510202300",
+        "destination": "Berlin Hbf",
+        "path_stations": [
+          "Berlin Hbf"
+        ]
+      },
+      {
+        "id": "-3272021131219238243-2510201749-3",
+        "type": "ICE",
+        "number": "1159",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "6",
+        "time": "2510202205",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin Zoologischer Garten",
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "1140779865956290650-2510201446-14",
+        "type": "ICE",
+        "number": "594",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "6",
+        "time": "2510202219",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "-1705524843027558889-2510202338-1",
+        "type": "RE",
+        "number": "62039",
+        "direction": "Wustermark",
+        "platform": "3",
+        "time": "2510202338",
+        "destination": "Wustermark",
+        "path_stations": [
+          "Berlin-Staaken",
+          "Dallgow-Döberitz",
+          "Elstal",
+          "Wustermark"
+        ]
+      },
+      {
+        "id": "5597303123860052865-2510201926-9",
+        "type": "ICE",
+        "number": "947",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "6",
+        "time": "2510210001",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin Zoologischer Garten",
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "-8196009632544207530-2510202035-6",
+        "type": "ICE",
+        "number": "807",
+        "direction": "Berlin Hbf",
+        "platform": "6",
+        "time": "2510202306",
+        "destination": "Berlin Hbf",
+        "path_stations": [
+          "Berlin Hbf"
+        ]
+      },
+      {
+        "id": "1116577686148397167-2510201613-15",
+        "type": "ICE",
+        "number": "274",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "6",
+        "time": "2510202316",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin Zoologischer Garten",
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "4121683295209577191-2510202315-4",
+        "type": "ICE",
+        "number": "271",
+        "direction": "Chur",
+        "platform": "4",
+        "time": "2510202345",
+        "destination": "Chur",
+        "path_stations": [
+          "Stendal Hbf",
+          "Wolfsburg Hbf",
+          "Hannover Hbf",
+          "Göttingen",
+          "Fulda",
+          "Hanau Hbf",
+          "Frankfurt(Main)Hbf",
+          "Mannheim Hbf",
+          "Karlsruhe Hbf",
+          "Baden-Baden",
+          "Offenburg",
+          "Freiburg(Breisgau) Hbf",
+          "Basel Bad Bf",
+          "Basel SBB",
+          "Zürich HB",
+          "Sargans",
+          "Landquart",
+          "Chur"
+        ]
+      },
+      {
+        "id": "-9028947455859417744-2510202258-5",
+        "type": "RE",
+        "number": "3185",
+        "direction": "Stendal Hbf",
+        "platform": "3",
+        "time": "2510202318",
+        "destination": "Stendal Hbf",
+        "path_stations": [
+          "Berlin-Staaken",
+          "Dallgow-Döberitz",
+          "Elstal",
+          "Wustermark",
+          "Buschow",
+          "Nennhausen",
+          "Rathenow",
+          "Stendal Hbf"
+        ]
+      },
+      {
+        "id": "4447890004106418758-2510201852-9",
+        "type": "ICE",
+        "number": "645",
+        "direction": "Berlin Hbf",
+        "platform": "5",
+        "time": "2510202300",
+        "destination": "Berlin Hbf",
+        "path_stations": [
+          "Berlin Hbf"
+        ]
+      },
+      {
+        "id": "4966825592039783790-2510202121-8",
+        "type": "ICE",
+        "number": "907",
+        "direction": "Berlin Hbf",
+        "platform": "5",
+        "time": "2510202358",
+        "destination": "Berlin Hbf",
+        "path_stations": [
+          "Berlin Hbf"
+        ]
+      },
+      {
+        "id": "6716572724661645432-2510202245-9",
+        "type": "RE",
+        "number": "3182",
+        "direction": "Berlin Hbf",
+        "platform": "5",
+        "time": "2510202352",
+        "destination": "Berlin Hbf",
+        "path_stations": [
+          "Berlin Jungfernheide",
+          "Berlin Hbf"
+        ]
+      },
+      {
+        "id": "5597303123860052865-2510201926-9",
+        "type": "ICE",
+        "number": "947",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "6",
+        "time": "2510210001",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin Zoologischer Garten",
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "4209598486652835463-2510210034-1",
+        "type": "RE",
+        "number": "62045",
+        "direction": "Wustermark",
+        "platform": "3",
+        "time": "2510210034",
+        "destination": "Wustermark",
+        "path_stations": [
+          "Berlin-Staaken",
+          "Dallgow-Döberitz",
+          "Elstal",
+          "Wustermark"
+        ]
+      },
+      {
+        "id": "5089820149948252230-2510201646-15",
+        "type": "ICE",
+        "number": "592",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "6",
+        "time": "2510210052",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin Zoologischer Garten",
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "2192436520712598630-2510210054-3",
+        "type": "RE",
+        "number": "3165",
+        "direction": "Rathenow",
+        "platform": "3",
+        "time": "2510210107",
+        "destination": "Rathenow",
+        "path_stations": [
+          "Berlin-Staaken",
+          "Dallgow-Döberitz",
+          "Elstal",
+          "Wustermark",
+          "Buschow",
+          "Nennhausen",
+          "Rathenow"
+        ]
+      },
+      {
+        "id": "5399646541294258814-2510210233-1",
+        "type": "RE",
+        "number": "62047",
+        "direction": "Wustermark",
+        "platform": "3",
+        "time": "2510210233",
+        "destination": "Wustermark",
+        "path_stations": [
+          "Berlin-Staaken",
+          "Dallgow-Döberitz",
+          "Elstal",
+          "Wustermark"
+        ]
+      },
+      {
+        "id": "4643047070553497889-2510210435-1",
+        "type": "RE",
+        "number": "62001",
+        "direction": "Wustermark",
+        "platform": "4",
+        "time": "2510210435",
+        "destination": "Wustermark",
+        "path_stations": [
+          "Berlin-Staaken",
+          "Dallgow-Döberitz",
+          "Elstal",
+          "Wustermark"
+        ]
+      },
+      {
+        "id": "5141467109041808432-2510210406-8",
+        "type": "RE",
+        "number": "3144",
+        "direction": "Berlin Südkreuz",
+        "platform": "6",
+        "time": "2510210452",
+        "destination": "Berlin Südkreuz",
+        "path_stations": [
+          "Berlin Jungfernheide",
+          "Berlin Hbf",
+          "Berlin Potsdamer Platz",
+          "Berlin Südkreuz"
+        ]
+      },
+      {
+        "id": "3129031456741493070-2510210411-4",
+        "type": "ICE",
+        "number": "646",
+        "direction": "Düsseldorf Hbf",
+        "platform": "3",
+        "time": "2510210441",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Stendal Hbf",
+          "Wolfsburg Hbf",
+          "Hannover Hbf",
+          "Minden(Westf)",
+          "Herford",
+          "Bielefeld Hbf",
+          "Hamm(Westf)Hbf",
+          "Dortmund Hbf",
+          "Essen Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-8380428484308774538-2510210438-2",
+        "type": "ICE",
+        "number": "908",
+        "direction": "Hamburg-Altona",
+        "platform": "3",
+        "time": "2510210450",
+        "destination": "Hamburg-Altona",
+        "path_stations": [
+          "Stendal Hbf",
+          "Salzwedel",
+          "Uelzen",
+          "Lüneburg",
+          "Hamburg-Harburg",
+          "Hamburg Hbf",
+          "Hamburg-Altona"
+        ]
+      },
+      {
+        "id": "-5507937173269973978-2510210413-3",
+        "type": "RB",
+        "number": "18241",
+        "direction": "Potsdam Hbf",
+        "platform": "3",
+        "time": "2510210428",
+        "destination": "Potsdam Hbf",
+        "path_stations": [
+          "Berlin-Staaken",
+          "Dallgow-Döberitz",
+          "Elstal",
+          "Wustermark",
+          "Priort",
+          "Marquardt",
+          "Golm",
+          "Potsdam Park Sanssouci",
+          "Potsdam Charlottenhof",
+          "Potsdam Hbf"
+        ]
+      },
+      {
+        "id": "8877134481212521389-2510210416-4",
+        "type": "ICE",
+        "number": "275",
+        "direction": "Interlaken Ost",
+        "platform": "4",
+        "time": "2510210446",
+        "destination": "Interlaken Ost",
+        "path_stations": [
+          "Wolfsburg Hbf",
+          "Braunschweig Hbf",
+          "Hildesheim Hbf",
+          "Göttingen",
+          "Kassel-Wilhelmshöhe",
+          "Fulda",
+          "Hanau Hbf",
+          "Frankfurt(Main)Hbf",
+          "Mannheim Hbf",
+          "Karlsruhe Hbf",
+          "Offenburg",
+          "Freiburg(Breisgau) Hbf",
+          "Basel Bad Bf",
+          "Basel SBB",
+          "Liestal",
+          "Olten",
+          "Bern",
+          "Thun",
+          "Spiez",
+          "Interlaken West",
+          "Interlaken Ost"
+        ]
+      }
+    ],
+    "arrivals": []
+  }
+}

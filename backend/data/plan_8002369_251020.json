@@ -1,0 +1,1369 @@
+{
+  "station_eva": "8002369",
+  "date": "251020",
+  "cached_at": "2025-10-20T16:38:01.814680",
+  "plan_data": {
+    "arrivals": [
+      {
+        "id": "4621747675100731683-2510201835-4",
+        "type": "RB",
+        "number": "52346",
+        "time": "2510201847",
+        "platform": "1",
+        "path_stations": [
+          "Münster(Westf)Hbf",
+          "Münster(W)Zentrum Nord",
+          "Münster-Sprakel"
+        ],
+        "line": "65"
+      },
+      {
+        "id": "528103146165346343-2510201535-23",
+        "type": "RE",
+        "number": "17424",
+        "time": "2510201833",
+        "platform": "1",
+        "path_stations": [
+          "Krefeld Hbf",
+          "Krefeld-Oppum",
+          "Meerbusch-Osterath",
+          "Neuss Hbf",
+          "Dormagen",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Opladen",
+          "Solingen Hbf",
+          "Wuppertal Hbf",
+          "Wuppertal-Oberbarmen",
+          "Schwelm",
+          "Ennepetal",
+          "Hagen Hbf",
+          "Schwerte(Ruhr)",
+          "Holzwickede",
+          "Unna",
+          "Bönen",
+          "Hamm(Westf)Hbf",
+          "Drensteinfurt",
+          "Münster-Hiltrup",
+          "Münster(Westf)Hbf"
+        ],
+        "line": "7"
+      },
+      {
+        "id": "2791776302558067166-2510201808-3",
+        "type": "RE",
+        "number": "17431",
+        "time": "2510201822",
+        "platform": "2",
+        "path_stations": [
+          "Rheine",
+          "Emsdetten"
+        ],
+        "line": "7"
+      },
+      {
+        "id": "6756496553405217854-2510201652-15",
+        "type": "WFB",
+        "number": "90291",
+        "time": "2510201844",
+        "platform": "2",
+        "path_stations": [
+          "Emden Hbf",
+          "Leer(Ostfriesl)",
+          "Papenburg(Ems)",
+          "Aschendorf",
+          "Dörpen",
+          "Lathen",
+          "Haren(Ems)",
+          "Meppen",
+          "Geeste",
+          "Lingen(Ems)",
+          "Leschede",
+          "Salzbergen",
+          "Rheine",
+          "Emsdetten"
+        ],
+        "line": "RE15"
+      },
+      {
+        "id": "-2024685938287613027-2510201805-2",
+        "type": "WFB",
+        "number": "90292",
+        "time": "2510201814",
+        "platform": "1",
+        "path_stations": [
+          "Münster(Westf)Hbf"
+        ],
+        "line": "RE15"
+      },
+      {
+        "id": "-6382437368396309593-2510201813-4",
+        "type": "RB",
+        "number": "52344",
+        "time": "2510201825",
+        "platform": "1",
+        "path_stations": [
+          "Münster(Westf)Hbf",
+          "Münster(W)Zentrum Nord",
+          "Münster-Sprakel"
+        ],
+        "line": "65"
+      },
+      {
+        "id": "-4205108958797169033-2510201753-5",
+        "type": "RB",
+        "number": "52347",
+        "time": "2510201809",
+        "platform": "2",
+        "path_stations": [
+          "Rheine",
+          "Rheine-Mesum",
+          "Emsdetten",
+          "Reckenfeld"
+        ],
+        "line": "65"
+      },
+      {
+        "id": "-4414766005444815964-2510201908-3",
+        "type": "RE",
+        "number": "17433",
+        "time": "2510201922",
+        "platform": "2",
+        "path_stations": [
+          "Rheine",
+          "Emsdetten"
+        ],
+        "line": "7"
+      },
+      {
+        "id": "9135876238992906802-2510201853-5",
+        "type": "RB",
+        "number": "52351",
+        "time": "2510201909",
+        "platform": "2",
+        "path_stations": [
+          "Rheine",
+          "Rheine-Mesum",
+          "Emsdetten",
+          "Reckenfeld"
+        ],
+        "line": "65"
+      },
+      {
+        "id": "6340911107085795931-2510201635-23",
+        "type": "RE",
+        "number": "17426",
+        "time": "2510201933",
+        "platform": "1",
+        "path_stations": [
+          "Krefeld Hbf",
+          "Krefeld-Oppum",
+          "Meerbusch-Osterath",
+          "Neuss Hbf",
+          "Dormagen",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Opladen",
+          "Solingen Hbf",
+          "Wuppertal Hbf",
+          "Wuppertal-Oberbarmen",
+          "Schwelm",
+          "Ennepetal",
+          "Hagen Hbf",
+          "Schwerte(Ruhr)",
+          "Holzwickede",
+          "Unna",
+          "Bönen",
+          "Hamm(Westf)Hbf",
+          "Drensteinfurt",
+          "Münster-Hiltrup",
+          "Münster(Westf)Hbf"
+        ],
+        "line": "7"
+      },
+      {
+        "id": "-6630329376169134582-2510201752-15",
+        "type": "WFB",
+        "number": "90293",
+        "time": "2510201944",
+        "platform": "2",
+        "path_stations": [
+          "Emden Hbf",
+          "Leer(Ostfriesl)",
+          "Papenburg(Ems)",
+          "Aschendorf",
+          "Dörpen",
+          "Lathen",
+          "Haren(Ems)",
+          "Meppen",
+          "Geeste",
+          "Lingen(Ems)",
+          "Leschede",
+          "Salzbergen",
+          "Rheine",
+          "Emsdetten"
+        ],
+        "line": "RE15"
+      },
+      {
+        "id": "2078769880633547351-2510201935-4",
+        "type": "RB",
+        "number": "52350",
+        "time": "2510201947",
+        "platform": "1",
+        "path_stations": [
+          "Münster(Westf)Hbf",
+          "Münster(W)Zentrum Nord",
+          "Münster-Sprakel"
+        ],
+        "line": "65"
+      },
+      {
+        "id": "124533310730592450-2510201905-2",
+        "type": "WFB",
+        "number": "90294",
+        "time": "2510201914",
+        "platform": "1",
+        "path_stations": [
+          "Münster(Westf)Hbf"
+        ],
+        "line": "RE15"
+      },
+      {
+        "id": "6090228758868284344-2510202035-4",
+        "type": "RB",
+        "number": "52352",
+        "time": "2510202047",
+        "platform": "1",
+        "path_stations": [
+          "Münster(Westf)Hbf",
+          "Münster(W)Zentrum Nord",
+          "Münster-Sprakel"
+        ],
+        "line": "65"
+      },
+      {
+        "id": "8897274227786964332-2510202008-3",
+        "type": "RE",
+        "number": "17435",
+        "time": "2510202022",
+        "platform": "2",
+        "path_stations": [
+          "Rheine",
+          "Emsdetten"
+        ],
+        "line": "7"
+      },
+      {
+        "id": "7440050562638271263-2510201852-16",
+        "type": "WFB",
+        "number": "90295",
+        "time": "2510202045",
+        "platform": "2",
+        "path_stations": [
+          "Emden Hbf",
+          "Leer(Ostfriesl)",
+          "Papenburg(Ems)",
+          "Aschendorf",
+          "Dörpen",
+          "Lathen",
+          "Haren(Ems)",
+          "Meppen",
+          "Geeste",
+          "Lingen(Ems)",
+          "Leschede",
+          "Salzbergen",
+          "Rheine",
+          "Emsdetten",
+          "Reckenfeld"
+        ],
+        "line": "RE15"
+      },
+      {
+        "id": "5156814714618662356-2510202005-2",
+        "type": "WFB",
+        "number": "90296",
+        "time": "2510202014",
+        "platform": "1",
+        "path_stations": [
+          "Münster(Westf)Hbf"
+        ],
+        "line": "RE15"
+      },
+      {
+        "id": "3069707380370401808-2510201953-5",
+        "type": "RB",
+        "number": "52353",
+        "time": "2510202009",
+        "platform": "2",
+        "path_stations": [
+          "Rheine",
+          "Rheine-Mesum",
+          "Emsdetten",
+          "Reckenfeld"
+        ],
+        "line": "65"
+      },
+      {
+        "id": "4486711732900979138-2510201952-16",
+        "type": "WFB",
+        "number": "90297",
+        "time": "2510202145",
+        "platform": "2",
+        "path_stations": [
+          "Emden Hbf",
+          "Leer(Ostfriesl)",
+          "Papenburg(Ems)",
+          "Aschendorf",
+          "Dörpen",
+          "Lathen",
+          "Haren(Ems)",
+          "Meppen",
+          "Geeste",
+          "Lingen(Ems)",
+          "Leschede",
+          "Salzbergen",
+          "Rheine",
+          "Emsdetten",
+          "Reckenfeld"
+        ],
+        "line": "RE15"
+      },
+      {
+        "id": "-2517546130397205322-2510202053-5",
+        "type": "RB",
+        "number": "52355",
+        "time": "2510202109",
+        "platform": "2",
+        "path_stations": [
+          "Rheine",
+          "Rheine-Mesum",
+          "Emsdetten",
+          "Reckenfeld"
+        ],
+        "line": "65"
+      },
+      {
+        "id": "-4705707440919021676-2510202135-4",
+        "type": "RB",
+        "number": "52354",
+        "time": "2510202147",
+        "platform": "1",
+        "path_stations": [
+          "Münster(Westf)Hbf",
+          "Münster(W)Zentrum Nord",
+          "Münster-Sprakel"
+        ],
+        "line": "65"
+      },
+      {
+        "id": "-3786533084540134922-2510202105-2",
+        "type": "WFB",
+        "number": "90298",
+        "time": "2510202114",
+        "platform": "1",
+        "path_stations": [
+          "Münster(Westf)Hbf"
+        ],
+        "line": "RE15"
+      },
+      {
+        "id": "7597073892496609484-2510202153-5",
+        "type": "RB",
+        "number": "52357",
+        "time": "2510202209",
+        "platform": "2",
+        "path_stations": [
+          "Rheine",
+          "Rheine-Mesum",
+          "Emsdetten",
+          "Reckenfeld"
+        ],
+        "line": "65"
+      },
+      {
+        "id": "-4202560257404214898-2510202212-3",
+        "type": "WFB",
+        "number": "90300",
+        "time": "2510202222",
+        "platform": "1",
+        "path_stations": [
+          "Münster(Westf)Hbf",
+          "Münster(W)Zentrum Nord"
+        ],
+        "line": "RE15"
+      },
+      {
+        "id": "2960297712658480378-2510202235-4",
+        "type": "RB",
+        "number": "52356",
+        "time": "2510202247",
+        "platform": "1",
+        "path_stations": [
+          "Münster(Westf)Hbf",
+          "Münster(W)Zentrum Nord",
+          "Münster-Sprakel"
+        ],
+        "line": "65"
+      },
+      {
+        "id": "-6311631194256153279-2510202052-15",
+        "type": "WFB",
+        "number": "90299",
+        "time": "2510202244",
+        "platform": "2",
+        "path_stations": [
+          "Emden Hbf",
+          "Leer(Ostfriesl)",
+          "Papenburg(Ems)",
+          "Aschendorf",
+          "Dörpen",
+          "Lathen",
+          "Haren(Ems)",
+          "Meppen",
+          "Geeste",
+          "Lingen(Ems)",
+          "Leschede",
+          "Salzbergen",
+          "Rheine",
+          "Emsdetten"
+        ],
+        "line": "RE15"
+      },
+      {
+        "id": "637219038798480565-2510202312-4",
+        "type": "WFB",
+        "number": "90302",
+        "time": "2510202323",
+        "platform": "1",
+        "path_stations": [
+          "Münster(Westf)Hbf",
+          "Münster(W)Zentrum Nord",
+          "Münster-Sprakel"
+        ],
+        "line": "RE15"
+      },
+      {
+        "id": "-8926903299797833236-2510202253-5",
+        "type": "RB",
+        "number": "52359",
+        "time": "2510202309",
+        "platform": "2",
+        "path_stations": [
+          "Rheine",
+          "Rheine-Mesum",
+          "Emsdetten",
+          "Reckenfeld"
+        ],
+        "line": "65"
+      },
+      {
+        "id": "-109431539876697361-2510210013-4",
+        "type": "RB",
+        "number": "52360",
+        "time": "2510210025",
+        "platform": "1",
+        "path_stations": [
+          "Münster(Westf)Hbf",
+          "Münster(W)Zentrum Nord",
+          "Münster-Sprakel"
+        ],
+        "line": "65"
+      },
+      {
+        "id": "-3352780807530743271-2510202214-17",
+        "type": "WFB",
+        "number": "90301",
+        "time": "2510210009",
+        "platform": "2",
+        "path_stations": [
+          "Emden Hbf",
+          "Leer(Ostfriesl)",
+          "Papenburg(Ems)",
+          "Aschendorf",
+          "Dörpen",
+          "Lathen",
+          "Haren(Ems)",
+          "Meppen",
+          "Geeste",
+          "Lingen(Ems)",
+          "Leschede",
+          "Salzbergen",
+          "Rheine",
+          "Rheine-Mesum",
+          "Emsdetten",
+          "Reckenfeld"
+        ],
+        "line": "RE15"
+      },
+      {
+        "id": "3762548195492777348-2510210535-4",
+        "type": "RB",
+        "number": "52300",
+        "time": "2510210547",
+        "platform": "1",
+        "path_stations": [
+          "Münster(Westf)Hbf",
+          "Münster(W)Zentrum Nord",
+          "Münster-Sprakel"
+        ],
+        "line": "65"
+      },
+      {
+        "id": "-3558590691375544865-2510210502-3",
+        "type": "WFB",
+        "number": "90266",
+        "time": "2510210512",
+        "platform": "1",
+        "path_stations": [
+          "Münster(Westf)Hbf",
+          "Münster(W)Zentrum Nord"
+        ],
+        "line": "RE15"
+      },
+      {
+        "id": "-3170763827464905858-2510210450-8",
+        "type": "WFB",
+        "number": "90265",
+        "time": "2510210543",
+        "platform": "2",
+        "path_stations": [
+          "Meppen",
+          "Geeste",
+          "Lingen(Ems)",
+          "Leschede",
+          "Salzbergen",
+          "Rheine",
+          "Emsdetten"
+        ],
+        "line": "RE15"
+      },
+      {
+        "id": "2812183816605450724-2510210453-5",
+        "type": "RB",
+        "number": "52301",
+        "time": "2510210509",
+        "platform": "2",
+        "path_stations": [
+          "Rheine",
+          "Rheine-Mesum",
+          "Emsdetten",
+          "Reckenfeld"
+        ],
+        "line": "65"
+      },
+      {
+        "id": "-1344406117609016506-2510210635-4",
+        "type": "RB",
+        "number": "52304",
+        "time": "2510210647",
+        "platform": "1",
+        "path_stations": [
+          "Münster(Westf)Hbf",
+          "Münster(W)Zentrum Nord",
+          "Münster-Sprakel"
+        ],
+        "line": "65"
+      },
+      {
+        "id": "1344516564372516743-2510210553-5",
+        "type": "RB",
+        "number": "52305",
+        "time": "2510210609",
+        "platform": "2",
+        "path_stations": [
+          "Rheine",
+          "Rheine-Mesum",
+          "Emsdetten",
+          "Reckenfeld"
+        ],
+        "line": "65"
+      },
+      {
+        "id": "-3507722088886233452-2510210602-3",
+        "type": "WFB",
+        "number": "90268",
+        "time": "2510210612",
+        "platform": "1",
+        "path_stations": [
+          "Münster(Westf)Hbf",
+          "Münster(W)Zentrum Nord"
+        ],
+        "line": "RE15"
+      },
+      {
+        "id": "-6617944683281406732-2510210613-4",
+        "type": "RB",
+        "number": "52302",
+        "time": "2510210625",
+        "platform": "1",
+        "path_stations": [
+          "Münster(Westf)Hbf",
+          "Münster(W)Zentrum Nord",
+          "Münster-Sprakel"
+        ],
+        "line": "65"
+      },
+      {
+        "id": "-2441118754353506185-2510210452-15",
+        "type": "WFB",
+        "number": "90267",
+        "time": "2510210643",
+        "platform": "2",
+        "path_stations": [
+          "Emden Hbf",
+          "Leer(Ostfriesl)",
+          "Papenburg(Ems)",
+          "Aschendorf",
+          "Dörpen",
+          "Lathen",
+          "Haren(Ems)",
+          "Meppen",
+          "Geeste",
+          "Lingen(Ems)",
+          "Leschede",
+          "Salzbergen",
+          "Rheine",
+          "Emsdetten"
+        ],
+        "line": "RE15"
+      },
+      {
+        "id": "4678559792670816478-2510210618-5",
+        "type": "RB",
+        "number": "52307",
+        "time": "2510210636",
+        "platform": "2",
+        "path_stations": [
+          "Rheine",
+          "Rheine-Mesum",
+          "Emsdetten",
+          "Reckenfeld"
+        ],
+        "line": "65"
+      },
+      {
+        "id": "8047337506388594690-2510210521-12",
+        "type": "RE",
+        "number": "17400",
+        "time": "2510210636",
+        "platform": "1",
+        "path_stations": [
+          "Hagen Hbf",
+          "Schwerte(Ruhr)",
+          "Holzwickede",
+          "Unna",
+          "Bönen",
+          "Hamm(Westf)Hbf",
+          "Drensteinfurt",
+          "Münster-Hiltrup",
+          "Münster(Westf)Hbf",
+          "Münster(W)Zentrum Nord",
+          "Münster-Sprakel"
+        ],
+        "line": "7"
+      }
+    ],
+    "departures": [
+      {
+        "id": "4621747675100731683-2510201835-4",
+        "type": "RB",
+        "number": "52346",
+        "direction": "Rheine",
+        "platform": "1",
+        "time": "2510201847",
+        "destination": "Rheine",
+        "path_stations": [
+          "Reckenfeld",
+          "Emsdetten",
+          "Rheine-Mesum",
+          "Rheine"
+        ]
+      },
+      {
+        "id": "528103146165346343-2510201535-23",
+        "type": "RE",
+        "number": "17424",
+        "direction": "Rheine",
+        "platform": "1",
+        "time": "2510201834",
+        "destination": "Rheine",
+        "path_stations": [
+          "Emsdetten",
+          "Rheine"
+        ]
+      },
+      {
+        "id": "2791776302558067166-2510201808-3",
+        "type": "RE",
+        "number": "17431",
+        "direction": "Krefeld Hbf",
+        "platform": "2",
+        "time": "2510201823",
+        "destination": "Krefeld Hbf",
+        "path_stations": [
+          "Münster(Westf)Hbf",
+          "Münster-Hiltrup",
+          "Drensteinfurt",
+          "Hamm(Westf)Hbf",
+          "Bönen",
+          "Unna",
+          "Holzwickede",
+          "Schwerte(Ruhr)",
+          "Hagen Hbf",
+          "Ennepetal",
+          "Schwelm",
+          "Wuppertal-Oberbarmen",
+          "Wuppertal Hbf",
+          "Solingen Hbf",
+          "Opladen",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Dormagen",
+          "Neuss Hbf",
+          "Meerbusch-Osterath",
+          "Krefeld-Oppum",
+          "Krefeld Hbf"
+        ]
+      },
+      {
+        "id": "6756496553405217854-2510201652-15",
+        "type": "WFB",
+        "number": "90291",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "2",
+        "time": "2510201845",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-2024685938287613027-2510201805-2",
+        "type": "WFB",
+        "number": "90292",
+        "direction": "Emden Hbf",
+        "platform": "1",
+        "time": "2510201815",
+        "destination": "Emden Hbf",
+        "path_stations": [
+          "Emsdetten",
+          "Rheine",
+          "Salzbergen",
+          "Leschede",
+          "Lingen(Ems)",
+          "Geeste",
+          "Meppen",
+          "Haren(Ems)",
+          "Lathen",
+          "Dörpen",
+          "Aschendorf",
+          "Papenburg(Ems)",
+          "Leer(Ostfriesl)",
+          "Emden Hbf"
+        ]
+      },
+      {
+        "id": "-6382437368396309593-2510201813-4",
+        "type": "RB",
+        "number": "52344",
+        "direction": "Rheine",
+        "platform": "1",
+        "time": "2510201825",
+        "destination": "Rheine",
+        "path_stations": [
+          "Reckenfeld",
+          "Emsdetten",
+          "Rheine-Mesum",
+          "Rheine"
+        ]
+      },
+      {
+        "id": "-4205108958797169033-2510201753-5",
+        "type": "RB",
+        "number": "52347",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "2",
+        "time": "2510201810",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Münster-Sprakel",
+          "Münster(W)Zentrum Nord",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-4414766005444815964-2510201908-3",
+        "type": "RE",
+        "number": "17433",
+        "direction": "Köln Hbf",
+        "platform": "2",
+        "time": "2510201923",
+        "destination": "Köln Hbf",
+        "path_stations": [
+          "Münster(Westf)Hbf",
+          "Münster-Hiltrup",
+          "Drensteinfurt",
+          "Hamm(Westf)Hbf",
+          "Bönen",
+          "Unna",
+          "Holzwickede",
+          "Schwerte(Ruhr)",
+          "Hagen Hbf",
+          "Ennepetal",
+          "Schwelm",
+          "Wuppertal-Oberbarmen",
+          "Wuppertal Hbf",
+          "Solingen Hbf",
+          "Opladen",
+          "Köln Messe/Deutz",
+          "Köln Hbf"
+        ]
+      },
+      {
+        "id": "9135876238992906802-2510201853-5",
+        "type": "RB",
+        "number": "52351",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "2",
+        "time": "2510201910",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Münster-Sprakel",
+          "Münster(W)Zentrum Nord",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "6340911107085795931-2510201635-23",
+        "type": "RE",
+        "number": "17426",
+        "direction": "Rheine",
+        "platform": "1",
+        "time": "2510201934",
+        "destination": "Rheine",
+        "path_stations": [
+          "Emsdetten",
+          "Rheine"
+        ]
+      },
+      {
+        "id": "-6630329376169134582-2510201752-15",
+        "type": "WFB",
+        "number": "90293",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "2",
+        "time": "2510201945",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "2078769880633547351-2510201935-4",
+        "type": "RB",
+        "number": "52350",
+        "direction": "Rheine",
+        "platform": "1",
+        "time": "2510201947",
+        "destination": "Rheine",
+        "path_stations": [
+          "Reckenfeld",
+          "Emsdetten",
+          "Rheine-Mesum",
+          "Rheine"
+        ]
+      },
+      {
+        "id": "124533310730592450-2510201905-2",
+        "type": "WFB",
+        "number": "90294",
+        "direction": "Emden Hbf",
+        "platform": "1",
+        "time": "2510201915",
+        "destination": "Emden Hbf",
+        "path_stations": [
+          "Emsdetten",
+          "Rheine",
+          "Salzbergen",
+          "Leschede",
+          "Lingen(Ems)",
+          "Geeste",
+          "Meppen",
+          "Haren(Ems)",
+          "Lathen",
+          "Dörpen",
+          "Aschendorf",
+          "Papenburg(Ems)",
+          "Leer(Ostfriesl)",
+          "Emden Hbf"
+        ]
+      },
+      {
+        "id": "6090228758868284344-2510202035-4",
+        "type": "RB",
+        "number": "52352",
+        "direction": "Rheine",
+        "platform": "1",
+        "time": "2510202047",
+        "destination": "Rheine",
+        "path_stations": [
+          "Reckenfeld",
+          "Emsdetten",
+          "Rheine-Mesum",
+          "Rheine"
+        ]
+      },
+      {
+        "id": "8897274227786964332-2510202008-3",
+        "type": "RE",
+        "number": "17435",
+        "direction": "Hagen Hbf",
+        "platform": "2",
+        "time": "2510202023",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Münster(Westf)Hbf",
+          "Münster-Hiltrup",
+          "Drensteinfurt",
+          "Hamm(Westf)Hbf",
+          "Bönen",
+          "Unna",
+          "Holzwickede",
+          "Schwerte(Ruhr)",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "7440050562638271263-2510201852-16",
+        "type": "WFB",
+        "number": "90295",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "2",
+        "time": "2510202046",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "5156814714618662356-2510202005-2",
+        "type": "WFB",
+        "number": "90296",
+        "direction": "Emden Hbf",
+        "platform": "1",
+        "time": "2510202015",
+        "destination": "Emden Hbf",
+        "path_stations": [
+          "Emsdetten",
+          "Rheine",
+          "Salzbergen",
+          "Leschede",
+          "Lingen(Ems)",
+          "Geeste",
+          "Meppen",
+          "Haren(Ems)",
+          "Lathen",
+          "Dörpen",
+          "Aschendorf",
+          "Papenburg(Ems)",
+          "Leer(Ostfriesl)",
+          "Emden Hbf"
+        ]
+      },
+      {
+        "id": "3069707380370401808-2510201953-5",
+        "type": "RB",
+        "number": "52353",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "2",
+        "time": "2510202010",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Münster-Sprakel",
+          "Münster(W)Zentrum Nord",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "4486711732900979138-2510201952-16",
+        "type": "WFB",
+        "number": "90297",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "2",
+        "time": "2510202146",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-2517546130397205322-2510202053-5",
+        "type": "RB",
+        "number": "52355",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "2",
+        "time": "2510202110",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Münster-Sprakel",
+          "Münster(W)Zentrum Nord",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-4705707440919021676-2510202135-4",
+        "type": "RB",
+        "number": "52354",
+        "direction": "Rheine",
+        "platform": "1",
+        "time": "2510202147",
+        "destination": "Rheine",
+        "path_stations": [
+          "Reckenfeld",
+          "Emsdetten",
+          "Rheine-Mesum",
+          "Rheine"
+        ]
+      },
+      {
+        "id": "-3786533084540134922-2510202105-2",
+        "type": "WFB",
+        "number": "90298",
+        "direction": "Emden Hbf",
+        "platform": "1",
+        "time": "2510202115",
+        "destination": "Emden Hbf",
+        "path_stations": [
+          "Emsdetten",
+          "Rheine",
+          "Salzbergen",
+          "Leschede",
+          "Lingen(Ems)",
+          "Geeste",
+          "Meppen",
+          "Haren(Ems)",
+          "Lathen",
+          "Dörpen",
+          "Aschendorf",
+          "Papenburg(Ems)",
+          "Leer(Ostfriesl)",
+          "Emden Hbf"
+        ]
+      },
+      {
+        "id": "7597073892496609484-2510202153-5",
+        "type": "RB",
+        "number": "52357",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "2",
+        "time": "2510202210",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Münster-Sprakel",
+          "Münster(W)Zentrum Nord",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-4202560257404214898-2510202212-3",
+        "type": "WFB",
+        "number": "90300",
+        "direction": "Emden Hbf",
+        "platform": "1",
+        "time": "2510202223",
+        "destination": "Emden Hbf",
+        "path_stations": [
+          "Reckenfeld",
+          "Emsdetten",
+          "Rheine-Mesum",
+          "Rheine",
+          "Salzbergen",
+          "Leschede",
+          "Lingen(Ems)",
+          "Geeste",
+          "Meppen",
+          "Haren(Ems)",
+          "Lathen",
+          "Dörpen",
+          "Aschendorf",
+          "Papenburg(Ems)",
+          "Leer(Ostfriesl)",
+          "Emden Hbf"
+        ]
+      },
+      {
+        "id": "2960297712658480378-2510202235-4",
+        "type": "RB",
+        "number": "52356",
+        "direction": "Rheine",
+        "platform": "1",
+        "time": "2510202247",
+        "destination": "Rheine",
+        "path_stations": [
+          "Reckenfeld",
+          "Emsdetten",
+          "Rheine-Mesum",
+          "Rheine"
+        ]
+      },
+      {
+        "id": "-6311631194256153279-2510202052-15",
+        "type": "WFB",
+        "number": "90299",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "2",
+        "time": "2510202245",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "637219038798480565-2510202312-4",
+        "type": "WFB",
+        "number": "90302",
+        "direction": "Meppen",
+        "platform": "1",
+        "time": "2510202324",
+        "destination": "Meppen",
+        "path_stations": [
+          "Reckenfeld",
+          "Emsdetten",
+          "Rheine-Mesum",
+          "Rheine",
+          "Salzbergen",
+          "Leschede",
+          "Lingen(Ems)",
+          "Geeste",
+          "Meppen"
+        ]
+      },
+      {
+        "id": "-8926903299797833236-2510202253-5",
+        "type": "RB",
+        "number": "52359",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "2",
+        "time": "2510202310",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Münster-Sprakel",
+          "Münster(W)Zentrum Nord",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-109431539876697361-2510210013-4",
+        "type": "RB",
+        "number": "52360",
+        "direction": "Rheine",
+        "platform": "1",
+        "time": "2510210025",
+        "destination": "Rheine",
+        "path_stations": [
+          "Reckenfeld",
+          "Emsdetten",
+          "Rheine-Mesum",
+          "Rheine"
+        ]
+      },
+      {
+        "id": "-3352780807530743271-2510202214-17",
+        "type": "WFB",
+        "number": "90301",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "2",
+        "time": "2510210010",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Münster-Sprakel",
+          "Münster(W)Zentrum Nord",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "3762548195492777348-2510210535-4",
+        "type": "RB",
+        "number": "52300",
+        "direction": "Rheine",
+        "platform": "1",
+        "time": "2510210547",
+        "destination": "Rheine",
+        "path_stations": [
+          "Reckenfeld",
+          "Emsdetten",
+          "Rheine-Mesum",
+          "Rheine"
+        ]
+      },
+      {
+        "id": "-3558590691375544865-2510210502-3",
+        "type": "WFB",
+        "number": "90266",
+        "direction": "Emden Hbf",
+        "platform": "1",
+        "time": "2510210513",
+        "destination": "Emden Hbf",
+        "path_stations": [
+          "Reckenfeld",
+          "Emsdetten",
+          "Rheine-Mesum",
+          "Rheine",
+          "Salzbergen",
+          "Leschede",
+          "Lingen(Ems)",
+          "Geeste",
+          "Meppen",
+          "Haren(Ems)",
+          "Lathen",
+          "Dörpen",
+          "Aschendorf",
+          "Papenburg(Ems)",
+          "Leer(Ostfriesl)",
+          "Emden Hbf"
+        ]
+      },
+      {
+        "id": "-3170763827464905858-2510210450-8",
+        "type": "WFB",
+        "number": "90265",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "2",
+        "time": "2510210544",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Münster(W)Zentrum Nord",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "2812183816605450724-2510210453-5",
+        "type": "RB",
+        "number": "52301",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "2",
+        "time": "2510210510",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Münster-Sprakel",
+          "Münster(W)Zentrum Nord",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-1344406117609016506-2510210635-4",
+        "type": "RB",
+        "number": "52304",
+        "direction": "Rheine",
+        "platform": "1",
+        "time": "2510210647",
+        "destination": "Rheine",
+        "path_stations": [
+          "Reckenfeld",
+          "Emsdetten",
+          "Rheine-Mesum",
+          "Rheine"
+        ]
+      },
+      {
+        "id": "1344516564372516743-2510210553-5",
+        "type": "RB",
+        "number": "52305",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "2",
+        "time": "2510210610",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Münster-Sprakel",
+          "Münster(W)Zentrum Nord",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-3507722088886233452-2510210602-3",
+        "type": "WFB",
+        "number": "90268",
+        "direction": "Emden Hbf",
+        "platform": "1",
+        "time": "2510210613",
+        "destination": "Emden Hbf",
+        "path_stations": [
+          "Reckenfeld",
+          "Emsdetten",
+          "Rheine-Mesum",
+          "Rheine",
+          "Salzbergen",
+          "Leschede",
+          "Lingen(Ems)",
+          "Geeste",
+          "Meppen",
+          "Haren(Ems)",
+          "Lathen",
+          "Dörpen",
+          "Aschendorf",
+          "Papenburg(Ems)",
+          "Leer(Ostfriesl)",
+          "Emden Hbf"
+        ]
+      },
+      {
+        "id": "-6617944683281406732-2510210613-4",
+        "type": "RB",
+        "number": "52302",
+        "direction": "Rheine",
+        "platform": "1",
+        "time": "2510210625",
+        "destination": "Rheine",
+        "path_stations": [
+          "Reckenfeld",
+          "Emsdetten",
+          "Rheine-Mesum",
+          "Rheine"
+        ]
+      },
+      {
+        "id": "-2441118754353506185-2510210452-15",
+        "type": "WFB",
+        "number": "90267",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "2",
+        "time": "2510210644",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Münster(W)Zentrum Nord",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "4678559792670816478-2510210618-5",
+        "type": "RB",
+        "number": "52307",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "2",
+        "time": "2510210637",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Münster-Sprakel",
+          "Münster(W)Zentrum Nord",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "8047337506388594690-2510210521-12",
+        "type": "RE",
+        "number": "17400",
+        "direction": "Rheine",
+        "platform": "1",
+        "time": "2510210636",
+        "destination": "Rheine",
+        "path_stations": [
+          "Reckenfeld",
+          "Emsdetten",
+          "Rheine-Mesum",
+          "Rheine"
+        ]
+      }
+    ]
+  }
+}

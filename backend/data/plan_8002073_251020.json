@@ -1,0 +1,962 @@
+{
+  "station_eva": "8002073",
+  "date": "251020",
+  "cached_at": "2025-10-20T16:53:20.639696",
+  "plan_data": {
+    "arrivals": [
+      {
+        "id": "1309585286763079849-2510201806-6",
+        "type": "RE",
+        "number": "10734",
+        "time": "2510201847",
+        "platform": "1",
+        "path_stations": [
+          "Brilon Stadt",
+          "Brilon Wald",
+          "Olsberg",
+          "Bestwig",
+          "Meschede"
+        ],
+        "line": "17"
+      },
+      {
+        "id": "5914355730637244808-2510201741-8",
+        "type": "RE",
+        "number": "10985",
+        "time": "2510201834",
+        "platform": "2",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Hörde",
+          "Fröndenberg",
+          "Wickede(Ruhr)",
+          "Neheim-Hüsten",
+          "Arnsberg(Westf)",
+          "Oeventrop"
+        ],
+        "line": "57"
+      },
+      {
+        "id": "8149047541479448317-2510201810-3",
+        "type": "RE",
+        "number": "10770",
+        "time": "2510201823",
+        "platform": "1",
+        "path_stations": [
+          "Bestwig",
+          "Meschede"
+        ],
+        "line": "57"
+      },
+      {
+        "id": "4013474293696965215-2510201717-8",
+        "type": "RE",
+        "number": "10733",
+        "time": "2510201808",
+        "platform": "2",
+        "path_stations": [
+          "Hagen Hbf",
+          "Schwerte(Ruhr)",
+          "Fröndenberg",
+          "Wickede(Ruhr)",
+          "Neheim-Hüsten",
+          "Arnsberg(Westf)",
+          "Oeventrop"
+        ],
+        "line": "17"
+      },
+      {
+        "id": "3689181936034228762-2510201841-8",
+        "type": "RE",
+        "number": "10729",
+        "time": "2510201934",
+        "platform": "2",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Hörde",
+          "Fröndenberg",
+          "Wickede(Ruhr)",
+          "Neheim-Hüsten",
+          "Arnsberg(Westf)",
+          "Oeventrop"
+        ],
+        "line": "57"
+      },
+      {
+        "id": "1187297819094461103-2510201831-7",
+        "type": "RE",
+        "number": "10772",
+        "time": "2510201923",
+        "platform": "1",
+        "path_stations": [
+          "Winterberg(Westf)",
+          "Silbach",
+          "Siedlinghausen",
+          "Bigge",
+          "Bestwig",
+          "Meschede"
+        ],
+        "line": "57"
+      },
+      {
+        "id": "-5999853450837439154-2510201817-8",
+        "type": "RE",
+        "number": "10735",
+        "time": "2510201908",
+        "platform": "2",
+        "path_stations": [
+          "Hagen Hbf",
+          "Schwerte(Ruhr)",
+          "Fröndenberg",
+          "Wickede(Ruhr)",
+          "Neheim-Hüsten",
+          "Arnsberg(Westf)",
+          "Oeventrop"
+        ],
+        "line": "17"
+      },
+      {
+        "id": "8591630287314620641-2510201830-7",
+        "type": "RE",
+        "number": "10988",
+        "time": "2510201923",
+        "platform": "1",
+        "path_stations": [
+          "Messinghausen",
+          "Hoppecke",
+          "Brilon Wald",
+          "Olsberg",
+          "Bestwig",
+          "Meschede"
+        ],
+        "line": "57"
+      },
+      {
+        "id": "3848301645644586652-2510201920-5",
+        "type": "RE",
+        "number": "10736",
+        "time": "2510201947",
+        "platform": "1",
+        "path_stations": [
+          "Brilon Wald",
+          "Olsberg",
+          "Bestwig",
+          "Meschede"
+        ],
+        "line": "17"
+      },
+      {
+        "id": "-3573137413263550703-2510201841-8",
+        "type": "RE",
+        "number": "10773",
+        "time": "2510201934",
+        "platform": "2",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Hörde",
+          "Fröndenberg",
+          "Wickede(Ruhr)",
+          "Neheim-Hüsten",
+          "Arnsberg(Westf)",
+          "Oeventrop"
+        ],
+        "line": "57"
+      },
+      {
+        "id": "-5194716324580485418-2510201941-8",
+        "type": "RE",
+        "number": "10987",
+        "time": "2510202034",
+        "platform": "2",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Hörde",
+          "Fröndenberg",
+          "Wickede(Ruhr)",
+          "Neheim-Hüsten",
+          "Arnsberg(Westf)",
+          "Oeventrop"
+        ],
+        "line": "57"
+      },
+      {
+        "id": "404805235254735392-2510202006-6",
+        "type": "RE",
+        "number": "10738",
+        "time": "2510202047",
+        "platform": "1",
+        "path_stations": [
+          "Brilon Stadt",
+          "Brilon Wald",
+          "Olsberg",
+          "Bestwig",
+          "Meschede"
+        ],
+        "line": "17"
+      },
+      {
+        "id": "4398946879592328156-2510201930-7",
+        "type": "RE",
+        "number": "10784",
+        "time": "2510202023",
+        "platform": "1",
+        "path_stations": [
+          "Messinghausen",
+          "Hoppecke",
+          "Brilon Wald",
+          "Olsberg",
+          "Bestwig",
+          "Meschede"
+        ],
+        "line": "57"
+      },
+      {
+        "id": "-2473337171463306520-2510201917-8",
+        "type": "RE",
+        "number": "10737",
+        "time": "2510202008",
+        "platform": "2",
+        "path_stations": [
+          "Hagen Hbf",
+          "Schwerte(Ruhr)",
+          "Fröndenberg",
+          "Wickede(Ruhr)",
+          "Neheim-Hüsten",
+          "Arnsberg(Westf)",
+          "Oeventrop"
+        ],
+        "line": "17"
+      },
+      {
+        "id": "-7803346422170976119-2510202017-8",
+        "type": "RE",
+        "number": "10739",
+        "time": "2510202108",
+        "platform": "2",
+        "path_stations": [
+          "Hagen Hbf",
+          "Schwerte(Ruhr)",
+          "Fröndenberg",
+          "Wickede(Ruhr)",
+          "Neheim-Hüsten",
+          "Arnsberg(Westf)",
+          "Oeventrop"
+        ],
+        "line": "17"
+      },
+      {
+        "id": "5057761212125952452-2510202041-8",
+        "type": "RE",
+        "number": "10775",
+        "time": "2510202134",
+        "platform": "2",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Hörde",
+          "Fröndenberg",
+          "Wickede(Ruhr)",
+          "Neheim-Hüsten",
+          "Arnsberg(Westf)",
+          "Oeventrop"
+        ],
+        "line": "57"
+      },
+      {
+        "id": "6139576060381192397-2510202130-7",
+        "type": "RE",
+        "number": "10742",
+        "time": "2510202223",
+        "platform": "1",
+        "path_stations": [
+          "Messinghausen",
+          "Hoppecke",
+          "Brilon Wald",
+          "Olsberg",
+          "Bestwig",
+          "Meschede"
+        ],
+        "line": "57"
+      },
+      {
+        "id": "4542750070960076824-2510202123-11",
+        "type": "RE",
+        "number": "10989",
+        "time": "2510202230",
+        "platform": "2",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund Signal Iduna Park",
+          "Dortmund-Hörde",
+          "Dortmund-Aplerbeck Süd",
+          "Schwerte(Ruhr)",
+          "Fröndenberg",
+          "Wickede(Ruhr)",
+          "Neheim-Hüsten",
+          "Arnsberg(Westf)",
+          "Oeventrop"
+        ],
+        "line": "57"
+      },
+      {
+        "id": "-6659804647792252479-2510202223-10",
+        "type": "RE",
+        "number": "10783",
+        "time": "2510202330",
+        "platform": "2",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund Signal Iduna Park",
+          "Dortmund-Hörde",
+          "Dortmund-Aplerbeck Süd",
+          "Fröndenberg",
+          "Wickede(Ruhr)",
+          "Neheim-Hüsten",
+          "Arnsberg(Westf)",
+          "Oeventrop"
+        ],
+        "line": "57"
+      },
+      {
+        "id": "2233921617116533250-2510202323-10",
+        "type": "RE",
+        "number": "10785",
+        "time": "2510210030",
+        "platform": "2",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund Signal Iduna Park",
+          "Dortmund-Hörde",
+          "Dortmund-Aplerbeck Süd",
+          "Fröndenberg",
+          "Wickede(Ruhr)",
+          "Neheim-Hüsten",
+          "Arnsberg(Westf)",
+          "Oeventrop"
+        ],
+        "line": "57"
+      },
+      {
+        "id": "8497876791873705989-2510210434-3",
+        "type": "RE",
+        "number": "10700",
+        "time": "2510210447",
+        "platform": "1",
+        "path_stations": [
+          "Bestwig",
+          "Meschede"
+        ],
+        "line": "17"
+      },
+      {
+        "id": "6418114152002972230-2510210502-8",
+        "type": "RE",
+        "number": "10703",
+        "time": "2510210550",
+        "platform": "2",
+        "path_stations": [
+          "Hagen Hbf",
+          "Schwerte(Ruhr)",
+          "Fröndenberg",
+          "Wickede(Ruhr)",
+          "Neheim-Hüsten",
+          "Arnsberg(Westf)",
+          "Oeventrop"
+        ],
+        "line": "17"
+      },
+      {
+        "id": "-5221126719656170853-2510210505-3",
+        "type": "RE",
+        "number": "10776",
+        "time": "2510210518",
+        "platform": "1",
+        "path_stations": [
+          "Bestwig",
+          "Meschede"
+        ],
+        "line": "57"
+      },
+      {
+        "id": "-8952450699433042057-2510210534-3",
+        "type": "RE",
+        "number": "10702",
+        "time": "2510210547",
+        "platform": "1",
+        "path_stations": [
+          "Bestwig",
+          "Meschede"
+        ],
+        "line": "17"
+      },
+      {
+        "id": "767842075325333541-2510210502-8",
+        "type": "RE",
+        "number": "10777",
+        "time": "2510210550",
+        "platform": "2",
+        "path_stations": [
+          "Hagen Hbf",
+          "Schwerte(Ruhr)",
+          "Fröndenberg",
+          "Wickede(Ruhr)",
+          "Neheim-Hüsten",
+          "Arnsberg(Westf)",
+          "Oeventrop"
+        ],
+        "line": "17"
+      },
+      {
+        "id": "-1298816416661755954-2510210602-8",
+        "type": "RE",
+        "number": "10707",
+        "time": "2510210650",
+        "platform": "2",
+        "path_stations": [
+          "Hagen Hbf",
+          "Schwerte(Ruhr)",
+          "Fröndenberg",
+          "Wickede(Ruhr)",
+          "Neheim-Hüsten",
+          "Arnsberg(Westf)",
+          "Oeventrop"
+        ],
+        "line": "17"
+      },
+      {
+        "id": "-7140379087591827434-2510210610-7",
+        "type": "RE",
+        "number": "10704",
+        "time": "2510210647",
+        "platform": "1",
+        "path_stations": [
+          "Messinghausen",
+          "Hoppecke",
+          "Brilon Wald",
+          "Olsberg",
+          "Bestwig",
+          "Meschede"
+        ],
+        "line": "17"
+      },
+      {
+        "id": "-7940964638266023787-2510210602-8",
+        "type": "RE",
+        "number": "10781",
+        "time": "2510210650",
+        "platform": "2",
+        "path_stations": [
+          "Hagen Hbf",
+          "Schwerte(Ruhr)",
+          "Fröndenberg",
+          "Wickede(Ruhr)",
+          "Neheim-Hüsten",
+          "Arnsberg(Westf)",
+          "Oeventrop"
+        ],
+        "line": "57"
+      },
+      {
+        "id": "-7398256256622347140-2510210543-6",
+        "type": "RE",
+        "number": "10970",
+        "time": "2510210623",
+        "platform": "1",
+        "path_stations": [
+          "Brilon Stadt",
+          "Brilon Wald",
+          "Olsberg",
+          "Bestwig",
+          "Meschede"
+        ],
+        "line": "57"
+      }
+    ],
+    "departures": [
+      {
+        "id": "1309585286763079849-2510201806-6",
+        "type": "RE",
+        "number": "10734",
+        "direction": "Hagen Hbf",
+        "platform": "1",
+        "time": "2510201848",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Oeventrop",
+          "Arnsberg(Westf)",
+          "Neheim-Hüsten",
+          "Wickede(Ruhr)",
+          "Fröndenberg",
+          "Schwerte(Ruhr)",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "5914355730637244808-2510201741-8",
+        "type": "RE",
+        "number": "10985",
+        "direction": "Messinghausen",
+        "platform": "2",
+        "time": "2510201835",
+        "destination": "Messinghausen",
+        "path_stations": [
+          "Meschede",
+          "Bestwig",
+          "Olsberg",
+          "Brilon Wald",
+          "Hoppecke",
+          "Messinghausen"
+        ]
+      },
+      {
+        "id": "8149047541479448317-2510201810-3",
+        "type": "RE",
+        "number": "10770",
+        "direction": "Dortmund Hbf",
+        "platform": "1",
+        "time": "2510201824",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Oeventrop",
+          "Arnsberg(Westf)",
+          "Neheim-Hüsten",
+          "Wickede(Ruhr)",
+          "Fröndenberg",
+          "Dortmund-Hörde",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "4013474293696965215-2510201717-8",
+        "type": "RE",
+        "number": "10733",
+        "direction": "Brilon Wald",
+        "platform": "2",
+        "time": "2510201808",
+        "destination": "Brilon Wald",
+        "path_stations": [
+          "Meschede",
+          "Bestwig",
+          "Olsberg",
+          "Brilon Wald"
+        ]
+      },
+      {
+        "id": "3689181936034228762-2510201841-8",
+        "type": "RE",
+        "number": "10729",
+        "direction": "Messinghausen",
+        "platform": "2",
+        "time": "2510201935",
+        "destination": "Messinghausen",
+        "path_stations": [
+          "Meschede",
+          "Bestwig",
+          "Olsberg",
+          "Brilon Wald",
+          "Hoppecke",
+          "Messinghausen"
+        ]
+      },
+      {
+        "id": "1187297819094461103-2510201831-7",
+        "type": "RE",
+        "number": "10772",
+        "direction": "Dortmund Hbf",
+        "platform": "1",
+        "time": "2510201924",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Oeventrop",
+          "Arnsberg(Westf)",
+          "Neheim-Hüsten",
+          "Wickede(Ruhr)",
+          "Fröndenberg",
+          "Dortmund-Hörde",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-5999853450837439154-2510201817-8",
+        "type": "RE",
+        "number": "10735",
+        "direction": "Brilon Stadt",
+        "platform": "2",
+        "time": "2510201908",
+        "destination": "Brilon Stadt",
+        "path_stations": [
+          "Meschede",
+          "Bestwig",
+          "Olsberg",
+          "Brilon Wald",
+          "Brilon Stadt"
+        ]
+      },
+      {
+        "id": "8591630287314620641-2510201830-7",
+        "type": "RE",
+        "number": "10988",
+        "direction": "Dortmund Hbf",
+        "platform": "1",
+        "time": "2510201924",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Oeventrop",
+          "Arnsberg(Westf)",
+          "Neheim-Hüsten",
+          "Wickede(Ruhr)",
+          "Fröndenberg",
+          "Dortmund-Hörde",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "3848301645644586652-2510201920-5",
+        "type": "RE",
+        "number": "10736",
+        "direction": "Hagen Hbf",
+        "platform": "1",
+        "time": "2510201948",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Oeventrop",
+          "Arnsberg(Westf)",
+          "Neheim-Hüsten",
+          "Wickede(Ruhr)",
+          "Fröndenberg",
+          "Schwerte(Ruhr)",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "-3573137413263550703-2510201841-8",
+        "type": "RE",
+        "number": "10773",
+        "direction": "Winterberg(Westf)",
+        "platform": "2",
+        "time": "2510201935",
+        "destination": "Winterberg(Westf)",
+        "path_stations": [
+          "Meschede",
+          "Bestwig",
+          "Bigge",
+          "Siedlinghausen",
+          "Silbach",
+          "Winterberg(Westf)"
+        ]
+      },
+      {
+        "id": "-5194716324580485418-2510201941-8",
+        "type": "RE",
+        "number": "10987",
+        "direction": "Messinghausen",
+        "platform": "2",
+        "time": "2510202035",
+        "destination": "Messinghausen",
+        "path_stations": [
+          "Meschede",
+          "Bestwig",
+          "Olsberg",
+          "Brilon Wald",
+          "Hoppecke",
+          "Messinghausen"
+        ]
+      },
+      {
+        "id": "404805235254735392-2510202006-6",
+        "type": "RE",
+        "number": "10738",
+        "direction": "Hagen Hbf",
+        "platform": "1",
+        "time": "2510202048",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Oeventrop",
+          "Arnsberg(Westf)",
+          "Neheim-Hüsten",
+          "Wickede(Ruhr)",
+          "Fröndenberg",
+          "Schwerte(Ruhr)",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "4398946879592328156-2510201930-7",
+        "type": "RE",
+        "number": "10784",
+        "direction": "Dortmund Hbf",
+        "platform": "1",
+        "time": "2510202024",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Oeventrop",
+          "Arnsberg(Westf)",
+          "Neheim-Hüsten",
+          "Wickede(Ruhr)",
+          "Fröndenberg",
+          "Dortmund-Hörde",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-2473337171463306520-2510201917-8",
+        "type": "RE",
+        "number": "10737",
+        "direction": "Brilon Wald",
+        "platform": "2",
+        "time": "2510202008",
+        "destination": "Brilon Wald",
+        "path_stations": [
+          "Meschede",
+          "Bestwig",
+          "Olsberg",
+          "Brilon Wald"
+        ]
+      },
+      {
+        "id": "-7803346422170976119-2510202017-8",
+        "type": "RE",
+        "number": "10739",
+        "direction": "Brilon Wald",
+        "platform": "2",
+        "time": "2510202108",
+        "destination": "Brilon Wald",
+        "path_stations": [
+          "Meschede",
+          "Bestwig",
+          "Olsberg",
+          "Brilon Wald"
+        ]
+      },
+      {
+        "id": "5057761212125952452-2510202041-8",
+        "type": "RE",
+        "number": "10775",
+        "direction": "Bestwig",
+        "platform": "2",
+        "time": "2510202135",
+        "destination": "Bestwig",
+        "path_stations": [
+          "Meschede",
+          "Bestwig"
+        ]
+      },
+      {
+        "id": "6139576060381192397-2510202130-7",
+        "type": "RE",
+        "number": "10742",
+        "direction": "Dortmund Hbf",
+        "platform": "1",
+        "time": "2510202224",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Oeventrop",
+          "Arnsberg(Westf)",
+          "Neheim-Hüsten",
+          "Wickede(Ruhr)",
+          "Fröndenberg",
+          "Dortmund-Hörde",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "4542750070960076824-2510202123-11",
+        "type": "RE",
+        "number": "10989",
+        "direction": "Brilon Stadt",
+        "platform": "2",
+        "time": "2510202231",
+        "destination": "Brilon Stadt",
+        "path_stations": [
+          "Meschede",
+          "Bestwig",
+          "Olsberg",
+          "Brilon Wald",
+          "Brilon Stadt"
+        ]
+      },
+      {
+        "id": "-6659804647792252479-2510202223-10",
+        "type": "RE",
+        "number": "10783",
+        "direction": "Bestwig",
+        "platform": "2",
+        "time": "2510202331",
+        "destination": "Bestwig",
+        "path_stations": [
+          "Meschede",
+          "Bestwig"
+        ]
+      },
+      {
+        "id": "2233921617116533250-2510202323-10",
+        "type": "RE",
+        "number": "10785",
+        "direction": "Bestwig",
+        "platform": "2",
+        "time": "2510210031",
+        "destination": "Bestwig",
+        "path_stations": [
+          "Meschede",
+          "Bestwig"
+        ]
+      },
+      {
+        "id": "8497876791873705989-2510210434-3",
+        "type": "RE",
+        "number": "10700",
+        "direction": "Hagen Hbf",
+        "platform": "1",
+        "time": "2510210448",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Oeventrop",
+          "Arnsberg(Westf)",
+          "Neheim-Hüsten",
+          "Wickede(Ruhr)",
+          "Fröndenberg",
+          "Schwerte(Ruhr)",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "6418114152002972230-2510210502-8",
+        "type": "RE",
+        "number": "10703",
+        "direction": "Messinghausen",
+        "platform": "2",
+        "time": "2510210551",
+        "destination": "Messinghausen",
+        "path_stations": [
+          "Meschede",
+          "Bestwig",
+          "Olsberg",
+          "Brilon Wald",
+          "Hoppecke",
+          "Messinghausen"
+        ]
+      },
+      {
+        "id": "-5221126719656170853-2510210505-3",
+        "type": "RE",
+        "number": "10776",
+        "direction": "Dortmund Hbf",
+        "platform": "1",
+        "time": "2510210518",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Oeventrop",
+          "Arnsberg(Westf)",
+          "Neheim-Hüsten",
+          "Wickede(Ruhr)",
+          "Fröndenberg",
+          "Dortmund-Hörde",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-8952450699433042057-2510210534-3",
+        "type": "RE",
+        "number": "10702",
+        "direction": "Hagen Hbf",
+        "platform": "1",
+        "time": "2510210548",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Oeventrop",
+          "Arnsberg(Westf)",
+          "Neheim-Hüsten",
+          "Wickede(Ruhr)",
+          "Fröndenberg",
+          "Schwerte(Ruhr)",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "767842075325333541-2510210502-8",
+        "type": "RE",
+        "number": "10777",
+        "direction": "Winterberg(Westf)",
+        "platform": "2",
+        "time": "2510210551",
+        "destination": "Winterberg(Westf)",
+        "path_stations": [
+          "Meschede",
+          "Bestwig",
+          "Bigge",
+          "Siedlinghausen",
+          "Silbach",
+          "Winterberg(Westf)"
+        ]
+      },
+      {
+        "id": "-1298816416661755954-2510210602-8",
+        "type": "RE",
+        "number": "10707",
+        "direction": "Messinghausen",
+        "platform": "2",
+        "time": "2510210651",
+        "destination": "Messinghausen",
+        "path_stations": [
+          "Meschede",
+          "Bestwig",
+          "Olsberg",
+          "Brilon Wald",
+          "Hoppecke",
+          "Messinghausen"
+        ]
+      },
+      {
+        "id": "-7140379087591827434-2510210610-7",
+        "type": "RE",
+        "number": "10704",
+        "direction": "Hagen Hbf",
+        "platform": "1",
+        "time": "2510210648",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Oeventrop",
+          "Arnsberg(Westf)",
+          "Neheim-Hüsten",
+          "Wickede(Ruhr)",
+          "Fröndenberg",
+          "Schwerte(Ruhr)",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "-7940964638266023787-2510210602-8",
+        "type": "RE",
+        "number": "10781",
+        "direction": "Brilon Stadt",
+        "platform": "2",
+        "time": "2510210651",
+        "destination": "Brilon Stadt",
+        "path_stations": [
+          "Meschede",
+          "Bestwig",
+          "Olsberg",
+          "Brilon Wald",
+          "Brilon Stadt"
+        ]
+      },
+      {
+        "id": "-7398256256622347140-2510210543-6",
+        "type": "RE",
+        "number": "10970",
+        "direction": "Dortmund Hbf",
+        "platform": "1",
+        "time": "2510210624",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Oeventrop",
+          "Arnsberg(Westf)",
+          "Neheim-Hüsten",
+          "Wickede(Ruhr)",
+          "Fröndenberg",
+          "Dortmund-Hörde",
+          "Dortmund Hbf"
+        ]
+      }
+    ]
+  }
+}

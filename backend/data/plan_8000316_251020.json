@@ -1,0 +1,2203 @@
+{
+  "station_eva": "8000316",
+  "date": "251020",
+  "cached_at": "2025-10-20T16:38:11.076051",
+  "plan_data": {
+    "arrivals": [
+      {
+        "id": "528103146165346343-2510201535-25",
+        "type": "RE",
+        "number": "17424",
+        "time": "2510201851",
+        "platform": "8",
+        "path_stations": [
+          "Krefeld Hbf",
+          "Krefeld-Oppum",
+          "Meerbusch-Osterath",
+          "Neuss Hbf",
+          "Dormagen",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Opladen",
+          "Solingen Hbf",
+          "Wuppertal Hbf",
+          "Wuppertal-Oberbarmen",
+          "Schwelm",
+          "Ennepetal",
+          "Hagen Hbf",
+          "Schwerte(Ruhr)",
+          "Holzwickede",
+          "Unna",
+          "Bönen",
+          "Hamm(Westf)Hbf",
+          "Drensteinfurt",
+          "Münster-Hiltrup",
+          "Münster(Westf)Hbf",
+          "Greven",
+          "Emsdetten"
+        ],
+        "line": "7"
+      },
+      {
+        "id": "-130190603183544299-2510201600-8",
+        "type": "IC",
+        "number": "241",
+        "time": "2510201824",
+        "platform": "4",
+        "path_stations": [
+          "Amsterdam Centraal",
+          "Hilversum",
+          "Amersfoort Centraal",
+          "Apeldoorn",
+          "Deventer",
+          "Hengelo",
+          "Bad Bentheim"
+        ],
+        "line": ""
+      },
+      {
+        "id": "1492120664389609114-2510201604-7",
+        "type": "IC",
+        "number": "2207",
+        "time": "2510201802",
+        "platform": "5",
+        "path_stations": [
+          "Emden Außenhafen",
+          "Emden Hbf",
+          "Leer(Ostfriesl)",
+          "Papenburg(Ems)",
+          "Meppen",
+          "Lingen(Ems)"
+        ],
+        "line": ""
+      },
+      {
+        "id": "6756496553405217854-2510201652-13",
+        "type": "WFB",
+        "number": "90291",
+        "time": "2510201827",
+        "platform": "5",
+        "path_stations": [
+          "Emden Hbf",
+          "Leer(Ostfriesl)",
+          "Papenburg(Ems)",
+          "Aschendorf",
+          "Dörpen",
+          "Lathen",
+          "Haren(Ems)",
+          "Meppen",
+          "Geeste",
+          "Lingen(Ems)",
+          "Leschede",
+          "Salzbergen"
+        ],
+        "line": "RE15"
+      },
+      {
+        "id": "939678255578634406-2510201734-6",
+        "type": "RB",
+        "number": "20379",
+        "time": "2510201811",
+        "platform": "4",
+        "path_stations": [
+          "Hengelo",
+          "Oldenzaal",
+          "Bad Bentheim",
+          "Schüttorf",
+          "Salzbergen"
+        ],
+        "line": "61"
+      },
+      {
+        "id": "-2024685938287613027-2510201805-4",
+        "type": "WFB",
+        "number": "90292",
+        "time": "2510201832",
+        "platform": "4",
+        "path_stations": [
+          "Münster(Westf)Hbf",
+          "Greven",
+          "Emsdetten"
+        ],
+        "line": "RE15"
+      },
+      {
+        "id": "3861776621939891503-2510201718-8",
+        "type": "RE",
+        "number": "11512",
+        "time": "2510201818",
+        "platform": "2",
+        "path_stations": [
+          "Löhne(Westf)",
+          "Kirchlengern",
+          "Bünde(Westf)",
+          "Melle",
+          "Osnabrück Hbf",
+          "Osnabrück Altstadt",
+          "Ibbenbüren"
+        ],
+        "line": "62"
+      },
+      {
+        "id": "8016294952105536291-2510201712-17",
+        "type": "RB",
+        "number": "20378",
+        "time": "2510201846",
+        "platform": "2",
+        "path_stations": [
+          "Bielefeld Hbf",
+          "Brake(b Bielefeld)",
+          "Herford",
+          "Hiddenhausen-Schweicheln",
+          "Kirchlengern",
+          "Bünde(Westf)",
+          "Bruchmühlen",
+          "Melle",
+          "Westerhausen",
+          "Wissingen",
+          "Osnabrück Hbf",
+          "Osnabrück Altstadt",
+          "Ibbenbüren-Laggenbeck",
+          "Ibbenbüren",
+          "Ibbenbüren-Esch",
+          "Hörstel"
+        ],
+        "line": "61"
+      },
+      {
+        "id": "-6382437368396309593-2510201813-8",
+        "type": "RB",
+        "number": "52344",
+        "time": "2510201846",
+        "platform": "5",
+        "path_stations": [
+          "Münster(Westf)Hbf",
+          "Münster(W)Zentrum Nord",
+          "Münster-Sprakel",
+          "Greven",
+          "Reckenfeld",
+          "Emsdetten",
+          "Rheine-Mesum"
+        ],
+        "line": "65"
+      },
+      {
+        "id": "8131002448481819974-2510201553-7",
+        "type": "IC",
+        "number": "140",
+        "time": "2510201933",
+        "platform": "3",
+        "path_stations": [
+          "Berlin Ostbahnhof",
+          "Berlin Hbf",
+          "Berlin-Spandau",
+          "Hannover Hbf",
+          "Bünde(Westf)",
+          "Osnabrück Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "4621747675100731683-2510201835-8",
+        "type": "RB",
+        "number": "52346",
+        "time": "2510201908",
+        "platform": "3",
+        "path_stations": [
+          "Münster(Westf)Hbf",
+          "Münster(W)Zentrum Nord",
+          "Münster-Sprakel",
+          "Greven",
+          "Reckenfeld",
+          "Emsdetten",
+          "Rheine-Mesum"
+        ],
+        "line": "65"
+      },
+      {
+        "id": "8765295095727879976-2510201745-9",
+        "type": "IC",
+        "number": "2002",
+        "time": "2510201954",
+        "platform": "3",
+        "path_stations": [
+          "Köln Hbf",
+          "Düsseldorf Hbf",
+          "Duisburg Hbf",
+          "Oberhausen Hbf",
+          "Gelsenkirchen Hbf",
+          "Wanne-Eickel Hbf",
+          "Recklinghausen Hbf",
+          "Münster(Westf)Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "6340911107085795931-2510201635-25",
+        "type": "RE",
+        "number": "17426",
+        "time": "2510201951",
+        "platform": "8",
+        "path_stations": [
+          "Krefeld Hbf",
+          "Krefeld-Oppum",
+          "Meerbusch-Osterath",
+          "Neuss Hbf",
+          "Dormagen",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Opladen",
+          "Solingen Hbf",
+          "Wuppertal Hbf",
+          "Wuppertal-Oberbarmen",
+          "Schwelm",
+          "Ennepetal",
+          "Hagen Hbf",
+          "Schwerte(Ruhr)",
+          "Holzwickede",
+          "Unna",
+          "Bönen",
+          "Hamm(Westf)Hbf",
+          "Drensteinfurt",
+          "Münster-Hiltrup",
+          "Münster(Westf)Hbf",
+          "Greven",
+          "Emsdetten"
+        ],
+        "line": "7"
+      },
+      {
+        "id": "-891615662086108657-2510201834-6",
+        "type": "RB",
+        "number": "20381",
+        "time": "2510201911",
+        "platform": "4",
+        "path_stations": [
+          "Hengelo",
+          "Oldenzaal",
+          "Bad Bentheim",
+          "Schüttorf",
+          "Salzbergen"
+        ],
+        "line": "61"
+      },
+      {
+        "id": "-6630329376169134582-2510201752-13",
+        "type": "WFB",
+        "number": "90293",
+        "time": "2510201926",
+        "platform": "5",
+        "path_stations": [
+          "Emden Hbf",
+          "Leer(Ostfriesl)",
+          "Papenburg(Ems)",
+          "Aschendorf",
+          "Dörpen",
+          "Lathen",
+          "Haren(Ems)",
+          "Meppen",
+          "Geeste",
+          "Lingen(Ems)",
+          "Leschede",
+          "Salzbergen"
+        ],
+        "line": "RE15"
+      },
+      {
+        "id": "-4102193317769056684-2510201812-17",
+        "type": "RB",
+        "number": "20380",
+        "time": "2510201946",
+        "platform": "2",
+        "path_stations": [
+          "Bielefeld Hbf",
+          "Brake(b Bielefeld)",
+          "Herford",
+          "Hiddenhausen-Schweicheln",
+          "Kirchlengern",
+          "Bünde(Westf)",
+          "Bruchmühlen",
+          "Melle",
+          "Westerhausen",
+          "Wissingen",
+          "Osnabrück Hbf",
+          "Osnabrück Altstadt",
+          "Ibbenbüren-Laggenbeck",
+          "Ibbenbüren",
+          "Ibbenbüren-Esch",
+          "Hörstel"
+        ],
+        "line": "61"
+      },
+      {
+        "id": "124533310730592450-2510201905-4",
+        "type": "WFB",
+        "number": "90294",
+        "time": "2510201932",
+        "platform": "4",
+        "path_stations": [
+          "Münster(Westf)Hbf",
+          "Greven",
+          "Emsdetten"
+        ],
+        "line": "RE15"
+      },
+      {
+        "id": "8375696493341006692-2510201620-25",
+        "type": "WFB",
+        "number": "95782",
+        "time": "2510201922",
+        "platform": "2",
+        "path_stations": [
+          "Braunschweig Hbf",
+          "Vechelde",
+          "Peine",
+          "Vöhrum",
+          "Hämelerwald",
+          "Lehrte",
+          "Hannover Hbf",
+          "Wunstorf",
+          "Haste",
+          "Stadthagen",
+          "Bückeburg",
+          "Minden(Westf)",
+          "Porta Westfalica",
+          "Bad Oeynhausen",
+          "Löhne(Westf)",
+          "Kirchlengern",
+          "Bünde(Westf)",
+          "Melle",
+          "Osnabrück Hbf",
+          "Osnabrück Altstadt",
+          "Ibbenbüren-Laggenbeck",
+          "Ibbenbüren",
+          "Ibbenbüren-Esch",
+          "Hörstel"
+        ],
+        "line": "RE60"
+      },
+      {
+        "id": "353138728312286579-2510201912-17",
+        "type": "RB",
+        "number": "20382",
+        "time": "2510202046",
+        "platform": "2",
+        "path_stations": [
+          "Bielefeld Hbf",
+          "Brake(b Bielefeld)",
+          "Herford",
+          "Hiddenhausen-Schweicheln",
+          "Kirchlengern",
+          "Bünde(Westf)",
+          "Bruchmühlen",
+          "Melle",
+          "Westerhausen",
+          "Wissingen",
+          "Osnabrück Hbf",
+          "Osnabrück Altstadt",
+          "Ibbenbüren-Laggenbeck",
+          "Ibbenbüren",
+          "Ibbenbüren-Esch",
+          "Hörstel"
+        ],
+        "line": "61"
+      },
+      {
+        "id": "-8602352550093560103-2510201918-8",
+        "type": "RE",
+        "number": "11514",
+        "time": "2510202018",
+        "platform": "2",
+        "path_stations": [
+          "Löhne(Westf)",
+          "Kirchlengern",
+          "Bünde(Westf)",
+          "Melle",
+          "Osnabrück Hbf",
+          "Osnabrück Altstadt",
+          "Ibbenbüren"
+        ],
+        "line": "62"
+      },
+      {
+        "id": "-3301018149004817737-2510201934-6",
+        "type": "RB",
+        "number": "20383",
+        "time": "2510202011",
+        "platform": "4",
+        "path_stations": [
+          "Hengelo",
+          "Oldenzaal",
+          "Bad Bentheim",
+          "Schüttorf",
+          "Salzbergen"
+        ],
+        "line": "61"
+      },
+      {
+        "id": "7440050562638271263-2510201852-13",
+        "type": "WFB",
+        "number": "90295",
+        "time": "2510202027",
+        "platform": "5",
+        "path_stations": [
+          "Emden Hbf",
+          "Leer(Ostfriesl)",
+          "Papenburg(Ems)",
+          "Aschendorf",
+          "Dörpen",
+          "Lathen",
+          "Haren(Ems)",
+          "Meppen",
+          "Geeste",
+          "Lingen(Ems)",
+          "Leschede",
+          "Salzbergen"
+        ],
+        "line": "RE15"
+      },
+      {
+        "id": "5156814714618662356-2510202005-4",
+        "type": "WFB",
+        "number": "90296",
+        "time": "2510202032",
+        "platform": "4",
+        "path_stations": [
+          "Münster(Westf)Hbf",
+          "Greven",
+          "Emsdetten"
+        ],
+        "line": "RE15"
+      },
+      {
+        "id": "2078769880633547351-2510201935-8",
+        "type": "RB",
+        "number": "52350",
+        "time": "2510202008",
+        "platform": "3",
+        "path_stations": [
+          "Münster(Westf)Hbf",
+          "Münster(W)Zentrum Nord",
+          "Münster-Sprakel",
+          "Greven",
+          "Reckenfeld",
+          "Emsdetten",
+          "Rheine-Mesum"
+        ],
+        "line": "65"
+      },
+      {
+        "id": "5925446793945225412-2510201759-8",
+        "type": "IC",
+        "number": "243",
+        "time": "2510202024",
+        "platform": "4",
+        "path_stations": [
+          "Amsterdam Centraal",
+          "Hilversum",
+          "Amersfoort Centraal",
+          "Apeldoorn",
+          "Deventer",
+          "Hengelo",
+          "Bad Bentheim"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-6784476354127339290-2510202034-6",
+        "type": "RB",
+        "number": "20385",
+        "time": "2510202111",
+        "platform": "4",
+        "path_stations": [
+          "Hengelo",
+          "Oldenzaal",
+          "Bad Bentheim",
+          "Schüttorf",
+          "Salzbergen"
+        ],
+        "line": "61"
+      },
+      {
+        "id": "6090228758868284344-2510202035-8",
+        "type": "RB",
+        "number": "52352",
+        "time": "2510202108",
+        "platform": "3",
+        "path_stations": [
+          "Münster(Westf)Hbf",
+          "Münster(W)Zentrum Nord",
+          "Münster-Sprakel",
+          "Greven",
+          "Reckenfeld",
+          "Emsdetten",
+          "Rheine-Mesum"
+        ],
+        "line": "65"
+      },
+      {
+        "id": "502654172913099951-2510201820-25",
+        "type": "WFB",
+        "number": "95784",
+        "time": "2510202122",
+        "platform": "2",
+        "path_stations": [
+          "Braunschweig Hbf",
+          "Vechelde",
+          "Peine",
+          "Vöhrum",
+          "Hämelerwald",
+          "Lehrte",
+          "Hannover Hbf",
+          "Wunstorf",
+          "Haste",
+          "Stadthagen",
+          "Bückeburg",
+          "Minden(Westf)",
+          "Porta Westfalica",
+          "Bad Oeynhausen",
+          "Löhne(Westf)",
+          "Kirchlengern",
+          "Bünde(Westf)",
+          "Melle",
+          "Osnabrück Hbf",
+          "Osnabrück Altstadt",
+          "Ibbenbüren-Laggenbeck",
+          "Ibbenbüren",
+          "Ibbenbüren-Esch",
+          "Hörstel"
+        ],
+        "line": "RE60"
+      },
+      {
+        "id": "4486711732900979138-2510201952-13",
+        "type": "WFB",
+        "number": "90297",
+        "time": "2510202127",
+        "platform": "5",
+        "path_stations": [
+          "Emden Hbf",
+          "Leer(Ostfriesl)",
+          "Papenburg(Ems)",
+          "Aschendorf",
+          "Dörpen",
+          "Lathen",
+          "Haren(Ems)",
+          "Meppen",
+          "Geeste",
+          "Lingen(Ems)",
+          "Leschede",
+          "Salzbergen"
+        ],
+        "line": "RE15"
+      },
+      {
+        "id": "9196651174783427245-2510202012-17",
+        "type": "RB",
+        "number": "20384",
+        "time": "2510202146",
+        "platform": "2",
+        "path_stations": [
+          "Bielefeld Hbf",
+          "Brake(b Bielefeld)",
+          "Herford",
+          "Hiddenhausen-Schweicheln",
+          "Kirchlengern",
+          "Bünde(Westf)",
+          "Bruchmühlen",
+          "Melle",
+          "Westerhausen",
+          "Wissingen",
+          "Osnabrück Hbf",
+          "Osnabrück Altstadt",
+          "Ibbenbüren-Laggenbeck",
+          "Ibbenbüren",
+          "Ibbenbüren-Esch",
+          "Hörstel"
+        ],
+        "line": "61"
+      },
+      {
+        "id": "-3786533084540134922-2510202105-4",
+        "type": "WFB",
+        "number": "90298",
+        "time": "2510202132",
+        "platform": "4",
+        "path_stations": [
+          "Münster(Westf)Hbf",
+          "Greven",
+          "Emsdetten"
+        ],
+        "line": "RE15"
+      },
+      {
+        "id": "8341458247546975375-2510202134-6",
+        "type": "RB",
+        "number": "20387",
+        "time": "2510202211",
+        "platform": "4",
+        "path_stations": [
+          "Hengelo",
+          "Oldenzaal",
+          "Bad Bentheim",
+          "Schüttorf",
+          "Salzbergen"
+        ],
+        "line": "61"
+      },
+      {
+        "id": "-4202560257404214898-2510202212-7",
+        "type": "WFB",
+        "number": "90300",
+        "time": "2510202244",
+        "platform": "4",
+        "path_stations": [
+          "Münster(Westf)Hbf",
+          "Münster(W)Zentrum Nord",
+          "Greven",
+          "Reckenfeld",
+          "Emsdetten",
+          "Rheine-Mesum"
+        ],
+        "line": "RE15"
+      },
+      {
+        "id": "8818815257427412608-2510202152-11",
+        "type": "RB",
+        "number": "20386",
+        "time": "2510202246",
+        "platform": "2",
+        "path_stations": [
+          "Bruchmühlen",
+          "Melle",
+          "Westerhausen",
+          "Wissingen",
+          "Osnabrück Hbf",
+          "Osnabrück Altstadt",
+          "Ibbenbüren-Laggenbeck",
+          "Ibbenbüren",
+          "Ibbenbüren-Esch",
+          "Hörstel"
+        ],
+        "line": "61"
+      },
+      {
+        "id": "-4705707440919021676-2510202135-8",
+        "type": "RB",
+        "number": "52354",
+        "time": "2510202208",
+        "platform": "5",
+        "path_stations": [
+          "Münster(Westf)Hbf",
+          "Münster(W)Zentrum Nord",
+          "Münster-Sprakel",
+          "Greven",
+          "Reckenfeld",
+          "Emsdetten",
+          "Rheine-Mesum"
+        ],
+        "line": "65"
+      },
+      {
+        "id": "-4994668759358133133-2510202118-8",
+        "type": "RE",
+        "number": "11516",
+        "time": "2510202218",
+        "platform": "2",
+        "path_stations": [
+          "Löhne(Westf)",
+          "Kirchlengern",
+          "Bünde(Westf)",
+          "Melle",
+          "Osnabrück Hbf",
+          "Osnabrück Altstadt",
+          "Ibbenbüren"
+        ],
+        "line": "62"
+      },
+      {
+        "id": "-6311631194256153279-2510202052-13",
+        "type": "WFB",
+        "number": "90299",
+        "time": "2510202227",
+        "platform": "5",
+        "path_stations": [
+          "Emden Hbf",
+          "Leer(Ostfriesl)",
+          "Papenburg(Ems)",
+          "Aschendorf",
+          "Dörpen",
+          "Lathen",
+          "Haren(Ems)",
+          "Meppen",
+          "Geeste",
+          "Lingen(Ems)",
+          "Leschede",
+          "Salzbergen"
+        ],
+        "line": "RE15"
+      },
+      {
+        "id": "601208318005647306-2510202020-25",
+        "type": "WFB",
+        "number": "95786",
+        "time": "2510202322",
+        "platform": "2",
+        "path_stations": [
+          "Braunschweig Hbf",
+          "Vechelde",
+          "Peine",
+          "Vöhrum",
+          "Hämelerwald",
+          "Lehrte",
+          "Hannover Hbf",
+          "Wunstorf",
+          "Haste",
+          "Stadthagen",
+          "Bückeburg",
+          "Minden(Westf)",
+          "Porta Westfalica",
+          "Bad Oeynhausen",
+          "Löhne(Westf)",
+          "Kirchlengern",
+          "Bünde(Westf)",
+          "Melle",
+          "Osnabrück Hbf",
+          "Osnabrück Altstadt",
+          "Ibbenbüren-Laggenbeck",
+          "Ibbenbüren",
+          "Ibbenbüren-Esch",
+          "Hörstel"
+        ],
+        "line": "RE60"
+      },
+      {
+        "id": "2960297712658480378-2510202235-8",
+        "type": "RB",
+        "number": "52356",
+        "time": "2510202308",
+        "platform": "3",
+        "path_stations": [
+          "Münster(Westf)Hbf",
+          "Münster(W)Zentrum Nord",
+          "Münster-Sprakel",
+          "Greven",
+          "Reckenfeld",
+          "Emsdetten",
+          "Rheine-Mesum"
+        ],
+        "line": "65"
+      },
+      {
+        "id": "637219038798480565-2510202312-8",
+        "type": "WFB",
+        "number": "90302",
+        "time": "2510202344",
+        "platform": "4",
+        "path_stations": [
+          "Münster(Westf)Hbf",
+          "Münster(W)Zentrum Nord",
+          "Münster-Sprakel",
+          "Greven",
+          "Reckenfeld",
+          "Emsdetten",
+          "Rheine-Mesum"
+        ],
+        "line": "RE15"
+      },
+      {
+        "id": "8039038537744682558-2510202253-11",
+        "type": "RB",
+        "number": "20388",
+        "time": "2510202346",
+        "platform": "2",
+        "path_stations": [
+          "Bruchmühlen",
+          "Melle",
+          "Westerhausen",
+          "Wissingen",
+          "Osnabrück Hbf",
+          "Osnabrück Altstadt",
+          "Ibbenbüren-Laggenbeck",
+          "Ibbenbüren",
+          "Ibbenbüren-Esch",
+          "Hörstel"
+        ],
+        "line": "61"
+      },
+      {
+        "id": "-8304744246774224499-2510202234-6",
+        "type": "RB",
+        "number": "20389",
+        "time": "2510202311",
+        "platform": "4",
+        "path_stations": [
+          "Hengelo",
+          "Oldenzaal",
+          "Bad Bentheim",
+          "Schüttorf",
+          "Salzbergen"
+        ],
+        "line": "61"
+      },
+      {
+        "id": "-3352780807530743271-2510202214-13",
+        "type": "WFB",
+        "number": "90301",
+        "time": "2510202350",
+        "platform": "5",
+        "path_stations": [
+          "Emden Hbf",
+          "Leer(Ostfriesl)",
+          "Papenburg(Ems)",
+          "Aschendorf",
+          "Dörpen",
+          "Lathen",
+          "Haren(Ems)",
+          "Meppen",
+          "Geeste",
+          "Lingen(Ems)",
+          "Leschede",
+          "Salzbergen"
+        ],
+        "line": "RE15"
+      },
+      {
+        "id": "-109431539876697361-2510210013-8",
+        "type": "RB",
+        "number": "52360",
+        "time": "2510210046",
+        "platform": "5",
+        "path_stations": [
+          "Münster(Westf)Hbf",
+          "Münster(W)Zentrum Nord",
+          "Münster-Sprakel",
+          "Greven",
+          "Reckenfeld",
+          "Emsdetten",
+          "Rheine-Mesum"
+        ],
+        "line": "65"
+      },
+      {
+        "id": "-3558590691375544865-2510210502-7",
+        "type": "WFB",
+        "number": "90266",
+        "time": "2510210532",
+        "platform": "3",
+        "path_stations": [
+          "Münster(Westf)Hbf",
+          "Münster(W)Zentrum Nord",
+          "Greven",
+          "Reckenfeld",
+          "Emsdetten",
+          "Rheine-Mesum"
+        ],
+        "line": "RE15"
+      },
+      {
+        "id": "882664500836328391-2510210514-7",
+        "type": "RB",
+        "number": "20350",
+        "time": "2510210546",
+        "platform": "2",
+        "path_stations": [
+          "Osnabrück Hbf",
+          "Osnabrück Altstadt",
+          "Ibbenbüren-Laggenbeck",
+          "Ibbenbüren",
+          "Ibbenbüren-Esch",
+          "Hörstel"
+        ],
+        "line": "61"
+      },
+      {
+        "id": "-3170763827464905858-2510210450-6",
+        "type": "WFB",
+        "number": "90265",
+        "time": "2510210526",
+        "platform": "5",
+        "path_stations": [
+          "Meppen",
+          "Geeste",
+          "Lingen(Ems)",
+          "Leschede",
+          "Salzbergen"
+        ],
+        "line": "RE15"
+      },
+      {
+        "id": "3762548195492777348-2510210535-8",
+        "type": "RB",
+        "number": "52300",
+        "time": "2510210608",
+        "platform": "5",
+        "path_stations": [
+          "Münster(Westf)Hbf",
+          "Münster(W)Zentrum Nord",
+          "Münster-Sprakel",
+          "Greven",
+          "Reckenfeld",
+          "Emsdetten",
+          "Rheine-Mesum"
+        ],
+        "line": "65"
+      },
+      {
+        "id": "-334548738650380190-2510210518-8",
+        "type": "RE",
+        "number": "11500",
+        "time": "2510210618",
+        "platform": "2",
+        "path_stations": [
+          "Löhne(Westf)",
+          "Kirchlengern",
+          "Bünde(Westf)",
+          "Melle",
+          "Osnabrück Hbf",
+          "Osnabrück Altstadt",
+          "Ibbenbüren"
+        ],
+        "line": "62"
+      },
+      {
+        "id": "-3507722088886233452-2510210602-7",
+        "type": "WFB",
+        "number": "90268",
+        "time": "2510210632",
+        "platform": "3",
+        "path_stations": [
+          "Münster(Westf)Hbf",
+          "Münster(W)Zentrum Nord",
+          "Greven",
+          "Reckenfeld",
+          "Emsdetten",
+          "Rheine-Mesum"
+        ],
+        "line": "RE15"
+      },
+      {
+        "id": "-6617944683281406732-2510210613-8",
+        "type": "RB",
+        "number": "52302",
+        "time": "2510210646",
+        "platform": "5",
+        "path_stations": [
+          "Münster(Westf)Hbf",
+          "Münster(W)Zentrum Nord",
+          "Münster-Sprakel",
+          "Greven",
+          "Reckenfeld",
+          "Emsdetten",
+          "Rheine-Mesum"
+        ],
+        "line": "65"
+      },
+      {
+        "id": "3342956088738577911-2510210534-6",
+        "type": "RB",
+        "number": "20355",
+        "time": "2510210611",
+        "platform": "4",
+        "path_stations": [
+          "Hengelo",
+          "Oldenzaal",
+          "Bad Bentheim",
+          "Schüttorf",
+          "Salzbergen"
+        ],
+        "line": "61"
+      },
+      {
+        "id": "-174740467195253639-2510210511-17",
+        "type": "RB",
+        "number": "20352",
+        "time": "2510210646",
+        "platform": "2",
+        "path_stations": [
+          "Bielefeld Hbf",
+          "Brake(b Bielefeld)",
+          "Herford",
+          "Hiddenhausen-Schweicheln",
+          "Kirchlengern",
+          "Bünde(Westf)",
+          "Bruchmühlen",
+          "Melle",
+          "Westerhausen",
+          "Wissingen",
+          "Osnabrück Hbf",
+          "Osnabrück Altstadt",
+          "Ibbenbüren-Laggenbeck",
+          "Ibbenbüren",
+          "Ibbenbüren-Esch",
+          "Hörstel"
+        ],
+        "line": "61"
+      },
+      {
+        "id": "-2441118754353506185-2510210452-13",
+        "type": "WFB",
+        "number": "90267",
+        "time": "2510210626",
+        "platform": "5",
+        "path_stations": [
+          "Emden Hbf",
+          "Leer(Ostfriesl)",
+          "Papenburg(Ems)",
+          "Aschendorf",
+          "Dörpen",
+          "Lathen",
+          "Haren(Ems)",
+          "Meppen",
+          "Geeste",
+          "Lingen(Ems)",
+          "Leschede",
+          "Salzbergen"
+        ],
+        "line": "RE15"
+      },
+      {
+        "id": "8047337506388594690-2510210521-16",
+        "type": "RE",
+        "number": "17400",
+        "time": "2510210657",
+        "platform": "8",
+        "path_stations": [
+          "Hagen Hbf",
+          "Schwerte(Ruhr)",
+          "Holzwickede",
+          "Unna",
+          "Bönen",
+          "Hamm(Westf)Hbf",
+          "Drensteinfurt",
+          "Münster-Hiltrup",
+          "Münster(Westf)Hbf",
+          "Münster(W)Zentrum Nord",
+          "Münster-Sprakel",
+          "Greven",
+          "Reckenfeld",
+          "Emsdetten",
+          "Rheine-Mesum"
+        ],
+        "line": "7"
+      }
+    ],
+    "departures": [
+      {
+        "id": "9135876238992906802-2510201853-1",
+        "type": "RB",
+        "number": "52351",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "5",
+        "time": "2510201853",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Rheine-Mesum",
+          "Emsdetten",
+          "Reckenfeld",
+          "Greven",
+          "Münster-Sprakel",
+          "Münster(W)Zentrum Nord",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "2791776302558067166-2510201808-1",
+        "type": "RE",
+        "number": "17431",
+        "direction": "Krefeld Hbf",
+        "platform": "8",
+        "time": "2510201808",
+        "destination": "Krefeld Hbf",
+        "path_stations": [
+          "Emsdetten",
+          "Greven",
+          "Münster(Westf)Hbf",
+          "Münster-Hiltrup",
+          "Drensteinfurt",
+          "Hamm(Westf)Hbf",
+          "Bönen",
+          "Unna",
+          "Holzwickede",
+          "Schwerte(Ruhr)",
+          "Hagen Hbf",
+          "Ennepetal",
+          "Schwelm",
+          "Wuppertal-Oberbarmen",
+          "Wuppertal Hbf",
+          "Solingen Hbf",
+          "Opladen",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Dormagen",
+          "Neuss Hbf",
+          "Meerbusch-Osterath",
+          "Krefeld-Oppum",
+          "Krefeld Hbf"
+        ]
+      },
+      {
+        "id": "-130190603183544299-2510201600-8",
+        "type": "IC",
+        "number": "241",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "4",
+        "time": "2510201826",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Osnabrück Hbf",
+          "Bünde(Westf)",
+          "Hannover Hbf",
+          "Berlin-Spandau",
+          "Berlin Zoologischer Garten",
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "1492120664389609114-2510201604-7",
+        "type": "IC",
+        "number": "2207",
+        "direction": "Köln Hbf",
+        "platform": "5",
+        "time": "2510201804",
+        "destination": "Köln Hbf",
+        "path_stations": [
+          "Münster(Westf)Hbf",
+          "Recklinghausen Hbf",
+          "Wanne-Eickel Hbf",
+          "Gelsenkirchen Hbf",
+          "Oberhausen Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Hbf",
+          "Köln Hbf"
+        ]
+      },
+      {
+        "id": "6756496553405217854-2510201652-13",
+        "type": "WFB",
+        "number": "90291",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "5",
+        "time": "2510201829",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Emsdetten",
+          "Greven",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "939678255578634406-2510201734-6",
+        "type": "RB",
+        "number": "20379",
+        "direction": "Bielefeld Hbf",
+        "platform": "4",
+        "time": "2510201814",
+        "destination": "Bielefeld Hbf",
+        "path_stations": [
+          "Hörstel",
+          "Ibbenbüren-Esch",
+          "Ibbenbüren",
+          "Ibbenbüren-Laggenbeck",
+          "Osnabrück Altstadt",
+          "Osnabrück Hbf",
+          "Wissingen",
+          "Westerhausen",
+          "Melle",
+          "Bruchmühlen",
+          "Bünde(Westf)",
+          "Kirchlengern",
+          "Hiddenhausen-Schweicheln",
+          "Herford",
+          "Brake(b Bielefeld)",
+          "Bielefeld Hbf"
+        ]
+      },
+      {
+        "id": "7478530496367099178-2510201838-1",
+        "type": "WFB",
+        "number": "95787",
+        "direction": "Braunschweig Hbf",
+        "platform": "3",
+        "time": "2510201838",
+        "destination": "Braunschweig Hbf",
+        "path_stations": [
+          "Hörstel",
+          "Ibbenbüren-Esch",
+          "Ibbenbüren",
+          "Ibbenbüren-Laggenbeck",
+          "Osnabrück Altstadt",
+          "Osnabrück Hbf",
+          "Melle",
+          "Bünde(Westf)",
+          "Kirchlengern",
+          "Löhne(Westf)",
+          "Bad Oeynhausen",
+          "Porta Westfalica",
+          "Minden(Westf)",
+          "Bückeburg",
+          "Stadthagen",
+          "Haste",
+          "Wunstorf",
+          "Hannover Hbf",
+          "Lehrte",
+          "Hämelerwald",
+          "Vöhrum",
+          "Peine",
+          "Vechelde",
+          "Braunschweig Hbf"
+        ]
+      },
+      {
+        "id": "-2024685938287613027-2510201805-4",
+        "type": "WFB",
+        "number": "90292",
+        "direction": "Emden Hbf",
+        "platform": "4",
+        "time": "2510201833",
+        "destination": "Emden Hbf",
+        "path_stations": [
+          "Salzbergen",
+          "Leschede",
+          "Lingen(Ems)",
+          "Geeste",
+          "Meppen",
+          "Haren(Ems)",
+          "Lathen",
+          "Dörpen",
+          "Aschendorf",
+          "Papenburg(Ems)",
+          "Leer(Ostfriesl)",
+          "Emden Hbf"
+        ]
+      },
+      {
+        "id": "8016294952105536291-2510201712-17",
+        "type": "RB",
+        "number": "20378",
+        "direction": "Hengelo",
+        "platform": "2",
+        "time": "2510201849",
+        "destination": "Hengelo",
+        "path_stations": [
+          "Salzbergen",
+          "Schüttorf",
+          "Bad Bentheim",
+          "Oldenzaal",
+          "Hengelo"
+        ]
+      },
+      {
+        "id": "8131002448481819974-2510201553-7",
+        "type": "IC",
+        "number": "140",
+        "direction": "Amsterdam Centraal",
+        "platform": "3",
+        "time": "2510201936",
+        "destination": "Amsterdam Centraal",
+        "path_stations": [
+          "Bad Bentheim",
+          "Hengelo",
+          "Deventer",
+          "Apeldoorn",
+          "Amersfoort Centraal",
+          "Hilversum",
+          "Amsterdam Centraal"
+        ]
+      },
+      {
+        "id": "-4414766005444815964-2510201908-1",
+        "type": "RE",
+        "number": "17433",
+        "direction": "Köln Hbf",
+        "platform": "8",
+        "time": "2510201908",
+        "destination": "Köln Hbf",
+        "path_stations": [
+          "Emsdetten",
+          "Greven",
+          "Münster(Westf)Hbf",
+          "Münster-Hiltrup",
+          "Drensteinfurt",
+          "Hamm(Westf)Hbf",
+          "Bönen",
+          "Unna",
+          "Holzwickede",
+          "Schwerte(Ruhr)",
+          "Hagen Hbf",
+          "Ennepetal",
+          "Schwelm",
+          "Wuppertal-Oberbarmen",
+          "Wuppertal Hbf",
+          "Solingen Hbf",
+          "Opladen",
+          "Köln Messe/Deutz",
+          "Köln Hbf"
+        ]
+      },
+      {
+        "id": "8765295095727879976-2510201745-9",
+        "type": "IC",
+        "number": "2002",
+        "direction": "Emden Hbf",
+        "platform": "3",
+        "time": "2510201956",
+        "destination": "Emden Hbf",
+        "path_stations": [
+          "Lingen(Ems)",
+          "Meppen",
+          "Papenburg(Ems)",
+          "Leer(Ostfriesl)",
+          "Emden Hbf"
+        ]
+      },
+      {
+        "id": "1551746681297127309-2510201939-1",
+        "type": "RE",
+        "number": "11515",
+        "direction": "Löhne(Westf)",
+        "platform": "5",
+        "time": "2510201939",
+        "destination": "Löhne(Westf)",
+        "path_stations": [
+          "Ibbenbüren",
+          "Osnabrück Altstadt",
+          "Osnabrück Hbf",
+          "Melle",
+          "Bünde(Westf)",
+          "Kirchlengern",
+          "Löhne(Westf)"
+        ]
+      },
+      {
+        "id": "-891615662086108657-2510201834-6",
+        "type": "RB",
+        "number": "20381",
+        "direction": "Bielefeld Hbf",
+        "platform": "4",
+        "time": "2510201914",
+        "destination": "Bielefeld Hbf",
+        "path_stations": [
+          "Hörstel",
+          "Ibbenbüren-Esch",
+          "Ibbenbüren",
+          "Ibbenbüren-Laggenbeck",
+          "Osnabrück Altstadt",
+          "Osnabrück Hbf",
+          "Wissingen",
+          "Westerhausen",
+          "Melle",
+          "Bruchmühlen",
+          "Bünde(Westf)",
+          "Kirchlengern",
+          "Hiddenhausen-Schweicheln",
+          "Herford",
+          "Brake(b Bielefeld)",
+          "Bielefeld Hbf"
+        ]
+      },
+      {
+        "id": "-6630329376169134582-2510201752-13",
+        "type": "WFB",
+        "number": "90293",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "5",
+        "time": "2510201929",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Emsdetten",
+          "Greven",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-4102193317769056684-2510201812-17",
+        "type": "RB",
+        "number": "20380",
+        "direction": "Hengelo",
+        "platform": "2",
+        "time": "2510201948",
+        "destination": "Hengelo",
+        "path_stations": [
+          "Salzbergen",
+          "Schüttorf",
+          "Bad Bentheim",
+          "Oldenzaal",
+          "Hengelo"
+        ]
+      },
+      {
+        "id": "3069707380370401808-2510201953-1",
+        "type": "RB",
+        "number": "52353",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "5",
+        "time": "2510201953",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Rheine-Mesum",
+          "Emsdetten",
+          "Reckenfeld",
+          "Greven",
+          "Münster-Sprakel",
+          "Münster(W)Zentrum Nord",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "124533310730592450-2510201905-4",
+        "type": "WFB",
+        "number": "90294",
+        "direction": "Emden Hbf",
+        "platform": "4",
+        "time": "2510201933",
+        "destination": "Emden Hbf",
+        "path_stations": [
+          "Salzbergen",
+          "Leschede",
+          "Lingen(Ems)",
+          "Geeste",
+          "Meppen",
+          "Haren(Ems)",
+          "Lathen",
+          "Dörpen",
+          "Aschendorf",
+          "Papenburg(Ems)",
+          "Leer(Ostfriesl)",
+          "Emden Hbf"
+        ]
+      },
+      {
+        "id": "353138728312286579-2510201912-17",
+        "type": "RB",
+        "number": "20382",
+        "direction": "Hengelo",
+        "platform": "2",
+        "time": "2510202049",
+        "destination": "Hengelo",
+        "path_stations": [
+          "Salzbergen",
+          "Schüttorf",
+          "Bad Bentheim",
+          "Oldenzaal",
+          "Hengelo"
+        ]
+      },
+      {
+        "id": "8897274227786964332-2510202008-1",
+        "type": "RE",
+        "number": "17435",
+        "direction": "Hagen Hbf",
+        "platform": "8",
+        "time": "2510202008",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Emsdetten",
+          "Greven",
+          "Münster(Westf)Hbf",
+          "Münster-Hiltrup",
+          "Drensteinfurt",
+          "Hamm(Westf)Hbf",
+          "Bönen",
+          "Unna",
+          "Holzwickede",
+          "Schwerte(Ruhr)",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "-2517546130397205322-2510202053-1",
+        "type": "RB",
+        "number": "52355",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "5",
+        "time": "2510202053",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Rheine-Mesum",
+          "Emsdetten",
+          "Reckenfeld",
+          "Greven",
+          "Münster-Sprakel",
+          "Münster(W)Zentrum Nord",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-3301018149004817737-2510201934-6",
+        "type": "RB",
+        "number": "20383",
+        "direction": "Bruchmühlen",
+        "platform": "4",
+        "time": "2510202014",
+        "destination": "Bruchmühlen",
+        "path_stations": [
+          "Hörstel",
+          "Ibbenbüren-Esch",
+          "Ibbenbüren",
+          "Ibbenbüren-Laggenbeck",
+          "Osnabrück Altstadt",
+          "Osnabrück Hbf",
+          "Wissingen",
+          "Westerhausen",
+          "Melle",
+          "Bruchmühlen"
+        ]
+      },
+      {
+        "id": "7440050562638271263-2510201852-13",
+        "type": "WFB",
+        "number": "90295",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "5",
+        "time": "2510202029",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Emsdetten",
+          "Reckenfeld",
+          "Greven",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "5156814714618662356-2510202005-4",
+        "type": "WFB",
+        "number": "90296",
+        "direction": "Emden Hbf",
+        "platform": "4",
+        "time": "2510202033",
+        "destination": "Emden Hbf",
+        "path_stations": [
+          "Salzbergen",
+          "Leschede",
+          "Lingen(Ems)",
+          "Geeste",
+          "Meppen",
+          "Haren(Ems)",
+          "Lathen",
+          "Dörpen",
+          "Aschendorf",
+          "Papenburg(Ems)",
+          "Leer(Ostfriesl)",
+          "Emden Hbf"
+        ]
+      },
+      {
+        "id": "2998651517533835490-2510202038-1",
+        "type": "WFB",
+        "number": "95789",
+        "direction": "Braunschweig Hbf",
+        "platform": "3",
+        "time": "2510202038",
+        "destination": "Braunschweig Hbf",
+        "path_stations": [
+          "Hörstel",
+          "Ibbenbüren-Esch",
+          "Ibbenbüren",
+          "Ibbenbüren-Laggenbeck",
+          "Osnabrück Altstadt",
+          "Osnabrück Hbf",
+          "Melle",
+          "Bünde(Westf)",
+          "Kirchlengern",
+          "Löhne(Westf)",
+          "Bad Oeynhausen",
+          "Porta Westfalica",
+          "Minden(Westf)",
+          "Bückeburg",
+          "Kirchhorsten",
+          "Stadthagen",
+          "Lindhorst(Schaumb-Lippe)",
+          "Haste",
+          "Hannover Hbf",
+          "Lehrte",
+          "Hämelerwald",
+          "Vöhrum",
+          "Peine",
+          "Vechelde",
+          "Braunschweig Hbf"
+        ]
+      },
+      {
+        "id": "5925446793945225412-2510201759-8",
+        "type": "IC",
+        "number": "243",
+        "direction": "Hannover Hbf",
+        "platform": "4",
+        "time": "2510202026",
+        "destination": "Hannover Hbf",
+        "path_stations": [
+          "Osnabrück Hbf",
+          "Bünde(Westf)",
+          "Hannover Hbf"
+        ]
+      },
+      {
+        "id": "-6784476354127339290-2510202034-6",
+        "type": "RB",
+        "number": "20385",
+        "direction": "Bruchmühlen",
+        "platform": "4",
+        "time": "2510202114",
+        "destination": "Bruchmühlen",
+        "path_stations": [
+          "Hörstel",
+          "Ibbenbüren-Esch",
+          "Ibbenbüren",
+          "Ibbenbüren-Laggenbeck",
+          "Osnabrück Altstadt",
+          "Osnabrück Hbf",
+          "Wissingen",
+          "Westerhausen",
+          "Melle",
+          "Bruchmühlen"
+        ]
+      },
+      {
+        "id": "7597073892496609484-2510202153-1",
+        "type": "RB",
+        "number": "52357",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "5",
+        "time": "2510202153",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Rheine-Mesum",
+          "Emsdetten",
+          "Reckenfeld",
+          "Greven",
+          "Münster-Sprakel",
+          "Münster(W)Zentrum Nord",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "4486711732900979138-2510201952-13",
+        "type": "WFB",
+        "number": "90297",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "5",
+        "time": "2510202129",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Emsdetten",
+          "Reckenfeld",
+          "Greven",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "5750402792036773694-2510202139-1",
+        "type": "RE",
+        "number": "11517",
+        "direction": "Löhne(Westf)",
+        "platform": "5",
+        "time": "2510202139",
+        "destination": "Löhne(Westf)",
+        "path_stations": [
+          "Ibbenbüren",
+          "Osnabrück Altstadt",
+          "Osnabrück Hbf",
+          "Melle",
+          "Bünde(Westf)",
+          "Kirchlengern",
+          "Löhne(Westf)"
+        ]
+      },
+      {
+        "id": "9196651174783427245-2510202012-17",
+        "type": "RB",
+        "number": "20384",
+        "direction": "Hengelo",
+        "platform": "2",
+        "time": "2510202149",
+        "destination": "Hengelo",
+        "path_stations": [
+          "Salzbergen",
+          "Schüttorf",
+          "Bad Bentheim",
+          "Oldenzaal",
+          "Hengelo"
+        ]
+      },
+      {
+        "id": "-3786533084540134922-2510202105-4",
+        "type": "WFB",
+        "number": "90298",
+        "direction": "Emden Hbf",
+        "platform": "4",
+        "time": "2510202133",
+        "destination": "Emden Hbf",
+        "path_stations": [
+          "Salzbergen",
+          "Leschede",
+          "Lingen(Ems)",
+          "Geeste",
+          "Meppen",
+          "Haren(Ems)",
+          "Lathen",
+          "Dörpen",
+          "Aschendorf",
+          "Papenburg(Ems)",
+          "Leer(Ostfriesl)",
+          "Emden Hbf"
+        ]
+      },
+      {
+        "id": "8341458247546975375-2510202134-6",
+        "type": "RB",
+        "number": "20387",
+        "direction": "Bruchmühlen",
+        "platform": "4",
+        "time": "2510202214",
+        "destination": "Bruchmühlen",
+        "path_stations": [
+          "Hörstel",
+          "Ibbenbüren-Esch",
+          "Ibbenbüren",
+          "Ibbenbüren-Laggenbeck",
+          "Osnabrück Altstadt",
+          "Osnabrück Hbf",
+          "Wissingen",
+          "Westerhausen",
+          "Melle",
+          "Bruchmühlen"
+        ]
+      },
+      {
+        "id": "-4202560257404214898-2510202212-7",
+        "type": "WFB",
+        "number": "90300",
+        "direction": "Emden Hbf",
+        "platform": "4",
+        "time": "2510202252",
+        "destination": "Emden Hbf",
+        "path_stations": [
+          "Salzbergen",
+          "Leschede",
+          "Lingen(Ems)",
+          "Geeste",
+          "Meppen",
+          "Haren(Ems)",
+          "Lathen",
+          "Dörpen",
+          "Aschendorf",
+          "Papenburg(Ems)",
+          "Leer(Ostfriesl)",
+          "Emden Hbf"
+        ]
+      },
+      {
+        "id": "-6191346030287563743-2510202238-1",
+        "type": "WFB",
+        "number": "95791",
+        "direction": "Minden(Westf)",
+        "platform": "3",
+        "time": "2510202238",
+        "destination": "Minden(Westf)",
+        "path_stations": [
+          "Hörstel",
+          "Ibbenbüren-Esch",
+          "Ibbenbüren",
+          "Ibbenbüren-Laggenbeck",
+          "Osnabrück Altstadt",
+          "Osnabrück Hbf",
+          "Melle",
+          "Bünde(Westf)",
+          "Kirchlengern",
+          "Löhne(Westf)",
+          "Bad Oeynhausen",
+          "Porta Westfalica",
+          "Minden(Westf)"
+        ]
+      },
+      {
+        "id": "8818815257427412608-2510202152-11",
+        "type": "RB",
+        "number": "20386",
+        "direction": "Hengelo",
+        "platform": "2",
+        "time": "2510202249",
+        "destination": "Hengelo",
+        "path_stations": [
+          "Salzbergen",
+          "Schüttorf",
+          "Bad Bentheim",
+          "Oldenzaal",
+          "Hengelo"
+        ]
+      },
+      {
+        "id": "-8926903299797833236-2510202253-1",
+        "type": "RB",
+        "number": "52359",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "5",
+        "time": "2510202253",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Rheine-Mesum",
+          "Emsdetten",
+          "Reckenfeld",
+          "Greven",
+          "Münster-Sprakel",
+          "Münster(W)Zentrum Nord",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-6311631194256153279-2510202052-13",
+        "type": "WFB",
+        "number": "90299",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "5",
+        "time": "2510202229",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Emsdetten",
+          "Greven",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "637219038798480565-2510202312-8",
+        "type": "WFB",
+        "number": "90302",
+        "direction": "Meppen",
+        "platform": "4",
+        "time": "2510202356",
+        "destination": "Meppen",
+        "path_stations": [
+          "Salzbergen",
+          "Leschede",
+          "Lingen(Ems)",
+          "Geeste",
+          "Meppen"
+        ]
+      },
+      {
+        "id": "-8304744246774224499-2510202234-6",
+        "type": "RB",
+        "number": "20389",
+        "direction": "Osnabrück Hbf",
+        "platform": "4",
+        "time": "2510202314",
+        "destination": "Osnabrück Hbf",
+        "path_stations": [
+          "Hörstel",
+          "Ibbenbüren-Esch",
+          "Ibbenbüren",
+          "Ibbenbüren-Laggenbeck",
+          "Osnabrück Altstadt",
+          "Osnabrück Hbf"
+        ]
+      },
+      {
+        "id": "-3352780807530743271-2510202214-13",
+        "type": "WFB",
+        "number": "90301",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "5",
+        "time": "2510202353",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Rheine-Mesum",
+          "Emsdetten",
+          "Reckenfeld",
+          "Greven",
+          "Münster-Sprakel",
+          "Münster(W)Zentrum Nord",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "2812183816605450724-2510210453-1",
+        "type": "RB",
+        "number": "52301",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "5",
+        "time": "2510210453",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Rheine-Mesum",
+          "Emsdetten",
+          "Reckenfeld",
+          "Greven",
+          "Münster-Sprakel",
+          "Münster(W)Zentrum Nord",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-3558590691375544865-2510210502-7",
+        "type": "WFB",
+        "number": "90266",
+        "direction": "Emden Hbf",
+        "platform": "3",
+        "time": "2510210534",
+        "destination": "Emden Hbf",
+        "path_stations": [
+          "Salzbergen",
+          "Leschede",
+          "Lingen(Ems)",
+          "Geeste",
+          "Meppen",
+          "Haren(Ems)",
+          "Lathen",
+          "Dörpen",
+          "Aschendorf",
+          "Papenburg(Ems)",
+          "Leer(Ostfriesl)",
+          "Emden Hbf"
+        ]
+      },
+      {
+        "id": "-783459692724030587-2510210514-1",
+        "type": "RB",
+        "number": "20353",
+        "direction": "Bielefeld Hbf",
+        "platform": "3",
+        "time": "2510210514",
+        "destination": "Bielefeld Hbf",
+        "path_stations": [
+          "Hörstel",
+          "Ibbenbüren-Esch",
+          "Ibbenbüren",
+          "Ibbenbüren-Laggenbeck",
+          "Osnabrück Altstadt",
+          "Osnabrück Hbf",
+          "Wissingen",
+          "Westerhausen",
+          "Melle",
+          "Bruchmühlen",
+          "Bünde(Westf)",
+          "Kirchlengern",
+          "Hiddenhausen-Schweicheln",
+          "Herford",
+          "Brake(b Bielefeld)",
+          "Bielefeld Hbf"
+        ]
+      },
+      {
+        "id": "882664500836328391-2510210514-7",
+        "type": "RB",
+        "number": "20350",
+        "direction": "Hengelo",
+        "platform": "2",
+        "time": "2510210549",
+        "destination": "Hengelo",
+        "path_stations": [
+          "Salzbergen",
+          "Schüttorf",
+          "Bad Bentheim",
+          "Oldenzaal",
+          "Hengelo"
+        ]
+      },
+      {
+        "id": "-3170763827464905858-2510210450-6",
+        "type": "WFB",
+        "number": "90265",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "5",
+        "time": "2510210529",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Emsdetten",
+          "Greven",
+          "Münster(W)Zentrum Nord",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "1344516564372516743-2510210553-1",
+        "type": "RB",
+        "number": "52305",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "5",
+        "time": "2510210553",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Rheine-Mesum",
+          "Emsdetten",
+          "Reckenfeld",
+          "Greven",
+          "Münster-Sprakel",
+          "Münster(W)Zentrum Nord",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-7692923324803142356-2510210539-1",
+        "type": "RE",
+        "number": "11501",
+        "direction": "Löhne(Westf)",
+        "platform": "2",
+        "time": "2510210539",
+        "destination": "Löhne(Westf)",
+        "path_stations": [
+          "Ibbenbüren",
+          "Osnabrück Altstadt",
+          "Osnabrück Hbf",
+          "Melle",
+          "Bünde(Westf)",
+          "Kirchlengern",
+          "Löhne(Westf)"
+        ]
+      },
+      {
+        "id": "8667099094681991630-2510210653-1",
+        "type": "RB",
+        "number": "52309",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "5",
+        "time": "2510210653",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Rheine-Mesum",
+          "Emsdetten",
+          "Reckenfeld",
+          "Greven",
+          "Münster-Sprakel",
+          "Münster(W)Zentrum Nord",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-3507722088886233452-2510210602-7",
+        "type": "WFB",
+        "number": "90268",
+        "direction": "Emden Hbf",
+        "platform": "3",
+        "time": "2510210634",
+        "destination": "Emden Hbf",
+        "path_stations": [
+          "Salzbergen",
+          "Leschede",
+          "Lingen(Ems)",
+          "Geeste",
+          "Meppen",
+          "Haren(Ems)",
+          "Lathen",
+          "Dörpen",
+          "Aschendorf",
+          "Papenburg(Ems)",
+          "Leer(Ostfriesl)",
+          "Emden Hbf"
+        ]
+      },
+      {
+        "id": "-5076826593111136189-2510210638-1",
+        "type": "WFB",
+        "number": "95775",
+        "direction": "Braunschweig Hbf",
+        "platform": "4",
+        "time": "2510210638",
+        "destination": "Braunschweig Hbf",
+        "path_stations": [
+          "Hörstel",
+          "Ibbenbüren-Esch",
+          "Ibbenbüren",
+          "Ibbenbüren-Laggenbeck",
+          "Osnabrück Altstadt",
+          "Osnabrück Hbf",
+          "Melle",
+          "Bünde(Westf)",
+          "Kirchlengern",
+          "Löhne(Westf)",
+          "Bad Oeynhausen",
+          "Porta Westfalica",
+          "Minden(Westf)",
+          "Bückeburg",
+          "Stadthagen",
+          "Haste",
+          "Wunstorf",
+          "Hannover Hbf",
+          "Lehrte",
+          "Hämelerwald",
+          "Vöhrum",
+          "Peine",
+          "Vechelde",
+          "Braunschweig Hbf"
+        ]
+      },
+      {
+        "id": "3342956088738577911-2510210534-6",
+        "type": "RB",
+        "number": "20355",
+        "direction": "Bielefeld Hbf",
+        "platform": "4",
+        "time": "2510210614",
+        "destination": "Bielefeld Hbf",
+        "path_stations": [
+          "Hörstel",
+          "Ibbenbüren-Esch",
+          "Ibbenbüren",
+          "Ibbenbüren-Laggenbeck",
+          "Osnabrück Altstadt",
+          "Osnabrück Hbf",
+          "Wissingen",
+          "Westerhausen",
+          "Melle",
+          "Bruchmühlen",
+          "Bünde(Westf)",
+          "Kirchlengern",
+          "Hiddenhausen-Schweicheln",
+          "Herford",
+          "Brake(b Bielefeld)",
+          "Bielefeld Hbf"
+        ]
+      },
+      {
+        "id": "-174740467195253639-2510210511-17",
+        "type": "RB",
+        "number": "20352",
+        "direction": "Hengelo",
+        "platform": "2",
+        "time": "2510210649",
+        "destination": "Hengelo",
+        "path_stations": [
+          "Salzbergen",
+          "Schüttorf",
+          "Bad Bentheim",
+          "Oldenzaal",
+          "Hengelo"
+        ]
+      },
+      {
+        "id": "-2441118754353506185-2510210452-13",
+        "type": "WFB",
+        "number": "90267",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "5",
+        "time": "2510210629",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Emsdetten",
+          "Greven",
+          "Münster(W)Zentrum Nord",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "4678559792670816478-2510210618-1",
+        "type": "RB",
+        "number": "52307",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "5",
+        "time": "2510210618",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Rheine-Mesum",
+          "Emsdetten",
+          "Reckenfeld",
+          "Greven",
+          "Münster-Sprakel",
+          "Münster(W)Zentrum Nord",
+          "Münster(Westf)Hbf"
+        ]
+      }
+    ]
+  }
+}

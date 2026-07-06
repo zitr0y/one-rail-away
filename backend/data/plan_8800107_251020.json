@@ -1,0 +1,524 @@
+{
+  "station_eva": "8800107",
+  "date": "251020",
+  "cached_at": "2025-10-20T16:40:02.836623",
+  "plan_data": {
+    "arrivals": [
+      {
+        "id": "-8519956269466191700-2510201808-2",
+        "type": "RE",
+        "number": "18961",
+        "time": "2510201816",
+        "platform": "2",
+        "path_stations": [
+          "Liège-Guillemins"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-6645816543771038074-2510201717-13",
+        "type": "RE",
+        "number": "18954",
+        "time": "2510201842",
+        "platform": "1",
+        "path_stations": [
+          "Aachen Hbf",
+          "Aachen West",
+          "Herzogenrath",
+          "Eygelshoven Markt",
+          "Landgraaf",
+          "Heerlen",
+          "Valkenburg(NL)",
+          "Meerssen",
+          "Maastricht",
+          "Maastricht Randwyck",
+          "Eijsden",
+          "Vise"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-578842327442286635-2510201908-2",
+        "type": "RE",
+        "number": "18965",
+        "time": "2510201916",
+        "platform": "2",
+        "path_stations": [
+          "Liège-Guillemins"
+        ],
+        "line": ""
+      },
+      {
+        "id": "3466590436910825275-2510201817-13",
+        "type": "RE",
+        "number": "18958",
+        "time": "2510201942",
+        "platform": "1",
+        "path_stations": [
+          "Aachen Hbf",
+          "Aachen West",
+          "Herzogenrath",
+          "Eygelshoven Markt",
+          "Landgraaf",
+          "Heerlen",
+          "Valkenburg(NL)",
+          "Meerssen",
+          "Maastricht",
+          "Maastricht Randwyck",
+          "Eijsden",
+          "Vise"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-8918702319618982047-2510202008-2",
+        "type": "R",
+        "number": "18969",
+        "time": "2510202016",
+        "platform": "2",
+        "path_stations": [
+          "Liège-Guillemins"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-8053212848275694556-2510201917-13",
+        "type": "RE",
+        "number": "18962",
+        "time": "2510202042",
+        "platform": "1",
+        "path_stations": [
+          "Aachen Hbf",
+          "Aachen West",
+          "Herzogenrath",
+          "Eygelshoven Markt",
+          "Landgraaf",
+          "Heerlen",
+          "Valkenburg(NL)",
+          "Meerssen",
+          "Maastricht",
+          "Maastricht Randwyck",
+          "Eijsden",
+          "Vise"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-1661393425858138034-2510202017-13",
+        "type": "RE",
+        "number": "18966",
+        "time": "2510202142",
+        "platform": "1",
+        "path_stations": [
+          "Aachen Hbf",
+          "Aachen West",
+          "Herzogenrath",
+          "Eygelshoven Markt",
+          "Landgraaf",
+          "Heerlen",
+          "Valkenburg(NL)",
+          "Meerssen",
+          "Maastricht",
+          "Maastricht Randwyck",
+          "Eijsden",
+          "Vise"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-5843531746821958576-2510202108-2",
+        "type": "R",
+        "number": "18973",
+        "time": "2510202116",
+        "platform": "2",
+        "path_stations": [
+          "Liège-Guillemins"
+        ],
+        "line": ""
+      },
+      {
+        "id": "2142685495596717780-2510202117-13",
+        "type": "RE",
+        "number": "18970",
+        "time": "2510202242",
+        "platform": "1",
+        "path_stations": [
+          "Aachen Hbf",
+          "Aachen West",
+          "Herzogenrath",
+          "Eygelshoven Markt",
+          "Landgraaf",
+          "Heerlen",
+          "Valkenburg(NL)",
+          "Meerssen",
+          "Maastricht",
+          "Maastricht Randwyck",
+          "Eijsden",
+          "Vise"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-3333274161150070147-2510202208-2",
+        "type": "RE",
+        "number": "18977",
+        "time": "2510202216",
+        "platform": "2",
+        "path_stations": [
+          "Liège-Guillemins"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-2100556839975301087-2510202308-2",
+        "type": "RE",
+        "number": "18981",
+        "time": "2510202316",
+        "platform": "2",
+        "path_stations": [
+          "Liège-Guillemins"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-4384464881482399756-2510202217-13",
+        "type": "RE",
+        "number": "18974",
+        "time": "2510202342",
+        "platform": "1",
+        "path_stations": [
+          "Aachen Hbf",
+          "Aachen West",
+          "Herzogenrath",
+          "Eygelshoven Markt",
+          "Landgraaf",
+          "Heerlen",
+          "Valkenburg(NL)",
+          "Meerssen",
+          "Maastricht",
+          "Maastricht Randwyck",
+          "Eijsden",
+          "Vise"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-1621018825370458266-2510202317-13",
+        "type": "RE",
+        "number": "18978",
+        "time": "2510210042",
+        "platform": "1",
+        "path_stations": [
+          "Aachen Hbf",
+          "Aachen West",
+          "Herzogenrath",
+          "Eygelshoven Markt",
+          "Landgraaf",
+          "Heerlen",
+          "Valkenburg(NL)",
+          "Meerssen",
+          "Maastricht",
+          "Maastricht Randwyck",
+          "Eijsden",
+          "Vise"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-1739865554578015828-2510210508-2",
+        "type": "RE",
+        "number": "18909",
+        "time": "2510210516",
+        "platform": "2",
+        "path_stations": [
+          "Liège-Guillemins"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-5223862438650354442-2510210616-2",
+        "type": "R",
+        "number": "18906",
+        "time": "2510210642",
+        "platform": "1",
+        "path_stations": [
+          "Vise"
+        ],
+        "line": ""
+      },
+      {
+        "id": "1399436403693664828-2510210608-2",
+        "type": "RE",
+        "number": "18913",
+        "time": "2510210616",
+        "platform": "2",
+        "path_stations": [
+          "Liège-Guillemins"
+        ],
+        "line": ""
+      }
+    ],
+    "departures": [
+      {
+        "id": "-8519956269466191700-2510201808-2",
+        "type": "RE",
+        "number": "18961",
+        "direction": "Aachen Hbf",
+        "platform": "2",
+        "time": "2510201817",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Vise",
+          "Eijsden",
+          "Maastricht Randwyck",
+          "Maastricht",
+          "Meerssen",
+          "Valkenburg(NL)",
+          "Heerlen",
+          "Landgraaf",
+          "Eygelshoven Markt",
+          "Herzogenrath",
+          "Aachen West",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "-6645816543771038074-2510201717-13",
+        "type": "RE",
+        "number": "18954",
+        "direction": "Liège-Guillemins",
+        "platform": "1",
+        "time": "2510201843",
+        "destination": "Liège-Guillemins",
+        "path_stations": [
+          "Liège-Guillemins"
+        ]
+      },
+      {
+        "id": "-578842327442286635-2510201908-2",
+        "type": "RE",
+        "number": "18965",
+        "direction": "Aachen Hbf",
+        "platform": "2",
+        "time": "2510201917",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Vise",
+          "Eijsden",
+          "Maastricht Randwyck",
+          "Maastricht",
+          "Meerssen",
+          "Valkenburg(NL)",
+          "Heerlen",
+          "Landgraaf",
+          "Eygelshoven Markt",
+          "Herzogenrath",
+          "Aachen West",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "3466590436910825275-2510201817-13",
+        "type": "RE",
+        "number": "18958",
+        "direction": "Liège-Guillemins",
+        "platform": "1",
+        "time": "2510201943",
+        "destination": "Liège-Guillemins",
+        "path_stations": [
+          "Liège-Guillemins"
+        ]
+      },
+      {
+        "id": "-8918702319618982047-2510202008-2",
+        "type": "R",
+        "number": "18969",
+        "direction": "Maastricht",
+        "platform": "2",
+        "time": "2510202017",
+        "destination": "Maastricht",
+        "path_stations": [
+          "Vise",
+          "Maastricht"
+        ]
+      },
+      {
+        "id": "-8053212848275694556-2510201917-13",
+        "type": "RE",
+        "number": "18962",
+        "direction": "Liège-Guillemins",
+        "platform": "1",
+        "time": "2510202043",
+        "destination": "Liège-Guillemins",
+        "path_stations": [
+          "Liège-Guillemins"
+        ]
+      },
+      {
+        "id": "-1661393425858138034-2510202017-13",
+        "type": "RE",
+        "number": "18966",
+        "direction": "Liège-Guillemins",
+        "platform": "1",
+        "time": "2510202143",
+        "destination": "Liège-Guillemins",
+        "path_stations": [
+          "Liège-Guillemins"
+        ]
+      },
+      {
+        "id": "-5843531746821958576-2510202108-2",
+        "type": "R",
+        "number": "18973",
+        "direction": "Maastricht",
+        "platform": "2",
+        "time": "2510202117",
+        "destination": "Maastricht",
+        "path_stations": [
+          "Vise",
+          "Maastricht"
+        ]
+      },
+      {
+        "id": "2142685495596717780-2510202117-13",
+        "type": "RE",
+        "number": "18970",
+        "direction": "Liège-Guillemins",
+        "platform": "1",
+        "time": "2510202243",
+        "destination": "Liège-Guillemins",
+        "path_stations": [
+          "Liège-Guillemins"
+        ]
+      },
+      {
+        "id": "-3333274161150070147-2510202208-2",
+        "type": "RE",
+        "number": "18977",
+        "direction": "Aachen Hbf",
+        "platform": "2",
+        "time": "2510202217",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Vise",
+          "Eijsden",
+          "Maastricht Randwyck",
+          "Maastricht",
+          "Meerssen",
+          "Valkenburg(NL)",
+          "Heerlen",
+          "Landgraaf",
+          "Eygelshoven Markt",
+          "Herzogenrath",
+          "Aachen West",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "-2100556839975301087-2510202308-2",
+        "type": "RE",
+        "number": "18981",
+        "direction": "Aachen Hbf",
+        "platform": "2",
+        "time": "2510202317",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Vise",
+          "Eijsden",
+          "Maastricht Randwyck",
+          "Maastricht",
+          "Meerssen",
+          "Valkenburg(NL)",
+          "Heerlen",
+          "Landgraaf",
+          "Eygelshoven Markt",
+          "Herzogenrath",
+          "Aachen West",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "-4384464881482399756-2510202217-13",
+        "type": "RE",
+        "number": "18974",
+        "direction": "Liège-Guillemins",
+        "platform": "1",
+        "time": "2510202343",
+        "destination": "Liège-Guillemins",
+        "path_stations": [
+          "Liège-Guillemins"
+        ]
+      },
+      {
+        "id": "-1621018825370458266-2510202317-13",
+        "type": "RE",
+        "number": "18978",
+        "direction": "Liège-Guillemins",
+        "platform": "1",
+        "time": "2510210043",
+        "destination": "Liège-Guillemins",
+        "path_stations": [
+          "Liège-Guillemins"
+        ]
+      },
+      {
+        "id": "-1739865554578015828-2510210508-2",
+        "type": "RE",
+        "number": "18909",
+        "direction": "Aachen Hbf",
+        "platform": "2",
+        "time": "2510210517",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Vise",
+          "Eijsden",
+          "Maastricht Randwyck",
+          "Maastricht",
+          "Meerssen",
+          "Valkenburg(NL)",
+          "Heerlen",
+          "Landgraaf",
+          "Eygelshoven Markt",
+          "Herzogenrath",
+          "Aachen West",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "-5223862438650354442-2510210616-2",
+        "type": "R",
+        "number": "18906",
+        "direction": "Liège-Guillemins",
+        "platform": "1",
+        "time": "2510210643",
+        "destination": "Liège-Guillemins",
+        "path_stations": [
+          "Liège-Guillemins"
+        ]
+      },
+      {
+        "id": "1399436403693664828-2510210608-2",
+        "type": "RE",
+        "number": "18913",
+        "direction": "Aachen Hbf",
+        "platform": "2",
+        "time": "2510210617",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Vise",
+          "Eijsden",
+          "Maastricht Randwyck",
+          "Maastricht",
+          "Meerssen",
+          "Valkenburg(NL)",
+          "Heerlen",
+          "Landgraaf",
+          "Eygelshoven Markt",
+          "Herzogenrath",
+          "Aachen West",
+          "Aachen Hbf"
+        ]
+      }
+    ]
+  }
+}

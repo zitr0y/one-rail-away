@@ -1,0 +1,100 @@
+{
+  "station_eva": "653009",
+  "date": "251020",
+  "cached_at": "2025-10-20T15:34:52.141850",
+  "plan_data": {
+    "departures": [
+      {
+        "id": "9015619407585897183-2510201738-1",
+        "type": "Bus",
+        "number": "9183",
+        "direction": "Hauptbahnhof Osteingang, Recklinghausen",
+        "platform": "",
+        "time": "2510201738",
+        "destination": "Hauptbahnhof Osteingang, Recklinghausen",
+        "path_stations": [
+          "Boy Bahnhof, Bottrop",
+          "West/Bahnhof, Gladbeck",
+          "Gymnasium, Herten",
+          "Hauptbahnhof Osteingang, Recklinghausen"
+        ]
+      },
+      {
+        "id": "926986283914887306-2510201838-1",
+        "type": "Bus",
+        "number": "9185",
+        "direction": "Hauptbahnhof Osteingang, Recklinghausen",
+        "platform": "",
+        "time": "2510201838",
+        "destination": "Hauptbahnhof Osteingang, Recklinghausen",
+        "path_stations": [
+          "Boy Bahnhof, Bottrop",
+          "West/Bahnhof, Gladbeck",
+          "Gymnasium, Herten",
+          "Hauptbahnhof Osteingang, Recklinghausen"
+        ]
+      },
+      {
+        "id": "-3638821667441064173-2510201938-1",
+        "type": "Bus",
+        "number": "9187",
+        "direction": "Hauptbahnhof Osteingang, Recklinghausen",
+        "platform": "",
+        "time": "2510201938",
+        "destination": "Hauptbahnhof Osteingang, Recklinghausen",
+        "path_stations": [
+          "Boy Bahnhof, Bottrop",
+          "West/Bahnhof, Gladbeck",
+          "Gymnasium, Herten",
+          "Hauptbahnhof Osteingang, Recklinghausen"
+        ]
+      },
+      {
+        "id": "5506371433732108338-2510202038-1",
+        "type": "Bus",
+        "number": "9189",
+        "direction": "Hauptbahnhof Osteingang, Recklinghausen",
+        "platform": "",
+        "time": "2510202038",
+        "destination": "Hauptbahnhof Osteingang, Recklinghausen",
+        "path_stations": [
+          "Boy Bahnhof, Bottrop",
+          "West/Bahnhof, Gladbeck",
+          "Gymnasium, Herten",
+          "Hauptbahnhof Osteingang, Recklinghausen"
+        ]
+      },
+      {
+        "id": "2748212523324276725-2510202138-1",
+        "type": "Bus",
+        "number": "9191",
+        "direction": "Hauptbahnhof Osteingang, Recklinghausen",
+        "platform": "",
+        "time": "2510202138",
+        "destination": "Hauptbahnhof Osteingang, Recklinghausen",
+        "path_stations": [
+          "Boy Bahnhof, Bottrop",
+          "West/Bahnhof, Gladbeck",
+          "Gymnasium, Herten",
+          "Hauptbahnhof Osteingang, Recklinghausen"
+        ]
+      },
+      {
+        "id": "6362534752707224835-2510202238-1",
+        "type": "Bus",
+        "number": "9193",
+        "direction": "Hauptbahnhof Osteingang, Recklinghausen",
+        "platform": "",
+        "time": "2510202238",
+        "destination": "Hauptbahnhof Osteingang, Recklinghausen",
+        "path_stations": [
+          "Boy Bahnhof, Bottrop",
+          "West/Bahnhof, Gladbeck",
+          "Gymnasium, Herten",
+          "Hauptbahnhof Osteingang, Recklinghausen"
+        ]
+      }
+    ],
+    "arrivals": []
+  }
+}

@@ -1,0 +1,2975 @@
+{
+  "station_eva": "8004869",
+  "date": "251020",
+  "cached_at": "2025-10-20T16:43:06.986402",
+  "plan_data": {
+    "arrivals": [
+      {
+        "id": "7587440103218504043-2510201809-13",
+        "type": "S",
+        "number": "33240",
+        "time": "2510201843",
+        "platform": "2",
+        "path_stations": [
+          "Horrem",
+          "Frechen-Königsdorf",
+          "Köln-Weiden West",
+          "Lövenich",
+          "Köln-Müngersdorf Technologiepark",
+          "Köln-Ehrenfeld",
+          "Köln Hansaring",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln Trimbornstr",
+          "Köln Airport-Businesspark",
+          "Köln Steinstraße"
+        ],
+        "line": "12"
+      },
+      {
+        "id": "-6326407469458865187-2510201729-13",
+        "type": "S",
+        "number": "33230",
+        "time": "2510201803",
+        "platform": "2",
+        "path_stations": [
+          "Horrem",
+          "Frechen-Königsdorf",
+          "Köln-Weiden West",
+          "Lövenich",
+          "Köln-Müngersdorf Technologiepark",
+          "Köln-Ehrenfeld",
+          "Köln Hansaring",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln Trimbornstr",
+          "Köln Airport-Businesspark",
+          "Köln Steinstraße"
+        ],
+        "line": "12"
+      },
+      {
+        "id": "5254640728407340655-2510201737-7",
+        "type": "RE",
+        "number": "29475",
+        "time": "2510201812",
+        "platform": "2",
+        "path_stations": [
+          "Rommerskirchen",
+          "Stommeln",
+          "Pulheim",
+          "Köln-Ehrenfeld",
+          "Köln Hbf",
+          "Köln Messe/Deutz"
+        ],
+        "line": "8"
+      },
+      {
+        "id": "4124699725257303251-2510201710-13",
+        "type": "RE",
+        "number": "10926",
+        "time": "2510201824",
+        "platform": "1",
+        "path_stations": [
+          "Siegen Hbf",
+          "Brachbach",
+          "Kirchen",
+          "Betzdorf(Sieg)",
+          "Wissen(Sieg)",
+          "Au(Sieg)",
+          "Schladern(Sieg)",
+          "Herchen",
+          "Eitorf",
+          "Hennef(Sieg)",
+          "Siegburg/Bonn",
+          "Troisdorf"
+        ],
+        "line": "9"
+      },
+      {
+        "id": "-2092309483944033948-2510201828-2",
+        "type": "RE",
+        "number": "29476",
+        "time": "2510201837",
+        "platform": "1",
+        "path_stations": [
+          "Troisdorf"
+        ],
+        "line": "8"
+      },
+      {
+        "id": "-183237788427159234-2510201720-15",
+        "type": "S",
+        "number": "33243",
+        "time": "2510201812",
+        "platform": "1",
+        "path_stations": [
+          "Au(Sieg)",
+          "Rosbach(Sieg)",
+          "Schladern(Sieg)",
+          "Dattenfeld(Sieg)",
+          "Herchen",
+          "Eitorf",
+          "Merten(Sieg)",
+          "Blankenberg(Sieg)",
+          "Hennef im Siegbogen",
+          "Hennef(Sieg)",
+          "Siegburg/Bonn",
+          "Troisdorf",
+          "Spich",
+          "Porz-Wahn"
+        ],
+        "line": "12"
+      },
+      {
+        "id": "2633398492900654257-2510201718-11",
+        "type": "RE",
+        "number": "10925",
+        "time": "2510201833",
+        "platform": "2",
+        "path_stations": [
+          "Aachen Hbf",
+          "Aachen-Rothe Erde",
+          "Stolberg(Rheinl)Hbf",
+          "Eschweiler Hbf",
+          "Langerwehe",
+          "Düren",
+          "Horrem",
+          "Köln-Ehrenfeld",
+          "Köln Hbf",
+          "Köln Messe/Deutz"
+        ],
+        "line": "9"
+      },
+      {
+        "id": "-3297745711372374047-2510201749-13",
+        "type": "S",
+        "number": "33238",
+        "time": "2510201823",
+        "platform": "2",
+        "path_stations": [
+          "Horrem",
+          "Frechen-Königsdorf",
+          "Köln-Weiden West",
+          "Lövenich",
+          "Köln-Müngersdorf Technologiepark",
+          "Köln-Ehrenfeld",
+          "Köln Hansaring",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln Trimbornstr",
+          "Köln Airport-Businesspark",
+          "Köln Steinstraße"
+        ],
+        "line": "12"
+      },
+      {
+        "id": "1891717273857072510-2510201813-6",
+        "type": "S",
+        "number": "33245",
+        "time": "2510201832",
+        "platform": "1",
+        "path_stations": [
+          "Hennef(Sieg)",
+          "Siegburg/Bonn",
+          "Troisdorf",
+          "Spich",
+          "Porz-Wahn"
+        ],
+        "line": "12"
+      },
+      {
+        "id": "8584391312189741700-2510201833-6",
+        "type": "S",
+        "number": "33249",
+        "time": "2510201852",
+        "platform": "1",
+        "path_stations": [
+          "Hennef(Sieg)",
+          "Siegburg/Bonn",
+          "Troisdorf",
+          "Spich",
+          "Porz-Wahn"
+        ],
+        "line": "12"
+      },
+      {
+        "id": "4074523748542074650-2510201933-6",
+        "type": "S",
+        "number": "33259",
+        "time": "2510201952",
+        "platform": "1",
+        "path_stations": [
+          "Hennef(Sieg)",
+          "Siegburg/Bonn",
+          "Troisdorf",
+          "Spich",
+          "Porz-Wahn"
+        ],
+        "line": "12"
+      },
+      {
+        "id": "-4622339806274585555-2510201909-13",
+        "type": "S",
+        "number": "33252",
+        "time": "2510201945",
+        "platform": "2",
+        "path_stations": [
+          "Horrem",
+          "Frechen-Königsdorf",
+          "Köln-Weiden West",
+          "Lövenich",
+          "Köln-Müngersdorf Technologiepark",
+          "Köln-Ehrenfeld",
+          "Köln Hansaring",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln Trimbornstr",
+          "Köln Airport-Businesspark",
+          "Köln Steinstraße"
+        ],
+        "line": "12"
+      },
+      {
+        "id": "-4685260995542115648-2510201818-11",
+        "type": "RE",
+        "number": "10927",
+        "time": "2510201933",
+        "platform": "2",
+        "path_stations": [
+          "Aachen Hbf",
+          "Aachen-Rothe Erde",
+          "Stolberg(Rheinl)Hbf",
+          "Eschweiler Hbf",
+          "Langerwehe",
+          "Düren",
+          "Horrem",
+          "Köln-Ehrenfeld",
+          "Köln Hbf",
+          "Köln Messe/Deutz"
+        ],
+        "line": "9"
+      },
+      {
+        "id": "-3378703793595651975-2510201829-13",
+        "type": "S",
+        "number": "33242",
+        "time": "2510201903",
+        "platform": "2",
+        "path_stations": [
+          "Horrem",
+          "Frechen-Königsdorf",
+          "Köln-Weiden West",
+          "Lövenich",
+          "Köln-Müngersdorf Technologiepark",
+          "Köln-Ehrenfeld",
+          "Köln Hansaring",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln Trimbornstr",
+          "Köln Airport-Businesspark",
+          "Köln Steinstraße"
+        ],
+        "line": "12"
+      },
+      {
+        "id": "-4537120205580227667-2510201820-15",
+        "type": "S",
+        "number": "33251",
+        "time": "2510201912",
+        "platform": "1",
+        "path_stations": [
+          "Au(Sieg)",
+          "Rosbach(Sieg)",
+          "Schladern(Sieg)",
+          "Dattenfeld(Sieg)",
+          "Herchen",
+          "Eitorf",
+          "Merten(Sieg)",
+          "Blankenberg(Sieg)",
+          "Hennef im Siegbogen",
+          "Hennef(Sieg)",
+          "Siegburg/Bonn",
+          "Troisdorf",
+          "Spich",
+          "Porz-Wahn"
+        ],
+        "line": "12"
+      },
+      {
+        "id": "-4724875222103811586-2510201810-13",
+        "type": "RE",
+        "number": "10928",
+        "time": "2510201924",
+        "platform": "1",
+        "path_stations": [
+          "Siegen Hbf",
+          "Brachbach",
+          "Kirchen",
+          "Betzdorf(Sieg)",
+          "Wissen(Sieg)",
+          "Au(Sieg)",
+          "Schladern(Sieg)",
+          "Herchen",
+          "Eitorf",
+          "Hennef(Sieg)",
+          "Siegburg/Bonn",
+          "Troisdorf"
+        ],
+        "line": "9"
+      },
+      {
+        "id": "6874849569090414856-2510201849-13",
+        "type": "S",
+        "number": "33248",
+        "time": "2510201923",
+        "platform": "2",
+        "path_stations": [
+          "Horrem",
+          "Frechen-Königsdorf",
+          "Köln-Weiden West",
+          "Lövenich",
+          "Köln-Müngersdorf Technologiepark",
+          "Köln-Ehrenfeld",
+          "Köln Hansaring",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln Trimbornstr",
+          "Köln Airport-Businesspark",
+          "Köln Steinstraße"
+        ],
+        "line": "12"
+      },
+      {
+        "id": "1617919149696385964-2510201837-7",
+        "type": "RE",
+        "number": "29477",
+        "time": "2510201912",
+        "platform": "2",
+        "path_stations": [
+          "Rommerskirchen",
+          "Stommeln",
+          "Pulheim",
+          "Köln-Ehrenfeld",
+          "Köln Hbf",
+          "Köln Messe/Deutz"
+        ],
+        "line": "8"
+      },
+      {
+        "id": "-1683218772098927952-2510201913-6",
+        "type": "S",
+        "number": "33255",
+        "time": "2510201932",
+        "platform": "1",
+        "path_stations": [
+          "Hennef(Sieg)",
+          "Siegburg/Bonn",
+          "Troisdorf",
+          "Spich",
+          "Porz-Wahn"
+        ],
+        "line": "12"
+      },
+      {
+        "id": "1544833212009923962-2510201928-2",
+        "type": "RE",
+        "number": "29478",
+        "time": "2510201937",
+        "platform": "1",
+        "path_stations": [
+          "Troisdorf"
+        ],
+        "line": "8"
+      },
+      {
+        "id": "-7957634259049838531-2510201920-15",
+        "type": "S",
+        "number": "33261",
+        "time": "2510202012",
+        "platform": "1",
+        "path_stations": [
+          "Au(Sieg)",
+          "Rosbach(Sieg)",
+          "Schladern(Sieg)",
+          "Dattenfeld(Sieg)",
+          "Herchen",
+          "Eitorf",
+          "Merten(Sieg)",
+          "Blankenberg(Sieg)",
+          "Hennef im Siegbogen",
+          "Hennef(Sieg)",
+          "Siegburg/Bonn",
+          "Troisdorf",
+          "Spich",
+          "Porz-Wahn"
+        ],
+        "line": "12"
+      },
+      {
+        "id": "-5806736731936295600-2510201937-7",
+        "type": "RE",
+        "number": "29479",
+        "time": "2510202012",
+        "platform": "2",
+        "path_stations": [
+          "Rommerskirchen",
+          "Stommeln",
+          "Pulheim",
+          "Köln-Ehrenfeld",
+          "Köln Hbf",
+          "Köln Messe/Deutz"
+        ],
+        "line": "8"
+      },
+      {
+        "id": "-250321817239940087-2510202033-6",
+        "type": "S",
+        "number": "33269",
+        "time": "2510202052",
+        "platform": "1",
+        "path_stations": [
+          "Hennef(Sieg)",
+          "Siegburg/Bonn",
+          "Troisdorf",
+          "Spich",
+          "Porz-Wahn"
+        ],
+        "line": "12"
+      },
+      {
+        "id": "-2515307770764250879-2510201929-13",
+        "type": "S",
+        "number": "33254",
+        "time": "2510202003",
+        "platform": "2",
+        "path_stations": [
+          "Horrem",
+          "Frechen-Königsdorf",
+          "Köln-Weiden West",
+          "Lövenich",
+          "Köln-Müngersdorf Technologiepark",
+          "Köln-Ehrenfeld",
+          "Köln Hansaring",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln Trimbornstr",
+          "Köln Airport-Businesspark",
+          "Köln Steinstraße"
+        ],
+        "line": "12"
+      },
+      {
+        "id": "-233663964926761052-2510202028-2",
+        "type": "RE",
+        "number": "29480",
+        "time": "2510202037",
+        "platform": "1",
+        "path_stations": [
+          "Troisdorf"
+        ],
+        "line": "8"
+      },
+      {
+        "id": "-1524262322350185603-2510201949-13",
+        "type": "S",
+        "number": "33260",
+        "time": "2510202023",
+        "platform": "2",
+        "path_stations": [
+          "Horrem",
+          "Frechen-Königsdorf",
+          "Köln-Weiden West",
+          "Lövenich",
+          "Köln-Müngersdorf Technologiepark",
+          "Köln-Ehrenfeld",
+          "Köln Hansaring",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln Trimbornstr",
+          "Köln Airport-Businesspark",
+          "Köln Steinstraße"
+        ],
+        "line": "12"
+      },
+      {
+        "id": "3413675835544714902-2510202013-6",
+        "type": "S",
+        "number": "33263",
+        "time": "2510202032",
+        "platform": "1",
+        "path_stations": [
+          "Hennef(Sieg)",
+          "Siegburg/Bonn",
+          "Troisdorf",
+          "Spich",
+          "Porz-Wahn"
+        ],
+        "line": "12"
+      },
+      {
+        "id": "-3650283809114826212-2510202009-13",
+        "type": "S",
+        "number": "33262",
+        "time": "2510202044",
+        "platform": "2",
+        "path_stations": [
+          "Horrem",
+          "Frechen-Königsdorf",
+          "Köln-Weiden West",
+          "Lövenich",
+          "Köln-Müngersdorf Technologiepark",
+          "Köln-Ehrenfeld",
+          "Köln Hansaring",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln Trimbornstr",
+          "Köln Airport-Businesspark",
+          "Köln Steinstraße"
+        ],
+        "line": "12"
+      },
+      {
+        "id": "-4937371511567608539-2510201918-11",
+        "type": "RE",
+        "number": "10929",
+        "time": "2510202033",
+        "platform": "2",
+        "path_stations": [
+          "Aachen Hbf",
+          "Aachen-Rothe Erde",
+          "Stolberg(Rheinl)Hbf",
+          "Eschweiler Hbf",
+          "Langerwehe",
+          "Düren",
+          "Horrem",
+          "Köln-Ehrenfeld",
+          "Köln Hbf",
+          "Köln Messe/Deutz"
+        ],
+        "line": "9"
+      },
+      {
+        "id": "-5089838934529415105-2510201910-13",
+        "type": "RE",
+        "number": "10930",
+        "time": "2510202024",
+        "platform": "1",
+        "path_stations": [
+          "Siegen Hbf",
+          "Brachbach",
+          "Kirchen",
+          "Betzdorf(Sieg)",
+          "Wissen(Sieg)",
+          "Au(Sieg)",
+          "Schladern(Sieg)",
+          "Herchen",
+          "Eitorf",
+          "Hennef(Sieg)",
+          "Siegburg/Bonn",
+          "Troisdorf"
+        ],
+        "line": "9"
+      },
+      {
+        "id": "714437661852393809-2510202007-13",
+        "type": "RE",
+        "number": "91735",
+        "time": "2510202112",
+        "platform": "2",
+        "path_stations": [
+          "Mönchengladbach Hbf",
+          "Rheydt Hbf",
+          "Rheydt-Odenkirchen",
+          "Hochneukirch",
+          "Jüchen",
+          "Grevenbroich",
+          "Rommerskirchen",
+          "Stommeln",
+          "Pulheim",
+          "Köln-Ehrenfeld",
+          "Köln Hbf",
+          "Köln Messe/Deutz"
+        ],
+        "line": "8"
+      },
+      {
+        "id": "5707712282502171787-2510202020-15",
+        "type": "S",
+        "number": "33271",
+        "time": "2510202112",
+        "platform": "1",
+        "path_stations": [
+          "Au(Sieg)",
+          "Rosbach(Sieg)",
+          "Schladern(Sieg)",
+          "Dattenfeld(Sieg)",
+          "Herchen",
+          "Eitorf",
+          "Merten(Sieg)",
+          "Blankenberg(Sieg)",
+          "Hennef im Siegbogen",
+          "Hennef(Sieg)",
+          "Siegburg/Bonn",
+          "Troisdorf",
+          "Spich",
+          "Porz-Wahn"
+        ],
+        "line": "12"
+      },
+      {
+        "id": "457970646090966950-2510202051-9",
+        "type": "S",
+        "number": "33264",
+        "time": "2510202116",
+        "platform": "2",
+        "path_stations": [
+          "Köln-Müngersdorf Technologiepark",
+          "Köln-Ehrenfeld",
+          "Köln Hansaring",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln Trimbornstr",
+          "Köln Airport-Businesspark",
+          "Köln Steinstraße"
+        ],
+        "line": "12"
+      },
+      {
+        "id": "-7431299548988929535-2510202010-13",
+        "type": "RE",
+        "number": "10932",
+        "time": "2510202124",
+        "platform": "1",
+        "path_stations": [
+          "Siegen Hbf",
+          "Brachbach",
+          "Kirchen",
+          "Betzdorf(Sieg)",
+          "Wissen(Sieg)",
+          "Au(Sieg)",
+          "Schladern(Sieg)",
+          "Herchen",
+          "Eitorf",
+          "Hennef(Sieg)",
+          "Siegburg/Bonn",
+          "Troisdorf"
+        ],
+        "line": "9"
+      },
+      {
+        "id": "639169959544390038-2510202128-2",
+        "type": "RE",
+        "number": "29482",
+        "time": "2510202137",
+        "platform": "1",
+        "path_stations": [
+          "Troisdorf"
+        ],
+        "line": "8"
+      },
+      {
+        "id": "-378032818941792498-2510202018-11",
+        "type": "RE",
+        "number": "10931",
+        "time": "2510202133",
+        "platform": "2",
+        "path_stations": [
+          "Aachen Hbf",
+          "Aachen-Rothe Erde",
+          "Stolberg(Rheinl)Hbf",
+          "Eschweiler Hbf",
+          "Langerwehe",
+          "Düren",
+          "Horrem",
+          "Köln-Ehrenfeld",
+          "Köln Hbf",
+          "Köln Messe/Deutz"
+        ],
+        "line": "9"
+      },
+      {
+        "id": "3945801788754059454-2510202118-8",
+        "type": "S",
+        "number": "33273",
+        "time": "2510202142",
+        "platform": "1",
+        "path_stations": [
+          "Blankenberg(Sieg)",
+          "Hennef im Siegbogen",
+          "Hennef(Sieg)",
+          "Siegburg/Bonn",
+          "Troisdorf",
+          "Spich",
+          "Porz-Wahn"
+        ],
+        "line": "12"
+      },
+      {
+        "id": "8186404750962379136-2510202121-9",
+        "type": "S",
+        "number": "33270",
+        "time": "2510202143",
+        "platform": "2",
+        "path_stations": [
+          "Köln-Müngersdorf Technologiepark",
+          "Köln-Ehrenfeld",
+          "Köln Hansaring",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln Trimbornstr",
+          "Köln Airport-Businesspark",
+          "Köln Steinstraße"
+        ],
+        "line": "12"
+      },
+      {
+        "id": "-422211315649496749-2510202137-7",
+        "type": "RE",
+        "number": "91739",
+        "time": "2510202212",
+        "platform": "2",
+        "path_stations": [
+          "Rommerskirchen",
+          "Stommeln",
+          "Pulheim",
+          "Köln-Ehrenfeld",
+          "Köln Hbf",
+          "Köln Messe/Deutz"
+        ],
+        "line": "8"
+      },
+      {
+        "id": "4177036688678574305-2510202118-11",
+        "type": "RE",
+        "number": "10933",
+        "time": "2510202233",
+        "platform": "2",
+        "path_stations": [
+          "Aachen Hbf",
+          "Aachen-Rothe Erde",
+          "Stolberg(Rheinl)Hbf",
+          "Eschweiler Hbf",
+          "Langerwehe",
+          "Düren",
+          "Horrem",
+          "Köln-Ehrenfeld",
+          "Köln Hbf",
+          "Köln Messe/Deutz"
+        ],
+        "line": "9"
+      },
+      {
+        "id": "965460819498165796-2510202154-8",
+        "type": "S",
+        "number": "33272",
+        "time": "2510202216",
+        "platform": "2",
+        "path_stations": [
+          "Köln-Ehrenfeld",
+          "Köln Hansaring",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln Trimbornstr",
+          "Köln Airport-Businesspark",
+          "Köln Steinstraße"
+        ],
+        "line": "12"
+      },
+      {
+        "id": "5048783240925079083-2510202228-2",
+        "type": "RE",
+        "number": "91736",
+        "time": "2510202237",
+        "platform": "1",
+        "path_stations": [
+          "Troisdorf"
+        ],
+        "line": "8"
+      },
+      {
+        "id": "-4106799935542647204-2510202119-15",
+        "type": "S",
+        "number": "33275",
+        "time": "2510202212",
+        "platform": "1",
+        "path_stations": [
+          "Au(Sieg)",
+          "Rosbach(Sieg)",
+          "Schladern(Sieg)",
+          "Dattenfeld(Sieg)",
+          "Herchen",
+          "Eitorf",
+          "Merten(Sieg)",
+          "Blankenberg(Sieg)",
+          "Hennef im Siegbogen",
+          "Hennef(Sieg)",
+          "Siegburg/Bonn",
+          "Troisdorf",
+          "Spich",
+          "Porz-Wahn"
+        ],
+        "line": "12"
+      },
+      {
+        "id": "4065472633490480606-2510202218-8",
+        "type": "S",
+        "number": "33277",
+        "time": "2510202242",
+        "platform": "1",
+        "path_stations": [
+          "Blankenberg(Sieg)",
+          "Hennef im Siegbogen",
+          "Hennef(Sieg)",
+          "Siegburg/Bonn",
+          "Troisdorf",
+          "Spich",
+          "Porz-Wahn"
+        ],
+        "line": "12"
+      },
+      {
+        "id": "3833493142293988637-2510202224-8",
+        "type": "S",
+        "number": "33274",
+        "time": "2510202243",
+        "platform": "2",
+        "path_stations": [
+          "Köln-Ehrenfeld",
+          "Köln Hansaring",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln Trimbornstr",
+          "Köln Airport-Businesspark",
+          "Köln Steinstraße"
+        ],
+        "line": "12"
+      },
+      {
+        "id": "-3073949015818699333-2510202110-13",
+        "type": "RE",
+        "number": "10934",
+        "time": "2510202224",
+        "platform": "1",
+        "path_stations": [
+          "Siegen Hbf",
+          "Brachbach",
+          "Kirchen",
+          "Betzdorf(Sieg)",
+          "Wissen(Sieg)",
+          "Au(Sieg)",
+          "Schladern(Sieg)",
+          "Herchen",
+          "Eitorf",
+          "Hennef(Sieg)",
+          "Siegburg/Bonn",
+          "Troisdorf"
+        ],
+        "line": "9"
+      },
+      {
+        "id": "-9179778945711518303-2510202237-7",
+        "type": "RE",
+        "number": "10839",
+        "time": "2510202312",
+        "platform": "2",
+        "path_stations": [
+          "Rommerskirchen",
+          "Stommeln",
+          "Pulheim",
+          "Köln-Ehrenfeld",
+          "Köln Hbf",
+          "Köln Messe/Deutz"
+        ],
+        "line": "8"
+      },
+      {
+        "id": "5016281240918927141-2510202254-8",
+        "type": "S",
+        "number": "33276",
+        "time": "2510202316",
+        "platform": "2",
+        "path_stations": [
+          "Köln-Ehrenfeld",
+          "Köln Hansaring",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln Trimbornstr",
+          "Köln Airport-Businesspark",
+          "Köln Steinstraße"
+        ],
+        "line": "12"
+      },
+      {
+        "id": "6883381443490040055-2510202324-8",
+        "type": "S",
+        "number": "33278",
+        "time": "2510202343",
+        "platform": "2",
+        "path_stations": [
+          "Köln-Ehrenfeld",
+          "Köln Hansaring",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln Trimbornstr",
+          "Köln Airport-Businesspark",
+          "Köln Steinstraße"
+        ],
+        "line": "12"
+      },
+      {
+        "id": "-4899735371190977624-2510202220-15",
+        "type": "S",
+        "number": "33279",
+        "time": "2510202312",
+        "platform": "1",
+        "path_stations": [
+          "Au(Sieg)",
+          "Rosbach(Sieg)",
+          "Schladern(Sieg)",
+          "Dattenfeld(Sieg)",
+          "Herchen",
+          "Eitorf",
+          "Merten(Sieg)",
+          "Blankenberg(Sieg)",
+          "Hennef im Siegbogen",
+          "Hennef(Sieg)",
+          "Siegburg/Bonn",
+          "Troisdorf",
+          "Spich",
+          "Porz-Wahn"
+        ],
+        "line": "12"
+      },
+      {
+        "id": "-1291355389794506596-2510202318-8",
+        "type": "S",
+        "number": "33281",
+        "time": "2510202342",
+        "platform": "1",
+        "path_stations": [
+          "Blankenberg(Sieg)",
+          "Hennef im Siegbogen",
+          "Hennef(Sieg)",
+          "Siegburg/Bonn",
+          "Troisdorf",
+          "Spich",
+          "Porz-Wahn"
+        ],
+        "line": "12"
+      },
+      {
+        "id": "-1701587498056121817-2510202210-13",
+        "type": "RE",
+        "number": "10936",
+        "time": "2510202324",
+        "platform": "1",
+        "path_stations": [
+          "Siegen Hbf",
+          "Brachbach",
+          "Kirchen",
+          "Betzdorf(Sieg)",
+          "Wissen(Sieg)",
+          "Au(Sieg)",
+          "Schladern(Sieg)",
+          "Herchen",
+          "Eitorf",
+          "Hennef(Sieg)",
+          "Siegburg/Bonn",
+          "Troisdorf"
+        ],
+        "line": "9"
+      },
+      {
+        "id": "-2466429266007476523-2510202328-2",
+        "type": "RE",
+        "number": "91740",
+        "time": "2510202336",
+        "platform": "1",
+        "path_stations": [
+          "Troisdorf"
+        ],
+        "line": "8"
+      },
+      {
+        "id": "-1764616001057382001-2510202323-3",
+        "type": "RE",
+        "number": "10935",
+        "time": "2510202333",
+        "platform": "2",
+        "path_stations": [
+          "Köln Hbf",
+          "Köln Messe/Deutz"
+        ],
+        "line": "9"
+      },
+      {
+        "id": "-7363373570835729048-2510202337-7",
+        "type": "RE",
+        "number": "10841",
+        "time": "2510210012",
+        "platform": "2",
+        "path_stations": [
+          "Rommerskirchen",
+          "Stommeln",
+          "Pulheim",
+          "Köln-Ehrenfeld",
+          "Köln Hbf",
+          "Köln Messe/Deutz"
+        ],
+        "line": "8"
+      },
+      {
+        "id": "-7469408795968249002-2510202354-8",
+        "type": "S",
+        "number": "33280",
+        "time": "2510210015",
+        "platform": "2",
+        "path_stations": [
+          "Köln-Ehrenfeld",
+          "Köln Hansaring",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln Trimbornstr",
+          "Köln Airport-Businesspark",
+          "Köln Steinstraße"
+        ],
+        "line": "12"
+      },
+      {
+        "id": "-6837599455394296334-2510210024-8",
+        "type": "S",
+        "number": "33282",
+        "time": "2510210043",
+        "platform": "2",
+        "path_stations": [
+          "Köln-Ehrenfeld",
+          "Köln Hansaring",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln Trimbornstr",
+          "Köln Airport-Businesspark",
+          "Köln Steinstraße"
+        ],
+        "line": "12"
+      },
+      {
+        "id": "6530408973942076056-2510210018-8",
+        "type": "S",
+        "number": "33287",
+        "time": "2510210042",
+        "platform": "1",
+        "path_stations": [
+          "Blankenberg(Sieg)",
+          "Hennef im Siegbogen",
+          "Hennef(Sieg)",
+          "Siegburg/Bonn",
+          "Troisdorf",
+          "Spich",
+          "Porz-Wahn"
+        ],
+        "line": "12"
+      },
+      {
+        "id": "3107561231898974536-2510202320-15",
+        "type": "S",
+        "number": "33283",
+        "time": "2510210012",
+        "platform": "1",
+        "path_stations": [
+          "Au(Sieg)",
+          "Rosbach(Sieg)",
+          "Schladern(Sieg)",
+          "Dattenfeld(Sieg)",
+          "Herchen",
+          "Eitorf",
+          "Merten(Sieg)",
+          "Blankenberg(Sieg)",
+          "Hennef im Siegbogen",
+          "Hennef(Sieg)",
+          "Siegburg/Bonn",
+          "Troisdorf",
+          "Spich",
+          "Porz-Wahn"
+        ],
+        "line": "12"
+      },
+      {
+        "id": "-5054126898388790406-2510210048-8",
+        "type": "S",
+        "number": "33289",
+        "time": "2510210112",
+        "platform": "1",
+        "path_stations": [
+          "Blankenberg(Sieg)",
+          "Hennef im Siegbogen",
+          "Hennef(Sieg)",
+          "Siegburg/Bonn",
+          "Troisdorf",
+          "Spich",
+          "Porz-Wahn"
+        ],
+        "line": "12"
+      },
+      {
+        "id": "-3880480158113133724-2510210424-8",
+        "type": "S",
+        "number": "32200",
+        "time": "2510210444",
+        "platform": "2",
+        "path_stations": [
+          "Köln-Ehrenfeld",
+          "Köln Hansaring",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln Trimbornstr",
+          "Köln Airport-Businesspark",
+          "Köln Steinstraße"
+        ],
+        "line": "12"
+      },
+      {
+        "id": "9067727019686819413-2510210504-8",
+        "type": "S",
+        "number": "32206",
+        "time": "2510210524",
+        "platform": "2",
+        "path_stations": [
+          "Köln-Ehrenfeld",
+          "Köln Hansaring",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln Trimbornstr",
+          "Köln Airport-Businesspark",
+          "Köln Steinstraße"
+        ],
+        "line": "12"
+      },
+      {
+        "id": "-2894795155385581895-2510210444-8",
+        "type": "S",
+        "number": "32202",
+        "time": "2510210504",
+        "platform": "2",
+        "path_stations": [
+          "Köln-Ehrenfeld",
+          "Köln Hansaring",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln Trimbornstr",
+          "Köln Airport-Businesspark",
+          "Köln Steinstraße"
+        ],
+        "line": "12"
+      },
+      {
+        "id": "-8865640289621230868-2510210533-6",
+        "type": "S",
+        "number": "32207",
+        "time": "2510210552",
+        "platform": "1",
+        "path_stations": [
+          "Hennef(Sieg)",
+          "Siegburg/Bonn",
+          "Troisdorf",
+          "Spich",
+          "Porz-Wahn"
+        ],
+        "line": "12"
+      },
+      {
+        "id": "-7559051505666812137-2510210528-7",
+        "type": "S",
+        "number": "32208",
+        "time": "2510210545",
+        "platform": "2",
+        "path_stations": [
+          "Köln Hansaring",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln Trimbornstr",
+          "Köln Airport-Businesspark",
+          "Köln Steinstraße"
+        ],
+        "line": "12"
+      },
+      {
+        "id": "7037501765563242396-2510210420-15",
+        "type": "S",
+        "number": "32201",
+        "time": "2510210512",
+        "platform": "1",
+        "path_stations": [
+          "Au(Sieg)",
+          "Rosbach(Sieg)",
+          "Schladern(Sieg)",
+          "Dattenfeld(Sieg)",
+          "Herchen",
+          "Eitorf",
+          "Merten(Sieg)",
+          "Blankenberg(Sieg)",
+          "Hennef im Siegbogen",
+          "Hennef(Sieg)",
+          "Siegburg/Bonn",
+          "Troisdorf",
+          "Spich",
+          "Porz-Wahn"
+        ],
+        "line": "12"
+      },
+      {
+        "id": "-3205435559063812693-2510210513-6",
+        "type": "S",
+        "number": "32203",
+        "time": "2510210532",
+        "platform": "1",
+        "path_stations": [
+          "Hennef(Sieg)",
+          "Siegburg/Bonn",
+          "Troisdorf",
+          "Spich",
+          "Porz-Wahn"
+        ],
+        "line": "12"
+      },
+      {
+        "id": "-5112894780481029142-2510210528-2",
+        "type": "RE",
+        "number": "10802",
+        "time": "2510210536",
+        "platform": "1",
+        "path_stations": [
+          "Troisdorf"
+        ],
+        "line": "8"
+      },
+      {
+        "id": "4015909857474541498-2510210520-15",
+        "type": "S",
+        "number": "32209",
+        "time": "2510210612",
+        "platform": "1",
+        "path_stations": [
+          "Au(Sieg)",
+          "Rosbach(Sieg)",
+          "Schladern(Sieg)",
+          "Dattenfeld(Sieg)",
+          "Herchen",
+          "Eitorf",
+          "Merten(Sieg)",
+          "Blankenberg(Sieg)",
+          "Hennef im Siegbogen",
+          "Hennef(Sieg)",
+          "Siegburg/Bonn",
+          "Troisdorf",
+          "Spich",
+          "Porz-Wahn"
+        ],
+        "line": "12"
+      },
+      {
+        "id": "-1589105017932698866-2510210613-6",
+        "type": "S",
+        "number": "32213",
+        "time": "2510210632",
+        "platform": "1",
+        "path_stations": [
+          "Hennef(Sieg)",
+          "Siegburg/Bonn",
+          "Troisdorf",
+          "Spich",
+          "Porz-Wahn"
+        ],
+        "line": "12"
+      },
+      {
+        "id": "-2255561979453758760-2510210633-6",
+        "type": "S",
+        "number": "32217",
+        "time": "2510210652",
+        "platform": "1",
+        "path_stations": [
+          "Hennef(Sieg)",
+          "Siegburg/Bonn",
+          "Troisdorf",
+          "Spich",
+          "Porz-Wahn"
+        ],
+        "line": "12"
+      },
+      {
+        "id": "-1609410441714459597-2510210518-11",
+        "type": "RE",
+        "number": "10901",
+        "time": "2510210633",
+        "platform": "2",
+        "path_stations": [
+          "Aachen Hbf",
+          "Aachen-Rothe Erde",
+          "Stolberg(Rheinl)Hbf",
+          "Eschweiler Hbf",
+          "Langerwehe",
+          "Düren",
+          "Horrem",
+          "Köln-Ehrenfeld",
+          "Köln Hbf",
+          "Köln Messe/Deutz"
+        ],
+        "line": "9"
+      },
+      {
+        "id": "-5481207295125498643-2510210454-18",
+        "type": "RE",
+        "number": "10902",
+        "time": "2510210624",
+        "platform": "1",
+        "path_stations": [
+          "Siegen Hbf",
+          "Eiserfeld(Sieg)",
+          "Niederschelden",
+          "Brachbach",
+          "Kirchen",
+          "Betzdorf(Sieg)",
+          "Scheuerfeld(Sieg)",
+          "Niederhövels",
+          "Wissen(Sieg)",
+          "Etzbach",
+          "Au(Sieg)",
+          "Schladern(Sieg)",
+          "Herchen",
+          "Eitorf",
+          "Hennef(Sieg)",
+          "Siegburg/Bonn",
+          "Troisdorf"
+        ],
+        "line": "9"
+      },
+      {
+        "id": "-313109341544513186-2510210609-13",
+        "type": "S",
+        "number": "32216",
+        "time": "2510210644",
+        "platform": "2",
+        "path_stations": [
+          "Horrem",
+          "Frechen-Königsdorf",
+          "Köln-Weiden West",
+          "Lövenich",
+          "Köln-Müngersdorf Technologiepark",
+          "Köln-Ehrenfeld",
+          "Köln Hansaring",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln Trimbornstr",
+          "Köln Airport-Businesspark",
+          "Köln Steinstraße"
+        ],
+        "line": "12"
+      },
+      {
+        "id": "8299125461975571282-2510210537-7",
+        "type": "RE",
+        "number": "10803",
+        "time": "2510210612",
+        "platform": "2",
+        "path_stations": [
+          "Rommerskirchen",
+          "Stommeln",
+          "Pulheim",
+          "Köln-Ehrenfeld",
+          "Köln Hbf",
+          "Köln Messe/Deutz"
+        ],
+        "line": "8"
+      },
+      {
+        "id": "2714456635689050086-2510210544-8",
+        "type": "S",
+        "number": "32210",
+        "time": "2510210604",
+        "platform": "2",
+        "path_stations": [
+          "Köln-Ehrenfeld",
+          "Köln Hansaring",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln Trimbornstr",
+          "Köln Airport-Businesspark",
+          "Köln Steinstraße"
+        ],
+        "line": "12"
+      },
+      {
+        "id": "8990786652729301863-2510210516-19",
+        "type": "RE",
+        "number": "10804",
+        "time": "2510210636",
+        "platform": "1",
+        "path_stations": [
+          "Koblenz Hbf",
+          "Koblenz Stadtmitte",
+          "Koblenz-Lützel",
+          "Urmitz Rheinbrücke",
+          "Neuwied",
+          "Rheinbrohl",
+          "Bad Hönningen",
+          "Linz(Rhein)",
+          "Unkel",
+          "Bad Honnef(Rhein)",
+          "Rhöndorf",
+          "Königswinter",
+          "Niederdollendorf",
+          "Bonn-Oberkassel",
+          "Bonn-Beuel",
+          "Menden(Rheinl)",
+          "Friedrich Wilhelmshütte",
+          "Troisdorf"
+        ],
+        "line": "8"
+      },
+      {
+        "id": "-3918470870505822325-2510210549-13",
+        "type": "S",
+        "number": "32214",
+        "time": "2510210624",
+        "platform": "2",
+        "path_stations": [
+          "Horrem",
+          "Frechen-Königsdorf",
+          "Köln-Weiden West",
+          "Lövenich",
+          "Köln-Müngersdorf Technologiepark",
+          "Köln-Ehrenfeld",
+          "Köln Hansaring",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln Trimbornstr",
+          "Köln Airport-Businesspark",
+          "Köln Steinstraße"
+        ],
+        "line": "12"
+      }
+    ],
+    "departures": [
+      {
+        "id": "7587440103218504043-2510201809-13",
+        "type": "S",
+        "number": "33240",
+        "direction": "Au(Sieg)",
+        "platform": "2",
+        "time": "2510201844",
+        "destination": "Au(Sieg)",
+        "path_stations": [
+          "Porz-Wahn",
+          "Spich",
+          "Troisdorf",
+          "Siegburg/Bonn",
+          "Hennef(Sieg)",
+          "Hennef im Siegbogen",
+          "Blankenberg(Sieg)",
+          "Merten(Sieg)",
+          "Eitorf",
+          "Herchen",
+          "Dattenfeld(Sieg)",
+          "Schladern(Sieg)",
+          "Rosbach(Sieg)",
+          "Au(Sieg)"
+        ]
+      },
+      {
+        "id": "-6326407469458865187-2510201729-13",
+        "type": "S",
+        "number": "33230",
+        "direction": "Hennef(Sieg)",
+        "platform": "2",
+        "time": "2510201804",
+        "destination": "Hennef(Sieg)",
+        "path_stations": [
+          "Porz-Wahn",
+          "Spich",
+          "Troisdorf",
+          "Siegburg/Bonn",
+          "Hennef(Sieg)"
+        ]
+      },
+      {
+        "id": "5254640728407340655-2510201737-7",
+        "type": "RE",
+        "number": "29475",
+        "direction": "Troisdorf",
+        "platform": "2",
+        "time": "2510201813",
+        "destination": "Troisdorf",
+        "path_stations": [
+          "Troisdorf"
+        ]
+      },
+      {
+        "id": "4124699725257303251-2510201710-13",
+        "type": "RE",
+        "number": "10926",
+        "direction": "Aachen Hbf",
+        "platform": "1",
+        "time": "2510201825",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln-Ehrenfeld",
+          "Horrem",
+          "Düren",
+          "Langerwehe",
+          "Eschweiler Hbf",
+          "Stolberg(Rheinl)Hbf",
+          "Aachen-Rothe Erde",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "-2092309483944033948-2510201828-2",
+        "type": "RE",
+        "number": "29476",
+        "direction": "Rommerskirchen",
+        "platform": "1",
+        "time": "2510201837",
+        "destination": "Rommerskirchen",
+        "path_stations": [
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln-Ehrenfeld",
+          "Pulheim",
+          "Stommeln",
+          "Rommerskirchen"
+        ]
+      },
+      {
+        "id": "-183237788427159234-2510201720-15",
+        "type": "S",
+        "number": "33243",
+        "direction": "Horrem",
+        "platform": "1",
+        "time": "2510201813",
+        "destination": "Horrem",
+        "path_stations": [
+          "Köln Steinstraße",
+          "Köln Airport-Businesspark",
+          "Köln Trimbornstr",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln Hansaring",
+          "Köln-Ehrenfeld",
+          "Köln-Müngersdorf Technologiepark",
+          "Lövenich",
+          "Köln-Weiden West",
+          "Frechen-Königsdorf",
+          "Horrem"
+        ]
+      },
+      {
+        "id": "2633398492900654257-2510201718-11",
+        "type": "RE",
+        "number": "10925",
+        "direction": "Siegen Hbf",
+        "platform": "2",
+        "time": "2510201834",
+        "destination": "Siegen Hbf",
+        "path_stations": [
+          "Troisdorf",
+          "Siegburg/Bonn",
+          "Hennef(Sieg)",
+          "Eitorf",
+          "Herchen",
+          "Schladern(Sieg)",
+          "Au(Sieg)",
+          "Wissen(Sieg)",
+          "Betzdorf(Sieg)",
+          "Kirchen",
+          "Brachbach",
+          "Siegen Hbf"
+        ]
+      },
+      {
+        "id": "-3297745711372374047-2510201749-13",
+        "type": "S",
+        "number": "33238",
+        "direction": "Hennef(Sieg)",
+        "platform": "2",
+        "time": "2510201824",
+        "destination": "Hennef(Sieg)",
+        "path_stations": [
+          "Porz-Wahn",
+          "Spich",
+          "Troisdorf",
+          "Siegburg/Bonn",
+          "Hennef(Sieg)"
+        ]
+      },
+      {
+        "id": "1891717273857072510-2510201813-6",
+        "type": "S",
+        "number": "33245",
+        "direction": "Horrem",
+        "platform": "1",
+        "time": "2510201833",
+        "destination": "Horrem",
+        "path_stations": [
+          "Köln Steinstraße",
+          "Köln Airport-Businesspark",
+          "Köln Trimbornstr",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln Hansaring",
+          "Köln-Ehrenfeld",
+          "Köln-Müngersdorf Technologiepark",
+          "Lövenich",
+          "Köln-Weiden West",
+          "Frechen-Königsdorf",
+          "Horrem"
+        ]
+      },
+      {
+        "id": "8584391312189741700-2510201833-6",
+        "type": "S",
+        "number": "33249",
+        "direction": "Horrem",
+        "platform": "1",
+        "time": "2510201853",
+        "destination": "Horrem",
+        "path_stations": [
+          "Köln Steinstraße",
+          "Köln Airport-Businesspark",
+          "Köln Trimbornstr",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln Hansaring",
+          "Köln-Ehrenfeld",
+          "Köln-Müngersdorf Technologiepark",
+          "Lövenich",
+          "Köln-Weiden West",
+          "Frechen-Königsdorf",
+          "Horrem"
+        ]
+      },
+      {
+        "id": "4074523748542074650-2510201933-6",
+        "type": "S",
+        "number": "33259",
+        "direction": "Horrem",
+        "platform": "1",
+        "time": "2510201953",
+        "destination": "Horrem",
+        "path_stations": [
+          "Köln Steinstraße",
+          "Köln Airport-Businesspark",
+          "Köln Trimbornstr",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln Hansaring",
+          "Köln-Ehrenfeld",
+          "Köln-Müngersdorf Technologiepark",
+          "Lövenich",
+          "Köln-Weiden West",
+          "Frechen-Königsdorf",
+          "Horrem"
+        ]
+      },
+      {
+        "id": "-4622339806274585555-2510201909-13",
+        "type": "S",
+        "number": "33252",
+        "direction": "Au(Sieg)",
+        "platform": "2",
+        "time": "2510201946",
+        "destination": "Au(Sieg)",
+        "path_stations": [
+          "Porz-Wahn",
+          "Spich",
+          "Troisdorf",
+          "Siegburg/Bonn",
+          "Hennef(Sieg)",
+          "Hennef im Siegbogen",
+          "Blankenberg(Sieg)",
+          "Merten(Sieg)",
+          "Eitorf",
+          "Herchen",
+          "Dattenfeld(Sieg)",
+          "Schladern(Sieg)",
+          "Rosbach(Sieg)",
+          "Au(Sieg)"
+        ]
+      },
+      {
+        "id": "-4685260995542115648-2510201818-11",
+        "type": "RE",
+        "number": "10927",
+        "direction": "Siegen Hbf",
+        "platform": "2",
+        "time": "2510201934",
+        "destination": "Siegen Hbf",
+        "path_stations": [
+          "Troisdorf",
+          "Siegburg/Bonn",
+          "Hennef(Sieg)",
+          "Eitorf",
+          "Herchen",
+          "Schladern(Sieg)",
+          "Au(Sieg)",
+          "Wissen(Sieg)",
+          "Betzdorf(Sieg)",
+          "Kirchen",
+          "Brachbach",
+          "Siegen Hbf"
+        ]
+      },
+      {
+        "id": "-3378703793595651975-2510201829-13",
+        "type": "S",
+        "number": "33242",
+        "direction": "Hennef(Sieg)",
+        "platform": "2",
+        "time": "2510201904",
+        "destination": "Hennef(Sieg)",
+        "path_stations": [
+          "Porz-Wahn",
+          "Spich",
+          "Troisdorf",
+          "Siegburg/Bonn",
+          "Hennef(Sieg)"
+        ]
+      },
+      {
+        "id": "-4537120205580227667-2510201820-15",
+        "type": "S",
+        "number": "33251",
+        "direction": "Horrem",
+        "platform": "1",
+        "time": "2510201913",
+        "destination": "Horrem",
+        "path_stations": [
+          "Köln Steinstraße",
+          "Köln Airport-Businesspark",
+          "Köln Trimbornstr",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln Hansaring",
+          "Köln-Ehrenfeld",
+          "Köln-Müngersdorf Technologiepark",
+          "Lövenich",
+          "Köln-Weiden West",
+          "Frechen-Königsdorf",
+          "Horrem"
+        ]
+      },
+      {
+        "id": "-4724875222103811586-2510201810-13",
+        "type": "RE",
+        "number": "10928",
+        "direction": "Aachen Hbf",
+        "platform": "1",
+        "time": "2510201925",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln-Ehrenfeld",
+          "Horrem",
+          "Düren",
+          "Langerwehe",
+          "Eschweiler Hbf",
+          "Stolberg(Rheinl)Hbf",
+          "Aachen-Rothe Erde",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "6874849569090414856-2510201849-13",
+        "type": "S",
+        "number": "33248",
+        "direction": "Hennef(Sieg)",
+        "platform": "2",
+        "time": "2510201924",
+        "destination": "Hennef(Sieg)",
+        "path_stations": [
+          "Porz-Wahn",
+          "Spich",
+          "Troisdorf",
+          "Siegburg/Bonn",
+          "Hennef(Sieg)"
+        ]
+      },
+      {
+        "id": "1617919149696385964-2510201837-7",
+        "type": "RE",
+        "number": "29477",
+        "direction": "Troisdorf",
+        "platform": "2",
+        "time": "2510201913",
+        "destination": "Troisdorf",
+        "path_stations": [
+          "Troisdorf"
+        ]
+      },
+      {
+        "id": "-1683218772098927952-2510201913-6",
+        "type": "S",
+        "number": "33255",
+        "direction": "Horrem",
+        "platform": "1",
+        "time": "2510201933",
+        "destination": "Horrem",
+        "path_stations": [
+          "Köln Steinstraße",
+          "Köln Airport-Businesspark",
+          "Köln Trimbornstr",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln Hansaring",
+          "Köln-Ehrenfeld",
+          "Köln-Müngersdorf Technologiepark",
+          "Lövenich",
+          "Köln-Weiden West",
+          "Frechen-Königsdorf",
+          "Horrem"
+        ]
+      },
+      {
+        "id": "1544833212009923962-2510201928-2",
+        "type": "RE",
+        "number": "29478",
+        "direction": "Rommerskirchen",
+        "platform": "1",
+        "time": "2510201937",
+        "destination": "Rommerskirchen",
+        "path_stations": [
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln-Ehrenfeld",
+          "Pulheim",
+          "Stommeln",
+          "Rommerskirchen"
+        ]
+      },
+      {
+        "id": "-7957634259049838531-2510201920-15",
+        "type": "S",
+        "number": "33261",
+        "direction": "Köln-Müngersdorf Technologiepark",
+        "platform": "1",
+        "time": "2510202013",
+        "destination": "Köln-Müngersdorf Technologiepark",
+        "path_stations": [
+          "Köln Steinstraße",
+          "Köln Airport-Businesspark",
+          "Köln Trimbornstr",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln Hansaring",
+          "Köln-Ehrenfeld",
+          "Köln-Müngersdorf Technologiepark"
+        ]
+      },
+      {
+        "id": "-5806736731936295600-2510201937-7",
+        "type": "RE",
+        "number": "29479",
+        "direction": "Troisdorf",
+        "platform": "2",
+        "time": "2510202013",
+        "destination": "Troisdorf",
+        "path_stations": [
+          "Troisdorf"
+        ]
+      },
+      {
+        "id": "-250321817239940087-2510202033-6",
+        "type": "S",
+        "number": "33269",
+        "direction": "Sindorf",
+        "platform": "1",
+        "time": "2510202053",
+        "destination": "Sindorf",
+        "path_stations": [
+          "Köln Steinstraße",
+          "Köln Airport-Businesspark",
+          "Köln Trimbornstr",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln Hansaring",
+          "Köln-Ehrenfeld",
+          "Köln-Müngersdorf Technologiepark",
+          "Lövenich",
+          "Köln-Weiden West",
+          "Frechen-Königsdorf",
+          "Horrem",
+          "Sindorf"
+        ]
+      },
+      {
+        "id": "-2515307770764250879-2510201929-13",
+        "type": "S",
+        "number": "33254",
+        "direction": "Hennef(Sieg)",
+        "platform": "2",
+        "time": "2510202004",
+        "destination": "Hennef(Sieg)",
+        "path_stations": [
+          "Porz-Wahn",
+          "Spich",
+          "Troisdorf",
+          "Siegburg/Bonn",
+          "Hennef(Sieg)"
+        ]
+      },
+      {
+        "id": "-233663964926761052-2510202028-2",
+        "type": "RE",
+        "number": "29480",
+        "direction": "Rommerskirchen",
+        "platform": "1",
+        "time": "2510202037",
+        "destination": "Rommerskirchen",
+        "path_stations": [
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln-Ehrenfeld",
+          "Pulheim",
+          "Stommeln",
+          "Rommerskirchen"
+        ]
+      },
+      {
+        "id": "-1524262322350185603-2510201949-13",
+        "type": "S",
+        "number": "33260",
+        "direction": "Blankenberg(Sieg)",
+        "platform": "2",
+        "time": "2510202024",
+        "destination": "Blankenberg(Sieg)",
+        "path_stations": [
+          "Porz-Wahn",
+          "Spich",
+          "Troisdorf",
+          "Siegburg/Bonn",
+          "Hennef(Sieg)",
+          "Hennef im Siegbogen",
+          "Blankenberg(Sieg)"
+        ]
+      },
+      {
+        "id": "3413675835544714902-2510202013-6",
+        "type": "S",
+        "number": "33263",
+        "direction": "Köln Hansaring",
+        "platform": "1",
+        "time": "2510202033",
+        "destination": "Köln Hansaring",
+        "path_stations": [
+          "Köln Steinstraße",
+          "Köln Airport-Businesspark",
+          "Köln Trimbornstr",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln Hansaring"
+        ]
+      },
+      {
+        "id": "-3650283809114826212-2510202009-13",
+        "type": "S",
+        "number": "33262",
+        "direction": "Au(Sieg)",
+        "platform": "2",
+        "time": "2510202044",
+        "destination": "Au(Sieg)",
+        "path_stations": [
+          "Porz-Wahn",
+          "Spich",
+          "Troisdorf",
+          "Siegburg/Bonn",
+          "Hennef(Sieg)",
+          "Hennef im Siegbogen",
+          "Blankenberg(Sieg)",
+          "Merten(Sieg)",
+          "Eitorf",
+          "Herchen",
+          "Dattenfeld(Sieg)",
+          "Schladern(Sieg)",
+          "Rosbach(Sieg)",
+          "Au(Sieg)"
+        ]
+      },
+      {
+        "id": "-4937371511567608539-2510201918-11",
+        "type": "RE",
+        "number": "10929",
+        "direction": "Siegen Hbf",
+        "platform": "2",
+        "time": "2510202034",
+        "destination": "Siegen Hbf",
+        "path_stations": [
+          "Troisdorf",
+          "Siegburg/Bonn",
+          "Hennef(Sieg)",
+          "Eitorf",
+          "Herchen",
+          "Schladern(Sieg)",
+          "Au(Sieg)",
+          "Wissen(Sieg)",
+          "Betzdorf(Sieg)",
+          "Kirchen",
+          "Brachbach",
+          "Siegen Hbf"
+        ]
+      },
+      {
+        "id": "-5089838934529415105-2510201910-13",
+        "type": "RE",
+        "number": "10930",
+        "direction": "Aachen Hbf",
+        "platform": "1",
+        "time": "2510202025",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln-Ehrenfeld",
+          "Horrem",
+          "Düren",
+          "Langerwehe",
+          "Eschweiler Hbf",
+          "Stolberg(Rheinl)Hbf",
+          "Aachen-Rothe Erde",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "714437661852393809-2510202007-13",
+        "type": "RE",
+        "number": "91735",
+        "direction": "Troisdorf",
+        "platform": "2",
+        "time": "2510202113",
+        "destination": "Troisdorf",
+        "path_stations": [
+          "Troisdorf"
+        ]
+      },
+      {
+        "id": "5707712282502171787-2510202020-15",
+        "type": "S",
+        "number": "33271",
+        "direction": "Köln-Ehrenfeld",
+        "platform": "1",
+        "time": "2510202113",
+        "destination": "Köln-Ehrenfeld",
+        "path_stations": [
+          "Köln Steinstraße",
+          "Köln Airport-Businesspark",
+          "Köln Trimbornstr",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln Hansaring",
+          "Köln-Ehrenfeld"
+        ]
+      },
+      {
+        "id": "457970646090966950-2510202051-9",
+        "type": "S",
+        "number": "33264",
+        "direction": "Blankenberg(Sieg)",
+        "platform": "2",
+        "time": "2510202116",
+        "destination": "Blankenberg(Sieg)",
+        "path_stations": [
+          "Porz-Wahn",
+          "Spich",
+          "Troisdorf",
+          "Siegburg/Bonn",
+          "Hennef(Sieg)",
+          "Hennef im Siegbogen",
+          "Blankenberg(Sieg)"
+        ]
+      },
+      {
+        "id": "-7431299548988929535-2510202010-13",
+        "type": "RE",
+        "number": "10932",
+        "direction": "Aachen Hbf",
+        "platform": "1",
+        "time": "2510202125",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln-Ehrenfeld",
+          "Horrem",
+          "Düren",
+          "Langerwehe",
+          "Eschweiler Hbf",
+          "Stolberg(Rheinl)Hbf",
+          "Aachen-Rothe Erde",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "639169959544390038-2510202128-2",
+        "type": "RE",
+        "number": "29482",
+        "direction": "Rommerskirchen",
+        "platform": "1",
+        "time": "2510202137",
+        "destination": "Rommerskirchen",
+        "path_stations": [
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln-Ehrenfeld",
+          "Pulheim",
+          "Stommeln",
+          "Rommerskirchen"
+        ]
+      },
+      {
+        "id": "-378032818941792498-2510202018-11",
+        "type": "RE",
+        "number": "10931",
+        "direction": "Siegen Hbf",
+        "platform": "2",
+        "time": "2510202134",
+        "destination": "Siegen Hbf",
+        "path_stations": [
+          "Troisdorf",
+          "Siegburg/Bonn",
+          "Hennef(Sieg)",
+          "Eitorf",
+          "Herchen",
+          "Schladern(Sieg)",
+          "Au(Sieg)",
+          "Etzbach",
+          "Wissen(Sieg)",
+          "Niederhövels",
+          "Scheuerfeld(Sieg)",
+          "Betzdorf(Sieg)",
+          "Kirchen",
+          "Brachbach",
+          "Niederschelden",
+          "Eiserfeld(Sieg)",
+          "Siegen Hbf"
+        ]
+      },
+      {
+        "id": "3945801788754059454-2510202118-8",
+        "type": "S",
+        "number": "33273",
+        "direction": "Köln-Ehrenfeld",
+        "platform": "1",
+        "time": "2510202143",
+        "destination": "Köln-Ehrenfeld",
+        "path_stations": [
+          "Köln Steinstraße",
+          "Köln Airport-Businesspark",
+          "Köln Trimbornstr",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln Hansaring",
+          "Köln-Ehrenfeld"
+        ]
+      },
+      {
+        "id": "8186404750962379136-2510202121-9",
+        "type": "S",
+        "number": "33270",
+        "direction": "Au(Sieg)",
+        "platform": "2",
+        "time": "2510202144",
+        "destination": "Au(Sieg)",
+        "path_stations": [
+          "Porz-Wahn",
+          "Spich",
+          "Troisdorf",
+          "Siegburg/Bonn",
+          "Hennef(Sieg)",
+          "Hennef im Siegbogen",
+          "Blankenberg(Sieg)",
+          "Merten(Sieg)",
+          "Eitorf",
+          "Herchen",
+          "Dattenfeld(Sieg)",
+          "Schladern(Sieg)",
+          "Rosbach(Sieg)",
+          "Au(Sieg)"
+        ]
+      },
+      {
+        "id": "-422211315649496749-2510202137-7",
+        "type": "RE",
+        "number": "91739",
+        "direction": "Troisdorf",
+        "platform": "2",
+        "time": "2510202213",
+        "destination": "Troisdorf",
+        "path_stations": [
+          "Troisdorf"
+        ]
+      },
+      {
+        "id": "4177036688678574305-2510202118-11",
+        "type": "RE",
+        "number": "10933",
+        "direction": "Siegen Hbf",
+        "platform": "2",
+        "time": "2510202234",
+        "destination": "Siegen Hbf",
+        "path_stations": [
+          "Troisdorf",
+          "Siegburg/Bonn",
+          "Hennef(Sieg)",
+          "Eitorf",
+          "Herchen",
+          "Schladern(Sieg)",
+          "Au(Sieg)",
+          "Etzbach",
+          "Wissen(Sieg)",
+          "Niederhövels",
+          "Scheuerfeld(Sieg)",
+          "Betzdorf(Sieg)",
+          "Kirchen",
+          "Brachbach",
+          "Niederschelden",
+          "Eiserfeld(Sieg)",
+          "Siegen Hbf"
+        ]
+      },
+      {
+        "id": "965460819498165796-2510202154-8",
+        "type": "S",
+        "number": "33272",
+        "direction": "Blankenberg(Sieg)",
+        "platform": "2",
+        "time": "2510202216",
+        "destination": "Blankenberg(Sieg)",
+        "path_stations": [
+          "Porz-Wahn",
+          "Spich",
+          "Troisdorf",
+          "Siegburg/Bonn",
+          "Hennef(Sieg)",
+          "Hennef im Siegbogen",
+          "Blankenberg(Sieg)"
+        ]
+      },
+      {
+        "id": "5048783240925079083-2510202228-2",
+        "type": "RE",
+        "number": "91736",
+        "direction": "Rommerskirchen",
+        "platform": "1",
+        "time": "2510202237",
+        "destination": "Rommerskirchen",
+        "path_stations": [
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln-Ehrenfeld",
+          "Pulheim",
+          "Stommeln",
+          "Rommerskirchen"
+        ]
+      },
+      {
+        "id": "-4106799935542647204-2510202119-15",
+        "type": "S",
+        "number": "33275",
+        "direction": "Köln-Ehrenfeld",
+        "platform": "1",
+        "time": "2510202213",
+        "destination": "Köln-Ehrenfeld",
+        "path_stations": [
+          "Köln Steinstraße",
+          "Köln Airport-Businesspark",
+          "Köln Trimbornstr",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln Hansaring",
+          "Köln-Ehrenfeld"
+        ]
+      },
+      {
+        "id": "4065472633490480606-2510202218-8",
+        "type": "S",
+        "number": "33277",
+        "direction": "Köln-Ehrenfeld",
+        "platform": "1",
+        "time": "2510202243",
+        "destination": "Köln-Ehrenfeld",
+        "path_stations": [
+          "Köln Steinstraße",
+          "Köln Airport-Businesspark",
+          "Köln Trimbornstr",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln Hansaring",
+          "Köln-Ehrenfeld"
+        ]
+      },
+      {
+        "id": "3833493142293988637-2510202224-8",
+        "type": "S",
+        "number": "33274",
+        "direction": "Au(Sieg)",
+        "platform": "2",
+        "time": "2510202244",
+        "destination": "Au(Sieg)",
+        "path_stations": [
+          "Porz-Wahn",
+          "Spich",
+          "Troisdorf",
+          "Siegburg/Bonn",
+          "Hennef(Sieg)",
+          "Hennef im Siegbogen",
+          "Blankenberg(Sieg)",
+          "Merten(Sieg)",
+          "Eitorf",
+          "Herchen",
+          "Dattenfeld(Sieg)",
+          "Schladern(Sieg)",
+          "Rosbach(Sieg)",
+          "Au(Sieg)"
+        ]
+      },
+      {
+        "id": "-3073949015818699333-2510202110-13",
+        "type": "RE",
+        "number": "10934",
+        "direction": "Köln Hbf",
+        "platform": "1",
+        "time": "2510202225",
+        "destination": "Köln Hbf",
+        "path_stations": [
+          "Köln Messe/Deutz",
+          "Köln Hbf"
+        ]
+      },
+      {
+        "id": "-9179778945711518303-2510202237-7",
+        "type": "RE",
+        "number": "10839",
+        "direction": "Troisdorf",
+        "platform": "2",
+        "time": "2510202313",
+        "destination": "Troisdorf",
+        "path_stations": [
+          "Troisdorf"
+        ]
+      },
+      {
+        "id": "5016281240918927141-2510202254-8",
+        "type": "S",
+        "number": "33276",
+        "direction": "Blankenberg(Sieg)",
+        "platform": "2",
+        "time": "2510202317",
+        "destination": "Blankenberg(Sieg)",
+        "path_stations": [
+          "Porz-Wahn",
+          "Spich",
+          "Troisdorf",
+          "Siegburg/Bonn",
+          "Hennef(Sieg)",
+          "Hennef im Siegbogen",
+          "Blankenberg(Sieg)"
+        ]
+      },
+      {
+        "id": "6883381443490040055-2510202324-8",
+        "type": "S",
+        "number": "33278",
+        "direction": "Hennef(Sieg)",
+        "platform": "2",
+        "time": "2510202344",
+        "destination": "Hennef(Sieg)",
+        "path_stations": [
+          "Porz-Wahn",
+          "Spich",
+          "Troisdorf",
+          "Siegburg/Bonn",
+          "Hennef(Sieg)"
+        ]
+      },
+      {
+        "id": "-4899735371190977624-2510202220-15",
+        "type": "S",
+        "number": "33279",
+        "direction": "Köln-Ehrenfeld",
+        "platform": "1",
+        "time": "2510202313",
+        "destination": "Köln-Ehrenfeld",
+        "path_stations": [
+          "Köln Steinstraße",
+          "Köln Airport-Businesspark",
+          "Köln Trimbornstr",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln Hansaring",
+          "Köln-Ehrenfeld"
+        ]
+      },
+      {
+        "id": "-1291355389794506596-2510202318-8",
+        "type": "S",
+        "number": "33281",
+        "direction": "Köln-Ehrenfeld",
+        "platform": "1",
+        "time": "2510202343",
+        "destination": "Köln-Ehrenfeld",
+        "path_stations": [
+          "Köln Steinstraße",
+          "Köln Airport-Businesspark",
+          "Köln Trimbornstr",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln Hansaring",
+          "Köln-Ehrenfeld"
+        ]
+      },
+      {
+        "id": "-1701587498056121817-2510202210-13",
+        "type": "RE",
+        "number": "10936",
+        "direction": "Aachen Hbf",
+        "platform": "1",
+        "time": "2510202325",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln-Ehrenfeld",
+          "Horrem",
+          "Düren",
+          "Langerwehe",
+          "Eschweiler Hbf",
+          "Stolberg(Rheinl)Hbf",
+          "Aachen-Rothe Erde",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "-2466429266007476523-2510202328-2",
+        "type": "RE",
+        "number": "91740",
+        "direction": "Köln Hbf",
+        "platform": "1",
+        "time": "2510202337",
+        "destination": "Köln Hbf",
+        "path_stations": [
+          "Köln Messe/Deutz",
+          "Köln Hbf"
+        ]
+      },
+      {
+        "id": "-1764616001057382001-2510202323-3",
+        "type": "RE",
+        "number": "10935",
+        "direction": "Siegen Hbf",
+        "platform": "2",
+        "time": "2510202334",
+        "destination": "Siegen Hbf",
+        "path_stations": [
+          "Troisdorf",
+          "Siegburg/Bonn",
+          "Hennef(Sieg)",
+          "Eitorf",
+          "Herchen",
+          "Schladern(Sieg)",
+          "Au(Sieg)",
+          "Etzbach",
+          "Wissen(Sieg)",
+          "Niederhövels",
+          "Scheuerfeld(Sieg)",
+          "Betzdorf(Sieg)",
+          "Kirchen",
+          "Brachbach",
+          "Niederschelden",
+          "Eiserfeld(Sieg)",
+          "Siegen Hbf"
+        ]
+      },
+      {
+        "id": "-7363373570835729048-2510202337-7",
+        "type": "RE",
+        "number": "10841",
+        "direction": "Troisdorf",
+        "platform": "2",
+        "time": "2510210013",
+        "destination": "Troisdorf",
+        "path_stations": [
+          "Troisdorf"
+        ]
+      },
+      {
+        "id": "-7469408795968249002-2510202354-8",
+        "type": "S",
+        "number": "33280",
+        "direction": "Blankenberg(Sieg)",
+        "platform": "2",
+        "time": "2510210016",
+        "destination": "Blankenberg(Sieg)",
+        "path_stations": [
+          "Porz-Wahn",
+          "Spich",
+          "Troisdorf",
+          "Siegburg/Bonn",
+          "Hennef(Sieg)",
+          "Hennef im Siegbogen",
+          "Blankenberg(Sieg)"
+        ]
+      },
+      {
+        "id": "-6837599455394296334-2510210024-8",
+        "type": "S",
+        "number": "33282",
+        "direction": "Hennef(Sieg)",
+        "platform": "2",
+        "time": "2510210044",
+        "destination": "Hennef(Sieg)",
+        "path_stations": [
+          "Porz-Wahn",
+          "Spich",
+          "Troisdorf",
+          "Siegburg/Bonn",
+          "Hennef(Sieg)"
+        ]
+      },
+      {
+        "id": "6530408973942076056-2510210018-8",
+        "type": "S",
+        "number": "33287",
+        "direction": "Köln-Ehrenfeld",
+        "platform": "1",
+        "time": "2510210043",
+        "destination": "Köln-Ehrenfeld",
+        "path_stations": [
+          "Köln Steinstraße",
+          "Köln Airport-Businesspark",
+          "Köln Trimbornstr",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln Hansaring",
+          "Köln-Ehrenfeld"
+        ]
+      },
+      {
+        "id": "3107561231898974536-2510202320-15",
+        "type": "S",
+        "number": "33283",
+        "direction": "Köln-Ehrenfeld",
+        "platform": "1",
+        "time": "2510210013",
+        "destination": "Köln-Ehrenfeld",
+        "path_stations": [
+          "Köln Steinstraße",
+          "Köln Airport-Businesspark",
+          "Köln Trimbornstr",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln Hansaring",
+          "Köln-Ehrenfeld"
+        ]
+      },
+      {
+        "id": "-5054126898388790406-2510210048-8",
+        "type": "S",
+        "number": "33289",
+        "direction": "Köln-Ehrenfeld",
+        "platform": "1",
+        "time": "2510210113",
+        "destination": "Köln-Ehrenfeld",
+        "path_stations": [
+          "Köln Steinstraße",
+          "Köln Airport-Businesspark",
+          "Köln Trimbornstr",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln Hansaring",
+          "Köln-Ehrenfeld"
+        ]
+      },
+      {
+        "id": "-3880480158113133724-2510210424-8",
+        "type": "S",
+        "number": "32200",
+        "direction": "Au(Sieg)",
+        "platform": "2",
+        "time": "2510210444",
+        "destination": "Au(Sieg)",
+        "path_stations": [
+          "Porz-Wahn",
+          "Spich",
+          "Troisdorf",
+          "Siegburg/Bonn",
+          "Hennef(Sieg)",
+          "Hennef im Siegbogen",
+          "Blankenberg(Sieg)",
+          "Merten(Sieg)",
+          "Eitorf",
+          "Herchen",
+          "Dattenfeld(Sieg)",
+          "Schladern(Sieg)",
+          "Rosbach(Sieg)",
+          "Au(Sieg)"
+        ]
+      },
+      {
+        "id": "9067727019686819413-2510210504-8",
+        "type": "S",
+        "number": "32206",
+        "direction": "Hennef(Sieg)",
+        "platform": "2",
+        "time": "2510210524",
+        "destination": "Hennef(Sieg)",
+        "path_stations": [
+          "Porz-Wahn",
+          "Spich",
+          "Troisdorf",
+          "Siegburg/Bonn",
+          "Hennef(Sieg)"
+        ]
+      },
+      {
+        "id": "-2894795155385581895-2510210444-8",
+        "type": "S",
+        "number": "32202",
+        "direction": "Hennef(Sieg)",
+        "platform": "2",
+        "time": "2510210504",
+        "destination": "Hennef(Sieg)",
+        "path_stations": [
+          "Porz-Wahn",
+          "Spich",
+          "Troisdorf",
+          "Siegburg/Bonn",
+          "Hennef(Sieg)"
+        ]
+      },
+      {
+        "id": "-8865640289621230868-2510210533-6",
+        "type": "S",
+        "number": "32207",
+        "direction": "Horrem",
+        "platform": "1",
+        "time": "2510210553",
+        "destination": "Horrem",
+        "path_stations": [
+          "Köln Steinstraße",
+          "Köln Airport-Businesspark",
+          "Köln Trimbornstr",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln Hansaring",
+          "Köln-Ehrenfeld",
+          "Köln-Müngersdorf Technologiepark",
+          "Lövenich",
+          "Köln-Weiden West",
+          "Frechen-Königsdorf",
+          "Horrem"
+        ]
+      },
+      {
+        "id": "-7559051505666812137-2510210528-7",
+        "type": "S",
+        "number": "32208",
+        "direction": "Au(Sieg)",
+        "platform": "2",
+        "time": "2510210545",
+        "destination": "Au(Sieg)",
+        "path_stations": [
+          "Porz-Wahn",
+          "Spich",
+          "Troisdorf",
+          "Siegburg/Bonn",
+          "Hennef(Sieg)",
+          "Hennef im Siegbogen",
+          "Blankenberg(Sieg)",
+          "Merten(Sieg)",
+          "Eitorf",
+          "Herchen",
+          "Dattenfeld(Sieg)",
+          "Schladern(Sieg)",
+          "Rosbach(Sieg)",
+          "Au(Sieg)"
+        ]
+      },
+      {
+        "id": "7037501765563242396-2510210420-15",
+        "type": "S",
+        "number": "32201",
+        "direction": "Köln-Ehrenfeld",
+        "platform": "1",
+        "time": "2510210513",
+        "destination": "Köln-Ehrenfeld",
+        "path_stations": [
+          "Köln Steinstraße",
+          "Köln Airport-Businesspark",
+          "Köln Trimbornstr",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln Hansaring",
+          "Köln-Ehrenfeld"
+        ]
+      },
+      {
+        "id": "-3205435559063812693-2510210513-6",
+        "type": "S",
+        "number": "32203",
+        "direction": "Horrem",
+        "platform": "1",
+        "time": "2510210533",
+        "destination": "Horrem",
+        "path_stations": [
+          "Köln Steinstraße",
+          "Köln Airport-Businesspark",
+          "Köln Trimbornstr",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln Hansaring",
+          "Köln-Ehrenfeld",
+          "Köln-Müngersdorf Technologiepark",
+          "Lövenich",
+          "Köln-Weiden West",
+          "Frechen-Königsdorf",
+          "Horrem"
+        ]
+      },
+      {
+        "id": "-5112894780481029142-2510210528-2",
+        "type": "RE",
+        "number": "10802",
+        "direction": "Rommerskirchen",
+        "platform": "1",
+        "time": "2510210537",
+        "destination": "Rommerskirchen",
+        "path_stations": [
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln-Ehrenfeld",
+          "Pulheim",
+          "Stommeln",
+          "Rommerskirchen"
+        ]
+      },
+      {
+        "id": "4015909857474541498-2510210520-15",
+        "type": "S",
+        "number": "32209",
+        "direction": "Horrem",
+        "platform": "1",
+        "time": "2510210613",
+        "destination": "Horrem",
+        "path_stations": [
+          "Köln Steinstraße",
+          "Köln Airport-Businesspark",
+          "Köln Trimbornstr",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln Hansaring",
+          "Köln-Ehrenfeld",
+          "Köln-Müngersdorf Technologiepark",
+          "Lövenich",
+          "Köln-Weiden West",
+          "Frechen-Königsdorf",
+          "Horrem"
+        ]
+      },
+      {
+        "id": "-1589105017932698866-2510210613-6",
+        "type": "S",
+        "number": "32213",
+        "direction": "Horrem",
+        "platform": "1",
+        "time": "2510210633",
+        "destination": "Horrem",
+        "path_stations": [
+          "Köln Steinstraße",
+          "Köln Airport-Businesspark",
+          "Köln Trimbornstr",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln Hansaring",
+          "Köln-Ehrenfeld",
+          "Köln-Müngersdorf Technologiepark",
+          "Lövenich",
+          "Köln-Weiden West",
+          "Frechen-Königsdorf",
+          "Horrem"
+        ]
+      },
+      {
+        "id": "-2255561979453758760-2510210633-6",
+        "type": "S",
+        "number": "32217",
+        "direction": "Horrem",
+        "platform": "1",
+        "time": "2510210653",
+        "destination": "Horrem",
+        "path_stations": [
+          "Köln Steinstraße",
+          "Köln Airport-Businesspark",
+          "Köln Trimbornstr",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln Hansaring",
+          "Köln-Ehrenfeld",
+          "Köln-Müngersdorf Technologiepark",
+          "Lövenich",
+          "Köln-Weiden West",
+          "Frechen-Königsdorf",
+          "Horrem"
+        ]
+      },
+      {
+        "id": "-1609410441714459597-2510210518-11",
+        "type": "RE",
+        "number": "10901",
+        "direction": "Siegen Hbf",
+        "platform": "2",
+        "time": "2510210634",
+        "destination": "Siegen Hbf",
+        "path_stations": [
+          "Troisdorf",
+          "Siegburg/Bonn",
+          "Hennef(Sieg)",
+          "Eitorf",
+          "Herchen",
+          "Schladern(Sieg)",
+          "Au(Sieg)",
+          "Wissen(Sieg)",
+          "Betzdorf(Sieg)",
+          "Kirchen",
+          "Brachbach",
+          "Siegen Hbf"
+        ]
+      },
+      {
+        "id": "-5481207295125498643-2510210454-18",
+        "type": "RE",
+        "number": "10902",
+        "direction": "Aachen Hbf",
+        "platform": "1",
+        "time": "2510210625",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln-Ehrenfeld",
+          "Horrem",
+          "Düren",
+          "Langerwehe",
+          "Eschweiler Hbf",
+          "Stolberg(Rheinl)Hbf",
+          "Aachen-Rothe Erde",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "-313109341544513186-2510210609-13",
+        "type": "S",
+        "number": "32216",
+        "direction": "Au(Sieg)",
+        "platform": "2",
+        "time": "2510210644",
+        "destination": "Au(Sieg)",
+        "path_stations": [
+          "Porz-Wahn",
+          "Spich",
+          "Troisdorf",
+          "Siegburg/Bonn",
+          "Hennef(Sieg)",
+          "Hennef im Siegbogen",
+          "Blankenberg(Sieg)",
+          "Merten(Sieg)",
+          "Eitorf",
+          "Herchen",
+          "Dattenfeld(Sieg)",
+          "Schladern(Sieg)",
+          "Rosbach(Sieg)",
+          "Au(Sieg)"
+        ]
+      },
+      {
+        "id": "8299125461975571282-2510210537-7",
+        "type": "RE",
+        "number": "10803",
+        "direction": "Koblenz Hbf",
+        "platform": "2",
+        "time": "2510210613",
+        "destination": "Koblenz Hbf",
+        "path_stations": [
+          "Troisdorf",
+          "Friedrich Wilhelmshütte",
+          "Menden(Rheinl)",
+          "Bonn-Beuel",
+          "Bonn-Oberkassel",
+          "Niederdollendorf",
+          "Königswinter",
+          "Rhöndorf",
+          "Bad Honnef(Rhein)",
+          "Unkel",
+          "Linz(Rhein)",
+          "Bad Hönningen",
+          "Rheinbrohl",
+          "Neuwied",
+          "Urmitz Rheinbrücke",
+          "Koblenz-Lützel",
+          "Koblenz Stadtmitte",
+          "Koblenz Hbf"
+        ]
+      },
+      {
+        "id": "2714456635689050086-2510210544-8",
+        "type": "S",
+        "number": "32210",
+        "direction": "Hennef(Sieg)",
+        "platform": "2",
+        "time": "2510210604",
+        "destination": "Hennef(Sieg)",
+        "path_stations": [
+          "Porz-Wahn",
+          "Spich",
+          "Troisdorf",
+          "Siegburg/Bonn",
+          "Hennef(Sieg)"
+        ]
+      },
+      {
+        "id": "8990786652729301863-2510210516-19",
+        "type": "RE",
+        "number": "10804",
+        "direction": "Rommerskirchen",
+        "platform": "1",
+        "time": "2510210637",
+        "destination": "Rommerskirchen",
+        "path_stations": [
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln-Ehrenfeld",
+          "Pulheim",
+          "Stommeln",
+          "Rommerskirchen"
+        ]
+      },
+      {
+        "id": "-3918470870505822325-2510210549-13",
+        "type": "S",
+        "number": "32214",
+        "direction": "Hennef(Sieg)",
+        "platform": "2",
+        "time": "2510210624",
+        "destination": "Hennef(Sieg)",
+        "path_stations": [
+          "Porz-Wahn",
+          "Spich",
+          "Troisdorf",
+          "Siegburg/Bonn",
+          "Hennef(Sieg)"
+        ]
+      }
+    ]
+  }
+}

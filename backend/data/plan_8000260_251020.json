@@ -1,0 +1,4490 @@
+{
+  "station_eva": "8000260",
+  "date": "251020",
+  "cached_at": "2025-10-20T15:47:54.185869",
+  "plan_data": {
+    "arrivals": [
+      {
+        "id": "2447360199556637414-2510201604-12",
+        "type": "RE",
+        "number": "58224",
+        "time": "2510201714",
+        "platform": "8",
+        "path_stations": [
+          "Nürnberg Hbf",
+          "Fürth(Bay)Hbf",
+          "Siegelsdorf",
+          "Emskirchen",
+          "Neustadt(Aisch)Bahnhof",
+          "Markt Bibart",
+          "Iphofen",
+          "Kitzingen",
+          "Buchbrunn-Mainstockheim",
+          "Dettelbach Bahnhof",
+          "Rottendorf"
+        ],
+        "line": "10"
+      },
+      {
+        "id": "3257168502775920133-2510201603-14",
+        "type": "RB",
+        "number": "58057",
+        "time": "2510201700",
+        "platform": "5",
+        "path_stations": [
+          "Jossa",
+          "Obersinn",
+          "Mittelsinn",
+          "Burgsinn",
+          "Rieneck",
+          "Gemünden(Main)",
+          "Wernfeld",
+          "Karlstadt(Main)",
+          "Himmelstadt",
+          "Retzbach-Zellingen",
+          "Thüngersheim",
+          "Veitshöchheim",
+          "Würzburg-Zell"
+        ],
+        "line": "53"
+      },
+      {
+        "id": "1168659607297595372-2510201710-7",
+        "type": "RB",
+        "number": "58059",
+        "time": "2510201734",
+        "platform": "7",
+        "path_stations": [
+          "Karlstadt(Main)",
+          "Himmelstadt",
+          "Retzbach-Zellingen",
+          "Thüngersheim",
+          "Veitshöchheim",
+          "Würzburg-Zell"
+        ],
+        "line": "53"
+      },
+      {
+        "id": "7468334744528629490-2510201517-4",
+        "type": "ICE",
+        "number": "584",
+        "time": "2510201726",
+        "platform": "6",
+        "path_stations": [
+          "München Hbf",
+          "Ingolstadt Hbf",
+          "Nürnberg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "4362608433923368689-2510201641-15",
+        "type": "RB",
+        "number": "58060",
+        "time": "2510201751",
+        "platform": "7",
+        "path_stations": [
+          "Bamberg",
+          "Oberhaid",
+          "Ebelsbach-Eltmann",
+          "Zeil",
+          "Haßfurt",
+          "Schonungen",
+          "Schweinfurt Stadt",
+          "Schweinfurt Mitte",
+          "Schweinfurt Hbf",
+          "Waigolshausen",
+          "Eßleben",
+          "Bergtheim",
+          "Seligenstadt(b Würzburg)",
+          "Rottendorf"
+        ],
+        "line": "53"
+      },
+      {
+        "id": "4398825102862904507-2510201700-5",
+        "type": "RE",
+        "number": "3783",
+        "time": "2510201755",
+        "platform": "8",
+        "path_stations": [
+          "Bad Kissingen",
+          "Oerlenbach",
+          "Ebenhausen(Unterfr)",
+          "Schweinfurt Hbf"
+        ],
+        "line": "57"
+      },
+      {
+        "id": "-7327748931486405543-2510201654-13",
+        "type": "RB",
+        "number": "57976",
+        "time": "2510201757",
+        "platform": "2",
+        "path_stations": [
+          "Boxberg-Wölchingen",
+          "Königshofen(Baden)",
+          "Lauda",
+          "Gerlachsheim",
+          "Grünsfeld",
+          "Zimmern(Main-Tauber)",
+          "Wittighausen",
+          "Gaubüttelbrunn",
+          "Kirchheim(Unterfr)",
+          "Geroldshausen",
+          "Reichenberg(Unterfr)",
+          "Würzburg Süd"
+        ],
+        "line": "85"
+      },
+      {
+        "id": "-7072391795018261274-2510201535-13",
+        "type": "RE",
+        "number": "3763",
+        "time": "2510201755",
+        "platform": "8",
+        "path_stations": [
+          "Erfurt Hbf",
+          "Neudietendorf",
+          "Arnstadt Hbf",
+          "Plaue(Thür)",
+          "Zella-Mehlis",
+          "Suhl",
+          "Grimmenthal",
+          "Mellrichstadt Bf",
+          "Bad Neustadt(Saale)",
+          "Münnerstadt",
+          "Ebenhausen(Unterfr)",
+          "Schweinfurt Hbf"
+        ],
+        "line": "7"
+      },
+      {
+        "id": "-388013222747031970-2510201354-8",
+        "type": "ICE",
+        "number": "721",
+        "time": "2510201701",
+        "platform": "4",
+        "path_stations": [
+          "Essen Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Hbf",
+          "Köln Messe/Deutz Gl.11-12",
+          "Frankfurt(M) Flughafen Fernbf",
+          "Frankfurt(Main)Hbf",
+          "Aschaffenburg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "9127946800501944634-2510201534-17",
+        "type": "RE",
+        "number": "4621",
+        "time": "2510201721",
+        "platform": "9",
+        "path_stations": [
+          "Frankfurt(Main)Hbf",
+          "Frankfurt(Main)Süd",
+          "Offenbach(Main)Hbf",
+          "Hanau Hbf",
+          "Kahl(Main)",
+          "Dettingen(Main)",
+          "Kleinostheim",
+          "Aschaffenburg Hbf",
+          "Heigenbrücken",
+          "Wiesthal",
+          "Partenstein",
+          "Lohr Bahnhof",
+          "Langenprozelten",
+          "Gemünden(Main)",
+          "Karlstadt(Main)",
+          "Retzbach-Zellingen"
+        ],
+        "line": "54"
+      },
+      {
+        "id": "7902783310561071532-2510201624-12",
+        "type": "RE",
+        "number": "58248",
+        "time": "2510201745",
+        "platform": "11",
+        "path_stations": [
+          "Nürnberg Hbf",
+          "Fürth(Bay)Hbf",
+          "Siegelsdorf",
+          "Emskirchen",
+          "Neustadt(Aisch)Bahnhof",
+          "Markt Bibart",
+          "Iphofen",
+          "Kitzingen",
+          "Buchbrunn-Mainstockheim",
+          "Dettelbach Bahnhof",
+          "Rottendorf"
+        ],
+        "line": "10"
+      },
+      {
+        "id": "-8690167237364043686-2510201650-2",
+        "type": "RE",
+        "number": "19074",
+        "time": "2510201721",
+        "platform": "2",
+        "path_stations": [
+          "Lauda"
+        ],
+        "line": "8"
+      },
+      {
+        "id": "6492627968416470339-2510201220-14",
+        "type": "ICE",
+        "number": "229",
+        "time": "2510201732",
+        "platform": "4",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Wanne-Eickel Hbf",
+          "Essen Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Hbf",
+          "Köln Hbf",
+          "Bonn Hbf",
+          "Koblenz Hbf",
+          "Mainz Hbf",
+          "Frankfurt(M) Flughafen Fernbf",
+          "Frankfurt(Main)Hbf",
+          "Hanau Hbf",
+          "Aschaffenburg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-1188267942167451229-2510201550-3",
+        "type": "ICE",
+        "number": "620",
+        "time": "2510201752",
+        "platform": "6",
+        "path_stations": [
+          "München Hbf",
+          "Nürnberg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-434598350930201597-2510201541-15",
+        "type": "RB",
+        "number": "58054",
+        "time": "2510201651",
+        "platform": "7",
+        "path_stations": [
+          "Bamberg",
+          "Oberhaid",
+          "Ebelsbach-Eltmann",
+          "Zeil",
+          "Haßfurt",
+          "Schonungen",
+          "Schweinfurt Stadt",
+          "Schweinfurt Mitte",
+          "Schweinfurt Hbf",
+          "Waigolshausen",
+          "Eßleben",
+          "Bergtheim",
+          "Seligenstadt(b Würzburg)",
+          "Rottendorf"
+        ],
+        "line": "53"
+      },
+      {
+        "id": "-305888048753380988-2510201538-9",
+        "type": "RE",
+        "number": "4792",
+        "time": "2510201721",
+        "platform": "10 D-F",
+        "path_stations": [
+          "Nürnberg Hbf",
+          "Fürth(Bay)Hbf",
+          "Erlangen",
+          "Forchheim(Oberfr)",
+          "Hirschaid",
+          "Bamberg",
+          "Haßfurt",
+          "Schweinfurt Hbf"
+        ],
+        "line": "20"
+      },
+      {
+        "id": "-1151057268452720658-2510201311-11",
+        "type": "ICE",
+        "number": "1205",
+        "time": "2510201710",
+        "platform": "3",
+        "path_stations": [
+          "Hamburg-Altona",
+          "Hamburg Dammtor",
+          "Hamburg Hbf",
+          "Hamburg-Harburg",
+          "Lüneburg",
+          "Uelzen",
+          "Hannover Hbf",
+          "Göttingen",
+          "Kassel-Wilhelmshöhe",
+          "Fulda"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-8239802221902842517-2510201634-7",
+        "type": "Bus",
+        "number": "58162",
+        "time": "2510201725",
+        "platform": "",
+        "path_stations": [
+          "Marktbreit",
+          "Ochsenfurt",
+          "Goßmannsdorf",
+          "Winterhausen",
+          "Würzburg-Heidingsfeld Ost",
+          "Würzburg Süd"
+        ],
+        "line": "EV"
+      },
+      {
+        "id": "9071095305640109786-2510201643-5",
+        "type": "RE",
+        "number": "58094",
+        "time": "2510201702",
+        "platform": "9",
+        "path_stations": [
+          "Kitzingen",
+          "Buchbrunn-Mainstockheim",
+          "Dettelbach Bahnhof",
+          "Rottendorf"
+        ],
+        "line": "10"
+      },
+      {
+        "id": "-266204046597736577-2510201354-9",
+        "type": "ICE",
+        "number": "881",
+        "time": "2510201728",
+        "platform": "5",
+        "path_stations": [
+          "Hamburg Dammtor",
+          "Hamburg Hbf",
+          "Hamburg-Harburg",
+          "Lüneburg",
+          "Hannover Hbf",
+          "Göttingen",
+          "Kassel-Wilhelmshöhe",
+          "Fulda"
+        ],
+        "line": ""
+      },
+      {
+        "id": "4959401606751256562-2510201618-4",
+        "type": "ICE",
+        "number": "1204",
+        "time": "2510201827",
+        "platform": "6",
+        "path_stations": [
+          "München Hbf",
+          "Ingolstadt Hbf",
+          "Nürnberg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "3941958275395660636-2510201515-6",
+        "type": "ICE",
+        "number": "631",
+        "time": "2510201828",
+        "platform": "5",
+        "path_stations": [
+          "Bremen Hbf",
+          "Hannover Hbf",
+          "Göttingen",
+          "Kassel-Wilhelmshöhe",
+          "Fulda"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-4299390533875955991-2510201648-3",
+        "type": "ICE",
+        "number": "1128",
+        "time": "2510201852",
+        "platform": "6",
+        "path_stations": [
+          "München Hbf",
+          "Nürnberg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-4384291237910028934-2510201726-4",
+        "type": "RE",
+        "number": "4628",
+        "time": "2510201821",
+        "platform": "9",
+        "path_stations": [
+          "Bamberg",
+          "Haßfurt",
+          "Schweinfurt Hbf"
+        ],
+        "line": "54"
+      },
+      {
+        "id": "4362608433923368689-2510201641-15",
+        "type": "RB",
+        "number": "58060",
+        "time": "2510201751",
+        "platform": "7",
+        "path_stations": [
+          "Bamberg",
+          "Oberhaid",
+          "Ebelsbach-Eltmann",
+          "Zeil",
+          "Haßfurt",
+          "Schonungen",
+          "Schweinfurt Stadt",
+          "Schweinfurt Mitte",
+          "Schweinfurt Hbf",
+          "Waigolshausen",
+          "Eßleben",
+          "Bergtheim",
+          "Seligenstadt(b Würzburg)",
+          "Rottendorf"
+        ],
+        "line": "53"
+      },
+      {
+        "id": "1246342218205095403-2510201635-16",
+        "type": "RB",
+        "number": "58061",
+        "time": "2510201800",
+        "platform": "5",
+        "path_stations": [
+          "Schlüchtern",
+          "Sterbfritz",
+          "Jossa",
+          "Obersinn",
+          "Mittelsinn",
+          "Burgsinn",
+          "Rieneck",
+          "Gemünden(Main)",
+          "Wernfeld",
+          "Karlstadt(Main)",
+          "Himmelstadt",
+          "Retzbach-Zellingen",
+          "Thüngersheim",
+          "Veitshöchheim",
+          "Würzburg-Zell"
+        ],
+        "line": "53"
+      },
+      {
+        "id": "50770787591072936-2510201648-3",
+        "type": "ICE",
+        "number": "528",
+        "time": "2510201852",
+        "platform": "6",
+        "path_stations": [
+          "München Hbf",
+          "Nürnberg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "7776727203684521800-2510201750-2",
+        "type": "RE",
+        "number": "21954",
+        "time": "2510201821",
+        "platform": "",
+        "path_stations": [
+          "Lauda"
+        ],
+        "line": "8"
+      },
+      {
+        "id": "-3292467818332395433-2510201634-17",
+        "type": "RE",
+        "number": "4623",
+        "time": "2510201821",
+        "platform": "11",
+        "path_stations": [
+          "Frankfurt(Main)Hbf",
+          "Frankfurt(Main)Süd",
+          "Offenbach(Main)Hbf",
+          "Hanau Hbf",
+          "Kahl(Main)",
+          "Dettingen(Main)",
+          "Kleinostheim",
+          "Aschaffenburg Hbf",
+          "Heigenbrücken",
+          "Wiesthal",
+          "Partenstein",
+          "Lohr Bahnhof",
+          "Langenprozelten",
+          "Gemünden(Main)",
+          "Karlstadt(Main)",
+          "Retzbach-Zellingen"
+        ],
+        "line": "55"
+      },
+      {
+        "id": "6550731328021148930-2510201754-13",
+        "type": "RB",
+        "number": "57978",
+        "time": "2510201856",
+        "platform": "2",
+        "path_stations": [
+          "Boxberg-Wölchingen",
+          "Königshofen(Baden)",
+          "Lauda",
+          "Gerlachsheim",
+          "Grünsfeld",
+          "Zimmern(Main-Tauber)",
+          "Wittighausen",
+          "Gaubüttelbrunn",
+          "Kirchheim(Unterfr)",
+          "Geroldshausen",
+          "Reichenberg(Unterfr)",
+          "Würzburg Süd"
+        ],
+        "line": "85"
+      },
+      {
+        "id": "4218053850205204069-2510201618-4",
+        "type": "ICE",
+        "number": "1222",
+        "time": "2510201827",
+        "platform": "6",
+        "path_stations": [
+          "München Hbf",
+          "Ingolstadt Hbf",
+          "Nürnberg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-6502961489494378196-2510201741-15",
+        "type": "RB",
+        "number": "58068",
+        "time": "2510201851",
+        "platform": "7",
+        "path_stations": [
+          "Bamberg",
+          "Oberhaid",
+          "Ebelsbach-Eltmann",
+          "Zeil",
+          "Haßfurt",
+          "Schonungen",
+          "Schweinfurt Stadt",
+          "Schweinfurt Mitte",
+          "Schweinfurt Hbf",
+          "Waigolshausen",
+          "Eßleben",
+          "Bergtheim",
+          "Seligenstadt(b Würzburg)",
+          "Rottendorf"
+        ],
+        "line": "53"
+      },
+      {
+        "id": "2006650266683945588-2510201416-8",
+        "type": "ICE",
+        "number": "681",
+        "time": "2510201828",
+        "platform": "5",
+        "path_stations": [
+          "Lübeck Hbf",
+          "Hamburg Hbf",
+          "Hamburg-Harburg",
+          "Hannover Hbf",
+          "Göttingen",
+          "Kassel-Wilhelmshöhe",
+          "Fulda"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-721807130937592434-2510201313-9",
+        "type": "ICE",
+        "number": "90",
+        "time": "2510201823",
+        "platform": "7",
+        "path_stations": [
+          "Wien Hbf",
+          "Wien Meidling",
+          "St.Pölten Hbf",
+          "Linz Hbf",
+          "Passau Hbf",
+          "Plattling",
+          "Regensburg Hbf",
+          "Nürnberg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "1902111262221564262-2510201811-7",
+        "type": "RB",
+        "number": "58065",
+        "time": "2510201833",
+        "platform": "4",
+        "path_stations": [
+          "Karlstadt(Main)",
+          "Himmelstadt",
+          "Retzbach-Zellingen",
+          "Thüngersheim",
+          "Veitshöchheim",
+          "Würzburg-Zell"
+        ],
+        "line": "53"
+      },
+      {
+        "id": "958240752594003824-2510201454-8",
+        "type": "ICE",
+        "number": "723",
+        "time": "2510201801",
+        "platform": "4",
+        "path_stations": [
+          "Essen Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Hbf",
+          "Köln Messe/Deutz Gl.11-12",
+          "Frankfurt(M) Flughafen Fernbf",
+          "Frankfurt(Main)Hbf",
+          "Aschaffenburg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "7114376650570255512-2510201734-7",
+        "type": "Bus",
+        "number": "58164",
+        "time": "2510201825",
+        "platform": "",
+        "path_stations": [
+          "Marktbreit",
+          "Ochsenfurt",
+          "Goßmannsdorf",
+          "Winterhausen",
+          "Würzburg-Heidingsfeld Ost",
+          "Würzburg Süd"
+        ],
+        "line": "EV"
+      },
+      {
+        "id": "6880334478435383322-2510201705-12",
+        "type": "RE",
+        "number": "58226",
+        "time": "2510201817",
+        "platform": "8",
+        "path_stations": [
+          "Nürnberg Hbf",
+          "Fürth(Bay)Hbf",
+          "Siegelsdorf",
+          "Emskirchen",
+          "Neustadt(Aisch)Bahnhof",
+          "Markt Bibart",
+          "Iphofen",
+          "Kitzingen",
+          "Buchbrunn-Mainstockheim",
+          "Dettelbach Bahnhof",
+          "Rottendorf"
+        ],
+        "line": "10"
+      },
+      {
+        "id": "4647941454054225663-2510201735-16",
+        "type": "RB",
+        "number": "58067",
+        "time": "2510201900",
+        "platform": "5",
+        "path_stations": [
+          "Schlüchtern",
+          "Sterbfritz",
+          "Jossa",
+          "Obersinn",
+          "Mittelsinn",
+          "Burgsinn",
+          "Rieneck",
+          "Gemünden(Main)",
+          "Wernfeld",
+          "Karlstadt(Main)",
+          "Himmelstadt",
+          "Retzbach-Zellingen",
+          "Thüngersheim",
+          "Veitshöchheim",
+          "Würzburg-Zell"
+        ],
+        "line": "53"
+      },
+      {
+        "id": "-5149897530695207342-2510201900-5",
+        "type": "RE",
+        "number": "3785",
+        "time": "2510201955",
+        "platform": "9",
+        "path_stations": [
+          "Bad Kissingen",
+          "Oerlenbach",
+          "Ebenhausen(Unterfr)",
+          "Schweinfurt Hbf"
+        ],
+        "line": "57"
+      },
+      {
+        "id": "-566732643625155291-2510201716-4",
+        "type": "ICE",
+        "number": "582",
+        "time": "2510201925",
+        "platform": "6",
+        "path_stations": [
+          "München Hbf",
+          "Ingolstadt Hbf",
+          "Nürnberg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-6502961489494378196-2510201741-15",
+        "type": "RB",
+        "number": "58068",
+        "time": "2510201851",
+        "platform": "7",
+        "path_stations": [
+          "Bamberg",
+          "Oberhaid",
+          "Ebelsbach-Eltmann",
+          "Zeil",
+          "Haßfurt",
+          "Schonungen",
+          "Schweinfurt Stadt",
+          "Schweinfurt Mitte",
+          "Schweinfurt Hbf",
+          "Waigolshausen",
+          "Eßleben",
+          "Bergtheim",
+          "Seligenstadt(b Würzburg)",
+          "Rottendorf"
+        ],
+        "line": "53"
+      },
+      {
+        "id": "6013213540626996483-2510201554-8",
+        "type": "ICE",
+        "number": "725",
+        "time": "2510201901",
+        "platform": "4",
+        "path_stations": [
+          "Essen Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Hbf",
+          "Köln Messe/Deutz Gl.11-12",
+          "Frankfurt(M) Flughafen Fernbf",
+          "Frankfurt(Main)Hbf",
+          "Aschaffenburg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-1977884503358630048-2510201804-12",
+        "type": "RE",
+        "number": "58228",
+        "time": "2510201917",
+        "platform": "8",
+        "path_stations": [
+          "Nürnberg Hbf",
+          "Fürth(Bay)Hbf",
+          "Siegelsdorf",
+          "Emskirchen",
+          "Neustadt(Aisch)Bahnhof",
+          "Markt Bibart",
+          "Iphofen",
+          "Kitzingen",
+          "Buchbrunn-Mainstockheim",
+          "Dettelbach Bahnhof",
+          "Rottendorf"
+        ],
+        "line": "10"
+      },
+      {
+        "id": "-549868263348691192-2510201854-13",
+        "type": "RB",
+        "number": "57980",
+        "time": "2510201957",
+        "platform": "2",
+        "path_stations": [
+          "Boxberg-Wölchingen",
+          "Königshofen(Baden)",
+          "Lauda",
+          "Gerlachsheim",
+          "Grünsfeld",
+          "Zimmern(Main-Tauber)",
+          "Wittighausen",
+          "Gaubüttelbrunn",
+          "Kirchheim(Unterfr)",
+          "Geroldshausen",
+          "Reichenberg(Unterfr)",
+          "Würzburg Süd"
+        ],
+        "line": "85"
+      },
+      {
+        "id": "-8138362163861218620-2510201716-4",
+        "type": "ICE",
+        "number": "532",
+        "time": "2510201925",
+        "platform": "6",
+        "path_stations": [
+          "München Hbf",
+          "Ingolstadt Hbf",
+          "Nürnberg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "8099042640261743061-2510201842-5",
+        "type": "RE",
+        "number": "58098",
+        "time": "2510201900",
+        "platform": "8",
+        "path_stations": [
+          "Kitzingen",
+          "Buchbrunn-Mainstockheim",
+          "Dettelbach Bahnhof",
+          "Rottendorf"
+        ],
+        "line": "10"
+      },
+      {
+        "id": "6178969369000784496-2510201842-15",
+        "type": "RB",
+        "number": "58264",
+        "time": "2510201951",
+        "platform": "7",
+        "path_stations": [
+          "Bamberg",
+          "Oberhaid",
+          "Ebelsbach-Eltmann",
+          "Zeil",
+          "Haßfurt",
+          "Schonungen",
+          "Schweinfurt Stadt",
+          "Schweinfurt Mitte",
+          "Schweinfurt Hbf",
+          "Waigolshausen",
+          "Eßleben",
+          "Bergtheim",
+          "Seligenstadt(b Würzburg)",
+          "Rottendorf"
+        ],
+        "line": "53"
+      },
+      {
+        "id": "827667018986119015-2510201834-7",
+        "type": "Bus",
+        "number": "58166",
+        "time": "2510201925",
+        "platform": "",
+        "path_stations": [
+          "Marktbreit",
+          "Ochsenfurt",
+          "Goßmannsdorf",
+          "Winterhausen",
+          "Würzburg-Heidingsfeld Ost",
+          "Würzburg Süd"
+        ],
+        "line": "EV"
+      },
+      {
+        "id": "-1497213994658544450-2510201139-17",
+        "type": "ICE",
+        "number": "927",
+        "time": "2510201932",
+        "platform": "4",
+        "path_stations": [
+          "Hamburg-Altona",
+          "Hamburg Hbf",
+          "Bremen Hbf",
+          "Münster(Westf)Hbf",
+          "Recklinghausen Hbf",
+          "Essen Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Hbf",
+          "Köln Hbf",
+          "Bonn Hbf",
+          "Koblenz Hbf",
+          "Mainz Hbf",
+          "Frankfurt(M) Flughafen Fernbf",
+          "Frankfurt(Main)Hbf",
+          "Hanau Hbf",
+          "Aschaffenburg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "4009932964148084182-2510201734-17",
+        "type": "RE",
+        "number": "4625",
+        "time": "2510201921",
+        "platform": "9 E-F",
+        "path_stations": [
+          "Frankfurt(Main)Hbf",
+          "Frankfurt(Main)Süd",
+          "Offenbach(Main)Hbf",
+          "Hanau Hbf",
+          "Kahl(Main)",
+          "Dettingen(Main)",
+          "Kleinostheim",
+          "Aschaffenburg Hbf",
+          "Heigenbrücken",
+          "Wiesthal",
+          "Partenstein",
+          "Lohr Bahnhof",
+          "Langenprozelten",
+          "Gemünden(Main)",
+          "Karlstadt(Main)",
+          "Retzbach-Zellingen"
+        ],
+        "line": "55"
+      },
+      {
+        "id": "-988583344704703688-2510201554-8",
+        "type": "ICE",
+        "number": "883",
+        "time": "2510201928",
+        "platform": "5",
+        "path_stations": [
+          "Hamburg Dammtor",
+          "Hamburg Hbf",
+          "Hamburg-Harburg",
+          "Hannover Hbf",
+          "Göttingen",
+          "Kassel-Wilhelmshöhe",
+          "Fulda"
+        ],
+        "line": ""
+      },
+      {
+        "id": "8644418802245550301-2510201735-13",
+        "type": "RE",
+        "number": "3765",
+        "time": "2510201955",
+        "platform": "9",
+        "path_stations": [
+          "Erfurt Hbf",
+          "Neudietendorf",
+          "Arnstadt Hbf",
+          "Plaue(Thür)",
+          "Zella-Mehlis",
+          "Suhl",
+          "Grimmenthal",
+          "Mellrichstadt Bf",
+          "Bad Neustadt(Saale)",
+          "Münnerstadt",
+          "Ebenhausen(Unterfr)",
+          "Schweinfurt Hbf"
+        ],
+        "line": "7"
+      },
+      {
+        "id": "2271678389449807193-2510201740-9",
+        "type": "RE",
+        "number": "4794",
+        "time": "2510201921",
+        "platform": "10 D-F",
+        "path_stations": [
+          "Nürnberg Hbf",
+          "Fürth(Bay)Hbf",
+          "Erlangen",
+          "Forchheim(Oberfr)",
+          "Hirschaid",
+          "Bamberg",
+          "Haßfurt",
+          "Schweinfurt Hbf"
+        ],
+        "line": "20"
+      },
+      {
+        "id": "2909920282145421135-2510201850-2",
+        "type": "RE",
+        "number": "19078",
+        "time": "2510201920",
+        "platform": "2",
+        "path_stations": [
+          "Lauda"
+        ],
+        "line": "8"
+      },
+      {
+        "id": "3736117015423388331-2510201751-3",
+        "type": "ICE",
+        "number": "526",
+        "time": "2510201953",
+        "platform": "6",
+        "path_stations": [
+          "München Hbf",
+          "Nürnberg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-6341401029022658133-2510201651-8",
+        "type": "ICE",
+        "number": "727",
+        "time": "2510202001",
+        "platform": "4",
+        "path_stations": [
+          "Essen Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Hbf",
+          "Köln Messe/Deutz Gl.11-12",
+          "Frankfurt(M) Flughafen Fernbf",
+          "Frankfurt(Main)Hbf",
+          "Aschaffenburg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-7246037594139825471-2510201834-17",
+        "type": "RE",
+        "number": "4627",
+        "time": "2510202021",
+        "platform": "10A-C",
+        "path_stations": [
+          "Frankfurt(Main)Hbf",
+          "Frankfurt(Main)Süd",
+          "Offenbach(Main)Hbf",
+          "Hanau Hbf",
+          "Kahl(Main)",
+          "Dettingen(Main)",
+          "Kleinostheim",
+          "Aschaffenburg Hbf",
+          "Heigenbrücken",
+          "Wiesthal",
+          "Partenstein",
+          "Lohr Bahnhof",
+          "Langenprozelten",
+          "Gemünden(Main)",
+          "Karlstadt(Main)",
+          "Retzbach-Zellingen"
+        ],
+        "line": "55"
+      },
+      {
+        "id": "434699660439512752-2510201715-6",
+        "type": "ICE",
+        "number": "633",
+        "time": "2510202028",
+        "platform": "4",
+        "path_stations": [
+          "Bremen Hbf",
+          "Hannover Hbf",
+          "Göttingen",
+          "Kassel-Wilhelmshöhe",
+          "Fulda"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-6141796340052867163-2510201935-16",
+        "type": "RB",
+        "number": "58075",
+        "time": "2510202057",
+        "platform": "9",
+        "path_stations": [
+          "Schlüchtern",
+          "Sterbfritz",
+          "Jossa",
+          "Obersinn",
+          "Mittelsinn",
+          "Burgsinn",
+          "Rieneck",
+          "Gemünden(Main)",
+          "Wernfeld",
+          "Karlstadt(Main)",
+          "Himmelstadt",
+          "Retzbach-Zellingen",
+          "Thüngersheim",
+          "Veitshöchheim",
+          "Würzburg-Zell"
+        ],
+        "line": "53"
+      },
+      {
+        "id": "899526545449232559-2510201926-4",
+        "type": "RE",
+        "number": "4632",
+        "time": "2510202021",
+        "platform": "11",
+        "path_stations": [
+          "Bamberg",
+          "Haßfurt",
+          "Schweinfurt Hbf"
+        ],
+        "line": "54"
+      },
+      {
+        "id": "-7536356323137987638-2510201941-15",
+        "type": "RB",
+        "number": "58266",
+        "time": "2510202051",
+        "platform": "7",
+        "path_stations": [
+          "Bamberg",
+          "Oberhaid",
+          "Ebelsbach-Eltmann",
+          "Zeil",
+          "Haßfurt",
+          "Schonungen",
+          "Schweinfurt Stadt",
+          "Schweinfurt Mitte",
+          "Schweinfurt Hbf",
+          "Waigolshausen",
+          "Eßleben",
+          "Bergtheim",
+          "Seligenstadt(b Würzburg)",
+          "Rottendorf"
+        ],
+        "line": "53"
+      },
+      {
+        "id": "-1290839640796586839-2510201818-4",
+        "type": "ICE",
+        "number": "782",
+        "time": "2510202026",
+        "platform": "5",
+        "path_stations": [
+          "München Hbf",
+          "Ingolstadt Hbf",
+          "Nürnberg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "8205144232781928328-2510201513-9",
+        "type": "ICE",
+        "number": "22",
+        "time": "2510202022",
+        "platform": "6",
+        "path_stations": [
+          "Wien Hbf",
+          "Wien Meidling",
+          "St.Pölten Hbf",
+          "Linz Hbf",
+          "Passau Hbf",
+          "Plattling",
+          "Regensburg Hbf",
+          "Nürnberg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-7179928820236290043-2510201636-9",
+        "type": "ICE",
+        "number": "683",
+        "time": "2510202028",
+        "platform": "4",
+        "path_stations": [
+          "Hamburg-Altona",
+          "Hamburg Dammtor",
+          "Hamburg Hbf",
+          "Hamburg-Harburg",
+          "Hannover Hbf",
+          "Göttingen",
+          "Kassel-Wilhelmshöhe",
+          "Fulda"
+        ],
+        "line": ""
+      },
+      {
+        "id": "6303403905356431728-2510201904-12",
+        "type": "RE",
+        "number": "58230",
+        "time": "2510202016",
+        "platform": "8",
+        "path_stations": [
+          "Nürnberg Hbf",
+          "Fürth(Bay)Hbf",
+          "Siegelsdorf",
+          "Emskirchen",
+          "Neustadt(Aisch)Bahnhof",
+          "Markt Bibart",
+          "Iphofen",
+          "Kitzingen",
+          "Buchbrunn-Mainstockheim",
+          "Dettelbach Bahnhof",
+          "Rottendorf"
+        ],
+        "line": "10"
+      },
+      {
+        "id": "1090297836038148770-2510201954-13",
+        "type": "RB",
+        "number": "57982",
+        "time": "2510202057",
+        "platform": "2",
+        "path_stations": [
+          "Boxberg-Wölchingen",
+          "Königshofen(Baden)",
+          "Lauda",
+          "Gerlachsheim",
+          "Grünsfeld",
+          "Zimmern(Main-Tauber)",
+          "Wittighausen",
+          "Gaubüttelbrunn",
+          "Kirchheim(Unterfr)",
+          "Geroldshausen",
+          "Reichenberg(Unterfr)",
+          "Würzburg Süd"
+        ],
+        "line": "85"
+      },
+      {
+        "id": "-6524998557445987060-2510201847-3",
+        "type": "ICE",
+        "number": "524",
+        "time": "2510202052",
+        "platform": "6",
+        "path_stations": [
+          "München Hbf",
+          "Nürnberg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-5750289458878160511-2510201950-2",
+        "type": "RE",
+        "number": "19080",
+        "time": "2510202020",
+        "platform": "2",
+        "path_stations": [
+          "Lauda"
+        ],
+        "line": "8"
+      },
+      {
+        "id": "-6011663053134895080-2510201835-16",
+        "type": "RB",
+        "number": "58071",
+        "time": "2510202000",
+        "platform": "5",
+        "path_stations": [
+          "Schlüchtern",
+          "Sterbfritz",
+          "Jossa",
+          "Obersinn",
+          "Mittelsinn",
+          "Burgsinn",
+          "Rieneck",
+          "Gemünden(Main)",
+          "Wernfeld",
+          "Karlstadt(Main)",
+          "Himmelstadt",
+          "Retzbach-Zellingen",
+          "Thüngersheim",
+          "Veitshöchheim",
+          "Würzburg-Zell"
+        ],
+        "line": "53"
+      },
+      {
+        "id": "5324821628306728469-2510201754-8",
+        "type": "ICE",
+        "number": "729",
+        "time": "2510202101",
+        "platform": "4",
+        "path_stations": [
+          "Essen Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Hbf",
+          "Köln Messe/Deutz Gl.11-12",
+          "Frankfurt(M) Flughafen Fernbf",
+          "Frankfurt(Main)Hbf",
+          "Aschaffenburg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "5375326263046654482-2510201917-4",
+        "type": "ICE",
+        "number": "580",
+        "time": "2510202124",
+        "platform": "6",
+        "path_stations": [
+          "München Hbf",
+          "Ingolstadt Hbf",
+          "Nürnberg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "4629995601422529047-2510202005-12",
+        "type": "RE",
+        "number": "58232",
+        "time": "2510202116",
+        "platform": "8",
+        "path_stations": [
+          "Nürnberg Hbf",
+          "Fürth(Bay)Hbf",
+          "Siegelsdorf",
+          "Emskirchen",
+          "Neustadt(Aisch)Bahnhof",
+          "Markt Bibart",
+          "Iphofen",
+          "Kitzingen",
+          "Buchbrunn-Mainstockheim",
+          "Dettelbach Bahnhof",
+          "Rottendorf"
+        ],
+        "line": "10"
+      },
+      {
+        "id": "-2634757867894125038-2510202100-5",
+        "type": "RE",
+        "number": "3787",
+        "time": "2510202157",
+        "platform": "11 D-F",
+        "path_stations": [
+          "Bad Kissingen",
+          "Oerlenbach",
+          "Ebenhausen(Unterfr)",
+          "Schweinfurt Hbf"
+        ],
+        "line": "57"
+      },
+      {
+        "id": "3075064943330816624-2510201938-9",
+        "type": "RE",
+        "number": "4796",
+        "time": "2510202121",
+        "platform": "10 D-F",
+        "path_stations": [
+          "Nürnberg Hbf",
+          "Fürth(Bay)Hbf",
+          "Erlangen",
+          "Forchheim(Oberfr)",
+          "Hirschaid",
+          "Bamberg",
+          "Haßfurt",
+          "Schweinfurt Hbf"
+        ],
+        "line": "20"
+      },
+      {
+        "id": "2258467216439828113-2510201935-14",
+        "type": "RE",
+        "number": "3767",
+        "time": "2510202157",
+        "platform": "11 D-F",
+        "path_stations": [
+          "Erfurt Hbf",
+          "Neudietendorf",
+          "Arnstadt Hbf",
+          "Plaue(Thür)",
+          "Gräfenroda",
+          "Zella-Mehlis",
+          "Suhl",
+          "Grimmenthal",
+          "Mellrichstadt Bf",
+          "Bad Neustadt(Saale)",
+          "Münnerstadt",
+          "Ebenhausen(Unterfr)",
+          "Schweinfurt Hbf"
+        ],
+        "line": "7"
+      },
+      {
+        "id": "-6582319370317014275-2510202050-2",
+        "type": "RE",
+        "number": "19082",
+        "time": "2510202120",
+        "platform": "2",
+        "path_stations": [
+          "Lauda"
+        ],
+        "line": "8"
+      },
+      {
+        "id": "-5406854671062109561-2510202042-15",
+        "type": "RB",
+        "number": "58268",
+        "time": "2510202150",
+        "platform": "7",
+        "path_stations": [
+          "Bamberg",
+          "Oberhaid",
+          "Ebelsbach-Eltmann",
+          "Zeil",
+          "Haßfurt",
+          "Schonungen",
+          "Schweinfurt Stadt",
+          "Schweinfurt Mitte",
+          "Schweinfurt Hbf",
+          "Waigolshausen",
+          "Eßleben",
+          "Bergtheim",
+          "Seligenstadt(b Würzburg)",
+          "Rottendorf"
+        ],
+        "line": "53"
+      },
+      {
+        "id": "-4643542074777550273-2510202054-13",
+        "type": "RB",
+        "number": "57984",
+        "time": "2510202157",
+        "platform": "3",
+        "path_stations": [
+          "Boxberg-Wölchingen",
+          "Königshofen(Baden)",
+          "Lauda",
+          "Gerlachsheim",
+          "Grünsfeld",
+          "Zimmern(Main-Tauber)",
+          "Wittighausen",
+          "Gaubüttelbrunn",
+          "Kirchheim(Unterfr)",
+          "Geroldshausen",
+          "Reichenberg(Unterfr)",
+          "Würzburg Süd"
+        ],
+        "line": "85"
+      },
+      {
+        "id": "8428028954903351107-2510201635-12",
+        "type": "ICE",
+        "number": "929",
+        "time": "2510202132",
+        "platform": "5",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Hbf",
+          "Köln Hbf",
+          "Bonn Hbf",
+          "Koblenz Hbf",
+          "Mainz Hbf",
+          "Frankfurt(M) Flughafen Fernbf",
+          "Frankfurt(Main)Hbf",
+          "Hanau Hbf",
+          "Aschaffenburg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-223421926958290666-2510201634-10",
+        "type": "ICE",
+        "number": "885",
+        "time": "2510202128",
+        "platform": "4",
+        "path_stations": [
+          "Kiel Hbf",
+          "Neumünster",
+          "Hamburg Dammtor",
+          "Hamburg Hbf",
+          "Hamburg-Harburg",
+          "Hannover Hbf",
+          "Göttingen",
+          "Kassel-Wilhelmshöhe",
+          "Fulda"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-4383803236760390820-2510201947-4",
+        "type": "ICE",
+        "number": "522",
+        "time": "2510202152",
+        "platform": "6",
+        "path_stations": [
+          "München Hbf",
+          "Ingolstadt Hbf",
+          "Nürnberg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "8614367859162303290-2510201930-22",
+        "type": "RE",
+        "number": "4629",
+        "time": "2510202121",
+        "platform": "11",
+        "path_stations": [
+          "Frankfurt(Main)Hbf",
+          "Frankfurt(Main)Süd",
+          "Frankfurt(Main)Ost",
+          "Frankfurt-Mainkur",
+          "Maintal West",
+          "Maintal Ost",
+          "Hanau-Wilhelmsbad",
+          "Hanau West",
+          "Hanau Hbf",
+          "Kahl(Main)",
+          "Dettingen(Main)",
+          "Kleinostheim",
+          "Aschaffenburg Hbf",
+          "Heigenbrücken",
+          "Wiesthal",
+          "Partenstein",
+          "Lohr Bahnhof",
+          "Langenprozelten",
+          "Gemünden(Main)",
+          "Karlstadt(Main)",
+          "Retzbach-Zellingen"
+        ],
+        "line": "54"
+      },
+      {
+        "id": "-8535181229836363177-2510202034-17",
+        "type": "RE",
+        "number": "4631",
+        "time": "2510202221",
+        "platform": "9",
+        "path_stations": [
+          "Frankfurt(Main)Hbf",
+          "Frankfurt(Main)Süd",
+          "Offenbach(Main)Hbf",
+          "Hanau Hbf",
+          "Kahl(Main)",
+          "Dettingen(Main)",
+          "Kleinostheim",
+          "Aschaffenburg Hbf",
+          "Heigenbrücken",
+          "Wiesthal",
+          "Partenstein",
+          "Lohr Bahnhof",
+          "Langenprozelten",
+          "Gemünden(Main)",
+          "Karlstadt(Main)",
+          "Retzbach-Zellingen"
+        ],
+        "line": "55"
+      },
+      {
+        "id": "2143499115056676952-2510201839-10",
+        "type": "ICE",
+        "number": "821",
+        "time": "2510202201",
+        "platform": "4",
+        "path_stations": [
+          "Essen Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Hbf",
+          "Köln Messe/Deutz Gl.11-12",
+          "Montabaur",
+          "Limburg Süd",
+          "Frankfurt(M) Flughafen Fernbf",
+          "Frankfurt(Main)Hbf",
+          "Aschaffenburg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "5903101010412136106-2510201713-10",
+        "type": "ICE",
+        "number": "20",
+        "time": "2510202222",
+        "platform": "6",
+        "path_stations": [
+          "Wien Hbf",
+          "Wien Meidling",
+          "St.Pölten Hbf",
+          "Linz Hbf",
+          "Wels Hbf",
+          "Passau Hbf",
+          "Plattling",
+          "Regensburg Hbf",
+          "Nürnberg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-3352262123498948724-2510202150-2",
+        "type": "RE",
+        "number": "19084",
+        "time": "2510202221",
+        "platform": "3",
+        "path_stations": [
+          "Lauda"
+        ],
+        "line": "8"
+      },
+      {
+        "id": "-5516896756132872421-2510202141-15",
+        "type": "RE",
+        "number": "58404",
+        "time": "2510202251",
+        "platform": "10",
+        "path_stations": [
+          "Bamberg",
+          "Oberhaid",
+          "Ebelsbach-Eltmann",
+          "Zeil",
+          "Haßfurt",
+          "Schonungen",
+          "Schweinfurt Stadt",
+          "Schweinfurt Mitte",
+          "Schweinfurt Hbf",
+          "Waigolshausen",
+          "Eßleben",
+          "Bergtheim",
+          "Seligenstadt(b Würzburg)",
+          "Rottendorf"
+        ],
+        "line": "55"
+      },
+      {
+        "id": "3365409376481099659-2510201915-6",
+        "type": "ICE",
+        "number": "635",
+        "time": "2510202228",
+        "platform": "5",
+        "path_stations": [
+          "Bremen Hbf",
+          "Hannover Hbf",
+          "Göttingen",
+          "Kassel-Wilhelmshöhe",
+          "Fulda"
+        ],
+        "line": ""
+      },
+      {
+        "id": "8573811631662133764-2510202048-4",
+        "type": "ICE",
+        "number": "520",
+        "time": "2510202254",
+        "platform": "6",
+        "path_stations": [
+          "München Hbf",
+          "Ingolstadt Hbf",
+          "Nürnberg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "8388537054998746810-2510202105-12",
+        "type": "RE",
+        "number": "58234",
+        "time": "2510202219",
+        "platform": "7",
+        "path_stations": [
+          "Nürnberg Hbf",
+          "Fürth(Bay)Hbf",
+          "Siegelsdorf",
+          "Emskirchen",
+          "Neustadt(Aisch)Bahnhof",
+          "Markt Bibart",
+          "Iphofen",
+          "Kitzingen",
+          "Buchbrunn-Mainstockheim",
+          "Dettelbach Bahnhof",
+          "Rottendorf"
+        ],
+        "line": "10"
+      },
+      {
+        "id": "-7254438839048267156-2510202035-16",
+        "type": "RB",
+        "number": "58077",
+        "time": "2510202200",
+        "platform": "5A-D",
+        "path_stations": [
+          "Schlüchtern",
+          "Sterbfritz",
+          "Jossa",
+          "Obersinn",
+          "Mittelsinn",
+          "Burgsinn",
+          "Rieneck",
+          "Gemünden(Main)",
+          "Wernfeld",
+          "Karlstadt(Main)",
+          "Himmelstadt",
+          "Retzbach-Zellingen",
+          "Thüngersheim",
+          "Veitshöchheim",
+          "Würzburg-Zell"
+        ],
+        "line": "53"
+      },
+      {
+        "id": "-524151628723159576-2510201854-8",
+        "type": "ICE",
+        "number": "685",
+        "time": "2510202228",
+        "platform": "5",
+        "path_stations": [
+          "Hamburg Dammtor",
+          "Hamburg Hbf",
+          "Hamburg-Harburg",
+          "Hannover Hbf",
+          "Göttingen",
+          "Kassel-Wilhelmshöhe",
+          "Fulda"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-5605018714140416440-2510202154-13",
+        "type": "RB",
+        "number": "57986",
+        "time": "2510202256",
+        "platform": "3",
+        "path_stations": [
+          "Boxberg-Wölchingen",
+          "Königshofen(Baden)",
+          "Lauda",
+          "Gerlachsheim",
+          "Grünsfeld",
+          "Zimmern(Main-Tauber)",
+          "Wittighausen",
+          "Gaubüttelbrunn",
+          "Kirchheim(Unterfr)",
+          "Geroldshausen",
+          "Reichenberg(Unterfr)",
+          "Würzburg Süd"
+        ],
+        "line": "85"
+      },
+      {
+        "id": "-7099332526201805103-2510202311-11",
+        "type": "RB",
+        "number": "57988",
+        "time": "2510202357",
+        "platform": "2",
+        "path_stations": [
+          "Lauda",
+          "Gerlachsheim",
+          "Grünsfeld",
+          "Zimmern(Main-Tauber)",
+          "Wittighausen",
+          "Gaubüttelbrunn",
+          "Kirchheim(Unterfr)",
+          "Geroldshausen",
+          "Reichenberg(Unterfr)",
+          "Würzburg Süd"
+        ],
+        "line": "85"
+      },
+      {
+        "id": "2454826157285726462-2510202130-29",
+        "type": "RE",
+        "number": "4633",
+        "time": "2510202333",
+        "platform": "11",
+        "path_stations": [
+          "Frankfurt(Main)Hbf",
+          "Frankfurt(Main)Süd",
+          "Frankfurt(Main)Ost",
+          "Frankfurt-Mainkur",
+          "Maintal West",
+          "Maintal Ost",
+          "Hanau-Wilhelmsbad",
+          "Hanau West",
+          "Hanau Hbf",
+          "Kahl(Main)",
+          "Dettingen(Main)",
+          "Kleinostheim",
+          "Aschaffenburg Hbf",
+          "Hösbach",
+          "Laufach",
+          "Heigenbrücken",
+          "Wiesthal",
+          "Partenstein",
+          "Lohr Bahnhof",
+          "Langenprozelten",
+          "Gemünden(Main)",
+          "Wernfeld",
+          "Karlstadt(Main)",
+          "Himmelstadt",
+          "Retzbach-Zellingen",
+          "Thüngersheim",
+          "Veitshöchheim",
+          "Würzburg-Zell"
+        ],
+        "line": "54"
+      },
+      {
+        "id": "4944821663867669731-2510202206-12",
+        "type": "RE",
+        "number": "58236",
+        "time": "2510202315",
+        "platform": "8",
+        "path_stations": [
+          "Nürnberg Hbf",
+          "Fürth(Bay)Hbf",
+          "Siegelsdorf",
+          "Emskirchen",
+          "Neustadt(Aisch)Bahnhof",
+          "Markt Bibart",
+          "Iphofen",
+          "Kitzingen",
+          "Buchbrunn-Mainstockheim",
+          "Dettelbach Bahnhof",
+          "Rottendorf"
+        ],
+        "line": "10"
+      },
+      {
+        "id": "2312296716933966404-2510201555-17",
+        "type": "ICE",
+        "number": "1021",
+        "time": "2510202339",
+        "platform": "5",
+        "path_stations": [
+          "Hamburg-Altona",
+          "Hamburg Dammtor",
+          "Hamburg Hbf",
+          "Recklinghausen Hbf",
+          "Essen Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Hbf",
+          "Köln Hbf",
+          "Bonn Hbf",
+          "Koblenz Hbf",
+          "Bingen(Rhein) Hbf",
+          "Mainz Hbf",
+          "Frankfurt(M) Flughafen Fernbf",
+          "Frankfurt(Main)Hbf",
+          "Hanau Hbf",
+          "Aschaffenburg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-2983905102943717047-2510202250-2",
+        "type": "RE",
+        "number": "21956",
+        "time": "2510202325",
+        "platform": "",
+        "path_stations": [
+          "Lauda"
+        ],
+        "line": "8"
+      },
+      {
+        "id": "-4428241117209577603-2510202304-15",
+        "type": "RB",
+        "number": "58272",
+        "time": "2510210016",
+        "platform": "10",
+        "path_stations": [
+          "Bamberg",
+          "Oberhaid",
+          "Ebelsbach-Eltmann",
+          "Zeil",
+          "Haßfurt",
+          "Schonungen",
+          "Schweinfurt Stadt",
+          "Schweinfurt Mitte",
+          "Schweinfurt Hbf",
+          "Waigolshausen",
+          "Eßleben",
+          "Bergtheim",
+          "Seligenstadt(b Würzburg)",
+          "Rottendorf"
+        ],
+        "line": "53"
+      },
+      {
+        "id": "3324609306163352035-2510202230-27",
+        "type": "RE",
+        "number": "4635",
+        "time": "2510210025",
+        "platform": "11",
+        "path_stations": [
+          "Frankfurt(Main)Hbf",
+          "Frankfurt(Main)Süd",
+          "Frankfurt(Main)Ost",
+          "Frankfurt-Mainkur",
+          "Maintal West",
+          "Maintal Ost",
+          "Hanau-Wilhelmsbad",
+          "Hanau West",
+          "Hanau Hbf",
+          "Großauheim(Kr Hanau)",
+          "Großkrotzenburg",
+          "Kahl(Main)",
+          "Dettingen(Main)",
+          "Rückersbacher Schlucht",
+          "Kleinostheim",
+          "Aschaffenburg Hbf",
+          "Hösbach",
+          "Laufach",
+          "Heigenbrücken",
+          "Wiesthal",
+          "Partenstein",
+          "Lohr Bahnhof",
+          "Langenprozelten",
+          "Gemünden(Main)",
+          "Karlstadt(Main)",
+          "Retzbach-Zellingen"
+        ],
+        "line": "54"
+      },
+      {
+        "id": "8906784528362899284-2510202335-17",
+        "type": "RE",
+        "number": "58238",
+        "time": "2510210054",
+        "platform": "7",
+        "path_stations": [
+          "Nürnberg Hbf",
+          "Fürth(Bay)Hbf",
+          "Fürth-Unterfürberg",
+          "Fürth-Burgfarrnbach",
+          "Siegelsdorf",
+          "Puschendorf",
+          "Hagenbüchach",
+          "Emskirchen",
+          "Neustadt(Aisch)Mitte",
+          "Neustadt(Aisch)Bahnhof",
+          "Markt Bibart",
+          "Iphofen",
+          "Kitzingen",
+          "Buchbrunn-Mainstockheim",
+          "Dettelbach Bahnhof",
+          "Rottendorf"
+        ],
+        "line": "10"
+      },
+      {
+        "id": "8209469800275406026-2510202217-4",
+        "type": "ICE",
+        "number": "1080",
+        "time": "2510210115",
+        "platform": "6",
+        "path_stations": [
+          "München Hbf",
+          "Ingolstadt Hbf",
+          "Nürnberg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "6992012378128167215-2510201956-6",
+        "type": "NJ",
+        "number": "40491",
+        "time": "2510210133",
+        "platform": "5",
+        "path_stations": [
+          "Hamburg-Altona",
+          "Hamburg Hbf",
+          "Hamburg-Harburg",
+          "Hannover Hbf",
+          "Göttingen"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-2044723357159653206-2510201956-6",
+        "type": "NJ",
+        "number": "491",
+        "time": "2510210133",
+        "platform": "5",
+        "path_stations": [
+          "Hamburg-Altona",
+          "Hamburg Hbf",
+          "Hamburg-Harburg",
+          "Hannover Hbf",
+          "Göttingen"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-3823254010841261196-2510201900-7",
+        "type": "NJ",
+        "number": "421",
+        "time": "2510210244",
+        "platform": "4",
+        "path_stations": [
+          "Amsterdam Centraal",
+          "Amersfoort Centraal",
+          "Deventer",
+          "Münster(Westf)Hbf",
+          "Hamm(Westf)Hbf",
+          "Kassel-Wilhelmshöhe"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-8677182982400525824-2510202046-8",
+        "type": "NJ",
+        "number": "40420",
+        "time": "2510210234",
+        "platform": "7",
+        "path_stations": [
+          "Innsbruck Hbf",
+          "Jenbach",
+          "Wörgl Hbf",
+          "Kufstein",
+          "Rosenheim",
+          "München Hbf",
+          "Nürnberg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-6813803786124510421-2510202010-9",
+        "type": "NJ",
+        "number": "40490",
+        "time": "2510210230",
+        "platform": "6",
+        "path_stations": [
+          "Wien Hbf",
+          "Wien Meidling",
+          "St.Pölten Hbf",
+          "Linz Hbf",
+          "Wels Hbf",
+          "Passau Hbf",
+          "Regensburg Hbf",
+          "Nürnberg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "3272146161175325165-2510202046-8",
+        "type": "NJ",
+        "number": "420",
+        "time": "2510210230",
+        "platform": "6",
+        "path_stations": [
+          "Innsbruck Hbf",
+          "Jenbach",
+          "Wörgl Hbf",
+          "Kufstein",
+          "Rosenheim",
+          "München Hbf",
+          "Nürnberg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-7547304040443208216-2510202010-9",
+        "type": "NJ",
+        "number": "490",
+        "time": "2510210234",
+        "platform": "7",
+        "path_stations": [
+          "Wien Hbf",
+          "Wien Meidling",
+          "St.Pölten Hbf",
+          "Linz Hbf",
+          "Wels Hbf",
+          "Passau Hbf",
+          "Regensburg Hbf",
+          "Nürnberg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-4272298498907669914-2510201900-7",
+        "type": "NJ",
+        "number": "40421",
+        "time": "2510210244",
+        "platform": "4",
+        "path_stations": [
+          "Amsterdam Centraal",
+          "Amersfoort Centraal",
+          "Deventer",
+          "Münster(Westf)Hbf",
+          "Hamm(Westf)Hbf",
+          "Kassel-Wilhelmshöhe"
+        ],
+        "line": ""
+      },
+      {
+        "id": "7597089806492032299-2510202221-6",
+        "type": "ICE",
+        "number": "1081",
+        "time": "2510210352",
+        "platform": "5",
+        "path_stations": [
+          "Hamburg Dammtor",
+          "Hamburg Hbf",
+          "Hamburg-Harburg",
+          "Hannover Hbf",
+          "Göttingen"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-9136018603804123240-2510210409-9",
+        "type": "RB",
+        "number": "58250",
+        "time": "2510210447",
+        "platform": "10",
+        "path_stations": [
+          "Schweinfurt Stadt",
+          "Schweinfurt Mitte",
+          "Schweinfurt Hbf",
+          "Waigolshausen",
+          "Eßleben",
+          "Bergtheim",
+          "Seligenstadt(b Würzburg)",
+          "Rottendorf"
+        ],
+        "line": "53"
+      },
+      {
+        "id": "-7802763862737197006-2510210445-10",
+        "type": "RE",
+        "number": "4780",
+        "time": "2510210548",
+        "platform": "10 D-F",
+        "path_stations": [
+          "Bamberg",
+          "Oberhaid",
+          "Ebelsbach-Eltmann",
+          "Zeil",
+          "Haßfurt",
+          "Schonungen",
+          "Schweinfurt Stadt",
+          "Schweinfurt Mitte",
+          "Schweinfurt Hbf"
+        ],
+        "line": "20"
+      },
+      {
+        "id": "-1513864714308296458-2510210508-11",
+        "type": "RB",
+        "number": "19050",
+        "time": "2510210550",
+        "platform": "2",
+        "path_stations": [
+          "Lauda",
+          "Gerlachsheim",
+          "Grünsfeld",
+          "Zimmern(Main-Tauber)",
+          "Wittighausen",
+          "Gaubüttelbrunn",
+          "Kirchheim(Unterfr)",
+          "Geroldshausen",
+          "Reichenberg(Unterfr)",
+          "Würzburg Süd"
+        ],
+        "line": "8"
+      },
+      {
+        "id": "-553996024274697743-2510210500-11",
+        "type": "RB",
+        "number": "58003",
+        "time": "2510210541",
+        "platform": "11A-C",
+        "path_stations": [
+          "Lohr Bahnhof",
+          "Langenprozelten",
+          "Gemünden(Main)",
+          "Wernfeld",
+          "Karlstadt(Main)",
+          "Himmelstadt",
+          "Retzbach-Zellingen",
+          "Thüngersheim",
+          "Veitshöchheim",
+          "Würzburg-Zell"
+        ],
+        "line": "79"
+      },
+      {
+        "id": "-7109172465500352160-2510210505-5",
+        "type": "RE",
+        "number": "58080",
+        "time": "2510210525",
+        "platform": "9",
+        "path_stations": [
+          "Kitzingen",
+          "Buchbrunn-Mainstockheim",
+          "Dettelbach Bahnhof",
+          "Rottendorf"
+        ],
+        "line": "10"
+      },
+      {
+        "id": "-4166763107050001350-2510210428-17",
+        "type": "RE",
+        "number": "58202",
+        "time": "2510210548",
+        "platform": "8",
+        "path_stations": [
+          "Nürnberg Hbf",
+          "Fürth(Bay)Hbf",
+          "Fürth-Unterfürberg",
+          "Fürth-Burgfarrnbach",
+          "Siegelsdorf",
+          "Puschendorf",
+          "Hagenbüchach",
+          "Emskirchen",
+          "Neustadt(Aisch)Mitte",
+          "Neustadt(Aisch)Bahnhof",
+          "Markt Bibart",
+          "Iphofen",
+          "Kitzingen",
+          "Buchbrunn-Mainstockheim",
+          "Dettelbach Bahnhof",
+          "Rottendorf"
+        ],
+        "line": "10"
+      },
+      {
+        "id": "6356243946693584998-2510210452-9",
+        "type": "RB",
+        "number": "58001",
+        "time": "2510210523",
+        "platform": "11A-C",
+        "path_stations": [
+          "Gemünden(Main)",
+          "Wernfeld",
+          "Karlstadt(Main)",
+          "Himmelstadt",
+          "Retzbach-Zellingen",
+          "Thüngersheim",
+          "Veitshöchheim",
+          "Würzburg-Zell"
+        ],
+        "line": "53"
+      },
+      {
+        "id": "2113398118035681651-2510210505-9",
+        "type": "RB",
+        "number": "58252",
+        "time": "2510210544",
+        "platform": "4",
+        "path_stations": [
+          "Schweinfurt Stadt",
+          "Schweinfurt Mitte",
+          "Schweinfurt Hbf",
+          "Waigolshausen",
+          "Eßleben",
+          "Bergtheim",
+          "Seligenstadt(b Würzburg)",
+          "Rottendorf"
+        ],
+        "line": "53"
+      }
+    ],
+    "departures": [
+      {
+        "id": "3257168502775920133-2510201603-14",
+        "type": "RB",
+        "number": "58057",
+        "direction": "Bamberg",
+        "platform": "5",
+        "time": "2510201708",
+        "destination": "Bamberg",
+        "path_stations": [
+          "Rottendorf",
+          "Seligenstadt(b Würzburg)",
+          "Bergtheim",
+          "Eßleben",
+          "Waigolshausen",
+          "Schweinfurt Hbf",
+          "Schweinfurt Mitte",
+          "Schweinfurt Stadt",
+          "Schonungen",
+          "Haßfurt",
+          "Zeil",
+          "Ebelsbach-Eltmann",
+          "Oberhaid",
+          "Bamberg"
+        ]
+      },
+      {
+        "id": "252116077381183101-2510201706-1",
+        "type": "RB",
+        "number": "57975",
+        "direction": "Boxberg-Wölchingen",
+        "platform": "2",
+        "time": "2510201706",
+        "destination": "Boxberg-Wölchingen",
+        "path_stations": [
+          "Würzburg Süd",
+          "Reichenberg(Unterfr)",
+          "Geroldshausen",
+          "Kirchheim(Unterfr)",
+          "Gaubüttelbrunn",
+          "Wittighausen",
+          "Zimmern(Main-Tauber)",
+          "Grünsfeld",
+          "Gerlachsheim",
+          "Lauda",
+          "Boxberg-Wölchingen"
+        ]
+      },
+      {
+        "id": "7468334744528629490-2510201517-4",
+        "type": "ICE",
+        "number": "584",
+        "direction": "Lübeck Hbf",
+        "platform": "6",
+        "time": "2510201727",
+        "destination": "Lübeck Hbf",
+        "path_stations": [
+          "Fulda",
+          "Kassel-Wilhelmshöhe",
+          "Göttingen",
+          "Hannover Hbf",
+          "Lüneburg",
+          "Hamburg-Harburg",
+          "Hamburg Hbf",
+          "Lübeck Hbf"
+        ]
+      },
+      {
+        "id": "4362608433923368689-2510201641-15",
+        "type": "RB",
+        "number": "58060",
+        "direction": "Schlüchtern",
+        "platform": "7",
+        "time": "2510201801",
+        "destination": "Schlüchtern",
+        "path_stations": [
+          "Würzburg-Zell",
+          "Veitshöchheim",
+          "Thüngersheim",
+          "Retzbach-Zellingen",
+          "Himmelstadt",
+          "Karlstadt(Main)",
+          "Wernfeld",
+          "Gemünden(Main)",
+          "Rieneck",
+          "Burgsinn",
+          "Mittelsinn",
+          "Obersinn",
+          "Jossa",
+          "Sterbfritz",
+          "Schlüchtern"
+        ]
+      },
+      {
+        "id": "-388013222747031970-2510201354-8",
+        "type": "ICE",
+        "number": "721",
+        "direction": "München Hbf",
+        "platform": "4",
+        "time": "2510201703",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Nürnberg Hbf",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "3716369156189983676-2510201715-1",
+        "type": "RE",
+        "number": "58095",
+        "direction": "Kitzingen",
+        "platform": "9",
+        "time": "2510201715",
+        "destination": "Kitzingen",
+        "path_stations": [
+          "Rottendorf",
+          "Dettelbach Bahnhof",
+          "Buchbrunn-Mainstockheim",
+          "Kitzingen"
+        ]
+      },
+      {
+        "id": "-2683407695518987323-2510201746-1",
+        "type": "RB",
+        "number": "58273",
+        "direction": "Schweinfurt Stadt",
+        "platform": "8 D-F",
+        "time": "2510201746",
+        "destination": "Schweinfurt Stadt",
+        "path_stations": [
+          "Rottendorf",
+          "Seligenstadt(b Würzburg)",
+          "Bergtheim",
+          "Eßleben",
+          "Waigolshausen",
+          "Schweinfurt Hbf",
+          "Schweinfurt Mitte",
+          "Schweinfurt Stadt"
+        ]
+      },
+      {
+        "id": "9127946800501944634-2510201534-17",
+        "type": "RE",
+        "number": "4621",
+        "direction": "Bamberg",
+        "platform": "9",
+        "time": "2510201739",
+        "destination": "Bamberg",
+        "path_stations": [
+          "Schweinfurt Hbf",
+          "Haßfurt",
+          "Bamberg"
+        ]
+      },
+      {
+        "id": "-7291804535494157437-2510201737-1",
+        "type": "RE",
+        "number": "19079",
+        "direction": "Lauda",
+        "platform": "2",
+        "time": "2510201737",
+        "destination": "Lauda",
+        "path_stations": [
+          "Lauda"
+        ]
+      },
+      {
+        "id": "6492627968416470339-2510201220-14",
+        "type": "ICE",
+        "number": "229",
+        "direction": "Wien Hbf",
+        "platform": "4",
+        "time": "2510201733",
+        "destination": "Wien Hbf",
+        "path_stations": [
+          "Nürnberg Hbf",
+          "Regensburg Hbf",
+          "Plattling",
+          "Passau Hbf",
+          "Schärding",
+          "Wels Hbf",
+          "Linz Hbf",
+          "Amstetten NÖ",
+          "St.Pölten Hbf",
+          "Tullnerfeld",
+          "Wien Meidling",
+          "Wien Hbf"
+        ]
+      },
+      {
+        "id": "1927572309911478582-2510201741-1",
+        "type": "RE",
+        "number": "58227",
+        "direction": "Nürnberg Hbf",
+        "platform": "7",
+        "time": "2510201741",
+        "destination": "Nürnberg Hbf",
+        "path_stations": [
+          "Rottendorf",
+          "Dettelbach Bahnhof",
+          "Buchbrunn-Mainstockheim",
+          "Kitzingen",
+          "Iphofen",
+          "Markt Bibart",
+          "Neustadt(Aisch)Bahnhof",
+          "Emskirchen",
+          "Siegelsdorf",
+          "Fürth(Bay)Hbf",
+          "Nürnberg Hbf"
+        ]
+      },
+      {
+        "id": "-1188267942167451229-2510201550-3",
+        "type": "ICE",
+        "number": "620",
+        "direction": "Dortmund Hbf",
+        "platform": "6",
+        "time": "2510201754",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Aschaffenburg Hbf",
+          "Frankfurt(Main)Hbf",
+          "Frankfurt(M) Flughafen Fernbf",
+          "Limburg Süd",
+          "Montabaur",
+          "Siegburg/Bonn",
+          "Köln Messe/Deutz Gl.11-12",
+          "Düsseldorf Hbf",
+          "Duisburg Hbf",
+          "Essen Hbf",
+          "Gelsenkirchen Hbf",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-434598350930201597-2510201541-15",
+        "type": "RB",
+        "number": "58054",
+        "direction": "Schlüchtern",
+        "platform": "7",
+        "time": "2510201701",
+        "destination": "Schlüchtern",
+        "path_stations": [
+          "Würzburg-Zell",
+          "Veitshöchheim",
+          "Thüngersheim",
+          "Retzbach-Zellingen",
+          "Himmelstadt",
+          "Karlstadt(Main)",
+          "Wernfeld",
+          "Gemünden(Main)",
+          "Rieneck",
+          "Burgsinn",
+          "Mittelsinn",
+          "Obersinn",
+          "Jossa",
+          "Sterbfritz",
+          "Schlüchtern"
+        ]
+      },
+      {
+        "id": "-5050276282382737898-2510201730-1",
+        "type": "Bus",
+        "number": "58163",
+        "direction": "Marktbreit",
+        "platform": "",
+        "time": "2510201730",
+        "destination": "Marktbreit",
+        "path_stations": [
+          "Würzburg Süd",
+          "Würzburg-Heidingsfeld Ost",
+          "Winterhausen",
+          "Goßmannsdorf",
+          "Ochsenfurt",
+          "Marktbreit"
+        ]
+      },
+      {
+        "id": "-1151057268452720658-2510201311-11",
+        "type": "ICE",
+        "number": "1205",
+        "direction": "Nürnberg Hbf",
+        "platform": "3",
+        "time": "2510201711",
+        "destination": "Nürnberg Hbf",
+        "path_stations": [
+          "Nürnberg Hbf"
+        ]
+      },
+      {
+        "id": "4239313126946046799-2510201723-1",
+        "type": "RB",
+        "number": "58058",
+        "direction": "Karlstadt(Main)",
+        "platform": "8",
+        "time": "2510201723",
+        "destination": "Karlstadt(Main)",
+        "path_stations": [
+          "Würzburg-Zell",
+          "Veitshöchheim",
+          "Thüngersheim",
+          "Retzbach-Zellingen",
+          "Himmelstadt",
+          "Karlstadt(Main)"
+        ]
+      },
+      {
+        "id": "3066189143901278962-2510201737-1",
+        "type": "RE",
+        "number": "4626",
+        "direction": "Frankfurt(Main)Hbf",
+        "platform": "10A-C",
+        "time": "2510201737",
+        "destination": "Frankfurt(Main)Hbf",
+        "path_stations": [
+          "Retzbach-Zellingen",
+          "Karlstadt(Main)",
+          "Gemünden(Main)",
+          "Langenprozelten",
+          "Lohr Bahnhof",
+          "Partenstein",
+          "Wiesthal",
+          "Heigenbrücken",
+          "Aschaffenburg Hbf",
+          "Kleinostheim",
+          "Dettingen(Main)",
+          "Kahl(Main)",
+          "Hanau Hbf",
+          "Offenbach(Main)Hbf",
+          "Frankfurt(Main)Süd",
+          "Frankfurt(Main)Hbf"
+        ]
+      },
+      {
+        "id": "-266204046597736577-2510201354-9",
+        "type": "ICE",
+        "number": "881",
+        "direction": "München Hbf",
+        "platform": "5",
+        "time": "2510201729",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Nürnberg Hbf",
+          "Ingolstadt Hbf",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "4959401606751256562-2510201618-4",
+        "type": "ICE",
+        "number": "1204",
+        "direction": "Hamburg-Altona",
+        "platform": "6",
+        "time": "2510201833",
+        "destination": "Hamburg-Altona",
+        "path_stations": [
+          "Fulda",
+          "Kassel-Wilhelmshöhe",
+          "Göttingen",
+          "Hannover Hbf",
+          "Celle",
+          "Uelzen",
+          "Lüneburg",
+          "Hamburg-Harburg",
+          "Hamburg Hbf",
+          "Hamburg Dammtor",
+          "Hamburg-Altona"
+        ]
+      },
+      {
+        "id": "3941958275395660636-2510201515-6",
+        "type": "ICE",
+        "number": "631",
+        "direction": "München Hbf",
+        "platform": "5",
+        "time": "2510201831",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Nürnberg Hbf",
+          "Ingolstadt Hbf",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "-4430290121058106168-2510201801-1",
+        "type": "RE",
+        "number": "3782",
+        "direction": "Bad Kissingen",
+        "platform": "9",
+        "time": "2510201801",
+        "destination": "Bad Kissingen",
+        "path_stations": [
+          "Schweinfurt Hbf",
+          "Ebenhausen(Unterfr)",
+          "Oerlenbach",
+          "Bad Kissingen"
+        ]
+      },
+      {
+        "id": "-5451741172656939686-2510201835-1",
+        "type": "RE",
+        "number": "4793",
+        "direction": "Nürnberg Hbf",
+        "platform": "10 D-F",
+        "time": "2510201835",
+        "destination": "Nürnberg Hbf",
+        "path_stations": [
+          "Schweinfurt Hbf",
+          "Haßfurt",
+          "Bamberg",
+          "Hirschaid",
+          "Forchheim(Oberfr)",
+          "Erlangen",
+          "Fürth(Bay)Hbf",
+          "Nürnberg Hbf"
+        ]
+      },
+      {
+        "id": "-4299390533875955991-2510201648-3",
+        "type": "ICE",
+        "number": "1128",
+        "direction": "Wiesbaden Hbf",
+        "platform": "6",
+        "time": "2510201855",
+        "destination": "Wiesbaden Hbf",
+        "path_stations": [
+          "Aschaffenburg Hbf",
+          "Frankfurt(Main)Hbf",
+          "Frankfurt(M) Flughafen Fernbf",
+          "Mainz Hbf",
+          "Wiesbaden Hbf"
+        ]
+      },
+      {
+        "id": "-4384291237910028934-2510201726-4",
+        "type": "RE",
+        "number": "4628",
+        "direction": "Frankfurt(Main)Hbf",
+        "platform": "9",
+        "time": "2510201837",
+        "destination": "Frankfurt(Main)Hbf",
+        "path_stations": [
+          "Retzbach-Zellingen",
+          "Karlstadt(Main)",
+          "Gemünden(Main)",
+          "Langenprozelten",
+          "Lohr Bahnhof",
+          "Partenstein",
+          "Wiesthal",
+          "Heigenbrücken",
+          "Aschaffenburg Hbf",
+          "Kleinostheim",
+          "Dettingen(Main)",
+          "Kahl(Main)",
+          "Hanau Hbf",
+          "Hanau West",
+          "Hanau-Wilhelmsbad",
+          "Maintal Ost",
+          "Maintal West",
+          "Frankfurt-Mainkur",
+          "Frankfurt(Main)Ost",
+          "Frankfurt(Main)Süd",
+          "Frankfurt(Main)Hbf"
+        ]
+      },
+      {
+        "id": "4362608433923368689-2510201641-15",
+        "type": "RB",
+        "number": "58060",
+        "direction": "Schlüchtern",
+        "platform": "7",
+        "time": "2510201801",
+        "destination": "Schlüchtern",
+        "path_stations": [
+          "Würzburg-Zell",
+          "Veitshöchheim",
+          "Thüngersheim",
+          "Retzbach-Zellingen",
+          "Himmelstadt",
+          "Karlstadt(Main)",
+          "Wernfeld",
+          "Gemünden(Main)",
+          "Rieneck",
+          "Burgsinn",
+          "Mittelsinn",
+          "Obersinn",
+          "Jossa",
+          "Sterbfritz",
+          "Schlüchtern"
+        ]
+      },
+      {
+        "id": "1246342218205095403-2510201635-16",
+        "type": "RB",
+        "number": "58061",
+        "direction": "Bamberg",
+        "platform": "5",
+        "time": "2510201808",
+        "destination": "Bamberg",
+        "path_stations": [
+          "Rottendorf",
+          "Seligenstadt(b Würzburg)",
+          "Bergtheim",
+          "Eßleben",
+          "Waigolshausen",
+          "Schweinfurt Hbf",
+          "Schweinfurt Mitte",
+          "Schweinfurt Stadt",
+          "Schonungen",
+          "Haßfurt",
+          "Zeil",
+          "Ebelsbach-Eltmann",
+          "Oberhaid",
+          "Bamberg"
+        ]
+      },
+      {
+        "id": "50770787591072936-2510201648-3",
+        "type": "ICE",
+        "number": "528",
+        "direction": "Dortmund Hbf",
+        "platform": "6",
+        "time": "2510201855",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Aschaffenburg Hbf",
+          "Frankfurt(Main)Hbf",
+          "Frankfurt(M) Flughafen Fernbf",
+          "Köln Messe/Deutz Gl.11-12",
+          "Düsseldorf Hbf",
+          "Duisburg Hbf",
+          "Essen Hbf",
+          "Gelsenkirchen Hbf",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-7876328486158242449-2510201810-1",
+        "type": "RE",
+        "number": "58097",
+        "direction": "Kitzingen",
+        "platform": "6",
+        "time": "2510201810",
+        "destination": "Kitzingen",
+        "path_stations": [
+          "Rottendorf",
+          "Dettelbach Bahnhof",
+          "Buchbrunn-Mainstockheim",
+          "Kitzingen"
+        ]
+      },
+      {
+        "id": "-2984975484195949033-2510201801-1",
+        "type": "RE",
+        "number": "3762",
+        "direction": "Erfurt Hbf",
+        "platform": "9",
+        "time": "2510201801",
+        "destination": "Erfurt Hbf",
+        "path_stations": [
+          "Schweinfurt Hbf",
+          "Ebenhausen(Unterfr)",
+          "Münnerstadt",
+          "Bad Neustadt(Saale)",
+          "Mellrichstadt Bf",
+          "Grimmenthal",
+          "Suhl",
+          "Zella-Mehlis",
+          "Plaue(Thür)",
+          "Arnstadt Hbf",
+          "Neudietendorf",
+          "Erfurt Hbf"
+        ]
+      },
+      {
+        "id": "4975878403948571913-2510201841-1",
+        "type": "RE",
+        "number": "58229",
+        "direction": "Nürnberg Hbf",
+        "platform": "4",
+        "time": "2510201841",
+        "destination": "Nürnberg Hbf",
+        "path_stations": [
+          "Rottendorf",
+          "Dettelbach Bahnhof",
+          "Buchbrunn-Mainstockheim",
+          "Kitzingen",
+          "Iphofen",
+          "Markt Bibart",
+          "Neustadt(Aisch)Bahnhof",
+          "Emskirchen",
+          "Siegelsdorf",
+          "Fürth(Bay)Hbf",
+          "Nürnberg Hbf"
+        ]
+      },
+      {
+        "id": "4218053850205204069-2510201618-4",
+        "type": "ICE",
+        "number": "1222",
+        "direction": "Dortmund Hbf",
+        "platform": "6",
+        "time": "2510201831",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Hanau Hbf",
+          "Frankfurt(Main)Hbf",
+          "Frankfurt(M) Flughafen Fernbf",
+          "Mainz Hbf",
+          "Koblenz Hbf",
+          "Bonn Hbf",
+          "Köln Hbf",
+          "Solingen Hbf",
+          "Wuppertal Hbf",
+          "Hagen Hbf",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-6502961489494378196-2510201741-15",
+        "type": "RB",
+        "number": "58068",
+        "direction": "Schlüchtern",
+        "platform": "7",
+        "time": "2510201901",
+        "destination": "Schlüchtern",
+        "path_stations": [
+          "Würzburg-Zell",
+          "Veitshöchheim",
+          "Thüngersheim",
+          "Retzbach-Zellingen",
+          "Himmelstadt",
+          "Karlstadt(Main)",
+          "Wernfeld",
+          "Gemünden(Main)",
+          "Rieneck",
+          "Burgsinn",
+          "Mittelsinn",
+          "Obersinn",
+          "Jossa",
+          "Sterbfritz",
+          "Schlüchtern"
+        ]
+      },
+      {
+        "id": "-4221892085970556011-2510201807-1",
+        "type": "RB",
+        "number": "57977",
+        "direction": "Boxberg-Wölchingen",
+        "platform": "2",
+        "time": "2510201807",
+        "destination": "Boxberg-Wölchingen",
+        "path_stations": [
+          "Würzburg Süd",
+          "Reichenberg(Unterfr)",
+          "Geroldshausen",
+          "Kirchheim(Unterfr)",
+          "Gaubüttelbrunn",
+          "Wittighausen",
+          "Zimmern(Main-Tauber)",
+          "Grünsfeld",
+          "Gerlachsheim",
+          "Lauda",
+          "Boxberg-Wölchingen"
+        ]
+      },
+      {
+        "id": "2006650266683945588-2510201416-8",
+        "type": "ICE",
+        "number": "681",
+        "direction": "München Hbf",
+        "platform": "5",
+        "time": "2510201831",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Nürnberg Hbf",
+          "Ingolstadt Hbf",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "1399176191624882982-2510201837-1",
+        "type": "RE",
+        "number": "21961",
+        "direction": "Lauda",
+        "platform": "",
+        "time": "2510201837",
+        "destination": "Lauda",
+        "path_stations": [
+          "Lauda"
+        ]
+      },
+      {
+        "id": "7614041139946674531-2510201822-1",
+        "type": "RB",
+        "number": "58064",
+        "direction": "Karlstadt(Main)",
+        "platform": "8",
+        "time": "2510201822",
+        "destination": "Karlstadt(Main)",
+        "path_stations": [
+          "Würzburg-Zell",
+          "Veitshöchheim",
+          "Thüngersheim",
+          "Retzbach-Zellingen",
+          "Himmelstadt",
+          "Karlstadt(Main)"
+        ]
+      },
+      {
+        "id": "-721807130937592434-2510201313-9",
+        "type": "ICE",
+        "number": "90",
+        "direction": "Hamburg-Altona",
+        "platform": "7",
+        "time": "2510201826",
+        "destination": "Hamburg-Altona",
+        "path_stations": [
+          "Fulda",
+          "Kassel-Wilhelmshöhe",
+          "Göttingen",
+          "Hannover Hbf",
+          "Hamburg-Harburg",
+          "Hamburg Hbf",
+          "Hamburg Dammtor",
+          "Hamburg-Altona"
+        ]
+      },
+      {
+        "id": "958240752594003824-2510201454-8",
+        "type": "ICE",
+        "number": "723",
+        "direction": "München Hbf",
+        "platform": "4",
+        "time": "2510201803",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Nürnberg Hbf",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "4292825798451474759-2510201830-1",
+        "type": "Bus",
+        "number": "58165",
+        "direction": "Marktbreit",
+        "platform": "",
+        "time": "2510201830",
+        "destination": "Marktbreit",
+        "path_stations": [
+          "Würzburg Süd",
+          "Würzburg-Heidingsfeld Ost",
+          "Winterhausen",
+          "Goßmannsdorf",
+          "Ochsenfurt",
+          "Marktbreit"
+        ]
+      },
+      {
+        "id": "4647941454054225663-2510201735-16",
+        "type": "RB",
+        "number": "58067",
+        "direction": "Bamberg",
+        "platform": "5",
+        "time": "2510201908",
+        "destination": "Bamberg",
+        "path_stations": [
+          "Rottendorf",
+          "Seligenstadt(b Würzburg)",
+          "Bergtheim",
+          "Eßleben",
+          "Waigolshausen",
+          "Schweinfurt Hbf",
+          "Schweinfurt Mitte",
+          "Schweinfurt Stadt",
+          "Schonungen",
+          "Haßfurt",
+          "Zeil",
+          "Ebelsbach-Eltmann",
+          "Oberhaid",
+          "Bamberg"
+        ]
+      },
+      {
+        "id": "-566732643625155291-2510201716-4",
+        "type": "ICE",
+        "number": "582",
+        "direction": "Hamburg Hbf",
+        "platform": "6",
+        "time": "2510201927",
+        "destination": "Hamburg Hbf",
+        "path_stations": [
+          "Fulda",
+          "Kassel-Wilhelmshöhe",
+          "Göttingen",
+          "Hannover Hbf",
+          "Hamburg-Harburg",
+          "Hamburg Hbf"
+        ]
+      },
+      {
+        "id": "-6502961489494378196-2510201741-15",
+        "type": "RB",
+        "number": "58068",
+        "direction": "Schlüchtern",
+        "platform": "7",
+        "time": "2510201901",
+        "destination": "Schlüchtern",
+        "path_stations": [
+          "Würzburg-Zell",
+          "Veitshöchheim",
+          "Thüngersheim",
+          "Retzbach-Zellingen",
+          "Himmelstadt",
+          "Karlstadt(Main)",
+          "Wernfeld",
+          "Gemünden(Main)",
+          "Rieneck",
+          "Burgsinn",
+          "Mittelsinn",
+          "Obersinn",
+          "Jossa",
+          "Sterbfritz",
+          "Schlüchtern"
+        ]
+      },
+      {
+        "id": "6013213540626996483-2510201554-8",
+        "type": "ICE",
+        "number": "725",
+        "direction": "München Hbf",
+        "platform": "4",
+        "time": "2510201903",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Nürnberg Hbf",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "-8138362163861218620-2510201716-4",
+        "type": "ICE",
+        "number": "532",
+        "direction": "Oldenburg(Oldb)Hbf",
+        "platform": "6",
+        "time": "2510201927",
+        "destination": "Oldenburg(Oldb)Hbf",
+        "path_stations": [
+          "Fulda",
+          "Kassel-Wilhelmshöhe",
+          "Göttingen",
+          "Hannover Hbf",
+          "Nienburg(Weser)",
+          "Verden(Aller)",
+          "Bremen Hbf",
+          "Delmenhorst",
+          "Oldenburg(Oldb)Hbf"
+        ]
+      },
+      {
+        "id": "-1497213994658544450-2510201139-17",
+        "type": "ICE",
+        "number": "927",
+        "direction": "Passau Hbf",
+        "platform": "4",
+        "time": "2510201934",
+        "destination": "Passau Hbf",
+        "path_stations": [
+          "Nürnberg Hbf",
+          "Regensburg Hbf",
+          "Plattling",
+          "Passau Hbf"
+        ]
+      },
+      {
+        "id": "9142813261556521089-2510201937-1",
+        "type": "RE",
+        "number": "4630",
+        "direction": "Frankfurt(Main)Hbf",
+        "platform": "11",
+        "time": "2510201937",
+        "destination": "Frankfurt(Main)Hbf",
+        "path_stations": [
+          "Retzbach-Zellingen",
+          "Karlstadt(Main)",
+          "Gemünden(Main)",
+          "Langenprozelten",
+          "Lohr Bahnhof",
+          "Partenstein",
+          "Wiesthal",
+          "Heigenbrücken",
+          "Aschaffenburg Hbf",
+          "Kleinostheim",
+          "Dettingen(Main)",
+          "Kahl(Main)",
+          "Hanau Hbf",
+          "Offenbach(Main)Hbf",
+          "Frankfurt(Main)Süd",
+          "Frankfurt(Main)Hbf"
+        ]
+      },
+      {
+        "id": "4009932964148084182-2510201734-17",
+        "type": "RE",
+        "number": "4625",
+        "direction": "Bamberg",
+        "platform": "9 E-F",
+        "time": "2510201939",
+        "destination": "Bamberg",
+        "path_stations": [
+          "Schweinfurt Hbf",
+          "Haßfurt",
+          "Bamberg"
+        ]
+      },
+      {
+        "id": "2347230914193742902-2510201937-1",
+        "type": "RE",
+        "number": "19083",
+        "direction": "Lauda",
+        "platform": "2",
+        "time": "2510201937",
+        "destination": "Lauda",
+        "path_stations": [
+          "Lauda"
+        ]
+      },
+      {
+        "id": "-988583344704703688-2510201554-8",
+        "type": "ICE",
+        "number": "883",
+        "direction": "München Hbf",
+        "platform": "5",
+        "time": "2510201929",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Nürnberg Hbf",
+          "Ingolstadt Hbf",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "3035103638737948966-2510201906-1",
+        "type": "RB",
+        "number": "57979",
+        "direction": "Boxberg-Wölchingen",
+        "platform": "2",
+        "time": "2510201906",
+        "destination": "Boxberg-Wölchingen",
+        "path_stations": [
+          "Würzburg Süd",
+          "Reichenberg(Unterfr)",
+          "Geroldshausen",
+          "Kirchheim(Unterfr)",
+          "Gaubüttelbrunn",
+          "Wittighausen",
+          "Zimmern(Main-Tauber)",
+          "Grünsfeld",
+          "Gerlachsheim",
+          "Lauda",
+          "Boxberg-Wölchingen"
+        ]
+      },
+      {
+        "id": "-4886494141291006718-2510201941-1",
+        "type": "RE",
+        "number": "58231",
+        "direction": "Nürnberg Hbf",
+        "platform": "9",
+        "time": "2510201941",
+        "destination": "Nürnberg Hbf",
+        "path_stations": [
+          "Rottendorf",
+          "Dettelbach Bahnhof",
+          "Buchbrunn-Mainstockheim",
+          "Kitzingen",
+          "Iphofen",
+          "Markt Bibart",
+          "Neustadt(Aisch)Bahnhof",
+          "Emskirchen",
+          "Siegelsdorf",
+          "Fürth(Bay)Hbf",
+          "Nürnberg Hbf"
+        ]
+      },
+      {
+        "id": "3736117015423388331-2510201751-3",
+        "type": "ICE",
+        "number": "526",
+        "direction": "Dortmund Hbf",
+        "platform": "6",
+        "time": "2510201954",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Aschaffenburg Hbf",
+          "Frankfurt(Main)Hbf",
+          "Frankfurt(M) Flughafen Fernbf",
+          "Köln Messe/Deutz Gl.11-12",
+          "Düsseldorf Hbf",
+          "Duisburg Hbf",
+          "Essen Hbf",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-6341401029022658133-2510201651-8",
+        "type": "ICE",
+        "number": "727",
+        "direction": "München Hbf",
+        "platform": "4",
+        "time": "2510202003",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Nürnberg Hbf",
+          "Ingolstadt Hbf",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "-7569472672372385119-2510202006-1",
+        "type": "RB",
+        "number": "57981",
+        "direction": "Boxberg-Wölchingen",
+        "platform": "2",
+        "time": "2510202006",
+        "destination": "Boxberg-Wölchingen",
+        "path_stations": [
+          "Würzburg Süd",
+          "Reichenberg(Unterfr)",
+          "Geroldshausen",
+          "Kirchheim(Unterfr)",
+          "Gaubüttelbrunn",
+          "Wittighausen",
+          "Zimmern(Main-Tauber)",
+          "Grünsfeld",
+          "Gerlachsheim",
+          "Lauda",
+          "Boxberg-Wölchingen"
+        ]
+      },
+      {
+        "id": "434699660439512752-2510201715-6",
+        "type": "ICE",
+        "number": "633",
+        "direction": "München Hbf",
+        "platform": "4",
+        "time": "2510202030",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Nürnberg Hbf",
+          "Ingolstadt Hbf",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "1848798892491687320-2510202041-1",
+        "type": "RE",
+        "number": "58233",
+        "direction": "Nürnberg Hbf",
+        "platform": "8",
+        "time": "2510202041",
+        "destination": "Nürnberg Hbf",
+        "path_stations": [
+          "Rottendorf",
+          "Dettelbach Bahnhof",
+          "Buchbrunn-Mainstockheim",
+          "Kitzingen",
+          "Iphofen",
+          "Markt Bibart",
+          "Neustadt(Aisch)Bahnhof",
+          "Emskirchen",
+          "Siegelsdorf",
+          "Fürth(Bay)Hbf",
+          "Nürnberg Hbf"
+        ]
+      },
+      {
+        "id": "5399349176998465879-2510202001-1",
+        "type": "RE",
+        "number": "3784",
+        "direction": "Bad Kissingen",
+        "platform": "11",
+        "time": "2510202001",
+        "destination": "Bad Kissingen",
+        "path_stations": [
+          "Schweinfurt Hbf",
+          "Ebenhausen(Unterfr)",
+          "Oerlenbach",
+          "Bad Kissingen"
+        ]
+      },
+      {
+        "id": "899526545449232559-2510201926-4",
+        "type": "RE",
+        "number": "4632",
+        "direction": "Frankfurt(Main)Hbf",
+        "platform": "11",
+        "time": "2510202037",
+        "destination": "Frankfurt(Main)Hbf",
+        "path_stations": [
+          "Retzbach-Zellingen",
+          "Karlstadt(Main)",
+          "Gemünden(Main)",
+          "Langenprozelten",
+          "Lohr Bahnhof",
+          "Partenstein",
+          "Wiesthal",
+          "Heigenbrücken",
+          "Aschaffenburg Hbf",
+          "Kleinostheim",
+          "Rückersbacher Schlucht",
+          "Dettingen(Main)",
+          "Kahl(Main)",
+          "Großkrotzenburg",
+          "Großauheim(Kr Hanau)",
+          "Hanau Hbf",
+          "Hanau West",
+          "Hanau-Wilhelmsbad",
+          "Maintal Ost",
+          "Maintal West",
+          "Frankfurt-Mainkur",
+          "Frankfurt(Main)Ost",
+          "Frankfurt(Main)Süd",
+          "Frankfurt(Main)Hbf"
+        ]
+      },
+      {
+        "id": "5211373871464484357-2510202001-1",
+        "type": "RE",
+        "number": "3764",
+        "direction": "Erfurt Hbf",
+        "platform": "11",
+        "time": "2510202001",
+        "destination": "Erfurt Hbf",
+        "path_stations": [
+          "Schweinfurt Hbf",
+          "Ebenhausen(Unterfr)",
+          "Münnerstadt",
+          "Bad Neustadt(Saale)",
+          "Mellrichstadt Bf",
+          "Rentwertshausen",
+          "Grimmenthal",
+          "Rohr(Thür)",
+          "Dietzhausen",
+          "Suhl",
+          "Zella-Mehlis",
+          "Gräfenroda",
+          "Plaue(Thür)",
+          "Arnstadt Hbf",
+          "Neudietendorf",
+          "Erfurt Hbf"
+        ]
+      },
+      {
+        "id": "-2182448810912761135-2510202028-1",
+        "type": "RB",
+        "number": "58072",
+        "direction": "Jossa",
+        "platform": "7",
+        "time": "2510202028",
+        "destination": "Jossa",
+        "path_stations": [
+          "Würzburg-Zell",
+          "Veitshöchheim",
+          "Thüngersheim",
+          "Retzbach-Zellingen",
+          "Himmelstadt",
+          "Karlstadt(Main)",
+          "Wernfeld",
+          "Gemünden(Main)",
+          "Rieneck",
+          "Burgsinn",
+          "Mittelsinn",
+          "Obersinn",
+          "Jossa"
+        ]
+      },
+      {
+        "id": "-1290839640796586839-2510201818-4",
+        "type": "ICE",
+        "number": "782",
+        "direction": "Hamburg Hbf",
+        "platform": "5",
+        "time": "2510202027",
+        "destination": "Hamburg Hbf",
+        "path_stations": [
+          "Fulda",
+          "Kassel-Wilhelmshöhe",
+          "Göttingen",
+          "Hannover Hbf",
+          "Celle",
+          "Uelzen",
+          "Lüneburg",
+          "Hamburg-Harburg",
+          "Hamburg Hbf"
+        ]
+      },
+      {
+        "id": "8205144232781928328-2510201513-9",
+        "type": "ICE",
+        "number": "22",
+        "direction": "Frankfurt(Main)Hbf",
+        "platform": "6",
+        "time": "2510202024",
+        "destination": "Frankfurt(Main)Hbf",
+        "path_stations": [
+          "Hanau Hbf",
+          "Frankfurt(Main)Hbf"
+        ]
+      },
+      {
+        "id": "-7179928820236290043-2510201636-9",
+        "type": "ICE",
+        "number": "683",
+        "direction": "München Hbf",
+        "platform": "4",
+        "time": "2510202030",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Nürnberg Hbf",
+          "Ingolstadt Hbf",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "6628828134093893366-2510202035-1",
+        "type": "RE",
+        "number": "4795",
+        "direction": "Bamberg",
+        "platform": "10 D-F",
+        "time": "2510202035",
+        "destination": "Bamberg",
+        "path_stations": [
+          "Schweinfurt Hbf",
+          "Haßfurt",
+          "Bamberg"
+        ]
+      },
+      {
+        "id": "-6524998557445987060-2510201847-3",
+        "type": "ICE",
+        "number": "524",
+        "direction": "Dortmund Hbf",
+        "platform": "6",
+        "time": "2510202054",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Aschaffenburg Hbf",
+          "Frankfurt(Main)Hbf",
+          "Frankfurt(M) Flughafen Fernbf",
+          "Limburg Süd",
+          "Montabaur",
+          "Siegburg/Bonn",
+          "Köln/Bonn Flughafen",
+          "Köln Messe/Deutz Gl.11-12",
+          "Düsseldorf Hbf",
+          "Duisburg Hbf",
+          "Essen Hbf",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-6011663053134895080-2510201835-16",
+        "type": "RB",
+        "number": "58071",
+        "direction": "Bamberg",
+        "platform": "5",
+        "time": "2510202008",
+        "destination": "Bamberg",
+        "path_stations": [
+          "Rottendorf",
+          "Seligenstadt(b Würzburg)",
+          "Bergtheim",
+          "Eßleben",
+          "Waigolshausen",
+          "Schweinfurt Hbf",
+          "Schweinfurt Mitte",
+          "Schweinfurt Stadt",
+          "Schonungen",
+          "Haßfurt",
+          "Zeil",
+          "Ebelsbach-Eltmann",
+          "Oberhaid",
+          "Bamberg"
+        ]
+      },
+      {
+        "id": "2100913174972790746-2510202037-1",
+        "type": "RE",
+        "number": "19085",
+        "direction": "Lauda",
+        "platform": "2",
+        "time": "2510202037",
+        "destination": "Lauda",
+        "path_stations": [
+          "Lauda"
+        ]
+      },
+      {
+        "id": "5324821628306728469-2510201754-8",
+        "type": "ICE",
+        "number": "729",
+        "direction": "München Hbf",
+        "platform": "4",
+        "time": "2510202103",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Nürnberg Hbf",
+          "Ingolstadt Hbf",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "1556741539828157941-2510202135-1",
+        "type": "RE",
+        "number": "4634",
+        "direction": "Frankfurt(Main)Hbf",
+        "platform": "10A-C",
+        "time": "2510202135",
+        "destination": "Frankfurt(Main)Hbf",
+        "path_stations": [
+          "Würzburg-Zell",
+          "Veitshöchheim",
+          "Thüngersheim",
+          "Retzbach-Zellingen",
+          "Himmelstadt",
+          "Karlstadt(Main)",
+          "Wernfeld",
+          "Gemünden(Main)",
+          "Langenprozelten",
+          "Lohr Bahnhof",
+          "Partenstein",
+          "Wiesthal",
+          "Heigenbrücken",
+          "Laufach",
+          "Hösbach",
+          "Aschaffenburg Hbf",
+          "Kleinostheim",
+          "Rückersbacher Schlucht",
+          "Dettingen(Main)",
+          "Kahl(Main)",
+          "Großkrotzenburg",
+          "Großauheim(Kr Hanau)",
+          "Hanau Hbf",
+          "Hanau West",
+          "Hanau-Wilhelmsbad",
+          "Maintal Ost",
+          "Maintal West",
+          "Frankfurt-Mainkur",
+          "Frankfurt(Main)Ost",
+          "Frankfurt(Main)Süd",
+          "Frankfurt(Main)Hbf"
+        ]
+      },
+      {
+        "id": "-6883336439763088458-2510202148-1",
+        "type": "RE",
+        "number": "58237",
+        "direction": "Nürnberg Hbf",
+        "platform": "8",
+        "time": "2510202148",
+        "destination": "Nürnberg Hbf",
+        "path_stations": [
+          "Rottendorf",
+          "Dettelbach Bahnhof",
+          "Buchbrunn-Mainstockheim",
+          "Kitzingen",
+          "Iphofen",
+          "Markt Bibart",
+          "Neustadt(Aisch)Bahnhof",
+          "Neustadt(Aisch)Mitte",
+          "Emskirchen",
+          "Hagenbüchach",
+          "Puschendorf",
+          "Siegelsdorf",
+          "Fürth-Burgfarrnbach",
+          "Fürth-Unterfürberg",
+          "Fürth(Bay)Hbf",
+          "Nürnberg Hbf"
+        ]
+      },
+      {
+        "id": "5375326263046654482-2510201917-4",
+        "type": "ICE",
+        "number": "580",
+        "direction": "Kassel-Wilhelmshöhe",
+        "platform": "6",
+        "time": "2510202127",
+        "destination": "Kassel-Wilhelmshöhe",
+        "path_stations": [
+          "Fulda",
+          "Kassel-Wilhelmshöhe"
+        ]
+      },
+      {
+        "id": "3171766976891944720-2510202137-1",
+        "type": "RE",
+        "number": "19087",
+        "direction": "Lauda",
+        "platform": "2",
+        "time": "2510202137",
+        "destination": "Lauda",
+        "path_stations": [
+          "Lauda"
+        ]
+      },
+      {
+        "id": "5605830381281528832-2510202143-1",
+        "type": "RB",
+        "number": "58275",
+        "direction": "Bamberg",
+        "platform": "9",
+        "time": "2510202143",
+        "destination": "Bamberg",
+        "path_stations": [
+          "Rottendorf",
+          "Seligenstadt(b Würzburg)",
+          "Bergtheim",
+          "Eßleben",
+          "Waigolshausen",
+          "Schweinfurt Hbf",
+          "Schweinfurt Mitte",
+          "Schweinfurt Stadt",
+          "Schonungen",
+          "Haßfurt",
+          "Zeil",
+          "Ebelsbach-Eltmann",
+          "Oberhaid",
+          "Bamberg"
+        ]
+      },
+      {
+        "id": "8428028954903351107-2510201635-12",
+        "type": "ICE",
+        "number": "929",
+        "direction": "Nürnberg Hbf",
+        "platform": "5",
+        "time": "2510202134",
+        "destination": "Nürnberg Hbf",
+        "path_stations": [
+          "Nürnberg Hbf"
+        ]
+      },
+      {
+        "id": "-223421926958290666-2510201634-10",
+        "type": "ICE",
+        "number": "885",
+        "direction": "München Hbf",
+        "platform": "4",
+        "time": "2510202129",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Nürnberg Hbf",
+          "Ingolstadt Hbf",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "-4383803236760390820-2510201947-4",
+        "type": "ICE",
+        "number": "522",
+        "direction": "Köln Hbf",
+        "platform": "6",
+        "time": "2510202154",
+        "destination": "Köln Hbf",
+        "path_stations": [
+          "Aschaffenburg Hbf",
+          "Hanau Hbf",
+          "Frankfurt(Main)Hbf",
+          "Frankfurt(M) Flughafen Fernbf",
+          "Limburg Süd",
+          "Montabaur",
+          "Siegburg/Bonn",
+          "Köln Hbf"
+        ]
+      },
+      {
+        "id": "8614367859162303290-2510201930-22",
+        "type": "RE",
+        "number": "4629",
+        "direction": "Bamberg",
+        "platform": "11",
+        "time": "2510202139",
+        "destination": "Bamberg",
+        "path_stations": [
+          "Schweinfurt Hbf",
+          "Haßfurt",
+          "Bamberg"
+        ]
+      },
+      {
+        "id": "-9028186809002325365-2510202107-1",
+        "type": "RB",
+        "number": "57983",
+        "direction": "Lauda",
+        "platform": "2",
+        "time": "2510202107",
+        "destination": "Lauda",
+        "path_stations": [
+          "Würzburg Süd",
+          "Reichenberg(Unterfr)",
+          "Geroldshausen",
+          "Kirchheim(Unterfr)",
+          "Gaubüttelbrunn",
+          "Wittighausen",
+          "Zimmern(Main-Tauber)",
+          "Grünsfeld",
+          "Gerlachsheim",
+          "Lauda"
+        ]
+      },
+      {
+        "id": "9117006994590991223-2510202236-1",
+        "type": "RE",
+        "number": "4636",
+        "direction": "Frankfurt(Main)Hbf",
+        "platform": "7",
+        "time": "2510202236",
+        "destination": "Frankfurt(Main)Hbf",
+        "path_stations": [
+          "Würzburg-Zell",
+          "Veitshöchheim",
+          "Thüngersheim",
+          "Retzbach-Zellingen",
+          "Himmelstadt",
+          "Karlstadt(Main)",
+          "Wernfeld",
+          "Gemünden(Main)",
+          "Langenprozelten",
+          "Lohr Bahnhof",
+          "Partenstein",
+          "Wiesthal",
+          "Heigenbrücken",
+          "Laufach",
+          "Hösbach",
+          "Aschaffenburg Hbf",
+          "Kleinostheim",
+          "Rückersbacher Schlucht",
+          "Dettingen(Main)",
+          "Kahl(Main)",
+          "Großkrotzenburg",
+          "Großauheim(Kr Hanau)",
+          "Hanau Hbf",
+          "Hanau West",
+          "Hanau-Wilhelmsbad",
+          "Maintal Ost",
+          "Maintal West",
+          "Frankfurt-Mainkur",
+          "Frankfurt(Main)Ost",
+          "Frankfurt(Main)Süd",
+          "Frankfurt(Main)Hbf"
+        ]
+      },
+      {
+        "id": "2143499115056676952-2510201839-10",
+        "type": "ICE",
+        "number": "821",
+        "direction": "München Hbf",
+        "platform": "4",
+        "time": "2510202203",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Nürnberg Hbf",
+          "Ingolstadt Hbf",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "5903101010412136106-2510201713-10",
+        "type": "ICE",
+        "number": "20",
+        "direction": "Frankfurt(Main)Hbf",
+        "platform": "6",
+        "time": "2510202224",
+        "destination": "Frankfurt(Main)Hbf",
+        "path_stations": [
+          "Aschaffenburg Hbf",
+          "Hanau Hbf",
+          "Frankfurt(Main)Hbf"
+        ]
+      },
+      {
+        "id": "-7466466031288210975-2510202237-1",
+        "type": "RB",
+        "number": "19089",
+        "direction": "Lauda",
+        "platform": "3",
+        "time": "2510202237",
+        "destination": "Lauda",
+        "path_stations": [
+          "Würzburg Süd",
+          "Reichenberg(Unterfr)",
+          "Geroldshausen",
+          "Kirchheim(Unterfr)",
+          "Gaubüttelbrunn",
+          "Wittighausen",
+          "Zimmern(Main-Tauber)",
+          "Grünsfeld",
+          "Gerlachsheim",
+          "Lauda"
+        ]
+      },
+      {
+        "id": "3365409376481099659-2510201915-6",
+        "type": "ICE",
+        "number": "635",
+        "direction": "Nürnberg Hbf",
+        "platform": "5",
+        "time": "2510202229",
+        "destination": "Nürnberg Hbf",
+        "path_stations": [
+          "Nürnberg Hbf"
+        ]
+      },
+      {
+        "id": "8573811631662133764-2510202048-4",
+        "type": "ICE",
+        "number": "520",
+        "direction": "Frankfurt(Main)Hbf",
+        "platform": "6",
+        "time": "2510202255",
+        "destination": "Frankfurt(Main)Hbf",
+        "path_stations": [
+          "Aschaffenburg Hbf",
+          "Frankfurt(Main)Hbf"
+        ]
+      },
+      {
+        "id": "-8728315404525185962-2510202235-1",
+        "type": "RE",
+        "number": "4797",
+        "direction": "Bamberg",
+        "platform": "10 D-F",
+        "time": "2510202235",
+        "destination": "Bamberg",
+        "path_stations": [
+          "Schweinfurt Hbf",
+          "Haßfurt",
+          "Bamberg"
+        ]
+      },
+      {
+        "id": "-524151628723159576-2510201854-8",
+        "type": "ICE",
+        "number": "685",
+        "direction": "Nürnberg Hbf",
+        "platform": "5",
+        "time": "2510202229",
+        "destination": "Nürnberg Hbf",
+        "path_stations": [
+          "Nürnberg Hbf"
+        ]
+      },
+      {
+        "id": "-4605241284401770863-2510202343-1",
+        "type": "RB",
+        "number": "21963",
+        "direction": "Lauda",
+        "platform": "",
+        "time": "2510202343",
+        "destination": "Lauda",
+        "path_stations": [
+          "Würzburg Süd",
+          "Reichenberg(Unterfr)",
+          "Geroldshausen",
+          "Kirchheim(Unterfr)",
+          "Gaubüttelbrunn",
+          "Wittighausen",
+          "Zimmern(Main-Tauber)",
+          "Grünsfeld",
+          "Gerlachsheim",
+          "Lauda"
+        ]
+      },
+      {
+        "id": "2312296716933966404-2510201555-17",
+        "type": "ICE",
+        "number": "1021",
+        "direction": "Nürnberg Hbf",
+        "platform": "5",
+        "time": "2510202346",
+        "destination": "Nürnberg Hbf",
+        "path_stations": [
+          "Nürnberg Hbf"
+        ]
+      },
+      {
+        "id": "3735011379937895109-2510202340-1",
+        "type": "RE",
+        "number": "4638",
+        "direction": "Aschaffenburg Hbf",
+        "platform": "10",
+        "time": "2510202340",
+        "destination": "Aschaffenburg Hbf",
+        "path_stations": [
+          "Würzburg-Zell",
+          "Veitshöchheim",
+          "Thüngersheim",
+          "Retzbach-Zellingen",
+          "Himmelstadt",
+          "Karlstadt(Main)",
+          "Wernfeld",
+          "Gemünden(Main)",
+          "Langenprozelten",
+          "Lohr Bahnhof",
+          "Partenstein",
+          "Wiesthal",
+          "Heigenbrücken",
+          "Laufach",
+          "Hösbach",
+          "Aschaffenburg Hbf"
+        ]
+      },
+      {
+        "id": "3326383544585065094-2510202307-1",
+        "type": "RB",
+        "number": "58279",
+        "direction": "Bamberg",
+        "platform": "11",
+        "time": "2510202307",
+        "destination": "Bamberg",
+        "path_stations": [
+          "Rottendorf",
+          "Seligenstadt(b Würzburg)",
+          "Bergtheim",
+          "Eßleben",
+          "Waigolshausen",
+          "Schweinfurt Hbf",
+          "Schweinfurt Mitte",
+          "Schweinfurt Stadt",
+          "Schonungen",
+          "Haßfurt",
+          "Zeil",
+          "Ebelsbach-Eltmann",
+          "Oberhaid",
+          "Bamberg"
+        ]
+      },
+      {
+        "id": "-5857458160932928528-2510202304-1",
+        "type": "RE",
+        "number": "58239",
+        "direction": "Nürnberg Hbf",
+        "platform": "8",
+        "time": "2510202304",
+        "destination": "Nürnberg Hbf",
+        "path_stations": [
+          "Rottendorf",
+          "Dettelbach Bahnhof",
+          "Buchbrunn-Mainstockheim",
+          "Kitzingen",
+          "Iphofen",
+          "Markt Bibart",
+          "Neustadt(Aisch)Bahnhof",
+          "Neustadt(Aisch)Mitte",
+          "Emskirchen",
+          "Hagenbüchach",
+          "Puschendorf",
+          "Siegelsdorf",
+          "Fürth-Burgfarrnbach",
+          "Fürth-Unterfürberg",
+          "Fürth(Bay)Hbf",
+          "Nürnberg Hbf"
+        ]
+      },
+      {
+        "id": "-4833885411595418457-2510210036-1",
+        "type": "RB",
+        "number": "58281",
+        "direction": "Schweinfurt Stadt",
+        "platform": "10",
+        "time": "2510210036",
+        "destination": "Schweinfurt Stadt",
+        "path_stations": [
+          "Rottendorf",
+          "Seligenstadt(b Würzburg)",
+          "Bergtheim",
+          "Eßleben",
+          "Waigolshausen",
+          "Schweinfurt Hbf",
+          "Schweinfurt Mitte",
+          "Schweinfurt Stadt"
+        ]
+      },
+      {
+        "id": "-6911535029359117534-2510210036-1",
+        "type": "RE",
+        "number": "58099",
+        "direction": "Kitzingen",
+        "platform": "7 E-G",
+        "time": "2510210036",
+        "destination": "Kitzingen",
+        "path_stations": [
+          "Rottendorf",
+          "Dettelbach Bahnhof",
+          "Buchbrunn-Mainstockheim",
+          "Kitzingen"
+        ]
+      },
+      {
+        "id": "2297887253913206005-2510210040-1",
+        "type": "Bus",
+        "number": "58169",
+        "direction": "Marktbreit",
+        "platform": "",
+        "time": "2510210040",
+        "destination": "Marktbreit",
+        "path_stations": [
+          "Würzburg Süd",
+          "Würzburg-Heidingsfeld Ost",
+          "Winterhausen",
+          "Goßmannsdorf",
+          "Ochsenfurt",
+          "Marktbreit"
+        ]
+      },
+      {
+        "id": "-5359073389196170965-2510210044-1",
+        "type": "RE",
+        "number": "58406",
+        "direction": "Gemünden(Main)",
+        "platform": "7A-D",
+        "time": "2510210044",
+        "destination": "Gemünden(Main)",
+        "path_stations": [
+          "Würzburg-Zell",
+          "Veitshöchheim",
+          "Thüngersheim",
+          "Retzbach-Zellingen",
+          "Himmelstadt",
+          "Karlstadt(Main)",
+          "Wernfeld",
+          "Gemünden(Main)"
+        ]
+      },
+      {
+        "id": "8209469800275406026-2510202217-4",
+        "type": "ICE",
+        "number": "1080",
+        "direction": "Hamburg Hbf",
+        "platform": "6",
+        "time": "2510210118",
+        "destination": "Hamburg Hbf",
+        "path_stations": [
+          "Göttingen",
+          "Hannover Hbf",
+          "Celle",
+          "Uelzen",
+          "Lüneburg",
+          "Hamburg-Harburg",
+          "Hamburg Hbf"
+        ]
+      },
+      {
+        "id": "6992012378128167215-2510201956-6",
+        "type": "NJ",
+        "number": "40491",
+        "direction": "Innsbruck Hbf",
+        "platform": "5",
+        "time": "2510210148",
+        "destination": "Innsbruck Hbf",
+        "path_stations": [
+          "Nürnberg Hbf",
+          "München Hbf",
+          "Rosenheim",
+          "Kufstein",
+          "Wörgl Hbf",
+          "Jenbach",
+          "Innsbruck Hbf"
+        ]
+      },
+      {
+        "id": "-2044723357159653206-2510201956-6",
+        "type": "NJ",
+        "number": "491",
+        "direction": "Wien Hbf",
+        "platform": "5",
+        "time": "2510210148",
+        "destination": "Wien Hbf",
+        "path_stations": [
+          "Nürnberg Hbf",
+          "Regensburg Hbf",
+          "Passau Hbf",
+          "Wels Hbf",
+          "Linz Hbf",
+          "St.Pölten Hbf",
+          "Wien Meidling",
+          "Wien Hbf"
+        ]
+      },
+      {
+        "id": "-3823254010841261196-2510201900-7",
+        "type": "NJ",
+        "number": "421",
+        "direction": "Innsbruck Hbf",
+        "platform": "4",
+        "time": "2510210247",
+        "destination": "Innsbruck Hbf",
+        "path_stations": [
+          "Nürnberg Hbf",
+          "München Hbf",
+          "Rosenheim",
+          "Kufstein",
+          "Wörgl Hbf",
+          "Jenbach",
+          "Innsbruck Hbf"
+        ]
+      },
+      {
+        "id": "-8677182982400525824-2510202046-8",
+        "type": "NJ",
+        "number": "40420",
+        "direction": "Hamburg-Altona",
+        "platform": "7",
+        "time": "2510210236",
+        "destination": "Hamburg-Altona",
+        "path_stations": [
+          "Kassel-Wilhelmshöhe",
+          "Göttingen",
+          "Hannover Hbf",
+          "Hamburg-Harburg",
+          "Hamburg Hbf",
+          "Hamburg Dammtor",
+          "Hamburg-Altona"
+        ]
+      },
+      {
+        "id": "-6813803786124510421-2510202010-9",
+        "type": "NJ",
+        "number": "40490",
+        "direction": "Amsterdam Centraal",
+        "platform": "6",
+        "time": "2510210232",
+        "destination": "Amsterdam Centraal",
+        "path_stations": [
+          "Kassel-Wilhelmshöhe",
+          "Hamm(Westf)Hbf",
+          "Münster(Westf)Hbf",
+          "Deventer",
+          "Amersfoort Centraal",
+          "Amsterdam Centraal"
+        ]
+      },
+      {
+        "id": "3272146161175325165-2510202046-8",
+        "type": "NJ",
+        "number": "420",
+        "direction": "Amsterdam Centraal",
+        "platform": "6",
+        "time": "2510210232",
+        "destination": "Amsterdam Centraal",
+        "path_stations": [
+          "Kassel-Wilhelmshöhe",
+          "Hamm(Westf)Hbf",
+          "Münster(Westf)Hbf",
+          "Deventer",
+          "Amersfoort Centraal",
+          "Amsterdam Centraal"
+        ]
+      },
+      {
+        "id": "-7547304040443208216-2510202010-9",
+        "type": "NJ",
+        "number": "490",
+        "direction": "Hamburg-Altona",
+        "platform": "7",
+        "time": "2510210236",
+        "destination": "Hamburg-Altona",
+        "path_stations": [
+          "Kassel-Wilhelmshöhe",
+          "Göttingen",
+          "Hannover Hbf",
+          "Hamburg-Harburg",
+          "Hamburg Hbf",
+          "Hamburg Dammtor",
+          "Hamburg-Altona"
+        ]
+      },
+      {
+        "id": "-4272298498907669914-2510201900-7",
+        "type": "NJ",
+        "number": "40421",
+        "direction": "Wien Hbf",
+        "platform": "4",
+        "time": "2510210247",
+        "destination": "Wien Hbf",
+        "path_stations": [
+          "Nürnberg Hbf",
+          "Regensburg Hbf",
+          "Passau Hbf",
+          "Wels Hbf",
+          "Linz Hbf",
+          "St.Pölten Hbf",
+          "Wien Meidling",
+          "Wien Hbf"
+        ]
+      },
+      {
+        "id": "7597089806492032299-2510202221-6",
+        "type": "ICE",
+        "number": "1081",
+        "direction": "München Hbf",
+        "platform": "5",
+        "time": "2510210354",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Nürnberg Hbf",
+          "Ingolstadt Hbf",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "-1055747470447340683-2510210419-1",
+        "type": "RE",
+        "number": "4600",
+        "direction": "Frankfurt(Main)Hbf",
+        "platform": "8A-C",
+        "time": "2510210419",
+        "destination": "Frankfurt(Main)Hbf",
+        "path_stations": [
+          "Würzburg-Zell",
+          "Veitshöchheim",
+          "Thüngersheim",
+          "Retzbach-Zellingen",
+          "Himmelstadt",
+          "Karlstadt(Main)",
+          "Wernfeld",
+          "Gemünden(Main)",
+          "Langenprozelten",
+          "Lohr Bahnhof",
+          "Partenstein",
+          "Wiesthal",
+          "Heigenbrücken",
+          "Laufach",
+          "Hösbach",
+          "Aschaffenburg Hbf",
+          "Kleinostheim",
+          "Dettingen(Main)",
+          "Kahl(Main)",
+          "Großkrotzenburg",
+          "Großauheim(Kr Hanau)",
+          "Hanau Hbf",
+          "Offenbach(Main)Hbf",
+          "Frankfurt(Main)Süd",
+          "Frankfurt(Main)Hbf"
+        ]
+      },
+      {
+        "id": "1440743783152681115-2510210438-1",
+        "type": "RE",
+        "number": "58201",
+        "direction": "Nürnberg Hbf",
+        "platform": "10",
+        "time": "2510210438",
+        "destination": "Nürnberg Hbf",
+        "path_stations": [
+          "Rottendorf",
+          "Dettelbach Bahnhof",
+          "Buchbrunn-Mainstockheim",
+          "Kitzingen",
+          "Iphofen",
+          "Markt Bibart",
+          "Neustadt(Aisch)Bahnhof",
+          "Neustadt(Aisch)Mitte",
+          "Emskirchen",
+          "Siegelsdorf",
+          "Fürth(Bay)Hbf",
+          "Nürnberg Hbf"
+        ]
+      },
+      {
+        "id": "4762485887259149637-2510210454-1",
+        "type": "RB",
+        "number": "58251",
+        "direction": "Bamberg",
+        "platform": "10",
+        "time": "2510210454",
+        "destination": "Bamberg",
+        "path_stations": [
+          "Rottendorf",
+          "Seligenstadt(b Würzburg)",
+          "Bergtheim",
+          "Eßleben",
+          "Waigolshausen",
+          "Schweinfurt Hbf",
+          "Schweinfurt Mitte",
+          "Schweinfurt Stadt",
+          "Schonungen",
+          "Haßfurt",
+          "Zeil",
+          "Ebelsbach-Eltmann",
+          "Oberhaid",
+          "Bamberg"
+        ]
+      },
+      {
+        "id": "-4185122276411590864-2510210532-1",
+        "type": "RB",
+        "number": "58292",
+        "direction": "Aschaffenburg Hbf",
+        "platform": "11",
+        "time": "2510210532",
+        "destination": "Aschaffenburg Hbf",
+        "path_stations": [
+          "Würzburg-Zell",
+          "Veitshöchheim",
+          "Thüngersheim",
+          "Retzbach-Zellingen",
+          "Himmelstadt",
+          "Karlstadt(Main)",
+          "Wernfeld",
+          "Gemünden(Main)",
+          "Langenprozelten",
+          "Lohr Bahnhof",
+          "Partenstein",
+          "Wiesthal",
+          "Heigenbrücken",
+          "Laufach",
+          "Hösbach",
+          "Aschaffenburg Hbf"
+        ]
+      },
+      {
+        "id": "1685463709709395057-2510210505-1",
+        "type": "RB",
+        "number": "57951",
+        "direction": "Boxberg-Wölchingen",
+        "platform": "3",
+        "time": "2510210505",
+        "destination": "Boxberg-Wölchingen",
+        "path_stations": [
+          "Würzburg Süd",
+          "Reichenberg(Unterfr)",
+          "Geroldshausen",
+          "Kirchheim(Unterfr)",
+          "Gaubüttelbrunn",
+          "Wittighausen",
+          "Zimmern(Main-Tauber)",
+          "Grünsfeld",
+          "Gerlachsheim",
+          "Lauda",
+          "Boxberg-Wölchingen"
+        ]
+      },
+      {
+        "id": "-2241274955247592120-2510210536-1",
+        "type": "RE",
+        "number": "58203",
+        "direction": "Nürnberg Hbf",
+        "platform": "10",
+        "time": "2510210536",
+        "destination": "Nürnberg Hbf",
+        "path_stations": [
+          "Rottendorf",
+          "Dettelbach Bahnhof",
+          "Buchbrunn-Mainstockheim",
+          "Kitzingen",
+          "Iphofen",
+          "Markt Bibart",
+          "Neustadt(Aisch)Bahnhof",
+          "Neustadt(Aisch)Mitte",
+          "Emskirchen",
+          "Hagenbüchach",
+          "Puschendorf",
+          "Siegelsdorf",
+          "Fürth-Burgfarrnbach",
+          "Fürth-Unterfürberg",
+          "Fürth(Bay)Hbf",
+          "Nürnberg Hbf"
+        ]
+      },
+      {
+        "id": "8536284617001416347-2510210515-1",
+        "type": "RE",
+        "number": "4602",
+        "direction": "Frankfurt(Main)Hbf",
+        "platform": "11",
+        "time": "2510210515",
+        "destination": "Frankfurt(Main)Hbf",
+        "path_stations": [
+          "Würzburg-Zell",
+          "Veitshöchheim",
+          "Thüngersheim",
+          "Retzbach-Zellingen",
+          "Himmelstadt",
+          "Karlstadt(Main)",
+          "Wernfeld",
+          "Gemünden(Main)",
+          "Langenprozelten",
+          "Lohr Bahnhof",
+          "Partenstein",
+          "Wiesthal",
+          "Heigenbrücken",
+          "Laufach",
+          "Hösbach",
+          "Aschaffenburg Hbf",
+          "Kleinostheim",
+          "Dettingen(Main)",
+          "Kahl(Main)",
+          "Großkrotzenburg",
+          "Hanau Hbf",
+          "Offenbach(Main)Hbf",
+          "Frankfurt(Main)Süd",
+          "Frankfurt(Main)Hbf"
+        ]
+      },
+      {
+        "id": "-5131293378113929246-2510210554-1",
+        "type": "RE",
+        "number": "58081",
+        "direction": "Kitzingen",
+        "platform": "9",
+        "time": "2510210554",
+        "destination": "Kitzingen",
+        "path_stations": [
+          "Rottendorf",
+          "Dettelbach Bahnhof",
+          "Buchbrunn-Mainstockheim",
+          "Kitzingen"
+        ]
+      }
+    ]
+  }
+}

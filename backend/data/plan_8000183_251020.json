@@ -1,0 +1,3767 @@
+{
+  "station_eva": "8000183",
+  "date": "251020",
+  "cached_at": "2025-10-20T15:48:29.353584",
+  "plan_data": {
+    "arrivals": [
+      {
+        "id": "-566732643625155291-2510201716-2",
+        "type": "ICE",
+        "number": "582",
+        "time": "2510201754",
+        "platform": "4",
+        "path_stations": [
+          "München Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-2167176296731169400-2510201234-7",
+        "type": "ICE",
+        "number": "707",
+        "time": "2510201724",
+        "platform": "3",
+        "path_stations": [
+          "Berlin Hbf",
+          "Bitterfeld",
+          "Leipzig Hbf",
+          "Erfurt Hbf",
+          "Bamberg",
+          "Nürnberg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-8138362163861218620-2510201716-2",
+        "type": "ICE",
+        "number": "532",
+        "time": "2510201754",
+        "platform": "4",
+        "path_stations": [
+          "München Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-445419195348314833-2510201728-4",
+        "type": "ag",
+        "number": "21731",
+        "time": "2510201748",
+        "platform": "6",
+        "path_stations": [
+          "Neuburg(Donau)",
+          "Rohrenfeld",
+          "Weichering"
+        ],
+        "line": "RB15"
+      },
+      {
+        "id": "3205195526778397248-2510201713-2",
+        "type": "ag",
+        "number": "84337",
+        "time": "2510201717",
+        "platform": "5",
+        "path_stations": [
+          "Ingolstadt Nord"
+        ],
+        "line": "RB17"
+      },
+      {
+        "id": "-5040697306619664939-2510201614-13",
+        "type": "ag",
+        "number": "84160",
+        "time": "2510201730",
+        "platform": "7",
+        "path_stations": [
+          "Regensburg Hbf",
+          "Regensburg-Prüfening",
+          "Sinzing",
+          "Gundelshausen",
+          "Poikam",
+          "Bad Abbach",
+          "Saal(Donau)",
+          "Abensberg",
+          "Neustadt(Donau)",
+          "Münchsmünster",
+          "Vohburg-Rockolding",
+          "Ernsgaden"
+        ],
+        "line": "RB17"
+      },
+      {
+        "id": "7584765896389479697-2510201700-6",
+        "type": "RE",
+        "number": "4698",
+        "time": "2510201752",
+        "platform": "7",
+        "path_stations": [
+          "München Hbf",
+          "Petershausen(Obb)",
+          "Pfaffenhofen(Ilm)",
+          "Rohrbach(Ilm)",
+          "Baar-Ebenhausen"
+        ],
+        "line": "1"
+      },
+      {
+        "id": "3397100192751969577-2510201154-10",
+        "type": "ICE",
+        "number": "789",
+        "time": "2510201700",
+        "platform": "3",
+        "path_stations": [
+          "Hamburg Dammtor",
+          "Hamburg Hbf",
+          "Hamburg-Harburg",
+          "Hannover Hbf",
+          "Göttingen",
+          "Kassel-Wilhelmshöhe",
+          "Fulda",
+          "Würzburg Hbf",
+          "Nürnberg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "5709112160374555400-2510201646-11",
+        "type": "BRB",
+        "number": "86720",
+        "time": "2510201747",
+        "platform": "2",
+        "path_stations": [
+          "Augsburg Hbf",
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Friedberg(Augsburg)",
+          "Dasing",
+          "Obergriesbach",
+          "Aichach",
+          "Radersdorf",
+          "Schrobenhausen",
+          "Brunnen(Oberbay)"
+        ],
+        "line": "RB13"
+      },
+      {
+        "id": "-26093661295024706-2510201608-19",
+        "type": "ag",
+        "number": "84338",
+        "time": "2510201754",
+        "platform": "5",
+        "path_stations": [
+          "Plattling",
+          "Straßkirchen",
+          "Straubing",
+          "Radldorf(Niederbay)",
+          "Sünching",
+          "Obertraubling",
+          "Regensburg-Burgweinting",
+          "Regensburg Hbf",
+          "Regensburg-Prüfening",
+          "Sinzing",
+          "Poikam",
+          "Bad Abbach",
+          "Saal(Donau)",
+          "Abensberg",
+          "Neustadt(Donau)",
+          "Münchsmünster",
+          "Vohburg-Rockolding",
+          "Ernsgaden"
+        ],
+        "line": "RB17"
+      },
+      {
+        "id": "1111100847072027067-2510201538-21",
+        "type": "RB",
+        "number": "59099",
+        "time": "2510201736",
+        "platform": "2",
+        "path_stations": [
+          "Nürnberg Hbf",
+          "Schwabach",
+          "Roth",
+          "Unterheckenhofen",
+          "Georgensgmünd",
+          "Mühlstetten",
+          "Pleinfeld",
+          "Ellingen(Bay)",
+          "Weißenburg(Bay)",
+          "Treuchtlingen",
+          "Pappenheim",
+          "Solnhofen",
+          "Dollnstein",
+          "Eichstätt Bahnhof",
+          "Adelschlag",
+          "Tauberfeld",
+          "Eitensheim",
+          "Gaimersheim",
+          "Ingolstadt Audi",
+          "Ingolstadt Nord"
+        ],
+        "line": "16"
+      },
+      {
+        "id": "3358372643788175404-2510201716-10",
+        "type": "BRB",
+        "number": "84073",
+        "time": "2510201754",
+        "platform": "2 A-C",
+        "path_stations": [
+          "Eichstätt Stadt",
+          "Rebdorf-Hofmühle",
+          "Wasserzell(b Eichstätt)",
+          "Eichstätt Bahnhof",
+          "Adelschlag",
+          "Tauberfeld",
+          "Gaimersheim",
+          "Ingolstadt Audi",
+          "Ingolstadt Nord"
+        ],
+        "line": "RB14"
+      },
+      {
+        "id": "-8110258217593167614-2510201707-5",
+        "type": "RE",
+        "number": "4031",
+        "time": "2510201757",
+        "platform": "1",
+        "path_stations": [
+          "Nürnberg Hbf",
+          "Allersberg(Rothsee)",
+          "Kinding(Altmühltal)",
+          "Ingolstadt Nord"
+        ],
+        "line": "1"
+      },
+      {
+        "id": "-6411928738155319171-2510201626-9",
+        "type": "RB",
+        "number": "59160",
+        "time": "2510201723",
+        "platform": "6",
+        "path_stations": [
+          "München Hbf",
+          "Dachau Bahnhof",
+          "Petershausen(Obb)",
+          "Paindorf",
+          "Reichertshausen(Ilm)",
+          "Pfaffenhofen(Ilm)",
+          "Rohrbach(Ilm)",
+          "Baar-Ebenhausen"
+        ],
+        "line": "16"
+      },
+      {
+        "id": "4097406752069824477-2510201735-12",
+        "type": "RB",
+        "number": "59159",
+        "time": "2510201841",
+        "platform": "2",
+        "path_stations": [
+          "Treuchtlingen",
+          "Pappenheim",
+          "Solnhofen",
+          "Dollnstein",
+          "Eichstätt Bahnhof",
+          "Adelschlag",
+          "Tauberfeld",
+          "Eitensheim",
+          "Gaimersheim",
+          "Ingolstadt Audi",
+          "Ingolstadt Nord"
+        ],
+        "line": "16"
+      },
+      {
+        "id": "-1290839640796586839-2510201818-2",
+        "type": "ICE",
+        "number": "782",
+        "time": "2510201857",
+        "platform": "4",
+        "path_stations": [
+          "München Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-1734804500819434690-2510201808-5",
+        "type": "RE",
+        "number": "4035",
+        "time": "2510201857",
+        "platform": "2",
+        "path_stations": [
+          "Nürnberg Hbf",
+          "Allersberg(Rothsee)",
+          "Kinding(Altmühltal)",
+          "Ingolstadt Nord"
+        ],
+        "line": "1"
+      },
+      {
+        "id": "8808170896533086223-2510201801-5",
+        "type": "RE",
+        "number": "59078",
+        "time": "2510201852",
+        "platform": "7",
+        "path_stations": [
+          "München Hbf",
+          "Petershausen(Obb)",
+          "Pfaffenhofen(Ilm)",
+          "Rohrbach(Ilm)"
+        ],
+        "line": "1"
+      },
+      {
+        "id": "5301498751267042861-2510201741-7",
+        "type": "RB",
+        "number": "59184",
+        "time": "2510201841",
+        "platform": "4",
+        "path_stations": [
+          "München Hbf",
+          "Dachau Bahnhof",
+          "Petershausen(Obb)",
+          "Reichertshausen(Ilm)",
+          "Pfaffenhofen(Ilm)",
+          "Rohrbach(Ilm)"
+        ],
+        "line": "16"
+      },
+      {
+        "id": "-4177690667848918592-2510201246-11",
+        "type": "ICE",
+        "number": "689",
+        "time": "2510201801",
+        "platform": "3",
+        "path_stations": [
+          "Hamburg-Altona",
+          "Hamburg Dammtor",
+          "Hamburg Hbf",
+          "Hamburg-Harburg",
+          "Hannover Hbf",
+          "Göttingen",
+          "Kassel-Wilhelmshöhe",
+          "Fulda",
+          "Würzburg Hbf",
+          "Nürnberg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-5932526768578681712-2510201745-11",
+        "type": "BRB",
+        "number": "86728",
+        "time": "2510201848",
+        "platform": "1",
+        "path_stations": [
+          "Augsburg Hbf",
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Friedberg(Augsburg)",
+          "Dasing",
+          "Obergriesbach",
+          "Aichach",
+          "Radersdorf",
+          "Schrobenhausen",
+          "Brunnen(Oberbay)"
+        ],
+        "line": "RB13"
+      },
+      {
+        "id": "-9166421327117935483-2510201816-10",
+        "type": "BRB",
+        "number": "84077",
+        "time": "2510201854",
+        "platform": "1 A-C",
+        "path_stations": [
+          "Eichstätt Stadt",
+          "Rebdorf-Hofmühle",
+          "Wasserzell(b Eichstätt)",
+          "Eichstätt Bahnhof",
+          "Adelschlag",
+          "Eitensheim",
+          "Gaimersheim",
+          "Ingolstadt Audi",
+          "Ingolstadt Nord"
+        ],
+        "line": "RB14"
+      },
+      {
+        "id": "-8598090900729313198-2510201828-4",
+        "type": "ag",
+        "number": "21733",
+        "time": "2510201849",
+        "platform": "6",
+        "path_stations": [
+          "Neuburg(Donau)",
+          "Rohrenfeld",
+          "Weichering"
+        ],
+        "line": "RB15"
+      },
+      {
+        "id": "1187978601821214931-2510201803-2",
+        "type": "ag",
+        "number": "84339",
+        "time": "2510201809",
+        "platform": "5",
+        "path_stations": [
+          "Ingolstadt Nord"
+        ],
+        "line": "RB17"
+      },
+      {
+        "id": "3351216915816787574-2510201745-12",
+        "type": "ag",
+        "number": "84340",
+        "time": "2510201845",
+        "platform": "5",
+        "path_stations": [
+          "Regensburg Hbf",
+          "Regensburg-Prüfening",
+          "Sinzing",
+          "Gundelshausen",
+          "Bad Abbach",
+          "Saal(Donau)",
+          "Abensberg",
+          "Neustadt(Donau)",
+          "Münchsmünster",
+          "Vohburg-Rockolding",
+          "Ernsgaden"
+        ],
+        "line": "RB17"
+      },
+      {
+        "id": "7267341271087249011-2510201722-9",
+        "type": "RB",
+        "number": "59104",
+        "time": "2510201825",
+        "platform": "5",
+        "path_stations": [
+          "München Hbf",
+          "Dachau Bahnhof",
+          "Petershausen(Obb)",
+          "Paindorf",
+          "Reichertshausen(Ilm)",
+          "Pfaffenhofen(Ilm)",
+          "Rohrbach(Ilm)",
+          "Baar-Ebenhausen"
+        ],
+        "line": "16"
+      },
+      {
+        "id": "4261737417841218390-2510201710-5",
+        "type": "RE",
+        "number": "4034",
+        "time": "2510201801",
+        "platform": "4",
+        "path_stations": [
+          "München Hbf",
+          "Dachau Bahnhof",
+          "Pfaffenhofen(Ilm)",
+          "Rohrbach(Ilm)"
+        ],
+        "line": "1"
+      },
+      {
+        "id": "-8110258217593167614-2510201707-5",
+        "type": "RE",
+        "number": "4031",
+        "time": "2510201757",
+        "platform": "1",
+        "path_stations": [
+          "Nürnberg Hbf",
+          "Allersberg(Rothsee)",
+          "Kinding(Altmühltal)",
+          "Ingolstadt Nord"
+        ],
+        "line": "1"
+      },
+      {
+        "id": "-7393276972710358996-2510201829-13",
+        "type": "ag",
+        "number": "84164",
+        "time": "2510201937",
+        "platform": "5",
+        "path_stations": [
+          "Regensburg Hbf",
+          "Regensburg-Prüfening",
+          "Sinzing",
+          "Gundelshausen",
+          "Poikam",
+          "Bad Abbach",
+          "Saal(Donau)",
+          "Abensberg",
+          "Neustadt(Donau)",
+          "Münchsmünster",
+          "Vohburg-Rockolding",
+          "Ernsgaden"
+        ],
+        "line": "RB17"
+      },
+      {
+        "id": "5375326263046654482-2510201917-2",
+        "type": "ICE",
+        "number": "580",
+        "time": "2510201956",
+        "platform": "4",
+        "path_stations": [
+          "München Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "2113442754813536250-2510201739-21",
+        "type": "RB",
+        "number": "59101",
+        "time": "2510201936",
+        "platform": "2",
+        "path_stations": [
+          "Nürnberg Hbf",
+          "Schwabach",
+          "Roth",
+          "Unterheckenhofen",
+          "Georgensgmünd",
+          "Mühlstetten",
+          "Pleinfeld",
+          "Ellingen(Bay)",
+          "Weißenburg(Bay)",
+          "Treuchtlingen",
+          "Pappenheim",
+          "Solnhofen",
+          "Dollnstein",
+          "Eichstätt Bahnhof",
+          "Adelschlag",
+          "Tauberfeld",
+          "Eitensheim",
+          "Gaimersheim",
+          "Ingolstadt Audi",
+          "Ingolstadt Nord"
+        ],
+        "line": "16"
+      },
+      {
+        "id": "5180885733832133637-2510201857-2",
+        "type": "ag",
+        "number": "84341",
+        "time": "2510201900",
+        "platform": "5",
+        "path_stations": [
+          "Ingolstadt Nord"
+        ],
+        "line": "RB17"
+      },
+      {
+        "id": "7347363591020888163-2510201905-5",
+        "type": "RE",
+        "number": "4040",
+        "time": "2510201951",
+        "platform": "6",
+        "path_stations": [
+          "München Hbf",
+          "Petershausen(Obb)",
+          "Pfaffenhofen(Ilm)",
+          "Rohrbach(Ilm)"
+        ],
+        "line": "1"
+      },
+      {
+        "id": "-1290839640796586839-2510201818-2",
+        "type": "ICE",
+        "number": "782",
+        "time": "2510201857",
+        "platform": "4",
+        "path_stations": [
+          "München Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "1064335486279272526-2510201808-20",
+        "type": "ag",
+        "number": "84342",
+        "time": "2510201953",
+        "platform": "5",
+        "path_stations": [
+          "Plattling",
+          "Straßkirchen",
+          "Straubing",
+          "Radldorf(Niederbay)",
+          "Sünching",
+          "Obertraubling",
+          "Regensburg-Burgweinting",
+          "Regensburg Hbf",
+          "Regensburg-Prüfening",
+          "Sinzing",
+          "Gundelshausen",
+          "Poikam",
+          "Bad Abbach",
+          "Saal(Donau)",
+          "Abensberg",
+          "Neustadt(Donau)",
+          "Münchsmünster",
+          "Vohburg-Rockolding",
+          "Ernsgaden"
+        ],
+        "line": "RB17"
+      },
+      {
+        "id": "7649777879216529082-2510201826-9",
+        "type": "RB",
+        "number": "59162",
+        "time": "2510201924",
+        "platform": "5",
+        "path_stations": [
+          "München Hbf",
+          "Dachau Bahnhof",
+          "Petershausen(Obb)",
+          "Paindorf",
+          "Reichertshausen(Ilm)",
+          "Pfaffenhofen(Ilm)",
+          "Rohrbach(Ilm)",
+          "Baar-Ebenhausen"
+        ],
+        "line": "16"
+      },
+      {
+        "id": "55670652780305893-2510201931-4",
+        "type": "ag",
+        "number": "21735",
+        "time": "2510201948",
+        "platform": "1",
+        "path_stations": [
+          "Neuburg(Donau)",
+          "Rohrenfeld",
+          "Weichering"
+        ],
+        "line": "RB15"
+      },
+      {
+        "id": "-266204046597736577-2510201354-11",
+        "type": "ICE",
+        "number": "881",
+        "time": "2510201901",
+        "platform": "3",
+        "path_stations": [
+          "Hamburg Dammtor",
+          "Hamburg Hbf",
+          "Hamburg-Harburg",
+          "Lüneburg",
+          "Hannover Hbf",
+          "Göttingen",
+          "Kassel-Wilhelmshöhe",
+          "Fulda",
+          "Würzburg Hbf",
+          "Nürnberg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "5848569001778625404-2510201838-11",
+        "type": "BRB",
+        "number": "86736",
+        "time": "2510201948",
+        "platform": "7",
+        "path_stations": [
+          "Augsburg Hbf",
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Friedberg(Augsburg)",
+          "Dasing",
+          "Obergriesbach",
+          "Aichach",
+          "Radersdorf",
+          "Schrobenhausen",
+          "Brunnen(Oberbay)"
+        ],
+        "line": "RB13"
+      },
+      {
+        "id": "-277955073194021155-2510202007-5",
+        "type": "RE",
+        "number": "4039",
+        "time": "2510202054",
+        "platform": "6",
+        "path_stations": [
+          "Nürnberg Hbf",
+          "Allersberg(Rothsee)",
+          "Kinding(Altmühltal)",
+          "Ingolstadt Nord"
+        ],
+        "line": "1"
+      },
+      {
+        "id": "-2928589825584210378-2510202003-5",
+        "type": "RE",
+        "number": "59082",
+        "time": "2510202055",
+        "platform": "2",
+        "path_stations": [
+          "München Hbf",
+          "Petershausen(Obb)",
+          "Pfaffenhofen(Ilm)",
+          "Rohrbach(Ilm)"
+        ],
+        "line": "1"
+      },
+      {
+        "id": "3941958275395660636-2510201515-8",
+        "type": "ICE",
+        "number": "631",
+        "time": "2510202004",
+        "platform": "3",
+        "path_stations": [
+          "Bremen Hbf",
+          "Hannover Hbf",
+          "Göttingen",
+          "Kassel-Wilhelmshöhe",
+          "Fulda",
+          "Würzburg Hbf",
+          "Nürnberg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-2724062921285146474-2510201924-9",
+        "type": "RB",
+        "number": "59106",
+        "time": "2510202022",
+        "platform": "5",
+        "path_stations": [
+          "München Hbf",
+          "Dachau Bahnhof",
+          "Petershausen(Obb)",
+          "Paindorf",
+          "Reichertshausen(Ilm)",
+          "Pfaffenhofen(Ilm)",
+          "Rohrbach(Ilm)",
+          "Baar-Ebenhausen"
+        ],
+        "line": "16"
+      },
+      {
+        "id": "-4080256596236254369-2510201935-12",
+        "type": "RB",
+        "number": "59161",
+        "time": "2510202038",
+        "platform": "2",
+        "path_stations": [
+          "Treuchtlingen",
+          "Pappenheim",
+          "Solnhofen",
+          "Dollnstein",
+          "Eichstätt Bahnhof",
+          "Adelschlag",
+          "Tauberfeld",
+          "Eitensheim",
+          "Gaimersheim",
+          "Ingolstadt Audi",
+          "Ingolstadt Nord"
+        ],
+        "line": "16"
+      },
+      {
+        "id": "-530930744538340941-2510201945-12",
+        "type": "ag",
+        "number": "84344",
+        "time": "2510202050",
+        "platform": "5",
+        "path_stations": [
+          "Regensburg Hbf",
+          "Regensburg-Prüfening",
+          "Sinzing",
+          "Gundelshausen",
+          "Bad Abbach",
+          "Saal(Donau)",
+          "Abensberg",
+          "Neustadt(Donau)",
+          "Münchsmünster",
+          "Vohburg-Rockolding",
+          "Ernsgaden"
+        ],
+        "line": "RB17"
+      },
+      {
+        "id": "7347363591020888163-2510201905-5",
+        "type": "RE",
+        "number": "4040",
+        "time": "2510201951",
+        "platform": "6",
+        "path_stations": [
+          "München Hbf",
+          "Petershausen(Obb)",
+          "Pfaffenhofen(Ilm)",
+          "Rohrbach(Ilm)"
+        ],
+        "line": "1"
+      },
+      {
+        "id": "2006650266683945588-2510201416-10",
+        "type": "ICE",
+        "number": "681",
+        "time": "2510202004",
+        "platform": "3",
+        "path_stations": [
+          "Lübeck Hbf",
+          "Hamburg Hbf",
+          "Hamburg-Harburg",
+          "Hannover Hbf",
+          "Göttingen",
+          "Kassel-Wilhelmshöhe",
+          "Fulda",
+          "Würzburg Hbf",
+          "Nürnberg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "4373663595963982305-2510201946-11",
+        "type": "BRB",
+        "number": "86742",
+        "time": "2510202048",
+        "platform": "7",
+        "path_stations": [
+          "Augsburg Hbf",
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Friedberg(Augsburg)",
+          "Dasing",
+          "Obergriesbach",
+          "Aichach",
+          "Radersdorf",
+          "Schrobenhausen",
+          "Brunnen(Oberbay)"
+        ],
+        "line": "RB13"
+      },
+      {
+        "id": "-7173313963166475560-2510201907-5",
+        "type": "RE",
+        "number": "4037",
+        "time": "2510202001",
+        "platform": "2",
+        "path_stations": [
+          "Nürnberg Hbf",
+          "Allersberg(Rothsee)",
+          "Kinding(Altmühltal)",
+          "Ingolstadt Nord"
+        ],
+        "line": "1"
+      },
+      {
+        "id": "-4383803236760390820-2510201947-2",
+        "type": "ICE",
+        "number": "522",
+        "time": "2510202024",
+        "platform": "4",
+        "path_stations": [
+          "München Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "7689622041577317205-2510202031-4",
+        "type": "ag",
+        "number": "21737",
+        "time": "2510202047",
+        "platform": "1",
+        "path_stations": [
+          "Neuburg(Donau)",
+          "Rohrenfeld",
+          "Weichering"
+        ],
+        "line": "RB15"
+      },
+      {
+        "id": "-988583344704703688-2510201554-10",
+        "type": "ICE",
+        "number": "883",
+        "time": "2510202058",
+        "platform": "3",
+        "path_stations": [
+          "Hamburg Dammtor",
+          "Hamburg Hbf",
+          "Hamburg-Harburg",
+          "Hannover Hbf",
+          "Göttingen",
+          "Kassel-Wilhelmshöhe",
+          "Fulda",
+          "Würzburg Hbf",
+          "Nürnberg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "758555810786479173-2510202001-2",
+        "type": "ag",
+        "number": "84343",
+        "time": "2510202006",
+        "platform": "5",
+        "path_stations": [
+          "Ingolstadt Nord"
+        ],
+        "line": "RB17"
+      },
+      {
+        "id": "-8358896547980546511-2510201937-21",
+        "type": "RB",
+        "number": "59107",
+        "time": "2510202136",
+        "platform": "2",
+        "path_stations": [
+          "Nürnberg Hbf",
+          "Schwabach",
+          "Roth",
+          "Unterheckenhofen",
+          "Georgensgmünd",
+          "Mühlstetten",
+          "Pleinfeld",
+          "Ellingen(Bay)",
+          "Weißenburg(Bay)",
+          "Treuchtlingen",
+          "Pappenheim",
+          "Solnhofen",
+          "Dollnstein",
+          "Eichstätt Bahnhof",
+          "Adelschlag",
+          "Tauberfeld",
+          "Eitensheim",
+          "Gaimersheim",
+          "Ingolstadt Audi",
+          "Ingolstadt Nord"
+        ],
+        "line": "16"
+      },
+      {
+        "id": "-6341401029022658133-2510201651-10",
+        "type": "ICE",
+        "number": "727",
+        "time": "2510202131",
+        "platform": "3",
+        "path_stations": [
+          "Essen Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Hbf",
+          "Köln Messe/Deutz Gl.11-12",
+          "Frankfurt(M) Flughafen Fernbf",
+          "Frankfurt(Main)Hbf",
+          "Aschaffenburg Hbf",
+          "Würzburg Hbf",
+          "Nürnberg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "4930918570354887901-2510202107-5",
+        "type": "RE",
+        "number": "4041",
+        "time": "2510202154",
+        "platform": "2",
+        "path_stations": [
+          "Nürnberg Hbf",
+          "Allersberg(Rothsee)",
+          "Kinding(Altmühltal)",
+          "Ingolstadt Nord"
+        ],
+        "line": "1"
+      },
+      {
+        "id": "-4650662687300759398-2510202022-9",
+        "type": "RB",
+        "number": "59164",
+        "time": "2510202124",
+        "platform": "5",
+        "path_stations": [
+          "München Hbf",
+          "Dachau Bahnhof",
+          "Petershausen(Obb)",
+          "Paindorf",
+          "Reichertshausen(Ilm)",
+          "Pfaffenhofen(Ilm)",
+          "Rohrbach(Ilm)",
+          "Baar-Ebenhausen"
+        ],
+        "line": "16"
+      },
+      {
+        "id": "434699660439512752-2510201715-8",
+        "type": "ICE",
+        "number": "633",
+        "time": "2510202159",
+        "platform": "3",
+        "path_stations": [
+          "Bremen Hbf",
+          "Hannover Hbf",
+          "Göttingen",
+          "Kassel-Wilhelmshöhe",
+          "Fulda",
+          "Würzburg Hbf",
+          "Nürnberg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "5321437189916721296-2510202105-5",
+        "type": "RE",
+        "number": "4044",
+        "time": "2510202151",
+        "platform": "4",
+        "path_stations": [
+          "München Hbf",
+          "Petershausen(Obb)",
+          "Pfaffenhofen(Ilm)",
+          "Rohrbach(Ilm)"
+        ],
+        "line": "1"
+      },
+      {
+        "id": "-6079724885055746641-2510202131-4",
+        "type": "ag",
+        "number": "21739",
+        "time": "2510202147",
+        "platform": "1",
+        "path_stations": [
+          "Neuburg(Donau)",
+          "Rohrenfeld",
+          "Weichering"
+        ],
+        "line": "RB15"
+      },
+      {
+        "id": "2177944950666158255-2510202045-11",
+        "type": "BRB",
+        "number": "86746",
+        "time": "2510202146",
+        "platform": "6",
+        "path_stations": [
+          "Augsburg Hbf",
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Friedberg(Augsburg)",
+          "Dasing",
+          "Obergriesbach",
+          "Aichach",
+          "Radersdorf",
+          "Schrobenhausen",
+          "Brunnen(Oberbay)"
+        ],
+        "line": "RB13"
+      },
+      {
+        "id": "-7179928820236290043-2510201636-11",
+        "type": "ICE",
+        "number": "683",
+        "time": "2510202159",
+        "platform": "3",
+        "path_stations": [
+          "Hamburg-Altona",
+          "Hamburg Dammtor",
+          "Hamburg Hbf",
+          "Hamburg-Harburg",
+          "Hannover Hbf",
+          "Göttingen",
+          "Kassel-Wilhelmshöhe",
+          "Fulda",
+          "Würzburg Hbf",
+          "Nürnberg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "4027978340592185050-2510202008-19",
+        "type": "ag",
+        "number": "84346",
+        "time": "2510202153",
+        "platform": "5",
+        "path_stations": [
+          "Plattling",
+          "Straßkirchen",
+          "Straubing",
+          "Radldorf(Niederbay)",
+          "Sünching",
+          "Obertraubling",
+          "Regensburg-Burgweinting",
+          "Regensburg Hbf",
+          "Regensburg-Prüfening",
+          "Sinzing",
+          "Poikam",
+          "Bad Abbach",
+          "Saal(Donau)",
+          "Abensberg",
+          "Neustadt(Donau)",
+          "Münchsmünster",
+          "Vohburg-Rockolding",
+          "Ernsgaden"
+        ],
+        "line": "RB17"
+      },
+      {
+        "id": "8573811631662133764-2510202048-2",
+        "type": "ICE",
+        "number": "520",
+        "time": "2510202127",
+        "platform": "4",
+        "path_stations": [
+          "München Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-7751455148133111269-2510202059-2",
+        "type": "ag",
+        "number": "84345",
+        "time": "2510202103",
+        "platform": "5",
+        "path_stations": [
+          "Ingolstadt Nord"
+        ],
+        "line": "RB17"
+      },
+      {
+        "id": "-988583344704703688-2510201554-10",
+        "type": "ICE",
+        "number": "883",
+        "time": "2510202058",
+        "platform": "3",
+        "path_stations": [
+          "Hamburg Dammtor",
+          "Hamburg Hbf",
+          "Hamburg-Harburg",
+          "Hannover Hbf",
+          "Göttingen",
+          "Kassel-Wilhelmshöhe",
+          "Fulda",
+          "Würzburg Hbf",
+          "Nürnberg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "5324821628306728469-2510201754-10",
+        "type": "ICE",
+        "number": "729",
+        "time": "2510202239",
+        "platform": "3",
+        "path_stations": [
+          "Essen Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Hbf",
+          "Köln Messe/Deutz Gl.11-12",
+          "Frankfurt(M) Flughafen Fernbf",
+          "Frankfurt(Main)Hbf",
+          "Aschaffenburg Hbf",
+          "Würzburg Hbf",
+          "Nürnberg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "4930918570354887901-2510202107-5",
+        "type": "RE",
+        "number": "4041",
+        "time": "2510202154",
+        "platform": "2",
+        "path_stations": [
+          "Nürnberg Hbf",
+          "Allersberg(Rothsee)",
+          "Kinding(Altmühltal)",
+          "Ingolstadt Nord"
+        ],
+        "line": "1"
+      },
+      {
+        "id": "8209469800275406026-2510202217-2",
+        "type": "ICE",
+        "number": "1080",
+        "time": "2510202252",
+        "platform": "4",
+        "path_stations": [
+          "München Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "4199646812407441115-2510202126-9",
+        "type": "RB",
+        "number": "59108",
+        "time": "2510202223",
+        "platform": "4",
+        "path_stations": [
+          "München Hbf",
+          "Dachau Bahnhof",
+          "Petershausen(Obb)",
+          "Paindorf",
+          "Reichertshausen(Ilm)",
+          "Pfaffenhofen(Ilm)",
+          "Rohrbach(Ilm)",
+          "Baar-Ebenhausen"
+        ],
+        "line": "16"
+      },
+      {
+        "id": "7771397587504426738-2510202135-12",
+        "type": "RB",
+        "number": "59163",
+        "time": "2510202224",
+        "platform": "2",
+        "path_stations": [
+          "Treuchtlingen",
+          "Pappenheim",
+          "Solnhofen",
+          "Dollnstein",
+          "Eichstätt Bahnhof",
+          "Adelschlag",
+          "Tauberfeld",
+          "Eitensheim",
+          "Gaimersheim",
+          "Ingolstadt Audi",
+          "Ingolstadt Nord"
+        ],
+        "line": "16"
+      },
+      {
+        "id": "434699660439512752-2510201715-8",
+        "type": "ICE",
+        "number": "633",
+        "time": "2510202159",
+        "platform": "3",
+        "path_stations": [
+          "Bremen Hbf",
+          "Hannover Hbf",
+          "Göttingen",
+          "Kassel-Wilhelmshöhe",
+          "Fulda",
+          "Würzburg Hbf",
+          "Nürnberg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "3368787621892045260-2510202146-12",
+        "type": "ag",
+        "number": "84348",
+        "time": "2510202254",
+        "platform": "6",
+        "path_stations": [
+          "Regensburg Hbf",
+          "Regensburg-Prüfening",
+          "Sinzing",
+          "Gundelshausen",
+          "Bad Abbach",
+          "Saal(Donau)",
+          "Abensberg",
+          "Neustadt(Donau)",
+          "Münchsmünster",
+          "Vohburg-Rockolding",
+          "Ernsgaden"
+        ],
+        "line": "RB17"
+      },
+      {
+        "id": "-7179928820236290043-2510201636-11",
+        "type": "ICE",
+        "number": "683",
+        "time": "2510202159",
+        "platform": "3",
+        "path_stations": [
+          "Hamburg-Altona",
+          "Hamburg Dammtor",
+          "Hamburg Hbf",
+          "Hamburg-Harburg",
+          "Hannover Hbf",
+          "Göttingen",
+          "Kassel-Wilhelmshöhe",
+          "Fulda",
+          "Würzburg Hbf",
+          "Nürnberg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-3262256816161634412-2510202159-2",
+        "type": "ag",
+        "number": "84347",
+        "time": "2510202203",
+        "platform": "5",
+        "path_stations": [
+          "Ingolstadt Nord"
+        ],
+        "line": "RB17"
+      },
+      {
+        "id": "-3366945118418988031-2510202231-4",
+        "type": "ag",
+        "number": "21741",
+        "time": "2510202251",
+        "platform": "7",
+        "path_stations": [
+          "Neuburg(Donau)",
+          "Rohrenfeld",
+          "Weichering"
+        ],
+        "line": "RB15"
+      },
+      {
+        "id": "-2590970551728120725-2510202145-11",
+        "type": "BRB",
+        "number": "86748",
+        "time": "2510202246",
+        "platform": "1",
+        "path_stations": [
+          "Augsburg Hbf",
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Friedberg(Augsburg)",
+          "Dasing",
+          "Obergriesbach",
+          "Aichach",
+          "Radersdorf",
+          "Schrobenhausen",
+          "Brunnen(Oberbay)"
+        ],
+        "line": "RB13"
+      },
+      {
+        "id": "-223421926958290666-2510201634-12",
+        "type": "ICE",
+        "number": "885",
+        "time": "2510202258",
+        "platform": "3",
+        "path_stations": [
+          "Kiel Hbf",
+          "Neumünster",
+          "Hamburg Dammtor",
+          "Hamburg Hbf",
+          "Hamburg-Harburg",
+          "Hannover Hbf",
+          "Göttingen",
+          "Kassel-Wilhelmshöhe",
+          "Fulda",
+          "Würzburg Hbf",
+          "Nürnberg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-3836550047191728891-2510202245-11",
+        "type": "BRB",
+        "number": "86750",
+        "time": "2510202346",
+        "platform": "6",
+        "path_stations": [
+          "Augsburg Hbf",
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Friedberg(Augsburg)",
+          "Dasing",
+          "Obergriesbach",
+          "Aichach",
+          "Radersdorf",
+          "Schrobenhausen",
+          "Brunnen(Oberbay)"
+        ],
+        "line": "RB13"
+      },
+      {
+        "id": "-8740199710913967763-2510202331-4",
+        "type": "ag",
+        "number": "21745",
+        "time": "2510202351",
+        "platform": "",
+        "path_stations": [
+          "Neuburg(Donau)",
+          "Rohrenfeld",
+          "Weichering"
+        ],
+        "line": "RB15"
+      },
+      {
+        "id": "2143499115056676952-2510201839-12",
+        "type": "ICE",
+        "number": "821",
+        "time": "2510202340",
+        "platform": "3",
+        "path_stations": [
+          "Essen Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Hbf",
+          "Köln Messe/Deutz Gl.11-12",
+          "Montabaur",
+          "Limburg Süd",
+          "Frankfurt(M) Flughafen Fernbf",
+          "Frankfurt(Main)Hbf",
+          "Aschaffenburg Hbf",
+          "Würzburg Hbf",
+          "Nürnberg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "4469832740417756644-2510202233-5",
+        "type": "RE",
+        "number": "4045",
+        "time": "2510202319",
+        "platform": "1",
+        "path_stations": [
+          "Nürnberg Hbf",
+          "Allersberg(Rothsee)",
+          "Kinding(Altmühltal)",
+          "Ingolstadt Nord"
+        ],
+        "line": "1"
+      },
+      {
+        "id": "-5262352002503319170-2510202138-21",
+        "type": "RB",
+        "number": "59109",
+        "time": "2510202330",
+        "platform": "2",
+        "path_stations": [
+          "Nürnberg Hbf",
+          "Schwabach",
+          "Roth",
+          "Unterheckenhofen",
+          "Georgensgmünd",
+          "Mühlstetten",
+          "Pleinfeld",
+          "Ellingen(Bay)",
+          "Weißenburg(Bay)",
+          "Treuchtlingen",
+          "Pappenheim",
+          "Solnhofen",
+          "Dollnstein",
+          "Eichstätt Bahnhof",
+          "Adelschlag",
+          "Tauberfeld",
+          "Eitensheim",
+          "Gaimersheim",
+          "Ingolstadt Audi",
+          "Ingolstadt Nord"
+        ],
+        "line": "16"
+      },
+      {
+        "id": "9023065078721211182-2510202208-20",
+        "type": "ag",
+        "number": "84350",
+        "time": "2510202353",
+        "platform": "5",
+        "path_stations": [
+          "Plattling",
+          "Straßkirchen",
+          "Straubing",
+          "Radldorf(Niederbay)",
+          "Sünching",
+          "Obertraubling",
+          "Regensburg-Burgweinting",
+          "Regensburg Hbf",
+          "Regensburg-Prüfening",
+          "Sinzing",
+          "Gundelshausen",
+          "Poikam",
+          "Bad Abbach",
+          "Saal(Donau)",
+          "Abensberg",
+          "Neustadt(Donau)",
+          "Münchsmünster",
+          "Vohburg-Rockolding",
+          "Ernsgaden"
+        ],
+        "line": "RB17"
+      },
+      {
+        "id": "1779337362639736229-2510202259-2",
+        "type": "ag",
+        "number": "84349",
+        "time": "2510202303",
+        "platform": "5",
+        "path_stations": [
+          "Ingolstadt Nord"
+        ],
+        "line": "RB17"
+      },
+      {
+        "id": "-223421926958290666-2510201634-12",
+        "type": "ICE",
+        "number": "885",
+        "time": "2510202258",
+        "platform": "3",
+        "path_stations": [
+          "Kiel Hbf",
+          "Neumünster",
+          "Hamburg Dammtor",
+          "Hamburg Hbf",
+          "Hamburg-Harburg",
+          "Hannover Hbf",
+          "Göttingen",
+          "Kassel-Wilhelmshöhe",
+          "Fulda",
+          "Würzburg Hbf",
+          "Nürnberg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "6941385099426743797-2510202226-9",
+        "type": "RB",
+        "number": "59174",
+        "time": "2510202321",
+        "platform": "4",
+        "path_stations": [
+          "München Hbf",
+          "Dachau Bahnhof",
+          "Petershausen(Obb)",
+          "Paindorf",
+          "Reichertshausen(Ilm)",
+          "Pfaffenhofen(Ilm)",
+          "Rohrbach(Ilm)",
+          "Baar-Ebenhausen"
+        ],
+        "line": "16"
+      },
+      {
+        "id": "7734805089613574578-2510202359-11",
+        "type": "BRB",
+        "number": "86752",
+        "time": "2510210059",
+        "platform": "7",
+        "path_stations": [
+          "Augsburg Hbf",
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Friedberg(Augsburg)",
+          "Dasing",
+          "Obergriesbach",
+          "Aichach",
+          "Radersdorf",
+          "Schrobenhausen",
+          "Brunnen(Oberbay)"
+        ],
+        "line": "RB13"
+      },
+      {
+        "id": "2464246333012018822-2510202244-21",
+        "type": "RB",
+        "number": "59225",
+        "time": "2510210027",
+        "platform": "1",
+        "path_stations": [
+          "Nürnberg Hbf",
+          "Schwabach",
+          "Roth",
+          "Unterheckenhofen",
+          "Georgensgmünd",
+          "Mühlstetten",
+          "Pleinfeld",
+          "Ellingen(Bay)",
+          "Weißenburg(Bay)",
+          "Treuchtlingen",
+          "Pappenheim",
+          "Solnhofen",
+          "Dollnstein",
+          "Eichstätt Bahnhof",
+          "Adelschlag",
+          "Tauberfeld",
+          "Eitensheim",
+          "Gaimersheim",
+          "Ingolstadt Audi",
+          "Ingolstadt Nord"
+        ],
+        "line": "16"
+      },
+      {
+        "id": "5472562903720777205-2510210043-2",
+        "type": "RB",
+        "number": "59191",
+        "time": "2510210048",
+        "platform": "2",
+        "path_stations": [
+          "Ingolstadt Nord"
+        ],
+        "line": "16"
+      },
+      {
+        "id": "7255926203441774243-2510210025-2",
+        "type": "ag",
+        "number": "84351",
+        "time": "2510210029",
+        "platform": "5",
+        "path_stations": [
+          "Ingolstadt Nord"
+        ],
+        "line": "RB17"
+      },
+      {
+        "id": "-2480303027028645831-2510202326-9",
+        "type": "RB",
+        "number": "59176",
+        "time": "2510210027",
+        "platform": "4",
+        "path_stations": [
+          "München Hbf",
+          "Dachau Bahnhof",
+          "Petershausen(Obb)",
+          "Paindorf",
+          "Reichertshausen(Ilm)",
+          "Pfaffenhofen(Ilm)",
+          "Rohrbach(Ilm)",
+          "Baar-Ebenhausen"
+        ],
+        "line": "16"
+      },
+      {
+        "id": "5822124379955087267-2510210144-2",
+        "type": "RB",
+        "number": "59195",
+        "time": "2510210149",
+        "platform": "1",
+        "path_stations": [
+          "Ingolstadt Nord"
+        ],
+        "line": "16"
+      },
+      {
+        "id": "1811066918985459005-2510210031-9",
+        "type": "RB",
+        "number": "59170",
+        "time": "2510210128",
+        "platform": "4",
+        "path_stations": [
+          "München Hbf",
+          "Dachau Bahnhof",
+          "Petershausen(Obb)",
+          "Paindorf",
+          "Reichertshausen(Ilm)",
+          "Pfaffenhofen(Ilm)",
+          "Rohrbach(Ilm)",
+          "Baar-Ebenhausen"
+        ],
+        "line": "16"
+      },
+      {
+        "id": "-2068972056873159167-2510210420-5",
+        "type": "ag",
+        "number": "84308",
+        "time": "2510210442",
+        "platform": "7",
+        "path_stations": [
+          "Neustadt(Donau)",
+          "Münchsmünster",
+          "Vohburg-Rockolding",
+          "Ernsgaden"
+        ],
+        "line": "RB17"
+      },
+      {
+        "id": "5028473175569704025-2510210412-2",
+        "type": "ICE",
+        "number": "888",
+        "time": "2510210449",
+        "platform": "4",
+        "path_stations": [
+          "München Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-8987841866346689354-2510210431-2",
+        "type": "RB",
+        "number": "59171",
+        "time": "2510210436",
+        "platform": "3",
+        "path_stations": [
+          "Ingolstadt Nord"
+        ],
+        "line": "16"
+      },
+      {
+        "id": "-4763915422430400608-2510210443-12",
+        "type": "RB",
+        "number": "59141",
+        "time": "2510210532",
+        "platform": "3",
+        "path_stations": [
+          "Treuchtlingen",
+          "Pappenheim",
+          "Solnhofen",
+          "Dollnstein",
+          "Eichstätt Bahnhof",
+          "Adelschlag",
+          "Tauberfeld",
+          "Eitensheim",
+          "Gaimersheim",
+          "Ingolstadt Audi",
+          "Ingolstadt Nord"
+        ],
+        "line": "16"
+      },
+      {
+        "id": "4653126596847301158-2510210514-2",
+        "type": "ICE",
+        "number": "634",
+        "time": "2510210553",
+        "platform": "4",
+        "path_stations": [
+          "München Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "5183348441957312525-2510210519-3",
+        "type": "BRB",
+        "number": "86628",
+        "time": "2510210537",
+        "platform": "1",
+        "path_stations": [
+          "Schrobenhausen",
+          "Brunnen(Oberbay)"
+        ],
+        "line": "RB13"
+      },
+      {
+        "id": "-3901580007931980802-2510210501-6",
+        "type": "RE",
+        "number": "4000",
+        "time": "2510210551",
+        "platform": "7",
+        "path_stations": [
+          "München Hbf",
+          "Dachau Bahnhof",
+          "Petershausen(Obb)",
+          "Pfaffenhofen(Ilm)",
+          "Rohrbach(Ilm)"
+        ],
+        "line": "1"
+      },
+      {
+        "id": "-1399957532335496298-2510210512-11",
+        "type": "BRB",
+        "number": "84037",
+        "time": "2510210552",
+        "platform": "2",
+        "path_stations": [
+          "Eichstätt Stadt",
+          "Rebdorf-Hofmühle",
+          "Wasserzell(b Eichstätt)",
+          "Eichstätt Bahnhof",
+          "Adelschlag",
+          "Tauberfeld",
+          "Eitensheim",
+          "Gaimersheim",
+          "Ingolstadt Audi",
+          "Ingolstadt Nord"
+        ],
+        "line": "RB14"
+      },
+      {
+        "id": "6106442635410950120-2510210509-5",
+        "type": "RE",
+        "number": "4001",
+        "time": "2510210556",
+        "platform": "3",
+        "path_stations": [
+          "Nürnberg Hbf",
+          "Allersberg(Rothsee)",
+          "Kinding(Altmühltal)",
+          "Ingolstadt Nord"
+        ],
+        "line": "1"
+      },
+      {
+        "id": "-8003392339101483857-2510210514-2",
+        "type": "ICE",
+        "number": "684",
+        "time": "2510210553",
+        "platform": "4",
+        "path_stations": [
+          "München Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "7597089806492032299-2510202221-8",
+        "type": "ICE",
+        "number": "1081",
+        "time": "2510210523",
+        "platform": "3",
+        "path_stations": [
+          "Hamburg Dammtor",
+          "Hamburg Hbf",
+          "Hamburg-Harburg",
+          "Hannover Hbf",
+          "Göttingen",
+          "Würzburg Hbf",
+          "Nürnberg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "5661718834704034174-2510210457-4",
+        "type": "ag",
+        "number": "84249",
+        "time": "2510210514",
+        "platform": "6",
+        "path_stations": [
+          "Neuburg(Donau)",
+          "Rohrenfeld",
+          "Weichering"
+        ],
+        "line": "RB15"
+      },
+      {
+        "id": "4261223944140790482-2510210418-13",
+        "type": "ag",
+        "number": "84310",
+        "time": "2510210518",
+        "platform": "5",
+        "path_stations": [
+          "Regensburg Hbf",
+          "Regensburg-Prüfening",
+          "Sinzing",
+          "Gundelshausen",
+          "Poikam",
+          "Bad Abbach",
+          "Saal(Donau)",
+          "Abensberg",
+          "Neustadt(Donau)",
+          "Münchsmünster",
+          "Vohburg-Rockolding",
+          "Ernsgaden"
+        ],
+        "line": "RB17"
+      },
+      {
+        "id": "-6223962037244896084-2510210447-2",
+        "type": "ICE",
+        "number": "822",
+        "time": "2510210526",
+        "platform": "5",
+        "path_stations": [
+          "München Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "8286319660578517068-2510210500-4",
+        "type": "RB",
+        "number": "59144",
+        "time": "2510210521",
+        "platform": "4",
+        "path_stations": [
+          "Pfaffenhofen(Ilm)",
+          "Rohrbach(Ilm)",
+          "Baar-Ebenhausen"
+        ],
+        "line": "16"
+      },
+      {
+        "id": "5153089020938679173-2510210528-4",
+        "type": "ag",
+        "number": "84251",
+        "time": "2510210544",
+        "platform": "6",
+        "path_stations": [
+          "Neuburg(Donau)",
+          "Rohrenfeld",
+          "Weichering"
+        ],
+        "line": "RB15"
+      }
+    ],
+    "departures": [
+      {
+        "id": "-193356784379041286-2510201705-1",
+        "type": "RE",
+        "number": "59077",
+        "direction": "München Hbf",
+        "platform": "1",
+        "time": "2510201705",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Rohrbach(Ilm)",
+          "Pfaffenhofen(Ilm)",
+          "Petershausen(Obb)",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "-566732643625155291-2510201716-2",
+        "type": "ICE",
+        "number": "582",
+        "direction": "Hamburg Hbf",
+        "platform": "4",
+        "time": "2510201756",
+        "destination": "Hamburg Hbf",
+        "path_stations": [
+          "Nürnberg Hbf",
+          "Würzburg Hbf",
+          "Fulda",
+          "Kassel-Wilhelmshöhe",
+          "Göttingen",
+          "Hannover Hbf",
+          "Hamburg-Harburg",
+          "Hamburg Hbf"
+        ]
+      },
+      {
+        "id": "-2167176296731169400-2510201234-7",
+        "type": "ICE",
+        "number": "707",
+        "direction": "München Hbf",
+        "platform": "3",
+        "time": "2510201725",
+        "destination": "München Hbf",
+        "path_stations": [
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "-8138362163861218620-2510201716-2",
+        "type": "ICE",
+        "number": "532",
+        "direction": "Oldenburg(Oldb)Hbf",
+        "platform": "4",
+        "time": "2510201756",
+        "destination": "Oldenburg(Oldb)Hbf",
+        "path_stations": [
+          "Nürnberg Hbf",
+          "Würzburg Hbf",
+          "Fulda",
+          "Kassel-Wilhelmshöhe",
+          "Göttingen",
+          "Hannover Hbf",
+          "Nienburg(Weser)",
+          "Verden(Aller)",
+          "Bremen Hbf",
+          "Delmenhorst",
+          "Oldenburg(Oldb)Hbf"
+        ]
+      },
+      {
+        "id": "3205195526778397248-2510201713-2",
+        "type": "ag",
+        "number": "84337",
+        "direction": "Regensburg Hbf",
+        "platform": "5",
+        "time": "2510201718",
+        "destination": "Regensburg Hbf",
+        "path_stations": [
+          "Ernsgaden",
+          "Vohburg-Rockolding",
+          "Münchsmünster",
+          "Neustadt(Donau)",
+          "Abensberg",
+          "Saal(Donau)",
+          "Bad Abbach",
+          "Poikam",
+          "Gundelshausen",
+          "Sinzing",
+          "Regensburg-Prüfening",
+          "Regensburg Hbf"
+        ]
+      },
+      {
+        "id": "-5638997854339113436-2510201710-1",
+        "type": "BRB",
+        "number": "86729",
+        "direction": "Augsburg Hbf",
+        "platform": "2",
+        "time": "2510201710",
+        "destination": "Augsburg Hbf",
+        "path_stations": [
+          "Brunnen(Oberbay)",
+          "Schrobenhausen",
+          "Radersdorf",
+          "Aichach",
+          "Obergriesbach",
+          "Dasing",
+          "Friedberg(Augsburg)",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße",
+          "Augsburg Hbf"
+        ]
+      },
+      {
+        "id": "3434262725316113417-2510201706-1",
+        "type": "ag",
+        "number": "21728",
+        "direction": "Neuburg(Donau)",
+        "platform": "6",
+        "time": "2510201706",
+        "destination": "Neuburg(Donau)",
+        "path_stations": [
+          "Weichering",
+          "Rohrenfeld",
+          "Neuburg(Donau)"
+        ]
+      },
+      {
+        "id": "3397100192751969577-2510201154-10",
+        "type": "ICE",
+        "number": "789",
+        "direction": "München Hbf",
+        "platform": "3",
+        "time": "2510201702",
+        "destination": "München Hbf",
+        "path_stations": [
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "-26093661295024706-2510201608-19",
+        "type": "ag",
+        "number": "84338",
+        "direction": "Ingolstadt Nord",
+        "platform": "5",
+        "time": "2510201755",
+        "destination": "Ingolstadt Nord",
+        "path_stations": [
+          "Ingolstadt Nord"
+        ]
+      },
+      {
+        "id": "1111100847072027067-2510201538-21",
+        "type": "RB",
+        "number": "59099",
+        "direction": "München Hbf",
+        "platform": "2",
+        "time": "2510201737",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Baar-Ebenhausen",
+          "Rohrbach(Ilm)",
+          "Pfaffenhofen(Ilm)",
+          "Reichertshausen(Ilm)",
+          "Paindorf",
+          "Petershausen(Obb)",
+          "Dachau Bahnhof",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "-8110258217593167614-2510201707-5",
+        "type": "RE",
+        "number": "4031",
+        "direction": "München Hbf",
+        "platform": "1",
+        "time": "2510201806",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Rohrbach(Ilm)",
+          "Pfaffenhofen(Ilm)",
+          "Petershausen(Obb)",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "-4112067027486378418-2510201704-1",
+        "type": "BRB",
+        "number": "84074",
+        "direction": "Eichstätt Stadt",
+        "platform": "2 A-C",
+        "time": "2510201704",
+        "destination": "Eichstätt Stadt",
+        "path_stations": [
+          "Ingolstadt Nord",
+          "Gaimersheim",
+          "Eitensheim",
+          "Tauberfeld",
+          "Adelschlag",
+          "Eichstätt Bahnhof",
+          "Wasserzell(b Eichstätt)",
+          "Rebdorf-Hofmühle",
+          "Eichstätt Stadt"
+        ]
+      },
+      {
+        "id": "-6411928738155319171-2510201626-9",
+        "type": "RB",
+        "number": "59160",
+        "direction": "Treuchtlingen",
+        "platform": "6",
+        "time": "2510201727",
+        "destination": "Treuchtlingen",
+        "path_stations": [
+          "Ingolstadt Nord",
+          "Ingolstadt Audi",
+          "Gaimersheim",
+          "Eitensheim",
+          "Tauberfeld",
+          "Adelschlag",
+          "Eichstätt Bahnhof",
+          "Dollnstein",
+          "Solnhofen",
+          "Pappenheim",
+          "Treuchtlingen"
+        ]
+      },
+      {
+        "id": "-3591637741369825174-2510201810-1",
+        "type": "BRB",
+        "number": "86737",
+        "direction": "Augsburg Hbf",
+        "platform": "2",
+        "time": "2510201810",
+        "destination": "Augsburg Hbf",
+        "path_stations": [
+          "Brunnen(Oberbay)",
+          "Schrobenhausen",
+          "Radersdorf",
+          "Aichach",
+          "Obergriesbach",
+          "Dasing",
+          "Friedberg(Augsburg)",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße",
+          "Augsburg Hbf"
+        ]
+      },
+      {
+        "id": "4097406752069824477-2510201735-12",
+        "type": "RB",
+        "number": "59159",
+        "direction": "München Hbf",
+        "platform": "2",
+        "time": "2510201842",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Baar-Ebenhausen",
+          "Rohrbach(Ilm)",
+          "Pfaffenhofen(Ilm)",
+          "Reichertshausen(Ilm)",
+          "Paindorf",
+          "Petershausen(Obb)",
+          "Dachau Bahnhof",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "-3845191841150591118-2510201838-1",
+        "type": "ag",
+        "number": "84240",
+        "direction": "Neuburg(Donau)",
+        "platform": "7",
+        "time": "2510201838",
+        "destination": "Neuburg(Donau)",
+        "path_stations": [
+          "Weichering",
+          "Rohrenfeld",
+          "Neuburg(Donau)"
+        ]
+      },
+      {
+        "id": "-1290839640796586839-2510201818-2",
+        "type": "ICE",
+        "number": "782",
+        "direction": "Hamburg Hbf",
+        "platform": "4",
+        "time": "2510201900",
+        "destination": "Hamburg Hbf",
+        "path_stations": [
+          "Nürnberg Hbf",
+          "Würzburg Hbf",
+          "Fulda",
+          "Kassel-Wilhelmshöhe",
+          "Göttingen",
+          "Hannover Hbf",
+          "Celle",
+          "Uelzen",
+          "Lüneburg",
+          "Hamburg-Harburg",
+          "Hamburg Hbf"
+        ]
+      },
+      {
+        "id": "5301498751267042861-2510201741-7",
+        "type": "RB",
+        "number": "59184",
+        "direction": "Ingolstadt Nord",
+        "platform": "4",
+        "time": "2510201842",
+        "destination": "Ingolstadt Nord",
+        "path_stations": [
+          "Ingolstadt Nord"
+        ]
+      },
+      {
+        "id": "-4177690667848918592-2510201246-11",
+        "type": "ICE",
+        "number": "689",
+        "direction": "München Hbf",
+        "platform": "3",
+        "time": "2510201803",
+        "destination": "München Hbf",
+        "path_stations": [
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "1187978601821214931-2510201803-2",
+        "type": "ag",
+        "number": "84339",
+        "direction": "Regensburg Hbf",
+        "platform": "5",
+        "time": "2510201810",
+        "destination": "Regensburg Hbf",
+        "path_stations": [
+          "Ernsgaden",
+          "Vohburg-Rockolding",
+          "Münchsmünster",
+          "Neustadt(Donau)",
+          "Abensberg",
+          "Saal(Donau)",
+          "Bad Abbach",
+          "Poikam",
+          "Gundelshausen",
+          "Sinzing",
+          "Regensburg-Prüfening",
+          "Regensburg Hbf"
+        ]
+      },
+      {
+        "id": "3351216915816787574-2510201745-12",
+        "type": "ag",
+        "number": "84340",
+        "direction": "Ingolstadt Nord",
+        "platform": "5",
+        "time": "2510201850",
+        "destination": "Ingolstadt Nord",
+        "path_stations": [
+          "Ingolstadt Nord"
+        ]
+      },
+      {
+        "id": "7267341271087249011-2510201722-9",
+        "type": "RB",
+        "number": "59104",
+        "direction": "Nürnberg Hbf",
+        "platform": "5",
+        "time": "2510201826",
+        "destination": "Nürnberg Hbf",
+        "path_stations": [
+          "Ingolstadt Nord",
+          "Ingolstadt Audi",
+          "Gaimersheim",
+          "Eitensheim",
+          "Tauberfeld",
+          "Adelschlag",
+          "Eichstätt Bahnhof",
+          "Dollnstein",
+          "Solnhofen",
+          "Pappenheim",
+          "Treuchtlingen",
+          "Weißenburg(Bay)",
+          "Ellingen(Bay)",
+          "Pleinfeld",
+          "Mühlstetten",
+          "Georgensgmünd",
+          "Unterheckenhofen",
+          "Roth",
+          "Schwabach",
+          "Nürnberg Hbf"
+        ]
+      },
+      {
+        "id": "4261737417841218390-2510201710-5",
+        "type": "RE",
+        "number": "4034",
+        "direction": "Nürnberg Hbf",
+        "platform": "4",
+        "time": "2510201802",
+        "destination": "Nürnberg Hbf",
+        "path_stations": [
+          "Ingolstadt Nord",
+          "Kinding(Altmühltal)",
+          "Allersberg(Rothsee)",
+          "Nürnberg Hbf"
+        ]
+      },
+      {
+        "id": "-8110258217593167614-2510201707-5",
+        "type": "RE",
+        "number": "4031",
+        "direction": "München Hbf",
+        "platform": "1",
+        "time": "2510201806",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Rohrbach(Ilm)",
+          "Pfaffenhofen(Ilm)",
+          "Petershausen(Obb)",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "-2815397824131408876-2510201804-1",
+        "type": "BRB",
+        "number": "84078",
+        "direction": "Eichstätt Stadt",
+        "platform": "2 A-C",
+        "time": "2510201804",
+        "destination": "Eichstätt Stadt",
+        "path_stations": [
+          "Ingolstadt Nord",
+          "Gaimersheim",
+          "Eitensheim",
+          "Tauberfeld",
+          "Adelschlag",
+          "Eichstätt Bahnhof",
+          "Wasserzell(b Eichstätt)",
+          "Rebdorf-Hofmühle",
+          "Eichstätt Stadt"
+        ]
+      },
+      {
+        "id": "1184971491498604817-2510201832-1",
+        "type": "ag",
+        "number": "84159",
+        "direction": "Neustadt(Donau)",
+        "platform": "6",
+        "time": "2510201832",
+        "destination": "Neustadt(Donau)",
+        "path_stations": [
+          "Ernsgaden",
+          "Vohburg-Rockolding",
+          "Münchsmünster",
+          "Neustadt(Donau)"
+        ]
+      },
+      {
+        "id": "-231474449477123133-2510201806-1",
+        "type": "ag",
+        "number": "21730",
+        "direction": "Neuburg(Donau)",
+        "platform": "6",
+        "time": "2510201806",
+        "destination": "Neuburg(Donau)",
+        "path_stations": [
+          "Weichering",
+          "Rohrenfeld",
+          "Neuburg(Donau)"
+        ]
+      },
+      {
+        "id": "-2106102740967803407-2510201908-1",
+        "type": "BRB",
+        "number": "86743",
+        "direction": "Augsburg Hbf",
+        "platform": "1",
+        "time": "2510201908",
+        "destination": "Augsburg Hbf",
+        "path_stations": [
+          "Brunnen(Oberbay)",
+          "Schrobenhausen",
+          "Radersdorf",
+          "Aichach",
+          "Obergriesbach",
+          "Dasing",
+          "Friedberg(Augsburg)",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße",
+          "Augsburg Hbf"
+        ]
+      },
+      {
+        "id": "5375326263046654482-2510201917-2",
+        "type": "ICE",
+        "number": "580",
+        "direction": "Kassel-Wilhelmshöhe",
+        "platform": "4",
+        "time": "2510201958",
+        "destination": "Kassel-Wilhelmshöhe",
+        "path_stations": [
+          "Nürnberg Hbf",
+          "Würzburg Hbf",
+          "Fulda",
+          "Kassel-Wilhelmshöhe"
+        ]
+      },
+      {
+        "id": "2113442754813536250-2510201739-21",
+        "type": "RB",
+        "number": "59101",
+        "direction": "München Hbf",
+        "platform": "2",
+        "time": "2510201937",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Baar-Ebenhausen",
+          "Rohrbach(Ilm)",
+          "Pfaffenhofen(Ilm)",
+          "Reichertshausen(Ilm)",
+          "Paindorf",
+          "Petershausen(Obb)",
+          "Dachau Bahnhof",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "5180885733832133637-2510201857-2",
+        "type": "ag",
+        "number": "84341",
+        "direction": "Regensburg Hbf",
+        "platform": "5",
+        "time": "2510201905",
+        "destination": "Regensburg Hbf",
+        "path_stations": [
+          "Ernsgaden",
+          "Vohburg-Rockolding",
+          "Münchsmünster",
+          "Neustadt(Donau)",
+          "Abensberg",
+          "Saal(Donau)",
+          "Bad Abbach",
+          "Gundelshausen",
+          "Sinzing",
+          "Regensburg-Prüfening",
+          "Regensburg Hbf"
+        ]
+      },
+      {
+        "id": "-1554836085446211574-2510201904-1",
+        "type": "RE",
+        "number": "4038",
+        "direction": "Nürnberg Hbf",
+        "platform": "2",
+        "time": "2510201904",
+        "destination": "Nürnberg Hbf",
+        "path_stations": [
+          "Ingolstadt Nord",
+          "Kinding(Altmühltal)",
+          "Allersberg(Rothsee)",
+          "Nürnberg Hbf"
+        ]
+      },
+      {
+        "id": "7347363591020888163-2510201905-5",
+        "type": "RE",
+        "number": "4040",
+        "direction": "Nürnberg Hbf",
+        "platform": "6",
+        "time": "2510202001",
+        "destination": "Nürnberg Hbf",
+        "path_stations": [
+          "Ingolstadt Nord",
+          "Kinding(Altmühltal)",
+          "Allersberg(Rothsee)",
+          "Nürnberg Hbf"
+        ]
+      },
+      {
+        "id": "-1290839640796586839-2510201818-2",
+        "type": "ICE",
+        "number": "782",
+        "direction": "Hamburg Hbf",
+        "platform": "4",
+        "time": "2510201900",
+        "destination": "Hamburg Hbf",
+        "path_stations": [
+          "Nürnberg Hbf",
+          "Würzburg Hbf",
+          "Fulda",
+          "Kassel-Wilhelmshöhe",
+          "Göttingen",
+          "Hannover Hbf",
+          "Celle",
+          "Uelzen",
+          "Lüneburg",
+          "Hamburg-Harburg",
+          "Hamburg Hbf"
+        ]
+      },
+      {
+        "id": "-3549002208205132341-2510201911-1",
+        "type": "ag",
+        "number": "21734",
+        "direction": "Neuburg(Donau)",
+        "platform": "6",
+        "time": "2510201911",
+        "destination": "Neuburg(Donau)",
+        "path_stations": [
+          "Weichering",
+          "Rohrenfeld",
+          "Neuburg(Donau)"
+        ]
+      },
+      {
+        "id": "1064335486279272526-2510201808-20",
+        "type": "ag",
+        "number": "84342",
+        "direction": "Ingolstadt Nord",
+        "platform": "5",
+        "time": "2510201955",
+        "destination": "Ingolstadt Nord",
+        "path_stations": [
+          "Ingolstadt Nord"
+        ]
+      },
+      {
+        "id": "-4234574648514804033-2510201907-1",
+        "type": "RE",
+        "number": "59079",
+        "direction": "München Hbf",
+        "platform": "7",
+        "time": "2510201907",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Rohrbach(Ilm)",
+          "Pfaffenhofen(Ilm)",
+          "Petershausen(Obb)",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "7649777879216529082-2510201826-9",
+        "type": "RB",
+        "number": "59162",
+        "direction": "Treuchtlingen",
+        "platform": "5",
+        "time": "2510201926",
+        "destination": "Treuchtlingen",
+        "path_stations": [
+          "Ingolstadt Nord",
+          "Ingolstadt Audi",
+          "Gaimersheim",
+          "Eitensheim",
+          "Tauberfeld",
+          "Adelschlag",
+          "Eichstätt Bahnhof",
+          "Dollnstein",
+          "Solnhofen",
+          "Pappenheim",
+          "Treuchtlingen"
+        ]
+      },
+      {
+        "id": "-266204046597736577-2510201354-11",
+        "type": "ICE",
+        "number": "881",
+        "direction": "München Hbf",
+        "platform": "3",
+        "time": "2510201903",
+        "destination": "München Hbf",
+        "path_stations": [
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "3941958275395660636-2510201515-8",
+        "type": "ICE",
+        "number": "631",
+        "direction": "München Hbf",
+        "platform": "3",
+        "time": "2510202006",
+        "destination": "München Hbf",
+        "path_stations": [
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "-2724062921285146474-2510201924-9",
+        "type": "RB",
+        "number": "59106",
+        "direction": "Nürnberg Hbf",
+        "platform": "5",
+        "time": "2510202030",
+        "destination": "Nürnberg Hbf",
+        "path_stations": [
+          "Ingolstadt Nord",
+          "Ingolstadt Audi",
+          "Gaimersheim",
+          "Eitensheim",
+          "Tauberfeld",
+          "Adelschlag",
+          "Eichstätt Bahnhof",
+          "Dollnstein",
+          "Solnhofen",
+          "Pappenheim",
+          "Treuchtlingen",
+          "Weißenburg(Bay)",
+          "Ellingen(Bay)",
+          "Pleinfeld",
+          "Mühlstetten",
+          "Georgensgmünd",
+          "Unterheckenhofen",
+          "Roth",
+          "Schwabach",
+          "Nürnberg Hbf"
+        ]
+      },
+      {
+        "id": "-4769796874542577189-2510202009-1",
+        "type": "BRB",
+        "number": "86745",
+        "direction": "Augsburg Hbf",
+        "platform": "7",
+        "time": "2510202009",
+        "destination": "Augsburg Hbf",
+        "path_stations": [
+          "Brunnen(Oberbay)",
+          "Schrobenhausen",
+          "Radersdorf",
+          "Aichach",
+          "Obergriesbach",
+          "Dasing",
+          "Friedberg(Augsburg)",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße",
+          "Augsburg Hbf"
+        ]
+      },
+      {
+        "id": "-4080256596236254369-2510201935-12",
+        "type": "RB",
+        "number": "59161",
+        "direction": "München Hbf",
+        "platform": "2",
+        "time": "2510202040",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Baar-Ebenhausen",
+          "Rohrbach(Ilm)",
+          "Pfaffenhofen(Ilm)",
+          "Reichertshausen(Ilm)",
+          "Paindorf",
+          "Petershausen(Obb)",
+          "Dachau Bahnhof",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "-530930744538340941-2510201945-12",
+        "type": "ag",
+        "number": "84344",
+        "direction": "Ingolstadt Nord",
+        "platform": "5",
+        "time": "2510202055",
+        "destination": "Ingolstadt Nord",
+        "path_stations": [
+          "Ingolstadt Nord"
+        ]
+      },
+      {
+        "id": "7347363591020888163-2510201905-5",
+        "type": "RE",
+        "number": "4040",
+        "direction": "Nürnberg Hbf",
+        "platform": "6",
+        "time": "2510202001",
+        "destination": "Nürnberg Hbf",
+        "path_stations": [
+          "Ingolstadt Nord",
+          "Kinding(Altmühltal)",
+          "Allersberg(Rothsee)",
+          "Nürnberg Hbf"
+        ]
+      },
+      {
+        "id": "2006650266683945588-2510201416-10",
+        "type": "ICE",
+        "number": "681",
+        "direction": "München Hbf",
+        "platform": "3",
+        "time": "2510202006",
+        "destination": "München Hbf",
+        "path_stations": [
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "7397876130428124259-2510202011-1",
+        "type": "ag",
+        "number": "21736",
+        "direction": "Neuburg(Donau)",
+        "platform": "1",
+        "time": "2510202011",
+        "destination": "Neuburg(Donau)",
+        "path_stations": [
+          "Weichering",
+          "Rohrenfeld",
+          "Neuburg(Donau)"
+        ]
+      },
+      {
+        "id": "-7173313963166475560-2510201907-5",
+        "type": "RE",
+        "number": "4037",
+        "direction": "München Hbf",
+        "platform": "2",
+        "time": "2510202009",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Rohrbach(Ilm)",
+          "Pfaffenhofen(Ilm)",
+          "Petershausen(Obb)",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "-4383803236760390820-2510201947-2",
+        "type": "ICE",
+        "number": "522",
+        "direction": "Köln Hbf",
+        "platform": "4",
+        "time": "2510202025",
+        "destination": "Köln Hbf",
+        "path_stations": [
+          "Nürnberg Hbf",
+          "Würzburg Hbf",
+          "Aschaffenburg Hbf",
+          "Hanau Hbf",
+          "Frankfurt(Main)Hbf",
+          "Frankfurt(M) Flughafen Fernbf",
+          "Limburg Süd",
+          "Montabaur",
+          "Siegburg/Bonn",
+          "Köln Hbf"
+        ]
+      },
+      {
+        "id": "-988583344704703688-2510201554-10",
+        "type": "ICE",
+        "number": "883",
+        "direction": "München Hbf",
+        "platform": "3",
+        "time": "2510202101",
+        "destination": "München Hbf",
+        "path_stations": [
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "758555810786479173-2510202001-2",
+        "type": "ag",
+        "number": "84343",
+        "direction": "Plattling",
+        "platform": "5",
+        "time": "2510202006",
+        "destination": "Plattling",
+        "path_stations": [
+          "Ernsgaden",
+          "Vohburg-Rockolding",
+          "Münchsmünster",
+          "Neustadt(Donau)",
+          "Abensberg",
+          "Saal(Donau)",
+          "Bad Abbach",
+          "Poikam",
+          "Sinzing",
+          "Regensburg-Prüfening",
+          "Regensburg Hbf",
+          "Regensburg-Burgweinting",
+          "Obertraubling",
+          "Sünching",
+          "Radldorf(Niederbay)",
+          "Straubing",
+          "Straßkirchen",
+          "Plattling"
+        ]
+      },
+      {
+        "id": "-8358896547980546511-2510201937-21",
+        "type": "RB",
+        "number": "59107",
+        "direction": "München Hbf",
+        "platform": "2",
+        "time": "2510202137",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Baar-Ebenhausen",
+          "Rohrbach(Ilm)",
+          "Pfaffenhofen(Ilm)",
+          "Reichertshausen(Ilm)",
+          "Paindorf",
+          "Petershausen(Obb)",
+          "Dachau Bahnhof",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "-6341401029022658133-2510201651-10",
+        "type": "ICE",
+        "number": "727",
+        "direction": "München Hbf",
+        "platform": "3",
+        "time": "2510202132",
+        "destination": "München Hbf",
+        "path_stations": [
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "4930918570354887901-2510202107-5",
+        "type": "RE",
+        "number": "4041",
+        "direction": "München Hbf",
+        "platform": "2",
+        "time": "2510202204",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Rohrbach(Ilm)",
+          "Pfaffenhofen(Ilm)",
+          "Petershausen(Obb)",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "-4650662687300759398-2510202022-9",
+        "type": "RB",
+        "number": "59164",
+        "direction": "Treuchtlingen",
+        "platform": "5",
+        "time": "2510202125",
+        "destination": "Treuchtlingen",
+        "path_stations": [
+          "Ingolstadt Nord",
+          "Ingolstadt Audi",
+          "Gaimersheim",
+          "Eitensheim",
+          "Tauberfeld",
+          "Adelschlag",
+          "Eichstätt Bahnhof",
+          "Dollnstein",
+          "Solnhofen",
+          "Pappenheim",
+          "Treuchtlingen"
+        ]
+      },
+      {
+        "id": "434699660439512752-2510201715-8",
+        "type": "ICE",
+        "number": "633",
+        "direction": "München Hbf",
+        "platform": "3",
+        "time": "2510202201",
+        "destination": "München Hbf",
+        "path_stations": [
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "5321437189916721296-2510202105-5",
+        "type": "RE",
+        "number": "4044",
+        "direction": "Nürnberg Hbf",
+        "platform": "4",
+        "time": "2510202157",
+        "destination": "Nürnberg Hbf",
+        "path_stations": [
+          "Ingolstadt Nord",
+          "Kinding(Altmühltal)",
+          "Allersberg(Rothsee)",
+          "Nürnberg Hbf"
+        ]
+      },
+      {
+        "id": "4904604235229839941-2510202108-1",
+        "type": "BRB",
+        "number": "86747",
+        "direction": "Augsburg Hbf",
+        "platform": "7",
+        "time": "2510202108",
+        "destination": "Augsburg Hbf",
+        "path_stations": [
+          "Brunnen(Oberbay)",
+          "Schrobenhausen",
+          "Radersdorf",
+          "Aichach",
+          "Obergriesbach",
+          "Dasing",
+          "Friedberg(Augsburg)",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße",
+          "Augsburg Hbf"
+        ]
+      },
+      {
+        "id": "-7179928820236290043-2510201636-11",
+        "type": "ICE",
+        "number": "683",
+        "direction": "München Hbf",
+        "platform": "3",
+        "time": "2510202201",
+        "destination": "München Hbf",
+        "path_stations": [
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "4027978340592185050-2510202008-19",
+        "type": "ag",
+        "number": "84346",
+        "direction": "Ingolstadt Nord",
+        "platform": "5",
+        "time": "2510202154",
+        "destination": "Ingolstadt Nord",
+        "path_stations": [
+          "Ingolstadt Nord"
+        ]
+      },
+      {
+        "id": "8573811631662133764-2510202048-2",
+        "type": "ICE",
+        "number": "520",
+        "direction": "Frankfurt(Main)Hbf",
+        "platform": "4",
+        "time": "2510202129",
+        "destination": "Frankfurt(Main)Hbf",
+        "path_stations": [
+          "Nürnberg Hbf",
+          "Würzburg Hbf",
+          "Aschaffenburg Hbf",
+          "Frankfurt(Main)Hbf"
+        ]
+      },
+      {
+        "id": "7436690865011430248-2510202111-1",
+        "type": "ag",
+        "number": "21738",
+        "direction": "Neuburg(Donau)",
+        "platform": "1",
+        "time": "2510202111",
+        "destination": "Neuburg(Donau)",
+        "path_stations": [
+          "Weichering",
+          "Rohrenfeld",
+          "Neuburg(Donau)"
+        ]
+      },
+      {
+        "id": "-7751455148133111269-2510202059-2",
+        "type": "ag",
+        "number": "84345",
+        "direction": "Regensburg Hbf",
+        "platform": "5",
+        "time": "2510202105",
+        "destination": "Regensburg Hbf",
+        "path_stations": [
+          "Ernsgaden",
+          "Vohburg-Rockolding",
+          "Münchsmünster",
+          "Neustadt(Donau)",
+          "Abensberg",
+          "Saal(Donau)",
+          "Bad Abbach",
+          "Gundelshausen",
+          "Sinzing",
+          "Regensburg-Prüfening",
+          "Regensburg Hbf"
+        ]
+      },
+      {
+        "id": "-988583344704703688-2510201554-10",
+        "type": "ICE",
+        "number": "883",
+        "direction": "München Hbf",
+        "platform": "3",
+        "time": "2510202101",
+        "destination": "München Hbf",
+        "path_stations": [
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "3834791717484354220-2510202104-1",
+        "type": "RE",
+        "number": "4036",
+        "direction": "Nürnberg Hbf",
+        "platform": "6",
+        "time": "2510202104",
+        "destination": "Nürnberg Hbf",
+        "path_stations": [
+          "Ingolstadt Nord",
+          "Kinding(Altmühltal)",
+          "Allersberg(Rothsee)",
+          "Nürnberg Hbf"
+        ]
+      },
+      {
+        "id": "-5442198346485122846-2510202104-1",
+        "type": "RE",
+        "number": "59083",
+        "direction": "München Hbf",
+        "platform": "2",
+        "time": "2510202104",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Rohrbach(Ilm)",
+          "Pfaffenhofen(Ilm)",
+          "Petershausen(Obb)",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "5324821628306728469-2510201754-10",
+        "type": "ICE",
+        "number": "729",
+        "direction": "München Hbf",
+        "platform": "3",
+        "time": "2510202240",
+        "destination": "München Hbf",
+        "path_stations": [
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "4930918570354887901-2510202107-5",
+        "type": "RE",
+        "number": "4041",
+        "direction": "München Hbf",
+        "platform": "2",
+        "time": "2510202204",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Rohrbach(Ilm)",
+          "Pfaffenhofen(Ilm)",
+          "Petershausen(Obb)",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "8209469800275406026-2510202217-2",
+        "type": "ICE",
+        "number": "1080",
+        "direction": "Hamburg Hbf",
+        "platform": "4",
+        "time": "2510202253",
+        "destination": "Hamburg Hbf",
+        "path_stations": [
+          "Nürnberg Hbf",
+          "Würzburg Hbf",
+          "Göttingen",
+          "Hannover Hbf",
+          "Celle",
+          "Uelzen",
+          "Lüneburg",
+          "Hamburg-Harburg",
+          "Hamburg Hbf"
+        ]
+      },
+      {
+        "id": "4199646812407441115-2510202126-9",
+        "type": "RB",
+        "number": "59108",
+        "direction": "Nürnberg Hbf",
+        "platform": "4",
+        "time": "2510202225",
+        "destination": "Nürnberg Hbf",
+        "path_stations": [
+          "Ingolstadt Nord",
+          "Ingolstadt Audi",
+          "Gaimersheim",
+          "Eitensheim",
+          "Tauberfeld",
+          "Adelschlag",
+          "Eichstätt Bahnhof",
+          "Dollnstein",
+          "Solnhofen",
+          "Pappenheim",
+          "Treuchtlingen",
+          "Weißenburg(Bay)",
+          "Ellingen(Bay)",
+          "Pleinfeld",
+          "Mühlstetten",
+          "Georgensgmünd",
+          "Unterheckenhofen",
+          "Roth",
+          "Schwabach",
+          "Nürnberg Hbf"
+        ]
+      },
+      {
+        "id": "7771397587504426738-2510202135-12",
+        "type": "RB",
+        "number": "59163",
+        "direction": "München Hbf",
+        "platform": "2",
+        "time": "2510202234",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Baar-Ebenhausen",
+          "Rohrbach(Ilm)",
+          "Pfaffenhofen(Ilm)",
+          "Reichertshausen(Ilm)",
+          "Paindorf",
+          "Petershausen(Obb)",
+          "Dachau Bahnhof",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "434699660439512752-2510201715-8",
+        "type": "ICE",
+        "number": "633",
+        "direction": "München Hbf",
+        "platform": "3",
+        "time": "2510202201",
+        "destination": "München Hbf",
+        "path_stations": [
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "-7179928820236290043-2510201636-11",
+        "type": "ICE",
+        "number": "683",
+        "direction": "München Hbf",
+        "platform": "3",
+        "time": "2510202201",
+        "destination": "München Hbf",
+        "path_stations": [
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "-6940863621314051564-2510202208-1",
+        "type": "BRB",
+        "number": "86749",
+        "direction": "Augsburg Hbf",
+        "platform": "6",
+        "time": "2510202208",
+        "destination": "Augsburg Hbf",
+        "path_stations": [
+          "Brunnen(Oberbay)",
+          "Schrobenhausen",
+          "Radersdorf",
+          "Aichach",
+          "Obergriesbach",
+          "Dasing",
+          "Friedberg(Augsburg)",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße",
+          "Augsburg Hbf"
+        ]
+      },
+      {
+        "id": "-3262256816161634412-2510202159-2",
+        "type": "ag",
+        "number": "84347",
+        "direction": "Plattling",
+        "platform": "5",
+        "time": "2510202205",
+        "destination": "Plattling",
+        "path_stations": [
+          "Ernsgaden",
+          "Vohburg-Rockolding",
+          "Münchsmünster",
+          "Neustadt(Donau)",
+          "Abensberg",
+          "Saal(Donau)",
+          "Bad Abbach",
+          "Poikam",
+          "Sinzing",
+          "Regensburg-Prüfening",
+          "Regensburg Hbf",
+          "Regensburg-Burgweinting",
+          "Obertraubling",
+          "Sünching",
+          "Radldorf(Niederbay)",
+          "Straubing",
+          "Straßkirchen",
+          "Plattling"
+        ]
+      },
+      {
+        "id": "-223421926958290666-2510201634-12",
+        "type": "ICE",
+        "number": "885",
+        "direction": "München Hbf",
+        "platform": "3",
+        "time": "2510202301",
+        "destination": "München Hbf",
+        "path_stations": [
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "-6188087749679563535-2510202211-1",
+        "type": "ag",
+        "number": "84296",
+        "direction": "Neuburg(Donau)",
+        "platform": "1",
+        "time": "2510202211",
+        "destination": "Neuburg(Donau)",
+        "path_stations": [
+          "Weichering",
+          "Rohrenfeld",
+          "Neuburg(Donau)"
+        ]
+      },
+      {
+        "id": "2143499115056676952-2510201839-12",
+        "type": "ICE",
+        "number": "821",
+        "direction": "München Hbf",
+        "platform": "3",
+        "time": "2510202342",
+        "destination": "München Hbf",
+        "path_stations": [
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "-3663574278303202190-2510202311-1",
+        "type": "ag",
+        "number": "21742",
+        "direction": "Neuburg(Donau)",
+        "platform": "6",
+        "time": "2510202311",
+        "destination": "Neuburg(Donau)",
+        "path_stations": [
+          "Weichering",
+          "Rohrenfeld",
+          "Neuburg(Donau)"
+        ]
+      },
+      {
+        "id": "3533109548330090403-2510202331-1",
+        "type": "RE",
+        "number": "4048",
+        "direction": "Nürnberg Hbf",
+        "platform": "1",
+        "time": "2510202331",
+        "destination": "Nürnberg Hbf",
+        "path_stations": [
+          "Ingolstadt Nord",
+          "Kinding(Altmühltal)",
+          "Allersberg(Rothsee)",
+          "Nürnberg Hbf"
+        ]
+      },
+      {
+        "id": "-5262352002503319170-2510202138-21",
+        "type": "RB",
+        "number": "59109",
+        "direction": "München Hbf",
+        "platform": "2",
+        "time": "2510202336",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Baar-Ebenhausen",
+          "Rohrbach(Ilm)",
+          "Pfaffenhofen(Ilm)",
+          "Reichertshausen(Ilm)",
+          "Paindorf",
+          "Petershausen(Obb)",
+          "Dachau Bahnhof",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "9023065078721211182-2510202208-20",
+        "type": "ag",
+        "number": "84350",
+        "direction": "Ingolstadt Nord",
+        "platform": "5",
+        "time": "2510202356",
+        "destination": "Ingolstadt Nord",
+        "path_stations": [
+          "Ingolstadt Nord"
+        ]
+      },
+      {
+        "id": "1779337362639736229-2510202259-2",
+        "type": "ag",
+        "number": "84349",
+        "direction": "Regensburg Hbf",
+        "platform": "5",
+        "time": "2510202305",
+        "destination": "Regensburg Hbf",
+        "path_stations": [
+          "Ernsgaden",
+          "Vohburg-Rockolding",
+          "Münchsmünster",
+          "Neustadt(Donau)",
+          "Abensberg",
+          "Saal(Donau)",
+          "Bad Abbach",
+          "Poikam",
+          "Gundelshausen",
+          "Sinzing",
+          "Regensburg-Prüfening",
+          "Regensburg Hbf"
+        ]
+      },
+      {
+        "id": "-223421926958290666-2510201634-12",
+        "type": "ICE",
+        "number": "885",
+        "direction": "München Hbf",
+        "platform": "3",
+        "time": "2510202301",
+        "destination": "München Hbf",
+        "path_stations": [
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "1647016829303373226-2510202308-1",
+        "type": "BRB",
+        "number": "86751",
+        "direction": "Augsburg Hbf",
+        "platform": "1",
+        "time": "2510202308",
+        "destination": "Augsburg Hbf",
+        "path_stations": [
+          "Brunnen(Oberbay)",
+          "Schrobenhausen",
+          "Radersdorf",
+          "Aichach",
+          "Obergriesbach",
+          "Dasing",
+          "Friedberg(Augsburg)",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße",
+          "Augsburg Hbf"
+        ]
+      },
+      {
+        "id": "6941385099426743797-2510202226-9",
+        "type": "RB",
+        "number": "59174",
+        "direction": "Treuchtlingen",
+        "platform": "4",
+        "time": "2510202322",
+        "destination": "Treuchtlingen",
+        "path_stations": [
+          "Ingolstadt Nord",
+          "Ingolstadt Audi",
+          "Gaimersheim",
+          "Eitensheim",
+          "Tauberfeld",
+          "Adelschlag",
+          "Eichstätt Bahnhof",
+          "Dollnstein",
+          "Solnhofen",
+          "Pappenheim",
+          "Treuchtlingen"
+        ]
+      },
+      {
+        "id": "3551238406803165030-2510210038-1",
+        "type": "BRB",
+        "number": "86625",
+        "direction": "Augsburg Hbf",
+        "platform": "6",
+        "time": "2510210038",
+        "destination": "Augsburg Hbf",
+        "path_stations": [
+          "Brunnen(Oberbay)",
+          "Schrobenhausen",
+          "Radersdorf",
+          "Aichach",
+          "Obergriesbach",
+          "Dasing",
+          "Friedberg(Augsburg)",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße",
+          "Augsburg Hbf"
+        ]
+      },
+      {
+        "id": "7255926203441774243-2510210025-2",
+        "type": "ag",
+        "number": "84351",
+        "direction": "Neustadt(Donau)",
+        "platform": "5",
+        "time": "2510210041",
+        "destination": "Neustadt(Donau)",
+        "path_stations": [
+          "Ernsgaden",
+          "Vohburg-Rockolding",
+          "Münchsmünster",
+          "Neustadt(Donau)"
+        ]
+      },
+      {
+        "id": "-2480303027028645831-2510202326-9",
+        "type": "RB",
+        "number": "59176",
+        "direction": "Ingolstadt Nord",
+        "platform": "4",
+        "time": "2510210029",
+        "destination": "Ingolstadt Nord",
+        "path_stations": [
+          "Ingolstadt Nord"
+        ]
+      },
+      {
+        "id": "1811066918985459005-2510210031-9",
+        "type": "RB",
+        "number": "59170",
+        "direction": "Ingolstadt Nord",
+        "platform": "4",
+        "time": "2510210129",
+        "destination": "Ingolstadt Nord",
+        "path_stations": [
+          "Ingolstadt Nord"
+        ]
+      },
+      {
+        "id": "7606147327866673072-2510210407-1",
+        "type": "RB",
+        "number": "59140",
+        "direction": "Nürnberg Hbf",
+        "platform": "5",
+        "time": "2510210407",
+        "destination": "Nürnberg Hbf",
+        "path_stations": [
+          "Ingolstadt Nord",
+          "Ingolstadt Audi",
+          "Gaimersheim",
+          "Eitensheim",
+          "Tauberfeld",
+          "Adelschlag",
+          "Eichstätt Bahnhof",
+          "Dollnstein",
+          "Solnhofen",
+          "Pappenheim",
+          "Treuchtlingen",
+          "Weißenburg(Bay)",
+          "Ellingen(Bay)",
+          "Pleinfeld",
+          "Mühlstetten",
+          "Georgensgmünd",
+          "Unterheckenhofen",
+          "Roth",
+          "Schwabach",
+          "Nürnberg Hbf"
+        ]
+      },
+      {
+        "id": "2948952881247611386-2510210410-1",
+        "type": "RB",
+        "number": "59198",
+        "direction": "Ingolstadt Nord",
+        "platform": "1",
+        "time": "2510210410",
+        "destination": "Ingolstadt Nord",
+        "path_stations": [
+          "Ingolstadt Nord"
+        ]
+      },
+      {
+        "id": "-7495630145569887754-2510210452-1",
+        "type": "BRB",
+        "number": "86629",
+        "direction": "Augsburg Hbf",
+        "platform": "1",
+        "time": "2510210452",
+        "destination": "Augsburg Hbf",
+        "path_stations": [
+          "Brunnen(Oberbay)",
+          "Schrobenhausen",
+          "Radersdorf",
+          "Aichach",
+          "Obergriesbach",
+          "Dasing",
+          "Friedberg(Augsburg)",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße",
+          "Augsburg Hbf"
+        ]
+      },
+      {
+        "id": "5028473175569704025-2510210412-2",
+        "type": "ICE",
+        "number": "888",
+        "direction": "Hamburg Hbf",
+        "platform": "4",
+        "time": "2510210451",
+        "destination": "Hamburg Hbf",
+        "path_stations": [
+          "Nürnberg Hbf",
+          "Würzburg Hbf",
+          "Fulda",
+          "Kassel-Wilhelmshöhe",
+          "Göttingen",
+          "Hannover Hbf",
+          "Hamburg-Harburg",
+          "Hamburg Hbf"
+        ]
+      },
+      {
+        "id": "3404182062933102629-2510210434-1",
+        "type": "ag",
+        "number": "21700",
+        "direction": "Neuburg(Donau)",
+        "platform": "5",
+        "time": "2510210434",
+        "destination": "Neuburg(Donau)",
+        "path_stations": [
+          "Weichering",
+          "Rohrenfeld",
+          "Neuburg(Donau)"
+        ]
+      },
+      {
+        "id": "-965501803229921880-2510210452-1",
+        "type": "ag",
+        "number": "84311",
+        "direction": "Regensburg Hbf",
+        "platform": "7",
+        "time": "2510210452",
+        "destination": "Regensburg Hbf",
+        "path_stations": [
+          "Ernsgaden",
+          "Vohburg-Rockolding",
+          "Münchsmünster",
+          "Neustadt(Donau)",
+          "Abensberg",
+          "Saal(Donau)",
+          "Bad Abbach",
+          "Poikam",
+          "Gundelshausen",
+          "Sinzing",
+          "Regensburg-Prüfening",
+          "Regensburg Hbf"
+        ]
+      },
+      {
+        "id": "-8987841866346689354-2510210431-2",
+        "type": "RB",
+        "number": "59171",
+        "direction": "München Hbf",
+        "platform": "3",
+        "time": "2510210437",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Baar-Ebenhausen",
+          "Rohrbach(Ilm)",
+          "Pfaffenhofen(Ilm)",
+          "Reichertshausen(Ilm)",
+          "Paindorf",
+          "Petershausen(Obb)",
+          "Dachau Bahnhof",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "-4763915422430400608-2510210443-12",
+        "type": "RB",
+        "number": "59141",
+        "direction": "München Hbf",
+        "platform": "3",
+        "time": "2510210534",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Baar-Ebenhausen",
+          "Rohrbach(Ilm)",
+          "Pfaffenhofen(Ilm)",
+          "Reichertshausen(Ilm)",
+          "Paindorf",
+          "Petershausen(Obb)",
+          "Dachau Bahnhof",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "4653126596847301158-2510210514-2",
+        "type": "ICE",
+        "number": "634",
+        "direction": "Bremen Hbf",
+        "platform": "4",
+        "time": "2510210557",
+        "destination": "Bremen Hbf",
+        "path_stations": [
+          "Nürnberg Hbf",
+          "Würzburg Hbf",
+          "Fulda",
+          "Kassel-Wilhelmshöhe",
+          "Göttingen",
+          "Hannover Hbf",
+          "Bremen Hbf"
+        ]
+      },
+      {
+        "id": "-8076309266227511026-2510210520-1",
+        "type": "ag",
+        "number": "84313",
+        "direction": "Regensburg Hbf",
+        "platform": "6",
+        "time": "2510210520",
+        "destination": "Regensburg Hbf",
+        "path_stations": [
+          "Ernsgaden",
+          "Vohburg-Rockolding",
+          "Münchsmünster",
+          "Neustadt(Donau)",
+          "Abensberg",
+          "Saal(Donau)",
+          "Bad Abbach",
+          "Poikam",
+          "Gundelshausen",
+          "Sinzing",
+          "Regensburg-Prüfening",
+          "Regensburg Hbf"
+        ]
+      },
+      {
+        "id": "8574245009288031259-2510210507-1",
+        "type": "BRB",
+        "number": "84038",
+        "direction": "Eichstätt Stadt",
+        "platform": "5 A-C",
+        "time": "2510210507",
+        "destination": "Eichstätt Stadt",
+        "path_stations": [
+          "Ingolstadt Nord",
+          "Ingolstadt Audi",
+          "Eichstätt Bahnhof",
+          "Wasserzell(b Eichstätt)",
+          "Rebdorf-Hofmühle",
+          "Eichstätt Stadt"
+        ]
+      },
+      {
+        "id": "-3901580007931980802-2510210501-6",
+        "type": "RE",
+        "number": "4000",
+        "direction": "Nürnberg Hbf",
+        "platform": "7",
+        "time": "2510210601",
+        "destination": "Nürnberg Hbf",
+        "path_stations": [
+          "Ingolstadt Nord",
+          "Kinding(Altmühltal)",
+          "Allersberg(Rothsee)",
+          "Nürnberg Hbf"
+        ]
+      },
+      {
+        "id": "6106442635410950120-2510210509-5",
+        "type": "RE",
+        "number": "4001",
+        "direction": "München Hbf",
+        "platform": "3",
+        "time": "2510210600",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Rohrbach(Ilm)",
+          "Pfaffenhofen(Ilm)",
+          "Petershausen(Obb)",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "-8003392339101483857-2510210514-2",
+        "type": "ICE",
+        "number": "684",
+        "direction": "Hamburg-Altona",
+        "platform": "4",
+        "time": "2510210557",
+        "destination": "Hamburg-Altona",
+        "path_stations": [
+          "Nürnberg Hbf",
+          "Würzburg Hbf",
+          "Fulda",
+          "Kassel-Wilhelmshöhe",
+          "Göttingen",
+          "Hannover Hbf",
+          "Hamburg-Harburg",
+          "Hamburg Hbf",
+          "Hamburg Dammtor",
+          "Hamburg-Altona"
+        ]
+      },
+      {
+        "id": "2731850022121036462-2510210556-1",
+        "type": "ag",
+        "number": "21702",
+        "direction": "Neuburg(Donau)",
+        "platform": "6",
+        "time": "2510210556",
+        "destination": "Neuburg(Donau)",
+        "path_stations": [
+          "Weichering",
+          "Rohrenfeld",
+          "Neuburg(Donau)"
+        ]
+      },
+      {
+        "id": "7597089806492032299-2510202221-8",
+        "type": "ICE",
+        "number": "1081",
+        "direction": "München Hbf",
+        "platform": "3",
+        "time": "2510210524",
+        "destination": "München Hbf",
+        "path_stations": [
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "-2468297444186144822-2510210544-1",
+        "type": "RB",
+        "number": "59175",
+        "direction": "München Hbf",
+        "platform": "2",
+        "time": "2510210544",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Baar-Ebenhausen",
+          "Rohrbach(Ilm)",
+          "Pfaffenhofen(Ilm)",
+          "Petershausen(Obb)",
+          "Dachau Bahnhof",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "4261223944140790482-2510210418-13",
+        "type": "ag",
+        "number": "84310",
+        "direction": "Ingolstadt Nord",
+        "platform": "5",
+        "time": "2510210519",
+        "destination": "Ingolstadt Nord",
+        "path_stations": [
+          "Ingolstadt Nord"
+        ]
+      },
+      {
+        "id": "-6223962037244896084-2510210447-2",
+        "type": "ICE",
+        "number": "822",
+        "direction": "Essen Hbf",
+        "platform": "5",
+        "time": "2510210527",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Nürnberg Hbf",
+          "Würzburg Hbf",
+          "Aschaffenburg Hbf",
+          "Frankfurt(Main)Hbf",
+          "Frankfurt(M) Flughafen Fernbf",
+          "Siegburg/Bonn",
+          "Köln Messe/Deutz Gl.11-12",
+          "Düsseldorf Hbf",
+          "Duisburg Hbf",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "8286319660578517068-2510210500-4",
+        "type": "RB",
+        "number": "59144",
+        "direction": "Treuchtlingen",
+        "platform": "4",
+        "time": "2510210523",
+        "destination": "Treuchtlingen",
+        "path_stations": [
+          "Ingolstadt Nord",
+          "Ingolstadt Audi",
+          "Gaimersheim",
+          "Eitensheim",
+          "Tauberfeld",
+          "Adelschlag",
+          "Eichstätt Bahnhof",
+          "Dollnstein",
+          "Solnhofen",
+          "Pappenheim",
+          "Treuchtlingen"
+        ]
+      }
+    ]
+  }
+}

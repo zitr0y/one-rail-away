@@ -1,0 +1,461 @@
+{
+  "station_eva": "8000667",
+  "date": "251020",
+  "cached_at": "2025-10-20T15:45:16.574568",
+  "plan_data": {
+    "departures": [
+      {
+        "id": "9221055242504429929-2510201654-10",
+        "type": "HLB",
+        "number": "61526",
+        "direction": "Siershahn",
+        "platform": "5 a",
+        "time": "2510201745",
+        "destination": "Siershahn",
+        "path_stations": [
+          "Dernbach(Westerw)",
+          "Wirges",
+          "Siershahn"
+        ]
+      },
+      {
+        "id": "-3945750437908498927-2510201715-4",
+        "type": "ICE",
+        "number": "814",
+        "direction": "Köln Hbf",
+        "platform": "4",
+        "time": "2510201805",
+        "destination": "Köln Hbf",
+        "path_stations": [
+          "Siegburg/Bonn",
+          "Köln Hbf"
+        ]
+      },
+      {
+        "id": "1767581860461023663-2510201512-6",
+        "type": "ICE",
+        "number": "118",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "4",
+        "time": "2510201747",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Siegburg/Bonn",
+          "Köln Messe/Deutz Gl.11-12",
+          "Düsseldorf Hbf",
+          "Duisburg Hbf",
+          "Oberhausen Hbf",
+          "Gelsenkirchen Hbf",
+          "Wanne-Eickel Hbf",
+          "Recklinghausen Hbf",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-1980200309778804828-2510201615-4",
+        "type": "ICE",
+        "number": "816",
+        "direction": "Köln Hbf",
+        "platform": "4",
+        "time": "2510201705",
+        "destination": "Köln Hbf",
+        "path_stations": [
+          "Siegburg/Bonn",
+          "Köln Hbf"
+        ]
+      },
+      {
+        "id": "6423634419829337550-2510201435-8",
+        "type": "ICE",
+        "number": "710",
+        "direction": "Köln Hbf",
+        "platform": "4",
+        "time": "2510201718",
+        "destination": "Köln Hbf",
+        "path_stations": [
+          "Siegburg/Bonn",
+          "Köln/Bonn Flughafen",
+          "Köln Hbf"
+        ]
+      },
+      {
+        "id": "-5407571878478060383-2510201658-4",
+        "type": "HLB",
+        "number": "61531",
+        "direction": "Limburg(Lahn)",
+        "platform": "5 b",
+        "time": "2510201711",
+        "destination": "Limburg(Lahn)",
+        "path_stations": [
+          "Goldhausen",
+          "Girod",
+          "Steinefrenz",
+          "Dreikirchen",
+          "Niedererbach",
+          "Elz(Limburg/Lahn) Süd",
+          "Staffel",
+          "Diez Ost",
+          "Limburg(Lahn)"
+        ]
+      },
+      {
+        "id": "-3945750437908498927-2510201715-4",
+        "type": "ICE",
+        "number": "814",
+        "direction": "Köln Hbf",
+        "platform": "4",
+        "time": "2510201805",
+        "destination": "Köln Hbf",
+        "path_stations": [
+          "Siegburg/Bonn",
+          "Köln Hbf"
+        ]
+      },
+      {
+        "id": "-6075989787739630213-2510201815-4",
+        "type": "ICE",
+        "number": "812",
+        "direction": "Köln Hbf",
+        "platform": "4",
+        "time": "2510201905",
+        "destination": "Köln Hbf",
+        "path_stations": [
+          "Siegburg/Bonn",
+          "Köln/Bonn Flughafen",
+          "Köln Hbf"
+        ]
+      },
+      {
+        "id": "1862937021478579831-2510201757-10",
+        "type": "HLB",
+        "number": "61528",
+        "direction": "Siershahn",
+        "platform": "5 a",
+        "time": "2510201842",
+        "destination": "Siershahn",
+        "path_stations": [
+          "Dernbach(Westerw)",
+          "Wirges",
+          "Siershahn"
+        ]
+      },
+      {
+        "id": "3361998684627940094-2510201814-4",
+        "type": "HLB",
+        "number": "61533",
+        "direction": "Limburg(Lahn)",
+        "platform": "5 b",
+        "time": "2510201827",
+        "destination": "Limburg(Lahn)",
+        "path_stations": [
+          "Goldhausen",
+          "Girod",
+          "Steinefrenz",
+          "Dreikirchen",
+          "Niedererbach",
+          "Elz(Limburg/Lahn) Süd",
+          "Staffel",
+          "Diez Ost",
+          "Limburg(Lahn)"
+        ]
+      },
+      {
+        "id": "-940035628142522529-2510200842-31",
+        "type": "ICE",
+        "number": "114",
+        "direction": "Dortmund Hbf",
+        "platform": "4",
+        "time": "2510201847",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Siegburg/Bonn",
+          "Köln Messe/Deutz Gl.11-12",
+          "Düsseldorf Hbf",
+          "Duisburg Hbf",
+          "Mülheim(Ruhr)Hbf",
+          "Essen Hbf",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-1057492321374091038-2510201731-3",
+        "type": "ICE",
+        "number": "713",
+        "direction": "Frankfurt(Main)Hbf",
+        "platform": "1",
+        "time": "2510201805",
+        "destination": "Frankfurt(Main)Hbf",
+        "path_stations": [
+          "Limburg Süd",
+          "Wiesbaden Hbf",
+          "Mainz Hbf",
+          "Frankfurt(M) Flughafen Fernbf",
+          "Frankfurt(Main)Hbf"
+        ]
+      },
+      {
+        "id": "6351305499723870039-2510201800-3",
+        "type": "ICE",
+        "number": "905",
+        "direction": "Frankfurt(Main)Hbf",
+        "platform": "1",
+        "time": "2510201838",
+        "destination": "Frankfurt(Main)Hbf",
+        "path_stations": [
+          "Limburg Süd",
+          "Frankfurt(M) Flughafen Fernbf",
+          "Frankfurt(Main)Hbf"
+        ]
+      },
+      {
+        "id": "-6075989787739630213-2510201815-4",
+        "type": "ICE",
+        "number": "812",
+        "direction": "Köln Hbf",
+        "platform": "4",
+        "time": "2510201905",
+        "destination": "Köln Hbf",
+        "path_stations": [
+          "Siegburg/Bonn",
+          "Köln/Bonn Flughafen",
+          "Köln Hbf"
+        ]
+      },
+      {
+        "id": "-1606173725982501827-2510201900-10",
+        "type": "HLB",
+        "number": "61530",
+        "direction": "Siershahn",
+        "platform": "5 a",
+        "time": "2510201944",
+        "destination": "Siershahn",
+        "path_stations": [
+          "Dernbach(Westerw)",
+          "Wirges",
+          "Siershahn"
+        ]
+      },
+      {
+        "id": "-1188267942167451229-2510201550-8",
+        "type": "ICE",
+        "number": "620",
+        "direction": "Dortmund Hbf",
+        "platform": "4",
+        "time": "2510201952",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Siegburg/Bonn",
+          "Köln Messe/Deutz Gl.11-12",
+          "Düsseldorf Hbf",
+          "Duisburg Hbf",
+          "Essen Hbf",
+          "Gelsenkirchen Hbf",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "4297397620435441022-2510201859-4",
+        "type": "HLB",
+        "number": "61535",
+        "direction": "Limburg(Lahn)",
+        "platform": "5 b",
+        "time": "2510201912",
+        "destination": "Limburg(Lahn)",
+        "path_stations": [
+          "Goldhausen",
+          "Girod",
+          "Steinefrenz",
+          "Dreikirchen",
+          "Niedererbach",
+          "Elz(Limburg/Lahn) Süd",
+          "Staffel",
+          "Diez Ost",
+          "Limburg(Lahn)"
+        ]
+      },
+      {
+        "id": "-42191259716199423-2510202009-4",
+        "type": "HLB",
+        "number": "61537",
+        "direction": "Limburg(Lahn)",
+        "platform": "5 b",
+        "time": "2510202022",
+        "destination": "Limburg(Lahn)",
+        "path_stations": [
+          "Goldhausen",
+          "Girod",
+          "Steinefrenz",
+          "Dreikirchen",
+          "Niedererbach",
+          "Elz(Limburg/Lahn) Süd",
+          "Staffel",
+          "Diez Ost",
+          "Limburg(Lahn)"
+        ]
+      },
+      {
+        "id": "2143499115056676952-2510201839-5",
+        "type": "ICE",
+        "number": "821",
+        "direction": "München Hbf",
+        "platform": "1",
+        "time": "2510202003",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Limburg Süd",
+          "Frankfurt(M) Flughafen Fernbf",
+          "Frankfurt(Main)Hbf",
+          "Aschaffenburg Hbf",
+          "Würzburg Hbf",
+          "Nürnberg Hbf",
+          "Ingolstadt Hbf",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "1555483896112278137-2510202015-4",
+        "type": "ICE",
+        "number": "318",
+        "direction": "Bruxelles Midi",
+        "platform": "4",
+        "time": "2510202106",
+        "destination": "Bruxelles Midi",
+        "path_stations": [
+          "Köln Hbf",
+          "Aachen Hbf",
+          "Liège-Guillemins",
+          "Bruxelles-Nord",
+          "Bruxelles Midi"
+        ]
+      },
+      {
+        "id": "6964681353506388574-2510202014-10",
+        "type": "HLB",
+        "number": "61532",
+        "direction": "Siershahn",
+        "platform": "5 a",
+        "time": "2510202056",
+        "destination": "Siershahn",
+        "path_stations": [
+          "Dernbach(Westerw)",
+          "Wirges",
+          "Siershahn"
+        ]
+      },
+      {
+        "id": "2004656983232721339-2510201939-5",
+        "type": "ICE",
+        "number": "823",
+        "direction": "Frankfurt(Main)Hbf",
+        "platform": "1",
+        "time": "2510202104",
+        "destination": "Frankfurt(Main)Hbf",
+        "path_stations": [
+          "Limburg Süd",
+          "Frankfurt(M) Flughafen Fernbf",
+          "Frankfurt(Main)Hbf"
+        ]
+      },
+      {
+        "id": "1555483896112278137-2510202015-4",
+        "type": "ICE",
+        "number": "318",
+        "direction": "Bruxelles Midi",
+        "platform": "4",
+        "time": "2510202106",
+        "destination": "Bruxelles Midi",
+        "path_stations": [
+          "Köln Hbf",
+          "Aachen Hbf",
+          "Liège-Guillemins",
+          "Bruxelles-Nord",
+          "Bruxelles Midi"
+        ]
+      },
+      {
+        "id": "-6524998557445987060-2510201847-8",
+        "type": "ICE",
+        "number": "524",
+        "direction": "Dortmund Hbf",
+        "platform": "4",
+        "time": "2510202252",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Siegburg/Bonn",
+          "Köln/Bonn Flughafen",
+          "Köln Messe/Deutz Gl.11-12",
+          "Düsseldorf Hbf",
+          "Duisburg Hbf",
+          "Essen Hbf",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-8088851598754426904-2510202025-8",
+        "type": "ICE",
+        "number": "319",
+        "direction": "Frankfurt(Main)Hbf",
+        "platform": "1",
+        "time": "2510202310",
+        "destination": "Frankfurt(Main)Hbf",
+        "path_stations": [
+          "Limburg Süd",
+          "Frankfurt(Main)Hbf"
+        ]
+      },
+      {
+        "id": "-4383803236760390820-2510201947-10",
+        "type": "ICE",
+        "number": "522",
+        "direction": "Köln Hbf",
+        "platform": "4",
+        "time": "2510202353",
+        "destination": "Köln Hbf",
+        "path_stations": [
+          "Siegburg/Bonn",
+          "Köln Hbf"
+        ]
+      },
+      {
+        "id": "7130605216857004791-2510210321-4",
+        "type": "ICE",
+        "number": "827",
+        "direction": "München Hbf",
+        "platform": "1",
+        "time": "2510210403",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Limburg Süd",
+          "Frankfurt(M) Flughafen Fernbf",
+          "Frankfurt(Main)Hbf",
+          "Hanau Hbf",
+          "Aschaffenburg Hbf",
+          "Würzburg Hbf",
+          "Nürnberg Hbf",
+          "Ingolstadt Hbf",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "-7455087584675999219-2510210420-3",
+        "type": "ICE",
+        "number": "521",
+        "direction": "München Hbf",
+        "platform": "1",
+        "time": "2510210457",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Limburg Süd",
+          "Frankfurt(M) Flughafen Fernbf",
+          "Frankfurt(Main)Hbf",
+          "Hanau Hbf",
+          "Aschaffenburg Hbf",
+          "Würzburg Hbf",
+          "Nürnberg Hbf",
+          "München Hbf"
+        ]
+      }
+    ],
+    "arrivals": []
+  }
+}

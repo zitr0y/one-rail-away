@@ -1,0 +1,100 @@
+{
+  "station_eva": "341342",
+  "date": "251020",
+  "cached_at": "2025-10-20T15:34:03.841249",
+  "plan_data": {
+    "departures": [
+      {
+        "id": "-6591887706470015218-2510201703-1",
+        "type": "Bus",
+        "number": "9192",
+        "direction": "Hauptbahnhof, Bottrop",
+        "platform": "",
+        "time": "2510201703",
+        "destination": "Hauptbahnhof, Bottrop",
+        "path_stations": [
+          "Gymnasium, Herten",
+          "West/Bahnhof, Gladbeck",
+          "Boy Bahnhof, Bottrop",
+          "Hauptbahnhof, Bottrop"
+        ]
+      },
+      {
+        "id": "6667165811881529043-2510201803-1",
+        "type": "Bus",
+        "number": "9194",
+        "direction": "Hauptbahnhof, Bottrop",
+        "platform": "",
+        "time": "2510201803",
+        "destination": "Hauptbahnhof, Bottrop",
+        "path_stations": [
+          "Gymnasium, Herten",
+          "West/Bahnhof, Gladbeck",
+          "Boy Bahnhof, Bottrop",
+          "Hauptbahnhof, Bottrop"
+        ]
+      },
+      {
+        "id": "-7486423261980515539-2510201903-1",
+        "type": "Bus",
+        "number": "9196",
+        "direction": "Hauptbahnhof, Bottrop",
+        "platform": "",
+        "time": "2510201903",
+        "destination": "Hauptbahnhof, Bottrop",
+        "path_stations": [
+          "Gymnasium, Herten",
+          "West/Bahnhof, Gladbeck",
+          "Boy Bahnhof, Bottrop",
+          "Hauptbahnhof, Bottrop"
+        ]
+      },
+      {
+        "id": "2482257410572383231-2510202003-1",
+        "type": "Bus",
+        "number": "9198",
+        "direction": "Hauptbahnhof, Bottrop",
+        "platform": "",
+        "time": "2510202003",
+        "destination": "Hauptbahnhof, Bottrop",
+        "path_stations": [
+          "Gymnasium, Herten",
+          "West/Bahnhof, Gladbeck",
+          "Boy Bahnhof, Bottrop",
+          "Hauptbahnhof, Bottrop"
+        ]
+      },
+      {
+        "id": "3127791125750056135-2510202103-1",
+        "type": "Bus",
+        "number": "9200",
+        "direction": "Hauptbahnhof, Bottrop",
+        "platform": "",
+        "time": "2510202103",
+        "destination": "Hauptbahnhof, Bottrop",
+        "path_stations": [
+          "Gymnasium, Herten",
+          "West/Bahnhof, Gladbeck",
+          "Boy Bahnhof, Bottrop",
+          "Hauptbahnhof, Bottrop"
+        ]
+      },
+      {
+        "id": "-3067244352527410212-2510202203-1",
+        "type": "Bus",
+        "number": "9204",
+        "direction": "Hauptbahnhof, Bottrop",
+        "platform": "",
+        "time": "2510202203",
+        "destination": "Hauptbahnhof, Bottrop",
+        "path_stations": [
+          "Gymnasium, Herten",
+          "West/Bahnhof, Gladbeck",
+          "Boy Bahnhof, Bottrop",
+          "Hauptbahnhof, Bottrop"
+        ]
+      }
+    ],
+    "arrivals": []
+  }
+}

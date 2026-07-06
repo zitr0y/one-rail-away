@@ -1,0 +1,1315 @@
+{
+  "station_eva": "8004898",
+  "date": "251020",
+  "cached_at": "2025-10-20T16:42:54.080945",
+  "plan_data": {
+    "arrivals": [
+      {
+        "id": "-3280925100095749204-2510201728-6",
+        "type": "RE",
+        "number": "29474",
+        "time": "2510201812",
+        "platform": "1",
+        "path_stations": [
+          "Troisdorf",
+          "Porz(Rhein)",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln-Ehrenfeld"
+        ],
+        "line": "8"
+      },
+      {
+        "id": "-780387347098381495-2510201741-9",
+        "type": "RB",
+        "number": "10633",
+        "time": "2510201819",
+        "platform": "2",
+        "path_stations": [
+          "Mönchengladbach Hbf",
+          "Rheydt Hbf",
+          "Rheydt-Odenkirchen",
+          "Hochneukirch",
+          "Jüchen",
+          "Grevenbroich",
+          "Rommerskirchen",
+          "Stommeln"
+        ],
+        "line": "27"
+      },
+      {
+        "id": "1617919149696385964-2510201837-3",
+        "type": "RE",
+        "number": "29477",
+        "time": "2510201844",
+        "platform": "2",
+        "path_stations": [
+          "Rommerskirchen",
+          "Stommeln"
+        ],
+        "line": "8"
+      },
+      {
+        "id": "-2132960344603677534-2510201640-26",
+        "type": "RB",
+        "number": "10626",
+        "time": "2510201838",
+        "platform": "1",
+        "path_stations": [
+          "Koblenz Hbf",
+          "Koblenz-Ehrenbreitstein",
+          "Vallendar",
+          "Engers",
+          "Neuwied",
+          "Leutesdorf(Rhein)",
+          "Rheinbrohl",
+          "Bad Hönningen",
+          "Leubsdorf(Rhein)",
+          "Linz(Rhein)",
+          "Erpel(Rhein)",
+          "Unkel",
+          "Bad Honnef(Rhein)",
+          "Rhöndorf",
+          "Königswinter",
+          "Niederdollendorf",
+          "Bonn-Oberkassel",
+          "Bonn-Beuel",
+          "Menden(Rheinl)",
+          "Friedrich Wilhelmshütte",
+          "Troisdorf",
+          "Köln/Bonn Flughafen",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln-Ehrenfeld"
+        ],
+        "line": "27"
+      },
+      {
+        "id": "-5806736731936295600-2510201937-3",
+        "type": "RE",
+        "number": "29479",
+        "time": "2510201944",
+        "platform": "2",
+        "path_stations": [
+          "Rommerskirchen",
+          "Stommeln"
+        ],
+        "line": "8"
+      },
+      {
+        "id": "-2092309483944033948-2510201828-6",
+        "type": "RE",
+        "number": "29476",
+        "time": "2510201912",
+        "platform": "1",
+        "path_stations": [
+          "Troisdorf",
+          "Porz(Rhein)",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln-Ehrenfeld"
+        ],
+        "line": "8"
+      },
+      {
+        "id": "-2069925583018293408-2510201740-26",
+        "type": "RB",
+        "number": "10628",
+        "time": "2510201938",
+        "platform": "1",
+        "path_stations": [
+          "Koblenz Hbf",
+          "Koblenz-Ehrenbreitstein",
+          "Vallendar",
+          "Engers",
+          "Neuwied",
+          "Leutesdorf(Rhein)",
+          "Rheinbrohl",
+          "Bad Hönningen",
+          "Leubsdorf(Rhein)",
+          "Linz(Rhein)",
+          "Erpel(Rhein)",
+          "Unkel",
+          "Bad Honnef(Rhein)",
+          "Rhöndorf",
+          "Königswinter",
+          "Niederdollendorf",
+          "Bonn-Oberkassel",
+          "Bonn-Beuel",
+          "Menden(Rheinl)",
+          "Friedrich Wilhelmshütte",
+          "Troisdorf",
+          "Köln/Bonn Flughafen",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln-Ehrenfeld"
+        ],
+        "line": "27"
+      },
+      {
+        "id": "-1698376223325614272-2510201841-9",
+        "type": "RB",
+        "number": "10635",
+        "time": "2510201919",
+        "platform": "2",
+        "path_stations": [
+          "Mönchengladbach Hbf",
+          "Rheydt Hbf",
+          "Rheydt-Odenkirchen",
+          "Hochneukirch",
+          "Jüchen",
+          "Grevenbroich",
+          "Rommerskirchen",
+          "Stommeln"
+        ],
+        "line": "27"
+      },
+      {
+        "id": "714437661852393809-2510202007-9",
+        "type": "RE",
+        "number": "91735",
+        "time": "2510202044",
+        "platform": "2",
+        "path_stations": [
+          "Mönchengladbach Hbf",
+          "Rheydt Hbf",
+          "Rheydt-Odenkirchen",
+          "Hochneukirch",
+          "Jüchen",
+          "Grevenbroich",
+          "Rommerskirchen",
+          "Stommeln"
+        ],
+        "line": "8"
+      },
+      {
+        "id": "-2127091549134868033-2510201840-26",
+        "type": "RB",
+        "number": "10630",
+        "time": "2510202038",
+        "platform": "1",
+        "path_stations": [
+          "Koblenz Hbf",
+          "Koblenz-Ehrenbreitstein",
+          "Vallendar",
+          "Engers",
+          "Neuwied",
+          "Leutesdorf(Rhein)",
+          "Rheinbrohl",
+          "Bad Hönningen",
+          "Leubsdorf(Rhein)",
+          "Linz(Rhein)",
+          "Erpel(Rhein)",
+          "Unkel",
+          "Bad Honnef(Rhein)",
+          "Rhöndorf",
+          "Königswinter",
+          "Niederdollendorf",
+          "Bonn-Oberkassel",
+          "Bonn-Beuel",
+          "Menden(Rheinl)",
+          "Friedrich Wilhelmshütte",
+          "Troisdorf",
+          "Köln/Bonn Flughafen",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln-Ehrenfeld"
+        ],
+        "line": "27"
+      },
+      {
+        "id": "6034284428737156178-2510201941-9",
+        "type": "RB",
+        "number": "10637",
+        "time": "2510202019",
+        "platform": "2",
+        "path_stations": [
+          "Mönchengladbach Hbf",
+          "Rheydt Hbf",
+          "Rheydt-Odenkirchen",
+          "Hochneukirch",
+          "Jüchen",
+          "Grevenbroich",
+          "Rommerskirchen",
+          "Stommeln"
+        ],
+        "line": "27"
+      },
+      {
+        "id": "1544833212009923962-2510201928-6",
+        "type": "RE",
+        "number": "29478",
+        "time": "2510202012",
+        "platform": "1",
+        "path_stations": [
+          "Troisdorf",
+          "Porz(Rhein)",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln-Ehrenfeld"
+        ],
+        "line": "8"
+      },
+      {
+        "id": "-422211315649496749-2510202137-3",
+        "type": "RE",
+        "number": "91739",
+        "time": "2510202144",
+        "platform": "2",
+        "path_stations": [
+          "Rommerskirchen",
+          "Stommeln"
+        ],
+        "line": "8"
+      },
+      {
+        "id": "-233663964926761052-2510202028-6",
+        "type": "RE",
+        "number": "29480",
+        "time": "2510202112",
+        "platform": "1",
+        "path_stations": [
+          "Troisdorf",
+          "Porz(Rhein)",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln-Ehrenfeld"
+        ],
+        "line": "8"
+      },
+      {
+        "id": "-4556529402145382852-2510201940-26",
+        "type": "RB",
+        "number": "10632",
+        "time": "2510202138",
+        "platform": "1",
+        "path_stations": [
+          "Koblenz Hbf",
+          "Koblenz-Ehrenbreitstein",
+          "Vallendar",
+          "Engers",
+          "Neuwied",
+          "Leutesdorf(Rhein)",
+          "Rheinbrohl",
+          "Bad Hönningen",
+          "Leubsdorf(Rhein)",
+          "Linz(Rhein)",
+          "Erpel(Rhein)",
+          "Unkel",
+          "Bad Honnef(Rhein)",
+          "Rhöndorf",
+          "Königswinter",
+          "Niederdollendorf",
+          "Bonn-Oberkassel",
+          "Bonn-Beuel",
+          "Menden(Rheinl)",
+          "Friedrich Wilhelmshütte",
+          "Troisdorf",
+          "Köln/Bonn Flughafen",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln-Ehrenfeld"
+        ],
+        "line": "27"
+      },
+      {
+        "id": "-3436420853485131700-2510202041-9",
+        "type": "RB",
+        "number": "91737",
+        "time": "2510202119",
+        "platform": "2",
+        "path_stations": [
+          "Mönchengladbach Hbf",
+          "Rheydt Hbf",
+          "Rheydt-Odenkirchen",
+          "Hochneukirch",
+          "Jüchen",
+          "Grevenbroich",
+          "Rommerskirchen",
+          "Stommeln"
+        ],
+        "line": "27"
+      },
+      {
+        "id": "-9179778945711518303-2510202237-3",
+        "type": "RE",
+        "number": "10839",
+        "time": "2510202244",
+        "platform": "2",
+        "path_stations": [
+          "Rommerskirchen",
+          "Stommeln"
+        ],
+        "line": "8"
+      },
+      {
+        "id": "-675302901061287074-2510202141-9",
+        "type": "RB",
+        "number": "91741",
+        "time": "2510202219",
+        "platform": "2",
+        "path_stations": [
+          "Mönchengladbach Hbf",
+          "Rheydt Hbf",
+          "Rheydt-Odenkirchen",
+          "Hochneukirch",
+          "Jüchen",
+          "Grevenbroich",
+          "Rommerskirchen",
+          "Stommeln"
+        ],
+        "line": "27"
+      },
+      {
+        "id": "5250790599776642869-2510202040-26",
+        "type": "RB",
+        "number": "10634",
+        "time": "2510202238",
+        "platform": "1",
+        "path_stations": [
+          "Koblenz Hbf",
+          "Koblenz-Ehrenbreitstein",
+          "Vallendar",
+          "Engers",
+          "Neuwied",
+          "Leutesdorf(Rhein)",
+          "Rheinbrohl",
+          "Bad Hönningen",
+          "Leubsdorf(Rhein)",
+          "Linz(Rhein)",
+          "Erpel(Rhein)",
+          "Unkel",
+          "Bad Honnef(Rhein)",
+          "Rhöndorf",
+          "Königswinter",
+          "Niederdollendorf",
+          "Bonn-Oberkassel",
+          "Bonn-Beuel",
+          "Menden(Rheinl)",
+          "Friedrich Wilhelmshütte",
+          "Troisdorf",
+          "Köln/Bonn Flughafen",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln-Ehrenfeld"
+        ],
+        "line": "27"
+      },
+      {
+        "id": "639169959544390038-2510202128-6",
+        "type": "RE",
+        "number": "29482",
+        "time": "2510202212",
+        "platform": "1",
+        "path_stations": [
+          "Troisdorf",
+          "Porz(Rhein)",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln-Ehrenfeld"
+        ],
+        "line": "8"
+      },
+      {
+        "id": "5048783240925079083-2510202228-6",
+        "type": "RE",
+        "number": "91736",
+        "time": "2510202312",
+        "platform": "1",
+        "path_stations": [
+          "Troisdorf",
+          "Porz(Rhein)",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln-Ehrenfeld"
+        ],
+        "line": "8"
+      },
+      {
+        "id": "-7363373570835729048-2510202337-3",
+        "type": "RE",
+        "number": "10841",
+        "time": "2510202344",
+        "platform": "2",
+        "path_stations": [
+          "Rommerskirchen",
+          "Stommeln"
+        ],
+        "line": "8"
+      },
+      {
+        "id": "3738963210758590952-2510202241-9",
+        "type": "RB",
+        "number": "10643",
+        "time": "2510202319",
+        "platform": "2",
+        "path_stations": [
+          "Mönchengladbach Hbf",
+          "Rheydt Hbf",
+          "Rheydt-Odenkirchen",
+          "Hochneukirch",
+          "Jüchen",
+          "Grevenbroich",
+          "Rommerskirchen",
+          "Stommeln"
+        ],
+        "line": "27"
+      },
+      {
+        "id": "813365170835197645-2510202319-4",
+        "type": "RB",
+        "number": "91738",
+        "time": "2510202338",
+        "platform": "1",
+        "path_stations": [
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln-Ehrenfeld"
+        ],
+        "line": "27"
+      },
+      {
+        "id": "3165899248041497024-2510210019-4",
+        "type": "RB",
+        "number": "91742",
+        "time": "2510210038",
+        "platform": "1",
+        "path_stations": [
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln-Ehrenfeld"
+        ],
+        "line": "27"
+      },
+      {
+        "id": "-1758616613920555539-2510202341-9",
+        "type": "RB",
+        "number": "10645",
+        "time": "2510210019",
+        "platform": "2",
+        "path_stations": [
+          "Mönchengladbach Hbf",
+          "Rheydt Hbf",
+          "Rheydt-Odenkirchen",
+          "Hochneukirch",
+          "Jüchen",
+          "Grevenbroich",
+          "Rommerskirchen",
+          "Stommeln"
+        ],
+        "line": "27"
+      },
+      {
+        "id": "245776739044096458-2510210441-9",
+        "type": "RB",
+        "number": "10607",
+        "time": "2510210519",
+        "platform": "2",
+        "path_stations": [
+          "Mönchengladbach Hbf",
+          "Rheydt Hbf",
+          "Rheydt-Odenkirchen",
+          "Hochneukirch",
+          "Jüchen",
+          "Grevenbroich",
+          "Rommerskirchen",
+          "Stommeln"
+        ],
+        "line": "27"
+      },
+      {
+        "id": "-7730474362769888699-2510210519-4",
+        "type": "RB",
+        "number": "10600",
+        "time": "2510210538",
+        "platform": "1",
+        "path_stations": [
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln-Ehrenfeld"
+        ],
+        "line": "27"
+      },
+      {
+        "id": "8299125461975571282-2510210537-3",
+        "type": "RE",
+        "number": "10803",
+        "time": "2510210544",
+        "platform": "2",
+        "path_stations": [
+          "Rommerskirchen",
+          "Stommeln"
+        ],
+        "line": "8"
+      },
+      {
+        "id": "-4101060102221793147-2510210451-4",
+        "type": "RE",
+        "number": "10800",
+        "time": "2510210512",
+        "platform": "1",
+        "path_stations": [
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln-Ehrenfeld"
+        ],
+        "line": "8"
+      },
+      {
+        "id": "-8710911700935271326-2510210541-9",
+        "type": "RB",
+        "number": "10609",
+        "time": "2510210619",
+        "platform": "2",
+        "path_stations": [
+          "Mönchengladbach Hbf",
+          "Rheydt Hbf",
+          "Rheydt-Odenkirchen",
+          "Hochneukirch",
+          "Jüchen",
+          "Grevenbroich",
+          "Rommerskirchen",
+          "Stommeln"
+        ],
+        "line": "27"
+      },
+      {
+        "id": "526832523504117742-2510210637-3",
+        "type": "RE",
+        "number": "10805",
+        "time": "2510210644",
+        "platform": "2",
+        "path_stations": [
+          "Rommerskirchen",
+          "Stommeln"
+        ],
+        "line": "8"
+      },
+      {
+        "id": "678396700268584114-2510210440-26",
+        "type": "RB",
+        "number": "10602",
+        "time": "2510210638",
+        "platform": "1",
+        "path_stations": [
+          "Koblenz Hbf",
+          "Koblenz-Ehrenbreitstein",
+          "Vallendar",
+          "Engers",
+          "Neuwied",
+          "Leutesdorf(Rhein)",
+          "Rheinbrohl",
+          "Bad Hönningen",
+          "Leubsdorf(Rhein)",
+          "Linz(Rhein)",
+          "Erpel(Rhein)",
+          "Unkel",
+          "Bad Honnef(Rhein)",
+          "Rhöndorf",
+          "Königswinter",
+          "Niederdollendorf",
+          "Bonn-Oberkassel",
+          "Bonn-Beuel",
+          "Menden(Rheinl)",
+          "Friedrich Wilhelmshütte",
+          "Troisdorf",
+          "Köln/Bonn Flughafen",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln-Ehrenfeld"
+        ],
+        "line": "27"
+      },
+      {
+        "id": "-5112894780481029142-2510210528-6",
+        "type": "RE",
+        "number": "10802",
+        "time": "2510210612",
+        "platform": "1",
+        "path_stations": [
+          "Troisdorf",
+          "Porz(Rhein)",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln-Ehrenfeld"
+        ],
+        "line": "8"
+      }
+    ],
+    "departures": [
+      {
+        "id": "-3280925100095749204-2510201728-6",
+        "type": "RE",
+        "number": "29474",
+        "direction": "Rommerskirchen",
+        "platform": "1",
+        "time": "2510201812",
+        "destination": "Rommerskirchen",
+        "path_stations": [
+          "Stommeln",
+          "Rommerskirchen"
+        ]
+      },
+      {
+        "id": "-780387347098381495-2510201741-9",
+        "type": "RB",
+        "number": "10633",
+        "direction": "Koblenz Hbf",
+        "platform": "2",
+        "time": "2510201820",
+        "destination": "Koblenz Hbf",
+        "path_stations": [
+          "Köln-Ehrenfeld",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln/Bonn Flughafen",
+          "Troisdorf",
+          "Friedrich Wilhelmshütte",
+          "Menden(Rheinl)",
+          "Bonn-Beuel",
+          "Bonn-Oberkassel",
+          "Niederdollendorf",
+          "Königswinter",
+          "Rhöndorf",
+          "Bad Honnef(Rhein)",
+          "Unkel",
+          "Erpel(Rhein)",
+          "Linz(Rhein)",
+          "Leubsdorf(Rhein)",
+          "Bad Hönningen",
+          "Rheinbrohl",
+          "Leutesdorf(Rhein)",
+          "Neuwied",
+          "Engers",
+          "Vallendar",
+          "Koblenz-Ehrenbreitstein",
+          "Koblenz Hbf"
+        ]
+      },
+      {
+        "id": "1617919149696385964-2510201837-3",
+        "type": "RE",
+        "number": "29477",
+        "direction": "Troisdorf",
+        "platform": "2",
+        "time": "2510201845",
+        "destination": "Troisdorf",
+        "path_stations": [
+          "Köln-Ehrenfeld",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Porz(Rhein)",
+          "Troisdorf"
+        ]
+      },
+      {
+        "id": "-2132960344603677534-2510201640-26",
+        "type": "RB",
+        "number": "10626",
+        "direction": "Mönchengladbach Hbf",
+        "platform": "1",
+        "time": "2510201839",
+        "destination": "Mönchengladbach Hbf",
+        "path_stations": [
+          "Stommeln",
+          "Rommerskirchen",
+          "Grevenbroich",
+          "Jüchen",
+          "Hochneukirch",
+          "Rheydt-Odenkirchen",
+          "Rheydt Hbf",
+          "Mönchengladbach Hbf"
+        ]
+      },
+      {
+        "id": "-5806736731936295600-2510201937-3",
+        "type": "RE",
+        "number": "29479",
+        "direction": "Troisdorf",
+        "platform": "2",
+        "time": "2510201945",
+        "destination": "Troisdorf",
+        "path_stations": [
+          "Köln-Ehrenfeld",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Porz(Rhein)",
+          "Troisdorf"
+        ]
+      },
+      {
+        "id": "-2092309483944033948-2510201828-6",
+        "type": "RE",
+        "number": "29476",
+        "direction": "Rommerskirchen",
+        "platform": "1",
+        "time": "2510201912",
+        "destination": "Rommerskirchen",
+        "path_stations": [
+          "Stommeln",
+          "Rommerskirchen"
+        ]
+      },
+      {
+        "id": "-2069925583018293408-2510201740-26",
+        "type": "RB",
+        "number": "10628",
+        "direction": "Mönchengladbach Hbf",
+        "platform": "1",
+        "time": "2510201939",
+        "destination": "Mönchengladbach Hbf",
+        "path_stations": [
+          "Stommeln",
+          "Rommerskirchen",
+          "Grevenbroich",
+          "Jüchen",
+          "Hochneukirch",
+          "Rheydt-Odenkirchen",
+          "Rheydt Hbf",
+          "Mönchengladbach Hbf"
+        ]
+      },
+      {
+        "id": "-1698376223325614272-2510201841-9",
+        "type": "RB",
+        "number": "10635",
+        "direction": "Koblenz Hbf",
+        "platform": "2",
+        "time": "2510201920",
+        "destination": "Koblenz Hbf",
+        "path_stations": [
+          "Köln-Ehrenfeld",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln/Bonn Flughafen",
+          "Troisdorf",
+          "Friedrich Wilhelmshütte",
+          "Menden(Rheinl)",
+          "Bonn-Beuel",
+          "Bonn-Oberkassel",
+          "Niederdollendorf",
+          "Königswinter",
+          "Rhöndorf",
+          "Bad Honnef(Rhein)",
+          "Unkel",
+          "Erpel(Rhein)",
+          "Linz(Rhein)",
+          "Leubsdorf(Rhein)",
+          "Bad Hönningen",
+          "Rheinbrohl",
+          "Leutesdorf(Rhein)",
+          "Neuwied",
+          "Engers",
+          "Vallendar",
+          "Koblenz-Ehrenbreitstein",
+          "Koblenz Hbf"
+        ]
+      },
+      {
+        "id": "714437661852393809-2510202007-9",
+        "type": "RE",
+        "number": "91735",
+        "direction": "Troisdorf",
+        "platform": "2",
+        "time": "2510202045",
+        "destination": "Troisdorf",
+        "path_stations": [
+          "Köln-Ehrenfeld",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Porz(Rhein)",
+          "Troisdorf"
+        ]
+      },
+      {
+        "id": "-2127091549134868033-2510201840-26",
+        "type": "RB",
+        "number": "10630",
+        "direction": "Mönchengladbach Hbf",
+        "platform": "1",
+        "time": "2510202039",
+        "destination": "Mönchengladbach Hbf",
+        "path_stations": [
+          "Stommeln",
+          "Rommerskirchen",
+          "Grevenbroich",
+          "Jüchen",
+          "Hochneukirch",
+          "Rheydt-Odenkirchen",
+          "Rheydt Hbf",
+          "Mönchengladbach Hbf"
+        ]
+      },
+      {
+        "id": "6034284428737156178-2510201941-9",
+        "type": "RB",
+        "number": "10637",
+        "direction": "Koblenz Hbf",
+        "platform": "2",
+        "time": "2510202020",
+        "destination": "Koblenz Hbf",
+        "path_stations": [
+          "Köln-Ehrenfeld",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln/Bonn Flughafen",
+          "Troisdorf",
+          "Friedrich Wilhelmshütte",
+          "Menden(Rheinl)",
+          "Bonn-Beuel",
+          "Bonn-Oberkassel",
+          "Niederdollendorf",
+          "Königswinter",
+          "Rhöndorf",
+          "Bad Honnef(Rhein)",
+          "Unkel",
+          "Erpel(Rhein)",
+          "Linz(Rhein)",
+          "Leubsdorf(Rhein)",
+          "Bad Hönningen",
+          "Rheinbrohl",
+          "Leutesdorf(Rhein)",
+          "Neuwied",
+          "Engers",
+          "Vallendar",
+          "Koblenz-Ehrenbreitstein",
+          "Koblenz Hbf"
+        ]
+      },
+      {
+        "id": "1544833212009923962-2510201928-6",
+        "type": "RE",
+        "number": "29478",
+        "direction": "Rommerskirchen",
+        "platform": "1",
+        "time": "2510202012",
+        "destination": "Rommerskirchen",
+        "path_stations": [
+          "Stommeln",
+          "Rommerskirchen"
+        ]
+      },
+      {
+        "id": "-422211315649496749-2510202137-3",
+        "type": "RE",
+        "number": "91739",
+        "direction": "Troisdorf",
+        "platform": "2",
+        "time": "2510202145",
+        "destination": "Troisdorf",
+        "path_stations": [
+          "Köln-Ehrenfeld",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Porz(Rhein)",
+          "Troisdorf"
+        ]
+      },
+      {
+        "id": "-233663964926761052-2510202028-6",
+        "type": "RE",
+        "number": "29480",
+        "direction": "Rommerskirchen",
+        "platform": "1",
+        "time": "2510202112",
+        "destination": "Rommerskirchen",
+        "path_stations": [
+          "Stommeln",
+          "Rommerskirchen"
+        ]
+      },
+      {
+        "id": "-4556529402145382852-2510201940-26",
+        "type": "RB",
+        "number": "10632",
+        "direction": "Mönchengladbach Hbf",
+        "platform": "1",
+        "time": "2510202139",
+        "destination": "Mönchengladbach Hbf",
+        "path_stations": [
+          "Stommeln",
+          "Rommerskirchen",
+          "Grevenbroich",
+          "Jüchen",
+          "Hochneukirch",
+          "Rheydt-Odenkirchen",
+          "Rheydt Hbf",
+          "Mönchengladbach Hbf"
+        ]
+      },
+      {
+        "id": "-3436420853485131700-2510202041-9",
+        "type": "RB",
+        "number": "91737",
+        "direction": "Köln Messe/Deutz",
+        "platform": "2",
+        "time": "2510202120",
+        "destination": "Köln Messe/Deutz",
+        "path_stations": [
+          "Köln-Ehrenfeld",
+          "Köln Hbf",
+          "Köln Messe/Deutz"
+        ]
+      },
+      {
+        "id": "-9179778945711518303-2510202237-3",
+        "type": "RE",
+        "number": "10839",
+        "direction": "Troisdorf",
+        "platform": "2",
+        "time": "2510202245",
+        "destination": "Troisdorf",
+        "path_stations": [
+          "Köln-Ehrenfeld",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Porz(Rhein)",
+          "Troisdorf"
+        ]
+      },
+      {
+        "id": "-675302901061287074-2510202141-9",
+        "type": "RB",
+        "number": "91741",
+        "direction": "Köln Messe/Deutz",
+        "platform": "2",
+        "time": "2510202220",
+        "destination": "Köln Messe/Deutz",
+        "path_stations": [
+          "Köln-Ehrenfeld",
+          "Köln Hbf",
+          "Köln Messe/Deutz"
+        ]
+      },
+      {
+        "id": "5250790599776642869-2510202040-26",
+        "type": "RB",
+        "number": "10634",
+        "direction": "Mönchengladbach Hbf",
+        "platform": "1",
+        "time": "2510202239",
+        "destination": "Mönchengladbach Hbf",
+        "path_stations": [
+          "Stommeln",
+          "Rommerskirchen",
+          "Grevenbroich",
+          "Jüchen",
+          "Hochneukirch",
+          "Rheydt-Odenkirchen",
+          "Rheydt Hbf",
+          "Mönchengladbach Hbf"
+        ]
+      },
+      {
+        "id": "639169959544390038-2510202128-6",
+        "type": "RE",
+        "number": "29482",
+        "direction": "Rommerskirchen",
+        "platform": "1",
+        "time": "2510202212",
+        "destination": "Rommerskirchen",
+        "path_stations": [
+          "Stommeln",
+          "Rommerskirchen"
+        ]
+      },
+      {
+        "id": "5048783240925079083-2510202228-6",
+        "type": "RE",
+        "number": "91736",
+        "direction": "Rommerskirchen",
+        "platform": "1",
+        "time": "2510202312",
+        "destination": "Rommerskirchen",
+        "path_stations": [
+          "Stommeln",
+          "Rommerskirchen"
+        ]
+      },
+      {
+        "id": "-7363373570835729048-2510202337-3",
+        "type": "RE",
+        "number": "10841",
+        "direction": "Troisdorf",
+        "platform": "2",
+        "time": "2510202345",
+        "destination": "Troisdorf",
+        "path_stations": [
+          "Köln-Ehrenfeld",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Porz(Rhein)",
+          "Troisdorf"
+        ]
+      },
+      {
+        "id": "3738963210758590952-2510202241-9",
+        "type": "RB",
+        "number": "10643",
+        "direction": "Köln Messe/Deutz",
+        "platform": "2",
+        "time": "2510202320",
+        "destination": "Köln Messe/Deutz",
+        "path_stations": [
+          "Köln-Ehrenfeld",
+          "Köln Hbf",
+          "Köln Messe/Deutz"
+        ]
+      },
+      {
+        "id": "813365170835197645-2510202319-4",
+        "type": "RB",
+        "number": "91738",
+        "direction": "Mönchengladbach Hbf",
+        "platform": "1",
+        "time": "2510202339",
+        "destination": "Mönchengladbach Hbf",
+        "path_stations": [
+          "Stommeln",
+          "Rommerskirchen",
+          "Grevenbroich",
+          "Jüchen",
+          "Hochneukirch",
+          "Rheydt-Odenkirchen",
+          "Rheydt Hbf",
+          "Mönchengladbach Hbf"
+        ]
+      },
+      {
+        "id": "3165899248041497024-2510210019-4",
+        "type": "RB",
+        "number": "91742",
+        "direction": "Mönchengladbach Hbf",
+        "platform": "1",
+        "time": "2510210039",
+        "destination": "Mönchengladbach Hbf",
+        "path_stations": [
+          "Stommeln",
+          "Rommerskirchen",
+          "Grevenbroich",
+          "Jüchen",
+          "Hochneukirch",
+          "Rheydt-Odenkirchen",
+          "Rheydt Hbf",
+          "Mönchengladbach Hbf"
+        ]
+      },
+      {
+        "id": "-1758616613920555539-2510202341-9",
+        "type": "RB",
+        "number": "10645",
+        "direction": "Köln Messe/Deutz",
+        "platform": "2",
+        "time": "2510210020",
+        "destination": "Köln Messe/Deutz",
+        "path_stations": [
+          "Köln-Ehrenfeld",
+          "Köln Hbf",
+          "Köln Messe/Deutz"
+        ]
+      },
+      {
+        "id": "245776739044096458-2510210441-9",
+        "type": "RB",
+        "number": "10607",
+        "direction": "Koblenz Hbf",
+        "platform": "2",
+        "time": "2510210520",
+        "destination": "Koblenz Hbf",
+        "path_stations": [
+          "Köln-Ehrenfeld",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln/Bonn Flughafen",
+          "Troisdorf",
+          "Friedrich Wilhelmshütte",
+          "Menden(Rheinl)",
+          "Bonn-Beuel",
+          "Bonn-Oberkassel",
+          "Niederdollendorf",
+          "Königswinter",
+          "Rhöndorf",
+          "Bad Honnef(Rhein)",
+          "Unkel",
+          "Erpel(Rhein)",
+          "Linz(Rhein)",
+          "Leubsdorf(Rhein)",
+          "Bad Hönningen",
+          "Rheinbrohl",
+          "Leutesdorf(Rhein)",
+          "Neuwied",
+          "Engers",
+          "Vallendar",
+          "Koblenz-Ehrenbreitstein",
+          "Koblenz Hbf"
+        ]
+      },
+      {
+        "id": "-7730474362769888699-2510210519-4",
+        "type": "RB",
+        "number": "10600",
+        "direction": "Mönchengladbach Hbf",
+        "platform": "1",
+        "time": "2510210539",
+        "destination": "Mönchengladbach Hbf",
+        "path_stations": [
+          "Stommeln",
+          "Rommerskirchen",
+          "Grevenbroich",
+          "Jüchen",
+          "Hochneukirch",
+          "Rheydt-Odenkirchen",
+          "Rheydt Hbf",
+          "Mönchengladbach Hbf"
+        ]
+      },
+      {
+        "id": "8299125461975571282-2510210537-3",
+        "type": "RE",
+        "number": "10803",
+        "direction": "Koblenz Hbf",
+        "platform": "2",
+        "time": "2510210545",
+        "destination": "Koblenz Hbf",
+        "path_stations": [
+          "Köln-Ehrenfeld",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Porz(Rhein)",
+          "Troisdorf",
+          "Friedrich Wilhelmshütte",
+          "Menden(Rheinl)",
+          "Bonn-Beuel",
+          "Bonn-Oberkassel",
+          "Niederdollendorf",
+          "Königswinter",
+          "Rhöndorf",
+          "Bad Honnef(Rhein)",
+          "Unkel",
+          "Linz(Rhein)",
+          "Bad Hönningen",
+          "Rheinbrohl",
+          "Neuwied",
+          "Urmitz Rheinbrücke",
+          "Koblenz-Lützel",
+          "Koblenz Stadtmitte",
+          "Koblenz Hbf"
+        ]
+      },
+      {
+        "id": "-4101060102221793147-2510210451-4",
+        "type": "RE",
+        "number": "10800",
+        "direction": "Rommerskirchen",
+        "platform": "1",
+        "time": "2510210512",
+        "destination": "Rommerskirchen",
+        "path_stations": [
+          "Stommeln",
+          "Rommerskirchen"
+        ]
+      },
+      {
+        "id": "-8710911700935271326-2510210541-9",
+        "type": "RB",
+        "number": "10609",
+        "direction": "Koblenz Hbf",
+        "platform": "2",
+        "time": "2510210620",
+        "destination": "Koblenz Hbf",
+        "path_stations": [
+          "Köln-Ehrenfeld",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln/Bonn Flughafen",
+          "Troisdorf",
+          "Friedrich Wilhelmshütte",
+          "Menden(Rheinl)",
+          "Bonn-Beuel",
+          "Bonn-Oberkassel",
+          "Niederdollendorf",
+          "Königswinter",
+          "Rhöndorf",
+          "Bad Honnef(Rhein)",
+          "Unkel",
+          "Erpel(Rhein)",
+          "Linz(Rhein)",
+          "Leubsdorf(Rhein)",
+          "Bad Hönningen",
+          "Rheinbrohl",
+          "Leutesdorf(Rhein)",
+          "Neuwied",
+          "Engers",
+          "Vallendar",
+          "Koblenz-Ehrenbreitstein",
+          "Koblenz Hbf"
+        ]
+      },
+      {
+        "id": "526832523504117742-2510210637-3",
+        "type": "RE",
+        "number": "10805",
+        "direction": "Koblenz Hbf",
+        "platform": "2",
+        "time": "2510210645",
+        "destination": "Koblenz Hbf",
+        "path_stations": [
+          "Köln-Ehrenfeld",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Porz(Rhein)",
+          "Troisdorf",
+          "Friedrich Wilhelmshütte",
+          "Menden(Rheinl)",
+          "Bonn-Beuel",
+          "Bonn-Oberkassel",
+          "Niederdollendorf",
+          "Königswinter",
+          "Rhöndorf",
+          "Bad Honnef(Rhein)",
+          "Unkel",
+          "Linz(Rhein)",
+          "Bad Hönningen",
+          "Rheinbrohl",
+          "Neuwied",
+          "Urmitz Rheinbrücke",
+          "Koblenz-Lützel",
+          "Koblenz Stadtmitte",
+          "Koblenz Hbf"
+        ]
+      },
+      {
+        "id": "678396700268584114-2510210440-26",
+        "type": "RB",
+        "number": "10602",
+        "direction": "Mönchengladbach Hbf",
+        "platform": "1",
+        "time": "2510210639",
+        "destination": "Mönchengladbach Hbf",
+        "path_stations": [
+          "Stommeln",
+          "Rommerskirchen",
+          "Grevenbroich",
+          "Jüchen",
+          "Hochneukirch",
+          "Rheydt-Odenkirchen",
+          "Rheydt Hbf",
+          "Mönchengladbach Hbf"
+        ]
+      },
+      {
+        "id": "-5112894780481029142-2510210528-6",
+        "type": "RE",
+        "number": "10802",
+        "direction": "Rommerskirchen",
+        "platform": "1",
+        "time": "2510210612",
+        "destination": "Rommerskirchen",
+        "path_stations": [
+          "Stommeln",
+          "Rommerskirchen"
+        ]
+      }
+    ]
+  }
+}

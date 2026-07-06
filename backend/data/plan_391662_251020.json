@@ -1,0 +1,263 @@
+{
+  "station_eva": "391662",
+  "date": "251020",
+  "cached_at": "2025-10-20T16:42:53.453147",
+  "plan_data": {
+    "arrivals": [
+      {
+        "id": "-1985982982119329547-2510202130-6",
+        "type": "Bus",
+        "number": "47002",
+        "time": "2510202222",
+        "platform": "",
+        "path_stations": [
+          "Bahnhof, Troisdorf",
+          "Mendener Straße, Troisdorf",
+          "Menden Markt, Sankt Augustin",
+          "Beuel Bahnhof, Bonn",
+          "Bonn-Ramersdorf"
+        ],
+        "line": "RE8"
+      },
+      {
+        "id": "-4460932062819804870-2510202207-6",
+        "type": "Bus",
+        "number": "46002",
+        "time": "2510202259",
+        "platform": "",
+        "path_stations": [
+          "Bahnhof, Troisdorf",
+          "Friedrich-Wilhelms-Hütte Bahnhof, Troisdorf",
+          "Menden Bahnhof, Sankt Augustin",
+          "Beuel Bahnhof, Bonn",
+          "Bonn-Ramersdorf"
+        ],
+        "line": "RB27"
+      },
+      {
+        "id": "5181539345457201314-2510202307-6",
+        "type": "Bus",
+        "number": "46004",
+        "time": "2510202359",
+        "platform": "",
+        "path_stations": [
+          "Bahnhof, Troisdorf",
+          "Friedrich-Wilhelms-Hütte Bahnhof, Troisdorf",
+          "Menden Bahnhof, Sankt Augustin",
+          "Beuel Bahnhof, Bonn",
+          "Bonn-Ramersdorf"
+        ],
+        "line": "RB27"
+      },
+      {
+        "id": "-1336307004386636943-2510202230-6",
+        "type": "Bus",
+        "number": "47004",
+        "time": "2510202322",
+        "platform": "",
+        "path_stations": [
+          "Bahnhof, Troisdorf",
+          "Mendener Straße, Troisdorf",
+          "Menden Markt, Sankt Augustin",
+          "Beuel Bahnhof, Bonn",
+          "Bonn-Ramersdorf"
+        ],
+        "line": "RE8"
+      },
+      {
+        "id": "-8453770826462272901-2510202330-6",
+        "type": "Bus",
+        "number": "47006",
+        "time": "2510210022",
+        "platform": "",
+        "path_stations": [
+          "Bahnhof, Troisdorf",
+          "Mendener Straße, Troisdorf",
+          "Menden Markt, Sankt Augustin",
+          "Beuel Bahnhof, Bonn",
+          "Bonn-Ramersdorf"
+        ],
+        "line": "RE8"
+      },
+      {
+        "id": "-4761463441724268812-2510210007-6",
+        "type": "Bus",
+        "number": "46006",
+        "time": "2510210059",
+        "platform": "",
+        "path_stations": [
+          "Bahnhof, Troisdorf",
+          "Friedrich-Wilhelms-Hütte Bahnhof, Troisdorf",
+          "Menden Bahnhof, Sankt Augustin",
+          "Beuel Bahnhof, Bonn",
+          "Bonn-Ramersdorf"
+        ],
+        "line": "RB27"
+      },
+      {
+        "id": "-2235663271368710198-2510210030-6",
+        "type": "Bus",
+        "number": "47008",
+        "time": "2510210122",
+        "platform": "",
+        "path_stations": [
+          "Bahnhof, Troisdorf",
+          "Mendener Straße, Troisdorf",
+          "Menden Markt, Sankt Augustin",
+          "Beuel Bahnhof, Bonn",
+          "Bonn-Ramersdorf"
+        ],
+        "line": "RE8"
+      },
+      {
+        "id": "1061625715953258317-2510210107-6",
+        "type": "Bus",
+        "number": "46008",
+        "time": "2510210159",
+        "platform": "",
+        "path_stations": [
+          "Bahnhof, Troisdorf",
+          "Friedrich-Wilhelms-Hütte Bahnhof, Troisdorf",
+          "Menden Bahnhof, Sankt Augustin",
+          "Beuel Bahnhof, Bonn",
+          "Bonn-Ramersdorf"
+        ],
+        "line": "RB27"
+      }
+    ],
+    "departures": [
+      {
+        "id": "-1985982982119329547-2510202130-6",
+        "type": "Bus",
+        "number": "47002",
+        "direction": "Bahnhof, Linz am Rhein",
+        "platform": "",
+        "time": "2510202222",
+        "destination": "Bahnhof, Linz am Rhein",
+        "path_stations": [
+          "Bahnhof, Königswinter",
+          "Rhöndorf Kapelle, Bad Honnef",
+          "Stadtbahn, Bad Honnef",
+          "Bahnhof, Unkel",
+          "Bahnhof, Linz am Rhein"
+        ]
+      },
+      {
+        "id": "-4460932062819804870-2510202207-6",
+        "type": "Bus",
+        "number": "46002",
+        "direction": "Bahnhof, Linz am Rhein",
+        "platform": "",
+        "time": "2510202259",
+        "destination": "Bahnhof, Linz am Rhein",
+        "path_stations": [
+          "Bahnhof, Königswinter",
+          "Rhöndorf Bahnhof, Bad Honnef",
+          "Bahnhof, Bad Honnef",
+          "Bahnhof, Unkel",
+          "Bahnhof, Erpel",
+          "Bahnhof, Linz am Rhein"
+        ]
+      },
+      {
+        "id": "5181539345457201314-2510202307-6",
+        "type": "Bus",
+        "number": "46004",
+        "direction": "Bahnhof, Linz am Rhein",
+        "platform": "",
+        "time": "2510202359",
+        "destination": "Bahnhof, Linz am Rhein",
+        "path_stations": [
+          "Bahnhof, Königswinter",
+          "Rhöndorf Bahnhof, Bad Honnef",
+          "Bahnhof, Bad Honnef",
+          "Bahnhof, Unkel",
+          "Bahnhof, Erpel",
+          "Bahnhof, Linz am Rhein"
+        ]
+      },
+      {
+        "id": "-1336307004386636943-2510202230-6",
+        "type": "Bus",
+        "number": "47004",
+        "direction": "Bahnhof, Linz am Rhein",
+        "platform": "",
+        "time": "2510202322",
+        "destination": "Bahnhof, Linz am Rhein",
+        "path_stations": [
+          "Bahnhof, Königswinter",
+          "Rhöndorf Kapelle, Bad Honnef",
+          "Stadtbahn, Bad Honnef",
+          "Bahnhof, Unkel",
+          "Bahnhof, Linz am Rhein"
+        ]
+      },
+      {
+        "id": "-8453770826462272901-2510202330-6",
+        "type": "Bus",
+        "number": "47006",
+        "direction": "Bahnhof, Linz am Rhein",
+        "platform": "",
+        "time": "2510210022",
+        "destination": "Bahnhof, Linz am Rhein",
+        "path_stations": [
+          "Bahnhof, Königswinter",
+          "Rhöndorf Kapelle, Bad Honnef",
+          "Stadtbahn, Bad Honnef",
+          "Bahnhof, Unkel",
+          "Bahnhof, Linz am Rhein"
+        ]
+      },
+      {
+        "id": "-4761463441724268812-2510210007-6",
+        "type": "Bus",
+        "number": "46006",
+        "direction": "Bahnhof, Linz am Rhein",
+        "platform": "",
+        "time": "2510210059",
+        "destination": "Bahnhof, Linz am Rhein",
+        "path_stations": [
+          "Bahnhof, Königswinter",
+          "Rhöndorf Bahnhof, Bad Honnef",
+          "Bahnhof, Bad Honnef",
+          "Bahnhof, Unkel",
+          "Bahnhof, Erpel",
+          "Bahnhof, Linz am Rhein"
+        ]
+      },
+      {
+        "id": "-2235663271368710198-2510210030-6",
+        "type": "Bus",
+        "number": "47008",
+        "direction": "Bahnhof, Linz am Rhein",
+        "platform": "",
+        "time": "2510210122",
+        "destination": "Bahnhof, Linz am Rhein",
+        "path_stations": [
+          "Bahnhof, Königswinter",
+          "Rhöndorf Kapelle, Bad Honnef",
+          "Stadtbahn, Bad Honnef",
+          "Bahnhof, Unkel",
+          "Bahnhof, Linz am Rhein"
+        ]
+      },
+      {
+        "id": "1061625715953258317-2510210107-6",
+        "type": "Bus",
+        "number": "46008",
+        "direction": "Bahnhof, Linz am Rhein",
+        "platform": "",
+        "time": "2510210159",
+        "destination": "Bahnhof, Linz am Rhein",
+        "path_stations": [
+          "Bahnhof, Königswinter",
+          "Rhöndorf Bahnhof, Bad Honnef",
+          "Bahnhof, Bad Honnef",
+          "Bahnhof, Unkel",
+          "Bahnhof, Erpel",
+          "Bahnhof, Linz am Rhein"
+        ]
+      }
+    ]
+  }
+}

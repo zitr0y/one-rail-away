@@ -1,0 +1,85 @@
+{
+  "station_eva": "111022",
+  "date": "251020",
+  "cached_at": "2025-10-20T15:49:27.890556",
+  "plan_data": {
+    "arrivals": [
+      {
+        "id": "628330781031881079-2510210058-3",
+        "type": "Bus",
+        "number": "7145",
+        "time": "2510210158",
+        "platform": "",
+        "path_stations": [
+          "ZOB/Bahnhof, Elmshorn",
+          "Bahnhof, Pinneberg"
+        ],
+        "line": "RE7"
+      },
+      {
+        "id": "-4639144774860401079-2510210040-2",
+        "type": "Bus",
+        "number": "7141",
+        "time": "2510210145",
+        "platform": "",
+        "path_stations": [
+          "ZOB/Bahnhof, Neumünster"
+        ],
+        "line": "RE7"
+      },
+      {
+        "id": "4009607240190372088-2510210042-6",
+        "type": "Bus",
+        "number": "7143",
+        "time": "2510210257",
+        "platform": "",
+        "path_stations": [
+          "ZOB/Bahnhof, Neumünster",
+          "Bahnhof, Brokstedt",
+          "Bahnhof, Wrist",
+          "ZOB/Bahnhof, Elmshorn",
+          "Bahnhof, Pinneberg"
+        ],
+        "line": "RE7"
+      }
+    ],
+    "departures": [
+      {
+        "id": "628330781031881079-2510210058-3",
+        "type": "Bus",
+        "number": "7145",
+        "direction": "Hamburg Hbf ZOB",
+        "platform": "",
+        "time": "2510210158",
+        "destination": "Hamburg Hbf ZOB",
+        "path_stations": [
+          "Hamburg Hbf ZOB"
+        ]
+      },
+      {
+        "id": "-4639144774860401079-2510210040-2",
+        "type": "Bus",
+        "number": "7141",
+        "direction": "Hamburg Hbf ZOB",
+        "platform": "",
+        "time": "2510210145",
+        "destination": "Hamburg Hbf ZOB",
+        "path_stations": [
+          "Hamburg Hbf ZOB"
+        ]
+      },
+      {
+        "id": "4009607240190372088-2510210042-6",
+        "type": "Bus",
+        "number": "7143",
+        "direction": "Hamburg Hbf ZOB",
+        "platform": "",
+        "time": "2510210257",
+        "destination": "Hamburg Hbf ZOB",
+        "path_stations": [
+          "Hamburg Hbf ZOB"
+        ]
+      }
+    ]
+  }
+}

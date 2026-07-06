@@ -1,0 +1,1577 @@
+{
+  "station_eva": "8001558",
+  "date": "251020",
+  "cached_at": "2025-10-20T16:38:01.776124",
+  "plan_data": {
+    "arrivals": [
+      {
+        "id": "528103146165346343-2510201535-20",
+        "type": "RE",
+        "number": "17424",
+        "time": "2510201807",
+        "platform": "1",
+        "path_stations": [
+          "Krefeld Hbf",
+          "Krefeld-Oppum",
+          "Meerbusch-Osterath",
+          "Neuss Hbf",
+          "Dormagen",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Opladen",
+          "Solingen Hbf",
+          "Wuppertal Hbf",
+          "Wuppertal-Oberbarmen",
+          "Schwelm",
+          "Ennepetal",
+          "Hagen Hbf",
+          "Schwerte(Ruhr)",
+          "Holzwickede",
+          "Unna",
+          "Bönen",
+          "Hamm(Westf)Hbf"
+        ],
+        "line": "7"
+      },
+      {
+        "id": "2791776302558067166-2510201808-6",
+        "type": "RE",
+        "number": "17431",
+        "time": "2510201846",
+        "platform": "2",
+        "path_stations": [
+          "Rheine",
+          "Emsdetten",
+          "Greven",
+          "Münster(Westf)Hbf",
+          "Münster-Hiltrup"
+        ],
+        "line": "7"
+      },
+      {
+        "id": "6070247481173782512-2510201721-16",
+        "type": "RB",
+        "number": "90030",
+        "time": "2510201835",
+        "platform": "1",
+        "path_stations": [
+          "Paderborn Hbf",
+          "Scharmede",
+          "Salzkotten",
+          "Geseke",
+          "Ehringhausen(Kr Lippstadt)",
+          "Dedinghausen",
+          "Lippstadt",
+          "Bad Sassendorf",
+          "Soest",
+          "Borgeln",
+          "Welver",
+          "Hamm-Westtünnen",
+          "Hamm(Westf)Hbf",
+          "Hamm-Bockum-Hövel",
+          "Mersch(Westf)"
+        ],
+        "line": "89"
+      },
+      {
+        "id": "8366820696655501879-2510201810-4",
+        "type": "RB",
+        "number": "89991",
+        "time": "2510201823",
+        "platform": "2",
+        "path_stations": [
+          "Münster(Westf)Hbf",
+          "Münster-Hiltrup",
+          "Rinkerode"
+        ],
+        "line": "69"
+      },
+      {
+        "id": "-7195479608071269594-2510201651-16",
+        "type": "RB",
+        "number": "90078",
+        "time": "2510201801",
+        "platform": "1",
+        "path_stations": [
+          "Paderborn Hbf",
+          "Scharmede",
+          "Salzkotten",
+          "Geseke",
+          "Ehringhausen(Kr Lippstadt)",
+          "Dedinghausen",
+          "Lippstadt",
+          "Bad Sassendorf",
+          "Soest",
+          "Borgeln",
+          "Welver",
+          "Hamm-Westtünnen",
+          "Hamm(Westf)Hbf",
+          "Hamm-Bockum-Hövel",
+          "Mersch(Westf)"
+        ],
+        "line": "89"
+      },
+      {
+        "id": "-5165331594088828113-2510201737-12",
+        "type": "RB",
+        "number": "89988",
+        "time": "2510201835",
+        "platform": "1",
+        "path_stations": [
+          "Bielefeld Hbf",
+          "Bielefeld-Brackwede",
+          "Gütersloh Hbf",
+          "Rheda-Wiedenbrück",
+          "Oelde",
+          "Beckum-Neubeckum",
+          "Ahlen(Westf)",
+          "Hamm-Heessen",
+          "Hamm(Westf)Hbf",
+          "Hamm-Bockum-Hövel",
+          "Mersch(Westf)"
+        ],
+        "line": "69"
+      },
+      {
+        "id": "-8740784245747370028-2510201810-4",
+        "type": "RB",
+        "number": "90033",
+        "time": "2510201823",
+        "platform": "2",
+        "path_stations": [
+          "Münster(Westf)Hbf",
+          "Münster-Hiltrup",
+          "Rinkerode"
+        ],
+        "line": "89"
+      },
+      {
+        "id": "-1793784616506880598-2510201840-4",
+        "type": "RB",
+        "number": "90083",
+        "time": "2510201853",
+        "platform": "2",
+        "path_stations": [
+          "Münster(Westf)Hbf",
+          "Münster-Hiltrup",
+          "Rinkerode"
+        ],
+        "line": "89"
+      },
+      {
+        "id": "-4414766005444815964-2510201908-6",
+        "type": "RE",
+        "number": "17433",
+        "time": "2510201946",
+        "platform": "2",
+        "path_stations": [
+          "Rheine",
+          "Emsdetten",
+          "Greven",
+          "Münster(Westf)Hbf",
+          "Münster-Hiltrup"
+        ],
+        "line": "7"
+      },
+      {
+        "id": "-3546747815552203403-2510201908-4",
+        "type": "RB",
+        "number": "90035",
+        "time": "2510201921",
+        "platform": "2",
+        "path_stations": [
+          "Münster(Westf)Hbf",
+          "Münster-Hiltrup",
+          "Rinkerode"
+        ],
+        "line": "89"
+      },
+      {
+        "id": "5743217421743839311-2510201827-13",
+        "type": "RB",
+        "number": "89990",
+        "time": "2510201933",
+        "platform": "1",
+        "path_stations": [
+          "Bielefeld Hbf",
+          "Bielefeld-Brackwede",
+          "Isselhorst-Avenwedde",
+          "Gütersloh Hbf",
+          "Rheda-Wiedenbrück",
+          "Oelde",
+          "Beckum-Neubeckum",
+          "Ahlen(Westf)",
+          "Hamm-Heessen",
+          "Hamm(Westf)Hbf",
+          "Hamm-Bockum-Hövel",
+          "Mersch(Westf)"
+        ],
+        "line": "69"
+      },
+      {
+        "id": "-40095813426521212-2510201751-16",
+        "type": "RB",
+        "number": "90080",
+        "time": "2510201901",
+        "platform": "1",
+        "path_stations": [
+          "Paderborn Hbf",
+          "Scharmede",
+          "Salzkotten",
+          "Geseke",
+          "Ehringhausen(Kr Lippstadt)",
+          "Dedinghausen",
+          "Lippstadt",
+          "Bad Sassendorf",
+          "Soest",
+          "Borgeln",
+          "Welver",
+          "Hamm-Westtünnen",
+          "Hamm(Westf)Hbf",
+          "Hamm-Bockum-Hövel",
+          "Mersch(Westf)"
+        ],
+        "line": "89"
+      },
+      {
+        "id": "6340911107085795931-2510201635-20",
+        "type": "RE",
+        "number": "17426",
+        "time": "2510201907",
+        "platform": "1",
+        "path_stations": [
+          "Krefeld Hbf",
+          "Krefeld-Oppum",
+          "Meerbusch-Osterath",
+          "Neuss Hbf",
+          "Dormagen",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Opladen",
+          "Solingen Hbf",
+          "Wuppertal Hbf",
+          "Wuppertal-Oberbarmen",
+          "Schwelm",
+          "Ennepetal",
+          "Hagen Hbf",
+          "Schwerte(Ruhr)",
+          "Holzwickede",
+          "Unna",
+          "Bönen",
+          "Hamm(Westf)Hbf"
+        ],
+        "line": "7"
+      },
+      {
+        "id": "-7713658347553341378-2510201908-4",
+        "type": "RB",
+        "number": "89993",
+        "time": "2510201921",
+        "platform": "2",
+        "path_stations": [
+          "Münster(Westf)Hbf",
+          "Münster-Hiltrup",
+          "Rinkerode"
+        ],
+        "line": "69"
+      },
+      {
+        "id": "1975256304812980452-2510201821-16",
+        "type": "RB",
+        "number": "90032",
+        "time": "2510201933",
+        "platform": "1",
+        "path_stations": [
+          "Paderborn Hbf",
+          "Scharmede",
+          "Salzkotten",
+          "Geseke",
+          "Ehringhausen(Kr Lippstadt)",
+          "Dedinghausen",
+          "Lippstadt",
+          "Bad Sassendorf",
+          "Soest",
+          "Borgeln",
+          "Welver",
+          "Hamm-Westtünnen",
+          "Hamm(Westf)Hbf",
+          "Hamm-Bockum-Hövel",
+          "Mersch(Westf)"
+        ],
+        "line": "89"
+      },
+      {
+        "id": "2802758363915481103-2510202010-4",
+        "type": "RB",
+        "number": "90037",
+        "time": "2510202023",
+        "platform": "2",
+        "path_stations": [
+          "Münster(Westf)Hbf",
+          "Münster-Hiltrup",
+          "Rinkerode"
+        ],
+        "line": "89"
+      },
+      {
+        "id": "8897274227786964332-2510202008-6",
+        "type": "RE",
+        "number": "17435",
+        "time": "2510202046",
+        "platform": "2",
+        "path_stations": [
+          "Rheine",
+          "Emsdetten",
+          "Greven",
+          "Münster(Westf)Hbf",
+          "Münster-Hiltrup"
+        ],
+        "line": "7"
+      },
+      {
+        "id": "4871177226552021468-2510201937-12",
+        "type": "RB",
+        "number": "89992",
+        "time": "2510202035",
+        "platform": "1",
+        "path_stations": [
+          "Bielefeld Hbf",
+          "Bielefeld-Brackwede",
+          "Gütersloh Hbf",
+          "Rheda-Wiedenbrück",
+          "Oelde",
+          "Beckum-Neubeckum",
+          "Ahlen(Westf)",
+          "Hamm-Heessen",
+          "Hamm(Westf)Hbf",
+          "Hamm-Bockum-Hövel",
+          "Mersch(Westf)"
+        ],
+        "line": "69"
+      },
+      {
+        "id": "7603293696253863218-2510201921-16",
+        "type": "RB",
+        "number": "90034",
+        "time": "2510202035",
+        "platform": "1",
+        "path_stations": [
+          "Paderborn Hbf",
+          "Scharmede",
+          "Salzkotten",
+          "Geseke",
+          "Ehringhausen(Kr Lippstadt)",
+          "Dedinghausen",
+          "Lippstadt",
+          "Bad Sassendorf",
+          "Soest",
+          "Borgeln",
+          "Welver",
+          "Hamm-Westtünnen",
+          "Hamm(Westf)Hbf",
+          "Hamm-Bockum-Hövel",
+          "Mersch(Westf)"
+        ],
+        "line": "89"
+      },
+      {
+        "id": "-2223501954227914711-2510201735-20",
+        "type": "RE",
+        "number": "17428",
+        "time": "2510202007",
+        "platform": "1",
+        "path_stations": [
+          "Krefeld Hbf",
+          "Krefeld-Oppum",
+          "Meerbusch-Osterath",
+          "Neuss Hbf",
+          "Dormagen",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Opladen",
+          "Solingen Hbf",
+          "Wuppertal Hbf",
+          "Wuppertal-Oberbarmen",
+          "Schwelm",
+          "Ennepetal",
+          "Hagen Hbf",
+          "Schwerte(Ruhr)",
+          "Holzwickede",
+          "Unna",
+          "Bönen",
+          "Hamm(Westf)Hbf"
+        ],
+        "line": "7"
+      },
+      {
+        "id": "1754890827728627532-2510201835-20",
+        "type": "RE",
+        "number": "17430",
+        "time": "2510202107",
+        "platform": "1",
+        "path_stations": [
+          "Krefeld Hbf",
+          "Krefeld-Oppum",
+          "Meerbusch-Osterath",
+          "Neuss Hbf",
+          "Dormagen",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Opladen",
+          "Solingen Hbf",
+          "Wuppertal Hbf",
+          "Wuppertal-Oberbarmen",
+          "Schwelm",
+          "Ennepetal",
+          "Hagen Hbf",
+          "Schwerte(Ruhr)",
+          "Holzwickede",
+          "Unna",
+          "Bönen",
+          "Hamm(Westf)Hbf"
+        ],
+        "line": "7"
+      },
+      {
+        "id": "3514901573500855539-2510202015-16",
+        "type": "RB",
+        "number": "90036",
+        "time": "2510202131",
+        "platform": "1",
+        "path_stations": [
+          "Paderborn Hbf",
+          "Scharmede",
+          "Salzkotten",
+          "Geseke",
+          "Ehringhausen(Kr Lippstadt)",
+          "Dedinghausen",
+          "Lippstadt",
+          "Bad Sassendorf",
+          "Soest",
+          "Borgeln",
+          "Welver",
+          "Hamm-Westtünnen",
+          "Hamm(Westf)Hbf",
+          "Hamm-Bockum-Hövel",
+          "Mersch(Westf)"
+        ],
+        "line": "89"
+      },
+      {
+        "id": "4444951875748672307-2510202110-4",
+        "type": "RB",
+        "number": "90039",
+        "time": "2510202123",
+        "platform": "2",
+        "path_stations": [
+          "Münster(Westf)Hbf",
+          "Münster-Hiltrup",
+          "Rinkerode"
+        ],
+        "line": "89"
+      },
+      {
+        "id": "5534271823367149192-2510202115-16",
+        "type": "RB",
+        "number": "90038",
+        "time": "2510202235",
+        "platform": "1",
+        "path_stations": [
+          "Paderborn Hbf",
+          "Scharmede",
+          "Salzkotten",
+          "Geseke",
+          "Ehringhausen(Kr Lippstadt)",
+          "Dedinghausen",
+          "Lippstadt",
+          "Bad Sassendorf",
+          "Soest",
+          "Borgeln",
+          "Welver",
+          "Hamm-Westtünnen",
+          "Hamm(Westf)Hbf",
+          "Hamm-Bockum-Hövel",
+          "Mersch(Westf)"
+        ],
+        "line": "89"
+      },
+      {
+        "id": "7839853945287523601-2510202210-4",
+        "type": "RB",
+        "number": "90041",
+        "time": "2510202223",
+        "platform": "2",
+        "path_stations": [
+          "Münster(Westf)Hbf",
+          "Münster-Hiltrup",
+          "Rinkerode"
+        ],
+        "line": "89"
+      },
+      {
+        "id": "6568871694850903235-2510202215-16",
+        "type": "RB",
+        "number": "90040",
+        "time": "2510202331",
+        "platform": "1",
+        "path_stations": [
+          "Paderborn Hbf",
+          "Scharmede",
+          "Salzkotten",
+          "Geseke",
+          "Ehringhausen(Kr Lippstadt)",
+          "Dedinghausen",
+          "Lippstadt",
+          "Bad Sassendorf",
+          "Soest",
+          "Borgeln",
+          "Welver",
+          "Hamm-Westtünnen",
+          "Hamm(Westf)Hbf",
+          "Hamm-Bockum-Hövel",
+          "Mersch(Westf)"
+        ],
+        "line": "89"
+      },
+      {
+        "id": "-9088865381407852178-2510202310-4",
+        "type": "RB",
+        "number": "90043",
+        "time": "2510202323",
+        "platform": "2",
+        "path_stations": [
+          "Münster(Westf)Hbf",
+          "Münster-Hiltrup",
+          "Rinkerode"
+        ],
+        "line": "89"
+      },
+      {
+        "id": "-3719982820367997836-2510202315-16",
+        "type": "RB",
+        "number": "90042",
+        "time": "2510210021",
+        "platform": "1",
+        "path_stations": [
+          "Paderborn Hbf",
+          "Scharmede",
+          "Salzkotten",
+          "Geseke",
+          "Ehringhausen(Kr Lippstadt)",
+          "Dedinghausen",
+          "Lippstadt",
+          "Bad Sassendorf",
+          "Soest",
+          "Borgeln",
+          "Welver",
+          "Hamm-Westtünnen",
+          "Hamm(Westf)Hbf",
+          "Hamm-Bockum-Hövel",
+          "Mersch(Westf)"
+        ],
+        "line": "89"
+      },
+      {
+        "id": "6233846057944826584-2510210010-4",
+        "type": "RB",
+        "number": "90045",
+        "time": "2510210023",
+        "platform": "2",
+        "path_stations": [
+          "Münster(Westf)Hbf",
+          "Münster-Hiltrup",
+          "Rinkerode"
+        ],
+        "line": "89"
+      },
+      {
+        "id": "-6725426308915019299-2510210015-16",
+        "type": "RB",
+        "number": "90044",
+        "time": "2510210121",
+        "platform": "1",
+        "path_stations": [
+          "Paderborn Hbf",
+          "Scharmede",
+          "Salzkotten",
+          "Geseke",
+          "Ehringhausen(Kr Lippstadt)",
+          "Dedinghausen",
+          "Lippstadt",
+          "Bad Sassendorf",
+          "Soest",
+          "Borgeln",
+          "Welver",
+          "Hamm-Westtünnen",
+          "Hamm(Westf)Hbf",
+          "Hamm-Bockum-Hövel",
+          "Mersch(Westf)"
+        ],
+        "line": "89"
+      },
+      {
+        "id": "6203029297381651457-2510210510-4",
+        "type": "RB",
+        "number": "90007",
+        "time": "2510210523",
+        "platform": "2",
+        "path_stations": [
+          "Münster(Westf)Hbf",
+          "Münster-Hiltrup",
+          "Rinkerode"
+        ],
+        "line": "89"
+      },
+      {
+        "id": "8109066545142144463-2510210531-4",
+        "type": "RE",
+        "number": "17405",
+        "time": "2510210544",
+        "platform": "2",
+        "path_stations": [
+          "Münster(Westf)Hbf",
+          "Münster-Hiltrup",
+          "Rinkerode"
+        ],
+        "line": "7"
+      },
+      {
+        "id": "-7242885284052380065-2510210520-4",
+        "type": "RB",
+        "number": "90004",
+        "time": "2510210531",
+        "platform": "1",
+        "path_stations": [
+          "Hamm(Westf)Hbf",
+          "Hamm-Bockum-Hövel",
+          "Mersch(Westf)"
+        ],
+        "line": "89"
+      },
+      {
+        "id": "7615355469460915134-2510210451-16",
+        "type": "RB",
+        "number": "90054",
+        "time": "2510210601",
+        "platform": "1",
+        "path_stations": [
+          "Paderborn Hbf",
+          "Scharmede",
+          "Salzkotten",
+          "Geseke",
+          "Ehringhausen(Kr Lippstadt)",
+          "Dedinghausen",
+          "Lippstadt",
+          "Bad Sassendorf",
+          "Soest",
+          "Borgeln",
+          "Welver",
+          "Hamm-Westtünnen",
+          "Hamm(Westf)Hbf",
+          "Hamm-Bockum-Hövel",
+          "Mersch(Westf)"
+        ],
+        "line": "89"
+      },
+      {
+        "id": "2714870446092357657-2510210639-4",
+        "type": "RB",
+        "number": "90002",
+        "time": "2510210650",
+        "platform": "1",
+        "path_stations": [
+          "Hamm(Westf)Hbf",
+          "Hamm-Bockum-Hövel",
+          "Mersch(Westf)"
+        ],
+        "line": "89"
+      },
+      {
+        "id": "9052830126092746548-2510210635-3",
+        "type": "RE",
+        "number": "17407",
+        "time": "2510210646",
+        "platform": "2",
+        "path_stations": [
+          "Münster(Westf)Hbf",
+          "Münster-Hiltrup"
+        ],
+        "line": "7"
+      },
+      {
+        "id": "5822268014255633780-2510210527-13",
+        "type": "RB",
+        "number": "89964",
+        "time": "2510210631",
+        "platform": "1",
+        "path_stations": [
+          "Bielefeld Hbf",
+          "Bielefeld-Brackwede",
+          "Isselhorst-Avenwedde",
+          "Gütersloh Hbf",
+          "Rheda-Wiedenbrück",
+          "Oelde",
+          "Beckum-Neubeckum",
+          "Ahlen(Westf)",
+          "Hamm-Heessen",
+          "Hamm(Westf)Hbf",
+          "Hamm-Bockum-Hövel",
+          "Mersch(Westf)"
+        ],
+        "line": "69"
+      },
+      {
+        "id": "7480392243953521332-2510210521-16",
+        "type": "RB",
+        "number": "90006",
+        "time": "2510210631",
+        "platform": "1",
+        "path_stations": [
+          "Paderborn Hbf",
+          "Scharmede",
+          "Salzkotten",
+          "Geseke",
+          "Ehringhausen(Kr Lippstadt)",
+          "Dedinghausen",
+          "Lippstadt",
+          "Bad Sassendorf",
+          "Soest",
+          "Borgeln",
+          "Welver",
+          "Hamm-Westtünnen",
+          "Hamm(Westf)Hbf",
+          "Hamm-Bockum-Hövel",
+          "Mersch(Westf)"
+        ],
+        "line": "89"
+      },
+      {
+        "id": "8707435304927256538-2510210640-4",
+        "type": "RB",
+        "number": "90059",
+        "time": "2510210653",
+        "platform": "2",
+        "path_stations": [
+          "Münster(Westf)Hbf",
+          "Münster-Hiltrup",
+          "Rinkerode"
+        ],
+        "line": "89"
+      },
+      {
+        "id": "2585047690083153026-2510210610-4",
+        "type": "RB",
+        "number": "90009",
+        "time": "2510210622",
+        "platform": "2",
+        "path_stations": [
+          "Münster(Westf)Hbf",
+          "Münster-Hiltrup",
+          "Rinkerode"
+        ],
+        "line": "89"
+      },
+      {
+        "id": "8047337506388594690-2510210521-7",
+        "type": "RE",
+        "number": "17400",
+        "time": "2510210607",
+        "platform": "1",
+        "path_stations": [
+          "Hagen Hbf",
+          "Schwerte(Ruhr)",
+          "Holzwickede",
+          "Unna",
+          "Bönen",
+          "Hamm(Westf)Hbf"
+        ],
+        "line": "7"
+      }
+    ],
+    "departures": [
+      {
+        "id": "528103146165346343-2510201535-20",
+        "type": "RE",
+        "number": "17424",
+        "direction": "Rheine",
+        "platform": "1",
+        "time": "2510201808",
+        "destination": "Rheine",
+        "path_stations": [
+          "Münster-Hiltrup",
+          "Münster(Westf)Hbf",
+          "Greven",
+          "Emsdetten",
+          "Rheine"
+        ]
+      },
+      {
+        "id": "2791776302558067166-2510201808-6",
+        "type": "RE",
+        "number": "17431",
+        "direction": "Krefeld Hbf",
+        "platform": "2",
+        "time": "2510201847",
+        "destination": "Krefeld Hbf",
+        "path_stations": [
+          "Hamm(Westf)Hbf",
+          "Bönen",
+          "Unna",
+          "Holzwickede",
+          "Schwerte(Ruhr)",
+          "Hagen Hbf",
+          "Ennepetal",
+          "Schwelm",
+          "Wuppertal-Oberbarmen",
+          "Wuppertal Hbf",
+          "Solingen Hbf",
+          "Opladen",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Dormagen",
+          "Neuss Hbf",
+          "Meerbusch-Osterath",
+          "Krefeld-Oppum",
+          "Krefeld Hbf"
+        ]
+      },
+      {
+        "id": "6070247481173782512-2510201721-16",
+        "type": "RB",
+        "number": "90030",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "1",
+        "time": "2510201836",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Rinkerode",
+          "Münster-Hiltrup",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "8366820696655501879-2510201810-4",
+        "type": "RB",
+        "number": "89991",
+        "direction": "Bielefeld Hbf",
+        "platform": "2",
+        "time": "2510201823",
+        "destination": "Bielefeld Hbf",
+        "path_stations": [
+          "Mersch(Westf)",
+          "Hamm-Bockum-Hövel",
+          "Hamm(Westf)Hbf",
+          "Hamm-Heessen",
+          "Ahlen(Westf)",
+          "Beckum-Neubeckum",
+          "Oelde",
+          "Rheda-Wiedenbrück",
+          "Gütersloh Hbf",
+          "Isselhorst-Avenwedde",
+          "Bielefeld-Brackwede",
+          "Bielefeld Hbf"
+        ]
+      },
+      {
+        "id": "-7195479608071269594-2510201651-16",
+        "type": "RB",
+        "number": "90078",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "1",
+        "time": "2510201802",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Rinkerode",
+          "Münster-Hiltrup",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-5165331594088828113-2510201737-12",
+        "type": "RB",
+        "number": "89988",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "1",
+        "time": "2510201836",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Rinkerode",
+          "Münster-Hiltrup",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-8740784245747370028-2510201810-4",
+        "type": "RB",
+        "number": "90033",
+        "direction": "Paderborn Hbf",
+        "platform": "2",
+        "time": "2510201823",
+        "destination": "Paderborn Hbf",
+        "path_stations": [
+          "Mersch(Westf)",
+          "Hamm-Bockum-Hövel",
+          "Hamm(Westf)Hbf",
+          "Hamm-Westtünnen",
+          "Welver",
+          "Borgeln",
+          "Soest",
+          "Bad Sassendorf",
+          "Lippstadt",
+          "Dedinghausen",
+          "Ehringhausen(Kr Lippstadt)",
+          "Geseke",
+          "Salzkotten",
+          "Scharmede",
+          "Paderborn Hbf"
+        ]
+      },
+      {
+        "id": "-1793784616506880598-2510201840-4",
+        "type": "RB",
+        "number": "90083",
+        "direction": "Paderborn Hbf",
+        "platform": "2",
+        "time": "2510201853",
+        "destination": "Paderborn Hbf",
+        "path_stations": [
+          "Mersch(Westf)",
+          "Hamm-Bockum-Hövel",
+          "Hamm(Westf)Hbf",
+          "Hamm-Westtünnen",
+          "Welver",
+          "Borgeln",
+          "Soest",
+          "Bad Sassendorf",
+          "Lippstadt",
+          "Dedinghausen",
+          "Ehringhausen(Kr Lippstadt)",
+          "Geseke",
+          "Salzkotten",
+          "Scharmede",
+          "Paderborn Hbf"
+        ]
+      },
+      {
+        "id": "-4414766005444815964-2510201908-6",
+        "type": "RE",
+        "number": "17433",
+        "direction": "Köln Hbf",
+        "platform": "2",
+        "time": "2510201947",
+        "destination": "Köln Hbf",
+        "path_stations": [
+          "Hamm(Westf)Hbf",
+          "Bönen",
+          "Unna",
+          "Holzwickede",
+          "Schwerte(Ruhr)",
+          "Hagen Hbf",
+          "Ennepetal",
+          "Schwelm",
+          "Wuppertal-Oberbarmen",
+          "Wuppertal Hbf",
+          "Solingen Hbf",
+          "Opladen",
+          "Köln Messe/Deutz",
+          "Köln Hbf"
+        ]
+      },
+      {
+        "id": "-3546747815552203403-2510201908-4",
+        "type": "RB",
+        "number": "90035",
+        "direction": "Paderborn Hbf",
+        "platform": "2",
+        "time": "2510201921",
+        "destination": "Paderborn Hbf",
+        "path_stations": [
+          "Mersch(Westf)",
+          "Hamm-Bockum-Hövel",
+          "Hamm(Westf)Hbf",
+          "Hamm-Westtünnen",
+          "Welver",
+          "Borgeln",
+          "Soest",
+          "Bad Sassendorf",
+          "Lippstadt",
+          "Dedinghausen",
+          "Ehringhausen(Kr Lippstadt)",
+          "Geseke",
+          "Salzkotten",
+          "Scharmede",
+          "Paderborn Hbf"
+        ]
+      },
+      {
+        "id": "5743217421743839311-2510201827-13",
+        "type": "RB",
+        "number": "89990",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "1",
+        "time": "2510201934",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Rinkerode",
+          "Münster-Hiltrup",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-40095813426521212-2510201751-16",
+        "type": "RB",
+        "number": "90080",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "1",
+        "time": "2510201902",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Rinkerode",
+          "Münster-Hiltrup",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "6340911107085795931-2510201635-20",
+        "type": "RE",
+        "number": "17426",
+        "direction": "Rheine",
+        "platform": "1",
+        "time": "2510201908",
+        "destination": "Rheine",
+        "path_stations": [
+          "Münster-Hiltrup",
+          "Münster(Westf)Hbf",
+          "Greven",
+          "Emsdetten",
+          "Rheine"
+        ]
+      },
+      {
+        "id": "-7713658347553341378-2510201908-4",
+        "type": "RB",
+        "number": "89993",
+        "direction": "Bielefeld Hbf",
+        "platform": "2",
+        "time": "2510201921",
+        "destination": "Bielefeld Hbf",
+        "path_stations": [
+          "Mersch(Westf)",
+          "Hamm-Bockum-Hövel",
+          "Hamm(Westf)Hbf",
+          "Hamm-Heessen",
+          "Ahlen(Westf)",
+          "Beckum-Neubeckum",
+          "Oelde",
+          "Rheda-Wiedenbrück",
+          "Gütersloh Hbf",
+          "Bielefeld-Brackwede",
+          "Bielefeld Hbf"
+        ]
+      },
+      {
+        "id": "1975256304812980452-2510201821-16",
+        "type": "RB",
+        "number": "90032",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "1",
+        "time": "2510201934",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Rinkerode",
+          "Münster-Hiltrup",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "2802758363915481103-2510202010-4",
+        "type": "RB",
+        "number": "90037",
+        "direction": "Paderborn Hbf",
+        "platform": "2",
+        "time": "2510202023",
+        "destination": "Paderborn Hbf",
+        "path_stations": [
+          "Mersch(Westf)",
+          "Hamm-Bockum-Hövel",
+          "Hamm(Westf)Hbf",
+          "Hamm-Westtünnen",
+          "Welver",
+          "Borgeln",
+          "Soest",
+          "Bad Sassendorf",
+          "Lippstadt",
+          "Dedinghausen",
+          "Ehringhausen(Kr Lippstadt)",
+          "Geseke",
+          "Salzkotten",
+          "Scharmede",
+          "Paderborn Hbf"
+        ]
+      },
+      {
+        "id": "8897274227786964332-2510202008-6",
+        "type": "RE",
+        "number": "17435",
+        "direction": "Hagen Hbf",
+        "platform": "2",
+        "time": "2510202047",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Hamm(Westf)Hbf",
+          "Bönen",
+          "Unna",
+          "Holzwickede",
+          "Schwerte(Ruhr)",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "4871177226552021468-2510201937-12",
+        "type": "RB",
+        "number": "89992",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "1",
+        "time": "2510202036",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Rinkerode",
+          "Münster-Hiltrup",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "7603293696253863218-2510201921-16",
+        "type": "RB",
+        "number": "90034",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "1",
+        "time": "2510202036",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Rinkerode",
+          "Münster-Hiltrup",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-2223501954227914711-2510201735-20",
+        "type": "RE",
+        "number": "17428",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "1",
+        "time": "2510202008",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Münster-Hiltrup",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "1754890827728627532-2510201835-20",
+        "type": "RE",
+        "number": "17430",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "1",
+        "time": "2510202108",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Münster-Hiltrup",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "3514901573500855539-2510202015-16",
+        "type": "RB",
+        "number": "90036",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "1",
+        "time": "2510202132",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Rinkerode",
+          "Münster-Hiltrup",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "4444951875748672307-2510202110-4",
+        "type": "RB",
+        "number": "90039",
+        "direction": "Paderborn Hbf",
+        "platform": "2",
+        "time": "2510202123",
+        "destination": "Paderborn Hbf",
+        "path_stations": [
+          "Mersch(Westf)",
+          "Hamm-Bockum-Hövel",
+          "Hamm(Westf)Hbf",
+          "Hamm-Westtünnen",
+          "Welver",
+          "Borgeln",
+          "Soest",
+          "Bad Sassendorf",
+          "Lippstadt",
+          "Dedinghausen",
+          "Ehringhausen(Kr Lippstadt)",
+          "Geseke",
+          "Salzkotten",
+          "Scharmede",
+          "Paderborn Hbf"
+        ]
+      },
+      {
+        "id": "5534271823367149192-2510202115-16",
+        "type": "RB",
+        "number": "90038",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "1",
+        "time": "2510202236",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Rinkerode",
+          "Münster-Hiltrup",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "7839853945287523601-2510202210-4",
+        "type": "RB",
+        "number": "90041",
+        "direction": "Paderborn Hbf",
+        "platform": "2",
+        "time": "2510202223",
+        "destination": "Paderborn Hbf",
+        "path_stations": [
+          "Mersch(Westf)",
+          "Hamm-Bockum-Hövel",
+          "Hamm(Westf)Hbf",
+          "Hamm-Westtünnen",
+          "Welver",
+          "Borgeln",
+          "Soest",
+          "Bad Sassendorf",
+          "Lippstadt",
+          "Dedinghausen",
+          "Ehringhausen(Kr Lippstadt)",
+          "Geseke",
+          "Salzkotten",
+          "Scharmede",
+          "Paderborn Hbf"
+        ]
+      },
+      {
+        "id": "6568871694850903235-2510202215-16",
+        "type": "RB",
+        "number": "90040",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "1",
+        "time": "2510202332",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Rinkerode",
+          "Münster-Hiltrup",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-9088865381407852178-2510202310-4",
+        "type": "RB",
+        "number": "90043",
+        "direction": "Paderborn Hbf",
+        "platform": "2",
+        "time": "2510202323",
+        "destination": "Paderborn Hbf",
+        "path_stations": [
+          "Mersch(Westf)",
+          "Hamm-Bockum-Hövel",
+          "Hamm(Westf)Hbf",
+          "Hamm-Westtünnen",
+          "Welver",
+          "Borgeln",
+          "Soest",
+          "Bad Sassendorf",
+          "Lippstadt",
+          "Dedinghausen",
+          "Ehringhausen(Kr Lippstadt)",
+          "Geseke",
+          "Salzkotten",
+          "Scharmede",
+          "Paderborn Hbf"
+        ]
+      },
+      {
+        "id": "-3719982820367997836-2510202315-16",
+        "type": "RB",
+        "number": "90042",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "1",
+        "time": "2510210022",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Rinkerode",
+          "Münster-Hiltrup",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "6233846057944826584-2510210010-4",
+        "type": "RB",
+        "number": "90045",
+        "direction": "Hamm(Westf)Hbf",
+        "platform": "2",
+        "time": "2510210023",
+        "destination": "Hamm(Westf)Hbf",
+        "path_stations": [
+          "Mersch(Westf)",
+          "Hamm-Bockum-Hövel",
+          "Hamm(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-6725426308915019299-2510210015-16",
+        "type": "RB",
+        "number": "90044",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "1",
+        "time": "2510210122",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Rinkerode",
+          "Münster-Hiltrup",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "6203029297381651457-2510210510-4",
+        "type": "RB",
+        "number": "90007",
+        "direction": "Paderborn Hbf",
+        "platform": "2",
+        "time": "2510210523",
+        "destination": "Paderborn Hbf",
+        "path_stations": [
+          "Mersch(Westf)",
+          "Hamm-Bockum-Hövel",
+          "Hamm(Westf)Hbf",
+          "Hamm-Westtünnen",
+          "Welver",
+          "Borgeln",
+          "Soest",
+          "Bad Sassendorf",
+          "Lippstadt",
+          "Dedinghausen",
+          "Ehringhausen(Kr Lippstadt)",
+          "Geseke",
+          "Salzkotten",
+          "Scharmede",
+          "Paderborn Hbf"
+        ]
+      },
+      {
+        "id": "8109066545142144463-2510210531-4",
+        "type": "RE",
+        "number": "17405",
+        "direction": "Krefeld Hbf",
+        "platform": "2",
+        "time": "2510210544",
+        "destination": "Krefeld Hbf",
+        "path_stations": [
+          "Mersch(Westf)",
+          "Hamm-Bockum-Hövel",
+          "Hamm(Westf)Hbf",
+          "Bönen",
+          "Unna",
+          "Holzwickede",
+          "Schwerte(Ruhr)",
+          "Hagen Hbf",
+          "Ennepetal",
+          "Schwelm",
+          "Wuppertal-Oberbarmen",
+          "Wuppertal Hbf",
+          "Solingen Hbf",
+          "Opladen",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Dormagen",
+          "Neuss Hbf",
+          "Meerbusch-Osterath",
+          "Krefeld-Oppum",
+          "Krefeld Hbf"
+        ]
+      },
+      {
+        "id": "-7242885284052380065-2510210520-4",
+        "type": "RB",
+        "number": "90004",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "1",
+        "time": "2510210532",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Rinkerode",
+          "Münster-Hiltrup",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "7615355469460915134-2510210451-16",
+        "type": "RB",
+        "number": "90054",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "1",
+        "time": "2510210602",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Rinkerode",
+          "Münster-Hiltrup",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "2714870446092357657-2510210639-4",
+        "type": "RB",
+        "number": "90002",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "1",
+        "time": "2510210651",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Rinkerode",
+          "Münster-Hiltrup",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "9052830126092746548-2510210635-3",
+        "type": "RE",
+        "number": "17407",
+        "direction": "Krefeld Hbf",
+        "platform": "2",
+        "time": "2510210647",
+        "destination": "Krefeld Hbf",
+        "path_stations": [
+          "Hamm(Westf)Hbf",
+          "Bönen",
+          "Unna",
+          "Holzwickede",
+          "Schwerte(Ruhr)",
+          "Hagen Hbf",
+          "Ennepetal",
+          "Schwelm",
+          "Wuppertal-Oberbarmen",
+          "Wuppertal Hbf",
+          "Solingen Hbf",
+          "Opladen",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Dormagen",
+          "Neuss Hbf",
+          "Meerbusch-Osterath",
+          "Krefeld-Oppum",
+          "Krefeld Hbf"
+        ]
+      },
+      {
+        "id": "5822268014255633780-2510210527-13",
+        "type": "RB",
+        "number": "89964",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "1",
+        "time": "2510210632",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Rinkerode",
+          "Münster-Hiltrup",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "7480392243953521332-2510210521-16",
+        "type": "RB",
+        "number": "90006",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "1",
+        "time": "2510210632",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Rinkerode",
+          "Münster-Hiltrup",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "8707435304927256538-2510210640-4",
+        "type": "RB",
+        "number": "90059",
+        "direction": "Paderborn Hbf",
+        "platform": "2",
+        "time": "2510210653",
+        "destination": "Paderborn Hbf",
+        "path_stations": [
+          "Mersch(Westf)",
+          "Hamm-Bockum-Hövel",
+          "Hamm(Westf)Hbf",
+          "Hamm-Westtünnen",
+          "Welver",
+          "Borgeln",
+          "Soest",
+          "Bad Sassendorf",
+          "Lippstadt",
+          "Dedinghausen",
+          "Ehringhausen(Kr Lippstadt)",
+          "Geseke",
+          "Salzkotten",
+          "Scharmede",
+          "Paderborn Hbf"
+        ]
+      },
+      {
+        "id": "2585047690083153026-2510210610-4",
+        "type": "RB",
+        "number": "90009",
+        "direction": "Paderborn Hbf",
+        "platform": "2",
+        "time": "2510210623",
+        "destination": "Paderborn Hbf",
+        "path_stations": [
+          "Mersch(Westf)",
+          "Hamm-Bockum-Hövel",
+          "Hamm(Westf)Hbf",
+          "Hamm-Westtünnen",
+          "Welver",
+          "Borgeln",
+          "Soest",
+          "Bad Sassendorf",
+          "Lippstadt",
+          "Dedinghausen",
+          "Ehringhausen(Kr Lippstadt)",
+          "Geseke",
+          "Salzkotten",
+          "Scharmede",
+          "Paderborn Hbf"
+        ]
+      },
+      {
+        "id": "8047337506388594690-2510210521-7",
+        "type": "RE",
+        "number": "17400",
+        "direction": "Rheine",
+        "platform": "1",
+        "time": "2510210608",
+        "destination": "Rheine",
+        "path_stations": [
+          "Münster-Hiltrup",
+          "Münster(Westf)Hbf",
+          "Münster(W)Zentrum Nord",
+          "Münster-Sprakel",
+          "Greven",
+          "Reckenfeld",
+          "Emsdetten",
+          "Rheine-Mesum",
+          "Rheine"
+        ]
+      }
+    ]
+  }
+}

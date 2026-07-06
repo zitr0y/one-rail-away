@@ -1,0 +1,462 @@
+{
+  "station_eva": "8002640",
+  "date": "251020",
+  "cached_at": "2025-10-20T15:46:43.553590",
+  "plan_data": {
+    "departures": [
+      {
+        "id": "-8063860012819393966-2510201733-1",
+        "type": "S",
+        "number": "30357",
+        "direction": "Oberhausen Hbf",
+        "platform": "1",
+        "time": "2510201733",
+        "destination": "Oberhausen Hbf",
+        "path_stations": [
+          "Hattingen(Ruhr)",
+          "Bochum-Dahlhausen",
+          "Essen-Horst",
+          "Essen-Steele Ost",
+          "Essen-Steele",
+          "Essen Hbf",
+          "Essen West",
+          "Essen-Frohnhausen",
+          "Mülheim(Ruhr)Hbf",
+          "Mülheim(Ruhr)West",
+          "Mülheim(Ruhr)Styrum",
+          "Oberhausen Hbf"
+        ]
+      },
+      {
+        "id": "-4123538427748528181-2510201703-1",
+        "type": "S",
+        "number": "30355",
+        "direction": "Oberhausen Hbf",
+        "platform": "1",
+        "time": "2510201703",
+        "destination": "Oberhausen Hbf",
+        "path_stations": [
+          "Hattingen(Ruhr)",
+          "Bochum-Dahlhausen",
+          "Essen-Horst",
+          "Essen-Steele Ost",
+          "Essen-Steele",
+          "Essen Hbf",
+          "Essen West",
+          "Essen-Frohnhausen",
+          "Mülheim(Ruhr)Hbf",
+          "Mülheim(Ruhr)West",
+          "Mülheim(Ruhr)Styrum",
+          "Oberhausen Hbf"
+        ]
+      },
+      {
+        "id": "5849843044545452570-2510201803-1",
+        "type": "S",
+        "number": "30359",
+        "direction": "Oberhausen Hbf",
+        "platform": "1",
+        "time": "2510201803",
+        "destination": "Oberhausen Hbf",
+        "path_stations": [
+          "Hattingen(Ruhr)",
+          "Bochum-Dahlhausen",
+          "Essen-Horst",
+          "Essen-Steele Ost",
+          "Essen-Steele",
+          "Essen Hbf",
+          "Essen West",
+          "Essen-Frohnhausen",
+          "Mülheim(Ruhr)Hbf",
+          "Mülheim(Ruhr)West",
+          "Mülheim(Ruhr)Styrum",
+          "Oberhausen Hbf"
+        ]
+      },
+      {
+        "id": "-6619273956750358554-2510201833-1",
+        "type": "S",
+        "number": "30361",
+        "direction": "Oberhausen Hbf",
+        "platform": "1",
+        "time": "2510201833",
+        "destination": "Oberhausen Hbf",
+        "path_stations": [
+          "Hattingen(Ruhr)",
+          "Bochum-Dahlhausen",
+          "Essen-Horst",
+          "Essen-Steele Ost",
+          "Essen-Steele",
+          "Essen Hbf",
+          "Essen West",
+          "Essen-Frohnhausen",
+          "Mülheim(Ruhr)Hbf",
+          "Mülheim(Ruhr)West",
+          "Mülheim(Ruhr)Styrum",
+          "Oberhausen Hbf"
+        ]
+      },
+      {
+        "id": "2934134569438800148-2510201933-1",
+        "type": "S",
+        "number": "30365",
+        "direction": "Oberhausen Hbf",
+        "platform": "1",
+        "time": "2510201933",
+        "destination": "Oberhausen Hbf",
+        "path_stations": [
+          "Hattingen(Ruhr)",
+          "Bochum-Dahlhausen",
+          "Essen-Horst",
+          "Essen-Steele Ost",
+          "Essen-Steele",
+          "Essen Hbf",
+          "Essen West",
+          "Essen-Frohnhausen",
+          "Mülheim(Ruhr)Hbf",
+          "Mülheim(Ruhr)West",
+          "Mülheim(Ruhr)Styrum",
+          "Oberhausen Hbf"
+        ]
+      },
+      {
+        "id": "-9070208170418161881-2510201903-1",
+        "type": "S",
+        "number": "30363",
+        "direction": "Oberhausen Hbf",
+        "platform": "1",
+        "time": "2510201903",
+        "destination": "Oberhausen Hbf",
+        "path_stations": [
+          "Hattingen(Ruhr)",
+          "Bochum-Dahlhausen",
+          "Essen-Horst",
+          "Essen-Steele Ost",
+          "Essen-Steele",
+          "Essen Hbf",
+          "Essen West",
+          "Essen-Frohnhausen",
+          "Mülheim(Ruhr)Hbf",
+          "Mülheim(Ruhr)West",
+          "Mülheim(Ruhr)Styrum",
+          "Oberhausen Hbf"
+        ]
+      },
+      {
+        "id": "2572402660165950814-2510202033-1",
+        "type": "S",
+        "number": "30369",
+        "direction": "Oberhausen Hbf",
+        "platform": "1",
+        "time": "2510202033",
+        "destination": "Oberhausen Hbf",
+        "path_stations": [
+          "Hattingen(Ruhr)",
+          "Bochum-Dahlhausen",
+          "Essen-Horst",
+          "Essen-Steele Ost",
+          "Essen-Steele",
+          "Essen Hbf",
+          "Essen West",
+          "Essen-Frohnhausen",
+          "Mülheim(Ruhr)Hbf",
+          "Mülheim(Ruhr)West",
+          "Mülheim(Ruhr)Styrum",
+          "Oberhausen Hbf"
+        ]
+      },
+      {
+        "id": "-6877139240402722043-2510202003-1",
+        "type": "S",
+        "number": "30367",
+        "direction": "Oberhausen Hbf",
+        "platform": "1",
+        "time": "2510202003",
+        "destination": "Oberhausen Hbf",
+        "path_stations": [
+          "Hattingen(Ruhr)",
+          "Bochum-Dahlhausen",
+          "Essen-Horst",
+          "Essen-Steele Ost",
+          "Essen-Steele",
+          "Essen Hbf",
+          "Essen West",
+          "Essen-Frohnhausen",
+          "Mülheim(Ruhr)Hbf",
+          "Mülheim(Ruhr)West",
+          "Mülheim(Ruhr)Styrum",
+          "Oberhausen Hbf"
+        ]
+      },
+      {
+        "id": "66078863357781378-2510202142-1",
+        "type": "Bus",
+        "number": "341",
+        "direction": "Oberhausen Hbf",
+        "platform": "",
+        "time": "2510202142",
+        "destination": "Oberhausen Hbf",
+        "path_stations": [
+          "Hattingen(Ruhr)",
+          "Bochum-Dahlhausen",
+          "Essen-Horst",
+          "Essen-Steele Ost",
+          "Essen-Steele",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus",
+          "Essen West",
+          "Essen-Frohnhausen",
+          "Mülheim(Ruhr)Hbf",
+          "Mülheim(Ruhr)West",
+          "Mülheim(Ruhr)Styrum",
+          "Oberhausen Hbf"
+        ]
+      },
+      {
+        "id": "-7459491755798857683-2510202105-1",
+        "type": "Bus",
+        "number": "30371",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510202105",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Hattingen(Ruhr)",
+          "Bochum-Dahlhausen",
+          "Essen-Horst",
+          "Essen-Steele Ost",
+          "Essen-Steele",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-2790768571897797604-2510202135-1",
+        "type": "Bus",
+        "number": "30373",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510202135",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Hattingen(Ruhr)",
+          "Bochum-Dahlhausen",
+          "Essen-Horst",
+          "Essen-Steele Ost",
+          "Essen-Steele",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "201252502168494027-2510202242-1",
+        "type": "Bus",
+        "number": "349",
+        "direction": "Oberhausen Hbf",
+        "platform": "",
+        "time": "2510202242",
+        "destination": "Oberhausen Hbf",
+        "path_stations": [
+          "Hattingen(Ruhr)",
+          "Bochum-Dahlhausen",
+          "Essen-Horst",
+          "Essen-Steele Ost",
+          "Essen-Steele",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus",
+          "Essen West",
+          "Essen-Frohnhausen",
+          "Mülheim(Ruhr)Hbf",
+          "Mülheim(Ruhr)West",
+          "Mülheim(Ruhr)Styrum",
+          "Oberhausen Hbf"
+        ]
+      },
+      {
+        "id": "-6216607233360207801-2510202212-1",
+        "type": "Bus",
+        "number": "345",
+        "direction": "Oberhausen Hbf",
+        "platform": "",
+        "time": "2510202212",
+        "destination": "Oberhausen Hbf",
+        "path_stations": [
+          "Hattingen(Ruhr)",
+          "Bochum-Dahlhausen",
+          "Essen-Horst",
+          "Essen-Steele Ost",
+          "Essen-Steele",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus",
+          "Essen West",
+          "Essen-Frohnhausen",
+          "Mülheim(Ruhr)Hbf",
+          "Mülheim(Ruhr)West",
+          "Mülheim(Ruhr)Styrum",
+          "Oberhausen Hbf"
+        ]
+      },
+      {
+        "id": "-8996720251017932138-2510202235-1",
+        "type": "Bus",
+        "number": "30377",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510202235",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Hattingen(Ruhr)",
+          "Bochum-Dahlhausen",
+          "Essen-Horst",
+          "Essen-Steele Ost",
+          "Essen-Steele",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-504120253217315578-2510202205-1",
+        "type": "Bus",
+        "number": "30375",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510202205",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Hattingen(Ruhr)",
+          "Bochum-Dahlhausen",
+          "Essen-Horst",
+          "Essen-Steele Ost",
+          "Essen-Steele",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "1313664177792605240-2510202312-1",
+        "type": "Bus",
+        "number": "353",
+        "direction": "Oberhausen Hbf",
+        "platform": "",
+        "time": "2510202312",
+        "destination": "Oberhausen Hbf",
+        "path_stations": [
+          "Hattingen(Ruhr)",
+          "Bochum-Dahlhausen",
+          "Essen-Horst",
+          "Essen-Steele Ost",
+          "Essen-Steele",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus",
+          "Essen West",
+          "Essen-Frohnhausen",
+          "Mülheim(Ruhr)Hbf",
+          "Mülheim(Ruhr)West",
+          "Mülheim(Ruhr)Styrum",
+          "Oberhausen Hbf"
+        ]
+      },
+      {
+        "id": "2128336786717591849-2510202305-1",
+        "type": "Bus",
+        "number": "30379",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510202305",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Hattingen(Ruhr)",
+          "Bochum-Dahlhausen",
+          "Essen-Horst",
+          "Essen-Steele Ost",
+          "Essen-Steele",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "4000947229845511791-2510202335-1",
+        "type": "Bus",
+        "number": "331",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510202335",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Hattingen(Ruhr)",
+          "Bochum-Dahlhausen",
+          "Essen-Horst",
+          "Essen-Steele Ost",
+          "Essen-Steele",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-9156801588697148860-2510210012-1",
+        "type": "Bus",
+        "number": "333",
+        "direction": "Oberhausen Hbf",
+        "platform": "",
+        "time": "2510210012",
+        "destination": "Oberhausen Hbf",
+        "path_stations": [
+          "Hattingen(Ruhr)",
+          "Bochum-Dahlhausen",
+          "Essen-Horst",
+          "Essen-Steele Ost",
+          "Essen-Steele",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus",
+          "Essen West",
+          "Essen-Frohnhausen",
+          "Mülheim(Ruhr)Hbf",
+          "Mülheim(Ruhr)West",
+          "Mülheim(Ruhr)Styrum",
+          "Oberhausen Hbf"
+        ]
+      },
+      {
+        "id": "5003995313904074344-2510210112-1",
+        "type": "Bus",
+        "number": "30303",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510210112",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Hattingen(Ruhr)",
+          "Bochum-Dahlhausen",
+          "Essen-Horst",
+          "Essen-Steele Ost",
+          "Essen-Steele",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-8995564024226222664-2510210435-1",
+        "type": "Bus",
+        "number": "337",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510210435",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Hattingen(Ruhr)",
+          "Bochum-Dahlhausen",
+          "Essen-Horst",
+          "Essen-Steele Ost",
+          "Essen-Steele",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "4183518954290776475-2510210405-1",
+        "type": "Bus",
+        "number": "335",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510210405",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Hattingen(Ruhr)",
+          "Bochum-Dahlhausen",
+          "Essen-Horst",
+          "Essen-Steele Ost",
+          "Essen-Steele",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      }
+    ],
+    "arrivals": []
+  }
+}

@@ -1,0 +1,961 @@
+{
+  "station_eva": "8070979",
+  "date": "251020",
+  "cached_at": "2025-10-20T15:46:05.849641",
+  "plan_data": {
+    "departures": [
+      {
+        "id": "-409334650505466512-2510201625-5",
+        "type": "Bus",
+        "number": "40033",
+        "direction": "Witten Hbf",
+        "platform": "",
+        "time": "2510201708",
+        "destination": "Witten Hbf",
+        "path_stations": [
+          "Witten Hbf"
+        ]
+      },
+      {
+        "id": "-2505207735686136804-2510201655-5",
+        "type": "Bus",
+        "number": "41023",
+        "direction": "Witten Hbf",
+        "platform": "",
+        "time": "2510201738",
+        "destination": "Witten Hbf",
+        "path_stations": [
+          "Witten Hbf"
+        ]
+      },
+      {
+        "id": "-5528484242662412795-2510201705-3",
+        "type": "Bus",
+        "number": "1064",
+        "direction": "Dortmund Hbf",
+        "platform": "",
+        "time": "2510201741",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "570748136073077134-2510201650-2",
+        "type": "Bus",
+        "number": "1057",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510201722",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Wattenscheid",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "4000250689572129164-2510201710-2",
+        "type": "Bus",
+        "number": "41022",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510201728",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Bochum West",
+          "Wattenscheid",
+          "Essen-Kray Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "1431550108455049482-2510201720-2",
+        "type": "Bus",
+        "number": "1059",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510201752",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Wattenscheid",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-1278023339643399474-2510201635-3",
+        "type": "Bus",
+        "number": "1062",
+        "direction": "Dortmund Hbf",
+        "platform": "",
+        "time": "2510201711",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "6999798493782942250-2510201740-2",
+        "type": "Bus",
+        "number": "40034",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510201758",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Bochum West",
+          "Wattenscheid",
+          "Essen-Kray Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "3905927764189325646-2510201735-3",
+        "type": "Bus",
+        "number": "1066",
+        "direction": "Dortmund Hbf",
+        "platform": "",
+        "time": "2510201811",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-8868153036652375948-2510201840-2",
+        "type": "Bus",
+        "number": "40036",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510201858",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Bochum West",
+          "Wattenscheid",
+          "Essen-Kray Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "7795341692083428655-2510201820-2",
+        "type": "Bus",
+        "number": "1063",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510201852",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Wattenscheid",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "3115556868582937988-2510201805-3",
+        "type": "Bus",
+        "number": "1068",
+        "direction": "Dortmund Hbf",
+        "platform": "",
+        "time": "2510201841",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "2594854692551641804-2510201810-2",
+        "type": "Bus",
+        "number": "41024",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510201828",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Bochum West",
+          "Wattenscheid",
+          "Essen-Kray Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "9159512474718046498-2510201755-5",
+        "type": "Bus",
+        "number": "41025",
+        "direction": "Witten Hbf",
+        "platform": "",
+        "time": "2510201838",
+        "destination": "Witten Hbf",
+        "path_stations": [
+          "Witten Hbf"
+        ]
+      },
+      {
+        "id": "5223022216940619790-2510201750-2",
+        "type": "Bus",
+        "number": "1061",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510201822",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Wattenscheid",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "467849573460436506-2510201725-5",
+        "type": "Bus",
+        "number": "40035",
+        "direction": "Witten Hbf",
+        "platform": "",
+        "time": "2510201808",
+        "destination": "Witten Hbf",
+        "path_stations": [
+          "Witten Hbf"
+        ]
+      },
+      {
+        "id": "5372864579435979565-2510201940-2",
+        "type": "Bus",
+        "number": "40038",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510201958",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Bochum West",
+          "Wattenscheid",
+          "Essen-Kray Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-3016504492523654429-2510201905-3",
+        "type": "Bus",
+        "number": "1072",
+        "direction": "Dortmund Hbf",
+        "platform": "",
+        "time": "2510201941",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "8744473417999274720-2510201910-2",
+        "type": "Bus",
+        "number": "41026",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510201928",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Bochum West",
+          "Wattenscheid",
+          "Essen-Kray Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-4771390743550366162-2510201855-5",
+        "type": "Bus",
+        "number": "41027",
+        "direction": "Witten Hbf",
+        "platform": "",
+        "time": "2510201938",
+        "destination": "Witten Hbf",
+        "path_stations": [
+          "Witten Hbf"
+        ]
+      },
+      {
+        "id": "-6401759325125531519-2510201920-2",
+        "type": "Bus",
+        "number": "1067",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510201952",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Wattenscheid",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "1444740774342860095-2510201825-5",
+        "type": "Bus",
+        "number": "40037",
+        "direction": "Witten Hbf",
+        "platform": "",
+        "time": "2510201908",
+        "destination": "Witten Hbf",
+        "path_stations": [
+          "Witten Hbf"
+        ]
+      },
+      {
+        "id": "1693439934452668252-2510201850-2",
+        "type": "Bus",
+        "number": "1065",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510201922",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Wattenscheid",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-1476780141823218796-2510201835-3",
+        "type": "Bus",
+        "number": "1070",
+        "direction": "Dortmund Hbf",
+        "platform": "",
+        "time": "2510201911",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "6844292419290637856-2510202005-3",
+        "type": "Bus",
+        "number": "1076",
+        "direction": "Hamm(Westf)Hbf",
+        "platform": "",
+        "time": "2510202041",
+        "destination": "Hamm(Westf)Hbf",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Scharnhorst",
+          "Dortmund-Kurl",
+          "Kamen-Methler",
+          "Kamen",
+          "Bönen-Nordbögge",
+          "Hamm(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-8517649358450377868-2510202020-2",
+        "type": "Bus",
+        "number": "1071",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510202052",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Wattenscheid",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-4773172978365174954-2510202010-2",
+        "type": "Bus",
+        "number": "41028",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510202028",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Bochum West",
+          "Wattenscheid",
+          "Essen-Kray Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "6028821724648173548-2510201935-3",
+        "type": "Bus",
+        "number": "1074",
+        "direction": "Hamm(Westf)Hbf",
+        "platform": "",
+        "time": "2510202011",
+        "destination": "Hamm(Westf)Hbf",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Scharnhorst",
+          "Dortmund-Kurl",
+          "Kamen-Methler",
+          "Kamen",
+          "Bönen-Nordbögge",
+          "Hamm(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "2952375516804484725-2510201925-5",
+        "type": "Bus",
+        "number": "40039",
+        "direction": "Witten Hbf",
+        "platform": "",
+        "time": "2510202008",
+        "destination": "Witten Hbf",
+        "path_stations": [
+          "Witten Hbf"
+        ]
+      },
+      {
+        "id": "2914310123354533777-2510201955-5",
+        "type": "Bus",
+        "number": "41029",
+        "direction": "Witten Hbf",
+        "platform": "",
+        "time": "2510202038",
+        "destination": "Witten Hbf",
+        "path_stations": [
+          "Witten Hbf"
+        ]
+      },
+      {
+        "id": "-5396599124220382846-2510202040-2",
+        "type": "Bus",
+        "number": "40040",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510202058",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Bochum West",
+          "Wattenscheid",
+          "Essen-Kray Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "7789281817468758808-2510201950-2",
+        "type": "Bus",
+        "number": "1069",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510202022",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Wattenscheid",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-8830647386091646345-2510202025-5",
+        "type": "Bus",
+        "number": "40041",
+        "direction": "Witten Hbf",
+        "platform": "",
+        "time": "2510202108",
+        "destination": "Witten Hbf",
+        "path_stations": [
+          "Witten Hbf"
+        ]
+      },
+      {
+        "id": "-5471504808797007974-2510202035-3",
+        "type": "Bus",
+        "number": "1078",
+        "direction": "Hamm(Westf)Hbf",
+        "platform": "",
+        "time": "2510202111",
+        "destination": "Hamm(Westf)Hbf",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Scharnhorst",
+          "Dortmund-Kurl",
+          "Kamen-Methler",
+          "Kamen",
+          "Bönen-Nordbögge",
+          "Hamm(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-5594013023136919373-2510202140-2",
+        "type": "Bus",
+        "number": "40042",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510202158",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Bochum West",
+          "Wattenscheid",
+          "Essen-Kray Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-7835905024481850295-2510202120-2",
+        "type": "Bus",
+        "number": "1075",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510202152",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Wattenscheid",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-8011371056328089957-2510202050-2",
+        "type": "Bus",
+        "number": "1073",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510202122",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Wattenscheid",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "1115334887484968574-2510202135-3",
+        "type": "Bus",
+        "number": "1080",
+        "direction": "Hamm(Westf)Hbf",
+        "platform": "",
+        "time": "2510202211",
+        "destination": "Hamm(Westf)Hbf",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Scharnhorst",
+          "Dortmund-Kurl",
+          "Kamen-Methler",
+          "Kamen",
+          "Bönen-Nordbögge",
+          "Hamm(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-7590826221914420017-2510202150-2",
+        "type": "Bus",
+        "number": "1077",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510202222",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Wattenscheid",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "7466772189215854555-2510202205-3",
+        "type": "Bus",
+        "number": "1082",
+        "direction": "Hamm(Westf)Hbf",
+        "platform": "",
+        "time": "2510202241",
+        "destination": "Hamm(Westf)Hbf",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Scharnhorst",
+          "Dortmund-Kurl",
+          "Kamen-Methler",
+          "Kamen",
+          "Bönen-Nordbögge",
+          "Hamm(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-7501592733182360482-2510202125-5",
+        "type": "Bus",
+        "number": "40043",
+        "direction": "Witten Hbf",
+        "platform": "",
+        "time": "2510202208",
+        "destination": "Witten Hbf",
+        "path_stations": [
+          "Witten Hbf"
+        ]
+      },
+      {
+        "id": "8004204859961294461-2510202220-2",
+        "type": "Bus",
+        "number": "1079",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510202252",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Wattenscheid",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-6327690437567306618-2510202240-2",
+        "type": "Bus",
+        "number": "40044",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510202258",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Bochum West",
+          "Wattenscheid",
+          "Essen-Kray Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "4116393508190134854-2510202050-8",
+        "type": "Bus",
+        "number": "1081",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510202254",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Wattenscheid",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-1480646626733224543-2510202340-2",
+        "type": "Bus",
+        "number": "40046",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510202358",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Bochum West",
+          "Wattenscheid",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-2952111715038404971-2510202305-3",
+        "type": "Bus",
+        "number": "1086",
+        "direction": "Hamm(Westf)Hbf",
+        "platform": "",
+        "time": "2510202341",
+        "destination": "Hamm(Westf)Hbf",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Scharnhorst",
+          "Dortmund-Kurl",
+          "Kamen-Methler",
+          "Kamen",
+          "Bönen-Nordbögge",
+          "Hamm(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-7935879769966103594-2510202120-8",
+        "type": "Bus",
+        "number": "1083",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510202324",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Wattenscheid",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "65264026544892332-2510202235-3",
+        "type": "Bus",
+        "number": "1084",
+        "direction": "Hamm(Westf)Hbf",
+        "platform": "",
+        "time": "2510202311",
+        "destination": "Hamm(Westf)Hbf",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Scharnhorst",
+          "Dortmund-Kurl",
+          "Kamen-Methler",
+          "Kamen",
+          "Bönen-Nordbögge",
+          "Hamm(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "7208556528743135153-2510202150-8",
+        "type": "Bus",
+        "number": "1085",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510202354",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Wattenscheid",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-4098013467321340974-2510202225-5",
+        "type": "Bus",
+        "number": "40045",
+        "direction": "Witten Hbf",
+        "platform": "",
+        "time": "2510202308",
+        "destination": "Witten Hbf",
+        "path_stations": [
+          "Witten Hbf"
+        ]
+      },
+      {
+        "id": "45841186386860662-2510202220-8",
+        "type": "Bus",
+        "number": "1087",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510210024",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Wattenscheid",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-1813952423523487450-2510202335-3",
+        "type": "Bus",
+        "number": "1088",
+        "direction": "Hamm(Westf)Hbf",
+        "platform": "",
+        "time": "2510210011",
+        "destination": "Hamm(Westf)Hbf",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Scharnhorst",
+          "Dortmund-Kurl",
+          "Kamen-Methler",
+          "Kamen",
+          "Bönen-Nordbögge",
+          "Hamm(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-195833393579867748-2510202325-4",
+        "type": "Bus",
+        "number": "40001",
+        "direction": "Witten Hbf",
+        "platform": "",
+        "time": "2510210008",
+        "destination": "Witten Hbf",
+        "path_stations": [
+          "Witten Hbf"
+        ]
+      },
+      {
+        "id": "7100717143143276809-2510210005-3",
+        "type": "Bus",
+        "number": "1000",
+        "direction": "Hamm(Westf)Hbf",
+        "platform": "",
+        "time": "2510210041",
+        "destination": "Hamm(Westf)Hbf",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Scharnhorst",
+          "Dortmund-Kurl",
+          "Kamen-Methler",
+          "Kamen",
+          "Bönen-Nordbögge",
+          "Hamm(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "578561240065963630-2510210040-2",
+        "type": "Bus",
+        "number": "40000",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510210058",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Bochum West",
+          "Wattenscheid",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-2634571858741069482-2510202250-8",
+        "type": "Bus",
+        "number": "1089",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510210054",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Wattenscheid",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-3614445004552731289-2510210105-3",
+        "type": "Bus",
+        "number": "1002",
+        "direction": "Hamm(Westf)Hbf",
+        "platform": "",
+        "time": "2510210141",
+        "destination": "Hamm(Westf)Hbf",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Scharnhorst",
+          "Dortmund-Kurl",
+          "Kamen-Methler",
+          "Kamen",
+          "Bönen-Nordbögge",
+          "Hamm(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "8348277243163136377-2510210025-4",
+        "type": "Bus",
+        "number": "40003",
+        "direction": "Hagen Hbf",
+        "platform": "",
+        "time": "2510210108",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Witten Hbf",
+          "Wetter(Ruhr)",
+          "Hagen-Vorhalle",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "6577650736749111359-2510202320-8",
+        "type": "Bus",
+        "number": "1091",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510210124",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Wattenscheid",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-5673466453405027805-2510210140-2",
+        "type": "Bus",
+        "number": "40002",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510210158",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Bochum West",
+          "Wattenscheid",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-1862684883433501494-2510202350-8",
+        "type": "Bus",
+        "number": "1093",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510210154",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Wattenscheid",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "8326430290048004934-2510210020-8",
+        "type": "Bus",
+        "number": "1001",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510210224",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Wattenscheid",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-1413371878725604535-2510210205-3",
+        "type": "Bus",
+        "number": "1004",
+        "direction": "Hamm(Westf)Hbf",
+        "platform": "",
+        "time": "2510210241",
+        "destination": "Hamm(Westf)Hbf",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Scharnhorst",
+          "Dortmund-Kurl",
+          "Kamen-Methler",
+          "Kamen",
+          "Bönen-Nordbögge",
+          "Hamm(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "8836213910327636624-2510210240-2",
+        "type": "Bus",
+        "number": "40004",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510210258",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Bochum West",
+          "Wattenscheid",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-7981999174023803660-2510210120-8",
+        "type": "Bus",
+        "number": "1003",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510210324",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Wattenscheid",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "2347081983794210432-2510210305-3",
+        "type": "Bus",
+        "number": "1006",
+        "direction": "Hamm(Westf)Hbf",
+        "platform": "",
+        "time": "2510210341",
+        "destination": "Hamm(Westf)Hbf",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Scharnhorst",
+          "Dortmund-Kurl",
+          "Kamen-Methler",
+          "Kamen",
+          "Bönen-Nordbögge",
+          "Hamm(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "530700669386025771-2510210220-8",
+        "type": "Bus",
+        "number": "1005",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510210424",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Wattenscheid",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-4453027303379448533-2510210405-3",
+        "type": "Bus",
+        "number": "1008",
+        "direction": "Dortmund Hbf",
+        "platform": "",
+        "time": "2510210441",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Dortmund Hbf"
+        ]
+      }
+    ],
+    "arrivals": []
+  }
+}

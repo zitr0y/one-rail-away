@@ -1,0 +1,1024 @@
+{
+  "station_eva": "8006552",
+  "date": "251020",
+  "cached_at": "2025-10-20T15:35:47.487791",
+  "plan_data": {
+    "departures": [
+      {
+        "id": "-1457168968992517383-2510201714-1",
+        "type": "ENO",
+        "number": "83524",
+        "direction": "Hannover Hbf",
+        "platform": "4",
+        "time": "2510201714",
+        "destination": "Hannover Hbf",
+        "path_stations": [
+          "Fallersleben",
+          "Calberlah",
+          "Gifhorn",
+          "Leiferde(b Gifhorn)",
+          "Meinersen",
+          "Dedenhausen",
+          "Dollbergen",
+          "Immensen-Arpke",
+          "Lehrte",
+          "Hannover Hbf"
+        ]
+      },
+      {
+        "id": "6264673881775742533-2510201617-4",
+        "type": "ICE",
+        "number": "377",
+        "direction": "Basel SBB",
+        "platform": "1",
+        "time": "2510201738",
+        "destination": "Basel SBB",
+        "path_stations": [
+          "Braunschweig Hbf",
+          "Hildesheim Hbf",
+          "Göttingen",
+          "Kassel-Wilhelmshöhe",
+          "Fulda",
+          "Hanau Hbf",
+          "Frankfurt(Main)Hbf",
+          "Mannheim Hbf",
+          "Karlsruhe Hbf",
+          "Baden-Baden",
+          "Offenburg",
+          "Freiburg(Breisgau) Hbf",
+          "Basel Bad Bf",
+          "Basel SBB"
+        ]
+      },
+      {
+        "id": "-7106033539035275477-2510201718-1",
+        "type": "ENO",
+        "number": "83574",
+        "direction": "Hildesheim Hbf",
+        "platform": "8",
+        "time": "2510201718",
+        "destination": "Hildesheim Hbf",
+        "path_stations": [
+          "Fallersleben",
+          "Weddel(Braunschw)",
+          "Braunschweig Hbf",
+          "Lengede-Broistedt",
+          "Woltwiesche",
+          "Hoheneggelsen",
+          "Hildesheim Hbf"
+        ]
+      },
+      {
+        "id": "-1360629902197387952-2510201343-8",
+        "type": "ICE",
+        "number": "941",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "5",
+        "time": "2510201704",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin-Spandau",
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "-7595263230458046246-2510201722-1",
+        "type": "SMD",
+        "number": "80373",
+        "direction": "Magdeburg Hbf",
+        "platform": "9",
+        "time": "2510201722",
+        "destination": "Magdeburg Hbf",
+        "path_stations": [
+          "Oebisfelde",
+          "Bösdorf(Sachs-Anh)",
+          "Rätzlingen",
+          "Wegenstedt",
+          "Flechtingen",
+          "Haldensleben",
+          "Vahldorf",
+          "Groß Ammensleben",
+          "Meitzendorf",
+          "Barleben",
+          "Magdeburg-Eichenweiler",
+          "Magdeburg-Neustadt",
+          "Magdeburg Hbf"
+        ]
+      },
+      {
+        "id": "6094743061070474635-2510201750-1",
+        "type": "SMD",
+        "number": "80329",
+        "direction": "Stendal Hbf",
+        "platform": "9",
+        "time": "2510201750",
+        "destination": "Stendal Hbf",
+        "path_stations": [
+          "Oebisfelde",
+          "Miesterhorst",
+          "Mieste",
+          "Solpke",
+          "Gardelegen",
+          "Jävenitz",
+          "Uchtspringe",
+          "Vinzelberg",
+          "Möringen(Altm)",
+          "Stendal Hbf"
+        ]
+      },
+      {
+        "id": "8210477890964980741-2510201632-4",
+        "type": "ICE",
+        "number": "544",
+        "direction": "Köln Hbf",
+        "platform": "1",
+        "time": "2510201753",
+        "destination": "Köln Hbf",
+        "path_stations": [
+          "Hannover Hbf",
+          "Minden(Westf)",
+          "Bielefeld Hbf",
+          "Dortmund Hbf",
+          "Essen Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Hbf",
+          "Köln Hbf"
+        ]
+      },
+      {
+        "id": "8983673647294408675-2510200842-19",
+        "type": "ICE",
+        "number": "1218",
+        "direction": "Berlin Hbf",
+        "platform": "5",
+        "time": "2510201720",
+        "destination": "Berlin Hbf",
+        "path_stations": [
+          "Stendal Hbf",
+          "Berlin-Spandau",
+          "Berlin Hbf"
+        ]
+      },
+      {
+        "id": "-4020550040361167307-2510201345-6",
+        "type": "ICE",
+        "number": "951",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "5",
+        "time": "2510201704",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin-Spandau",
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "-794637768611448246-2510201825-1",
+        "type": "SMD",
+        "number": "80375",
+        "direction": "Magdeburg Hbf",
+        "platform": "9",
+        "time": "2510201825",
+        "destination": "Magdeburg Hbf",
+        "path_stations": [
+          "Oebisfelde",
+          "Bösdorf(Sachs-Anh)",
+          "Rätzlingen",
+          "Wegenstedt",
+          "Flechtingen",
+          "Haldensleben",
+          "Vahldorf",
+          "Groß Ammensleben",
+          "Meitzendorf",
+          "Barleben",
+          "Magdeburg-Eichenweiler",
+          "Magdeburg-Neustadt",
+          "Magdeburg Hbf"
+        ]
+      },
+      {
+        "id": "4961782681481677440-2510200959-21",
+        "type": "ICE",
+        "number": "278",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "5",
+        "time": "2510201819",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin-Spandau",
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "7606526371432167075-2510201814-1",
+        "type": "ENO",
+        "number": "83526",
+        "direction": "Hannover Hbf",
+        "platform": "3",
+        "time": "2510201814",
+        "destination": "Hannover Hbf",
+        "path_stations": [
+          "Fallersleben",
+          "Calberlah",
+          "Gifhorn",
+          "Leiferde(b Gifhorn)",
+          "Meinersen",
+          "Dedenhausen",
+          "Dollbergen",
+          "Immensen-Arpke",
+          "Lehrte",
+          "Hannover Hbf"
+        ]
+      },
+      {
+        "id": "-6941808823713393757-2510201850-1",
+        "type": "SMD",
+        "number": "80331",
+        "direction": "Stendal Hbf",
+        "platform": "9",
+        "time": "2510201850",
+        "destination": "Stendal Hbf",
+        "path_stations": [
+          "Oebisfelde",
+          "Miesterhorst",
+          "Mieste",
+          "Solpke",
+          "Gardelegen",
+          "Jävenitz",
+          "Uchtspringe",
+          "Vinzelberg",
+          "Möringen(Altm)",
+          "Stendal Hbf"
+        ]
+      },
+      {
+        "id": "1690497143864597407-2510201732-4",
+        "type": "ICE",
+        "number": "854",
+        "direction": "Wuppertal Hbf",
+        "platform": "1",
+        "time": "2510201853",
+        "destination": "Wuppertal Hbf",
+        "path_stations": [
+          "Hannover Hbf",
+          "Hamm(Westf)Hbf",
+          "Hagen Hbf",
+          "Wuppertal Hbf"
+        ]
+      },
+      {
+        "id": "7188954872564278301-2510201451-8",
+        "type": "ICE",
+        "number": "641",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "5",
+        "time": "2510201803",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin-Spandau",
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "6202916625163174173-2510201724-4",
+        "type": "ICE",
+        "number": "695",
+        "direction": "Stuttgart Hbf",
+        "platform": "1",
+        "time": "2510201836",
+        "destination": "Stuttgart Hbf",
+        "path_stations": [
+          "Braunschweig Hbf",
+          "Hildesheim Hbf",
+          "Göttingen",
+          "Kassel-Wilhelmshöhe",
+          "Fulda",
+          "Frankfurt(Main)Hbf",
+          "Mannheim Hbf",
+          "Stuttgart Hbf"
+        ]
+      },
+      {
+        "id": "-4604221385965901094-2510201818-1",
+        "type": "ENO",
+        "number": "83576",
+        "direction": "Hildesheim Hbf",
+        "platform": "8",
+        "time": "2510201818",
+        "destination": "Hildesheim Hbf",
+        "path_stations": [
+          "Fallersleben",
+          "Weddel(Braunschw)",
+          "Braunschweig Hbf",
+          "Lengede-Broistedt",
+          "Woltwiesche",
+          "Hoheneggelsen",
+          "Hildesheim Hbf"
+        ]
+      },
+      {
+        "id": "4251988685605862791-2510201732-4",
+        "type": "ICE",
+        "number": "844",
+        "direction": "Köln Hbf",
+        "platform": "1",
+        "time": "2510201853",
+        "destination": "Köln Hbf",
+        "path_stations": [
+          "Hannover Hbf",
+          "Hamm(Westf)Hbf",
+          "Dortmund Hbf",
+          "Essen Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf",
+          "Köln Hbf"
+        ]
+      },
+      {
+        "id": "2761170167525471867-2510201922-1",
+        "type": "SMD",
+        "number": "80377",
+        "direction": "Magdeburg Hbf",
+        "platform": "9",
+        "time": "2510201922",
+        "destination": "Magdeburg Hbf",
+        "path_stations": [
+          "Oebisfelde",
+          "Bösdorf(Sachs-Anh)",
+          "Rätzlingen",
+          "Wegenstedt",
+          "Flechtingen",
+          "Haldensleben",
+          "Vahldorf",
+          "Groß Ammensleben",
+          "Meitzendorf",
+          "Barleben",
+          "Magdeburg-Eichenweiler",
+          "Magdeburg-Neustadt",
+          "Magdeburg Hbf"
+        ]
+      },
+      {
+        "id": "7793181434569715846-2510201914-1",
+        "type": "ENO",
+        "number": "83528",
+        "direction": "Hannover Hbf",
+        "platform": "3",
+        "time": "2510201914",
+        "destination": "Hannover Hbf",
+        "path_stations": [
+          "Fallersleben",
+          "Calberlah",
+          "Gifhorn",
+          "Leiferde(b Gifhorn)",
+          "Meinersen",
+          "Dedenhausen",
+          "Dollbergen",
+          "Immensen-Arpke",
+          "Lehrte",
+          "Hannover Hbf"
+        ]
+      },
+      {
+        "id": "4083739950560377043-2510201246-13",
+        "type": "ICE",
+        "number": "596",
+        "direction": "Berlin Hbf",
+        "platform": "5",
+        "time": "2510201920",
+        "destination": "Berlin Hbf",
+        "path_stations": [
+          "Stendal Hbf",
+          "Berlin-Spandau",
+          "Berlin Hbf"
+        ]
+      },
+      {
+        "id": "6378881227509878523-2510201550-7",
+        "type": "ICE",
+        "number": "943",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "5",
+        "time": "2510201904",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin-Spandau",
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "-8203578369052827954-2510201817-4",
+        "type": "ICE",
+        "number": "877",
+        "direction": "Frankfurt(Main)Hbf",
+        "platform": "1",
+        "time": "2510201938",
+        "destination": "Frankfurt(Main)Hbf",
+        "path_stations": [
+          "Braunschweig Hbf",
+          "Hildesheim Hbf",
+          "Göttingen",
+          "Kassel-Wilhelmshöhe",
+          "Fulda",
+          "Hanau Hbf",
+          "Frankfurt(Main)Hbf"
+        ]
+      },
+      {
+        "id": "5270998905588748805-2510201918-1",
+        "type": "ENO",
+        "number": "83578",
+        "direction": "Hildesheim Hbf",
+        "platform": "8",
+        "time": "2510201918",
+        "destination": "Hildesheim Hbf",
+        "path_stations": [
+          "Fallersleben",
+          "Weddel(Braunschw)",
+          "Braunschweig Hbf",
+          "Lengede-Broistedt",
+          "Woltwiesche",
+          "Hoheneggelsen",
+          "Hildesheim Hbf"
+        ]
+      },
+      {
+        "id": "-107298036587741504-2510201545-6",
+        "type": "ICE",
+        "number": "953",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "5",
+        "time": "2510201904",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin-Spandau",
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "3742440961287674842-2510201832-4",
+        "type": "ICE",
+        "number": "542",
+        "direction": "Köln Hbf",
+        "platform": "1",
+        "time": "2510201953",
+        "destination": "Köln Hbf",
+        "path_stations": [
+          "Hannover Hbf",
+          "Minden(Westf)",
+          "Bielefeld Hbf",
+          "Dortmund Hbf",
+          "Essen Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Hbf",
+          "Köln Hbf"
+        ]
+      },
+      {
+        "id": "1727073522629915379-2510201925-4",
+        "type": "ICE",
+        "number": "687",
+        "direction": "Frankfurt(Main)Hbf",
+        "platform": "1",
+        "time": "2510202039",
+        "destination": "Frankfurt(Main)Hbf",
+        "path_stations": [
+          "Braunschweig Hbf",
+          "Hildesheim Hbf",
+          "Göttingen",
+          "Eichenberg",
+          "Fulda",
+          "Frankfurt(Main)Hbf"
+        ]
+      },
+      {
+        "id": "3860580944530455718-2510202050-1",
+        "type": "SMD",
+        "number": "80333",
+        "direction": "Stendal Hbf",
+        "platform": "9",
+        "time": "2510202050",
+        "destination": "Stendal Hbf",
+        "path_stations": [
+          "Oebisfelde",
+          "Miesterhorst",
+          "Mieste",
+          "Solpke",
+          "Gardelegen",
+          "Jävenitz",
+          "Uchtspringe",
+          "Vinzelberg",
+          "Möringen(Altm)",
+          "Stendal Hbf"
+        ]
+      },
+      {
+        "id": "-5511541014003594580-2510201652-8",
+        "type": "ICE",
+        "number": "643",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "5",
+        "time": "2510202003",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin-Spandau",
+          "Berlin Zoologischer Garten",
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "-4697456810072453316-2510202018-1",
+        "type": "ENO",
+        "number": "83580",
+        "direction": "Hildesheim Hbf",
+        "platform": "8",
+        "time": "2510202018",
+        "destination": "Hildesheim Hbf",
+        "path_stations": [
+          "Fallersleben",
+          "Weddel(Braunschw)",
+          "Braunschweig Hbf",
+          "Lengede-Broistedt",
+          "Woltwiesche",
+          "Hoheneggelsen",
+          "Hildesheim Hbf"
+        ]
+      },
+      {
+        "id": "624684981040080406-2510201934-4",
+        "type": "ICE",
+        "number": "842",
+        "direction": "Köln Hbf",
+        "platform": "1",
+        "time": "2510202053",
+        "destination": "Köln Hbf",
+        "path_stations": [
+          "Hannover Hbf",
+          "Minden(Westf)",
+          "Bielefeld Hbf",
+          "Hamm(Westf)Hbf",
+          "Dortmund Hbf",
+          "Essen Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf",
+          "Köln Hbf"
+        ]
+      },
+      {
+        "id": "6170002538724052342-2510201413-14",
+        "type": "ICE",
+        "number": "276",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "5",
+        "time": "2510202019",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin-Spandau",
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "3382247501636548579-2510202014-1",
+        "type": "ENO",
+        "number": "83530",
+        "direction": "Hannover Hbf",
+        "platform": "3",
+        "time": "2510202014",
+        "destination": "Hannover Hbf",
+        "path_stations": [
+          "Fallersleben",
+          "Calberlah",
+          "Gifhorn",
+          "Leiferde(b Gifhorn)",
+          "Meinersen",
+          "Dedenhausen",
+          "Dollbergen",
+          "Immensen-Arpke",
+          "Lehrte",
+          "Hannover Hbf"
+        ]
+      },
+      {
+        "id": "-8582937126189412550-2510202118-1",
+        "type": "ENO",
+        "number": "83582",
+        "direction": "Hildesheim Hbf",
+        "platform": "8",
+        "time": "2510202118",
+        "destination": "Hildesheim Hbf",
+        "path_stations": [
+          "Fallersleben",
+          "Weddel(Braunschw)",
+          "Braunschweig Hbf",
+          "Lengede-Broistedt",
+          "Woltwiesche",
+          "Hoheneggelsen",
+          "Hildesheim Hbf"
+        ]
+      },
+      {
+        "id": "-6365543450329300214-2510202114-1",
+        "type": "ENO",
+        "number": "83532",
+        "direction": "Hannover Hbf",
+        "platform": "3",
+        "time": "2510202114",
+        "destination": "Hannover Hbf",
+        "path_stations": [
+          "Fallersleben",
+          "Calberlah",
+          "Gifhorn",
+          "Leiferde(b Gifhorn)",
+          "Meinersen",
+          "Dedenhausen",
+          "Dollbergen",
+          "Immensen-Arpke",
+          "Lehrte",
+          "Hannover Hbf"
+        ]
+      },
+      {
+        "id": "-8275737537227179086-2510201750-7",
+        "type": "ICE",
+        "number": "945",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "5",
+        "time": "2510202104",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Stendal Hbf",
+          "Berlin-Spandau",
+          "Berlin Zoologischer Garten",
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "-4550645364654346112-2510201745-6",
+        "type": "ICE",
+        "number": "955",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "5",
+        "time": "2510202104",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Stendal Hbf",
+          "Berlin-Spandau",
+          "Berlin Zoologischer Garten",
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "1140779865956290650-2510201446-13",
+        "type": "ICE",
+        "number": "594",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "5",
+        "time": "2510202120",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin-Spandau",
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "8849850357444188253-2510202016-5",
+        "type": "ICE",
+        "number": "879",
+        "direction": "Kassel-Wilhelmshöhe",
+        "platform": "1",
+        "time": "2510202139",
+        "destination": "Kassel-Wilhelmshöhe",
+        "path_stations": [
+          "Braunschweig Hbf",
+          "Hildesheim Hbf",
+          "Göttingen",
+          "Kassel-Wilhelmshöhe"
+        ]
+      },
+      {
+        "id": "2869769973922245820-2510202032-5",
+        "type": "ICE",
+        "number": "540",
+        "direction": "Oldenburg(Oldb)Hbf",
+        "platform": "1",
+        "time": "2510202208",
+        "destination": "Oldenburg(Oldb)Hbf",
+        "path_stations": [
+          "Hannover Hbf",
+          "Nienburg(Weser)",
+          "Verden(Aller)",
+          "Bremen Hbf",
+          "Delmenhorst",
+          "Oldenburg(Oldb)Hbf"
+        ]
+      },
+      {
+        "id": "-4895514507913038239-2510202214-1",
+        "type": "ENO",
+        "number": "83534",
+        "direction": "Hannover Hbf",
+        "platform": "3",
+        "time": "2510202214",
+        "destination": "Hannover Hbf",
+        "path_stations": [
+          "Fallersleben",
+          "Calberlah",
+          "Gifhorn",
+          "Leiferde(b Gifhorn)",
+          "Meinersen",
+          "Dedenhausen",
+          "Dollbergen",
+          "Immensen-Arpke",
+          "Lehrte",
+          "Hannover Hbf"
+        ]
+      },
+      {
+        "id": "1116577686148397167-2510201613-14",
+        "type": "ICE",
+        "number": "274",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "5",
+        "time": "2510202219",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin-Spandau",
+          "Berlin Zoologischer Garten",
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "4447890004106418758-2510201852-8",
+        "type": "ICE",
+        "number": "645",
+        "direction": "Berlin Hbf",
+        "platform": "5",
+        "time": "2510202203",
+        "destination": "Berlin Hbf",
+        "path_stations": [
+          "Berlin-Spandau",
+          "Berlin Hbf"
+        ]
+      },
+      {
+        "id": "6606826357131203295-2510202218-1",
+        "type": "ENO",
+        "number": "83584",
+        "direction": "Hildesheim Hbf",
+        "platform": "8",
+        "time": "2510202218",
+        "destination": "Hildesheim Hbf",
+        "path_stations": [
+          "Fallersleben",
+          "Weddel(Braunschw)",
+          "Braunschweig Hbf",
+          "Lengede-Broistedt",
+          "Woltwiesche",
+          "Hoheneggelsen",
+          "Hildesheim Hbf"
+        ]
+      },
+      {
+        "id": "2121877044531283563-2510202113-6",
+        "type": "ICE",
+        "number": "840",
+        "direction": "Hannover Hbf",
+        "platform": "1",
+        "time": "2510202248",
+        "destination": "Hannover Hbf",
+        "path_stations": [
+          "Hannover Hbf"
+        ]
+      },
+      {
+        "id": "-4947827194116587130-2510202223-1",
+        "type": "SMD",
+        "number": "80383",
+        "direction": "Magdeburg Hbf",
+        "platform": "9",
+        "time": "2510202223",
+        "destination": "Magdeburg Hbf",
+        "path_stations": [
+          "Oebisfelde",
+          "Bösdorf(Sachs-Anh)",
+          "Rätzlingen",
+          "Wegenstedt",
+          "Flechtingen",
+          "Haldensleben",
+          "Vahldorf",
+          "Groß Ammensleben",
+          "Meitzendorf",
+          "Barleben",
+          "Magdeburg-Eichenweiler",
+          "Magdeburg-Neustadt",
+          "Magdeburg Hbf"
+        ]
+      },
+      {
+        "id": "2495224407053131128-2510202314-1",
+        "type": "ENO",
+        "number": "83536",
+        "direction": "Hannover Hbf",
+        "platform": "3",
+        "time": "2510202314",
+        "destination": "Hannover Hbf",
+        "path_stations": [
+          "Fallersleben",
+          "Calberlah",
+          "Gifhorn",
+          "Leiferde(b Gifhorn)",
+          "Meinersen",
+          "Dedenhausen",
+          "Dollbergen",
+          "Immensen-Arpke",
+          "Lehrte",
+          "Hannover Hbf"
+        ]
+      },
+      {
+        "id": "5597303123860052865-2510201926-8",
+        "type": "ICE",
+        "number": "947",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "5",
+        "time": "2510202304",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin-Spandau",
+          "Berlin Zoologischer Garten",
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "1685709864218984895-2510202318-1",
+        "type": "ENO",
+        "number": "83586",
+        "direction": "Hildesheim Hbf",
+        "platform": "8",
+        "time": "2510202318",
+        "destination": "Hildesheim Hbf",
+        "path_stations": [
+          "Fallersleben",
+          "Weddel(Braunschw)",
+          "Braunschweig Hbf",
+          "Lengede-Broistedt",
+          "Woltwiesche",
+          "Hoheneggelsen",
+          "Hildesheim Hbf"
+        ]
+      },
+      {
+        "id": "9024658818508190993-2510202320-1",
+        "type": "SMD",
+        "number": "80385",
+        "direction": "Magdeburg Hbf",
+        "platform": "9",
+        "time": "2510202320",
+        "destination": "Magdeburg Hbf",
+        "path_stations": [
+          "Oebisfelde",
+          "Bösdorf(Sachs-Anh)",
+          "Rätzlingen",
+          "Wegenstedt",
+          "Flechtingen",
+          "Haldensleben",
+          "Vahldorf",
+          "Groß Ammensleben",
+          "Meitzendorf",
+          "Barleben",
+          "Magdeburg-Eichenweiler",
+          "Magdeburg-Neustadt",
+          "Magdeburg Hbf"
+        ]
+      },
+      {
+        "id": "5089820149948252230-2510201646-13",
+        "type": "ICE",
+        "number": "592",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "5",
+        "time": "2510202347",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Stendal Hbf",
+          "Berlin-Spandau",
+          "Berlin Zoologischer Garten",
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "5845049446990543970-2510210014-1",
+        "type": "ENO",
+        "number": "83538",
+        "direction": "Hannover Hbf",
+        "platform": "3",
+        "time": "2510210014",
+        "destination": "Hannover Hbf",
+        "path_stations": [
+          "Fallersleben",
+          "Calberlah",
+          "Gifhorn",
+          "Leiferde(b Gifhorn)",
+          "Meinersen",
+          "Dedenhausen",
+          "Dollbergen",
+          "Immensen-Arpke",
+          "Lehrte",
+          "Hannover Hbf"
+        ]
+      },
+      {
+        "id": "4121683295209577191-2510202315-6",
+        "type": "ICE",
+        "number": "271",
+        "direction": "Chur",
+        "platform": "1",
+        "time": "2510210100",
+        "destination": "Chur",
+        "path_stations": [
+          "Hannover Hbf",
+          "Göttingen",
+          "Fulda",
+          "Hanau Hbf",
+          "Frankfurt(Main)Hbf",
+          "Mannheim Hbf",
+          "Karlsruhe Hbf",
+          "Baden-Baden",
+          "Offenburg",
+          "Freiburg(Breisgau) Hbf",
+          "Basel Bad Bf",
+          "Basel SBB",
+          "Zürich HB",
+          "Sargans",
+          "Landquart",
+          "Chur"
+        ]
+      },
+      {
+        "id": "4121683295209577191-2510202315-6",
+        "type": "ICE",
+        "number": "271",
+        "direction": "Chur",
+        "platform": "1",
+        "time": "2510210100",
+        "destination": "Chur",
+        "path_stations": [
+          "Hannover Hbf",
+          "Göttingen",
+          "Fulda",
+          "Hanau Hbf",
+          "Frankfurt(Main)Hbf",
+          "Mannheim Hbf",
+          "Karlsruhe Hbf",
+          "Baden-Baden",
+          "Offenburg",
+          "Freiburg(Breisgau) Hbf",
+          "Basel Bad Bf",
+          "Basel SBB",
+          "Zürich HB",
+          "Sargans",
+          "Landquart",
+          "Chur"
+        ]
+      },
+      {
+        "id": "4234177747592826708-2510210454-1",
+        "type": "ENO",
+        "number": "83592",
+        "direction": "Hannover Hbf",
+        "platform": "3",
+        "time": "2510210454",
+        "destination": "Hannover Hbf",
+        "path_stations": [
+          "Fallersleben",
+          "Calberlah",
+          "Gifhorn",
+          "Leiferde(b Gifhorn)",
+          "Meinersen",
+          "Dedenhausen",
+          "Dollbergen",
+          "Immensen-Arpke",
+          "Lehrte",
+          "Hannover Hbf"
+        ]
+      }
+    ],
+    "arrivals": []
+  }
+}

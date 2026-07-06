@@ -1,0 +1,189 @@
+{
+  "station_eva": "100372",
+  "date": "251020",
+  "cached_at": "2025-10-20T16:42:32.506545",
+  "plan_data": {
+    "arrivals": [
+      {
+        "id": "-8565288696483774236-2510202141-6",
+        "type": "Bus",
+        "number": "57101",
+        "time": "2510202237",
+        "platform": "",
+        "path_stations": [
+          "Hauptbahnhof, Koblenz",
+          "Bahnhof Stadtmitte/Löhr-Center, Koblenz",
+          "Lützel Balduinbrücke, Koblenz",
+          "Bahnhof Rheinbrücke, Urmitz",
+          "Bahnhof, Neuwied"
+        ],
+        "line": "RE8"
+      },
+      {
+        "id": "2861893523349543828-2510202108-7",
+        "type": "Bus",
+        "number": "46101",
+        "time": "2510202204",
+        "platform": "",
+        "path_stations": [
+          "Hauptbahnhof, Koblenz",
+          "Ehrenbreitstein Bahnhof, Koblenz",
+          "Bahnhof, Vallendar",
+          "Engers Bahnhof, Neuwied",
+          "Bahnhof, Neuwied",
+          "Neuer Weg, Leutesdorf"
+        ],
+        "line": "RB27"
+      },
+      {
+        "id": "1524425151386231742-2510202208-7",
+        "type": "Bus",
+        "number": "46103",
+        "time": "2510202304",
+        "platform": "",
+        "path_stations": [
+          "Hauptbahnhof, Koblenz",
+          "Ehrenbreitstein Bahnhof, Koblenz",
+          "Bahnhof, Vallendar",
+          "Engers Bahnhof, Neuwied",
+          "Bahnhof, Neuwied",
+          "Neuer Weg, Leutesdorf"
+        ],
+        "line": "RB27"
+      },
+      {
+        "id": "-3840166135885084630-2510202317-4",
+        "type": "Bus",
+        "number": "47100",
+        "time": "2510202334",
+        "platform": "",
+        "path_stations": [
+          "Bahnhof, Linz am Rhein",
+          "Bahnhof, Leubsdorf (Rhein)",
+          "Bahnhof, Bad Hönningen"
+        ],
+        "line": "RE8"
+      },
+      {
+        "id": "-1917479370528198446-2510202308-7",
+        "type": "Bus",
+        "number": "46105",
+        "time": "2510210004",
+        "platform": "",
+        "path_stations": [
+          "Hauptbahnhof, Koblenz",
+          "Ehrenbreitstein Bahnhof, Koblenz",
+          "Bahnhof, Vallendar",
+          "Engers Bahnhof, Neuwied",
+          "Bahnhof, Neuwied",
+          "Neuer Weg, Leutesdorf"
+        ],
+        "line": "RB27"
+      },
+      {
+        "id": "5165072441194749921-2510210017-4",
+        "type": "Bus",
+        "number": "47102",
+        "time": "2510210034",
+        "platform": "",
+        "path_stations": [
+          "Bahnhof, Linz am Rhein",
+          "Bahnhof, Leubsdorf (Rhein)",
+          "Bahnhof, Bad Hönningen"
+        ],
+        "line": "RE8"
+      }
+    ],
+    "departures": [
+      {
+        "id": "-8565288696483774236-2510202141-6",
+        "type": "Bus",
+        "number": "57101",
+        "direction": "Bahnhof, Linz am Rhein",
+        "platform": "",
+        "time": "2510202237",
+        "destination": "Bahnhof, Linz am Rhein",
+        "path_stations": [
+          "Bahnhof, Bad Hönningen",
+          "Bahnhof, Linz am Rhein"
+        ]
+      },
+      {
+        "id": "2861893523349543828-2510202108-7",
+        "type": "Bus",
+        "number": "46101",
+        "direction": "Bahnhof, Linz am Rhein",
+        "platform": "",
+        "time": "2510202204",
+        "destination": "Bahnhof, Linz am Rhein",
+        "path_stations": [
+          "Bahnhof, Bad Hönningen",
+          "Bahnhof, Leubsdorf (Rhein)",
+          "Bahnhof, Linz am Rhein"
+        ]
+      },
+      {
+        "id": "1524425151386231742-2510202208-7",
+        "type": "Bus",
+        "number": "46103",
+        "direction": "Bahnhof, Linz am Rhein",
+        "platform": "",
+        "time": "2510202304",
+        "destination": "Bahnhof, Linz am Rhein",
+        "path_stations": [
+          "Bahnhof, Bad Hönningen",
+          "Bahnhof, Leubsdorf (Rhein)",
+          "Bahnhof, Linz am Rhein"
+        ]
+      },
+      {
+        "id": "-3840166135885084630-2510202317-4",
+        "type": "Bus",
+        "number": "47100",
+        "direction": "Hauptbahnhof, Koblenz",
+        "platform": "",
+        "time": "2510202334",
+        "destination": "Hauptbahnhof, Koblenz",
+        "path_stations": [
+          "Neuer Weg, Leutesdorf",
+          "Bahnhof, Neuwied",
+          "Rheinbrücke Bahnhof, Urmitz",
+          "Lützel Bahnhof, Koblenz",
+          "Bahnhof Stadtmitte/Löhr-Center, Koblenz",
+          "Hauptbahnhof, Koblenz"
+        ]
+      },
+      {
+        "id": "-1917479370528198446-2510202308-7",
+        "type": "Bus",
+        "number": "46105",
+        "direction": "Bahnhof, Linz am Rhein",
+        "platform": "",
+        "time": "2510210004",
+        "destination": "Bahnhof, Linz am Rhein",
+        "path_stations": [
+          "Bahnhof, Bad Hönningen",
+          "Bahnhof, Leubsdorf (Rhein)",
+          "Bahnhof, Linz am Rhein"
+        ]
+      },
+      {
+        "id": "5165072441194749921-2510210017-4",
+        "type": "Bus",
+        "number": "47102",
+        "direction": "Hauptbahnhof, Koblenz",
+        "platform": "",
+        "time": "2510210034",
+        "destination": "Hauptbahnhof, Koblenz",
+        "path_stations": [
+          "Neuer Weg, Leutesdorf",
+          "Bahnhof, Neuwied",
+          "Rheinbrücke Bahnhof, Urmitz",
+          "Lützel Bahnhof, Koblenz",
+          "Bahnhof Stadtmitte/Löhr-Center, Koblenz",
+          "Hauptbahnhof, Koblenz"
+        ]
+      }
+    ]
+  }
+}

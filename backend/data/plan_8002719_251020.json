@@ -1,0 +1,641 @@
+{
+  "station_eva": "8002719",
+  "date": "251020",
+  "cached_at": "2025-10-20T16:38:23.835615",
+  "plan_data": {
+    "arrivals": [
+      {
+        "id": "4770059462093724975-2510201831-6",
+        "type": "RB",
+        "number": "10387",
+        "time": "2510201841",
+        "platform": "",
+        "path_stations": [
+          "Heinsberg(Rheinl)",
+          "Heinsberg Kreishaus",
+          "Heinsberg-Oberbruch",
+          "Heinsberg-Dremmen",
+          "Heinsberg-Porselen"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "3919210378414046683-2510201737-10",
+        "type": "RB",
+        "number": "10384",
+        "time": "2510201816",
+        "platform": "",
+        "path_stations": [
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West",
+          "Kohlscheid",
+          "Herzogenrath",
+          "Übach-Palenberg",
+          "Geilenkirchen",
+          "Lindern",
+          "Heinsberg-Randerath"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "425169339972651404-2510201931-6",
+        "type": "RB",
+        "number": "10389",
+        "time": "2510201941",
+        "platform": "",
+        "path_stations": [
+          "Heinsberg(Rheinl)",
+          "Heinsberg Kreishaus",
+          "Heinsberg-Oberbruch",
+          "Heinsberg-Dremmen",
+          "Heinsberg-Porselen"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "-955063537674402454-2510201837-10",
+        "type": "RB",
+        "number": "10386",
+        "time": "2510201916",
+        "platform": "",
+        "path_stations": [
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West",
+          "Kohlscheid",
+          "Herzogenrath",
+          "Übach-Palenberg",
+          "Geilenkirchen",
+          "Lindern",
+          "Heinsberg-Randerath"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "-7538420336010471002-2510201937-10",
+        "type": "RB",
+        "number": "10388",
+        "time": "2510202016",
+        "platform": "",
+        "path_stations": [
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West",
+          "Kohlscheid",
+          "Herzogenrath",
+          "Übach-Palenberg",
+          "Geilenkirchen",
+          "Lindern",
+          "Heinsberg-Randerath"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "2192262199334435396-2510202031-6",
+        "type": "RB",
+        "number": "10391",
+        "time": "2510202041",
+        "platform": "",
+        "path_stations": [
+          "Heinsberg(Rheinl)",
+          "Heinsberg Kreishaus",
+          "Heinsberg-Oberbruch",
+          "Heinsberg-Dremmen",
+          "Heinsberg-Porselen"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "4156722506302358103-2510202131-6",
+        "type": "RB",
+        "number": "10393",
+        "time": "2510202141",
+        "platform": "",
+        "path_stations": [
+          "Heinsberg(Rheinl)",
+          "Heinsberg Kreishaus",
+          "Heinsberg-Oberbruch",
+          "Heinsberg-Dremmen",
+          "Heinsberg-Porselen"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "-2247727545179716275-2510202036-10",
+        "type": "RB",
+        "number": "10390",
+        "time": "2510202116",
+        "platform": "",
+        "path_stations": [
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West",
+          "Kohlscheid",
+          "Herzogenrath",
+          "Übach-Palenberg",
+          "Geilenkirchen",
+          "Lindern",
+          "Heinsberg-Randerath"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "8981576163685482211-2510202231-6",
+        "type": "RB",
+        "number": "10395",
+        "time": "2510202241",
+        "platform": "",
+        "path_stations": [
+          "Heinsberg(Rheinl)",
+          "Heinsberg Kreishaus",
+          "Heinsberg-Oberbruch",
+          "Heinsberg-Dremmen",
+          "Heinsberg-Porselen"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "-2782820331228224710-2510202137-10",
+        "type": "RB",
+        "number": "10392",
+        "time": "2510202216",
+        "platform": "",
+        "path_stations": [
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West",
+          "Kohlscheid",
+          "Herzogenrath",
+          "Übach-Palenberg",
+          "Geilenkirchen",
+          "Lindern",
+          "Heinsberg-Randerath"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "2613121905918442532-2510202237-10",
+        "type": "RB",
+        "number": "10394",
+        "time": "2510202316",
+        "platform": "",
+        "path_stations": [
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West",
+          "Kohlscheid",
+          "Herzogenrath",
+          "Übach-Palenberg",
+          "Geilenkirchen",
+          "Lindern",
+          "Heinsberg-Randerath"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "6548269022931127007-2510202331-6",
+        "type": "RB",
+        "number": "10397",
+        "time": "2510202341",
+        "platform": "",
+        "path_stations": [
+          "Heinsberg(Rheinl)",
+          "Heinsberg Kreishaus",
+          "Heinsberg-Oberbruch",
+          "Heinsberg-Dremmen",
+          "Heinsberg-Porselen"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "-8551912666434911898-2510202337-10",
+        "type": "RB",
+        "number": "10396",
+        "time": "2510210016",
+        "platform": "",
+        "path_stations": [
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West",
+          "Kohlscheid",
+          "Herzogenrath",
+          "Übach-Palenberg",
+          "Geilenkirchen",
+          "Lindern",
+          "Heinsberg-Randerath"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "-7112950632579182168-2510210031-6",
+        "type": "RB",
+        "number": "10351",
+        "time": "2510210041",
+        "platform": "",
+        "path_stations": [
+          "Heinsberg(Rheinl)",
+          "Heinsberg Kreishaus",
+          "Heinsberg-Oberbruch",
+          "Heinsberg-Dremmen",
+          "Heinsberg-Porselen"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "2268936165231476331-2510210437-10",
+        "type": "RB",
+        "number": "10358",
+        "time": "2510210516",
+        "platform": "",
+        "path_stations": [
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West",
+          "Kohlscheid",
+          "Herzogenrath",
+          "Übach-Palenberg",
+          "Geilenkirchen",
+          "Lindern",
+          "Heinsberg-Randerath"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "3249475284365179118-2510210531-6",
+        "type": "RB",
+        "number": "10361",
+        "time": "2510210541",
+        "platform": "",
+        "path_stations": [
+          "Heinsberg(Rheinl)",
+          "Heinsberg Kreishaus",
+          "Heinsberg-Oberbruch",
+          "Heinsberg-Dremmen",
+          "Heinsberg-Porselen"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "-7592054811744883795-2510210537-10",
+        "type": "RB",
+        "number": "10360",
+        "time": "2510210616",
+        "platform": "",
+        "path_stations": [
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West",
+          "Kohlscheid",
+          "Herzogenrath",
+          "Übach-Palenberg",
+          "Geilenkirchen",
+          "Lindern",
+          "Heinsberg-Randerath"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "8796805481190130826-2510210631-6",
+        "type": "RB",
+        "number": "10363",
+        "time": "2510210641",
+        "platform": "",
+        "path_stations": [
+          "Heinsberg(Rheinl)",
+          "Heinsberg Kreishaus",
+          "Heinsberg-Oberbruch",
+          "Heinsberg-Dremmen",
+          "Heinsberg-Porselen"
+        ],
+        "line": "33"
+      }
+    ],
+    "departures": [
+      {
+        "id": "4770059462093724975-2510201831-6",
+        "type": "RB",
+        "number": "10387",
+        "direction": "Aachen Hbf",
+        "platform": "",
+        "time": "2510201842",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Heinsberg-Randerath",
+          "Lindern",
+          "Geilenkirchen",
+          "Übach-Palenberg",
+          "Herzogenrath",
+          "Kohlscheid",
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "3919210378414046683-2510201737-10",
+        "type": "RB",
+        "number": "10384",
+        "direction": "Heinsberg(Rheinl)",
+        "platform": "",
+        "time": "2510201816",
+        "destination": "Heinsberg(Rheinl)",
+        "path_stations": [
+          "Heinsberg-Porselen",
+          "Heinsberg-Dremmen",
+          "Heinsberg-Oberbruch",
+          "Heinsberg Kreishaus",
+          "Heinsberg(Rheinl)"
+        ]
+      },
+      {
+        "id": "425169339972651404-2510201931-6",
+        "type": "RB",
+        "number": "10389",
+        "direction": "Aachen Hbf",
+        "platform": "",
+        "time": "2510201942",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Heinsberg-Randerath",
+          "Lindern",
+          "Geilenkirchen",
+          "Übach-Palenberg",
+          "Herzogenrath",
+          "Kohlscheid",
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "-955063537674402454-2510201837-10",
+        "type": "RB",
+        "number": "10386",
+        "direction": "Heinsberg(Rheinl)",
+        "platform": "",
+        "time": "2510201916",
+        "destination": "Heinsberg(Rheinl)",
+        "path_stations": [
+          "Heinsberg-Porselen",
+          "Heinsberg-Dremmen",
+          "Heinsberg-Oberbruch",
+          "Heinsberg Kreishaus",
+          "Heinsberg(Rheinl)"
+        ]
+      },
+      {
+        "id": "-7538420336010471002-2510201937-10",
+        "type": "RB",
+        "number": "10388",
+        "direction": "Heinsberg(Rheinl)",
+        "platform": "",
+        "time": "2510202016",
+        "destination": "Heinsberg(Rheinl)",
+        "path_stations": [
+          "Heinsberg-Porselen",
+          "Heinsberg-Dremmen",
+          "Heinsberg-Oberbruch",
+          "Heinsberg Kreishaus",
+          "Heinsberg(Rheinl)"
+        ]
+      },
+      {
+        "id": "2192262199334435396-2510202031-6",
+        "type": "RB",
+        "number": "10391",
+        "direction": "Aachen Hbf",
+        "platform": "",
+        "time": "2510202042",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Heinsberg-Randerath",
+          "Lindern",
+          "Geilenkirchen",
+          "Übach-Palenberg",
+          "Herzogenrath",
+          "Kohlscheid",
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "4156722506302358103-2510202131-6",
+        "type": "RB",
+        "number": "10393",
+        "direction": "Aachen Hbf",
+        "platform": "",
+        "time": "2510202142",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Heinsberg-Randerath",
+          "Lindern",
+          "Geilenkirchen",
+          "Übach-Palenberg",
+          "Herzogenrath",
+          "Kohlscheid",
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "-2247727545179716275-2510202036-10",
+        "type": "RB",
+        "number": "10390",
+        "direction": "Heinsberg(Rheinl)",
+        "platform": "",
+        "time": "2510202116",
+        "destination": "Heinsberg(Rheinl)",
+        "path_stations": [
+          "Heinsberg-Porselen",
+          "Heinsberg-Dremmen",
+          "Heinsberg-Oberbruch",
+          "Heinsberg Kreishaus",
+          "Heinsberg(Rheinl)"
+        ]
+      },
+      {
+        "id": "8981576163685482211-2510202231-6",
+        "type": "RB",
+        "number": "10395",
+        "direction": "Aachen Hbf",
+        "platform": "",
+        "time": "2510202242",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Heinsberg-Randerath",
+          "Lindern",
+          "Geilenkirchen",
+          "Übach-Palenberg",
+          "Herzogenrath",
+          "Kohlscheid",
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "-2782820331228224710-2510202137-10",
+        "type": "RB",
+        "number": "10392",
+        "direction": "Heinsberg(Rheinl)",
+        "platform": "",
+        "time": "2510202216",
+        "destination": "Heinsberg(Rheinl)",
+        "path_stations": [
+          "Heinsberg-Porselen",
+          "Heinsberg-Dremmen",
+          "Heinsberg-Oberbruch",
+          "Heinsberg Kreishaus",
+          "Heinsberg(Rheinl)"
+        ]
+      },
+      {
+        "id": "2613121905918442532-2510202237-10",
+        "type": "RB",
+        "number": "10394",
+        "direction": "Heinsberg(Rheinl)",
+        "platform": "",
+        "time": "2510202316",
+        "destination": "Heinsberg(Rheinl)",
+        "path_stations": [
+          "Heinsberg-Porselen",
+          "Heinsberg-Dremmen",
+          "Heinsberg-Oberbruch",
+          "Heinsberg Kreishaus",
+          "Heinsberg(Rheinl)"
+        ]
+      },
+      {
+        "id": "6548269022931127007-2510202331-6",
+        "type": "RB",
+        "number": "10397",
+        "direction": "Aachen Hbf",
+        "platform": "",
+        "time": "2510202342",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Heinsberg-Randerath",
+          "Lindern",
+          "Geilenkirchen",
+          "Übach-Palenberg",
+          "Herzogenrath",
+          "Kohlscheid",
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "-8551912666434911898-2510202337-10",
+        "type": "RB",
+        "number": "10396",
+        "direction": "Heinsberg(Rheinl)",
+        "platform": "",
+        "time": "2510210016",
+        "destination": "Heinsberg(Rheinl)",
+        "path_stations": [
+          "Heinsberg-Porselen",
+          "Heinsberg-Dremmen",
+          "Heinsberg-Oberbruch",
+          "Heinsberg Kreishaus",
+          "Heinsberg(Rheinl)"
+        ]
+      },
+      {
+        "id": "-7112950632579182168-2510210031-6",
+        "type": "RB",
+        "number": "10351",
+        "direction": "Aachen Hbf",
+        "platform": "",
+        "time": "2510210042",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Heinsberg-Randerath",
+          "Lindern",
+          "Geilenkirchen",
+          "Übach-Palenberg",
+          "Herzogenrath",
+          "Kohlscheid",
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "2268936165231476331-2510210437-10",
+        "type": "RB",
+        "number": "10358",
+        "direction": "Heinsberg(Rheinl)",
+        "platform": "",
+        "time": "2510210516",
+        "destination": "Heinsberg(Rheinl)",
+        "path_stations": [
+          "Heinsberg-Porselen",
+          "Heinsberg-Dremmen",
+          "Heinsberg-Oberbruch",
+          "Heinsberg Kreishaus",
+          "Heinsberg(Rheinl)"
+        ]
+      },
+      {
+        "id": "3249475284365179118-2510210531-6",
+        "type": "RB",
+        "number": "10361",
+        "direction": "Aachen Hbf",
+        "platform": "",
+        "time": "2510210542",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Heinsberg-Randerath",
+          "Lindern",
+          "Geilenkirchen",
+          "Übach-Palenberg",
+          "Herzogenrath",
+          "Kohlscheid",
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "-7592054811744883795-2510210537-10",
+        "type": "RB",
+        "number": "10360",
+        "direction": "Heinsberg(Rheinl)",
+        "platform": "",
+        "time": "2510210616",
+        "destination": "Heinsberg(Rheinl)",
+        "path_stations": [
+          "Heinsberg-Porselen",
+          "Heinsberg-Dremmen",
+          "Heinsberg-Oberbruch",
+          "Heinsberg Kreishaus",
+          "Heinsberg(Rheinl)"
+        ]
+      },
+      {
+        "id": "8796805481190130826-2510210631-6",
+        "type": "RB",
+        "number": "10363",
+        "direction": "Aachen Hbf",
+        "platform": "",
+        "time": "2510210642",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Heinsberg-Randerath",
+          "Lindern",
+          "Geilenkirchen",
+          "Übach-Palenberg",
+          "Herzogenrath",
+          "Kohlscheid",
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,435 @@
+{
+  "station_eva": "8002615",
+  "date": "251020",
+  "cached_at": "2025-10-20T15:44:28.097415",
+  "plan_data": {
+    "departures": [
+      {
+        "id": "-386535038278434364-2510201747-2",
+        "type": "RE",
+        "number": "10228",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510201753",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Natrup-Hagen",
+          "Lengerich(Westf)",
+          "Kattenvenne",
+          "Ostbevern",
+          "Westbevern",
+          "Münster(Westf)Hbf",
+          "Dülmen",
+          "Haltern am See",
+          "Recklinghausen Hbf",
+          "Wanne-Eickel Hbf",
+          "Gelsenkirchen Hbf",
+          "Essen Hbf",
+          "Mülheim(Ruhr)Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-3634933124778563131-2510201719-2",
+        "type": "RB",
+        "number": "90605",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "1",
+        "time": "2510201724",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Natrup-Hagen",
+          "Lengerich(Westf)",
+          "Kattenvenne",
+          "Ostbevern",
+          "Westbevern",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "7519885705204733145-2510201506-16",
+        "type": "RE",
+        "number": "10223",
+        "direction": "Osnabrück Hbf",
+        "platform": "2",
+        "time": "2510201704",
+        "destination": "Osnabrück Hbf",
+        "path_stations": [
+          "Osnabrück Hbf"
+        ]
+      },
+      {
+        "id": "-5288500199592642009-2510201703-7",
+        "type": "RB",
+        "number": "90604",
+        "direction": "Osnabrück Hbf",
+        "platform": "2",
+        "time": "2510201732",
+        "destination": "Osnabrück Hbf",
+        "path_stations": [
+          "Osnabrück Hbf"
+        ]
+      },
+      {
+        "id": "8160971408950894112-2510201849-2",
+        "type": "RE",
+        "number": "10230",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510201855",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Lengerich(Westf)",
+          "Ostbevern",
+          "Westbevern",
+          "Münster(Westf)Hbf",
+          "Dülmen",
+          "Haltern am See",
+          "Recklinghausen Hbf",
+          "Wanne-Eickel Hbf",
+          "Gelsenkirchen Hbf",
+          "Essen Hbf",
+          "Mülheim(Ruhr)Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "7244023356803628627-2510201819-2",
+        "type": "RB",
+        "number": "90607",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "1",
+        "time": "2510201824",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Natrup-Hagen",
+          "Lengerich(Westf)",
+          "Kattenvenne",
+          "Ostbevern",
+          "Westbevern",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-3871920034157101912-2510201803-7",
+        "type": "RB",
+        "number": "90606",
+        "direction": "Osnabrück Hbf",
+        "platform": "2",
+        "time": "2510201832",
+        "destination": "Osnabrück Hbf",
+        "path_stations": [
+          "Osnabrück Hbf"
+        ]
+      },
+      {
+        "id": "-7588989561167990482-2510201606-17",
+        "type": "RE",
+        "number": "10225",
+        "direction": "Osnabrück Hbf",
+        "platform": "4",
+        "time": "2510201812",
+        "destination": "Osnabrück Hbf",
+        "path_stations": [
+          "Osnabrück Hbf"
+        ]
+      },
+      {
+        "id": "-8353762467905917512-2510201948-2",
+        "type": "RE",
+        "number": "10232",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510201954",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Natrup-Hagen",
+          "Lengerich(Westf)",
+          "Kattenvenne",
+          "Ostbevern",
+          "Westbevern",
+          "Münster(Westf)Hbf",
+          "Dülmen",
+          "Haltern am See",
+          "Recklinghausen Hbf",
+          "Wanne-Eickel Hbf",
+          "Gelsenkirchen Hbf",
+          "Essen Hbf",
+          "Mülheim(Ruhr)Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "6387099544984147257-2510201919-2",
+        "type": "RB",
+        "number": "90609",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "1",
+        "time": "2510201924",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Natrup-Hagen",
+          "Lengerich(Westf)",
+          "Kattenvenne",
+          "Ostbevern",
+          "Westbevern",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-5986976369657252600-2510201903-7",
+        "type": "RB",
+        "number": "90608",
+        "direction": "Osnabrück Hbf",
+        "platform": "2",
+        "time": "2510201932",
+        "destination": "Osnabrück Hbf",
+        "path_stations": [
+          "Osnabrück Hbf"
+        ]
+      },
+      {
+        "id": "-825132534215068637-2510201706-17",
+        "type": "RE",
+        "number": "10227",
+        "direction": "Osnabrück Hbf",
+        "platform": "2",
+        "time": "2510201906",
+        "destination": "Osnabrück Hbf",
+        "path_stations": [
+          "Osnabrück Hbf"
+        ]
+      },
+      {
+        "id": "-3432942875825561985-2510202049-2",
+        "type": "RE",
+        "number": "10234",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510202055",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Lengerich(Westf)",
+          "Ostbevern",
+          "Westbevern",
+          "Münster(Westf)Hbf",
+          "Dülmen",
+          "Haltern am See",
+          "Recklinghausen Hbf",
+          "Wanne-Eickel Hbf",
+          "Gelsenkirchen Hbf",
+          "Essen Hbf",
+          "Mülheim(Ruhr)Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "22061397007586177-2510201806-17",
+        "type": "RE",
+        "number": "10229",
+        "direction": "Osnabrück Hbf",
+        "platform": "2",
+        "time": "2510202007",
+        "destination": "Osnabrück Hbf",
+        "path_stations": [
+          "Osnabrück Hbf"
+        ]
+      },
+      {
+        "id": "-6204714467019708676-2510202019-2",
+        "type": "RB",
+        "number": "90611",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "1",
+        "time": "2510202024",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Natrup-Hagen",
+          "Lengerich(Westf)",
+          "Kattenvenne",
+          "Ostbevern",
+          "Westbevern",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-7604057477232851115-2510202003-7",
+        "type": "RB",
+        "number": "90610",
+        "direction": "Osnabrück Hbf",
+        "platform": "2",
+        "time": "2510202032",
+        "destination": "Osnabrück Hbf",
+        "path_stations": [
+          "Osnabrück Hbf"
+        ]
+      },
+      {
+        "id": "-6675646583218474846-2510201906-15",
+        "type": "RE",
+        "number": "10231",
+        "direction": "Osnabrück Hbf",
+        "platform": "2",
+        "time": "2510202102",
+        "destination": "Osnabrück Hbf",
+        "path_stations": [
+          "Osnabrück Hbf"
+        ]
+      },
+      {
+        "id": "6464672305539067987-2510202119-2",
+        "type": "RB",
+        "number": "90613",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "1",
+        "time": "2510202124",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Natrup-Hagen",
+          "Lengerich(Westf)",
+          "Kattenvenne",
+          "Ostbevern",
+          "Westbevern",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "5179908427841197932-2510202103-7",
+        "type": "RB",
+        "number": "90612",
+        "direction": "Osnabrück Hbf",
+        "platform": "2",
+        "time": "2510202132",
+        "destination": "Osnabrück Hbf",
+        "path_stations": [
+          "Osnabrück Hbf"
+        ]
+      },
+      {
+        "id": "5086113524240255172-2510202145-2",
+        "type": "RE",
+        "number": "10248",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "1",
+        "time": "2510202151",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Natrup-Hagen",
+          "Lengerich(Westf)",
+          "Kattenvenne",
+          "Ostbevern",
+          "Westbevern",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "8605252344551097194-2510202006-17",
+        "type": "RE",
+        "number": "10233",
+        "direction": "Osnabrück Hbf",
+        "platform": "2",
+        "time": "2510202207",
+        "destination": "Osnabrück Hbf",
+        "path_stations": [
+          "Osnabrück Hbf"
+        ]
+      },
+      {
+        "id": "-4323823110103139357-2510202203-7",
+        "type": "RB",
+        "number": "90614",
+        "direction": "Osnabrück Hbf",
+        "platform": "2",
+        "time": "2510202232",
+        "destination": "Osnabrück Hbf",
+        "path_stations": [
+          "Osnabrück Hbf"
+        ]
+      },
+      {
+        "id": "-6508014677579618515-2510202219-2",
+        "type": "RB",
+        "number": "90615",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "1",
+        "time": "2510202224",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Natrup-Hagen",
+          "Lengerich(Westf)",
+          "Kattenvenne",
+          "Ostbevern",
+          "Westbevern",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-7960550957488781077-2510202303-7",
+        "type": "RB",
+        "number": "90616",
+        "direction": "Osnabrück Hbf",
+        "platform": "2",
+        "time": "2510202332",
+        "destination": "Osnabrück Hbf",
+        "path_stations": [
+          "Osnabrück Hbf"
+        ]
+      },
+      {
+        "id": "4828982359787752391-2510202319-2",
+        "type": "RB",
+        "number": "90617",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "1",
+        "time": "2510202324",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Natrup-Hagen",
+          "Lengerich(Westf)",
+          "Kattenvenne",
+          "Ostbevern",
+          "Westbevern",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "2101317462792319484-2510210019-2",
+        "type": "RB",
+        "number": "90619",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "1",
+        "time": "2510210024",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Natrup-Hagen",
+          "Lengerich(Westf)",
+          "Kattenvenne",
+          "Ostbevern",
+          "Westbevern",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "8037645491792027272-2510210003-7",
+        "type": "RB",
+        "number": "90618",
+        "direction": "Osnabrück Hbf",
+        "platform": "2",
+        "time": "2510210032",
+        "destination": "Osnabrück Hbf",
+        "path_stations": [
+          "Osnabrück Hbf"
+        ]
+      }
+    ],
+    "arrivals": []
+  }
+}

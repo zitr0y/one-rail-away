@@ -1,0 +1,712 @@
+{
+  "station_eva": "8001107",
+  "date": "251020",
+  "cached_at": "2025-10-20T16:35:29.890618",
+  "plan_data": {
+    "arrivals": [
+      {
+        "id": "-1370259092281776481-2510201833-7",
+        "type": "S",
+        "number": "30960",
+        "time": "2510201858",
+        "platform": "1",
+        "path_stations": [
+          "Haltern am See",
+          "Marl-Hamm",
+          "Marl Mitte",
+          "Gelsenkirchen-Hassel",
+          "Gelsenkirchen-Buer Nord",
+          "Gladbeck West"
+        ],
+        "line": "9"
+      },
+      {
+        "id": "-6343398238674672303-2510201653-22",
+        "type": "S",
+        "number": "30955",
+        "time": "2510201801",
+        "platform": "2",
+        "path_stations": [
+          "Wuppertal Hbf",
+          "Wuppertal-Steinbeck",
+          "Wuppertal-Zoologischer Garten",
+          "Wuppertal-Sonnborn",
+          "Wuppertal-Vohwinkel",
+          "Wülfrath-Aprath",
+          "Velbert Rosenhügel",
+          "Velbert-Neviges",
+          "Velbert-Langenberg",
+          "Velbert-Nierenhof",
+          "Essen-Kupferdreh",
+          "Essen-Holthausen",
+          "Essen-Überruhr",
+          "Essen-Steele",
+          "Essen Hbf",
+          "Essen West",
+          "Essen-Borbeck Süd",
+          "Essen-Borbeck",
+          "Essen-Gerschede",
+          "Essen-Dellwig Ost",
+          "Bottrop Hbf"
+        ],
+        "line": "9"
+      },
+      {
+        "id": "8706044662723271675-2510201933-7",
+        "type": "S",
+        "number": "52590",
+        "time": "2510201958",
+        "platform": "1",
+        "path_stations": [
+          "Haltern am See",
+          "Marl-Hamm",
+          "Marl Mitte",
+          "Gelsenkirchen-Hassel",
+          "Gelsenkirchen-Buer Nord",
+          "Gladbeck West"
+        ],
+        "line": "9"
+      },
+      {
+        "id": "3751759026305688703-2510201753-22",
+        "type": "S",
+        "number": "30959",
+        "time": "2510201901",
+        "platform": "2",
+        "path_stations": [
+          "Wuppertal Hbf",
+          "Wuppertal-Steinbeck",
+          "Wuppertal-Zoologischer Garten",
+          "Wuppertal-Sonnborn",
+          "Wuppertal-Vohwinkel",
+          "Wülfrath-Aprath",
+          "Velbert Rosenhügel",
+          "Velbert-Neviges",
+          "Velbert-Langenberg",
+          "Velbert-Nierenhof",
+          "Essen-Kupferdreh",
+          "Essen-Holthausen",
+          "Essen-Überruhr",
+          "Essen-Steele",
+          "Essen Hbf",
+          "Essen West",
+          "Essen-Borbeck Süd",
+          "Essen-Borbeck",
+          "Essen-Gerschede",
+          "Essen-Dellwig Ost",
+          "Bottrop Hbf"
+        ],
+        "line": "9"
+      },
+      {
+        "id": "1517057089680271375-2510201853-22",
+        "type": "S",
+        "number": "30963",
+        "time": "2510202001",
+        "platform": "2",
+        "path_stations": [
+          "Wuppertal Hbf",
+          "Wuppertal-Steinbeck",
+          "Wuppertal-Zoologischer Garten",
+          "Wuppertal-Sonnborn",
+          "Wuppertal-Vohwinkel",
+          "Wülfrath-Aprath",
+          "Velbert Rosenhügel",
+          "Velbert-Neviges",
+          "Velbert-Langenberg",
+          "Velbert-Nierenhof",
+          "Essen-Kupferdreh",
+          "Essen-Holthausen",
+          "Essen-Überruhr",
+          "Essen-Steele",
+          "Essen Hbf",
+          "Essen West",
+          "Essen-Borbeck Süd",
+          "Essen-Borbeck",
+          "Essen-Gerschede",
+          "Essen-Dellwig Ost",
+          "Bottrop Hbf"
+        ],
+        "line": "9"
+      },
+      {
+        "id": "-9053216016976614159-2510202001-4",
+        "type": "S",
+        "number": "52592",
+        "time": "2510202024",
+        "platform": "1",
+        "path_stations": [
+          "Recklinghausen Hbf",
+          "Herten(Westf)",
+          "Gladbeck West"
+        ],
+        "line": "9"
+      },
+      {
+        "id": "2592460848296947112-2510202033-7",
+        "type": "S",
+        "number": "52580",
+        "time": "2510202058",
+        "platform": "1",
+        "path_stations": [
+          "Haltern am See",
+          "Marl-Hamm",
+          "Marl Mitte",
+          "Gelsenkirchen-Hassel",
+          "Gelsenkirchen-Buer Nord",
+          "Gladbeck West"
+        ],
+        "line": "9"
+      },
+      {
+        "id": "6691778708610321213-2510202133-7",
+        "type": "S",
+        "number": "52584",
+        "time": "2510202158",
+        "platform": "1",
+        "path_stations": [
+          "Haltern am See",
+          "Marl-Hamm",
+          "Marl Mitte",
+          "Gelsenkirchen-Hassel",
+          "Gelsenkirchen-Buer Nord",
+          "Gladbeck West"
+        ],
+        "line": "9"
+      },
+      {
+        "id": "2310628244601967971-2510201953-22",
+        "type": "S",
+        "number": "30967",
+        "time": "2510202101",
+        "platform": "2",
+        "path_stations": [
+          "Wuppertal Hbf",
+          "Wuppertal-Steinbeck",
+          "Wuppertal-Zoologischer Garten",
+          "Wuppertal-Sonnborn",
+          "Wuppertal-Vohwinkel",
+          "Wülfrath-Aprath",
+          "Velbert Rosenhügel",
+          "Velbert-Neviges",
+          "Velbert-Langenberg",
+          "Velbert-Nierenhof",
+          "Essen-Kupferdreh",
+          "Essen-Holthausen",
+          "Essen-Überruhr",
+          "Essen-Steele",
+          "Essen Hbf",
+          "Essen West",
+          "Essen-Borbeck Süd",
+          "Essen-Borbeck",
+          "Essen-Gerschede",
+          "Essen-Dellwig Ost",
+          "Bottrop Hbf"
+        ],
+        "line": "9"
+      },
+      {
+        "id": "5833263541183633823-2510202141-8",
+        "type": "S",
+        "number": "52591",
+        "time": "2510202201",
+        "platform": "2",
+        "path_stations": [
+          "Essen Hbf",
+          "Essen West",
+          "Essen-Borbeck Süd",
+          "Essen-Borbeck",
+          "Essen-Gerschede",
+          "Essen-Dellwig Ost",
+          "Bottrop Hbf"
+        ],
+        "line": "9"
+      },
+      {
+        "id": "-1405711529585431997-2510202233-7",
+        "type": "S",
+        "number": "52586",
+        "time": "2510202258",
+        "platform": "1",
+        "path_stations": [
+          "Haltern am See",
+          "Marl-Hamm",
+          "Marl Mitte",
+          "Gelsenkirchen-Hassel",
+          "Gelsenkirchen-Buer Nord",
+          "Gladbeck West"
+        ],
+        "line": "9"
+      },
+      {
+        "id": "7903934543958685549-2510202241-8",
+        "type": "S",
+        "number": "52583",
+        "time": "2510202301",
+        "platform": "2",
+        "path_stations": [
+          "Essen Hbf",
+          "Essen West",
+          "Essen-Borbeck Süd",
+          "Essen-Borbeck",
+          "Essen-Gerschede",
+          "Essen-Dellwig Ost",
+          "Bottrop Hbf"
+        ],
+        "line": "9"
+      },
+      {
+        "id": "5686958370734500348-2510210433-7",
+        "type": "S",
+        "number": "30904",
+        "time": "2510210458",
+        "platform": "1",
+        "path_stations": [
+          "Haltern am See",
+          "Marl-Hamm",
+          "Marl Mitte",
+          "Gelsenkirchen-Hassel",
+          "Gelsenkirchen-Buer Nord",
+          "Gladbeck West"
+        ],
+        "line": "9"
+      },
+      {
+        "id": "-3212824769676029606-2510210441-8",
+        "type": "S",
+        "number": "30903",
+        "time": "2510210501",
+        "platform": "2",
+        "path_stations": [
+          "Essen Hbf",
+          "Essen West",
+          "Essen-Borbeck Süd",
+          "Essen-Borbeck",
+          "Essen-Gerschede",
+          "Essen-Dellwig Ost",
+          "Bottrop Hbf"
+        ],
+        "line": "9"
+      },
+      {
+        "id": "6634132827281501368-2510210533-7",
+        "type": "S",
+        "number": "30908",
+        "time": "2510210558",
+        "platform": "1",
+        "path_stations": [
+          "Haltern am See",
+          "Marl-Hamm",
+          "Marl Mitte",
+          "Gelsenkirchen-Hassel",
+          "Gelsenkirchen-Buer Nord",
+          "Gladbeck West"
+        ],
+        "line": "9"
+      },
+      {
+        "id": "5534443729456046615-2510210453-22",
+        "type": "S",
+        "number": "30907",
+        "time": "2510210601",
+        "platform": "2",
+        "path_stations": [
+          "Wuppertal Hbf",
+          "Wuppertal-Steinbeck",
+          "Wuppertal-Zoologischer Garten",
+          "Wuppertal-Sonnborn",
+          "Wuppertal-Vohwinkel",
+          "Wülfrath-Aprath",
+          "Velbert Rosenhügel",
+          "Velbert-Neviges",
+          "Velbert-Langenberg",
+          "Velbert-Nierenhof",
+          "Essen-Kupferdreh",
+          "Essen-Holthausen",
+          "Essen-Überruhr",
+          "Essen-Steele",
+          "Essen Hbf",
+          "Essen West",
+          "Essen-Borbeck Süd",
+          "Essen-Borbeck",
+          "Essen-Gerschede",
+          "Essen-Dellwig Ost",
+          "Bottrop Hbf"
+        ],
+        "line": "9"
+      },
+      {
+        "id": "2546905723714157751-2510210633-7",
+        "type": "S",
+        "number": "30912",
+        "time": "2510210658",
+        "platform": "1",
+        "path_stations": [
+          "Haltern am See",
+          "Marl-Hamm",
+          "Marl Mitte",
+          "Gelsenkirchen-Hassel",
+          "Gelsenkirchen-Buer Nord",
+          "Gladbeck West"
+        ],
+        "line": "9"
+      }
+    ],
+    "departures": [
+      {
+        "id": "-1370259092281776481-2510201833-7",
+        "type": "S",
+        "number": "30960",
+        "direction": "Wuppertal Hbf",
+        "platform": "1",
+        "time": "2510201858",
+        "destination": "Wuppertal Hbf",
+        "path_stations": [
+          "Bottrop Hbf",
+          "Essen-Dellwig Ost",
+          "Essen-Gerschede",
+          "Essen-Borbeck",
+          "Essen-Borbeck Süd",
+          "Essen West",
+          "Essen Hbf",
+          "Essen-Steele",
+          "Essen-Überruhr",
+          "Essen-Holthausen",
+          "Essen-Kupferdreh",
+          "Velbert-Nierenhof",
+          "Velbert-Langenberg",
+          "Velbert-Neviges",
+          "Velbert Rosenhügel",
+          "Wülfrath-Aprath",
+          "Wuppertal-Vohwinkel",
+          "Wuppertal-Sonnborn",
+          "Wuppertal-Zoologischer Garten",
+          "Wuppertal-Steinbeck",
+          "Wuppertal Hbf"
+        ]
+      },
+      {
+        "id": "-6343398238674672303-2510201653-22",
+        "type": "S",
+        "number": "30955",
+        "direction": "Haltern am See",
+        "platform": "2",
+        "time": "2510201802",
+        "destination": "Haltern am See",
+        "path_stations": [
+          "Gladbeck West",
+          "Gelsenkirchen-Buer Nord",
+          "Gelsenkirchen-Hassel",
+          "Marl Mitte",
+          "Marl-Hamm",
+          "Haltern am See"
+        ]
+      },
+      {
+        "id": "8706044662723271675-2510201933-7",
+        "type": "S",
+        "number": "52590",
+        "direction": "Essen Hbf",
+        "platform": "1",
+        "time": "2510201958",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Bottrop Hbf",
+          "Essen-Dellwig Ost",
+          "Essen-Gerschede",
+          "Essen-Borbeck",
+          "Essen-Borbeck Süd",
+          "Essen West",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "3751759026305688703-2510201753-22",
+        "type": "S",
+        "number": "30959",
+        "direction": "Haltern am See",
+        "platform": "2",
+        "time": "2510201902",
+        "destination": "Haltern am See",
+        "path_stations": [
+          "Gladbeck West",
+          "Gelsenkirchen-Buer Nord",
+          "Gelsenkirchen-Hassel",
+          "Marl Mitte",
+          "Marl-Hamm",
+          "Haltern am See"
+        ]
+      },
+      {
+        "id": "1517057089680271375-2510201853-22",
+        "type": "S",
+        "number": "30963",
+        "direction": "Haltern am See",
+        "platform": "2",
+        "time": "2510202002",
+        "destination": "Haltern am See",
+        "path_stations": [
+          "Gladbeck West",
+          "Gelsenkirchen-Buer Nord",
+          "Gelsenkirchen-Hassel",
+          "Marl Mitte",
+          "Marl-Hamm",
+          "Haltern am See"
+        ]
+      },
+      {
+        "id": "-9053216016976614159-2510202001-4",
+        "type": "S",
+        "number": "52592",
+        "direction": "Essen Hbf",
+        "platform": "1",
+        "time": "2510202025",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Bottrop Hbf",
+          "Essen-Dellwig Ost",
+          "Essen-Gerschede",
+          "Essen-Borbeck",
+          "Essen-Borbeck Süd",
+          "Essen West",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "2592460848296947112-2510202033-7",
+        "type": "S",
+        "number": "52580",
+        "direction": "Essen Hbf",
+        "platform": "1",
+        "time": "2510202058",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Bottrop Hbf",
+          "Essen-Dellwig Ost",
+          "Essen-Gerschede",
+          "Essen-Borbeck",
+          "Essen-Borbeck Süd",
+          "Essen West",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "6691778708610321213-2510202133-7",
+        "type": "S",
+        "number": "52584",
+        "direction": "Essen Hbf",
+        "platform": "1",
+        "time": "2510202158",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Bottrop Hbf",
+          "Essen-Dellwig Ost",
+          "Essen-Gerschede",
+          "Essen-Borbeck",
+          "Essen-Borbeck Süd",
+          "Essen West",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "2310628244601967971-2510201953-22",
+        "type": "S",
+        "number": "30967",
+        "direction": "Haltern am See",
+        "platform": "2",
+        "time": "2510202102",
+        "destination": "Haltern am See",
+        "path_stations": [
+          "Gladbeck West",
+          "Gelsenkirchen-Buer Nord",
+          "Gelsenkirchen-Hassel",
+          "Marl Mitte",
+          "Marl-Hamm",
+          "Haltern am See"
+        ]
+      },
+      {
+        "id": "5833263541183633823-2510202141-8",
+        "type": "S",
+        "number": "52591",
+        "direction": "Haltern am See",
+        "platform": "2",
+        "time": "2510202202",
+        "destination": "Haltern am See",
+        "path_stations": [
+          "Gladbeck West",
+          "Gelsenkirchen-Buer Nord",
+          "Gelsenkirchen-Hassel",
+          "Marl Mitte",
+          "Marl-Hamm",
+          "Haltern am See"
+        ]
+      },
+      {
+        "id": "-1405711529585431997-2510202233-7",
+        "type": "S",
+        "number": "52586",
+        "direction": "Essen Hbf",
+        "platform": "1",
+        "time": "2510202258",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Bottrop Hbf",
+          "Essen-Dellwig Ost",
+          "Essen-Gerschede",
+          "Essen-Borbeck",
+          "Essen-Borbeck Süd",
+          "Essen West",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "7903934543958685549-2510202241-8",
+        "type": "S",
+        "number": "52583",
+        "direction": "Haltern am See",
+        "platform": "2",
+        "time": "2510202302",
+        "destination": "Haltern am See",
+        "path_stations": [
+          "Gladbeck West",
+          "Gelsenkirchen-Buer Nord",
+          "Gelsenkirchen-Hassel",
+          "Marl Mitte",
+          "Marl-Hamm",
+          "Haltern am See"
+        ]
+      },
+      {
+        "id": "5686958370734500348-2510210433-7",
+        "type": "S",
+        "number": "30904",
+        "direction": "Wuppertal Hbf",
+        "platform": "1",
+        "time": "2510210458",
+        "destination": "Wuppertal Hbf",
+        "path_stations": [
+          "Bottrop Hbf",
+          "Essen-Dellwig Ost",
+          "Essen-Gerschede",
+          "Essen-Borbeck",
+          "Essen-Borbeck Süd",
+          "Essen West",
+          "Essen Hbf",
+          "Essen-Steele",
+          "Essen-Überruhr",
+          "Essen-Holthausen",
+          "Essen-Kupferdreh",
+          "Velbert-Nierenhof",
+          "Velbert-Langenberg",
+          "Velbert-Neviges",
+          "Velbert Rosenhügel",
+          "Wülfrath-Aprath",
+          "Wuppertal-Vohwinkel",
+          "Wuppertal-Sonnborn",
+          "Wuppertal-Zoologischer Garten",
+          "Wuppertal-Steinbeck",
+          "Wuppertal Hbf"
+        ]
+      },
+      {
+        "id": "-3212824769676029606-2510210441-8",
+        "type": "S",
+        "number": "30903",
+        "direction": "Haltern am See",
+        "platform": "2",
+        "time": "2510210502",
+        "destination": "Haltern am See",
+        "path_stations": [
+          "Gladbeck West",
+          "Gelsenkirchen-Buer Nord",
+          "Gelsenkirchen-Hassel",
+          "Marl Mitte",
+          "Marl-Hamm",
+          "Haltern am See"
+        ]
+      },
+      {
+        "id": "6634132827281501368-2510210533-7",
+        "type": "S",
+        "number": "30908",
+        "direction": "Wuppertal Hbf",
+        "platform": "1",
+        "time": "2510210558",
+        "destination": "Wuppertal Hbf",
+        "path_stations": [
+          "Bottrop Hbf",
+          "Essen-Dellwig Ost",
+          "Essen-Gerschede",
+          "Essen-Borbeck",
+          "Essen-Borbeck Süd",
+          "Essen West",
+          "Essen Hbf",
+          "Essen-Steele",
+          "Essen-Überruhr",
+          "Essen-Holthausen",
+          "Essen-Kupferdreh",
+          "Velbert-Nierenhof",
+          "Velbert-Langenberg",
+          "Velbert-Neviges",
+          "Velbert Rosenhügel",
+          "Wülfrath-Aprath",
+          "Wuppertal-Vohwinkel",
+          "Wuppertal-Sonnborn",
+          "Wuppertal-Zoologischer Garten",
+          "Wuppertal-Steinbeck",
+          "Wuppertal Hbf"
+        ]
+      },
+      {
+        "id": "5534443729456046615-2510210453-22",
+        "type": "S",
+        "number": "30907",
+        "direction": "Haltern am See",
+        "platform": "2",
+        "time": "2510210602",
+        "destination": "Haltern am See",
+        "path_stations": [
+          "Gladbeck West",
+          "Gelsenkirchen-Buer Nord",
+          "Gelsenkirchen-Hassel",
+          "Marl Mitte",
+          "Marl-Hamm",
+          "Haltern am See"
+        ]
+      },
+      {
+        "id": "2546905723714157751-2510210633-7",
+        "type": "S",
+        "number": "30912",
+        "direction": "Wuppertal Hbf",
+        "platform": "1",
+        "time": "2510210658",
+        "destination": "Wuppertal Hbf",
+        "path_stations": [
+          "Bottrop Hbf",
+          "Essen-Dellwig Ost",
+          "Essen-Gerschede",
+          "Essen-Borbeck",
+          "Essen-Borbeck Süd",
+          "Essen West",
+          "Essen Hbf",
+          "Essen-Steele",
+          "Essen-Überruhr",
+          "Essen-Holthausen",
+          "Essen-Kupferdreh",
+          "Velbert-Nierenhof",
+          "Velbert-Langenberg",
+          "Velbert-Neviges",
+          "Velbert Rosenhügel",
+          "Wülfrath-Aprath",
+          "Wuppertal-Vohwinkel",
+          "Wuppertal-Sonnborn",
+          "Wuppertal-Zoologischer Garten",
+          "Wuppertal-Steinbeck",
+          "Wuppertal Hbf"
+        ]
+      }
+    ]
+  }
+}

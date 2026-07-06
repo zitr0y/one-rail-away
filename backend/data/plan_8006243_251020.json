@@ -1,0 +1,335 @@
+{
+  "station_eva": "8006243",
+  "date": "251020",
+  "cached_at": "2025-10-20T16:42:33.681418",
+  "plan_data": {
+    "arrivals": [
+      {
+        "id": "-7917571060965408731-2510201831-5",
+        "type": "VIA",
+        "number": "90523",
+        "time": "2510201847",
+        "platform": "1",
+        "path_stations": [
+          "Mönchengladbach Hbf",
+          "Rheydt Hbf",
+          "Mönchengladbach-Rheindahlen",
+          "Mönchengladbach-Genhausen"
+        ],
+        "line": "RB34"
+      },
+      {
+        "id": "8219354666315184378-2510201800-3",
+        "type": "VIA",
+        "number": "90522",
+        "time": "2510201807",
+        "platform": "1",
+        "path_stations": [
+          "Dalheim",
+          "Arsbeck"
+        ],
+        "line": "RB34"
+      },
+      {
+        "id": "-7202334647441408680-2510201900-3",
+        "type": "VIA",
+        "number": "90524",
+        "time": "2510201907",
+        "platform": "1",
+        "path_stations": [
+          "Dalheim",
+          "Arsbeck"
+        ],
+        "line": "RB34"
+      },
+      {
+        "id": "1337231010941360729-2510201931-5",
+        "type": "VIA",
+        "number": "90525",
+        "time": "2510201947",
+        "platform": "1",
+        "path_stations": [
+          "Mönchengladbach Hbf",
+          "Rheydt Hbf",
+          "Mönchengladbach-Rheindahlen",
+          "Mönchengladbach-Genhausen"
+        ],
+        "line": "RB34"
+      },
+      {
+        "id": "-4039849583473734642-2510202000-3",
+        "type": "VIA",
+        "number": "90526",
+        "time": "2510202007",
+        "platform": "1",
+        "path_stations": [
+          "Dalheim",
+          "Arsbeck"
+        ],
+        "line": "RB34"
+      },
+      {
+        "id": "-197222740491670421-2510202031-5",
+        "type": "VIA",
+        "number": "90527",
+        "time": "2510202047",
+        "platform": "1",
+        "path_stations": [
+          "Mönchengladbach Hbf",
+          "Rheydt Hbf",
+          "Mönchengladbach-Rheindahlen",
+          "Mönchengladbach-Genhausen"
+        ],
+        "line": "RB34"
+      },
+      {
+        "id": "7254166163796610366-2510202100-3",
+        "type": "VIA",
+        "number": "90528",
+        "time": "2510202107",
+        "platform": "1",
+        "path_stations": [
+          "Dalheim",
+          "Arsbeck"
+        ],
+        "line": "RB34"
+      },
+      {
+        "id": "4339119124982119470-2510202231-5",
+        "type": "VIA",
+        "number": "90529",
+        "time": "2510202247",
+        "platform": "1",
+        "path_stations": [
+          "Mönchengladbach Hbf",
+          "Rheydt Hbf",
+          "Mönchengladbach-Rheindahlen",
+          "Mönchengladbach-Genhausen"
+        ],
+        "line": "RB34"
+      },
+      {
+        "id": "8084467638550973197-2510210531-5",
+        "type": "VIA",
+        "number": "90497",
+        "time": "2510210547",
+        "platform": "1",
+        "path_stations": [
+          "Mönchengladbach Hbf",
+          "Rheydt Hbf",
+          "Mönchengladbach-Rheindahlen",
+          "Mönchengladbach-Genhausen"
+        ],
+        "line": "RB34"
+      },
+      {
+        "id": "-8965941117926666526-2510210500-3",
+        "type": "VIA",
+        "number": "90496",
+        "time": "2510210507",
+        "platform": "1",
+        "path_stations": [
+          "Dalheim",
+          "Arsbeck"
+        ],
+        "line": "RB34"
+      },
+      {
+        "id": "-5376612048473157126-2510210631-5",
+        "type": "VIA",
+        "number": "90499",
+        "time": "2510210647",
+        "platform": "1",
+        "path_stations": [
+          "Mönchengladbach Hbf",
+          "Rheydt Hbf",
+          "Mönchengladbach-Rheindahlen",
+          "Mönchengladbach-Genhausen"
+        ],
+        "line": "RB34"
+      },
+      {
+        "id": "266854112534670351-2510210600-3",
+        "type": "VIA",
+        "number": "90498",
+        "time": "2510210607",
+        "platform": "1",
+        "path_stations": [
+          "Dalheim",
+          "Arsbeck"
+        ],
+        "line": "RB34"
+      }
+    ],
+    "departures": [
+      {
+        "id": "-7917571060965408731-2510201831-5",
+        "type": "VIA",
+        "number": "90523",
+        "direction": "Dalheim",
+        "platform": "1",
+        "time": "2510201848",
+        "destination": "Dalheim",
+        "path_stations": [
+          "Arsbeck",
+          "Dalheim"
+        ]
+      },
+      {
+        "id": "8219354666315184378-2510201800-3",
+        "type": "VIA",
+        "number": "90522",
+        "direction": "Mönchengladbach Hbf",
+        "platform": "1",
+        "time": "2510201807",
+        "destination": "Mönchengladbach Hbf",
+        "path_stations": [
+          "Mönchengladbach-Genhausen",
+          "Mönchengladbach-Rheindahlen",
+          "Rheydt Hbf",
+          "Mönchengladbach Hbf"
+        ]
+      },
+      {
+        "id": "-7202334647441408680-2510201900-3",
+        "type": "VIA",
+        "number": "90524",
+        "direction": "Mönchengladbach Hbf",
+        "platform": "1",
+        "time": "2510201907",
+        "destination": "Mönchengladbach Hbf",
+        "path_stations": [
+          "Mönchengladbach-Genhausen",
+          "Mönchengladbach-Rheindahlen",
+          "Rheydt Hbf",
+          "Mönchengladbach Hbf"
+        ]
+      },
+      {
+        "id": "1337231010941360729-2510201931-5",
+        "type": "VIA",
+        "number": "90525",
+        "direction": "Dalheim",
+        "platform": "1",
+        "time": "2510201948",
+        "destination": "Dalheim",
+        "path_stations": [
+          "Arsbeck",
+          "Dalheim"
+        ]
+      },
+      {
+        "id": "-4039849583473734642-2510202000-3",
+        "type": "VIA",
+        "number": "90526",
+        "direction": "Mönchengladbach Hbf",
+        "platform": "1",
+        "time": "2510202007",
+        "destination": "Mönchengladbach Hbf",
+        "path_stations": [
+          "Mönchengladbach-Genhausen",
+          "Mönchengladbach-Rheindahlen",
+          "Rheydt Hbf",
+          "Mönchengladbach Hbf"
+        ]
+      },
+      {
+        "id": "-197222740491670421-2510202031-5",
+        "type": "VIA",
+        "number": "90527",
+        "direction": "Dalheim",
+        "platform": "1",
+        "time": "2510202048",
+        "destination": "Dalheim",
+        "path_stations": [
+          "Arsbeck",
+          "Dalheim"
+        ]
+      },
+      {
+        "id": "7254166163796610366-2510202100-3",
+        "type": "VIA",
+        "number": "90528",
+        "direction": "Mönchengladbach Hbf",
+        "platform": "1",
+        "time": "2510202107",
+        "destination": "Mönchengladbach Hbf",
+        "path_stations": [
+          "Mönchengladbach-Genhausen",
+          "Mönchengladbach-Rheindahlen",
+          "Rheydt Hbf",
+          "Mönchengladbach Hbf"
+        ]
+      },
+      {
+        "id": "4339119124982119470-2510202231-5",
+        "type": "VIA",
+        "number": "90529",
+        "direction": "Dalheim",
+        "platform": "1",
+        "time": "2510202248",
+        "destination": "Dalheim",
+        "path_stations": [
+          "Arsbeck",
+          "Dalheim"
+        ]
+      },
+      {
+        "id": "8084467638550973197-2510210531-5",
+        "type": "VIA",
+        "number": "90497",
+        "direction": "Dalheim",
+        "platform": "1",
+        "time": "2510210548",
+        "destination": "Dalheim",
+        "path_stations": [
+          "Arsbeck",
+          "Dalheim"
+        ]
+      },
+      {
+        "id": "-8965941117926666526-2510210500-3",
+        "type": "VIA",
+        "number": "90496",
+        "direction": "Mönchengladbach Hbf",
+        "platform": "1",
+        "time": "2510210507",
+        "destination": "Mönchengladbach Hbf",
+        "path_stations": [
+          "Mönchengladbach-Genhausen",
+          "Mönchengladbach-Rheindahlen",
+          "Rheydt Hbf",
+          "Mönchengladbach Hbf"
+        ]
+      },
+      {
+        "id": "-5376612048473157126-2510210631-5",
+        "type": "VIA",
+        "number": "90499",
+        "direction": "Dalheim",
+        "platform": "1",
+        "time": "2510210648",
+        "destination": "Dalheim",
+        "path_stations": [
+          "Arsbeck",
+          "Dalheim"
+        ]
+      },
+      {
+        "id": "266854112534670351-2510210600-3",
+        "type": "VIA",
+        "number": "90498",
+        "direction": "Mönchengladbach Hbf",
+        "platform": "1",
+        "time": "2510210607",
+        "destination": "Mönchengladbach Hbf",
+        "path_stations": [
+          "Mönchengladbach-Genhausen",
+          "Mönchengladbach-Rheindahlen",
+          "Rheydt Hbf",
+          "Mönchengladbach Hbf"
+        ]
+      }
+    ]
+  }
+}

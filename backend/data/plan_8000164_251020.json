@@ -1,0 +1,1592 @@
+{
+  "station_eva": "8000164",
+  "date": "251020",
+  "cached_at": "2025-10-20T15:46:56.231268",
+  "plan_data": {
+    "departures": [
+      {
+        "id": "491595817851525722-2510201630-10",
+        "type": "TRI",
+        "number": "26667",
+        "direction": "Düsseldorf Hbf",
+        "platform": "",
+        "time": "2510201719",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Wanne-Eickel Hbf",
+          "Gelsenkirchen Hbf",
+          "Essen-Altenessen",
+          "Oberhausen Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-9221916148632096480-2510201451-19",
+        "type": "RE",
+        "number": "63825",
+        "direction": "Hamm(Westf)Hbf",
+        "platform": "3",
+        "time": "2510201705",
+        "destination": "Hamm(Westf)Hbf",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Kamen",
+          "Hamm(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "2259711982756912849-2510201707-3",
+        "type": "S",
+        "number": "30254",
+        "direction": "Dortmund Hbf",
+        "platform": "3",
+        "time": "2510201716",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Castrop-Rauxel Hbf",
+          "Dortmund-Mengede",
+          "Dortmund-Nette/Oestrich",
+          "Dortmund-Westerfilde",
+          "Dortmund-Huckarde",
+          "Dortmund-Wischlingen",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-9018568100345061553-2510201651-5",
+        "type": "RB",
+        "number": "14775",
+        "direction": "Dorsten",
+        "platform": "6",
+        "time": "2510201709",
+        "destination": "Dorsten",
+        "path_stations": [
+          "Wanne-Eickel Hbf",
+          "Gelsenkirchen Zoo",
+          "Gelsenkirchen-Buer Süd",
+          "Gladbeck Ost",
+          "Gladbeck-Zweckel",
+          "Feldhausen",
+          "Dorsten"
+        ]
+      },
+      {
+        "id": "-6607065416810327598-2510201645-8",
+        "type": "RE",
+        "number": "89889",
+        "direction": "Hamm(Westf)Hbf",
+        "platform": "3",
+        "time": "2510201738",
+        "destination": "Hamm(Westf)Hbf",
+        "path_stations": [
+          "Castrop-Rauxel Hbf",
+          "Dortmund-Mengede",
+          "Dortmund Hbf",
+          "Dortmund-Scharnhorst",
+          "Dortmund-Kurl",
+          "Kamen-Methler",
+          "Kamen",
+          "Bönen-Nordbögge",
+          "Hamm(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-3634204366445658742-2510201707-8",
+        "type": "RB",
+        "number": "14776",
+        "direction": "Dortmund-Bövinghausen",
+        "platform": "6",
+        "time": "2510201747",
+        "destination": "Dortmund-Bövinghausen",
+        "path_stations": [
+          "Herne-Börnig",
+          "Castrop-Rauxel Süd",
+          "Castrop-Rauxel-Merklinde",
+          "Dortmund-Bövinghausen"
+        ]
+      },
+      {
+        "id": "-6799415300981731941-2510201717-9",
+        "type": "S",
+        "number": "30257",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "1",
+        "time": "2510201744",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Wanne-Eickel Hbf",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "4781352900848420148-2510201732-3",
+        "type": "S",
+        "number": "30256",
+        "direction": "Dortmund Hbf",
+        "platform": "7",
+        "time": "2510201744",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Castrop-Rauxel Hbf",
+          "Dortmund-Mengede",
+          "Dortmund-Nette/Oestrich",
+          "Dortmund-Westerfilde",
+          "Dortmund-Huckarde",
+          "Dortmund-Wischlingen",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-2460944781227951001-2510201720-4",
+        "type": "RE",
+        "number": "63828",
+        "direction": "Aachen Hbf",
+        "platform": "1",
+        "time": "2510201753",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Essen Hbf",
+          "Mülheim(Ruhr)Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf",
+          "Düsseldorf-Benrath",
+          "Leverkusen Mitte",
+          "Köln-Mülheim",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln-Ehrenfeld",
+          "Horrem",
+          "Düren",
+          "Langerwehe",
+          "Eschweiler Hbf",
+          "Stolberg(Rheinl)Hbf",
+          "Aachen-Rothe Erde",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "356811846785420530-2510201647-9",
+        "type": "S",
+        "number": "30255",
+        "direction": "Recklinghausen Hbf",
+        "platform": "7",
+        "time": "2510201716",
+        "destination": "Recklinghausen Hbf",
+        "path_stations": [
+          "Recklinghausen Süd",
+          "Recklinghausen Hbf"
+        ]
+      },
+      {
+        "id": "1817684191720603357-2510201817-9",
+        "type": "S",
+        "number": "30261",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "1",
+        "time": "2510201844",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Wanne-Eickel Hbf",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "4853716973799954647-2510201820-4",
+        "type": "RE",
+        "number": "63830",
+        "direction": "Aachen Hbf",
+        "platform": "1",
+        "time": "2510201853",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Essen Hbf",
+          "Mülheim(Ruhr)Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf",
+          "Düsseldorf-Benrath",
+          "Leverkusen Mitte",
+          "Köln-Mülheim",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln-Ehrenfeld",
+          "Horrem",
+          "Düren",
+          "Langerwehe",
+          "Eschweiler Hbf",
+          "Stolberg(Rheinl)Hbf",
+          "Aachen-Rothe Erde",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "3787572563507984235-2510201807-8",
+        "type": "RB",
+        "number": "14778",
+        "direction": "Dortmund-Bövinghausen",
+        "platform": "6",
+        "time": "2510201847",
+        "destination": "Dortmund-Bövinghausen",
+        "path_stations": [
+          "Herne-Börnig",
+          "Castrop-Rauxel Süd",
+          "Castrop-Rauxel-Merklinde",
+          "Dortmund-Bövinghausen"
+        ]
+      },
+      {
+        "id": "-5081558288005397210-2510201751-5",
+        "type": "RB",
+        "number": "14777",
+        "direction": "Dorsten",
+        "platform": "6",
+        "time": "2510201809",
+        "destination": "Dorsten",
+        "path_stations": [
+          "Wanne-Eickel Hbf",
+          "Gelsenkirchen Zoo",
+          "Gelsenkirchen-Buer Süd",
+          "Gladbeck Ost",
+          "Gladbeck-Zweckel",
+          "Feldhausen",
+          "Dorsten"
+        ]
+      },
+      {
+        "id": "-463404969627888842-2510201745-8",
+        "type": "RE",
+        "number": "89891",
+        "direction": "Hamm(Westf)Hbf",
+        "platform": "3",
+        "time": "2510201838",
+        "destination": "Hamm(Westf)Hbf",
+        "path_stations": [
+          "Castrop-Rauxel Hbf",
+          "Dortmund-Mengede",
+          "Dortmund Hbf",
+          "Dortmund-Scharnhorst",
+          "Dortmund-Kurl",
+          "Kamen-Methler",
+          "Kamen",
+          "Bönen-Nordbögge",
+          "Hamm(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-3369409229162093789-2510201832-3",
+        "type": "S",
+        "number": "30260",
+        "direction": "Dortmund Hbf",
+        "platform": "7",
+        "time": "2510201844",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Castrop-Rauxel Hbf",
+          "Dortmund-Mengede",
+          "Dortmund-Nette/Oestrich",
+          "Dortmund-Westerfilde",
+          "Dortmund-Huckarde",
+          "Dortmund-Wischlingen",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "6630506945739936524-2510201730-10",
+        "type": "RE",
+        "number": "89892",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510201819",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Wanne-Eickel Hbf",
+          "Gelsenkirchen Hbf",
+          "Essen-Altenessen",
+          "Oberhausen Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "8446179001498853928-2510201551-19",
+        "type": "RE",
+        "number": "63827",
+        "direction": "Hamm(Westf)Hbf",
+        "platform": "3",
+        "time": "2510201806",
+        "destination": "Hamm(Westf)Hbf",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Kamen",
+          "Hamm(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-5335021667616538455-2510201802-3",
+        "type": "S",
+        "number": "30258",
+        "direction": "Dortmund Hbf",
+        "platform": "3",
+        "time": "2510201816",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Castrop-Rauxel Hbf",
+          "Dortmund-Mengede",
+          "Dortmund-Nette/Oestrich",
+          "Dortmund-Westerfilde",
+          "Dortmund-Huckarde",
+          "Dortmund-Wischlingen",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-2353135946364843242-2510201747-9",
+        "type": "S",
+        "number": "30259",
+        "direction": "Recklinghausen Hbf",
+        "platform": "7",
+        "time": "2510201815",
+        "destination": "Recklinghausen Hbf",
+        "path_stations": [
+          "Recklinghausen Süd",
+          "Recklinghausen Hbf"
+        ]
+      },
+      {
+        "id": "-6196822620352860836-2510201851-5",
+        "type": "RB",
+        "number": "14779",
+        "direction": "Dorsten",
+        "platform": "6",
+        "time": "2510201909",
+        "destination": "Dorsten",
+        "path_stations": [
+          "Wanne-Eickel Hbf",
+          "Gelsenkirchen Zoo",
+          "Gelsenkirchen-Buer Süd",
+          "Gladbeck Ost",
+          "Gladbeck-Zweckel",
+          "Feldhausen",
+          "Dorsten"
+        ]
+      },
+      {
+        "id": "6761890177864973524-2510201830-10",
+        "type": "RE",
+        "number": "89894",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510201919",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Wanne-Eickel Hbf",
+          "Gelsenkirchen Hbf",
+          "Essen-Altenessen",
+          "Oberhausen Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "1345106269673531398-2510201905-3",
+        "type": "S",
+        "number": "30262",
+        "direction": "Dortmund Hbf",
+        "platform": "3",
+        "time": "2510201916",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Castrop-Rauxel Hbf",
+          "Dortmund-Mengede",
+          "Dortmund-Nette/Oestrich",
+          "Dortmund-Westerfilde",
+          "Dortmund-Huckarde",
+          "Dortmund-Wischlingen",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-3550918628609812807-2510201907-8",
+        "type": "RB",
+        "number": "14780",
+        "direction": "Dortmund-Bövinghausen",
+        "platform": "6",
+        "time": "2510201947",
+        "destination": "Dortmund-Bövinghausen",
+        "path_stations": [
+          "Herne-Börnig",
+          "Castrop-Rauxel Süd",
+          "Castrop-Rauxel-Merklinde",
+          "Dortmund-Bövinghausen"
+        ]
+      },
+      {
+        "id": "6306225813542830228-2510201651-19",
+        "type": "RE",
+        "number": "63829",
+        "direction": "Hamm(Westf)Hbf",
+        "platform": "3",
+        "time": "2510201906",
+        "destination": "Hamm(Westf)Hbf",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Kamen",
+          "Hamm(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "9124182195417290215-2510201845-8",
+        "type": "TRI",
+        "number": "28543",
+        "direction": "Hamm(Westf)Hbf",
+        "platform": "",
+        "time": "2510201938",
+        "destination": "Hamm(Westf)Hbf",
+        "path_stations": [
+          "Castrop-Rauxel Hbf",
+          "Dortmund-Mengede",
+          "Dortmund Hbf",
+          "Dortmund-Scharnhorst",
+          "Dortmund-Kurl",
+          "Kamen-Methler",
+          "Kamen",
+          "Bönen-Nordbögge",
+          "Hamm(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "7566730591368236692-2510201933-3",
+        "type": "S",
+        "number": "30264",
+        "direction": "Dortmund Hbf",
+        "platform": "7",
+        "time": "2510201944",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Castrop-Rauxel Hbf",
+          "Dortmund-Mengede",
+          "Dortmund-Nette/Oestrich",
+          "Dortmund-Westerfilde",
+          "Dortmund-Huckarde",
+          "Dortmund-Wischlingen",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-922177523971370161-2510201917-9",
+        "type": "S",
+        "number": "30265",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "1",
+        "time": "2510201944",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Wanne-Eickel Hbf",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "3909903143609546984-2510201920-4",
+        "type": "RE",
+        "number": "63832",
+        "direction": "Aachen Hbf",
+        "platform": "1",
+        "time": "2510201953",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Essen Hbf",
+          "Mülheim(Ruhr)Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf",
+          "Düsseldorf-Benrath",
+          "Leverkusen Mitte",
+          "Köln-Mülheim",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln-Ehrenfeld",
+          "Horrem",
+          "Düren",
+          "Langerwehe",
+          "Eschweiler Hbf",
+          "Stolberg(Rheinl)Hbf",
+          "Aachen-Rothe Erde",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "-1903857096819911023-2510201847-9",
+        "type": "S",
+        "number": "30263",
+        "direction": "Recklinghausen Hbf",
+        "platform": "7",
+        "time": "2510201915",
+        "destination": "Recklinghausen Hbf",
+        "path_stations": [
+          "Recklinghausen Süd",
+          "Recklinghausen Hbf"
+        ]
+      },
+      {
+        "id": "431971826784164832-2510201751-19",
+        "type": "RE",
+        "number": "63831",
+        "direction": "Hamm(Westf)Hbf",
+        "platform": "3",
+        "time": "2510202006",
+        "destination": "Hamm(Westf)Hbf",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Kamen",
+          "Hamm(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-2282360737034766347-2510202007-8",
+        "type": "RB",
+        "number": "14782",
+        "direction": "Dortmund Hbf",
+        "platform": "6",
+        "time": "2510202047",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Herne-Börnig",
+          "Castrop-Rauxel Süd",
+          "Castrop-Rauxel-Merklinde",
+          "Dortmund-Bövinghausen",
+          "Dortmund-Lütgendortmund Nord",
+          "Dortmund-Marten",
+          "Dortmund-Rahm",
+          "Dortmund-Huckarde Nord",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "3568907334647208213-2510202017-9",
+        "type": "S",
+        "number": "30269",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "1",
+        "time": "2510202044",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Wanne-Eickel Hbf",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "5385439516583052773-2510201947-9",
+        "type": "S",
+        "number": "30267",
+        "direction": "Recklinghausen Hbf",
+        "platform": "7",
+        "time": "2510202015",
+        "destination": "Recklinghausen Hbf",
+        "path_stations": [
+          "Recklinghausen Süd",
+          "Recklinghausen Hbf"
+        ]
+      },
+      {
+        "id": "-3950498695485132145-2510201951-5",
+        "type": "RB",
+        "number": "14781",
+        "direction": "Dorsten",
+        "platform": "6",
+        "time": "2510202009",
+        "destination": "Dorsten",
+        "path_stations": [
+          "Wanne-Eickel Hbf",
+          "Gelsenkirchen Zoo",
+          "Gelsenkirchen-Buer Süd",
+          "Gladbeck Ost",
+          "Gladbeck-Zweckel",
+          "Feldhausen",
+          "Dorsten"
+        ]
+      },
+      {
+        "id": "-1687625518078930243-2510201945-8",
+        "type": "RE",
+        "number": "89895",
+        "direction": "Dortmund Hbf",
+        "platform": "3",
+        "time": "2510202038",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Castrop-Rauxel Hbf",
+          "Dortmund-Mengede",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "6060546869279204528-2510201930-10",
+        "type": "RE",
+        "number": "89896",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510202019",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Wanne-Eickel Hbf",
+          "Gelsenkirchen Hbf",
+          "Essen-Altenessen",
+          "Oberhausen Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "9056483478076769473-2510202009-3",
+        "type": "S",
+        "number": "30266",
+        "direction": "Dortmund Hbf",
+        "platform": "3",
+        "time": "2510202017",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Castrop-Rauxel Hbf",
+          "Dortmund-Mengede",
+          "Dortmund-Nette/Oestrich",
+          "Dortmund-Westerfilde",
+          "Dortmund-Huckarde",
+          "Dortmund-Wischlingen",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-8684631919837451404-2510202020-4",
+        "type": "RE",
+        "number": "63834",
+        "direction": "Aachen Hbf",
+        "platform": "1",
+        "time": "2510202053",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Essen Hbf",
+          "Mülheim(Ruhr)Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf",
+          "Düsseldorf-Benrath",
+          "Leverkusen Mitte",
+          "Köln-Mülheim",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln-Ehrenfeld",
+          "Horrem",
+          "Düren",
+          "Langerwehe",
+          "Eschweiler Hbf",
+          "Stolberg(Rheinl)Hbf",
+          "Aachen-Rothe Erde",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "8634841075307311040-2510202031-3",
+        "type": "S",
+        "number": "30268",
+        "direction": "Dortmund Hbf",
+        "platform": "7",
+        "time": "2510202044",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Castrop-Rauxel Hbf",
+          "Dortmund-Mengede",
+          "Dortmund-Nette/Oestrich",
+          "Dortmund-Westerfilde",
+          "Dortmund-Huckarde",
+          "Dortmund-Wischlingen",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "4594771126664263764-2510202045-8",
+        "type": "RE",
+        "number": "89897",
+        "direction": "Dortmund Hbf",
+        "platform": "3",
+        "time": "2510202138",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Castrop-Rauxel Hbf",
+          "Dortmund-Mengede",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "9212429611903001368-2510202107-3",
+        "type": "S",
+        "number": "30270",
+        "direction": "Dortmund Hbf",
+        "platform": "3",
+        "time": "2510202116",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Castrop-Rauxel Hbf",
+          "Dortmund-Mengede",
+          "Dortmund-Nette/Oestrich",
+          "Dortmund-Westerfilde",
+          "Dortmund-Huckarde",
+          "Dortmund-Wischlingen",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "3956684365756578284-2510202107-8",
+        "type": "RB",
+        "number": "14784",
+        "direction": "Dortmund-Bövinghausen",
+        "platform": "6",
+        "time": "2510202147",
+        "destination": "Dortmund-Bövinghausen",
+        "path_stations": [
+          "Herne-Börnig",
+          "Castrop-Rauxel Süd",
+          "Castrop-Rauxel-Merklinde",
+          "Dortmund-Bövinghausen"
+        ]
+      },
+      {
+        "id": "3442624314650770455-2510202133-3",
+        "type": "S",
+        "number": "30272",
+        "direction": "Dortmund Hbf",
+        "platform": "7",
+        "time": "2510202144",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Castrop-Rauxel Hbf",
+          "Dortmund-Mengede",
+          "Dortmund-Nette/Oestrich",
+          "Dortmund-Westerfilde",
+          "Dortmund-Huckarde",
+          "Dortmund-Wischlingen",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-8942589474541217776-2510202051-5",
+        "type": "RB",
+        "number": "14783",
+        "direction": "Dorsten",
+        "platform": "6",
+        "time": "2510202109",
+        "destination": "Dorsten",
+        "path_stations": [
+          "Wanne-Eickel Hbf",
+          "Gelsenkirchen Zoo",
+          "Gelsenkirchen-Buer Süd",
+          "Gladbeck Ost",
+          "Gladbeck-Zweckel",
+          "Feldhausen",
+          "Dorsten"
+        ]
+      },
+      {
+        "id": "-6689766698168916760-2510202120-4",
+        "type": "RE",
+        "number": "63836",
+        "direction": "Aachen Hbf",
+        "platform": "1",
+        "time": "2510202153",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Essen Hbf",
+          "Mülheim(Ruhr)Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf",
+          "Düsseldorf-Benrath",
+          "Leverkusen Mitte",
+          "Köln-Mülheim",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln-Ehrenfeld",
+          "Horrem",
+          "Düren",
+          "Langerwehe",
+          "Eschweiler Hbf",
+          "Stolberg(Rheinl)Hbf",
+          "Aachen-Rothe Erde",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "1098131851914614206-2510202117-9",
+        "type": "S",
+        "number": "30273",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "1",
+        "time": "2510202144",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Wanne-Eickel Hbf",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "3116793615861921787-2510201851-19",
+        "type": "RE",
+        "number": "63833",
+        "direction": "Hamm(Westf)Hbf",
+        "platform": "3",
+        "time": "2510202106",
+        "destination": "Hamm(Westf)Hbf",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Kamen",
+          "Hamm(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-4604417545031401799-2510202030-10",
+        "type": "RE",
+        "number": "89898",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510202119",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Wanne-Eickel Hbf",
+          "Gelsenkirchen Hbf",
+          "Essen-Altenessen",
+          "Oberhausen Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "2562292363912826711-2510202047-9",
+        "type": "S",
+        "number": "30271",
+        "direction": "Recklinghausen Hbf",
+        "platform": "7",
+        "time": "2510202115",
+        "destination": "Recklinghausen Hbf",
+        "path_stations": [
+          "Recklinghausen Süd",
+          "Recklinghausen Hbf"
+        ]
+      },
+      {
+        "id": "-4812366603402288733-2510201951-19",
+        "type": "RE",
+        "number": "63835",
+        "direction": "Hamm(Westf)Hbf",
+        "platform": "3",
+        "time": "2510202206",
+        "destination": "Hamm(Westf)Hbf",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Kamen",
+          "Hamm(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-1619029766848941379-2510202232-3",
+        "type": "S",
+        "number": "30276",
+        "direction": "Dortmund Hbf",
+        "platform": "7",
+        "time": "2510202244",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Castrop-Rauxel Hbf",
+          "Dortmund-Mengede",
+          "Dortmund-Nette/Oestrich",
+          "Dortmund-Westerfilde",
+          "Dortmund-Huckarde",
+          "Dortmund-Wischlingen",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "3629160826480911816-2510202147-9",
+        "type": "S",
+        "number": "30275",
+        "direction": "Recklinghausen Hbf",
+        "platform": "7",
+        "time": "2510202215",
+        "destination": "Recklinghausen Hbf",
+        "path_stations": [
+          "Recklinghausen Süd",
+          "Recklinghausen Hbf"
+        ]
+      },
+      {
+        "id": "73633733534286672-2510202220-4",
+        "type": "RE",
+        "number": "63838",
+        "direction": "Aachen Hbf",
+        "platform": "1",
+        "time": "2510202253",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Essen Hbf",
+          "Mülheim(Ruhr)Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf",
+          "Düsseldorf-Benrath",
+          "Leverkusen Mitte",
+          "Köln-Mülheim",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln-Ehrenfeld",
+          "Horrem",
+          "Düren",
+          "Langerwehe",
+          "Eschweiler Hbf",
+          "Stolberg(Rheinl)Hbf",
+          "Aachen-Rothe Erde",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "3462162865004817073-2510202145-8",
+        "type": "RE",
+        "number": "89899",
+        "direction": "Dortmund Hbf",
+        "platform": "3",
+        "time": "2510202238",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Castrop-Rauxel Hbf",
+          "Dortmund-Mengede",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-1820607811961656188-2510202207-8",
+        "type": "RB",
+        "number": "14786",
+        "direction": "Dortmund-Bövinghausen",
+        "platform": "6",
+        "time": "2510202247",
+        "destination": "Dortmund-Bövinghausen",
+        "path_stations": [
+          "Herne-Börnig",
+          "Castrop-Rauxel Süd",
+          "Castrop-Rauxel-Merklinde",
+          "Dortmund-Bövinghausen"
+        ]
+      },
+      {
+        "id": "-3292607639099155330-2510202151-5",
+        "type": "RB",
+        "number": "14785",
+        "direction": "Dorsten",
+        "platform": "6",
+        "time": "2510202209",
+        "destination": "Dorsten",
+        "path_stations": [
+          "Wanne-Eickel Hbf",
+          "Gelsenkirchen Zoo",
+          "Gelsenkirchen-Buer Süd",
+          "Gladbeck Ost",
+          "Gladbeck-Zweckel",
+          "Feldhausen",
+          "Dorsten"
+        ]
+      },
+      {
+        "id": "1214959809392953563-2510202203-4",
+        "type": "RE",
+        "number": "89900",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "1",
+        "time": "2510202219",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Wanne-Eickel Hbf",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "8045380513246255110-2510202207-3",
+        "type": "S",
+        "number": "30274",
+        "direction": "Dortmund Hbf",
+        "platform": "3",
+        "time": "2510202216",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Castrop-Rauxel Hbf",
+          "Dortmund-Mengede",
+          "Dortmund-Nette/Oestrich",
+          "Dortmund-Westerfilde",
+          "Dortmund-Huckarde",
+          "Dortmund-Wischlingen",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "6082340962456072518-2510202217-9",
+        "type": "S",
+        "number": "30277",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "1",
+        "time": "2510202244",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Wanne-Eickel Hbf",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "-3853867593662097628-2510202317-9",
+        "type": "S",
+        "number": "30281",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "1",
+        "time": "2510202344",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Wanne-Eickel Hbf",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "-8551381297133856391-2510202332-3",
+        "type": "S",
+        "number": "30280",
+        "direction": "Dortmund Hbf",
+        "platform": "7",
+        "time": "2510202344",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Castrop-Rauxel Hbf",
+          "Dortmund-Mengede",
+          "Dortmund-Nette/Oestrich",
+          "Dortmund-Westerfilde",
+          "Dortmund-Huckarde",
+          "Dortmund-Wischlingen",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "6595985436810124013-2510202307-3",
+        "type": "S",
+        "number": "30278",
+        "direction": "Dortmund Hbf",
+        "platform": "3",
+        "time": "2510202316",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Castrop-Rauxel Hbf",
+          "Dortmund-Mengede",
+          "Dortmund-Nette/Oestrich",
+          "Dortmund-Westerfilde",
+          "Dortmund-Huckarde",
+          "Dortmund-Wischlingen",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "4956006036609249189-2510202320-4",
+        "type": "RE",
+        "number": "63840",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510202353",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Essen Hbf",
+          "Mülheim(Ruhr)Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-451286263090926745-2510202247-9",
+        "type": "S",
+        "number": "30279",
+        "direction": "Recklinghausen Hbf",
+        "platform": "7",
+        "time": "2510202315",
+        "destination": "Recklinghausen Hbf",
+        "path_stations": [
+          "Recklinghausen Süd",
+          "Recklinghausen Hbf"
+        ]
+      },
+      {
+        "id": "5291693898925106706-2510202329-3",
+        "type": "RE",
+        "number": "89901",
+        "direction": "Dortmund Hbf",
+        "platform": "3",
+        "time": "2510202338",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Castrop-Rauxel Hbf",
+          "Dortmund-Mengede",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-837956258388045715-2510202051-19",
+        "type": "RE",
+        "number": "63837",
+        "direction": "Hamm(Westf)Hbf",
+        "platform": "3",
+        "time": "2510202306",
+        "destination": "Hamm(Westf)Hbf",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Kamen",
+          "Hamm(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "8529112800034229225-2510202251-5",
+        "type": "RB",
+        "number": "14787",
+        "direction": "Dorsten",
+        "platform": "6",
+        "time": "2510202309",
+        "destination": "Dorsten",
+        "path_stations": [
+          "Wanne-Eickel Hbf",
+          "Gelsenkirchen Zoo",
+          "Gelsenkirchen-Buer Süd",
+          "Gladbeck Ost",
+          "Gladbeck-Zweckel",
+          "Feldhausen",
+          "Dorsten"
+        ]
+      },
+      {
+        "id": "882734840783239191-2510202303-4",
+        "type": "RE",
+        "number": "89902",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "1",
+        "time": "2510202319",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Wanne-Eickel Hbf",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "3562313626194213085-2510202344-10",
+        "type": "Bus",
+        "number": "94789",
+        "direction": "Wanne-Eickel Hbf",
+        "platform": "",
+        "time": "2510210058",
+        "destination": "Wanne-Eickel Hbf",
+        "path_stations": [
+          "Wanne-Eickel Hbf"
+        ]
+      },
+      {
+        "id": "-1716104757636428190-2510202351-5",
+        "type": "RB",
+        "number": "14789",
+        "direction": "Wanne-Eickel Hbf",
+        "platform": "6",
+        "time": "2510210009",
+        "destination": "Wanne-Eickel Hbf",
+        "path_stations": [
+          "Wanne-Eickel Hbf"
+        ]
+      },
+      {
+        "id": "5120707896695215275-2510210007-3",
+        "type": "S",
+        "number": "30282",
+        "direction": "Dortmund Hbf",
+        "platform": "3",
+        "time": "2510210016",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Castrop-Rauxel Hbf",
+          "Dortmund-Mengede",
+          "Dortmund-Nette/Oestrich",
+          "Dortmund-Westerfilde",
+          "Dortmund-Huckarde",
+          "Dortmund-Wischlingen",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-2968023535338810240-2510202151-19",
+        "type": "RE",
+        "number": "63839",
+        "direction": "Hamm(Westf)Hbf",
+        "platform": "3",
+        "time": "2510210006",
+        "destination": "Hamm(Westf)Hbf",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Kamen",
+          "Hamm(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "3347046343395620456-2510210029-3",
+        "type": "RE",
+        "number": "89903",
+        "direction": "Dortmund Hbf",
+        "platform": "3",
+        "time": "2510210038",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Castrop-Rauxel Hbf",
+          "Dortmund-Mengede",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "713155576491447788-2510202347-9",
+        "type": "S",
+        "number": "30283",
+        "direction": "Recklinghausen Hbf",
+        "platform": "7",
+        "time": "2510210015",
+        "destination": "Recklinghausen Hbf",
+        "path_stations": [
+          "Recklinghausen Süd",
+          "Recklinghausen Hbf"
+        ]
+      },
+      {
+        "id": "-3860351201071312770-2510210017-9",
+        "type": "S",
+        "number": "30201",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "1",
+        "time": "2510210044",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Wanne-Eickel Hbf",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "-3405907370836561095-2510210040-2",
+        "type": "RE",
+        "number": "63844",
+        "direction": "Köln/Bonn Flughafen",
+        "platform": "1",
+        "time": "2510210053",
+        "destination": "Köln/Bonn Flughafen",
+        "path_stations": [
+          "Essen Hbf",
+          "Mülheim(Ruhr)Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf",
+          "Düsseldorf-Benrath",
+          "Leverkusen Mitte",
+          "Köln-Mülheim",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln/Bonn Flughafen"
+        ]
+      },
+      {
+        "id": "4887798446852904735-2510210107-3",
+        "type": "S",
+        "number": "30200",
+        "direction": "Dortmund Hbf",
+        "platform": "3",
+        "time": "2510210116",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Castrop-Rauxel Hbf",
+          "Dortmund-Mengede",
+          "Dortmund-Nette/Oestrich",
+          "Dortmund-Westerfilde",
+          "Dortmund-Huckarde",
+          "Dortmund-Wischlingen",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "139899372578291995-2510202251-19",
+        "type": "RE",
+        "number": "63841",
+        "direction": "Dortmund Hbf",
+        "platform": "3",
+        "time": "2510210106",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "1031466248248489431-2510210117-9",
+        "type": "S",
+        "number": "30203",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "1",
+        "time": "2510210144",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Wanne-Eickel Hbf",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "-6524772251027910778-2510210239-2",
+        "type": "RE",
+        "number": "63848",
+        "direction": "Köln Hbf",
+        "platform": "1",
+        "time": "2510210254",
+        "destination": "Köln Hbf",
+        "path_stations": [
+          "Essen Hbf",
+          "Mülheim(Ruhr)Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf",
+          "Düsseldorf-Benrath",
+          "Leverkusen Mitte",
+          "Köln-Mülheim",
+          "Köln Messe/Deutz",
+          "Köln Hbf"
+        ]
+      },
+      {
+        "id": "4584806807655155350-2510210217-9",
+        "type": "S",
+        "number": "30205",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "1",
+        "time": "2510210244",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Wanne-Eickel Hbf",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "-3847634946598460685-2510210207-3",
+        "type": "S",
+        "number": "30202",
+        "direction": "Dortmund Hbf",
+        "platform": "3",
+        "time": "2510210216",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Castrop-Rauxel Hbf",
+          "Dortmund-Mengede",
+          "Dortmund-Nette/Oestrich",
+          "Dortmund-Westerfilde",
+          "Dortmund-Huckarde",
+          "Dortmund-Wischlingen",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "6861118068401432511-2510202351-19",
+        "type": "RE",
+        "number": "63843",
+        "direction": "Hamm(Westf)Hbf",
+        "platform": "3",
+        "time": "2510210206",
+        "destination": "Hamm(Westf)Hbf",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Kamen",
+          "Hamm(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-5399228238189016632-2510210222-6",
+        "type": "RE",
+        "number": "63845",
+        "direction": "Dortmund Hbf",
+        "platform": "3",
+        "time": "2510210306",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "3420601797057640764-2510210320-4",
+        "type": "RE",
+        "number": "63800",
+        "direction": "Aachen Hbf",
+        "platform": "1",
+        "time": "2510210353",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Essen Hbf",
+          "Mülheim(Ruhr)Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf",
+          "Düsseldorf-Benrath",
+          "Leverkusen Mitte",
+          "Köln-Mülheim",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln-Ehrenfeld",
+          "Horrem",
+          "Düren",
+          "Langerwehe",
+          "Eschweiler Hbf",
+          "Stolberg(Rheinl)Hbf",
+          "Aachen-Rothe Erde",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "-7506078612137227600-2510210317-9",
+        "type": "S",
+        "number": "30285",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "1",
+        "time": "2510210344",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Wanne-Eickel Hbf",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "1025611722263176185-2510210303-4",
+        "type": "RE",
+        "number": "89910",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "1",
+        "time": "2510210319",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Wanne-Eickel Hbf",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "5927341399731218299-2510210307-3",
+        "type": "S",
+        "number": "30284",
+        "direction": "Dortmund Hbf",
+        "platform": "3",
+        "time": "2510210316",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Castrop-Rauxel Hbf",
+          "Dortmund-Mengede",
+          "Dortmund-Nette/Oestrich",
+          "Dortmund-Westerfilde",
+          "Dortmund-Huckarde",
+          "Dortmund-Wischlingen",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-3175803859938356317-2510210407-3",
+        "type": "S",
+        "number": "30204",
+        "direction": "Dortmund Hbf",
+        "platform": "3",
+        "time": "2510210416",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Castrop-Rauxel Hbf",
+          "Dortmund-Mengede",
+          "Dortmund-Nette/Oestrich",
+          "Dortmund-Westerfilde",
+          "Dortmund-Huckarde",
+          "Dortmund-Wischlingen",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "6164544895508624728-2510210420-4",
+        "type": "RE",
+        "number": "63802",
+        "direction": "Aachen Hbf",
+        "platform": "1",
+        "time": "2510210453",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Essen Hbf",
+          "Mülheim(Ruhr)Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf",
+          "Düsseldorf-Benrath",
+          "Leverkusen Mitte",
+          "Köln-Mülheim",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln-Ehrenfeld",
+          "Horrem",
+          "Düren",
+          "Langerwehe",
+          "Eschweiler Hbf",
+          "Stolberg(Rheinl)Hbf",
+          "Aachen-Rothe Erde",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "8691072478849514590-2510210417-9",
+        "type": "S",
+        "number": "30207",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "1",
+        "time": "2510210444",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Wanne-Eickel Hbf",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "-2786460756361957971-2510210441-2",
+        "type": "RB",
+        "number": "14750",
+        "direction": "Dortmund-Bövinghausen",
+        "platform": "6",
+        "time": "2510210447",
+        "destination": "Dortmund-Bövinghausen",
+        "path_stations": [
+          "Herne-Börnig",
+          "Castrop-Rauxel Süd",
+          "Castrop-Rauxel-Merklinde",
+          "Dortmund-Bövinghausen"
+        ]
+      }
+    ],
+    "arrivals": []
+  }
+}

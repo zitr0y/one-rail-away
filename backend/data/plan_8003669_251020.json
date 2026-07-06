@@ -1,0 +1,1307 @@
+{
+  "station_eva": "8003669",
+  "date": "251020",
+  "cached_at": "2025-10-20T16:50:00.993255",
+  "plan_data": {
+    "arrivals": [
+      {
+        "id": "-6968782947257746913-2510201812-10",
+        "type": "RB",
+        "number": "17361",
+        "time": "2510201849",
+        "platform": "2",
+        "path_stations": [
+          "Wuppertal-Oberbarmen",
+          "Wuppertal-Barmen",
+          "Wuppertal Hbf",
+          "Wuppertal-Vohwinkel",
+          "Haan-Gruiten",
+          "Haan",
+          "Solingen Hbf",
+          "Leichlingen",
+          "Opladen"
+        ],
+        "line": "48"
+      },
+      {
+        "id": "-445205024599209482-2510201740-10",
+        "type": "RB",
+        "number": "17359",
+        "time": "2510201817",
+        "platform": "2",
+        "path_stations": [
+          "Wuppertal-Oberbarmen",
+          "Wuppertal-Barmen",
+          "Wuppertal Hbf",
+          "Wuppertal-Vohwinkel",
+          "Haan-Gruiten",
+          "Haan",
+          "Solingen Hbf",
+          "Leichlingen",
+          "Opladen"
+        ],
+        "line": "48"
+      },
+      {
+        "id": "-2023304610599426709-2510201743-14",
+        "type": "RB",
+        "number": "17358",
+        "time": "2510201839",
+        "platform": "1",
+        "path_stations": [
+          "Bonn-Mehlem",
+          "Bonn-Bad Godesberg",
+          "Bonn UN Campus",
+          "Bonn Hbf",
+          "Roisdorf",
+          "Sechtem",
+          "Brühl",
+          "Hürth-Kalscheuren",
+          "Köln Süd",
+          "Köln West",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln-Mülheim"
+        ],
+        "line": "48"
+      },
+      {
+        "id": "-6242841293303923817-2510201752-4",
+        "type": "RB",
+        "number": "17356",
+        "time": "2510201806",
+        "platform": "1",
+        "path_stations": [
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln-Mülheim"
+        ],
+        "line": "48"
+      },
+      {
+        "id": "-4090752192705550976-2510201852-4",
+        "type": "RB",
+        "number": "17360",
+        "time": "2510201906",
+        "platform": "1",
+        "path_stations": [
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln-Mülheim"
+        ],
+        "line": "48"
+      },
+      {
+        "id": "4278853024182696690-2510201843-14",
+        "type": "RB",
+        "number": "17362",
+        "time": "2510201939",
+        "platform": "1",
+        "path_stations": [
+          "Bonn-Mehlem",
+          "Bonn-Bad Godesberg",
+          "Bonn UN Campus",
+          "Bonn Hbf",
+          "Roisdorf",
+          "Sechtem",
+          "Brühl",
+          "Hürth-Kalscheuren",
+          "Köln Süd",
+          "Köln West",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln-Mülheim"
+        ],
+        "line": "48"
+      },
+      {
+        "id": "-6053771493732539738-2510201912-10",
+        "type": "RB",
+        "number": "17365",
+        "time": "2510201949",
+        "platform": "2",
+        "path_stations": [
+          "Wuppertal-Oberbarmen",
+          "Wuppertal-Barmen",
+          "Wuppertal Hbf",
+          "Wuppertal-Vohwinkel",
+          "Haan-Gruiten",
+          "Haan",
+          "Solingen Hbf",
+          "Leichlingen",
+          "Opladen"
+        ],
+        "line": "48"
+      },
+      {
+        "id": "2000780667434420476-2510201843-10",
+        "type": "RB",
+        "number": "17363",
+        "time": "2510201918",
+        "platform": "2",
+        "path_stations": [
+          "Wuppertal-Oberbarmen",
+          "Wuppertal-Barmen",
+          "Wuppertal Hbf",
+          "Wuppertal-Vohwinkel",
+          "Haan-Gruiten",
+          "Haan",
+          "Solingen Hbf",
+          "Leichlingen",
+          "Opladen"
+        ],
+        "line": "48"
+      },
+      {
+        "id": "-5752472669840346846-2510201943-14",
+        "type": "RB",
+        "number": "17366",
+        "time": "2510202039",
+        "platform": "1",
+        "path_stations": [
+          "Bonn-Mehlem",
+          "Bonn-Bad Godesberg",
+          "Bonn UN Campus",
+          "Bonn Hbf",
+          "Roisdorf",
+          "Sechtem",
+          "Brühl",
+          "Hürth-Kalscheuren",
+          "Köln Süd",
+          "Köln West",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln-Mülheim"
+        ],
+        "line": "48"
+      },
+      {
+        "id": "5587917440787901589-2510201952-4",
+        "type": "RB",
+        "number": "17364",
+        "time": "2510202006",
+        "platform": "1",
+        "path_stations": [
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln-Mülheim"
+        ],
+        "line": "48"
+      },
+      {
+        "id": "-4571137337317051113-2510202012-10",
+        "type": "RB",
+        "number": "17369",
+        "time": "2510202049",
+        "platform": "2",
+        "path_stations": [
+          "Wuppertal-Oberbarmen",
+          "Wuppertal-Barmen",
+          "Wuppertal Hbf",
+          "Wuppertal-Vohwinkel",
+          "Haan-Gruiten",
+          "Haan",
+          "Solingen Hbf",
+          "Leichlingen",
+          "Opladen"
+        ],
+        "line": "48"
+      },
+      {
+        "id": "5274594993239171954-2510201940-10",
+        "type": "RB",
+        "number": "17367",
+        "time": "2510202017",
+        "platform": "2",
+        "path_stations": [
+          "Wuppertal-Oberbarmen",
+          "Wuppertal-Barmen",
+          "Wuppertal Hbf",
+          "Wuppertal-Vohwinkel",
+          "Haan-Gruiten",
+          "Haan",
+          "Solingen Hbf",
+          "Leichlingen",
+          "Opladen"
+        ],
+        "line": "48"
+      },
+      {
+        "id": "-4542260104046058714-2510202112-10",
+        "type": "RB",
+        "number": "17373",
+        "time": "2510202149",
+        "platform": "2",
+        "path_stations": [
+          "Wuppertal-Oberbarmen",
+          "Wuppertal-Barmen",
+          "Wuppertal Hbf",
+          "Wuppertal-Vohwinkel",
+          "Haan-Gruiten",
+          "Haan",
+          "Solingen Hbf",
+          "Leichlingen",
+          "Opladen"
+        ],
+        "line": "48"
+      },
+      {
+        "id": "-718759491291457997-2510202107-4",
+        "type": "RB",
+        "number": "17371",
+        "time": "2510202118",
+        "platform": "2",
+        "path_stations": [
+          "Solingen Hbf",
+          "Leichlingen",
+          "Opladen"
+        ],
+        "line": "48"
+      },
+      {
+        "id": "-622691603181576740-2510202052-4",
+        "type": "RB",
+        "number": "17368",
+        "time": "2510202106",
+        "platform": "1",
+        "path_stations": [
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln-Mülheim"
+        ],
+        "line": "48"
+      },
+      {
+        "id": "5398615917808572568-2510202043-14",
+        "type": "RB",
+        "number": "17370",
+        "time": "2510202139",
+        "platform": "1",
+        "path_stations": [
+          "Bonn-Mehlem",
+          "Bonn-Bad Godesberg",
+          "Bonn UN Campus",
+          "Bonn Hbf",
+          "Roisdorf",
+          "Sechtem",
+          "Brühl",
+          "Hürth-Kalscheuren",
+          "Köln Süd",
+          "Köln West",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln-Mülheim"
+        ],
+        "line": "48"
+      },
+      {
+        "id": "847880078711156377-2510202152-4",
+        "type": "RB",
+        "number": "17372",
+        "time": "2510202206",
+        "platform": "1",
+        "path_stations": [
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln-Mülheim"
+        ],
+        "line": "48"
+      },
+      {
+        "id": "416882499297797432-2510202205-4",
+        "type": "RB",
+        "number": "17375",
+        "time": "2510202217",
+        "platform": "2",
+        "path_stations": [
+          "Solingen Hbf",
+          "Leichlingen",
+          "Opladen"
+        ],
+        "line": "48"
+      },
+      {
+        "id": "6546367605327202484-2510202143-14",
+        "type": "RB",
+        "number": "17374",
+        "time": "2510202239",
+        "platform": "1",
+        "path_stations": [
+          "Bonn-Mehlem",
+          "Bonn-Bad Godesberg",
+          "Bonn UN Campus",
+          "Bonn Hbf",
+          "Roisdorf",
+          "Sechtem",
+          "Brühl",
+          "Hürth-Kalscheuren",
+          "Köln Süd",
+          "Köln West",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln-Mülheim"
+        ],
+        "line": "48"
+      },
+      {
+        "id": "-369568550797356166-2510202212-10",
+        "type": "RB",
+        "number": "17377",
+        "time": "2510202249",
+        "platform": "2",
+        "path_stations": [
+          "Wuppertal-Oberbarmen",
+          "Wuppertal-Barmen",
+          "Wuppertal Hbf",
+          "Wuppertal-Vohwinkel",
+          "Haan-Gruiten",
+          "Haan",
+          "Solingen Hbf",
+          "Leichlingen",
+          "Opladen"
+        ],
+        "line": "48"
+      },
+      {
+        "id": "1988308713044273901-2510202252-4",
+        "type": "RB",
+        "number": "17376",
+        "time": "2510202306",
+        "platform": "1",
+        "path_stations": [
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln-Mülheim"
+        ],
+        "line": "48"
+      },
+      {
+        "id": "-308749912574999128-2510202312-10",
+        "type": "RB",
+        "number": "17381",
+        "time": "2510202349",
+        "platform": "2",
+        "path_stations": [
+          "Wuppertal-Oberbarmen",
+          "Wuppertal-Barmen",
+          "Wuppertal Hbf",
+          "Wuppertal-Vohwinkel",
+          "Haan-Gruiten",
+          "Haan",
+          "Solingen Hbf",
+          "Leichlingen",
+          "Opladen"
+        ],
+        "line": "48"
+      },
+      {
+        "id": "3321732101889754889-2510202307-4",
+        "type": "RB",
+        "number": "17379",
+        "time": "2510202318",
+        "platform": "2",
+        "path_stations": [
+          "Solingen Hbf",
+          "Leichlingen",
+          "Opladen"
+        ],
+        "line": "48"
+      },
+      {
+        "id": "236240230379806377-2510202243-14",
+        "type": "RB",
+        "number": "17378",
+        "time": "2510202339",
+        "platform": "1",
+        "path_stations": [
+          "Bonn-Mehlem",
+          "Bonn-Bad Godesberg",
+          "Bonn UN Campus",
+          "Bonn Hbf",
+          "Roisdorf",
+          "Sechtem",
+          "Brühl",
+          "Hürth-Kalscheuren",
+          "Köln Süd",
+          "Köln West",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln-Mülheim"
+        ],
+        "line": "48"
+      },
+      {
+        "id": "-2520847002958379291-2510210012-10",
+        "type": "RB",
+        "number": "17385",
+        "time": "2510210049",
+        "platform": "2",
+        "path_stations": [
+          "Wuppertal-Oberbarmen",
+          "Wuppertal-Barmen",
+          "Wuppertal Hbf",
+          "Wuppertal-Vohwinkel",
+          "Haan-Gruiten",
+          "Haan",
+          "Solingen Hbf",
+          "Leichlingen",
+          "Opladen"
+        ],
+        "line": "48"
+      },
+      {
+        "id": "2201895368432956593-2510202352-4",
+        "type": "RB",
+        "number": "17380",
+        "time": "2510210006",
+        "platform": "1",
+        "path_stations": [
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln-Mülheim"
+        ],
+        "line": "48"
+      },
+      {
+        "id": "6311251470360843894-2510210052-4",
+        "type": "RB",
+        "number": "17384",
+        "time": "2510210106",
+        "platform": "1",
+        "path_stations": [
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln-Mülheim"
+        ],
+        "line": "48"
+      },
+      {
+        "id": "5628809295797350035-2510210445-2",
+        "type": "RB",
+        "number": "17305",
+        "time": "2510210449",
+        "platform": "2",
+        "path_stations": [
+          "Opladen"
+        ],
+        "line": "48"
+      },
+      {
+        "id": "-8596389011457522596-2510210420-4",
+        "type": "RB",
+        "number": "17302",
+        "time": "2510210434",
+        "platform": "1",
+        "path_stations": [
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln-Mülheim"
+        ],
+        "line": "48"
+      },
+      {
+        "id": "3849774974937611477-2510210443-14",
+        "type": "RB",
+        "number": "17306",
+        "time": "2510210539",
+        "platform": "1",
+        "path_stations": [
+          "Bonn-Mehlem",
+          "Bonn-Bad Godesberg",
+          "Bonn UN Campus",
+          "Bonn Hbf",
+          "Roisdorf",
+          "Sechtem",
+          "Brühl",
+          "Hürth-Kalscheuren",
+          "Köln Süd",
+          "Köln West",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln-Mülheim"
+        ],
+        "line": "48"
+      },
+      {
+        "id": "-8157461877845404685-2510210438-10",
+        "type": "RB",
+        "number": "17307",
+        "time": "2510210515",
+        "platform": "2",
+        "path_stations": [
+          "Wuppertal-Oberbarmen",
+          "Wuppertal-Barmen",
+          "Wuppertal Hbf",
+          "Wuppertal-Vohwinkel",
+          "Haan-Gruiten",
+          "Haan",
+          "Solingen Hbf",
+          "Leichlingen",
+          "Opladen"
+        ],
+        "line": "48"
+      },
+      {
+        "id": "3911059707191366843-2510210512-10",
+        "type": "RB",
+        "number": "17309",
+        "time": "2510210549",
+        "platform": "2",
+        "path_stations": [
+          "Wuppertal-Oberbarmen",
+          "Wuppertal-Barmen",
+          "Wuppertal Hbf",
+          "Wuppertal-Vohwinkel",
+          "Haan-Gruiten",
+          "Haan",
+          "Solingen Hbf",
+          "Leichlingen",
+          "Opladen"
+        ],
+        "line": "48"
+      },
+      {
+        "id": "-2683882177421185765-2510210612-10",
+        "type": "RB",
+        "number": "17313",
+        "time": "2510210649",
+        "platform": "2",
+        "path_stations": [
+          "Wuppertal-Oberbarmen",
+          "Wuppertal-Barmen",
+          "Wuppertal Hbf",
+          "Wuppertal-Vohwinkel",
+          "Haan-Gruiten",
+          "Haan",
+          "Solingen Hbf",
+          "Leichlingen",
+          "Opladen"
+        ],
+        "line": "48"
+      },
+      {
+        "id": "-6620411772124880159-2510210552-4",
+        "type": "RB",
+        "number": "17308",
+        "time": "2510210606",
+        "platform": "1",
+        "path_stations": [
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln-Mülheim"
+        ],
+        "line": "48"
+      },
+      {
+        "id": "2146874745796313092-2510210538-10",
+        "type": "RB",
+        "number": "17311",
+        "time": "2510210615",
+        "platform": "2",
+        "path_stations": [
+          "Wuppertal-Oberbarmen",
+          "Wuppertal-Barmen",
+          "Wuppertal Hbf",
+          "Wuppertal-Vohwinkel",
+          "Haan-Gruiten",
+          "Haan",
+          "Solingen Hbf",
+          "Leichlingen",
+          "Opladen"
+        ],
+        "line": "48"
+      },
+      {
+        "id": "5564186060372060012-2510210542-14",
+        "type": "RB",
+        "number": "17310",
+        "time": "2510210639",
+        "platform": "1",
+        "path_stations": [
+          "Bonn-Mehlem",
+          "Bonn-Bad Godesberg",
+          "Bonn UN Campus",
+          "Bonn Hbf",
+          "Roisdorf",
+          "Sechtem",
+          "Brühl",
+          "Hürth-Kalscheuren",
+          "Köln Süd",
+          "Köln West",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln-Mülheim"
+        ],
+        "line": "48"
+      }
+    ],
+    "departures": [
+      {
+        "id": "-6968782947257746913-2510201812-10",
+        "type": "RB",
+        "number": "17361",
+        "direction": "Köln Hbf",
+        "platform": "2",
+        "time": "2510201849",
+        "destination": "Köln Hbf",
+        "path_stations": [
+          "Köln-Mülheim",
+          "Köln Messe/Deutz",
+          "Köln Hbf"
+        ]
+      },
+      {
+        "id": "-445205024599209482-2510201740-10",
+        "type": "RB",
+        "number": "17359",
+        "direction": "Bonn-Mehlem",
+        "platform": "2",
+        "time": "2510201817",
+        "destination": "Bonn-Mehlem",
+        "path_stations": [
+          "Köln-Mülheim",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln West",
+          "Köln Süd",
+          "Hürth-Kalscheuren",
+          "Brühl",
+          "Sechtem",
+          "Roisdorf",
+          "Bonn Hbf",
+          "Bonn UN Campus",
+          "Bonn-Bad Godesberg",
+          "Bonn-Mehlem"
+        ]
+      },
+      {
+        "id": "-2023304610599426709-2510201743-14",
+        "type": "RB",
+        "number": "17358",
+        "direction": "Wuppertal-Oberbarmen",
+        "platform": "1",
+        "time": "2510201839",
+        "destination": "Wuppertal-Oberbarmen",
+        "path_stations": [
+          "Opladen",
+          "Leichlingen",
+          "Solingen Hbf",
+          "Haan",
+          "Haan-Gruiten",
+          "Wuppertal-Vohwinkel",
+          "Wuppertal Hbf",
+          "Wuppertal-Barmen",
+          "Wuppertal-Oberbarmen"
+        ]
+      },
+      {
+        "id": "-6242841293303923817-2510201752-4",
+        "type": "RB",
+        "number": "17356",
+        "direction": "Wuppertal-Oberbarmen",
+        "platform": "1",
+        "time": "2510201806",
+        "destination": "Wuppertal-Oberbarmen",
+        "path_stations": [
+          "Opladen",
+          "Leichlingen",
+          "Solingen Hbf",
+          "Haan",
+          "Haan-Gruiten",
+          "Wuppertal-Vohwinkel",
+          "Wuppertal Hbf",
+          "Wuppertal-Barmen",
+          "Wuppertal-Oberbarmen"
+        ]
+      },
+      {
+        "id": "-4090752192705550976-2510201852-4",
+        "type": "RB",
+        "number": "17360",
+        "direction": "Wuppertal-Oberbarmen",
+        "platform": "1",
+        "time": "2510201906",
+        "destination": "Wuppertal-Oberbarmen",
+        "path_stations": [
+          "Opladen",
+          "Leichlingen",
+          "Solingen Hbf",
+          "Haan",
+          "Haan-Gruiten",
+          "Wuppertal-Vohwinkel",
+          "Wuppertal Hbf",
+          "Wuppertal-Barmen",
+          "Wuppertal-Oberbarmen"
+        ]
+      },
+      {
+        "id": "4278853024182696690-2510201843-14",
+        "type": "RB",
+        "number": "17362",
+        "direction": "Wuppertal-Oberbarmen",
+        "platform": "1",
+        "time": "2510201939",
+        "destination": "Wuppertal-Oberbarmen",
+        "path_stations": [
+          "Opladen",
+          "Leichlingen",
+          "Solingen Hbf",
+          "Haan",
+          "Haan-Gruiten",
+          "Wuppertal-Vohwinkel",
+          "Wuppertal Hbf",
+          "Wuppertal-Barmen",
+          "Wuppertal-Oberbarmen"
+        ]
+      },
+      {
+        "id": "-6053771493732539738-2510201912-10",
+        "type": "RB",
+        "number": "17365",
+        "direction": "Köln Hbf",
+        "platform": "2",
+        "time": "2510201949",
+        "destination": "Köln Hbf",
+        "path_stations": [
+          "Köln-Mülheim",
+          "Köln Messe/Deutz",
+          "Köln Hbf"
+        ]
+      },
+      {
+        "id": "2000780667434420476-2510201843-10",
+        "type": "RB",
+        "number": "17363",
+        "direction": "Bonn-Mehlem",
+        "platform": "2",
+        "time": "2510201918",
+        "destination": "Bonn-Mehlem",
+        "path_stations": [
+          "Köln-Mülheim",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln West",
+          "Köln Süd",
+          "Hürth-Kalscheuren",
+          "Brühl",
+          "Sechtem",
+          "Roisdorf",
+          "Bonn Hbf",
+          "Bonn UN Campus",
+          "Bonn-Bad Godesberg",
+          "Bonn-Mehlem"
+        ]
+      },
+      {
+        "id": "-5752472669840346846-2510201943-14",
+        "type": "RB",
+        "number": "17366",
+        "direction": "Wuppertal-Oberbarmen",
+        "platform": "1",
+        "time": "2510202039",
+        "destination": "Wuppertal-Oberbarmen",
+        "path_stations": [
+          "Opladen",
+          "Leichlingen",
+          "Solingen Hbf",
+          "Haan",
+          "Haan-Gruiten",
+          "Wuppertal-Vohwinkel",
+          "Wuppertal Hbf",
+          "Wuppertal-Barmen",
+          "Wuppertal-Oberbarmen"
+        ]
+      },
+      {
+        "id": "5587917440787901589-2510201952-4",
+        "type": "RB",
+        "number": "17364",
+        "direction": "Wuppertal-Oberbarmen",
+        "platform": "1",
+        "time": "2510202006",
+        "destination": "Wuppertal-Oberbarmen",
+        "path_stations": [
+          "Opladen",
+          "Leichlingen",
+          "Solingen Hbf",
+          "Haan",
+          "Haan-Gruiten",
+          "Wuppertal-Vohwinkel",
+          "Wuppertal Hbf",
+          "Wuppertal-Barmen",
+          "Wuppertal-Oberbarmen"
+        ]
+      },
+      {
+        "id": "-4571137337317051113-2510202012-10",
+        "type": "RB",
+        "number": "17369",
+        "direction": "Köln Hbf",
+        "platform": "2",
+        "time": "2510202049",
+        "destination": "Köln Hbf",
+        "path_stations": [
+          "Köln-Mülheim",
+          "Köln Messe/Deutz",
+          "Köln Hbf"
+        ]
+      },
+      {
+        "id": "5274594993239171954-2510201940-10",
+        "type": "RB",
+        "number": "17367",
+        "direction": "Bonn-Mehlem",
+        "platform": "2",
+        "time": "2510202017",
+        "destination": "Bonn-Mehlem",
+        "path_stations": [
+          "Köln-Mülheim",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln West",
+          "Köln Süd",
+          "Hürth-Kalscheuren",
+          "Brühl",
+          "Sechtem",
+          "Roisdorf",
+          "Bonn Hbf",
+          "Bonn UN Campus",
+          "Bonn-Bad Godesberg",
+          "Bonn-Mehlem"
+        ]
+      },
+      {
+        "id": "-4542260104046058714-2510202112-10",
+        "type": "RB",
+        "number": "17373",
+        "direction": "Köln Hbf",
+        "platform": "2",
+        "time": "2510202149",
+        "destination": "Köln Hbf",
+        "path_stations": [
+          "Köln-Mülheim",
+          "Köln Messe/Deutz",
+          "Köln Hbf"
+        ]
+      },
+      {
+        "id": "-718759491291457997-2510202107-4",
+        "type": "RB",
+        "number": "17371",
+        "direction": "Bonn-Mehlem",
+        "platform": "2",
+        "time": "2510202118",
+        "destination": "Bonn-Mehlem",
+        "path_stations": [
+          "Köln-Mülheim",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln West",
+          "Köln Süd",
+          "Hürth-Kalscheuren",
+          "Brühl",
+          "Sechtem",
+          "Roisdorf",
+          "Bonn Hbf",
+          "Bonn UN Campus",
+          "Bonn-Bad Godesberg",
+          "Bonn-Mehlem"
+        ]
+      },
+      {
+        "id": "-622691603181576740-2510202052-4",
+        "type": "RB",
+        "number": "17368",
+        "direction": "Wuppertal-Oberbarmen",
+        "platform": "1",
+        "time": "2510202106",
+        "destination": "Wuppertal-Oberbarmen",
+        "path_stations": [
+          "Opladen",
+          "Leichlingen",
+          "Solingen Hbf",
+          "Haan",
+          "Haan-Gruiten",
+          "Wuppertal-Vohwinkel",
+          "Wuppertal Hbf",
+          "Wuppertal-Barmen",
+          "Wuppertal-Oberbarmen"
+        ]
+      },
+      {
+        "id": "5398615917808572568-2510202043-14",
+        "type": "RB",
+        "number": "17370",
+        "direction": "Solingen Hbf",
+        "platform": "1",
+        "time": "2510202139",
+        "destination": "Solingen Hbf",
+        "path_stations": [
+          "Opladen",
+          "Leichlingen",
+          "Solingen Hbf"
+        ]
+      },
+      {
+        "id": "847880078711156377-2510202152-4",
+        "type": "RB",
+        "number": "17372",
+        "direction": "Wuppertal-Oberbarmen",
+        "platform": "1",
+        "time": "2510202206",
+        "destination": "Wuppertal-Oberbarmen",
+        "path_stations": [
+          "Opladen",
+          "Leichlingen",
+          "Solingen Hbf",
+          "Haan",
+          "Haan-Gruiten",
+          "Wuppertal-Vohwinkel",
+          "Wuppertal Hbf",
+          "Wuppertal-Barmen",
+          "Wuppertal-Oberbarmen"
+        ]
+      },
+      {
+        "id": "416882499297797432-2510202205-4",
+        "type": "RB",
+        "number": "17375",
+        "direction": "Bonn-Mehlem",
+        "platform": "2",
+        "time": "2510202217",
+        "destination": "Bonn-Mehlem",
+        "path_stations": [
+          "Köln-Mülheim",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln West",
+          "Köln Süd",
+          "Hürth-Kalscheuren",
+          "Brühl",
+          "Sechtem",
+          "Roisdorf",
+          "Bonn Hbf",
+          "Bonn UN Campus",
+          "Bonn-Bad Godesberg",
+          "Bonn-Mehlem"
+        ]
+      },
+      {
+        "id": "6546367605327202484-2510202143-14",
+        "type": "RB",
+        "number": "17374",
+        "direction": "Solingen Hbf",
+        "platform": "1",
+        "time": "2510202239",
+        "destination": "Solingen Hbf",
+        "path_stations": [
+          "Opladen",
+          "Leichlingen",
+          "Solingen Hbf"
+        ]
+      },
+      {
+        "id": "-369568550797356166-2510202212-10",
+        "type": "RB",
+        "number": "17377",
+        "direction": "Köln Hbf",
+        "platform": "2",
+        "time": "2510202249",
+        "destination": "Köln Hbf",
+        "path_stations": [
+          "Köln-Mülheim",
+          "Köln Messe/Deutz",
+          "Köln Hbf"
+        ]
+      },
+      {
+        "id": "1988308713044273901-2510202252-4",
+        "type": "RB",
+        "number": "17376",
+        "direction": "Wuppertal-Oberbarmen",
+        "platform": "1",
+        "time": "2510202306",
+        "destination": "Wuppertal-Oberbarmen",
+        "path_stations": [
+          "Opladen",
+          "Leichlingen",
+          "Solingen Hbf",
+          "Haan",
+          "Haan-Gruiten",
+          "Wuppertal-Vohwinkel",
+          "Wuppertal Hbf",
+          "Wuppertal-Barmen",
+          "Wuppertal-Oberbarmen"
+        ]
+      },
+      {
+        "id": "-308749912574999128-2510202312-10",
+        "type": "RB",
+        "number": "17381",
+        "direction": "Köln Hbf",
+        "platform": "2",
+        "time": "2510202349",
+        "destination": "Köln Hbf",
+        "path_stations": [
+          "Köln-Mülheim",
+          "Köln Messe/Deutz",
+          "Köln Hbf"
+        ]
+      },
+      {
+        "id": "3321732101889754889-2510202307-4",
+        "type": "RB",
+        "number": "17379",
+        "direction": "Bonn-Mehlem",
+        "platform": "2",
+        "time": "2510202318",
+        "destination": "Bonn-Mehlem",
+        "path_stations": [
+          "Köln-Mülheim",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln West",
+          "Köln Süd",
+          "Hürth-Kalscheuren",
+          "Brühl",
+          "Sechtem",
+          "Roisdorf",
+          "Bonn Hbf",
+          "Bonn UN Campus",
+          "Bonn-Bad Godesberg",
+          "Bonn-Mehlem"
+        ]
+      },
+      {
+        "id": "236240230379806377-2510202243-14",
+        "type": "RB",
+        "number": "17378",
+        "direction": "Solingen Hbf",
+        "platform": "1",
+        "time": "2510202339",
+        "destination": "Solingen Hbf",
+        "path_stations": [
+          "Opladen",
+          "Leichlingen",
+          "Solingen Hbf"
+        ]
+      },
+      {
+        "id": "-2520847002958379291-2510210012-10",
+        "type": "RB",
+        "number": "17385",
+        "direction": "Köln Hbf",
+        "platform": "2",
+        "time": "2510210049",
+        "destination": "Köln Hbf",
+        "path_stations": [
+          "Köln-Mülheim",
+          "Köln Messe/Deutz",
+          "Köln Hbf"
+        ]
+      },
+      {
+        "id": "2201895368432956593-2510202352-4",
+        "type": "RB",
+        "number": "17380",
+        "direction": "Wuppertal-Oberbarmen",
+        "platform": "1",
+        "time": "2510210006",
+        "destination": "Wuppertal-Oberbarmen",
+        "path_stations": [
+          "Opladen",
+          "Leichlingen",
+          "Solingen Hbf",
+          "Haan",
+          "Haan-Gruiten",
+          "Wuppertal-Vohwinkel",
+          "Wuppertal Hbf",
+          "Wuppertal-Barmen",
+          "Wuppertal-Oberbarmen"
+        ]
+      },
+      {
+        "id": "6311251470360843894-2510210052-4",
+        "type": "RB",
+        "number": "17384",
+        "direction": "Wuppertal-Oberbarmen",
+        "platform": "1",
+        "time": "2510210106",
+        "destination": "Wuppertal-Oberbarmen",
+        "path_stations": [
+          "Opladen",
+          "Leichlingen",
+          "Solingen Hbf",
+          "Haan",
+          "Haan-Gruiten",
+          "Wuppertal-Vohwinkel",
+          "Wuppertal Hbf",
+          "Wuppertal-Barmen",
+          "Wuppertal-Oberbarmen"
+        ]
+      },
+      {
+        "id": "5628809295797350035-2510210445-2",
+        "type": "RB",
+        "number": "17305",
+        "direction": "Köln Hbf",
+        "platform": "2",
+        "time": "2510210449",
+        "destination": "Köln Hbf",
+        "path_stations": [
+          "Köln-Mülheim",
+          "Köln Messe/Deutz",
+          "Köln Hbf"
+        ]
+      },
+      {
+        "id": "-8596389011457522596-2510210420-4",
+        "type": "RB",
+        "number": "17302",
+        "direction": "Opladen",
+        "platform": "1",
+        "time": "2510210434",
+        "destination": "Opladen",
+        "path_stations": [
+          "Opladen"
+        ]
+      },
+      {
+        "id": "3849774974937611477-2510210443-14",
+        "type": "RB",
+        "number": "17306",
+        "direction": "Wuppertal-Oberbarmen",
+        "platform": "1",
+        "time": "2510210539",
+        "destination": "Wuppertal-Oberbarmen",
+        "path_stations": [
+          "Opladen",
+          "Leichlingen",
+          "Solingen Hbf",
+          "Haan",
+          "Haan-Gruiten",
+          "Wuppertal-Vohwinkel",
+          "Wuppertal Hbf",
+          "Wuppertal-Barmen",
+          "Wuppertal-Oberbarmen"
+        ]
+      },
+      {
+        "id": "-8157461877845404685-2510210438-10",
+        "type": "RB",
+        "number": "17307",
+        "direction": "Bonn-Mehlem",
+        "platform": "2",
+        "time": "2510210516",
+        "destination": "Bonn-Mehlem",
+        "path_stations": [
+          "Köln-Mülheim",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln West",
+          "Köln Süd",
+          "Hürth-Kalscheuren",
+          "Brühl",
+          "Sechtem",
+          "Roisdorf",
+          "Bonn Hbf",
+          "Bonn UN Campus",
+          "Bonn-Bad Godesberg",
+          "Bonn-Mehlem"
+        ]
+      },
+      {
+        "id": "3911059707191366843-2510210512-10",
+        "type": "RB",
+        "number": "17309",
+        "direction": "Köln Hbf",
+        "platform": "2",
+        "time": "2510210549",
+        "destination": "Köln Hbf",
+        "path_stations": [
+          "Köln-Mülheim",
+          "Köln Messe/Deutz",
+          "Köln Hbf"
+        ]
+      },
+      {
+        "id": "-2683882177421185765-2510210612-10",
+        "type": "RB",
+        "number": "17313",
+        "direction": "Köln Hbf",
+        "platform": "2",
+        "time": "2510210649",
+        "destination": "Köln Hbf",
+        "path_stations": [
+          "Köln-Mülheim",
+          "Köln Messe/Deutz",
+          "Köln Hbf"
+        ]
+      },
+      {
+        "id": "-6620411772124880159-2510210552-4",
+        "type": "RB",
+        "number": "17308",
+        "direction": "Wuppertal-Oberbarmen",
+        "platform": "1",
+        "time": "2510210606",
+        "destination": "Wuppertal-Oberbarmen",
+        "path_stations": [
+          "Opladen",
+          "Leichlingen",
+          "Solingen Hbf",
+          "Haan",
+          "Haan-Gruiten",
+          "Wuppertal-Vohwinkel",
+          "Wuppertal Hbf",
+          "Wuppertal-Barmen",
+          "Wuppertal-Oberbarmen"
+        ]
+      },
+      {
+        "id": "2146874745796313092-2510210538-10",
+        "type": "RB",
+        "number": "17311",
+        "direction": "Bonn-Mehlem",
+        "platform": "2",
+        "time": "2510210616",
+        "destination": "Bonn-Mehlem",
+        "path_stations": [
+          "Köln-Mülheim",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln West",
+          "Köln Süd",
+          "Hürth-Kalscheuren",
+          "Brühl",
+          "Sechtem",
+          "Roisdorf",
+          "Bonn Hbf",
+          "Bonn UN Campus",
+          "Bonn-Bad Godesberg",
+          "Bonn-Mehlem"
+        ]
+      },
+      {
+        "id": "5564186060372060012-2510210542-14",
+        "type": "RB",
+        "number": "17310",
+        "direction": "Wuppertal-Oberbarmen",
+        "platform": "1",
+        "time": "2510210639",
+        "destination": "Wuppertal-Oberbarmen",
+        "path_stations": [
+          "Opladen",
+          "Leichlingen",
+          "Solingen Hbf",
+          "Haan",
+          "Haan-Gruiten",
+          "Wuppertal-Vohwinkel",
+          "Wuppertal Hbf",
+          "Wuppertal-Barmen",
+          "Wuppertal-Oberbarmen"
+        ]
+      }
+    ]
+  }
+}

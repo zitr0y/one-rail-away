@@ -1,0 +1,22 @@
+{
+  "station_eva": "8089390",
+  "date": "251020",
+  "cached_at": "2025-10-20T15:50:07.679779",
+  "plan_data": {
+    "arrivals": [],
+    "departures": [
+      {
+        "id": "-674552208053201478-2510202300-1",
+        "type": "Bus",
+        "number": "15756",
+        "direction": "Bahnhof/Niederwaldstraße, Rastatt",
+        "platform": "",
+        "time": "2510202300",
+        "destination": "Bahnhof/Niederwaldstraße, Rastatt",
+        "path_stations": [
+          "Bahnhof/Niederwaldstraße, Rastatt"
+        ]
+      }
+    ]
+  }
+}

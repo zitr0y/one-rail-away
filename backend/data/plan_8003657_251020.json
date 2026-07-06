@@ -1,0 +1,620 @@
+{
+  "station_eva": "8003657",
+  "date": "251020",
+  "cached_at": "2025-10-20T16:53:46.557094",
+  "plan_data": {
+    "arrivals": [
+      {
+        "id": "3064714223747587260-2510201815-4",
+        "type": "VIA",
+        "number": "31324",
+        "time": "2510201833",
+        "platform": "1",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hohenlimburg",
+          "Letmathe"
+        ],
+        "line": "RE16"
+      },
+      {
+        "id": "-3160571851523370708-2510201805-2",
+        "type": "VIA",
+        "number": "29984",
+        "time": "2510201807",
+        "platform": "1",
+        "path_stations": [
+          "Letmathe"
+        ],
+        "line": "RB91"
+      },
+      {
+        "id": "1827652851536307858-2510201848-2",
+        "type": "VIA",
+        "number": "29991",
+        "time": "2510201851",
+        "platform": "1",
+        "path_stations": [
+          "Iserlohn"
+        ],
+        "line": "RB91"
+      },
+      {
+        "id": "-3794772600978396443-2510201820-2",
+        "type": "VIA",
+        "number": "31331",
+        "time": "2510201823",
+        "platform": "1",
+        "path_stations": [
+          "Iserlohn"
+        ],
+        "line": "RE16"
+      },
+      {
+        "id": "-9146590832885910738-2510201915-4",
+        "type": "VIA",
+        "number": "31326",
+        "time": "2510201933",
+        "platform": "1",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hohenlimburg",
+          "Letmathe"
+        ],
+        "line": "RE16"
+      },
+      {
+        "id": "7794600975490665308-2510201920-2",
+        "type": "VIA",
+        "number": "31333",
+        "time": "2510201923",
+        "platform": "1",
+        "path_stations": [
+          "Iserlohn"
+        ],
+        "line": "RE16"
+      },
+      {
+        "id": "-4417429097992488987-2510201905-2",
+        "type": "VIA",
+        "number": "29986",
+        "time": "2510201907",
+        "platform": "1",
+        "path_stations": [
+          "Letmathe"
+        ],
+        "line": "RB91"
+      },
+      {
+        "id": "-5687400684130899149-2510201948-2",
+        "type": "VIA",
+        "number": "29993",
+        "time": "2510201951",
+        "platform": "1",
+        "path_stations": [
+          "Iserlohn"
+        ],
+        "line": "RB91"
+      },
+      {
+        "id": "5286740696638149201-2510202005-2",
+        "type": "VIA",
+        "number": "29988",
+        "time": "2510202007",
+        "platform": "1",
+        "path_stations": [
+          "Letmathe"
+        ],
+        "line": "RB91"
+      },
+      {
+        "id": "-6726842467690916476-2510202015-4",
+        "type": "VIA",
+        "number": "31328",
+        "time": "2510202033",
+        "platform": "1",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hohenlimburg",
+          "Letmathe"
+        ],
+        "line": "RE16"
+      },
+      {
+        "id": "-672465394697082054-2510202020-2",
+        "type": "VIA",
+        "number": "31335",
+        "time": "2510202023",
+        "platform": "1",
+        "path_stations": [
+          "Iserlohn"
+        ],
+        "line": "RE16"
+      },
+      {
+        "id": "-4653643674708415543-2510202115-4",
+        "type": "VIA",
+        "number": "29990",
+        "time": "2510202138",
+        "platform": "1",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hohenlimburg",
+          "Letmathe"
+        ],
+        "line": "RB91"
+      },
+      {
+        "id": "4428601503162750759-2510202120-2",
+        "type": "VIA",
+        "number": "31337",
+        "time": "2510202123",
+        "platform": "1",
+        "path_stations": [
+          "Iserlohn"
+        ],
+        "line": "RE16"
+      },
+      {
+        "id": "5667140145523189152-2510202220-2",
+        "type": "VIA",
+        "number": "31339",
+        "time": "2510202223",
+        "platform": "1",
+        "path_stations": [
+          "Iserlohn"
+        ],
+        "line": "RE16"
+      },
+      {
+        "id": "648493478821781274-2510202215-4",
+        "type": "VIA",
+        "number": "31368",
+        "time": "2510202233",
+        "platform": "1",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hohenlimburg",
+          "Letmathe"
+        ],
+        "line": "RB91"
+      },
+      {
+        "id": "-1117377222442954366-2510202315-4",
+        "type": "VIA",
+        "number": "29992",
+        "time": "2510202338",
+        "platform": "1",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hohenlimburg",
+          "Letmathe"
+        ],
+        "line": "RB91"
+      },
+      {
+        "id": "2716669935883990168-2510202349-2",
+        "type": "VIA",
+        "number": "31395",
+        "time": "2510202352",
+        "platform": "1",
+        "path_stations": [
+          "Iserlohn"
+        ],
+        "line": "RB91"
+      },
+      {
+        "id": "-6108509953302125335-2510202320-2",
+        "type": "VIA",
+        "number": "31341",
+        "time": "2510202323",
+        "platform": "1",
+        "path_stations": [
+          "Iserlohn"
+        ],
+        "line": "RE16"
+      },
+      {
+        "id": "3975767506966412181-2510210033-4",
+        "type": "VIA",
+        "number": "31374",
+        "time": "2510210052",
+        "platform": "1",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hohenlimburg",
+          "Letmathe"
+        ],
+        "line": "RB91"
+      },
+      {
+        "id": "4096309369063292224-2510210549-2",
+        "type": "VIA",
+        "number": "29965",
+        "time": "2510210552",
+        "platform": "1",
+        "path_stations": [
+          "Iserlohn"
+        ],
+        "line": "RB91"
+      },
+      {
+        "id": "-6102512305155720404-2510210520-2",
+        "type": "VIA",
+        "number": "31301",
+        "time": "2510210523",
+        "platform": "1",
+        "path_stations": [
+          "Iserlohn"
+        ],
+        "line": "RE16"
+      },
+      {
+        "id": "4125780207050505074-2510210605-2",
+        "type": "VIA",
+        "number": "29960",
+        "time": "2510210607",
+        "platform": "1",
+        "path_stations": [
+          "Letmathe"
+        ],
+        "line": "RB91"
+      },
+      {
+        "id": "3427288704939347562-2510210648-2",
+        "type": "VIA",
+        "number": "29967",
+        "time": "2510210651",
+        "platform": "1",
+        "path_stations": [
+          "Iserlohn"
+        ],
+        "line": "RB91"
+      },
+      {
+        "id": "-1785333457856888128-2510210620-2",
+        "type": "VIA",
+        "number": "31303",
+        "time": "2510210623",
+        "platform": "1",
+        "path_stations": [
+          "Iserlohn"
+        ],
+        "line": "RE16"
+      },
+      {
+        "id": "7776746030328226931-2510210615-4",
+        "type": "VIA",
+        "number": "31300",
+        "time": "2510210633",
+        "platform": "1",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hohenlimburg",
+          "Letmathe"
+        ],
+        "line": "RE16"
+      }
+    ],
+    "departures": [
+      {
+        "id": "3064714223747587260-2510201815-4",
+        "type": "VIA",
+        "number": "31324",
+        "direction": "Iserlohn",
+        "platform": "1",
+        "time": "2510201833",
+        "destination": "Iserlohn",
+        "path_stations": [
+          "Iserlohn"
+        ]
+      },
+      {
+        "id": "-3160571851523370708-2510201805-2",
+        "type": "VIA",
+        "number": "29984",
+        "direction": "Iserlohn",
+        "platform": "1",
+        "time": "2510201807",
+        "destination": "Iserlohn",
+        "path_stations": [
+          "Iserlohn"
+        ]
+      },
+      {
+        "id": "1827652851536307858-2510201848-2",
+        "type": "VIA",
+        "number": "29991",
+        "direction": "Letmathe",
+        "platform": "1",
+        "time": "2510201851",
+        "destination": "Letmathe",
+        "path_stations": [
+          "Letmathe"
+        ]
+      },
+      {
+        "id": "-3794772600978396443-2510201820-2",
+        "type": "VIA",
+        "number": "31331",
+        "direction": "Hagen Hbf",
+        "platform": "1",
+        "time": "2510201823",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Letmathe",
+          "Hohenlimburg",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "-9146590832885910738-2510201915-4",
+        "type": "VIA",
+        "number": "31326",
+        "direction": "Iserlohn",
+        "platform": "1",
+        "time": "2510201933",
+        "destination": "Iserlohn",
+        "path_stations": [
+          "Iserlohn"
+        ]
+      },
+      {
+        "id": "7794600975490665308-2510201920-2",
+        "type": "VIA",
+        "number": "31333",
+        "direction": "Hagen Hbf",
+        "platform": "1",
+        "time": "2510201923",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Letmathe",
+          "Hohenlimburg",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "-4417429097992488987-2510201905-2",
+        "type": "VIA",
+        "number": "29986",
+        "direction": "Iserlohn",
+        "platform": "1",
+        "time": "2510201907",
+        "destination": "Iserlohn",
+        "path_stations": [
+          "Iserlohn"
+        ]
+      },
+      {
+        "id": "-5687400684130899149-2510201948-2",
+        "type": "VIA",
+        "number": "29993",
+        "direction": "Letmathe",
+        "platform": "1",
+        "time": "2510201951",
+        "destination": "Letmathe",
+        "path_stations": [
+          "Letmathe"
+        ]
+      },
+      {
+        "id": "5286740696638149201-2510202005-2",
+        "type": "VIA",
+        "number": "29988",
+        "direction": "Iserlohn",
+        "platform": "1",
+        "time": "2510202007",
+        "destination": "Iserlohn",
+        "path_stations": [
+          "Iserlohn"
+        ]
+      },
+      {
+        "id": "-6726842467690916476-2510202015-4",
+        "type": "VIA",
+        "number": "31328",
+        "direction": "Iserlohn",
+        "platform": "1",
+        "time": "2510202033",
+        "destination": "Iserlohn",
+        "path_stations": [
+          "Iserlohn"
+        ]
+      },
+      {
+        "id": "-672465394697082054-2510202020-2",
+        "type": "VIA",
+        "number": "31335",
+        "direction": "Hagen Hbf",
+        "platform": "1",
+        "time": "2510202023",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Letmathe",
+          "Hohenlimburg",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "-4653643674708415543-2510202115-4",
+        "type": "VIA",
+        "number": "29990",
+        "direction": "Iserlohn",
+        "platform": "1",
+        "time": "2510202138",
+        "destination": "Iserlohn",
+        "path_stations": [
+          "Iserlohn"
+        ]
+      },
+      {
+        "id": "4428601503162750759-2510202120-2",
+        "type": "VIA",
+        "number": "31337",
+        "direction": "Hagen Hbf",
+        "platform": "1",
+        "time": "2510202123",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Letmathe",
+          "Hohenlimburg",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "5667140145523189152-2510202220-2",
+        "type": "VIA",
+        "number": "31339",
+        "direction": "Hagen Hbf",
+        "platform": "1",
+        "time": "2510202223",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Letmathe",
+          "Hohenlimburg",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "648493478821781274-2510202215-4",
+        "type": "VIA",
+        "number": "31368",
+        "direction": "Iserlohn",
+        "platform": "1",
+        "time": "2510202233",
+        "destination": "Iserlohn",
+        "path_stations": [
+          "Iserlohn"
+        ]
+      },
+      {
+        "id": "-1117377222442954366-2510202315-4",
+        "type": "VIA",
+        "number": "29992",
+        "direction": "Iserlohn",
+        "platform": "1",
+        "time": "2510202338",
+        "destination": "Iserlohn",
+        "path_stations": [
+          "Iserlohn"
+        ]
+      },
+      {
+        "id": "2716669935883990168-2510202349-2",
+        "type": "VIA",
+        "number": "31395",
+        "direction": "Letmathe",
+        "platform": "1",
+        "time": "2510202353",
+        "destination": "Letmathe",
+        "path_stations": [
+          "Letmathe"
+        ]
+      },
+      {
+        "id": "-6108509953302125335-2510202320-2",
+        "type": "VIA",
+        "number": "31341",
+        "direction": "Hagen Hbf",
+        "platform": "1",
+        "time": "2510202323",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Letmathe",
+          "Hohenlimburg",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "3975767506966412181-2510210033-4",
+        "type": "VIA",
+        "number": "31374",
+        "direction": "Iserlohn",
+        "platform": "1",
+        "time": "2510210052",
+        "destination": "Iserlohn",
+        "path_stations": [
+          "Iserlohn"
+        ]
+      },
+      {
+        "id": "4096309369063292224-2510210549-2",
+        "type": "VIA",
+        "number": "29965",
+        "direction": "Hagen Hbf",
+        "platform": "1",
+        "time": "2510210553",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Letmathe",
+          "Hohenlimburg",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "-6102512305155720404-2510210520-2",
+        "type": "VIA",
+        "number": "31301",
+        "direction": "Hagen Hbf",
+        "platform": "1",
+        "time": "2510210523",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Letmathe",
+          "Hohenlimburg",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "4125780207050505074-2510210605-2",
+        "type": "VIA",
+        "number": "29960",
+        "direction": "Iserlohn",
+        "platform": "1",
+        "time": "2510210607",
+        "destination": "Iserlohn",
+        "path_stations": [
+          "Iserlohn"
+        ]
+      },
+      {
+        "id": "3427288704939347562-2510210648-2",
+        "type": "VIA",
+        "number": "29967",
+        "direction": "Letmathe",
+        "platform": "1",
+        "time": "2510210651",
+        "destination": "Letmathe",
+        "path_stations": [
+          "Letmathe"
+        ]
+      },
+      {
+        "id": "-1785333457856888128-2510210620-2",
+        "type": "VIA",
+        "number": "31303",
+        "direction": "Hagen Hbf",
+        "platform": "1",
+        "time": "2510210623",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Letmathe",
+          "Hohenlimburg",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "7776746030328226931-2510210615-4",
+        "type": "VIA",
+        "number": "31300",
+        "direction": "Iserlohn",
+        "platform": "1",
+        "time": "2510210633",
+        "destination": "Iserlohn",
+        "path_stations": [
+          "Iserlohn"
+        ]
+      }
+    ]
+  }
+}

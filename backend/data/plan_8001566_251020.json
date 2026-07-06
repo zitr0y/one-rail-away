@@ -1,0 +1,2100 @@
+{
+  "station_eva": "8001566",
+  "date": "251020",
+  "cached_at": "2025-10-20T16:41:11.887486",
+  "plan_data": {
+    "arrivals": [
+      {
+        "id": "164372233927860724-2510201853-2",
+        "type": "S",
+        "number": "33129",
+        "time": "2510201855",
+        "platform": "1",
+        "path_stations": [
+          "Bergisch Gladbach"
+        ],
+        "line": "11"
+      },
+      {
+        "id": "-3425142153914482840-2510201704-35",
+        "type": "S",
+        "number": "33124",
+        "time": "2510201844",
+        "platform": "1",
+        "path_stations": [
+          "Düsseldorf Flughafen Terminal",
+          "Düsseldorf-Unterrath",
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Hamm",
+          "Neuss Rheinparkcenter",
+          "Neuss Am Kaiser",
+          "Neuss Hbf",
+          "Neuss Süd",
+          "Norf",
+          "Neuss Allerheiligen",
+          "Nievenheim",
+          "Dormagen",
+          "Dormagen Chempark",
+          "Köln-Worringen",
+          "Köln-Blumenberg",
+          "Köln-Chorweiler Nord",
+          "Köln-Chorweiler",
+          "Köln Volkhovener Weg",
+          "Köln-Longerich",
+          "Köln Geldernstr./Parkgürtel",
+          "Köln-Nippes",
+          "Köln Hansaring",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln-Buchforst",
+          "Köln-Mülheim",
+          "Köln-Holweide",
+          "Köln-Dellbrück"
+        ],
+        "line": "11"
+      },
+      {
+        "id": "7637044744989835390-2510201644-35",
+        "type": "S",
+        "number": "33120",
+        "time": "2510201824",
+        "platform": "1",
+        "path_stations": [
+          "Düsseldorf Flughafen Terminal",
+          "Düsseldorf-Unterrath",
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Hamm",
+          "Neuss Rheinparkcenter",
+          "Neuss Am Kaiser",
+          "Neuss Hbf",
+          "Neuss Süd",
+          "Norf",
+          "Neuss Allerheiligen",
+          "Nievenheim",
+          "Dormagen",
+          "Dormagen Chempark",
+          "Köln-Worringen",
+          "Köln-Blumenberg",
+          "Köln-Chorweiler Nord",
+          "Köln-Chorweiler",
+          "Köln Volkhovener Weg",
+          "Köln-Longerich",
+          "Köln Geldernstr./Parkgürtel",
+          "Köln-Nippes",
+          "Köln Hansaring",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln-Buchforst",
+          "Köln-Mülheim",
+          "Köln-Holweide",
+          "Köln-Dellbrück"
+        ],
+        "line": "11"
+      },
+      {
+        "id": "-3263050538109472485-2510201833-2",
+        "type": "S",
+        "number": "33127",
+        "time": "2510201835",
+        "platform": "1",
+        "path_stations": [
+          "Bergisch Gladbach"
+        ],
+        "line": "11"
+      },
+      {
+        "id": "-1316972676785631133-2510201624-35",
+        "type": "S",
+        "number": "33118",
+        "time": "2510201804",
+        "platform": "1",
+        "path_stations": [
+          "Düsseldorf Flughafen Terminal",
+          "Düsseldorf-Unterrath",
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Hamm",
+          "Neuss Rheinparkcenter",
+          "Neuss Am Kaiser",
+          "Neuss Hbf",
+          "Neuss Süd",
+          "Norf",
+          "Neuss Allerheiligen",
+          "Nievenheim",
+          "Dormagen",
+          "Dormagen Chempark",
+          "Köln-Worringen",
+          "Köln-Blumenberg",
+          "Köln-Chorweiler Nord",
+          "Köln-Chorweiler",
+          "Köln Volkhovener Weg",
+          "Köln-Longerich",
+          "Köln Geldernstr./Parkgürtel",
+          "Köln-Nippes",
+          "Köln Hansaring",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln-Buchforst",
+          "Köln-Mülheim",
+          "Köln-Holweide",
+          "Köln-Dellbrück"
+        ],
+        "line": "11"
+      },
+      {
+        "id": "-5484991667960049137-2510201813-2",
+        "type": "S",
+        "number": "33123",
+        "time": "2510201815",
+        "platform": "1",
+        "path_stations": [
+          "Bergisch Gladbach"
+        ],
+        "line": "11"
+      },
+      {
+        "id": "-7855473569570216836-2510201724-35",
+        "type": "S",
+        "number": "33126",
+        "time": "2510201904",
+        "platform": "1",
+        "path_stations": [
+          "Düsseldorf Flughafen Terminal",
+          "Düsseldorf-Unterrath",
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Hamm",
+          "Neuss Rheinparkcenter",
+          "Neuss Am Kaiser",
+          "Neuss Hbf",
+          "Neuss Süd",
+          "Norf",
+          "Neuss Allerheiligen",
+          "Nievenheim",
+          "Dormagen",
+          "Dormagen Chempark",
+          "Köln-Worringen",
+          "Köln-Blumenberg",
+          "Köln-Chorweiler Nord",
+          "Köln-Chorweiler",
+          "Köln Volkhovener Weg",
+          "Köln-Longerich",
+          "Köln Geldernstr./Parkgürtel",
+          "Köln-Nippes",
+          "Köln Hansaring",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln-Buchforst",
+          "Köln-Mülheim",
+          "Köln-Holweide",
+          "Köln-Dellbrück"
+        ],
+        "line": "11"
+      },
+      {
+        "id": "-8308924094354947115-2510201913-2",
+        "type": "S",
+        "number": "33131",
+        "time": "2510201915",
+        "platform": "1",
+        "path_stations": [
+          "Bergisch Gladbach"
+        ],
+        "line": "11"
+      },
+      {
+        "id": "2214729745019285042-2510201933-2",
+        "type": "S",
+        "number": "33135",
+        "time": "2510201935",
+        "platform": "1",
+        "path_stations": [
+          "Bergisch Gladbach"
+        ],
+        "line": "11"
+      },
+      {
+        "id": "-6852474675998100410-2510201744-35",
+        "type": "S",
+        "number": "33128",
+        "time": "2510201924",
+        "platform": "1",
+        "path_stations": [
+          "Düsseldorf Flughafen Terminal",
+          "Düsseldorf-Unterrath",
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Hamm",
+          "Neuss Rheinparkcenter",
+          "Neuss Am Kaiser",
+          "Neuss Hbf",
+          "Neuss Süd",
+          "Norf",
+          "Neuss Allerheiligen",
+          "Nievenheim",
+          "Dormagen",
+          "Dormagen Chempark",
+          "Köln-Worringen",
+          "Köln-Blumenberg",
+          "Köln-Chorweiler Nord",
+          "Köln-Chorweiler",
+          "Köln Volkhovener Weg",
+          "Köln-Longerich",
+          "Köln Geldernstr./Parkgürtel",
+          "Köln-Nippes",
+          "Köln Hansaring",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln-Buchforst",
+          "Köln-Mülheim",
+          "Köln-Holweide",
+          "Köln-Dellbrück"
+        ],
+        "line": "11"
+      },
+      {
+        "id": "5192597161264455361-2510201953-2",
+        "type": "S",
+        "number": "33137",
+        "time": "2510201955",
+        "platform": "1",
+        "path_stations": [
+          "Bergisch Gladbach"
+        ],
+        "line": "11"
+      },
+      {
+        "id": "7358106895276260495-2510201804-35",
+        "type": "S",
+        "number": "33132",
+        "time": "2510201944",
+        "platform": "1",
+        "path_stations": [
+          "Düsseldorf Flughafen Terminal",
+          "Düsseldorf-Unterrath",
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Hamm",
+          "Neuss Rheinparkcenter",
+          "Neuss Am Kaiser",
+          "Neuss Hbf",
+          "Neuss Süd",
+          "Norf",
+          "Neuss Allerheiligen",
+          "Nievenheim",
+          "Dormagen",
+          "Dormagen Chempark",
+          "Köln-Worringen",
+          "Köln-Blumenberg",
+          "Köln-Chorweiler Nord",
+          "Köln-Chorweiler",
+          "Köln Volkhovener Weg",
+          "Köln-Longerich",
+          "Köln Geldernstr./Parkgürtel",
+          "Köln-Nippes",
+          "Köln Hansaring",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln-Buchforst",
+          "Köln-Mülheim",
+          "Köln-Holweide",
+          "Köln-Dellbrück"
+        ],
+        "line": "11"
+      },
+      {
+        "id": "6758009919720262777-2510201844-35",
+        "type": "S",
+        "number": "33136",
+        "time": "2510202024",
+        "platform": "1",
+        "path_stations": [
+          "Düsseldorf Flughafen Terminal",
+          "Düsseldorf-Unterrath",
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Hamm",
+          "Neuss Rheinparkcenter",
+          "Neuss Am Kaiser",
+          "Neuss Hbf",
+          "Neuss Süd",
+          "Norf",
+          "Neuss Allerheiligen",
+          "Nievenheim",
+          "Dormagen",
+          "Dormagen Chempark",
+          "Köln-Worringen",
+          "Köln-Blumenberg",
+          "Köln-Chorweiler Nord",
+          "Köln-Chorweiler",
+          "Köln Volkhovener Weg",
+          "Köln-Longerich",
+          "Köln Geldernstr./Parkgürtel",
+          "Köln-Nippes",
+          "Köln Hansaring",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln-Buchforst",
+          "Köln-Mülheim",
+          "Köln-Holweide",
+          "Köln-Dellbrück"
+        ],
+        "line": "11"
+      },
+      {
+        "id": "770060424843712862-2510202033-2",
+        "type": "S",
+        "number": "33143",
+        "time": "2510202035",
+        "platform": "1",
+        "path_stations": [
+          "Bergisch Gladbach"
+        ],
+        "line": "11"
+      },
+      {
+        "id": "-1030285933763483726-2510201824-35",
+        "type": "S",
+        "number": "33134",
+        "time": "2510202004",
+        "platform": "1",
+        "path_stations": [
+          "Düsseldorf Flughafen Terminal",
+          "Düsseldorf-Unterrath",
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Hamm",
+          "Neuss Rheinparkcenter",
+          "Neuss Am Kaiser",
+          "Neuss Hbf",
+          "Neuss Süd",
+          "Norf",
+          "Neuss Allerheiligen",
+          "Nievenheim",
+          "Dormagen",
+          "Dormagen Chempark",
+          "Köln-Worringen",
+          "Köln-Blumenberg",
+          "Köln-Chorweiler Nord",
+          "Köln-Chorweiler",
+          "Köln Volkhovener Weg",
+          "Köln-Longerich",
+          "Köln Geldernstr./Parkgürtel",
+          "Köln-Nippes",
+          "Köln Hansaring",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln-Buchforst",
+          "Köln-Mülheim",
+          "Köln-Holweide",
+          "Köln-Dellbrück"
+        ],
+        "line": "11"
+      },
+      {
+        "id": "-8154538353252789706-2510202010-2",
+        "type": "Bus",
+        "number": "155",
+        "time": "2510202016",
+        "platform": "",
+        "path_stations": [
+          "Bergisch Gladbach"
+        ],
+        "line": "S11"
+      },
+      {
+        "id": "-6901467502963422036-2510202040-2",
+        "type": "Bus",
+        "number": "157",
+        "time": "2510202046",
+        "platform": "",
+        "path_stations": [
+          "Bergisch Gladbach"
+        ],
+        "line": "S11"
+      },
+      {
+        "id": "-2478148460754560042-2510202013-2",
+        "type": "S",
+        "number": "33139",
+        "time": "2510202015",
+        "platform": "1",
+        "path_stations": [
+          "Bergisch Gladbach"
+        ],
+        "line": "11"
+      },
+      {
+        "id": "-3505553863917277643-2510202037-6",
+        "type": "Bus",
+        "number": "146",
+        "time": "2510202123",
+        "platform": "",
+        "path_stations": [
+          "Köln Messe/Deutz",
+          "Köln-Buchforst",
+          "Köln-Mülheim",
+          "Köln-Holweide",
+          "Köln-Dellbrück"
+        ],
+        "line": "S11"
+      },
+      {
+        "id": "-6718798550028698806-2510202057-6",
+        "type": "Bus",
+        "number": "148",
+        "time": "2510202143",
+        "platform": "",
+        "path_stations": [
+          "Köln Messe/Deutz",
+          "Köln-Buchforst",
+          "Köln-Mülheim",
+          "Köln-Holweide",
+          "Köln-Dellbrück"
+        ],
+        "line": "S11"
+      },
+      {
+        "id": "7058695142655010522-2510202140-2",
+        "type": "Bus",
+        "number": "161",
+        "time": "2510202146",
+        "platform": "",
+        "path_stations": [
+          "Bergisch Gladbach"
+        ],
+        "line": "S11"
+      },
+      {
+        "id": "2368052037450771333-2510202110-2",
+        "type": "Bus",
+        "number": "159",
+        "time": "2510202116",
+        "platform": "",
+        "path_stations": [
+          "Bergisch Gladbach"
+        ],
+        "line": "S11"
+      },
+      {
+        "id": "939421253385720750-2510202127-6",
+        "type": "Bus",
+        "number": "150",
+        "time": "2510202213",
+        "platform": "",
+        "path_stations": [
+          "Köln Messe/Deutz",
+          "Köln-Buchforst",
+          "Köln-Mülheim",
+          "Köln-Holweide",
+          "Köln-Dellbrück"
+        ],
+        "line": "S11"
+      },
+      {
+        "id": "7295497179840084152-2510202157-6",
+        "type": "Bus",
+        "number": "152",
+        "time": "2510202243",
+        "platform": "",
+        "path_stations": [
+          "Köln Messe/Deutz",
+          "Köln-Buchforst",
+          "Köln-Mülheim",
+          "Köln-Holweide",
+          "Köln-Dellbrück"
+        ],
+        "line": "S11"
+      },
+      {
+        "id": "-4808888946733619692-2510202210-2",
+        "type": "Bus",
+        "number": "163",
+        "time": "2510202216",
+        "platform": "",
+        "path_stations": [
+          "Bergisch Gladbach"
+        ],
+        "line": "S11"
+      },
+      {
+        "id": "7880517536319359450-2510202240-2",
+        "type": "Bus",
+        "number": "165",
+        "time": "2510202246",
+        "platform": "",
+        "path_stations": [
+          "Bergisch Gladbach"
+        ],
+        "line": "S11"
+      },
+      {
+        "id": "3147317233570105923-2510202310-2",
+        "type": "Bus",
+        "number": "167",
+        "time": "2510202316",
+        "platform": "",
+        "path_stations": [
+          "Bergisch Gladbach"
+        ],
+        "line": "S11"
+      },
+      {
+        "id": "8843944506694070612-2510202227-6",
+        "type": "Bus",
+        "number": "154",
+        "time": "2510202313",
+        "platform": "",
+        "path_stations": [
+          "Köln Messe/Deutz",
+          "Köln-Buchforst",
+          "Köln-Mülheim",
+          "Köln-Holweide",
+          "Köln-Dellbrück"
+        ],
+        "line": "S11"
+      },
+      {
+        "id": "-1025029183977348616-2510202341-2",
+        "type": "Bus",
+        "number": "145",
+        "time": "2510202347",
+        "platform": "",
+        "path_stations": [
+          "Bergisch Gladbach"
+        ],
+        "line": "S11"
+      },
+      {
+        "id": "200802331288562819-2510202257-6",
+        "type": "Bus",
+        "number": "156",
+        "time": "2510202343",
+        "platform": "",
+        "path_stations": [
+          "Köln Messe/Deutz",
+          "Köln-Buchforst",
+          "Köln-Mülheim",
+          "Köln-Holweide",
+          "Köln-Dellbrück"
+        ],
+        "line": "S11"
+      },
+      {
+        "id": "3539037157829213230-2510210040-2",
+        "type": "Bus",
+        "number": "149",
+        "time": "2510210046",
+        "platform": "",
+        "path_stations": [
+          "Bergisch Gladbach"
+        ],
+        "line": "S11"
+      },
+      {
+        "id": "8249922066588008606-2510202327-6",
+        "type": "Bus",
+        "number": "158",
+        "time": "2510210013",
+        "platform": "",
+        "path_stations": [
+          "Köln Messe/Deutz",
+          "Köln-Buchforst",
+          "Köln-Mülheim",
+          "Köln-Holweide",
+          "Köln-Dellbrück"
+        ],
+        "line": "S11"
+      },
+      {
+        "id": "8228964204910580153-2510210010-2",
+        "type": "Bus",
+        "number": "147",
+        "time": "2510210016",
+        "platform": "",
+        "path_stations": [
+          "Bergisch Gladbach"
+        ],
+        "line": "S11"
+      },
+      {
+        "id": "9167246238124608135-2510202357-6",
+        "type": "Bus",
+        "number": "160",
+        "time": "2510210043",
+        "platform": "",
+        "path_stations": [
+          "Köln Messe/Deutz",
+          "Köln-Buchforst",
+          "Köln-Mülheim",
+          "Köln-Holweide",
+          "Köln-Dellbrück"
+        ],
+        "line": "S11"
+      },
+      {
+        "id": "2931546906280877202-2510210057-6",
+        "type": "Bus",
+        "number": "164",
+        "time": "2510210143",
+        "platform": "",
+        "path_stations": [
+          "Köln Messe/Deutz",
+          "Köln-Buchforst",
+          "Köln-Mülheim",
+          "Köln-Holweide",
+          "Köln-Dellbrück"
+        ],
+        "line": "S11"
+      },
+      {
+        "id": "8373989498060455349-2510210027-6",
+        "type": "Bus",
+        "number": "162",
+        "time": "2510210113",
+        "platform": "",
+        "path_stations": [
+          "Köln Messe/Deutz",
+          "Köln-Buchforst",
+          "Köln-Mülheim",
+          "Köln-Holweide",
+          "Köln-Dellbrück"
+        ],
+        "line": "S11"
+      },
+      {
+        "id": "1709865165910769490-2510210110-2",
+        "type": "Bus",
+        "number": "151",
+        "time": "2510210116",
+        "platform": "",
+        "path_stations": [
+          "Bergisch Gladbach"
+        ],
+        "line": "S11"
+      },
+      {
+        "id": "-2200188184825279691-2510210127-6",
+        "type": "Bus",
+        "number": "166",
+        "time": "2510210213",
+        "platform": "",
+        "path_stations": [
+          "Köln Messe/Deutz",
+          "Köln-Buchforst",
+          "Köln-Mülheim",
+          "Köln-Holweide",
+          "Köln-Dellbrück"
+        ],
+        "line": "S11"
+      },
+      {
+        "id": "-5917984989218195244-2510210410-2",
+        "type": "Bus",
+        "number": "153",
+        "time": "2510210416",
+        "platform": "",
+        "path_stations": [
+          "Bergisch Gladbach"
+        ],
+        "line": "S11"
+      },
+      {
+        "id": "7511800987663901260-2510210513-2",
+        "type": "S",
+        "number": "32115",
+        "time": "2510210515",
+        "platform": "1",
+        "path_stations": [
+          "Bergisch Gladbach"
+        ],
+        "line": "11"
+      },
+      {
+        "id": "5191576247309762755-2510210418-30",
+        "type": "S",
+        "number": "32110",
+        "time": "2510210544",
+        "platform": "1",
+        "path_stations": [
+          "Düsseldorf Hbf",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Hamm",
+          "Neuss Rheinparkcenter",
+          "Neuss Am Kaiser",
+          "Neuss Hbf",
+          "Neuss Süd",
+          "Norf",
+          "Neuss Allerheiligen",
+          "Nievenheim",
+          "Dormagen",
+          "Dormagen Chempark",
+          "Köln-Worringen",
+          "Köln-Blumenberg",
+          "Köln-Chorweiler Nord",
+          "Köln-Chorweiler",
+          "Köln Volkhovener Weg",
+          "Köln-Longerich",
+          "Köln Geldernstr./Parkgürtel",
+          "Köln-Nippes",
+          "Köln Hansaring",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln-Buchforst",
+          "Köln-Mülheim",
+          "Köln-Holweide",
+          "Köln-Dellbrück"
+        ],
+        "line": "11"
+      },
+      {
+        "id": "-7151359610019140890-2510210533-2",
+        "type": "S",
+        "number": "32119",
+        "time": "2510210535",
+        "platform": "1",
+        "path_stations": [
+          "Bergisch Gladbach"
+        ],
+        "line": "11"
+      },
+      {
+        "id": "-5549242381146695701-2510210447-7",
+        "type": "S",
+        "number": "32102",
+        "time": "2510210504",
+        "platform": "1",
+        "path_stations": [
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln-Buchforst",
+          "Köln-Mülheim",
+          "Köln-Holweide",
+          "Köln-Dellbrück"
+        ],
+        "line": "11"
+      },
+      {
+        "id": "-8335331866598198547-2510210553-2",
+        "type": "S",
+        "number": "32121",
+        "time": "2510210555",
+        "platform": "1",
+        "path_stations": [
+          "Bergisch Gladbach"
+        ],
+        "line": "11"
+      },
+      {
+        "id": "8401842895047825461-2510210437-6",
+        "type": "Bus",
+        "number": "144",
+        "time": "2510210523",
+        "platform": "",
+        "path_stations": [
+          "Köln Messe/Deutz",
+          "Köln-Buchforst",
+          "Köln-Mülheim",
+          "Köln-Holweide",
+          "Köln-Dellbrück"
+        ],
+        "line": "S11"
+      },
+      {
+        "id": "6531357684457107396-2510210507-7",
+        "type": "S",
+        "number": "32106",
+        "time": "2510210524",
+        "platform": "1",
+        "path_stations": [
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln-Buchforst",
+          "Köln-Mülheim",
+          "Köln-Holweide",
+          "Köln-Dellbrück"
+        ],
+        "line": "11"
+      },
+      {
+        "id": "3773488832237551903-2510210458-30",
+        "type": "S",
+        "number": "32114",
+        "time": "2510210624",
+        "platform": "1",
+        "path_stations": [
+          "Düsseldorf Hbf",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Hamm",
+          "Neuss Rheinparkcenter",
+          "Neuss Am Kaiser",
+          "Neuss Hbf",
+          "Neuss Süd",
+          "Norf",
+          "Neuss Allerheiligen",
+          "Nievenheim",
+          "Dormagen",
+          "Dormagen Chempark",
+          "Köln-Worringen",
+          "Köln-Blumenberg",
+          "Köln-Chorweiler Nord",
+          "Köln-Chorweiler",
+          "Köln Volkhovener Weg",
+          "Köln-Longerich",
+          "Köln Geldernstr./Parkgürtel",
+          "Köln-Nippes",
+          "Köln Hansaring",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln-Buchforst",
+          "Köln-Mülheim",
+          "Köln-Holweide",
+          "Köln-Dellbrück"
+        ],
+        "line": "11"
+      },
+      {
+        "id": "2336947329621964599-2510210613-2",
+        "type": "S",
+        "number": "32125",
+        "time": "2510210615",
+        "platform": "1",
+        "path_stations": [
+          "Bergisch Gladbach"
+        ],
+        "line": "11"
+      },
+      {
+        "id": "-8833691760584346805-2510210633-2",
+        "type": "S",
+        "number": "32129",
+        "time": "2510210635",
+        "platform": "1",
+        "path_stations": [
+          "Bergisch Gladbach"
+        ],
+        "line": "11"
+      },
+      {
+        "id": "5270799049340630662-2510210438-30",
+        "type": "S",
+        "number": "32112",
+        "time": "2510210604",
+        "platform": "1",
+        "path_stations": [
+          "Düsseldorf Hbf",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Hamm",
+          "Neuss Rheinparkcenter",
+          "Neuss Am Kaiser",
+          "Neuss Hbf",
+          "Neuss Süd",
+          "Norf",
+          "Neuss Allerheiligen",
+          "Nievenheim",
+          "Dormagen",
+          "Dormagen Chempark",
+          "Köln-Worringen",
+          "Köln-Blumenberg",
+          "Köln-Chorweiler Nord",
+          "Köln-Chorweiler",
+          "Köln Volkhovener Weg",
+          "Köln-Longerich",
+          "Köln Geldernstr./Parkgürtel",
+          "Köln-Nippes",
+          "Köln Hansaring",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln-Buchforst",
+          "Köln-Mülheim",
+          "Köln-Holweide",
+          "Köln-Dellbrück"
+        ],
+        "line": "11"
+      },
+      {
+        "id": "2105813546437377345-2510210653-2",
+        "type": "S",
+        "number": "32131",
+        "time": "2510210655",
+        "platform": "1",
+        "path_stations": [
+          "Bergisch Gladbach"
+        ],
+        "line": "11"
+      },
+      {
+        "id": "2551970710841011064-2510210518-30",
+        "type": "S",
+        "number": "32118",
+        "time": "2510210644",
+        "platform": "1",
+        "path_stations": [
+          "Düsseldorf Hbf",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Hamm",
+          "Neuss Rheinparkcenter",
+          "Neuss Am Kaiser",
+          "Neuss Hbf",
+          "Neuss Süd",
+          "Norf",
+          "Neuss Allerheiligen",
+          "Nievenheim",
+          "Dormagen",
+          "Dormagen Chempark",
+          "Köln-Worringen",
+          "Köln-Blumenberg",
+          "Köln-Chorweiler Nord",
+          "Köln-Chorweiler",
+          "Köln Volkhovener Weg",
+          "Köln-Longerich",
+          "Köln Geldernstr./Parkgürtel",
+          "Köln-Nippes",
+          "Köln Hansaring",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln-Buchforst",
+          "Köln-Mülheim",
+          "Köln-Holweide",
+          "Köln-Dellbrück"
+        ],
+        "line": "11"
+      }
+    ],
+    "departures": [
+      {
+        "id": "164372233927860724-2510201853-2",
+        "type": "S",
+        "number": "33129",
+        "direction": "Düsseldorf Flughafen Terminal",
+        "platform": "1",
+        "time": "2510201855",
+        "destination": "Düsseldorf Flughafen Terminal",
+        "path_stations": [
+          "Köln-Dellbrück",
+          "Köln-Holweide",
+          "Köln-Mülheim",
+          "Köln-Buchforst",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln Hansaring",
+          "Köln-Nippes",
+          "Köln Geldernstr./Parkgürtel",
+          "Köln-Longerich",
+          "Köln Volkhovener Weg",
+          "Köln-Chorweiler",
+          "Köln-Chorweiler Nord",
+          "Köln-Blumenberg",
+          "Köln-Worringen",
+          "Dormagen Chempark",
+          "Dormagen",
+          "Nievenheim",
+          "Neuss Allerheiligen",
+          "Norf",
+          "Neuss Süd",
+          "Neuss Hbf",
+          "Neuss Am Kaiser",
+          "Neuss Rheinparkcenter",
+          "Düsseldorf-Hamm",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf Hbf",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf-Zoo",
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Unterrath",
+          "Düsseldorf Flughafen Terminal"
+        ]
+      },
+      {
+        "id": "-3425142153914482840-2510201704-35",
+        "type": "S",
+        "number": "33124",
+        "direction": "Bergisch Gladbach",
+        "platform": "1",
+        "time": "2510201844",
+        "destination": "Bergisch Gladbach",
+        "path_stations": [
+          "Bergisch Gladbach"
+        ]
+      },
+      {
+        "id": "7637044744989835390-2510201644-35",
+        "type": "S",
+        "number": "33120",
+        "direction": "Bergisch Gladbach",
+        "platform": "1",
+        "time": "2510201824",
+        "destination": "Bergisch Gladbach",
+        "path_stations": [
+          "Bergisch Gladbach"
+        ]
+      },
+      {
+        "id": "-3263050538109472485-2510201833-2",
+        "type": "S",
+        "number": "33127",
+        "direction": "Dormagen",
+        "platform": "1",
+        "time": "2510201835",
+        "destination": "Dormagen",
+        "path_stations": [
+          "Köln-Dellbrück",
+          "Köln-Holweide",
+          "Köln-Mülheim",
+          "Köln-Buchforst",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln Hansaring",
+          "Köln-Nippes",
+          "Köln Geldernstr./Parkgürtel",
+          "Köln-Longerich",
+          "Köln Volkhovener Weg",
+          "Köln-Chorweiler",
+          "Köln-Chorweiler Nord",
+          "Köln-Blumenberg",
+          "Köln-Worringen",
+          "Dormagen Chempark",
+          "Dormagen"
+        ]
+      },
+      {
+        "id": "-1316972676785631133-2510201624-35",
+        "type": "S",
+        "number": "33118",
+        "direction": "Bergisch Gladbach",
+        "platform": "1",
+        "time": "2510201804",
+        "destination": "Bergisch Gladbach",
+        "path_stations": [
+          "Bergisch Gladbach"
+        ]
+      },
+      {
+        "id": "-5484991667960049137-2510201813-2",
+        "type": "S",
+        "number": "33123",
+        "direction": "Düsseldorf Flughafen Terminal",
+        "platform": "1",
+        "time": "2510201815",
+        "destination": "Düsseldorf Flughafen Terminal",
+        "path_stations": [
+          "Köln-Dellbrück",
+          "Köln-Holweide",
+          "Köln-Mülheim",
+          "Köln-Buchforst",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln Hansaring",
+          "Köln-Nippes",
+          "Köln Geldernstr./Parkgürtel",
+          "Köln-Longerich",
+          "Köln Volkhovener Weg",
+          "Köln-Chorweiler",
+          "Köln-Chorweiler Nord",
+          "Köln-Blumenberg",
+          "Köln-Worringen",
+          "Dormagen Chempark",
+          "Dormagen",
+          "Nievenheim",
+          "Neuss Allerheiligen",
+          "Norf",
+          "Neuss Süd",
+          "Neuss Hbf",
+          "Neuss Am Kaiser",
+          "Neuss Rheinparkcenter",
+          "Düsseldorf-Hamm",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf Hbf",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf-Zoo",
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Unterrath",
+          "Düsseldorf Flughafen Terminal"
+        ]
+      },
+      {
+        "id": "-7855473569570216836-2510201724-35",
+        "type": "S",
+        "number": "33126",
+        "direction": "Bergisch Gladbach",
+        "platform": "1",
+        "time": "2510201904",
+        "destination": "Bergisch Gladbach",
+        "path_stations": [
+          "Bergisch Gladbach"
+        ]
+      },
+      {
+        "id": "-8308924094354947115-2510201913-2",
+        "type": "S",
+        "number": "33131",
+        "direction": "Düsseldorf Flughafen Terminal",
+        "platform": "1",
+        "time": "2510201915",
+        "destination": "Düsseldorf Flughafen Terminal",
+        "path_stations": [
+          "Köln-Dellbrück",
+          "Köln-Holweide",
+          "Köln-Mülheim",
+          "Köln-Buchforst",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln Hansaring",
+          "Köln-Nippes",
+          "Köln Geldernstr./Parkgürtel",
+          "Köln-Longerich",
+          "Köln Volkhovener Weg",
+          "Köln-Chorweiler",
+          "Köln-Chorweiler Nord",
+          "Köln-Blumenberg",
+          "Köln-Worringen",
+          "Dormagen Chempark",
+          "Dormagen",
+          "Nievenheim",
+          "Neuss Allerheiligen",
+          "Norf",
+          "Neuss Süd",
+          "Neuss Hbf",
+          "Neuss Am Kaiser",
+          "Neuss Rheinparkcenter",
+          "Düsseldorf-Hamm",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf Hbf",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf-Zoo",
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Unterrath",
+          "Düsseldorf Flughafen Terminal"
+        ]
+      },
+      {
+        "id": "2214729745019285042-2510201933-2",
+        "type": "S",
+        "number": "33135",
+        "direction": "Dormagen",
+        "platform": "1",
+        "time": "2510201935",
+        "destination": "Dormagen",
+        "path_stations": [
+          "Köln-Dellbrück",
+          "Köln-Holweide",
+          "Köln-Mülheim",
+          "Köln-Buchforst",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln Hansaring",
+          "Köln-Nippes",
+          "Köln Geldernstr./Parkgürtel",
+          "Köln-Longerich",
+          "Köln Volkhovener Weg",
+          "Köln-Chorweiler",
+          "Köln-Chorweiler Nord",
+          "Köln-Blumenberg",
+          "Köln-Worringen",
+          "Dormagen Chempark",
+          "Dormagen"
+        ]
+      },
+      {
+        "id": "-6852474675998100410-2510201744-35",
+        "type": "S",
+        "number": "33128",
+        "direction": "Bergisch Gladbach",
+        "platform": "1",
+        "time": "2510201924",
+        "destination": "Bergisch Gladbach",
+        "path_stations": [
+          "Bergisch Gladbach"
+        ]
+      },
+      {
+        "id": "5192597161264455361-2510201953-2",
+        "type": "S",
+        "number": "33137",
+        "direction": "Düsseldorf Flughafen Terminal",
+        "platform": "1",
+        "time": "2510201955",
+        "destination": "Düsseldorf Flughafen Terminal",
+        "path_stations": [
+          "Köln-Dellbrück",
+          "Köln-Holweide",
+          "Köln-Mülheim",
+          "Köln-Buchforst",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln Hansaring",
+          "Köln-Nippes",
+          "Köln Geldernstr./Parkgürtel",
+          "Köln-Longerich",
+          "Köln Volkhovener Weg",
+          "Köln-Chorweiler",
+          "Köln-Chorweiler Nord",
+          "Köln-Blumenberg",
+          "Köln-Worringen",
+          "Dormagen Chempark",
+          "Dormagen",
+          "Nievenheim",
+          "Neuss Allerheiligen",
+          "Norf",
+          "Neuss Süd",
+          "Neuss Hbf",
+          "Neuss Am Kaiser",
+          "Neuss Rheinparkcenter",
+          "Düsseldorf-Hamm",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf Hbf",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf-Zoo",
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Unterrath",
+          "Düsseldorf Flughafen Terminal"
+        ]
+      },
+      {
+        "id": "7358106895276260495-2510201804-35",
+        "type": "S",
+        "number": "33132",
+        "direction": "Bergisch Gladbach",
+        "platform": "1",
+        "time": "2510201944",
+        "destination": "Bergisch Gladbach",
+        "path_stations": [
+          "Bergisch Gladbach"
+        ]
+      },
+      {
+        "id": "6758009919720262777-2510201844-35",
+        "type": "S",
+        "number": "33136",
+        "direction": "Bergisch Gladbach",
+        "platform": "1",
+        "time": "2510202024",
+        "destination": "Bergisch Gladbach",
+        "path_stations": [
+          "Bergisch Gladbach"
+        ]
+      },
+      {
+        "id": "770060424843712862-2510202033-2",
+        "type": "S",
+        "number": "33143",
+        "direction": "Dormagen",
+        "platform": "1",
+        "time": "2510202035",
+        "destination": "Dormagen",
+        "path_stations": [
+          "Köln-Dellbrück",
+          "Köln-Holweide",
+          "Köln-Mülheim",
+          "Köln-Buchforst",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln Hansaring",
+          "Köln-Nippes",
+          "Köln Geldernstr./Parkgürtel",
+          "Köln-Longerich",
+          "Köln Volkhovener Weg",
+          "Köln-Chorweiler",
+          "Köln-Chorweiler Nord",
+          "Köln-Blumenberg",
+          "Köln-Worringen",
+          "Dormagen Chempark",
+          "Dormagen"
+        ]
+      },
+      {
+        "id": "-1030285933763483726-2510201824-35",
+        "type": "S",
+        "number": "33134",
+        "direction": "Bergisch Gladbach",
+        "platform": "1",
+        "time": "2510202004",
+        "destination": "Bergisch Gladbach",
+        "path_stations": [
+          "Bergisch Gladbach"
+        ]
+      },
+      {
+        "id": "-8154538353252789706-2510202010-2",
+        "type": "Bus",
+        "number": "155",
+        "direction": "Köln Messe/Deutz",
+        "platform": "",
+        "time": "2510202016",
+        "destination": "Köln Messe/Deutz",
+        "path_stations": [
+          "Köln-Dellbrück",
+          "Köln-Holweide",
+          "Köln-Mülheim",
+          "Köln-Buchforst",
+          "Köln Messe/Deutz"
+        ]
+      },
+      {
+        "id": "-6901467502963422036-2510202040-2",
+        "type": "Bus",
+        "number": "157",
+        "direction": "Köln Messe/Deutz",
+        "platform": "",
+        "time": "2510202046",
+        "destination": "Köln Messe/Deutz",
+        "path_stations": [
+          "Köln-Dellbrück",
+          "Köln-Holweide",
+          "Köln-Mülheim",
+          "Köln-Buchforst",
+          "Köln Messe/Deutz"
+        ]
+      },
+      {
+        "id": "-2478148460754560042-2510202013-2",
+        "type": "S",
+        "number": "33139",
+        "direction": "Düsseldorf Flughafen Terminal",
+        "platform": "1",
+        "time": "2510202015",
+        "destination": "Düsseldorf Flughafen Terminal",
+        "path_stations": [
+          "Köln-Dellbrück",
+          "Köln-Holweide",
+          "Köln-Mülheim",
+          "Köln-Buchforst",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln Hansaring",
+          "Köln-Nippes",
+          "Köln Geldernstr./Parkgürtel",
+          "Köln-Longerich",
+          "Köln Volkhovener Weg",
+          "Köln-Chorweiler",
+          "Köln-Chorweiler Nord",
+          "Köln-Blumenberg",
+          "Köln-Worringen",
+          "Dormagen Chempark",
+          "Dormagen",
+          "Nievenheim",
+          "Neuss Allerheiligen",
+          "Norf",
+          "Neuss Süd",
+          "Neuss Hbf",
+          "Neuss Am Kaiser",
+          "Neuss Rheinparkcenter",
+          "Düsseldorf-Hamm",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf Hbf",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf-Zoo",
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Unterrath",
+          "Düsseldorf Flughafen Terminal"
+        ]
+      },
+      {
+        "id": "-3505553863917277643-2510202037-6",
+        "type": "Bus",
+        "number": "146",
+        "direction": "Bergisch Gladbach",
+        "platform": "",
+        "time": "2510202123",
+        "destination": "Bergisch Gladbach",
+        "path_stations": [
+          "Bergisch Gladbach"
+        ]
+      },
+      {
+        "id": "-6718798550028698806-2510202057-6",
+        "type": "Bus",
+        "number": "148",
+        "direction": "Bergisch Gladbach",
+        "platform": "",
+        "time": "2510202143",
+        "destination": "Bergisch Gladbach",
+        "path_stations": [
+          "Bergisch Gladbach"
+        ]
+      },
+      {
+        "id": "7058695142655010522-2510202140-2",
+        "type": "Bus",
+        "number": "161",
+        "direction": "Köln Messe/Deutz",
+        "platform": "",
+        "time": "2510202146",
+        "destination": "Köln Messe/Deutz",
+        "path_stations": [
+          "Köln-Dellbrück",
+          "Köln-Holweide",
+          "Köln-Mülheim",
+          "Köln-Buchforst",
+          "Köln Messe/Deutz"
+        ]
+      },
+      {
+        "id": "2368052037450771333-2510202110-2",
+        "type": "Bus",
+        "number": "159",
+        "direction": "Köln Messe/Deutz",
+        "platform": "",
+        "time": "2510202116",
+        "destination": "Köln Messe/Deutz",
+        "path_stations": [
+          "Köln-Dellbrück",
+          "Köln-Holweide",
+          "Köln-Mülheim",
+          "Köln-Buchforst",
+          "Köln Messe/Deutz"
+        ]
+      },
+      {
+        "id": "939421253385720750-2510202127-6",
+        "type": "Bus",
+        "number": "150",
+        "direction": "Bergisch Gladbach",
+        "platform": "",
+        "time": "2510202213",
+        "destination": "Bergisch Gladbach",
+        "path_stations": [
+          "Bergisch Gladbach"
+        ]
+      },
+      {
+        "id": "7295497179840084152-2510202157-6",
+        "type": "Bus",
+        "number": "152",
+        "direction": "Bergisch Gladbach",
+        "platform": "",
+        "time": "2510202243",
+        "destination": "Bergisch Gladbach",
+        "path_stations": [
+          "Bergisch Gladbach"
+        ]
+      },
+      {
+        "id": "-4808888946733619692-2510202210-2",
+        "type": "Bus",
+        "number": "163",
+        "direction": "Köln Messe/Deutz",
+        "platform": "",
+        "time": "2510202216",
+        "destination": "Köln Messe/Deutz",
+        "path_stations": [
+          "Köln-Dellbrück",
+          "Köln-Holweide",
+          "Köln-Mülheim",
+          "Köln-Buchforst",
+          "Köln Messe/Deutz"
+        ]
+      },
+      {
+        "id": "7880517536319359450-2510202240-2",
+        "type": "Bus",
+        "number": "165",
+        "direction": "Köln Messe/Deutz",
+        "platform": "",
+        "time": "2510202246",
+        "destination": "Köln Messe/Deutz",
+        "path_stations": [
+          "Köln-Dellbrück",
+          "Köln-Holweide",
+          "Köln-Mülheim",
+          "Köln-Buchforst",
+          "Köln Messe/Deutz"
+        ]
+      },
+      {
+        "id": "3147317233570105923-2510202310-2",
+        "type": "Bus",
+        "number": "167",
+        "direction": "Köln Messe/Deutz",
+        "platform": "",
+        "time": "2510202316",
+        "destination": "Köln Messe/Deutz",
+        "path_stations": [
+          "Köln-Dellbrück",
+          "Köln-Holweide",
+          "Köln-Mülheim",
+          "Köln-Buchforst",
+          "Köln Messe/Deutz"
+        ]
+      },
+      {
+        "id": "8843944506694070612-2510202227-6",
+        "type": "Bus",
+        "number": "154",
+        "direction": "Bergisch Gladbach",
+        "platform": "",
+        "time": "2510202313",
+        "destination": "Bergisch Gladbach",
+        "path_stations": [
+          "Bergisch Gladbach"
+        ]
+      },
+      {
+        "id": "-1025029183977348616-2510202341-2",
+        "type": "Bus",
+        "number": "145",
+        "direction": "Köln Messe/Deutz",
+        "platform": "",
+        "time": "2510202347",
+        "destination": "Köln Messe/Deutz",
+        "path_stations": [
+          "Köln-Dellbrück",
+          "Köln-Holweide",
+          "Köln-Mülheim",
+          "Köln-Buchforst",
+          "Köln Messe/Deutz"
+        ]
+      },
+      {
+        "id": "200802331288562819-2510202257-6",
+        "type": "Bus",
+        "number": "156",
+        "direction": "Bergisch Gladbach",
+        "platform": "",
+        "time": "2510202343",
+        "destination": "Bergisch Gladbach",
+        "path_stations": [
+          "Bergisch Gladbach"
+        ]
+      },
+      {
+        "id": "3539037157829213230-2510210040-2",
+        "type": "Bus",
+        "number": "149",
+        "direction": "Köln Messe/Deutz",
+        "platform": "",
+        "time": "2510210046",
+        "destination": "Köln Messe/Deutz",
+        "path_stations": [
+          "Köln-Dellbrück",
+          "Köln-Holweide",
+          "Köln-Mülheim",
+          "Köln-Buchforst",
+          "Köln Messe/Deutz"
+        ]
+      },
+      {
+        "id": "8249922066588008606-2510202327-6",
+        "type": "Bus",
+        "number": "158",
+        "direction": "Bergisch Gladbach",
+        "platform": "",
+        "time": "2510210013",
+        "destination": "Bergisch Gladbach",
+        "path_stations": [
+          "Bergisch Gladbach"
+        ]
+      },
+      {
+        "id": "8228964204910580153-2510210010-2",
+        "type": "Bus",
+        "number": "147",
+        "direction": "Köln Messe/Deutz",
+        "platform": "",
+        "time": "2510210016",
+        "destination": "Köln Messe/Deutz",
+        "path_stations": [
+          "Köln-Dellbrück",
+          "Köln-Holweide",
+          "Köln-Mülheim",
+          "Köln-Buchforst",
+          "Köln Messe/Deutz"
+        ]
+      },
+      {
+        "id": "9167246238124608135-2510202357-6",
+        "type": "Bus",
+        "number": "160",
+        "direction": "Bergisch Gladbach",
+        "platform": "",
+        "time": "2510210043",
+        "destination": "Bergisch Gladbach",
+        "path_stations": [
+          "Bergisch Gladbach"
+        ]
+      },
+      {
+        "id": "2931546906280877202-2510210057-6",
+        "type": "Bus",
+        "number": "164",
+        "direction": "Bergisch Gladbach",
+        "platform": "",
+        "time": "2510210143",
+        "destination": "Bergisch Gladbach",
+        "path_stations": [
+          "Bergisch Gladbach"
+        ]
+      },
+      {
+        "id": "8373989498060455349-2510210027-6",
+        "type": "Bus",
+        "number": "162",
+        "direction": "Bergisch Gladbach",
+        "platform": "",
+        "time": "2510210113",
+        "destination": "Bergisch Gladbach",
+        "path_stations": [
+          "Bergisch Gladbach"
+        ]
+      },
+      {
+        "id": "1709865165910769490-2510210110-2",
+        "type": "Bus",
+        "number": "151",
+        "direction": "Köln Messe/Deutz",
+        "platform": "",
+        "time": "2510210116",
+        "destination": "Köln Messe/Deutz",
+        "path_stations": [
+          "Köln-Dellbrück",
+          "Köln-Holweide",
+          "Köln-Mülheim",
+          "Köln-Buchforst",
+          "Köln Messe/Deutz"
+        ]
+      },
+      {
+        "id": "-2200188184825279691-2510210127-6",
+        "type": "Bus",
+        "number": "166",
+        "direction": "Bergisch Gladbach",
+        "platform": "",
+        "time": "2510210213",
+        "destination": "Bergisch Gladbach",
+        "path_stations": [
+          "Bergisch Gladbach"
+        ]
+      },
+      {
+        "id": "-5917984989218195244-2510210410-2",
+        "type": "Bus",
+        "number": "153",
+        "direction": "Köln Messe/Deutz",
+        "platform": "",
+        "time": "2510210416",
+        "destination": "Köln Messe/Deutz",
+        "path_stations": [
+          "Köln-Dellbrück",
+          "Köln-Holweide",
+          "Köln-Mülheim",
+          "Köln-Buchforst",
+          "Köln Messe/Deutz"
+        ]
+      },
+      {
+        "id": "7511800987663901260-2510210513-2",
+        "type": "S",
+        "number": "32115",
+        "direction": "Düsseldorf Flughafen Terminal",
+        "platform": "1",
+        "time": "2510210515",
+        "destination": "Düsseldorf Flughafen Terminal",
+        "path_stations": [
+          "Köln-Dellbrück",
+          "Köln-Holweide",
+          "Köln-Mülheim",
+          "Köln-Buchforst",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln Hansaring",
+          "Köln-Nippes",
+          "Köln Geldernstr./Parkgürtel",
+          "Köln-Longerich",
+          "Köln Volkhovener Weg",
+          "Köln-Chorweiler",
+          "Köln-Chorweiler Nord",
+          "Köln-Blumenberg",
+          "Köln-Worringen",
+          "Dormagen Chempark",
+          "Dormagen",
+          "Nievenheim",
+          "Neuss Allerheiligen",
+          "Norf",
+          "Neuss Süd",
+          "Neuss Hbf",
+          "Neuss Am Kaiser",
+          "Neuss Rheinparkcenter",
+          "Düsseldorf-Hamm",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf Hbf",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf-Zoo",
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Unterrath",
+          "Düsseldorf Flughafen Terminal"
+        ]
+      },
+      {
+        "id": "5191576247309762755-2510210418-30",
+        "type": "S",
+        "number": "32110",
+        "direction": "Bergisch Gladbach",
+        "platform": "1",
+        "time": "2510210544",
+        "destination": "Bergisch Gladbach",
+        "path_stations": [
+          "Bergisch Gladbach"
+        ]
+      },
+      {
+        "id": "-7151359610019140890-2510210533-2",
+        "type": "S",
+        "number": "32119",
+        "direction": "Düsseldorf Flughafen Terminal",
+        "platform": "1",
+        "time": "2510210535",
+        "destination": "Düsseldorf Flughafen Terminal",
+        "path_stations": [
+          "Köln-Dellbrück",
+          "Köln-Holweide",
+          "Köln-Mülheim",
+          "Köln-Buchforst",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln Hansaring",
+          "Köln-Nippes",
+          "Köln Geldernstr./Parkgürtel",
+          "Köln-Longerich",
+          "Köln Volkhovener Weg",
+          "Köln-Chorweiler",
+          "Köln-Chorweiler Nord",
+          "Köln-Blumenberg",
+          "Köln-Worringen",
+          "Dormagen Chempark",
+          "Dormagen",
+          "Nievenheim",
+          "Neuss Allerheiligen",
+          "Norf",
+          "Neuss Süd",
+          "Neuss Hbf",
+          "Neuss Am Kaiser",
+          "Neuss Rheinparkcenter",
+          "Düsseldorf-Hamm",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf Hbf",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf-Zoo",
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Unterrath",
+          "Düsseldorf Flughafen Terminal"
+        ]
+      },
+      {
+        "id": "-5549242381146695701-2510210447-7",
+        "type": "S",
+        "number": "32102",
+        "direction": "Bergisch Gladbach",
+        "platform": "1",
+        "time": "2510210504",
+        "destination": "Bergisch Gladbach",
+        "path_stations": [
+          "Bergisch Gladbach"
+        ]
+      },
+      {
+        "id": "-8335331866598198547-2510210553-2",
+        "type": "S",
+        "number": "32121",
+        "direction": "Düsseldorf Flughafen Terminal",
+        "platform": "1",
+        "time": "2510210555",
+        "destination": "Düsseldorf Flughafen Terminal",
+        "path_stations": [
+          "Köln-Dellbrück",
+          "Köln-Holweide",
+          "Köln-Mülheim",
+          "Köln-Buchforst",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln Hansaring",
+          "Köln-Nippes",
+          "Köln Geldernstr./Parkgürtel",
+          "Köln-Longerich",
+          "Köln Volkhovener Weg",
+          "Köln-Chorweiler",
+          "Köln-Chorweiler Nord",
+          "Köln-Blumenberg",
+          "Köln-Worringen",
+          "Dormagen Chempark",
+          "Dormagen",
+          "Nievenheim",
+          "Neuss Allerheiligen",
+          "Norf",
+          "Neuss Süd",
+          "Neuss Hbf",
+          "Neuss Am Kaiser",
+          "Neuss Rheinparkcenter",
+          "Düsseldorf-Hamm",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf Hbf",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf-Zoo",
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Unterrath",
+          "Düsseldorf Flughafen Terminal"
+        ]
+      },
+      {
+        "id": "8401842895047825461-2510210437-6",
+        "type": "Bus",
+        "number": "144",
+        "direction": "Bergisch Gladbach",
+        "platform": "",
+        "time": "2510210523",
+        "destination": "Bergisch Gladbach",
+        "path_stations": [
+          "Bergisch Gladbach"
+        ]
+      },
+      {
+        "id": "6531357684457107396-2510210507-7",
+        "type": "S",
+        "number": "32106",
+        "direction": "Bergisch Gladbach",
+        "platform": "1",
+        "time": "2510210524",
+        "destination": "Bergisch Gladbach",
+        "path_stations": [
+          "Bergisch Gladbach"
+        ]
+      },
+      {
+        "id": "3773488832237551903-2510210458-30",
+        "type": "S",
+        "number": "32114",
+        "direction": "Bergisch Gladbach",
+        "platform": "1",
+        "time": "2510210624",
+        "destination": "Bergisch Gladbach",
+        "path_stations": [
+          "Bergisch Gladbach"
+        ]
+      },
+      {
+        "id": "2336947329621964599-2510210613-2",
+        "type": "S",
+        "number": "32125",
+        "direction": "Düsseldorf Flughafen Terminal",
+        "platform": "1",
+        "time": "2510210615",
+        "destination": "Düsseldorf Flughafen Terminal",
+        "path_stations": [
+          "Köln-Dellbrück",
+          "Köln-Holweide",
+          "Köln-Mülheim",
+          "Köln-Buchforst",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln Hansaring",
+          "Köln-Nippes",
+          "Köln Geldernstr./Parkgürtel",
+          "Köln-Longerich",
+          "Köln Volkhovener Weg",
+          "Köln-Chorweiler",
+          "Köln-Chorweiler Nord",
+          "Köln-Blumenberg",
+          "Köln-Worringen",
+          "Dormagen Chempark",
+          "Dormagen",
+          "Nievenheim",
+          "Neuss Allerheiligen",
+          "Norf",
+          "Neuss Süd",
+          "Neuss Hbf",
+          "Neuss Am Kaiser",
+          "Neuss Rheinparkcenter",
+          "Düsseldorf-Hamm",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf Hbf",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf-Zoo",
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Unterrath",
+          "Düsseldorf Flughafen Terminal"
+        ]
+      },
+      {
+        "id": "-8833691760584346805-2510210633-2",
+        "type": "S",
+        "number": "32129",
+        "direction": "Düsseldorf Flughafen Terminal",
+        "platform": "1",
+        "time": "2510210635",
+        "destination": "Düsseldorf Flughafen Terminal",
+        "path_stations": [
+          "Köln-Dellbrück",
+          "Köln-Holweide",
+          "Köln-Mülheim",
+          "Köln-Buchforst",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln Hansaring",
+          "Köln-Nippes",
+          "Köln Geldernstr./Parkgürtel",
+          "Köln-Longerich",
+          "Köln Volkhovener Weg",
+          "Köln-Chorweiler",
+          "Köln-Chorweiler Nord",
+          "Köln-Blumenberg",
+          "Köln-Worringen",
+          "Dormagen Chempark",
+          "Dormagen",
+          "Nievenheim",
+          "Neuss Allerheiligen",
+          "Norf",
+          "Neuss Süd",
+          "Neuss Hbf",
+          "Neuss Am Kaiser",
+          "Neuss Rheinparkcenter",
+          "Düsseldorf-Hamm",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf Hbf",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf-Zoo",
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Unterrath",
+          "Düsseldorf Flughafen Terminal"
+        ]
+      },
+      {
+        "id": "5270799049340630662-2510210438-30",
+        "type": "S",
+        "number": "32112",
+        "direction": "Bergisch Gladbach",
+        "platform": "1",
+        "time": "2510210604",
+        "destination": "Bergisch Gladbach",
+        "path_stations": [
+          "Bergisch Gladbach"
+        ]
+      },
+      {
+        "id": "2105813546437377345-2510210653-2",
+        "type": "S",
+        "number": "32131",
+        "direction": "Düsseldorf Flughafen Terminal",
+        "platform": "1",
+        "time": "2510210655",
+        "destination": "Düsseldorf Flughafen Terminal",
+        "path_stations": [
+          "Köln-Dellbrück",
+          "Köln-Holweide",
+          "Köln-Mülheim",
+          "Köln-Buchforst",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln Hansaring",
+          "Köln-Nippes",
+          "Köln Geldernstr./Parkgürtel",
+          "Köln-Longerich",
+          "Köln Volkhovener Weg",
+          "Köln-Chorweiler",
+          "Köln-Chorweiler Nord",
+          "Köln-Blumenberg",
+          "Köln-Worringen",
+          "Dormagen Chempark",
+          "Dormagen",
+          "Nievenheim",
+          "Neuss Allerheiligen",
+          "Norf",
+          "Neuss Süd",
+          "Neuss Hbf",
+          "Neuss Am Kaiser",
+          "Neuss Rheinparkcenter",
+          "Düsseldorf-Hamm",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf Hbf",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf-Zoo",
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Unterrath",
+          "Düsseldorf Flughafen Terminal"
+        ]
+      },
+      {
+        "id": "2551970710841011064-2510210518-30",
+        "type": "S",
+        "number": "32118",
+        "direction": "Bergisch Gladbach",
+        "platform": "1",
+        "time": "2510210644",
+        "destination": "Bergisch Gladbach",
+        "path_stations": [
+          "Bergisch Gladbach"
+        ]
+      }
+    ]
+  }
+}

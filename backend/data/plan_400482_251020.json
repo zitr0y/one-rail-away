@@ -1,0 +1,143 @@
+{
+  "station_eva": "400482",
+  "date": "251020",
+  "cached_at": "2025-10-20T16:42:49.166155",
+  "plan_data": {
+    "arrivals": [
+      {
+        "id": "-8565288696483774236-2510202141-8",
+        "type": "Bus",
+        "number": "57101",
+        "time": "2510202253",
+        "platform": "",
+        "path_stations": [
+          "Hauptbahnhof, Koblenz",
+          "Bahnhof Stadtmitte/Löhr-Center, Koblenz",
+          "Lützel Balduinbrücke, Koblenz",
+          "Bahnhof Rheinbrücke, Urmitz",
+          "Bahnhof, Neuwied",
+          "Bahnhof, Rheinbrohl",
+          "Bahnhof, Bad Hönningen"
+        ],
+        "line": "RE8"
+      },
+      {
+        "id": "2861893523349543828-2510202108-10",
+        "type": "Bus",
+        "number": "46101",
+        "time": "2510202221",
+        "platform": "",
+        "path_stations": [
+          "Hauptbahnhof, Koblenz",
+          "Ehrenbreitstein Bahnhof, Koblenz",
+          "Bahnhof, Vallendar",
+          "Engers Bahnhof, Neuwied",
+          "Bahnhof, Neuwied",
+          "Neuer Weg, Leutesdorf",
+          "Bahnhof, Rheinbrohl",
+          "Bahnhof, Bad Hönningen",
+          "Bahnhof, Leubsdorf (Rhein)"
+        ],
+        "line": "RB27"
+      },
+      {
+        "id": "1524425151386231742-2510202208-10",
+        "type": "Bus",
+        "number": "46103",
+        "time": "2510202321",
+        "platform": "",
+        "path_stations": [
+          "Hauptbahnhof, Koblenz",
+          "Ehrenbreitstein Bahnhof, Koblenz",
+          "Bahnhof, Vallendar",
+          "Engers Bahnhof, Neuwied",
+          "Bahnhof, Neuwied",
+          "Neuer Weg, Leutesdorf",
+          "Bahnhof, Rheinbrohl",
+          "Bahnhof, Bad Hönningen",
+          "Bahnhof, Leubsdorf (Rhein)"
+        ],
+        "line": "RB27"
+      },
+      {
+        "id": "-1917479370528198446-2510202308-10",
+        "type": "Bus",
+        "number": "46105",
+        "time": "2510210021",
+        "platform": "",
+        "path_stations": [
+          "Hauptbahnhof, Koblenz",
+          "Ehrenbreitstein Bahnhof, Koblenz",
+          "Bahnhof, Vallendar",
+          "Engers Bahnhof, Neuwied",
+          "Bahnhof, Neuwied",
+          "Neuer Weg, Leutesdorf",
+          "Bahnhof, Rheinbrohl",
+          "Bahnhof, Bad Hönningen",
+          "Bahnhof, Leubsdorf (Rhein)"
+        ],
+        "line": "RB27"
+      }
+    ],
+    "departures": [
+      {
+        "id": "-5495368557849872156-2510202201-1",
+        "type": "Bus",
+        "number": "47001",
+        "direction": "Bahnhof, Troisdorf",
+        "platform": "",
+        "time": "2510202201",
+        "destination": "Bahnhof, Troisdorf",
+        "path_stations": [
+          "Bahnhof, Unkel",
+          "Stadtbahn, Bad Honnef",
+          "Rhöndorf Kapelle, Bad Honnef",
+          "Bahnhof, Königswinter",
+          "Niederdollendorf Bahnhof, Königswinter",
+          "Bonn-Ramersdorf",
+          "Beuel Bahnhof, Bonn",
+          "Menden Bahnhof, Sankt Augustin",
+          "Friedrich-Wilhelms-Hütte Bahnhof, Troisdorf",
+          "Bahnhof, Troisdorf"
+        ]
+      },
+      {
+        "id": "5514034755461090794-2510202301-1",
+        "type": "Bus",
+        "number": "47003",
+        "direction": "Bahnhof, Troisdorf",
+        "platform": "",
+        "time": "2510202301",
+        "destination": "Bahnhof, Troisdorf",
+        "path_stations": [
+          "Bahnhof, Unkel",
+          "Stadtbahn, Bad Honnef",
+          "Rhöndorf Kapelle, Bad Honnef",
+          "Bahnhof, Königswinter",
+          "Niederdollendorf Bahnhof, Königswinter",
+          "Bonn-Ramersdorf",
+          "Beuel Bahnhof, Bonn",
+          "Menden Bahnhof, Sankt Augustin",
+          "Friedrich-Wilhelms-Hütte Bahnhof, Troisdorf",
+          "Bahnhof, Troisdorf"
+        ]
+      },
+      {
+        "id": "-3405635212267309204-2510210445-1",
+        "type": "Bus",
+        "number": "47005",
+        "direction": "Niederdollendorf Bahnhof, Königswinter",
+        "platform": "",
+        "time": "2510210445",
+        "destination": "Niederdollendorf Bahnhof, Königswinter",
+        "path_stations": [
+          "Bahnhof, Unkel",
+          "Stadtbahn, Bad Honnef",
+          "Rhöndorf Kapelle, Bad Honnef",
+          "Bahnhof, Königswinter",
+          "Niederdollendorf Bahnhof, Königswinter"
+        ]
+      }
+    ]
+  }
+}

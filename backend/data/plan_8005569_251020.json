@@ -1,0 +1,231 @@
+{
+  "station_eva": "8005569",
+  "date": "251020",
+  "cached_at": "2025-10-20T16:52:19.651801",
+  "plan_data": {
+    "arrivals": [
+      {
+        "id": "1187297819094461103-2510201831-2",
+        "type": "RE",
+        "number": "10772",
+        "time": "2510201837",
+        "platform": "1",
+        "path_stations": [
+          "Winterberg(Westf)"
+        ],
+        "line": "57"
+      },
+      {
+        "id": "959233734712686270-2510201641-13",
+        "type": "RE",
+        "number": "10771",
+        "time": "2510201816",
+        "platform": "1",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Hörde",
+          "Fröndenberg",
+          "Wickede(Ruhr)",
+          "Neheim-Hüsten",
+          "Arnsberg(Westf)",
+          "Oeventrop",
+          "Freienohl",
+          "Meschede",
+          "Bestwig",
+          "Bigge",
+          "Siedlinghausen"
+        ],
+        "line": "57"
+      },
+      {
+        "id": "-3573137413263550703-2510201841-13",
+        "type": "RE",
+        "number": "10773",
+        "time": "2510202016",
+        "platform": "1",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Hörde",
+          "Fröndenberg",
+          "Wickede(Ruhr)",
+          "Neheim-Hüsten",
+          "Arnsberg(Westf)",
+          "Oeventrop",
+          "Freienohl",
+          "Meschede",
+          "Bestwig",
+          "Bigge",
+          "Siedlinghausen"
+        ],
+        "line": "57"
+      },
+      {
+        "id": "-7122940753470558049-2510202131-2",
+        "type": "RE",
+        "number": "10774",
+        "time": "2510202137",
+        "platform": "1",
+        "path_stations": [
+          "Winterberg(Westf)"
+        ],
+        "line": "57"
+      },
+      {
+        "id": "-6054284350319138662-2510210616-2",
+        "type": "RE",
+        "number": "10778",
+        "time": "2510210623",
+        "platform": "1",
+        "path_stations": [
+          "Winterberg(Westf)"
+        ],
+        "line": "57"
+      },
+      {
+        "id": "-1464238442224017525-2510210650-2",
+        "type": "RE",
+        "number": "10782",
+        "time": "2510210656",
+        "platform": "1",
+        "path_stations": [
+          "Winterberg(Westf)"
+        ],
+        "line": "57"
+      },
+      {
+        "id": "767842075325333541-2510210502-13",
+        "type": "RE",
+        "number": "10777",
+        "time": "2510210639",
+        "platform": "1",
+        "path_stations": [
+          "Hagen Hbf",
+          "Schwerte(Ruhr)",
+          "Fröndenberg",
+          "Wickede(Ruhr)",
+          "Neheim-Hüsten",
+          "Arnsberg(Westf)",
+          "Oeventrop",
+          "Freienohl",
+          "Meschede",
+          "Bestwig",
+          "Bigge",
+          "Siedlinghausen"
+        ],
+        "line": "57"
+      }
+    ],
+    "departures": [
+      {
+        "id": "1187297819094461103-2510201831-2",
+        "type": "RE",
+        "number": "10772",
+        "direction": "Dortmund Hbf",
+        "platform": "1",
+        "time": "2510201837",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Siedlinghausen",
+          "Bigge",
+          "Bestwig",
+          "Meschede",
+          "Freienohl",
+          "Oeventrop",
+          "Arnsberg(Westf)",
+          "Neheim-Hüsten",
+          "Wickede(Ruhr)",
+          "Fröndenberg",
+          "Dortmund-Hörde",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "959233734712686270-2510201641-13",
+        "type": "RE",
+        "number": "10771",
+        "direction": "Winterberg(Westf)",
+        "platform": "1",
+        "time": "2510201816",
+        "destination": "Winterberg(Westf)",
+        "path_stations": [
+          "Winterberg(Westf)"
+        ]
+      },
+      {
+        "id": "-3573137413263550703-2510201841-13",
+        "type": "RE",
+        "number": "10773",
+        "direction": "Winterberg(Westf)",
+        "platform": "1",
+        "time": "2510202016",
+        "destination": "Winterberg(Westf)",
+        "path_stations": [
+          "Winterberg(Westf)"
+        ]
+      },
+      {
+        "id": "-7122940753470558049-2510202131-2",
+        "type": "RE",
+        "number": "10774",
+        "direction": "Bestwig",
+        "platform": "1",
+        "time": "2510202137",
+        "destination": "Bestwig",
+        "path_stations": [
+          "Siedlinghausen",
+          "Bigge",
+          "Bestwig"
+        ]
+      },
+      {
+        "id": "-6054284350319138662-2510210616-2",
+        "type": "RE",
+        "number": "10778",
+        "direction": "Hagen Hbf",
+        "platform": "1",
+        "time": "2510210623",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Siedlinghausen",
+          "Bigge",
+          "Bestwig",
+          "Meschede",
+          "Freienohl",
+          "Oeventrop",
+          "Arnsberg(Westf)",
+          "Neheim-Hüsten",
+          "Wickede(Ruhr)",
+          "Fröndenberg",
+          "Schwerte(Ruhr)",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "-1464238442224017525-2510210650-2",
+        "type": "RE",
+        "number": "10782",
+        "direction": "Bestwig",
+        "platform": "1",
+        "time": "2510210656",
+        "destination": "Bestwig",
+        "path_stations": [
+          "Siedlinghausen",
+          "Bigge",
+          "Bestwig"
+        ]
+      },
+      {
+        "id": "767842075325333541-2510210502-13",
+        "type": "RE",
+        "number": "10777",
+        "direction": "Winterberg(Westf)",
+        "platform": "1",
+        "time": "2510210639",
+        "destination": "Winterberg(Westf)",
+        "path_stations": [
+          "Winterberg(Westf)"
+        ]
+      }
+    ]
+  }
+}

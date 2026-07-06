@@ -1,0 +1,139 @@
+{
+  "station_eva": "396321",
+  "date": "251020",
+  "cached_at": "2025-10-20T16:42:44.097298",
+  "plan_data": {
+    "arrivals": [
+      {
+        "id": "-4460932062819804870-2510202207-3",
+        "type": "Bus",
+        "number": "46002",
+        "time": "2510202220",
+        "platform": "",
+        "path_stations": [
+          "Bahnhof, Troisdorf",
+          "Friedrich-Wilhelms-Hütte Bahnhof, Troisdorf"
+        ],
+        "line": "RB27"
+      },
+      {
+        "id": "5181539345457201314-2510202307-3",
+        "type": "Bus",
+        "number": "46004",
+        "time": "2510202320",
+        "platform": "",
+        "path_stations": [
+          "Bahnhof, Troisdorf",
+          "Friedrich-Wilhelms-Hütte Bahnhof, Troisdorf"
+        ],
+        "line": "RB27"
+      },
+      {
+        "id": "-4761463441724268812-2510210007-3",
+        "type": "Bus",
+        "number": "46006",
+        "time": "2510210020",
+        "platform": "",
+        "path_stations": [
+          "Bahnhof, Troisdorf",
+          "Friedrich-Wilhelms-Hütte Bahnhof, Troisdorf"
+        ],
+        "line": "RB27"
+      },
+      {
+        "id": "1061625715953258317-2510210107-3",
+        "type": "Bus",
+        "number": "46008",
+        "time": "2510210120",
+        "platform": "",
+        "path_stations": [
+          "Bahnhof, Troisdorf",
+          "Friedrich-Wilhelms-Hütte Bahnhof, Troisdorf"
+        ],
+        "line": "RB27"
+      }
+    ],
+    "departures": [
+      {
+        "id": "-4460932062819804870-2510202207-3",
+        "type": "Bus",
+        "number": "46002",
+        "direction": "Bahnhof, Linz am Rhein",
+        "platform": "",
+        "time": "2510202220",
+        "destination": "Bahnhof, Linz am Rhein",
+        "path_stations": [
+          "Beuel Bahnhof, Bonn",
+          "Bonn-Ramersdorf",
+          "Niederdollendorf Bahnhof, Königswinter",
+          "Bahnhof, Königswinter",
+          "Rhöndorf Bahnhof, Bad Honnef",
+          "Bahnhof, Bad Honnef",
+          "Bahnhof, Unkel",
+          "Bahnhof, Erpel",
+          "Bahnhof, Linz am Rhein"
+        ]
+      },
+      {
+        "id": "5181539345457201314-2510202307-3",
+        "type": "Bus",
+        "number": "46004",
+        "direction": "Bahnhof, Linz am Rhein",
+        "platform": "",
+        "time": "2510202320",
+        "destination": "Bahnhof, Linz am Rhein",
+        "path_stations": [
+          "Beuel Bahnhof, Bonn",
+          "Bonn-Ramersdorf",
+          "Niederdollendorf Bahnhof, Königswinter",
+          "Bahnhof, Königswinter",
+          "Rhöndorf Bahnhof, Bad Honnef",
+          "Bahnhof, Bad Honnef",
+          "Bahnhof, Unkel",
+          "Bahnhof, Erpel",
+          "Bahnhof, Linz am Rhein"
+        ]
+      },
+      {
+        "id": "-4761463441724268812-2510210007-3",
+        "type": "Bus",
+        "number": "46006",
+        "direction": "Bahnhof, Linz am Rhein",
+        "platform": "",
+        "time": "2510210020",
+        "destination": "Bahnhof, Linz am Rhein",
+        "path_stations": [
+          "Beuel Bahnhof, Bonn",
+          "Bonn-Ramersdorf",
+          "Niederdollendorf Bahnhof, Königswinter",
+          "Bahnhof, Königswinter",
+          "Rhöndorf Bahnhof, Bad Honnef",
+          "Bahnhof, Bad Honnef",
+          "Bahnhof, Unkel",
+          "Bahnhof, Erpel",
+          "Bahnhof, Linz am Rhein"
+        ]
+      },
+      {
+        "id": "1061625715953258317-2510210107-3",
+        "type": "Bus",
+        "number": "46008",
+        "direction": "Bahnhof, Linz am Rhein",
+        "platform": "",
+        "time": "2510210120",
+        "destination": "Bahnhof, Linz am Rhein",
+        "path_stations": [
+          "Beuel Bahnhof, Bonn",
+          "Bonn-Ramersdorf",
+          "Niederdollendorf Bahnhof, Königswinter",
+          "Bahnhof, Königswinter",
+          "Rhöndorf Bahnhof, Bad Honnef",
+          "Bahnhof, Bad Honnef",
+          "Bahnhof, Unkel",
+          "Bahnhof, Erpel",
+          "Bahnhof, Linz am Rhein"
+        ]
+      }
+    ]
+  }
+}

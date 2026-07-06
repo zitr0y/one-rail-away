@@ -1,0 +1,2950 @@
+{
+  "station_eva": "8001595",
+  "date": "251020",
+  "cached_at": "2025-10-20T15:33:29.341782",
+  "plan_data": {
+    "departures": [
+      {
+        "id": "-9138088604923630653-2510201751-1",
+        "type": "Bus",
+        "number": "63039",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510201751",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Rath",
+          "Ratingen Ost",
+          "Hösel",
+          "Kettwig Stausee",
+          "Kettwig",
+          "Essen-Werden",
+          "Essen-Hügel",
+          "Essen Stadtwald",
+          "Essen Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-1629591200184458286-2510201731-1",
+        "type": "Bus",
+        "number": "64055",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510201731",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Rath",
+          "Ratingen Ost",
+          "Hösel",
+          "Kettwig Stausee",
+          "Kettwig",
+          "Essen-Werden",
+          "Essen-Hügel",
+          "Essen Stadtwald",
+          "Essen Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "8190639271457460579-2510201633-5",
+        "type": "S",
+        "number": "56137",
+        "direction": "Düsseldorf Flughafen Terminal",
+        "platform": "2",
+        "time": "2510201759",
+        "destination": "Düsseldorf Flughafen Terminal",
+        "path_stations": [
+          "Düsseldorf Flughafen Terminal"
+        ]
+      },
+      {
+        "id": "-6852474675998100410-2510201744-2",
+        "type": "S",
+        "number": "33128",
+        "direction": "Bergisch Gladbach",
+        "platform": "1",
+        "time": "2510201747",
+        "destination": "Bergisch Gladbach",
+        "path_stations": [
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Hamm",
+          "Neuss Rheinparkcenter",
+          "Neuss Am Kaiser",
+          "Neuss Hbf",
+          "Neuss Süd",
+          "Norf",
+          "Neuss Allerheiligen",
+          "Nievenheim",
+          "Dormagen",
+          "Dormagen Chempark",
+          "Köln-Worringen",
+          "Köln-Blumenberg",
+          "Köln-Chorweiler Nord",
+          "Köln-Chorweiler",
+          "Köln Volkhovener Weg",
+          "Köln-Longerich",
+          "Köln Geldernstr./Parkgürtel",
+          "Köln-Nippes",
+          "Köln Hansaring",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln-Buchforst",
+          "Köln-Mülheim",
+          "Köln-Holweide",
+          "Köln-Dellbrück",
+          "Duckterath",
+          "Bergisch Gladbach"
+        ]
+      },
+      {
+        "id": "-1555898278974255722-2510201718-2",
+        "type": "S",
+        "number": "56120",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510201721",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "6301047045001093469-2510201657-5",
+        "type": "S",
+        "number": "31157",
+        "direction": "Dortmund Hbf",
+        "platform": "2",
+        "time": "2510201706",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Düsseldorf Flughafen",
+          "Angermund",
+          "Duisburg-Rahm",
+          "Duisburg-Großenbaum",
+          "Duisburg-Buchholz",
+          "Duisburg-Schlenk",
+          "Duisburg Hbf",
+          "Mülheim(Ruhr)Styrum",
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf",
+          "Essen-Steele",
+          "Essen-Steele Ost",
+          "Essen-Eiberg",
+          "Wattenscheid-Höntrop",
+          "Bochum-Ehrenfeld",
+          "Bochum Hbf",
+          "Bochum-Langendreer West",
+          "Bochum-Langendreer",
+          "Dortmund-Kley",
+          "Dortmund-Oespel",
+          "Dortmund Universität",
+          "Dortmund-Dorstfeld Süd",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "5595619589368789451-2510201711-1",
+        "type": "Bus",
+        "number": "64053",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510201711",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Rath",
+          "Ratingen Ost",
+          "Hösel",
+          "Kettwig Stausee",
+          "Kettwig",
+          "Essen-Werden",
+          "Essen-Hügel",
+          "Essen Stadtwald",
+          "Essen Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "293418545100948012-2510201613-5",
+        "type": "S",
+        "number": "56135",
+        "direction": "Düsseldorf Flughafen Terminal",
+        "platform": "2",
+        "time": "2510201739",
+        "destination": "Düsseldorf Flughafen Terminal",
+        "path_stations": [
+          "Düsseldorf Flughafen Terminal"
+        ]
+      },
+      {
+        "id": "-3425142153914482840-2510201704-2",
+        "type": "S",
+        "number": "33124",
+        "direction": "Bergisch Gladbach",
+        "platform": "1",
+        "time": "2510201707",
+        "destination": "Bergisch Gladbach",
+        "path_stations": [
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Hamm",
+          "Neuss Rheinparkcenter",
+          "Neuss Am Kaiser",
+          "Neuss Hbf",
+          "Neuss Süd",
+          "Norf",
+          "Neuss Allerheiligen",
+          "Nievenheim",
+          "Dormagen",
+          "Dormagen Chempark",
+          "Köln-Worringen",
+          "Köln-Blumenberg",
+          "Köln-Chorweiler Nord",
+          "Köln-Chorweiler",
+          "Köln Volkhovener Weg",
+          "Köln-Longerich",
+          "Köln Geldernstr./Parkgürtel",
+          "Köln-Nippes",
+          "Köln Hansaring",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln-Buchforst",
+          "Köln-Mülheim",
+          "Köln-Holweide",
+          "Köln-Dellbrück",
+          "Duckterath",
+          "Bergisch Gladbach"
+        ]
+      },
+      {
+        "id": "-7870632075245494504-2510201613-35",
+        "type": "S",
+        "number": "33107",
+        "direction": "Düsseldorf Flughafen Terminal",
+        "platform": "2",
+        "time": "2510201752",
+        "destination": "Düsseldorf Flughafen Terminal",
+        "path_stations": [
+          "Düsseldorf Flughafen Terminal"
+        ]
+      },
+      {
+        "id": "1415356615028165213-2510201553-5",
+        "type": "S",
+        "number": "56131",
+        "direction": "Düsseldorf Flughafen Terminal",
+        "platform": "2",
+        "time": "2510201719",
+        "destination": "Düsseldorf Flughafen Terminal",
+        "path_stations": [
+          "Düsseldorf Flughafen Terminal"
+        ]
+      },
+      {
+        "id": "1037911783417795363-2510201553-35",
+        "type": "S",
+        "number": "33105",
+        "direction": "Düsseldorf Flughafen Terminal",
+        "platform": "2",
+        "time": "2510201732",
+        "destination": "Düsseldorf Flughafen Terminal",
+        "path_stations": [
+          "Düsseldorf Flughafen Terminal"
+        ]
+      },
+      {
+        "id": "-7855473569570216836-2510201724-2",
+        "type": "S",
+        "number": "33126",
+        "direction": "Bergisch Gladbach",
+        "platform": "1",
+        "time": "2510201727",
+        "destination": "Bergisch Gladbach",
+        "path_stations": [
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Hamm",
+          "Neuss Rheinparkcenter",
+          "Neuss Am Kaiser",
+          "Neuss Hbf",
+          "Neuss Süd",
+          "Norf",
+          "Neuss Allerheiligen",
+          "Nievenheim",
+          "Dormagen",
+          "Dormagen Chempark",
+          "Köln-Worringen",
+          "Köln-Blumenberg",
+          "Köln-Chorweiler Nord",
+          "Köln-Chorweiler",
+          "Köln Volkhovener Weg",
+          "Köln-Longerich",
+          "Köln Geldernstr./Parkgürtel",
+          "Köln-Nippes",
+          "Köln Hansaring",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln-Buchforst",
+          "Köln-Mülheim",
+          "Köln-Holweide",
+          "Köln-Dellbrück",
+          "Duckterath",
+          "Bergisch Gladbach"
+        ]
+      },
+      {
+        "id": "-8728332143420389284-2510201738-2",
+        "type": "S",
+        "number": "56124",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510201741",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "7950184652389845405-2510201737-5",
+        "type": "S",
+        "number": "31165",
+        "direction": "Dortmund Hbf",
+        "platform": "2",
+        "time": "2510201746",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Düsseldorf Flughafen",
+          "Angermund",
+          "Duisburg-Rahm",
+          "Duisburg-Großenbaum",
+          "Duisburg-Buchholz",
+          "Duisburg-Schlenk",
+          "Duisburg Hbf",
+          "Mülheim(Ruhr)Styrum",
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf",
+          "Essen-Steele",
+          "Essen-Steele Ost",
+          "Essen-Eiberg",
+          "Wattenscheid-Höntrop",
+          "Bochum-Ehrenfeld",
+          "Bochum Hbf",
+          "Bochum-Langendreer West",
+          "Bochum-Langendreer",
+          "Dortmund-Kley",
+          "Dortmund-Oespel",
+          "Dortmund Universität",
+          "Dortmund-Dorstfeld Süd",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "9040296835721503574-2510201658-2",
+        "type": "S",
+        "number": "56118",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510201701",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-9105015555237005542-2510201553-27",
+        "type": "S",
+        "number": "31146",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510201714",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "6300808968772733756-2510201717-5",
+        "type": "S",
+        "number": "31161",
+        "direction": "Duisburg Hbf",
+        "platform": "2",
+        "time": "2510201726",
+        "destination": "Duisburg Hbf",
+        "path_stations": [
+          "Düsseldorf Flughafen",
+          "Angermund",
+          "Duisburg-Rahm",
+          "Duisburg-Großenbaum",
+          "Duisburg-Buchholz",
+          "Duisburg-Schlenk",
+          "Duisburg Hbf"
+        ]
+      },
+      {
+        "id": "-8557209944495013000-2510201533-35",
+        "type": "S",
+        "number": "33103",
+        "direction": "Düsseldorf Flughafen Terminal",
+        "platform": "2",
+        "time": "2510201712",
+        "destination": "Düsseldorf Flughafen Terminal",
+        "path_stations": [
+          "Düsseldorf Flughafen Terminal"
+        ]
+      },
+      {
+        "id": "-4271752637693918771-2510201715-8",
+        "type": "S",
+        "number": "31150",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510201734",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-4521664599156773151-2510201623-27",
+        "type": "S",
+        "number": "31154",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510201754",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-6812722505348393102-2510201653-27",
+        "type": "S",
+        "number": "31158",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510201814",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-2530119336123222776-2510201818-2",
+        "type": "S",
+        "number": "56130",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510201821",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-7660097898382246974-2510201851-1",
+        "type": "Bus",
+        "number": "63041",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510201851",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Rath",
+          "Ratingen Ost",
+          "Hösel",
+          "Kettwig Stausee",
+          "Kettwig",
+          "Essen-Werden",
+          "Essen-Hügel",
+          "Essen Stadtwald",
+          "Essen Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-698740088440691545-2510201758-2",
+        "type": "S",
+        "number": "56128",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510201801",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-3480121301683747990-2510201723-27",
+        "type": "S",
+        "number": "31166",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510201854",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "5241062801534535379-2510201653-35",
+        "type": "S",
+        "number": "33113",
+        "direction": "Düsseldorf Flughafen Terminal",
+        "platform": "2",
+        "time": "2510201832",
+        "destination": "Düsseldorf Flughafen Terminal",
+        "path_stations": [
+          "Düsseldorf Flughafen Terminal"
+        ]
+      },
+      {
+        "id": "-8730194095926765581-2510201713-5",
+        "type": "S",
+        "number": "56145",
+        "direction": "Düsseldorf Flughafen Terminal",
+        "platform": "2",
+        "time": "2510201839",
+        "destination": "Düsseldorf Flughafen Terminal",
+        "path_stations": [
+          "Düsseldorf Flughafen Terminal"
+        ]
+      },
+      {
+        "id": "-4234057807010132712-2510201733-5",
+        "type": "S",
+        "number": "56147",
+        "direction": "Düsseldorf Flughafen Terminal",
+        "platform": "2",
+        "time": "2510201859",
+        "destination": "Düsseldorf Flughafen Terminal",
+        "path_stations": [
+          "Düsseldorf Flughafen Terminal"
+        ]
+      },
+      {
+        "id": "7358106895276260495-2510201804-2",
+        "type": "S",
+        "number": "33132",
+        "direction": "Bergisch Gladbach",
+        "platform": "1",
+        "time": "2510201807",
+        "destination": "Bergisch Gladbach",
+        "path_stations": [
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Hamm",
+          "Neuss Rheinparkcenter",
+          "Neuss Am Kaiser",
+          "Neuss Hbf",
+          "Neuss Süd",
+          "Norf",
+          "Neuss Allerheiligen",
+          "Nievenheim",
+          "Dormagen",
+          "Dormagen Chempark",
+          "Köln-Worringen",
+          "Köln-Blumenberg",
+          "Köln-Chorweiler Nord",
+          "Köln-Chorweiler",
+          "Köln Volkhovener Weg",
+          "Köln-Longerich",
+          "Köln Geldernstr./Parkgürtel",
+          "Köln-Nippes",
+          "Köln Hansaring",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln-Buchforst",
+          "Köln-Mülheim",
+          "Köln-Holweide",
+          "Köln-Dellbrück",
+          "Duckterath",
+          "Bergisch Gladbach"
+        ]
+      },
+      {
+        "id": "884988265726284057-2510201633-35",
+        "type": "S",
+        "number": "33111",
+        "direction": "Düsseldorf Flughafen Terminal",
+        "platform": "2",
+        "time": "2510201812",
+        "destination": "Düsseldorf Flughafen Terminal",
+        "path_stations": [
+          "Düsseldorf Flughafen Terminal"
+        ]
+      },
+      {
+        "id": "6758009919720262777-2510201844-2",
+        "type": "S",
+        "number": "33136",
+        "direction": "Bergisch Gladbach",
+        "platform": "1",
+        "time": "2510201847",
+        "destination": "Bergisch Gladbach",
+        "path_stations": [
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Hamm",
+          "Neuss Rheinparkcenter",
+          "Neuss Am Kaiser",
+          "Neuss Hbf",
+          "Neuss Süd",
+          "Norf",
+          "Neuss Allerheiligen",
+          "Nievenheim",
+          "Dormagen",
+          "Dormagen Chempark",
+          "Köln-Worringen",
+          "Köln-Blumenberg",
+          "Köln-Chorweiler Nord",
+          "Köln-Chorweiler",
+          "Köln Volkhovener Weg",
+          "Köln-Longerich",
+          "Köln Geldernstr./Parkgürtel",
+          "Köln-Nippes",
+          "Köln Hansaring",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln-Buchforst",
+          "Köln-Mülheim",
+          "Köln-Holweide",
+          "Köln-Dellbrück",
+          "Duckterath",
+          "Bergisch Gladbach"
+        ]
+      },
+      {
+        "id": "7090038333405223439-2510201837-5",
+        "type": "S",
+        "number": "31175",
+        "direction": "Dortmund Hbf",
+        "platform": "2",
+        "time": "2510201846",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Düsseldorf Flughafen",
+          "Angermund",
+          "Duisburg-Rahm",
+          "Duisburg-Großenbaum",
+          "Duisburg-Buchholz",
+          "Duisburg-Schlenk",
+          "Duisburg Hbf",
+          "Mülheim(Ruhr)Styrum",
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf",
+          "Essen-Steele",
+          "Essen-Steele Ost",
+          "Essen-Eiberg",
+          "Wattenscheid-Höntrop",
+          "Bochum-Ehrenfeld",
+          "Bochum Hbf",
+          "Bochum-Langendreer West",
+          "Bochum-Langendreer",
+          "Dortmund-Kley",
+          "Dortmund-Oespel",
+          "Dortmund Universität",
+          "Dortmund-Dorstfeld Süd",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "9127145390184150415-2510201815-8",
+        "type": "S",
+        "number": "31162",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510201834",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-1030285933763483726-2510201824-2",
+        "type": "S",
+        "number": "33134",
+        "direction": "Bergisch Gladbach",
+        "platform": "1",
+        "time": "2510201827",
+        "destination": "Bergisch Gladbach",
+        "path_stations": [
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Hamm",
+          "Neuss Rheinparkcenter",
+          "Neuss Am Kaiser",
+          "Neuss Hbf",
+          "Neuss Süd",
+          "Norf",
+          "Neuss Allerheiligen",
+          "Nievenheim",
+          "Dormagen",
+          "Dormagen Chempark",
+          "Köln-Worringen",
+          "Köln-Blumenberg",
+          "Köln-Chorweiler Nord",
+          "Köln-Chorweiler",
+          "Köln Volkhovener Weg",
+          "Köln-Longerich",
+          "Köln Geldernstr./Parkgürtel",
+          "Köln-Nippes",
+          "Köln Hansaring",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Köln-Buchforst",
+          "Köln-Mülheim",
+          "Köln-Holweide",
+          "Köln-Dellbrück",
+          "Duckterath",
+          "Bergisch Gladbach"
+        ]
+      },
+      {
+        "id": "2855925152961425842-2510201653-5",
+        "type": "S",
+        "number": "56141",
+        "direction": "Düsseldorf Flughafen Terminal",
+        "platform": "2",
+        "time": "2510201819",
+        "destination": "Düsseldorf Flughafen Terminal",
+        "path_stations": [
+          "Düsseldorf Flughafen Terminal"
+        ]
+      },
+      {
+        "id": "3407966717770838980-2510201811-1",
+        "type": "Bus",
+        "number": "64057",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510201811",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Rath",
+          "Ratingen Ost",
+          "Hösel",
+          "Kettwig Stausee",
+          "Kettwig",
+          "Essen-Werden",
+          "Essen-Hügel",
+          "Essen Stadtwald",
+          "Essen Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-346773376619879626-2510201831-1",
+        "type": "Bus",
+        "number": "64059",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510201831",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Rath",
+          "Ratingen Ost",
+          "Hösel",
+          "Kettwig Stausee",
+          "Kettwig",
+          "Essen-Werden",
+          "Essen-Hügel",
+          "Essen Stadtwald",
+          "Essen Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-562229616484776102-2510201838-2",
+        "type": "S",
+        "number": "56134",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510201841",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-2620411401792153252-2510201713-35",
+        "type": "S",
+        "number": "33115",
+        "direction": "Düsseldorf Flughafen Terminal",
+        "platform": "2",
+        "time": "2510201852",
+        "destination": "Düsseldorf Flughafen Terminal",
+        "path_stations": [
+          "Düsseldorf Flughafen Terminal"
+        ]
+      },
+      {
+        "id": "20060156742948078-2510201757-5",
+        "type": "S",
+        "number": "31169",
+        "direction": "Dortmund Hbf",
+        "platform": "2",
+        "time": "2510201806",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Düsseldorf Flughafen",
+          "Angermund",
+          "Duisburg-Rahm",
+          "Duisburg-Großenbaum",
+          "Duisburg-Buchholz",
+          "Duisburg-Schlenk",
+          "Duisburg Hbf",
+          "Mülheim(Ruhr)Styrum",
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf",
+          "Essen-Steele",
+          "Essen-Steele Ost",
+          "Essen-Eiberg",
+          "Wattenscheid-Höntrop",
+          "Bochum-Ehrenfeld",
+          "Bochum Hbf",
+          "Bochum-Langendreer West",
+          "Bochum-Langendreer",
+          "Dortmund-Kley",
+          "Dortmund-Oespel",
+          "Dortmund Universität",
+          "Dortmund-Dorstfeld Süd",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-7284214617212237010-2510201817-5",
+        "type": "S",
+        "number": "31173",
+        "direction": "Duisburg Hbf",
+        "platform": "2",
+        "time": "2510201826",
+        "destination": "Duisburg Hbf",
+        "path_stations": [
+          "Düsseldorf Flughafen",
+          "Angermund",
+          "Duisburg-Rahm",
+          "Duisburg-Großenbaum",
+          "Duisburg-Buchholz",
+          "Duisburg-Schlenk",
+          "Duisburg Hbf"
+        ]
+      },
+      {
+        "id": "-2175314878748239454-2510201857-5",
+        "type": "S",
+        "number": "31177",
+        "direction": "Dortmund Hbf",
+        "platform": "2",
+        "time": "2510201906",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Düsseldorf Flughafen",
+          "Angermund",
+          "Duisburg-Rahm",
+          "Duisburg-Großenbaum",
+          "Duisburg-Buchholz",
+          "Duisburg-Schlenk",
+          "Duisburg Hbf",
+          "Mülheim(Ruhr)Styrum",
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf",
+          "Essen-Steele",
+          "Essen-Steele Ost",
+          "Essen-Eiberg",
+          "Wattenscheid-Höntrop",
+          "Bochum-Ehrenfeld",
+          "Bochum Hbf",
+          "Bochum-Langendreer West",
+          "Bochum-Langendreer",
+          "Dortmund-Kley",
+          "Dortmund-Oespel",
+          "Dortmund Universität",
+          "Dortmund-Dorstfeld Süd",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-6014845167072633133-2510201858-2",
+        "type": "S",
+        "number": "56136",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510201901",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-6855787613273536488-2510201733-35",
+        "type": "S",
+        "number": "33119",
+        "direction": "Düsseldorf Flughafen Terminal",
+        "platform": "2",
+        "time": "2510201912",
+        "destination": "Düsseldorf Flughafen Terminal",
+        "path_stations": [
+          "Düsseldorf Flughafen Terminal"
+        ]
+      },
+      {
+        "id": "9150334487419696062-2510201918-2",
+        "type": "S",
+        "number": "56138",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510201921",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-7376217309340768692-2510201813-5",
+        "type": "S",
+        "number": "56155",
+        "direction": "Düsseldorf Flughafen Terminal",
+        "platform": "2",
+        "time": "2510201939",
+        "destination": "Düsseldorf Flughafen Terminal",
+        "path_stations": [
+          "Düsseldorf Flughafen Terminal"
+        ]
+      },
+      {
+        "id": "-4828100076268504849-2510201917-5",
+        "type": "S",
+        "number": "31181",
+        "direction": "Duisburg Hbf",
+        "platform": "2",
+        "time": "2510201926",
+        "destination": "Duisburg Hbf",
+        "path_stations": [
+          "Düsseldorf Flughafen",
+          "Angermund",
+          "Duisburg-Rahm",
+          "Duisburg-Großenbaum",
+          "Duisburg-Buchholz",
+          "Duisburg-Schlenk",
+          "Duisburg Hbf"
+        ]
+      },
+      {
+        "id": "2390809721927293725-2510201823-27",
+        "type": "S",
+        "number": "31174",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510201944",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "5081566013175615924-2510201937-5",
+        "type": "S",
+        "number": "31183",
+        "direction": "Dortmund Hbf",
+        "platform": "2",
+        "time": "2510201946",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Düsseldorf Flughafen",
+          "Angermund",
+          "Duisburg-Rahm",
+          "Duisburg-Großenbaum",
+          "Duisburg-Buchholz",
+          "Duisburg-Schlenk",
+          "Duisburg Hbf",
+          "Mülheim(Ruhr)Styrum",
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf",
+          "Essen-Steele",
+          "Essen-Steele Ost",
+          "Essen-Eiberg",
+          "Wattenscheid-Höntrop",
+          "Bochum-Ehrenfeld",
+          "Bochum Hbf",
+          "Bochum-Langendreer West",
+          "Bochum-Langendreer",
+          "Dortmund-Kley",
+          "Dortmund-Oespel",
+          "Dortmund Universität",
+          "Dortmund-Dorstfeld Süd",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "3632799313100248910-2510201753-5",
+        "type": "S",
+        "number": "56151",
+        "direction": "Düsseldorf Flughafen Terminal",
+        "platform": "2",
+        "time": "2510201919",
+        "destination": "Düsseldorf Flughafen Terminal",
+        "path_stations": [
+          "Düsseldorf Flughafen Terminal"
+        ]
+      },
+      {
+        "id": "-241384015875935357-2510201931-1",
+        "type": "Bus",
+        "number": "64063",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510201931",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Rath",
+          "Ratingen Ost",
+          "Hösel",
+          "Kettwig Stausee",
+          "Kettwig",
+          "Essen-Werden",
+          "Essen-Hügel",
+          "Essen Stadtwald",
+          "Essen Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "3404670100132919255-2510201753-27",
+        "type": "S",
+        "number": "31170",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510201914",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "7913629659101022096-2510201938-2",
+        "type": "S",
+        "number": "56142",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510201941",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-1504320759625782662-2510201904-2",
+        "type": "S",
+        "number": "33140",
+        "direction": "Köln Messe/Deutz",
+        "platform": "1",
+        "time": "2510201907",
+        "destination": "Köln Messe/Deutz",
+        "path_stations": [
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Hamm",
+          "Neuss Rheinparkcenter",
+          "Neuss Am Kaiser",
+          "Neuss Hbf",
+          "Neuss Süd",
+          "Norf",
+          "Neuss Allerheiligen",
+          "Nievenheim",
+          "Dormagen",
+          "Dormagen Chempark",
+          "Köln-Worringen",
+          "Köln-Blumenberg",
+          "Köln-Chorweiler Nord",
+          "Köln-Chorweiler",
+          "Köln Volkhovener Weg",
+          "Köln-Longerich",
+          "Köln Geldernstr./Parkgürtel",
+          "Köln-Nippes",
+          "Köln Hansaring",
+          "Köln Hbf",
+          "Köln Messe/Deutz"
+        ]
+      },
+      {
+        "id": "-2908335940965344842-2510201954-2",
+        "type": "S",
+        "number": "33144",
+        "direction": "Köln Messe/Deutz",
+        "platform": "1",
+        "time": "2510201957",
+        "destination": "Köln Messe/Deutz",
+        "path_stations": [
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Hamm",
+          "Neuss Rheinparkcenter",
+          "Neuss Am Kaiser",
+          "Neuss Hbf",
+          "Neuss Süd",
+          "Norf",
+          "Neuss Allerheiligen",
+          "Nievenheim",
+          "Dormagen",
+          "Dormagen Chempark",
+          "Köln-Worringen",
+          "Köln-Blumenberg",
+          "Köln-Chorweiler Nord",
+          "Köln-Chorweiler",
+          "Köln Volkhovener Weg",
+          "Köln-Longerich",
+          "Köln Geldernstr./Parkgürtel",
+          "Köln-Nippes",
+          "Köln Hansaring",
+          "Köln Hbf",
+          "Köln Messe/Deutz"
+        ]
+      },
+      {
+        "id": "-2999116652558081613-2510201924-2",
+        "type": "S",
+        "number": "33142",
+        "direction": "Köln Messe/Deutz",
+        "platform": "1",
+        "time": "2510201927",
+        "destination": "Köln Messe/Deutz",
+        "path_stations": [
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Hamm",
+          "Neuss Rheinparkcenter",
+          "Neuss Am Kaiser",
+          "Neuss Hbf",
+          "Neuss Süd",
+          "Norf",
+          "Neuss Allerheiligen",
+          "Nievenheim",
+          "Dormagen",
+          "Dormagen Chempark",
+          "Köln-Worringen",
+          "Köln-Blumenberg",
+          "Köln-Chorweiler Nord",
+          "Köln-Chorweiler",
+          "Köln Volkhovener Weg",
+          "Köln-Longerich",
+          "Köln Geldernstr./Parkgürtel",
+          "Köln-Nippes",
+          "Köln Hansaring",
+          "Köln Hbf",
+          "Köln Messe/Deutz"
+        ]
+      },
+      {
+        "id": "-354488229330643102-2510201951-1",
+        "type": "Bus",
+        "number": "63043",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510201951",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Rath",
+          "Ratingen Ost",
+          "Hösel",
+          "Kettwig Stausee",
+          "Kettwig",
+          "Essen-Werden",
+          "Essen-Hügel",
+          "Essen Stadtwald",
+          "Essen Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-965858564086394413-2510201911-1",
+        "type": "Bus",
+        "number": "64061",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510201911",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Rath",
+          "Ratingen Ost",
+          "Hösel",
+          "Kettwig Stausee",
+          "Kettwig",
+          "Essen-Werden",
+          "Essen-Hügel",
+          "Essen Stadtwald",
+          "Essen Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-7025147720158753369-2510201753-35",
+        "type": "S",
+        "number": "33121",
+        "direction": "Düsseldorf Flughafen Terminal",
+        "platform": "2",
+        "time": "2510201932",
+        "destination": "Düsseldorf Flughafen Terminal",
+        "path_stations": [
+          "Düsseldorf Flughafen Terminal"
+        ]
+      },
+      {
+        "id": "7602152626037777066-2510202054-2",
+        "type": "S",
+        "number": "33148",
+        "direction": "Köln Messe/Deutz",
+        "platform": "1",
+        "time": "2510202057",
+        "destination": "Köln Messe/Deutz",
+        "path_stations": [
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Hamm",
+          "Neuss Rheinparkcenter",
+          "Neuss Am Kaiser",
+          "Neuss Hbf",
+          "Neuss Süd",
+          "Norf",
+          "Neuss Allerheiligen",
+          "Nievenheim",
+          "Dormagen",
+          "Dormagen Chempark",
+          "Köln-Worringen",
+          "Köln-Blumenberg",
+          "Köln-Chorweiler Nord",
+          "Köln-Chorweiler",
+          "Köln Volkhovener Weg",
+          "Köln-Longerich",
+          "Köln Geldernstr./Parkgürtel",
+          "Köln-Nippes",
+          "Köln Hansaring",
+          "Köln Hbf",
+          "Köln Messe/Deutz"
+        ]
+      },
+      {
+        "id": "312775916287392950-2510201851-27",
+        "type": "S",
+        "number": "31178",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510202016",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-6198274916676444611-2510201913-5",
+        "type": "S",
+        "number": "56159",
+        "direction": "Düsseldorf Flughafen Terminal",
+        "platform": "2",
+        "time": "2510202039",
+        "destination": "Düsseldorf Flughafen Terminal",
+        "path_stations": [
+          "Düsseldorf Flughafen Terminal"
+        ]
+      },
+      {
+        "id": "164372233927860724-2510201853-35",
+        "type": "S",
+        "number": "33129",
+        "direction": "Düsseldorf Flughafen Terminal",
+        "platform": "2",
+        "time": "2510202032",
+        "destination": "Düsseldorf Flughafen Terminal",
+        "path_stations": [
+          "Düsseldorf Flughafen Terminal"
+        ]
+      },
+      {
+        "id": "7195377711743719015-2510202007-5",
+        "type": "S",
+        "number": "31185",
+        "direction": "Essen Hbf",
+        "platform": "2",
+        "time": "2510202016",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Düsseldorf Flughafen",
+          "Angermund",
+          "Duisburg-Rahm",
+          "Duisburg-Großenbaum",
+          "Duisburg-Buchholz",
+          "Duisburg-Schlenk",
+          "Duisburg Hbf",
+          "Mülheim(Ruhr)Styrum",
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "3323912590793571556-2510202018-2",
+        "type": "S",
+        "number": "56148",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510202021",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-8347068226867458-2510202048-2",
+        "type": "S",
+        "number": "56150",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510202051",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-465957258473626305-2510202051-1",
+        "type": "Bus",
+        "number": "63047",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510202051",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Rath",
+          "Ratingen Ost",
+          "Hösel",
+          "Kettwig Stausee",
+          "Kettwig",
+          "Essen-Werden",
+          "Essen-Hügel",
+          "Essen Stadtwald",
+          "Essen Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-2562358167762451426-2510202021-1",
+        "type": "Bus",
+        "number": "63045",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510202021",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Rath",
+          "Ratingen Ost",
+          "Hösel",
+          "Kettwig Stausee",
+          "Kettwig",
+          "Essen-Werden",
+          "Essen-Hügel",
+          "Essen Stadtwald",
+          "Essen Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "4890552726327719177-2510201833-5",
+        "type": "S",
+        "number": "56157",
+        "direction": "Düsseldorf Flughafen Terminal",
+        "platform": "2",
+        "time": "2510202009",
+        "destination": "Düsseldorf Flughafen Terminal",
+        "path_stations": [
+          "Düsseldorf Flughafen Terminal"
+        ]
+      },
+      {
+        "id": "-4966414111834203309-2510202037-5",
+        "type": "S",
+        "number": "31187",
+        "direction": "Essen Hbf",
+        "platform": "2",
+        "time": "2510202046",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Düsseldorf Flughafen",
+          "Angermund",
+          "Duisburg-Rahm",
+          "Duisburg-Großenbaum",
+          "Duisburg-Buchholz",
+          "Duisburg-Schlenk",
+          "Duisburg Hbf",
+          "Mülheim(Ruhr)Styrum",
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "3495681272868886190-2510201958-2",
+        "type": "S",
+        "number": "56146",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510202001",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-5484991667960049137-2510201813-35",
+        "type": "S",
+        "number": "33123",
+        "direction": "Düsseldorf Flughafen Terminal",
+        "platform": "2",
+        "time": "2510202002",
+        "destination": "Düsseldorf Flughafen Terminal",
+        "path_stations": [
+          "Düsseldorf Flughafen Terminal"
+        ]
+      },
+      {
+        "id": "6749567218566713209-2510202024-2",
+        "type": "S",
+        "number": "33146",
+        "direction": "Köln Messe/Deutz",
+        "platform": "1",
+        "time": "2510202027",
+        "destination": "Köln Messe/Deutz",
+        "path_stations": [
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Hamm",
+          "Neuss Rheinparkcenter",
+          "Neuss Am Kaiser",
+          "Neuss Hbf",
+          "Neuss Süd",
+          "Norf",
+          "Neuss Allerheiligen",
+          "Nievenheim",
+          "Dormagen",
+          "Dormagen Chempark",
+          "Köln-Worringen",
+          "Köln-Blumenberg",
+          "Köln-Chorweiler Nord",
+          "Köln-Chorweiler",
+          "Köln Volkhovener Weg",
+          "Köln-Longerich",
+          "Köln Geldernstr./Parkgürtel",
+          "Köln-Nippes",
+          "Köln Hansaring",
+          "Köln Hbf",
+          "Köln Messe/Deutz"
+        ]
+      },
+      {
+        "id": "-9027594124101845781-2510201921-27",
+        "type": "S",
+        "number": "31180",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510202044",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "6047904296347569207-2510202124-2",
+        "type": "S",
+        "number": "33150",
+        "direction": "Köln Messe/Deutz",
+        "platform": "1",
+        "time": "2510202127",
+        "destination": "Köln Messe/Deutz",
+        "path_stations": [
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Hamm",
+          "Neuss Rheinparkcenter",
+          "Neuss Am Kaiser",
+          "Neuss Hbf",
+          "Neuss Süd",
+          "Norf",
+          "Neuss Allerheiligen",
+          "Nievenheim",
+          "Dormagen",
+          "Dormagen Chempark",
+          "Köln-Worringen",
+          "Köln-Blumenberg",
+          "Köln-Chorweiler Nord",
+          "Köln-Chorweiler",
+          "Köln Volkhovener Weg",
+          "Köln-Longerich",
+          "Köln Geldernstr./Parkgürtel",
+          "Köln-Nippes",
+          "Köln Hansaring",
+          "Köln Hbf",
+          "Köln Messe/Deutz"
+        ]
+      },
+      {
+        "id": "-5930456924783341444-2510202023-27",
+        "type": "S",
+        "number": "31184",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510202144",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-8308924094354947115-2510201913-35",
+        "type": "S",
+        "number": "33131",
+        "direction": "Düsseldorf Flughafen Terminal",
+        "platform": "2",
+        "time": "2510202102",
+        "destination": "Düsseldorf Flughafen Terminal",
+        "path_stations": [
+          "Düsseldorf Flughafen Terminal"
+        ]
+      },
+      {
+        "id": "2204186911412594255-2510201933-5",
+        "type": "S",
+        "number": "56161",
+        "direction": "Düsseldorf Flughafen Terminal",
+        "platform": "2",
+        "time": "2510202108",
+        "destination": "Düsseldorf Flughafen Terminal",
+        "path_stations": [
+          "Düsseldorf Flughafen Terminal"
+        ]
+      },
+      {
+        "id": "-1120758034770088542-2510202013-5",
+        "type": "S",
+        "number": "56163",
+        "direction": "Düsseldorf Flughafen Terminal",
+        "platform": "2",
+        "time": "2510202139",
+        "destination": "Düsseldorf Flughafen Terminal",
+        "path_stations": [
+          "Düsseldorf Flughafen Terminal"
+        ]
+      },
+      {
+        "id": "4334601717599118896-2510202148-2",
+        "type": "S",
+        "number": "56154",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510202151",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "8495068409962674272-2510202154-2",
+        "type": "S",
+        "number": "33152",
+        "direction": "Köln Messe/Deutz",
+        "platform": "1",
+        "time": "2510202157",
+        "destination": "Köln Messe/Deutz",
+        "path_stations": [
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Hamm",
+          "Neuss Rheinparkcenter",
+          "Neuss Am Kaiser",
+          "Neuss Hbf",
+          "Neuss Süd",
+          "Norf",
+          "Neuss Allerheiligen",
+          "Nievenheim",
+          "Dormagen",
+          "Dormagen Chempark",
+          "Köln-Worringen",
+          "Köln-Blumenberg",
+          "Köln-Chorweiler Nord",
+          "Köln-Chorweiler",
+          "Köln Volkhovener Weg",
+          "Köln-Longerich",
+          "Köln Geldernstr./Parkgürtel",
+          "Köln-Nippes",
+          "Köln Hansaring",
+          "Köln Hbf",
+          "Köln Messe/Deutz"
+        ]
+      },
+      {
+        "id": "5694448330484703670-2510202121-1",
+        "type": "Bus",
+        "number": "63049",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510202121",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Rath",
+          "Ratingen Ost",
+          "Hösel",
+          "Kettwig Stausee",
+          "Kettwig",
+          "Essen-Werden",
+          "Essen-Hügel",
+          "Essen Stadtwald",
+          "Essen Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-93948079650213652-2510202137-5",
+        "type": "S",
+        "number": "31191",
+        "direction": "Essen Hbf",
+        "platform": "2",
+        "time": "2510202146",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Düsseldorf Flughafen",
+          "Angermund",
+          "Duisburg-Rahm",
+          "Duisburg-Großenbaum",
+          "Duisburg-Buchholz",
+          "Duisburg-Schlenk",
+          "Duisburg Hbf",
+          "Mülheim(Ruhr)Styrum",
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "-8656224922965928109-2510202118-2",
+        "type": "S",
+        "number": "56152",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510202121",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-5185695367606666233-2510202107-5",
+        "type": "S",
+        "number": "31189",
+        "direction": "Essen Hbf",
+        "platform": "2",
+        "time": "2510202116",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Düsseldorf Flughafen",
+          "Angermund",
+          "Duisburg-Rahm",
+          "Duisburg-Großenbaum",
+          "Duisburg-Buchholz",
+          "Duisburg-Schlenk",
+          "Duisburg Hbf",
+          "Mülheim(Ruhr)Styrum",
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "5192597161264455361-2510201953-35",
+        "type": "S",
+        "number": "33137",
+        "direction": "Düsseldorf Flughafen Terminal",
+        "platform": "2",
+        "time": "2510202132",
+        "destination": "Düsseldorf Flughafen Terminal",
+        "path_stations": [
+          "Düsseldorf Flughafen Terminal"
+        ]
+      },
+      {
+        "id": "-4784787748227581023-2510202151-1",
+        "type": "Bus",
+        "number": "63051",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510202151",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Rath",
+          "Ratingen Ost",
+          "Hösel",
+          "Kettwig Stausee",
+          "Kettwig",
+          "Essen-Werden",
+          "Essen-Hügel",
+          "Essen Stadtwald",
+          "Essen Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-6439265394219046946-2510201953-27",
+        "type": "S",
+        "number": "31182",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510202114",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "2164813334721298154-2510202237-5",
+        "type": "S",
+        "number": "31195",
+        "direction": "Essen Hbf",
+        "platform": "2",
+        "time": "2510202246",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Düsseldorf Flughafen",
+          "Angermund",
+          "Duisburg-Rahm",
+          "Duisburg-Großenbaum",
+          "Duisburg-Buchholz",
+          "Duisburg-Schlenk",
+          "Duisburg Hbf",
+          "Mülheim(Ruhr)Styrum",
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "-615452320390548391-2510202218-2",
+        "type": "S",
+        "number": "56156",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510202221",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-2091098978807148229-2510202206-13",
+        "type": "S",
+        "number": "31188",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510202244",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-2389022620329876059-2510202207-5",
+        "type": "S",
+        "number": "31193",
+        "direction": "Essen Hbf",
+        "platform": "2",
+        "time": "2510202216",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Düsseldorf Flughafen",
+          "Angermund",
+          "Duisburg-Rahm",
+          "Duisburg-Großenbaum",
+          "Duisburg-Buchholz",
+          "Duisburg-Schlenk",
+          "Duisburg Hbf",
+          "Mülheim(Ruhr)Styrum",
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "4402484657997191064-2510202254-2",
+        "type": "S",
+        "number": "33156",
+        "direction": "Köln Messe/Deutz",
+        "platform": "1",
+        "time": "2510202257",
+        "destination": "Köln Messe/Deutz",
+        "path_stations": [
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Hamm",
+          "Neuss Rheinparkcenter",
+          "Neuss Am Kaiser",
+          "Neuss Hbf",
+          "Neuss Süd",
+          "Norf",
+          "Neuss Allerheiligen",
+          "Nievenheim",
+          "Dormagen",
+          "Dormagen Chempark",
+          "Köln-Worringen",
+          "Köln-Blumenberg",
+          "Köln-Chorweiler Nord",
+          "Köln-Chorweiler",
+          "Köln Volkhovener Weg",
+          "Köln-Longerich",
+          "Köln Geldernstr./Parkgürtel",
+          "Köln-Nippes",
+          "Köln Hansaring",
+          "Köln Hbf",
+          "Köln Messe/Deutz"
+        ]
+      },
+      {
+        "id": "-4867615009233253076-2510202111-29",
+        "type": "S",
+        "number": "33145",
+        "direction": "Düsseldorf Flughafen Terminal",
+        "platform": "2",
+        "time": "2510202232",
+        "destination": "Düsseldorf Flughafen Terminal",
+        "path_stations": [
+          "Düsseldorf Flughafen Terminal"
+        ]
+      },
+      {
+        "id": "-4015000181240572820-2510202101-5",
+        "type": "S",
+        "number": "56165",
+        "direction": "Düsseldorf Flughafen Terminal",
+        "platform": "2",
+        "time": "2510202209",
+        "destination": "Düsseldorf Flughafen Terminal",
+        "path_stations": [
+          "Düsseldorf Flughafen Terminal"
+        ]
+      },
+      {
+        "id": "-4130516540586102412-2510202053-27",
+        "type": "S",
+        "number": "31186",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510202214",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-932450593848956853-2510202248-2",
+        "type": "S",
+        "number": "56158",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510202251",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-4784295333396550006-2510202251-1",
+        "type": "Bus",
+        "number": "63001",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510202251",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Rath",
+          "Ratingen Ost",
+          "Hösel",
+          "Kettwig Stausee",
+          "Kettwig",
+          "Essen-Werden",
+          "Essen-Hügel",
+          "Essen Stadtwald",
+          "Essen Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "1478340305423346422-2510202221-1",
+        "type": "Bus",
+        "number": "63053",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510202221",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Rath",
+          "Ratingen Ost",
+          "Hösel",
+          "Kettwig Stausee",
+          "Kettwig",
+          "Essen-Werden",
+          "Essen-Hügel",
+          "Essen Stadtwald",
+          "Essen Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-2478148460754560042-2510202013-35",
+        "type": "S",
+        "number": "33139",
+        "direction": "Düsseldorf Flughafen Terminal",
+        "platform": "2",
+        "time": "2510202202",
+        "destination": "Düsseldorf Flughafen Terminal",
+        "path_stations": [
+          "Düsseldorf Flughafen Terminal"
+        ]
+      },
+      {
+        "id": "-3696045774941040078-2510202131-5",
+        "type": "S",
+        "number": "56167",
+        "direction": "Düsseldorf Flughafen Terminal",
+        "platform": "2",
+        "time": "2510202239",
+        "destination": "Düsseldorf Flughafen Terminal",
+        "path_stations": [
+          "Düsseldorf Flughafen Terminal"
+        ]
+      },
+      {
+        "id": "7069447941423545793-2510202224-2",
+        "type": "S",
+        "number": "33154",
+        "direction": "Köln Messe/Deutz",
+        "platform": "1",
+        "time": "2510202227",
+        "destination": "Köln Messe/Deutz",
+        "path_stations": [
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Hamm",
+          "Neuss Rheinparkcenter",
+          "Neuss Am Kaiser",
+          "Neuss Hbf",
+          "Neuss Süd",
+          "Norf",
+          "Neuss Allerheiligen",
+          "Nievenheim",
+          "Dormagen",
+          "Dormagen Chempark",
+          "Köln-Worringen",
+          "Köln-Blumenberg",
+          "Köln-Chorweiler Nord",
+          "Köln-Chorweiler",
+          "Köln Volkhovener Weg",
+          "Köln-Longerich",
+          "Köln Geldernstr./Parkgürtel",
+          "Köln-Nippes",
+          "Köln Hansaring",
+          "Köln Hbf",
+          "Köln Messe/Deutz"
+        ]
+      },
+      {
+        "id": "6361874886333673128-2510202236-13",
+        "type": "S",
+        "number": "31190",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510202314",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-3492477151266586565-2510202300-5",
+        "type": "S",
+        "number": "56169",
+        "direction": "Düsseldorf Flughafen Terminal",
+        "platform": "2",
+        "time": "2510202309",
+        "destination": "Düsseldorf Flughafen Terminal",
+        "path_stations": [
+          "Düsseldorf Flughafen Terminal"
+        ]
+      },
+      {
+        "id": "21280271556957567-2510202211-29",
+        "type": "S",
+        "number": "33149",
+        "direction": "Düsseldorf Flughafen Terminal",
+        "platform": "2",
+        "time": "2510202332",
+        "destination": "Düsseldorf Flughafen Terminal",
+        "path_stations": [
+          "Düsseldorf Flughafen Terminal"
+        ]
+      },
+      {
+        "id": "5351401287462142532-2510202141-29",
+        "type": "S",
+        "number": "33147",
+        "direction": "Düsseldorf Flughafen Terminal",
+        "platform": "2",
+        "time": "2510202302",
+        "destination": "Düsseldorf Flughafen Terminal",
+        "path_stations": [
+          "Düsseldorf Flughafen Terminal"
+        ]
+      },
+      {
+        "id": "2862161729195150146-2510202324-2",
+        "type": "S",
+        "number": "33158",
+        "direction": "Köln Messe/Deutz",
+        "platform": "1",
+        "time": "2510202327",
+        "destination": "Köln Messe/Deutz",
+        "path_stations": [
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Hamm",
+          "Neuss Rheinparkcenter",
+          "Neuss Am Kaiser",
+          "Neuss Hbf",
+          "Neuss Süd",
+          "Norf",
+          "Neuss Allerheiligen",
+          "Nievenheim",
+          "Dormagen",
+          "Dormagen Chempark",
+          "Köln-Worringen",
+          "Köln-Blumenberg",
+          "Köln-Chorweiler Nord",
+          "Köln-Chorweiler",
+          "Köln Volkhovener Weg",
+          "Köln-Longerich",
+          "Köln Geldernstr./Parkgürtel",
+          "Köln-Nippes",
+          "Köln Hansaring",
+          "Köln Hbf",
+          "Köln Messe/Deutz"
+        ]
+      },
+      {
+        "id": "3554000708093905771-2510202307-5",
+        "type": "S",
+        "number": "31197",
+        "direction": "Essen Hbf",
+        "platform": "2",
+        "time": "2510202316",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Düsseldorf Flughafen",
+          "Angermund",
+          "Duisburg-Rahm",
+          "Duisburg-Großenbaum",
+          "Duisburg-Buchholz",
+          "Duisburg-Schlenk",
+          "Duisburg Hbf",
+          "Mülheim(Ruhr)Styrum",
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "1357697637198735008-2510202337-5",
+        "type": "S",
+        "number": "31199",
+        "direction": "Essen Hbf",
+        "platform": "2",
+        "time": "2510202346",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Düsseldorf Flughafen",
+          "Angermund",
+          "Duisburg-Rahm",
+          "Duisburg-Großenbaum",
+          "Duisburg-Buchholz",
+          "Duisburg-Schlenk",
+          "Duisburg Hbf",
+          "Mülheim(Ruhr)Styrum",
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "-149798240641939590-2510202318-2",
+        "type": "S",
+        "number": "56160",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510202321",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-8371330095741113075-2510202330-5",
+        "type": "S",
+        "number": "56171",
+        "direction": "Düsseldorf Flughafen Terminal",
+        "platform": "2",
+        "time": "2510202339",
+        "destination": "Düsseldorf Flughafen Terminal",
+        "path_stations": [
+          "Düsseldorf Flughafen Terminal"
+        ]
+      },
+      {
+        "id": "-1537118689903044118-2510202354-2",
+        "type": "S",
+        "number": "33160",
+        "direction": "Köln Messe/Deutz",
+        "platform": "1",
+        "time": "2510202357",
+        "destination": "Köln Messe/Deutz",
+        "path_stations": [
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Hamm",
+          "Neuss Rheinparkcenter",
+          "Neuss Am Kaiser",
+          "Neuss Hbf",
+          "Neuss Süd",
+          "Norf",
+          "Neuss Allerheiligen",
+          "Nievenheim",
+          "Dormagen",
+          "Dormagen Chempark",
+          "Köln-Worringen",
+          "Köln-Blumenberg",
+          "Köln-Chorweiler Nord",
+          "Köln-Chorweiler",
+          "Köln Volkhovener Weg",
+          "Köln-Longerich",
+          "Köln Geldernstr./Parkgürtel",
+          "Köln-Nippes",
+          "Köln Hansaring",
+          "Köln Hbf",
+          "Köln Messe/Deutz"
+        ]
+      },
+      {
+        "id": "6885068923748464812-2510202348-2",
+        "type": "S",
+        "number": "56162",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510202351",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-7936343427997207508-2510202351-1",
+        "type": "Bus",
+        "number": "63005",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510202351",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Rath",
+          "Ratingen Ost",
+          "Hösel",
+          "Kettwig Stausee",
+          "Kettwig",
+          "Essen-Werden",
+          "Essen-Hügel",
+          "Essen Stadtwald",
+          "Essen Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-1746633277051937924-2510202321-1",
+        "type": "Bus",
+        "number": "63003",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510202321",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Rath",
+          "Ratingen Ost",
+          "Hösel",
+          "Kettwig Stausee",
+          "Kettwig",
+          "Essen-Werden",
+          "Essen-Hügel",
+          "Essen Stadtwald",
+          "Essen Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "8283504208782285902-2510202306-13",
+        "type": "S",
+        "number": "31192",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510202344",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-5465137919727336872-2510210000-5",
+        "type": "S",
+        "number": "56001",
+        "direction": "Düsseldorf Flughafen Terminal",
+        "platform": "2",
+        "time": "2510210009",
+        "destination": "Düsseldorf Flughafen Terminal",
+        "path_stations": [
+          "Düsseldorf Flughafen Terminal"
+        ]
+      },
+      {
+        "id": "5725591571076636546-2510210037-5",
+        "type": "S",
+        "number": "30101",
+        "direction": "Essen Hbf",
+        "platform": "2",
+        "time": "2510210046",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Düsseldorf Flughafen",
+          "Angermund",
+          "Duisburg-Rahm",
+          "Duisburg-Großenbaum",
+          "Duisburg-Buchholz",
+          "Duisburg-Schlenk",
+          "Duisburg Hbf",
+          "Mülheim(Ruhr)Styrum",
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "3430491211711410024-2510210018-2",
+        "type": "S",
+        "number": "56000",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510210021",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-3249081817069598195-2510210006-13",
+        "type": "S",
+        "number": "31196",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510210044",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-5761329669373786716-2510202336-13",
+        "type": "S",
+        "number": "31194",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510210014",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "8557930028556723345-2510210030-5",
+        "type": "S",
+        "number": "56003",
+        "direction": "Düsseldorf Flughafen Terminal",
+        "platform": "2",
+        "time": "2510210039",
+        "destination": "Düsseldorf Flughafen Terminal",
+        "path_stations": [
+          "Düsseldorf Flughafen Terminal"
+        ]
+      },
+      {
+        "id": "5881358132212087818-2510202241-29",
+        "type": "S",
+        "number": "33151",
+        "direction": "Düsseldorf Flughafen Terminal",
+        "platform": "2",
+        "time": "2510210002",
+        "destination": "Düsseldorf Flughafen Terminal",
+        "path_stations": [
+          "Düsseldorf Flughafen Terminal"
+        ]
+      },
+      {
+        "id": "8454181999371794495-2510210024-2",
+        "type": "S",
+        "number": "33166",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510210027",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-3604799332687436783-2510210051-1",
+        "type": "Bus",
+        "number": "63009",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510210051",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Rath",
+          "Ratingen Ost",
+          "Hösel",
+          "Kettwig Stausee",
+          "Kettwig",
+          "Essen-Werden",
+          "Essen-Hügel",
+          "Essen Stadtwald",
+          "Essen Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-6050410340316768586-2510210021-1",
+        "type": "Bus",
+        "number": "63007",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510210021",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Rath",
+          "Ratingen Ost",
+          "Hösel",
+          "Kettwig Stausee",
+          "Kettwig",
+          "Essen-Werden",
+          "Essen-Hügel",
+          "Essen Stadtwald",
+          "Essen Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-1937516319174206649-2510210151-1",
+        "type": "Bus",
+        "number": "63011",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510210151",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Rath",
+          "Ratingen Ost",
+          "Hösel",
+          "Kettwig Stausee",
+          "Kettwig",
+          "Essen-Werden",
+          "Essen-Hügel",
+          "Essen Stadtwald",
+          "Essen Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-3552515162721656457-2510210036-13",
+        "type": "S",
+        "number": "31198",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510210114",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-5463405634008665571-2510210137-5",
+        "type": "S",
+        "number": "30103",
+        "direction": "Essen Hbf",
+        "platform": "2",
+        "time": "2510210146",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Düsseldorf Flughafen",
+          "Angermund",
+          "Duisburg-Rahm",
+          "Duisburg-Großenbaum",
+          "Duisburg-Buchholz",
+          "Duisburg-Schlenk",
+          "Duisburg Hbf",
+          "Mülheim(Ruhr)Styrum",
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "-182088820331223920-2510210124-2",
+        "type": "S",
+        "number": "33170",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510210127",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-6491511418798041910-2510202341-29",
+        "type": "S",
+        "number": "33155",
+        "direction": "Düsseldorf Flughafen Terminal",
+        "platform": "2",
+        "time": "2510210102",
+        "destination": "Düsseldorf Flughafen Terminal",
+        "path_stations": [
+          "Düsseldorf Flughafen Terminal"
+        ]
+      },
+      {
+        "id": "-8427861782537247399-2510210118-2",
+        "type": "S",
+        "number": "56002",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510210121",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-4761712854701176885-2510210130-5",
+        "type": "S",
+        "number": "56005",
+        "direction": "Düsseldorf Flughafen Terminal",
+        "platform": "2",
+        "time": "2510210139",
+        "destination": "Düsseldorf Flughafen Terminal",
+        "path_stations": [
+          "Düsseldorf Flughafen Terminal"
+        ]
+      },
+      {
+        "id": "-7827885900200630496-2510210136-13",
+        "type": "S",
+        "number": "30100",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510210214",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "4447834871209050440-2510210218-2",
+        "type": "S",
+        "number": "56004",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510210221",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-6460516812909385421-2510210337-5",
+        "type": "S",
+        "number": "30107",
+        "direction": "Dortmund Hbf",
+        "platform": "2",
+        "time": "2510210346",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Düsseldorf Flughafen",
+          "Angermund",
+          "Duisburg-Rahm",
+          "Duisburg-Großenbaum",
+          "Duisburg-Buchholz",
+          "Duisburg-Schlenk",
+          "Duisburg Hbf",
+          "Mülheim(Ruhr)Styrum",
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf",
+          "Essen-Steele",
+          "Essen-Steele Ost",
+          "Essen-Eiberg",
+          "Wattenscheid-Höntrop",
+          "Bochum-Ehrenfeld",
+          "Bochum Hbf",
+          "Bochum-Langendreer West",
+          "Bochum-Langendreer",
+          "Dortmund-Kley",
+          "Dortmund-Oespel",
+          "Dortmund Universität",
+          "Dortmund-Dorstfeld Süd",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-6118637058233412882-2510210236-13",
+        "type": "S",
+        "number": "30102",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510210314",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-1482963961330154182-2510210450-5",
+        "type": "S",
+        "number": "56017",
+        "direction": "Düsseldorf Flughafen Terminal",
+        "platform": "2",
+        "time": "2510210459",
+        "destination": "Düsseldorf Flughafen Terminal",
+        "path_stations": [
+          "Düsseldorf Flughafen Terminal"
+        ]
+      },
+      {
+        "id": "-6387528024619672023-2510210411-1",
+        "type": "Bus",
+        "number": "64001",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510210411",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Rath",
+          "Ratingen Ost",
+          "Hösel",
+          "Kettwig Stausee",
+          "Kettwig",
+          "Essen-Werden",
+          "Essen-Hügel",
+          "Essen Stadtwald",
+          "Essen Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-7957821270062947808-2510210336-13",
+        "type": "S",
+        "number": "31594",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510210414",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "2955674588781450211-2510210430-5",
+        "type": "S",
+        "number": "56015",
+        "direction": "Düsseldorf Flughafen Terminal",
+        "platform": "2",
+        "time": "2510210439",
+        "destination": "Düsseldorf Flughafen Terminal",
+        "path_stations": [
+          "Düsseldorf Flughafen Terminal"
+        ]
+      },
+      {
+        "id": "3927825235956492079-2510210411-5",
+        "type": "S",
+        "number": "56013",
+        "direction": "Düsseldorf Flughafen Terminal",
+        "platform": "2",
+        "time": "2510210420",
+        "destination": "Düsseldorf Flughafen Terminal",
+        "path_stations": [
+          "Düsseldorf Flughafen Terminal"
+        ]
+      },
+      {
+        "id": "-4862143114048345966-2510210437-5",
+        "type": "S",
+        "number": "30111",
+        "direction": "Dortmund Hbf",
+        "platform": "2",
+        "time": "2510210446",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Düsseldorf Flughafen",
+          "Angermund",
+          "Duisburg-Rahm",
+          "Duisburg-Großenbaum",
+          "Duisburg-Buchholz",
+          "Duisburg-Schlenk",
+          "Duisburg Hbf",
+          "Mülheim(Ruhr)Styrum",
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf",
+          "Essen-Steele",
+          "Essen-Steele Ost",
+          "Essen-Eiberg",
+          "Wattenscheid-Höntrop",
+          "Bochum-Ehrenfeld",
+          "Bochum Hbf",
+          "Bochum-Langendreer West",
+          "Bochum-Langendreer",
+          "Dortmund-Kley",
+          "Dortmund-Oespel",
+          "Dortmund Universität",
+          "Dortmund-Dorstfeld Süd",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-1181546129461788131-2510210451-1",
+        "type": "Bus",
+        "number": "63013",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510210451",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Rath",
+          "Ratingen Ost",
+          "Hösel",
+          "Kettwig Stausee",
+          "Kettwig",
+          "Essen-Werden",
+          "Essen-Hügel",
+          "Essen Stadtwald",
+          "Essen Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "147930640355708999-2510210431-1",
+        "type": "Bus",
+        "number": "64003",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510210431",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Rath",
+          "Ratingen Ost",
+          "Hösel",
+          "Kettwig Stausee",
+          "Kettwig",
+          "Essen-Werden",
+          "Essen-Hügel",
+          "Essen Stadtwald",
+          "Essen Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      }
+    ],
+    "arrivals": []
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "station_eva": "391623",
+  "date": "251020",
+  "cached_at": "2025-10-20T16:42:47.348301",
+  "plan_data": {
+    "arrivals": [
+      {
+        "id": "-5495368557849872156-2510202201-10",
+        "type": "Bus",
+        "number": "47001",
+        "time": "2510202335",
+        "platform": "",
+        "path_stations": [
+          "Bahnhof, Linz am Rhein",
+          "Bahnhof, Unkel",
+          "Stadtbahn, Bad Honnef",
+          "Rhöndorf Kapelle, Bad Honnef",
+          "Bahnhof, Königswinter",
+          "Niederdollendorf Bahnhof, Königswinter",
+          "Bonn-Ramersdorf",
+          "Beuel Bahnhof, Bonn",
+          "Menden Bahnhof, Sankt Augustin"
+        ],
+        "line": "RE8"
+      },
+      {
+        "id": "5514034755461090794-2510202301-10",
+        "type": "Bus",
+        "number": "47003",
+        "time": "2510210035",
+        "platform": "",
+        "path_stations": [
+          "Bahnhof, Linz am Rhein",
+          "Bahnhof, Unkel",
+          "Stadtbahn, Bad Honnef",
+          "Rhöndorf Kapelle, Bad Honnef",
+          "Bahnhof, Königswinter",
+          "Niederdollendorf Bahnhof, Königswinter",
+          "Bonn-Ramersdorf",
+          "Beuel Bahnhof, Bonn",
+          "Menden Bahnhof, Sankt Augustin"
+        ],
+        "line": "RE8"
+      }
+    ],
+    "departures": [
+      {
+        "id": "-5495368557849872156-2510202201-10",
+        "type": "Bus",
+        "number": "47001",
+        "direction": "Bahnhof, Troisdorf",
+        "platform": "",
+        "time": "2510202335",
+        "destination": "Bahnhof, Troisdorf",
+        "path_stations": [
+          "Bahnhof, Troisdorf"
+        ]
+      },
+      {
+        "id": "5514034755461090794-2510202301-10",
+        "type": "Bus",
+        "number": "47003",
+        "direction": "Bahnhof, Troisdorf",
+        "platform": "",
+        "time": "2510210035",
+        "destination": "Bahnhof, Troisdorf",
+        "path_stations": [
+          "Bahnhof, Troisdorf"
+        ]
+      }
+    ]
+  }
+}

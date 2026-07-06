@@ -1,0 +1,1238 @@
+{
+  "station_eva": "8000842",
+  "date": "251020",
+  "cached_at": "2025-10-20T16:41:42.888420",
+  "plan_data": {
+    "arrivals": [
+      {
+        "id": "7277398705142600690-2510201754-2",
+        "type": "RRB",
+        "number": "82299",
+        "time": "2510201758",
+        "platform": "2",
+        "path_stations": [
+          "Kleve"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "5416632649792902803-2510201854-2",
+        "type": "RRB",
+        "number": "82303",
+        "time": "2510201858",
+        "platform": "2",
+        "path_stations": [
+          "Kleve"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "6921897963218607466-2510201638-13",
+        "type": "RRB",
+        "number": "82286",
+        "time": "2510201759",
+        "platform": "1",
+        "path_stations": [
+          "Düsseldorf Hbf",
+          "Düsseldorf-Bilk",
+          "Meerbusch-Osterath",
+          "Krefeld-Oppum",
+          "Krefeld Hbf",
+          "Kempen(Niederrhein)",
+          "Aldekerk",
+          "Nieukerk",
+          "Geldern",
+          "Kevelaer",
+          "Weeze",
+          "Goch"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "1487968782658263439-2510201708-13",
+        "type": "RRB",
+        "number": "82288",
+        "time": "2510201829",
+        "platform": "1",
+        "path_stations": [
+          "Düsseldorf Hbf",
+          "Düsseldorf-Bilk",
+          "Meerbusch-Osterath",
+          "Krefeld-Oppum",
+          "Krefeld Hbf",
+          "Kempen(Niederrhein)",
+          "Aldekerk",
+          "Nieukerk",
+          "Geldern",
+          "Kevelaer",
+          "Weeze",
+          "Goch"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "-8148799511607500826-2510201824-2",
+        "type": "RRB",
+        "number": "82301",
+        "time": "2510201828",
+        "platform": "2",
+        "path_stations": [
+          "Kleve"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "2064389462180669111-2510201738-13",
+        "type": "RRB",
+        "number": "82290",
+        "time": "2510201859",
+        "platform": "1",
+        "path_stations": [
+          "Düsseldorf Hbf",
+          "Düsseldorf-Bilk",
+          "Meerbusch-Osterath",
+          "Krefeld-Oppum",
+          "Krefeld Hbf",
+          "Kempen(Niederrhein)",
+          "Aldekerk",
+          "Nieukerk",
+          "Geldern",
+          "Kevelaer",
+          "Weeze",
+          "Goch"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "-2019189587809067523-2510201808-13",
+        "type": "RRB",
+        "number": "82292",
+        "time": "2510201929",
+        "platform": "1",
+        "path_stations": [
+          "Düsseldorf Hbf",
+          "Düsseldorf-Bilk",
+          "Meerbusch-Osterath",
+          "Krefeld-Oppum",
+          "Krefeld Hbf",
+          "Kempen(Niederrhein)",
+          "Aldekerk",
+          "Nieukerk",
+          "Geldern",
+          "Kevelaer",
+          "Weeze",
+          "Goch"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "5416632649792902803-2510201854-2",
+        "type": "RRB",
+        "number": "82303",
+        "time": "2510201858",
+        "platform": "2",
+        "path_stations": [
+          "Kleve"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "613320569115855840-2510201838-13",
+        "type": "RRB",
+        "number": "82294",
+        "time": "2510201959",
+        "platform": "1",
+        "path_stations": [
+          "Düsseldorf Hbf",
+          "Düsseldorf-Bilk",
+          "Meerbusch-Osterath",
+          "Krefeld-Oppum",
+          "Krefeld Hbf",
+          "Kempen(Niederrhein)",
+          "Aldekerk",
+          "Nieukerk",
+          "Geldern",
+          "Kevelaer",
+          "Weeze",
+          "Goch"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "-711392098604245736-2510201924-2",
+        "type": "RRB",
+        "number": "82305",
+        "time": "2510201928",
+        "platform": "2",
+        "path_stations": [
+          "Kleve"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "2064389462180669111-2510201738-13",
+        "type": "RRB",
+        "number": "82290",
+        "time": "2510201859",
+        "platform": "1",
+        "path_stations": [
+          "Düsseldorf Hbf",
+          "Düsseldorf-Bilk",
+          "Meerbusch-Osterath",
+          "Krefeld-Oppum",
+          "Krefeld Hbf",
+          "Kempen(Niederrhein)",
+          "Aldekerk",
+          "Nieukerk",
+          "Geldern",
+          "Kevelaer",
+          "Weeze",
+          "Goch"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "-1111803701871361704-2510201908-13",
+        "type": "RRB",
+        "number": "82296",
+        "time": "2510202029",
+        "platform": "1",
+        "path_stations": [
+          "Düsseldorf Hbf",
+          "Düsseldorf-Bilk",
+          "Meerbusch-Osterath",
+          "Krefeld-Oppum",
+          "Krefeld Hbf",
+          "Kempen(Niederrhein)",
+          "Aldekerk",
+          "Nieukerk",
+          "Geldern",
+          "Kevelaer",
+          "Weeze",
+          "Goch"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "-1148421251369438838-2510202024-2",
+        "type": "RRB",
+        "number": "82307",
+        "time": "2510202028",
+        "platform": "2",
+        "path_stations": [
+          "Kleve"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "-1956470474702786398-2510201938-13",
+        "type": "RRB",
+        "number": "82298",
+        "time": "2510202059",
+        "platform": "1",
+        "path_stations": [
+          "Düsseldorf Hbf",
+          "Düsseldorf-Bilk",
+          "Meerbusch-Osterath",
+          "Krefeld-Oppum",
+          "Krefeld Hbf",
+          "Kempen(Niederrhein)",
+          "Aldekerk",
+          "Nieukerk",
+          "Geldern",
+          "Kevelaer",
+          "Weeze",
+          "Goch"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "613320569115855840-2510201838-13",
+        "type": "RRB",
+        "number": "82294",
+        "time": "2510201959",
+        "platform": "1",
+        "path_stations": [
+          "Düsseldorf Hbf",
+          "Düsseldorf-Bilk",
+          "Meerbusch-Osterath",
+          "Krefeld-Oppum",
+          "Krefeld Hbf",
+          "Kempen(Niederrhein)",
+          "Aldekerk",
+          "Nieukerk",
+          "Geldern",
+          "Kevelaer",
+          "Weeze",
+          "Goch"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "781451183581124934-2510202038-13",
+        "type": "RRB",
+        "number": "82302",
+        "time": "2510202159",
+        "platform": "1",
+        "path_stations": [
+          "Düsseldorf Hbf",
+          "Düsseldorf-Bilk",
+          "Meerbusch-Osterath",
+          "Krefeld-Oppum",
+          "Krefeld Hbf",
+          "Kempen(Niederrhein)",
+          "Aldekerk",
+          "Nieukerk",
+          "Geldern",
+          "Kevelaer",
+          "Weeze",
+          "Goch"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "3777822722398504528-2510202124-2",
+        "type": "RRB",
+        "number": "82309",
+        "time": "2510202128",
+        "platform": "2",
+        "path_stations": [
+          "Kleve"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "-1956470474702786398-2510201938-13",
+        "type": "RRB",
+        "number": "82298",
+        "time": "2510202059",
+        "platform": "1",
+        "path_stations": [
+          "Düsseldorf Hbf",
+          "Düsseldorf-Bilk",
+          "Meerbusch-Osterath",
+          "Krefeld-Oppum",
+          "Krefeld Hbf",
+          "Kempen(Niederrhein)",
+          "Aldekerk",
+          "Nieukerk",
+          "Geldern",
+          "Kevelaer",
+          "Weeze",
+          "Goch"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "2168079795607648087-2510202008-13",
+        "type": "RRB",
+        "number": "82300",
+        "time": "2510202129",
+        "platform": "1",
+        "path_stations": [
+          "Düsseldorf Hbf",
+          "Düsseldorf-Bilk",
+          "Meerbusch-Osterath",
+          "Krefeld-Oppum",
+          "Krefeld Hbf",
+          "Kempen(Niederrhein)",
+          "Aldekerk",
+          "Nieukerk",
+          "Geldern",
+          "Kevelaer",
+          "Weeze",
+          "Goch"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "781451183581124934-2510202038-13",
+        "type": "RRB",
+        "number": "82302",
+        "time": "2510202159",
+        "platform": "1",
+        "path_stations": [
+          "Düsseldorf Hbf",
+          "Düsseldorf-Bilk",
+          "Meerbusch-Osterath",
+          "Krefeld-Oppum",
+          "Krefeld Hbf",
+          "Kempen(Niederrhein)",
+          "Aldekerk",
+          "Nieukerk",
+          "Geldern",
+          "Kevelaer",
+          "Weeze",
+          "Goch"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "1166671853693713689-2510202224-2",
+        "type": "RRB",
+        "number": "82311",
+        "time": "2510202228",
+        "platform": "2",
+        "path_stations": [
+          "Kleve"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "-5690539133685113266-2510202136-9",
+        "type": "RRB",
+        "number": "82304",
+        "time": "2510202229",
+        "platform": "1",
+        "path_stations": [
+          "Krefeld Hbf",
+          "Kempen(Niederrhein)",
+          "Aldekerk",
+          "Nieukerk",
+          "Geldern",
+          "Kevelaer",
+          "Weeze",
+          "Goch"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "-6157199314152300041-2510202236-9",
+        "type": "RRB",
+        "number": "82306",
+        "time": "2510202329",
+        "platform": "1",
+        "path_stations": [
+          "Krefeld Hbf",
+          "Kempen(Niederrhein)",
+          "Aldekerk",
+          "Nieukerk",
+          "Geldern",
+          "Kevelaer",
+          "Weeze",
+          "Goch"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "5019686297351581639-2510202336-9",
+        "type": "RRB",
+        "number": "82308",
+        "time": "2510210029",
+        "platform": "1",
+        "path_stations": [
+          "Krefeld Hbf",
+          "Kempen(Niederrhein)",
+          "Aldekerk",
+          "Nieukerk",
+          "Geldern",
+          "Kevelaer",
+          "Weeze",
+          "Goch"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "-9219906390770521273-2510202315-12",
+        "type": "Bus",
+        "number": "61308",
+        "time": "2510210156",
+        "platform": "",
+        "path_stations": [
+          "Düsseldorf Hbf",
+          "Meerbusch-Osterath",
+          "Krefeld-Oppum",
+          "Krefeld Hbf",
+          "Kempen(Niederrhein)",
+          "Aldekerk",
+          "Nieukerk",
+          "Geldern",
+          "Kevelaer",
+          "Weeze",
+          "Goch"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "-6103936026442184931-2510210454-2",
+        "type": "RRB",
+        "number": "82245",
+        "time": "2510210458",
+        "platform": "2",
+        "path_stations": [
+          "Kleve"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "7064208522619921573-2510210424-2",
+        "type": "RRB",
+        "number": "82243",
+        "time": "2510210428",
+        "platform": "2",
+        "path_stations": [
+          "Kleve"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "-6103936026442184931-2510210454-2",
+        "type": "RRB",
+        "number": "82245",
+        "time": "2510210458",
+        "platform": "2",
+        "path_stations": [
+          "Kleve"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "-4049841179518522387-2510210417-12",
+        "type": "RRB",
+        "number": "82240",
+        "time": "2510210559",
+        "platform": "1",
+        "path_stations": [
+          "Düsseldorf Hbf",
+          "Duisburg Hbf",
+          "Krefeld-Oppum",
+          "Krefeld Hbf",
+          "Kempen(Niederrhein)",
+          "Aldekerk",
+          "Nieukerk",
+          "Geldern",
+          "Kevelaer",
+          "Weeze",
+          "Goch"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "6031820734105983123-2510210524-2",
+        "type": "RRB",
+        "number": "82247",
+        "time": "2510210528",
+        "platform": "2",
+        "path_stations": [
+          "Kleve"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "-3572918682712736545-2510210554-2",
+        "type": "RRB",
+        "number": "82249",
+        "time": "2510210558",
+        "platform": "2",
+        "path_stations": [
+          "Kleve"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "941474384020352598-2510210612-2",
+        "type": "RRB",
+        "number": "82251",
+        "time": "2510210616",
+        "platform": "2",
+        "path_stations": [
+          "Kleve"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "4041771404280633861-2510210654-2",
+        "type": "RRB",
+        "number": "82255",
+        "time": "2510210658",
+        "platform": "2",
+        "path_stations": [
+          "Kleve"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "-3572918682712736545-2510210554-2",
+        "type": "RRB",
+        "number": "82249",
+        "time": "2510210558",
+        "platform": "2",
+        "path_stations": [
+          "Kleve"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "2730810649190189096-2510210624-2",
+        "type": "RRB",
+        "number": "82253",
+        "time": "2510210628",
+        "platform": "2",
+        "path_stations": [
+          "Kleve"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "-4049841179518522387-2510210417-12",
+        "type": "RRB",
+        "number": "82240",
+        "time": "2510210559",
+        "platform": "1",
+        "path_stations": [
+          "Düsseldorf Hbf",
+          "Duisburg Hbf",
+          "Krefeld-Oppum",
+          "Krefeld Hbf",
+          "Kempen(Niederrhein)",
+          "Aldekerk",
+          "Nieukerk",
+          "Geldern",
+          "Kevelaer",
+          "Weeze",
+          "Goch"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "-2163577249168074909-2510210538-13",
+        "type": "RRB",
+        "number": "82242",
+        "time": "2510210659",
+        "platform": "1",
+        "path_stations": [
+          "Düsseldorf Hbf",
+          "Düsseldorf-Bilk",
+          "Meerbusch-Osterath",
+          "Krefeld-Oppum",
+          "Krefeld Hbf",
+          "Kempen(Niederrhein)",
+          "Aldekerk",
+          "Nieukerk",
+          "Geldern",
+          "Kevelaer",
+          "Weeze",
+          "Goch"
+        ],
+        "line": "RE10"
+      }
+    ],
+    "departures": [
+      {
+        "id": "7277398705142600690-2510201754-2",
+        "type": "RRB",
+        "number": "82299",
+        "direction": "Düsseldorf Hbf",
+        "platform": "2",
+        "time": "2510201801",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Goch",
+          "Weeze",
+          "Kevelaer",
+          "Geldern",
+          "Nieukerk",
+          "Aldekerk",
+          "Kempen(Niederrhein)",
+          "Krefeld Hbf",
+          "Krefeld-Oppum",
+          "Meerbusch-Osterath",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "5416632649792902803-2510201854-2",
+        "type": "RRB",
+        "number": "82303",
+        "direction": "Düsseldorf Hbf",
+        "platform": "2",
+        "time": "2510201901",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Goch",
+          "Weeze",
+          "Kevelaer",
+          "Geldern",
+          "Nieukerk",
+          "Aldekerk",
+          "Kempen(Niederrhein)",
+          "Krefeld Hbf",
+          "Krefeld-Oppum",
+          "Meerbusch-Osterath",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "6921897963218607466-2510201638-13",
+        "type": "RRB",
+        "number": "82286",
+        "direction": "Kleve",
+        "platform": "1",
+        "time": "2510201800",
+        "destination": "Kleve",
+        "path_stations": [
+          "Kleve"
+        ]
+      },
+      {
+        "id": "1487968782658263439-2510201708-13",
+        "type": "RRB",
+        "number": "82288",
+        "direction": "Kleve",
+        "platform": "1",
+        "time": "2510201830",
+        "destination": "Kleve",
+        "path_stations": [
+          "Kleve"
+        ]
+      },
+      {
+        "id": "-8148799511607500826-2510201824-2",
+        "type": "RRB",
+        "number": "82301",
+        "direction": "Düsseldorf Hbf",
+        "platform": "2",
+        "time": "2510201831",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Goch",
+          "Weeze",
+          "Kevelaer",
+          "Geldern",
+          "Nieukerk",
+          "Aldekerk",
+          "Kempen(Niederrhein)",
+          "Krefeld Hbf",
+          "Krefeld-Oppum",
+          "Meerbusch-Osterath",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "2064389462180669111-2510201738-13",
+        "type": "RRB",
+        "number": "82290",
+        "direction": "Kleve",
+        "platform": "1",
+        "time": "2510201900",
+        "destination": "Kleve",
+        "path_stations": [
+          "Kleve"
+        ]
+      },
+      {
+        "id": "-2019189587809067523-2510201808-13",
+        "type": "RRB",
+        "number": "82292",
+        "direction": "Kleve",
+        "platform": "1",
+        "time": "2510201930",
+        "destination": "Kleve",
+        "path_stations": [
+          "Kleve"
+        ]
+      },
+      {
+        "id": "5416632649792902803-2510201854-2",
+        "type": "RRB",
+        "number": "82303",
+        "direction": "Düsseldorf Hbf",
+        "platform": "2",
+        "time": "2510201901",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Goch",
+          "Weeze",
+          "Kevelaer",
+          "Geldern",
+          "Nieukerk",
+          "Aldekerk",
+          "Kempen(Niederrhein)",
+          "Krefeld Hbf",
+          "Krefeld-Oppum",
+          "Meerbusch-Osterath",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "613320569115855840-2510201838-13",
+        "type": "RRB",
+        "number": "82294",
+        "direction": "Kleve",
+        "platform": "1",
+        "time": "2510202000",
+        "destination": "Kleve",
+        "path_stations": [
+          "Kleve"
+        ]
+      },
+      {
+        "id": "-711392098604245736-2510201924-2",
+        "type": "RRB",
+        "number": "82305",
+        "direction": "Düsseldorf Hbf",
+        "platform": "2",
+        "time": "2510201931",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Goch",
+          "Weeze",
+          "Kevelaer",
+          "Geldern",
+          "Nieukerk",
+          "Aldekerk",
+          "Kempen(Niederrhein)",
+          "Krefeld Hbf",
+          "Krefeld-Oppum",
+          "Meerbusch-Osterath",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "2064389462180669111-2510201738-13",
+        "type": "RRB",
+        "number": "82290",
+        "direction": "Kleve",
+        "platform": "1",
+        "time": "2510201900",
+        "destination": "Kleve",
+        "path_stations": [
+          "Kleve"
+        ]
+      },
+      {
+        "id": "-1111803701871361704-2510201908-13",
+        "type": "RRB",
+        "number": "82296",
+        "direction": "Kleve",
+        "platform": "1",
+        "time": "2510202030",
+        "destination": "Kleve",
+        "path_stations": [
+          "Kleve"
+        ]
+      },
+      {
+        "id": "-1148421251369438838-2510202024-2",
+        "type": "RRB",
+        "number": "82307",
+        "direction": "Krefeld Hbf",
+        "platform": "2",
+        "time": "2510202031",
+        "destination": "Krefeld Hbf",
+        "path_stations": [
+          "Goch",
+          "Weeze",
+          "Kevelaer",
+          "Geldern",
+          "Nieukerk",
+          "Aldekerk",
+          "Kempen(Niederrhein)",
+          "Krefeld Hbf"
+        ]
+      },
+      {
+        "id": "-1956470474702786398-2510201938-13",
+        "type": "RRB",
+        "number": "82298",
+        "direction": "Kleve",
+        "platform": "1",
+        "time": "2510202100",
+        "destination": "Kleve",
+        "path_stations": [
+          "Kleve"
+        ]
+      },
+      {
+        "id": "613320569115855840-2510201838-13",
+        "type": "RRB",
+        "number": "82294",
+        "direction": "Kleve",
+        "platform": "1",
+        "time": "2510202000",
+        "destination": "Kleve",
+        "path_stations": [
+          "Kleve"
+        ]
+      },
+      {
+        "id": "781451183581124934-2510202038-13",
+        "type": "RRB",
+        "number": "82302",
+        "direction": "Kleve",
+        "platform": "1",
+        "time": "2510202200",
+        "destination": "Kleve",
+        "path_stations": [
+          "Kleve"
+        ]
+      },
+      {
+        "id": "3777822722398504528-2510202124-2",
+        "type": "RRB",
+        "number": "82309",
+        "direction": "Krefeld Hbf",
+        "platform": "2",
+        "time": "2510202131",
+        "destination": "Krefeld Hbf",
+        "path_stations": [
+          "Goch",
+          "Weeze",
+          "Kevelaer",
+          "Geldern",
+          "Nieukerk",
+          "Aldekerk",
+          "Kempen(Niederrhein)",
+          "Krefeld Hbf"
+        ]
+      },
+      {
+        "id": "-1956470474702786398-2510201938-13",
+        "type": "RRB",
+        "number": "82298",
+        "direction": "Kleve",
+        "platform": "1",
+        "time": "2510202100",
+        "destination": "Kleve",
+        "path_stations": [
+          "Kleve"
+        ]
+      },
+      {
+        "id": "2168079795607648087-2510202008-13",
+        "type": "RRB",
+        "number": "82300",
+        "direction": "Kleve",
+        "platform": "1",
+        "time": "2510202130",
+        "destination": "Kleve",
+        "path_stations": [
+          "Kleve"
+        ]
+      },
+      {
+        "id": "781451183581124934-2510202038-13",
+        "type": "RRB",
+        "number": "82302",
+        "direction": "Kleve",
+        "platform": "1",
+        "time": "2510202200",
+        "destination": "Kleve",
+        "path_stations": [
+          "Kleve"
+        ]
+      },
+      {
+        "id": "1166671853693713689-2510202224-2",
+        "type": "RRB",
+        "number": "82311",
+        "direction": "Krefeld Hbf",
+        "platform": "2",
+        "time": "2510202231",
+        "destination": "Krefeld Hbf",
+        "path_stations": [
+          "Goch",
+          "Weeze",
+          "Kevelaer",
+          "Geldern",
+          "Nieukerk",
+          "Aldekerk",
+          "Kempen(Niederrhein)",
+          "Krefeld Hbf"
+        ]
+      },
+      {
+        "id": "-5690539133685113266-2510202136-9",
+        "type": "RRB",
+        "number": "82304",
+        "direction": "Kleve",
+        "platform": "1",
+        "time": "2510202230",
+        "destination": "Kleve",
+        "path_stations": [
+          "Kleve"
+        ]
+      },
+      {
+        "id": "-6157199314152300041-2510202236-9",
+        "type": "RRB",
+        "number": "82306",
+        "direction": "Kleve",
+        "platform": "1",
+        "time": "2510202330",
+        "destination": "Kleve",
+        "path_stations": [
+          "Kleve"
+        ]
+      },
+      {
+        "id": "5019686297351581639-2510202336-9",
+        "type": "RRB",
+        "number": "82308",
+        "direction": "Kleve",
+        "platform": "1",
+        "time": "2510210030",
+        "destination": "Kleve",
+        "path_stations": [
+          "Kleve"
+        ]
+      },
+      {
+        "id": "-9219906390770521273-2510202315-12",
+        "type": "Bus",
+        "number": "61308",
+        "direction": "Kleve",
+        "platform": "",
+        "time": "2510210156",
+        "destination": "Kleve",
+        "path_stations": [
+          "Kleve"
+        ]
+      },
+      {
+        "id": "-6103936026442184931-2510210454-2",
+        "type": "RRB",
+        "number": "82245",
+        "direction": "Düsseldorf Hbf",
+        "platform": "2",
+        "time": "2510210501",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Goch",
+          "Weeze",
+          "Kevelaer",
+          "Geldern",
+          "Nieukerk",
+          "Aldekerk",
+          "Kempen(Niederrhein)",
+          "Krefeld Hbf",
+          "Krefeld-Oppum",
+          "Meerbusch-Osterath",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "7064208522619921573-2510210424-2",
+        "type": "RRB",
+        "number": "82243",
+        "direction": "Düsseldorf Hbf",
+        "platform": "2",
+        "time": "2510210431",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Goch",
+          "Weeze",
+          "Kevelaer",
+          "Geldern",
+          "Nieukerk",
+          "Aldekerk",
+          "Kempen(Niederrhein)",
+          "Krefeld Hbf",
+          "Krefeld-Oppum",
+          "Meerbusch-Osterath",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-6103936026442184931-2510210454-2",
+        "type": "RRB",
+        "number": "82245",
+        "direction": "Düsseldorf Hbf",
+        "platform": "2",
+        "time": "2510210501",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Goch",
+          "Weeze",
+          "Kevelaer",
+          "Geldern",
+          "Nieukerk",
+          "Aldekerk",
+          "Kempen(Niederrhein)",
+          "Krefeld Hbf",
+          "Krefeld-Oppum",
+          "Meerbusch-Osterath",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-4049841179518522387-2510210417-12",
+        "type": "RRB",
+        "number": "82240",
+        "direction": "Kleve",
+        "platform": "1",
+        "time": "2510210600",
+        "destination": "Kleve",
+        "path_stations": [
+          "Kleve"
+        ]
+      },
+      {
+        "id": "6031820734105983123-2510210524-2",
+        "type": "RRB",
+        "number": "82247",
+        "direction": "Düsseldorf Hbf",
+        "platform": "2",
+        "time": "2510210531",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Goch",
+          "Weeze",
+          "Kevelaer",
+          "Geldern",
+          "Nieukerk",
+          "Aldekerk",
+          "Kempen(Niederrhein)",
+          "Krefeld Hbf",
+          "Krefeld-Oppum",
+          "Meerbusch-Osterath",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-3572918682712736545-2510210554-2",
+        "type": "RRB",
+        "number": "82249",
+        "direction": "Düsseldorf Hbf",
+        "platform": "2",
+        "time": "2510210601",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Goch",
+          "Weeze",
+          "Kevelaer",
+          "Geldern",
+          "Nieukerk",
+          "Aldekerk",
+          "Kempen(Niederrhein)",
+          "Krefeld Hbf",
+          "Krefeld-Oppum",
+          "Meerbusch-Osterath",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "941474384020352598-2510210612-2",
+        "type": "RRB",
+        "number": "82251",
+        "direction": "Krefeld Hbf",
+        "platform": "2",
+        "time": "2510210617",
+        "destination": "Krefeld Hbf",
+        "path_stations": [
+          "Goch",
+          "Weeze",
+          "Kevelaer",
+          "Geldern",
+          "Nieukerk",
+          "Aldekerk",
+          "Kempen(Niederrhein)",
+          "Krefeld Hbf"
+        ]
+      },
+      {
+        "id": "4041771404280633861-2510210654-2",
+        "type": "RRB",
+        "number": "82255",
+        "direction": "Düsseldorf Hbf",
+        "platform": "2",
+        "time": "2510210701",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Goch",
+          "Weeze",
+          "Kevelaer",
+          "Geldern",
+          "Nieukerk",
+          "Aldekerk",
+          "Kempen(Niederrhein)",
+          "Krefeld Hbf",
+          "Krefeld-Oppum",
+          "Meerbusch-Osterath",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-3572918682712736545-2510210554-2",
+        "type": "RRB",
+        "number": "82249",
+        "direction": "Düsseldorf Hbf",
+        "platform": "2",
+        "time": "2510210601",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Goch",
+          "Weeze",
+          "Kevelaer",
+          "Geldern",
+          "Nieukerk",
+          "Aldekerk",
+          "Kempen(Niederrhein)",
+          "Krefeld Hbf",
+          "Krefeld-Oppum",
+          "Meerbusch-Osterath",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "2730810649190189096-2510210624-2",
+        "type": "RRB",
+        "number": "82253",
+        "direction": "Düsseldorf Hbf",
+        "platform": "2",
+        "time": "2510210631",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Goch",
+          "Weeze",
+          "Kevelaer",
+          "Geldern",
+          "Nieukerk",
+          "Aldekerk",
+          "Kempen(Niederrhein)",
+          "Krefeld Hbf",
+          "Krefeld-Oppum",
+          "Meerbusch-Osterath",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-4049841179518522387-2510210417-12",
+        "type": "RRB",
+        "number": "82240",
+        "direction": "Kleve",
+        "platform": "1",
+        "time": "2510210600",
+        "destination": "Kleve",
+        "path_stations": [
+          "Kleve"
+        ]
+      },
+      {
+        "id": "-2163577249168074909-2510210538-13",
+        "type": "RRB",
+        "number": "82242",
+        "direction": "Kleve",
+        "platform": "1",
+        "time": "2510210700",
+        "destination": "Kleve",
+        "path_stations": [
+          "Kleve"
+        ]
+      }
+    ]
+  }
+}

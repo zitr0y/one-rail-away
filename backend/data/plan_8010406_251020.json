@@ -1,0 +1,1672 @@
+{
+  "station_eva": "8010406",
+  "date": "251020",
+  "cached_at": "2025-10-20T15:36:31.241947",
+  "plan_data": {
+    "departures": [
+      {
+        "id": "-6888740577720947468-2510201612-10",
+        "type": "RE",
+        "number": "73741",
+        "direction": "Möser",
+        "platform": "4",
+        "time": "2510201708",
+        "destination": "Möser",
+        "path_stations": [
+          "Berlin-Charlottenburg",
+          "Berlin-Wannsee",
+          "Potsdam Hbf",
+          "Werder(Havel)",
+          "Brandenburg Hbf",
+          "Kirchmöser",
+          "Wusterwitz",
+          "Genthin",
+          "Güsen(b Genthin)",
+          "Burg(Magdeburg)",
+          "Möser"
+        ]
+      },
+      {
+        "id": "8620056342390804768-2510201707-5",
+        "type": "RE",
+        "number": "62024",
+        "direction": "Flughafen BER",
+        "platform": "1",
+        "time": "2510201733",
+        "destination": "Flughafen BER",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Friedrichstraße",
+          "Berlin Alexanderplatz",
+          "Berlin Ostbahnhof",
+          "Berlin Ostkreuz",
+          "Flughafen BER"
+        ]
+      },
+      {
+        "id": "8426640969036503454-2510201635-13",
+        "type": "RE",
+        "number": "73783",
+        "direction": "Brandenburg Hbf",
+        "platform": "3",
+        "time": "2510201747",
+        "destination": "Brandenburg Hbf",
+        "path_stations": [
+          "Berlin-Wannsee",
+          "Potsdam Hbf",
+          "Potsdam Charlottenhof",
+          "Potsdam Park Sanssouci",
+          "Werder(Havel)",
+          "Groß Kreutz",
+          "Götz",
+          "Brandenburg Hbf"
+        ]
+      },
+      {
+        "id": "4322485845231637617-2510201605-18",
+        "type": "RE",
+        "number": "3728",
+        "direction": "Senftenberg",
+        "platform": "2",
+        "time": "2510201740",
+        "destination": "Senftenberg",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Friedrichstraße",
+          "Berlin Alexanderplatz",
+          "Berlin Ostbahnhof",
+          "Berlin Ostkreuz",
+          "Königs Wusterhausen",
+          "Zeesen",
+          "Bestensee",
+          "Groß Köris",
+          "Halbe",
+          "Oderin",
+          "Brand Tropical Islands",
+          "Schönwalde(Spreewald)",
+          "Lubolz",
+          "Lübben(Spreewald)",
+          "Lübbenau(Spreewald)",
+          "Calau(Nl)",
+          "Luckaitztal",
+          "Altdöbern",
+          "Großräschen",
+          "Sedlitz Ost",
+          "Senftenberg"
+        ]
+      },
+      {
+        "id": "801494136601483731-2510201604-14",
+        "type": "RE",
+        "number": "3127",
+        "direction": "Berlin-Spandau",
+        "platform": "4",
+        "time": "2510201744",
+        "destination": "Berlin-Spandau",
+        "path_stations": [
+          "Berlin-Charlottenburg",
+          "Berlin-Spandau"
+        ]
+      },
+      {
+        "id": "-7239123561973496948-2510201657-3",
+        "type": "RE",
+        "number": "3126",
+        "direction": "Cottbus Hbf",
+        "platform": "1",
+        "time": "2510201717",
+        "destination": "Cottbus Hbf",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Friedrichstraße",
+          "Berlin Alexanderplatz",
+          "Berlin Ostbahnhof",
+          "Berlin Ostkreuz",
+          "Königs Wusterhausen",
+          "Brand Tropical Islands",
+          "Lübben(Spreewald)",
+          "Lübbenau(Spreewald)",
+          "Raddusch",
+          "Vetschau",
+          "Kunersdorf",
+          "Cottbus Hbf"
+        ]
+      },
+      {
+        "id": "-2564262768884264317-2510201619-9",
+        "type": "RE",
+        "number": "73778",
+        "direction": "Pillgram",
+        "platform": "2",
+        "time": "2510201708",
+        "destination": "Pillgram",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Friedrichstraße",
+          "Berlin Alexanderplatz",
+          "Berlin Ostbahnhof",
+          "Berlin Ostkreuz",
+          "Erkner",
+          "Fangschleuse",
+          "Fürstenwalde(Spree)",
+          "Berkenbrück",
+          "Briesen(Mark)",
+          "Jacobsdorf(Mark)",
+          "Pillgram"
+        ]
+      },
+      {
+        "id": "3889310201134315391-2510201514-23",
+        "type": "RE",
+        "number": "3731",
+        "direction": "Dessau Hbf",
+        "platform": "3",
+        "time": "2510201720",
+        "destination": "Dessau Hbf",
+        "path_stations": [
+          "Berlin-Charlottenburg",
+          "Berlin-Wannsee",
+          "Potsdam Medienstadt Babelsberg",
+          "Potsdam-Rehbrücke",
+          "Wilhelmshorst",
+          "Michendorf",
+          "Seddin",
+          "Beelitz-Heilstätten",
+          "Borkheide",
+          "Brück(Mark)",
+          "Baitz",
+          "Bad Belzig",
+          "Wiesenburg(Mark)",
+          "Medewitz(Mark)",
+          "Jeber-Bergfrieden",
+          "Roßlau(Elbe)",
+          "Dessau Hbf"
+        ]
+      },
+      {
+        "id": "1860742173081826953-2510201644-7",
+        "type": "RE",
+        "number": "62027",
+        "direction": "Elstal",
+        "platform": "3",
+        "time": "2510201726",
+        "destination": "Elstal",
+        "path_stations": [
+          "Berlin-Spandau",
+          "Berlin-Staaken",
+          "Dallgow-Döberitz",
+          "Elstal"
+        ]
+      },
+      {
+        "id": "5401992086578712474-2510201622-12",
+        "type": "RE",
+        "number": "73738",
+        "direction": "Fürstenwalde(Spree)",
+        "platform": "2",
+        "time": "2510201753",
+        "destination": "Fürstenwalde(Spree)",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Friedrichstraße",
+          "Berlin Alexanderplatz",
+          "Berlin Ostbahnhof",
+          "Berlin Ostkreuz",
+          "Erkner",
+          "Fangschleuse",
+          "Hangelsberg",
+          "Fürstenwalde(Spree)"
+        ]
+      },
+      {
+        "id": "-711090556101637449-2510201645-6",
+        "type": "RE",
+        "number": "73818",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "2",
+        "time": "2510201730",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Friedrichstraße",
+          "Berlin Alexanderplatz",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "4323607274068234512-2510201712-5",
+        "type": "RE",
+        "number": "73821",
+        "direction": "Brandenburg Hbf",
+        "platform": "4",
+        "time": "2510201730",
+        "destination": "Brandenburg Hbf",
+        "path_stations": [
+          "Berlin-Charlottenburg",
+          "Berlin-Wannsee",
+          "Potsdam Hbf",
+          "Werder(Havel)",
+          "Brandenburg Hbf"
+        ]
+      },
+      {
+        "id": "7054965822476343973-2510201757-3",
+        "type": "RE",
+        "number": "3128",
+        "direction": "Cottbus Hbf",
+        "platform": "1",
+        "time": "2510201817",
+        "destination": "Cottbus Hbf",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Friedrichstraße",
+          "Berlin Alexanderplatz",
+          "Berlin Ostbahnhof",
+          "Berlin Ostkreuz",
+          "Königs Wusterhausen",
+          "Brand Tropical Islands",
+          "Lübben(Spreewald)",
+          "Lübbenau(Spreewald)",
+          "Raddusch",
+          "Vetschau",
+          "Kolkwitz",
+          "Cottbus Hbf"
+        ]
+      },
+      {
+        "id": "2536661623828971725-2510201807-5",
+        "type": "RE",
+        "number": "62026",
+        "direction": "Flughafen BER",
+        "platform": "1",
+        "time": "2510201833",
+        "destination": "Flughafen BER",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Friedrichstraße",
+          "Berlin Alexanderplatz",
+          "Berlin Ostbahnhof",
+          "Berlin Ostkreuz",
+          "Flughafen BER"
+        ]
+      },
+      {
+        "id": "2091072037466272189-2510201704-16",
+        "type": "RE",
+        "number": "3730",
+        "direction": "Senftenberg",
+        "platform": "2",
+        "time": "2510201840",
+        "destination": "Senftenberg",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Friedrichstraße",
+          "Berlin Alexanderplatz",
+          "Berlin Ostbahnhof",
+          "Berlin Ostkreuz",
+          "Königs Wusterhausen",
+          "Zeesen",
+          "Bestensee",
+          "Groß Köris",
+          "Halbe",
+          "Oderin",
+          "Brand Tropical Islands",
+          "Schönwalde(Spreewald)",
+          "Lubolz",
+          "Lübben(Spreewald)",
+          "Lübbenau(Spreewald)",
+          "Calau(Nl)",
+          "Luckaitztal",
+          "Altdöbern",
+          "Großräschen",
+          "Sedlitz Ost",
+          "Senftenberg"
+        ]
+      },
+      {
+        "id": "-7512191592124202783-2510201745-6",
+        "type": "RE",
+        "number": "73820",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "2",
+        "time": "2510201830",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Friedrichstraße",
+          "Berlin Alexanderplatz",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "5439270288959646064-2510201722-12",
+        "type": "RE",
+        "number": "73740",
+        "direction": "Fürstenwalde(Spree)",
+        "platform": "2",
+        "time": "2510201853",
+        "destination": "Fürstenwalde(Spree)",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Friedrichstraße",
+          "Berlin Alexanderplatz",
+          "Berlin Ostbahnhof",
+          "Berlin Ostkreuz",
+          "Erkner",
+          "Fangschleuse",
+          "Hangelsberg",
+          "Fürstenwalde(Spree)"
+        ]
+      },
+      {
+        "id": "-3642361880164599102-2510201201-19",
+        "type": "IC",
+        "number": "2431",
+        "direction": "Cottbus Hbf",
+        "platform": "2",
+        "time": "2510201900",
+        "destination": "Cottbus Hbf",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Ostbahnhof",
+          "Berlin Ostkreuz",
+          "Königs Wusterhausen",
+          "Lübben(Spreewald)",
+          "Lübbenau(Spreewald)",
+          "Cottbus Hbf"
+        ]
+      },
+      {
+        "id": "2701497066205169816-2510201712-10",
+        "type": "RE",
+        "number": "73743",
+        "direction": "Möser",
+        "platform": "4",
+        "time": "2510201807",
+        "destination": "Möser",
+        "path_stations": [
+          "Berlin-Charlottenburg",
+          "Berlin-Wannsee",
+          "Potsdam Hbf",
+          "Werder(Havel)",
+          "Brandenburg Hbf",
+          "Kirchmöser",
+          "Wusterwitz",
+          "Genthin",
+          "Güsen(b Genthin)",
+          "Burg(Magdeburg)",
+          "Möser"
+        ]
+      },
+      {
+        "id": "-992681985183964948-2510201746-9",
+        "type": "RE",
+        "number": "18765",
+        "direction": "Bad Belzig",
+        "platform": "4",
+        "time": "2510201859",
+        "destination": "Bad Belzig",
+        "path_stations": [
+          "Berlin-Charlottenburg",
+          "Berlin-Wannsee",
+          "Potsdam Medienstadt Babelsberg",
+          "Potsdam-Rehbrücke",
+          "Wilhelmshorst",
+          "Michendorf",
+          "Seddin",
+          "Beelitz-Heilstätten",
+          "Borkheide",
+          "Brück(Mark)",
+          "Baitz",
+          "Bad Belzig"
+        ]
+      },
+      {
+        "id": "-7249450723487868865-2510201843-2",
+        "type": "RE",
+        "number": "62431",
+        "direction": "Cottbus Hbf",
+        "platform": "2",
+        "time": "2510201900",
+        "destination": "Cottbus Hbf",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Ostbahnhof",
+          "Berlin Ostkreuz",
+          "Königs Wusterhausen",
+          "Lübben(Spreewald)",
+          "Lübbenau(Spreewald)",
+          "Cottbus Hbf"
+        ]
+      },
+      {
+        "id": "3433559710760088836-2510201719-9",
+        "type": "RE",
+        "number": "73780",
+        "direction": "Pillgram",
+        "platform": "2",
+        "time": "2510201808",
+        "destination": "Pillgram",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Friedrichstraße",
+          "Berlin Alexanderplatz",
+          "Berlin Ostbahnhof",
+          "Berlin Ostkreuz",
+          "Erkner",
+          "Fangschleuse",
+          "Fürstenwalde(Spree)",
+          "Berkenbrück",
+          "Briesen(Mark)",
+          "Jacobsdorf(Mark)",
+          "Pillgram"
+        ]
+      },
+      {
+        "id": "-278981035392809330-2510201704-14",
+        "type": "RE",
+        "number": "3129",
+        "direction": "Berlin-Spandau",
+        "platform": "4",
+        "time": "2510201844",
+        "destination": "Berlin-Spandau",
+        "path_stations": [
+          "Berlin-Charlottenburg",
+          "Berlin-Spandau"
+        ]
+      },
+      {
+        "id": "1559564373463908983-2510201614-23",
+        "type": "RE",
+        "number": "3733",
+        "direction": "Dessau Hbf",
+        "platform": "3",
+        "time": "2510201820",
+        "destination": "Dessau Hbf",
+        "path_stations": [
+          "Berlin-Charlottenburg",
+          "Berlin-Wannsee",
+          "Potsdam Medienstadt Babelsberg",
+          "Potsdam-Rehbrücke",
+          "Wilhelmshorst",
+          "Michendorf",
+          "Seddin",
+          "Beelitz-Heilstätten",
+          "Borkheide",
+          "Brück(Mark)",
+          "Baitz",
+          "Bad Belzig",
+          "Wiesenburg(Mark)",
+          "Jeber-Bergfrieden",
+          "Roßlau(Elbe)",
+          "Dessau Hbf"
+        ]
+      },
+      {
+        "id": "4567319989281559808-2510201814-5",
+        "type": "RE",
+        "number": "73823",
+        "direction": "Brandenburg Hbf",
+        "platform": "4",
+        "time": "2510201830",
+        "destination": "Brandenburg Hbf",
+        "path_stations": [
+          "Berlin-Charlottenburg",
+          "Berlin-Wannsee",
+          "Potsdam Hbf",
+          "Werder(Havel)",
+          "Brandenburg Hbf"
+        ]
+      },
+      {
+        "id": "-152946679764836952-2510201735-13",
+        "type": "RE",
+        "number": "73785",
+        "direction": "Brandenburg Hbf",
+        "platform": "3",
+        "time": "2510201847",
+        "destination": "Brandenburg Hbf",
+        "path_stations": [
+          "Berlin-Wannsee",
+          "Potsdam Hbf",
+          "Potsdam Charlottenhof",
+          "Potsdam Park Sanssouci",
+          "Werder(Havel)",
+          "Groß Kreutz",
+          "Götz",
+          "Brandenburg Hbf"
+        ]
+      },
+      {
+        "id": "1131574480602817578-2510201744-7",
+        "type": "RE",
+        "number": "62029",
+        "direction": "Elstal",
+        "platform": "3",
+        "time": "2510201826",
+        "destination": "Elstal",
+        "path_stations": [
+          "Berlin-Spandau",
+          "Berlin-Staaken",
+          "Dallgow-Döberitz",
+          "Elstal"
+        ]
+      },
+      {
+        "id": "-7481751258611108168-2510201804-14",
+        "type": "RE",
+        "number": "3131",
+        "direction": "Berlin-Spandau",
+        "platform": "4",
+        "time": "2510201944",
+        "destination": "Berlin-Spandau",
+        "path_stations": [
+          "Berlin-Charlottenburg",
+          "Berlin-Spandau"
+        ]
+      },
+      {
+        "id": "5072364414259528218-2510201805-18",
+        "type": "RE",
+        "number": "3732",
+        "direction": "Senftenberg",
+        "platform": "2",
+        "time": "2510201940",
+        "destination": "Senftenberg",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Friedrichstraße",
+          "Berlin Alexanderplatz",
+          "Berlin Ostbahnhof",
+          "Berlin Ostkreuz",
+          "Königs Wusterhausen",
+          "Zeesen",
+          "Bestensee",
+          "Groß Köris",
+          "Halbe",
+          "Oderin",
+          "Brand Tropical Islands",
+          "Schönwalde(Spreewald)",
+          "Lubolz",
+          "Lübben(Spreewald)",
+          "Lübbenau(Spreewald)",
+          "Calau(Nl)",
+          "Luckaitztal",
+          "Altdöbern",
+          "Großräschen",
+          "Sedlitz Ost",
+          "Senftenberg"
+        ]
+      },
+      {
+        "id": "8912487887944617223-2510201822-12",
+        "type": "RE",
+        "number": "73742",
+        "direction": "Fürstenwalde(Spree)",
+        "platform": "2",
+        "time": "2510201953",
+        "destination": "Fürstenwalde(Spree)",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Friedrichstraße",
+          "Berlin Alexanderplatz",
+          "Berlin Ostbahnhof",
+          "Berlin Ostkreuz",
+          "Erkner",
+          "Fangschleuse",
+          "Hangelsberg",
+          "Fürstenwalde(Spree)"
+        ]
+      },
+      {
+        "id": "-2721294798420893082-2510201844-7",
+        "type": "RE",
+        "number": "62031",
+        "direction": "Elstal",
+        "platform": "4",
+        "time": "2510201926",
+        "destination": "Elstal",
+        "path_stations": [
+          "Berlin-Spandau",
+          "Berlin-Staaken",
+          "Dallgow-Döberitz",
+          "Elstal"
+        ]
+      },
+      {
+        "id": "-7508358264308364137-2510201714-23",
+        "type": "RE",
+        "number": "3735",
+        "direction": "Dessau Hbf",
+        "platform": "3",
+        "time": "2510201920",
+        "destination": "Dessau Hbf",
+        "path_stations": [
+          "Berlin-Charlottenburg",
+          "Berlin-Wannsee",
+          "Potsdam Medienstadt Babelsberg",
+          "Potsdam-Rehbrücke",
+          "Wilhelmshorst",
+          "Michendorf",
+          "Seddin",
+          "Beelitz-Heilstätten",
+          "Borkheide",
+          "Brück(Mark)",
+          "Baitz",
+          "Bad Belzig",
+          "Wiesenburg(Mark)",
+          "Medewitz(Mark)",
+          "Jeber-Bergfrieden",
+          "Roßlau(Elbe)",
+          "Dessau Hbf"
+        ]
+      },
+      {
+        "id": "-8843425916325458511-2510201835-13",
+        "type": "RE",
+        "number": "73787",
+        "direction": "Brandenburg Hbf",
+        "platform": "3",
+        "time": "2510201947",
+        "destination": "Brandenburg Hbf",
+        "path_stations": [
+          "Berlin-Wannsee",
+          "Potsdam Hbf",
+          "Potsdam Charlottenhof",
+          "Potsdam Park Sanssouci",
+          "Werder(Havel)",
+          "Groß Kreutz",
+          "Götz",
+          "Brandenburg Hbf"
+        ]
+      },
+      {
+        "id": "-5069143517080929104-2510201907-5",
+        "type": "RE",
+        "number": "62028",
+        "direction": "Flughafen BER",
+        "platform": "1",
+        "time": "2510201933",
+        "destination": "Flughafen BER",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Friedrichstraße",
+          "Berlin Alexanderplatz",
+          "Berlin Ostbahnhof",
+          "Berlin Ostkreuz",
+          "Flughafen BER"
+        ]
+      },
+      {
+        "id": "-8633091645037689472-2510201819-9",
+        "type": "RE",
+        "number": "73782",
+        "direction": "Pillgram",
+        "platform": "2",
+        "time": "2510201908",
+        "destination": "Pillgram",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Friedrichstraße",
+          "Berlin Alexanderplatz",
+          "Berlin Ostbahnhof",
+          "Berlin Ostkreuz",
+          "Erkner",
+          "Fangschleuse",
+          "Fürstenwalde(Spree)",
+          "Berkenbrück",
+          "Briesen(Mark)",
+          "Jacobsdorf(Mark)",
+          "Pillgram"
+        ]
+      },
+      {
+        "id": "-3642361880164599102-2510201201-19",
+        "type": "IC",
+        "number": "2431",
+        "direction": "Cottbus Hbf",
+        "platform": "2",
+        "time": "2510201900",
+        "destination": "Cottbus Hbf",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Ostbahnhof",
+          "Berlin Ostkreuz",
+          "Königs Wusterhausen",
+          "Lübben(Spreewald)",
+          "Lübbenau(Spreewald)",
+          "Cottbus Hbf"
+        ]
+      },
+      {
+        "id": "3253725302331673582-2510201912-5",
+        "type": "RE",
+        "number": "73825",
+        "direction": "Berlin-Charlottenburg",
+        "platform": "3",
+        "time": "2510201930",
+        "destination": "Berlin-Charlottenburg",
+        "path_stations": [
+          "Berlin-Charlottenburg"
+        ]
+      },
+      {
+        "id": "-7131908627807345997-2510201812-10",
+        "type": "RE",
+        "number": "73745",
+        "direction": "Möser",
+        "platform": "4",
+        "time": "2510201908",
+        "destination": "Möser",
+        "path_stations": [
+          "Berlin-Charlottenburg",
+          "Berlin-Wannsee",
+          "Potsdam Hbf",
+          "Werder(Havel)",
+          "Brandenburg Hbf",
+          "Kirchmöser",
+          "Wusterwitz",
+          "Genthin",
+          "Güsen(b Genthin)",
+          "Burg(Magdeburg)",
+          "Möser"
+        ]
+      },
+      {
+        "id": "-7249450723487868865-2510201843-2",
+        "type": "RE",
+        "number": "62431",
+        "direction": "Cottbus Hbf",
+        "platform": "2",
+        "time": "2510201900",
+        "destination": "Cottbus Hbf",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Ostbahnhof",
+          "Berlin Ostkreuz",
+          "Königs Wusterhausen",
+          "Lübben(Spreewald)",
+          "Lübbenau(Spreewald)",
+          "Cottbus Hbf"
+        ]
+      },
+      {
+        "id": "137726261770665329-2510201857-3",
+        "type": "RE",
+        "number": "3130",
+        "direction": "Cottbus Hbf",
+        "platform": "1",
+        "time": "2510201917",
+        "destination": "Cottbus Hbf",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Friedrichstraße",
+          "Berlin Alexanderplatz",
+          "Berlin Ostbahnhof",
+          "Berlin Ostkreuz",
+          "Königs Wusterhausen",
+          "Brand Tropical Islands",
+          "Lübben(Spreewald)",
+          "Lübbenau(Spreewald)",
+          "Raddusch",
+          "Vetschau",
+          "Kunersdorf",
+          "Cottbus Hbf"
+        ]
+      },
+      {
+        "id": "1979848653779299205-2510201919-9",
+        "type": "RE",
+        "number": "73784",
+        "direction": "Pillgram",
+        "platform": "2",
+        "time": "2510202008",
+        "destination": "Pillgram",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Friedrichstraße",
+          "Berlin Alexanderplatz",
+          "Berlin Ostbahnhof",
+          "Berlin Ostkreuz",
+          "Erkner",
+          "Fangschleuse",
+          "Fürstenwalde(Spree)",
+          "Berkenbrück",
+          "Briesen(Mark)",
+          "Jacobsdorf(Mark)",
+          "Pillgram"
+        ]
+      },
+      {
+        "id": "8740070721521818538-2510202007-5",
+        "type": "RE",
+        "number": "62030",
+        "direction": "Flughafen BER",
+        "platform": "1",
+        "time": "2510202033",
+        "destination": "Flughafen BER",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Friedrichstraße",
+          "Berlin Alexanderplatz",
+          "Berlin Ostbahnhof",
+          "Berlin Ostkreuz",
+          "Flughafen BER"
+        ]
+      },
+      {
+        "id": "2586815115940275104-2510201944-7",
+        "type": "RE",
+        "number": "62033",
+        "direction": "Elstal",
+        "platform": "4",
+        "time": "2510202026",
+        "destination": "Elstal",
+        "path_stations": [
+          "Berlin-Spandau",
+          "Berlin-Staaken",
+          "Dallgow-Döberitz",
+          "Elstal"
+        ]
+      },
+      {
+        "id": "6859394526314654403-2510202024-2",
+        "type": "RE",
+        "number": "73826",
+        "direction": "Fürstenwalde(Spree)",
+        "platform": "1",
+        "time": "2510202028",
+        "destination": "Fürstenwalde(Spree)",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Friedrichstraße",
+          "Berlin Alexanderplatz",
+          "Berlin Ostbahnhof",
+          "Berlin Ostkreuz",
+          "Erkner",
+          "Fangschleuse",
+          "Fürstenwalde(Spree)"
+        ]
+      },
+      {
+        "id": "-3701754198242952663-2510201912-10",
+        "type": "RE",
+        "number": "73747",
+        "direction": "Möser",
+        "platform": "4",
+        "time": "2510202008",
+        "destination": "Möser",
+        "path_stations": [
+          "Berlin-Charlottenburg",
+          "Berlin-Wannsee",
+          "Potsdam Hbf",
+          "Werder(Havel)",
+          "Brandenburg Hbf",
+          "Kirchmöser",
+          "Wusterwitz",
+          "Genthin",
+          "Güsen(b Genthin)",
+          "Burg(Magdeburg)",
+          "Möser"
+        ]
+      },
+      {
+        "id": "8953942811272684056-2510201814-23",
+        "type": "RE",
+        "number": "3737",
+        "direction": "Dessau Hbf",
+        "platform": "4",
+        "time": "2510202020",
+        "destination": "Dessau Hbf",
+        "path_stations": [
+          "Berlin-Charlottenburg",
+          "Berlin-Wannsee",
+          "Potsdam Medienstadt Babelsberg",
+          "Potsdam-Rehbrücke",
+          "Wilhelmshorst",
+          "Michendorf",
+          "Seddin",
+          "Beelitz-Heilstätten",
+          "Borkheide",
+          "Brück(Mark)",
+          "Baitz",
+          "Bad Belzig",
+          "Wiesenburg(Mark)",
+          "Jeber-Bergfrieden",
+          "Roßlau(Elbe)",
+          "Dessau Hbf"
+        ]
+      },
+      {
+        "id": "1923081405738379549-2510201904-16",
+        "type": "RE",
+        "number": "3734",
+        "direction": "Cottbus Hbf",
+        "platform": "2",
+        "time": "2510202040",
+        "destination": "Cottbus Hbf",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Friedrichstraße",
+          "Berlin Alexanderplatz",
+          "Berlin Ostbahnhof",
+          "Berlin Ostkreuz",
+          "Königs Wusterhausen",
+          "Zeesen",
+          "Bestensee",
+          "Groß Köris",
+          "Halbe",
+          "Oderin",
+          "Brand Tropical Islands",
+          "Schönwalde(Spreewald)",
+          "Lubolz",
+          "Lübben(Spreewald)",
+          "Lübbenau(Spreewald)",
+          "Raddusch",
+          "Vetschau",
+          "Kunersdorf",
+          "Kolkwitz",
+          "Cottbus Hbf"
+        ]
+      },
+      {
+        "id": "-755105478221408565-2510201922-12",
+        "type": "RE",
+        "number": "73744",
+        "direction": "Fürstenwalde(Spree)",
+        "platform": "2",
+        "time": "2510202053",
+        "destination": "Fürstenwalde(Spree)",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Friedrichstraße",
+          "Berlin Alexanderplatz",
+          "Berlin Ostbahnhof",
+          "Berlin Ostkreuz",
+          "Erkner",
+          "Fangschleuse",
+          "Hangelsberg",
+          "Fürstenwalde(Spree)"
+        ]
+      },
+      {
+        "id": "1168167159364410334-2510201904-14",
+        "type": "RE",
+        "number": "3133",
+        "direction": "Berlin-Spandau",
+        "platform": "4",
+        "time": "2510202042",
+        "destination": "Berlin-Spandau",
+        "path_stations": [
+          "Berlin-Charlottenburg",
+          "Berlin-Spandau"
+        ]
+      },
+      {
+        "id": "3293420129703424318-2510201957-3",
+        "type": "RE",
+        "number": "3132",
+        "direction": "Cottbus Hbf",
+        "platform": "1",
+        "time": "2510202017",
+        "destination": "Cottbus Hbf",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Friedrichstraße",
+          "Berlin Alexanderplatz",
+          "Berlin Ostbahnhof",
+          "Berlin Ostkreuz",
+          "Königs Wusterhausen",
+          "Brand Tropical Islands",
+          "Lübben(Spreewald)",
+          "Lübbenau(Spreewald)",
+          "Raddusch",
+          "Vetschau",
+          "Kolkwitz",
+          "Cottbus Hbf"
+        ]
+      },
+      {
+        "id": "8849850357444188253-2510202016-3",
+        "type": "ICE",
+        "number": "879",
+        "direction": "Kassel-Wilhelmshöhe",
+        "platform": "3",
+        "time": "2510202036",
+        "destination": "Kassel-Wilhelmshöhe",
+        "path_stations": [
+          "Berlin-Spandau",
+          "Wolfsburg Hbf",
+          "Braunschweig Hbf",
+          "Hildesheim Hbf",
+          "Göttingen",
+          "Kassel-Wilhelmshöhe"
+        ]
+      },
+      {
+        "id": "-616748016640324575-2510201935-13",
+        "type": "RE",
+        "number": "73789",
+        "direction": "Brandenburg Hbf",
+        "platform": "3",
+        "time": "2510202047",
+        "destination": "Brandenburg Hbf",
+        "path_stations": [
+          "Berlin-Wannsee",
+          "Potsdam Hbf",
+          "Potsdam Charlottenhof",
+          "Potsdam Park Sanssouci",
+          "Werder(Havel)",
+          "Groß Kreutz",
+          "Götz",
+          "Brandenburg Hbf"
+        ]
+      },
+      {
+        "id": "2165737684008660451-2510202118-2",
+        "type": "RE",
+        "number": "73828",
+        "direction": "Fürstenwalde(Spree)",
+        "platform": "1",
+        "time": "2510202122",
+        "destination": "Fürstenwalde(Spree)",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Friedrichstraße",
+          "Berlin Alexanderplatz",
+          "Berlin Ostbahnhof",
+          "Berlin Ostkreuz",
+          "Erkner",
+          "Fangschleuse",
+          "Fürstenwalde(Spree)"
+        ]
+      },
+      {
+        "id": "4930255775559768785-2510201914-23",
+        "type": "RE",
+        "number": "3739",
+        "direction": "Dessau Hbf",
+        "platform": "3",
+        "time": "2510202120",
+        "destination": "Dessau Hbf",
+        "path_stations": [
+          "Berlin-Charlottenburg",
+          "Berlin-Wannsee",
+          "Potsdam Medienstadt Babelsberg",
+          "Potsdam-Rehbrücke",
+          "Wilhelmshorst",
+          "Michendorf",
+          "Seddin",
+          "Beelitz-Heilstätten",
+          "Borkheide",
+          "Brück(Mark)",
+          "Baitz",
+          "Bad Belzig",
+          "Wiesenburg(Mark)",
+          "Medewitz(Mark)",
+          "Jeber-Bergfrieden",
+          "Roßlau(Elbe)",
+          "Dessau Hbf"
+        ]
+      },
+      {
+        "id": "7941445502228145274-2510202057-3",
+        "type": "RE",
+        "number": "3134",
+        "direction": "Cottbus Hbf",
+        "platform": "2",
+        "time": "2510202117",
+        "destination": "Cottbus Hbf",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Friedrichstraße",
+          "Berlin Alexanderplatz",
+          "Berlin Ostbahnhof",
+          "Berlin Ostkreuz",
+          "Königs Wusterhausen",
+          "Brand Tropical Islands",
+          "Lübben(Spreewald)",
+          "Lübbenau(Spreewald)",
+          "Raddusch",
+          "Vetschau",
+          "Kunersdorf",
+          "Cottbus Hbf"
+        ]
+      },
+      {
+        "id": "-1182049723102138344-2510202022-12",
+        "type": "RE",
+        "number": "73746",
+        "direction": "Pillgram",
+        "platform": "2",
+        "time": "2510202153",
+        "destination": "Pillgram",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Friedrichstraße",
+          "Berlin Alexanderplatz",
+          "Berlin Ostbahnhof",
+          "Berlin Ostkreuz",
+          "Erkner",
+          "Fangschleuse",
+          "Hangelsberg",
+          "Fürstenwalde(Spree)",
+          "Berkenbrück",
+          "Briesen(Mark)",
+          "Jacobsdorf(Mark)",
+          "Pillgram"
+        ]
+      },
+      {
+        "id": "-5511541014003594580-2510201652-10",
+        "type": "ICE",
+        "number": "643",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "1",
+        "time": "2510202112",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "6709817258906874136-2510202004-14",
+        "type": "RE",
+        "number": "3135",
+        "direction": "Berlin-Charlottenburg",
+        "platform": "4",
+        "time": "2510202144",
+        "destination": "Berlin-Charlottenburg",
+        "path_stations": [
+          "Berlin-Charlottenburg"
+        ]
+      },
+      {
+        "id": "4075367166838875683-2510202035-13",
+        "type": "RE",
+        "number": "73791",
+        "direction": "Möser",
+        "platform": "3",
+        "time": "2510202147",
+        "destination": "Möser",
+        "path_stations": [
+          "Berlin-Wannsee",
+          "Potsdam Hbf",
+          "Potsdam Charlottenhof",
+          "Potsdam Park Sanssouci",
+          "Werder(Havel)",
+          "Groß Kreutz",
+          "Götz",
+          "Brandenburg Hbf",
+          "Kirchmöser",
+          "Wusterwitz",
+          "Genthin",
+          "Güsen(b Genthin)",
+          "Burg(Magdeburg)",
+          "Möser"
+        ]
+      },
+      {
+        "id": "-130190603183544299-2510201600-13",
+        "type": "IC",
+        "number": "241",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "2",
+        "time": "2510202146",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "8034745534383330002-2510202019-9",
+        "type": "RE",
+        "number": "73786",
+        "direction": "Pillgram",
+        "platform": "2",
+        "time": "2510202108",
+        "destination": "Pillgram",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Friedrichstraße",
+          "Berlin Alexanderplatz",
+          "Berlin Ostbahnhof",
+          "Berlin Ostkreuz",
+          "Erkner",
+          "Fangschleuse",
+          "Fürstenwalde(Spree)",
+          "Berkenbrück",
+          "Briesen(Mark)",
+          "Jacobsdorf(Mark)",
+          "Pillgram"
+        ]
+      },
+      {
+        "id": "-1815896018063012568-2510202044-7",
+        "type": "RE",
+        "number": "62035",
+        "direction": "Elstal",
+        "platform": "4",
+        "time": "2510202126",
+        "destination": "Elstal",
+        "path_stations": [
+          "Berlin-Spandau",
+          "Berlin-Staaken",
+          "Dallgow-Döberitz",
+          "Elstal"
+        ]
+      },
+      {
+        "id": "2505889865231431423-2510202012-10",
+        "type": "RE",
+        "number": "73749",
+        "direction": "Möser",
+        "platform": "4",
+        "time": "2510202107",
+        "destination": "Möser",
+        "path_stations": [
+          "Berlin-Charlottenburg",
+          "Berlin-Wannsee",
+          "Potsdam Hbf",
+          "Werder(Havel)",
+          "Brandenburg Hbf",
+          "Kirchmöser",
+          "Wusterwitz",
+          "Genthin",
+          "Güsen(b Genthin)",
+          "Burg(Magdeburg)",
+          "Möser"
+        ]
+      },
+      {
+        "id": "-7807139520157065993-2510202005-18",
+        "type": "RE",
+        "number": "3736",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "2",
+        "time": "2510202140",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Friedrichstraße",
+          "Berlin Alexanderplatz",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "2121877044531283563-2510202113-3",
+        "type": "ICE",
+        "number": "840",
+        "direction": "Hannover Hbf",
+        "platform": "3",
+        "time": "2510202131",
+        "destination": "Hannover Hbf",
+        "path_stations": [
+          "Berlin-Spandau",
+          "Stendal Hbf",
+          "Wolfsburg Hbf",
+          "Hannover Hbf"
+        ]
+      },
+      {
+        "id": "-8275737537227179086-2510201750-10",
+        "type": "ICE",
+        "number": "945",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "3",
+        "time": "2510202221",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "-4550645364654346112-2510201745-9",
+        "type": "ICE",
+        "number": "955",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "3",
+        "time": "2510202221",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "5557142593100385004-2510202253-1",
+        "type": "RE",
+        "number": "92748",
+        "direction": "Pillgram",
+        "platform": "3",
+        "time": "2510202253",
+        "destination": "Pillgram",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Friedrichstraße",
+          "Berlin Alexanderplatz",
+          "Berlin Ostbahnhof",
+          "Berlin Ostkreuz",
+          "Erkner",
+          "Fangschleuse",
+          "Hangelsberg",
+          "Fürstenwalde(Spree)",
+          "Berkenbrück",
+          "Briesen(Mark)",
+          "Jacobsdorf(Mark)",
+          "Pillgram"
+        ]
+      },
+      {
+        "id": "-3272021131219238243-2510201749-4",
+        "type": "ICE",
+        "number": "1159",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "3",
+        "time": "2510202216",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "1116577686148397167-2510201613-16",
+        "type": "ICE",
+        "number": "274",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "3",
+        "time": "2510202326",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "4121683295209577191-2510202315-3",
+        "type": "ICE",
+        "number": "271",
+        "direction": "Chur",
+        "platform": "3",
+        "time": "2510202335",
+        "destination": "Chur",
+        "path_stations": [
+          "Berlin-Spandau",
+          "Stendal Hbf",
+          "Wolfsburg Hbf",
+          "Hannover Hbf",
+          "Göttingen",
+          "Fulda",
+          "Hanau Hbf",
+          "Frankfurt(Main)Hbf",
+          "Mannheim Hbf",
+          "Karlsruhe Hbf",
+          "Baden-Baden",
+          "Offenburg",
+          "Freiburg(Breisgau) Hbf",
+          "Basel Bad Bf",
+          "Basel SBB",
+          "Zürich HB",
+          "Sargans",
+          "Landquart",
+          "Chur"
+        ]
+      },
+      {
+        "id": "-2131862887631555695-2510202353-1",
+        "type": "RE",
+        "number": "92750",
+        "direction": "Pillgram",
+        "platform": "3",
+        "time": "2510202353",
+        "destination": "Pillgram",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Friedrichstraße",
+          "Berlin Alexanderplatz",
+          "Berlin Ostbahnhof",
+          "Berlin Ostkreuz",
+          "Erkner",
+          "Fangschleuse",
+          "Hangelsberg",
+          "Fürstenwalde(Spree)",
+          "Berkenbrück",
+          "Briesen(Mark)",
+          "Jacobsdorf(Mark)",
+          "Pillgram"
+        ]
+      },
+      {
+        "id": "3199623009169073885-2510210011-3",
+        "type": "ICE",
+        "number": "101",
+        "direction": "Basel SBB",
+        "platform": "4",
+        "time": "2510210028",
+        "destination": "Basel SBB",
+        "path_stations": [
+          "Stendal Hbf",
+          "Braunschweig Hbf",
+          "Hannover Hbf",
+          "Minden(Westf)",
+          "Bielefeld Hbf",
+          "Gütersloh Hbf",
+          "Hamm(Westf)Hbf",
+          "Dortmund Hbf",
+          "Essen Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Hbf",
+          "Köln Hbf",
+          "Frankfurt(M) Flughafen Fernbf",
+          "Mannheim Hbf",
+          "Karlsruhe Hbf",
+          "Baden-Baden",
+          "Offenburg",
+          "Freiburg(Breisgau) Hbf",
+          "Basel Bad Bf",
+          "Basel SBB"
+        ]
+      },
+      {
+        "id": "5597303123860052865-2510201926-10",
+        "type": "ICE",
+        "number": "947",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "3",
+        "time": "2510210013",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "-7460128831778763104-2510210002-7",
+        "type": "FEX",
+        "number": "19878",
+        "direction": "Berlin-Charlottenburg",
+        "platform": "4",
+        "time": "2510210041",
+        "destination": "Berlin-Charlottenburg",
+        "path_stations": [
+          "Berlin-Charlottenburg"
+        ]
+      },
+      {
+        "id": "3916491121868625246-2510210115-7",
+        "type": "FEX",
+        "number": "19880",
+        "direction": "Berlin-Charlottenburg",
+        "platform": "4",
+        "time": "2510210153",
+        "destination": "Berlin-Charlottenburg",
+        "path_stations": [
+          "Berlin-Charlottenburg"
+        ]
+      },
+      {
+        "id": "-5773702693210961376-2510210116-1",
+        "type": "RE",
+        "number": "92794",
+        "direction": "Pillgram",
+        "platform": "3",
+        "time": "2510210116",
+        "destination": "Pillgram",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Friedrichstraße",
+          "Berlin Alexanderplatz",
+          "Berlin Ostbahnhof",
+          "Berlin Ostkreuz",
+          "Erkner",
+          "Fangschleuse",
+          "Hangelsberg",
+          "Fürstenwalde(Spree)",
+          "Berkenbrück",
+          "Briesen(Mark)",
+          "Jacobsdorf(Mark)",
+          "Pillgram"
+        ]
+      },
+      {
+        "id": "5089820149948252230-2510201646-16",
+        "type": "ICE",
+        "number": "592",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "3",
+        "time": "2510210103",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "-199422321941227724-2510210320-2",
+        "type": "FEX",
+        "number": "19803",
+        "direction": "Flughafen BER",
+        "platform": "3",
+        "time": "2510210323",
+        "destination": "Flughafen BER",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Friedrichstraße",
+          "Berlin Alexanderplatz",
+          "Berlin Ostbahnhof",
+          "Berlin Ostkreuz",
+          "Flughafen BER"
+        ]
+      },
+      {
+        "id": "1507163401013910914-2510210305-2",
+        "type": "FEX",
+        "number": "19801",
+        "direction": "Flughafen BER",
+        "platform": "3",
+        "time": "2510210309",
+        "destination": "Flughafen BER",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Friedrichstraße",
+          "Berlin Alexanderplatz",
+          "Berlin Ostbahnhof",
+          "Berlin Ostkreuz",
+          "Flughafen BER"
+        ]
+      },
+      {
+        "id": "3615859253178022315-2510210425-6",
+        "type": "RE",
+        "number": "73757",
+        "direction": "Brandenburg Hbf",
+        "platform": "3",
+        "time": "2510210447",
+        "destination": "Brandenburg Hbf",
+        "path_stations": [
+          "Berlin-Wannsee",
+          "Potsdam Hbf",
+          "Potsdam Charlottenhof",
+          "Potsdam Park Sanssouci",
+          "Werder(Havel)",
+          "Groß Kreutz",
+          "Götz",
+          "Brandenburg Hbf"
+        ]
+      },
+      {
+        "id": "3129031456741493070-2510210411-3",
+        "type": "ICE",
+        "number": "646",
+        "direction": "Düsseldorf Hbf",
+        "platform": "4",
+        "time": "2510210431",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Berlin-Spandau",
+          "Stendal Hbf",
+          "Wolfsburg Hbf",
+          "Hannover Hbf",
+          "Minden(Westf)",
+          "Herford",
+          "Bielefeld Hbf",
+          "Hamm(Westf)Hbf",
+          "Dortmund Hbf",
+          "Essen Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "5018234171022072599-2510210417-6",
+        "type": "RE",
+        "number": "3101",
+        "direction": "Berlin-Charlottenburg",
+        "platform": "4",
+        "time": "2510210442",
+        "destination": "Berlin-Charlottenburg",
+        "path_stations": [
+          "Berlin-Charlottenburg"
+        ]
+      },
+      {
+        "id": "8877134481212521389-2510210416-3",
+        "type": "ICE",
+        "number": "275",
+        "direction": "Interlaken Ost",
+        "platform": "3",
+        "time": "2510210435",
+        "destination": "Interlaken Ost",
+        "path_stations": [
+          "Berlin-Spandau",
+          "Wolfsburg Hbf",
+          "Braunschweig Hbf",
+          "Hildesheim Hbf",
+          "Göttingen",
+          "Kassel-Wilhelmshöhe",
+          "Fulda",
+          "Hanau Hbf",
+          "Frankfurt(Main)Hbf",
+          "Mannheim Hbf",
+          "Karlsruhe Hbf",
+          "Offenburg",
+          "Freiburg(Breisgau) Hbf",
+          "Basel Bad Bf",
+          "Basel SBB",
+          "Liestal",
+          "Olten",
+          "Bern",
+          "Thun",
+          "Spiez",
+          "Interlaken West",
+          "Interlaken Ost"
+        ]
+      }
+    ],
+    "arrivals": []
+  }
+}

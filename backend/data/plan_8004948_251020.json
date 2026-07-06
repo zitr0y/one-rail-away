@@ -1,0 +1,1639 @@
+{
+  "station_eva": "8004948",
+  "date": "251020",
+  "cached_at": "2025-10-20T16:30:51.301926",
+  "plan_data": {
+    "arrivals": [
+      {
+        "id": "-9138088604923630653-2510201751-4",
+        "type": "Bus",
+        "number": "63039",
+        "time": "2510201813",
+        "platform": "",
+        "path_stations": [
+          "Düsseldorf-Unterrath",
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Rath"
+        ],
+        "line": "S6"
+      },
+      {
+        "id": "-8331028493671308578-2510201709-9",
+        "type": "Bus",
+        "number": "64054",
+        "time": "2510201807",
+        "platform": "",
+        "path_stations": [
+          "Essen Hbf Kruppstraße/Am Thyssenhaus",
+          "Essen Süd",
+          "Essen Stadtwald",
+          "Essen-Hügel",
+          "Essen-Werden",
+          "Kettwig",
+          "Kettwig Stausee",
+          "Hösel"
+        ],
+        "line": "S6"
+      },
+      {
+        "id": "5852959383116025301-2510201729-9",
+        "type": "Bus",
+        "number": "64056",
+        "time": "2510201827",
+        "platform": "",
+        "path_stations": [
+          "Essen Hbf Kruppstraße/Am Thyssenhaus",
+          "Essen Süd",
+          "Essen Stadtwald",
+          "Essen-Hügel",
+          "Essen-Werden",
+          "Kettwig",
+          "Kettwig Stausee",
+          "Hösel"
+        ],
+        "line": "S6"
+      },
+      {
+        "id": "3407966717770838980-2510201811-4",
+        "type": "Bus",
+        "number": "64057",
+        "time": "2510201833",
+        "platform": "",
+        "path_stations": [
+          "Düsseldorf-Unterrath",
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Rath"
+        ],
+        "line": "S6"
+      },
+      {
+        "id": "-346773376619879626-2510201831-4",
+        "type": "Bus",
+        "number": "64059",
+        "time": "2510201853",
+        "platform": "",
+        "path_stations": [
+          "Düsseldorf-Unterrath",
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Rath"
+        ],
+        "line": "S6"
+      },
+      {
+        "id": "2450895757378968118-2510201749-9",
+        "type": "Bus",
+        "number": "63042",
+        "time": "2510201847",
+        "platform": "",
+        "path_stations": [
+          "Essen Hbf Kruppstraße/Am Thyssenhaus",
+          "Essen Süd",
+          "Essen Stadtwald",
+          "Essen-Hügel",
+          "Essen-Werden",
+          "Kettwig",
+          "Kettwig Stausee",
+          "Hösel"
+        ],
+        "line": "S6"
+      },
+      {
+        "id": "-9065984255096063019-2510201829-9",
+        "type": "Bus",
+        "number": "64060",
+        "time": "2510201927",
+        "platform": "",
+        "path_stations": [
+          "Essen Hbf Kruppstraße/Am Thyssenhaus",
+          "Essen Süd",
+          "Essen Stadtwald",
+          "Essen-Hügel",
+          "Essen-Werden",
+          "Kettwig",
+          "Kettwig Stausee",
+          "Hösel"
+        ],
+        "line": "S6"
+      },
+      {
+        "id": "-7660097898382246974-2510201851-4",
+        "type": "Bus",
+        "number": "63041",
+        "time": "2510201913",
+        "platform": "",
+        "path_stations": [
+          "Düsseldorf-Unterrath",
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Rath"
+        ],
+        "line": "S6"
+      },
+      {
+        "id": "-7335574629070078049-2510201849-9",
+        "type": "Bus",
+        "number": "63044",
+        "time": "2510201947",
+        "platform": "",
+        "path_stations": [
+          "Essen Hbf Kruppstraße/Am Thyssenhaus",
+          "Essen Süd",
+          "Essen Stadtwald",
+          "Essen-Hügel",
+          "Essen-Werden",
+          "Kettwig",
+          "Kettwig Stausee",
+          "Hösel"
+        ],
+        "line": "S6"
+      },
+      {
+        "id": "-241384015875935357-2510201931-4",
+        "type": "Bus",
+        "number": "64063",
+        "time": "2510201953",
+        "platform": "",
+        "path_stations": [
+          "Düsseldorf-Unterrath",
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Rath"
+        ],
+        "line": "S6"
+      },
+      {
+        "id": "7940603785938598965-2510201809-9",
+        "type": "Bus",
+        "number": "64058",
+        "time": "2510201907",
+        "platform": "",
+        "path_stations": [
+          "Essen Hbf Kruppstraße/Am Thyssenhaus",
+          "Essen Süd",
+          "Essen Stadtwald",
+          "Essen-Hügel",
+          "Essen-Werden",
+          "Kettwig",
+          "Kettwig Stausee",
+          "Hösel"
+        ],
+        "line": "S6"
+      },
+      {
+        "id": "-965858564086394413-2510201911-4",
+        "type": "Bus",
+        "number": "64061",
+        "time": "2510201933",
+        "platform": "",
+        "path_stations": [
+          "Düsseldorf-Unterrath",
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Rath"
+        ],
+        "line": "S6"
+      },
+      {
+        "id": "-8932593274564926130-2510201949-9",
+        "type": "Bus",
+        "number": "63048",
+        "time": "2510202047",
+        "platform": "",
+        "path_stations": [
+          "Essen Hbf Kruppstraße/Am Thyssenhaus",
+          "Essen Süd",
+          "Essen Stadtwald",
+          "Essen-Hügel",
+          "Essen-Werden",
+          "Kettwig",
+          "Kettwig Stausee",
+          "Hösel"
+        ],
+        "line": "S6"
+      },
+      {
+        "id": "2671213673685174809-2510201919-9",
+        "type": "Bus",
+        "number": "63046",
+        "time": "2510202017",
+        "platform": "",
+        "path_stations": [
+          "Essen Hbf Kruppstraße/Am Thyssenhaus",
+          "Essen Süd",
+          "Essen Stadtwald",
+          "Essen-Hügel",
+          "Essen-Werden",
+          "Kettwig",
+          "Kettwig Stausee",
+          "Hösel"
+        ],
+        "line": "S6"
+      },
+      {
+        "id": "-2562358167762451426-2510202021-4",
+        "type": "Bus",
+        "number": "63045",
+        "time": "2510202043",
+        "platform": "",
+        "path_stations": [
+          "Düsseldorf-Unterrath",
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Rath"
+        ],
+        "line": "S6"
+      },
+      {
+        "id": "-354488229330643102-2510201951-4",
+        "type": "Bus",
+        "number": "63043",
+        "time": "2510202013",
+        "platform": "",
+        "path_stations": [
+          "Düsseldorf-Unterrath",
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Rath"
+        ],
+        "line": "S6"
+      },
+      {
+        "id": "5748717787459940592-2510202019-9",
+        "type": "Bus",
+        "number": "63050",
+        "time": "2510202117",
+        "platform": "",
+        "path_stations": [
+          "Essen Hbf Kruppstraße/Am Thyssenhaus",
+          "Essen Süd",
+          "Essen Stadtwald",
+          "Essen-Hügel",
+          "Essen-Werden",
+          "Kettwig",
+          "Kettwig Stausee",
+          "Hösel"
+        ],
+        "line": "S6"
+      },
+      {
+        "id": "5694448330484703670-2510202121-4",
+        "type": "Bus",
+        "number": "63049",
+        "time": "2510202143",
+        "platform": "",
+        "path_stations": [
+          "Düsseldorf-Unterrath",
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Rath"
+        ],
+        "line": "S6"
+      },
+      {
+        "id": "-465957258473626305-2510202051-4",
+        "type": "Bus",
+        "number": "63047",
+        "time": "2510202113",
+        "platform": "",
+        "path_stations": [
+          "Düsseldorf-Unterrath",
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Rath"
+        ],
+        "line": "S6"
+      },
+      {
+        "id": "8973639636142285698-2510202049-9",
+        "type": "Bus",
+        "number": "63052",
+        "time": "2510202147",
+        "platform": "",
+        "path_stations": [
+          "Essen Hbf Kruppstraße/Am Thyssenhaus",
+          "Essen Süd",
+          "Essen Stadtwald",
+          "Essen-Hügel",
+          "Essen-Werden",
+          "Kettwig",
+          "Kettwig Stausee",
+          "Hösel"
+        ],
+        "line": "S6"
+      },
+      {
+        "id": "-8181194890881685423-2510202119-9",
+        "type": "Bus",
+        "number": "63000",
+        "time": "2510202217",
+        "platform": "",
+        "path_stations": [
+          "Essen Hbf Kruppstraße/Am Thyssenhaus",
+          "Essen Süd",
+          "Essen Stadtwald",
+          "Essen-Hügel",
+          "Essen-Werden",
+          "Kettwig",
+          "Kettwig Stausee",
+          "Hösel"
+        ],
+        "line": "S6"
+      },
+      {
+        "id": "-4784787748227581023-2510202151-4",
+        "type": "Bus",
+        "number": "63051",
+        "time": "2510202213",
+        "platform": "",
+        "path_stations": [
+          "Düsseldorf-Unterrath",
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Rath"
+        ],
+        "line": "S6"
+      },
+      {
+        "id": "1478340305423346422-2510202221-4",
+        "type": "Bus",
+        "number": "63053",
+        "time": "2510202243",
+        "platform": "",
+        "path_stations": [
+          "Düsseldorf-Unterrath",
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Rath"
+        ],
+        "line": "S6"
+      },
+      {
+        "id": "-8107315878759995494-2510202149-9",
+        "type": "Bus",
+        "number": "63002",
+        "time": "2510202247",
+        "platform": "",
+        "path_stations": [
+          "Essen Hbf Kruppstraße/Am Thyssenhaus",
+          "Essen Süd",
+          "Essen Stadtwald",
+          "Essen-Hügel",
+          "Essen-Werden",
+          "Kettwig",
+          "Kettwig Stausee",
+          "Hösel"
+        ],
+        "line": "S6"
+      },
+      {
+        "id": "-3999995975567399690-2510202249-9",
+        "type": "Bus",
+        "number": "63006",
+        "time": "2510202347",
+        "platform": "",
+        "path_stations": [
+          "Essen Hbf Kruppstraße/Am Thyssenhaus",
+          "Essen Süd",
+          "Essen Stadtwald",
+          "Essen-Hügel",
+          "Essen-Werden",
+          "Kettwig",
+          "Kettwig Stausee",
+          "Hösel"
+        ],
+        "line": "S6"
+      },
+      {
+        "id": "-4784295333396550006-2510202251-4",
+        "type": "Bus",
+        "number": "63001",
+        "time": "2510202313",
+        "platform": "",
+        "path_stations": [
+          "Düsseldorf-Unterrath",
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Rath"
+        ],
+        "line": "S6"
+      },
+      {
+        "id": "2692536337329259782-2510202219-9",
+        "type": "Bus",
+        "number": "63004",
+        "time": "2510202317",
+        "platform": "",
+        "path_stations": [
+          "Essen Hbf Kruppstraße/Am Thyssenhaus",
+          "Essen Süd",
+          "Essen Stadtwald",
+          "Essen-Hügel",
+          "Essen-Werden",
+          "Kettwig",
+          "Kettwig Stausee",
+          "Hösel"
+        ],
+        "line": "S6"
+      },
+      {
+        "id": "-1746633277051937924-2510202321-4",
+        "type": "Bus",
+        "number": "63003",
+        "time": "2510202343",
+        "platform": "",
+        "path_stations": [
+          "Düsseldorf-Unterrath",
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Rath"
+        ],
+        "line": "S6"
+      },
+      {
+        "id": "-3297430616060243447-2510202319-9",
+        "type": "Bus",
+        "number": "63008",
+        "time": "2510210017",
+        "platform": "",
+        "path_stations": [
+          "Essen Hbf Kruppstraße/Am Thyssenhaus",
+          "Essen Süd",
+          "Essen Stadtwald",
+          "Essen-Hügel",
+          "Essen-Werden",
+          "Kettwig",
+          "Kettwig Stausee",
+          "Hösel"
+        ],
+        "line": "S6"
+      },
+      {
+        "id": "-7936343427997207508-2510202351-4",
+        "type": "Bus",
+        "number": "63005",
+        "time": "2510210013",
+        "platform": "",
+        "path_stations": [
+          "Düsseldorf-Unterrath",
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Rath"
+        ],
+        "line": "S6"
+      },
+      {
+        "id": "-5583392876812174420-2510202349-9",
+        "type": "Bus",
+        "number": "63010",
+        "time": "2510210047",
+        "platform": "",
+        "path_stations": [
+          "Essen Hbf Kruppstraße/Am Thyssenhaus",
+          "Essen Süd",
+          "Essen Stadtwald",
+          "Essen-Hügel",
+          "Essen-Werden",
+          "Kettwig",
+          "Kettwig Stausee",
+          "Hösel"
+        ],
+        "line": "S6"
+      },
+      {
+        "id": "-6050410340316768586-2510210021-4",
+        "type": "Bus",
+        "number": "63007",
+        "time": "2510210043",
+        "platform": "",
+        "path_stations": [
+          "Düsseldorf-Unterrath",
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Rath"
+        ],
+        "line": "S6"
+      },
+      {
+        "id": "-3604799332687436783-2510210051-4",
+        "type": "Bus",
+        "number": "63009",
+        "time": "2510210113",
+        "platform": "",
+        "path_stations": [
+          "Düsseldorf-Unterrath",
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Rath"
+        ],
+        "line": "S6"
+      },
+      {
+        "id": "1254480044599204731-2510210049-9",
+        "type": "Bus",
+        "number": "63012",
+        "time": "2510210147",
+        "platform": "",
+        "path_stations": [
+          "Essen Hbf Kruppstraße/Am Thyssenhaus",
+          "Essen Süd",
+          "Essen Stadtwald",
+          "Essen-Hügel",
+          "Essen-Werden",
+          "Kettwig",
+          "Kettwig Stausee",
+          "Hösel"
+        ],
+        "line": "S6"
+      },
+      {
+        "id": "-1937516319174206649-2510210151-4",
+        "type": "Bus",
+        "number": "63011",
+        "time": "2510210213",
+        "platform": "",
+        "path_stations": [
+          "Düsseldorf-Unterrath",
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Rath"
+        ],
+        "line": "S6"
+      },
+      {
+        "id": "-6387528024619672023-2510210411-4",
+        "type": "Bus",
+        "number": "64001",
+        "time": "2510210433",
+        "platform": "",
+        "path_stations": [
+          "Düsseldorf-Unterrath",
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Rath"
+        ],
+        "line": "S6"
+      },
+      {
+        "id": "-2261774661223528440-2510210349-9",
+        "type": "Bus",
+        "number": "63014",
+        "time": "2510210447",
+        "platform": "",
+        "path_stations": [
+          "Essen Hbf Kruppstraße/Am Thyssenhaus",
+          "Essen Süd",
+          "Essen Stadtwald",
+          "Essen-Hügel",
+          "Essen-Werden",
+          "Kettwig",
+          "Kettwig Stausee",
+          "Hösel"
+        ],
+        "line": "S6"
+      },
+      {
+        "id": "9033286958802436332-2510210353-5",
+        "type": "Bus",
+        "number": "64000",
+        "time": "2510210427",
+        "platform": "",
+        "path_stations": [
+          "Essen-Werden",
+          "Kettwig",
+          "Kettwig Stausee",
+          "Hösel"
+        ],
+        "line": "S6"
+      },
+      {
+        "id": "147930640355708999-2510210431-4",
+        "type": "Bus",
+        "number": "64003",
+        "time": "2510210453",
+        "platform": "",
+        "path_stations": [
+          "Düsseldorf-Unterrath",
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Rath"
+        ],
+        "line": "S6"
+      },
+      {
+        "id": "7706704463821314371-2510210511-4",
+        "type": "Bus",
+        "number": "64005",
+        "time": "2510210533",
+        "platform": "",
+        "path_stations": [
+          "Düsseldorf-Unterrath",
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Rath"
+        ],
+        "line": "S6"
+      },
+      {
+        "id": "-4259964307480177692-2510210531-4",
+        "type": "Bus",
+        "number": "64007",
+        "time": "2510210553",
+        "platform": "",
+        "path_stations": [
+          "Düsseldorf-Unterrath",
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Rath"
+        ],
+        "line": "S6"
+      },
+      {
+        "id": "4626006360350007113-2510210409-9",
+        "type": "Bus",
+        "number": "64002",
+        "time": "2510210507",
+        "platform": "",
+        "path_stations": [
+          "Essen Hbf Kruppstraße/Am Thyssenhaus",
+          "Essen Süd",
+          "Essen Stadtwald",
+          "Essen-Hügel",
+          "Essen-Werden",
+          "Kettwig",
+          "Kettwig Stausee",
+          "Hösel"
+        ],
+        "line": "S6"
+      },
+      {
+        "id": "-6288012760981020245-2510210429-9",
+        "type": "Bus",
+        "number": "64004",
+        "time": "2510210527",
+        "platform": "",
+        "path_stations": [
+          "Essen Hbf Kruppstraße/Am Thyssenhaus",
+          "Essen Süd",
+          "Essen Stadtwald",
+          "Essen-Hügel",
+          "Essen-Werden",
+          "Kettwig",
+          "Kettwig Stausee",
+          "Hösel"
+        ],
+        "line": "S6"
+      },
+      {
+        "id": "-8281262513251924785-2510210449-9",
+        "type": "Bus",
+        "number": "63016",
+        "time": "2510210547",
+        "platform": "",
+        "path_stations": [
+          "Essen Hbf Kruppstraße/Am Thyssenhaus",
+          "Essen Süd",
+          "Essen Stadtwald",
+          "Essen-Hügel",
+          "Essen-Werden",
+          "Kettwig",
+          "Kettwig Stausee",
+          "Hösel"
+        ],
+        "line": "S6"
+      },
+      {
+        "id": "-1181546129461788131-2510210451-4",
+        "type": "Bus",
+        "number": "63013",
+        "time": "2510210513",
+        "platform": "",
+        "path_stations": [
+          "Düsseldorf-Unterrath",
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Rath"
+        ],
+        "line": "S6"
+      },
+      {
+        "id": "3424510317029986005-2510210509-9",
+        "type": "Bus",
+        "number": "64006",
+        "time": "2510210607",
+        "platform": "",
+        "path_stations": [
+          "Essen Hbf Kruppstraße/Am Thyssenhaus",
+          "Essen Süd",
+          "Essen Stadtwald",
+          "Essen-Hügel",
+          "Essen-Werden",
+          "Kettwig",
+          "Kettwig Stausee",
+          "Hösel"
+        ],
+        "line": "S6"
+      },
+      {
+        "id": "8911762396619855093-2510210551-4",
+        "type": "Bus",
+        "number": "63015",
+        "time": "2510210613",
+        "platform": "",
+        "path_stations": [
+          "Düsseldorf-Unterrath",
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Rath"
+        ],
+        "line": "S6"
+      },
+      {
+        "id": "7931249370331620999-2510210549-9",
+        "type": "Bus",
+        "number": "63018",
+        "time": "2510210647",
+        "platform": "",
+        "path_stations": [
+          "Essen Hbf Kruppstraße/Am Thyssenhaus",
+          "Essen Süd",
+          "Essen Stadtwald",
+          "Essen-Hügel",
+          "Essen-Werden",
+          "Kettwig",
+          "Kettwig Stausee",
+          "Hösel"
+        ],
+        "line": "S6"
+      },
+      {
+        "id": "-782039089213270983-2510210611-4",
+        "type": "Bus",
+        "number": "64009",
+        "time": "2510210633",
+        "platform": "",
+        "path_stations": [
+          "Düsseldorf-Unterrath",
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Rath"
+        ],
+        "line": "S6"
+      },
+      {
+        "id": "7009300434051472965-2510210631-4",
+        "type": "Bus",
+        "number": "64011",
+        "time": "2510210653",
+        "platform": "",
+        "path_stations": [
+          "Düsseldorf-Unterrath",
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Rath"
+        ],
+        "line": "S6"
+      },
+      {
+        "id": "5752763468168811559-2510210529-9",
+        "type": "Bus",
+        "number": "64008",
+        "time": "2510210627",
+        "platform": "",
+        "path_stations": [
+          "Essen Hbf Kruppstraße/Am Thyssenhaus",
+          "Essen Süd",
+          "Essen Stadtwald",
+          "Essen-Hügel",
+          "Essen-Werden",
+          "Kettwig",
+          "Kettwig Stausee",
+          "Hösel"
+        ],
+        "line": "S6"
+      }
+    ],
+    "departures": [
+      {
+        "id": "-9138088604923630653-2510201751-4",
+        "type": "Bus",
+        "number": "63039",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510201813",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Hösel",
+          "Kettwig Stausee",
+          "Kettwig",
+          "Essen-Werden",
+          "Essen-Hügel",
+          "Essen Stadtwald",
+          "Essen Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-8331028493671308578-2510201709-9",
+        "type": "Bus",
+        "number": "64054",
+        "direction": "Düsseldorf-Unterrath",
+        "platform": "",
+        "time": "2510201807",
+        "destination": "Düsseldorf-Unterrath",
+        "path_stations": [
+          "Düsseldorf-Rath",
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Unterrath"
+        ]
+      },
+      {
+        "id": "5852959383116025301-2510201729-9",
+        "type": "Bus",
+        "number": "64056",
+        "direction": "Düsseldorf-Unterrath",
+        "platform": "",
+        "time": "2510201827",
+        "destination": "Düsseldorf-Unterrath",
+        "path_stations": [
+          "Düsseldorf-Rath",
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Unterrath"
+        ]
+      },
+      {
+        "id": "3407966717770838980-2510201811-4",
+        "type": "Bus",
+        "number": "64057",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510201833",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Hösel",
+          "Kettwig Stausee",
+          "Kettwig",
+          "Essen-Werden",
+          "Essen-Hügel",
+          "Essen Stadtwald",
+          "Essen Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-346773376619879626-2510201831-4",
+        "type": "Bus",
+        "number": "64059",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510201853",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Hösel",
+          "Kettwig Stausee",
+          "Kettwig",
+          "Essen-Werden",
+          "Essen-Hügel",
+          "Essen Stadtwald",
+          "Essen Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "2450895757378968118-2510201749-9",
+        "type": "Bus",
+        "number": "63042",
+        "direction": "Düsseldorf-Unterrath",
+        "platform": "",
+        "time": "2510201847",
+        "destination": "Düsseldorf-Unterrath",
+        "path_stations": [
+          "Düsseldorf-Rath",
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Unterrath"
+        ]
+      },
+      {
+        "id": "-9065984255096063019-2510201829-9",
+        "type": "Bus",
+        "number": "64060",
+        "direction": "Düsseldorf-Unterrath",
+        "platform": "",
+        "time": "2510201927",
+        "destination": "Düsseldorf-Unterrath",
+        "path_stations": [
+          "Düsseldorf-Rath",
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Unterrath"
+        ]
+      },
+      {
+        "id": "-7660097898382246974-2510201851-4",
+        "type": "Bus",
+        "number": "63041",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510201913",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Hösel",
+          "Kettwig Stausee",
+          "Kettwig",
+          "Essen-Werden",
+          "Essen-Hügel",
+          "Essen Stadtwald",
+          "Essen Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-7335574629070078049-2510201849-9",
+        "type": "Bus",
+        "number": "63044",
+        "direction": "Düsseldorf-Unterrath",
+        "platform": "",
+        "time": "2510201947",
+        "destination": "Düsseldorf-Unterrath",
+        "path_stations": [
+          "Düsseldorf-Rath",
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Unterrath"
+        ]
+      },
+      {
+        "id": "-241384015875935357-2510201931-4",
+        "type": "Bus",
+        "number": "64063",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510201953",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Hösel",
+          "Kettwig Stausee",
+          "Kettwig",
+          "Essen-Werden",
+          "Essen-Hügel",
+          "Essen Stadtwald",
+          "Essen Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "7940603785938598965-2510201809-9",
+        "type": "Bus",
+        "number": "64058",
+        "direction": "Düsseldorf-Unterrath",
+        "platform": "",
+        "time": "2510201907",
+        "destination": "Düsseldorf-Unterrath",
+        "path_stations": [
+          "Düsseldorf-Rath",
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Unterrath"
+        ]
+      },
+      {
+        "id": "-965858564086394413-2510201911-4",
+        "type": "Bus",
+        "number": "64061",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510201933",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Hösel",
+          "Kettwig Stausee",
+          "Kettwig",
+          "Essen-Werden",
+          "Essen-Hügel",
+          "Essen Stadtwald",
+          "Essen Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-8932593274564926130-2510201949-9",
+        "type": "Bus",
+        "number": "63048",
+        "direction": "Düsseldorf-Unterrath",
+        "platform": "",
+        "time": "2510202047",
+        "destination": "Düsseldorf-Unterrath",
+        "path_stations": [
+          "Düsseldorf-Rath",
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Unterrath"
+        ]
+      },
+      {
+        "id": "2671213673685174809-2510201919-9",
+        "type": "Bus",
+        "number": "63046",
+        "direction": "Düsseldorf-Unterrath",
+        "platform": "",
+        "time": "2510202017",
+        "destination": "Düsseldorf-Unterrath",
+        "path_stations": [
+          "Düsseldorf-Rath",
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Unterrath"
+        ]
+      },
+      {
+        "id": "-2562358167762451426-2510202021-4",
+        "type": "Bus",
+        "number": "63045",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510202043",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Hösel",
+          "Kettwig Stausee",
+          "Kettwig",
+          "Essen-Werden",
+          "Essen-Hügel",
+          "Essen Stadtwald",
+          "Essen Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-354488229330643102-2510201951-4",
+        "type": "Bus",
+        "number": "63043",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510202013",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Hösel",
+          "Kettwig Stausee",
+          "Kettwig",
+          "Essen-Werden",
+          "Essen-Hügel",
+          "Essen Stadtwald",
+          "Essen Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "5748717787459940592-2510202019-9",
+        "type": "Bus",
+        "number": "63050",
+        "direction": "Düsseldorf-Unterrath",
+        "platform": "",
+        "time": "2510202117",
+        "destination": "Düsseldorf-Unterrath",
+        "path_stations": [
+          "Düsseldorf-Rath",
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Unterrath"
+        ]
+      },
+      {
+        "id": "5694448330484703670-2510202121-4",
+        "type": "Bus",
+        "number": "63049",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510202143",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Hösel",
+          "Kettwig Stausee",
+          "Kettwig",
+          "Essen-Werden",
+          "Essen-Hügel",
+          "Essen Stadtwald",
+          "Essen Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-465957258473626305-2510202051-4",
+        "type": "Bus",
+        "number": "63047",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510202113",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Hösel",
+          "Kettwig Stausee",
+          "Kettwig",
+          "Essen-Werden",
+          "Essen-Hügel",
+          "Essen Stadtwald",
+          "Essen Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "8973639636142285698-2510202049-9",
+        "type": "Bus",
+        "number": "63052",
+        "direction": "Düsseldorf-Unterrath",
+        "platform": "",
+        "time": "2510202147",
+        "destination": "Düsseldorf-Unterrath",
+        "path_stations": [
+          "Düsseldorf-Rath",
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Unterrath"
+        ]
+      },
+      {
+        "id": "-8181194890881685423-2510202119-9",
+        "type": "Bus",
+        "number": "63000",
+        "direction": "Düsseldorf-Unterrath",
+        "platform": "",
+        "time": "2510202217",
+        "destination": "Düsseldorf-Unterrath",
+        "path_stations": [
+          "Düsseldorf-Rath",
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Unterrath"
+        ]
+      },
+      {
+        "id": "-4784787748227581023-2510202151-4",
+        "type": "Bus",
+        "number": "63051",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510202213",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Hösel",
+          "Kettwig Stausee",
+          "Kettwig",
+          "Essen-Werden",
+          "Essen-Hügel",
+          "Essen Stadtwald",
+          "Essen Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "1478340305423346422-2510202221-4",
+        "type": "Bus",
+        "number": "63053",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510202243",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Hösel",
+          "Kettwig Stausee",
+          "Kettwig",
+          "Essen-Werden",
+          "Essen-Hügel",
+          "Essen Stadtwald",
+          "Essen Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-8107315878759995494-2510202149-9",
+        "type": "Bus",
+        "number": "63002",
+        "direction": "Düsseldorf-Unterrath",
+        "platform": "",
+        "time": "2510202247",
+        "destination": "Düsseldorf-Unterrath",
+        "path_stations": [
+          "Düsseldorf-Rath",
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Unterrath"
+        ]
+      },
+      {
+        "id": "-3999995975567399690-2510202249-9",
+        "type": "Bus",
+        "number": "63006",
+        "direction": "Düsseldorf-Unterrath",
+        "platform": "",
+        "time": "2510202347",
+        "destination": "Düsseldorf-Unterrath",
+        "path_stations": [
+          "Düsseldorf-Rath",
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Unterrath"
+        ]
+      },
+      {
+        "id": "-4784295333396550006-2510202251-4",
+        "type": "Bus",
+        "number": "63001",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510202313",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Hösel",
+          "Kettwig Stausee",
+          "Kettwig",
+          "Essen-Werden",
+          "Essen-Hügel",
+          "Essen Stadtwald",
+          "Essen Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "2692536337329259782-2510202219-9",
+        "type": "Bus",
+        "number": "63004",
+        "direction": "Düsseldorf-Unterrath",
+        "platform": "",
+        "time": "2510202317",
+        "destination": "Düsseldorf-Unterrath",
+        "path_stations": [
+          "Düsseldorf-Rath",
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Unterrath"
+        ]
+      },
+      {
+        "id": "-1746633277051937924-2510202321-4",
+        "type": "Bus",
+        "number": "63003",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510202343",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Hösel",
+          "Kettwig Stausee",
+          "Kettwig",
+          "Essen-Werden",
+          "Essen-Hügel",
+          "Essen Stadtwald",
+          "Essen Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-3297430616060243447-2510202319-9",
+        "type": "Bus",
+        "number": "63008",
+        "direction": "Düsseldorf-Unterrath",
+        "platform": "",
+        "time": "2510210017",
+        "destination": "Düsseldorf-Unterrath",
+        "path_stations": [
+          "Düsseldorf-Rath",
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Unterrath"
+        ]
+      },
+      {
+        "id": "-7936343427997207508-2510202351-4",
+        "type": "Bus",
+        "number": "63005",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510210013",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Hösel",
+          "Kettwig Stausee",
+          "Kettwig",
+          "Essen-Werden",
+          "Essen-Hügel",
+          "Essen Stadtwald",
+          "Essen Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-5583392876812174420-2510202349-9",
+        "type": "Bus",
+        "number": "63010",
+        "direction": "Düsseldorf-Unterrath",
+        "platform": "",
+        "time": "2510210047",
+        "destination": "Düsseldorf-Unterrath",
+        "path_stations": [
+          "Düsseldorf-Rath",
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Unterrath"
+        ]
+      },
+      {
+        "id": "-6050410340316768586-2510210021-4",
+        "type": "Bus",
+        "number": "63007",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510210043",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Hösel",
+          "Kettwig Stausee",
+          "Kettwig",
+          "Essen-Werden",
+          "Essen-Hügel",
+          "Essen Stadtwald",
+          "Essen Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-3604799332687436783-2510210051-4",
+        "type": "Bus",
+        "number": "63009",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510210113",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Hösel",
+          "Kettwig Stausee",
+          "Kettwig",
+          "Essen-Werden",
+          "Essen-Hügel",
+          "Essen Stadtwald",
+          "Essen Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "1254480044599204731-2510210049-9",
+        "type": "Bus",
+        "number": "63012",
+        "direction": "Düsseldorf-Unterrath",
+        "platform": "",
+        "time": "2510210147",
+        "destination": "Düsseldorf-Unterrath",
+        "path_stations": [
+          "Düsseldorf-Rath",
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Unterrath"
+        ]
+      },
+      {
+        "id": "-1937516319174206649-2510210151-4",
+        "type": "Bus",
+        "number": "63011",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510210213",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Hösel",
+          "Kettwig Stausee",
+          "Kettwig",
+          "Essen-Werden",
+          "Essen-Hügel",
+          "Essen Stadtwald",
+          "Essen Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-6387528024619672023-2510210411-4",
+        "type": "Bus",
+        "number": "64001",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510210433",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Hösel",
+          "Kettwig Stausee",
+          "Kettwig",
+          "Essen-Werden",
+          "Essen-Hügel",
+          "Essen Stadtwald",
+          "Essen Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-2261774661223528440-2510210349-9",
+        "type": "Bus",
+        "number": "63014",
+        "direction": "Düsseldorf-Unterrath",
+        "platform": "",
+        "time": "2510210447",
+        "destination": "Düsseldorf-Unterrath",
+        "path_stations": [
+          "Düsseldorf-Rath",
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Unterrath"
+        ]
+      },
+      {
+        "id": "9033286958802436332-2510210353-5",
+        "type": "Bus",
+        "number": "64000",
+        "direction": "Düsseldorf-Unterrath",
+        "platform": "",
+        "time": "2510210427",
+        "destination": "Düsseldorf-Unterrath",
+        "path_stations": [
+          "Düsseldorf-Rath",
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Unterrath"
+        ]
+      },
+      {
+        "id": "147930640355708999-2510210431-4",
+        "type": "Bus",
+        "number": "64003",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510210453",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Hösel",
+          "Kettwig Stausee",
+          "Kettwig",
+          "Essen-Werden",
+          "Essen-Hügel",
+          "Essen Stadtwald",
+          "Essen Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "7706704463821314371-2510210511-4",
+        "type": "Bus",
+        "number": "64005",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510210533",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Hösel",
+          "Kettwig Stausee",
+          "Kettwig",
+          "Essen-Werden",
+          "Essen-Hügel",
+          "Essen Stadtwald",
+          "Essen Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-4259964307480177692-2510210531-4",
+        "type": "Bus",
+        "number": "64007",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510210553",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Hösel",
+          "Kettwig Stausee",
+          "Kettwig",
+          "Essen-Werden",
+          "Essen-Hügel",
+          "Essen Stadtwald",
+          "Essen Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "4626006360350007113-2510210409-9",
+        "type": "Bus",
+        "number": "64002",
+        "direction": "Düsseldorf-Unterrath",
+        "platform": "",
+        "time": "2510210507",
+        "destination": "Düsseldorf-Unterrath",
+        "path_stations": [
+          "Düsseldorf-Rath",
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Unterrath"
+        ]
+      },
+      {
+        "id": "-6288012760981020245-2510210429-9",
+        "type": "Bus",
+        "number": "64004",
+        "direction": "Düsseldorf-Unterrath",
+        "platform": "",
+        "time": "2510210527",
+        "destination": "Düsseldorf-Unterrath",
+        "path_stations": [
+          "Düsseldorf-Rath",
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Unterrath"
+        ]
+      },
+      {
+        "id": "-8281262513251924785-2510210449-9",
+        "type": "Bus",
+        "number": "63016",
+        "direction": "Düsseldorf-Unterrath",
+        "platform": "",
+        "time": "2510210547",
+        "destination": "Düsseldorf-Unterrath",
+        "path_stations": [
+          "Düsseldorf-Rath",
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Unterrath"
+        ]
+      },
+      {
+        "id": "-1181546129461788131-2510210451-4",
+        "type": "Bus",
+        "number": "63013",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510210513",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Hösel",
+          "Kettwig Stausee",
+          "Kettwig",
+          "Essen-Werden",
+          "Essen-Hügel",
+          "Essen Stadtwald",
+          "Essen Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "3424510317029986005-2510210509-9",
+        "type": "Bus",
+        "number": "64006",
+        "direction": "Düsseldorf-Unterrath",
+        "platform": "",
+        "time": "2510210607",
+        "destination": "Düsseldorf-Unterrath",
+        "path_stations": [
+          "Düsseldorf-Rath",
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Unterrath"
+        ]
+      },
+      {
+        "id": "8911762396619855093-2510210551-4",
+        "type": "Bus",
+        "number": "63015",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510210613",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Hösel",
+          "Kettwig Stausee",
+          "Kettwig",
+          "Essen-Werden",
+          "Essen-Hügel",
+          "Essen Stadtwald",
+          "Essen Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "7931249370331620999-2510210549-9",
+        "type": "Bus",
+        "number": "63018",
+        "direction": "Düsseldorf-Unterrath",
+        "platform": "",
+        "time": "2510210647",
+        "destination": "Düsseldorf-Unterrath",
+        "path_stations": [
+          "Düsseldorf-Rath",
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Unterrath"
+        ]
+      },
+      {
+        "id": "-782039089213270983-2510210611-4",
+        "type": "Bus",
+        "number": "64009",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510210633",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Hösel",
+          "Kettwig Stausee",
+          "Kettwig",
+          "Essen-Werden",
+          "Essen-Hügel",
+          "Essen Stadtwald",
+          "Essen Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "7009300434051472965-2510210631-4",
+        "type": "Bus",
+        "number": "64011",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510210653",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Hösel",
+          "Kettwig Stausee",
+          "Kettwig",
+          "Essen-Werden",
+          "Essen-Hügel",
+          "Essen Stadtwald",
+          "Essen Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "5752763468168811559-2510210529-9",
+        "type": "Bus",
+        "number": "64008",
+        "direction": "Düsseldorf-Unterrath",
+        "platform": "",
+        "time": "2510210627",
+        "destination": "Düsseldorf-Unterrath",
+        "path_stations": [
+          "Düsseldorf-Rath",
+          "Düsseldorf-Rath Mitte",
+          "Düsseldorf-Unterrath"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,1864 @@
+{
+  "station_eva": "8000227",
+  "date": "251020",
+  "cached_at": "2025-10-20T16:51:55.094141",
+  "plan_data": {
+    "arrivals": [
+      {
+        "id": "3064714223747587260-2510201815-3",
+        "type": "VIA",
+        "number": "31324",
+        "time": "2510201830",
+        "platform": "3",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hohenlimburg"
+        ],
+        "line": "RE16"
+      },
+      {
+        "id": "308025327970571773-2510201742-3",
+        "type": "VIA",
+        "number": "31358",
+        "time": "2510201757",
+        "platform": "3",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hohenlimburg"
+        ],
+        "line": "RB91"
+      },
+      {
+        "id": "-6034880667941900014-2510201759-3",
+        "type": "RE",
+        "number": "33094",
+        "time": "2510201835",
+        "platform": "3",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Witten Hbf"
+        ],
+        "line": "34"
+      },
+      {
+        "id": "-4492874168042325252-2510201636-11",
+        "type": "RE",
+        "number": "52226",
+        "time": "2510201821",
+        "platform": "2",
+        "path_stations": [
+          "Dillenburg",
+          "Siegen Hbf",
+          "Siegen-Weidenau",
+          "Kreuztal",
+          "Lennestadt-Altenhundem",
+          "Lennestadt-Grevenbrück",
+          "Finnentrop",
+          "Plettenberg",
+          "Werdohl",
+          "Altena(Westf)"
+        ],
+        "line": "34"
+      },
+      {
+        "id": "-3650220351546053834-2510201526-15",
+        "type": "IC",
+        "number": "2226",
+        "time": "2510201821",
+        "platform": "2",
+        "path_stations": [
+          "Frankfurt(Main)Hbf",
+          "Frankfurt(Main)West",
+          "Bad Nauheim",
+          "Wetzlar",
+          "Dillenburg",
+          "Siegen Hbf",
+          "Siegen-Weidenau",
+          "Kreuztal",
+          "Lennestadt-Altenhundem",
+          "Lennestadt-Grevenbrück",
+          "Finnentrop",
+          "Plettenberg",
+          "Werdohl",
+          "Altena(Westf)"
+        ],
+        "line": ""
+      },
+      {
+        "id": "2671014326599349088-2510201842-3",
+        "type": "VIA",
+        "number": "31360",
+        "time": "2510201857",
+        "platform": "3",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hohenlimburg"
+        ],
+        "line": "RB91"
+      },
+      {
+        "id": "526455942621044472-2510201640-16",
+        "type": "VIA",
+        "number": "31369",
+        "time": "2510201800",
+        "platform": "2",
+        "path_stations": [
+          "Siegen Hbf",
+          "Siegen-Weidenau",
+          "Siegen-Geisweid",
+          "Kreuztal",
+          "Eichen(Kr Siegen)",
+          "Kreuztal-Littfeld",
+          "Welschen Ennest",
+          "Kirchhundem",
+          "Lennestadt-Altenhundem",
+          "Lennestadt-Meggen",
+          "Lennestadt-Grevenbrück",
+          "Finnentrop",
+          "Plettenberg",
+          "Werdohl",
+          "Altena(Westf)"
+        ],
+        "line": "RB91"
+      },
+      {
+        "id": "1827652851536307858-2510201848-3",
+        "type": "VIA",
+        "number": "29991",
+        "time": "2510201855",
+        "platform": "1",
+        "path_stations": [
+          "Iserlohn",
+          "Letmathe Dechenhöhle"
+        ],
+        "line": "RB91"
+      },
+      {
+        "id": "-3794772600978396443-2510201820-3",
+        "type": "VIA",
+        "number": "31331",
+        "time": "2510201827",
+        "platform": "2",
+        "path_stations": [
+          "Iserlohn",
+          "Letmathe Dechenhöhle"
+        ],
+        "line": "RE16"
+      },
+      {
+        "id": "-9146590832885910738-2510201915-3",
+        "type": "VIA",
+        "number": "31326",
+        "time": "2510201930",
+        "platform": "3",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hohenlimburg"
+        ],
+        "line": "RE16"
+      },
+      {
+        "id": "7794600975490665308-2510201920-3",
+        "type": "VIA",
+        "number": "31333",
+        "time": "2510201927",
+        "platform": "2",
+        "path_stations": [
+          "Iserlohn",
+          "Letmathe Dechenhöhle"
+        ],
+        "line": "RE16"
+      },
+      {
+        "id": "-1997364921488903933-2510201740-16",
+        "type": "VIA",
+        "number": "31371",
+        "time": "2510201900",
+        "platform": "2",
+        "path_stations": [
+          "Siegen Hbf",
+          "Siegen-Weidenau",
+          "Siegen-Geisweid",
+          "Kreuztal",
+          "Eichen(Kr Siegen)",
+          "Kreuztal-Littfeld",
+          "Welschen Ennest",
+          "Kirchhundem",
+          "Lennestadt-Altenhundem",
+          "Lennestadt-Meggen",
+          "Lennestadt-Grevenbrück",
+          "Finnentrop",
+          "Plettenberg",
+          "Werdohl",
+          "Altena(Westf)"
+        ],
+        "line": "RB91"
+      },
+      {
+        "id": "2671014326599349088-2510201842-3",
+        "type": "VIA",
+        "number": "31360",
+        "time": "2510201857",
+        "platform": "3",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hohenlimburg"
+        ],
+        "line": "RB91"
+      },
+      {
+        "id": "-4901352206523413738-2510201942-3",
+        "type": "VIA",
+        "number": "31362",
+        "time": "2510201957",
+        "platform": "3",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hohenlimburg"
+        ],
+        "line": "RB91"
+      },
+      {
+        "id": "-3233372792649548718-2510201859-4",
+        "type": "HLB",
+        "number": "61848",
+        "time": "2510201931",
+        "platform": "3",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Witten Hbf",
+          "Hohenlimburg"
+        ],
+        "line": "RE34"
+      },
+      {
+        "id": "-5687400684130899149-2510201948-3",
+        "type": "VIA",
+        "number": "29993",
+        "time": "2510201955",
+        "platform": "1",
+        "path_stations": [
+          "Iserlohn",
+          "Letmathe Dechenhöhle"
+        ],
+        "line": "RB91"
+      },
+      {
+        "id": "-6407591196353320755-2510201808-11",
+        "type": "RE",
+        "number": "33095",
+        "time": "2510201922",
+        "platform": "2",
+        "path_stations": [
+          "Siegen Hbf",
+          "Siegen-Weidenau",
+          "Kreuztal",
+          "Welschen Ennest",
+          "Lennestadt-Altenhundem",
+          "Lennestadt-Grevenbrück",
+          "Finnentrop",
+          "Plettenberg",
+          "Werdohl",
+          "Altena(Westf)"
+        ],
+        "line": "34"
+      },
+      {
+        "id": "7391523970940871217-2510201840-16",
+        "type": "VIA",
+        "number": "31373",
+        "time": "2510202000",
+        "platform": "2",
+        "path_stations": [
+          "Siegen Hbf",
+          "Siegen-Weidenau",
+          "Siegen-Geisweid",
+          "Kreuztal",
+          "Eichen(Kr Siegen)",
+          "Kreuztal-Littfeld",
+          "Welschen Ennest",
+          "Kirchhundem",
+          "Lennestadt-Altenhundem",
+          "Lennestadt-Meggen",
+          "Lennestadt-Grevenbrück",
+          "Finnentrop",
+          "Plettenberg",
+          "Werdohl",
+          "Altena(Westf)"
+        ],
+        "line": "RB91"
+      },
+      {
+        "id": "-5888736089639508299-2510201726-15",
+        "type": "IC",
+        "number": "2224",
+        "time": "2510202021",
+        "platform": "2",
+        "path_stations": [
+          "Frankfurt(Main)Hbf",
+          "Frankfurt(Main)West",
+          "Bad Nauheim",
+          "Wetzlar",
+          "Dillenburg",
+          "Siegen Hbf",
+          "Siegen-Weidenau",
+          "Kreuztal",
+          "Lennestadt-Altenhundem",
+          "Lennestadt-Grevenbrück",
+          "Finnentrop",
+          "Plettenberg",
+          "Werdohl",
+          "Altena(Westf)"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-8440866711270974957-2510201836-11",
+        "type": "RE",
+        "number": "52224",
+        "time": "2510202021",
+        "platform": "2",
+        "path_stations": [
+          "Dillenburg",
+          "Siegen Hbf",
+          "Siegen-Weidenau",
+          "Kreuztal",
+          "Lennestadt-Altenhundem",
+          "Lennestadt-Grevenbrück",
+          "Finnentrop",
+          "Plettenberg",
+          "Werdohl",
+          "Altena(Westf)"
+        ],
+        "line": "34"
+      },
+      {
+        "id": "-6450304352099987422-2510202042-3",
+        "type": "VIA",
+        "number": "31364",
+        "time": "2510202057",
+        "platform": "3",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hohenlimburg"
+        ],
+        "line": "RB91"
+      },
+      {
+        "id": "-6726842467690916476-2510202015-3",
+        "type": "VIA",
+        "number": "31328",
+        "time": "2510202030",
+        "platform": "3",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hohenlimburg"
+        ],
+        "line": "RE16"
+      },
+      {
+        "id": "-4901352206523413738-2510201942-3",
+        "type": "VIA",
+        "number": "31362",
+        "time": "2510201957",
+        "platform": "3",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hohenlimburg"
+        ],
+        "line": "RB91"
+      },
+      {
+        "id": "-4445643833120023180-2510201959-3",
+        "type": "RE",
+        "number": "33096",
+        "time": "2510202035",
+        "platform": "3",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Witten Hbf"
+        ],
+        "line": "34"
+      },
+      {
+        "id": "-672465394697082054-2510202020-3",
+        "type": "VIA",
+        "number": "31335",
+        "time": "2510202027",
+        "platform": "2",
+        "path_stations": [
+          "Iserlohn",
+          "Letmathe Dechenhöhle"
+        ],
+        "line": "RE16"
+      },
+      {
+        "id": "-4653643674708415543-2510202115-3",
+        "type": "VIA",
+        "number": "29990",
+        "time": "2510202130",
+        "platform": "3",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hohenlimburg"
+        ],
+        "line": "RB91"
+      },
+      {
+        "id": "-6450304352099987422-2510202042-3",
+        "type": "VIA",
+        "number": "31364",
+        "time": "2510202057",
+        "platform": "3",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hohenlimburg"
+        ],
+        "line": "RB91"
+      },
+      {
+        "id": "9178980954621852537-2510201940-16",
+        "type": "VIA",
+        "number": "31375",
+        "time": "2510202100",
+        "platform": "2",
+        "path_stations": [
+          "Siegen Hbf",
+          "Siegen-Weidenau",
+          "Siegen-Geisweid",
+          "Kreuztal",
+          "Eichen(Kr Siegen)",
+          "Kreuztal-Littfeld",
+          "Welschen Ennest",
+          "Kirchhundem",
+          "Lennestadt-Altenhundem",
+          "Lennestadt-Meggen",
+          "Lennestadt-Grevenbrück",
+          "Finnentrop",
+          "Plettenberg",
+          "Werdohl",
+          "Altena(Westf)"
+        ],
+        "line": "RB91"
+      },
+      {
+        "id": "-6135668272228981389-2510202008-11",
+        "type": "RE",
+        "number": "33097",
+        "time": "2510202122",
+        "platform": "2",
+        "path_stations": [
+          "Siegen Hbf",
+          "Siegen-Weidenau",
+          "Kreuztal",
+          "Welschen Ennest",
+          "Lennestadt-Altenhundem",
+          "Lennestadt-Grevenbrück",
+          "Finnentrop",
+          "Plettenberg",
+          "Werdohl",
+          "Altena(Westf)"
+        ],
+        "line": "34"
+      },
+      {
+        "id": "4428601503162750759-2510202120-3",
+        "type": "VIA",
+        "number": "31337",
+        "time": "2510202127",
+        "platform": "2",
+        "path_stations": [
+          "Iserlohn",
+          "Letmathe Dechenhöhle"
+        ],
+        "line": "RE16"
+      },
+      {
+        "id": "-6572256401110362134-2510202115-3",
+        "type": "VIA",
+        "number": "31366",
+        "time": "2510202130",
+        "platform": "3",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hohenlimburg"
+        ],
+        "line": "RB91"
+      },
+      {
+        "id": "5667140145523189152-2510202220-3",
+        "type": "VIA",
+        "number": "31339",
+        "time": "2510202227",
+        "platform": "2",
+        "path_stations": [
+          "Iserlohn",
+          "Letmathe Dechenhöhle"
+        ],
+        "line": "RE16"
+      },
+      {
+        "id": "648493478821781274-2510202215-3",
+        "type": "VIA",
+        "number": "31368",
+        "time": "2510202230",
+        "platform": "3",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hohenlimburg"
+        ],
+        "line": "RB91"
+      },
+      {
+        "id": "610747135279490644-2510202040-16",
+        "type": "VIA",
+        "number": "31377",
+        "time": "2510202200",
+        "platform": "2",
+        "path_stations": [
+          "Siegen Hbf",
+          "Siegen-Weidenau",
+          "Siegen-Geisweid",
+          "Kreuztal",
+          "Eichen(Kr Siegen)",
+          "Kreuztal-Littfeld",
+          "Welschen Ennest",
+          "Kirchhundem",
+          "Lennestadt-Altenhundem",
+          "Lennestadt-Meggen",
+          "Lennestadt-Grevenbrück",
+          "Finnentrop",
+          "Plettenberg",
+          "Werdohl",
+          "Altena(Westf)"
+        ],
+        "line": "RB91"
+      },
+      {
+        "id": "-5376449017606360923-2510202122-3",
+        "type": "Bus",
+        "number": "3400",
+        "time": "2510202225",
+        "platform": "",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Witten Hbf"
+        ],
+        "line": "RE34"
+      },
+      {
+        "id": "-1117377222442954366-2510202315-3",
+        "type": "VIA",
+        "number": "29992",
+        "time": "2510202330",
+        "platform": "3",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hohenlimburg"
+        ],
+        "line": "RB91"
+      },
+      {
+        "id": "2716669935883990168-2510202349-3",
+        "type": "VIA",
+        "number": "31395",
+        "time": "2510202356",
+        "platform": "2",
+        "path_stations": [
+          "Iserlohn",
+          "Letmathe Dechenhöhle"
+        ],
+        "line": "RB91"
+      },
+      {
+        "id": "-2039138036799450266-2510202140-16",
+        "type": "VIA",
+        "number": "31379",
+        "time": "2510202300",
+        "platform": "2",
+        "path_stations": [
+          "Siegen Hbf",
+          "Siegen-Weidenau",
+          "Siegen-Geisweid",
+          "Kreuztal",
+          "Eichen(Kr Siegen)",
+          "Kreuztal-Littfeld",
+          "Welschen Ennest",
+          "Kirchhundem",
+          "Lennestadt-Altenhundem",
+          "Lennestadt-Meggen",
+          "Lennestadt-Grevenbrück",
+          "Finnentrop",
+          "Plettenberg",
+          "Werdohl",
+          "Altena(Westf)"
+        ],
+        "line": "RB91"
+      },
+      {
+        "id": "193928253252178512-2510202208-11",
+        "type": "RE",
+        "number": "33099",
+        "time": "2510202322",
+        "platform": "2",
+        "path_stations": [
+          "Siegen Hbf",
+          "Siegen-Weidenau",
+          "Kreuztal",
+          "Welschen Ennest",
+          "Lennestadt-Altenhundem",
+          "Lennestadt-Grevenbrück",
+          "Finnentrop",
+          "Plettenberg",
+          "Werdohl",
+          "Altena(Westf)"
+        ],
+        "line": "34"
+      },
+      {
+        "id": "-5109043856199033040-2510202315-3",
+        "type": "VIA",
+        "number": "31370",
+        "time": "2510202330",
+        "platform": "3",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hohenlimburg"
+        ],
+        "line": "RB91"
+      },
+      {
+        "id": "-6108509953302125335-2510202320-3",
+        "type": "VIA",
+        "number": "31341",
+        "time": "2510202327",
+        "platform": "2",
+        "path_stations": [
+          "Iserlohn",
+          "Letmathe Dechenhöhle"
+        ],
+        "line": "RE16"
+      },
+      {
+        "id": "6642419568892832477-2510202240-16",
+        "type": "VIA",
+        "number": "31381",
+        "time": "2510210000",
+        "platform": "2",
+        "path_stations": [
+          "Siegen Hbf",
+          "Siegen-Weidenau",
+          "Siegen-Geisweid",
+          "Kreuztal",
+          "Eichen(Kr Siegen)",
+          "Kreuztal-Littfeld",
+          "Welschen Ennest",
+          "Kirchhundem",
+          "Lennestadt-Altenhundem",
+          "Lennestadt-Meggen",
+          "Lennestadt-Grevenbrück",
+          "Finnentrop",
+          "Plettenberg",
+          "Werdohl",
+          "Altena(Westf)"
+        ],
+        "line": "RB91"
+      },
+      {
+        "id": "3975767506966412181-2510210033-3",
+        "type": "VIA",
+        "number": "31374",
+        "time": "2510210048",
+        "platform": "3",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hohenlimburg"
+        ],
+        "line": "RB91"
+      },
+      {
+        "id": "6056069512944622513-2510210414-2",
+        "type": "RE",
+        "number": "33080",
+        "time": "2510210429",
+        "platform": "3",
+        "path_stations": [
+          "Hagen Hbf"
+        ],
+        "line": "34"
+      },
+      {
+        "id": "-6508823820826240364-2510210502-3",
+        "type": "IC",
+        "number": "2223",
+        "time": "2510210538",
+        "platform": "3",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Witten Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "4096309369063292224-2510210549-3",
+        "type": "VIA",
+        "number": "29965",
+        "time": "2510210556",
+        "platform": "2",
+        "path_stations": [
+          "Iserlohn",
+          "Letmathe Dechenhöhle"
+        ],
+        "line": "RB91"
+      },
+      {
+        "id": "2055066298986521598-2510210542-3",
+        "type": "VIA",
+        "number": "31334",
+        "time": "2510210557",
+        "platform": "3",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hohenlimburg"
+        ],
+        "line": "RB91"
+      },
+      {
+        "id": "-2204791766157734511-2510210401-16",
+        "type": "RE",
+        "number": "33081",
+        "time": "2510210522",
+        "platform": "2",
+        "path_stations": [
+          "Siegen Hbf",
+          "Siegen-Weidenau",
+          "Siegen-Geisweid",
+          "Kreuztal",
+          "Eichen(Kr Siegen)",
+          "Kreuztal-Littfeld",
+          "Welschen Ennest",
+          "Kirchhundem",
+          "Lennestadt-Altenhundem",
+          "Lennestadt-Meggen",
+          "Lennestadt-Grevenbrück",
+          "Finnentrop",
+          "Plettenberg",
+          "Werdohl",
+          "Altena(Westf)"
+        ],
+        "line": "34"
+      },
+      {
+        "id": "2834775926475247198-2510210502-3",
+        "type": "RE",
+        "number": "52223",
+        "time": "2510210538",
+        "platform": "3",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Witten Hbf"
+        ],
+        "line": "34"
+      },
+      {
+        "id": "-6102512305155720404-2510210520-3",
+        "type": "VIA",
+        "number": "31301",
+        "time": "2510210527",
+        "platform": "2",
+        "path_stations": [
+          "Iserlohn",
+          "Letmathe Dechenhöhle"
+        ],
+        "line": "RE16"
+      },
+      {
+        "id": "1400043871841396044-2510210559-3",
+        "type": "RE",
+        "number": "33082",
+        "time": "2510210635",
+        "platform": "3",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Witten Hbf"
+        ],
+        "line": "34"
+      },
+      {
+        "id": "4096309369063292224-2510210549-3",
+        "type": "VIA",
+        "number": "29965",
+        "time": "2510210556",
+        "platform": "2",
+        "path_stations": [
+          "Iserlohn",
+          "Letmathe Dechenhöhle"
+        ],
+        "line": "RB91"
+      },
+      {
+        "id": "3427288704939347562-2510210648-3",
+        "type": "VIA",
+        "number": "29967",
+        "time": "2510210655",
+        "platform": "1",
+        "path_stations": [
+          "Iserlohn",
+          "Letmathe Dechenhöhle"
+        ],
+        "line": "RB91"
+      },
+      {
+        "id": "-398063306361696981-2510210642-3",
+        "type": "VIA",
+        "number": "31336",
+        "time": "2510210657",
+        "platform": "3",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hohenlimburg"
+        ],
+        "line": "RB91"
+      },
+      {
+        "id": "-1785333457856888128-2510210620-3",
+        "type": "VIA",
+        "number": "31303",
+        "time": "2510210627",
+        "platform": "2",
+        "path_stations": [
+          "Iserlohn",
+          "Letmathe Dechenhöhle"
+        ],
+        "line": "RE16"
+      },
+      {
+        "id": "-2323653325998298843-2510210508-11",
+        "type": "HLB",
+        "number": "61599",
+        "time": "2510210623",
+        "platform": "2",
+        "path_stations": [
+          "Siegen Hbf",
+          "Siegen-Weidenau",
+          "Kreuztal",
+          "Welschen Ennest",
+          "Lennestadt-Altenhundem",
+          "Lennestadt-Grevenbrück",
+          "Finnentrop",
+          "Plettenberg",
+          "Werdohl",
+          "Altena(Westf)"
+        ],
+        "line": "RE34"
+      },
+      {
+        "id": "2055066298986521598-2510210542-3",
+        "type": "VIA",
+        "number": "31334",
+        "time": "2510210557",
+        "platform": "3",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hohenlimburg"
+        ],
+        "line": "RB91"
+      },
+      {
+        "id": "7776746030328226931-2510210615-3",
+        "type": "VIA",
+        "number": "31300",
+        "time": "2510210630",
+        "platform": "3",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hohenlimburg"
+        ],
+        "line": "RE16"
+      }
+    ],
+    "departures": [
+      {
+        "id": "3064714223747587260-2510201815-3",
+        "type": "VIA",
+        "number": "31324",
+        "direction": "Iserlohn",
+        "platform": "3",
+        "time": "2510201831",
+        "destination": "Iserlohn",
+        "path_stations": [
+          "Letmathe Dechenhöhle",
+          "Iserlohn"
+        ]
+      },
+      {
+        "id": "308025327970571773-2510201742-3",
+        "type": "VIA",
+        "number": "31358",
+        "direction": "Siegen Hbf",
+        "platform": "3",
+        "time": "2510201800",
+        "destination": "Siegen Hbf",
+        "path_stations": [
+          "Altena(Westf)",
+          "Werdohl",
+          "Plettenberg",
+          "Finnentrop",
+          "Lennestadt-Grevenbrück",
+          "Lennestadt-Meggen",
+          "Lennestadt-Altenhundem",
+          "Kirchhundem",
+          "Welschen Ennest",
+          "Kreuztal-Littfeld",
+          "Eichen(Kr Siegen)",
+          "Kreuztal",
+          "Siegen-Geisweid",
+          "Siegen-Weidenau",
+          "Siegen Hbf"
+        ]
+      },
+      {
+        "id": "-3160571851523370708-2510201805-1",
+        "type": "VIA",
+        "number": "29984",
+        "direction": "Iserlohn",
+        "platform": "1",
+        "time": "2510201805",
+        "destination": "Iserlohn",
+        "path_stations": [
+          "Letmathe Dechenhöhle",
+          "Iserlohn"
+        ]
+      },
+      {
+        "id": "-6034880667941900014-2510201759-3",
+        "type": "RE",
+        "number": "33094",
+        "direction": "Siegen Hbf",
+        "platform": "3",
+        "time": "2510201836",
+        "destination": "Siegen Hbf",
+        "path_stations": [
+          "Altena(Westf)",
+          "Werdohl",
+          "Plettenberg",
+          "Finnentrop",
+          "Lennestadt-Grevenbrück",
+          "Lennestadt-Altenhundem",
+          "Welschen Ennest",
+          "Kreuztal",
+          "Siegen-Weidenau",
+          "Siegen Hbf"
+        ]
+      },
+      {
+        "id": "-4492874168042325252-2510201636-11",
+        "type": "RE",
+        "number": "52226",
+        "direction": "Dortmund Hbf",
+        "platform": "2",
+        "time": "2510201823",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Witten Hbf",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-3650220351546053834-2510201526-15",
+        "type": "IC",
+        "number": "2226",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "2",
+        "time": "2510201823",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Witten Hbf",
+          "Dortmund Hbf",
+          "Hamm(Westf)Hbf",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "2671014326599349088-2510201842-3",
+        "type": "VIA",
+        "number": "31360",
+        "direction": "Siegen Hbf",
+        "platform": "3",
+        "time": "2510201900",
+        "destination": "Siegen Hbf",
+        "path_stations": [
+          "Altena(Westf)",
+          "Werdohl",
+          "Plettenberg",
+          "Finnentrop",
+          "Lennestadt-Grevenbrück",
+          "Lennestadt-Meggen",
+          "Lennestadt-Altenhundem",
+          "Kirchhundem",
+          "Welschen Ennest",
+          "Kreuztal-Littfeld",
+          "Eichen(Kr Siegen)",
+          "Kreuztal",
+          "Siegen-Geisweid",
+          "Siegen-Weidenau",
+          "Siegen Hbf"
+        ]
+      },
+      {
+        "id": "526455942621044472-2510201640-16",
+        "type": "VIA",
+        "number": "31369",
+        "direction": "Hagen Hbf",
+        "platform": "2",
+        "time": "2510201803",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Hohenlimburg",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "-3794772600978396443-2510201820-3",
+        "type": "VIA",
+        "number": "31331",
+        "direction": "Hagen Hbf",
+        "platform": "2",
+        "time": "2510201827",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Hohenlimburg",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "-9146590832885910738-2510201915-3",
+        "type": "VIA",
+        "number": "31326",
+        "direction": "Iserlohn",
+        "platform": "3",
+        "time": "2510201931",
+        "destination": "Iserlohn",
+        "path_stations": [
+          "Letmathe Dechenhöhle",
+          "Iserlohn"
+        ]
+      },
+      {
+        "id": "7794600975490665308-2510201920-3",
+        "type": "VIA",
+        "number": "31333",
+        "direction": "Hagen Hbf",
+        "platform": "2",
+        "time": "2510201927",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Hohenlimburg",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "-1997364921488903933-2510201740-16",
+        "type": "VIA",
+        "number": "31371",
+        "direction": "Hagen Hbf",
+        "platform": "2",
+        "time": "2510201903",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Hohenlimburg",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "-4417429097992488987-2510201905-1",
+        "type": "VIA",
+        "number": "29986",
+        "direction": "Iserlohn",
+        "platform": "1",
+        "time": "2510201905",
+        "destination": "Iserlohn",
+        "path_stations": [
+          "Letmathe Dechenhöhle",
+          "Iserlohn"
+        ]
+      },
+      {
+        "id": "2671014326599349088-2510201842-3",
+        "type": "VIA",
+        "number": "31360",
+        "direction": "Siegen Hbf",
+        "platform": "3",
+        "time": "2510201900",
+        "destination": "Siegen Hbf",
+        "path_stations": [
+          "Altena(Westf)",
+          "Werdohl",
+          "Plettenberg",
+          "Finnentrop",
+          "Lennestadt-Grevenbrück",
+          "Lennestadt-Meggen",
+          "Lennestadt-Altenhundem",
+          "Kirchhundem",
+          "Welschen Ennest",
+          "Kreuztal-Littfeld",
+          "Eichen(Kr Siegen)",
+          "Kreuztal",
+          "Siegen-Geisweid",
+          "Siegen-Weidenau",
+          "Siegen Hbf"
+        ]
+      },
+      {
+        "id": "-4901352206523413738-2510201942-3",
+        "type": "VIA",
+        "number": "31362",
+        "direction": "Siegen Hbf",
+        "platform": "3",
+        "time": "2510202000",
+        "destination": "Siegen Hbf",
+        "path_stations": [
+          "Altena(Westf)",
+          "Werdohl",
+          "Plettenberg",
+          "Finnentrop",
+          "Lennestadt-Grevenbrück",
+          "Lennestadt-Meggen",
+          "Lennestadt-Altenhundem",
+          "Kirchhundem",
+          "Welschen Ennest",
+          "Kreuztal-Littfeld",
+          "Eichen(Kr Siegen)",
+          "Kreuztal",
+          "Siegen-Geisweid",
+          "Siegen-Weidenau",
+          "Siegen Hbf"
+        ]
+      },
+      {
+        "id": "-3233372792649548718-2510201859-4",
+        "type": "HLB",
+        "number": "61848",
+        "direction": "Siegen Hbf",
+        "platform": "3",
+        "time": "2510201931",
+        "destination": "Siegen Hbf",
+        "path_stations": [
+          "Altena(Westf)",
+          "Werdohl",
+          "Plettenberg",
+          "Finnentrop",
+          "Lennestadt-Grevenbrück",
+          "Lennestadt-Altenhundem",
+          "Welschen Ennest",
+          "Kreuztal",
+          "Siegen-Weidenau",
+          "Siegen Hbf"
+        ]
+      },
+      {
+        "id": "-6407591196353320755-2510201808-11",
+        "type": "RE",
+        "number": "33095",
+        "direction": "Dortmund Hbf",
+        "platform": "2",
+        "time": "2510201923",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Hohenlimburg",
+          "Witten Hbf",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "7391523970940871217-2510201840-16",
+        "type": "VIA",
+        "number": "31373",
+        "direction": "Hagen Hbf",
+        "platform": "2",
+        "time": "2510202003",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Hohenlimburg",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "5286740696638149201-2510202005-1",
+        "type": "VIA",
+        "number": "29988",
+        "direction": "Iserlohn",
+        "platform": "1",
+        "time": "2510202005",
+        "destination": "Iserlohn",
+        "path_stations": [
+          "Letmathe Dechenhöhle",
+          "Iserlohn"
+        ]
+      },
+      {
+        "id": "-5888736089639508299-2510201726-15",
+        "type": "IC",
+        "number": "2224",
+        "direction": "Dortmund Hbf",
+        "platform": "2",
+        "time": "2510202023",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Witten Hbf",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-8440866711270974957-2510201836-11",
+        "type": "RE",
+        "number": "52224",
+        "direction": "Dortmund Hbf",
+        "platform": "2",
+        "time": "2510202023",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Witten Hbf",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-6450304352099987422-2510202042-3",
+        "type": "VIA",
+        "number": "31364",
+        "direction": "Siegen Hbf",
+        "platform": "3",
+        "time": "2510202100",
+        "destination": "Siegen Hbf",
+        "path_stations": [
+          "Altena(Westf)",
+          "Werdohl",
+          "Plettenberg",
+          "Finnentrop",
+          "Lennestadt-Grevenbrück",
+          "Lennestadt-Meggen",
+          "Lennestadt-Altenhundem",
+          "Kirchhundem",
+          "Welschen Ennest",
+          "Kreuztal-Littfeld",
+          "Eichen(Kr Siegen)",
+          "Kreuztal",
+          "Siegen-Geisweid",
+          "Siegen-Weidenau",
+          "Siegen Hbf"
+        ]
+      },
+      {
+        "id": "-6726842467690916476-2510202015-3",
+        "type": "VIA",
+        "number": "31328",
+        "direction": "Iserlohn",
+        "platform": "3",
+        "time": "2510202031",
+        "destination": "Iserlohn",
+        "path_stations": [
+          "Letmathe Dechenhöhle",
+          "Iserlohn"
+        ]
+      },
+      {
+        "id": "-4901352206523413738-2510201942-3",
+        "type": "VIA",
+        "number": "31362",
+        "direction": "Siegen Hbf",
+        "platform": "3",
+        "time": "2510202000",
+        "destination": "Siegen Hbf",
+        "path_stations": [
+          "Altena(Westf)",
+          "Werdohl",
+          "Plettenberg",
+          "Finnentrop",
+          "Lennestadt-Grevenbrück",
+          "Lennestadt-Meggen",
+          "Lennestadt-Altenhundem",
+          "Kirchhundem",
+          "Welschen Ennest",
+          "Kreuztal-Littfeld",
+          "Eichen(Kr Siegen)",
+          "Kreuztal",
+          "Siegen-Geisweid",
+          "Siegen-Weidenau",
+          "Siegen Hbf"
+        ]
+      },
+      {
+        "id": "-4445643833120023180-2510201959-3",
+        "type": "RE",
+        "number": "33096",
+        "direction": "Siegen Hbf",
+        "platform": "3",
+        "time": "2510202036",
+        "destination": "Siegen Hbf",
+        "path_stations": [
+          "Altena(Westf)",
+          "Werdohl",
+          "Plettenberg",
+          "Finnentrop",
+          "Lennestadt-Grevenbrück",
+          "Lennestadt-Altenhundem",
+          "Welschen Ennest",
+          "Kreuztal",
+          "Siegen-Weidenau",
+          "Siegen Hbf"
+        ]
+      },
+      {
+        "id": "-672465394697082054-2510202020-3",
+        "type": "VIA",
+        "number": "31335",
+        "direction": "Hagen Hbf",
+        "platform": "2",
+        "time": "2510202027",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Hohenlimburg",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "-4653643674708415543-2510202115-3",
+        "type": "VIA",
+        "number": "29990",
+        "direction": "Iserlohn",
+        "platform": "3",
+        "time": "2510202136",
+        "destination": "Iserlohn",
+        "path_stations": [
+          "Letmathe Dechenhöhle",
+          "Iserlohn"
+        ]
+      },
+      {
+        "id": "-6450304352099987422-2510202042-3",
+        "type": "VIA",
+        "number": "31364",
+        "direction": "Siegen Hbf",
+        "platform": "3",
+        "time": "2510202100",
+        "destination": "Siegen Hbf",
+        "path_stations": [
+          "Altena(Westf)",
+          "Werdohl",
+          "Plettenberg",
+          "Finnentrop",
+          "Lennestadt-Grevenbrück",
+          "Lennestadt-Meggen",
+          "Lennestadt-Altenhundem",
+          "Kirchhundem",
+          "Welschen Ennest",
+          "Kreuztal-Littfeld",
+          "Eichen(Kr Siegen)",
+          "Kreuztal",
+          "Siegen-Geisweid",
+          "Siegen-Weidenau",
+          "Siegen Hbf"
+        ]
+      },
+      {
+        "id": "9178980954621852537-2510201940-16",
+        "type": "VIA",
+        "number": "31375",
+        "direction": "Hagen Hbf",
+        "platform": "2",
+        "time": "2510202103",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Hohenlimburg",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "-6135668272228981389-2510202008-11",
+        "type": "RE",
+        "number": "33097",
+        "direction": "Dortmund Hbf",
+        "platform": "2",
+        "time": "2510202123",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Hohenlimburg",
+          "Witten Hbf",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "4428601503162750759-2510202120-3",
+        "type": "VIA",
+        "number": "31337",
+        "direction": "Hagen Hbf",
+        "platform": "2",
+        "time": "2510202127",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Hohenlimburg",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "-6572256401110362134-2510202115-3",
+        "type": "VIA",
+        "number": "31366",
+        "direction": "Siegen Hbf",
+        "platform": "3",
+        "time": "2510202132",
+        "destination": "Siegen Hbf",
+        "path_stations": [
+          "Altena(Westf)",
+          "Werdohl",
+          "Plettenberg",
+          "Finnentrop",
+          "Lennestadt-Grevenbrück",
+          "Lennestadt-Meggen",
+          "Lennestadt-Altenhundem",
+          "Kirchhundem",
+          "Welschen Ennest",
+          "Kreuztal-Littfeld",
+          "Eichen(Kr Siegen)",
+          "Kreuztal",
+          "Siegen-Geisweid",
+          "Siegen-Weidenau",
+          "Siegen Hbf"
+        ]
+      },
+      {
+        "id": "5667140145523189152-2510202220-3",
+        "type": "VIA",
+        "number": "31339",
+        "direction": "Hagen Hbf",
+        "platform": "2",
+        "time": "2510202227",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Hohenlimburg",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "648493478821781274-2510202215-3",
+        "type": "VIA",
+        "number": "31368",
+        "direction": "Iserlohn",
+        "platform": "3",
+        "time": "2510202231",
+        "destination": "Iserlohn",
+        "path_stations": [
+          "Letmathe Dechenhöhle",
+          "Iserlohn"
+        ]
+      },
+      {
+        "id": "-8736901466251620451-2510202236-1",
+        "type": "RE",
+        "number": "33098",
+        "direction": "Siegen Hbf",
+        "platform": "3",
+        "time": "2510202236",
+        "destination": "Siegen Hbf",
+        "path_stations": [
+          "Altena(Westf)",
+          "Werdohl",
+          "Plettenberg",
+          "Finnentrop",
+          "Lennestadt-Grevenbrück",
+          "Lennestadt-Meggen",
+          "Lennestadt-Altenhundem",
+          "Kirchhundem",
+          "Welschen Ennest",
+          "Kreuztal-Littfeld",
+          "Eichen(Kr Siegen)",
+          "Kreuztal",
+          "Siegen-Geisweid",
+          "Siegen-Weidenau",
+          "Siegen Hbf"
+        ]
+      },
+      {
+        "id": "610747135279490644-2510202040-16",
+        "type": "VIA",
+        "number": "31377",
+        "direction": "Hagen Hbf",
+        "platform": "2",
+        "time": "2510202203",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Hohenlimburg",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "-1117377222442954366-2510202315-3",
+        "type": "VIA",
+        "number": "29992",
+        "direction": "Iserlohn",
+        "platform": "3",
+        "time": "2510202336",
+        "destination": "Iserlohn",
+        "path_stations": [
+          "Letmathe Dechenhöhle",
+          "Iserlohn"
+        ]
+      },
+      {
+        "id": "-2039138036799450266-2510202140-16",
+        "type": "VIA",
+        "number": "31379",
+        "direction": "Hagen Hbf",
+        "platform": "2",
+        "time": "2510202303",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Hohenlimburg",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "193928253252178512-2510202208-11",
+        "type": "RE",
+        "number": "33099",
+        "direction": "Hagen Hbf",
+        "platform": "2",
+        "time": "2510202323",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Hohenlimburg",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "-5109043856199033040-2510202315-3",
+        "type": "VIA",
+        "number": "31370",
+        "direction": "Siegen Hbf",
+        "platform": "3",
+        "time": "2510202332",
+        "destination": "Siegen Hbf",
+        "path_stations": [
+          "Altena(Westf)",
+          "Werdohl",
+          "Plettenberg",
+          "Finnentrop",
+          "Lennestadt-Grevenbrück",
+          "Lennestadt-Meggen",
+          "Lennestadt-Altenhundem",
+          "Kirchhundem",
+          "Welschen Ennest",
+          "Kreuztal-Littfeld",
+          "Eichen(Kr Siegen)",
+          "Kreuztal",
+          "Siegen-Geisweid",
+          "Siegen-Weidenau",
+          "Siegen Hbf"
+        ]
+      },
+      {
+        "id": "-6108509953302125335-2510202320-3",
+        "type": "VIA",
+        "number": "31341",
+        "direction": "Hagen Hbf",
+        "platform": "2",
+        "time": "2510202327",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Hohenlimburg",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "3975767506966412181-2510210033-3",
+        "type": "VIA",
+        "number": "31374",
+        "direction": "Iserlohn",
+        "platform": "3",
+        "time": "2510210049",
+        "destination": "Iserlohn",
+        "path_stations": [
+          "Letmathe Dechenhöhle",
+          "Iserlohn"
+        ]
+      },
+      {
+        "id": "6056069512944622513-2510210414-2",
+        "type": "RE",
+        "number": "33080",
+        "direction": "Siegen Hbf",
+        "platform": "3",
+        "time": "2510210430",
+        "destination": "Siegen Hbf",
+        "path_stations": [
+          "Altena(Westf)",
+          "Werdohl",
+          "Plettenberg",
+          "Finnentrop",
+          "Lennestadt-Grevenbrück",
+          "Lennestadt-Meggen",
+          "Lennestadt-Altenhundem",
+          "Kirchhundem",
+          "Welschen Ennest",
+          "Kreuztal-Littfeld",
+          "Eichen(Kr Siegen)",
+          "Kreuztal",
+          "Siegen-Geisweid",
+          "Siegen-Weidenau",
+          "Siegen Hbf"
+        ]
+      },
+      {
+        "id": "-6508823820826240364-2510210502-3",
+        "type": "IC",
+        "number": "2223",
+        "direction": "Frankfurt(Main)Hbf",
+        "platform": "3",
+        "time": "2510210539",
+        "destination": "Frankfurt(Main)Hbf",
+        "path_stations": [
+          "Altena(Westf)",
+          "Werdohl",
+          "Plettenberg",
+          "Finnentrop",
+          "Lennestadt-Grevenbrück",
+          "Lennestadt-Altenhundem",
+          "Kreuztal",
+          "Siegen-Weidenau",
+          "Siegen Hbf",
+          "Dillenburg",
+          "Wetzlar",
+          "Bad Nauheim",
+          "Frankfurt(Main)West",
+          "Frankfurt(Main)Hbf"
+        ]
+      },
+      {
+        "id": "4096309369063292224-2510210549-3",
+        "type": "VIA",
+        "number": "29965",
+        "direction": "Hagen Hbf",
+        "platform": "2",
+        "time": "2510210603",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Hohenlimburg",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "2055066298986521598-2510210542-3",
+        "type": "VIA",
+        "number": "31334",
+        "direction": "Siegen Hbf",
+        "platform": "3",
+        "time": "2510210600",
+        "destination": "Siegen Hbf",
+        "path_stations": [
+          "Altena(Westf)",
+          "Werdohl",
+          "Plettenberg",
+          "Finnentrop",
+          "Lennestadt-Grevenbrück",
+          "Lennestadt-Meggen",
+          "Lennestadt-Altenhundem",
+          "Kirchhundem",
+          "Welschen Ennest",
+          "Kreuztal-Littfeld",
+          "Eichen(Kr Siegen)",
+          "Kreuztal",
+          "Siegen-Geisweid",
+          "Siegen-Weidenau",
+          "Siegen Hbf"
+        ]
+      },
+      {
+        "id": "-2204791766157734511-2510210401-16",
+        "type": "RE",
+        "number": "33081",
+        "direction": "Dortmund Hbf",
+        "platform": "2",
+        "time": "2510210523",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Hohenlimburg",
+          "Witten Hbf",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "2834775926475247198-2510210502-3",
+        "type": "RE",
+        "number": "52223",
+        "direction": "Dillenburg",
+        "platform": "3",
+        "time": "2510210539",
+        "destination": "Dillenburg",
+        "path_stations": [
+          "Altena(Westf)",
+          "Werdohl",
+          "Plettenberg",
+          "Finnentrop",
+          "Lennestadt-Grevenbrück",
+          "Lennestadt-Altenhundem",
+          "Kreuztal",
+          "Siegen-Weidenau",
+          "Siegen Hbf",
+          "Dillenburg"
+        ]
+      },
+      {
+        "id": "-6102512305155720404-2510210520-3",
+        "type": "VIA",
+        "number": "31301",
+        "direction": "Hagen Hbf",
+        "platform": "2",
+        "time": "2510210527",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Hohenlimburg",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "1400043871841396044-2510210559-3",
+        "type": "RE",
+        "number": "33082",
+        "direction": "Siegen Hbf",
+        "platform": "3",
+        "time": "2510210636",
+        "destination": "Siegen Hbf",
+        "path_stations": [
+          "Altena(Westf)",
+          "Werdohl",
+          "Plettenberg",
+          "Finnentrop",
+          "Lennestadt-Grevenbrück",
+          "Lennestadt-Altenhundem",
+          "Welschen Ennest",
+          "Kreuztal",
+          "Siegen-Weidenau",
+          "Siegen Hbf"
+        ]
+      },
+      {
+        "id": "4125780207050505074-2510210605-1",
+        "type": "VIA",
+        "number": "29960",
+        "direction": "Iserlohn",
+        "platform": "1",
+        "time": "2510210605",
+        "destination": "Iserlohn",
+        "path_stations": [
+          "Letmathe Dechenhöhle",
+          "Iserlohn"
+        ]
+      },
+      {
+        "id": "4096309369063292224-2510210549-3",
+        "type": "VIA",
+        "number": "29965",
+        "direction": "Hagen Hbf",
+        "platform": "2",
+        "time": "2510210603",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Hohenlimburg",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "-398063306361696981-2510210642-3",
+        "type": "VIA",
+        "number": "31336",
+        "direction": "Siegen Hbf",
+        "platform": "3",
+        "time": "2510210700",
+        "destination": "Siegen Hbf",
+        "path_stations": [
+          "Altena(Westf)",
+          "Werdohl",
+          "Plettenberg",
+          "Finnentrop",
+          "Lennestadt-Grevenbrück",
+          "Lennestadt-Meggen",
+          "Lennestadt-Altenhundem",
+          "Kirchhundem",
+          "Welschen Ennest",
+          "Kreuztal-Littfeld",
+          "Eichen(Kr Siegen)",
+          "Kreuztal",
+          "Siegen-Geisweid",
+          "Siegen-Weidenau",
+          "Siegen Hbf"
+        ]
+      },
+      {
+        "id": "-1785333457856888128-2510210620-3",
+        "type": "VIA",
+        "number": "31303",
+        "direction": "Hagen Hbf",
+        "platform": "2",
+        "time": "2510210627",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Hohenlimburg",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "-2323653325998298843-2510210508-11",
+        "type": "HLB",
+        "number": "61599",
+        "direction": "Dortmund Hbf",
+        "platform": "2",
+        "time": "2510210623",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Hohenlimburg",
+          "Witten Hbf",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "2055066298986521598-2510210542-3",
+        "type": "VIA",
+        "number": "31334",
+        "direction": "Siegen Hbf",
+        "platform": "3",
+        "time": "2510210600",
+        "destination": "Siegen Hbf",
+        "path_stations": [
+          "Altena(Westf)",
+          "Werdohl",
+          "Plettenberg",
+          "Finnentrop",
+          "Lennestadt-Grevenbrück",
+          "Lennestadt-Meggen",
+          "Lennestadt-Altenhundem",
+          "Kirchhundem",
+          "Welschen Ennest",
+          "Kreuztal-Littfeld",
+          "Eichen(Kr Siegen)",
+          "Kreuztal",
+          "Siegen-Geisweid",
+          "Siegen-Weidenau",
+          "Siegen Hbf"
+        ]
+      },
+      {
+        "id": "7776746030328226931-2510210615-3",
+        "type": "VIA",
+        "number": "31300",
+        "direction": "Iserlohn",
+        "platform": "3",
+        "time": "2510210631",
+        "destination": "Iserlohn",
+        "path_stations": [
+          "Letmathe Dechenhöhle",
+          "Iserlohn"
+        ]
+      }
+    ]
+  }
+}

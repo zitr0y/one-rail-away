@@ -1,0 +1,1517 @@
+{
+  "station_eva": "8010334",
+  "date": "251020",
+  "cached_at": "2025-10-20T15:45:21.661769",
+  "plan_data": {
+    "departures": [
+      {
+        "id": "2733330203244837809-2510201705-1",
+        "type": "RB",
+        "number": "76433",
+        "direction": "Tangermünde",
+        "platform": "8",
+        "time": "2510201705",
+        "destination": "Tangermünde",
+        "path_stations": [
+          "Stendal Vorbf",
+          "Bindfelde",
+          "Miltern",
+          "Tangermünde West",
+          "Tangermünde"
+        ]
+      },
+      {
+        "id": "7415112192791735813-2510201732-6",
+        "type": "S",
+        "number": "39031",
+        "direction": "Schönebeck-Bad Salzelmen",
+        "platform": "5",
+        "time": "2510201757",
+        "destination": "Schönebeck-Bad Salzelmen",
+        "path_stations": [
+          "Demker",
+          "Tangerhütte",
+          "Mahlwinkel",
+          "Angern-Rogätz",
+          "Zielitz",
+          "Zielitz Ort",
+          "Wolmirstedt",
+          "Magdeburg-Rothensee",
+          "Magdeburg-Eichenweiler",
+          "Magdeburg-Neustadt",
+          "Magdeburg Hbf",
+          "Magdeburg Hasselbachplatz",
+          "Magdeburg-Buckau",
+          "Magdeburg SKET Industriepark",
+          "Magdeburg-Salbke",
+          "Magdeburg Südost",
+          "Schönebeck-Frohse",
+          "Schönebeck(Elbe)",
+          "Schönebeck Süd",
+          "Schönebeck-Bad Salzelmen"
+        ]
+      },
+      {
+        "id": "617877954789973828-2510201732-1",
+        "type": "RE",
+        "number": "16945",
+        "direction": "Schönebeck-Bad Salzelmen",
+        "platform": "5",
+        "time": "2510201732",
+        "destination": "Schönebeck-Bad Salzelmen",
+        "path_stations": [
+          "Tangerhütte",
+          "Zielitz Ort",
+          "Wolmirstedt",
+          "Magdeburg-Rothensee",
+          "Magdeburg-Eichenweiler",
+          "Magdeburg-Neustadt",
+          "Magdeburg Hbf",
+          "Magdeburg Hasselbachplatz",
+          "Magdeburg-Buckau",
+          "Magdeburg SKET Industriepark",
+          "Magdeburg-Salbke",
+          "Magdeburg Südost",
+          "Schönebeck-Frohse",
+          "Schönebeck(Elbe)",
+          "Schönebeck Süd",
+          "Schönebeck-Bad Salzelmen"
+        ]
+      },
+      {
+        "id": "-3642361880164599102-2510201201-17",
+        "type": "IC",
+        "number": "2431",
+        "direction": "Cottbus Hbf",
+        "platform": "3",
+        "time": "2510201750",
+        "destination": "Cottbus Hbf",
+        "path_stations": [
+          "Berlin-Spandau",
+          "Berlin Zoologischer Garten",
+          "Berlin Hbf",
+          "Berlin Ostbahnhof",
+          "Berlin Ostkreuz",
+          "Königs Wusterhausen",
+          "Lübben(Spreewald)",
+          "Lübbenau(Spreewald)",
+          "Cottbus Hbf"
+        ]
+      },
+      {
+        "id": "-5468884830591852515-2510201646-21",
+        "type": "S",
+        "number": "39024",
+        "direction": "Osterburg",
+        "platform": "3",
+        "time": "2510201800",
+        "destination": "Osterburg",
+        "path_stations": [
+          "Stendal-Stadtsee",
+          "Stendal Hochschule",
+          "Eichstedt(Altm)",
+          "Goldbeck(Osterburg)",
+          "Osterburg"
+        ]
+      },
+      {
+        "id": "6078091544773212843-2510201538-4",
+        "type": "ICE",
+        "number": "1615",
+        "direction": "Berlin Hbf",
+        "platform": "3",
+        "time": "2510201727",
+        "destination": "Berlin Hbf",
+        "path_stations": [
+          "Berlin-Spandau",
+          "Berlin Hbf"
+        ]
+      },
+      {
+        "id": "2334959252022002025-2510201616-17",
+        "type": "RE",
+        "number": "16946",
+        "direction": "Salzwedel",
+        "platform": "4",
+        "time": "2510201734",
+        "destination": "Salzwedel",
+        "path_stations": [
+          "Steinfeld(Stendal)",
+          "Kläden(Stendal)",
+          "Hohenwulsch",
+          "Brunau-Packebusch",
+          "Fleetmark",
+          "Pretzier(Altm)",
+          "Salzwedel"
+        ]
+      },
+      {
+        "id": "8339383025180806528-2510201637-3",
+        "type": "ICE",
+        "number": "1708",
+        "direction": "Kiel Hbf",
+        "platform": "1",
+        "time": "2510201722",
+        "destination": "Kiel Hbf",
+        "path_stations": [
+          "Salzwedel",
+          "Lüneburg",
+          "Hamburg-Harburg",
+          "Hamburg Hbf",
+          "Neumünster",
+          "Kiel Hbf"
+        ]
+      },
+      {
+        "id": "4562522837513088521-2510201546-21",
+        "type": "S",
+        "number": "39022",
+        "direction": "Osterburg",
+        "platform": "3",
+        "time": "2510201700",
+        "destination": "Osterburg",
+        "path_stations": [
+          "Stendal-Stadtsee",
+          "Stendal Hochschule",
+          "Eichstedt(Altm)",
+          "Goldbeck(Osterburg)",
+          "Osterburg"
+        ]
+      },
+      {
+        "id": "8983673647294408675-2510200842-20",
+        "type": "ICE",
+        "number": "1218",
+        "direction": "Berlin Hbf",
+        "platform": "1",
+        "time": "2510201747",
+        "destination": "Berlin Hbf",
+        "path_stations": [
+          "Berlin-Spandau",
+          "Berlin Hbf"
+        ]
+      },
+      {
+        "id": "5529314417488014783-2510201706-1",
+        "type": "SMD",
+        "number": "80328",
+        "direction": "Wolfsburg Hbf",
+        "platform": "4",
+        "time": "2510201706",
+        "destination": "Wolfsburg Hbf",
+        "path_stations": [
+          "Möringen(Altm)",
+          "Vinzelberg",
+          "Uchtspringe",
+          "Jävenitz",
+          "Gardelegen",
+          "Solpke",
+          "Mieste",
+          "Miesterhorst",
+          "Oebisfelde",
+          "Wolfsburg Hbf"
+        ]
+      },
+      {
+        "id": "7745570464314139433-2510201746-21",
+        "type": "S",
+        "number": "39026",
+        "direction": "Osterburg",
+        "platform": "3",
+        "time": "2510201900",
+        "destination": "Osterburg",
+        "path_stations": [
+          "Stendal-Stadtsee",
+          "Stendal Hochschule",
+          "Eichstedt(Altm)",
+          "Goldbeck(Osterburg)",
+          "Osterburg"
+        ]
+      },
+      {
+        "id": "2773492246749393443-2510201806-1",
+        "type": "SMD",
+        "number": "80330",
+        "direction": "Wolfsburg Hbf",
+        "platform": "4",
+        "time": "2510201806",
+        "destination": "Wolfsburg Hbf",
+        "path_stations": [
+          "Möringen(Altm)",
+          "Vinzelberg",
+          "Uchtspringe",
+          "Jävenitz",
+          "Gardelegen",
+          "Solpke",
+          "Mieste",
+          "Miesterhorst",
+          "Oebisfelde",
+          "Wolfsburg Hbf"
+        ]
+      },
+      {
+        "id": "-5468884830591852515-2510201646-21",
+        "type": "S",
+        "number": "39024",
+        "direction": "Osterburg",
+        "platform": "3",
+        "time": "2510201800",
+        "destination": "Osterburg",
+        "path_stations": [
+          "Stendal-Stadtsee",
+          "Stendal Hochschule",
+          "Eichstedt(Altm)",
+          "Goldbeck(Osterburg)",
+          "Osterburg"
+        ]
+      },
+      {
+        "id": "-3034206107369764844-2510201738-3",
+        "type": "ICE",
+        "number": "1716",
+        "direction": "Hamburg-Altona",
+        "platform": "3",
+        "time": "2510201831",
+        "destination": "Hamburg-Altona",
+        "path_stations": [
+          "Salzwedel",
+          "Uelzen",
+          "Hamburg Hbf",
+          "Hamburg-Altona"
+        ]
+      },
+      {
+        "id": "-4212351288937431836-2510201805-1",
+        "type": "RB",
+        "number": "76435",
+        "direction": "Tangermünde",
+        "platform": "8",
+        "time": "2510201805",
+        "destination": "Tangermünde",
+        "path_stations": [
+          "Stendal Vorbf",
+          "Bindfelde",
+          "Miltern",
+          "Tangermünde West",
+          "Tangermünde"
+        ]
+      },
+      {
+        "id": "-4892511838880631506-2510201743-8",
+        "type": "RE",
+        "number": "16947",
+        "direction": "Schönebeck-Bad Salzelmen",
+        "platform": "5",
+        "time": "2510201832",
+        "destination": "Schönebeck-Bad Salzelmen",
+        "path_stations": [
+          "Tangerhütte",
+          "Zielitz Ort",
+          "Wolmirstedt",
+          "Magdeburg-Rothensee",
+          "Magdeburg-Eichenweiler",
+          "Magdeburg-Neustadt",
+          "Magdeburg Hbf",
+          "Magdeburg Hasselbachplatz",
+          "Magdeburg-Buckau",
+          "Magdeburg SKET Industriepark",
+          "Magdeburg-Salbke",
+          "Magdeburg Südost",
+          "Schönebeck-Frohse",
+          "Schönebeck(Elbe)",
+          "Schönebeck Süd",
+          "Schönebeck-Bad Salzelmen"
+        ]
+      },
+      {
+        "id": "-4659876279235164279-2510201832-1",
+        "type": "RE",
+        "number": "3178",
+        "direction": "Berlin Südkreuz",
+        "platform": "2",
+        "time": "2510201832",
+        "destination": "Berlin Südkreuz",
+        "path_stations": [
+          "Rathenow",
+          "Nennhausen",
+          "Wustermark",
+          "Elstal",
+          "Dallgow-Döberitz",
+          "Berlin-Staaken",
+          "Berlin-Spandau",
+          "Berlin Jungfernheide",
+          "Berlin Hbf",
+          "Berlin Potsdamer Platz",
+          "Berlin Südkreuz"
+        ]
+      },
+      {
+        "id": "6202916625163174173-2510201724-3",
+        "type": "ICE",
+        "number": "695",
+        "direction": "Stuttgart Hbf",
+        "platform": "1",
+        "time": "2510201811",
+        "destination": "Stuttgart Hbf",
+        "path_stations": [
+          "Wolfsburg Hbf",
+          "Braunschweig Hbf",
+          "Hildesheim Hbf",
+          "Göttingen",
+          "Kassel-Wilhelmshöhe",
+          "Fulda",
+          "Frankfurt(Main)Hbf",
+          "Mannheim Hbf",
+          "Stuttgart Hbf"
+        ]
+      },
+      {
+        "id": "5701347044418282694-2510201616-8",
+        "type": "ICE",
+        "number": "1633",
+        "direction": "Berlin Hbf",
+        "platform": "1",
+        "time": "2510201837",
+        "destination": "Berlin Hbf",
+        "path_stations": [
+          "Berlin-Spandau",
+          "Berlin Hbf"
+        ]
+      },
+      {
+        "id": "-263789116210700888-2510201753-4",
+        "type": "ICE",
+        "number": "742",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "1",
+        "time": "2510201859",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Hannover Hbf",
+          "Bünde(Westf)",
+          "Osnabrück Hbf",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-8699803328493740364-2510201845-1",
+        "type": "Bus",
+        "number": "96462",
+        "direction": "Rathenow",
+        "platform": "",
+        "time": "2510201845",
+        "destination": "Rathenow",
+        "path_stations": [
+          "Hämerten",
+          "Hämerten Abzweig, Tangermünde",
+          "Wartehalle, Schönhausen (Elbe)",
+          "Wendestelle, Schönhausen (Elbe)",
+          "Großwudicke",
+          "Rathenow"
+        ]
+      },
+      {
+        "id": "4502891745129444971-2510201832-6",
+        "type": "S",
+        "number": "39033",
+        "direction": "Schönebeck-Bad Salzelmen",
+        "platform": "5",
+        "time": "2510201857",
+        "destination": "Schönebeck-Bad Salzelmen",
+        "path_stations": [
+          "Demker",
+          "Tangerhütte",
+          "Mahlwinkel",
+          "Angern-Rogätz",
+          "Zielitz",
+          "Zielitz Ort",
+          "Wolmirstedt",
+          "Magdeburg-Rothensee",
+          "Magdeburg-Eichenweiler",
+          "Magdeburg-Neustadt",
+          "Magdeburg Hbf",
+          "Magdeburg Hasselbachplatz",
+          "Magdeburg-Buckau",
+          "Magdeburg SKET Industriepark",
+          "Magdeburg-Salbke",
+          "Magdeburg Südost",
+          "Schönebeck-Frohse",
+          "Schönebeck(Elbe)",
+          "Schönebeck Süd",
+          "Schönebeck-Bad Salzelmen"
+        ]
+      },
+      {
+        "id": "-7044479639794506131-2510201521-8",
+        "type": "IC",
+        "number": "2475",
+        "direction": "Magdeburg Hbf",
+        "platform": "3",
+        "time": "2510201831",
+        "destination": "Magdeburg Hbf",
+        "path_stations": [
+          "Magdeburg Hbf"
+        ]
+      },
+      {
+        "id": "4083739950560377043-2510201246-14",
+        "type": "ICE",
+        "number": "596",
+        "direction": "Berlin Hbf",
+        "platform": "1",
+        "time": "2510201947",
+        "destination": "Berlin Hbf",
+        "path_stations": [
+          "Berlin-Spandau",
+          "Berlin Hbf"
+        ]
+      },
+      {
+        "id": "7745570464314139433-2510201746-21",
+        "type": "S",
+        "number": "39026",
+        "direction": "Osterburg",
+        "platform": "3",
+        "time": "2510201900",
+        "destination": "Osterburg",
+        "path_stations": [
+          "Stendal-Stadtsee",
+          "Stendal Hochschule",
+          "Eichstedt(Altm)",
+          "Goldbeck(Osterburg)",
+          "Osterburg"
+        ]
+      },
+      {
+        "id": "4310159669733814470-2510201906-1",
+        "type": "SMD",
+        "number": "80332",
+        "direction": "Oebisfelde",
+        "platform": "7",
+        "time": "2510201906",
+        "destination": "Oebisfelde",
+        "path_stations": [
+          "Möringen(Altm)",
+          "Vinzelberg",
+          "Uchtspringe",
+          "Jävenitz",
+          "Gardelegen",
+          "Solpke",
+          "Mieste",
+          "Miesterhorst",
+          "Oebisfelde"
+        ]
+      },
+      {
+        "id": "-8221900283054404859-2510201932-1",
+        "type": "RE",
+        "number": "16949",
+        "direction": "Schönebeck-Bad Salzelmen",
+        "platform": "5",
+        "time": "2510201932",
+        "destination": "Schönebeck-Bad Salzelmen",
+        "path_stations": [
+          "Tangerhütte",
+          "Zielitz Ort",
+          "Wolmirstedt",
+          "Magdeburg-Rothensee",
+          "Magdeburg-Eichenweiler",
+          "Magdeburg-Neustadt",
+          "Magdeburg Hbf",
+          "Magdeburg Hasselbachplatz",
+          "Magdeburg-Buckau",
+          "Magdeburg SKET Industriepark",
+          "Magdeburg-Salbke",
+          "Magdeburg Südost",
+          "Schönebeck-Frohse",
+          "Schönebeck(Elbe)",
+          "Schönebeck Süd",
+          "Schönebeck-Bad Salzelmen"
+        ]
+      },
+      {
+        "id": "1579911222281120613-2510201816-17",
+        "type": "RE",
+        "number": "16950",
+        "direction": "Salzwedel",
+        "platform": "4",
+        "time": "2510201934",
+        "destination": "Salzwedel",
+        "path_stations": [
+          "Steinfeld(Stendal)",
+          "Kläden(Stendal)",
+          "Hohenwulsch",
+          "Brunau-Packebusch",
+          "Fleetmark",
+          "Pretzier(Altm)",
+          "Salzwedel"
+        ]
+      },
+      {
+        "id": "-1271506002631796023-2510201932-6",
+        "type": "S",
+        "number": "39035",
+        "direction": "Schönebeck-Bad Salzelmen",
+        "platform": "5",
+        "time": "2510201957",
+        "destination": "Schönebeck-Bad Salzelmen",
+        "path_stations": [
+          "Demker",
+          "Tangerhütte",
+          "Mahlwinkel",
+          "Angern-Rogätz",
+          "Zielitz",
+          "Zielitz Ort",
+          "Wolmirstedt",
+          "Magdeburg-Rothensee",
+          "Magdeburg-Eichenweiler",
+          "Magdeburg-Neustadt",
+          "Magdeburg Hbf",
+          "Magdeburg Hasselbachplatz",
+          "Magdeburg-Buckau",
+          "Magdeburg SKET Industriepark",
+          "Magdeburg-Salbke",
+          "Magdeburg Südost",
+          "Schönebeck-Frohse",
+          "Schönebeck(Elbe)",
+          "Schönebeck Süd",
+          "Schönebeck-Bad Salzelmen"
+        ]
+      },
+      {
+        "id": "-572145541046900328-2510201905-1",
+        "type": "RB",
+        "number": "76437",
+        "direction": "Tangermünde",
+        "platform": "8",
+        "time": "2510201905",
+        "destination": "Tangermünde",
+        "path_stations": [
+          "Stendal Vorbf",
+          "Bindfelde",
+          "Miltern",
+          "Tangermünde West",
+          "Tangermünde"
+        ]
+      },
+      {
+        "id": "-2352178830845622438-2510201735-5",
+        "type": "ICE",
+        "number": "1617",
+        "direction": "Berlin Hbf",
+        "platform": "3",
+        "time": "2510201927",
+        "destination": "Berlin Hbf",
+        "path_stations": [
+          "Berlin-Spandau",
+          "Berlin Hbf"
+        ]
+      },
+      {
+        "id": "-2158448546545096156-2510201846-21",
+        "type": "S",
+        "number": "39028",
+        "direction": "Osterburg",
+        "platform": "3",
+        "time": "2510202000",
+        "destination": "Osterburg",
+        "path_stations": [
+          "Stendal-Stadtsee",
+          "Stendal Hochschule",
+          "Eichstedt(Altm)",
+          "Goldbeck(Osterburg)",
+          "Osterburg"
+        ]
+      },
+      {
+        "id": "5684021401707670638-2510201837-3",
+        "type": "ICE",
+        "number": "1706",
+        "direction": "Hamburg-Altona",
+        "platform": "1",
+        "time": "2510201922",
+        "destination": "Hamburg-Altona",
+        "path_stations": [
+          "Salzwedel",
+          "Lüneburg",
+          "Hamburg Hbf",
+          "Hamburg-Altona"
+        ]
+      },
+      {
+        "id": "1727073522629915379-2510201925-3",
+        "type": "ICE",
+        "number": "687",
+        "direction": "Frankfurt(Main)Hbf",
+        "platform": "",
+        "time": "2510202011",
+        "destination": "Frankfurt(Main)Hbf",
+        "path_stations": [
+          "Wolfsburg Hbf",
+          "Braunschweig Hbf",
+          "Hildesheim Hbf",
+          "Göttingen",
+          "Eichenberg",
+          "Fulda",
+          "Frankfurt(Main)Hbf"
+        ]
+      },
+      {
+        "id": "2011218422143744825-2510201946-21",
+        "type": "S",
+        "number": "39030",
+        "direction": "Osterburg",
+        "platform": "3",
+        "time": "2510202100",
+        "destination": "Osterburg",
+        "path_stations": [
+          "Stendal-Stadtsee",
+          "Stendal Hochschule",
+          "Eichstedt(Altm)",
+          "Goldbeck(Osterburg)",
+          "Osterburg"
+        ]
+      },
+      {
+        "id": "6650457238952290678-2510202033-1",
+        "type": "RE",
+        "number": "3180",
+        "direction": "Berlin Südkreuz",
+        "platform": "2",
+        "time": "2510202033",
+        "destination": "Berlin Südkreuz",
+        "path_stations": [
+          "Rathenow",
+          "Wustermark",
+          "Elstal",
+          "Dallgow-Döberitz",
+          "Berlin-Staaken",
+          "Berlin-Spandau",
+          "Berlin Jungfernheide",
+          "Berlin Hbf",
+          "Berlin Potsdamer Platz",
+          "Berlin Südkreuz"
+        ]
+      },
+      {
+        "id": "4628797216718709444-2510201353-10",
+        "type": "ICE",
+        "number": "706",
+        "direction": "Hamburg-Altona",
+        "platform": "3",
+        "time": "2510202030",
+        "destination": "Hamburg-Altona",
+        "path_stations": [
+          "Salzwedel",
+          "Uelzen",
+          "Hamburg Hbf",
+          "Hamburg Dammtor",
+          "Hamburg-Altona"
+        ]
+      },
+      {
+        "id": "-6082892540545655398-2510202032-6",
+        "type": "S",
+        "number": "39037",
+        "direction": "Schönebeck-Bad Salzelmen",
+        "platform": "5",
+        "time": "2510202057",
+        "destination": "Schönebeck-Bad Salzelmen",
+        "path_stations": [
+          "Demker",
+          "Tangerhütte",
+          "Mahlwinkel",
+          "Angern-Rogätz",
+          "Zielitz",
+          "Zielitz Ort",
+          "Wolmirstedt",
+          "Magdeburg-Rothensee",
+          "Magdeburg-Eichenweiler",
+          "Magdeburg-Neustadt",
+          "Magdeburg Hbf",
+          "Magdeburg Hasselbachplatz",
+          "Magdeburg-Buckau",
+          "Magdeburg SKET Industriepark",
+          "Magdeburg-Salbke",
+          "Magdeburg Südost",
+          "Schönebeck-Frohse",
+          "Schönebeck(Elbe)",
+          "Schönebeck Süd",
+          "Schönebeck-Bad Salzelmen"
+        ]
+      },
+      {
+        "id": "2827924248816345529-2510202045-1",
+        "type": "Bus",
+        "number": "96464",
+        "direction": "Rathenow",
+        "platform": "",
+        "time": "2510202045",
+        "destination": "Rathenow",
+        "path_stations": [
+          "Hämerten",
+          "Hämerten Abzweig, Tangermünde",
+          "Wartehalle, Schönhausen (Elbe)",
+          "Wendestelle, Schönhausen (Elbe)",
+          "Großwudicke",
+          "Rathenow"
+        ]
+      },
+      {
+        "id": "-6678531979468233781-2510202005-1",
+        "type": "RB",
+        "number": "76439",
+        "direction": "Tangermünde",
+        "platform": "8",
+        "time": "2510202005",
+        "destination": "Tangermünde",
+        "path_stations": [
+          "Stendal Vorbf",
+          "Bindfelde",
+          "Miltern",
+          "Tangermünde West",
+          "Tangermünde"
+        ]
+      },
+      {
+        "id": "-3851151041923621842-2510201836-5",
+        "type": "ICE",
+        "number": "599",
+        "direction": "Berlin Hbf",
+        "platform": "1",
+        "time": "2510202037",
+        "destination": "Berlin Hbf",
+        "path_stations": [
+          "Berlin-Spandau",
+          "Berlin Hbf"
+        ]
+      },
+      {
+        "id": "2751832486872929976-2510201945-8",
+        "type": "RE",
+        "number": "16951",
+        "direction": "Schönebeck-Bad Salzelmen",
+        "platform": "5",
+        "time": "2510202032",
+        "destination": "Schönebeck-Bad Salzelmen",
+        "path_stations": [
+          "Tangerhütte",
+          "Zielitz Ort",
+          "Wolmirstedt",
+          "Magdeburg-Rothensee",
+          "Magdeburg-Eichenweiler",
+          "Magdeburg-Neustadt",
+          "Magdeburg Hbf",
+          "Magdeburg Hasselbachplatz",
+          "Magdeburg-Buckau",
+          "Magdeburg SKET Industriepark",
+          "Magdeburg-Salbke",
+          "Magdeburg Südost",
+          "Schönebeck-Frohse",
+          "Schönebeck(Elbe)",
+          "Schönebeck Süd",
+          "Schönebeck-Bad Salzelmen"
+        ]
+      },
+      {
+        "id": "-2158448546545096156-2510201846-21",
+        "type": "S",
+        "number": "39028",
+        "direction": "Osterburg",
+        "platform": "3",
+        "time": "2510202000",
+        "destination": "Osterburg",
+        "path_stations": [
+          "Stendal-Stadtsee",
+          "Stendal Hochschule",
+          "Eichstedt(Altm)",
+          "Goldbeck(Osterburg)",
+          "Osterburg"
+        ]
+      },
+      {
+        "id": "-3777095370375129333-2510202006-1",
+        "type": "SMD",
+        "number": "80334",
+        "direction": "Wolfsburg Hbf",
+        "platform": "4",
+        "time": "2510202006",
+        "destination": "Wolfsburg Hbf",
+        "path_stations": [
+          "Möringen(Altm)",
+          "Vinzelberg",
+          "Uchtspringe",
+          "Jävenitz",
+          "Gardelegen",
+          "Solpke",
+          "Mieste",
+          "Miesterhorst",
+          "Oebisfelde",
+          "Wolfsburg Hbf"
+        ]
+      },
+      {
+        "id": "2869769973922245820-2510202032-4",
+        "type": "ICE",
+        "number": "540",
+        "direction": "Oldenburg(Oldb)Hbf",
+        "platform": "1",
+        "time": "2510202138",
+        "destination": "Oldenburg(Oldb)Hbf",
+        "path_stations": [
+          "Wolfsburg Hbf",
+          "Hannover Hbf",
+          "Nienburg(Weser)",
+          "Verden(Aller)",
+          "Bremen Hbf",
+          "Delmenhorst",
+          "Oldenburg(Oldb)Hbf"
+        ]
+      },
+      {
+        "id": "3845640765503284488-2510202038-3",
+        "type": "ICE",
+        "number": "1734",
+        "direction": "Hamburg-Altona",
+        "platform": "1",
+        "time": "2510202123",
+        "destination": "Hamburg-Altona",
+        "path_stations": [
+          "Salzwedel",
+          "Lüneburg",
+          "Hamburg Hbf",
+          "Hamburg-Altona"
+        ]
+      },
+      {
+        "id": "-840063395062210324-2510202132-6",
+        "type": "S",
+        "number": "39039",
+        "direction": "Magdeburg Hbf",
+        "platform": "5",
+        "time": "2510202157",
+        "destination": "Magdeburg Hbf",
+        "path_stations": [
+          "Demker",
+          "Tangerhütte",
+          "Mahlwinkel",
+          "Angern-Rogätz",
+          "Zielitz",
+          "Zielitz Ort",
+          "Wolmirstedt",
+          "Magdeburg-Rothensee",
+          "Magdeburg-Eichenweiler",
+          "Magdeburg-Neustadt",
+          "Magdeburg Hbf"
+        ]
+      },
+      {
+        "id": "-2437601807607792909-2510202132-1",
+        "type": "RE",
+        "number": "16953",
+        "direction": "Magdeburg Hbf",
+        "platform": "5",
+        "time": "2510202132",
+        "destination": "Magdeburg Hbf",
+        "path_stations": [
+          "Tangerhütte",
+          "Zielitz Ort",
+          "Wolmirstedt",
+          "Magdeburg-Neustadt",
+          "Magdeburg Hbf"
+        ]
+      },
+      {
+        "id": "-8275737537227179086-2510201750-8",
+        "type": "ICE",
+        "number": "945",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "3",
+        "time": "2510202132",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin-Spandau",
+          "Berlin Zoologischer Garten",
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "-4550645364654346112-2510201745-7",
+        "type": "ICE",
+        "number": "955",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "3",
+        "time": "2510202132",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin-Spandau",
+          "Berlin Zoologischer Garten",
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "2011218422143744825-2510201946-21",
+        "type": "S",
+        "number": "39030",
+        "direction": "Osterburg",
+        "platform": "3",
+        "time": "2510202100",
+        "destination": "Osterburg",
+        "path_stations": [
+          "Stendal-Stadtsee",
+          "Stendal Hochschule",
+          "Eichstedt(Altm)",
+          "Goldbeck(Osterburg)",
+          "Osterburg"
+        ]
+      },
+      {
+        "id": "7447311929725543650-2510202046-21",
+        "type": "S",
+        "number": "39032",
+        "direction": "Osterburg",
+        "platform": "3",
+        "time": "2510202200",
+        "destination": "Osterburg",
+        "path_stations": [
+          "Stendal-Stadtsee",
+          "Stendal Hochschule",
+          "Eichstedt(Altm)",
+          "Goldbeck(Osterburg)",
+          "Osterburg"
+        ]
+      },
+      {
+        "id": "2911782960401690104-2510202016-17",
+        "type": "RE",
+        "number": "16954",
+        "direction": "Uelzen",
+        "platform": "4",
+        "time": "2510202134",
+        "destination": "Uelzen",
+        "path_stations": [
+          "Kläden(Stendal)",
+          "Hohenwulsch",
+          "Brunau-Packebusch",
+          "Fleetmark",
+          "Pretzier(Altm)",
+          "Salzwedel",
+          "Schnega",
+          "Soltendieck",
+          "Wieren",
+          "Stederdorf(Kr Uelzen)",
+          "Uelzen"
+        ]
+      },
+      {
+        "id": "3949680304246258492-2510202105-1",
+        "type": "RB",
+        "number": "76441",
+        "direction": "Tangermünde",
+        "platform": "8",
+        "time": "2510202105",
+        "destination": "Tangermünde",
+        "path_stations": [
+          "Stendal Vorbf",
+          "Bindfelde",
+          "Miltern",
+          "Tangermünde West",
+          "Tangermünde"
+        ]
+      },
+      {
+        "id": "-4795573960898992874-2510202137-3",
+        "type": "ICE",
+        "number": "1712",
+        "direction": "Hamburg-Altona",
+        "platform": "1",
+        "time": "2510202232",
+        "destination": "Hamburg-Altona",
+        "path_stations": [
+          "Salzwedel",
+          "Uelzen",
+          "Hamburg-Harburg",
+          "Hamburg Hbf",
+          "Hamburg Dammtor",
+          "Hamburg-Altona"
+        ]
+      },
+      {
+        "id": "-8196009632544207530-2510202035-5",
+        "type": "ICE",
+        "number": "807",
+        "direction": "Berlin Hbf",
+        "platform": "1",
+        "time": "2510202226",
+        "destination": "Berlin Hbf",
+        "path_stations": [
+          "Berlin-Spandau",
+          "Berlin Hbf"
+        ]
+      },
+      {
+        "id": "8192742368174548939-2510202226-1",
+        "type": "SMD",
+        "number": "80336",
+        "direction": "Oebisfelde",
+        "platform": "4",
+        "time": "2510202226",
+        "destination": "Oebisfelde",
+        "path_stations": [
+          "Möringen(Altm)",
+          "Vinzelberg",
+          "Uchtspringe",
+          "Jävenitz",
+          "Gardelegen",
+          "Solpke",
+          "Mieste",
+          "Miesterhorst",
+          "Oebisfelde"
+        ]
+      },
+      {
+        "id": "-4307360304197989638-2510202116-17",
+        "type": "RE",
+        "number": "16956",
+        "direction": "Salzwedel",
+        "platform": "3",
+        "time": "2510202236",
+        "destination": "Salzwedel",
+        "path_stations": [
+          "Kläden(Stendal)",
+          "Hohenwulsch",
+          "Brunau-Packebusch",
+          "Fleetmark",
+          "Pretzier(Altm)",
+          "Salzwedel"
+        ]
+      },
+      {
+        "id": "7447311929725543650-2510202046-21",
+        "type": "S",
+        "number": "39032",
+        "direction": "Osterburg",
+        "platform": "3",
+        "time": "2510202200",
+        "destination": "Osterburg",
+        "path_stations": [
+          "Stendal-Stadtsee",
+          "Stendal Hochschule",
+          "Eichstedt(Altm)",
+          "Goldbeck(Osterburg)",
+          "Osterburg"
+        ]
+      },
+      {
+        "id": "5684361241464336188-2510202230-1",
+        "type": "RB",
+        "number": "76443",
+        "direction": "Tangermünde",
+        "platform": "8",
+        "time": "2510202230",
+        "destination": "Tangermünde",
+        "path_stations": [
+          "Stendal Vorbf",
+          "Bindfelde",
+          "Miltern",
+          "Tangermünde West",
+          "Tangermünde"
+        ]
+      },
+      {
+        "id": "-1331327744121344485-2510202232-6",
+        "type": "S",
+        "number": "39041",
+        "direction": "Schönebeck-Bad Salzelmen",
+        "platform": "5",
+        "time": "2510202257",
+        "destination": "Schönebeck-Bad Salzelmen",
+        "path_stations": [
+          "Demker",
+          "Tangerhütte",
+          "Mahlwinkel",
+          "Angern-Rogätz",
+          "Zielitz",
+          "Zielitz Ort",
+          "Wolmirstedt",
+          "Magdeburg-Rothensee",
+          "Magdeburg-Eichenweiler",
+          "Magdeburg-Neustadt",
+          "Magdeburg Hbf",
+          "Magdeburg Hasselbachplatz",
+          "Magdeburg-Buckau",
+          "Magdeburg SKET Industriepark",
+          "Magdeburg-Salbke",
+          "Magdeburg Südost",
+          "Schönebeck-Frohse",
+          "Schönebeck(Elbe)",
+          "Schönebeck Süd",
+          "Schönebeck-Bad Salzelmen"
+        ]
+      },
+      {
+        "id": "-4389945191814153650-2510202135-8",
+        "type": "RE",
+        "number": "16955",
+        "direction": "Magdeburg Hbf",
+        "platform": "5",
+        "time": "2510202223",
+        "destination": "Magdeburg Hbf",
+        "path_stations": [
+          "Tangerhütte",
+          "Wolmirstedt",
+          "Magdeburg-Neustadt",
+          "Magdeburg Hbf"
+        ]
+      },
+      {
+        "id": "6716572724661645432-2510202245-1",
+        "type": "RE",
+        "number": "3182",
+        "direction": "Berlin Hbf",
+        "platform": "2",
+        "time": "2510202245",
+        "destination": "Berlin Hbf",
+        "path_stations": [
+          "Rathenow",
+          "Nennhausen",
+          "Buschow",
+          "Wustermark",
+          "Elstal",
+          "Dallgow-Döberitz",
+          "Berlin-Staaken",
+          "Berlin-Spandau",
+          "Berlin Jungfernheide",
+          "Berlin Hbf"
+        ]
+      },
+      {
+        "id": "2121877044531283563-2510202113-5",
+        "type": "ICE",
+        "number": "840",
+        "direction": "Hannover Hbf",
+        "platform": "1",
+        "time": "2510202218",
+        "destination": "Hannover Hbf",
+        "path_stations": [
+          "Wolfsburg Hbf",
+          "Hannover Hbf"
+        ]
+      },
+      {
+        "id": "-2226467865786714148-2510202238-3",
+        "type": "ICE",
+        "number": "700",
+        "direction": "Hamburg-Altona",
+        "platform": "1",
+        "time": "2510202322",
+        "destination": "Hamburg-Altona",
+        "path_stations": [
+          "Salzwedel",
+          "Uelzen",
+          "Hamburg-Harburg",
+          "Hamburg Hbf",
+          "Hamburg Dammtor",
+          "Hamburg-Altona"
+        ]
+      },
+      {
+        "id": "4966825592039783790-2510202121-7",
+        "type": "ICE",
+        "number": "907",
+        "direction": "Berlin Hbf",
+        "platform": "2",
+        "time": "2510202321",
+        "destination": "Berlin Hbf",
+        "path_stations": [
+          "Berlin-Spandau",
+          "Berlin Hbf"
+        ]
+      },
+      {
+        "id": "4121683295209577191-2510202315-5",
+        "type": "ICE",
+        "number": "271",
+        "direction": "Chur",
+        "platform": "1",
+        "time": "2510210025",
+        "destination": "Chur",
+        "path_stations": [
+          "Wolfsburg Hbf",
+          "Hannover Hbf",
+          "Göttingen",
+          "Fulda",
+          "Hanau Hbf",
+          "Frankfurt(Main)Hbf",
+          "Mannheim Hbf",
+          "Karlsruhe Hbf",
+          "Baden-Baden",
+          "Offenburg",
+          "Freiburg(Breisgau) Hbf",
+          "Basel Bad Bf",
+          "Basel SBB",
+          "Zürich HB",
+          "Sargans",
+          "Landquart",
+          "Chur"
+        ]
+      },
+      {
+        "id": "2273731246723666230-2510202302-8",
+        "type": "RE",
+        "number": "16957",
+        "direction": "Magdeburg Hbf",
+        "platform": "5",
+        "time": "2510210007",
+        "destination": "Magdeburg Hbf",
+        "path_stations": [
+          "Tangerhütte",
+          "Wolmirstedt",
+          "Magdeburg-Neustadt",
+          "Magdeburg Hbf"
+        ]
+      },
+      {
+        "id": "5089820149948252230-2510201646-14",
+        "type": "ICE",
+        "number": "592",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "1",
+        "time": "2510210017",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin-Spandau",
+          "Berlin Zoologischer Garten",
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "3199623009169073885-2510210011-4",
+        "type": "ICE",
+        "number": "101",
+        "direction": "Basel SBB",
+        "platform": "",
+        "time": "2510210137",
+        "destination": "Basel SBB",
+        "path_stations": [
+          "Braunschweig Hbf",
+          "Hannover Hbf",
+          "Minden(Westf)",
+          "Bielefeld Hbf",
+          "Gütersloh Hbf",
+          "Hamm(Westf)Hbf",
+          "Dortmund Hbf",
+          "Essen Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Hbf",
+          "Köln Hbf",
+          "Frankfurt(M) Flughafen Fernbf",
+          "Mannheim Hbf",
+          "Karlsruhe Hbf",
+          "Baden-Baden",
+          "Offenburg",
+          "Freiburg(Breisgau) Hbf",
+          "Basel Bad Bf",
+          "Basel SBB"
+        ]
+      },
+      {
+        "id": "-5717167845739810602-2510210357-1",
+        "type": "S",
+        "number": "39001",
+        "direction": "Schönebeck-Bad Salzelmen",
+        "platform": "5",
+        "time": "2510210357",
+        "destination": "Schönebeck-Bad Salzelmen",
+        "path_stations": [
+          "Demker",
+          "Tangerhütte",
+          "Mahlwinkel",
+          "Angern-Rogätz",
+          "Zielitz",
+          "Zielitz Ort",
+          "Wolmirstedt",
+          "Magdeburg-Rothensee",
+          "Magdeburg-Eichenweiler",
+          "Magdeburg-Neustadt",
+          "Magdeburg Hbf",
+          "Magdeburg Hasselbachplatz",
+          "Magdeburg-Buckau",
+          "Magdeburg SKET Industriepark",
+          "Magdeburg-Salbke",
+          "Magdeburg Südost",
+          "Schönebeck-Frohse",
+          "Schönebeck(Elbe)",
+          "Schönebeck Süd",
+          "Schönebeck-Bad Salzelmen"
+        ]
+      },
+      {
+        "id": "-4674302681811850992-2510201913-20",
+        "type": "ICE",
+        "number": "100",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "3",
+        "time": "2510210357",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Potsdam Hbf",
+          "Berlin-Wannsee",
+          "Berlin Zoologischer Garten",
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "-8833187460731760789-2510210347-8",
+        "type": "RE",
+        "number": "16920",
+        "direction": "Salzwedel",
+        "platform": "4",
+        "time": "2510210432",
+        "destination": "Salzwedel",
+        "path_stations": [
+          "Steinfeld(Stendal)",
+          "Kläden(Stendal)",
+          "Hohenwulsch",
+          "Brunau-Packebusch",
+          "Fleetmark",
+          "Pretzier(Altm)",
+          "Salzwedel"
+        ]
+      },
+      {
+        "id": "7455521130826395216-2510210445-1",
+        "type": "Bus",
+        "number": "96448",
+        "direction": "Rathenow",
+        "platform": "",
+        "time": "2510210445",
+        "destination": "Rathenow",
+        "path_stations": [
+          "Hämerten",
+          "Hämerten Abzweig, Tangermünde",
+          "Wartehalle, Schönhausen (Elbe)",
+          "Wendestelle, Schönhausen (Elbe)",
+          "Großwudicke",
+          "Rathenow"
+        ]
+      },
+      {
+        "id": "8379770776825735015-2510210444-1",
+        "type": "RE",
+        "number": "3164",
+        "direction": "Berlin Südkreuz",
+        "platform": "3",
+        "time": "2510210444",
+        "destination": "Berlin Südkreuz",
+        "path_stations": [
+          "Rathenow",
+          "Nennhausen",
+          "Buschow",
+          "Wustermark",
+          "Elstal",
+          "Dallgow-Döberitz",
+          "Berlin-Staaken",
+          "Berlin-Spandau",
+          "Berlin Jungfernheide",
+          "Berlin Hbf",
+          "Berlin Potsdamer Platz",
+          "Berlin Südkreuz"
+        ]
+      },
+      {
+        "id": "2645304795127339464-2510210405-1",
+        "type": "S",
+        "number": "39044",
+        "direction": "Osterburg",
+        "platform": "3",
+        "time": "2510210405",
+        "destination": "Osterburg",
+        "path_stations": [
+          "Stendal-Stadtsee",
+          "Stendal Hochschule",
+          "Eichstedt(Altm)",
+          "Goldbeck(Osterburg)",
+          "Osterburg"
+        ]
+      },
+      {
+        "id": "6191414192028031117-2510210426-1",
+        "type": "SMD",
+        "number": "80300",
+        "direction": "Oebisfelde",
+        "platform": "1",
+        "time": "2510210426",
+        "destination": "Oebisfelde",
+        "path_stations": [
+          "Möringen(Altm)",
+          "Vinzelberg",
+          "Uchtspringe",
+          "Jävenitz",
+          "Gardelegen",
+          "Solpke",
+          "Mieste",
+          "Miesterhorst",
+          "Oebisfelde"
+        ]
+      },
+      {
+        "id": "-2470066660433544024-2510210457-1",
+        "type": "S",
+        "number": "39005",
+        "direction": "Schönebeck-Bad Salzelmen",
+        "platform": "5",
+        "time": "2510210457",
+        "destination": "Schönebeck-Bad Salzelmen",
+        "path_stations": [
+          "Demker",
+          "Tangerhütte",
+          "Mahlwinkel",
+          "Angern-Rogätz",
+          "Zielitz",
+          "Zielitz Ort",
+          "Wolmirstedt",
+          "Magdeburg-Rothensee",
+          "Magdeburg-Eichenweiler",
+          "Magdeburg-Neustadt",
+          "Magdeburg Hbf",
+          "Magdeburg Hasselbachplatz",
+          "Magdeburg-Buckau",
+          "Magdeburg SKET Industriepark",
+          "Magdeburg-Salbke",
+          "Magdeburg Südost",
+          "Schönebeck-Frohse",
+          "Schönebeck(Elbe)",
+          "Schönebeck Süd",
+          "Schönebeck-Bad Salzelmen"
+        ]
+      },
+      {
+        "id": "-6538060569751958995-2510210456-1",
+        "type": "SMD",
+        "number": "80302",
+        "direction": "Wolfsburg Hbf",
+        "platform": "4",
+        "time": "2510210456",
+        "destination": "Wolfsburg Hbf",
+        "path_stations": [
+          "Möringen(Altm)",
+          "Vinzelberg",
+          "Uchtspringe",
+          "Jävenitz",
+          "Gardelegen",
+          "Solpke",
+          "Mieste",
+          "Miesterhorst",
+          "Oebisfelde",
+          "Wolfsburg Hbf"
+        ]
+      }
+    ],
+    "arrivals": []
+  }
+}

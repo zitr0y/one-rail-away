@@ -1,0 +1,1641 @@
+{
+  "station_eva": "8010195",
+  "date": "251020",
+  "cached_at": "2025-10-20T16:54:55.477228",
+  "plan_data": {
+    "arrivals": [
+      {
+        "id": "1622480238072546462-2510201802-5",
+        "type": "SMD",
+        "number": "80478",
+        "time": "2510201822",
+        "platform": "2",
+        "path_stations": [
+          "Dessau Hbf",
+          "Dessau-Alten",
+          "Dessau-Mosigkau",
+          "Elsnigk(Anh)"
+        ],
+        "line": "RB50"
+      },
+      {
+        "id": "-7763686466636471476-2510201740-3",
+        "type": "IC",
+        "number": "2032",
+        "time": "2510201825",
+        "platform": "5",
+        "path_stations": [
+          "Leipzig Hbf",
+          "Halle(Saale)Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "1419424853916133241-2510201822-2",
+        "type": "Bus",
+        "number": "11480",
+        "time": "2510201856",
+        "platform": "",
+        "path_stations": [
+          "Dessau Hbf"
+        ],
+        "line": "RB50"
+      },
+      {
+        "id": "6701115085809222600-2510201814-7",
+        "type": "RE",
+        "number": "16330",
+        "time": "2510201841",
+        "platform": "5",
+        "path_stations": [
+          "Halle(Saale)Hbf",
+          "Zöberitz",
+          "Niemberg",
+          "Stumsdorf",
+          "Weißandt-Gölzau",
+          "Arensdorf(Köthen)"
+        ],
+        "line": "30"
+      },
+      {
+        "id": "-7436485298375179154-2510201734-10",
+        "type": "RE",
+        "number": "16331",
+        "time": "2510201813",
+        "platform": "4",
+        "path_stations": [
+          "Magdeburg Hbf",
+          "Magdeburg-Buckau",
+          "Magdeburg Südost",
+          "Schönebeck(Elbe)",
+          "Schönebeck-Felgeleben",
+          "Gnadau",
+          "Calbe(Saale) Ost",
+          "Sachsendorf(Calbe)",
+          "Wulfen(Anh)"
+        ],
+        "line": "30"
+      },
+      {
+        "id": "-2950490356695221515-2510201428-11",
+        "type": "IC",
+        "number": "2047",
+        "time": "2510201828",
+        "platform": "4",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Hamm(Westf)Hbf",
+          "Gütersloh Hbf",
+          "Bielefeld Hbf",
+          "Herford",
+          "Bad Oeynhausen",
+          "Minden(Westf)",
+          "Hannover Hbf",
+          "Braunschweig Hbf",
+          "Magdeburg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "1674161360324409002-2510201901-5",
+        "type": "Bus",
+        "number": "10480",
+        "time": "2510201937",
+        "platform": "",
+        "path_stations": [
+          "Dessau Hbf",
+          "Dessau-Alten",
+          "Dessau-Mosigkau",
+          "Elsnigk(Anh)"
+        ],
+        "line": "RB50"
+      },
+      {
+        "id": "-4129945950703253308-2510201834-10",
+        "type": "RE",
+        "number": "16333",
+        "time": "2510201913",
+        "platform": "4",
+        "path_stations": [
+          "Magdeburg Hbf",
+          "Magdeburg-Buckau",
+          "Magdeburg Südost",
+          "Schönebeck(Elbe)",
+          "Schönebeck-Felgeleben",
+          "Gnadau",
+          "Calbe(Saale) Ost",
+          "Sachsendorf(Calbe)",
+          "Wulfen(Anh)"
+        ],
+        "line": "30"
+      },
+      {
+        "id": "1297801680225336717-2510201709-7",
+        "type": "IC",
+        "number": "2446",
+        "time": "2510201925",
+        "platform": "5",
+        "path_stations": [
+          "Dresden Hbf",
+          "Dresden-Neustadt",
+          "Riesa",
+          "Leipzig Hbf",
+          "Leipzig/Halle Flughafen",
+          "Halle(Saale)Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-8796610692411741434-2510201417-16",
+        "type": "IC",
+        "number": "2433",
+        "time": "2510201932",
+        "platform": "4",
+        "path_stations": [
+          "Emden Hbf",
+          "Leer(Ostfriesl)",
+          "Augustfehn",
+          "Westerstede-Ocholt",
+          "Bad Zwischenahn",
+          "Oldenburg(Oldb)Hbf",
+          "Hude",
+          "Delmenhorst",
+          "Bremen Hbf",
+          "Verden(Aller)",
+          "Nienburg(Weser)",
+          "Hannover Hbf",
+          "Braunschweig Hbf",
+          "Helmstedt",
+          "Magdeburg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "4336247658538760253-2510201914-7",
+        "type": "RE",
+        "number": "16332",
+        "time": "2510201941",
+        "platform": "5",
+        "path_stations": [
+          "Halle(Saale)Hbf",
+          "Zöberitz",
+          "Niemberg",
+          "Stumsdorf",
+          "Weißandt-Gölzau",
+          "Arensdorf(Köthen)"
+        ],
+        "line": "30"
+      },
+      {
+        "id": "4562898714060690735-2510201807-7",
+        "type": "Bus",
+        "number": "11471",
+        "time": "2510201901",
+        "platform": "",
+        "path_stations": [
+          "Güsten",
+          "Ilberstedt",
+          "Bernburg Hbf",
+          "Bernburg-Roschwitz",
+          "Baalberge",
+          "Biendorf"
+        ],
+        "line": "RB50"
+      },
+      {
+        "id": "2124216467812386194-2510201849-11",
+        "type": "SMD",
+        "number": "80473",
+        "time": "2510201935",
+        "platform": "3",
+        "path_stations": [
+          "Aschersleben",
+          "Schierstedt",
+          "Giersleben",
+          "Güsten",
+          "Ilberstedt",
+          "Bernburg Hbf",
+          "Bernburg-Roschwitz",
+          "Baalberge",
+          "Biendorf",
+          "Frenz"
+        ],
+        "line": "RB50"
+      },
+      {
+        "id": "-7904142730475662294-2510201934-10",
+        "type": "RE",
+        "number": "16335",
+        "time": "2510202013",
+        "platform": "4",
+        "path_stations": [
+          "Magdeburg Hbf",
+          "Magdeburg-Buckau",
+          "Magdeburg Südost",
+          "Schönebeck(Elbe)",
+          "Schönebeck-Felgeleben",
+          "Gnadau",
+          "Calbe(Saale) Ost",
+          "Sachsendorf(Calbe)",
+          "Wulfen(Anh)"
+        ],
+        "line": "30"
+      },
+      {
+        "id": "7736371140530083462-2510202002-5",
+        "type": "SMD",
+        "number": "80482",
+        "time": "2510202022",
+        "platform": "2",
+        "path_stations": [
+          "Dessau Hbf",
+          "Dessau-Alten",
+          "Dessau-Mosigkau",
+          "Elsnigk(Anh)"
+        ],
+        "line": "RB50"
+      },
+      {
+        "id": "-1601954594940179198-2510202014-7",
+        "type": "RE",
+        "number": "16334",
+        "time": "2510202041",
+        "platform": "5",
+        "path_stations": [
+          "Halle(Saale)Hbf",
+          "Zöberitz",
+          "Niemberg",
+          "Stumsdorf",
+          "Weißandt-Gölzau",
+          "Arensdorf(Köthen)"
+        ],
+        "line": "30"
+      },
+      {
+        "id": "-1047205503728816168-2510202022-2",
+        "type": "Bus",
+        "number": "11484",
+        "time": "2510202056",
+        "platform": "",
+        "path_stations": [
+          "Dessau Hbf"
+        ],
+        "line": "RB50"
+      },
+      {
+        "id": "-2875979624331062252-2510201628-11",
+        "type": "IC",
+        "number": "2045",
+        "time": "2510202027",
+        "platform": "4",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Hamm(Westf)Hbf",
+          "Gütersloh Hbf",
+          "Bielefeld Hbf",
+          "Herford",
+          "Bad Oeynhausen",
+          "Minden(Westf)",
+          "Hannover Hbf",
+          "Braunschweig Hbf",
+          "Magdeburg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "8088489625262557114-2510201536-20",
+        "type": "IC",
+        "number": "2435",
+        "time": "2510202132",
+        "platform": "4",
+        "path_stations": [
+          "Norddeich Mole",
+          "Norddeich",
+          "Norden",
+          "Marienhafe",
+          "Emden Hbf",
+          "Leer(Ostfriesl)",
+          "Augustfehn",
+          "Westerstede-Ocholt",
+          "Bad Zwischenahn",
+          "Oldenburg(Oldb)Hbf",
+          "Hude",
+          "Delmenhorst",
+          "Bremen Hbf",
+          "Verden(Aller)",
+          "Nienburg(Weser)",
+          "Hannover Hbf",
+          "Braunschweig Hbf",
+          "Helmstedt",
+          "Magdeburg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "1078184301054867299-2510202049-11",
+        "type": "SMD",
+        "number": "80477",
+        "time": "2510202135",
+        "platform": "3",
+        "path_stations": [
+          "Aschersleben",
+          "Schierstedt",
+          "Giersleben",
+          "Güsten",
+          "Ilberstedt",
+          "Bernburg Hbf",
+          "Bernburg-Roschwitz",
+          "Baalberge",
+          "Biendorf",
+          "Frenz"
+        ],
+        "line": "RB50"
+      },
+      {
+        "id": "3229911990981525703-2510202007-7",
+        "type": "Bus",
+        "number": "11475",
+        "time": "2510202101",
+        "platform": "",
+        "path_stations": [
+          "Güsten",
+          "Ilberstedt",
+          "Bernburg Hbf",
+          "Bernburg-Roschwitz",
+          "Baalberge",
+          "Biendorf"
+        ],
+        "line": "RB50"
+      },
+      {
+        "id": "67273429190528841-2510201909-7",
+        "type": "IC",
+        "number": "2448",
+        "time": "2510202125",
+        "platform": "5",
+        "path_stations": [
+          "Dresden Hbf",
+          "Dresden-Neustadt",
+          "Riesa",
+          "Leipzig Hbf",
+          "Leipzig/Halle Flughafen",
+          "Halle(Saale)Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "3300991037232207459-2510202034-10",
+        "type": "RE",
+        "number": "16337",
+        "time": "2510202113",
+        "platform": "4",
+        "path_stations": [
+          "Magdeburg Hbf",
+          "Magdeburg-Buckau",
+          "Magdeburg Südost",
+          "Schönebeck(Elbe)",
+          "Schönebeck-Felgeleben",
+          "Gnadau",
+          "Calbe(Saale) Ost",
+          "Sachsendorf(Calbe)",
+          "Wulfen(Anh)"
+        ],
+        "line": "30"
+      },
+      {
+        "id": "4682274811682738578-2510202101-5",
+        "type": "Bus",
+        "number": "10484",
+        "time": "2510202137",
+        "platform": "",
+        "path_stations": [
+          "Dessau Hbf",
+          "Dessau-Alten",
+          "Dessau-Mosigkau",
+          "Elsnigk(Anh)"
+        ],
+        "line": "RB50"
+      },
+      {
+        "id": "7684540179647535991-2510202125-7",
+        "type": "RE",
+        "number": "16336",
+        "time": "2510202152",
+        "platform": "5",
+        "path_stations": [
+          "Halle(Saale)Hbf",
+          "Zöberitz",
+          "Niemberg",
+          "Stumsdorf",
+          "Weißandt-Gölzau",
+          "Arensdorf(Köthen)"
+        ],
+        "line": "30"
+      },
+      {
+        "id": "-3858469373393089422-2510202153-8",
+        "type": "SMD",
+        "number": "80483",
+        "time": "2510202234",
+        "platform": "3",
+        "path_stations": [
+          "Aschersleben",
+          "Güsten",
+          "Ilberstedt",
+          "Bernburg Hbf",
+          "Bernburg-Roschwitz",
+          "Baalberge",
+          "Biendorf"
+        ],
+        "line": "RB50"
+      },
+      {
+        "id": "2380677322423002088-2510202215-10",
+        "type": "RE",
+        "number": "16339",
+        "time": "2510202253",
+        "platform": "4",
+        "path_stations": [
+          "Magdeburg Hbf",
+          "Magdeburg-Buckau",
+          "Magdeburg Südost",
+          "Schönebeck(Elbe)",
+          "Schönebeck-Felgeleben",
+          "Gnadau",
+          "Calbe(Saale) Ost",
+          "Sachsendorf(Calbe)",
+          "Wulfen(Anh)"
+        ],
+        "line": "30"
+      },
+      {
+        "id": "-5037962892191490320-2510202212-5",
+        "type": "SMD",
+        "number": "80486",
+        "time": "2510202231",
+        "platform": "2",
+        "path_stations": [
+          "Dessau Hbf",
+          "Dessau-Alten",
+          "Dessau-Mosigkau",
+          "Elsnigk(Anh)"
+        ],
+        "line": "RB50"
+      },
+      {
+        "id": "5123016104052247728-2510202329-5",
+        "type": "SMD",
+        "number": "80488",
+        "time": "2510202349",
+        "platform": "2",
+        "path_stations": [
+          "Dessau Hbf",
+          "Dessau-Alten",
+          "Dessau-Mosigkau",
+          "Elsnigk(Anh)"
+        ],
+        "line": "RB50"
+      },
+      {
+        "id": "2634627177344857140-2510202259-7",
+        "type": "RE",
+        "number": "16338",
+        "time": "2510202326",
+        "platform": "5",
+        "path_stations": [
+          "Halle(Saale)Hbf",
+          "Zöberitz",
+          "Niemberg",
+          "Stumsdorf",
+          "Weißandt-Gölzau",
+          "Arensdorf(Köthen)"
+        ],
+        "line": "30"
+      },
+      {
+        "id": "-752329130849343138-2510202307-10",
+        "type": "RE",
+        "number": "16341",
+        "time": "2510202346",
+        "platform": "4",
+        "path_stations": [
+          "Magdeburg Hbf",
+          "Magdeburg-Buckau",
+          "Magdeburg Südost",
+          "Schönebeck(Elbe)",
+          "Schönebeck-Felgeleben",
+          "Gnadau",
+          "Calbe(Saale) Ost",
+          "Sachsendorf(Calbe)",
+          "Wulfen(Anh)"
+        ],
+        "line": "30"
+      },
+      {
+        "id": "-8938124554125853436-2510210008-7",
+        "type": "RE",
+        "number": "16340",
+        "time": "2510210035",
+        "platform": "5",
+        "path_stations": [
+          "Halle(Saale)Hbf",
+          "Zöberitz",
+          "Niemberg",
+          "Stumsdorf",
+          "Weißandt-Gölzau",
+          "Arensdorf(Köthen)"
+        ],
+        "line": "30"
+      },
+      {
+        "id": "3761688805869364588-2510210428-5",
+        "type": "SMD",
+        "number": "80338",
+        "time": "2510210448",
+        "platform": "2",
+        "path_stations": [
+          "Dessau Hbf",
+          "Dessau-Alten",
+          "Dessau-Mosigkau",
+          "Elsnigk(Anh)"
+        ],
+        "line": "RB50"
+      },
+      {
+        "id": "-2134383347807036645-2510210411-6",
+        "type": "RE",
+        "number": "16303",
+        "time": "2510210447",
+        "platform": "4",
+        "path_stations": [
+          "Magdeburg Hbf",
+          "Schönebeck(Elbe)",
+          "Calbe(Saale) Ost",
+          "Sachsendorf(Calbe)",
+          "Wulfen(Anh)"
+        ],
+        "line": "30"
+      },
+      {
+        "id": "-5232406020684029823-2510210458-8",
+        "type": "RE",
+        "number": "16305",
+        "time": "2510210534",
+        "platform": "4",
+        "path_stations": [
+          "Magdeburg Hbf",
+          "Magdeburg-Buckau",
+          "Magdeburg Südost",
+          "Schönebeck(Elbe)",
+          "Schönebeck-Felgeleben",
+          "Gnadau",
+          "Calbe(Saale) Ost"
+        ],
+        "line": "30"
+      },
+      {
+        "id": "6903803880585995268-2510210421-11",
+        "type": "SMD",
+        "number": "80441",
+        "time": "2510210516",
+        "platform": "3",
+        "path_stations": [
+          "Aschersleben",
+          "Schierstedt",
+          "Giersleben",
+          "Güsten",
+          "Ilberstedt",
+          "Bernburg Hbf",
+          "Bernburg-Roschwitz",
+          "Baalberge",
+          "Biendorf",
+          "Frenz"
+        ],
+        "line": "RB50"
+      },
+      {
+        "id": "-2283932534800244197-2510210442-7",
+        "type": "RE",
+        "number": "16302",
+        "time": "2510210509",
+        "platform": "5",
+        "path_stations": [
+          "Halle(Saale)Hbf",
+          "Zöberitz",
+          "Niemberg",
+          "Stumsdorf",
+          "Weißandt-Gölzau",
+          "Arensdorf(Köthen)"
+        ],
+        "line": "30"
+      },
+      {
+        "id": "2154354029458829825-2510210515-5",
+        "type": "SMD",
+        "number": "80444",
+        "time": "2510210536",
+        "platform": "2",
+        "path_stations": [
+          "Dessau Hbf",
+          "Dessau-Alten",
+          "Dessau-Mosigkau",
+          "Elsnigk(Anh)"
+        ],
+        "line": "RB50"
+      },
+      {
+        "id": "2801110518623072619-2510210557-8",
+        "type": "SMD",
+        "number": "80445",
+        "time": "2510210638",
+        "platform": "3",
+        "path_stations": [
+          "Aschersleben",
+          "Giersleben",
+          "Güsten",
+          "Bernburg Hbf",
+          "Bernburg-Roschwitz",
+          "Baalberge",
+          "Biendorf"
+        ],
+        "line": "RB50"
+      },
+      {
+        "id": "2599462261997860942-2510210542-3",
+        "type": "IC",
+        "number": "2434",
+        "time": "2510210625",
+        "platform": "5",
+        "path_stations": [
+          "Leipzig Hbf",
+          "Halle(Saale)Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "6005048336940874644-2510210600-2",
+        "type": "IC",
+        "number": "2449",
+        "time": "2510210627",
+        "platform": "4",
+        "path_stations": [
+          "Magdeburg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "5347994075390778021-2510210534-10",
+        "type": "RE",
+        "number": "16307",
+        "time": "2510210613",
+        "platform": "4",
+        "path_stations": [
+          "Magdeburg Hbf",
+          "Magdeburg-Buckau",
+          "Magdeburg Südost",
+          "Schönebeck(Elbe)",
+          "Schönebeck-Felgeleben",
+          "Gnadau",
+          "Calbe(Saale) Ost",
+          "Sachsendorf(Calbe)",
+          "Wulfen(Anh)"
+        ],
+        "line": "30"
+      },
+      {
+        "id": "1170584398257206573-2510210553-5",
+        "type": "SMD",
+        "number": "80446",
+        "time": "2510210619",
+        "platform": "2",
+        "path_stations": [
+          "Dessau Hbf",
+          "Dessau-Alten",
+          "Dessau-Mosigkau",
+          "Elsnigk(Anh)"
+        ],
+        "line": "RB50"
+      },
+      {
+        "id": "1447686855866008865-2510210622-2",
+        "type": "Bus",
+        "number": "11450",
+        "time": "2510210656",
+        "platform": "",
+        "path_stations": [
+          "Dessau Hbf"
+        ],
+        "line": "RB50"
+      },
+      {
+        "id": "7400909513425751739-2510210542-7",
+        "type": "RE",
+        "number": "16304",
+        "time": "2510210609",
+        "platform": "5",
+        "path_stations": [
+          "Halle(Saale)Hbf",
+          "Zöberitz",
+          "Niemberg",
+          "Stumsdorf",
+          "Weißandt-Gölzau",
+          "Arensdorf(Köthen)"
+        ],
+        "line": "30"
+      },
+      {
+        "id": "4101240016221731680-2510210614-7",
+        "type": "RE",
+        "number": "16306",
+        "time": "2510210641",
+        "platform": "5",
+        "path_stations": [
+          "Halle(Saale)Hbf",
+          "Zöberitz",
+          "Niemberg",
+          "Stumsdorf",
+          "Weißandt-Gölzau",
+          "Arensdorf(Köthen)"
+        ],
+        "line": "30"
+      },
+      {
+        "id": "-3095397431556012770-2510210519-5",
+        "type": "Bus",
+        "number": "11443",
+        "time": "2510210609",
+        "platform": "",
+        "path_stations": [
+          "Güsten",
+          "Ilberstedt",
+          "Bernburg Hbf",
+          "Bernburg-Roschwitz"
+        ],
+        "line": "RB50"
+      }
+    ],
+    "departures": [
+      {
+        "id": "1622480238072546462-2510201802-5",
+        "type": "SMD",
+        "number": "80478",
+        "direction": "Aschersleben",
+        "platform": "2",
+        "time": "2510201832",
+        "destination": "Aschersleben",
+        "path_stations": [
+          "Frenz",
+          "Biendorf",
+          "Baalberge",
+          "Bernburg-Roschwitz",
+          "Bernburg Hbf",
+          "Ilberstedt",
+          "Güsten",
+          "Giersleben",
+          "Schierstedt",
+          "Aschersleben"
+        ]
+      },
+      {
+        "id": "-7763686466636471476-2510201740-3",
+        "type": "IC",
+        "number": "2032",
+        "direction": "Emden Hbf",
+        "platform": "5",
+        "time": "2510201827",
+        "destination": "Emden Hbf",
+        "path_stations": [
+          "Magdeburg Hbf",
+          "Helmstedt",
+          "Braunschweig Hbf",
+          "Hannover Hbf",
+          "Nienburg(Weser)",
+          "Verden(Aller)",
+          "Bremen Hbf",
+          "Delmenhorst",
+          "Hude",
+          "Oldenburg(Oldb)Hbf",
+          "Bad Zwischenahn",
+          "Westerstede-Ocholt",
+          "Augustfehn",
+          "Leer(Ostfriesl)",
+          "Emden Hbf"
+        ]
+      },
+      {
+        "id": "1419424853916133241-2510201822-2",
+        "type": "Bus",
+        "number": "11480",
+        "direction": "Güsten",
+        "platform": "",
+        "time": "2510201856",
+        "destination": "Güsten",
+        "path_stations": [
+          "Biendorf",
+          "Baalberge",
+          "Bernburg-Roschwitz",
+          "Bernburg Hbf",
+          "Ilberstedt",
+          "Güsten"
+        ]
+      },
+      {
+        "id": "6701115085809222600-2510201814-7",
+        "type": "RE",
+        "number": "16330",
+        "direction": "Magdeburg Hbf",
+        "platform": "5",
+        "time": "2510201843",
+        "destination": "Magdeburg Hbf",
+        "path_stations": [
+          "Wulfen(Anh)",
+          "Sachsendorf(Calbe)",
+          "Calbe(Saale) Ost",
+          "Gnadau",
+          "Schönebeck-Felgeleben",
+          "Schönebeck(Elbe)",
+          "Magdeburg Südost",
+          "Magdeburg-Buckau",
+          "Magdeburg Hbf"
+        ]
+      },
+      {
+        "id": "-7436485298375179154-2510201734-10",
+        "type": "RE",
+        "number": "16331",
+        "direction": "Halle(Saale)Hbf",
+        "platform": "4",
+        "time": "2510201814",
+        "destination": "Halle(Saale)Hbf",
+        "path_stations": [
+          "Arensdorf(Köthen)",
+          "Weißandt-Gölzau",
+          "Stumsdorf",
+          "Niemberg",
+          "Zöberitz",
+          "Halle(Saale)Hbf"
+        ]
+      },
+      {
+        "id": "-2950490356695221515-2510201428-11",
+        "type": "IC",
+        "number": "2047",
+        "direction": "Dresden Hbf",
+        "platform": "4",
+        "time": "2510201830",
+        "destination": "Dresden Hbf",
+        "path_stations": [
+          "Halle(Saale)Hbf",
+          "Leipzig/Halle Flughafen",
+          "Leipzig Hbf",
+          "Riesa",
+          "Dresden-Neustadt",
+          "Dresden Hbf"
+        ]
+      },
+      {
+        "id": "-272467886463811409-2510201818-1",
+        "type": "Bus",
+        "number": "10471",
+        "direction": "Dessau Hbf",
+        "platform": "",
+        "time": "2510201818",
+        "destination": "Dessau Hbf",
+        "path_stations": [
+          "Elsnigk(Anh)",
+          "Dessau-Mosigkau",
+          "Dessau-Alten",
+          "Dessau Hbf"
+        ]
+      },
+      {
+        "id": "-4129945950703253308-2510201834-10",
+        "type": "RE",
+        "number": "16333",
+        "direction": "Halle(Saale)Hbf",
+        "platform": "4",
+        "time": "2510201914",
+        "destination": "Halle(Saale)Hbf",
+        "path_stations": [
+          "Arensdorf(Köthen)",
+          "Weißandt-Gölzau",
+          "Stumsdorf",
+          "Niemberg",
+          "Zöberitz",
+          "Halle(Saale)Hbf"
+        ]
+      },
+      {
+        "id": "1297801680225336717-2510201709-7",
+        "type": "IC",
+        "number": "2446",
+        "direction": "Hannover Hbf",
+        "platform": "5",
+        "time": "2510201927",
+        "destination": "Hannover Hbf",
+        "path_stations": [
+          "Magdeburg Hbf",
+          "Braunschweig Hbf",
+          "Hannover Hbf"
+        ]
+      },
+      {
+        "id": "-8796610692411741434-2510201417-16",
+        "type": "IC",
+        "number": "2433",
+        "direction": "Leipzig Hbf",
+        "platform": "4",
+        "time": "2510201933",
+        "destination": "Leipzig Hbf",
+        "path_stations": [
+          "Halle(Saale)Hbf",
+          "Leipzig Hbf"
+        ]
+      },
+      {
+        "id": "4336247658538760253-2510201914-7",
+        "type": "RE",
+        "number": "16332",
+        "direction": "Magdeburg Hbf",
+        "platform": "5",
+        "time": "2510201943",
+        "destination": "Magdeburg Hbf",
+        "path_stations": [
+          "Wulfen(Anh)",
+          "Sachsendorf(Calbe)",
+          "Calbe(Saale) Ost",
+          "Gnadau",
+          "Schönebeck-Felgeleben",
+          "Schönebeck(Elbe)",
+          "Magdeburg Südost",
+          "Magdeburg-Buckau",
+          "Magdeburg Hbf"
+        ]
+      },
+      {
+        "id": "4562898714060690735-2510201807-7",
+        "type": "Bus",
+        "number": "11471",
+        "direction": "Dessau Hbf",
+        "platform": "",
+        "time": "2510201902",
+        "destination": "Dessau Hbf",
+        "path_stations": [
+          "Dessau Hbf"
+        ]
+      },
+      {
+        "id": "2124216467812386194-2510201849-11",
+        "type": "SMD",
+        "number": "80473",
+        "direction": "Dessau Hbf",
+        "platform": "3",
+        "time": "2510201937",
+        "destination": "Dessau Hbf",
+        "path_stations": [
+          "Elsnigk(Anh)",
+          "Dessau-Mosigkau",
+          "Dessau-Alten",
+          "Dessau Hbf"
+        ]
+      },
+      {
+        "id": "-5273568857550119299-2510202018-1",
+        "type": "Bus",
+        "number": "10475",
+        "direction": "Dessau Hbf",
+        "platform": "",
+        "time": "2510202018",
+        "destination": "Dessau Hbf",
+        "path_stations": [
+          "Elsnigk(Anh)",
+          "Dessau-Mosigkau",
+          "Dessau-Alten",
+          "Dessau Hbf"
+        ]
+      },
+      {
+        "id": "-7904142730475662294-2510201934-10",
+        "type": "RE",
+        "number": "16335",
+        "direction": "Halle(Saale)Hbf",
+        "platform": "4",
+        "time": "2510202014",
+        "destination": "Halle(Saale)Hbf",
+        "path_stations": [
+          "Arensdorf(Köthen)",
+          "Weißandt-Gölzau",
+          "Stumsdorf",
+          "Niemberg",
+          "Zöberitz",
+          "Halle(Saale)Hbf"
+        ]
+      },
+      {
+        "id": "7736371140530083462-2510202002-5",
+        "type": "SMD",
+        "number": "80482",
+        "direction": "Aschersleben",
+        "platform": "2",
+        "time": "2510202032",
+        "destination": "Aschersleben",
+        "path_stations": [
+          "Frenz",
+          "Biendorf",
+          "Baalberge",
+          "Bernburg-Roschwitz",
+          "Bernburg Hbf",
+          "Ilberstedt",
+          "Güsten",
+          "Giersleben",
+          "Schierstedt",
+          "Aschersleben"
+        ]
+      },
+      {
+        "id": "-1601954594940179198-2510202014-7",
+        "type": "RE",
+        "number": "16334",
+        "direction": "Magdeburg Hbf",
+        "platform": "5",
+        "time": "2510202043",
+        "destination": "Magdeburg Hbf",
+        "path_stations": [
+          "Wulfen(Anh)",
+          "Sachsendorf(Calbe)",
+          "Calbe(Saale) Ost",
+          "Gnadau",
+          "Schönebeck-Felgeleben",
+          "Schönebeck(Elbe)",
+          "Magdeburg Südost",
+          "Magdeburg-Buckau",
+          "Magdeburg Hbf"
+        ]
+      },
+      {
+        "id": "-1047205503728816168-2510202022-2",
+        "type": "Bus",
+        "number": "11484",
+        "direction": "Güsten",
+        "platform": "",
+        "time": "2510202056",
+        "destination": "Güsten",
+        "path_stations": [
+          "Biendorf",
+          "Baalberge",
+          "Bernburg-Roschwitz",
+          "Bernburg Hbf",
+          "Ilberstedt",
+          "Güsten"
+        ]
+      },
+      {
+        "id": "-2875979624331062252-2510201628-11",
+        "type": "IC",
+        "number": "2045",
+        "direction": "Dresden Hbf",
+        "platform": "4",
+        "time": "2510202029",
+        "destination": "Dresden Hbf",
+        "path_stations": [
+          "Halle(Saale)Hbf",
+          "Leipzig/Halle Flughafen",
+          "Leipzig Hbf",
+          "Riesa",
+          "Dresden-Neustadt",
+          "Dresden Hbf"
+        ]
+      },
+      {
+        "id": "8088489625262557114-2510201536-20",
+        "type": "IC",
+        "number": "2435",
+        "direction": "Leipzig Hbf",
+        "platform": "4",
+        "time": "2510202133",
+        "destination": "Leipzig Hbf",
+        "path_stations": [
+          "Halle(Saale)Hbf",
+          "Leipzig Hbf"
+        ]
+      },
+      {
+        "id": "1078184301054867299-2510202049-11",
+        "type": "SMD",
+        "number": "80477",
+        "direction": "Dessau Hbf",
+        "platform": "3",
+        "time": "2510202137",
+        "destination": "Dessau Hbf",
+        "path_stations": [
+          "Elsnigk(Anh)",
+          "Dessau-Mosigkau",
+          "Dessau-Alten",
+          "Dessau Hbf"
+        ]
+      },
+      {
+        "id": "3229911990981525703-2510202007-7",
+        "type": "Bus",
+        "number": "11475",
+        "direction": "Dessau Hbf",
+        "platform": "",
+        "time": "2510202102",
+        "destination": "Dessau Hbf",
+        "path_stations": [
+          "Dessau Hbf"
+        ]
+      },
+      {
+        "id": "67273429190528841-2510201909-7",
+        "type": "IC",
+        "number": "2448",
+        "direction": "Hannover Hbf",
+        "platform": "5",
+        "time": "2510202127",
+        "destination": "Hannover Hbf",
+        "path_stations": [
+          "Magdeburg Hbf",
+          "Braunschweig Hbf",
+          "Hannover Hbf"
+        ]
+      },
+      {
+        "id": "3300991037232207459-2510202034-10",
+        "type": "RE",
+        "number": "16337",
+        "direction": "Halle(Saale)Hbf",
+        "platform": "4",
+        "time": "2510202114",
+        "destination": "Halle(Saale)Hbf",
+        "path_stations": [
+          "Arensdorf(Köthen)",
+          "Weißandt-Gölzau",
+          "Stumsdorf",
+          "Niemberg",
+          "Zöberitz",
+          "Halle(Saale)Hbf"
+        ]
+      },
+      {
+        "id": "7684540179647535991-2510202125-7",
+        "type": "RE",
+        "number": "16336",
+        "direction": "Magdeburg Hbf",
+        "platform": "5",
+        "time": "2510202154",
+        "destination": "Magdeburg Hbf",
+        "path_stations": [
+          "Wulfen(Anh)",
+          "Sachsendorf(Calbe)",
+          "Calbe(Saale) Ost",
+          "Gnadau",
+          "Schönebeck-Felgeleben",
+          "Schönebeck(Elbe)",
+          "Schönebeck-Frohse",
+          "Magdeburg Südost",
+          "Magdeburg-Salbke",
+          "Magdeburg SKET Industriepark",
+          "Magdeburg-Buckau",
+          "Magdeburg Hasselbachplatz",
+          "Magdeburg Hbf"
+        ]
+      },
+      {
+        "id": "-3858469373393089422-2510202153-8",
+        "type": "SMD",
+        "number": "80483",
+        "direction": "Dessau Hbf",
+        "platform": "3",
+        "time": "2510202235",
+        "destination": "Dessau Hbf",
+        "path_stations": [
+          "Elsnigk(Anh)",
+          "Dessau-Mosigkau",
+          "Dessau-Alten",
+          "Dessau Hbf"
+        ]
+      },
+      {
+        "id": "2380677322423002088-2510202215-10",
+        "type": "RE",
+        "number": "16339",
+        "direction": "Halle(Saale)Hbf",
+        "platform": "4",
+        "time": "2510202254",
+        "destination": "Halle(Saale)Hbf",
+        "path_stations": [
+          "Arensdorf(Köthen)",
+          "Weißandt-Gölzau",
+          "Zöberitz",
+          "Halle(Saale)Hbf"
+        ]
+      },
+      {
+        "id": "-5037962892191490320-2510202212-5",
+        "type": "SMD",
+        "number": "80486",
+        "direction": "Aschersleben",
+        "platform": "2",
+        "time": "2510202232",
+        "destination": "Aschersleben",
+        "path_stations": [
+          "Frenz",
+          "Biendorf",
+          "Baalberge",
+          "Bernburg-Roschwitz",
+          "Bernburg Hbf",
+          "Ilberstedt",
+          "Güsten",
+          "Giersleben",
+          "Schierstedt",
+          "Aschersleben"
+        ]
+      },
+      {
+        "id": "5123016104052247728-2510202329-5",
+        "type": "SMD",
+        "number": "80488",
+        "direction": "Bernburg Hbf",
+        "platform": "2",
+        "time": "2510202351",
+        "destination": "Bernburg Hbf",
+        "path_stations": [
+          "Frenz",
+          "Biendorf",
+          "Baalberge",
+          "Bernburg-Roschwitz",
+          "Bernburg Hbf"
+        ]
+      },
+      {
+        "id": "2634627177344857140-2510202259-7",
+        "type": "RE",
+        "number": "16338",
+        "direction": "Magdeburg Hbf",
+        "platform": "5",
+        "time": "2510202328",
+        "destination": "Magdeburg Hbf",
+        "path_stations": [
+          "Wulfen(Anh)",
+          "Sachsendorf(Calbe)",
+          "Calbe(Saale) Ost",
+          "Gnadau",
+          "Schönebeck-Felgeleben",
+          "Schönebeck(Elbe)",
+          "Magdeburg Südost",
+          "Magdeburg-Buckau",
+          "Magdeburg Hbf"
+        ]
+      },
+      {
+        "id": "-752329130849343138-2510202307-10",
+        "type": "RE",
+        "number": "16341",
+        "direction": "Halle(Saale)Hbf",
+        "platform": "4",
+        "time": "2510202347",
+        "destination": "Halle(Saale)Hbf",
+        "path_stations": [
+          "Arensdorf(Köthen)",
+          "Weißandt-Gölzau",
+          "Stumsdorf",
+          "Niemberg",
+          "Zöberitz",
+          "Halle(Saale)Hbf"
+        ]
+      },
+      {
+        "id": "-8938124554125853436-2510210008-7",
+        "type": "RE",
+        "number": "16340",
+        "direction": "Magdeburg Hbf",
+        "platform": "5",
+        "time": "2510210036",
+        "destination": "Magdeburg Hbf",
+        "path_stations": [
+          "Wulfen(Anh)",
+          "Sachsendorf(Calbe)",
+          "Calbe(Saale) Ost",
+          "Gnadau",
+          "Schönebeck-Felgeleben",
+          "Schönebeck(Elbe)",
+          "Magdeburg Südost",
+          "Magdeburg-Buckau",
+          "Magdeburg Hbf"
+        ]
+      },
+      {
+        "id": "-2047243926671335434-2510210327-1",
+        "type": "RE",
+        "number": "16300",
+        "direction": "Magdeburg Hbf",
+        "platform": "5",
+        "time": "2510210327",
+        "destination": "Magdeburg Hbf",
+        "path_stations": [
+          "Wulfen(Anh)",
+          "Sachsendorf(Calbe)",
+          "Calbe(Saale) Ost",
+          "Gnadau",
+          "Schönebeck-Felgeleben",
+          "Schönebeck(Elbe)",
+          "Schönebeck-Frohse",
+          "Magdeburg Südost",
+          "Magdeburg-Salbke",
+          "Magdeburg SKET Industriepark",
+          "Magdeburg-Buckau",
+          "Magdeburg Hasselbachplatz",
+          "Magdeburg Hbf"
+        ]
+      },
+      {
+        "id": "3761688805869364588-2510210428-5",
+        "type": "SMD",
+        "number": "80338",
+        "direction": "Aschersleben",
+        "platform": "2",
+        "time": "2510210451",
+        "destination": "Aschersleben",
+        "path_stations": [
+          "Frenz",
+          "Biendorf",
+          "Baalberge",
+          "Bernburg-Roschwitz",
+          "Bernburg Hbf",
+          "Ilberstedt",
+          "Güsten",
+          "Giersleben",
+          "Schierstedt",
+          "Aschersleben"
+        ]
+      },
+      {
+        "id": "-2134383347807036645-2510210411-6",
+        "type": "RE",
+        "number": "16303",
+        "direction": "Halle(Saale)Hbf",
+        "platform": "4",
+        "time": "2510210448",
+        "destination": "Halle(Saale)Hbf",
+        "path_stations": [
+          "Arensdorf(Köthen)",
+          "Weißandt-Gölzau",
+          "Stumsdorf",
+          "Niemberg",
+          "Zöberitz",
+          "Halle(Saale)Hbf"
+        ]
+      },
+      {
+        "id": "-5232406020684029823-2510210458-8",
+        "type": "RE",
+        "number": "16305",
+        "direction": "Halle(Saale)Hbf",
+        "platform": "4",
+        "time": "2510210536",
+        "destination": "Halle(Saale)Hbf",
+        "path_stations": [
+          "Stumsdorf",
+          "Niemberg",
+          "Zöberitz",
+          "Halle(Saale)Hbf"
+        ]
+      },
+      {
+        "id": "8934181687036386696-2510210540-1",
+        "type": "Bus",
+        "number": "10443",
+        "direction": "Dessau Hbf",
+        "platform": "",
+        "time": "2510210540",
+        "destination": "Dessau Hbf",
+        "path_stations": [
+          "Elsnigk(Anh)",
+          "Dessau-Mosigkau",
+          "Dessau-Alten",
+          "Dessau Hbf"
+        ]
+      },
+      {
+        "id": "6903803880585995268-2510210421-11",
+        "type": "SMD",
+        "number": "80441",
+        "direction": "Dessau Hbf",
+        "platform": "3",
+        "time": "2510210518",
+        "destination": "Dessau Hbf",
+        "path_stations": [
+          "Elsnigk(Anh)",
+          "Dessau-Mosigkau",
+          "Dessau-Alten",
+          "Dessau Hbf"
+        ]
+      },
+      {
+        "id": "-2283932534800244197-2510210442-7",
+        "type": "RE",
+        "number": "16302",
+        "direction": "Magdeburg Hbf",
+        "platform": "5",
+        "time": "2510210510",
+        "destination": "Magdeburg Hbf",
+        "path_stations": [
+          "Wulfen(Anh)",
+          "Sachsendorf(Calbe)",
+          "Calbe(Saale) Ost",
+          "Gnadau",
+          "Schönebeck-Felgeleben",
+          "Schönebeck(Elbe)",
+          "Magdeburg Südost",
+          "Magdeburg-Buckau",
+          "Magdeburg Hbf"
+        ]
+      },
+      {
+        "id": "2154354029458829825-2510210515-5",
+        "type": "SMD",
+        "number": "80444",
+        "direction": "Aschersleben",
+        "platform": "2",
+        "time": "2510210539",
+        "destination": "Aschersleben",
+        "path_stations": [
+          "Frenz",
+          "Baalberge",
+          "Bernburg-Roschwitz",
+          "Bernburg Hbf",
+          "Ilberstedt",
+          "Güsten",
+          "Giersleben",
+          "Schierstedt",
+          "Aschersleben"
+        ]
+      },
+      {
+        "id": "2801110518623072619-2510210557-8",
+        "type": "SMD",
+        "number": "80445",
+        "direction": "Dessau Hbf",
+        "platform": "3",
+        "time": "2510210640",
+        "destination": "Dessau Hbf",
+        "path_stations": [
+          "Elsnigk(Anh)",
+          "Dessau-Mosigkau",
+          "Dessau-Alten",
+          "Dessau Hbf"
+        ]
+      },
+      {
+        "id": "2599462261997860942-2510210542-3",
+        "type": "IC",
+        "number": "2434",
+        "direction": "Emden Außenhafen",
+        "platform": "5",
+        "time": "2510210627",
+        "destination": "Emden Außenhafen",
+        "path_stations": [
+          "Magdeburg Hbf",
+          "Helmstedt",
+          "Braunschweig Hbf",
+          "Hannover Hbf",
+          "Nienburg(Weser)",
+          "Verden(Aller)",
+          "Bremen Hbf",
+          "Delmenhorst",
+          "Hude",
+          "Oldenburg(Oldb)Hbf",
+          "Bad Zwischenahn",
+          "Westerstede-Ocholt",
+          "Augustfehn",
+          "Leer(Ostfriesl)",
+          "Emden Hbf",
+          "Emden Außenhafen"
+        ]
+      },
+      {
+        "id": "6005048336940874644-2510210600-2",
+        "type": "IC",
+        "number": "2449",
+        "direction": "Dresden Hbf",
+        "platform": "4",
+        "time": "2510210629",
+        "destination": "Dresden Hbf",
+        "path_stations": [
+          "Halle(Saale)Hbf",
+          "Leipzig/Halle Flughafen",
+          "Leipzig Hbf",
+          "Riesa",
+          "Dresden-Neustadt",
+          "Dresden Hbf"
+        ]
+      },
+      {
+        "id": "5347994075390778021-2510210534-10",
+        "type": "RE",
+        "number": "16307",
+        "direction": "Halle(Saale)Hbf",
+        "platform": "4",
+        "time": "2510210614",
+        "destination": "Halle(Saale)Hbf",
+        "path_stations": [
+          "Arensdorf(Köthen)",
+          "Weißandt-Gölzau",
+          "Stumsdorf",
+          "Niemberg",
+          "Zöberitz",
+          "Halle(Saale)Hbf"
+        ]
+      },
+      {
+        "id": "1170584398257206573-2510210553-5",
+        "type": "SMD",
+        "number": "80446",
+        "direction": "Aschersleben",
+        "platform": "2",
+        "time": "2510210632",
+        "destination": "Aschersleben",
+        "path_stations": [
+          "Biendorf",
+          "Baalberge",
+          "Bernburg-Roschwitz",
+          "Bernburg Hbf",
+          "Ilberstedt",
+          "Güsten",
+          "Aschersleben"
+        ]
+      },
+      {
+        "id": "1447686855866008865-2510210622-2",
+        "type": "Bus",
+        "number": "11450",
+        "direction": "Güsten",
+        "platform": "",
+        "time": "2510210656",
+        "destination": "Güsten",
+        "path_stations": [
+          "Biendorf",
+          "Baalberge",
+          "Bernburg-Roschwitz",
+          "Bernburg Hbf",
+          "Ilberstedt",
+          "Güsten"
+        ]
+      },
+      {
+        "id": "7400909513425751739-2510210542-7",
+        "type": "RE",
+        "number": "16304",
+        "direction": "Magdeburg Hbf",
+        "platform": "5",
+        "time": "2510210610",
+        "destination": "Magdeburg Hbf",
+        "path_stations": [
+          "Wulfen(Anh)",
+          "Sachsendorf(Calbe)",
+          "Calbe(Saale) Ost",
+          "Gnadau",
+          "Schönebeck-Felgeleben",
+          "Schönebeck(Elbe)",
+          "Magdeburg SKET Industriepark",
+          "Magdeburg-Buckau",
+          "Magdeburg Hbf"
+        ]
+      },
+      {
+        "id": "4101240016221731680-2510210614-7",
+        "type": "RE",
+        "number": "16306",
+        "direction": "Magdeburg Hbf",
+        "platform": "5",
+        "time": "2510210643",
+        "destination": "Magdeburg Hbf",
+        "path_stations": [
+          "Wulfen(Anh)",
+          "Sachsendorf(Calbe)",
+          "Calbe(Saale) Ost",
+          "Gnadau",
+          "Schönebeck-Felgeleben",
+          "Schönebeck(Elbe)",
+          "Schönebeck-Frohse",
+          "Magdeburg Südost",
+          "Magdeburg-Buckau",
+          "Magdeburg Hbf"
+        ]
+      },
+      {
+        "id": "-3095397431556012770-2510210519-5",
+        "type": "Bus",
+        "number": "11443",
+        "direction": "Dessau Hbf",
+        "platform": "",
+        "time": "2510210610",
+        "destination": "Dessau Hbf",
+        "path_stations": [
+          "Dessau Hbf"
+        ]
+      }
+    ]
+  }
+}

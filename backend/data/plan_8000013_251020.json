@@ -1,0 +1,6789 @@
+{
+  "station_eva": "8000013",
+  "date": "251020",
+  "cached_at": "2025-10-20T15:49:26.636930",
+  "plan_data": {
+    "arrivals": [
+      {
+        "id": "5804299321688665494-2510201716-4",
+        "type": "BRB",
+        "number": "86723",
+        "time": "2510201727",
+        "platform": "2",
+        "path_stations": [
+          "Friedberg(Augsburg)",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße"
+        ],
+        "line": "RB13"
+      },
+      {
+        "id": "3563464592597661153-2510201619-4",
+        "type": "RE",
+        "number": "3297",
+        "time": "2510201716",
+        "platform": "10 C-E",
+        "path_stations": [
+          "Kempten(Allgäu)Hbf",
+          "Kaufbeuren",
+          "Buchloe"
+        ],
+        "line": "7"
+      },
+      {
+        "id": "8506890160780492652-2510201641-8",
+        "type": "RB",
+        "number": "57058",
+        "time": "2510201726",
+        "platform": "6",
+        "path_stations": [
+          "München Hbf",
+          "München-Pasing",
+          "Mering",
+          "Mering-St Afra",
+          "Kissing",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße"
+        ],
+        "line": "89"
+      },
+      {
+        "id": "-4317260211232886197-2510201706-6",
+        "type": "BRB",
+        "number": "62773",
+        "time": "2510201726",
+        "platform": "12 C-E",
+        "path_stations": [
+          "Schwabmünchen",
+          "Bobingen",
+          "Inningen",
+          "Augsburg Messe",
+          "Augsburg Morellstr."
+        ],
+        "line": "RB77"
+      },
+      {
+        "id": "-372722039847397299-2510201608-11",
+        "type": "BRB",
+        "number": "86721",
+        "time": "2510201708",
+        "platform": "101",
+        "path_stations": [
+          "Ingolstadt Hbf",
+          "Brunnen(Oberbay)",
+          "Schrobenhausen",
+          "Radersdorf",
+          "Aichach",
+          "Obergriesbach",
+          "Dasing",
+          "Friedberg(Augsburg)",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße"
+        ],
+        "line": "RB13"
+      },
+      {
+        "id": "3165904318930204161-2510201742-5",
+        "type": "BRB",
+        "number": "62775",
+        "time": "2510201756",
+        "platform": "12 A-C",
+        "path_stations": [
+          "Bobingen",
+          "Inningen",
+          "Augsburg Messe",
+          "Augsburg Morellstr."
+        ],
+        "line": "RB77"
+      },
+      {
+        "id": "882347703018965271-2510201659-11",
+        "type": "BRB",
+        "number": "28828",
+        "time": "2510201739",
+        "platform": "5 C-E",
+        "path_stations": [
+          "Geltendorf",
+          "Walleshausen",
+          "Egling",
+          "Schmiechen(Schwab)",
+          "Merching",
+          "Mering",
+          "Mering-St Afra",
+          "Kissing",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße"
+        ],
+        "line": "RB67"
+      },
+      {
+        "id": "8711679463121242866-2510201633-8",
+        "type": "RB",
+        "number": "57167",
+        "time": "2510201705",
+        "platform": "6",
+        "path_stations": [
+          "Dinkelscherben",
+          "Kutzenhausen",
+          "Gessertshausen",
+          "Diedorf(Schwab)",
+          "Westheim(Schwab)",
+          "Neusäß",
+          "Augsburg-Oberhausen"
+        ],
+        "line": "86"
+      },
+      {
+        "id": "8992764379286664706-2510201712-2",
+        "type": "BRB",
+        "number": "28827",
+        "time": "2510201715",
+        "platform": "6 A-B",
+        "path_stations": [
+          "Augsburg-Oberhausen"
+        ],
+        "line": "RB67"
+      },
+      {
+        "id": "-4659040351822619408-2510201635-8",
+        "type": "RE",
+        "number": "57056",
+        "time": "2510201717",
+        "platform": "5",
+        "path_stations": [
+          "München Hbf",
+          "München-Pasing",
+          "Mering",
+          "Mering-St Afra",
+          "Kissing",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße"
+        ],
+        "line": "9"
+      },
+      {
+        "id": "1846652511305511175-2510201745-4",
+        "type": "BRB",
+        "number": "86727",
+        "time": "2510201756",
+        "platform": "101",
+        "path_stations": [
+          "Friedberg(Augsburg)",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße"
+        ],
+        "line": "RB13"
+      },
+      {
+        "id": "9042395260942796037-2510201419-9",
+        "type": "ICE",
+        "number": "117",
+        "time": "2510201740",
+        "platform": "4",
+        "path_stations": [
+          "Frankfurt(Main)Hbf",
+          "Darmstadt Hbf",
+          "Bensheim",
+          "Weinheim(Bergstr)Hbf",
+          "Heidelberg Hbf",
+          "Stuttgart Hbf",
+          "Ulm Hbf",
+          "Günzburg"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-293311094429060174-2510201512-4",
+        "type": "WB",
+        "number": "969",
+        "time": "2510201706",
+        "platform": "4",
+        "path_stations": [
+          "Stuttgart Hbf",
+          "Ulm Hbf",
+          "Günzburg"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-725633819366291972-2510201533-21",
+        "type": "RE",
+        "number": "57071",
+        "time": "2510201728",
+        "platform": "9 C-E",
+        "path_stations": [
+          "Aalen Hbf",
+          "Wasseralfingen",
+          "Goldshöfe",
+          "Westhausen",
+          "Lauchheim",
+          "Aufhausen(Württ)",
+          "Bopfingen",
+          "Trochtelfingen(b Bopfingen)",
+          "Pflaumloch",
+          "Nördlingen",
+          "Möttingen",
+          "Hoppingen",
+          "Harburg(Schwab)",
+          "Ebermergen",
+          "Wörnitzstein",
+          "Donauwörth",
+          "Mertingen Bahnhof",
+          "Nordendorf",
+          "Meitingen",
+          "Augsburg-Oberhausen"
+        ],
+        "line": "89"
+      },
+      {
+        "id": "8723558896603301381-2510201658-3",
+        "type": "ICE",
+        "number": "266",
+        "time": "2510201729",
+        "platform": "1",
+        "path_stations": [
+          "München Hbf",
+          "München-Pasing"
+        ],
+        "line": ""
+      },
+      {
+        "id": "650872066569866900-2510201713-7",
+        "type": "BRB",
+        "number": "86725",
+        "time": "2510201738",
+        "platform": "3 A-B",
+        "path_stations": [
+          "Aichach",
+          "Obergriesbach",
+          "Dasing",
+          "Friedberg(Augsburg)",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße"
+        ],
+        "line": "RB13"
+      },
+      {
+        "id": "-7561705490074818671-2510201703-6",
+        "type": "BRB",
+        "number": "86607",
+        "time": "2510201722",
+        "platform": "12 A-C",
+        "path_stations": [
+          "Gessertshausen",
+          "Diedorf(Schwab)",
+          "Westheim(Schwab)",
+          "Neusäß",
+          "Augsburg-Oberhausen"
+        ],
+        "line": "RB83"
+      },
+      {
+        "id": "-2028745860606230826-2510201613-11",
+        "type": "RB",
+        "number": "57054",
+        "time": "2510201702",
+        "platform": "8",
+        "path_stations": [
+          "München Hbf",
+          "München-Pasing",
+          "Mammendorf",
+          "Haspelmoor",
+          "Althegnenberg",
+          "Mering",
+          "Mering-St Afra",
+          "Kissing",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße"
+        ],
+        "line": "87"
+      },
+      {
+        "id": "3794997293468751738-2510201640-12",
+        "type": "RB",
+        "number": "57255",
+        "time": "2510201721",
+        "platform": "9 A-C",
+        "path_stations": [
+          "Donauwörth",
+          "Bäumenheim",
+          "Mertingen Bahnhof",
+          "Nordendorf",
+          "Westendorf",
+          "Meitingen",
+          "Herbertshofen",
+          "Langweid(Lech)",
+          "Gablingen",
+          "Gersthofen",
+          "Augsburg-Oberhausen"
+        ],
+        "line": "87"
+      },
+      {
+        "id": "1631294551636002553-2510201619-9",
+        "type": "RE",
+        "number": "57171",
+        "time": "2510201728",
+        "platform": "9 C-E",
+        "path_stations": [
+          "Gunzenhausen",
+          "Treuchtlingen",
+          "Otting-Weilheim",
+          "Donauwörth",
+          "Mertingen Bahnhof",
+          "Nordendorf",
+          "Meitingen",
+          "Augsburg-Oberhausen"
+        ],
+        "line": "80"
+      },
+      {
+        "id": "-7724390263517347378-2510201709-3",
+        "type": "ICE",
+        "number": "702",
+        "time": "2510201740",
+        "platform": "1",
+        "path_stations": [
+          "München Hbf",
+          "München-Pasing"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-8471873024121272354-2510200929-17",
+        "type": "ICE",
+        "number": "519",
+        "time": "2510201753",
+        "platform": "4",
+        "path_stations": [
+          "Hamburg-Altona",
+          "Hamburg Dammtor",
+          "Hamburg Hbf",
+          "Hamburg-Harburg",
+          "Bremen Hbf",
+          "Osnabrück Hbf",
+          "Münster(Westf)Hbf",
+          "Dortmund Hbf",
+          "Hagen Hbf",
+          "Wuppertal Hbf",
+          "Solingen Hbf",
+          "Köln Hbf",
+          "Frankfurt(M) Flughafen Fernbf",
+          "Mannheim Hbf",
+          "Stuttgart Hbf",
+          "Ulm Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "3588816028503301469-2510201703-10",
+        "type": "BRB",
+        "number": "62941",
+        "time": "2510201742",
+        "platform": "8",
+        "path_stations": [
+          "Kaufering",
+          "Klosterlechfeld",
+          "Lagerlechfeld",
+          "Graben(Lechfeld)Gewerbepark",
+          "Oberottmarshausen",
+          "Bobingen",
+          "Inningen",
+          "Augsburg Messe",
+          "Augsburg Morellstr."
+        ],
+        "line": "RB69"
+      },
+      {
+        "id": "3725988805124534489-2510201649-6",
+        "type": "BRB",
+        "number": "86566",
+        "time": "2510201707",
+        "platform": "501",
+        "path_stations": [
+          "Mering",
+          "Mering-St Afra",
+          "Kissing",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße"
+        ],
+        "line": "RB67"
+      },
+      {
+        "id": "-2007809943534273547-2510201620-12",
+        "type": "RB",
+        "number": "57067",
+        "time": "2510201700",
+        "platform": "6",
+        "path_stations": [
+          "Donauwörth",
+          "Bäumenheim",
+          "Mertingen Bahnhof",
+          "Nordendorf",
+          "Westendorf",
+          "Meitingen",
+          "Herbertshofen",
+          "Langweid(Lech)",
+          "Gablingen",
+          "Gersthofen",
+          "Augsburg-Oberhausen"
+        ],
+        "line": "87"
+      },
+      {
+        "id": "4365922452448918066-2510201741-2",
+        "type": "BRB",
+        "number": "86565",
+        "time": "2510201745",
+        "platform": "6 A-B",
+        "path_stations": [
+          "Augsburg-Oberhausen"
+        ],
+        "line": "RB67"
+      },
+      {
+        "id": "-6264648509796476021-2510201628-3",
+        "type": "ICE",
+        "number": "1212",
+        "time": "2510201659",
+        "platform": "1",
+        "path_stations": [
+          "München Hbf",
+          "München-Pasing"
+        ],
+        "line": ""
+      },
+      {
+        "id": "7537395545451740415-2510201727-3",
+        "type": "ICE",
+        "number": "512",
+        "time": "2510201759",
+        "platform": "1",
+        "path_stations": [
+          "München Hbf",
+          "München-Pasing"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-2976273011815144718-2510201654-11",
+        "type": "RB",
+        "number": "57160",
+        "time": "2510201744",
+        "platform": "5",
+        "path_stations": [
+          "München Hbf",
+          "München-Pasing",
+          "Mammendorf",
+          "Haspelmoor",
+          "Althegnenberg",
+          "Mering",
+          "Mering-St Afra",
+          "Kissing",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße"
+        ],
+        "line": "87"
+      },
+      {
+        "id": "6519619872479541872-2510201520-15",
+        "type": "BRB",
+        "number": "62767",
+        "time": "2510201708",
+        "platform": "7",
+        "path_stations": [
+          "Füssen",
+          "Weizern-Hopferau",
+          "Seeg",
+          "Lengenwang",
+          "Leuterschach",
+          "Marktoberdorf Schule",
+          "Marktoberdorf",
+          "Ebenhofen",
+          "Biessenhofen",
+          "Kaufbeuren",
+          "Buchloe",
+          "Schwabmünchen",
+          "Bobingen",
+          "Augsburg Morellstr."
+        ],
+        "line": "RB77"
+      },
+      {
+        "id": "2407865436169237069-2510201628-10",
+        "type": "BRB",
+        "number": "62939",
+        "time": "2510201712",
+        "platform": "901",
+        "path_stations": [
+          "Kaufering",
+          "Klosterlechfeld",
+          "Lagerlechfeld",
+          "Graben(Lechfeld)Gewerbepark",
+          "Oberottmarshausen",
+          "Bobingen",
+          "Inningen",
+          "Augsburg Messe",
+          "Augsburg Morellstr."
+        ],
+        "line": "RB69"
+      },
+      {
+        "id": "3574170985910172506-2510201654-11",
+        "type": "RB",
+        "number": "57060",
+        "time": "2510201744",
+        "platform": "5",
+        "path_stations": [
+          "München Hbf",
+          "München-Pasing",
+          "Mammendorf",
+          "Haspelmoor",
+          "Althegnenberg",
+          "Mering",
+          "Mering-St Afra",
+          "Kissing",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße"
+        ],
+        "line": "86"
+      },
+      {
+        "id": "-5311429009387847441-2510201637-8",
+        "type": "RE",
+        "number": "57427",
+        "time": "2510201748",
+        "platform": "10 C-E",
+        "path_stations": [
+          "Kempten(Allgäu)Hbf",
+          "Günzach",
+          "Biessenhofen",
+          "Kaufbeuren",
+          "Buchloe",
+          "Schwabmünchen",
+          "Bobingen"
+        ],
+        "line": "79"
+      },
+      {
+        "id": "8109378362808558240-2510201617-18",
+        "type": "RE",
+        "number": "57331",
+        "time": "2510201733",
+        "platform": "7",
+        "path_stations": [
+          "Ulm Hbf",
+          "Neu-Ulm",
+          "Nersingen",
+          "Leipheim",
+          "Günzburg",
+          "Offingen",
+          "Mindelaltheim",
+          "Burgau(Schwab)",
+          "Jettingen",
+          "Freihalden",
+          "Dinkelscherben",
+          "Kutzenhausen",
+          "Gessertshausen",
+          "Diedorf(Schwab)",
+          "Westheim(Schwab)",
+          "Neusäß",
+          "Augsburg-Oberhausen"
+        ],
+        "line": "9"
+      },
+      {
+        "id": "-8273180056631844503-2510201628-3",
+        "type": "ICE",
+        "number": "254",
+        "time": "2510201659",
+        "platform": "1",
+        "path_stations": [
+          "München Hbf",
+          "München-Pasing"
+        ],
+        "line": ""
+      },
+      {
+        "id": "5089820149948252230-2510201646-3",
+        "type": "ICE",
+        "number": "592",
+        "time": "2510201716",
+        "platform": "1",
+        "path_stations": [
+          "München Hbf",
+          "München-Pasing"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-2603312626651473862-2510201446-8",
+        "type": "ICE",
+        "number": "1011",
+        "time": "2510201854",
+        "platform": "4",
+        "path_stations": [
+          "Düsseldorf Hbf",
+          "Köln Messe/Deutz Gl.11-12",
+          "Siegburg/Bonn",
+          "Frankfurt(M) Flughafen Fernbf",
+          "Mannheim Hbf",
+          "Stuttgart Hbf",
+          "Ulm Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-8676934477502020812-2510201816-4",
+        "type": "BRB",
+        "number": "86731",
+        "time": "2510201827",
+        "platform": "101",
+        "path_stations": [
+          "Friedberg(Augsburg)",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße"
+        ],
+        "line": "RB13"
+      },
+      {
+        "id": "2055882036874313830-2510201846-2",
+        "type": "BRB",
+        "number": "86575",
+        "time": "2510201850",
+        "platform": "8 A-C",
+        "path_stations": [
+          "Augsburg-Oberhausen"
+        ],
+        "line": "RB67"
+      },
+      {
+        "id": "4097711371156808190-2510201145-21",
+        "type": "EC",
+        "number": "216",
+        "time": "2510201814",
+        "platform": "1",
+        "path_stations": [
+          "Graz Hbf",
+          "Leoben Hbf",
+          "St.Michael in Obersteiermark",
+          "Selzthal",
+          "Liezen",
+          "Stainach-Irdning",
+          "Schladming",
+          "Radstadt",
+          "Bischofshofen",
+          "Werfen",
+          "Golling-Abtenau",
+          "Hallein",
+          "Salzburg Süd",
+          "Salzburg Hbf",
+          "Freilassing",
+          "Traunstein",
+          "Prien am Chiemsee",
+          "Rosenheim",
+          "München Ost",
+          "München Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "6195485783263057734-2510201827-3",
+        "type": "ICE",
+        "number": "910",
+        "time": "2510201859",
+        "platform": "1",
+        "path_stations": [
+          "München Hbf",
+          "München-Pasing"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-1908021651160660597-2510201720-12",
+        "type": "RB",
+        "number": "57073",
+        "time": "2510201800",
+        "platform": "9",
+        "path_stations": [
+          "Donauwörth",
+          "Bäumenheim",
+          "Mertingen Bahnhof",
+          "Nordendorf",
+          "Westendorf",
+          "Meitingen",
+          "Herbertshofen",
+          "Langweid(Lech)",
+          "Gablingen",
+          "Gersthofen",
+          "Augsburg-Oberhausen"
+        ],
+        "line": "87"
+      },
+      {
+        "id": "-3350735717630224063-2510201815-8",
+        "type": "RB",
+        "number": "57072",
+        "time": "2510201859",
+        "platform": "5",
+        "path_stations": [
+          "München Hbf",
+          "München-Pasing",
+          "Mering",
+          "Mering-St Afra",
+          "Kissing",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße"
+        ],
+        "line": "87"
+      },
+      {
+        "id": "1429667821227828962-2510201757-11",
+        "type": "RB",
+        "number": "57068",
+        "time": "2510201846",
+        "platform": "5",
+        "path_stations": [
+          "München Hbf",
+          "München-Pasing",
+          "Mammendorf",
+          "Haspelmoor",
+          "Althegnenberg",
+          "Mering",
+          "Mering-St Afra",
+          "Kissing",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße"
+        ],
+        "line": "86"
+      },
+      {
+        "id": "9216409100824599045-2510201723-8",
+        "type": "RB",
+        "number": "57062",
+        "time": "2510201806",
+        "platform": "7 C-E",
+        "path_stations": [
+          "München Hbf",
+          "München-Pasing",
+          "Mering",
+          "Mering-St Afra",
+          "Kissing",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße"
+        ],
+        "line": "87"
+      },
+      {
+        "id": "-1378667911472082187-2510201125-14",
+        "type": "ICE",
+        "number": "1219",
+        "time": "2510201841",
+        "platform": "4",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin-Spandau",
+          "Stendal Hbf",
+          "Wolfsburg Hbf",
+          "Braunschweig Hbf",
+          "Hildesheim Hbf",
+          "Göttingen",
+          "Kassel-Wilhelmshöhe",
+          "Fulda",
+          "Frankfurt(Main)Hbf",
+          "Mannheim Hbf",
+          "Stuttgart Hbf",
+          "Ulm Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-5638997854339113436-2510201710-11",
+        "type": "BRB",
+        "number": "86729",
+        "time": "2510201808",
+        "platform": "2",
+        "path_stations": [
+          "Ingolstadt Hbf",
+          "Brunnen(Oberbay)",
+          "Schrobenhausen",
+          "Radersdorf",
+          "Aichach",
+          "Obergriesbach",
+          "Dasing",
+          "Friedberg(Augsburg)",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße"
+        ],
+        "line": "RB13"
+      },
+      {
+        "id": "7220981882580559406-2510201811-6",
+        "type": "BRB",
+        "number": "86609",
+        "time": "2510201830",
+        "platform": "10 A-C",
+        "path_stations": [
+          "Gessertshausen",
+          "Diedorf(Schwab)",
+          "Westheim(Schwab)",
+          "Neusäß",
+          "Augsburg-Oberhausen"
+        ],
+        "line": "RB83"
+      },
+      {
+        "id": "-7525148401455668068-2510201737-8",
+        "type": "RE",
+        "number": "57429",
+        "time": "2510201848",
+        "platform": "7",
+        "path_stations": [
+          "Kempten(Allgäu)Hbf",
+          "Günzach",
+          "Biessenhofen",
+          "Kaufbeuren",
+          "Buchloe",
+          "Schwabmünchen",
+          "Bobingen"
+        ],
+        "line": "79"
+      },
+      {
+        "id": "-4620763876078149352-2510201707-8",
+        "type": "RE",
+        "number": "57515",
+        "time": "2510201818",
+        "platform": "10",
+        "path_stations": [
+          "Memmingen",
+          "Sontheim(Schwab)",
+          "Stetten(Schwab)",
+          "Mindelheim",
+          "Rammingen(Bay)",
+          "Türkheim(Bay)Bf",
+          "Buchloe"
+        ],
+        "line": "71"
+      },
+      {
+        "id": "7480753411614330721-2510201639-17",
+        "type": "RE",
+        "number": "59129",
+        "time": "2510201827",
+        "platform": "7 C-E",
+        "path_stations": [
+          "Nürnberg Hbf",
+          "Schwabach",
+          "Roth",
+          "Unterheckenhofen",
+          "Georgensgmünd",
+          "Mühlstetten",
+          "Pleinfeld",
+          "Ellingen(Bay)",
+          "Weißenburg(Bay)",
+          "Treuchtlingen",
+          "Otting-Weilheim",
+          "Donauwörth",
+          "Mertingen Bahnhof",
+          "Nordendorf",
+          "Meitingen",
+          "Augsburg-Oberhausen"
+        ],
+        "line": "16"
+      },
+      {
+        "id": "-6822374050967780693-2510201813-7",
+        "type": "BRB",
+        "number": "86733",
+        "time": "2510201837",
+        "platform": "2",
+        "path_stations": [
+          "Aichach",
+          "Obergriesbach",
+          "Dasing",
+          "Friedberg(Augsburg)",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße"
+        ],
+        "line": "RB13"
+      },
+      {
+        "id": "-1050652782747772889-2510201733-8",
+        "type": "RB",
+        "number": "57173",
+        "time": "2510201804",
+        "platform": "9",
+        "path_stations": [
+          "Dinkelscherben",
+          "Kutzenhausen",
+          "Gessertshausen",
+          "Diedorf(Schwab)",
+          "Westheim(Schwab)",
+          "Neusäß",
+          "Augsburg-Oberhausen"
+        ],
+        "line": "86"
+      },
+      {
+        "id": "3422823246203542050-2510201312-7",
+        "type": "ICE",
+        "number": "1695",
+        "time": "2510201850",
+        "platform": "4",
+        "path_stations": [
+          "Berlin Hbf",
+          "Halle(Saale)Hbf",
+          "Erfurt Hbf",
+          "Coburg",
+          "Nürnberg Hbf",
+          "Donauwörth"
+        ],
+        "line": ""
+      },
+      {
+        "id": "7754455782639464851-2510201812-2",
+        "type": "BRB",
+        "number": "28829",
+        "time": "2510201815",
+        "platform": "6 A-B",
+        "path_stations": [
+          "Augsburg-Oberhausen"
+        ],
+        "line": "RB67"
+      },
+      {
+        "id": "-4588358306015442436-2510201759-11",
+        "type": "BRB",
+        "number": "28830",
+        "time": "2510201837",
+        "platform": "5 C-E",
+        "path_stations": [
+          "Geltendorf",
+          "Walleshausen",
+          "Egling",
+          "Schmiechen(Schwab)",
+          "Merching",
+          "Mering",
+          "Mering-St Afra",
+          "Kissing",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße"
+        ],
+        "line": "RB67"
+      },
+      {
+        "id": "5222452683479379729-2510201735-8",
+        "type": "RB",
+        "number": "57064",
+        "time": "2510201819",
+        "platform": "3",
+        "path_stations": [
+          "München Hbf",
+          "München-Pasing",
+          "Mering",
+          "Mering-St Afra",
+          "Kissing",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße"
+        ],
+        "line": "87"
+      },
+      {
+        "id": "-943850335692792067-2510201741-8",
+        "type": "RB",
+        "number": "57066",
+        "time": "2510201827",
+        "platform": "6",
+        "path_stations": [
+          "München Hbf",
+          "München-Pasing",
+          "Mering",
+          "Mering-St Afra",
+          "Kissing",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße"
+        ],
+        "line": "87"
+      },
+      {
+        "id": "-8355148014419824900-2510201620-17",
+        "type": "BRB",
+        "number": "62777",
+        "time": "2510201809",
+        "platform": "12",
+        "path_stations": [
+          "Füssen",
+          "Weizern-Hopferau",
+          "Seeg",
+          "Lengenwang",
+          "Leuterschach",
+          "Marktoberdorf Schule",
+          "Marktoberdorf",
+          "Ebenhofen",
+          "Biessenhofen",
+          "Kaufbeuren",
+          "Buchloe",
+          "Schwabmünchen",
+          "Bobingen",
+          "Inningen",
+          "Augsburg Messe",
+          "Augsburg Morellstr."
+        ],
+        "line": "RB77"
+      },
+      {
+        "id": "-6593149483901234579-2510201718-18",
+        "type": "RE",
+        "number": "57075",
+        "time": "2510201834",
+        "platform": "8 C-E",
+        "path_stations": [
+          "Ulm Hbf",
+          "Neu-Ulm",
+          "Nersingen",
+          "Leipheim",
+          "Günzburg",
+          "Offingen",
+          "Mindelaltheim",
+          "Burgau(Schwab)",
+          "Jettingen",
+          "Freihalden",
+          "Dinkelscherben",
+          "Kutzenhausen",
+          "Gessertshausen",
+          "Diedorf(Schwab)",
+          "Westheim(Schwab)",
+          "Neusäß",
+          "Augsburg-Oberhausen"
+        ],
+        "line": "9"
+      },
+      {
+        "id": "349319637773054913-2510201806-10",
+        "type": "BRB",
+        "number": "62943",
+        "time": "2510201842",
+        "platform": "10 C-E",
+        "path_stations": [
+          "Kaufering",
+          "Klosterlechfeld",
+          "Lagerlechfeld",
+          "Graben(Lechfeld)Gewerbepark",
+          "Oberottmarshausen",
+          "Bobingen",
+          "Inningen",
+          "Augsburg Messe",
+          "Augsburg Morellstr."
+        ],
+        "line": "RB69"
+      },
+      {
+        "id": "7537395545451740415-2510201727-3",
+        "type": "ICE",
+        "number": "512",
+        "time": "2510201759",
+        "platform": "1",
+        "path_stations": [
+          "München Hbf",
+          "München-Pasing"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-7759827436146803415-2510201605-5",
+        "type": "ICE",
+        "number": "569",
+        "time": "2510201817",
+        "platform": "4",
+        "path_stations": [
+          "Karlsruhe Hbf",
+          "Bruchsal",
+          "Stuttgart Hbf",
+          "Ulm Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "5700213522785101305-2510201757-11",
+        "type": "RB",
+        "number": "57168",
+        "time": "2510201846",
+        "platform": "5",
+        "path_stations": [
+          "München Hbf",
+          "München-Pasing",
+          "Mammendorf",
+          "Haspelmoor",
+          "Althegnenberg",
+          "Mering",
+          "Mering-St Afra",
+          "Kissing",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße"
+        ],
+        "line": "87"
+      },
+      {
+        "id": "2725032972542751301-2510201735-4",
+        "type": "RE",
+        "number": "57535",
+        "time": "2510201818",
+        "platform": "10",
+        "path_stations": [
+          "Bad Wörishofen",
+          "Türkheim(Bay)Bf",
+          "Buchloe"
+        ],
+        "line": "73"
+      },
+      {
+        "id": "-655443362206028429-2510201844-4",
+        "type": "BRB",
+        "number": "86735",
+        "time": "2510201855",
+        "platform": "3 A-B",
+        "path_stations": [
+          "Friedberg(Augsburg)",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße"
+        ],
+        "line": "RB13"
+      },
+      {
+        "id": "7434899549445698192-2510201842-5",
+        "type": "BRB",
+        "number": "62783",
+        "time": "2510201857",
+        "platform": "12 C-E",
+        "path_stations": [
+          "Bobingen",
+          "Inningen",
+          "Augsburg Messe",
+          "Augsburg Morellstr."
+        ],
+        "line": "RB77"
+      },
+      {
+        "id": "-7354866783901292518-2510201807-6",
+        "type": "BRB",
+        "number": "62781",
+        "time": "2510201826",
+        "platform": "12 C-E",
+        "path_stations": [
+          "Schwabmünchen",
+          "Bobingen",
+          "Inningen",
+          "Augsburg Messe",
+          "Augsburg Morellstr."
+        ],
+        "line": "RB77"
+      },
+      {
+        "id": "5713085400762483393-2510201857-11",
+        "type": "RB",
+        "number": "57176",
+        "time": "2510201946",
+        "platform": "5",
+        "path_stations": [
+          "München Hbf",
+          "München-Pasing",
+          "Mammendorf",
+          "Haspelmoor",
+          "Althegnenberg",
+          "Mering",
+          "Mering-St Afra",
+          "Kissing",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße"
+        ],
+        "line": "87"
+      },
+      {
+        "id": "5950834780887514626-2510201838-7",
+        "type": "BRB",
+        "number": "62785",
+        "time": "2510201909",
+        "platform": "10 C-E",
+        "path_stations": [
+          "Buchloe",
+          "Schwabmünchen",
+          "Bobingen",
+          "Inningen",
+          "Augsburg Messe",
+          "Augsburg Morellstr."
+        ],
+        "line": "RB77"
+      },
+      {
+        "id": "-4146464473718222045-2510201837-8",
+        "type": "RE",
+        "number": "57431",
+        "time": "2510201948",
+        "platform": "9 C-E",
+        "path_stations": [
+          "Kempten(Allgäu)Hbf",
+          "Günzach",
+          "Biessenhofen",
+          "Kaufbeuren",
+          "Buchloe",
+          "Schwabmünchen",
+          "Bobingen"
+        ],
+        "line": "79"
+      },
+      {
+        "id": "-3591637741369825174-2510201810-11",
+        "type": "BRB",
+        "number": "86737",
+        "time": "2510201908",
+        "platform": "101",
+        "path_stations": [
+          "Ingolstadt Hbf",
+          "Brunnen(Oberbay)",
+          "Schrobenhausen",
+          "Radersdorf",
+          "Aichach",
+          "Obergriesbach",
+          "Dasing",
+          "Friedberg(Augsburg)",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße"
+        ],
+        "line": "RB13"
+      },
+      {
+        "id": "679182129841009100-2510201903-6",
+        "type": "BRB",
+        "number": "86611",
+        "time": "2510201920",
+        "platform": "3",
+        "path_stations": [
+          "Gessertshausen",
+          "Diedorf(Schwab)",
+          "Westheim(Schwab)",
+          "Neusäß",
+          "Augsburg-Oberhausen"
+        ],
+        "line": "RB83"
+      },
+      {
+        "id": "-7768387626255130843-2510201819-9",
+        "type": "RE",
+        "number": "57179",
+        "time": "2510201928",
+        "platform": "8 A-C",
+        "path_stations": [
+          "Gunzenhausen",
+          "Treuchtlingen",
+          "Otting-Weilheim",
+          "Donauwörth",
+          "Mertingen Bahnhof",
+          "Nordendorf",
+          "Meitingen",
+          "Augsburg-Oberhausen"
+        ],
+        "line": "80"
+      },
+      {
+        "id": "6337980242377215650-2510201816-11",
+        "type": "BRB",
+        "number": "86580",
+        "time": "2510201908",
+        "platform": "4",
+        "path_stations": [
+          "Geltendorf",
+          "Walleshausen",
+          "Egling",
+          "Schmiechen(Schwab)",
+          "Merching",
+          "Mering",
+          "Mering-St Afra",
+          "Kissing",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße"
+        ],
+        "line": "RB67"
+      },
+      {
+        "id": "6202931575666114667-2510201818-18",
+        "type": "RE",
+        "number": "57175",
+        "time": "2510201933",
+        "platform": "7 C-E",
+        "path_stations": [
+          "Ulm Hbf",
+          "Neu-Ulm",
+          "Nersingen",
+          "Leipheim",
+          "Günzburg",
+          "Offingen",
+          "Mindelaltheim",
+          "Burgau(Schwab)",
+          "Jettingen",
+          "Freihalden",
+          "Dinkelscherben",
+          "Kutzenhausen",
+          "Gessertshausen",
+          "Diedorf(Schwab)",
+          "Westheim(Schwab)",
+          "Neusäß",
+          "Augsburg-Oberhausen"
+        ],
+        "line": "9"
+      },
+      {
+        "id": "6195485783263057734-2510201827-3",
+        "type": "ICE",
+        "number": "910",
+        "time": "2510201859",
+        "platform": "1",
+        "path_stations": [
+          "München Hbf",
+          "München-Pasing"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-4017558981803900258-2510201906-6",
+        "type": "BRB",
+        "number": "62789",
+        "time": "2510201927",
+        "platform": "12 C-E",
+        "path_stations": [
+          "Schwabmünchen",
+          "Bobingen",
+          "Inningen",
+          "Augsburg Messe",
+          "Augsburg Morellstr."
+        ],
+        "line": "RB77"
+      },
+      {
+        "id": "-3350735717630224063-2510201815-8",
+        "type": "RB",
+        "number": "57072",
+        "time": "2510201859",
+        "platform": "5",
+        "path_stations": [
+          "München Hbf",
+          "München-Pasing",
+          "Mering",
+          "Mering-St Afra",
+          "Kissing",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße"
+        ],
+        "line": "87"
+      },
+      {
+        "id": "-3089101331800344023-2510201819-4",
+        "type": "RE",
+        "number": "3299",
+        "time": "2510201914",
+        "platform": "9 C-E",
+        "path_stations": [
+          "Kempten(Allgäu)Hbf",
+          "Kaufbeuren",
+          "Buchloe"
+        ],
+        "line": "7"
+      },
+      {
+        "id": "-1895474681646249837-2510201900-3",
+        "type": "ICE",
+        "number": "560",
+        "time": "2510201931",
+        "platform": "1",
+        "path_stations": [
+          "München Hbf",
+          "München-Pasing"
+        ],
+        "line": ""
+      },
+      {
+        "id": "5734996551620743986-2510201859-11",
+        "type": "BRB",
+        "number": "28832",
+        "time": "2510201938",
+        "platform": "5 C-E",
+        "path_stations": [
+          "Geltendorf",
+          "Walleshausen",
+          "Egling",
+          "Schmiechen(Schwab)",
+          "Merching",
+          "Mering",
+          "Mering-St Afra",
+          "Kissing",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße"
+        ],
+        "line": "RB67"
+      },
+      {
+        "id": "-5849884007825646125-2510201857-11",
+        "type": "RB",
+        "number": "57076",
+        "time": "2510201946",
+        "platform": "5",
+        "path_stations": [
+          "München Hbf",
+          "München-Pasing",
+          "Mammendorf",
+          "Haspelmoor",
+          "Althegnenberg",
+          "Mering",
+          "Mering-St Afra",
+          "Kissing",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße"
+        ],
+        "line": "86"
+      },
+      {
+        "id": "1976403945320218368-2510201835-8",
+        "type": "RE",
+        "number": "57074",
+        "time": "2510201918",
+        "platform": "5",
+        "path_stations": [
+          "München Hbf",
+          "München-Pasing",
+          "Mering",
+          "Mering-St Afra",
+          "Kissing",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße"
+        ],
+        "line": "9"
+      },
+      {
+        "id": "8659391428471416530-2510201815-12",
+        "type": "RB",
+        "number": "57077",
+        "time": "2510201900",
+        "platform": "8 A-C",
+        "path_stations": [
+          "Donauwörth",
+          "Bäumenheim",
+          "Mertingen Bahnhof",
+          "Nordendorf",
+          "Westendorf",
+          "Meitingen",
+          "Herbertshofen",
+          "Langweid(Lech)",
+          "Gablingen",
+          "Gersthofen",
+          "Augsburg-Oberhausen"
+        ],
+        "line": "87"
+      },
+      {
+        "id": "9070964615908690912-2510201909-2",
+        "type": "BRB",
+        "number": "28831",
+        "time": "2510201913",
+        "platform": "6 A-B",
+        "path_stations": [
+          "Augsburg-Oberhausen"
+        ],
+        "line": "RB67"
+      },
+      {
+        "id": "-5083558051405008269-2510201909-3",
+        "type": "ICE",
+        "number": "1500",
+        "time": "2510201942",
+        "platform": "1",
+        "path_stations": [
+          "München Hbf",
+          "München-Pasing"
+        ],
+        "line": ""
+      },
+      {
+        "id": "5653087570567167872-2510201129-17",
+        "type": "ICE",
+        "number": "611",
+        "time": "2510201953",
+        "platform": "4",
+        "path_stations": [
+          "Hamburg-Altona",
+          "Hamburg Dammtor",
+          "Hamburg Hbf",
+          "Hamburg-Harburg",
+          "Bremen Hbf",
+          "Osnabrück Hbf",
+          "Münster(Westf)Hbf",
+          "Dortmund Hbf",
+          "Hagen Hbf",
+          "Wuppertal Hbf",
+          "Solingen Hbf",
+          "Köln Hbf",
+          "Frankfurt(M) Flughafen Fernbf",
+          "Mannheim Hbf",
+          "Stuttgart Hbf",
+          "Ulm Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "8322424274180843926-2510201927-3",
+        "type": "ICE",
+        "number": "510",
+        "time": "2510201959",
+        "platform": "1",
+        "path_stations": [
+          "München Hbf",
+          "München-Pasing"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-3031925877358690214-2510201620-9",
+        "type": "IC",
+        "number": "1291",
+        "time": "2510201940",
+        "platform": "4",
+        "path_stations": [
+          "Frankfurt(Main)Hbf",
+          "Darmstadt Hbf",
+          "Bensheim",
+          "Weinheim(Bergstr)Hbf",
+          "Heidelberg Hbf",
+          "Stuttgart Hbf",
+          "Ulm Hbf",
+          "Günzburg"
+        ],
+        "line": ""
+      },
+      {
+        "id": "7051631584189496394-2510201916-4",
+        "type": "BRB",
+        "number": "86739",
+        "time": "2510201927",
+        "platform": "2",
+        "path_stations": [
+          "Friedberg(Augsburg)",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße"
+        ],
+        "line": "RB13"
+      },
+      {
+        "id": "7036544064545441556-2510201833-8",
+        "type": "RB",
+        "number": "57177",
+        "time": "2510201904",
+        "platform": "8 C-E",
+        "path_stations": [
+          "Dinkelscherben",
+          "Kutzenhausen",
+          "Gessertshausen",
+          "Diedorf(Schwab)",
+          "Westheim(Schwab)",
+          "Neusäß",
+          "Augsburg-Oberhausen"
+        ],
+        "line": "86"
+      },
+      {
+        "id": "-7610672940066525446-2510201846-3",
+        "type": "ICE",
+        "number": "590",
+        "time": "2510201916",
+        "platform": "1",
+        "path_stations": [
+          "München Hbf",
+          "München-Pasing"
+        ],
+        "line": ""
+      },
+      {
+        "id": "1688959751949050779-2510201733-21",
+        "type": "RB",
+        "number": "57079",
+        "time": "2510201928",
+        "platform": "8 A-C",
+        "path_stations": [
+          "Aalen Hbf",
+          "Wasseralfingen",
+          "Goldshöfe",
+          "Westhausen",
+          "Lauchheim",
+          "Aufhausen(Württ)",
+          "Bopfingen",
+          "Trochtelfingen(b Bopfingen)",
+          "Pflaumloch",
+          "Nördlingen",
+          "Möttingen",
+          "Hoppingen",
+          "Harburg(Schwab)",
+          "Ebermergen",
+          "Wörnitzstein",
+          "Donauwörth",
+          "Mertingen Bahnhof",
+          "Nordendorf",
+          "Meitingen",
+          "Augsburg-Oberhausen"
+        ],
+        "line": "89"
+      },
+      {
+        "id": "6417725917171869322-2510201845-12",
+        "type": "BRB",
+        "number": "62945",
+        "time": "2510201943",
+        "platform": "10 C-E",
+        "path_stations": [
+          "Landsberg(Lech)",
+          "Landsberg(L)Schule",
+          "Kaufering",
+          "Klosterlechfeld",
+          "Lagerlechfeld",
+          "Graben(Lechfeld)Gewerbepark",
+          "Oberottmarshausen",
+          "Bobingen",
+          "Inningen",
+          "Augsburg Messe",
+          "Augsburg Morellstr."
+        ],
+        "line": "RB69"
+      },
+      {
+        "id": "-4512829283537469719-2510201913-7",
+        "type": "BRB",
+        "number": "86741",
+        "time": "2510201938",
+        "platform": "3",
+        "path_stations": [
+          "Aichach",
+          "Obergriesbach",
+          "Dasing",
+          "Friedberg(Augsburg)",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße"
+        ],
+        "line": "RB13"
+      },
+      {
+        "id": "-2106102740967803407-2510201908-11",
+        "type": "BRB",
+        "number": "86743",
+        "time": "2510202008",
+        "platform": "2",
+        "path_stations": [
+          "Ingolstadt Hbf",
+          "Brunnen(Oberbay)",
+          "Schrobenhausen",
+          "Radersdorf",
+          "Aichach",
+          "Obergriesbach",
+          "Dasing",
+          "Friedberg(Augsburg)",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße"
+        ],
+        "line": "RB13"
+      },
+      {
+        "id": "-1075534163626666476-2510201919-18",
+        "type": "RE",
+        "number": "57083",
+        "time": "2510202034",
+        "platform": "7",
+        "path_stations": [
+          "Ulm Hbf",
+          "Neu-Ulm",
+          "Nersingen",
+          "Leipheim",
+          "Günzburg",
+          "Offingen",
+          "Mindelaltheim",
+          "Burgau(Schwab)",
+          "Jettingen",
+          "Freihalden",
+          "Dinkelscherben",
+          "Kutzenhausen",
+          "Gessertshausen",
+          "Diedorf(Schwab)",
+          "Westheim(Schwab)",
+          "Neusäß",
+          "Augsburg-Oberhausen"
+        ],
+        "line": "9"
+      },
+      {
+        "id": "4471729078023853954-2510201328-13",
+        "type": "ICE",
+        "number": "691",
+        "time": "2510202041",
+        "platform": "4",
+        "path_stations": [
+          "Berlin Hbf",
+          "Stendal Hbf",
+          "Wolfsburg Hbf",
+          "Braunschweig Hbf",
+          "Hildesheim Hbf",
+          "Göttingen",
+          "Kassel-Wilhelmshöhe",
+          "Fulda",
+          "Frankfurt(Main)Hbf",
+          "Mannheim Hbf",
+          "Stuttgart Hbf",
+          "Ulm Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-3471876550272840599-2510201920-12",
+        "type": "RB",
+        "number": "57081",
+        "time": "2510202000",
+        "platform": "8 A-C",
+        "path_stations": [
+          "Donauwörth",
+          "Bäumenheim",
+          "Mertingen Bahnhof",
+          "Nordendorf",
+          "Westendorf",
+          "Meitingen",
+          "Herbertshofen",
+          "Langweid(Lech)",
+          "Gablingen",
+          "Gersthofen",
+          "Augsburg-Oberhausen"
+        ],
+        "line": "87"
+      },
+      {
+        "id": "6525064366969089202-2510202003-8",
+        "type": "RB",
+        "number": "57180",
+        "time": "2510202046",
+        "platform": "5",
+        "path_stations": [
+          "München Hbf",
+          "München-Pasing",
+          "Mering",
+          "Mering-St Afra",
+          "Kissing",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße"
+        ],
+        "line": "87"
+      },
+      {
+        "id": "-7235636669664161794-2510201838-17",
+        "type": "RE",
+        "number": "59131",
+        "time": "2510202029",
+        "platform": "8 C-E",
+        "path_stations": [
+          "Nürnberg Hbf",
+          "Schwabach",
+          "Roth",
+          "Unterheckenhofen",
+          "Georgensgmünd",
+          "Mühlstetten",
+          "Pleinfeld",
+          "Ellingen(Bay)",
+          "Weißenburg(Bay)",
+          "Treuchtlingen",
+          "Otting-Weilheim",
+          "Donauwörth",
+          "Mertingen Bahnhof",
+          "Nordendorf",
+          "Meitingen",
+          "Augsburg-Oberhausen"
+        ],
+        "line": "16"
+      },
+      {
+        "id": "-4829272067238729215-2510201906-8",
+        "type": "RE",
+        "number": "57517",
+        "time": "2510202020",
+        "platform": "9 A-C",
+        "path_stations": [
+          "Memmingen",
+          "Sontheim(Schwab)",
+          "Stetten(Schwab)",
+          "Mindelheim",
+          "Rammingen(Bay)",
+          "Türkheim(Bay)Bf",
+          "Buchloe"
+        ],
+        "line": "71"
+      },
+      {
+        "id": "-8492978092935438453-2510201935-8",
+        "type": "RB",
+        "number": "57078",
+        "time": "2510202020",
+        "platform": "3",
+        "path_stations": [
+          "München Hbf",
+          "München-Pasing",
+          "Mering",
+          "Mering-St Afra",
+          "Kissing",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße"
+        ],
+        "line": "89"
+      },
+      {
+        "id": "1541016340931134365-2510201820-17",
+        "type": "BRB",
+        "number": "62791",
+        "time": "2510202009",
+        "platform": "12 C-E",
+        "path_stations": [
+          "Füssen",
+          "Weizern-Hopferau",
+          "Seeg",
+          "Lengenwang",
+          "Leuterschach",
+          "Marktoberdorf Schule",
+          "Marktoberdorf",
+          "Ebenhofen",
+          "Biessenhofen",
+          "Kaufbeuren",
+          "Buchloe",
+          "Schwabmünchen",
+          "Bobingen",
+          "Inningen",
+          "Augsburg Messe",
+          "Augsburg Morellstr."
+        ],
+        "line": "RB77"
+      },
+      {
+        "id": "-8388647908545523408-2510202003-8",
+        "type": "RB",
+        "number": "57080",
+        "time": "2510202046",
+        "platform": "5",
+        "path_stations": [
+          "München Hbf",
+          "München-Pasing",
+          "Mering",
+          "Mering-St Afra",
+          "Kissing",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße"
+        ],
+        "line": "86"
+      },
+      {
+        "id": "9136983377466843461-2510201945-12",
+        "type": "BRB",
+        "number": "62947",
+        "time": "2510202042",
+        "platform": "12 C-E",
+        "path_stations": [
+          "Landsberg(Lech)",
+          "Landsberg(L)Schule",
+          "Kaufering",
+          "Klosterlechfeld",
+          "Lagerlechfeld",
+          "Graben(Lechfeld)Gewerbepark",
+          "Oberottmarshausen",
+          "Bobingen",
+          "Inningen",
+          "Augsburg Messe",
+          "Augsburg Morellstr."
+        ],
+        "line": "RB69"
+      },
+      {
+        "id": "-2359847737515606668-2510201933-8",
+        "type": "RB",
+        "number": "57181",
+        "time": "2510202004",
+        "platform": "8 C-E",
+        "path_stations": [
+          "Dinkelscherben",
+          "Kutzenhausen",
+          "Gessertshausen",
+          "Diedorf(Schwab)",
+          "Westheim(Schwab)",
+          "Neusäß",
+          "Augsburg-Oberhausen"
+        ],
+        "line": "86"
+      },
+      {
+        "id": "-5235249208700751601-2510201646-8",
+        "type": "ICE",
+        "number": "1013",
+        "time": "2510202054",
+        "platform": "4",
+        "path_stations": [
+          "Düsseldorf Hbf",
+          "Köln Messe/Deutz Gl.11-12",
+          "Siegburg/Bonn",
+          "Frankfurt(M) Flughafen Fernbf",
+          "Mannheim Hbf",
+          "Stuttgart Hbf",
+          "Ulm Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "7280991471195430281-2510201805-5",
+        "type": "ICE",
+        "number": "1069",
+        "time": "2510202022",
+        "platform": "4",
+        "path_stations": [
+          "Karlsruhe Hbf",
+          "Bruchsal",
+          "Stuttgart Hbf",
+          "Ulm Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "8050570540025011394-2510201434-8",
+        "type": "ICE",
+        "number": "709",
+        "time": "2510202009",
+        "platform": "4",
+        "path_stations": [
+          "Berlin Hbf",
+          "Bitterfeld",
+          "Leipzig Hbf",
+          "Erfurt Hbf",
+          "Bamberg",
+          "Nürnberg Hbf",
+          "Donauwörth"
+        ],
+        "line": ""
+      },
+      {
+        "id": "3908522583546497389-2510202012-2",
+        "type": "BRB",
+        "number": "28833",
+        "time": "2510202015",
+        "platform": "8 A-C",
+        "path_stations": [
+          "Augsburg-Oberhausen"
+        ],
+        "line": "RB67"
+      },
+      {
+        "id": "8322424274180843926-2510201927-3",
+        "type": "ICE",
+        "number": "510",
+        "time": "2510201959",
+        "platform": "1",
+        "path_stations": [
+          "München Hbf",
+          "München-Pasing"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-3562027429123750762-2510201935-4",
+        "type": "RE",
+        "number": "57537",
+        "time": "2510202020",
+        "platform": "9 A-C",
+        "path_stations": [
+          "Bad Wörishofen",
+          "Türkheim(Bay)Bf",
+          "Buchloe"
+        ],
+        "line": "73"
+      },
+      {
+        "id": "-530921157149495475-2510201959-11",
+        "type": "BRB",
+        "number": "28834",
+        "time": "2510202039",
+        "platform": "5 C-E",
+        "path_stations": [
+          "Geltendorf",
+          "Walleshausen",
+          "Egling",
+          "Schmiechen(Schwab)",
+          "Merching",
+          "Mering",
+          "Mering-St Afra",
+          "Kissing",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße"
+        ],
+        "line": "RB67"
+      },
+      {
+        "id": "-8959018065734509300-2510201818-9",
+        "type": "ICE",
+        "number": "1099",
+        "time": "2510202140",
+        "platform": "4",
+        "path_stations": [
+          "Frankfurt(Main)Hbf",
+          "Darmstadt Hbf",
+          "Bensheim",
+          "Weinheim(Bergstr)Hbf",
+          "Heidelberg Hbf",
+          "Stuttgart Hbf",
+          "Ulm Hbf",
+          "Günzburg"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-2320340282101811304-2510202043-3",
+        "type": "ICE",
+        "number": "990",
+        "time": "2510202113",
+        "platform": "1",
+        "path_stations": [
+          "München Hbf",
+          "München-Pasing"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-4769796874542577189-2510202009-11",
+        "type": "BRB",
+        "number": "86745",
+        "time": "2510202108",
+        "platform": "101",
+        "path_stations": [
+          "Ingolstadt Hbf",
+          "Brunnen(Oberbay)",
+          "Schrobenhausen",
+          "Radersdorf",
+          "Aichach",
+          "Obergriesbach",
+          "Dasing",
+          "Friedberg(Augsburg)",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße"
+        ],
+        "line": "RB13"
+      },
+      {
+        "id": "2697708217939048507-2510202059-11",
+        "type": "BRB",
+        "number": "28836",
+        "time": "2510202138",
+        "platform": "5 C-E",
+        "path_stations": [
+          "Geltendorf",
+          "Walleshausen",
+          "Egling",
+          "Schmiechen(Schwab)",
+          "Merching",
+          "Mering",
+          "Mering-St Afra",
+          "Kissing",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße"
+        ],
+        "line": "RB67"
+      },
+      {
+        "id": "4876412217104662801-2510201555-7",
+        "type": "TGV",
+        "number": "9577",
+        "time": "2510202104",
+        "platform": "4",
+        "path_stations": [
+          "Paris Est",
+          "Strasbourg",
+          "Kehl",
+          "Karlsruhe Hbf",
+          "Stuttgart Hbf",
+          "Ulm Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-8234085367482508756-2510202018-18",
+        "type": "RE",
+        "number": "57183",
+        "time": "2510202133",
+        "platform": "8",
+        "path_stations": [
+          "Ulm Hbf",
+          "Neu-Ulm",
+          "Nersingen",
+          "Leipheim",
+          "Günzburg",
+          "Offingen",
+          "Mindelaltheim",
+          "Burgau(Schwab)",
+          "Jettingen",
+          "Freihalden",
+          "Dinkelscherben",
+          "Kutzenhausen",
+          "Gessertshausen",
+          "Diedorf(Schwab)",
+          "Westheim(Schwab)",
+          "Neusäß",
+          "Augsburg-Oberhausen"
+        ],
+        "line": "9"
+      },
+      {
+        "id": "2179186552234065450-2510202019-7",
+        "type": "RE",
+        "number": "3287",
+        "time": "2510202120",
+        "platform": "10 C-E",
+        "path_stations": [
+          "Kempten(Allgäu)Hbf",
+          "Kaufbeuren",
+          "Buchloe",
+          "Schwabmünchen",
+          "Bobingen",
+          "Inningen"
+        ],
+        "line": "7"
+      },
+      {
+        "id": "5822378549779729152-2510202057-11",
+        "type": "RE",
+        "number": "57084",
+        "time": "2510202146",
+        "platform": "5",
+        "path_stations": [
+          "München Hbf",
+          "München-Pasing",
+          "Mammendorf",
+          "Haspelmoor",
+          "Althegnenberg",
+          "Mering",
+          "Mering-St Afra",
+          "Kissing",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße"
+        ],
+        "line": "9"
+      },
+      {
+        "id": "5717325320137192082-2510202022-11",
+        "type": "RB",
+        "number": "57082",
+        "time": "2510202115",
+        "platform": "5",
+        "path_stations": [
+          "München Hbf",
+          "München-Pasing",
+          "Mammendorf",
+          "Haspelmoor",
+          "Althegnenberg",
+          "Mering",
+          "Mering-St Afra",
+          "Kissing",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße"
+        ],
+        "line": "87"
+      },
+      {
+        "id": "-5881335852882080257-2510202019-9",
+        "type": "RE",
+        "number": "57185",
+        "time": "2510202128",
+        "platform": "9 A-C",
+        "path_stations": [
+          "Gunzenhausen",
+          "Treuchtlingen",
+          "Otting-Weilheim",
+          "Donauwörth",
+          "Mertingen Bahnhof",
+          "Nordendorf",
+          "Meitingen",
+          "Augsburg-Oberhausen"
+        ],
+        "line": "80"
+      },
+      {
+        "id": "-8066331694575326723-2510202114-2",
+        "type": "BRB",
+        "number": "28835",
+        "time": "2510202117",
+        "platform": "7 A-C",
+        "path_stations": [
+          "Augsburg-Oberhausen"
+        ],
+        "line": "RB67"
+      },
+      {
+        "id": "-511866851090640032-2510202020-12",
+        "type": "RB",
+        "number": "57257",
+        "time": "2510202100",
+        "platform": "7",
+        "path_stations": [
+          "Donauwörth",
+          "Bäumenheim",
+          "Mertingen Bahnhof",
+          "Nordendorf",
+          "Westendorf",
+          "Meitingen",
+          "Herbertshofen",
+          "Langweid(Lech)",
+          "Gablingen",
+          "Gersthofen",
+          "Augsburg-Oberhausen"
+        ],
+        "line": "87"
+      },
+      {
+        "id": "-1073134180640803249-2510202038-7",
+        "type": "BRB",
+        "number": "62793",
+        "time": "2510202109",
+        "platform": "8 A-C",
+        "path_stations": [
+          "Buchloe",
+          "Schwabmünchen",
+          "Bobingen",
+          "Inningen",
+          "Augsburg Messe",
+          "Augsburg Morellstr."
+        ],
+        "line": "RB77"
+      },
+      {
+        "id": "5295243416856313869-2510201237-18",
+        "type": "ICE",
+        "number": "613",
+        "time": "2510202153",
+        "platform": "4",
+        "path_stations": [
+          "Kiel Hbf",
+          "Neumünster",
+          "Hamburg Dammtor",
+          "Hamburg Hbf",
+          "Hamburg-Harburg",
+          "Bremen Hbf",
+          "Osnabrück Hbf",
+          "Münster(Westf)Hbf",
+          "Dortmund Hbf",
+          "Hagen Hbf",
+          "Wuppertal Hbf",
+          "Solingen Hbf",
+          "Köln Hbf",
+          "Frankfurt(M) Flughafen Fernbf",
+          "Mannheim Hbf",
+          "Stuttgart Hbf",
+          "Ulm Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "8803799214306376762-2510201608-13",
+        "type": "WB",
+        "number": "966",
+        "time": "2510202100",
+        "platform": "1",
+        "path_stations": [
+          "Wien Westbahnhof",
+          "Wien Hütteldorf",
+          "St.Pölten Hbf",
+          "Amstetten NÖ",
+          "Linz Hbf",
+          "Wels Hbf",
+          "Attnang-Puchheim",
+          "Vöcklabruck",
+          "Salzburg Hbf",
+          "Rosenheim",
+          "München Ost",
+          "München Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-8310733878175700848-2510201944-21",
+        "type": "RE",
+        "number": "57085",
+        "time": "2510202128",
+        "platform": "9 A-C",
+        "path_stations": [
+          "Aalen Hbf",
+          "Wasseralfingen",
+          "Goldshöfe",
+          "Westhausen",
+          "Lauchheim",
+          "Aufhausen(Württ)",
+          "Bopfingen",
+          "Trochtelfingen(b Bopfingen)",
+          "Pflaumloch",
+          "Nördlingen",
+          "Möttingen",
+          "Hoppingen",
+          "Harburg(Schwab)",
+          "Ebermergen",
+          "Wörnitzstein",
+          "Donauwörth",
+          "Mertingen Bahnhof",
+          "Nordendorf",
+          "Meitingen",
+          "Augsburg-Oberhausen"
+        ],
+        "line": "89"
+      },
+      {
+        "id": "3060027256655949343-2510202045-12",
+        "type": "BRB",
+        "number": "62949",
+        "time": "2510202144",
+        "platform": "12 C-E",
+        "path_stations": [
+          "Landsberg(Lech)",
+          "Landsberg(L)Schule",
+          "Kaufering",
+          "Klosterlechfeld",
+          "Lagerlechfeld",
+          "Graben(Lechfeld)Gewerbepark",
+          "Oberottmarshausen",
+          "Bobingen",
+          "Inningen",
+          "Augsburg Messe",
+          "Augsburg Morellstr."
+        ],
+        "line": "RB69"
+      },
+      {
+        "id": "9087845597939331086-2510202213-2",
+        "type": "BRB",
+        "number": "28837",
+        "time": "2510202215",
+        "platform": "6 A-B",
+        "path_stations": [
+          "Augsburg-Oberhausen"
+        ],
+        "line": "RB67"
+      },
+      {
+        "id": "-8675610531658838681-2510202145-12",
+        "type": "BRB",
+        "number": "62951",
+        "time": "2510202243",
+        "platform": "12 C-E",
+        "path_stations": [
+          "Landsberg(Lech)",
+          "Landsberg(L)Schule",
+          "Kaufering",
+          "Klosterlechfeld",
+          "Lagerlechfeld",
+          "Graben(Lechfeld)Gewerbepark",
+          "Oberottmarshausen",
+          "Bobingen",
+          "Inningen",
+          "Augsburg Messe",
+          "Augsburg Morellstr."
+        ],
+        "line": "RB69"
+      },
+      {
+        "id": "6746955278691408993-2510202029-4",
+        "type": "EN",
+        "number": "50237",
+        "time": "2510202248",
+        "platform": "5",
+        "path_stations": [
+          "Stuttgart Hbf",
+          "Göppingen",
+          "Ulm Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "6174709018733740648-2510202020-17",
+        "type": "BRB",
+        "number": "62795",
+        "time": "2510202209",
+        "platform": "10 C-E",
+        "path_stations": [
+          "Füssen",
+          "Weizern-Hopferau",
+          "Seeg",
+          "Lengenwang",
+          "Leuterschach",
+          "Marktoberdorf Schule",
+          "Marktoberdorf",
+          "Ebenhofen",
+          "Biessenhofen",
+          "Kaufbeuren",
+          "Buchloe",
+          "Schwabmünchen",
+          "Bobingen",
+          "Inningen",
+          "Augsburg Messe",
+          "Augsburg Morellstr."
+        ],
+        "line": "RB77"
+      },
+      {
+        "id": "4904604235229839941-2510202108-11",
+        "type": "BRB",
+        "number": "86747",
+        "time": "2510202208",
+        "platform": "2 A-B",
+        "path_stations": [
+          "Ingolstadt Hbf",
+          "Brunnen(Oberbay)",
+          "Schrobenhausen",
+          "Radersdorf",
+          "Aichach",
+          "Obergriesbach",
+          "Dasing",
+          "Friedberg(Augsburg)",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße"
+        ],
+        "line": "RB13"
+      },
+      {
+        "id": "3640656304426635503-2510202159-11",
+        "type": "BRB",
+        "number": "28838",
+        "time": "2510202237",
+        "platform": "6 C-E",
+        "path_stations": [
+          "Geltendorf",
+          "Walleshausen",
+          "Egling",
+          "Schmiechen(Schwab)",
+          "Merching",
+          "Mering",
+          "Mering-St Afra",
+          "Kissing",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße"
+        ],
+        "line": "RB67"
+      },
+      {
+        "id": "7108274583246193747-2510202152-2",
+        "type": "ICE",
+        "number": "698",
+        "time": "2510202217",
+        "platform": "1",
+        "path_stations": [
+          "München Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "3709050757667951658-2510202159-11",
+        "type": "RE",
+        "number": "57086",
+        "time": "2510202246",
+        "platform": "6",
+        "path_stations": [
+          "München Hbf",
+          "München-Pasing",
+          "Mammendorf",
+          "Haspelmoor",
+          "Althegnenberg",
+          "Mering",
+          "Mering-St Afra",
+          "Kissing",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße"
+        ],
+        "line": "89"
+      },
+      {
+        "id": "5949417852042325682-2510202029-4",
+        "type": "NJ",
+        "number": "237",
+        "time": "2510202248",
+        "platform": "5",
+        "path_stations": [
+          "Stuttgart Hbf",
+          "Göppingen",
+          "Ulm Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-1412524464226526551-2510201525-14",
+        "type": "ICE",
+        "number": "693",
+        "time": "2510202240",
+        "platform": "4",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin-Spandau",
+          "Stendal Hbf",
+          "Wolfsburg Hbf",
+          "Braunschweig Hbf",
+          "Hildesheim Hbf",
+          "Göttingen",
+          "Kassel-Wilhelmshöhe",
+          "Fulda",
+          "Frankfurt(Main)Hbf",
+          "Mannheim Hbf",
+          "Stuttgart Hbf",
+          "Ulm Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "2441251625409756695-2510202119-18",
+        "type": "RE",
+        "number": "57087",
+        "time": "2510202232",
+        "platform": "9 C-E",
+        "path_stations": [
+          "Ulm Hbf",
+          "Neu-Ulm",
+          "Nersingen",
+          "Leipheim",
+          "Günzburg",
+          "Offingen",
+          "Mindelaltheim",
+          "Burgau(Schwab)",
+          "Jettingen",
+          "Freihalden",
+          "Dinkelscherben",
+          "Kutzenhausen",
+          "Gessertshausen",
+          "Diedorf(Schwab)",
+          "Westheim(Schwab)",
+          "Neusäß",
+          "Augsburg-Oberhausen"
+        ],
+        "line": "9"
+      },
+      {
+        "id": "9032456421859921143-2510202119-12",
+        "type": "RB",
+        "number": "57259",
+        "time": "2510202201",
+        "platform": "9 A-C",
+        "path_stations": [
+          "Donauwörth",
+          "Bäumenheim",
+          "Mertingen Bahnhof",
+          "Nordendorf",
+          "Westendorf",
+          "Meitingen",
+          "Herbertshofen",
+          "Langweid(Lech)",
+          "Gablingen",
+          "Gersthofen",
+          "Augsburg-Oberhausen"
+        ],
+        "line": "87"
+      },
+      {
+        "id": "5410389489561193980-2510202107-10",
+        "type": "RE",
+        "number": "57519",
+        "time": "2510202226",
+        "platform": "12 C-E",
+        "path_stations": [
+          "Memmingen",
+          "Sontheim(Schwab)",
+          "Stetten(Schwab)",
+          "Mindelheim",
+          "Rammingen(Bay)",
+          "Türkheim(Bay)Bf",
+          "Buchloe",
+          "Schwabmünchen",
+          "Bobingen"
+        ],
+        "line": "71"
+      },
+      {
+        "id": "-6876729525690631277-2510201843-8",
+        "type": "ICE",
+        "number": "1015",
+        "time": "2510202254",
+        "platform": "4",
+        "path_stations": [
+          "Düsseldorf Hbf",
+          "Köln Messe/Deutz Gl.11-12",
+          "Siegburg/Bonn",
+          "Frankfurt(M) Flughafen Fernbf",
+          "Mannheim Hbf",
+          "Stuttgart Hbf",
+          "Ulm Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-7226604022876462423-2510202029-4",
+        "type": "EN",
+        "number": "40237",
+        "time": "2510202248",
+        "platform": "5",
+        "path_stations": [
+          "Stuttgart Hbf",
+          "Göppingen",
+          "Ulm Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-5425302918995479956-2510201529-17",
+        "type": "ICE",
+        "number": "615",
+        "time": "2510202353",
+        "platform": "4",
+        "path_stations": [
+          "Hamburg-Altona",
+          "Hamburg Dammtor",
+          "Hamburg Hbf",
+          "Hamburg-Harburg",
+          "Bremen Hbf",
+          "Osnabrück Hbf",
+          "Münster(Westf)Hbf",
+          "Dortmund Hbf",
+          "Hagen Hbf",
+          "Wuppertal Hbf",
+          "Solingen Hbf",
+          "Köln Hbf",
+          "Frankfurt(M) Flughafen Fernbf",
+          "Mannheim Hbf",
+          "Stuttgart Hbf",
+          "Ulm Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-5310472404710805800-2510202312-2",
+        "type": "BRB",
+        "number": "28839",
+        "time": "2510202315",
+        "platform": "7 A-C",
+        "path_stations": [
+          "Augsburg-Oberhausen"
+        ],
+        "line": "RB67"
+      },
+      {
+        "id": "6746955278691408993-2510202029-4",
+        "type": "EN",
+        "number": "50237",
+        "time": "2510202248",
+        "platform": "5",
+        "path_stations": [
+          "Stuttgart Hbf",
+          "Göppingen",
+          "Ulm Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "9157866427519413881-2510202258-11",
+        "type": "RE",
+        "number": "57088",
+        "time": "2510202346",
+        "platform": "5",
+        "path_stations": [
+          "München Hbf",
+          "München-Pasing",
+          "Mammendorf",
+          "Haspelmoor",
+          "Althegnenberg",
+          "Mering",
+          "Mering-St Afra",
+          "Kissing",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße"
+        ],
+        "line": "9"
+      },
+      {
+        "id": "4990574524683944018-2510202245-12",
+        "type": "BRB",
+        "number": "62953",
+        "time": "2510202344",
+        "platform": "12 C-E",
+        "path_stations": [
+          "Landsberg(Lech)",
+          "Landsberg(L)Schule",
+          "Kaufering",
+          "Klosterlechfeld",
+          "Lagerlechfeld",
+          "Graben(Lechfeld)Gewerbepark",
+          "Oberottmarshausen",
+          "Bobingen",
+          "Inningen",
+          "Augsburg Messe",
+          "Augsburg Morellstr."
+        ],
+        "line": "RB69"
+      },
+      {
+        "id": "5949417852042325682-2510202029-4",
+        "type": "NJ",
+        "number": "237",
+        "time": "2510202248",
+        "platform": "5",
+        "path_stations": [
+          "Stuttgart Hbf",
+          "Göppingen",
+          "Ulm Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-73867752890473259-2510202123-17",
+        "type": "BRB",
+        "number": "62797",
+        "time": "2510202309",
+        "platform": "10 A-C",
+        "path_stations": [
+          "Füssen",
+          "Weizern-Hopferau",
+          "Seeg",
+          "Lengenwang",
+          "Leuterschach",
+          "Marktoberdorf Schule",
+          "Marktoberdorf",
+          "Ebenhofen",
+          "Biessenhofen",
+          "Kaufbeuren",
+          "Buchloe",
+          "Schwabmünchen",
+          "Bobingen",
+          "Inningen",
+          "Augsburg Messe",
+          "Augsburg Morellstr."
+        ],
+        "line": "RB77"
+      },
+      {
+        "id": "-8285676644023140801-2510202137-8",
+        "type": "Bus",
+        "number": "59133",
+        "time": "2510202337",
+        "platform": "",
+        "path_stations": [
+          "Treuchtlingen",
+          "Otting-Weilheim",
+          "Donauwörth",
+          "Mertingen Bahnhof",
+          "Nordendorf",
+          "Meitingen",
+          "Augsburg-Oberhausen"
+        ],
+        "line": "EV"
+      },
+      {
+        "id": "6449613228243482585-2510202353-2",
+        "type": "BRB",
+        "number": "86595",
+        "time": "2510202356",
+        "platform": "6 A-B",
+        "path_stations": [
+          "Augsburg-Oberhausen"
+        ],
+        "line": "RB67"
+      },
+      {
+        "id": "-6095734434880315155-2510202218-10",
+        "type": "RE",
+        "number": "3295",
+        "time": "2510202325",
+        "platform": "8",
+        "path_stations": [
+          "Kempten(Allgäu)Hbf",
+          "Günzach",
+          "Kaufbeuren",
+          "Buchloe",
+          "Schwabmünchen",
+          "Bobingen",
+          "Inningen",
+          "Augsburg Messe",
+          "Augsburg Morellstr."
+        ],
+        "line": "7"
+      },
+      {
+        "id": "-6940863621314051564-2510202208-11",
+        "type": "BRB",
+        "number": "86749",
+        "time": "2510202308",
+        "platform": "2 A-B",
+        "path_stations": [
+          "Ingolstadt Hbf",
+          "Brunnen(Oberbay)",
+          "Schrobenhausen",
+          "Radersdorf",
+          "Aichach",
+          "Obergriesbach",
+          "Dasing",
+          "Friedberg(Augsburg)",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße"
+        ],
+        "line": "RB13"
+      },
+      {
+        "id": "179162183929136680-2510202219-18",
+        "type": "RE",
+        "number": "57089",
+        "time": "2510202336",
+        "platform": "9 A-C",
+        "path_stations": [
+          "Ulm Hbf",
+          "Neu-Ulm",
+          "Nersingen",
+          "Leipheim",
+          "Günzburg",
+          "Offingen",
+          "Mindelaltheim",
+          "Burgau(Schwab)",
+          "Jettingen",
+          "Freihalden",
+          "Dinkelscherben",
+          "Kutzenhausen",
+          "Gessertshausen",
+          "Diedorf(Schwab)",
+          "Westheim(Schwab)",
+          "Neusäß",
+          "Augsburg-Oberhausen"
+        ],
+        "line": "9"
+      },
+      {
+        "id": "-5449674689628191425-2510202259-11",
+        "type": "BRB",
+        "number": "28840",
+        "time": "2510202338",
+        "platform": "5 C-E",
+        "path_stations": [
+          "Geltendorf",
+          "Walleshausen",
+          "Egling",
+          "Schmiechen(Schwab)",
+          "Merching",
+          "Mering",
+          "Mering-St Afra",
+          "Kissing",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße"
+        ],
+        "line": "RB67"
+      },
+      {
+        "id": "4747644076881825118-2510202245-3",
+        "type": "ICE",
+        "number": "1060",
+        "time": "2510202315",
+        "platform": "1",
+        "path_stations": [
+          "München Hbf",
+          "München-Pasing"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-7226604022876462423-2510202029-4",
+        "type": "EN",
+        "number": "40237",
+        "time": "2510202248",
+        "platform": "5",
+        "path_stations": [
+          "Stuttgart Hbf",
+          "Göppingen",
+          "Ulm Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "2686007473625185344-2510210000-3",
+        "type": "ICE",
+        "number": "618",
+        "time": "2510210029",
+        "platform": "1",
+        "path_stations": [
+          "München Hbf",
+          "München-Pasing"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-2117726194312836395-2510202307-13",
+        "type": "RE",
+        "number": "57521",
+        "time": "2510210046",
+        "platform": "10 A-C",
+        "path_stations": [
+          "Memmingen",
+          "Sontheim(Schwab)",
+          "Stetten(Schwab)",
+          "Mindelheim",
+          "Rammingen(Bay)",
+          "Türkheim(Bay)Bf",
+          "Buchloe",
+          "Schwabmünchen",
+          "Bobingen",
+          "Inningen",
+          "Augsburg Messe",
+          "Augsburg Morellstr."
+        ],
+        "line": "71"
+      },
+      {
+        "id": "3292093239126572118-2510210005-11",
+        "type": "BRB",
+        "number": "28842",
+        "time": "2510210043",
+        "platform": "5 C-E",
+        "path_stations": [
+          "Geltendorf",
+          "Walleshausen",
+          "Egling",
+          "Schmiechen(Schwab)",
+          "Merching",
+          "Mering",
+          "Mering-St Afra",
+          "Kissing",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße"
+        ],
+        "line": "RB67"
+      },
+      {
+        "id": "-8506992454186612126-2510202346-8",
+        "type": "BRB",
+        "number": "62955",
+        "time": "2510210013",
+        "platform": "9",
+        "path_stations": [
+          "Lagerlechfeld",
+          "Graben(Lechfeld)Gewerbepark",
+          "Oberottmarshausen",
+          "Bobingen",
+          "Inningen",
+          "Augsburg Messe",
+          "Augsburg Morellstr."
+        ],
+        "line": "RB69"
+      },
+      {
+        "id": "-1621672876699348789-2510210006-11",
+        "type": "RE",
+        "number": "57000",
+        "time": "2510210053",
+        "platform": "6",
+        "path_stations": [
+          "München Hbf",
+          "München-Pasing",
+          "Mammendorf",
+          "Haspelmoor",
+          "Althegnenberg",
+          "Mering",
+          "Mering-St Afra",
+          "Kissing",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße"
+        ],
+        "line": "9"
+      },
+      {
+        "id": "1647016829303373226-2510202308-11",
+        "type": "BRB",
+        "number": "86751",
+        "time": "2510210008",
+        "platform": "2 A-B",
+        "path_stations": [
+          "Ingolstadt Hbf",
+          "Brunnen(Oberbay)",
+          "Schrobenhausen",
+          "Radersdorf",
+          "Aichach",
+          "Obergriesbach",
+          "Dasing",
+          "Friedberg(Augsburg)",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße"
+        ],
+        "line": "RB13"
+      },
+      {
+        "id": "-6075418217470310351-2510202354-4",
+        "type": "RB",
+        "number": "57193",
+        "time": "2510210006",
+        "platform": "8 A-C",
+        "path_stations": [
+          "Gablingen",
+          "Gersthofen",
+          "Augsburg-Oberhausen"
+        ],
+        "line": "87"
+      },
+      {
+        "id": "3551238406803165030-2510210038-11",
+        "type": "BRB",
+        "number": "86625",
+        "time": "2510210134",
+        "platform": "2 A-B",
+        "path_stations": [
+          "Ingolstadt Hbf",
+          "Brunnen(Oberbay)",
+          "Schrobenhausen",
+          "Radersdorf",
+          "Aichach",
+          "Obergriesbach",
+          "Dasing",
+          "Friedberg(Augsburg)",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße"
+        ],
+        "line": "RB13"
+      },
+      {
+        "id": "5673424143814683803-2510210046-6",
+        "type": "BRB",
+        "number": "86606",
+        "time": "2510210107",
+        "platform": "8 A-C",
+        "path_stations": [
+          "Mering",
+          "Mering-St Afra",
+          "Kissing",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße"
+        ],
+        "line": "RB67"
+      },
+      {
+        "id": "2673171754462196046-2510210437-2",
+        "type": "BRB",
+        "number": "28801",
+        "time": "2510210440",
+        "platform": "7",
+        "path_stations": [
+          "Augsburg-Oberhausen"
+        ],
+        "line": "RB67"
+      },
+      {
+        "id": "-8624992757107064587-2510210331-3",
+        "type": "ICE",
+        "number": "616",
+        "time": "2510210402",
+        "platform": "1",
+        "path_stations": [
+          "München Hbf",
+          "München-Pasing"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-4818673389474582712-2510210425-8",
+        "type": "RB",
+        "number": "57005",
+        "time": "2510210451",
+        "platform": "8",
+        "path_stations": [
+          "Dinkelscherben",
+          "Kutzenhausen",
+          "Gessertshausen",
+          "Diedorf(Schwab)",
+          "Westheim(Schwab)",
+          "Neusäß",
+          "Augsburg-Oberhausen"
+        ],
+        "line": "86"
+      },
+      {
+        "id": "1261775079518102950-2510210444-4",
+        "type": "RB",
+        "number": "57105",
+        "time": "2510210455",
+        "platform": "8 C-E",
+        "path_stations": [
+          "Gablingen",
+          "Gersthofen",
+          "Augsburg-Oberhausen"
+        ],
+        "line": "87"
+      },
+      {
+        "id": "-2394412459609983872-2510210536-2",
+        "type": "BRB",
+        "number": "28803",
+        "time": "2510210539",
+        "platform": "8",
+        "path_stations": [
+          "Augsburg-Oberhausen"
+        ],
+        "line": "RB67"
+      },
+      {
+        "id": "1360190811462989129-2510210504-7",
+        "type": "BRB",
+        "number": "86627",
+        "time": "2510210529",
+        "platform": "101",
+        "path_stations": [
+          "Aichach",
+          "Obergriesbach",
+          "Dasing",
+          "Friedberg(Augsburg)",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße"
+        ],
+        "line": "RB13"
+      },
+      {
+        "id": "4061735120889363778-2510210502-8",
+        "type": "RB",
+        "number": "57107",
+        "time": "2510210529",
+        "platform": "7",
+        "path_stations": [
+          "Dinkelscherben",
+          "Kutzenhausen",
+          "Gessertshausen",
+          "Diedorf(Schwab)",
+          "Westheim(Schwab)",
+          "Neusäß",
+          "Augsburg-Oberhausen"
+        ],
+        "line": "86"
+      },
+      {
+        "id": "5076139208089852075-2510210442-12",
+        "type": "RB",
+        "number": "57007",
+        "time": "2510210522",
+        "platform": "7",
+        "path_stations": [
+          "Donauwörth",
+          "Bäumenheim",
+          "Mertingen Bahnhof",
+          "Nordendorf",
+          "Westendorf",
+          "Meitingen",
+          "Herbertshofen",
+          "Langweid(Lech)",
+          "Gablingen",
+          "Gersthofen",
+          "Augsburg-Oberhausen"
+        ],
+        "line": "87"
+      },
+      {
+        "id": "-6457792526093672155-2510210454-6",
+        "type": "RE",
+        "number": "57004",
+        "time": "2510210512",
+        "platform": "5",
+        "path_stations": [
+          "Mering",
+          "Mering-St Afra",
+          "Kissing",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße"
+        ],
+        "line": "9"
+      },
+      {
+        "id": "7474414276230536927-2510201838-22",
+        "type": "ICE",
+        "number": "619",
+        "time": "2510210530",
+        "platform": "4",
+        "path_stations": [
+          "Kiel Hbf",
+          "Neumünster",
+          "Hamburg Dammtor",
+          "Hamburg Hbf",
+          "Hamburg-Harburg",
+          "Bremen Hbf",
+          "Osnabrück Hbf",
+          "Münster(Westf)Hbf",
+          "Recklinghausen Hbf",
+          "Essen Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Hbf",
+          "Köln Hbf",
+          "Siegburg/Bonn",
+          "Frankfurt(M) Flughafen Fernbf",
+          "Frankfurt(Main)Hbf",
+          "Mannheim Hbf",
+          "Heidelberg Hbf",
+          "Stuttgart Hbf",
+          "Ulm Hbf",
+          "Günzburg"
+        ],
+        "line": ""
+      },
+      {
+        "id": "1261775079518102950-2510210444-4",
+        "type": "RB",
+        "number": "57105",
+        "time": "2510210455",
+        "platform": "8 C-E",
+        "path_stations": [
+          "Gablingen",
+          "Gersthofen",
+          "Augsburg-Oberhausen"
+        ],
+        "line": "87"
+      },
+      {
+        "id": "2662972692212507122-2510210506-3",
+        "type": "ICE",
+        "number": "804",
+        "time": "2510210539",
+        "platform": "1",
+        "path_stations": [
+          "München Hbf",
+          "München-Pasing"
+        ],
+        "line": ""
+      },
+      {
+        "id": "1847313071699172804-2510210459-3",
+        "type": "ICE",
+        "number": "1068",
+        "time": "2510210533",
+        "platform": "1",
+        "path_stations": [
+          "München Hbf",
+          "München-Pasing"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-2202733089513772847-2510210433-11",
+        "type": "RE",
+        "number": "57401",
+        "time": "2510210555",
+        "platform": "12 C-E",
+        "path_stations": [
+          "Kempten(Allgäu)Hbf",
+          "Günzach",
+          "Biessenhofen",
+          "Kaufbeuren",
+          "Buchloe",
+          "Schwabmünchen",
+          "Bobingen",
+          "Inningen",
+          "Augsburg Messe",
+          "Augsburg Morellstr."
+        ],
+        "line": "79"
+      },
+      {
+        "id": "-7072675174493931063-2510210519-6",
+        "type": "BRB",
+        "number": "86500",
+        "time": "2510210537",
+        "platform": "7",
+        "path_stations": [
+          "Mering",
+          "Mering-St Afra",
+          "Kissing",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße"
+        ],
+        "line": "RB67"
+      },
+      {
+        "id": "-3459153264638320511-2510210453-7",
+        "type": "BRB",
+        "number": "62715",
+        "time": "2510210527",
+        "platform": "10 C-E",
+        "path_stations": [
+          "Buchloe",
+          "Schwabmünchen",
+          "Bobingen",
+          "Inningen",
+          "Augsburg Messe",
+          "Augsburg Morellstr."
+        ],
+        "line": "RB77"
+      },
+      {
+        "id": "-4818673389474582712-2510210425-8",
+        "type": "RB",
+        "number": "57005",
+        "time": "2510210451",
+        "platform": "8",
+        "path_stations": [
+          "Dinkelscherben",
+          "Kutzenhausen",
+          "Gessertshausen",
+          "Diedorf(Schwab)",
+          "Westheim(Schwab)",
+          "Neusäß",
+          "Augsburg-Oberhausen"
+        ],
+        "line": "86"
+      }
+    ],
+    "departures": [
+      {
+        "id": "3905930457733512231-2510201702-1",
+        "type": "BRB",
+        "number": "86722",
+        "direction": "Friedberg(Augsburg)",
+        "platform": "101",
+        "time": "2510201702",
+        "destination": "Friedberg(Augsburg)",
+        "path_stations": [
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Friedberg(Augsburg)"
+        ]
+      },
+      {
+        "id": "8506890160780492652-2510201641-8",
+        "type": "RB",
+        "number": "57058",
+        "direction": "Nördlingen",
+        "platform": "6",
+        "time": "2510201733",
+        "destination": "Nördlingen",
+        "path_stations": [
+          "Augsburg-Oberhausen",
+          "Gersthofen",
+          "Gablingen",
+          "Langweid(Lech)",
+          "Herbertshofen",
+          "Meitingen",
+          "Westendorf",
+          "Nordendorf",
+          "Mertingen Bahnhof",
+          "Bäumenheim",
+          "Donauwörth",
+          "Wörnitzstein",
+          "Ebermergen",
+          "Harburg(Schwab)",
+          "Hoppingen",
+          "Möttingen",
+          "Nördlingen"
+        ]
+      },
+      {
+        "id": "882347703018965271-2510201659-11",
+        "type": "BRB",
+        "number": "28828",
+        "direction": "Augsburg-Oberhausen",
+        "platform": "5 C-E",
+        "time": "2510201746",
+        "destination": "Augsburg-Oberhausen",
+        "path_stations": [
+          "Augsburg-Oberhausen"
+        ]
+      },
+      {
+        "id": "8711679463121242866-2510201633-8",
+        "type": "RB",
+        "number": "57167",
+        "direction": "München Hbf",
+        "platform": "6",
+        "time": "2510201708",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Kissing",
+          "Mering-St Afra",
+          "Mering",
+          "Althegnenberg",
+          "Haspelmoor",
+          "Mammendorf",
+          "München-Pasing",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "8992764379286664706-2510201712-2",
+        "type": "BRB",
+        "number": "28827",
+        "direction": "Geltendorf",
+        "platform": "6 A-B",
+        "time": "2510201718",
+        "destination": "Geltendorf",
+        "path_stations": [
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Kissing",
+          "Mering-St Afra",
+          "Mering",
+          "Merching",
+          "Schmiechen(Schwab)",
+          "Egling",
+          "Walleshausen",
+          "Geltendorf"
+        ]
+      },
+      {
+        "id": "-619679491451458325-2510201727-1",
+        "type": "BRB",
+        "number": "86726",
+        "direction": "Friedberg(Augsburg)",
+        "platform": "501",
+        "time": "2510201727",
+        "destination": "Friedberg(Augsburg)",
+        "path_stations": [
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Friedberg(Augsburg)"
+        ]
+      },
+      {
+        "id": "-4659040351822619408-2510201635-8",
+        "type": "RE",
+        "number": "57056",
+        "direction": "Ulm Hbf",
+        "platform": "5",
+        "time": "2510201722",
+        "destination": "Ulm Hbf",
+        "path_stations": [
+          "Augsburg-Oberhausen",
+          "Neusäß",
+          "Westheim(Schwab)",
+          "Diedorf(Schwab)",
+          "Gessertshausen",
+          "Kutzenhausen",
+          "Dinkelscherben",
+          "Freihalden",
+          "Jettingen",
+          "Burgau(Schwab)",
+          "Mindelaltheim",
+          "Offingen",
+          "Günzburg",
+          "Leipheim",
+          "Nersingen",
+          "Neu-Ulm",
+          "Ulm Hbf"
+        ]
+      },
+      {
+        "id": "9042395260942796037-2510201419-9",
+        "type": "ICE",
+        "number": "117",
+        "direction": "Klagenfurt Hbf",
+        "platform": "4",
+        "time": "2510201741",
+        "destination": "Klagenfurt Hbf",
+        "path_stations": [
+          "München Hbf",
+          "München Ost",
+          "Rosenheim",
+          "Prien am Chiemsee",
+          "Traunstein",
+          "Freilassing",
+          "Salzburg Hbf",
+          "Golling-Abtenau",
+          "Bischofshofen",
+          "St. Johann im Pongau",
+          "Schwarzach-St.Veit",
+          "Bad Hofgastein",
+          "Bad Gastein",
+          "Mallnitz-Obervellach",
+          "Spittal-Millstättersee",
+          "Villach Hbf",
+          "Velden am Wörther See",
+          "Pörtschach am Wörther See",
+          "Krumpendorf/Wörthersee",
+          "Klagenfurt Hbf"
+        ]
+      },
+      {
+        "id": "-293311094429060174-2510201512-4",
+        "type": "WB",
+        "number": "969",
+        "direction": "Wien Westbahnhof",
+        "platform": "4",
+        "time": "2510201708",
+        "destination": "Wien Westbahnhof",
+        "path_stations": [
+          "München Hbf",
+          "München Ost",
+          "Rosenheim",
+          "Salzburg Hbf",
+          "Vöcklabruck",
+          "Attnang-Puchheim",
+          "Wels Hbf",
+          "Linz Hbf",
+          "Amstetten NÖ",
+          "St.Pölten Hbf",
+          "Wien Hütteldorf",
+          "Wien Westbahnhof"
+        ]
+      },
+      {
+        "id": "-8790051417330388129-2510201726-1",
+        "type": "RE",
+        "number": "59132",
+        "direction": "Nürnberg Hbf",
+        "platform": "7 C-E",
+        "time": "2510201726",
+        "destination": "Nürnberg Hbf",
+        "path_stations": [
+          "Augsburg-Oberhausen",
+          "Meitingen",
+          "Nordendorf",
+          "Mertingen Bahnhof",
+          "Donauwörth",
+          "Otting-Weilheim",
+          "Treuchtlingen",
+          "Weißenburg(Bay)",
+          "Ellingen(Bay)",
+          "Pleinfeld",
+          "Mühlstetten",
+          "Georgensgmünd",
+          "Unterheckenhofen",
+          "Roth",
+          "Schwabach",
+          "Nürnberg Hbf"
+        ]
+      },
+      {
+        "id": "-725633819366291972-2510201533-21",
+        "type": "RE",
+        "number": "57071",
+        "direction": "München Hbf",
+        "platform": "9",
+        "time": "2510201738",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Kissing",
+          "Mering-St Afra",
+          "Mering",
+          "München-Pasing",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "6657106991222813256-2510201732-1",
+        "type": "RB",
+        "number": "57069",
+        "direction": "München Hbf",
+        "platform": "8",
+        "time": "2510201732",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Kissing",
+          "Mering-St Afra",
+          "Mering",
+          "München-Pasing",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "-5932526768578681712-2510201745-1",
+        "type": "BRB",
+        "number": "86728",
+        "direction": "Ingolstadt Hbf",
+        "platform": "101",
+        "time": "2510201745",
+        "destination": "Ingolstadt Hbf",
+        "path_stations": [
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Friedberg(Augsburg)",
+          "Dasing",
+          "Obergriesbach",
+          "Aichach",
+          "Radersdorf",
+          "Schrobenhausen",
+          "Brunnen(Oberbay)",
+          "Ingolstadt Hbf"
+        ]
+      },
+      {
+        "id": "-5839465728859986182-2510201741-1",
+        "type": "RE",
+        "number": "57514",
+        "direction": "Bad Wörishofen",
+        "platform": "10 C-E",
+        "time": "2510201741",
+        "destination": "Bad Wörishofen",
+        "path_stations": [
+          "Buchloe",
+          "Türkheim(Bay)Bf",
+          "Bad Wörishofen"
+        ]
+      },
+      {
+        "id": "8723558896603301381-2510201658-3",
+        "type": "ICE",
+        "number": "266",
+        "direction": "Basel SBB",
+        "platform": "1",
+        "time": "2510201731",
+        "destination": "Basel SBB",
+        "path_stations": [
+          "Günzburg",
+          "Ulm Hbf",
+          "Stuttgart Hbf",
+          "Bruchsal",
+          "Karlsruhe Hbf",
+          "Baden-Baden",
+          "Offenburg",
+          "Lahr(Schwarzw)",
+          "Freiburg(Breisgau) Hbf",
+          "Müllheim im Markgräflerland",
+          "Weil am Rhein",
+          "Basel Bad Bf",
+          "Basel SBB"
+        ]
+      },
+      {
+        "id": "1631294551636002553-2510201619-9",
+        "type": "RE",
+        "number": "57171",
+        "direction": "München Hbf",
+        "platform": "9",
+        "time": "2510201738",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Kissing",
+          "Mering-St Afra",
+          "Mering",
+          "München-Pasing",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "-5684565015075810046-2510201731-1",
+        "type": "BRB",
+        "number": "62760",
+        "direction": "Schwabmünchen",
+        "platform": "12 C-E",
+        "time": "2510201731",
+        "destination": "Schwabmünchen",
+        "path_stations": [
+          "Augsburg Morellstr.",
+          "Augsburg Messe",
+          "Inningen",
+          "Bobingen",
+          "Schwabmünchen"
+        ]
+      },
+      {
+        "id": "-7724390263517347378-2510201709-3",
+        "type": "ICE",
+        "number": "702",
+        "direction": "Berlin Hbf",
+        "platform": "1",
+        "time": "2510201741",
+        "destination": "Berlin Hbf",
+        "path_stations": [
+          "Donauwörth",
+          "Treuchtlingen",
+          "Nürnberg Hbf",
+          "Bamberg",
+          "Erfurt Hbf",
+          "Leipzig Hbf",
+          "Bitterfeld",
+          "Berlin Hbf"
+        ]
+      },
+      {
+        "id": "-8471873024121272354-2510200929-17",
+        "type": "ICE",
+        "number": "519",
+        "direction": "München Hbf",
+        "platform": "4",
+        "time": "2510201755",
+        "destination": "München Hbf",
+        "path_stations": [
+          "München-Pasing",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "6052604170162718485-2510201714-1",
+        "type": "BRB",
+        "number": "86724",
+        "direction": "Aichach",
+        "platform": "2",
+        "time": "2510201714",
+        "destination": "Aichach",
+        "path_stations": [
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Friedberg(Augsburg)",
+          "Dasing",
+          "Obergriesbach",
+          "Aichach"
+        ]
+      },
+      {
+        "id": "1129717407319875572-2510201734-1",
+        "type": "BRB",
+        "number": "86624",
+        "direction": "Gessertshausen",
+        "platform": "12 A-C",
+        "time": "2510201734",
+        "destination": "Gessertshausen",
+        "path_stations": [
+          "Augsburg-Oberhausen",
+          "Neusäß",
+          "Westheim(Schwab)",
+          "Diedorf(Schwab)",
+          "Gessertshausen"
+        ]
+      },
+      {
+        "id": "-2007809943534273547-2510201620-12",
+        "type": "RB",
+        "number": "57067",
+        "direction": "München Hbf",
+        "platform": "6",
+        "time": "2510201708",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Kissing",
+          "Mering-St Afra",
+          "Mering",
+          "Althegnenberg",
+          "Haspelmoor",
+          "Mammendorf",
+          "München-Pasing",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "4365922452448918066-2510201741-2",
+        "type": "BRB",
+        "number": "86565",
+        "direction": "Mering",
+        "platform": "6 A-B",
+        "time": "2510201751",
+        "destination": "Mering",
+        "path_stations": [
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Kissing",
+          "Mering-St Afra",
+          "Mering"
+        ]
+      },
+      {
+        "id": "-6264648509796476021-2510201628-3",
+        "type": "ICE",
+        "number": "1212",
+        "direction": "Dortmund Hbf",
+        "platform": "1",
+        "time": "2510201701",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Ulm Hbf",
+          "Stuttgart Hbf",
+          "Mannheim Hbf",
+          "Frankfurt(M) Flughafen Fernbf",
+          "Siegburg/Bonn",
+          "Düsseldorf Hbf",
+          "Duisburg Hbf",
+          "Oberhausen Hbf",
+          "Gelsenkirchen Hbf",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "7537395545451740415-2510201727-3",
+        "type": "ICE",
+        "number": "512",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "1",
+        "time": "2510201801",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Ulm Hbf",
+          "Stuttgart Hbf",
+          "Mannheim Hbf",
+          "Frankfurt(M) Flughafen Fernbf",
+          "Siegburg/Bonn",
+          "Köln Hbf",
+          "Düsseldorf Hbf",
+          "Duisburg Hbf",
+          "Essen Hbf",
+          "Gelsenkirchen Hbf",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-2976273011815144718-2510201654-11",
+        "type": "RB",
+        "number": "57160",
+        "direction": "Donauwörth",
+        "platform": "5",
+        "time": "2510201754",
+        "destination": "Donauwörth",
+        "path_stations": [
+          "Augsburg-Oberhausen",
+          "Gersthofen",
+          "Gablingen",
+          "Langweid(Lech)",
+          "Herbertshofen",
+          "Meitingen",
+          "Westendorf",
+          "Nordendorf",
+          "Mertingen Bahnhof",
+          "Bäumenheim",
+          "Donauwörth"
+        ]
+      },
+      {
+        "id": "9004722026389089824-2510201748-1",
+        "type": "BRB",
+        "number": "62764",
+        "direction": "Füssen",
+        "platform": "7",
+        "time": "2510201748",
+        "destination": "Füssen",
+        "path_stations": [
+          "Augsburg Morellstr.",
+          "Augsburg Messe",
+          "Inningen",
+          "Bobingen",
+          "Schwabmünchen",
+          "Buchloe",
+          "Kaufbeuren",
+          "Biessenhofen",
+          "Ebenhofen",
+          "Marktoberdorf",
+          "Marktoberdorf Schule",
+          "Leuterschach",
+          "Lengenwang",
+          "Seeg",
+          "Weizern-Hopferau",
+          "Füssen"
+        ]
+      },
+      {
+        "id": "3574170985910172506-2510201654-11",
+        "type": "RB",
+        "number": "57060",
+        "direction": "Dinkelscherben",
+        "platform": "5",
+        "time": "2510201749",
+        "destination": "Dinkelscherben",
+        "path_stations": [
+          "Augsburg-Oberhausen",
+          "Neusäß",
+          "Westheim(Schwab)",
+          "Diedorf(Schwab)",
+          "Gessertshausen",
+          "Kutzenhausen",
+          "Dinkelscherben"
+        ]
+      },
+      {
+        "id": "-1676405551199095692-2510201714-1",
+        "type": "BRB",
+        "number": "62940",
+        "direction": "Kaufering",
+        "platform": "12 C-E",
+        "time": "2510201714",
+        "destination": "Kaufering",
+        "path_stations": [
+          "Augsburg Morellstr.",
+          "Augsburg Messe",
+          "Inningen",
+          "Bobingen",
+          "Oberottmarshausen",
+          "Graben(Lechfeld)Gewerbepark",
+          "Lagerlechfeld",
+          "Klosterlechfeld",
+          "Kaufering"
+        ]
+      },
+      {
+        "id": "7739265554476668178-2510201741-1",
+        "type": "RE",
+        "number": "57534",
+        "direction": "Memmingen",
+        "platform": "10 C-E",
+        "time": "2510201741",
+        "destination": "Memmingen",
+        "path_stations": [
+          "Buchloe",
+          "Türkheim(Bay)Bf",
+          "Rammingen(Bay)",
+          "Mindelheim",
+          "Stetten(Schwab)",
+          "Sontheim(Schwab)",
+          "Memmingen"
+        ]
+      },
+      {
+        "id": "-4824265244481707214-2510201709-1",
+        "type": "RE",
+        "number": "57424",
+        "direction": "Kempten(Allgäu)Hbf",
+        "platform": "10 C-E",
+        "time": "2510201709",
+        "destination": "Kempten(Allgäu)Hbf",
+        "path_stations": [
+          "Bobingen",
+          "Schwabmünchen",
+          "Buchloe",
+          "Kaufbeuren",
+          "Biessenhofen",
+          "Günzach",
+          "Kempten(Allgäu)Hbf"
+        ]
+      },
+      {
+        "id": "-8273180056631844503-2510201628-3",
+        "type": "ICE",
+        "number": "254",
+        "direction": "Amsterdam Centraal",
+        "platform": "1",
+        "time": "2510201701",
+        "destination": "Amsterdam Centraal",
+        "path_stations": [
+          "Ulm Hbf",
+          "Stuttgart Hbf",
+          "Mannheim Hbf",
+          "Frankfurt(M) Flughafen Fernbf",
+          "Siegburg/Bonn",
+          "Köln Hbf",
+          "Mönchengladbach Hbf",
+          "s-Hertogenbosch",
+          "Utrecht Centraal",
+          "Amsterdam Centraal"
+        ]
+      },
+      {
+        "id": "5089820149948252230-2510201646-3",
+        "type": "ICE",
+        "number": "592",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "1",
+        "time": "2510201718",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Ulm Hbf",
+          "Stuttgart Hbf",
+          "Mannheim Hbf",
+          "Frankfurt(Main)Hbf",
+          "Fulda",
+          "Kassel-Wilhelmshöhe",
+          "Göttingen",
+          "Hildesheim Hbf",
+          "Braunschweig Hbf",
+          "Wolfsburg Hbf",
+          "Stendal Hbf",
+          "Berlin-Spandau",
+          "Berlin Zoologischer Garten",
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "-2603312626651473862-2510201446-8",
+        "type": "ICE",
+        "number": "1011",
+        "direction": "München Hbf",
+        "platform": "4",
+        "time": "2510201856",
+        "destination": "München Hbf",
+        "path_stations": [
+          "München-Pasing",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "-5929322322241206429-2510201831-1",
+        "type": "BRB",
+        "number": "62768",
+        "direction": "Schwabmünchen",
+        "platform": "12 C-E",
+        "time": "2510201831",
+        "destination": "Schwabmünchen",
+        "path_stations": [
+          "Augsburg Morellstr.",
+          "Augsburg Messe",
+          "Inningen",
+          "Bobingen",
+          "Schwabmünchen"
+        ]
+      },
+      {
+        "id": "7523549257478369996-2510201828-1",
+        "type": "BRB",
+        "number": "86734",
+        "direction": "Friedberg(Augsburg)",
+        "platform": "2",
+        "time": "2510201828",
+        "destination": "Friedberg(Augsburg)",
+        "path_stations": [
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Friedberg(Augsburg)"
+        ]
+      },
+      {
+        "id": "-4486750394041468886-2510201828-1",
+        "type": "RE",
+        "number": "57164",
+        "direction": "Gunzenhausen",
+        "platform": "3",
+        "time": "2510201828",
+        "destination": "Gunzenhausen",
+        "path_stations": [
+          "Augsburg-Oberhausen",
+          "Meitingen",
+          "Nordendorf",
+          "Mertingen Bahnhof",
+          "Donauwörth",
+          "Otting-Weilheim",
+          "Treuchtlingen",
+          "Gunzenhausen"
+        ]
+      },
+      {
+        "id": "2055882036874313830-2510201846-2",
+        "type": "BRB",
+        "number": "86575",
+        "direction": "Geltendorf",
+        "platform": "8 A-C",
+        "time": "2510201851",
+        "destination": "Geltendorf",
+        "path_stations": [
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Kissing",
+          "Mering-St Afra",
+          "Mering",
+          "Merching",
+          "Schmiechen(Schwab)",
+          "Egling",
+          "Walleshausen",
+          "Geltendorf"
+        ]
+      },
+      {
+        "id": "4097711371156808190-2510201145-21",
+        "type": "EC",
+        "number": "216",
+        "direction": "Saarbrücken Hbf",
+        "platform": "1",
+        "time": "2510201815",
+        "destination": "Saarbrücken Hbf",
+        "path_stations": [
+          "Günzburg",
+          "Ulm Hbf",
+          "Stuttgart Hbf",
+          "Mannheim Hbf",
+          "Neustadt(Weinstr)Hbf",
+          "Kaiserslautern Hbf",
+          "Homburg(Saar)Hbf",
+          "Saarbrücken Hbf"
+        ]
+      },
+      {
+        "id": "6195485783263057734-2510201827-3",
+        "type": "ICE",
+        "number": "910",
+        "direction": "Dortmund Hbf",
+        "platform": "1",
+        "time": "2510201901",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Ulm Hbf",
+          "Stuttgart Hbf",
+          "Mannheim Hbf",
+          "Frankfurt(M) Flughafen Fernbf",
+          "Siegburg/Bonn",
+          "Köln Messe/Deutz Gl.11-12",
+          "Düsseldorf Hbf",
+          "Duisburg Hbf",
+          "Essen Hbf",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-1908021651160660597-2510201720-12",
+        "type": "RB",
+        "number": "57073",
+        "direction": "München Hbf",
+        "platform": "9",
+        "time": "2510201808",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Kissing",
+          "Mering-St Afra",
+          "Mering",
+          "München-Pasing",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "-3350735717630224063-2510201815-8",
+        "type": "RB",
+        "number": "57072",
+        "direction": "Donauwörth",
+        "platform": "5",
+        "time": "2510201902",
+        "destination": "Donauwörth",
+        "path_stations": [
+          "Augsburg-Oberhausen",
+          "Gersthofen",
+          "Gablingen",
+          "Langweid(Lech)",
+          "Meitingen",
+          "Nordendorf",
+          "Mertingen Bahnhof",
+          "Donauwörth"
+        ]
+      },
+      {
+        "id": "1429667821227828962-2510201757-11",
+        "type": "RB",
+        "number": "57068",
+        "direction": "Dinkelscherben",
+        "platform": "5",
+        "time": "2510201849",
+        "destination": "Dinkelscherben",
+        "path_stations": [
+          "Augsburg-Oberhausen",
+          "Neusäß",
+          "Westheim(Schwab)",
+          "Diedorf(Schwab)",
+          "Gessertshausen",
+          "Kutzenhausen",
+          "Dinkelscherben"
+        ]
+      },
+      {
+        "id": "-1378667911472082187-2510201125-14",
+        "type": "ICE",
+        "number": "1219",
+        "direction": "Innsbruck Hbf",
+        "platform": "4",
+        "time": "2510201843",
+        "destination": "Innsbruck Hbf",
+        "path_stations": [
+          "München-Pasing",
+          "München Hbf",
+          "München Ost",
+          "Rosenheim",
+          "Kufstein",
+          "Wörgl Hbf",
+          "Jenbach",
+          "Innsbruck Hbf"
+        ]
+      },
+      {
+        "id": "-1438772233584767741-2510201814-1",
+        "type": "BRB",
+        "number": "86732",
+        "direction": "Aichach",
+        "platform": "101",
+        "time": "2510201814",
+        "destination": "Aichach",
+        "path_stations": [
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Friedberg(Augsburg)",
+          "Dasing",
+          "Obergriesbach",
+          "Aichach"
+        ]
+      },
+      {
+        "id": "-8764004538778404728-2510201842-1",
+        "type": "RE",
+        "number": "3298",
+        "direction": "Kempten(Allgäu)Hbf",
+        "platform": "9 A-C",
+        "time": "2510201842",
+        "destination": "Kempten(Allgäu)Hbf",
+        "path_stations": [
+          "Buchloe",
+          "Kaufbeuren",
+          "Kempten(Allgäu)Hbf"
+        ]
+      },
+      {
+        "id": "5848569001778625404-2510201838-1",
+        "type": "BRB",
+        "number": "86736",
+        "direction": "Ingolstadt Hbf",
+        "platform": "101",
+        "time": "2510201838",
+        "destination": "Ingolstadt Hbf",
+        "path_stations": [
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Friedberg(Augsburg)",
+          "Dasing",
+          "Obergriesbach",
+          "Aichach",
+          "Radersdorf",
+          "Schrobenhausen",
+          "Brunnen(Oberbay)",
+          "Ingolstadt Hbf"
+        ]
+      },
+      {
+        "id": "3935462718199749669-2510201835-1",
+        "type": "BRB",
+        "number": "86626",
+        "direction": "Gessertshausen",
+        "platform": "10 A-C",
+        "time": "2510201835",
+        "destination": "Gessertshausen",
+        "path_stations": [
+          "Augsburg-Oberhausen",
+          "Neusäß",
+          "Westheim(Schwab)",
+          "Diedorf(Schwab)",
+          "Gessertshausen"
+        ]
+      },
+      {
+        "id": "-1050652782747772889-2510201733-8",
+        "type": "RB",
+        "number": "57173",
+        "direction": "München Hbf",
+        "platform": "9",
+        "time": "2510201808",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Kissing",
+          "Mering-St Afra",
+          "Mering",
+          "München-Pasing",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "3422823246203542050-2510201312-7",
+        "type": "ICE",
+        "number": "1695",
+        "direction": "München Hbf",
+        "platform": "4",
+        "time": "2510201852",
+        "destination": "München Hbf",
+        "path_stations": [
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "7189234803274208307-2510201813-1",
+        "type": "BRB",
+        "number": "62942",
+        "direction": "Landsberg(Lech)",
+        "platform": "901",
+        "time": "2510201813",
+        "destination": "Landsberg(Lech)",
+        "path_stations": [
+          "Augsburg Morellstr.",
+          "Augsburg Messe",
+          "Inningen",
+          "Bobingen",
+          "Oberottmarshausen",
+          "Graben(Lechfeld)Gewerbepark",
+          "Lagerlechfeld",
+          "Klosterlechfeld",
+          "Kaufering",
+          "Landsberg(L)Schule",
+          "Landsberg(Lech)"
+        ]
+      },
+      {
+        "id": "7754455782639464851-2510201812-2",
+        "type": "BRB",
+        "number": "28829",
+        "direction": "Geltendorf",
+        "platform": "6 A-B",
+        "time": "2510201818",
+        "destination": "Geltendorf",
+        "path_stations": [
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Kissing",
+          "Mering-St Afra",
+          "Mering",
+          "Merching",
+          "Schmiechen(Schwab)",
+          "Egling",
+          "Walleshausen",
+          "Geltendorf"
+        ]
+      },
+      {
+        "id": "-4588358306015442436-2510201759-11",
+        "type": "BRB",
+        "number": "28830",
+        "direction": "Augsburg-Oberhausen",
+        "platform": "5 C-E",
+        "time": "2510201838",
+        "destination": "Augsburg-Oberhausen",
+        "path_stations": [
+          "Augsburg-Oberhausen"
+        ]
+      },
+      {
+        "id": "5222452683479379729-2510201735-8",
+        "type": "RB",
+        "number": "57064",
+        "direction": "Ulm Hbf",
+        "platform": "3",
+        "time": "2510201825",
+        "destination": "Ulm Hbf",
+        "path_stations": [
+          "Augsburg-Oberhausen",
+          "Neusäß",
+          "Westheim(Schwab)",
+          "Diedorf(Schwab)",
+          "Gessertshausen",
+          "Kutzenhausen",
+          "Dinkelscherben",
+          "Freihalden",
+          "Jettingen",
+          "Burgau(Schwab)",
+          "Mindelaltheim",
+          "Offingen",
+          "Günzburg",
+          "Leipheim",
+          "Nersingen",
+          "Neu-Ulm",
+          "Ulm Hbf"
+        ]
+      },
+      {
+        "id": "-943850335692792067-2510201741-8",
+        "type": "RB",
+        "number": "57066",
+        "direction": "Donauwörth",
+        "platform": "6",
+        "time": "2510201834",
+        "destination": "Donauwörth",
+        "path_stations": [
+          "Augsburg-Oberhausen",
+          "Gersthofen",
+          "Gablingen",
+          "Langweid(Lech)",
+          "Herbertshofen",
+          "Meitingen",
+          "Westendorf",
+          "Nordendorf",
+          "Mertingen Bahnhof",
+          "Bäumenheim",
+          "Donauwörth"
+        ]
+      },
+      {
+        "id": "-6593149483901234579-2510201718-18",
+        "type": "RE",
+        "number": "57075",
+        "direction": "München Hbf",
+        "platform": "8",
+        "time": "2510201838",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Kissing",
+          "Mering-St Afra",
+          "Mering",
+          "München-Pasing",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "7537395545451740415-2510201727-3",
+        "type": "ICE",
+        "number": "512",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "1",
+        "time": "2510201801",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Ulm Hbf",
+          "Stuttgart Hbf",
+          "Mannheim Hbf",
+          "Frankfurt(M) Flughafen Fernbf",
+          "Siegburg/Bonn",
+          "Köln Hbf",
+          "Düsseldorf Hbf",
+          "Duisburg Hbf",
+          "Essen Hbf",
+          "Gelsenkirchen Hbf",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-7759827436146803415-2510201605-5",
+        "type": "ICE",
+        "number": "569",
+        "direction": "München Hbf Gl.5-10",
+        "platform": "4",
+        "time": "2510201819",
+        "destination": "München Hbf Gl.5-10",
+        "path_stations": [
+          "München-Pasing",
+          "München Hbf Gl.5-10"
+        ]
+      },
+      {
+        "id": "-3157016785034416121-2510201801-1",
+        "type": "BRB",
+        "number": "62766",
+        "direction": "Bobingen",
+        "platform": "8",
+        "time": "2510201801",
+        "destination": "Bobingen",
+        "path_stations": [
+          "Augsburg Morellstr.",
+          "Augsburg Messe",
+          "Inningen",
+          "Bobingen"
+        ]
+      },
+      {
+        "id": "-7130285193807920003-2510201809-1",
+        "type": "RE",
+        "number": "57426",
+        "direction": "Kempten(Allgäu)Hbf",
+        "platform": "10 C-E",
+        "time": "2510201809",
+        "destination": "Kempten(Allgäu)Hbf",
+        "path_stations": [
+          "Bobingen",
+          "Schwabmünchen",
+          "Buchloe",
+          "Kaufbeuren",
+          "Biessenhofen",
+          "Günzach",
+          "Kempten(Allgäu)Hbf"
+        ]
+      },
+      {
+        "id": "1591542372206181314-2510201801-1",
+        "type": "BRB",
+        "number": "86730",
+        "direction": "Friedberg(Augsburg)",
+        "platform": "2 A-B",
+        "time": "2510201801",
+        "destination": "Friedberg(Augsburg)",
+        "path_stations": [
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Friedberg(Augsburg)"
+        ]
+      },
+      {
+        "id": "5700213522785101305-2510201757-11",
+        "type": "RB",
+        "number": "57168",
+        "direction": "Donauwörth",
+        "platform": "5",
+        "time": "2510201854",
+        "destination": "Donauwörth",
+        "path_stations": [
+          "Augsburg-Oberhausen",
+          "Gersthofen",
+          "Gablingen",
+          "Langweid(Lech)",
+          "Herbertshofen",
+          "Meitingen",
+          "Westendorf",
+          "Nordendorf",
+          "Mertingen Bahnhof",
+          "Bäumenheim",
+          "Donauwörth"
+        ]
+      },
+      {
+        "id": "6375722481468943789-2510201846-1",
+        "type": "BRB",
+        "number": "62772",
+        "direction": "Kaufbeuren",
+        "platform": "12 A-C",
+        "time": "2510201846",
+        "destination": "Kaufbeuren",
+        "path_stations": [
+          "Augsburg Morellstr.",
+          "Augsburg Messe",
+          "Inningen",
+          "Bobingen",
+          "Schwabmünchen",
+          "Buchloe",
+          "Kaufbeuren"
+        ]
+      },
+      {
+        "id": "5713085400762483393-2510201857-11",
+        "type": "RB",
+        "number": "57176",
+        "direction": "Donauwörth",
+        "platform": "5",
+        "time": "2510201954",
+        "destination": "Donauwörth",
+        "path_stations": [
+          "Augsburg-Oberhausen",
+          "Gersthofen",
+          "Gablingen",
+          "Langweid(Lech)",
+          "Herbertshofen",
+          "Meitingen",
+          "Westendorf",
+          "Nordendorf",
+          "Mertingen Bahnhof",
+          "Bäumenheim",
+          "Donauwörth"
+        ]
+      },
+      {
+        "id": "-6380868624148839399-2510201942-1",
+        "type": "RE",
+        "number": "57516",
+        "direction": "Bad Wörishofen",
+        "platform": "9 A-C",
+        "time": "2510201942",
+        "destination": "Bad Wörishofen",
+        "path_stations": [
+          "Buchloe",
+          "Türkheim(Bay)Bf",
+          "Bad Wörishofen"
+        ]
+      },
+      {
+        "id": "-4606259237087570667-2510201901-1",
+        "type": "BRB",
+        "number": "86738",
+        "direction": "Friedberg(Augsburg)",
+        "platform": "2",
+        "time": "2510201901",
+        "destination": "Friedberg(Augsburg)",
+        "path_stations": [
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Friedberg(Augsburg)"
+        ]
+      },
+      {
+        "id": "6082694133240512334-2510201914-1",
+        "type": "BRB",
+        "number": "62946",
+        "direction": "Landsberg(Lech)",
+        "platform": "12 C-E",
+        "time": "2510201914",
+        "destination": "Landsberg(Lech)",
+        "path_stations": [
+          "Augsburg Morellstr.",
+          "Augsburg Messe",
+          "Inningen",
+          "Bobingen",
+          "Oberottmarshausen",
+          "Graben(Lechfeld)Gewerbepark",
+          "Lagerlechfeld",
+          "Klosterlechfeld",
+          "Kaufering",
+          "Landsberg(L)Schule",
+          "Landsberg(Lech)"
+        ]
+      },
+      {
+        "id": "2025727215896462575-2510201926-1",
+        "type": "RE",
+        "number": "59134",
+        "direction": "Nürnberg Hbf",
+        "platform": "7 C-E",
+        "time": "2510201926",
+        "destination": "Nürnberg Hbf",
+        "path_stations": [
+          "Augsburg-Oberhausen",
+          "Meitingen",
+          "Nordendorf",
+          "Mertingen Bahnhof",
+          "Donauwörth",
+          "Otting-Weilheim",
+          "Treuchtlingen",
+          "Weißenburg(Bay)",
+          "Ellingen(Bay)",
+          "Pleinfeld",
+          "Mühlstetten",
+          "Georgensgmünd",
+          "Unterheckenhofen",
+          "Roth",
+          "Schwabach",
+          "Nürnberg Hbf"
+        ]
+      },
+      {
+        "id": "-7768387626255130843-2510201819-9",
+        "type": "RE",
+        "number": "57179",
+        "direction": "München Hbf",
+        "platform": "8 A-C",
+        "time": "2510201938",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Kissing",
+          "Mering-St Afra",
+          "Mering",
+          "München-Pasing",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "6337980242377215650-2510201816-11",
+        "type": "BRB",
+        "number": "86580",
+        "direction": "Augsburg-Oberhausen",
+        "platform": "4",
+        "time": "2510201913",
+        "destination": "Augsburg-Oberhausen",
+        "path_stations": [
+          "Augsburg-Oberhausen"
+        ]
+      },
+      {
+        "id": "6195485783263057734-2510201827-3",
+        "type": "ICE",
+        "number": "910",
+        "direction": "Dortmund Hbf",
+        "platform": "1",
+        "time": "2510201901",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Ulm Hbf",
+          "Stuttgart Hbf",
+          "Mannheim Hbf",
+          "Frankfurt(M) Flughafen Fernbf",
+          "Siegburg/Bonn",
+          "Köln Messe/Deutz Gl.11-12",
+          "Düsseldorf Hbf",
+          "Duisburg Hbf",
+          "Essen Hbf",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-3350735717630224063-2510201815-8",
+        "type": "RB",
+        "number": "57072",
+        "direction": "Donauwörth",
+        "platform": "5",
+        "time": "2510201902",
+        "destination": "Donauwörth",
+        "path_stations": [
+          "Augsburg-Oberhausen",
+          "Gersthofen",
+          "Gablingen",
+          "Langweid(Lech)",
+          "Meitingen",
+          "Nordendorf",
+          "Mertingen Bahnhof",
+          "Donauwörth"
+        ]
+      },
+      {
+        "id": "-2327101485752426629-2510201914-1",
+        "type": "BRB",
+        "number": "86740",
+        "direction": "Aichach",
+        "platform": "2",
+        "time": "2510201914",
+        "destination": "Aichach",
+        "path_stations": [
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Friedberg(Augsburg)",
+          "Dasing",
+          "Obergriesbach",
+          "Aichach"
+        ]
+      },
+      {
+        "id": "-1608524521383286931-2510201909-1",
+        "type": "RE",
+        "number": "57428",
+        "direction": "Kempten(Allgäu)Hbf",
+        "platform": "7",
+        "time": "2510201909",
+        "destination": "Kempten(Allgäu)Hbf",
+        "path_stations": [
+          "Bobingen",
+          "Schwabmünchen",
+          "Buchloe",
+          "Kaufbeuren",
+          "Biessenhofen",
+          "Günzach",
+          "Kempten(Allgäu)Hbf"
+        ]
+      },
+      {
+        "id": "-1895474681646249837-2510201900-3",
+        "type": "ICE",
+        "number": "560",
+        "direction": "Karlsruhe Hbf",
+        "platform": "1",
+        "time": "2510201933",
+        "destination": "Karlsruhe Hbf",
+        "path_stations": [
+          "Günzburg",
+          "Ulm Hbf",
+          "Stuttgart Hbf",
+          "Bruchsal",
+          "Karlsruhe Hbf"
+        ]
+      },
+      {
+        "id": "5734996551620743986-2510201859-11",
+        "type": "BRB",
+        "number": "28832",
+        "direction": "Augsburg-Oberhausen",
+        "platform": "5 C-E",
+        "time": "2510201940",
+        "destination": "Augsburg-Oberhausen",
+        "path_stations": [
+          "Augsburg-Oberhausen"
+        ]
+      },
+      {
+        "id": "6439275209055145935-2510201942-1",
+        "type": "RE",
+        "number": "57536",
+        "direction": "Memmingen",
+        "platform": "9 A-C",
+        "time": "2510201942",
+        "destination": "Memmingen",
+        "path_stations": [
+          "Buchloe",
+          "Türkheim(Bay)Bf",
+          "Rammingen(Bay)",
+          "Mindelheim",
+          "Stetten(Schwab)",
+          "Sontheim(Schwab)",
+          "Memmingen"
+        ]
+      },
+      {
+        "id": "-5849884007825646125-2510201857-11",
+        "type": "RB",
+        "number": "57076",
+        "direction": "Dinkelscherben",
+        "platform": "5",
+        "time": "2510201949",
+        "destination": "Dinkelscherben",
+        "path_stations": [
+          "Augsburg-Oberhausen",
+          "Neusäß",
+          "Westheim(Schwab)",
+          "Diedorf(Schwab)",
+          "Gessertshausen",
+          "Kutzenhausen",
+          "Dinkelscherben"
+        ]
+      },
+      {
+        "id": "1976403945320218368-2510201835-8",
+        "type": "RE",
+        "number": "57074",
+        "direction": "Ulm Hbf",
+        "platform": "5",
+        "time": "2510201923",
+        "destination": "Ulm Hbf",
+        "path_stations": [
+          "Augsburg-Oberhausen",
+          "Neusäß",
+          "Westheim(Schwab)",
+          "Diedorf(Schwab)",
+          "Gessertshausen",
+          "Kutzenhausen",
+          "Dinkelscherben",
+          "Freihalden",
+          "Jettingen",
+          "Burgau(Schwab)",
+          "Mindelaltheim",
+          "Offingen",
+          "Günzburg",
+          "Leipheim",
+          "Nersingen",
+          "Neu-Ulm",
+          "Ulm Hbf"
+        ]
+      },
+      {
+        "id": "8659391428471416530-2510201815-12",
+        "type": "RB",
+        "number": "57077",
+        "direction": "München Hbf",
+        "platform": "8",
+        "time": "2510201908",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Kissing",
+          "Mering-St Afra",
+          "Mering",
+          "Althegnenberg",
+          "Haspelmoor",
+          "Mammendorf",
+          "München-Pasing",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "9070964615908690912-2510201909-2",
+        "type": "BRB",
+        "number": "28831",
+        "direction": "Geltendorf",
+        "platform": "6 A-B",
+        "time": "2510201918",
+        "destination": "Geltendorf",
+        "path_stations": [
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Kissing",
+          "Mering-St Afra",
+          "Mering",
+          "Merching",
+          "Schmiechen(Schwab)",
+          "Egling",
+          "Walleshausen",
+          "Geltendorf"
+        ]
+      },
+      {
+        "id": "-5083558051405008269-2510201909-3",
+        "type": "ICE",
+        "number": "1500",
+        "direction": "Leipzig Hbf",
+        "platform": "1",
+        "time": "2510201943",
+        "destination": "Leipzig Hbf",
+        "path_stations": [
+          "Donauwörth",
+          "Treuchtlingen",
+          "Nürnberg Hbf",
+          "Erlangen",
+          "Bamberg",
+          "Coburg",
+          "Erfurt Hbf",
+          "Leipzig Hbf"
+        ]
+      },
+      {
+        "id": "5653087570567167872-2510201129-17",
+        "type": "ICE",
+        "number": "611",
+        "direction": "München Hbf",
+        "platform": "4",
+        "time": "2510201955",
+        "destination": "München Hbf",
+        "path_stations": [
+          "München-Pasing",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "4373663595963982305-2510201946-1",
+        "type": "BRB",
+        "number": "86742",
+        "direction": "Ingolstadt Hbf",
+        "platform": "101",
+        "time": "2510201946",
+        "destination": "Ingolstadt Hbf",
+        "path_stations": [
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Friedberg(Augsburg)",
+          "Dasing",
+          "Obergriesbach",
+          "Aichach",
+          "Radersdorf",
+          "Schrobenhausen",
+          "Brunnen(Oberbay)",
+          "Ingolstadt Hbf"
+        ]
+      },
+      {
+        "id": "8322424274180843926-2510201927-3",
+        "type": "ICE",
+        "number": "510",
+        "direction": "Köln Hbf",
+        "platform": "1",
+        "time": "2510202001",
+        "destination": "Köln Hbf",
+        "path_stations": [
+          "Ulm Hbf",
+          "Stuttgart Hbf",
+          "Mannheim Hbf",
+          "Frankfurt(M) Flughafen Fernbf",
+          "Siegburg/Bonn",
+          "Köln Hbf"
+        ]
+      },
+      {
+        "id": "-3031925877358690214-2510201620-9",
+        "type": "IC",
+        "number": "1291",
+        "direction": "Salzburg Hbf",
+        "platform": "4",
+        "time": "2510201941",
+        "destination": "Salzburg Hbf",
+        "path_stations": [
+          "München Hbf",
+          "München Ost",
+          "Rosenheim",
+          "Bad Endorf",
+          "Prien am Chiemsee",
+          "Traunstein",
+          "Freilassing",
+          "Salzburg Hbf"
+        ]
+      },
+      {
+        "id": "-5448381360911335545-2510201946-1",
+        "type": "BRB",
+        "number": "62778",
+        "direction": "Buchloe",
+        "platform": "12 C-E",
+        "time": "2510201946",
+        "destination": "Buchloe",
+        "path_stations": [
+          "Augsburg Morellstr.",
+          "Augsburg Messe",
+          "Inningen",
+          "Bobingen",
+          "Schwabmünchen",
+          "Buchloe"
+        ]
+      },
+      {
+        "id": "7036544064545441556-2510201833-8",
+        "type": "RB",
+        "number": "57177",
+        "direction": "München Hbf",
+        "platform": "8 C-E",
+        "time": "2510201908",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Kissing",
+          "Mering-St Afra",
+          "Mering",
+          "Althegnenberg",
+          "Haspelmoor",
+          "Mammendorf",
+          "München-Pasing",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "-7610672940066525446-2510201846-3",
+        "type": "ICE",
+        "number": "590",
+        "direction": "Frankfurt(Main)Hbf",
+        "platform": "1",
+        "time": "2510201918",
+        "destination": "Frankfurt(Main)Hbf",
+        "path_stations": [
+          "Ulm Hbf",
+          "Stuttgart Hbf",
+          "Mannheim Hbf",
+          "Frankfurt(Main)Hbf"
+        ]
+      },
+      {
+        "id": "1688959751949050779-2510201733-21",
+        "type": "RB",
+        "number": "57079",
+        "direction": "München Hbf",
+        "platform": "8 A-C",
+        "time": "2510201938",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Kissing",
+          "Mering-St Afra",
+          "Mering",
+          "München-Pasing",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "-8901395469076926840-2510201902-1",
+        "type": "BRB",
+        "number": "62776",
+        "direction": "Bobingen",
+        "platform": "10 C-E",
+        "time": "2510201902",
+        "destination": "Bobingen",
+        "path_stations": [
+          "Augsburg Morellstr.",
+          "Augsburg Messe",
+          "Inningen",
+          "Bobingen"
+        ]
+      },
+      {
+        "id": "-8722425844034690799-2510202016-1",
+        "type": "BRB",
+        "number": "86744",
+        "direction": "Aichach",
+        "platform": "2 A-B",
+        "time": "2510202016",
+        "destination": "Aichach",
+        "path_stations": [
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Friedberg(Augsburg)",
+          "Dasing",
+          "Obergriesbach",
+          "Aichach"
+        ]
+      },
+      {
+        "id": "-1075534163626666476-2510201919-18",
+        "type": "RE",
+        "number": "57083",
+        "direction": "München Hbf",
+        "platform": "7",
+        "time": "2510202035",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Kissing",
+          "Mering-St Afra",
+          "Mering",
+          "Althegnenberg",
+          "Haspelmoor",
+          "Mammendorf",
+          "München-Pasing",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "4471729078023853954-2510201328-13",
+        "type": "ICE",
+        "number": "691",
+        "direction": "München Hbf",
+        "platform": "4",
+        "time": "2510202043",
+        "destination": "München Hbf",
+        "path_stations": [
+          "München-Pasing",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "4719060773494434112-2510202014-1",
+        "type": "BRB",
+        "number": "62950",
+        "direction": "Landsberg(Lech)",
+        "platform": "10 C-E",
+        "time": "2510202014",
+        "destination": "Landsberg(Lech)",
+        "path_stations": [
+          "Augsburg Morellstr.",
+          "Augsburg Messe",
+          "Inningen",
+          "Bobingen",
+          "Oberottmarshausen",
+          "Graben(Lechfeld)Gewerbepark",
+          "Lagerlechfeld",
+          "Klosterlechfeld",
+          "Kaufering",
+          "Landsberg(L)Schule",
+          "Landsberg(Lech)"
+        ]
+      },
+      {
+        "id": "-3471876550272840599-2510201920-12",
+        "type": "RB",
+        "number": "57081",
+        "direction": "München Hbf",
+        "platform": "8",
+        "time": "2510202008",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Kissing",
+          "Mering-St Afra",
+          "Mering",
+          "München-Pasing",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "6525064366969089202-2510202003-8",
+        "type": "RB",
+        "number": "57180",
+        "direction": "Donauwörth",
+        "platform": "5",
+        "time": "2510202054",
+        "destination": "Donauwörth",
+        "path_stations": [
+          "Augsburg-Oberhausen",
+          "Gersthofen",
+          "Gablingen",
+          "Langweid(Lech)",
+          "Herbertshofen",
+          "Meitingen",
+          "Westendorf",
+          "Nordendorf",
+          "Mertingen Bahnhof",
+          "Bäumenheim",
+          "Donauwörth"
+        ]
+      },
+      {
+        "id": "2177944950666158255-2510202045-1",
+        "type": "BRB",
+        "number": "86746",
+        "direction": "Ingolstadt Hbf",
+        "platform": "2",
+        "time": "2510202045",
+        "destination": "Ingolstadt Hbf",
+        "path_stations": [
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Friedberg(Augsburg)",
+          "Dasing",
+          "Obergriesbach",
+          "Aichach",
+          "Radersdorf",
+          "Schrobenhausen",
+          "Brunnen(Oberbay)",
+          "Ingolstadt Hbf"
+        ]
+      },
+      {
+        "id": "-8492978092935438453-2510201935-8",
+        "type": "RB",
+        "number": "57078",
+        "direction": "Gunzenhausen",
+        "platform": "3",
+        "time": "2510202022",
+        "destination": "Gunzenhausen",
+        "path_stations": [
+          "Augsburg-Oberhausen",
+          "Meitingen",
+          "Nordendorf",
+          "Mertingen Bahnhof",
+          "Donauwörth",
+          "Otting-Weilheim",
+          "Treuchtlingen",
+          "Gunzenhausen"
+        ]
+      },
+      {
+        "id": "4250642068572388831-2510202001-1",
+        "type": "BRB",
+        "number": "62780",
+        "direction": "Bobingen",
+        "platform": "12 C-E",
+        "time": "2510202001",
+        "destination": "Bobingen",
+        "path_stations": [
+          "Augsburg Morellstr.",
+          "Augsburg Messe",
+          "Inningen",
+          "Bobingen"
+        ]
+      },
+      {
+        "id": "-8388647908545523408-2510202003-8",
+        "type": "RB",
+        "number": "57080",
+        "direction": "Dinkelscherben",
+        "platform": "5",
+        "time": "2510202049",
+        "destination": "Dinkelscherben",
+        "path_stations": [
+          "Augsburg-Oberhausen",
+          "Neusäß",
+          "Westheim(Schwab)",
+          "Diedorf(Schwab)",
+          "Gessertshausen",
+          "Kutzenhausen",
+          "Dinkelscherben"
+        ]
+      },
+      {
+        "id": "-2359847737515606668-2510201933-8",
+        "type": "RB",
+        "number": "57181",
+        "direction": "München Hbf",
+        "platform": "8 C-E",
+        "time": "2510202008",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Kissing",
+          "Mering-St Afra",
+          "Mering",
+          "München-Pasing",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "-5235249208700751601-2510201646-8",
+        "type": "ICE",
+        "number": "1013",
+        "direction": "München Hbf",
+        "platform": "4",
+        "time": "2510202056",
+        "destination": "München Hbf",
+        "path_stations": [
+          "München-Pasing",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "-5205739156485172023-2510202016-1",
+        "type": "Bus",
+        "number": "59136",
+        "direction": "Treuchtlingen",
+        "platform": "",
+        "time": "2510202016",
+        "destination": "Treuchtlingen",
+        "path_stations": [
+          "Augsburg-Oberhausen",
+          "Meitingen",
+          "Nordendorf",
+          "Mertingen Bahnhof",
+          "Donauwörth",
+          "Otting-Weilheim",
+          "Treuchtlingen"
+        ]
+      },
+      {
+        "id": "7280991471195430281-2510201805-5",
+        "type": "ICE",
+        "number": "1069",
+        "direction": "München Hbf",
+        "platform": "4",
+        "time": "2510202024",
+        "destination": "München Hbf",
+        "path_stations": [
+          "München-Pasing",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "2590502689058876742-2510202025-1",
+        "type": "RE",
+        "number": "57182",
+        "direction": "Ulm Hbf",
+        "platform": "7 C-E",
+        "time": "2510202025",
+        "destination": "Ulm Hbf",
+        "path_stations": [
+          "Augsburg-Oberhausen",
+          "Neusäß",
+          "Westheim(Schwab)",
+          "Diedorf(Schwab)",
+          "Gessertshausen",
+          "Kutzenhausen",
+          "Dinkelscherben",
+          "Freihalden",
+          "Jettingen",
+          "Burgau(Schwab)",
+          "Mindelaltheim",
+          "Offingen",
+          "Günzburg",
+          "Leipheim",
+          "Nersingen",
+          "Neu-Ulm",
+          "Ulm Hbf"
+        ]
+      },
+      {
+        "id": "8050570540025011394-2510201434-8",
+        "type": "ICE",
+        "number": "709",
+        "direction": "München Hbf",
+        "platform": "4",
+        "time": "2510202010",
+        "destination": "München Hbf",
+        "path_stations": [
+          "München-Pasing",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "3908522583546497389-2510202012-2",
+        "type": "BRB",
+        "number": "28833",
+        "direction": "Geltendorf",
+        "platform": "8 A-C",
+        "time": "2510202018",
+        "destination": "Geltendorf",
+        "path_stations": [
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Kissing",
+          "Mering-St Afra",
+          "Mering",
+          "Merching",
+          "Schmiechen(Schwab)",
+          "Egling",
+          "Walleshausen",
+          "Geltendorf"
+        ]
+      },
+      {
+        "id": "8322424274180843926-2510201927-3",
+        "type": "ICE",
+        "number": "510",
+        "direction": "Köln Hbf",
+        "platform": "1",
+        "time": "2510202001",
+        "destination": "Köln Hbf",
+        "path_stations": [
+          "Ulm Hbf",
+          "Stuttgart Hbf",
+          "Mannheim Hbf",
+          "Frankfurt(M) Flughafen Fernbf",
+          "Siegburg/Bonn",
+          "Köln Hbf"
+        ]
+      },
+      {
+        "id": "7679590405167972610-2510202032-1",
+        "type": "RE",
+        "number": "3288",
+        "direction": "Kempten(Allgäu)Hbf",
+        "platform": "9 A-C",
+        "time": "2510202032",
+        "destination": "Kempten(Allgäu)Hbf",
+        "path_stations": [
+          "Augsburg Morellstr.",
+          "Augsburg Messe",
+          "Inningen",
+          "Bobingen",
+          "Schwabmünchen",
+          "Buchloe",
+          "Kaufbeuren",
+          "Biessenhofen",
+          "Günzach",
+          "Kempten(Allgäu)Hbf"
+        ]
+      },
+      {
+        "id": "-530921157149495475-2510201959-11",
+        "type": "BRB",
+        "number": "28834",
+        "direction": "Augsburg-Oberhausen",
+        "platform": "5 C-E",
+        "time": "2510202041",
+        "destination": "Augsburg-Oberhausen",
+        "path_stations": [
+          "Augsburg-Oberhausen"
+        ]
+      },
+      {
+        "id": "-8959018065734509300-2510201818-9",
+        "type": "ICE",
+        "number": "1099",
+        "direction": "München Hbf",
+        "platform": "4",
+        "time": "2510202141",
+        "destination": "München Hbf",
+        "path_stations": [
+          "München-Pasing",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "-2320340282101811304-2510202043-3",
+        "type": "ICE",
+        "number": "990",
+        "direction": "Frankfurt(Main)Hbf",
+        "platform": "1",
+        "time": "2510202115",
+        "destination": "Frankfurt(Main)Hbf",
+        "path_stations": [
+          "Günzburg",
+          "Ulm Hbf",
+          "Stuttgart Hbf",
+          "Mannheim Hbf",
+          "Frankfurt(Main)Hbf"
+        ]
+      },
+      {
+        "id": "2678137077550680936-2510202113-1",
+        "type": "Bus",
+        "number": "99136",
+        "direction": "Treuchtlingen",
+        "platform": "",
+        "time": "2510202113",
+        "destination": "Treuchtlingen",
+        "path_stations": [
+          "Augsburg-Oberhausen",
+          "Meitingen",
+          "Nordendorf",
+          "Mertingen Bahnhof",
+          "Donauwörth",
+          "Otting-Weilheim",
+          "Treuchtlingen"
+        ]
+      },
+      {
+        "id": "2697708217939048507-2510202059-11",
+        "type": "BRB",
+        "number": "28836",
+        "direction": "Augsburg-Oberhausen",
+        "platform": "5 C-E",
+        "time": "2510202141",
+        "destination": "Augsburg-Oberhausen",
+        "path_stations": [
+          "Augsburg-Oberhausen"
+        ]
+      },
+      {
+        "id": "4876412217104662801-2510201555-7",
+        "type": "TGV",
+        "number": "9577",
+        "direction": "München Hbf",
+        "platform": "4",
+        "time": "2510202107",
+        "destination": "München Hbf",
+        "path_stations": [
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "5822378549779729152-2510202057-11",
+        "type": "RE",
+        "number": "57084",
+        "direction": "Ulm Hbf",
+        "platform": "5",
+        "time": "2510202149",
+        "destination": "Ulm Hbf",
+        "path_stations": [
+          "Augsburg-Oberhausen",
+          "Neusäß",
+          "Westheim(Schwab)",
+          "Diedorf(Schwab)",
+          "Gessertshausen",
+          "Kutzenhausen",
+          "Dinkelscherben",
+          "Freihalden",
+          "Jettingen",
+          "Burgau(Schwab)",
+          "Mindelaltheim",
+          "Offingen",
+          "Günzburg",
+          "Leipheim",
+          "Nersingen",
+          "Neu-Ulm",
+          "Ulm Hbf"
+        ]
+      },
+      {
+        "id": "-1524722776704617582-2510202114-1",
+        "type": "BRB",
+        "number": "62952",
+        "direction": "Landsberg(Lech)",
+        "platform": "12 C-E",
+        "time": "2510202114",
+        "destination": "Landsberg(Lech)",
+        "path_stations": [
+          "Augsburg Morellstr.",
+          "Augsburg Messe",
+          "Inningen",
+          "Bobingen",
+          "Oberottmarshausen",
+          "Graben(Lechfeld)Gewerbepark",
+          "Lagerlechfeld",
+          "Klosterlechfeld",
+          "Kaufering",
+          "Landsberg(L)Schule",
+          "Landsberg(Lech)"
+        ]
+      },
+      {
+        "id": "-5881335852882080257-2510202019-9",
+        "type": "RE",
+        "number": "57185",
+        "direction": "München Hbf",
+        "platform": "9 A-C",
+        "time": "2510202139",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Kissing",
+          "Mering-St Afra",
+          "Mering",
+          "Althegnenberg",
+          "Haspelmoor",
+          "Mammendorf",
+          "München-Pasing",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "-8066331694575326723-2510202114-2",
+        "type": "BRB",
+        "number": "28835",
+        "direction": "Geltendorf",
+        "platform": "7 A-C",
+        "time": "2510202118",
+        "destination": "Geltendorf",
+        "path_stations": [
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Kissing",
+          "Mering-St Afra",
+          "Mering",
+          "Merching",
+          "Schmiechen(Schwab)",
+          "Egling",
+          "Walleshausen",
+          "Geltendorf"
+        ]
+      },
+      {
+        "id": "-2590970551728120725-2510202145-1",
+        "type": "BRB",
+        "number": "86748",
+        "direction": "Ingolstadt Hbf",
+        "platform": "101",
+        "time": "2510202145",
+        "destination": "Ingolstadt Hbf",
+        "path_stations": [
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Friedberg(Augsburg)",
+          "Dasing",
+          "Obergriesbach",
+          "Aichach",
+          "Radersdorf",
+          "Schrobenhausen",
+          "Brunnen(Oberbay)",
+          "Ingolstadt Hbf"
+        ]
+      },
+      {
+        "id": "-8164666813380398606-2510202133-1",
+        "type": "RE",
+        "number": "57518",
+        "direction": "Memmingen",
+        "platform": "10 C-E",
+        "time": "2510202133",
+        "destination": "Memmingen",
+        "path_stations": [
+          "Augsburg Morellstr.",
+          "Augsburg Messe",
+          "Inningen",
+          "Bobingen",
+          "Schwabmünchen",
+          "Buchloe",
+          "Türkheim(Bay)Bf",
+          "Rammingen(Bay)",
+          "Mindelheim",
+          "Stetten(Schwab)",
+          "Sontheim(Schwab)",
+          "Memmingen"
+        ]
+      },
+      {
+        "id": "5295243416856313869-2510201237-18",
+        "type": "ICE",
+        "number": "613",
+        "direction": "München Hbf",
+        "platform": "4",
+        "time": "2510202155",
+        "destination": "München Hbf",
+        "path_stations": [
+          "München-Pasing",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "8803799214306376762-2510201608-13",
+        "type": "WB",
+        "number": "966",
+        "direction": "Stuttgart Hbf",
+        "platform": "1",
+        "time": "2510202102",
+        "destination": "Stuttgart Hbf",
+        "path_stations": [
+          "Günzburg",
+          "Ulm Hbf",
+          "Stuttgart Hbf"
+        ]
+      },
+      {
+        "id": "-8310733878175700848-2510201944-21",
+        "type": "RE",
+        "number": "57085",
+        "direction": "München Hbf",
+        "platform": "9 A-C",
+        "time": "2510202139",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Kissing",
+          "Mering-St Afra",
+          "Mering",
+          "Althegnenberg",
+          "Haspelmoor",
+          "Mammendorf",
+          "München-Pasing",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "9087845597939331086-2510202213-2",
+        "type": "BRB",
+        "number": "28837",
+        "direction": "Geltendorf",
+        "platform": "6 A-B",
+        "time": "2510202218",
+        "destination": "Geltendorf",
+        "path_stations": [
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Kissing",
+          "Mering-St Afra",
+          "Mering",
+          "Merching",
+          "Schmiechen(Schwab)",
+          "Egling",
+          "Walleshausen",
+          "Geltendorf"
+        ]
+      },
+      {
+        "id": "-3836550047191728891-2510202245-1",
+        "type": "BRB",
+        "number": "86750",
+        "direction": "Ingolstadt Hbf",
+        "platform": "2 A-B",
+        "time": "2510202245",
+        "destination": "Ingolstadt Hbf",
+        "path_stations": [
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Friedberg(Augsburg)",
+          "Dasing",
+          "Obergriesbach",
+          "Aichach",
+          "Radersdorf",
+          "Schrobenhausen",
+          "Brunnen(Oberbay)",
+          "Ingolstadt Hbf"
+        ]
+      },
+      {
+        "id": "6746955278691408993-2510202029-4",
+        "type": "EN",
+        "number": "50237",
+        "direction": "Budapest-Keleti",
+        "platform": "5",
+        "time": "2510202302",
+        "destination": "Budapest-Keleti",
+        "path_stations": [
+          "München Ost",
+          "Rosenheim",
+          "Salzburg Hbf",
+          "Linz Hbf",
+          "St.Pölten Hbf",
+          "Wien Meidling",
+          "Wien Hbf",
+          "Hegyeshalom",
+          "Mosonmagyarovar",
+          "Györ",
+          "Tatabanya",
+          "Budapest-Kelenföld",
+          "Budapest-Keleti"
+        ]
+      },
+      {
+        "id": "3640656304426635503-2510202159-11",
+        "type": "BRB",
+        "number": "28838",
+        "direction": "Augsburg-Oberhausen",
+        "platform": "6 C-E",
+        "time": "2510202240",
+        "destination": "Augsburg-Oberhausen",
+        "path_stations": [
+          "Augsburg-Oberhausen"
+        ]
+      },
+      {
+        "id": "7108274583246193747-2510202152-2",
+        "type": "ICE",
+        "number": "698",
+        "direction": "Berlin Hbf",
+        "platform": "1",
+        "time": "2510202219",
+        "destination": "Berlin Hbf",
+        "path_stations": [
+          "Günzburg",
+          "Ulm Hbf",
+          "Stuttgart Hbf",
+          "Heidelberg Hbf",
+          "Mannheim Hbf",
+          "Frankfurt(M) Flughafen Fernbf",
+          "Frankfurt(Main)Hbf",
+          "Eisenach Hbf",
+          "Gotha",
+          "Erfurt Hbf",
+          "Weimar",
+          "Naumburg(Saale)Hbf",
+          "Halle(Saale)Hbf",
+          "Bitterfeld",
+          "Berlin Hbf"
+        ]
+      },
+      {
+        "id": "3709050757667951658-2510202159-11",
+        "type": "RE",
+        "number": "57086",
+        "direction": "Ulm Hbf",
+        "platform": "6",
+        "time": "2510202248",
+        "destination": "Ulm Hbf",
+        "path_stations": [
+          "Augsburg-Oberhausen",
+          "Neusäß",
+          "Westheim(Schwab)",
+          "Diedorf(Schwab)",
+          "Gessertshausen",
+          "Kutzenhausen",
+          "Dinkelscherben",
+          "Freihalden",
+          "Jettingen",
+          "Burgau(Schwab)",
+          "Mindelaltheim",
+          "Offingen",
+          "Günzburg",
+          "Leipheim",
+          "Nersingen",
+          "Neu-Ulm",
+          "Ulm Hbf"
+        ]
+      },
+      {
+        "id": "5949417852042325682-2510202029-4",
+        "type": "NJ",
+        "number": "237",
+        "direction": "Venezia Santa Lucia",
+        "platform": "5",
+        "time": "2510202302",
+        "destination": "Venezia Santa Lucia",
+        "path_stations": [
+          "München Ost",
+          "Rosenheim",
+          "Salzburg Hbf",
+          "Bischofshofen",
+          "Villach Hbf",
+          "Tarvisio Boscoverde",
+          "Udine",
+          "Pordenone",
+          "Conegliano",
+          "Treviso Centrale",
+          "Venezia Mestre",
+          "Venezia Santa Lucia"
+        ]
+      },
+      {
+        "id": "-1412524464226526551-2510201525-14",
+        "type": "ICE",
+        "number": "693",
+        "direction": "München Hbf",
+        "platform": "4",
+        "time": "2510202242",
+        "destination": "München Hbf",
+        "path_stations": [
+          "München-Pasing",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "2441251625409756695-2510202119-18",
+        "type": "RE",
+        "number": "57087",
+        "direction": "München Hbf",
+        "platform": "9",
+        "time": "2510202237",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Kissing",
+          "Mering-St Afra",
+          "Mering",
+          "München-Pasing",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "4240327971274372490-2510202256-1",
+        "type": "RE",
+        "number": "55892",
+        "direction": "Gablingen",
+        "platform": "6",
+        "time": "2510202256",
+        "destination": "Gablingen",
+        "path_stations": [
+          "Augsburg-Oberhausen",
+          "Gersthofen",
+          "Gablingen"
+        ]
+      },
+      {
+        "id": "4911203401007770899-2510202232-1",
+        "type": "RE",
+        "number": "3292",
+        "direction": "Kempten(Allgäu)Hbf",
+        "platform": "12 C-E",
+        "time": "2510202232",
+        "destination": "Kempten(Allgäu)Hbf",
+        "path_stations": [
+          "Augsburg Morellstr.",
+          "Augsburg Messe",
+          "Inningen",
+          "Bobingen",
+          "Schwabmünchen",
+          "Buchloe",
+          "Kaufbeuren",
+          "Biessenhofen",
+          "Günzach",
+          "Kempten(Allgäu)Hbf"
+        ]
+      },
+      {
+        "id": "-6876729525690631277-2510201843-8",
+        "type": "ICE",
+        "number": "1015",
+        "direction": "München Hbf",
+        "platform": "4",
+        "time": "2510202256",
+        "destination": "München Hbf",
+        "path_stations": [
+          "München-Pasing",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "3460779356439219917-2510202214-1",
+        "type": "BRB",
+        "number": "62954",
+        "direction": "Landsberg(Lech)",
+        "platform": "12 C-E",
+        "time": "2510202214",
+        "destination": "Landsberg(Lech)",
+        "path_stations": [
+          "Augsburg Morellstr.",
+          "Augsburg Messe",
+          "Inningen",
+          "Bobingen",
+          "Oberottmarshausen",
+          "Graben(Lechfeld)Gewerbepark",
+          "Lagerlechfeld",
+          "Klosterlechfeld",
+          "Kaufering",
+          "Landsberg(L)Schule",
+          "Landsberg(Lech)"
+        ]
+      },
+      {
+        "id": "-7226604022876462423-2510202029-4",
+        "type": "EN",
+        "number": "40237",
+        "direction": "Zagreb Glavni kolodvor",
+        "platform": "5",
+        "time": "2510202302",
+        "destination": "Zagreb Glavni kolodvor",
+        "path_stations": [
+          "München Ost",
+          "Rosenheim",
+          "Salzburg Hbf",
+          "Schwarzach-St.Veit",
+          "Bad Hofgastein",
+          "Bad Gastein",
+          "Mallnitz-Obervellach",
+          "Spittal-Millstättersee",
+          "Villach Hbf",
+          "Jesenice(SL)",
+          "Lesce-Bled",
+          "Kranj",
+          "Ljubljana",
+          "Zidani Most",
+          "Sevnica",
+          "Krsko",
+          "Dobova",
+          "Zapresic",
+          "Zagreb Glavni kolodvor"
+        ]
+      },
+      {
+        "id": "-5425302918995479956-2510201529-17",
+        "type": "ICE",
+        "number": "615",
+        "direction": "München Hbf",
+        "platform": "4",
+        "time": "2510202355",
+        "destination": "München Hbf",
+        "path_stations": [
+          "München-Pasing",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "-5310472404710805800-2510202312-2",
+        "type": "BRB",
+        "number": "28839",
+        "direction": "Geltendorf",
+        "platform": "7 A-C",
+        "time": "2510202318",
+        "destination": "Geltendorf",
+        "path_stations": [
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Kissing",
+          "Mering-St Afra",
+          "Mering",
+          "Merching",
+          "Schmiechen(Schwab)",
+          "Egling",
+          "Walleshausen",
+          "Geltendorf"
+        ]
+      },
+      {
+        "id": "883548528038681801-2510202333-1",
+        "type": "RE",
+        "number": "57520",
+        "direction": "Memmingen",
+        "platform": "8",
+        "time": "2510202333",
+        "destination": "Memmingen",
+        "path_stations": [
+          "Augsburg Morellstr.",
+          "Augsburg Messe",
+          "Inningen",
+          "Bobingen",
+          "Schwabmünchen",
+          "Buchloe",
+          "Türkheim(Bay)Bf",
+          "Rammingen(Bay)",
+          "Mindelheim",
+          "Stetten(Schwab)",
+          "Sontheim(Schwab)",
+          "Memmingen"
+        ]
+      },
+      {
+        "id": "7734805089613574578-2510202359-1",
+        "type": "BRB",
+        "number": "86752",
+        "direction": "Ingolstadt Hbf",
+        "platform": "2 A-B",
+        "time": "2510202359",
+        "destination": "Ingolstadt Hbf",
+        "path_stations": [
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Friedberg(Augsburg)",
+          "Dasing",
+          "Obergriesbach",
+          "Aichach",
+          "Radersdorf",
+          "Schrobenhausen",
+          "Brunnen(Oberbay)",
+          "Ingolstadt Hbf"
+        ]
+      },
+      {
+        "id": "6746955278691408993-2510202029-4",
+        "type": "EN",
+        "number": "50237",
+        "direction": "Budapest-Keleti",
+        "platform": "5",
+        "time": "2510202302",
+        "destination": "Budapest-Keleti",
+        "path_stations": [
+          "München Ost",
+          "Rosenheim",
+          "Salzburg Hbf",
+          "Linz Hbf",
+          "St.Pölten Hbf",
+          "Wien Meidling",
+          "Wien Hbf",
+          "Hegyeshalom",
+          "Mosonmagyarovar",
+          "Györ",
+          "Tatabanya",
+          "Budapest-Kelenföld",
+          "Budapest-Keleti"
+        ]
+      },
+      {
+        "id": "9157866427519413881-2510202258-11",
+        "type": "RE",
+        "number": "57088",
+        "direction": "Ulm Hbf",
+        "platform": "5",
+        "time": "2510202351",
+        "destination": "Ulm Hbf",
+        "path_stations": [
+          "Augsburg-Oberhausen",
+          "Neusäß",
+          "Westheim(Schwab)",
+          "Diedorf(Schwab)",
+          "Gessertshausen",
+          "Kutzenhausen",
+          "Dinkelscherben",
+          "Freihalden",
+          "Jettingen",
+          "Burgau(Schwab)",
+          "Mindelaltheim",
+          "Offingen",
+          "Günzburg",
+          "Leipheim",
+          "Nersingen",
+          "Neu-Ulm",
+          "Ulm Hbf"
+        ]
+      },
+      {
+        "id": "5949417852042325682-2510202029-4",
+        "type": "NJ",
+        "number": "237",
+        "direction": "Venezia Santa Lucia",
+        "platform": "5",
+        "time": "2510202302",
+        "destination": "Venezia Santa Lucia",
+        "path_stations": [
+          "München Ost",
+          "Rosenheim",
+          "Salzburg Hbf",
+          "Bischofshofen",
+          "Villach Hbf",
+          "Tarvisio Boscoverde",
+          "Udine",
+          "Pordenone",
+          "Conegliano",
+          "Treviso Centrale",
+          "Venezia Mestre",
+          "Venezia Santa Lucia"
+        ]
+      },
+      {
+        "id": "6187565811835269028-2510202314-1",
+        "type": "BRB",
+        "number": "62956",
+        "direction": "Landsberg(Lech)",
+        "platform": "12 C-E",
+        "time": "2510202314",
+        "destination": "Landsberg(Lech)",
+        "path_stations": [
+          "Augsburg Morellstr.",
+          "Augsburg Messe",
+          "Inningen",
+          "Bobingen",
+          "Oberottmarshausen",
+          "Graben(Lechfeld)Gewerbepark",
+          "Lagerlechfeld",
+          "Klosterlechfeld",
+          "Kaufering",
+          "Landsberg(L)Schule",
+          "Landsberg(Lech)"
+        ]
+      },
+      {
+        "id": "6449613228243482585-2510202353-2",
+        "type": "BRB",
+        "number": "86595",
+        "direction": "Mering",
+        "platform": "6 A-B",
+        "time": "2510202358",
+        "destination": "Mering",
+        "path_stations": [
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Kissing",
+          "Mering-St Afra",
+          "Mering"
+        ]
+      },
+      {
+        "id": "179162183929136680-2510202219-18",
+        "type": "RE",
+        "number": "57089",
+        "direction": "München Hbf",
+        "platform": "9 A-C",
+        "time": "2510202349",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Kissing",
+          "Mering-St Afra",
+          "Mering",
+          "Althegnenberg",
+          "Haspelmoor",
+          "Mammendorf",
+          "München-Pasing",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "-5449674689628191425-2510202259-11",
+        "type": "BRB",
+        "number": "28840",
+        "direction": "Augsburg-Oberhausen",
+        "platform": "5 C-E",
+        "time": "2510202340",
+        "destination": "Augsburg-Oberhausen",
+        "path_stations": [
+          "Augsburg-Oberhausen"
+        ]
+      },
+      {
+        "id": "4747644076881825118-2510202245-3",
+        "type": "ICE",
+        "number": "1060",
+        "direction": "Stuttgart Hbf",
+        "platform": "1",
+        "time": "2510202317",
+        "destination": "Stuttgart Hbf",
+        "path_stations": [
+          "Ulm Hbf",
+          "Stuttgart Hbf"
+        ]
+      },
+      {
+        "id": "-7226604022876462423-2510202029-4",
+        "type": "EN",
+        "number": "40237",
+        "direction": "Zagreb Glavni kolodvor",
+        "platform": "5",
+        "time": "2510202302",
+        "destination": "Zagreb Glavni kolodvor",
+        "path_stations": [
+          "München Ost",
+          "Rosenheim",
+          "Salzburg Hbf",
+          "Schwarzach-St.Veit",
+          "Bad Hofgastein",
+          "Bad Gastein",
+          "Mallnitz-Obervellach",
+          "Spittal-Millstättersee",
+          "Villach Hbf",
+          "Jesenice(SL)",
+          "Lesce-Bled",
+          "Kranj",
+          "Ljubljana",
+          "Zidani Most",
+          "Sevnica",
+          "Krsko",
+          "Dobova",
+          "Zapresic",
+          "Zagreb Glavni kolodvor"
+        ]
+      },
+      {
+        "id": "6526500943120584903-2510210000-1",
+        "type": "RB",
+        "number": "57188",
+        "direction": "Donauwörth",
+        "platform": "8 C-E",
+        "time": "2510210000",
+        "destination": "Donauwörth",
+        "path_stations": [
+          "Augsburg-Oberhausen",
+          "Gersthofen",
+          "Gablingen",
+          "Langweid(Lech)",
+          "Herbertshofen",
+          "Meitingen",
+          "Westendorf",
+          "Nordendorf",
+          "Mertingen Bahnhof",
+          "Bäumenheim",
+          "Donauwörth"
+        ]
+      },
+      {
+        "id": "2686007473625185344-2510210000-3",
+        "type": "ICE",
+        "number": "618",
+        "direction": "Kiel Hbf",
+        "platform": "1",
+        "time": "2510210031",
+        "destination": "Kiel Hbf",
+        "path_stations": [
+          "Günzburg",
+          "Ulm Hbf",
+          "Stuttgart Hbf",
+          "Heidelberg Hbf",
+          "Mannheim Hbf",
+          "Frankfurt(Main)Hbf",
+          "Frankfurt(M) Flughafen Fernbf",
+          "Siegburg/Bonn",
+          "Köln Hbf",
+          "Düsseldorf Hbf",
+          "Duisburg Hbf",
+          "Essen Hbf",
+          "Münster(Westf)Hbf",
+          "Osnabrück Hbf",
+          "Bremen Hbf",
+          "Hamburg-Harburg",
+          "Hamburg Hbf",
+          "Hamburg Dammtor",
+          "Neumünster",
+          "Kiel Hbf"
+        ]
+      },
+      {
+        "id": "3292093239126572118-2510210005-11",
+        "type": "BRB",
+        "number": "28842",
+        "direction": "Augsburg-Oberhausen",
+        "platform": "5 C-E",
+        "time": "2510210045",
+        "destination": "Augsburg-Oberhausen",
+        "path_stations": [
+          "Augsburg-Oberhausen"
+        ]
+      },
+      {
+        "id": "-8506992454186612126-2510202346-8",
+        "type": "BRB",
+        "number": "62955",
+        "direction": "Augsburg-Oberhausen",
+        "platform": "9",
+        "time": "2510210014",
+        "destination": "Augsburg-Oberhausen",
+        "path_stations": [
+          "Augsburg-Oberhausen"
+        ]
+      },
+      {
+        "id": "-6711944245409804133-2510210018-1",
+        "type": "BRB",
+        "number": "62790",
+        "direction": "Buchloe",
+        "platform": "12 C-E",
+        "time": "2510210018",
+        "destination": "Buchloe",
+        "path_stations": [
+          "Augsburg Morellstr.",
+          "Augsburg Messe",
+          "Inningen",
+          "Bobingen",
+          "Schwabmünchen",
+          "Buchloe"
+        ]
+      },
+      {
+        "id": "2673171754462196046-2510210437-2",
+        "type": "BRB",
+        "number": "28801",
+        "direction": "Geltendorf",
+        "platform": "7",
+        "time": "2510210443",
+        "destination": "Geltendorf",
+        "path_stations": [
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Kissing",
+          "Mering-St Afra",
+          "Mering",
+          "Merching",
+          "Schmiechen(Schwab)",
+          "Egling",
+          "Walleshausen",
+          "Geltendorf"
+        ]
+      },
+      {
+        "id": "8737320772759093957-2510210450-1",
+        "type": "RE",
+        "number": "57400",
+        "direction": "Kempten(Allgäu)Hbf",
+        "platform": "10 C-E",
+        "time": "2510210450",
+        "destination": "Kempten(Allgäu)Hbf",
+        "path_stations": [
+          "Augsburg Morellstr.",
+          "Augsburg Messe",
+          "Inningen",
+          "Bobingen",
+          "Schwabmünchen",
+          "Buchloe",
+          "Kaufbeuren",
+          "Biessenhofen",
+          "Günzach",
+          "Kempten(Allgäu)Hbf"
+        ]
+      },
+      {
+        "id": "-8624992757107064587-2510210331-3",
+        "type": "ICE",
+        "number": "616",
+        "direction": "Hamburg-Altona",
+        "platform": "1",
+        "time": "2510210404",
+        "destination": "Hamburg-Altona",
+        "path_stations": [
+          "Ulm Hbf",
+          "Stuttgart Hbf",
+          "Mannheim Hbf",
+          "Frankfurt(M) Flughafen Fernbf",
+          "Köln Hbf",
+          "Düsseldorf Hbf",
+          "Duisburg Hbf",
+          "Dortmund Hbf",
+          "Münster(Westf)Hbf",
+          "Osnabrück Hbf",
+          "Bremen Hbf",
+          "Hamburg-Harburg",
+          "Hamburg Hbf",
+          "Hamburg Dammtor",
+          "Hamburg-Altona"
+        ]
+      },
+      {
+        "id": "7536485922280434660-2510210432-1",
+        "type": "RB",
+        "number": "57003",
+        "direction": "München Hbf",
+        "platform": "6",
+        "time": "2510210432",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Kissing",
+          "Mering-St Afra",
+          "Mering",
+          "München-Pasing",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "-4818673389474582712-2510210425-8",
+        "type": "RB",
+        "number": "57005",
+        "direction": "München Hbf",
+        "platform": "8",
+        "time": "2510210501",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Kissing",
+          "Mering-St Afra",
+          "Mering",
+          "Althegnenberg",
+          "Haspelmoor",
+          "Mammendorf",
+          "München-Pasing",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "1261775079518102950-2510210444-4",
+        "type": "RB",
+        "number": "57105",
+        "direction": "München Hbf",
+        "platform": "8 C-E",
+        "time": "2510210501",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Kissing",
+          "Mering-St Afra",
+          "Mering",
+          "Althegnenberg",
+          "Haspelmoor",
+          "Mammendorf",
+          "München-Pasing",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "-2394412459609983872-2510210536-2",
+        "type": "BRB",
+        "number": "28803",
+        "direction": "Geltendorf",
+        "platform": "8",
+        "time": "2510210543",
+        "destination": "Geltendorf",
+        "path_stations": [
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Kissing",
+          "Mering-St Afra",
+          "Mering",
+          "Merching",
+          "Schmiechen(Schwab)",
+          "Egling",
+          "Walleshausen",
+          "Geltendorf"
+        ]
+      },
+      {
+        "id": "-5594689460481520186-2510210521-1",
+        "type": "RE",
+        "number": "57238",
+        "direction": "Aalen Hbf",
+        "platform": "6",
+        "time": "2510210521",
+        "destination": "Aalen Hbf",
+        "path_stations": [
+          "Augsburg-Oberhausen",
+          "Gersthofen",
+          "Gablingen",
+          "Langweid(Lech)",
+          "Herbertshofen",
+          "Meitingen",
+          "Westendorf",
+          "Nordendorf",
+          "Mertingen Bahnhof",
+          "Bäumenheim",
+          "Donauwörth",
+          "Wörnitzstein",
+          "Ebermergen",
+          "Harburg(Schwab)",
+          "Hoppingen",
+          "Möttingen",
+          "Nördlingen",
+          "Pflaumloch",
+          "Trochtelfingen(b Bopfingen)",
+          "Bopfingen",
+          "Aufhausen(Württ)",
+          "Lauchheim",
+          "Westhausen",
+          "Goldshöfe",
+          "Hofen(b Aalen)",
+          "Wasseralfingen",
+          "Aalen Hbf"
+        ]
+      },
+      {
+        "id": "4061735120889363778-2510210502-8",
+        "type": "RB",
+        "number": "57107",
+        "direction": "München Hbf",
+        "platform": "7",
+        "time": "2510210533",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Kissing",
+          "Mering-St Afra",
+          "Mering",
+          "München-Pasing",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "5076139208089852075-2510210442-12",
+        "type": "RB",
+        "number": "57007",
+        "direction": "München Hbf",
+        "platform": "7",
+        "time": "2510210533",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Kissing",
+          "Mering-St Afra",
+          "Mering",
+          "München-Pasing",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "6235052336174465492-2510210546-1",
+        "type": "BRB",
+        "number": "86632",
+        "direction": "Friedberg(Augsburg)",
+        "platform": "101",
+        "time": "2510210546",
+        "destination": "Friedberg(Augsburg)",
+        "path_stations": [
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Friedberg(Augsburg)"
+        ]
+      },
+      {
+        "id": "-6457792526093672155-2510210454-6",
+        "type": "RE",
+        "number": "57004",
+        "direction": "Ulm Hbf",
+        "platform": "5",
+        "time": "2510210520",
+        "destination": "Ulm Hbf",
+        "path_stations": [
+          "Augsburg-Oberhausen",
+          "Neusäß",
+          "Westheim(Schwab)",
+          "Diedorf(Schwab)",
+          "Gessertshausen",
+          "Kutzenhausen",
+          "Dinkelscherben",
+          "Freihalden",
+          "Jettingen",
+          "Burgau(Schwab)",
+          "Mindelaltheim",
+          "Offingen",
+          "Günzburg",
+          "Leipheim",
+          "Nersingen",
+          "Neu-Ulm",
+          "Ulm Hbf"
+        ]
+      },
+      {
+        "id": "7474414276230536927-2510201838-22",
+        "type": "ICE",
+        "number": "619",
+        "direction": "München Hbf",
+        "platform": "4",
+        "time": "2510210532",
+        "destination": "München Hbf",
+        "path_stations": [
+          "München-Pasing",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "1261775079518102950-2510210444-4",
+        "type": "RB",
+        "number": "57105",
+        "direction": "München Hbf",
+        "platform": "8 C-E",
+        "time": "2510210501",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Kissing",
+          "Mering-St Afra",
+          "Mering",
+          "Althegnenberg",
+          "Haspelmoor",
+          "Mammendorf",
+          "München-Pasing",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "3143477520061082281-2510210520-1",
+        "type": "RE",
+        "number": "57500",
+        "direction": "Memmingen",
+        "platform": "12 C-E",
+        "time": "2510210520",
+        "destination": "Memmingen",
+        "path_stations": [
+          "Augsburg Morellstr.",
+          "Augsburg Messe",
+          "Inningen",
+          "Bobingen",
+          "Schwabmünchen",
+          "Buchloe",
+          "Türkheim(Bay)Bf",
+          "Rammingen(Bay)",
+          "Mindelheim",
+          "Stetten(Schwab)",
+          "Sontheim(Schwab)",
+          "Memmingen"
+        ]
+      },
+      {
+        "id": "4168944133134341886-2510210537-1",
+        "type": "BRB",
+        "number": "86630",
+        "direction": "Ingolstadt Hbf",
+        "platform": "3",
+        "time": "2510210537",
+        "destination": "Ingolstadt Hbf",
+        "path_stations": [
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Friedberg(Augsburg)",
+          "Dasing",
+          "Obergriesbach",
+          "Aichach",
+          "Radersdorf",
+          "Schrobenhausen",
+          "Brunnen(Oberbay)",
+          "Ingolstadt Hbf"
+        ]
+      },
+      {
+        "id": "-7713489930006053771-2510210556-1",
+        "type": "RB",
+        "number": "57009",
+        "direction": "München Hbf",
+        "platform": "9",
+        "time": "2510210556",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Kissing",
+          "Mering-St Afra",
+          "Mering",
+          "Mammendorf",
+          "München-Pasing",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "2662972692212507122-2510210506-3",
+        "type": "ICE",
+        "number": "804",
+        "direction": "Berlin Hbf",
+        "platform": "1",
+        "time": "2510210540",
+        "destination": "Berlin Hbf",
+        "path_stations": [
+          "Donauwörth",
+          "Treuchtlingen",
+          "Nürnberg Hbf",
+          "Bamberg",
+          "Erfurt Hbf",
+          "Leipzig Hbf",
+          "Bitterfeld",
+          "Berlin Hbf"
+        ]
+      },
+      {
+        "id": "1847313071699172804-2510210459-3",
+        "type": "ICE",
+        "number": "1068",
+        "direction": "Karlsruhe Hbf",
+        "platform": "1",
+        "time": "2510210535",
+        "destination": "Karlsruhe Hbf",
+        "path_stations": [
+          "Ulm Hbf",
+          "Stuttgart Hbf",
+          "Bruchsal",
+          "Karlsruhe Hbf"
+        ]
+      },
+      {
+        "id": "-7072675174493931063-2510210519-6",
+        "type": "BRB",
+        "number": "86500",
+        "direction": "Gessertshausen",
+        "platform": "7",
+        "time": "2510210540",
+        "destination": "Gessertshausen",
+        "path_stations": [
+          "Augsburg-Oberhausen",
+          "Neusäß",
+          "Westheim(Schwab)",
+          "Diedorf(Schwab)",
+          "Gessertshausen"
+        ]
+      },
+      {
+        "id": "5812381235403711667-2510210557-1",
+        "type": "RE",
+        "number": "59116",
+        "direction": "Nürnberg Hbf",
+        "platform": "2 C-E",
+        "time": "2510210557",
+        "destination": "Nürnberg Hbf",
+        "path_stations": [
+          "Augsburg-Oberhausen",
+          "Meitingen",
+          "Nordendorf",
+          "Mertingen Bahnhof",
+          "Donauwörth",
+          "Otting-Weilheim",
+          "Treuchtlingen",
+          "Weißenburg(Bay)",
+          "Pleinfeld",
+          "Roth",
+          "Schwabach",
+          "Nürnberg Hbf"
+        ]
+      },
+      {
+        "id": "-4818673389474582712-2510210425-8",
+        "type": "RB",
+        "number": "57005",
+        "direction": "München Hbf",
+        "platform": "8",
+        "time": "2510210501",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Kissing",
+          "Mering-St Afra",
+          "Mering",
+          "Althegnenberg",
+          "Haspelmoor",
+          "Mammendorf",
+          "München-Pasing",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "-4586880460831148180-2510210544-1",
+        "type": "RB",
+        "number": "57240",
+        "direction": "Donauwörth",
+        "platform": "5 C-E",
+        "time": "2510210544",
+        "destination": "Donauwörth",
+        "path_stations": [
+          "Augsburg-Oberhausen",
+          "Gersthofen",
+          "Gablingen",
+          "Langweid(Lech)",
+          "Herbertshofen",
+          "Meitingen",
+          "Westendorf",
+          "Nordendorf",
+          "Mertingen Bahnhof",
+          "Bäumenheim",
+          "Donauwörth"
+        ]
+      }
+    ]
+  }
+}

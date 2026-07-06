@@ -1,0 +1,801 @@
+{
+  "station_eva": "8003427",
+  "date": "251020",
+  "cached_at": "2025-10-20T15:40:00.526640",
+  "plan_data": {
+    "departures": [
+      {
+        "id": "1399534534342426373-2510201722-4",
+        "type": "RE",
+        "number": "10155",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "2",
+        "time": "2510201748",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Rheinhausen",
+          "Duisburg Hbf",
+          "Mülheim(Ruhr)Hbf",
+          "Essen Hbf",
+          "Gelsenkirchen Hbf",
+          "Wanne-Eickel Hbf",
+          "Recklinghausen Süd",
+          "Recklinghausen Hbf",
+          "Marl-Sinsen",
+          "Haltern am See",
+          "Sythen",
+          "Dülmen",
+          "Buldern",
+          "Nottuln-Appelhülsen",
+          "Senden-Bösensell",
+          "Münster-Albachten",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "2839093185160367321-2510201536-18",
+        "type": "RE",
+        "number": "10146",
+        "direction": "Mönchengladbach Hbf",
+        "platform": "1",
+        "time": "2510201711",
+        "destination": "Mönchengladbach Hbf",
+        "path_stations": [
+          "Krefeld Hbf",
+          "Viersen",
+          "Mönchengladbach Hbf"
+        ]
+      },
+      {
+        "id": "8166382742810735249-2510201711-11",
+        "type": "RB",
+        "number": "10337",
+        "direction": "Aachen Hbf",
+        "platform": "1",
+        "time": "2510201750",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Krefeld-Linn",
+          "Krefeld-Oppum",
+          "Krefeld Hbf",
+          "Forsthaus",
+          "Anrath",
+          "Viersen",
+          "Mönchengladbach Hbf",
+          "Rheydt Hbf",
+          "Wickrath",
+          "Herrath",
+          "Erkelenz",
+          "Hückelhoven-Baal",
+          "Brachelen",
+          "Lindern",
+          "Geilenkirchen",
+          "Übach-Palenberg",
+          "Herzogenrath",
+          "Kohlscheid",
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "3810259593782358126-2510201639-12",
+        "type": "VIA",
+        "number": "52265",
+        "direction": "Mönchengladbach Hbf",
+        "platform": "1",
+        "time": "2510201720",
+        "destination": "Mönchengladbach Hbf",
+        "path_stations": [
+          "Krefeld-Linn",
+          "Krefeld-Oppum",
+          "Krefeld Hbf",
+          "Forsthaus",
+          "Anrath",
+          "Viersen",
+          "Mönchengladbach Hbf"
+        ]
+      },
+      {
+        "id": "5100772068058333677-2510201537-22",
+        "type": "RB",
+        "number": "10330",
+        "direction": "Essen-Steele",
+        "platform": "2",
+        "time": "2510201707",
+        "destination": "Essen-Steele",
+        "path_stations": [
+          "Krefeld-Hohenbudberg Chempark",
+          "Rheinhausen",
+          "Rheinhausen Ost",
+          "Duisburg-Hochfeld Süd",
+          "Duisburg Hbf",
+          "Mülheim(Ruhr)Styrum",
+          "Mülheim(Ruhr)Hbf",
+          "Essen West",
+          "Essen Hbf",
+          "Essen-Steele"
+        ]
+      },
+      {
+        "id": "7991506129333906200-2510201708-8",
+        "type": "VIA",
+        "number": "52262",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "2",
+        "time": "2510201737",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Krefeld-Hohenbudberg Chempark",
+          "Rheinhausen",
+          "Rheinhausen Ost",
+          "Duisburg-Hochfeld Süd",
+          "Duisburg Hbf",
+          "Oberhausen Hbf",
+          "Essen-Dellwig",
+          "Essen-Bergeborbeck",
+          "Essen-Altenessen",
+          "Essen-Zollverein Nord",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "7807422524941546938-2510201637-22",
+        "type": "RB",
+        "number": "10332",
+        "direction": "Essen-Steele",
+        "platform": "2",
+        "time": "2510201807",
+        "destination": "Essen-Steele",
+        "path_stations": [
+          "Krefeld-Hohenbudberg Chempark",
+          "Rheinhausen",
+          "Rheinhausen Ost",
+          "Duisburg-Hochfeld Süd",
+          "Duisburg Hbf",
+          "Mülheim(Ruhr)Styrum",
+          "Mülheim(Ruhr)Hbf",
+          "Essen West",
+          "Essen Hbf",
+          "Essen-Steele"
+        ]
+      },
+      {
+        "id": "-7280246599324333839-2510201739-12",
+        "type": "VIA",
+        "number": "52267",
+        "direction": "Mönchengladbach Hbf",
+        "platform": "1",
+        "time": "2510201820",
+        "destination": "Mönchengladbach Hbf",
+        "path_stations": [
+          "Krefeld-Linn",
+          "Krefeld-Oppum",
+          "Krefeld Hbf",
+          "Forsthaus",
+          "Anrath",
+          "Viersen",
+          "Mönchengladbach Hbf"
+        ]
+      },
+      {
+        "id": "7166872605298800511-2510201823-4",
+        "type": "RE",
+        "number": "10159",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "2",
+        "time": "2510201848",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Rheinhausen",
+          "Duisburg Hbf",
+          "Mülheim(Ruhr)Hbf",
+          "Essen Hbf",
+          "Gelsenkirchen Hbf",
+          "Wanne-Eickel Hbf",
+          "Recklinghausen Süd",
+          "Recklinghausen Hbf",
+          "Marl-Sinsen",
+          "Haltern am See",
+          "Sythen",
+          "Dülmen",
+          "Buldern",
+          "Nottuln-Appelhülsen",
+          "Senden-Bösensell",
+          "Münster-Albachten",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "8636159276859075814-2510201636-18",
+        "type": "RE",
+        "number": "10150",
+        "direction": "Mönchengladbach Hbf",
+        "platform": "1",
+        "time": "2510201812",
+        "destination": "Mönchengladbach Hbf",
+        "path_stations": [
+          "Krefeld Hbf",
+          "Viersen",
+          "Mönchengladbach Hbf"
+        ]
+      },
+      {
+        "id": "608379063884191223-2510201808-8",
+        "type": "VIA",
+        "number": "52264",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "2",
+        "time": "2510201837",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Krefeld-Hohenbudberg Chempark",
+          "Rheinhausen",
+          "Rheinhausen Ost",
+          "Duisburg-Hochfeld Süd",
+          "Duisburg Hbf",
+          "Oberhausen Hbf",
+          "Essen-Dellwig",
+          "Essen-Bergeborbeck",
+          "Essen-Altenessen",
+          "Essen-Zollverein Nord",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "-4664029606652746532-2510201811-11",
+        "type": "RB",
+        "number": "10339",
+        "direction": "Aachen Hbf",
+        "platform": "1",
+        "time": "2510201850",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Krefeld-Linn",
+          "Krefeld-Oppum",
+          "Krefeld Hbf",
+          "Forsthaus",
+          "Anrath",
+          "Viersen",
+          "Mönchengladbach Hbf",
+          "Rheydt Hbf",
+          "Wickrath",
+          "Herrath",
+          "Erkelenz",
+          "Hückelhoven-Baal",
+          "Brachelen",
+          "Lindern",
+          "Geilenkirchen",
+          "Übach-Palenberg",
+          "Herzogenrath",
+          "Kohlscheid",
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "-8421522247246892215-2510201839-12",
+        "type": "VIA",
+        "number": "52269",
+        "direction": "Mönchengladbach Hbf",
+        "platform": "1",
+        "time": "2510201920",
+        "destination": "Mönchengladbach Hbf",
+        "path_stations": [
+          "Krefeld-Linn",
+          "Krefeld-Oppum",
+          "Krefeld Hbf",
+          "Forsthaus",
+          "Anrath",
+          "Viersen",
+          "Mönchengladbach Hbf"
+        ]
+      },
+      {
+        "id": "-1801333113396667008-2510201737-22",
+        "type": "RB",
+        "number": "10334",
+        "direction": "Essen Hbf",
+        "platform": "2",
+        "time": "2510201907",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Krefeld-Hohenbudberg Chempark",
+          "Rheinhausen",
+          "Rheinhausen Ost",
+          "Duisburg-Hochfeld Süd",
+          "Duisburg Hbf",
+          "Mülheim(Ruhr)Styrum",
+          "Mülheim(Ruhr)Hbf",
+          "Essen West",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "858050368598625489-2510201908-8",
+        "type": "VIA",
+        "number": "52266",
+        "direction": "Duisburg Hbf",
+        "platform": "2",
+        "time": "2510201937",
+        "destination": "Duisburg Hbf",
+        "path_stations": [
+          "Krefeld-Hohenbudberg Chempark",
+          "Rheinhausen",
+          "Rheinhausen Ost",
+          "Duisburg-Hochfeld Süd",
+          "Duisburg Hbf"
+        ]
+      },
+      {
+        "id": "2071242247859986841-2510201736-18",
+        "type": "RE",
+        "number": "10154",
+        "direction": "Mönchengladbach Hbf",
+        "platform": "1",
+        "time": "2510201912",
+        "destination": "Mönchengladbach Hbf",
+        "path_stations": [
+          "Krefeld Hbf",
+          "Viersen",
+          "Mönchengladbach Hbf"
+        ]
+      },
+      {
+        "id": "7206303648391247295-2510201922-4",
+        "type": "RE",
+        "number": "10163",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "2",
+        "time": "2510201947",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Rheinhausen",
+          "Duisburg Hbf",
+          "Mülheim(Ruhr)Hbf",
+          "Essen Hbf",
+          "Gelsenkirchen Hbf",
+          "Wanne-Eickel Hbf",
+          "Recklinghausen Süd",
+          "Recklinghausen Hbf",
+          "Marl-Sinsen",
+          "Haltern am See",
+          "Sythen",
+          "Dülmen",
+          "Buldern",
+          "Nottuln-Appelhülsen",
+          "Senden-Bösensell",
+          "Münster-Albachten",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-9057893175658635366-2510201911-11",
+        "type": "RB",
+        "number": "10341",
+        "direction": "Aachen Hbf",
+        "platform": "1",
+        "time": "2510201950",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Krefeld-Linn",
+          "Krefeld-Oppum",
+          "Krefeld Hbf",
+          "Forsthaus",
+          "Anrath",
+          "Viersen",
+          "Mönchengladbach Hbf",
+          "Rheydt Hbf",
+          "Wickrath",
+          "Herrath",
+          "Erkelenz",
+          "Hückelhoven-Baal",
+          "Brachelen",
+          "Lindern",
+          "Geilenkirchen",
+          "Übach-Palenberg",
+          "Herzogenrath",
+          "Kohlscheid",
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "5356887278008679065-2510201837-22",
+        "type": "RB",
+        "number": "10336",
+        "direction": "Essen Hbf",
+        "platform": "2",
+        "time": "2510202007",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Krefeld-Hohenbudberg Chempark",
+          "Rheinhausen",
+          "Rheinhausen Ost",
+          "Duisburg-Hochfeld Süd",
+          "Duisburg Hbf",
+          "Mülheim(Ruhr)Styrum",
+          "Mülheim(Ruhr)Hbf",
+          "Essen West",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "-4223550550386185055-2510202016-10",
+        "type": "RB",
+        "number": "10343",
+        "direction": "Aachen Hbf",
+        "platform": "1",
+        "time": "2510202050",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Krefeld-Linn",
+          "Krefeld-Oppum",
+          "Krefeld Hbf",
+          "Forsthaus",
+          "Anrath",
+          "Viersen",
+          "Mönchengladbach Hbf",
+          "Rheydt Hbf",
+          "Wickrath",
+          "Herrath",
+          "Erkelenz",
+          "Hückelhoven-Baal",
+          "Brachelen",
+          "Lindern",
+          "Geilenkirchen",
+          "Übach-Palenberg",
+          "Herzogenrath",
+          "Kohlscheid",
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "-2686774313141415833-2510201836-18",
+        "type": "RE",
+        "number": "10158",
+        "direction": "Mönchengladbach Hbf",
+        "platform": "1",
+        "time": "2510202011",
+        "destination": "Mönchengladbach Hbf",
+        "path_stations": [
+          "Krefeld Hbf",
+          "Viersen",
+          "Mönchengladbach Hbf"
+        ]
+      },
+      {
+        "id": "-3846608273312252290-2510202008-8",
+        "type": "VIA",
+        "number": "52268",
+        "direction": "Duisburg Hbf",
+        "platform": "2",
+        "time": "2510202037",
+        "destination": "Duisburg Hbf",
+        "path_stations": [
+          "Krefeld-Hohenbudberg Chempark",
+          "Rheinhausen",
+          "Rheinhausen Ost",
+          "Duisburg-Hochfeld Süd",
+          "Duisburg Hbf"
+        ]
+      },
+      {
+        "id": "2785061315233803967-2510202022-4",
+        "type": "RE",
+        "number": "10167",
+        "direction": "Haltern am See",
+        "platform": "2",
+        "time": "2510202048",
+        "destination": "Haltern am See",
+        "path_stations": [
+          "Rheinhausen",
+          "Duisburg Hbf",
+          "Mülheim(Ruhr)Hbf",
+          "Essen Hbf",
+          "Gelsenkirchen Hbf",
+          "Wanne-Eickel Hbf",
+          "Recklinghausen Süd",
+          "Recklinghausen Hbf",
+          "Marl-Sinsen",
+          "Haltern am See"
+        ]
+      },
+      {
+        "id": "-6075476340840051066-2510201936-18",
+        "type": "RE",
+        "number": "10162",
+        "direction": "Mönchengladbach Hbf",
+        "platform": "1",
+        "time": "2510202111",
+        "destination": "Mönchengladbach Hbf",
+        "path_stations": [
+          "Krefeld Hbf",
+          "Viersen",
+          "Mönchengladbach Hbf"
+        ]
+      },
+      {
+        "id": "1626977314958828019-2510202122-4",
+        "type": "RE",
+        "number": "10171",
+        "direction": "Haltern am See",
+        "platform": "2",
+        "time": "2510202148",
+        "destination": "Haltern am See",
+        "path_stations": [
+          "Rheinhausen",
+          "Duisburg Hbf",
+          "Mülheim(Ruhr)Hbf",
+          "Essen Hbf",
+          "Gelsenkirchen Hbf",
+          "Wanne-Eickel Hbf",
+          "Recklinghausen Süd",
+          "Recklinghausen Hbf",
+          "Marl-Sinsen",
+          "Haltern am See"
+        ]
+      },
+      {
+        "id": "-1672872613949795114-2510202116-10",
+        "type": "RB",
+        "number": "10345",
+        "direction": "Aachen Hbf",
+        "platform": "1",
+        "time": "2510202150",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Krefeld-Linn",
+          "Krefeld-Oppum",
+          "Krefeld Hbf",
+          "Forsthaus",
+          "Anrath",
+          "Viersen",
+          "Mönchengladbach Hbf",
+          "Rheydt Hbf",
+          "Wickrath",
+          "Herrath",
+          "Erkelenz",
+          "Hückelhoven-Baal",
+          "Brachelen",
+          "Lindern",
+          "Geilenkirchen",
+          "Übach-Palenberg",
+          "Herzogenrath",
+          "Kohlscheid",
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "5995759368429194373-2510201937-22",
+        "type": "RB",
+        "number": "10338",
+        "direction": "Essen Hbf",
+        "platform": "2",
+        "time": "2510202107",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Krefeld-Hohenbudberg Chempark",
+          "Rheinhausen",
+          "Rheinhausen Ost",
+          "Duisburg-Hochfeld Süd",
+          "Duisburg Hbf",
+          "Mülheim(Ruhr)Styrum",
+          "Mülheim(Ruhr)Hbf",
+          "Essen West",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "3877311608492123870-2510202216-10",
+        "type": "RB",
+        "number": "10347",
+        "direction": "Aachen Hbf",
+        "platform": "1",
+        "time": "2510202250",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Krefeld-Linn",
+          "Krefeld-Oppum",
+          "Krefeld Hbf",
+          "Forsthaus",
+          "Anrath",
+          "Viersen",
+          "Mönchengladbach Hbf",
+          "Rheydt Hbf",
+          "Wickrath",
+          "Herrath",
+          "Erkelenz",
+          "Hückelhoven-Baal",
+          "Brachelen",
+          "Lindern",
+          "Geilenkirchen",
+          "Übach-Palenberg",
+          "Herzogenrath",
+          "Kohlscheid",
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "-6959189778167575588-2510202036-18",
+        "type": "RE",
+        "number": "10166",
+        "direction": "Mönchengladbach Hbf",
+        "platform": "1",
+        "time": "2510202211",
+        "destination": "Mönchengladbach Hbf",
+        "path_stations": [
+          "Krefeld Hbf",
+          "Viersen",
+          "Mönchengladbach Hbf"
+        ]
+      },
+      {
+        "id": "-7820555878403610683-2510202222-4",
+        "type": "RE",
+        "number": "10175",
+        "direction": "Haltern am See",
+        "platform": "2",
+        "time": "2510202248",
+        "destination": "Haltern am See",
+        "path_stations": [
+          "Rheinhausen",
+          "Duisburg Hbf",
+          "Mülheim(Ruhr)Hbf",
+          "Essen Hbf",
+          "Gelsenkirchen Hbf",
+          "Wanne-Eickel Hbf",
+          "Recklinghausen Süd",
+          "Recklinghausen Hbf",
+          "Marl-Sinsen",
+          "Haltern am See"
+        ]
+      },
+      {
+        "id": "-3507760180532579777-2510202036-22",
+        "type": "RB",
+        "number": "10340",
+        "direction": "Essen Hbf",
+        "platform": "2",
+        "time": "2510202207",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Krefeld-Hohenbudberg Chempark",
+          "Rheinhausen",
+          "Rheinhausen Ost",
+          "Duisburg-Hochfeld Süd",
+          "Duisburg Hbf",
+          "Mülheim(Ruhr)Styrum",
+          "Mülheim(Ruhr)Hbf",
+          "Essen West",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "-5067285706679593203-2510202137-22",
+        "type": "RB",
+        "number": "10342",
+        "direction": "Duisburg Hbf",
+        "platform": "2",
+        "time": "2510202307",
+        "destination": "Duisburg Hbf",
+        "path_stations": [
+          "Krefeld-Hohenbudberg Chempark",
+          "Rheinhausen",
+          "Rheinhausen Ost",
+          "Duisburg-Hochfeld Süd",
+          "Duisburg Hbf"
+        ]
+      },
+      {
+        "id": "-2982859918294871248-2510202335-6",
+        "type": "RB",
+        "number": "10349",
+        "direction": "Mönchengladbach Hbf",
+        "platform": "1",
+        "time": "2510202350",
+        "destination": "Mönchengladbach Hbf",
+        "path_stations": [
+          "Krefeld-Linn",
+          "Krefeld-Oppum",
+          "Krefeld Hbf",
+          "Forsthaus",
+          "Anrath",
+          "Viersen",
+          "Mönchengladbach Hbf"
+        ]
+      },
+      {
+        "id": "-5805077567086155624-2510202207-11",
+        "type": "RE",
+        "number": "10170",
+        "direction": "Mönchengladbach Hbf",
+        "platform": "1",
+        "time": "2510202311",
+        "destination": "Mönchengladbach Hbf",
+        "path_stations": [
+          "Krefeld Hbf",
+          "Viersen",
+          "Mönchengladbach Hbf"
+        ]
+      },
+      {
+        "id": "6753527767555726610-2510202237-22",
+        "type": "RB",
+        "number": "10344",
+        "direction": "Duisburg Hbf",
+        "platform": "2",
+        "time": "2510210007",
+        "destination": "Duisburg Hbf",
+        "path_stations": [
+          "Krefeld-Hohenbudberg Chempark",
+          "Rheinhausen",
+          "Rheinhausen Ost",
+          "Duisburg-Hochfeld Süd",
+          "Duisburg Hbf"
+        ]
+      },
+      {
+        "id": "3802086854857564828-2510210035-6",
+        "type": "RB",
+        "number": "10301",
+        "direction": "Mönchengladbach Hbf",
+        "platform": "1",
+        "time": "2510210050",
+        "destination": "Mönchengladbach Hbf",
+        "path_stations": [
+          "Krefeld-Linn",
+          "Krefeld-Oppum",
+          "Krefeld Hbf",
+          "Forsthaus",
+          "Anrath",
+          "Viersen",
+          "Mönchengladbach Hbf"
+        ]
+      },
+      {
+        "id": "7529602871628123055-2510210135-6",
+        "type": "RB",
+        "number": "10303",
+        "direction": "Mönchengladbach Hbf",
+        "platform": "1",
+        "time": "2510210150",
+        "destination": "Mönchengladbach Hbf",
+        "path_stations": [
+          "Krefeld-Linn",
+          "Krefeld-Oppum",
+          "Krefeld Hbf",
+          "Forsthaus",
+          "Anrath",
+          "Viersen",
+          "Mönchengladbach Hbf"
+        ]
+      },
+      {
+        "id": "8478574534290984085-2510202337-22",
+        "type": "RB",
+        "number": "10346",
+        "direction": "Duisburg Hbf",
+        "platform": "2",
+        "time": "2510210107",
+        "destination": "Duisburg Hbf",
+        "path_stations": [
+          "Krefeld-Hohenbudberg Chempark",
+          "Rheinhausen",
+          "Rheinhausen Ost",
+          "Duisburg-Hochfeld Süd",
+          "Duisburg Hbf"
+        ]
+      }
+    ],
+    "arrivals": []
+  }
+}

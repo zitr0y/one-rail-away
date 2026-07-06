@@ -1,0 +1,2223 @@
+{
+  "station_eva": "8000139",
+  "date": "251020",
+  "cached_at": "2025-10-20T15:48:28.382979",
+  "plan_data": {
+    "arrivals": [
+      {
+        "id": "9042395260942796037-2510201419-8",
+        "type": "ICE",
+        "number": "117",
+        "time": "2510201709",
+        "platform": "2",
+        "path_stations": [
+          "Frankfurt(Main)Hbf",
+          "Darmstadt Hbf",
+          "Bensheim",
+          "Weinheim(Bergstr)Hbf",
+          "Heidelberg Hbf",
+          "Stuttgart Hbf",
+          "Ulm Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "1290441015130173242-2510201726-5",
+        "type": "ag",
+        "number": "84263",
+        "time": "2510201743",
+        "platform": "2",
+        "path_stations": [
+          "Ulm Hbf",
+          "Neu-Ulm",
+          "Nersingen",
+          "Leipheim"
+        ],
+        "line": "RB15"
+      },
+      {
+        "id": "6061447830001777656-2510201539-21",
+        "type": "RB",
+        "number": "57686",
+        "time": "2510201714",
+        "platform": "1a",
+        "path_stations": [
+          "Mindelheim",
+          "Nassenbeuren",
+          "Hausen(Schwab)",
+          "Pfaffenhausen",
+          "Weilbach(Unterallg)",
+          "Breitenbrunn(Schwab)",
+          "Loppenhausen",
+          "Haupeltshofen",
+          "Aletshausen",
+          "Niederraunau",
+          "Krumbach(Schwab)Schule",
+          "Krumbach(Schwab)",
+          "Billenhausen",
+          "Hirschfelden",
+          "Neuburg(Kammel)",
+          "Ellzee",
+          "Ichenhausen",
+          "Hochwang",
+          "Kleinkötz",
+          "Wasserburg(Günz)"
+        ],
+        "line": "78"
+      },
+      {
+        "id": "-6593149483901234579-2510201718-5",
+        "type": "RE",
+        "number": "57075",
+        "time": "2510201736",
+        "platform": "2",
+        "path_stations": [
+          "Ulm Hbf",
+          "Neu-Ulm",
+          "Nersingen",
+          "Leipheim"
+        ],
+        "line": "9"
+      },
+      {
+        "id": "5425314286080249204-2510201708-9",
+        "type": "ag",
+        "number": "84284",
+        "time": "2510201751",
+        "platform": "3",
+        "path_stations": [
+          "Donauwörth",
+          "Tapfheim",
+          "Schwenningen(Bay)",
+          "Blindheim",
+          "Höchstädt(Donau)",
+          "Dillingen(Donau)",
+          "Lauingen",
+          "Gundelfingen(Bay)"
+        ],
+        "line": "RB15"
+      },
+      {
+        "id": "8388976578318959239-2510201602-21",
+        "type": "RE",
+        "number": "57052",
+        "time": "2510201755",
+        "platform": "3",
+        "path_stations": [
+          "München Hbf",
+          "München-Pasing",
+          "Mering",
+          "Mering-St Afra",
+          "Kissing",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße",
+          "Augsburg Hbf",
+          "Augsburg-Oberhausen",
+          "Neusäß",
+          "Westheim(Schwab)",
+          "Diedorf(Schwab)",
+          "Gessertshausen",
+          "Kutzenhausen",
+          "Dinkelscherben",
+          "Freihalden",
+          "Jettingen",
+          "Burgau(Schwab)",
+          "Mindelaltheim",
+          "Offingen"
+        ],
+        "line": "9"
+      },
+      {
+        "id": "-7398519093395828857-2510201647-5",
+        "type": "ag",
+        "number": "84291",
+        "time": "2510201704",
+        "platform": "2",
+        "path_stations": [
+          "Ulm Hbf",
+          "Neu-Ulm",
+          "Nersingen",
+          "Leipheim"
+        ],
+        "line": "RB15"
+      },
+      {
+        "id": "-968893277648538154-2510201623-14",
+        "type": "RE",
+        "number": "57154",
+        "time": "2510201718",
+        "platform": "3",
+        "path_stations": [
+          "Augsburg Hbf",
+          "Augsburg-Oberhausen",
+          "Neusäß",
+          "Westheim(Schwab)",
+          "Diedorf(Schwab)",
+          "Gessertshausen",
+          "Kutzenhausen",
+          "Dinkelscherben",
+          "Freihalden",
+          "Jettingen",
+          "Burgau(Schwab)",
+          "Mindelaltheim",
+          "Offingen"
+        ],
+        "line": "9"
+      },
+      {
+        "id": "4097711371156808190-2510201145-22",
+        "type": "EC",
+        "number": "216",
+        "time": "2510201846",
+        "platform": "3",
+        "path_stations": [
+          "Graz Hbf",
+          "Leoben Hbf",
+          "St.Michael in Obersteiermark",
+          "Selzthal",
+          "Liezen",
+          "Stainach-Irdning",
+          "Schladming",
+          "Radstadt",
+          "Bischofshofen",
+          "Werfen",
+          "Golling-Abtenau",
+          "Hallein",
+          "Salzburg Süd",
+          "Salzburg Hbf",
+          "Freilassing",
+          "Traunstein",
+          "Prien am Chiemsee",
+          "Rosenheim",
+          "München Ost",
+          "München Hbf",
+          "Augsburg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "6202931575666114667-2510201818-5",
+        "type": "RE",
+        "number": "57175",
+        "time": "2510201837",
+        "platform": "2",
+        "path_stations": [
+          "Ulm Hbf",
+          "Neu-Ulm",
+          "Nersingen",
+          "Leipheim"
+        ],
+        "line": "9"
+      },
+      {
+        "id": "-4659040351822619408-2510201635-21",
+        "type": "RE",
+        "number": "57056",
+        "time": "2510201831",
+        "platform": "4",
+        "path_stations": [
+          "München Hbf",
+          "München-Pasing",
+          "Mering",
+          "Mering-St Afra",
+          "Kissing",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße",
+          "Augsburg Hbf",
+          "Augsburg-Oberhausen",
+          "Neusäß",
+          "Westheim(Schwab)",
+          "Diedorf(Schwab)",
+          "Gessertshausen",
+          "Kutzenhausen",
+          "Dinkelscherben",
+          "Freihalden",
+          "Jettingen",
+          "Burgau(Schwab)",
+          "Mindelaltheim",
+          "Offingen"
+        ],
+        "line": "9"
+      },
+      {
+        "id": "8723558896603301381-2510201658-4",
+        "type": "ICE",
+        "number": "266",
+        "time": "2510201802",
+        "platform": "3",
+        "path_stations": [
+          "München Hbf",
+          "München-Pasing",
+          "Augsburg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "9018647413729499765-2510201705-21",
+        "type": "RB",
+        "number": "57722",
+        "time": "2510201842",
+        "platform": "1",
+        "path_stations": [
+          "Mindelheim",
+          "Nassenbeuren",
+          "Hausen(Schwab)",
+          "Pfaffenhausen",
+          "Weilbach(Unterallg)",
+          "Breitenbrunn(Schwab)",
+          "Loppenhausen",
+          "Haupeltshofen",
+          "Aletshausen",
+          "Niederraunau",
+          "Krumbach(Schwab)Schule",
+          "Krumbach(Schwab)",
+          "Billenhausen",
+          "Hirschfelden",
+          "Neuburg(Kammel)",
+          "Ellzee",
+          "Ichenhausen",
+          "Hochwang",
+          "Kleinkötz",
+          "Wasserburg(Günz)"
+        ],
+        "line": "78"
+      },
+      {
+        "id": "-6104127559410937903-2510201747-5",
+        "type": "ag",
+        "number": "84293",
+        "time": "2510201805",
+        "platform": "2",
+        "path_stations": [
+          "Ulm Hbf",
+          "Neu-Ulm",
+          "Nersingen",
+          "Leipheim"
+        ],
+        "line": "RB15"
+      },
+      {
+        "id": "-8587485395079831555-2510201816-9",
+        "type": "ag",
+        "number": "84286",
+        "time": "2510201855",
+        "platform": "3",
+        "path_stations": [
+          "Donauwörth",
+          "Tapfheim",
+          "Schwenningen(Bay)",
+          "Blindheim",
+          "Höchstädt(Donau)",
+          "Dillingen(Donau)",
+          "Lauingen",
+          "Gundelfingen(Bay)"
+        ],
+        "line": "RB15"
+      },
+      {
+        "id": "5387640546291398009-2510201738-8",
+        "type": "ag",
+        "number": "84262",
+        "time": "2510201825",
+        "platform": "5",
+        "path_stations": [
+          "Donauwörth",
+          "Schwenningen(Bay)",
+          "Blindheim",
+          "Höchstädt(Donau)",
+          "Dillingen(Donau)",
+          "Lauingen",
+          "Gundelfingen(Bay)"
+        ],
+        "line": "RB15"
+      },
+      {
+        "id": "-1075534163626666476-2510201919-5",
+        "type": "RE",
+        "number": "57083",
+        "time": "2510201936",
+        "platform": "2",
+        "path_stations": [
+          "Ulm Hbf",
+          "Neu-Ulm",
+          "Nersingen",
+          "Leipheim"
+        ],
+        "line": "9"
+      },
+      {
+        "id": "2040802966679384639-2510201759-21",
+        "type": "RB",
+        "number": "57688",
+        "time": "2510201924",
+        "platform": "1a",
+        "path_stations": [
+          "Mindelheim",
+          "Nassenbeuren",
+          "Hausen(Schwab)",
+          "Pfaffenhausen",
+          "Weilbach(Unterallg)",
+          "Breitenbrunn(Schwab)",
+          "Loppenhausen",
+          "Haupeltshofen",
+          "Aletshausen",
+          "Niederraunau",
+          "Krumbach(Schwab)Schule",
+          "Krumbach(Schwab)",
+          "Billenhausen",
+          "Hirschfelden",
+          "Neuburg(Kammel)",
+          "Ellzee",
+          "Ichenhausen",
+          "Hochwang",
+          "Kleinkötz",
+          "Wasserburg(Günz)"
+        ],
+        "line": "78"
+      },
+      {
+        "id": "5222452683479379729-2510201735-21",
+        "type": "RB",
+        "number": "57064",
+        "time": "2510201919",
+        "platform": "3",
+        "path_stations": [
+          "München Hbf",
+          "München-Pasing",
+          "Mering",
+          "Mering-St Afra",
+          "Kissing",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße",
+          "Augsburg Hbf",
+          "Augsburg-Oberhausen",
+          "Neusäß",
+          "Westheim(Schwab)",
+          "Diedorf(Schwab)",
+          "Gessertshausen",
+          "Kutzenhausen",
+          "Dinkelscherben",
+          "Freihalden",
+          "Jettingen",
+          "Burgau(Schwab)",
+          "Mindelaltheim",
+          "Offingen"
+        ],
+        "line": "9"
+      },
+      {
+        "id": "2055924159148554695-2510201902-9",
+        "type": "ag",
+        "number": "84288",
+        "time": "2510201945",
+        "platform": "4",
+        "path_stations": [
+          "Donauwörth",
+          "Tapfheim",
+          "Schwenningen(Bay)",
+          "Blindheim",
+          "Höchstädt(Donau)",
+          "Dillingen(Donau)",
+          "Lauingen",
+          "Gundelfingen(Bay)"
+        ],
+        "line": "RB15"
+      },
+      {
+        "id": "-3031925877358690214-2510201620-8",
+        "type": "IC",
+        "number": "1291",
+        "time": "2510201909",
+        "platform": "2",
+        "path_stations": [
+          "Frankfurt(Main)Hbf",
+          "Darmstadt Hbf",
+          "Bensheim",
+          "Weinheim(Bergstr)Hbf",
+          "Heidelberg Hbf",
+          "Stuttgart Hbf",
+          "Ulm Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "1569417861096361447-2510201847-5",
+        "type": "ag",
+        "number": "84295",
+        "time": "2510201904",
+        "platform": "2",
+        "path_stations": [
+          "Ulm Hbf",
+          "Neu-Ulm",
+          "Nersingen",
+          "Leipheim"
+        ],
+        "line": "RB15"
+      },
+      {
+        "id": "8570862596711826347-2510201855-21",
+        "type": "RB",
+        "number": "57726",
+        "time": "2510202022",
+        "platform": "1a",
+        "path_stations": [
+          "Mindelheim",
+          "Nassenbeuren",
+          "Hausen(Schwab)",
+          "Pfaffenhausen",
+          "Weilbach(Unterallg)",
+          "Breitenbrunn(Schwab)",
+          "Loppenhausen",
+          "Haupeltshofen",
+          "Aletshausen",
+          "Niederraunau",
+          "Krumbach(Schwab)Schule",
+          "Krumbach(Schwab)",
+          "Billenhausen",
+          "Hirschfelden",
+          "Neuburg(Kammel)",
+          "Ellzee",
+          "Ichenhausen",
+          "Hochwang",
+          "Kleinkötz",
+          "Wasserburg(Günz)"
+        ],
+        "line": "78"
+      },
+      {
+        "id": "-3678679483915527772-2510202016-9",
+        "type": "ag",
+        "number": "84290",
+        "time": "2510202054",
+        "platform": "3",
+        "path_stations": [
+          "Donauwörth",
+          "Tapfheim",
+          "Schwenningen(Bay)",
+          "Blindheim",
+          "Höchstädt(Donau)",
+          "Dillingen(Donau)",
+          "Lauingen",
+          "Gundelfingen(Bay)"
+        ],
+        "line": "RB15"
+      },
+      {
+        "id": "-3482315145506770845-2510201947-5",
+        "type": "ag",
+        "number": "84297",
+        "time": "2510202005",
+        "platform": "2",
+        "path_stations": [
+          "Ulm Hbf",
+          "Neu-Ulm",
+          "Nersingen",
+          "Leipheim"
+        ],
+        "line": "RB15"
+      },
+      {
+        "id": "-8234085367482508756-2510202018-5",
+        "type": "RE",
+        "number": "57183",
+        "time": "2510202040",
+        "platform": "2",
+        "path_stations": [
+          "Ulm Hbf",
+          "Neu-Ulm",
+          "Nersingen",
+          "Leipheim"
+        ],
+        "line": "9"
+      },
+      {
+        "id": "-1895474681646249837-2510201900-4",
+        "type": "ICE",
+        "number": "560",
+        "time": "2510202003",
+        "platform": "3",
+        "path_stations": [
+          "München Hbf",
+          "München-Pasing",
+          "Augsburg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "1976403945320218368-2510201835-21",
+        "type": "RE",
+        "number": "57074",
+        "time": "2510202021",
+        "platform": "3",
+        "path_stations": [
+          "München Hbf",
+          "München-Pasing",
+          "Mering",
+          "Mering-St Afra",
+          "Kissing",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße",
+          "Augsburg Hbf",
+          "Augsburg-Oberhausen",
+          "Neusäß",
+          "Westheim(Schwab)",
+          "Diedorf(Schwab)",
+          "Gessertshausen",
+          "Kutzenhausen",
+          "Dinkelscherben",
+          "Freihalden",
+          "Jettingen",
+          "Burgau(Schwab)",
+          "Mindelaltheim",
+          "Offingen"
+        ],
+        "line": "9"
+      },
+      {
+        "id": "8160473483286094908-2510202001-9",
+        "type": "ag",
+        "number": "84242",
+        "time": "2510202040",
+        "platform": "5",
+        "path_stations": [
+          "Donauwörth",
+          "Tapfheim",
+          "Schwenningen(Bay)",
+          "Blindheim",
+          "Höchstädt(Donau)",
+          "Dillingen(Donau)",
+          "Lauingen",
+          "Gundelfingen(Bay)"
+        ],
+        "line": "RB15"
+      },
+      {
+        "id": "-8959018065734509300-2510201818-8",
+        "type": "ICE",
+        "number": "1099",
+        "time": "2510202109",
+        "platform": "2",
+        "path_stations": [
+          "Frankfurt(Main)Hbf",
+          "Darmstadt Hbf",
+          "Bensheim",
+          "Weinheim(Bergstr)Hbf",
+          "Heidelberg Hbf",
+          "Stuttgart Hbf",
+          "Ulm Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-2320340282101811304-2510202043-4",
+        "type": "ICE",
+        "number": "990",
+        "time": "2510202143",
+        "platform": "3",
+        "path_stations": [
+          "München Hbf",
+          "München-Pasing",
+          "Augsburg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-4167027601046787673-2510202102-9",
+        "type": "ag",
+        "number": "84292",
+        "time": "2510202141",
+        "platform": "4",
+        "path_stations": [
+          "Donauwörth",
+          "Tapfheim",
+          "Schwenningen(Bay)",
+          "Blindheim",
+          "Höchstädt(Donau)",
+          "Dillingen(Donau)",
+          "Lauingen",
+          "Gundelfingen(Bay)"
+        ],
+        "line": "RB15"
+      },
+      {
+        "id": "2441251625409756695-2510202119-5",
+        "type": "RE",
+        "number": "57087",
+        "time": "2510202137",
+        "platform": "2",
+        "path_stations": [
+          "Ulm Hbf",
+          "Neu-Ulm",
+          "Nersingen",
+          "Leipheim"
+        ],
+        "line": "9"
+      },
+      {
+        "id": "-7175946382365964555-2510202047-5",
+        "type": "ag",
+        "number": "84299",
+        "time": "2510202104",
+        "platform": "2",
+        "path_stations": [
+          "Ulm Hbf",
+          "Neu-Ulm",
+          "Nersingen",
+          "Leipheim"
+        ],
+        "line": "RB15"
+      },
+      {
+        "id": "-964037295895145072-2510202054-10",
+        "type": "RB",
+        "number": "57744",
+        "time": "2510202133",
+        "platform": "1a",
+        "path_stations": [
+          "Krumbach(Schwab)",
+          "Billenhausen",
+          "Hirschfelden",
+          "Neuburg(Kammel)",
+          "Ellzee",
+          "Ichenhausen",
+          "Hochwang",
+          "Kleinkötz",
+          "Wasserburg(Günz)"
+        ],
+        "line": "78"
+      },
+      {
+        "id": "2590502689058876742-2510202025-14",
+        "type": "RE",
+        "number": "57182",
+        "time": "2510202119",
+        "platform": "3",
+        "path_stations": [
+          "Augsburg Hbf",
+          "Augsburg-Oberhausen",
+          "Neusäß",
+          "Westheim(Schwab)",
+          "Diedorf(Schwab)",
+          "Gessertshausen",
+          "Kutzenhausen",
+          "Dinkelscherben",
+          "Freihalden",
+          "Jettingen",
+          "Burgau(Schwab)",
+          "Mindelaltheim",
+          "Offingen"
+        ],
+        "line": "9"
+      },
+      {
+        "id": "8803799214306376762-2510201608-14",
+        "type": "WB",
+        "number": "966",
+        "time": "2510202131",
+        "platform": "3",
+        "path_stations": [
+          "Wien Westbahnhof",
+          "Wien Hütteldorf",
+          "St.Pölten Hbf",
+          "Amstetten NÖ",
+          "Linz Hbf",
+          "Wels Hbf",
+          "Attnang-Puchheim",
+          "Vöcklabruck",
+          "Salzburg Hbf",
+          "Rosenheim",
+          "München Ost",
+          "München Hbf",
+          "Augsburg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "7108274583246193747-2510202152-3",
+        "type": "ICE",
+        "number": "698",
+        "time": "2510202248",
+        "platform": "3",
+        "path_stations": [
+          "München Hbf",
+          "Augsburg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "5822378549779729152-2510202057-24",
+        "type": "RE",
+        "number": "57084",
+        "time": "2510202244",
+        "platform": "4",
+        "path_stations": [
+          "München Hbf",
+          "München-Pasing",
+          "Mammendorf",
+          "Haspelmoor",
+          "Althegnenberg",
+          "Mering",
+          "Mering-St Afra",
+          "Kissing",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße",
+          "Augsburg Hbf",
+          "Augsburg-Oberhausen",
+          "Neusäß",
+          "Westheim(Schwab)",
+          "Diedorf(Schwab)",
+          "Gessertshausen",
+          "Kutzenhausen",
+          "Dinkelscherben",
+          "Freihalden",
+          "Jettingen",
+          "Burgau(Schwab)",
+          "Mindelaltheim",
+          "Offingen"
+        ],
+        "line": "9"
+      },
+      {
+        "id": "179162183929136680-2510202219-5",
+        "type": "RE",
+        "number": "57089",
+        "time": "2510202238",
+        "platform": "2",
+        "path_stations": [
+          "Ulm Hbf",
+          "Neu-Ulm",
+          "Nersingen",
+          "Leipheim"
+        ],
+        "line": "9"
+      },
+      {
+        "id": "-3182916951289050576-2510202147-5",
+        "type": "ag",
+        "number": "84301",
+        "time": "2510202205",
+        "platform": "2",
+        "path_stations": [
+          "Ulm Hbf",
+          "Neu-Ulm",
+          "Nersingen",
+          "Leipheim"
+        ],
+        "line": "RB15"
+      },
+      {
+        "id": "1282096631182374072-2510202221-8",
+        "type": "ag",
+        "number": "84294",
+        "time": "2510202253",
+        "platform": "3",
+        "path_stations": [
+          "Tapfheim",
+          "Schwenningen(Bay)",
+          "Blindheim",
+          "Höchstädt(Donau)",
+          "Dillingen(Donau)",
+          "Lauingen",
+          "Gundelfingen(Bay)"
+        ],
+        "line": "RB15"
+      },
+      {
+        "id": "-4623299408447653945-2510202324-5",
+        "type": "RE",
+        "number": "57191",
+        "time": "2510202342",
+        "platform": "2",
+        "path_stations": [
+          "Ulm Hbf",
+          "Neu-Ulm",
+          "Nersingen",
+          "Leipheim"
+        ],
+        "line": "9"
+      },
+      {
+        "id": "3709050757667951658-2510202159-24",
+        "type": "RE",
+        "number": "57086",
+        "time": "2510202343",
+        "platform": "4",
+        "path_stations": [
+          "München Hbf",
+          "München-Pasing",
+          "Mammendorf",
+          "Haspelmoor",
+          "Althegnenberg",
+          "Mering",
+          "Mering-St Afra",
+          "Kissing",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße",
+          "Augsburg Hbf",
+          "Augsburg-Oberhausen",
+          "Neusäß",
+          "Westheim(Schwab)",
+          "Diedorf(Schwab)",
+          "Gessertshausen",
+          "Kutzenhausen",
+          "Dinkelscherben",
+          "Freihalden",
+          "Jettingen",
+          "Burgau(Schwab)",
+          "Mindelaltheim",
+          "Offingen"
+        ],
+        "line": "9"
+      },
+      {
+        "id": "3378646479369230872-2510202246-5",
+        "type": "ag",
+        "number": "84303",
+        "time": "2510202303",
+        "platform": "2",
+        "path_stations": [
+          "Ulm Hbf",
+          "Neu-Ulm",
+          "Nersingen",
+          "Leipheim"
+        ],
+        "line": "RB15"
+      },
+      {
+        "id": "-9090734619747811712-2510210006-8",
+        "type": "ag",
+        "number": "84298",
+        "time": "2510210038",
+        "platform": "3",
+        "path_stations": [
+          "Tapfheim",
+          "Schwenningen(Bay)",
+          "Blindheim",
+          "Höchstädt(Donau)",
+          "Dillingen(Donau)",
+          "Lauingen",
+          "Gundelfingen(Bay)"
+        ],
+        "line": "RB15"
+      },
+      {
+        "id": "9157866427519413881-2510202258-24",
+        "type": "RE",
+        "number": "57088",
+        "time": "2510210045",
+        "platform": "3",
+        "path_stations": [
+          "München Hbf",
+          "München-Pasing",
+          "Mammendorf",
+          "Haspelmoor",
+          "Althegnenberg",
+          "Mering",
+          "Mering-St Afra",
+          "Kissing",
+          "Augsburg-Hochzoll",
+          "Augsburg Haunstetterstraße",
+          "Augsburg Hbf",
+          "Augsburg-Oberhausen",
+          "Neusäß",
+          "Westheim(Schwab)",
+          "Diedorf(Schwab)",
+          "Gessertshausen",
+          "Kutzenhausen",
+          "Dinkelscherben",
+          "Freihalden",
+          "Jettingen",
+          "Burgau(Schwab)",
+          "Mindelaltheim",
+          "Offingen"
+        ],
+        "line": "9"
+      },
+      {
+        "id": "2686007473625185344-2510210000-4",
+        "type": "ICE",
+        "number": "618",
+        "time": "2510210100",
+        "platform": "3",
+        "path_stations": [
+          "München Hbf",
+          "München-Pasing",
+          "Augsburg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "7474414276230536927-2510201838-21",
+        "type": "ICE",
+        "number": "619",
+        "time": "2510210453",
+        "platform": "2",
+        "path_stations": [
+          "Kiel Hbf",
+          "Neumünster",
+          "Hamburg Dammtor",
+          "Hamburg Hbf",
+          "Hamburg-Harburg",
+          "Bremen Hbf",
+          "Osnabrück Hbf",
+          "Münster(Westf)Hbf",
+          "Recklinghausen Hbf",
+          "Essen Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Hbf",
+          "Köln Hbf",
+          "Siegburg/Bonn",
+          "Frankfurt(M) Flughafen Fernbf",
+          "Frankfurt(Main)Hbf",
+          "Mannheim Hbf",
+          "Heidelberg Hbf",
+          "Stuttgart Hbf",
+          "Ulm Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "9215471812401632440-2510210453-5",
+        "type": "ag",
+        "number": "84267",
+        "time": "2510210510",
+        "platform": "2",
+        "path_stations": [
+          "Ulm Hbf",
+          "Neu-Ulm",
+          "Nersingen",
+          "Leipheim"
+        ],
+        "line": "RB15"
+      },
+      {
+        "id": "2451608710124437449-2510210452-8",
+        "type": "ag",
+        "number": "84244",
+        "time": "2510210528",
+        "platform": "3",
+        "path_stations": [
+          "Tapfheim",
+          "Schwenningen(Bay)",
+          "Blindheim",
+          "Höchstädt(Donau)",
+          "Dillingen(Donau)",
+          "Lauingen",
+          "Gundelfingen(Bay)"
+        ],
+        "line": "RB15"
+      },
+      {
+        "id": "3681554462647411058-2510210457-10",
+        "type": "RB",
+        "number": "57732",
+        "time": "2510210533",
+        "platform": "1a",
+        "path_stations": [
+          "Krumbach(Schwab)",
+          "Billenhausen",
+          "Hirschfelden",
+          "Neuburg(Kammel)",
+          "Ellzee",
+          "Ichenhausen",
+          "Hochwang",
+          "Kleinkötz",
+          "Wasserburg(Günz)"
+        ],
+        "line": "78"
+      },
+      {
+        "id": "-7882286023501383508-2510210456-7",
+        "type": "RE",
+        "number": "57102",
+        "time": "2510210522",
+        "platform": "3",
+        "path_stations": [
+          "Dinkelscherben",
+          "Freihalden",
+          "Jettingen",
+          "Burgau(Schwab)",
+          "Mindelaltheim",
+          "Offingen"
+        ],
+        "line": "9"
+      },
+      {
+        "id": "3626122874516269645-2510210447-5",
+        "type": "RE",
+        "number": "57011",
+        "time": "2510210506",
+        "platform": "2",
+        "path_stations": [
+          "Ulm Hbf",
+          "Neu-Ulm",
+          "Nersingen",
+          "Leipheim"
+        ],
+        "line": "9"
+      },
+      {
+        "id": "-3481239594446651570-2510210518-5",
+        "type": "RE",
+        "number": "57015",
+        "time": "2510210537",
+        "platform": "2",
+        "path_stations": [
+          "Ulm Hbf",
+          "Neu-Ulm",
+          "Nersingen",
+          "Leipheim"
+        ],
+        "line": "9"
+      },
+      {
+        "id": "8912048394049036116-2510210531-5",
+        "type": "ag",
+        "number": "84257",
+        "time": "2510210550",
+        "platform": "2",
+        "path_stations": [
+          "Ulm Hbf",
+          "Neu-Ulm",
+          "Nersingen",
+          "Leipheim"
+        ],
+        "line": "RB15"
+      }
+    ],
+    "departures": [
+      {
+        "id": "9042395260942796037-2510201419-8",
+        "type": "ICE",
+        "number": "117",
+        "direction": "Klagenfurt Hbf",
+        "platform": "2",
+        "time": "2510201711",
+        "destination": "Klagenfurt Hbf",
+        "path_stations": [
+          "Augsburg Hbf",
+          "München Hbf",
+          "München Ost",
+          "Rosenheim",
+          "Prien am Chiemsee",
+          "Traunstein",
+          "Freilassing",
+          "Salzburg Hbf",
+          "Golling-Abtenau",
+          "Bischofshofen",
+          "St. Johann im Pongau",
+          "Schwarzach-St.Veit",
+          "Bad Hofgastein",
+          "Bad Gastein",
+          "Mallnitz-Obervellach",
+          "Spittal-Millstättersee",
+          "Villach Hbf",
+          "Velden am Wörther See",
+          "Pörtschach am Wörther See",
+          "Krumpendorf/Wörthersee",
+          "Klagenfurt Hbf"
+        ]
+      },
+      {
+        "id": "1290441015130173242-2510201726-5",
+        "type": "ag",
+        "number": "84263",
+        "direction": "Donauwörth",
+        "platform": "2",
+        "time": "2510201744",
+        "destination": "Donauwörth",
+        "path_stations": [
+          "Gundelfingen(Bay)",
+          "Lauingen",
+          "Dillingen(Donau)",
+          "Höchstädt(Donau)",
+          "Blindheim",
+          "Schwenningen(Bay)",
+          "Donauwörth"
+        ]
+      },
+      {
+        "id": "8848883959709261552-2510201724-1",
+        "type": "RB",
+        "number": "57749",
+        "direction": "Krumbach(Schwab)",
+        "platform": "1a",
+        "time": "2510201724",
+        "destination": "Krumbach(Schwab)",
+        "path_stations": [
+          "Wasserburg(Günz)",
+          "Kleinkötz",
+          "Hochwang",
+          "Ichenhausen",
+          "Ellzee",
+          "Neuburg(Kammel)",
+          "Hirschfelden",
+          "Billenhausen",
+          "Krumbach(Schwab)"
+        ]
+      },
+      {
+        "id": "-6593149483901234579-2510201718-5",
+        "type": "RE",
+        "number": "57075",
+        "direction": "München Hbf",
+        "platform": "2",
+        "time": "2510201737",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Offingen",
+          "Mindelaltheim",
+          "Burgau(Schwab)",
+          "Jettingen",
+          "Freihalden",
+          "Dinkelscherben",
+          "Kutzenhausen",
+          "Gessertshausen",
+          "Diedorf(Schwab)",
+          "Westheim(Schwab)",
+          "Neusäß",
+          "Augsburg-Oberhausen",
+          "Augsburg Hbf",
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Kissing",
+          "Mering-St Afra",
+          "Mering",
+          "München-Pasing",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "5425314286080249204-2510201708-9",
+        "type": "ag",
+        "number": "84284",
+        "direction": "Ulm Hbf",
+        "platform": "3",
+        "time": "2510201751",
+        "destination": "Ulm Hbf",
+        "path_stations": [
+          "Leipheim",
+          "Nersingen",
+          "Neu-Ulm",
+          "Ulm Hbf"
+        ]
+      },
+      {
+        "id": "8388976578318959239-2510201602-21",
+        "type": "RE",
+        "number": "57052",
+        "direction": "Ulm Hbf",
+        "platform": "3",
+        "time": "2510201755",
+        "destination": "Ulm Hbf",
+        "path_stations": [
+          "Leipheim",
+          "Nersingen",
+          "Neu-Ulm",
+          "Ulm Hbf"
+        ]
+      },
+      {
+        "id": "-7398519093395828857-2510201647-5",
+        "type": "ag",
+        "number": "84291",
+        "direction": "Donauwörth",
+        "platform": "2",
+        "time": "2510201705",
+        "destination": "Donauwörth",
+        "path_stations": [
+          "Gundelfingen(Bay)",
+          "Lauingen",
+          "Dillingen(Donau)",
+          "Höchstädt(Donau)",
+          "Blindheim",
+          "Schwenningen(Bay)",
+          "Tapfheim",
+          "Donauwörth"
+        ]
+      },
+      {
+        "id": "-968893277648538154-2510201623-14",
+        "type": "RE",
+        "number": "57154",
+        "direction": "Ulm Hbf",
+        "platform": "3",
+        "time": "2510201719",
+        "destination": "Ulm Hbf",
+        "path_stations": [
+          "Leipheim",
+          "Nersingen",
+          "Neu-Ulm",
+          "Ulm Hbf"
+        ]
+      },
+      {
+        "id": "4097711371156808190-2510201145-22",
+        "type": "EC",
+        "number": "216",
+        "direction": "Saarbrücken Hbf",
+        "platform": "3",
+        "time": "2510201848",
+        "destination": "Saarbrücken Hbf",
+        "path_stations": [
+          "Ulm Hbf",
+          "Stuttgart Hbf",
+          "Mannheim Hbf",
+          "Neustadt(Weinstr)Hbf",
+          "Kaiserslautern Hbf",
+          "Homburg(Saar)Hbf",
+          "Saarbrücken Hbf"
+        ]
+      },
+      {
+        "id": "6202931575666114667-2510201818-5",
+        "type": "RE",
+        "number": "57175",
+        "direction": "Augsburg Hbf",
+        "platform": "2",
+        "time": "2510201839",
+        "destination": "Augsburg Hbf",
+        "path_stations": [
+          "Offingen",
+          "Mindelaltheim",
+          "Burgau(Schwab)",
+          "Jettingen",
+          "Freihalden",
+          "Dinkelscherben",
+          "Kutzenhausen",
+          "Gessertshausen",
+          "Diedorf(Schwab)",
+          "Westheim(Schwab)",
+          "Neusäß",
+          "Augsburg-Oberhausen",
+          "Augsburg Hbf"
+        ]
+      },
+      {
+        "id": "-4659040351822619408-2510201635-21",
+        "type": "RE",
+        "number": "57056",
+        "direction": "Ulm Hbf",
+        "platform": "4",
+        "time": "2510201836",
+        "destination": "Ulm Hbf",
+        "path_stations": [
+          "Leipheim",
+          "Nersingen",
+          "Neu-Ulm",
+          "Ulm Hbf"
+        ]
+      },
+      {
+        "id": "8723558896603301381-2510201658-4",
+        "type": "ICE",
+        "number": "266",
+        "direction": "Basel SBB",
+        "platform": "3",
+        "time": "2510201804",
+        "destination": "Basel SBB",
+        "path_stations": [
+          "Ulm Hbf",
+          "Stuttgart Hbf",
+          "Bruchsal",
+          "Karlsruhe Hbf",
+          "Baden-Baden",
+          "Offenburg",
+          "Lahr(Schwarzw)",
+          "Freiburg(Breisgau) Hbf",
+          "Müllheim im Markgräflerland",
+          "Weil am Rhein",
+          "Basel Bad Bf",
+          "Basel SBB"
+        ]
+      },
+      {
+        "id": "-6104127559410937903-2510201747-5",
+        "type": "ag",
+        "number": "84293",
+        "direction": "Donauwörth",
+        "platform": "2",
+        "time": "2510201806",
+        "destination": "Donauwörth",
+        "path_stations": [
+          "Gundelfingen(Bay)",
+          "Lauingen",
+          "Dillingen(Donau)",
+          "Höchstädt(Donau)",
+          "Blindheim",
+          "Schwenningen(Bay)",
+          "Tapfheim",
+          "Donauwörth"
+        ]
+      },
+      {
+        "id": "8428498512485935993-2510201811-1",
+        "type": "RB",
+        "number": "57735",
+        "direction": "Krumbach(Schwab)",
+        "platform": "1a",
+        "time": "2510201811",
+        "destination": "Krumbach(Schwab)",
+        "path_stations": [
+          "Wasserburg(Günz)",
+          "Kleinkötz",
+          "Hochwang",
+          "Ichenhausen",
+          "Ellzee",
+          "Neuburg(Kammel)",
+          "Hirschfelden",
+          "Billenhausen",
+          "Krumbach(Schwab)"
+        ]
+      },
+      {
+        "id": "-8587485395079831555-2510201816-9",
+        "type": "ag",
+        "number": "84286",
+        "direction": "Ulm Hbf",
+        "platform": "3",
+        "time": "2510201856",
+        "destination": "Ulm Hbf",
+        "path_stations": [
+          "Leipheim",
+          "Nersingen",
+          "Neu-Ulm",
+          "Ulm Hbf"
+        ]
+      },
+      {
+        "id": "7636972291733705097-2510201834-1",
+        "type": "ag",
+        "number": "84265",
+        "direction": "Donauwörth",
+        "platform": "5",
+        "time": "2510201834",
+        "destination": "Donauwörth",
+        "path_stations": [
+          "Gundelfingen(Bay)",
+          "Lauingen",
+          "Dillingen(Donau)",
+          "Höchstädt(Donau)",
+          "Blindheim",
+          "Schwenningen(Bay)",
+          "Tapfheim",
+          "Donauwörth"
+        ]
+      },
+      {
+        "id": "-5380433083517516941-2510201853-1",
+        "type": "RB",
+        "number": "57727",
+        "direction": "Mindelheim",
+        "platform": "1",
+        "time": "2510201853",
+        "destination": "Mindelheim",
+        "path_stations": [
+          "Wasserburg(Günz)",
+          "Kleinkötz",
+          "Hochwang",
+          "Ichenhausen",
+          "Ellzee",
+          "Neuburg(Kammel)",
+          "Hirschfelden",
+          "Billenhausen",
+          "Krumbach(Schwab)",
+          "Krumbach(Schwab)Schule",
+          "Niederraunau",
+          "Aletshausen",
+          "Haupeltshofen",
+          "Loppenhausen",
+          "Breitenbrunn(Schwab)",
+          "Weilbach(Unterallg)",
+          "Pfaffenhausen",
+          "Hausen(Schwab)",
+          "Nassenbeuren",
+          "Mindelheim"
+        ]
+      },
+      {
+        "id": "-1075534163626666476-2510201919-5",
+        "type": "RE",
+        "number": "57083",
+        "direction": "München Hbf",
+        "platform": "2",
+        "time": "2510201937",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Offingen",
+          "Mindelaltheim",
+          "Burgau(Schwab)",
+          "Jettingen",
+          "Freihalden",
+          "Dinkelscherben",
+          "Kutzenhausen",
+          "Gessertshausen",
+          "Diedorf(Schwab)",
+          "Westheim(Schwab)",
+          "Neusäß",
+          "Augsburg-Oberhausen",
+          "Augsburg Hbf",
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Kissing",
+          "Mering-St Afra",
+          "Mering",
+          "Althegnenberg",
+          "Haspelmoor",
+          "Mammendorf",
+          "München-Pasing",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "5222452683479379729-2510201735-21",
+        "type": "RB",
+        "number": "57064",
+        "direction": "Ulm Hbf",
+        "platform": "3",
+        "time": "2510201921",
+        "destination": "Ulm Hbf",
+        "path_stations": [
+          "Leipheim",
+          "Nersingen",
+          "Neu-Ulm",
+          "Ulm Hbf"
+        ]
+      },
+      {
+        "id": "2055924159148554695-2510201902-9",
+        "type": "ag",
+        "number": "84288",
+        "direction": "Ulm Hbf",
+        "platform": "4",
+        "time": "2510201950",
+        "destination": "Ulm Hbf",
+        "path_stations": [
+          "Leipheim",
+          "Nersingen",
+          "Neu-Ulm",
+          "Ulm Hbf"
+        ]
+      },
+      {
+        "id": "-3022721702700886959-2510201951-1",
+        "type": "RB",
+        "number": "57737",
+        "direction": "Krumbach(Schwab)",
+        "platform": "1a",
+        "time": "2510201951",
+        "destination": "Krumbach(Schwab)",
+        "path_stations": [
+          "Wasserburg(Günz)",
+          "Kleinkötz",
+          "Hochwang",
+          "Ichenhausen",
+          "Ellzee",
+          "Neuburg(Kammel)",
+          "Hirschfelden",
+          "Billenhausen",
+          "Krumbach(Schwab)"
+        ]
+      },
+      {
+        "id": "-3031925877358690214-2510201620-8",
+        "type": "IC",
+        "number": "1291",
+        "direction": "Salzburg Hbf",
+        "platform": "2",
+        "time": "2510201911",
+        "destination": "Salzburg Hbf",
+        "path_stations": [
+          "Augsburg Hbf",
+          "München Hbf",
+          "München Ost",
+          "Rosenheim",
+          "Bad Endorf",
+          "Prien am Chiemsee",
+          "Traunstein",
+          "Freilassing",
+          "Salzburg Hbf"
+        ]
+      },
+      {
+        "id": "1569417861096361447-2510201847-5",
+        "type": "ag",
+        "number": "84295",
+        "direction": "Donauwörth",
+        "platform": "2",
+        "time": "2510201905",
+        "destination": "Donauwörth",
+        "path_stations": [
+          "Gundelfingen(Bay)",
+          "Lauingen",
+          "Dillingen(Donau)",
+          "Höchstädt(Donau)",
+          "Blindheim",
+          "Schwenningen(Bay)",
+          "Tapfheim",
+          "Donauwörth"
+        ]
+      },
+      {
+        "id": "-3678679483915527772-2510202016-9",
+        "type": "ag",
+        "number": "84290",
+        "direction": "Ulm Hbf",
+        "platform": "3",
+        "time": "2510202056",
+        "destination": "Ulm Hbf",
+        "path_stations": [
+          "Leipheim",
+          "Nersingen",
+          "Neu-Ulm",
+          "Ulm Hbf"
+        ]
+      },
+      {
+        "id": "-3482315145506770845-2510201947-5",
+        "type": "ag",
+        "number": "84297",
+        "direction": "Donauwörth",
+        "platform": "2",
+        "time": "2510202006",
+        "destination": "Donauwörth",
+        "path_stations": [
+          "Gundelfingen(Bay)",
+          "Lauingen",
+          "Dillingen(Donau)",
+          "Höchstädt(Donau)",
+          "Blindheim",
+          "Schwenningen(Bay)",
+          "Tapfheim",
+          "Donauwörth"
+        ]
+      },
+      {
+        "id": "-8234085367482508756-2510202018-5",
+        "type": "RE",
+        "number": "57183",
+        "direction": "Augsburg Hbf",
+        "platform": "2",
+        "time": "2510202041",
+        "destination": "Augsburg Hbf",
+        "path_stations": [
+          "Offingen",
+          "Mindelaltheim",
+          "Burgau(Schwab)",
+          "Jettingen",
+          "Freihalden",
+          "Dinkelscherben",
+          "Kutzenhausen",
+          "Gessertshausen",
+          "Diedorf(Schwab)",
+          "Westheim(Schwab)",
+          "Neusäß",
+          "Augsburg-Oberhausen",
+          "Augsburg Hbf"
+        ]
+      },
+      {
+        "id": "-1895474681646249837-2510201900-4",
+        "type": "ICE",
+        "number": "560",
+        "direction": "Karlsruhe Hbf",
+        "platform": "3",
+        "time": "2510202005",
+        "destination": "Karlsruhe Hbf",
+        "path_stations": [
+          "Ulm Hbf",
+          "Stuttgart Hbf",
+          "Bruchsal",
+          "Karlsruhe Hbf"
+        ]
+      },
+      {
+        "id": "1976403945320218368-2510201835-21",
+        "type": "RE",
+        "number": "57074",
+        "direction": "Ulm Hbf",
+        "platform": "3",
+        "time": "2510202022",
+        "destination": "Ulm Hbf",
+        "path_stations": [
+          "Leipheim",
+          "Nersingen",
+          "Neu-Ulm",
+          "Ulm Hbf"
+        ]
+      },
+      {
+        "id": "-8959018065734509300-2510201818-8",
+        "type": "ICE",
+        "number": "1099",
+        "direction": "München Hbf",
+        "platform": "2",
+        "time": "2510202111",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Augsburg Hbf",
+          "München-Pasing",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "-2320340282101811304-2510202043-4",
+        "type": "ICE",
+        "number": "990",
+        "direction": "Frankfurt(Main)Hbf",
+        "platform": "3",
+        "time": "2510202145",
+        "destination": "Frankfurt(Main)Hbf",
+        "path_stations": [
+          "Ulm Hbf",
+          "Stuttgart Hbf",
+          "Mannheim Hbf",
+          "Frankfurt(Main)Hbf"
+        ]
+      },
+      {
+        "id": "-4167027601046787673-2510202102-9",
+        "type": "ag",
+        "number": "84292",
+        "direction": "Ulm Hbf",
+        "platform": "4",
+        "time": "2510202150",
+        "destination": "Ulm Hbf",
+        "path_stations": [
+          "Leipheim",
+          "Nersingen",
+          "Neu-Ulm",
+          "Ulm Hbf"
+        ]
+      },
+      {
+        "id": "2441251625409756695-2510202119-5",
+        "type": "RE",
+        "number": "57087",
+        "direction": "München Hbf",
+        "platform": "2",
+        "time": "2510202139",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Offingen",
+          "Mindelaltheim",
+          "Burgau(Schwab)",
+          "Jettingen",
+          "Freihalden",
+          "Dinkelscherben",
+          "Kutzenhausen",
+          "Gessertshausen",
+          "Diedorf(Schwab)",
+          "Westheim(Schwab)",
+          "Neusäß",
+          "Augsburg-Oberhausen",
+          "Augsburg Hbf",
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Kissing",
+          "Mering-St Afra",
+          "Mering",
+          "München-Pasing",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "-7175946382365964555-2510202047-5",
+        "type": "ag",
+        "number": "84299",
+        "direction": "Tapfheim",
+        "platform": "2",
+        "time": "2510202105",
+        "destination": "Tapfheim",
+        "path_stations": [
+          "Gundelfingen(Bay)",
+          "Lauingen",
+          "Dillingen(Donau)",
+          "Höchstädt(Donau)",
+          "Blindheim",
+          "Schwenningen(Bay)",
+          "Tapfheim"
+        ]
+      },
+      {
+        "id": "2590502689058876742-2510202025-14",
+        "type": "RE",
+        "number": "57182",
+        "direction": "Ulm Hbf",
+        "platform": "3",
+        "time": "2510202121",
+        "destination": "Ulm Hbf",
+        "path_stations": [
+          "Leipheim",
+          "Nersingen",
+          "Neu-Ulm",
+          "Ulm Hbf"
+        ]
+      },
+      {
+        "id": "8803799214306376762-2510201608-14",
+        "type": "WB",
+        "number": "966",
+        "direction": "Stuttgart Hbf",
+        "platform": "3",
+        "time": "2510202133",
+        "destination": "Stuttgart Hbf",
+        "path_stations": [
+          "Ulm Hbf",
+          "Stuttgart Hbf"
+        ]
+      },
+      {
+        "id": "688390106710908987-2510202102-1",
+        "type": "RB",
+        "number": "57739",
+        "direction": "Krumbach(Schwab)",
+        "platform": "1a",
+        "time": "2510202102",
+        "destination": "Krumbach(Schwab)",
+        "path_stations": [
+          "Wasserburg(Günz)",
+          "Kleinkötz",
+          "Hochwang",
+          "Ichenhausen",
+          "Ellzee",
+          "Neuburg(Kammel)",
+          "Hirschfelden",
+          "Billenhausen",
+          "Krumbach(Schwab)"
+        ]
+      },
+      {
+        "id": "7108274583246193747-2510202152-3",
+        "type": "ICE",
+        "number": "698",
+        "direction": "Berlin Hbf",
+        "platform": "3",
+        "time": "2510202250",
+        "destination": "Berlin Hbf",
+        "path_stations": [
+          "Ulm Hbf",
+          "Stuttgart Hbf",
+          "Heidelberg Hbf",
+          "Mannheim Hbf",
+          "Frankfurt(M) Flughafen Fernbf",
+          "Frankfurt(Main)Hbf",
+          "Eisenach Hbf",
+          "Gotha",
+          "Erfurt Hbf",
+          "Weimar",
+          "Naumburg(Saale)Hbf",
+          "Halle(Saale)Hbf",
+          "Bitterfeld",
+          "Berlin Hbf"
+        ]
+      },
+      {
+        "id": "5822378549779729152-2510202057-24",
+        "type": "RE",
+        "number": "57084",
+        "direction": "Ulm Hbf",
+        "platform": "4",
+        "time": "2510202257",
+        "destination": "Ulm Hbf",
+        "path_stations": [
+          "Leipheim",
+          "Nersingen",
+          "Neu-Ulm",
+          "Ulm Hbf"
+        ]
+      },
+      {
+        "id": "1478147501806428173-2510202249-1",
+        "type": "RB",
+        "number": "57741",
+        "direction": "Krumbach(Schwab)",
+        "platform": "1a",
+        "time": "2510202249",
+        "destination": "Krumbach(Schwab)",
+        "path_stations": [
+          "Wasserburg(Günz)",
+          "Kleinkötz",
+          "Hochwang",
+          "Ichenhausen",
+          "Ellzee",
+          "Neuburg(Kammel)",
+          "Hirschfelden",
+          "Billenhausen",
+          "Krumbach(Schwab)"
+        ]
+      },
+      {
+        "id": "179162183929136680-2510202219-5",
+        "type": "RE",
+        "number": "57089",
+        "direction": "München Hbf",
+        "platform": "2",
+        "time": "2510202241",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Offingen",
+          "Mindelaltheim",
+          "Burgau(Schwab)",
+          "Jettingen",
+          "Freihalden",
+          "Dinkelscherben",
+          "Kutzenhausen",
+          "Gessertshausen",
+          "Diedorf(Schwab)",
+          "Westheim(Schwab)",
+          "Neusäß",
+          "Augsburg-Oberhausen",
+          "Augsburg Hbf",
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Kissing",
+          "Mering-St Afra",
+          "Mering",
+          "Althegnenberg",
+          "Haspelmoor",
+          "Mammendorf",
+          "München-Pasing",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "-3182916951289050576-2510202147-5",
+        "type": "ag",
+        "number": "84301",
+        "direction": "Tapfheim",
+        "platform": "2",
+        "time": "2510202206",
+        "destination": "Tapfheim",
+        "path_stations": [
+          "Gundelfingen(Bay)",
+          "Lauingen",
+          "Dillingen(Donau)",
+          "Höchstädt(Donau)",
+          "Blindheim",
+          "Schwenningen(Bay)",
+          "Tapfheim"
+        ]
+      },
+      {
+        "id": "1282096631182374072-2510202221-8",
+        "type": "ag",
+        "number": "84294",
+        "direction": "Neu-Ulm",
+        "platform": "3",
+        "time": "2510202254",
+        "destination": "Neu-Ulm",
+        "path_stations": [
+          "Leipheim",
+          "Nersingen",
+          "Neu-Ulm"
+        ]
+      },
+      {
+        "id": "-4623299408447653945-2510202324-5",
+        "type": "RE",
+        "number": "57191",
+        "direction": "Dinkelscherben",
+        "platform": "2",
+        "time": "2510202344",
+        "destination": "Dinkelscherben",
+        "path_stations": [
+          "Offingen",
+          "Mindelaltheim",
+          "Burgau(Schwab)",
+          "Jettingen",
+          "Freihalden",
+          "Dinkelscherben"
+        ]
+      },
+      {
+        "id": "3709050757667951658-2510202159-24",
+        "type": "RE",
+        "number": "57086",
+        "direction": "Ulm Hbf",
+        "platform": "4",
+        "time": "2510202350",
+        "destination": "Ulm Hbf",
+        "path_stations": [
+          "Leipheim",
+          "Nersingen",
+          "Neu-Ulm",
+          "Ulm Hbf"
+        ]
+      },
+      {
+        "id": "7041683328849730245-2510202347-1",
+        "type": "ag",
+        "number": "84305",
+        "direction": "Tapfheim",
+        "platform": "5",
+        "time": "2510202347",
+        "destination": "Tapfheim",
+        "path_stations": [
+          "Gundelfingen(Bay)",
+          "Lauingen",
+          "Dillingen(Donau)",
+          "Höchstädt(Donau)",
+          "Blindheim",
+          "Schwenningen(Bay)",
+          "Tapfheim"
+        ]
+      },
+      {
+        "id": "3378646479369230872-2510202246-5",
+        "type": "ag",
+        "number": "84303",
+        "direction": "Tapfheim",
+        "platform": "2",
+        "time": "2510202305",
+        "destination": "Tapfheim",
+        "path_stations": [
+          "Gundelfingen(Bay)",
+          "Lauingen",
+          "Dillingen(Donau)",
+          "Höchstädt(Donau)",
+          "Blindheim",
+          "Schwenningen(Bay)",
+          "Tapfheim"
+        ]
+      },
+      {
+        "id": "-9090734619747811712-2510210006-8",
+        "type": "ag",
+        "number": "84298",
+        "direction": "Ulm Hbf",
+        "platform": "3",
+        "time": "2510210039",
+        "destination": "Ulm Hbf",
+        "path_stations": [
+          "Leipheim",
+          "Nersingen",
+          "Neu-Ulm",
+          "Ulm Hbf"
+        ]
+      },
+      {
+        "id": "9157866427519413881-2510202258-24",
+        "type": "RE",
+        "number": "57088",
+        "direction": "Ulm Hbf",
+        "platform": "3",
+        "time": "2510210047",
+        "destination": "Ulm Hbf",
+        "path_stations": [
+          "Leipheim",
+          "Nersingen",
+          "Neu-Ulm",
+          "Ulm Hbf"
+        ]
+      },
+      {
+        "id": "2686007473625185344-2510210000-4",
+        "type": "ICE",
+        "number": "618",
+        "direction": "Kiel Hbf",
+        "platform": "3",
+        "time": "2510210102",
+        "destination": "Kiel Hbf",
+        "path_stations": [
+          "Ulm Hbf",
+          "Stuttgart Hbf",
+          "Heidelberg Hbf",
+          "Mannheim Hbf",
+          "Frankfurt(Main)Hbf",
+          "Frankfurt(M) Flughafen Fernbf",
+          "Siegburg/Bonn",
+          "Köln Hbf",
+          "Düsseldorf Hbf",
+          "Duisburg Hbf",
+          "Essen Hbf",
+          "Münster(Westf)Hbf",
+          "Osnabrück Hbf",
+          "Bremen Hbf",
+          "Hamburg-Harburg",
+          "Hamburg Hbf",
+          "Hamburg Dammtor",
+          "Neumünster",
+          "Kiel Hbf"
+        ]
+      },
+      {
+        "id": "7474414276230536927-2510201838-21",
+        "type": "ICE",
+        "number": "619",
+        "direction": "München Hbf",
+        "platform": "2",
+        "time": "2510210455",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Augsburg Hbf",
+          "München-Pasing",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "9215471812401632440-2510210453-5",
+        "type": "ag",
+        "number": "84267",
+        "direction": "Tapfheim",
+        "platform": "2",
+        "time": "2510210511",
+        "destination": "Tapfheim",
+        "path_stations": [
+          "Gundelfingen(Bay)",
+          "Lauingen",
+          "Dillingen(Donau)",
+          "Höchstädt(Donau)",
+          "Blindheim",
+          "Schwenningen(Bay)",
+          "Tapfheim"
+        ]
+      },
+      {
+        "id": "2451608710124437449-2510210452-8",
+        "type": "ag",
+        "number": "84244",
+        "direction": "Ulm Hbf",
+        "platform": "3",
+        "time": "2510210528",
+        "destination": "Ulm Hbf",
+        "path_stations": [
+          "Leipheim",
+          "Nersingen",
+          "Neu-Ulm",
+          "Ulm Hbf"
+        ]
+      },
+      {
+        "id": "-7882286023501383508-2510210456-7",
+        "type": "RE",
+        "number": "57102",
+        "direction": "Ulm Hbf",
+        "platform": "3",
+        "time": "2510210523",
+        "destination": "Ulm Hbf",
+        "path_stations": [
+          "Leipheim",
+          "Nersingen",
+          "Neu-Ulm",
+          "Ulm Hbf"
+        ]
+      },
+      {
+        "id": "3626122874516269645-2510210447-5",
+        "type": "RE",
+        "number": "57011",
+        "direction": "München Hbf",
+        "platform": "2",
+        "time": "2510210507",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Offingen",
+          "Mindelaltheim",
+          "Burgau(Schwab)",
+          "Jettingen",
+          "Freihalden",
+          "Dinkelscherben",
+          "Kutzenhausen",
+          "Gessertshausen",
+          "Diedorf(Schwab)",
+          "Westheim(Schwab)",
+          "Neusäß",
+          "Augsburg-Oberhausen",
+          "Augsburg Hbf",
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Kissing",
+          "Mering-St Afra",
+          "Mering",
+          "Althegnenberg",
+          "Haspelmoor",
+          "Mammendorf",
+          "München-Pasing",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "-8271865650443913053-2510210555-1",
+        "type": "RB",
+        "number": "57701",
+        "direction": "Mindelheim",
+        "platform": "1a",
+        "time": "2510210555",
+        "destination": "Mindelheim",
+        "path_stations": [
+          "Wasserburg(Günz)",
+          "Kleinkötz",
+          "Hochwang",
+          "Ichenhausen",
+          "Ellzee",
+          "Neuburg(Kammel)",
+          "Hirschfelden",
+          "Billenhausen",
+          "Krumbach(Schwab)",
+          "Krumbach(Schwab)Schule",
+          "Niederraunau",
+          "Aletshausen",
+          "Haupeltshofen",
+          "Loppenhausen",
+          "Breitenbrunn(Schwab)",
+          "Weilbach(Unterallg)",
+          "Pfaffenhausen",
+          "Hausen(Schwab)",
+          "Nassenbeuren",
+          "Mindelheim"
+        ]
+      },
+      {
+        "id": "-3481239594446651570-2510210518-5",
+        "type": "RE",
+        "number": "57015",
+        "direction": "München Hbf",
+        "platform": "2",
+        "time": "2510210538",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Offingen",
+          "Mindelaltheim",
+          "Burgau(Schwab)",
+          "Jettingen",
+          "Freihalden",
+          "Dinkelscherben",
+          "Kutzenhausen",
+          "Gessertshausen",
+          "Diedorf(Schwab)",
+          "Westheim(Schwab)",
+          "Neusäß",
+          "Augsburg-Oberhausen",
+          "Augsburg Hbf",
+          "Augsburg Haunstetterstraße",
+          "Augsburg-Hochzoll",
+          "Kissing",
+          "Mering-St Afra",
+          "Mering",
+          "München-Pasing",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "8912048394049036116-2510210531-5",
+        "type": "ag",
+        "number": "84257",
+        "direction": "Donauwörth",
+        "platform": "2",
+        "time": "2510210555",
+        "destination": "Donauwörth",
+        "path_stations": [
+          "Gundelfingen(Bay)",
+          "Lauingen",
+          "Dillingen(Donau)",
+          "Höchstädt(Donau)",
+          "Blindheim",
+          "Schwenningen(Bay)",
+          "Tapfheim",
+          "Donauwörth"
+        ]
+      }
+    ]
+  }
+}

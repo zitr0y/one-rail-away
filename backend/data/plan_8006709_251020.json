@@ -1,0 +1,1348 @@
+{
+  "station_eva": "8006709",
+  "date": "251020",
+  "cached_at": "2025-10-20T15:48:21.716589",
+  "plan_data": {
+    "arrivals": [
+      {
+        "id": "-9018568100345061553-2510201651-12",
+        "type": "RB",
+        "number": "14775",
+        "time": "2510201751",
+        "platform": "3",
+        "path_stations": [
+          "Dortmund-Bövinghausen",
+          "Castrop-Rauxel-Merklinde",
+          "Castrop-Rauxel Süd",
+          "Herne-Börnig",
+          "Herne",
+          "Wanne-Eickel Hbf",
+          "Gelsenkirchen Zoo",
+          "Gelsenkirchen-Buer Süd",
+          "Gladbeck Ost",
+          "Gladbeck-Zweckel",
+          "Feldhausen"
+        ],
+        "line": "43"
+      },
+      {
+        "id": "-4625998139013990883-2510201659-8",
+        "type": "RRB",
+        "number": "89564",
+        "time": "2510201731",
+        "platform": "1",
+        "path_stations": [
+          "Essen Hbf",
+          "Essen West",
+          "Essen-Borbeck",
+          "Bottrop Hbf",
+          "Gladbeck West",
+          "Gladbeck-Zweckel",
+          "Feldhausen"
+        ],
+        "line": "RE14"
+      },
+      {
+        "id": "-3410901791436557114-2510201703-4",
+        "type": "RRB",
+        "number": "89569",
+        "time": "2510201726",
+        "platform": "2",
+        "path_stations": [
+          "Borken(Westf)",
+          "Marbeck-Heiden",
+          "Rhade"
+        ],
+        "line": "RE14"
+      },
+      {
+        "id": "5162925665994854577-2510201631-7",
+        "type": "RRB",
+        "number": "89560",
+        "time": "2510201701",
+        "platform": "1",
+        "path_stations": [
+          "Essen Hbf",
+          "Essen-Borbeck",
+          "Bottrop Hbf",
+          "Gladbeck West",
+          "Gladbeck-Zweckel",
+          "Feldhausen"
+        ],
+        "line": "RE14"
+      },
+      {
+        "id": "906133831381185236-2510201731-6",
+        "type": "RRB",
+        "number": "89573",
+        "time": "2510201754",
+        "platform": "2",
+        "path_stations": [
+          "Borken(Westf)",
+          "Marbeck-Heiden",
+          "Rhade",
+          "Deuten",
+          "Hervest-Dorsten"
+        ],
+        "line": "RE14"
+      },
+      {
+        "id": "-8739091491184377806-2510201631-7",
+        "type": "RRB",
+        "number": "89562",
+        "time": "2510201701",
+        "platform": "1",
+        "path_stations": [
+          "Essen Hbf",
+          "Essen-Borbeck",
+          "Bottrop Hbf",
+          "Gladbeck West",
+          "Gladbeck-Zweckel",
+          "Feldhausen"
+        ],
+        "line": "RE14"
+      },
+      {
+        "id": "56679115160914734-2510201710-8",
+        "type": "RRB",
+        "number": "89571",
+        "time": "2510201749",
+        "platform": "2",
+        "path_stations": [
+          "Coesfeld(Westf)",
+          "Reken-Maria Veen",
+          "Reken",
+          "Reken-Klein Reken",
+          "Lembeck",
+          "Wulfen(Westf)",
+          "Hervest-Dorsten"
+        ],
+        "line": "RE14"
+      },
+      {
+        "id": "-8372432454398777864-2510201731-7",
+        "type": "RRB",
+        "number": "89566",
+        "time": "2510201801",
+        "platform": "1",
+        "path_stations": [
+          "Essen Hbf",
+          "Essen-Borbeck",
+          "Bottrop Hbf",
+          "Gladbeck West",
+          "Gladbeck-Zweckel",
+          "Feldhausen"
+        ],
+        "line": "RE14"
+      },
+      {
+        "id": "-8098835001188714129-2510201759-8",
+        "type": "RRB",
+        "number": "89570",
+        "time": "2510201833",
+        "platform": "4",
+        "path_stations": [
+          "Essen Hbf",
+          "Essen West",
+          "Essen-Borbeck",
+          "Bottrop Hbf",
+          "Gladbeck West",
+          "Gladbeck-Zweckel",
+          "Feldhausen"
+        ],
+        "line": "RE14"
+      },
+      {
+        "id": "-6279478472178427026-2510201831-6",
+        "type": "RRB",
+        "number": "89579",
+        "time": "2510201854",
+        "platform": "2",
+        "path_stations": [
+          "Borken(Westf)",
+          "Marbeck-Heiden",
+          "Rhade",
+          "Deuten",
+          "Hervest-Dorsten"
+        ],
+        "line": "RE14"
+      },
+      {
+        "id": "-5081558288005397210-2510201751-12",
+        "type": "RB",
+        "number": "14777",
+        "time": "2510201851",
+        "platform": "3",
+        "path_stations": [
+          "Dortmund-Bövinghausen",
+          "Castrop-Rauxel-Merklinde",
+          "Castrop-Rauxel Süd",
+          "Herne-Börnig",
+          "Herne",
+          "Wanne-Eickel Hbf",
+          "Gelsenkirchen Zoo",
+          "Gelsenkirchen-Buer Süd",
+          "Gladbeck Ost",
+          "Gladbeck-Zweckel",
+          "Feldhausen"
+        ],
+        "line": "43"
+      },
+      {
+        "id": "4438057741061517399-2510201810-8",
+        "type": "RRB",
+        "number": "89577",
+        "time": "2510201849",
+        "platform": "2",
+        "path_stations": [
+          "Coesfeld(Westf)",
+          "Reken-Maria Veen",
+          "Reken",
+          "Reken-Klein Reken",
+          "Lembeck",
+          "Wulfen(Westf)",
+          "Hervest-Dorsten"
+        ],
+        "line": "RE14"
+      },
+      {
+        "id": "-8948880772707480617-2510201731-7",
+        "type": "RRB",
+        "number": "89568",
+        "time": "2510201801",
+        "platform": "1",
+        "path_stations": [
+          "Essen Hbf",
+          "Essen-Borbeck",
+          "Bottrop Hbf",
+          "Gladbeck West",
+          "Gladbeck-Zweckel",
+          "Feldhausen"
+        ],
+        "line": "RE14"
+      },
+      {
+        "id": "-6617365854869622808-2510201803-4",
+        "type": "RRB",
+        "number": "89575",
+        "time": "2510201826",
+        "platform": "2",
+        "path_stations": [
+          "Borken(Westf)",
+          "Marbeck-Heiden",
+          "Rhade"
+        ],
+        "line": "RE14"
+      },
+      {
+        "id": "-6196822620352860836-2510201851-12",
+        "type": "RB",
+        "number": "14779",
+        "time": "2510201951",
+        "platform": "3",
+        "path_stations": [
+          "Dortmund-Bövinghausen",
+          "Castrop-Rauxel-Merklinde",
+          "Castrop-Rauxel Süd",
+          "Herne-Börnig",
+          "Herne",
+          "Wanne-Eickel Hbf",
+          "Gelsenkirchen Zoo",
+          "Gelsenkirchen-Buer Süd",
+          "Gladbeck Ost",
+          "Gladbeck-Zweckel",
+          "Feldhausen"
+        ],
+        "line": "43"
+      },
+      {
+        "id": "-4592694671867394456-2510201910-8",
+        "type": "RRB",
+        "number": "89581",
+        "time": "2510201949",
+        "platform": "2",
+        "path_stations": [
+          "Coesfeld(Westf)",
+          "Reken-Maria Veen",
+          "Reken",
+          "Reken-Klein Reken",
+          "Lembeck",
+          "Wulfen(Westf)",
+          "Hervest-Dorsten"
+        ],
+        "line": "RE14"
+      },
+      {
+        "id": "-2840464890753822334-2510201831-7",
+        "type": "RRB",
+        "number": "89572",
+        "time": "2510201901",
+        "platform": "1",
+        "path_stations": [
+          "Essen Hbf",
+          "Essen-Borbeck",
+          "Bottrop Hbf",
+          "Gladbeck West",
+          "Gladbeck-Zweckel",
+          "Feldhausen"
+        ],
+        "line": "RE14"
+      },
+      {
+        "id": "-7375333593028782186-2510201859-8",
+        "type": "RRB",
+        "number": "89576",
+        "time": "2510201933",
+        "platform": "4",
+        "path_stations": [
+          "Essen Hbf",
+          "Essen West",
+          "Essen-Borbeck",
+          "Bottrop Hbf",
+          "Gladbeck West",
+          "Gladbeck-Zweckel",
+          "Feldhausen"
+        ],
+        "line": "RE14"
+      },
+      {
+        "id": "-3995388517185215877-2510201931-6",
+        "type": "RRB",
+        "number": "89583",
+        "time": "2510201954",
+        "platform": "2",
+        "path_stations": [
+          "Borken(Westf)",
+          "Marbeck-Heiden",
+          "Rhade",
+          "Deuten",
+          "Hervest-Dorsten"
+        ],
+        "line": "RE14"
+      },
+      {
+        "id": "4155867870268804130-2510201831-7",
+        "type": "RRB",
+        "number": "89574",
+        "time": "2510201901",
+        "platform": "1",
+        "path_stations": [
+          "Essen Hbf",
+          "Essen-Borbeck",
+          "Bottrop Hbf",
+          "Gladbeck West",
+          "Gladbeck-Zweckel",
+          "Feldhausen"
+        ],
+        "line": "RE14"
+      },
+      {
+        "id": "-5873302904374228188-2510202031-6",
+        "type": "RRB",
+        "number": "89587",
+        "time": "2510202054",
+        "platform": "2",
+        "path_stations": [
+          "Borken(Westf)",
+          "Marbeck-Heiden",
+          "Rhade",
+          "Deuten",
+          "Hervest-Dorsten"
+        ],
+        "line": "RE14"
+      },
+      {
+        "id": "6414448251890613464-2510202010-8",
+        "type": "RRB",
+        "number": "89585",
+        "time": "2510202049",
+        "platform": "2",
+        "path_stations": [
+          "Coesfeld(Westf)",
+          "Reken-Maria Veen",
+          "Reken",
+          "Reken-Klein Reken",
+          "Lembeck",
+          "Wulfen(Westf)",
+          "Hervest-Dorsten"
+        ],
+        "line": "RE14"
+      },
+      {
+        "id": "-3950498695485132145-2510201951-12",
+        "type": "RB",
+        "number": "14781",
+        "time": "2510202051",
+        "platform": "3",
+        "path_stations": [
+          "Dortmund-Bövinghausen",
+          "Castrop-Rauxel-Merklinde",
+          "Castrop-Rauxel Süd",
+          "Herne-Börnig",
+          "Herne",
+          "Wanne-Eickel Hbf",
+          "Gelsenkirchen Zoo",
+          "Gelsenkirchen-Buer Süd",
+          "Gladbeck Ost",
+          "Gladbeck-Zweckel",
+          "Feldhausen"
+        ],
+        "line": "43"
+      },
+      {
+        "id": "628382199207209152-2510201931-7",
+        "type": "RRB",
+        "number": "89578",
+        "time": "2510202001",
+        "platform": "1",
+        "path_stations": [
+          "Essen Hbf",
+          "Essen-Borbeck",
+          "Bottrop Hbf",
+          "Gladbeck West",
+          "Gladbeck-Zweckel",
+          "Feldhausen"
+        ],
+        "line": "RE14"
+      },
+      {
+        "id": "3107981527397753990-2510201931-7",
+        "type": "RRB",
+        "number": "89580",
+        "time": "2510202001",
+        "platform": "1",
+        "path_stations": [
+          "Essen Hbf",
+          "Essen-Borbeck",
+          "Bottrop Hbf",
+          "Gladbeck West",
+          "Gladbeck-Zweckel",
+          "Feldhausen"
+        ],
+        "line": "RE14"
+      },
+      {
+        "id": "7706440448246622013-2510201959-8",
+        "type": "RRB",
+        "number": "89600",
+        "time": "2510202033",
+        "platform": "4",
+        "path_stations": [
+          "Essen Hbf",
+          "Essen West",
+          "Essen-Borbeck",
+          "Bottrop Hbf",
+          "Gladbeck West",
+          "Gladbeck-Zweckel",
+          "Feldhausen"
+        ],
+        "line": "RE14"
+      },
+      {
+        "id": "-6846156500769841645-2510202031-7",
+        "type": "RRB",
+        "number": "89584",
+        "time": "2510202101",
+        "platform": "1",
+        "path_stations": [
+          "Essen Hbf",
+          "Essen-Borbeck",
+          "Bottrop Hbf",
+          "Gladbeck West",
+          "Gladbeck-Zweckel",
+          "Feldhausen"
+        ],
+        "line": "RE14"
+      },
+      {
+        "id": "-8942589474541217776-2510202051-12",
+        "type": "RB",
+        "number": "14783",
+        "time": "2510202151",
+        "platform": "3",
+        "path_stations": [
+          "Dortmund-Bövinghausen",
+          "Castrop-Rauxel-Merklinde",
+          "Castrop-Rauxel Süd",
+          "Herne-Börnig",
+          "Herne",
+          "Wanne-Eickel Hbf",
+          "Gelsenkirchen Zoo",
+          "Gelsenkirchen-Buer Süd",
+          "Gladbeck Ost",
+          "Gladbeck-Zweckel",
+          "Feldhausen"
+        ],
+        "line": "43"
+      },
+      {
+        "id": "-4015553711345995600-2510202031-7",
+        "type": "RRB",
+        "number": "89582",
+        "time": "2510202101",
+        "platform": "1",
+        "path_stations": [
+          "Essen Hbf",
+          "Essen-Borbeck",
+          "Bottrop Hbf",
+          "Gladbeck West",
+          "Gladbeck-Zweckel",
+          "Feldhausen"
+        ],
+        "line": "RE14"
+      },
+      {
+        "id": "-8710470194653377583-2510202131-6",
+        "type": "RRB",
+        "number": "89589",
+        "time": "2510202154",
+        "platform": "2",
+        "path_stations": [
+          "Borken(Westf)",
+          "Marbeck-Heiden",
+          "Rhade",
+          "Deuten",
+          "Hervest-Dorsten"
+        ],
+        "line": "RE14"
+      },
+      {
+        "id": "-6528061277952258952-2510202131-7",
+        "type": "RRB",
+        "number": "89586",
+        "time": "2510202201",
+        "platform": "1",
+        "path_stations": [
+          "Essen Hbf",
+          "Essen-Borbeck",
+          "Bottrop Hbf",
+          "Gladbeck West",
+          "Gladbeck-Zweckel",
+          "Feldhausen"
+        ],
+        "line": "RE14"
+      },
+      {
+        "id": "-4873448364673596995-2510202231-6",
+        "type": "RRB",
+        "number": "89591",
+        "time": "2510202254",
+        "platform": "2",
+        "path_stations": [
+          "Borken(Westf)",
+          "Marbeck-Heiden",
+          "Rhade",
+          "Deuten",
+          "Hervest-Dorsten"
+        ],
+        "line": "RE14"
+      },
+      {
+        "id": "-3292607639099155330-2510202151-12",
+        "type": "RB",
+        "number": "14785",
+        "time": "2510202251",
+        "platform": "3",
+        "path_stations": [
+          "Dortmund-Bövinghausen",
+          "Castrop-Rauxel-Merklinde",
+          "Castrop-Rauxel Süd",
+          "Herne-Börnig",
+          "Herne",
+          "Wanne-Eickel Hbf",
+          "Gelsenkirchen Zoo",
+          "Gelsenkirchen-Buer Süd",
+          "Gladbeck Ost",
+          "Gladbeck-Zweckel",
+          "Feldhausen"
+        ],
+        "line": "43"
+      },
+      {
+        "id": "4940435727219814009-2510202231-7",
+        "type": "RRB",
+        "number": "89588",
+        "time": "2510202301",
+        "platform": "1",
+        "path_stations": [
+          "Essen Hbf",
+          "Essen-Borbeck",
+          "Bottrop Hbf",
+          "Gladbeck West",
+          "Gladbeck-Zweckel",
+          "Feldhausen"
+        ],
+        "line": "RE14"
+      },
+      {
+        "id": "8529112800034229225-2510202251-12",
+        "type": "RB",
+        "number": "14787",
+        "time": "2510202351",
+        "platform": "3",
+        "path_stations": [
+          "Dortmund-Bövinghausen",
+          "Castrop-Rauxel-Merklinde",
+          "Castrop-Rauxel Süd",
+          "Herne-Börnig",
+          "Herne",
+          "Wanne-Eickel Hbf",
+          "Gelsenkirchen Zoo",
+          "Gelsenkirchen-Buer Süd",
+          "Gladbeck Ost",
+          "Gladbeck-Zweckel",
+          "Feldhausen"
+        ],
+        "line": "43"
+      },
+      {
+        "id": "-8622625198098892040-2510202331-7",
+        "type": "RRB",
+        "number": "89590",
+        "time": "2510210001",
+        "platform": "4",
+        "path_stations": [
+          "Essen Hbf",
+          "Essen-Borbeck",
+          "Bottrop Hbf",
+          "Gladbeck West",
+          "Gladbeck-Zweckel",
+          "Feldhausen"
+        ],
+        "line": "RE14"
+      },
+      {
+        "id": "-3438077601379869108-2510210510-8",
+        "type": "RRB",
+        "number": "89499",
+        "time": "2510210549",
+        "platform": "2",
+        "path_stations": [
+          "Coesfeld(Westf)",
+          "Reken-Maria Veen",
+          "Reken",
+          "Reken-Klein Reken",
+          "Lembeck",
+          "Wulfen(Westf)",
+          "Hervest-Dorsten"
+        ],
+        "line": "RE14"
+      },
+      {
+        "id": "-8311231925213585374-2510210520-7",
+        "type": "RB",
+        "number": "14751",
+        "time": "2510210551",
+        "platform": "3",
+        "path_stations": [
+          "Wanne-Eickel Hbf",
+          "Gelsenkirchen Zoo",
+          "Gelsenkirchen-Buer Süd",
+          "Gladbeck Ost",
+          "Gladbeck-Zweckel",
+          "Feldhausen"
+        ],
+        "line": "43"
+      },
+      {
+        "id": "-8740545067956190474-2510210531-6",
+        "type": "RRB",
+        "number": "89501",
+        "time": "2510210554",
+        "platform": "2",
+        "path_stations": [
+          "Borken(Westf)",
+          "Marbeck-Heiden",
+          "Rhade",
+          "Deuten",
+          "Hervest-Dorsten"
+        ],
+        "line": "RE14"
+      }
+    ],
+    "departures": [
+      {
+        "id": "-3634204366445658742-2510201707-1",
+        "type": "RB",
+        "number": "14776",
+        "direction": "Dortmund-Bövinghausen",
+        "platform": "3",
+        "time": "2510201707",
+        "destination": "Dortmund-Bövinghausen",
+        "path_stations": [
+          "Feldhausen",
+          "Gladbeck-Zweckel",
+          "Gladbeck Ost",
+          "Gelsenkirchen-Buer Süd",
+          "Gelsenkirchen Zoo",
+          "Wanne-Eickel Hbf",
+          "Herne",
+          "Herne-Börnig",
+          "Castrop-Rauxel Süd",
+          "Castrop-Rauxel-Merklinde",
+          "Dortmund-Bövinghausen"
+        ]
+      },
+      {
+        "id": "-4625998139013990883-2510201659-8",
+        "type": "RRB",
+        "number": "89564",
+        "direction": "Borken(Westf)",
+        "platform": "1",
+        "time": "2510201732",
+        "destination": "Borken(Westf)",
+        "path_stations": [
+          "Rhade",
+          "Marbeck-Heiden",
+          "Borken(Westf)"
+        ]
+      },
+      {
+        "id": "-3410901791436557114-2510201703-4",
+        "type": "RRB",
+        "number": "89569",
+        "direction": "Essen Hbf",
+        "platform": "2",
+        "time": "2510201727",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Feldhausen",
+          "Gladbeck-Zweckel",
+          "Gladbeck West",
+          "Bottrop Hbf",
+          "Essen-Borbeck",
+          "Essen West",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "5162925665994854577-2510201631-7",
+        "type": "RRB",
+        "number": "89560",
+        "direction": "Borken(Westf)",
+        "platform": "1",
+        "time": "2510201703",
+        "destination": "Borken(Westf)",
+        "path_stations": [
+          "Hervest-Dorsten",
+          "Deuten",
+          "Rhade",
+          "Marbeck-Heiden",
+          "Borken(Westf)"
+        ]
+      },
+      {
+        "id": "906133831381185236-2510201731-6",
+        "type": "RRB",
+        "number": "89573",
+        "direction": "Essen Hbf",
+        "platform": "2",
+        "time": "2510201757",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Feldhausen",
+          "Gladbeck-Zweckel",
+          "Gladbeck West",
+          "Bottrop Hbf",
+          "Essen-Borbeck",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "-8739091491184377806-2510201631-7",
+        "type": "RRB",
+        "number": "89562",
+        "direction": "Coesfeld(Westf)",
+        "platform": "1",
+        "time": "2510201707",
+        "destination": "Coesfeld(Westf)",
+        "path_stations": [
+          "Hervest-Dorsten",
+          "Wulfen(Westf)",
+          "Lembeck",
+          "Reken-Klein Reken",
+          "Reken",
+          "Reken-Maria Veen",
+          "Coesfeld(Westf)"
+        ]
+      },
+      {
+        "id": "56679115160914734-2510201710-8",
+        "type": "RRB",
+        "number": "89571",
+        "direction": "Essen Hbf",
+        "platform": "2",
+        "time": "2510201757",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Feldhausen",
+          "Gladbeck-Zweckel",
+          "Gladbeck West",
+          "Bottrop Hbf",
+          "Essen-Borbeck",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "-8372432454398777864-2510201731-7",
+        "type": "RRB",
+        "number": "89566",
+        "direction": "Borken(Westf)",
+        "platform": "1",
+        "time": "2510201803",
+        "destination": "Borken(Westf)",
+        "path_stations": [
+          "Hervest-Dorsten",
+          "Deuten",
+          "Rhade",
+          "Marbeck-Heiden",
+          "Borken(Westf)"
+        ]
+      },
+      {
+        "id": "3787572563507984235-2510201807-1",
+        "type": "RB",
+        "number": "14778",
+        "direction": "Dortmund-Bövinghausen",
+        "platform": "3",
+        "time": "2510201807",
+        "destination": "Dortmund-Bövinghausen",
+        "path_stations": [
+          "Feldhausen",
+          "Gladbeck-Zweckel",
+          "Gladbeck Ost",
+          "Gelsenkirchen-Buer Süd",
+          "Gelsenkirchen Zoo",
+          "Wanne-Eickel Hbf",
+          "Herne",
+          "Herne-Börnig",
+          "Castrop-Rauxel Süd",
+          "Castrop-Rauxel-Merklinde",
+          "Dortmund-Bövinghausen"
+        ]
+      },
+      {
+        "id": "-6279478472178427026-2510201831-6",
+        "type": "RRB",
+        "number": "89579",
+        "direction": "Essen Hbf",
+        "platform": "2",
+        "time": "2510201857",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Feldhausen",
+          "Gladbeck-Zweckel",
+          "Gladbeck West",
+          "Bottrop Hbf",
+          "Essen-Borbeck",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "4438057741061517399-2510201810-8",
+        "type": "RRB",
+        "number": "89577",
+        "direction": "Essen Hbf",
+        "platform": "2",
+        "time": "2510201857",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Feldhausen",
+          "Gladbeck-Zweckel",
+          "Gladbeck West",
+          "Bottrop Hbf",
+          "Essen-Borbeck",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "-8948880772707480617-2510201731-7",
+        "type": "RRB",
+        "number": "89568",
+        "direction": "Coesfeld(Westf)",
+        "platform": "1",
+        "time": "2510201807",
+        "destination": "Coesfeld(Westf)",
+        "path_stations": [
+          "Hervest-Dorsten",
+          "Wulfen(Westf)",
+          "Lembeck",
+          "Reken-Klein Reken",
+          "Reken",
+          "Reken-Maria Veen",
+          "Coesfeld(Westf)"
+        ]
+      },
+      {
+        "id": "-6617365854869622808-2510201803-4",
+        "type": "RRB",
+        "number": "89575",
+        "direction": "Essen Hbf",
+        "platform": "2",
+        "time": "2510201827",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Feldhausen",
+          "Gladbeck-Zweckel",
+          "Gladbeck West",
+          "Bottrop Hbf",
+          "Essen-Borbeck",
+          "Essen West",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "-3550918628609812807-2510201907-1",
+        "type": "RB",
+        "number": "14780",
+        "direction": "Dortmund-Bövinghausen",
+        "platform": "3",
+        "time": "2510201907",
+        "destination": "Dortmund-Bövinghausen",
+        "path_stations": [
+          "Feldhausen",
+          "Gladbeck-Zweckel",
+          "Gladbeck Ost",
+          "Gelsenkirchen-Buer Süd",
+          "Gelsenkirchen Zoo",
+          "Wanne-Eickel Hbf",
+          "Herne",
+          "Herne-Börnig",
+          "Castrop-Rauxel Süd",
+          "Castrop-Rauxel-Merklinde",
+          "Dortmund-Bövinghausen"
+        ]
+      },
+      {
+        "id": "-4592694671867394456-2510201910-8",
+        "type": "RRB",
+        "number": "89581",
+        "direction": "Essen Hbf",
+        "platform": "2",
+        "time": "2510201957",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Feldhausen",
+          "Gladbeck-Zweckel",
+          "Gladbeck West",
+          "Bottrop Hbf",
+          "Essen-Borbeck",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "-2840464890753822334-2510201831-7",
+        "type": "RRB",
+        "number": "89572",
+        "direction": "Borken(Westf)",
+        "platform": "1",
+        "time": "2510201903",
+        "destination": "Borken(Westf)",
+        "path_stations": [
+          "Hervest-Dorsten",
+          "Deuten",
+          "Rhade",
+          "Marbeck-Heiden",
+          "Borken(Westf)"
+        ]
+      },
+      {
+        "id": "-3995388517185215877-2510201931-6",
+        "type": "RRB",
+        "number": "89583",
+        "direction": "Essen Hbf",
+        "platform": "2",
+        "time": "2510201957",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Feldhausen",
+          "Gladbeck-Zweckel",
+          "Gladbeck West",
+          "Bottrop Hbf",
+          "Essen-Borbeck",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "8434151147213437240-2510201927-1",
+        "type": "RRB",
+        "number": "89601",
+        "direction": "Essen Hbf",
+        "platform": "4",
+        "time": "2510201927",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Feldhausen",
+          "Gladbeck-Zweckel",
+          "Gladbeck West",
+          "Bottrop Hbf",
+          "Essen-Borbeck",
+          "Essen West",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "4155867870268804130-2510201831-7",
+        "type": "RRB",
+        "number": "89574",
+        "direction": "Coesfeld(Westf)",
+        "platform": "1",
+        "time": "2510201907",
+        "destination": "Coesfeld(Westf)",
+        "path_stations": [
+          "Hervest-Dorsten",
+          "Wulfen(Westf)",
+          "Lembeck",
+          "Reken-Klein Reken",
+          "Reken",
+          "Reken-Maria Veen",
+          "Coesfeld(Westf)"
+        ]
+      },
+      {
+        "id": "-2282360737034766347-2510202007-1",
+        "type": "RB",
+        "number": "14782",
+        "direction": "Dortmund Hbf",
+        "platform": "3",
+        "time": "2510202007",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Feldhausen",
+          "Gladbeck-Zweckel",
+          "Gladbeck Ost",
+          "Gelsenkirchen-Buer Süd",
+          "Gelsenkirchen Zoo",
+          "Wanne-Eickel Hbf",
+          "Herne",
+          "Herne-Börnig",
+          "Castrop-Rauxel Süd",
+          "Castrop-Rauxel-Merklinde",
+          "Dortmund-Bövinghausen",
+          "Dortmund-Lütgendortmund Nord",
+          "Dortmund-Marten",
+          "Dortmund-Rahm",
+          "Dortmund-Huckarde Nord",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-5873302904374228188-2510202031-6",
+        "type": "RRB",
+        "number": "89587",
+        "direction": "Essen Hbf",
+        "platform": "2",
+        "time": "2510202057",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Feldhausen",
+          "Gladbeck-Zweckel",
+          "Gladbeck West",
+          "Bottrop Hbf",
+          "Essen-Borbeck",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "628382199207209152-2510201931-7",
+        "type": "RRB",
+        "number": "89578",
+        "direction": "Borken(Westf)",
+        "platform": "1",
+        "time": "2510202003",
+        "destination": "Borken(Westf)",
+        "path_stations": [
+          "Hervest-Dorsten",
+          "Deuten",
+          "Rhade",
+          "Marbeck-Heiden",
+          "Borken(Westf)"
+        ]
+      },
+      {
+        "id": "3107981527397753990-2510201931-7",
+        "type": "RRB",
+        "number": "89580",
+        "direction": "Coesfeld(Westf)",
+        "platform": "1",
+        "time": "2510202007",
+        "destination": "Coesfeld(Westf)",
+        "path_stations": [
+          "Hervest-Dorsten",
+          "Wulfen(Westf)",
+          "Lembeck",
+          "Reken-Klein Reken",
+          "Reken",
+          "Reken-Maria Veen",
+          "Coesfeld(Westf)"
+        ]
+      },
+      {
+        "id": "-6846156500769841645-2510202031-7",
+        "type": "RRB",
+        "number": "89584",
+        "direction": "Coesfeld(Westf)",
+        "platform": "1",
+        "time": "2510202107",
+        "destination": "Coesfeld(Westf)",
+        "path_stations": [
+          "Hervest-Dorsten",
+          "Wulfen(Westf)",
+          "Lembeck",
+          "Reken-Klein Reken",
+          "Reken",
+          "Reken-Maria Veen",
+          "Coesfeld(Westf)"
+        ]
+      },
+      {
+        "id": "3956684365756578284-2510202107-1",
+        "type": "RB",
+        "number": "14784",
+        "direction": "Dortmund-Bövinghausen",
+        "platform": "3",
+        "time": "2510202107",
+        "destination": "Dortmund-Bövinghausen",
+        "path_stations": [
+          "Feldhausen",
+          "Gladbeck-Zweckel",
+          "Gladbeck Ost",
+          "Gelsenkirchen-Buer Süd",
+          "Gelsenkirchen Zoo",
+          "Wanne-Eickel Hbf",
+          "Herne",
+          "Herne-Börnig",
+          "Castrop-Rauxel Süd",
+          "Castrop-Rauxel-Merklinde",
+          "Dortmund-Bövinghausen"
+        ]
+      },
+      {
+        "id": "-4015553711345995600-2510202031-7",
+        "type": "RRB",
+        "number": "89582",
+        "direction": "Borken(Westf)",
+        "platform": "1",
+        "time": "2510202103",
+        "destination": "Borken(Westf)",
+        "path_stations": [
+          "Hervest-Dorsten",
+          "Deuten",
+          "Rhade",
+          "Marbeck-Heiden",
+          "Borken(Westf)"
+        ]
+      },
+      {
+        "id": "-8710470194653377583-2510202131-6",
+        "type": "RRB",
+        "number": "89589",
+        "direction": "Essen Hbf",
+        "platform": "2",
+        "time": "2510202157",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Feldhausen",
+          "Gladbeck-Zweckel",
+          "Gladbeck West",
+          "Bottrop Hbf",
+          "Essen-Borbeck",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "-6528061277952258952-2510202131-7",
+        "type": "RRB",
+        "number": "89586",
+        "direction": "Borken(Westf)",
+        "platform": "1",
+        "time": "2510202203",
+        "destination": "Borken(Westf)",
+        "path_stations": [
+          "Hervest-Dorsten",
+          "Deuten",
+          "Rhade",
+          "Marbeck-Heiden",
+          "Borken(Westf)"
+        ]
+      },
+      {
+        "id": "-4873448364673596995-2510202231-6",
+        "type": "RRB",
+        "number": "89591",
+        "direction": "Essen Hbf",
+        "platform": "2",
+        "time": "2510202257",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Feldhausen",
+          "Gladbeck-Zweckel",
+          "Gladbeck West",
+          "Bottrop Hbf",
+          "Essen-Borbeck",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "-1820607811961656188-2510202207-1",
+        "type": "RB",
+        "number": "14786",
+        "direction": "Dortmund-Bövinghausen",
+        "platform": "3",
+        "time": "2510202207",
+        "destination": "Dortmund-Bövinghausen",
+        "path_stations": [
+          "Feldhausen",
+          "Gladbeck-Zweckel",
+          "Gladbeck Ost",
+          "Gelsenkirchen-Buer Süd",
+          "Gelsenkirchen Zoo",
+          "Wanne-Eickel Hbf",
+          "Herne",
+          "Herne-Börnig",
+          "Castrop-Rauxel Süd",
+          "Castrop-Rauxel-Merklinde",
+          "Dortmund-Bövinghausen"
+        ]
+      },
+      {
+        "id": "-6333895081604492681-2510202307-1",
+        "type": "RB",
+        "number": "14788",
+        "direction": "Wanne-Eickel Hbf",
+        "platform": "3",
+        "time": "2510202307",
+        "destination": "Wanne-Eickel Hbf",
+        "path_stations": [
+          "Feldhausen",
+          "Gladbeck-Zweckel",
+          "Gladbeck Ost",
+          "Gelsenkirchen-Buer Süd",
+          "Gelsenkirchen Zoo",
+          "Wanne-Eickel Hbf"
+        ]
+      },
+      {
+        "id": "4940435727219814009-2510202231-7",
+        "type": "RRB",
+        "number": "89588",
+        "direction": "Borken(Westf)",
+        "platform": "1",
+        "time": "2510202303",
+        "destination": "Borken(Westf)",
+        "path_stations": [
+          "Hervest-Dorsten",
+          "Deuten",
+          "Rhade",
+          "Marbeck-Heiden",
+          "Borken(Westf)"
+        ]
+      },
+      {
+        "id": "-5360033022585151537-2510210457-1",
+        "type": "RRB",
+        "number": "89495",
+        "direction": "Essen Hbf",
+        "platform": "2",
+        "time": "2510210457",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Feldhausen",
+          "Gladbeck-Zweckel",
+          "Gladbeck West",
+          "Bottrop Hbf",
+          "Essen-Borbeck",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "-811639668534429630-2510210532-1",
+        "type": "RRB",
+        "number": "89598",
+        "direction": "Borken(Westf)",
+        "platform": "1",
+        "time": "2510210532",
+        "destination": "Borken(Westf)",
+        "path_stations": [
+          "Rhade",
+          "Marbeck-Heiden",
+          "Borken(Westf)"
+        ]
+      },
+      {
+        "id": "2750512648701710377-2510210507-1",
+        "type": "RB",
+        "number": "14752",
+        "direction": "Dortmund-Bövinghausen",
+        "platform": "3",
+        "time": "2510210507",
+        "destination": "Dortmund-Bövinghausen",
+        "path_stations": [
+          "Feldhausen",
+          "Gladbeck-Zweckel",
+          "Gladbeck Ost",
+          "Gelsenkirchen-Buer Süd",
+          "Gelsenkirchen Zoo",
+          "Wanne-Eickel Hbf",
+          "Herne",
+          "Herne-Börnig",
+          "Castrop-Rauxel Süd",
+          "Castrop-Rauxel-Merklinde",
+          "Dortmund-Bövinghausen"
+        ]
+      },
+      {
+        "id": "-3438077601379869108-2510210510-8",
+        "type": "RRB",
+        "number": "89499",
+        "direction": "Essen Hbf",
+        "platform": "2",
+        "time": "2510210557",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Feldhausen",
+          "Gladbeck-Zweckel",
+          "Gladbeck West",
+          "Bottrop Hbf",
+          "Essen-Borbeck",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "-1742621214747867275-2510210527-1",
+        "type": "RRB",
+        "number": "89497",
+        "direction": "Essen Hbf",
+        "platform": "4",
+        "time": "2510210527",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Feldhausen",
+          "Gladbeck-Zweckel",
+          "Gladbeck West",
+          "Bottrop Hbf",
+          "Essen-Borbeck",
+          "Essen West",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "-8740545067956190474-2510210531-6",
+        "type": "RRB",
+        "number": "89501",
+        "direction": "Essen Hbf",
+        "platform": "2",
+        "time": "2510210557",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Feldhausen",
+          "Gladbeck-Zweckel",
+          "Gladbeck West",
+          "Bottrop Hbf",
+          "Essen-Borbeck",
+          "Essen Hbf"
+        ]
+      }
+    ]
+  }
+}

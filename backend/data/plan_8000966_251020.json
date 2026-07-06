@@ -1,0 +1,172 @@
+{
+  "station_eva": "8000966",
+  "date": "251020",
+  "cached_at": "2025-10-20T16:55:03.915939",
+  "plan_data": {
+    "arrivals": [
+      {
+        "id": "1187297819094461103-2510201831-4",
+        "type": "RE",
+        "number": "10772",
+        "time": "2510201857",
+        "platform": "2",
+        "path_stations": [
+          "Winterberg(Westf)",
+          "Silbach",
+          "Siedlinghausen"
+        ],
+        "line": "57"
+      },
+      {
+        "id": "-3573137413263550703-2510201841-11",
+        "type": "RE",
+        "number": "10773",
+        "time": "2510201957",
+        "platform": "1",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Hörde",
+          "Fröndenberg",
+          "Wickede(Ruhr)",
+          "Neheim-Hüsten",
+          "Arnsberg(Westf)",
+          "Oeventrop",
+          "Freienohl",
+          "Meschede",
+          "Bestwig"
+        ],
+        "line": "57"
+      },
+      {
+        "id": "-7122940753470558049-2510202131-4",
+        "type": "RE",
+        "number": "10774",
+        "time": "2510202157",
+        "platform": "2",
+        "path_stations": [
+          "Winterberg(Westf)",
+          "Silbach",
+          "Siedlinghausen"
+        ],
+        "line": "57"
+      },
+      {
+        "id": "-6054284350319138662-2510210616-4",
+        "type": "RE",
+        "number": "10778",
+        "time": "2510210647",
+        "platform": "2",
+        "path_stations": [
+          "Winterberg(Westf)",
+          "Silbach",
+          "Siedlinghausen"
+        ],
+        "line": "57"
+      },
+      {
+        "id": "767842075325333541-2510210502-11",
+        "type": "RE",
+        "number": "10777",
+        "time": "2510210617",
+        "platform": "1",
+        "path_stations": [
+          "Hagen Hbf",
+          "Schwerte(Ruhr)",
+          "Fröndenberg",
+          "Wickede(Ruhr)",
+          "Neheim-Hüsten",
+          "Arnsberg(Westf)",
+          "Oeventrop",
+          "Freienohl",
+          "Meschede",
+          "Bestwig"
+        ],
+        "line": "57"
+      }
+    ],
+    "departures": [
+      {
+        "id": "1187297819094461103-2510201831-4",
+        "type": "RE",
+        "number": "10772",
+        "direction": "Dortmund Hbf",
+        "platform": "2",
+        "time": "2510201859",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Bestwig",
+          "Meschede",
+          "Freienohl",
+          "Oeventrop",
+          "Arnsberg(Westf)",
+          "Neheim-Hüsten",
+          "Wickede(Ruhr)",
+          "Fröndenberg",
+          "Dortmund-Hörde",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-3573137413263550703-2510201841-11",
+        "type": "RE",
+        "number": "10773",
+        "direction": "Winterberg(Westf)",
+        "platform": "1",
+        "time": "2510201958",
+        "destination": "Winterberg(Westf)",
+        "path_stations": [
+          "Siedlinghausen",
+          "Silbach",
+          "Winterberg(Westf)"
+        ]
+      },
+      {
+        "id": "-7122940753470558049-2510202131-4",
+        "type": "RE",
+        "number": "10774",
+        "direction": "Bestwig",
+        "platform": "2",
+        "time": "2510202159",
+        "destination": "Bestwig",
+        "path_stations": [
+          "Bestwig"
+        ]
+      },
+      {
+        "id": "-6054284350319138662-2510210616-4",
+        "type": "RE",
+        "number": "10778",
+        "direction": "Hagen Hbf",
+        "platform": "2",
+        "time": "2510210648",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Bestwig",
+          "Meschede",
+          "Freienohl",
+          "Oeventrop",
+          "Arnsberg(Westf)",
+          "Neheim-Hüsten",
+          "Wickede(Ruhr)",
+          "Fröndenberg",
+          "Schwerte(Ruhr)",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "767842075325333541-2510210502-11",
+        "type": "RE",
+        "number": "10777",
+        "direction": "Winterberg(Westf)",
+        "platform": "1",
+        "time": "2510210617",
+        "destination": "Winterberg(Westf)",
+        "path_stations": [
+          "Siedlinghausen",
+          "Silbach",
+          "Winterberg(Westf)"
+        ]
+      }
+    ]
+  }
+}

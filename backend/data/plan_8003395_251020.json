@@ -1,0 +1,2318 @@
+{
+  "station_eva": "8003395",
+  "date": "251020",
+  "cached_at": "2025-10-20T16:36:00.593914",
+  "plan_data": {
+    "arrivals": [
+      {
+        "id": "-7538420336010471002-2510201937-4",
+        "type": "RB",
+        "number": "10388",
+        "time": "2510201948",
+        "platform": "1",
+        "path_stations": [
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "-3188093330938561444-2510201904-12",
+        "type": "RB",
+        "number": "30578",
+        "time": "2510201943",
+        "platform": "1",
+        "path_stations": [
+          "Stolberg-Rathaus",
+          "Stolberg-Mühlener Bahnhof",
+          "Stolberg-Schneidmühle",
+          "Stolberg(Rheinl)Hbf Gl.27",
+          "Stolberg(Rheinl)Gbf",
+          "Stolberg(Rheinl)Hbf",
+          "Eilendorf",
+          "Aachen-Rothe Erde",
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West"
+        ],
+        "line": "20"
+      },
+      {
+        "id": "8695786270505834772-2510201912-12",
+        "type": "RB",
+        "number": "30033",
+        "time": "2510201948",
+        "platform": "2",
+        "path_stations": [
+          "Stolberg(Rheinl)Hbf Gl.44",
+          "Würselen-Merzbrück",
+          "Eschweiler-St.Jöris",
+          "Alsdorf Poststraße",
+          "Alsdorf-Mariadorf",
+          "Alsdorf-Kellersberg",
+          "Alsdorf-Annapark",
+          "Alsdorf-Busch",
+          "Herzogenrath-August-Schmidt-Platz",
+          "Herzogenrath-Alt-Merkstein",
+          "Herzogenrath"
+        ],
+        "line": "20"
+      },
+      {
+        "id": "8166382742810735249-2510201711-29",
+        "type": "RB",
+        "number": "10337",
+        "time": "2510201913",
+        "platform": "2",
+        "path_stations": [
+          "Essen-Steele",
+          "Essen Hbf",
+          "Essen West",
+          "Mülheim(Ruhr)Hbf",
+          "Mülheim(Ruhr)Styrum",
+          "Duisburg Hbf",
+          "Duisburg-Hochfeld Süd",
+          "Rheinhausen Ost",
+          "Rheinhausen",
+          "Krefeld-Hohenbudberg Chempark",
+          "Krefeld-Uerdingen",
+          "Krefeld-Linn",
+          "Krefeld-Oppum",
+          "Krefeld Hbf",
+          "Forsthaus",
+          "Anrath",
+          "Viersen",
+          "Mönchengladbach Hbf",
+          "Rheydt Hbf",
+          "Wickrath",
+          "Herrath",
+          "Erkelenz",
+          "Hückelhoven-Baal",
+          "Brachelen",
+          "Lindern",
+          "Geilenkirchen",
+          "Übach-Palenberg",
+          "Herzogenrath"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "-8319658347875020049-2510201902-6",
+        "type": "RB",
+        "number": "30533",
+        "time": "2510201918",
+        "platform": "2",
+        "path_stations": [
+          "Alsdorf-Annapark",
+          "Alsdorf-Busch",
+          "Herzogenrath-August-Schmidt-Platz",
+          "Herzogenrath-Alt-Merkstein",
+          "Herzogenrath"
+        ],
+        "line": "20"
+      },
+      {
+        "id": "1096955944459427262-2510201834-12",
+        "type": "RB",
+        "number": "30080",
+        "time": "2510201913",
+        "platform": "1",
+        "path_stations": [
+          "Stolberg-Rathaus",
+          "Stolberg-Mühlener Bahnhof",
+          "Stolberg-Schneidmühle",
+          "Stolberg(Rheinl)Hbf Gl.27",
+          "Stolberg(Rheinl)Gbf",
+          "Stolberg(Rheinl)Hbf",
+          "Eilendorf",
+          "Aachen-Rothe Erde",
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West"
+        ],
+        "line": "20"
+      },
+      {
+        "id": "5995759368429194373-2510201937-4",
+        "type": "RB",
+        "number": "10338",
+        "time": "2510201948",
+        "platform": "1",
+        "path_stations": [
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "4770059462093724975-2510201831-12",
+        "type": "RB",
+        "number": "10387",
+        "time": "2510201913",
+        "platform": "2",
+        "path_stations": [
+          "Heinsberg(Rheinl)",
+          "Heinsberg Kreishaus",
+          "Heinsberg-Oberbruch",
+          "Heinsberg-Dremmen",
+          "Heinsberg-Porselen",
+          "Heinsberg-Horst",
+          "Heinsberg-Randerath",
+          "Lindern",
+          "Geilenkirchen",
+          "Übach-Palenberg",
+          "Herzogenrath"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "1070772514473304501-2510202012-12",
+        "type": "RB",
+        "number": "30035",
+        "time": "2510202048",
+        "platform": "2",
+        "path_stations": [
+          "Stolberg(Rheinl)Hbf Gl.44",
+          "Würselen-Merzbrück",
+          "Eschweiler-St.Jöris",
+          "Alsdorf Poststraße",
+          "Alsdorf-Mariadorf",
+          "Alsdorf-Kellersberg",
+          "Alsdorf-Annapark",
+          "Alsdorf-Busch",
+          "Herzogenrath-August-Schmidt-Platz",
+          "Herzogenrath-Alt-Merkstein",
+          "Herzogenrath"
+        ],
+        "line": "20"
+      },
+      {
+        "id": "-1730048360711706466-2510202004-12",
+        "type": "RB",
+        "number": "30580",
+        "time": "2510202043",
+        "platform": "1",
+        "path_stations": [
+          "Stolberg-Rathaus",
+          "Stolberg-Mühlener Bahnhof",
+          "Stolberg-Schneidmühle",
+          "Stolberg(Rheinl)Hbf Gl.27",
+          "Stolberg(Rheinl)Gbf",
+          "Stolberg(Rheinl)Hbf",
+          "Eilendorf",
+          "Aachen-Rothe Erde",
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West"
+        ],
+        "line": "20"
+      },
+      {
+        "id": "-2247727545179716275-2510202036-4",
+        "type": "RB",
+        "number": "10390",
+        "time": "2510202048",
+        "platform": "1",
+        "path_stations": [
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "-3507760180532579777-2510202036-4",
+        "type": "RB",
+        "number": "10340",
+        "time": "2510202048",
+        "platform": "1",
+        "path_stations": [
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "-4581662523979249023-2510201934-12",
+        "type": "RB",
+        "number": "30082",
+        "time": "2510202014",
+        "platform": "1",
+        "path_stations": [
+          "Stolberg-Rathaus",
+          "Stolberg-Mühlener Bahnhof",
+          "Stolberg-Schneidmühle",
+          "Stolberg(Rheinl)Hbf Gl.27",
+          "Stolberg(Rheinl)Gbf",
+          "Stolberg(Rheinl)Hbf",
+          "Eilendorf",
+          "Aachen-Rothe Erde",
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West"
+        ],
+        "line": "20"
+      },
+      {
+        "id": "7872498165684149211-2510202002-6",
+        "type": "RB",
+        "number": "30585",
+        "time": "2510202018",
+        "platform": "2",
+        "path_stations": [
+          "Alsdorf-Annapark",
+          "Alsdorf-Busch",
+          "Herzogenrath-August-Schmidt-Platz",
+          "Herzogenrath-Alt-Merkstein",
+          "Herzogenrath"
+        ],
+        "line": "20"
+      },
+      {
+        "id": "425169339972651404-2510201931-12",
+        "type": "RB",
+        "number": "10389",
+        "time": "2510202014",
+        "platform": "2",
+        "path_stations": [
+          "Heinsberg(Rheinl)",
+          "Heinsberg Kreishaus",
+          "Heinsberg-Oberbruch",
+          "Heinsberg-Dremmen",
+          "Heinsberg-Porselen",
+          "Heinsberg-Horst",
+          "Heinsberg-Randerath",
+          "Lindern",
+          "Geilenkirchen",
+          "Übach-Palenberg",
+          "Herzogenrath"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "-4664029606652746532-2510201811-29",
+        "type": "RB",
+        "number": "10339",
+        "time": "2510202014",
+        "platform": "2",
+        "path_stations": [
+          "Essen-Steele",
+          "Essen Hbf",
+          "Essen West",
+          "Mülheim(Ruhr)Hbf",
+          "Mülheim(Ruhr)Styrum",
+          "Duisburg Hbf",
+          "Duisburg-Hochfeld Süd",
+          "Rheinhausen Ost",
+          "Rheinhausen",
+          "Krefeld-Hohenbudberg Chempark",
+          "Krefeld-Uerdingen",
+          "Krefeld-Linn",
+          "Krefeld-Oppum",
+          "Krefeld Hbf",
+          "Forsthaus",
+          "Anrath",
+          "Viersen",
+          "Mönchengladbach Hbf",
+          "Rheydt Hbf",
+          "Wickrath",
+          "Herrath",
+          "Erkelenz",
+          "Hückelhoven-Baal",
+          "Brachelen",
+          "Lindern",
+          "Geilenkirchen",
+          "Übach-Palenberg",
+          "Herzogenrath"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "2192262199334435396-2510202031-12",
+        "type": "RB",
+        "number": "10391",
+        "time": "2510202113",
+        "platform": "2",
+        "path_stations": [
+          "Heinsberg(Rheinl)",
+          "Heinsberg Kreishaus",
+          "Heinsberg-Oberbruch",
+          "Heinsberg-Dremmen",
+          "Heinsberg-Porselen",
+          "Heinsberg-Horst",
+          "Heinsberg-Randerath",
+          "Lindern",
+          "Geilenkirchen",
+          "Übach-Palenberg",
+          "Herzogenrath"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "-5067285706679593203-2510202137-4",
+        "type": "RB",
+        "number": "10342",
+        "time": "2510202147",
+        "platform": "1",
+        "path_stations": [
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "-154666799239067997-2510202104-12",
+        "type": "RB",
+        "number": "30582",
+        "time": "2510202143",
+        "platform": "1",
+        "path_stations": [
+          "Stolberg-Rathaus",
+          "Stolberg-Mühlener Bahnhof",
+          "Stolberg-Schneidmühle",
+          "Stolberg(Rheinl)Hbf Gl.27",
+          "Stolberg(Rheinl)Gbf",
+          "Stolberg(Rheinl)Hbf",
+          "Eilendorf",
+          "Aachen-Rothe Erde",
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West"
+        ],
+        "line": "20"
+      },
+      {
+        "id": "-9057893175658635366-2510201911-29",
+        "type": "RB",
+        "number": "10341",
+        "time": "2510202113",
+        "platform": "2",
+        "path_stations": [
+          "Essen-Steele",
+          "Essen Hbf",
+          "Essen West",
+          "Mülheim(Ruhr)Hbf",
+          "Mülheim(Ruhr)Styrum",
+          "Duisburg Hbf",
+          "Duisburg-Hochfeld Süd",
+          "Rheinhausen Ost",
+          "Rheinhausen",
+          "Krefeld-Hohenbudberg Chempark",
+          "Krefeld-Uerdingen",
+          "Krefeld-Linn",
+          "Krefeld-Oppum",
+          "Krefeld Hbf",
+          "Forsthaus",
+          "Anrath",
+          "Viersen",
+          "Mönchengladbach Hbf",
+          "Rheydt Hbf",
+          "Wickrath",
+          "Herrath",
+          "Erkelenz",
+          "Hückelhoven-Baal",
+          "Brachelen",
+          "Lindern",
+          "Geilenkirchen",
+          "Übach-Palenberg",
+          "Herzogenrath"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "-2730674727498638193-2510202034-12",
+        "type": "RB",
+        "number": "30084",
+        "time": "2510202113",
+        "platform": "1",
+        "path_stations": [
+          "Stolberg-Rathaus",
+          "Stolberg-Mühlener Bahnhof",
+          "Stolberg-Schneidmühle",
+          "Stolberg(Rheinl)Hbf Gl.27",
+          "Stolberg(Rheinl)Gbf",
+          "Stolberg(Rheinl)Hbf",
+          "Eilendorf",
+          "Aachen-Rothe Erde",
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West"
+        ],
+        "line": "20"
+      },
+      {
+        "id": "-2782820331228224710-2510202137-4",
+        "type": "RB",
+        "number": "10392",
+        "time": "2510202147",
+        "platform": "1",
+        "path_stations": [
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "-848055442268607445-2510202102-6",
+        "type": "RB",
+        "number": "30587",
+        "time": "2510202118",
+        "platform": "2",
+        "path_stations": [
+          "Alsdorf-Annapark",
+          "Alsdorf-Busch",
+          "Herzogenrath-August-Schmidt-Platz",
+          "Herzogenrath-Alt-Merkstein",
+          "Herzogenrath"
+        ],
+        "line": "20"
+      },
+      {
+        "id": "-3515297893740549448-2510202112-12",
+        "type": "RB",
+        "number": "30037",
+        "time": "2510202148",
+        "platform": "2",
+        "path_stations": [
+          "Stolberg(Rheinl)Hbf Gl.44",
+          "Würselen-Merzbrück",
+          "Eschweiler-St.Jöris",
+          "Alsdorf Poststraße",
+          "Alsdorf-Mariadorf",
+          "Alsdorf-Kellersberg",
+          "Alsdorf-Annapark",
+          "Alsdorf-Busch",
+          "Herzogenrath-August-Schmidt-Platz",
+          "Herzogenrath-Alt-Merkstein",
+          "Herzogenrath"
+        ],
+        "line": "20"
+      },
+      {
+        "id": "4271631143557062791-2510202202-6",
+        "type": "RB",
+        "number": "30589",
+        "time": "2510202218",
+        "platform": "2",
+        "path_stations": [
+          "Alsdorf-Annapark",
+          "Alsdorf-Busch",
+          "Herzogenrath-August-Schmidt-Platz",
+          "Herzogenrath-Alt-Merkstein",
+          "Herzogenrath"
+        ],
+        "line": "20"
+      },
+      {
+        "id": "4156722506302358103-2510202131-12",
+        "type": "RB",
+        "number": "10393",
+        "time": "2510202213",
+        "platform": "2",
+        "path_stations": [
+          "Heinsberg(Rheinl)",
+          "Heinsberg Kreishaus",
+          "Heinsberg-Oberbruch",
+          "Heinsberg-Dremmen",
+          "Heinsberg-Porselen",
+          "Heinsberg-Horst",
+          "Heinsberg-Randerath",
+          "Lindern",
+          "Geilenkirchen",
+          "Übach-Palenberg",
+          "Herzogenrath"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "-4223550550386185055-2510202016-28",
+        "type": "RB",
+        "number": "10343",
+        "time": "2510202213",
+        "platform": "2",
+        "path_stations": [
+          "Essen Hbf",
+          "Essen West",
+          "Mülheim(Ruhr)Hbf",
+          "Mülheim(Ruhr)Styrum",
+          "Duisburg Hbf",
+          "Duisburg-Hochfeld Süd",
+          "Rheinhausen Ost",
+          "Rheinhausen",
+          "Krefeld-Hohenbudberg Chempark",
+          "Krefeld-Uerdingen",
+          "Krefeld-Linn",
+          "Krefeld-Oppum",
+          "Krefeld Hbf",
+          "Forsthaus",
+          "Anrath",
+          "Viersen",
+          "Mönchengladbach Hbf",
+          "Rheydt Hbf",
+          "Wickrath",
+          "Herrath",
+          "Erkelenz",
+          "Hückelhoven-Baal",
+          "Brachelen",
+          "Lindern",
+          "Geilenkirchen",
+          "Übach-Palenberg",
+          "Herzogenrath"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "2613121905918442532-2510202237-4",
+        "type": "RB",
+        "number": "10394",
+        "time": "2510202247",
+        "platform": "1",
+        "path_stations": [
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "6753527767555726610-2510202237-4",
+        "type": "RB",
+        "number": "10344",
+        "time": "2510202247",
+        "platform": "1",
+        "path_stations": [
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "-678862891862806463-2510202150-7",
+        "type": "RB",
+        "number": "30036",
+        "time": "2510202213",
+        "platform": "1",
+        "path_stations": [
+          "Stolberg(Rheinl)Hbf",
+          "Eilendorf",
+          "Aachen-Rothe Erde",
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West"
+        ],
+        "line": "20"
+      },
+      {
+        "id": "-1931208181667454933-2510202212-12",
+        "type": "RB",
+        "number": "30039",
+        "time": "2510202248",
+        "platform": "2",
+        "path_stations": [
+          "Stolberg(Rheinl)Hbf Gl.44",
+          "Würselen-Merzbrück",
+          "Eschweiler-St.Jöris",
+          "Alsdorf Poststraße",
+          "Alsdorf-Mariadorf",
+          "Alsdorf-Kellersberg",
+          "Alsdorf-Annapark",
+          "Alsdorf-Busch",
+          "Herzogenrath-August-Schmidt-Platz",
+          "Herzogenrath-Alt-Merkstein",
+          "Herzogenrath"
+        ],
+        "line": "20"
+      },
+      {
+        "id": "8478574534290984085-2510202337-4",
+        "type": "RB",
+        "number": "10346",
+        "time": "2510202348",
+        "platform": "1",
+        "path_stations": [
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "8981576163685482211-2510202231-12",
+        "type": "RB",
+        "number": "10395",
+        "time": "2510202314",
+        "platform": "2",
+        "path_stations": [
+          "Heinsberg(Rheinl)",
+          "Heinsberg Kreishaus",
+          "Heinsberg-Oberbruch",
+          "Heinsberg-Dremmen",
+          "Heinsberg-Porselen",
+          "Heinsberg-Horst",
+          "Heinsberg-Randerath",
+          "Lindern",
+          "Geilenkirchen",
+          "Übach-Palenberg",
+          "Herzogenrath"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "-8551912666434911898-2510202337-4",
+        "type": "RB",
+        "number": "10396",
+        "time": "2510202348",
+        "platform": "1",
+        "path_stations": [
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "1573967790757085557-2510202312-12",
+        "type": "RB",
+        "number": "30043",
+        "time": "2510202348",
+        "platform": "2",
+        "path_stations": [
+          "Stolberg(Rheinl)Hbf Gl.44",
+          "Würselen-Merzbrück",
+          "Eschweiler-St.Jöris",
+          "Alsdorf Poststraße",
+          "Alsdorf-Mariadorf",
+          "Alsdorf-Kellersberg",
+          "Alsdorf-Annapark",
+          "Alsdorf-Busch",
+          "Herzogenrath-August-Schmidt-Platz",
+          "Herzogenrath-Alt-Merkstein",
+          "Herzogenrath"
+        ],
+        "line": "20"
+      },
+      {
+        "id": "-1672872613949795114-2510202116-28",
+        "type": "RB",
+        "number": "10345",
+        "time": "2510202314",
+        "platform": "2",
+        "path_stations": [
+          "Essen Hbf",
+          "Essen West",
+          "Mülheim(Ruhr)Hbf",
+          "Mülheim(Ruhr)Styrum",
+          "Duisburg Hbf",
+          "Duisburg-Hochfeld Süd",
+          "Rheinhausen Ost",
+          "Rheinhausen",
+          "Krefeld-Hohenbudberg Chempark",
+          "Krefeld-Uerdingen",
+          "Krefeld-Linn",
+          "Krefeld-Oppum",
+          "Krefeld Hbf",
+          "Forsthaus",
+          "Anrath",
+          "Viersen",
+          "Mönchengladbach Hbf",
+          "Rheydt Hbf",
+          "Wickrath",
+          "Herrath",
+          "Erkelenz",
+          "Hückelhoven-Baal",
+          "Brachelen",
+          "Lindern",
+          "Geilenkirchen",
+          "Übach-Palenberg",
+          "Herzogenrath"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "-6544413947444766657-2510202250-7",
+        "type": "RB",
+        "number": "30038",
+        "time": "2510202313",
+        "platform": "1",
+        "path_stations": [
+          "Stolberg(Rheinl)Hbf",
+          "Eilendorf",
+          "Aachen-Rothe Erde",
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West"
+        ],
+        "line": "20"
+      },
+      {
+        "id": "3877311608492123870-2510202216-28",
+        "type": "RB",
+        "number": "10347",
+        "time": "2510210014",
+        "platform": "2",
+        "path_stations": [
+          "Essen Hbf",
+          "Essen West",
+          "Mülheim(Ruhr)Hbf",
+          "Mülheim(Ruhr)Styrum",
+          "Duisburg Hbf",
+          "Duisburg-Hochfeld Süd",
+          "Rheinhausen Ost",
+          "Rheinhausen",
+          "Krefeld-Hohenbudberg Chempark",
+          "Krefeld-Uerdingen",
+          "Krefeld-Linn",
+          "Krefeld-Oppum",
+          "Krefeld Hbf",
+          "Forsthaus",
+          "Anrath",
+          "Viersen",
+          "Mönchengladbach Hbf",
+          "Rheydt Hbf",
+          "Wickrath",
+          "Herrath",
+          "Erkelenz",
+          "Hückelhoven-Baal",
+          "Brachelen",
+          "Lindern",
+          "Geilenkirchen",
+          "Übach-Palenberg",
+          "Herzogenrath"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "6548269022931127007-2510202331-12",
+        "type": "RB",
+        "number": "10397",
+        "time": "2510210014",
+        "platform": "2",
+        "path_stations": [
+          "Heinsberg(Rheinl)",
+          "Heinsberg Kreishaus",
+          "Heinsberg-Oberbruch",
+          "Heinsberg-Dremmen",
+          "Heinsberg-Porselen",
+          "Heinsberg-Horst",
+          "Heinsberg-Randerath",
+          "Lindern",
+          "Geilenkirchen",
+          "Übach-Palenberg",
+          "Herzogenrath"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "-7112950632579182168-2510210031-12",
+        "type": "RB",
+        "number": "10351",
+        "time": "2510210113",
+        "platform": "2",
+        "path_stations": [
+          "Heinsberg(Rheinl)",
+          "Heinsberg Kreishaus",
+          "Heinsberg-Oberbruch",
+          "Heinsberg-Dremmen",
+          "Heinsberg-Porselen",
+          "Heinsberg-Horst",
+          "Heinsberg-Randerath",
+          "Lindern",
+          "Geilenkirchen",
+          "Übach-Palenberg",
+          "Herzogenrath"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "2268936165231476331-2510210437-4",
+        "type": "RB",
+        "number": "10358",
+        "time": "2510210448",
+        "platform": "1",
+        "path_stations": [
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "-7802230568510813665-2510210437-4",
+        "type": "RB",
+        "number": "10308",
+        "time": "2510210448",
+        "platform": "1",
+        "path_stations": [
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "-513798877224063233-2510210427-12",
+        "type": "RB",
+        "number": "10309",
+        "time": "2510210514",
+        "platform": "2",
+        "path_stations": [
+          "Mönchengladbach Hbf",
+          "Rheydt Hbf",
+          "Wickrath",
+          "Herrath",
+          "Erkelenz",
+          "Hückelhoven-Baal",
+          "Brachelen",
+          "Lindern",
+          "Geilenkirchen",
+          "Übach-Palenberg",
+          "Herzogenrath"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "3921515057269802394-2510210504-12",
+        "type": "RB",
+        "number": "30550",
+        "time": "2510210543",
+        "platform": "1",
+        "path_stations": [
+          "Stolberg-Rathaus",
+          "Stolberg-Mühlener Bahnhof",
+          "Stolberg-Schneidmühle",
+          "Stolberg(Rheinl)Hbf Gl.27",
+          "Stolberg(Rheinl)Gbf",
+          "Stolberg(Rheinl)Hbf",
+          "Eilendorf",
+          "Aachen-Rothe Erde",
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West"
+        ],
+        "line": "20"
+      },
+      {
+        "id": "-6070894963608183613-2510210537-4",
+        "type": "RB",
+        "number": "10310",
+        "time": "2510210547",
+        "platform": "1",
+        "path_stations": [
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "-7592054811744883795-2510210537-4",
+        "type": "RB",
+        "number": "10360",
+        "time": "2510210547",
+        "platform": "1",
+        "path_stations": [
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "3833728364578108667-2510210511-12",
+        "type": "RB",
+        "number": "30005",
+        "time": "2510210548",
+        "platform": "2",
+        "path_stations": [
+          "Stolberg(Rheinl)Hbf Gl.44",
+          "Würselen-Merzbrück",
+          "Eschweiler-St.Jöris",
+          "Alsdorf Poststraße",
+          "Alsdorf-Mariadorf",
+          "Alsdorf-Kellersberg",
+          "Alsdorf-Annapark",
+          "Alsdorf-Busch",
+          "Herzogenrath-August-Schmidt-Platz",
+          "Herzogenrath-Alt-Merkstein",
+          "Herzogenrath"
+        ],
+        "line": "20"
+      },
+      {
+        "id": "1289268753873593751-2510210459-5",
+        "type": "RB",
+        "number": "30002",
+        "time": "2510210513",
+        "platform": "1",
+        "path_stations": [
+          "Aachen-Rothe Erde",
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West"
+        ],
+        "line": "20"
+      },
+      {
+        "id": "5181019480772100944-2510210602-6",
+        "type": "RB",
+        "number": "30507",
+        "time": "2510210618",
+        "platform": "2",
+        "path_stations": [
+          "Alsdorf-Annapark",
+          "Alsdorf-Busch",
+          "Herzogenrath-August-Schmidt-Platz",
+          "Herzogenrath-Alt-Merkstein",
+          "Herzogenrath"
+        ],
+        "line": "20"
+      },
+      {
+        "id": "-2239312772507820721-2510210612-12",
+        "type": "RB",
+        "number": "30007",
+        "time": "2510210648",
+        "platform": "2",
+        "path_stations": [
+          "Stolberg(Rheinl)Hbf Gl.44",
+          "Würselen-Merzbrück",
+          "Eschweiler-St.Jöris",
+          "Alsdorf Poststraße",
+          "Alsdorf-Mariadorf",
+          "Alsdorf-Kellersberg",
+          "Alsdorf-Annapark",
+          "Alsdorf-Busch",
+          "Herzogenrath-August-Schmidt-Platz",
+          "Herzogenrath-Alt-Merkstein",
+          "Herzogenrath"
+        ],
+        "line": "20"
+      },
+      {
+        "id": "5336966435253366328-2510210637-4",
+        "type": "RB",
+        "number": "10362",
+        "time": "2510210648",
+        "platform": "1",
+        "path_stations": [
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "-2850531178178820756-2510210534-12",
+        "type": "RB",
+        "number": "30054",
+        "time": "2510210613",
+        "platform": "1",
+        "path_stations": [
+          "Stolberg-Rathaus",
+          "Stolberg-Mühlener Bahnhof",
+          "Stolberg-Schneidmühle",
+          "Stolberg(Rheinl)Hbf Gl.27",
+          "Stolberg(Rheinl)Gbf",
+          "Stolberg(Rheinl)Hbf",
+          "Eilendorf",
+          "Aachen-Rothe Erde",
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West"
+        ],
+        "line": "20"
+      },
+      {
+        "id": "-4115719116711091198-2510210552-4",
+        "type": "TRI",
+        "number": "89455",
+        "time": "2510210603",
+        "platform": "1",
+        "path_stations": [
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West"
+        ],
+        "line": "RE4"
+      },
+      {
+        "id": "-1010003771467938077-2510210637-4",
+        "type": "RB",
+        "number": "10312",
+        "time": "2510210648",
+        "platform": "1",
+        "path_stations": [
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "3249475284365179118-2510210531-12",
+        "type": "RB",
+        "number": "10361",
+        "time": "2510210614",
+        "platform": "2",
+        "path_stations": [
+          "Heinsberg(Rheinl)",
+          "Heinsberg Kreishaus",
+          "Heinsberg-Oberbruch",
+          "Heinsberg-Dremmen",
+          "Heinsberg-Porselen",
+          "Heinsberg-Horst",
+          "Heinsberg-Randerath",
+          "Lindern",
+          "Geilenkirchen",
+          "Übach-Palenberg",
+          "Herzogenrath"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "-8978409617548986507-2510210608-4",
+        "type": "RE",
+        "number": "26850",
+        "time": "2510210618",
+        "platform": "1",
+        "path_stations": [
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West"
+        ],
+        "line": "1"
+      },
+      {
+        "id": "-1748674361267762904-2510210604-12",
+        "type": "RB",
+        "number": "30552",
+        "time": "2510210643",
+        "platform": "1",
+        "path_stations": [
+          "Stolberg-Rathaus",
+          "Stolberg-Mühlener Bahnhof",
+          "Stolberg-Schneidmühle",
+          "Stolberg(Rheinl)Hbf Gl.27",
+          "Stolberg(Rheinl)Gbf",
+          "Stolberg(Rheinl)Hbf",
+          "Eilendorf",
+          "Aachen-Rothe Erde",
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West"
+        ],
+        "line": "20"
+      },
+      {
+        "id": "345321925832417119-2510210522-12",
+        "type": "RB",
+        "number": "10311",
+        "time": "2510210614",
+        "platform": "2",
+        "path_stations": [
+          "Mönchengladbach Hbf",
+          "Rheydt Hbf",
+          "Wickrath",
+          "Herrath",
+          "Erkelenz",
+          "Hückelhoven-Baal",
+          "Brachelen",
+          "Lindern",
+          "Geilenkirchen",
+          "Übach-Palenberg",
+          "Herzogenrath"
+        ],
+        "line": "33"
+      }
+    ],
+    "departures": [
+      {
+        "id": "-7538420336010471002-2510201937-4",
+        "type": "RB",
+        "number": "10388",
+        "direction": "Heinsberg(Rheinl)",
+        "platform": "1",
+        "time": "2510201948",
+        "destination": "Heinsberg(Rheinl)",
+        "path_stations": [
+          "Herzogenrath",
+          "Übach-Palenberg",
+          "Geilenkirchen",
+          "Lindern",
+          "Heinsberg-Randerath",
+          "Heinsberg-Horst",
+          "Heinsberg-Porselen",
+          "Heinsberg-Dremmen",
+          "Heinsberg-Oberbruch",
+          "Heinsberg Kreishaus",
+          "Heinsberg(Rheinl)"
+        ]
+      },
+      {
+        "id": "-3188093330938561444-2510201904-12",
+        "type": "RB",
+        "number": "30578",
+        "direction": "Alsdorf-Annapark",
+        "platform": "1",
+        "time": "2510201944",
+        "destination": "Alsdorf-Annapark",
+        "path_stations": [
+          "Herzogenrath",
+          "Herzogenrath-Alt-Merkstein",
+          "Herzogenrath-August-Schmidt-Platz",
+          "Alsdorf-Busch",
+          "Alsdorf-Annapark"
+        ]
+      },
+      {
+        "id": "8695786270505834772-2510201912-12",
+        "type": "RB",
+        "number": "30033",
+        "direction": "Stolberg(Rheinl)Hbf",
+        "platform": "2",
+        "time": "2510201949",
+        "destination": "Stolberg(Rheinl)Hbf",
+        "path_stations": [
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf",
+          "Aachen-Rothe Erde",
+          "Eilendorf",
+          "Stolberg(Rheinl)Hbf"
+        ]
+      },
+      {
+        "id": "8166382742810735249-2510201711-29",
+        "type": "RB",
+        "number": "10337",
+        "direction": "Aachen Hbf",
+        "platform": "2",
+        "time": "2510201914",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "-8319658347875020049-2510201902-6",
+        "type": "RB",
+        "number": "30533",
+        "direction": "Stolberg(Rheinl)Hbf",
+        "platform": "2",
+        "time": "2510201919",
+        "destination": "Stolberg(Rheinl)Hbf",
+        "path_stations": [
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf",
+          "Aachen-Rothe Erde",
+          "Eilendorf",
+          "Stolberg(Rheinl)Hbf"
+        ]
+      },
+      {
+        "id": "1096955944459427262-2510201834-12",
+        "type": "RB",
+        "number": "30080",
+        "direction": "Stolberg(Rheinl)Hbf Gl.44",
+        "platform": "1",
+        "time": "2510201914",
+        "destination": "Stolberg(Rheinl)Hbf Gl.44",
+        "path_stations": [
+          "Herzogenrath",
+          "Herzogenrath-Alt-Merkstein",
+          "Herzogenrath-August-Schmidt-Platz",
+          "Alsdorf-Busch",
+          "Alsdorf-Annapark",
+          "Alsdorf-Kellersberg",
+          "Alsdorf-Mariadorf",
+          "Alsdorf Poststraße",
+          "Eschweiler-St.Jöris",
+          "Würselen-Merzbrück",
+          "Stolberg(Rheinl)Hbf Gl.44"
+        ]
+      },
+      {
+        "id": "5995759368429194373-2510201937-4",
+        "type": "RB",
+        "number": "10338",
+        "direction": "Essen Hbf",
+        "platform": "1",
+        "time": "2510201948",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Herzogenrath",
+          "Übach-Palenberg",
+          "Geilenkirchen",
+          "Lindern",
+          "Brachelen",
+          "Hückelhoven-Baal",
+          "Erkelenz",
+          "Herrath",
+          "Wickrath",
+          "Rheydt Hbf",
+          "Mönchengladbach Hbf",
+          "Viersen",
+          "Anrath",
+          "Forsthaus",
+          "Krefeld Hbf",
+          "Krefeld-Oppum",
+          "Krefeld-Linn",
+          "Krefeld-Uerdingen",
+          "Krefeld-Hohenbudberg Chempark",
+          "Rheinhausen",
+          "Rheinhausen Ost",
+          "Duisburg-Hochfeld Süd",
+          "Duisburg Hbf",
+          "Mülheim(Ruhr)Styrum",
+          "Mülheim(Ruhr)Hbf",
+          "Essen West",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "4770059462093724975-2510201831-12",
+        "type": "RB",
+        "number": "10387",
+        "direction": "Aachen Hbf",
+        "platform": "2",
+        "time": "2510201914",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "1070772514473304501-2510202012-12",
+        "type": "RB",
+        "number": "30035",
+        "direction": "Stolberg(Rheinl)Hbf",
+        "platform": "2",
+        "time": "2510202049",
+        "destination": "Stolberg(Rheinl)Hbf",
+        "path_stations": [
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf",
+          "Aachen-Rothe Erde",
+          "Eilendorf",
+          "Stolberg(Rheinl)Hbf"
+        ]
+      },
+      {
+        "id": "-1730048360711706466-2510202004-12",
+        "type": "RB",
+        "number": "30580",
+        "direction": "Alsdorf-Annapark",
+        "platform": "1",
+        "time": "2510202044",
+        "destination": "Alsdorf-Annapark",
+        "path_stations": [
+          "Herzogenrath",
+          "Herzogenrath-Alt-Merkstein",
+          "Herzogenrath-August-Schmidt-Platz",
+          "Alsdorf-Busch",
+          "Alsdorf-Annapark"
+        ]
+      },
+      {
+        "id": "-2247727545179716275-2510202036-4",
+        "type": "RB",
+        "number": "10390",
+        "direction": "Heinsberg(Rheinl)",
+        "platform": "1",
+        "time": "2510202048",
+        "destination": "Heinsberg(Rheinl)",
+        "path_stations": [
+          "Herzogenrath",
+          "Übach-Palenberg",
+          "Geilenkirchen",
+          "Lindern",
+          "Heinsberg-Randerath",
+          "Heinsberg-Horst",
+          "Heinsberg-Porselen",
+          "Heinsberg-Dremmen",
+          "Heinsberg-Oberbruch",
+          "Heinsberg Kreishaus",
+          "Heinsberg(Rheinl)"
+        ]
+      },
+      {
+        "id": "-3507760180532579777-2510202036-4",
+        "type": "RB",
+        "number": "10340",
+        "direction": "Essen Hbf",
+        "platform": "1",
+        "time": "2510202048",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Herzogenrath",
+          "Übach-Palenberg",
+          "Geilenkirchen",
+          "Lindern",
+          "Brachelen",
+          "Hückelhoven-Baal",
+          "Erkelenz",
+          "Herrath",
+          "Wickrath",
+          "Rheydt Hbf",
+          "Mönchengladbach Hbf",
+          "Viersen",
+          "Anrath",
+          "Forsthaus",
+          "Krefeld Hbf",
+          "Krefeld-Oppum",
+          "Krefeld-Linn",
+          "Krefeld-Uerdingen",
+          "Krefeld-Hohenbudberg Chempark",
+          "Rheinhausen",
+          "Rheinhausen Ost",
+          "Duisburg-Hochfeld Süd",
+          "Duisburg Hbf",
+          "Mülheim(Ruhr)Styrum",
+          "Mülheim(Ruhr)Hbf",
+          "Essen West",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "-4581662523979249023-2510201934-12",
+        "type": "RB",
+        "number": "30082",
+        "direction": "Stolberg(Rheinl)Hbf Gl.44",
+        "platform": "1",
+        "time": "2510202015",
+        "destination": "Stolberg(Rheinl)Hbf Gl.44",
+        "path_stations": [
+          "Herzogenrath",
+          "Herzogenrath-Alt-Merkstein",
+          "Herzogenrath-August-Schmidt-Platz",
+          "Alsdorf-Busch",
+          "Alsdorf-Annapark",
+          "Alsdorf-Kellersberg",
+          "Alsdorf-Mariadorf",
+          "Alsdorf Poststraße",
+          "Eschweiler-St.Jöris",
+          "Würselen-Merzbrück",
+          "Stolberg(Rheinl)Hbf Gl.44"
+        ]
+      },
+      {
+        "id": "7872498165684149211-2510202002-6",
+        "type": "RB",
+        "number": "30585",
+        "direction": "Stolberg-Rathaus",
+        "platform": "2",
+        "time": "2510202019",
+        "destination": "Stolberg-Rathaus",
+        "path_stations": [
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf",
+          "Aachen-Rothe Erde",
+          "Eilendorf",
+          "Stolberg(Rheinl)Hbf",
+          "Stolberg(Rheinl)Gbf",
+          "Stolberg(Rheinl)Hbf Gl.27",
+          "Stolberg-Schneidmühle",
+          "Stolberg-Mühlener Bahnhof",
+          "Stolberg-Rathaus"
+        ]
+      },
+      {
+        "id": "425169339972651404-2510201931-12",
+        "type": "RB",
+        "number": "10389",
+        "direction": "Aachen Hbf",
+        "platform": "2",
+        "time": "2510202015",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "-4664029606652746532-2510201811-29",
+        "type": "RB",
+        "number": "10339",
+        "direction": "Aachen Hbf",
+        "platform": "2",
+        "time": "2510202015",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "2192262199334435396-2510202031-12",
+        "type": "RB",
+        "number": "10391",
+        "direction": "Aachen Hbf",
+        "platform": "2",
+        "time": "2510202114",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "-5067285706679593203-2510202137-4",
+        "type": "RB",
+        "number": "10342",
+        "direction": "Duisburg Hbf",
+        "platform": "1",
+        "time": "2510202148",
+        "destination": "Duisburg Hbf",
+        "path_stations": [
+          "Herzogenrath",
+          "Übach-Palenberg",
+          "Geilenkirchen",
+          "Lindern",
+          "Brachelen",
+          "Hückelhoven-Baal",
+          "Erkelenz",
+          "Herrath",
+          "Wickrath",
+          "Rheydt Hbf",
+          "Mönchengladbach Hbf",
+          "Viersen",
+          "Anrath",
+          "Forsthaus",
+          "Krefeld Hbf",
+          "Krefeld-Oppum",
+          "Krefeld-Linn",
+          "Krefeld-Uerdingen",
+          "Krefeld-Hohenbudberg Chempark",
+          "Rheinhausen",
+          "Rheinhausen Ost",
+          "Duisburg-Hochfeld Süd",
+          "Duisburg Hbf"
+        ]
+      },
+      {
+        "id": "-154666799239067997-2510202104-12",
+        "type": "RB",
+        "number": "30582",
+        "direction": "Alsdorf-Annapark",
+        "platform": "1",
+        "time": "2510202144",
+        "destination": "Alsdorf-Annapark",
+        "path_stations": [
+          "Herzogenrath",
+          "Herzogenrath-Alt-Merkstein",
+          "Herzogenrath-August-Schmidt-Platz",
+          "Alsdorf-Busch",
+          "Alsdorf-Annapark"
+        ]
+      },
+      {
+        "id": "-9057893175658635366-2510201911-29",
+        "type": "RB",
+        "number": "10341",
+        "direction": "Aachen Hbf",
+        "platform": "2",
+        "time": "2510202114",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "-2730674727498638193-2510202034-12",
+        "type": "RB",
+        "number": "30084",
+        "direction": "Stolberg(Rheinl)Hbf Gl.44",
+        "platform": "1",
+        "time": "2510202114",
+        "destination": "Stolberg(Rheinl)Hbf Gl.44",
+        "path_stations": [
+          "Herzogenrath",
+          "Herzogenrath-Alt-Merkstein",
+          "Herzogenrath-August-Schmidt-Platz",
+          "Alsdorf-Busch",
+          "Alsdorf-Annapark",
+          "Alsdorf-Kellersberg",
+          "Alsdorf-Mariadorf",
+          "Alsdorf Poststraße",
+          "Eschweiler-St.Jöris",
+          "Würselen-Merzbrück",
+          "Stolberg(Rheinl)Hbf Gl.44"
+        ]
+      },
+      {
+        "id": "-2782820331228224710-2510202137-4",
+        "type": "RB",
+        "number": "10392",
+        "direction": "Heinsberg(Rheinl)",
+        "platform": "1",
+        "time": "2510202148",
+        "destination": "Heinsberg(Rheinl)",
+        "path_stations": [
+          "Herzogenrath",
+          "Übach-Palenberg",
+          "Geilenkirchen",
+          "Lindern",
+          "Heinsberg-Randerath",
+          "Heinsberg-Horst",
+          "Heinsberg-Porselen",
+          "Heinsberg-Dremmen",
+          "Heinsberg-Oberbruch",
+          "Heinsberg Kreishaus",
+          "Heinsberg(Rheinl)"
+        ]
+      },
+      {
+        "id": "-848055442268607445-2510202102-6",
+        "type": "RB",
+        "number": "30587",
+        "direction": "Stolberg-Rathaus",
+        "platform": "2",
+        "time": "2510202119",
+        "destination": "Stolberg-Rathaus",
+        "path_stations": [
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf",
+          "Aachen-Rothe Erde",
+          "Eilendorf",
+          "Stolberg(Rheinl)Hbf",
+          "Stolberg(Rheinl)Gbf",
+          "Stolberg(Rheinl)Hbf Gl.27",
+          "Stolberg-Schneidmühle",
+          "Stolberg-Mühlener Bahnhof",
+          "Stolberg-Rathaus"
+        ]
+      },
+      {
+        "id": "-3515297893740549448-2510202112-12",
+        "type": "RB",
+        "number": "30037",
+        "direction": "Stolberg(Rheinl)Hbf",
+        "platform": "2",
+        "time": "2510202149",
+        "destination": "Stolberg(Rheinl)Hbf",
+        "path_stations": [
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf",
+          "Aachen-Rothe Erde",
+          "Eilendorf",
+          "Stolberg(Rheinl)Hbf"
+        ]
+      },
+      {
+        "id": "4271631143557062791-2510202202-6",
+        "type": "RB",
+        "number": "30589",
+        "direction": "Stolberg-Rathaus",
+        "platform": "2",
+        "time": "2510202219",
+        "destination": "Stolberg-Rathaus",
+        "path_stations": [
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf",
+          "Aachen-Rothe Erde",
+          "Eilendorf",
+          "Stolberg(Rheinl)Hbf",
+          "Stolberg(Rheinl)Gbf",
+          "Stolberg(Rheinl)Hbf Gl.27",
+          "Stolberg-Schneidmühle",
+          "Stolberg-Mühlener Bahnhof",
+          "Stolberg-Rathaus"
+        ]
+      },
+      {
+        "id": "4156722506302358103-2510202131-12",
+        "type": "RB",
+        "number": "10393",
+        "direction": "Aachen Hbf",
+        "platform": "2",
+        "time": "2510202214",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "-4223550550386185055-2510202016-28",
+        "type": "RB",
+        "number": "10343",
+        "direction": "Aachen Hbf",
+        "platform": "2",
+        "time": "2510202214",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "2613121905918442532-2510202237-4",
+        "type": "RB",
+        "number": "10394",
+        "direction": "Heinsberg(Rheinl)",
+        "platform": "1",
+        "time": "2510202248",
+        "destination": "Heinsberg(Rheinl)",
+        "path_stations": [
+          "Herzogenrath",
+          "Übach-Palenberg",
+          "Geilenkirchen",
+          "Lindern",
+          "Heinsberg-Randerath",
+          "Heinsberg-Horst",
+          "Heinsberg-Porselen",
+          "Heinsberg-Dremmen",
+          "Heinsberg-Oberbruch",
+          "Heinsberg Kreishaus",
+          "Heinsberg(Rheinl)"
+        ]
+      },
+      {
+        "id": "6753527767555726610-2510202237-4",
+        "type": "RB",
+        "number": "10344",
+        "direction": "Duisburg Hbf",
+        "platform": "1",
+        "time": "2510202248",
+        "destination": "Duisburg Hbf",
+        "path_stations": [
+          "Herzogenrath",
+          "Übach-Palenberg",
+          "Geilenkirchen",
+          "Lindern",
+          "Brachelen",
+          "Hückelhoven-Baal",
+          "Erkelenz",
+          "Herrath",
+          "Wickrath",
+          "Rheydt Hbf",
+          "Mönchengladbach Hbf",
+          "Viersen",
+          "Anrath",
+          "Forsthaus",
+          "Krefeld Hbf",
+          "Krefeld-Oppum",
+          "Krefeld-Linn",
+          "Krefeld-Uerdingen",
+          "Krefeld-Hohenbudberg Chempark",
+          "Rheinhausen",
+          "Rheinhausen Ost",
+          "Duisburg-Hochfeld Süd",
+          "Duisburg Hbf"
+        ]
+      },
+      {
+        "id": "-678862891862806463-2510202150-7",
+        "type": "RB",
+        "number": "30036",
+        "direction": "Stolberg(Rheinl)Hbf Gl.44",
+        "platform": "1",
+        "time": "2510202214",
+        "destination": "Stolberg(Rheinl)Hbf Gl.44",
+        "path_stations": [
+          "Herzogenrath",
+          "Herzogenrath-Alt-Merkstein",
+          "Herzogenrath-August-Schmidt-Platz",
+          "Alsdorf-Busch",
+          "Alsdorf-Annapark",
+          "Alsdorf-Kellersberg",
+          "Alsdorf-Mariadorf",
+          "Alsdorf Poststraße",
+          "Eschweiler-St.Jöris",
+          "Würselen-Merzbrück",
+          "Stolberg(Rheinl)Hbf Gl.44"
+        ]
+      },
+      {
+        "id": "-1931208181667454933-2510202212-12",
+        "type": "RB",
+        "number": "30039",
+        "direction": "Stolberg(Rheinl)Hbf",
+        "platform": "2",
+        "time": "2510202249",
+        "destination": "Stolberg(Rheinl)Hbf",
+        "path_stations": [
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf",
+          "Aachen-Rothe Erde",
+          "Eilendorf",
+          "Stolberg(Rheinl)Hbf"
+        ]
+      },
+      {
+        "id": "8478574534290984085-2510202337-4",
+        "type": "RB",
+        "number": "10346",
+        "direction": "Duisburg Hbf",
+        "platform": "1",
+        "time": "2510202348",
+        "destination": "Duisburg Hbf",
+        "path_stations": [
+          "Herzogenrath",
+          "Übach-Palenberg",
+          "Geilenkirchen",
+          "Lindern",
+          "Brachelen",
+          "Hückelhoven-Baal",
+          "Erkelenz",
+          "Herrath",
+          "Wickrath",
+          "Rheydt Hbf",
+          "Mönchengladbach Hbf",
+          "Viersen",
+          "Anrath",
+          "Forsthaus",
+          "Krefeld Hbf",
+          "Krefeld-Oppum",
+          "Krefeld-Linn",
+          "Krefeld-Uerdingen",
+          "Krefeld-Hohenbudberg Chempark",
+          "Rheinhausen",
+          "Rheinhausen Ost",
+          "Duisburg-Hochfeld Süd",
+          "Duisburg Hbf"
+        ]
+      },
+      {
+        "id": "8981576163685482211-2510202231-12",
+        "type": "RB",
+        "number": "10395",
+        "direction": "Aachen Hbf",
+        "platform": "2",
+        "time": "2510202315",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "-8551912666434911898-2510202337-4",
+        "type": "RB",
+        "number": "10396",
+        "direction": "Heinsberg(Rheinl)",
+        "platform": "1",
+        "time": "2510202348",
+        "destination": "Heinsberg(Rheinl)",
+        "path_stations": [
+          "Herzogenrath",
+          "Übach-Palenberg",
+          "Geilenkirchen",
+          "Lindern",
+          "Heinsberg-Randerath",
+          "Heinsberg-Horst",
+          "Heinsberg-Porselen",
+          "Heinsberg-Dremmen",
+          "Heinsberg-Oberbruch",
+          "Heinsberg Kreishaus",
+          "Heinsberg(Rheinl)"
+        ]
+      },
+      {
+        "id": "1573967790757085557-2510202312-12",
+        "type": "RB",
+        "number": "30043",
+        "direction": "Aachen-Rothe Erde",
+        "platform": "2",
+        "time": "2510202349",
+        "destination": "Aachen-Rothe Erde",
+        "path_stations": [
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf",
+          "Aachen-Rothe Erde"
+        ]
+      },
+      {
+        "id": "-1672872613949795114-2510202116-28",
+        "type": "RB",
+        "number": "10345",
+        "direction": "Aachen Hbf",
+        "platform": "2",
+        "time": "2510202315",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "-6544413947444766657-2510202250-7",
+        "type": "RB",
+        "number": "30038",
+        "direction": "Alsdorf-Annapark",
+        "platform": "1",
+        "time": "2510202314",
+        "destination": "Alsdorf-Annapark",
+        "path_stations": [
+          "Herzogenrath",
+          "Herzogenrath-Alt-Merkstein",
+          "Herzogenrath-August-Schmidt-Platz",
+          "Alsdorf-Busch",
+          "Alsdorf-Annapark"
+        ]
+      },
+      {
+        "id": "3877311608492123870-2510202216-28",
+        "type": "RB",
+        "number": "10347",
+        "direction": "Aachen Hbf",
+        "platform": "2",
+        "time": "2510210015",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "6548269022931127007-2510202331-12",
+        "type": "RB",
+        "number": "10397",
+        "direction": "Aachen Hbf",
+        "platform": "2",
+        "time": "2510210015",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "-7112950632579182168-2510210031-12",
+        "type": "RB",
+        "number": "10351",
+        "direction": "Aachen Hbf",
+        "platform": "2",
+        "time": "2510210114",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "2268936165231476331-2510210437-4",
+        "type": "RB",
+        "number": "10358",
+        "direction": "Heinsberg(Rheinl)",
+        "platform": "1",
+        "time": "2510210448",
+        "destination": "Heinsberg(Rheinl)",
+        "path_stations": [
+          "Herzogenrath",
+          "Übach-Palenberg",
+          "Geilenkirchen",
+          "Lindern",
+          "Heinsberg-Randerath",
+          "Heinsberg-Horst",
+          "Heinsberg-Porselen",
+          "Heinsberg-Dremmen",
+          "Heinsberg-Oberbruch",
+          "Heinsberg Kreishaus",
+          "Heinsberg(Rheinl)"
+        ]
+      },
+      {
+        "id": "-7802230568510813665-2510210437-4",
+        "type": "RB",
+        "number": "10308",
+        "direction": "Essen-Steele",
+        "platform": "1",
+        "time": "2510210448",
+        "destination": "Essen-Steele",
+        "path_stations": [
+          "Herzogenrath",
+          "Übach-Palenberg",
+          "Geilenkirchen",
+          "Lindern",
+          "Brachelen",
+          "Hückelhoven-Baal",
+          "Erkelenz",
+          "Herrath",
+          "Wickrath",
+          "Rheydt Hbf",
+          "Mönchengladbach Hbf",
+          "Viersen",
+          "Anrath",
+          "Forsthaus",
+          "Krefeld Hbf",
+          "Krefeld-Oppum",
+          "Krefeld-Linn",
+          "Krefeld-Uerdingen",
+          "Krefeld-Hohenbudberg Chempark",
+          "Rheinhausen",
+          "Rheinhausen Ost",
+          "Duisburg-Hochfeld Süd",
+          "Duisburg Hbf",
+          "Mülheim(Ruhr)Styrum",
+          "Mülheim(Ruhr)Hbf",
+          "Essen West",
+          "Essen Hbf",
+          "Essen-Steele"
+        ]
+      },
+      {
+        "id": "-513798877224063233-2510210427-12",
+        "type": "RB",
+        "number": "10309",
+        "direction": "Aachen Hbf",
+        "platform": "2",
+        "time": "2510210514",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "3921515057269802394-2510210504-12",
+        "type": "RB",
+        "number": "30550",
+        "direction": "Alsdorf-Annapark",
+        "platform": "1",
+        "time": "2510210544",
+        "destination": "Alsdorf-Annapark",
+        "path_stations": [
+          "Herzogenrath",
+          "Herzogenrath-Alt-Merkstein",
+          "Herzogenrath-August-Schmidt-Platz",
+          "Alsdorf-Busch",
+          "Alsdorf-Annapark"
+        ]
+      },
+      {
+        "id": "-6070894963608183613-2510210537-4",
+        "type": "RB",
+        "number": "10310",
+        "direction": "Essen-Steele",
+        "platform": "1",
+        "time": "2510210548",
+        "destination": "Essen-Steele",
+        "path_stations": [
+          "Herzogenrath",
+          "Übach-Palenberg",
+          "Geilenkirchen",
+          "Lindern",
+          "Brachelen",
+          "Hückelhoven-Baal",
+          "Erkelenz",
+          "Herrath",
+          "Wickrath",
+          "Rheydt Hbf",
+          "Mönchengladbach Hbf",
+          "Viersen",
+          "Anrath",
+          "Forsthaus",
+          "Krefeld Hbf",
+          "Krefeld-Oppum",
+          "Krefeld-Linn",
+          "Krefeld-Uerdingen",
+          "Krefeld-Hohenbudberg Chempark",
+          "Rheinhausen",
+          "Rheinhausen Ost",
+          "Duisburg-Hochfeld Süd",
+          "Duisburg Hbf",
+          "Mülheim(Ruhr)Styrum",
+          "Mülheim(Ruhr)Hbf",
+          "Essen West",
+          "Essen Hbf",
+          "Essen-Steele"
+        ]
+      },
+      {
+        "id": "-7592054811744883795-2510210537-4",
+        "type": "RB",
+        "number": "10360",
+        "direction": "Heinsberg(Rheinl)",
+        "platform": "1",
+        "time": "2510210548",
+        "destination": "Heinsberg(Rheinl)",
+        "path_stations": [
+          "Herzogenrath",
+          "Übach-Palenberg",
+          "Geilenkirchen",
+          "Lindern",
+          "Heinsberg-Randerath",
+          "Heinsberg-Horst",
+          "Heinsberg-Porselen",
+          "Heinsberg-Dremmen",
+          "Heinsberg-Oberbruch",
+          "Heinsberg Kreishaus",
+          "Heinsberg(Rheinl)"
+        ]
+      },
+      {
+        "id": "3833728364578108667-2510210511-12",
+        "type": "RB",
+        "number": "30005",
+        "direction": "Stolberg(Rheinl)Hbf",
+        "platform": "2",
+        "time": "2510210549",
+        "destination": "Stolberg(Rheinl)Hbf",
+        "path_stations": [
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf",
+          "Aachen-Rothe Erde",
+          "Eilendorf",
+          "Stolberg(Rheinl)Hbf"
+        ]
+      },
+      {
+        "id": "1289268753873593751-2510210459-5",
+        "type": "RB",
+        "number": "30002",
+        "direction": "Stolberg(Rheinl)Hbf Gl.44",
+        "platform": "1",
+        "time": "2510210514",
+        "destination": "Stolberg(Rheinl)Hbf Gl.44",
+        "path_stations": [
+          "Herzogenrath",
+          "Herzogenrath-Alt-Merkstein",
+          "Herzogenrath-August-Schmidt-Platz",
+          "Alsdorf-Busch",
+          "Alsdorf-Annapark",
+          "Alsdorf-Kellersberg",
+          "Alsdorf-Mariadorf",
+          "Alsdorf Poststraße",
+          "Eschweiler-St.Jöris",
+          "Würselen-Merzbrück",
+          "Stolberg(Rheinl)Hbf Gl.44"
+        ]
+      },
+      {
+        "id": "5181019480772100944-2510210602-6",
+        "type": "RB",
+        "number": "30507",
+        "direction": "Stolberg(Rheinl)Hbf",
+        "platform": "2",
+        "time": "2510210619",
+        "destination": "Stolberg(Rheinl)Hbf",
+        "path_stations": [
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf",
+          "Aachen-Rothe Erde",
+          "Eilendorf",
+          "Stolberg(Rheinl)Hbf"
+        ]
+      },
+      {
+        "id": "-2239312772507820721-2510210612-12",
+        "type": "RB",
+        "number": "30007",
+        "direction": "Stolberg(Rheinl)Hbf",
+        "platform": "2",
+        "time": "2510210649",
+        "destination": "Stolberg(Rheinl)Hbf",
+        "path_stations": [
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf",
+          "Aachen-Rothe Erde",
+          "Eilendorf",
+          "Stolberg(Rheinl)Hbf"
+        ]
+      },
+      {
+        "id": "5336966435253366328-2510210637-4",
+        "type": "RB",
+        "number": "10362",
+        "direction": "Heinsberg(Rheinl)",
+        "platform": "1",
+        "time": "2510210648",
+        "destination": "Heinsberg(Rheinl)",
+        "path_stations": [
+          "Herzogenrath",
+          "Übach-Palenberg",
+          "Geilenkirchen",
+          "Lindern",
+          "Heinsberg-Randerath",
+          "Heinsberg-Horst",
+          "Heinsberg-Porselen",
+          "Heinsberg-Dremmen",
+          "Heinsberg-Oberbruch",
+          "Heinsberg Kreishaus",
+          "Heinsberg(Rheinl)"
+        ]
+      },
+      {
+        "id": "-2850531178178820756-2510210534-12",
+        "type": "RB",
+        "number": "30054",
+        "direction": "Stolberg(Rheinl)Hbf Gl.44",
+        "platform": "1",
+        "time": "2510210614",
+        "destination": "Stolberg(Rheinl)Hbf Gl.44",
+        "path_stations": [
+          "Herzogenrath",
+          "Herzogenrath-Alt-Merkstein",
+          "Herzogenrath-August-Schmidt-Platz",
+          "Alsdorf-Busch",
+          "Alsdorf-Annapark",
+          "Alsdorf-Kellersberg",
+          "Alsdorf-Mariadorf",
+          "Alsdorf Poststraße",
+          "Eschweiler-St.Jöris",
+          "Würselen-Merzbrück",
+          "Stolberg(Rheinl)Hbf Gl.44"
+        ]
+      },
+      {
+        "id": "-4115719116711091198-2510210552-4",
+        "type": "TRI",
+        "number": "89455",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510210604",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Herzogenrath",
+          "Übach-Palenberg",
+          "Geilenkirchen",
+          "Lindern",
+          "Brachelen",
+          "Hückelhoven-Baal",
+          "Erkelenz",
+          "Wickrath",
+          "Rheydt Hbf",
+          "Mönchengladbach Hbf",
+          "Korschenbroich",
+          "Kleinenbroich",
+          "Büttgen",
+          "Neuss Hbf",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-1010003771467938077-2510210637-4",
+        "type": "RB",
+        "number": "10312",
+        "direction": "Essen-Steele",
+        "platform": "1",
+        "time": "2510210648",
+        "destination": "Essen-Steele",
+        "path_stations": [
+          "Herzogenrath",
+          "Übach-Palenberg",
+          "Geilenkirchen",
+          "Lindern",
+          "Brachelen",
+          "Hückelhoven-Baal",
+          "Erkelenz",
+          "Herrath",
+          "Wickrath",
+          "Rheydt Hbf",
+          "Mönchengladbach Hbf",
+          "Viersen",
+          "Anrath",
+          "Forsthaus",
+          "Krefeld Hbf",
+          "Krefeld-Oppum",
+          "Krefeld-Linn",
+          "Krefeld-Uerdingen",
+          "Krefeld-Hohenbudberg Chempark",
+          "Rheinhausen",
+          "Rheinhausen Ost",
+          "Duisburg-Hochfeld Süd",
+          "Duisburg Hbf",
+          "Mülheim(Ruhr)Styrum",
+          "Mülheim(Ruhr)Hbf",
+          "Essen West",
+          "Essen Hbf",
+          "Essen-Steele"
+        ]
+      },
+      {
+        "id": "3249475284365179118-2510210531-12",
+        "type": "RB",
+        "number": "10361",
+        "direction": "Aachen Hbf",
+        "platform": "2",
+        "time": "2510210614",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "-8978409617548986507-2510210608-4",
+        "type": "RE",
+        "number": "26850",
+        "direction": "Geilenkirchen",
+        "platform": "1",
+        "time": "2510210618",
+        "destination": "Geilenkirchen",
+        "path_stations": [
+          "Herzogenrath",
+          "Übach-Palenberg",
+          "Geilenkirchen"
+        ]
+      },
+      {
+        "id": "-1748674361267762904-2510210604-12",
+        "type": "RB",
+        "number": "30552",
+        "direction": "Alsdorf-Annapark",
+        "platform": "1",
+        "time": "2510210644",
+        "destination": "Alsdorf-Annapark",
+        "path_stations": [
+          "Herzogenrath",
+          "Herzogenrath-Alt-Merkstein",
+          "Herzogenrath-August-Schmidt-Platz",
+          "Alsdorf-Busch",
+          "Alsdorf-Annapark"
+        ]
+      },
+      {
+        "id": "345321925832417119-2510210522-12",
+        "type": "RB",
+        "number": "10311",
+        "direction": "Aachen Hbf",
+        "platform": "2",
+        "time": "2510210614",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf"
+        ]
+      }
+    ]
+  }
+}

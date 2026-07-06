@@ -1,0 +1,3327 @@
+{
+  "station_eva": "8000212",
+  "date": "251020",
+  "cached_at": "2025-10-20T15:48:04.986818",
+  "plan_data": {
+    "arrivals": [
+      {
+        "id": "4331790089922232180-2510201654-11",
+        "type": "RRB",
+        "number": "82295",
+        "time": "2510201759",
+        "platform": "4",
+        "path_stations": [
+          "Kleve",
+          "Bedburg-Hau",
+          "Goch",
+          "Weeze",
+          "Kevelaer",
+          "Geldern",
+          "Nieukerk",
+          "Aldekerk",
+          "Kempen(Niederrhein)",
+          "Krefeld Hbf"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "6921897963218607466-2510201638-4",
+        "type": "RRB",
+        "number": "82286",
+        "time": "2510201659",
+        "platform": "3",
+        "path_stations": [
+          "Düsseldorf Hbf",
+          "Düsseldorf-Bilk",
+          "Meerbusch-Osterath"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "1487968782658263439-2510201708-4",
+        "type": "RRB",
+        "number": "82288",
+        "time": "2510201729",
+        "platform": "3",
+        "path_stations": [
+          "Düsseldorf Hbf",
+          "Düsseldorf-Bilk",
+          "Meerbusch-Osterath"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "-2223501954227914711-2510201735-2",
+        "type": "RE",
+        "number": "17428",
+        "time": "2510201738",
+        "platform": "4",
+        "path_stations": [
+          "Krefeld Hbf"
+        ],
+        "line": "7"
+      },
+      {
+        "id": "8166382742810735249-2510201711-13",
+        "type": "RB",
+        "number": "10337",
+        "time": "2510201755",
+        "platform": "1",
+        "path_stations": [
+          "Essen-Steele",
+          "Essen Hbf",
+          "Essen West",
+          "Mülheim(Ruhr)Hbf",
+          "Mülheim(Ruhr)Styrum",
+          "Duisburg Hbf",
+          "Duisburg-Hochfeld Süd",
+          "Rheinhausen Ost",
+          "Rheinhausen",
+          "Krefeld-Hohenbudberg Chempark",
+          "Krefeld-Uerdingen",
+          "Krefeld-Linn"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "3810259593782358126-2510201639-14",
+        "type": "VIA",
+        "number": "52265",
+        "time": "2510201725",
+        "platform": "1",
+        "path_stations": [
+          "Gelsenkirchen Hbf",
+          "Essen-Zollverein Nord",
+          "Essen-Altenessen",
+          "Essen-Bergeborbeck",
+          "Essen-Dellwig",
+          "Oberhausen Hbf",
+          "Duisburg Hbf",
+          "Duisburg-Hochfeld Süd",
+          "Rheinhausen Ost",
+          "Rheinhausen",
+          "Krefeld-Hohenbudberg Chempark",
+          "Krefeld-Uerdingen",
+          "Krefeld-Linn"
+        ],
+        "line": "RB35"
+      },
+      {
+        "id": "1526703993290174528-2510201408-24",
+        "type": "RE",
+        "number": "17423",
+        "time": "2510201719",
+        "platform": "3",
+        "path_stations": [
+          "Rheine",
+          "Emsdetten",
+          "Greven",
+          "Münster(Westf)Hbf",
+          "Münster-Hiltrup",
+          "Drensteinfurt",
+          "Hamm(Westf)Hbf",
+          "Bönen",
+          "Unna",
+          "Holzwickede",
+          "Schwerte(Ruhr)",
+          "Hagen Hbf",
+          "Ennepetal",
+          "Schwelm",
+          "Wuppertal-Oberbarmen",
+          "Wuppertal Hbf",
+          "Solingen Hbf",
+          "Opladen",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Dormagen",
+          "Neuss Hbf",
+          "Meerbusch-Osterath"
+        ],
+        "line": "7"
+      },
+      {
+        "id": "5100772068058333677-2510201537-20",
+        "type": "RB",
+        "number": "10330",
+        "time": "2510201701",
+        "platform": "2",
+        "path_stations": [
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West",
+          "Kohlscheid",
+          "Herzogenrath",
+          "Übach-Palenberg",
+          "Geilenkirchen",
+          "Lindern",
+          "Brachelen",
+          "Hückelhoven-Baal",
+          "Erkelenz",
+          "Herrath",
+          "Wickrath",
+          "Rheydt Hbf",
+          "Mönchengladbach Hbf",
+          "Viersen",
+          "Anrath",
+          "Forsthaus",
+          "Krefeld Hbf"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "-3359050098284062637-2510201737-3",
+        "type": "TRI",
+        "number": "89422",
+        "time": "2510201749",
+        "platform": "3",
+        "path_stations": [
+          "Neuss Hbf",
+          "Meerbusch-Osterath"
+        ],
+        "line": "RB37"
+      },
+      {
+        "id": "2064389462180669111-2510201738-4",
+        "type": "RRB",
+        "number": "82290",
+        "time": "2510201759",
+        "platform": "3",
+        "path_stations": [
+          "Düsseldorf Hbf",
+          "Düsseldorf-Bilk",
+          "Meerbusch-Osterath"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "4283750894307321373-2510201705-2",
+        "type": "TRI",
+        "number": "89423",
+        "time": "2510201708",
+        "platform": "4",
+        "path_stations": [
+          "Krefeld Hbf"
+        ],
+        "line": "RB37"
+      },
+      {
+        "id": "4831719788328639922-2510201624-11",
+        "type": "RRB",
+        "number": "82293",
+        "time": "2510201729",
+        "platform": "4",
+        "path_stations": [
+          "Kleve",
+          "Bedburg-Hau",
+          "Goch",
+          "Weeze",
+          "Kevelaer",
+          "Geldern",
+          "Nieukerk",
+          "Aldekerk",
+          "Kempen(Niederrhein)",
+          "Krefeld Hbf"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "-2977496206031941383-2510201554-11",
+        "type": "RRB",
+        "number": "82291",
+        "time": "2510201659",
+        "platform": "4",
+        "path_stations": [
+          "Kleve",
+          "Bedburg-Hau",
+          "Goch",
+          "Weeze",
+          "Kevelaer",
+          "Geldern",
+          "Nieukerk",
+          "Aldekerk",
+          "Kempen(Niederrhein)",
+          "Krefeld Hbf"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "7991506129333906200-2510201708-6",
+        "type": "VIA",
+        "number": "52262",
+        "time": "2510201731",
+        "platform": "2",
+        "path_stations": [
+          "Mönchengladbach Hbf",
+          "Viersen",
+          "Anrath",
+          "Forsthaus",
+          "Krefeld Hbf"
+        ],
+        "line": "RB35"
+      },
+      {
+        "id": "7277398705142600690-2510201754-11",
+        "type": "RRB",
+        "number": "82299",
+        "time": "2510201859",
+        "platform": "4",
+        "path_stations": [
+          "Kleve",
+          "Bedburg-Hau",
+          "Goch",
+          "Weeze",
+          "Kevelaer",
+          "Geldern",
+          "Nieukerk",
+          "Aldekerk",
+          "Kempen(Niederrhein)",
+          "Krefeld Hbf"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "-2019189587809067523-2510201808-4",
+        "type": "RRB",
+        "number": "82292",
+        "time": "2510201829",
+        "platform": "3",
+        "path_stations": [
+          "Düsseldorf Hbf",
+          "Düsseldorf-Bilk",
+          "Meerbusch-Osterath"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "4331790089922232180-2510201654-11",
+        "type": "RRB",
+        "number": "82295",
+        "time": "2510201759",
+        "platform": "4",
+        "path_stations": [
+          "Kleve",
+          "Bedburg-Hau",
+          "Goch",
+          "Weeze",
+          "Kevelaer",
+          "Geldern",
+          "Nieukerk",
+          "Aldekerk",
+          "Kempen(Niederrhein)",
+          "Krefeld Hbf"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "1754890827728627532-2510201835-2",
+        "type": "RE",
+        "number": "17430",
+        "time": "2510201838",
+        "platform": "4",
+        "path_stations": [
+          "Krefeld Hbf"
+        ],
+        "line": "7"
+      },
+      {
+        "id": "7807422524941546938-2510201637-20",
+        "type": "RB",
+        "number": "10332",
+        "time": "2510201801",
+        "platform": "2",
+        "path_stations": [
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West",
+          "Kohlscheid",
+          "Herzogenrath",
+          "Übach-Palenberg",
+          "Geilenkirchen",
+          "Lindern",
+          "Brachelen",
+          "Hückelhoven-Baal",
+          "Erkelenz",
+          "Herrath",
+          "Wickrath",
+          "Rheydt Hbf",
+          "Mönchengladbach Hbf",
+          "Viersen",
+          "Anrath",
+          "Forsthaus",
+          "Krefeld Hbf"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "-7280246599324333839-2510201739-14",
+        "type": "VIA",
+        "number": "52267",
+        "time": "2510201825",
+        "platform": "1",
+        "path_stations": [
+          "Gelsenkirchen Hbf",
+          "Essen-Zollverein Nord",
+          "Essen-Altenessen",
+          "Essen-Bergeborbeck",
+          "Essen-Dellwig",
+          "Oberhausen Hbf",
+          "Duisburg Hbf",
+          "Duisburg-Hochfeld Süd",
+          "Rheinhausen Ost",
+          "Rheinhausen",
+          "Krefeld-Hohenbudberg Chempark",
+          "Krefeld-Uerdingen",
+          "Krefeld-Linn"
+        ],
+        "line": "RB35"
+      },
+      {
+        "id": "7726561104479430993-2510201837-3",
+        "type": "TRI",
+        "number": "89424",
+        "time": "2510201849",
+        "platform": "3",
+        "path_stations": [
+          "Neuss Hbf",
+          "Meerbusch-Osterath"
+        ],
+        "line": "RB37"
+      },
+      {
+        "id": "-4825051844244089459-2510201508-24",
+        "type": "RE",
+        "number": "17425",
+        "time": "2510201819",
+        "platform": "3",
+        "path_stations": [
+          "Rheine",
+          "Emsdetten",
+          "Greven",
+          "Münster(Westf)Hbf",
+          "Münster-Hiltrup",
+          "Drensteinfurt",
+          "Hamm(Westf)Hbf",
+          "Bönen",
+          "Unna",
+          "Holzwickede",
+          "Schwerte(Ruhr)",
+          "Hagen Hbf",
+          "Ennepetal",
+          "Schwelm",
+          "Wuppertal-Oberbarmen",
+          "Wuppertal Hbf",
+          "Solingen Hbf",
+          "Opladen",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Dormagen",
+          "Neuss Hbf",
+          "Meerbusch-Osterath"
+        ],
+        "line": "7"
+      },
+      {
+        "id": "488744473847055546-2510201724-11",
+        "type": "RRB",
+        "number": "82297",
+        "time": "2510201829",
+        "platform": "4",
+        "path_stations": [
+          "Kleve",
+          "Bedburg-Hau",
+          "Goch",
+          "Weeze",
+          "Kevelaer",
+          "Geldern",
+          "Nieukerk",
+          "Aldekerk",
+          "Kempen(Niederrhein)",
+          "Krefeld Hbf"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "613320569115855840-2510201838-4",
+        "type": "RRB",
+        "number": "82294",
+        "time": "2510201859",
+        "platform": "3",
+        "path_stations": [
+          "Düsseldorf Hbf",
+          "Düsseldorf-Bilk",
+          "Meerbusch-Osterath"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "2064389462180669111-2510201738-4",
+        "type": "RRB",
+        "number": "82290",
+        "time": "2510201759",
+        "platform": "3",
+        "path_stations": [
+          "Düsseldorf Hbf",
+          "Düsseldorf-Bilk",
+          "Meerbusch-Osterath"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "4884952066173543543-2510201805-2",
+        "type": "TRI",
+        "number": "89425",
+        "time": "2510201808",
+        "platform": "4",
+        "path_stations": [
+          "Krefeld Hbf"
+        ],
+        "line": "RB37"
+      },
+      {
+        "id": "608379063884191223-2510201808-6",
+        "type": "VIA",
+        "number": "52264",
+        "time": "2510201831",
+        "platform": "2",
+        "path_stations": [
+          "Mönchengladbach Hbf",
+          "Viersen",
+          "Anrath",
+          "Forsthaus",
+          "Krefeld Hbf"
+        ],
+        "line": "RB35"
+      },
+      {
+        "id": "-4664029606652746532-2510201811-13",
+        "type": "RB",
+        "number": "10339",
+        "time": "2510201855",
+        "platform": "1",
+        "path_stations": [
+          "Essen-Steele",
+          "Essen Hbf",
+          "Essen West",
+          "Mülheim(Ruhr)Hbf",
+          "Mülheim(Ruhr)Styrum",
+          "Duisburg Hbf",
+          "Duisburg-Hochfeld Süd",
+          "Rheinhausen Ost",
+          "Rheinhausen",
+          "Krefeld-Hohenbudberg Chempark",
+          "Krefeld-Uerdingen",
+          "Krefeld-Linn"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "-8421522247246892215-2510201839-14",
+        "type": "VIA",
+        "number": "52269",
+        "time": "2510201925",
+        "platform": "1",
+        "path_stations": [
+          "Gelsenkirchen Hbf",
+          "Essen-Zollverein Nord",
+          "Essen-Altenessen",
+          "Essen-Bergeborbeck",
+          "Essen-Dellwig",
+          "Oberhausen Hbf",
+          "Duisburg Hbf",
+          "Duisburg-Hochfeld Süd",
+          "Rheinhausen Ost",
+          "Rheinhausen",
+          "Krefeld-Hohenbudberg Chempark",
+          "Krefeld-Uerdingen",
+          "Krefeld-Linn"
+        ],
+        "line": "RB35"
+      },
+      {
+        "id": "7277398705142600690-2510201754-11",
+        "type": "RRB",
+        "number": "82299",
+        "time": "2510201859",
+        "platform": "4",
+        "path_stations": [
+          "Kleve",
+          "Bedburg-Hau",
+          "Goch",
+          "Weeze",
+          "Kevelaer",
+          "Geldern",
+          "Nieukerk",
+          "Aldekerk",
+          "Kempen(Niederrhein)",
+          "Krefeld Hbf"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "-1801333113396667008-2510201737-20",
+        "type": "RB",
+        "number": "10334",
+        "time": "2510201901",
+        "platform": "2",
+        "path_stations": [
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West",
+          "Kohlscheid",
+          "Herzogenrath",
+          "Übach-Palenberg",
+          "Geilenkirchen",
+          "Lindern",
+          "Brachelen",
+          "Hückelhoven-Baal",
+          "Erkelenz",
+          "Herrath",
+          "Wickrath",
+          "Rheydt Hbf",
+          "Mönchengladbach Hbf",
+          "Viersen",
+          "Anrath",
+          "Forsthaus",
+          "Krefeld Hbf"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "858050368598625489-2510201908-6",
+        "type": "VIA",
+        "number": "52266",
+        "time": "2510201931",
+        "platform": "2",
+        "path_stations": [
+          "Mönchengladbach Hbf",
+          "Viersen",
+          "Anrath",
+          "Forsthaus",
+          "Krefeld Hbf"
+        ],
+        "line": "RB35"
+      },
+      {
+        "id": "3594300364594062551-2510201935-2",
+        "type": "RE",
+        "number": "17432",
+        "time": "2510201938",
+        "platform": "4",
+        "path_stations": [
+          "Krefeld Hbf"
+        ],
+        "line": "7"
+      },
+      {
+        "id": "5416632649792902803-2510201854-11",
+        "type": "RRB",
+        "number": "82303",
+        "time": "2510201959",
+        "platform": "4",
+        "path_stations": [
+          "Kleve",
+          "Bedburg-Hau",
+          "Goch",
+          "Weeze",
+          "Kevelaer",
+          "Geldern",
+          "Nieukerk",
+          "Aldekerk",
+          "Kempen(Niederrhein)",
+          "Krefeld Hbf"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "-8148799511607500826-2510201824-11",
+        "type": "RRB",
+        "number": "82301",
+        "time": "2510201929",
+        "platform": "4",
+        "path_stations": [
+          "Kleve",
+          "Bedburg-Hau",
+          "Goch",
+          "Weeze",
+          "Kevelaer",
+          "Geldern",
+          "Nieukerk",
+          "Aldekerk",
+          "Kempen(Niederrhein)",
+          "Krefeld Hbf"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "-9057893175658635366-2510201911-13",
+        "type": "RB",
+        "number": "10341",
+        "time": "2510201955",
+        "platform": "1",
+        "path_stations": [
+          "Essen-Steele",
+          "Essen Hbf",
+          "Essen West",
+          "Mülheim(Ruhr)Hbf",
+          "Mülheim(Ruhr)Styrum",
+          "Duisburg Hbf",
+          "Duisburg-Hochfeld Süd",
+          "Rheinhausen Ost",
+          "Rheinhausen",
+          "Krefeld-Hohenbudberg Chempark",
+          "Krefeld-Uerdingen",
+          "Krefeld-Linn"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "2464372302467108604-2510201608-24",
+        "type": "RE",
+        "number": "17427",
+        "time": "2510201919",
+        "platform": "3",
+        "path_stations": [
+          "Rheine",
+          "Emsdetten",
+          "Greven",
+          "Münster(Westf)Hbf",
+          "Münster-Hiltrup",
+          "Drensteinfurt",
+          "Hamm(Westf)Hbf",
+          "Bönen",
+          "Unna",
+          "Holzwickede",
+          "Schwerte(Ruhr)",
+          "Hagen Hbf",
+          "Ennepetal",
+          "Schwelm",
+          "Wuppertal-Oberbarmen",
+          "Wuppertal Hbf",
+          "Solingen Hbf",
+          "Opladen",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Dormagen",
+          "Neuss Hbf",
+          "Meerbusch-Osterath"
+        ],
+        "line": "7"
+      },
+      {
+        "id": "-1111803701871361704-2510201908-4",
+        "type": "RRB",
+        "number": "82296",
+        "time": "2510201929",
+        "platform": "3",
+        "path_stations": [
+          "Düsseldorf Hbf",
+          "Düsseldorf-Bilk",
+          "Meerbusch-Osterath"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "8011739663648914268-2510201937-3",
+        "type": "TRI",
+        "number": "89426",
+        "time": "2510201949",
+        "platform": "3",
+        "path_stations": [
+          "Neuss Hbf",
+          "Meerbusch-Osterath"
+        ],
+        "line": "RB37"
+      },
+      {
+        "id": "-1956470474702786398-2510201938-4",
+        "type": "RRB",
+        "number": "82298",
+        "time": "2510201959",
+        "platform": "3",
+        "path_stations": [
+          "Düsseldorf Hbf",
+          "Düsseldorf-Bilk",
+          "Meerbusch-Osterath"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "613320569115855840-2510201838-4",
+        "type": "RRB",
+        "number": "82294",
+        "time": "2510201859",
+        "platform": "3",
+        "path_stations": [
+          "Düsseldorf Hbf",
+          "Düsseldorf-Bilk",
+          "Meerbusch-Osterath"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "6991250409158537552-2510201905-2",
+        "type": "TRI",
+        "number": "89427",
+        "time": "2510201908",
+        "platform": "4",
+        "path_stations": [
+          "Krefeld Hbf"
+        ],
+        "line": "RB37"
+      },
+      {
+        "id": "5416632649792902803-2510201854-11",
+        "type": "RRB",
+        "number": "82303",
+        "time": "2510201959",
+        "platform": "4",
+        "path_stations": [
+          "Kleve",
+          "Bedburg-Hau",
+          "Goch",
+          "Weeze",
+          "Kevelaer",
+          "Geldern",
+          "Nieukerk",
+          "Aldekerk",
+          "Kempen(Niederrhein)",
+          "Krefeld Hbf"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "5356887278008679065-2510201837-20",
+        "type": "RB",
+        "number": "10336",
+        "time": "2510202001",
+        "platform": "2",
+        "path_stations": [
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West",
+          "Kohlscheid",
+          "Herzogenrath",
+          "Übach-Palenberg",
+          "Geilenkirchen",
+          "Lindern",
+          "Brachelen",
+          "Hückelhoven-Baal",
+          "Erkelenz",
+          "Herrath",
+          "Wickrath",
+          "Rheydt Hbf",
+          "Mönchengladbach Hbf",
+          "Viersen",
+          "Anrath",
+          "Forsthaus",
+          "Krefeld Hbf"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "3292469276047744105-2510201708-24",
+        "type": "RE",
+        "number": "17429",
+        "time": "2510202019",
+        "platform": "3",
+        "path_stations": [
+          "Rheine",
+          "Emsdetten",
+          "Greven",
+          "Münster(Westf)Hbf",
+          "Münster-Hiltrup",
+          "Drensteinfurt",
+          "Hamm(Westf)Hbf",
+          "Bönen",
+          "Unna",
+          "Holzwickede",
+          "Schwerte(Ruhr)",
+          "Hagen Hbf",
+          "Ennepetal",
+          "Schwelm",
+          "Wuppertal-Oberbarmen",
+          "Wuppertal Hbf",
+          "Solingen Hbf",
+          "Opladen",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Dormagen",
+          "Neuss Hbf",
+          "Meerbusch-Osterath"
+        ],
+        "line": "7"
+      },
+      {
+        "id": "5790272978137068081-2510202037-3",
+        "type": "TRI",
+        "number": "89428",
+        "time": "2510202049",
+        "platform": "3",
+        "path_stations": [
+          "Neuss Hbf",
+          "Meerbusch-Osterath"
+        ],
+        "line": "RB37"
+      },
+      {
+        "id": "-4223550550386185055-2510202016-12",
+        "type": "RB",
+        "number": "10343",
+        "time": "2510202055",
+        "platform": "1",
+        "path_stations": [
+          "Essen Hbf",
+          "Essen West",
+          "Mülheim(Ruhr)Hbf",
+          "Mülheim(Ruhr)Styrum",
+          "Duisburg Hbf",
+          "Duisburg-Hochfeld Süd",
+          "Rheinhausen Ost",
+          "Rheinhausen",
+          "Krefeld-Hohenbudberg Chempark",
+          "Krefeld-Uerdingen",
+          "Krefeld-Linn"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "781451183581124934-2510202038-4",
+        "type": "RRB",
+        "number": "82302",
+        "time": "2510202059",
+        "platform": "3",
+        "path_stations": [
+          "Düsseldorf Hbf",
+          "Düsseldorf-Bilk",
+          "Meerbusch-Osterath"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "-4939263065279758736-2510202038-2",
+        "type": "RE",
+        "number": "17434",
+        "time": "2510202042",
+        "platform": "4",
+        "path_stations": [
+          "Krefeld Hbf"
+        ],
+        "line": "7"
+      },
+      {
+        "id": "-1956470474702786398-2510201938-4",
+        "type": "RRB",
+        "number": "82298",
+        "time": "2510201959",
+        "platform": "3",
+        "path_stations": [
+          "Düsseldorf Hbf",
+          "Düsseldorf-Bilk",
+          "Meerbusch-Osterath"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "-711392098604245736-2510201924-11",
+        "type": "RRB",
+        "number": "82305",
+        "time": "2510202029",
+        "platform": "4",
+        "path_stations": [
+          "Kleve",
+          "Bedburg-Hau",
+          "Goch",
+          "Weeze",
+          "Kevelaer",
+          "Geldern",
+          "Nieukerk",
+          "Aldekerk",
+          "Kempen(Niederrhein)",
+          "Krefeld Hbf"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "2168079795607648087-2510202008-4",
+        "type": "RRB",
+        "number": "82300",
+        "time": "2510202029",
+        "platform": "3",
+        "path_stations": [
+          "Düsseldorf Hbf",
+          "Düsseldorf-Bilk",
+          "Meerbusch-Osterath"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "-3846608273312252290-2510202008-6",
+        "type": "VIA",
+        "number": "52268",
+        "time": "2510202031",
+        "platform": "2",
+        "path_stations": [
+          "Mönchengladbach Hbf",
+          "Viersen",
+          "Anrath",
+          "Forsthaus",
+          "Krefeld Hbf"
+        ],
+        "line": "RB35"
+      },
+      {
+        "id": "-872000640675137646-2510202005-2",
+        "type": "TRI",
+        "number": "89429",
+        "time": "2510202008",
+        "platform": "4",
+        "path_stations": [
+          "Krefeld Hbf"
+        ],
+        "line": "RB37"
+      },
+      {
+        "id": "1722217743853895248-2510202130-2",
+        "type": "Bus",
+        "number": "723",
+        "time": "2510202140",
+        "platform": "",
+        "path_stations": [
+          "Krefeld Hbf"
+        ],
+        "line": "RE7"
+      },
+      {
+        "id": "2791776302558067166-2510201808-24",
+        "type": "RE",
+        "number": "17431",
+        "time": "2510202119",
+        "platform": "3",
+        "path_stations": [
+          "Rheine",
+          "Emsdetten",
+          "Greven",
+          "Münster(Westf)Hbf",
+          "Münster-Hiltrup",
+          "Drensteinfurt",
+          "Hamm(Westf)Hbf",
+          "Bönen",
+          "Unna",
+          "Holzwickede",
+          "Schwerte(Ruhr)",
+          "Hagen Hbf",
+          "Ennepetal",
+          "Schwelm",
+          "Wuppertal-Oberbarmen",
+          "Wuppertal Hbf",
+          "Solingen Hbf",
+          "Opladen",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Dormagen",
+          "Neuss Hbf",
+          "Meerbusch-Osterath"
+        ],
+        "line": "7"
+      },
+      {
+        "id": "781451183581124934-2510202038-4",
+        "type": "RRB",
+        "number": "82302",
+        "time": "2510202059",
+        "platform": "3",
+        "path_stations": [
+          "Düsseldorf Hbf",
+          "Düsseldorf-Bilk",
+          "Meerbusch-Osterath"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "-1672872613949795114-2510202116-12",
+        "type": "RB",
+        "number": "10345",
+        "time": "2510202155",
+        "platform": "1",
+        "path_stations": [
+          "Essen Hbf",
+          "Essen West",
+          "Mülheim(Ruhr)Hbf",
+          "Mülheim(Ruhr)Styrum",
+          "Duisburg Hbf",
+          "Duisburg-Hochfeld Süd",
+          "Rheinhausen Ost",
+          "Rheinhausen",
+          "Krefeld-Hohenbudberg Chempark",
+          "Krefeld-Uerdingen",
+          "Krefeld-Linn"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "5995759368429194373-2510201937-20",
+        "type": "RB",
+        "number": "10338",
+        "time": "2510202101",
+        "platform": "2",
+        "path_stations": [
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West",
+          "Kohlscheid",
+          "Herzogenrath",
+          "Übach-Palenberg",
+          "Geilenkirchen",
+          "Lindern",
+          "Brachelen",
+          "Hückelhoven-Baal",
+          "Erkelenz",
+          "Herrath",
+          "Wickrath",
+          "Rheydt Hbf",
+          "Mönchengladbach Hbf",
+          "Viersen",
+          "Anrath",
+          "Forsthaus",
+          "Krefeld Hbf"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "-5605897894089284195-2510202048-3",
+        "type": "Bus",
+        "number": "60304",
+        "time": "2510202120",
+        "platform": "",
+        "path_stations": [
+          "Düsseldorf Hbf",
+          "Meerbusch-Osterath"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "-1319019305450294004-2510202134-2",
+        "type": "Bus",
+        "number": "60307",
+        "time": "2510202143",
+        "platform": "",
+        "path_stations": [
+          "Krefeld Hbf"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "3877311608492123870-2510202216-12",
+        "type": "RB",
+        "number": "10347",
+        "time": "2510202255",
+        "platform": "1",
+        "path_stations": [
+          "Essen Hbf",
+          "Essen West",
+          "Mülheim(Ruhr)Hbf",
+          "Mülheim(Ruhr)Styrum",
+          "Duisburg Hbf",
+          "Duisburg-Hochfeld Süd",
+          "Rheinhausen Ost",
+          "Rheinhausen",
+          "Krefeld-Hohenbudberg Chempark",
+          "Krefeld-Uerdingen",
+          "Krefeld-Linn"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "-3507760180532579777-2510202036-20",
+        "type": "RB",
+        "number": "10340",
+        "time": "2510202201",
+        "platform": "2",
+        "path_stations": [
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West",
+          "Kohlscheid",
+          "Herzogenrath",
+          "Übach-Palenberg",
+          "Geilenkirchen",
+          "Lindern",
+          "Brachelen",
+          "Hückelhoven-Baal",
+          "Erkelenz",
+          "Herrath",
+          "Wickrath",
+          "Rheydt Hbf",
+          "Mönchengladbach Hbf",
+          "Viersen",
+          "Anrath",
+          "Forsthaus",
+          "Krefeld Hbf"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "-9078456899548277033-2510202138-3",
+        "type": "Bus",
+        "number": "60306",
+        "time": "2510202216",
+        "platform": "",
+        "path_stations": [
+          "Düsseldorf Hbf",
+          "Meerbusch-Osterath"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "2894226976276234671-2510202234-2",
+        "type": "Bus",
+        "number": "60309",
+        "time": "2510202243",
+        "platform": "",
+        "path_stations": [
+          "Krefeld Hbf"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "4888859380135452094-2510202230-2",
+        "type": "Bus",
+        "number": "725",
+        "time": "2510202240",
+        "platform": "",
+        "path_stations": [
+          "Krefeld Hbf"
+        ],
+        "line": "RE7"
+      },
+      {
+        "id": "-5578649173838496233-2510202100-4",
+        "type": "Bus",
+        "number": "724",
+        "time": "2510202215",
+        "platform": "",
+        "path_stations": [
+          "Köln Hbf (Breslauer Platz)",
+          "Neuss Hbf",
+          "Meerbusch-Osterath"
+        ],
+        "line": "RE7"
+      },
+      {
+        "id": "-6464309031604541799-2510202330-2",
+        "type": "Bus",
+        "number": "727",
+        "time": "2510202340",
+        "platform": "",
+        "path_stations": [
+          "Krefeld Hbf"
+        ],
+        "line": "RE7"
+      },
+      {
+        "id": "-5067285706679593203-2510202137-20",
+        "type": "RB",
+        "number": "10342",
+        "time": "2510202301",
+        "platform": "2",
+        "path_stations": [
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West",
+          "Kohlscheid",
+          "Herzogenrath",
+          "Übach-Palenberg",
+          "Geilenkirchen",
+          "Lindern",
+          "Brachelen",
+          "Hückelhoven-Baal",
+          "Erkelenz",
+          "Herrath",
+          "Wickrath",
+          "Rheydt Hbf",
+          "Mönchengladbach Hbf",
+          "Viersen",
+          "Anrath",
+          "Forsthaus",
+          "Krefeld Hbf"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "-2747746623944908806-2510202334-2",
+        "type": "Bus",
+        "number": "60311",
+        "time": "2510202343",
+        "platform": "",
+        "path_stations": [
+          "Krefeld Hbf"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "-9219906390770521273-2510202315-3",
+        "type": "Bus",
+        "number": "61308",
+        "time": "2510202353",
+        "platform": "",
+        "path_stations": [
+          "Düsseldorf Hbf",
+          "Meerbusch-Osterath"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "-2982859918294871248-2510202335-8",
+        "type": "RB",
+        "number": "10349",
+        "time": "2510202355",
+        "platform": "1",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Duisburg-Hochfeld Süd",
+          "Rheinhausen Ost",
+          "Rheinhausen",
+          "Krefeld-Hohenbudberg Chempark",
+          "Krefeld-Uerdingen",
+          "Krefeld-Linn"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "1159460438693819336-2510202200-4",
+        "type": "Bus",
+        "number": "726",
+        "time": "2510202315",
+        "platform": "",
+        "path_stations": [
+          "Köln Hbf (Breslauer Platz)",
+          "Neuss Hbf",
+          "Meerbusch-Osterath"
+        ],
+        "line": "RE7"
+      },
+      {
+        "id": "3609102097406393152-2510202238-3",
+        "type": "Bus",
+        "number": "60308",
+        "time": "2510202316",
+        "platform": "",
+        "path_stations": [
+          "Düsseldorf Hbf",
+          "Meerbusch-Osterath"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "-8600863581452977230-2510210018-3",
+        "type": "Bus",
+        "number": "61310",
+        "time": "2510210055",
+        "platform": "",
+        "path_stations": [
+          "Düsseldorf Hbf",
+          "Meerbusch-Osterath"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "7662634712833691956-2510202300-4",
+        "type": "Bus",
+        "number": "728",
+        "time": "2510210015",
+        "platform": "",
+        "path_stations": [
+          "Köln Hbf (Breslauer Platz)",
+          "Neuss Hbf",
+          "Meerbusch-Osterath"
+        ],
+        "line": "RE7"
+      },
+      {
+        "id": "6753527767555726610-2510202237-20",
+        "type": "RB",
+        "number": "10344",
+        "time": "2510210001",
+        "platform": "2",
+        "path_stations": [
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West",
+          "Kohlscheid",
+          "Herzogenrath",
+          "Übach-Palenberg",
+          "Geilenkirchen",
+          "Lindern",
+          "Brachelen",
+          "Hückelhoven-Baal",
+          "Erkelenz",
+          "Herrath",
+          "Wickrath",
+          "Rheydt Hbf",
+          "Mönchengladbach Hbf",
+          "Viersen",
+          "Anrath",
+          "Forsthaus",
+          "Krefeld Hbf"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "3802086854857564828-2510210035-8",
+        "type": "RB",
+        "number": "10301",
+        "time": "2510210055",
+        "platform": "1",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Duisburg-Hochfeld Süd",
+          "Rheinhausen Ost",
+          "Rheinhausen",
+          "Krefeld-Hohenbudberg Chempark",
+          "Krefeld-Uerdingen",
+          "Krefeld-Linn"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "-4598652334031389544-2510202348-3",
+        "type": "Bus",
+        "number": "60310",
+        "time": "2510210025",
+        "platform": "",
+        "path_stations": [
+          "Düsseldorf Hbf",
+          "Meerbusch-Osterath"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "7529602871628123055-2510210135-8",
+        "type": "RB",
+        "number": "10303",
+        "time": "2510210155",
+        "platform": "1",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Duisburg-Hochfeld Süd",
+          "Rheinhausen Ost",
+          "Rheinhausen",
+          "Krefeld-Hohenbudberg Chempark",
+          "Krefeld-Uerdingen",
+          "Krefeld-Linn"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "-915455945029208013-2510210000-4",
+        "type": "Bus",
+        "number": "720",
+        "time": "2510210115",
+        "platform": "",
+        "path_stations": [
+          "Köln Hbf (Breslauer Platz)",
+          "Neuss Hbf",
+          "Meerbusch-Osterath"
+        ],
+        "line": "RE7"
+      },
+      {
+        "id": "8478574534290984085-2510202337-20",
+        "type": "RB",
+        "number": "10346",
+        "time": "2510210101",
+        "platform": "2",
+        "path_stations": [
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West",
+          "Kohlscheid",
+          "Herzogenrath",
+          "Übach-Palenberg",
+          "Geilenkirchen",
+          "Lindern",
+          "Brachelen",
+          "Hückelhoven-Baal",
+          "Erkelenz",
+          "Herrath",
+          "Wickrath",
+          "Rheydt Hbf",
+          "Mönchengladbach Hbf",
+          "Viersen",
+          "Anrath",
+          "Forsthaus",
+          "Krefeld Hbf"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "5774387740789274356-2510210100-4",
+        "type": "Bus",
+        "number": "722",
+        "time": "2510210215",
+        "platform": "",
+        "path_stations": [
+          "Köln Hbf (Breslauer Platz)",
+          "Neuss Hbf",
+          "Meerbusch-Osterath"
+        ],
+        "line": "RE7"
+      },
+      {
+        "id": "8864763218735258862-2510210401-2",
+        "type": "Bus",
+        "number": "61241",
+        "time": "2510210410",
+        "platform": "",
+        "path_stations": [
+          "Krefeld Hbf"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "6410448351491880318-2510210435-2",
+        "type": "Bus",
+        "number": "60241",
+        "time": "2510210444",
+        "platform": "",
+        "path_stations": [
+          "Krefeld Hbf"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "-4049841179518522387-2510210417-3",
+        "type": "RRB",
+        "number": "82240",
+        "time": "2510210459",
+        "platform": "3",
+        "path_stations": [
+          "Düsseldorf Hbf",
+          "Duisburg Hbf"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "8786498949532047971-2510210438-6",
+        "type": "RB",
+        "number": "10306",
+        "time": "2510210501",
+        "platform": "2",
+        "path_stations": [
+          "Mönchengladbach Hbf",
+          "Viersen",
+          "Anrath",
+          "Forsthaus",
+          "Krefeld Hbf"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "8719070097164291561-2510210505-8",
+        "type": "VIA",
+        "number": "52241",
+        "time": "2510210525",
+        "platform": "1",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Duisburg-Hochfeld Süd",
+          "Rheinhausen Ost",
+          "Rheinhausen",
+          "Krefeld-Hohenbudberg Chempark",
+          "Krefeld-Uerdingen",
+          "Krefeld-Linn"
+        ],
+        "line": "RB35"
+      },
+      {
+        "id": "-8296834615449233461-2510210535-2",
+        "type": "RE",
+        "number": "17404",
+        "time": "2510210538",
+        "platform": "4",
+        "path_stations": [
+          "Krefeld Hbf"
+        ],
+        "line": "7"
+      },
+      {
+        "id": "-6103936026442184931-2510210454-11",
+        "type": "RRB",
+        "number": "82245",
+        "time": "2510210559",
+        "platform": "4",
+        "path_stations": [
+          "Kleve",
+          "Bedburg-Hau",
+          "Goch",
+          "Weeze",
+          "Kevelaer",
+          "Geldern",
+          "Nieukerk",
+          "Aldekerk",
+          "Kempen(Niederrhein)",
+          "Krefeld Hbf"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "-4049841179518522387-2510210417-3",
+        "type": "RRB",
+        "number": "82240",
+        "time": "2510210459",
+        "platform": "3",
+        "path_stations": [
+          "Düsseldorf Hbf",
+          "Duisburg Hbf"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "122974487112226176-2510210516-12",
+        "type": "RB",
+        "number": "10313",
+        "time": "2510210555",
+        "platform": "1",
+        "path_stations": [
+          "Essen Hbf",
+          "Essen West",
+          "Mülheim(Ruhr)Hbf",
+          "Mülheim(Ruhr)Styrum",
+          "Duisburg Hbf",
+          "Duisburg-Hochfeld Süd",
+          "Rheinhausen Ost",
+          "Rheinhausen",
+          "Krefeld-Hohenbudberg Chempark",
+          "Krefeld-Uerdingen",
+          "Krefeld-Linn"
+        ],
+        "line": "33"
+      },
+      {
+        "id": "-2163577249168074909-2510210538-4",
+        "type": "RRB",
+        "number": "82242",
+        "time": "2510210559",
+        "platform": "3",
+        "path_stations": [
+          "Düsseldorf Hbf",
+          "Düsseldorf-Bilk",
+          "Meerbusch-Osterath"
+        ],
+        "line": "RE10"
+      },
+      {
+        "id": "7064208522619921573-2510210424-11",
+        "type": "RRB",
+        "number": "82243",
+        "time": "2510210529",
+        "platform": "4",
+        "path_stations": [
+          "Kleve",
+          "Bedburg-Hau",
+          "Goch",
+          "Weeze",
+          "Kevelaer",
+          "Geldern",
+          "Nieukerk",
+          "Aldekerk",
+          "Kempen(Niederrhein)",
+          "Krefeld Hbf"
+        ],
+        "line": "RE10"
+      }
+    ],
+    "departures": [
+      {
+        "id": "4331790089922232180-2510201654-11",
+        "type": "RRB",
+        "number": "82295",
+        "direction": "Düsseldorf Hbf",
+        "platform": "4",
+        "time": "2510201800",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Meerbusch-Osterath",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "6921897963218607466-2510201638-4",
+        "type": "RRB",
+        "number": "82286",
+        "direction": "Kleve",
+        "platform": "3",
+        "time": "2510201700",
+        "destination": "Kleve",
+        "path_stations": [
+          "Krefeld Hbf",
+          "Kempen(Niederrhein)",
+          "Aldekerk",
+          "Nieukerk",
+          "Geldern",
+          "Kevelaer",
+          "Weeze",
+          "Goch",
+          "Bedburg-Hau",
+          "Kleve"
+        ]
+      },
+      {
+        "id": "1487968782658263439-2510201708-4",
+        "type": "RRB",
+        "number": "82288",
+        "direction": "Kleve",
+        "platform": "3",
+        "time": "2510201730",
+        "destination": "Kleve",
+        "path_stations": [
+          "Krefeld Hbf",
+          "Kempen(Niederrhein)",
+          "Aldekerk",
+          "Nieukerk",
+          "Geldern",
+          "Kevelaer",
+          "Weeze",
+          "Goch",
+          "Bedburg-Hau",
+          "Kleve"
+        ]
+      },
+      {
+        "id": "-2223501954227914711-2510201735-2",
+        "type": "RE",
+        "number": "17428",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "4",
+        "time": "2510201739",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Meerbusch-Osterath",
+          "Neuss Hbf",
+          "Dormagen",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Opladen",
+          "Solingen Hbf",
+          "Wuppertal Hbf",
+          "Wuppertal-Oberbarmen",
+          "Schwelm",
+          "Ennepetal",
+          "Hagen Hbf",
+          "Schwerte(Ruhr)",
+          "Holzwickede",
+          "Unna",
+          "Bönen",
+          "Hamm(Westf)Hbf",
+          "Drensteinfurt",
+          "Münster-Hiltrup",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "8166382742810735249-2510201711-13",
+        "type": "RB",
+        "number": "10337",
+        "direction": "Aachen Hbf",
+        "platform": "1",
+        "time": "2510201755",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Krefeld Hbf",
+          "Forsthaus",
+          "Anrath",
+          "Viersen",
+          "Mönchengladbach Hbf",
+          "Rheydt Hbf",
+          "Wickrath",
+          "Herrath",
+          "Erkelenz",
+          "Hückelhoven-Baal",
+          "Brachelen",
+          "Lindern",
+          "Geilenkirchen",
+          "Übach-Palenberg",
+          "Herzogenrath",
+          "Kohlscheid",
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "3810259593782358126-2510201639-14",
+        "type": "VIA",
+        "number": "52265",
+        "direction": "Mönchengladbach Hbf",
+        "platform": "1",
+        "time": "2510201725",
+        "destination": "Mönchengladbach Hbf",
+        "path_stations": [
+          "Krefeld Hbf",
+          "Forsthaus",
+          "Anrath",
+          "Viersen",
+          "Mönchengladbach Hbf"
+        ]
+      },
+      {
+        "id": "1526703993290174528-2510201408-24",
+        "type": "RE",
+        "number": "17423",
+        "direction": "Krefeld Hbf",
+        "platform": "3",
+        "time": "2510201720",
+        "destination": "Krefeld Hbf",
+        "path_stations": [
+          "Krefeld Hbf"
+        ]
+      },
+      {
+        "id": "5100772068058333677-2510201537-20",
+        "type": "RB",
+        "number": "10330",
+        "direction": "Essen-Steele",
+        "platform": "2",
+        "time": "2510201702",
+        "destination": "Essen-Steele",
+        "path_stations": [
+          "Krefeld-Linn",
+          "Krefeld-Uerdingen",
+          "Krefeld-Hohenbudberg Chempark",
+          "Rheinhausen",
+          "Rheinhausen Ost",
+          "Duisburg-Hochfeld Süd",
+          "Duisburg Hbf",
+          "Mülheim(Ruhr)Styrum",
+          "Mülheim(Ruhr)Hbf",
+          "Essen West",
+          "Essen Hbf",
+          "Essen-Steele"
+        ]
+      },
+      {
+        "id": "-3359050098284062637-2510201737-3",
+        "type": "TRI",
+        "number": "89422",
+        "direction": "Krefeld Hbf",
+        "platform": "3",
+        "time": "2510201750",
+        "destination": "Krefeld Hbf",
+        "path_stations": [
+          "Krefeld Hbf"
+        ]
+      },
+      {
+        "id": "2064389462180669111-2510201738-4",
+        "type": "RRB",
+        "number": "82290",
+        "direction": "Kleve",
+        "platform": "3",
+        "time": "2510201800",
+        "destination": "Kleve",
+        "path_stations": [
+          "Krefeld Hbf",
+          "Kempen(Niederrhein)",
+          "Aldekerk",
+          "Nieukerk",
+          "Geldern",
+          "Kevelaer",
+          "Weeze",
+          "Goch",
+          "Bedburg-Hau",
+          "Kleve"
+        ]
+      },
+      {
+        "id": "4283750894307321373-2510201705-2",
+        "type": "TRI",
+        "number": "89423",
+        "direction": "Neuss Hbf",
+        "platform": "4",
+        "time": "2510201709",
+        "destination": "Neuss Hbf",
+        "path_stations": [
+          "Meerbusch-Osterath",
+          "Neuss Hbf"
+        ]
+      },
+      {
+        "id": "4831719788328639922-2510201624-11",
+        "type": "RRB",
+        "number": "82293",
+        "direction": "Düsseldorf Hbf",
+        "platform": "4",
+        "time": "2510201730",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Meerbusch-Osterath",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-2977496206031941383-2510201554-11",
+        "type": "RRB",
+        "number": "82291",
+        "direction": "Düsseldorf Hbf",
+        "platform": "4",
+        "time": "2510201700",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Meerbusch-Osterath",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "7991506129333906200-2510201708-6",
+        "type": "VIA",
+        "number": "52262",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "2",
+        "time": "2510201732",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Krefeld-Linn",
+          "Krefeld-Uerdingen",
+          "Krefeld-Hohenbudberg Chempark",
+          "Rheinhausen",
+          "Rheinhausen Ost",
+          "Duisburg-Hochfeld Süd",
+          "Duisburg Hbf",
+          "Oberhausen Hbf",
+          "Essen-Dellwig",
+          "Essen-Bergeborbeck",
+          "Essen-Altenessen",
+          "Essen-Zollverein Nord",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "7277398705142600690-2510201754-11",
+        "type": "RRB",
+        "number": "82299",
+        "direction": "Düsseldorf Hbf",
+        "platform": "4",
+        "time": "2510201900",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Meerbusch-Osterath",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-2019189587809067523-2510201808-4",
+        "type": "RRB",
+        "number": "82292",
+        "direction": "Kleve",
+        "platform": "3",
+        "time": "2510201830",
+        "destination": "Kleve",
+        "path_stations": [
+          "Krefeld Hbf",
+          "Kempen(Niederrhein)",
+          "Aldekerk",
+          "Nieukerk",
+          "Geldern",
+          "Kevelaer",
+          "Weeze",
+          "Goch",
+          "Bedburg-Hau",
+          "Kleve"
+        ]
+      },
+      {
+        "id": "4331790089922232180-2510201654-11",
+        "type": "RRB",
+        "number": "82295",
+        "direction": "Düsseldorf Hbf",
+        "platform": "4",
+        "time": "2510201800",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Meerbusch-Osterath",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "1754890827728627532-2510201835-2",
+        "type": "RE",
+        "number": "17430",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "4",
+        "time": "2510201839",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Meerbusch-Osterath",
+          "Neuss Hbf",
+          "Dormagen",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Opladen",
+          "Solingen Hbf",
+          "Wuppertal Hbf",
+          "Wuppertal-Oberbarmen",
+          "Schwelm",
+          "Ennepetal",
+          "Hagen Hbf",
+          "Schwerte(Ruhr)",
+          "Holzwickede",
+          "Unna",
+          "Bönen",
+          "Hamm(Westf)Hbf",
+          "Drensteinfurt",
+          "Münster-Hiltrup",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "7807422524941546938-2510201637-20",
+        "type": "RB",
+        "number": "10332",
+        "direction": "Essen-Steele",
+        "platform": "2",
+        "time": "2510201802",
+        "destination": "Essen-Steele",
+        "path_stations": [
+          "Krefeld-Linn",
+          "Krefeld-Uerdingen",
+          "Krefeld-Hohenbudberg Chempark",
+          "Rheinhausen",
+          "Rheinhausen Ost",
+          "Duisburg-Hochfeld Süd",
+          "Duisburg Hbf",
+          "Mülheim(Ruhr)Styrum",
+          "Mülheim(Ruhr)Hbf",
+          "Essen West",
+          "Essen Hbf",
+          "Essen-Steele"
+        ]
+      },
+      {
+        "id": "-7280246599324333839-2510201739-14",
+        "type": "VIA",
+        "number": "52267",
+        "direction": "Mönchengladbach Hbf",
+        "platform": "1",
+        "time": "2510201825",
+        "destination": "Mönchengladbach Hbf",
+        "path_stations": [
+          "Krefeld Hbf",
+          "Forsthaus",
+          "Anrath",
+          "Viersen",
+          "Mönchengladbach Hbf"
+        ]
+      },
+      {
+        "id": "7726561104479430993-2510201837-3",
+        "type": "TRI",
+        "number": "89424",
+        "direction": "Krefeld Hbf",
+        "platform": "3",
+        "time": "2510201850",
+        "destination": "Krefeld Hbf",
+        "path_stations": [
+          "Krefeld Hbf"
+        ]
+      },
+      {
+        "id": "-4825051844244089459-2510201508-24",
+        "type": "RE",
+        "number": "17425",
+        "direction": "Krefeld Hbf",
+        "platform": "3",
+        "time": "2510201820",
+        "destination": "Krefeld Hbf",
+        "path_stations": [
+          "Krefeld Hbf"
+        ]
+      },
+      {
+        "id": "488744473847055546-2510201724-11",
+        "type": "RRB",
+        "number": "82297",
+        "direction": "Düsseldorf Hbf",
+        "platform": "4",
+        "time": "2510201830",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Meerbusch-Osterath",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "613320569115855840-2510201838-4",
+        "type": "RRB",
+        "number": "82294",
+        "direction": "Kleve",
+        "platform": "3",
+        "time": "2510201900",
+        "destination": "Kleve",
+        "path_stations": [
+          "Krefeld Hbf",
+          "Kempen(Niederrhein)",
+          "Aldekerk",
+          "Nieukerk",
+          "Geldern",
+          "Kevelaer",
+          "Weeze",
+          "Goch",
+          "Bedburg-Hau",
+          "Kleve"
+        ]
+      },
+      {
+        "id": "2064389462180669111-2510201738-4",
+        "type": "RRB",
+        "number": "82290",
+        "direction": "Kleve",
+        "platform": "3",
+        "time": "2510201800",
+        "destination": "Kleve",
+        "path_stations": [
+          "Krefeld Hbf",
+          "Kempen(Niederrhein)",
+          "Aldekerk",
+          "Nieukerk",
+          "Geldern",
+          "Kevelaer",
+          "Weeze",
+          "Goch",
+          "Bedburg-Hau",
+          "Kleve"
+        ]
+      },
+      {
+        "id": "4884952066173543543-2510201805-2",
+        "type": "TRI",
+        "number": "89425",
+        "direction": "Neuss Hbf",
+        "platform": "4",
+        "time": "2510201809",
+        "destination": "Neuss Hbf",
+        "path_stations": [
+          "Meerbusch-Osterath",
+          "Neuss Hbf"
+        ]
+      },
+      {
+        "id": "608379063884191223-2510201808-6",
+        "type": "VIA",
+        "number": "52264",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "2",
+        "time": "2510201832",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Krefeld-Linn",
+          "Krefeld-Uerdingen",
+          "Krefeld-Hohenbudberg Chempark",
+          "Rheinhausen",
+          "Rheinhausen Ost",
+          "Duisburg-Hochfeld Süd",
+          "Duisburg Hbf",
+          "Oberhausen Hbf",
+          "Essen-Dellwig",
+          "Essen-Bergeborbeck",
+          "Essen-Altenessen",
+          "Essen-Zollverein Nord",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "-4664029606652746532-2510201811-13",
+        "type": "RB",
+        "number": "10339",
+        "direction": "Aachen Hbf",
+        "platform": "1",
+        "time": "2510201855",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Krefeld Hbf",
+          "Forsthaus",
+          "Anrath",
+          "Viersen",
+          "Mönchengladbach Hbf",
+          "Rheydt Hbf",
+          "Wickrath",
+          "Herrath",
+          "Erkelenz",
+          "Hückelhoven-Baal",
+          "Brachelen",
+          "Lindern",
+          "Geilenkirchen",
+          "Übach-Palenberg",
+          "Herzogenrath",
+          "Kohlscheid",
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "-8421522247246892215-2510201839-14",
+        "type": "VIA",
+        "number": "52269",
+        "direction": "Mönchengladbach Hbf",
+        "platform": "1",
+        "time": "2510201925",
+        "destination": "Mönchengladbach Hbf",
+        "path_stations": [
+          "Krefeld Hbf",
+          "Forsthaus",
+          "Anrath",
+          "Viersen",
+          "Mönchengladbach Hbf"
+        ]
+      },
+      {
+        "id": "7277398705142600690-2510201754-11",
+        "type": "RRB",
+        "number": "82299",
+        "direction": "Düsseldorf Hbf",
+        "platform": "4",
+        "time": "2510201900",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Meerbusch-Osterath",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-1801333113396667008-2510201737-20",
+        "type": "RB",
+        "number": "10334",
+        "direction": "Essen Hbf",
+        "platform": "2",
+        "time": "2510201902",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Krefeld-Linn",
+          "Krefeld-Uerdingen",
+          "Krefeld-Hohenbudberg Chempark",
+          "Rheinhausen",
+          "Rheinhausen Ost",
+          "Duisburg-Hochfeld Süd",
+          "Duisburg Hbf",
+          "Mülheim(Ruhr)Styrum",
+          "Mülheim(Ruhr)Hbf",
+          "Essen West",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "858050368598625489-2510201908-6",
+        "type": "VIA",
+        "number": "52266",
+        "direction": "Duisburg Hbf",
+        "platform": "2",
+        "time": "2510201932",
+        "destination": "Duisburg Hbf",
+        "path_stations": [
+          "Krefeld-Linn",
+          "Krefeld-Uerdingen",
+          "Krefeld-Hohenbudberg Chempark",
+          "Rheinhausen",
+          "Rheinhausen Ost",
+          "Duisburg-Hochfeld Süd",
+          "Duisburg Hbf"
+        ]
+      },
+      {
+        "id": "3594300364594062551-2510201935-2",
+        "type": "RE",
+        "number": "17432",
+        "direction": "Hamm(Westf)Hbf",
+        "platform": "4",
+        "time": "2510201939",
+        "destination": "Hamm(Westf)Hbf",
+        "path_stations": [
+          "Meerbusch-Osterath",
+          "Neuss Hbf",
+          "Dormagen",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Opladen",
+          "Solingen Hbf",
+          "Wuppertal Hbf",
+          "Wuppertal-Oberbarmen",
+          "Schwelm",
+          "Ennepetal",
+          "Hagen Hbf",
+          "Schwerte(Ruhr)",
+          "Holzwickede",
+          "Unna",
+          "Bönen",
+          "Hamm(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "5416632649792902803-2510201854-11",
+        "type": "RRB",
+        "number": "82303",
+        "direction": "Düsseldorf Hbf",
+        "platform": "4",
+        "time": "2510202000",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Meerbusch-Osterath",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-8148799511607500826-2510201824-11",
+        "type": "RRB",
+        "number": "82301",
+        "direction": "Düsseldorf Hbf",
+        "platform": "4",
+        "time": "2510201930",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Meerbusch-Osterath",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-9057893175658635366-2510201911-13",
+        "type": "RB",
+        "number": "10341",
+        "direction": "Aachen Hbf",
+        "platform": "1",
+        "time": "2510201955",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Krefeld Hbf",
+          "Forsthaus",
+          "Anrath",
+          "Viersen",
+          "Mönchengladbach Hbf",
+          "Rheydt Hbf",
+          "Wickrath",
+          "Herrath",
+          "Erkelenz",
+          "Hückelhoven-Baal",
+          "Brachelen",
+          "Lindern",
+          "Geilenkirchen",
+          "Übach-Palenberg",
+          "Herzogenrath",
+          "Kohlscheid",
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "2464372302467108604-2510201608-24",
+        "type": "RE",
+        "number": "17427",
+        "direction": "Krefeld Hbf",
+        "platform": "3",
+        "time": "2510201920",
+        "destination": "Krefeld Hbf",
+        "path_stations": [
+          "Krefeld Hbf"
+        ]
+      },
+      {
+        "id": "-1111803701871361704-2510201908-4",
+        "type": "RRB",
+        "number": "82296",
+        "direction": "Kleve",
+        "platform": "3",
+        "time": "2510201930",
+        "destination": "Kleve",
+        "path_stations": [
+          "Krefeld Hbf",
+          "Kempen(Niederrhein)",
+          "Aldekerk",
+          "Nieukerk",
+          "Geldern",
+          "Kevelaer",
+          "Weeze",
+          "Goch",
+          "Bedburg-Hau",
+          "Kleve"
+        ]
+      },
+      {
+        "id": "8011739663648914268-2510201937-3",
+        "type": "TRI",
+        "number": "89426",
+        "direction": "Krefeld Hbf",
+        "platform": "3",
+        "time": "2510201950",
+        "destination": "Krefeld Hbf",
+        "path_stations": [
+          "Krefeld Hbf"
+        ]
+      },
+      {
+        "id": "-1956470474702786398-2510201938-4",
+        "type": "RRB",
+        "number": "82298",
+        "direction": "Kleve",
+        "platform": "3",
+        "time": "2510202000",
+        "destination": "Kleve",
+        "path_stations": [
+          "Krefeld Hbf",
+          "Kempen(Niederrhein)",
+          "Aldekerk",
+          "Nieukerk",
+          "Geldern",
+          "Kevelaer",
+          "Weeze",
+          "Goch",
+          "Bedburg-Hau",
+          "Kleve"
+        ]
+      },
+      {
+        "id": "613320569115855840-2510201838-4",
+        "type": "RRB",
+        "number": "82294",
+        "direction": "Kleve",
+        "platform": "3",
+        "time": "2510201900",
+        "destination": "Kleve",
+        "path_stations": [
+          "Krefeld Hbf",
+          "Kempen(Niederrhein)",
+          "Aldekerk",
+          "Nieukerk",
+          "Geldern",
+          "Kevelaer",
+          "Weeze",
+          "Goch",
+          "Bedburg-Hau",
+          "Kleve"
+        ]
+      },
+      {
+        "id": "6991250409158537552-2510201905-2",
+        "type": "TRI",
+        "number": "89427",
+        "direction": "Neuss Hbf",
+        "platform": "4",
+        "time": "2510201909",
+        "destination": "Neuss Hbf",
+        "path_stations": [
+          "Meerbusch-Osterath",
+          "Neuss Hbf"
+        ]
+      },
+      {
+        "id": "5416632649792902803-2510201854-11",
+        "type": "RRB",
+        "number": "82303",
+        "direction": "Düsseldorf Hbf",
+        "platform": "4",
+        "time": "2510202000",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Meerbusch-Osterath",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "5356887278008679065-2510201837-20",
+        "type": "RB",
+        "number": "10336",
+        "direction": "Essen Hbf",
+        "platform": "2",
+        "time": "2510202002",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Krefeld-Linn",
+          "Krefeld-Uerdingen",
+          "Krefeld-Hohenbudberg Chempark",
+          "Rheinhausen",
+          "Rheinhausen Ost",
+          "Duisburg-Hochfeld Süd",
+          "Duisburg Hbf",
+          "Mülheim(Ruhr)Styrum",
+          "Mülheim(Ruhr)Hbf",
+          "Essen West",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "3292469276047744105-2510201708-24",
+        "type": "RE",
+        "number": "17429",
+        "direction": "Krefeld Hbf",
+        "platform": "3",
+        "time": "2510202020",
+        "destination": "Krefeld Hbf",
+        "path_stations": [
+          "Krefeld Hbf"
+        ]
+      },
+      {
+        "id": "5790272978137068081-2510202037-3",
+        "type": "TRI",
+        "number": "89428",
+        "direction": "Krefeld Hbf",
+        "platform": "3",
+        "time": "2510202050",
+        "destination": "Krefeld Hbf",
+        "path_stations": [
+          "Krefeld Hbf"
+        ]
+      },
+      {
+        "id": "-4223550550386185055-2510202016-12",
+        "type": "RB",
+        "number": "10343",
+        "direction": "Aachen Hbf",
+        "platform": "1",
+        "time": "2510202055",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Krefeld Hbf",
+          "Forsthaus",
+          "Anrath",
+          "Viersen",
+          "Mönchengladbach Hbf",
+          "Rheydt Hbf",
+          "Wickrath",
+          "Herrath",
+          "Erkelenz",
+          "Hückelhoven-Baal",
+          "Brachelen",
+          "Lindern",
+          "Geilenkirchen",
+          "Übach-Palenberg",
+          "Herzogenrath",
+          "Kohlscheid",
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "781451183581124934-2510202038-4",
+        "type": "RRB",
+        "number": "82302",
+        "direction": "Kleve",
+        "platform": "3",
+        "time": "2510202100",
+        "destination": "Kleve",
+        "path_stations": [
+          "Krefeld Hbf",
+          "Kempen(Niederrhein)",
+          "Aldekerk",
+          "Nieukerk",
+          "Geldern",
+          "Kevelaer",
+          "Weeze",
+          "Goch",
+          "Bedburg-Hau",
+          "Kleve"
+        ]
+      },
+      {
+        "id": "-4939263065279758736-2510202038-2",
+        "type": "RE",
+        "number": "17434",
+        "direction": "Hagen Hbf",
+        "platform": "4",
+        "time": "2510202043",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Meerbusch-Osterath",
+          "Neuss Hbf",
+          "Dormagen",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Opladen",
+          "Solingen Hbf",
+          "Wuppertal Hbf",
+          "Wuppertal-Oberbarmen",
+          "Schwelm",
+          "Ennepetal",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "-1956470474702786398-2510201938-4",
+        "type": "RRB",
+        "number": "82298",
+        "direction": "Kleve",
+        "platform": "3",
+        "time": "2510202000",
+        "destination": "Kleve",
+        "path_stations": [
+          "Krefeld Hbf",
+          "Kempen(Niederrhein)",
+          "Aldekerk",
+          "Nieukerk",
+          "Geldern",
+          "Kevelaer",
+          "Weeze",
+          "Goch",
+          "Bedburg-Hau",
+          "Kleve"
+        ]
+      },
+      {
+        "id": "-711392098604245736-2510201924-11",
+        "type": "RRB",
+        "number": "82305",
+        "direction": "Düsseldorf Hbf",
+        "platform": "4",
+        "time": "2510202030",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Meerbusch-Osterath",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "2168079795607648087-2510202008-4",
+        "type": "RRB",
+        "number": "82300",
+        "direction": "Kleve",
+        "platform": "3",
+        "time": "2510202030",
+        "destination": "Kleve",
+        "path_stations": [
+          "Krefeld Hbf",
+          "Kempen(Niederrhein)",
+          "Aldekerk",
+          "Nieukerk",
+          "Geldern",
+          "Kevelaer",
+          "Weeze",
+          "Goch",
+          "Bedburg-Hau",
+          "Kleve"
+        ]
+      },
+      {
+        "id": "-3846608273312252290-2510202008-6",
+        "type": "VIA",
+        "number": "52268",
+        "direction": "Duisburg Hbf",
+        "platform": "2",
+        "time": "2510202032",
+        "destination": "Duisburg Hbf",
+        "path_stations": [
+          "Krefeld-Linn",
+          "Krefeld-Uerdingen",
+          "Krefeld-Hohenbudberg Chempark",
+          "Rheinhausen",
+          "Rheinhausen Ost",
+          "Duisburg-Hochfeld Süd",
+          "Duisburg Hbf"
+        ]
+      },
+      {
+        "id": "-872000640675137646-2510202005-2",
+        "type": "TRI",
+        "number": "89429",
+        "direction": "Neuss Hbf",
+        "platform": "4",
+        "time": "2510202009",
+        "destination": "Neuss Hbf",
+        "path_stations": [
+          "Meerbusch-Osterath",
+          "Neuss Hbf"
+        ]
+      },
+      {
+        "id": "1722217743853895248-2510202130-2",
+        "type": "Bus",
+        "number": "723",
+        "direction": "Köln Hbf (Breslauer Platz)",
+        "platform": "",
+        "time": "2510202140",
+        "destination": "Köln Hbf (Breslauer Platz)",
+        "path_stations": [
+          "Meerbusch-Osterath",
+          "Neuss Hbf",
+          "Köln Hbf (Breslauer Platz)"
+        ]
+      },
+      {
+        "id": "2791776302558067166-2510201808-24",
+        "type": "RE",
+        "number": "17431",
+        "direction": "Krefeld Hbf",
+        "platform": "3",
+        "time": "2510202120",
+        "destination": "Krefeld Hbf",
+        "path_stations": [
+          "Krefeld Hbf"
+        ]
+      },
+      {
+        "id": "781451183581124934-2510202038-4",
+        "type": "RRB",
+        "number": "82302",
+        "direction": "Kleve",
+        "platform": "3",
+        "time": "2510202100",
+        "destination": "Kleve",
+        "path_stations": [
+          "Krefeld Hbf",
+          "Kempen(Niederrhein)",
+          "Aldekerk",
+          "Nieukerk",
+          "Geldern",
+          "Kevelaer",
+          "Weeze",
+          "Goch",
+          "Bedburg-Hau",
+          "Kleve"
+        ]
+      },
+      {
+        "id": "-1672872613949795114-2510202116-12",
+        "type": "RB",
+        "number": "10345",
+        "direction": "Aachen Hbf",
+        "platform": "1",
+        "time": "2510202155",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Krefeld Hbf",
+          "Forsthaus",
+          "Anrath",
+          "Viersen",
+          "Mönchengladbach Hbf",
+          "Rheydt Hbf",
+          "Wickrath",
+          "Herrath",
+          "Erkelenz",
+          "Hückelhoven-Baal",
+          "Brachelen",
+          "Lindern",
+          "Geilenkirchen",
+          "Übach-Palenberg",
+          "Herzogenrath",
+          "Kohlscheid",
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "5995759368429194373-2510201937-20",
+        "type": "RB",
+        "number": "10338",
+        "direction": "Essen Hbf",
+        "platform": "2",
+        "time": "2510202102",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Krefeld-Linn",
+          "Krefeld-Uerdingen",
+          "Krefeld-Hohenbudberg Chempark",
+          "Rheinhausen",
+          "Rheinhausen Ost",
+          "Duisburg-Hochfeld Süd",
+          "Duisburg Hbf",
+          "Mülheim(Ruhr)Styrum",
+          "Mülheim(Ruhr)Hbf",
+          "Essen West",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "-5605897894089284195-2510202048-3",
+        "type": "Bus",
+        "number": "60304",
+        "direction": "Krefeld Hbf",
+        "platform": "",
+        "time": "2510202120",
+        "destination": "Krefeld Hbf",
+        "path_stations": [
+          "Krefeld Hbf"
+        ]
+      },
+      {
+        "id": "-1319019305450294004-2510202134-2",
+        "type": "Bus",
+        "number": "60307",
+        "direction": "Düsseldorf Hbf",
+        "platform": "",
+        "time": "2510202143",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Meerbusch-Osterath",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "3877311608492123870-2510202216-12",
+        "type": "RB",
+        "number": "10347",
+        "direction": "Aachen Hbf",
+        "platform": "1",
+        "time": "2510202255",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Krefeld Hbf",
+          "Forsthaus",
+          "Anrath",
+          "Viersen",
+          "Mönchengladbach Hbf",
+          "Rheydt Hbf",
+          "Wickrath",
+          "Herrath",
+          "Erkelenz",
+          "Hückelhoven-Baal",
+          "Brachelen",
+          "Lindern",
+          "Geilenkirchen",
+          "Übach-Palenberg",
+          "Herzogenrath",
+          "Kohlscheid",
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "-3507760180532579777-2510202036-20",
+        "type": "RB",
+        "number": "10340",
+        "direction": "Essen Hbf",
+        "platform": "2",
+        "time": "2510202202",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Krefeld-Linn",
+          "Krefeld-Uerdingen",
+          "Krefeld-Hohenbudberg Chempark",
+          "Rheinhausen",
+          "Rheinhausen Ost",
+          "Duisburg-Hochfeld Süd",
+          "Duisburg Hbf",
+          "Mülheim(Ruhr)Styrum",
+          "Mülheim(Ruhr)Hbf",
+          "Essen West",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "-9078456899548277033-2510202138-3",
+        "type": "Bus",
+        "number": "60306",
+        "direction": "Krefeld Hbf",
+        "platform": "",
+        "time": "2510202216",
+        "destination": "Krefeld Hbf",
+        "path_stations": [
+          "Krefeld Hbf"
+        ]
+      },
+      {
+        "id": "2894226976276234671-2510202234-2",
+        "type": "Bus",
+        "number": "60309",
+        "direction": "Düsseldorf Hbf",
+        "platform": "",
+        "time": "2510202243",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Meerbusch-Osterath",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "4888859380135452094-2510202230-2",
+        "type": "Bus",
+        "number": "725",
+        "direction": "Köln Hbf (Breslauer Platz)",
+        "platform": "",
+        "time": "2510202240",
+        "destination": "Köln Hbf (Breslauer Platz)",
+        "path_stations": [
+          "Meerbusch-Osterath",
+          "Neuss Hbf",
+          "Köln Hbf (Breslauer Platz)"
+        ]
+      },
+      {
+        "id": "-5578649173838496233-2510202100-4",
+        "type": "Bus",
+        "number": "724",
+        "direction": "Krefeld Hbf",
+        "platform": "",
+        "time": "2510202215",
+        "destination": "Krefeld Hbf",
+        "path_stations": [
+          "Krefeld Hbf"
+        ]
+      },
+      {
+        "id": "-6464309031604541799-2510202330-2",
+        "type": "Bus",
+        "number": "727",
+        "direction": "Köln Hbf (Breslauer Platz)",
+        "platform": "",
+        "time": "2510202340",
+        "destination": "Köln Hbf (Breslauer Platz)",
+        "path_stations": [
+          "Meerbusch-Osterath",
+          "Neuss Hbf",
+          "Köln Hbf (Breslauer Platz)"
+        ]
+      },
+      {
+        "id": "-5067285706679593203-2510202137-20",
+        "type": "RB",
+        "number": "10342",
+        "direction": "Duisburg Hbf",
+        "platform": "2",
+        "time": "2510202302",
+        "destination": "Duisburg Hbf",
+        "path_stations": [
+          "Krefeld-Linn",
+          "Krefeld-Uerdingen",
+          "Krefeld-Hohenbudberg Chempark",
+          "Rheinhausen",
+          "Rheinhausen Ost",
+          "Duisburg-Hochfeld Süd",
+          "Duisburg Hbf"
+        ]
+      },
+      {
+        "id": "-2747746623944908806-2510202334-2",
+        "type": "Bus",
+        "number": "60311",
+        "direction": "Düsseldorf Hbf",
+        "platform": "",
+        "time": "2510202343",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Meerbusch-Osterath",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-9219906390770521273-2510202315-3",
+        "type": "Bus",
+        "number": "61308",
+        "direction": "Kleve",
+        "platform": "",
+        "time": "2510202353",
+        "destination": "Kleve",
+        "path_stations": [
+          "Krefeld Hbf",
+          "Kempen(Niederrhein)",
+          "Aldekerk",
+          "Nieukerk",
+          "Geldern",
+          "Kevelaer",
+          "Weeze",
+          "Goch",
+          "Bedburg-Hau",
+          "Kleve"
+        ]
+      },
+      {
+        "id": "-2982859918294871248-2510202335-8",
+        "type": "RB",
+        "number": "10349",
+        "direction": "Mönchengladbach Hbf",
+        "platform": "1",
+        "time": "2510202355",
+        "destination": "Mönchengladbach Hbf",
+        "path_stations": [
+          "Krefeld Hbf",
+          "Forsthaus",
+          "Anrath",
+          "Viersen",
+          "Mönchengladbach Hbf"
+        ]
+      },
+      {
+        "id": "1159460438693819336-2510202200-4",
+        "type": "Bus",
+        "number": "726",
+        "direction": "Krefeld Hbf",
+        "platform": "",
+        "time": "2510202315",
+        "destination": "Krefeld Hbf",
+        "path_stations": [
+          "Krefeld Hbf"
+        ]
+      },
+      {
+        "id": "3609102097406393152-2510202238-3",
+        "type": "Bus",
+        "number": "60308",
+        "direction": "Krefeld Hbf",
+        "platform": "",
+        "time": "2510202316",
+        "destination": "Krefeld Hbf",
+        "path_stations": [
+          "Krefeld Hbf"
+        ]
+      },
+      {
+        "id": "-8600863581452977230-2510210018-3",
+        "type": "Bus",
+        "number": "61310",
+        "direction": "Krefeld Hbf",
+        "platform": "",
+        "time": "2510210055",
+        "destination": "Krefeld Hbf",
+        "path_stations": [
+          "Krefeld Hbf"
+        ]
+      },
+      {
+        "id": "7662634712833691956-2510202300-4",
+        "type": "Bus",
+        "number": "728",
+        "direction": "Krefeld Hbf",
+        "platform": "",
+        "time": "2510210015",
+        "destination": "Krefeld Hbf",
+        "path_stations": [
+          "Krefeld Hbf"
+        ]
+      },
+      {
+        "id": "6753527767555726610-2510202237-20",
+        "type": "RB",
+        "number": "10344",
+        "direction": "Duisburg Hbf",
+        "platform": "2",
+        "time": "2510210002",
+        "destination": "Duisburg Hbf",
+        "path_stations": [
+          "Krefeld-Linn",
+          "Krefeld-Uerdingen",
+          "Krefeld-Hohenbudberg Chempark",
+          "Rheinhausen",
+          "Rheinhausen Ost",
+          "Duisburg-Hochfeld Süd",
+          "Duisburg Hbf"
+        ]
+      },
+      {
+        "id": "3802086854857564828-2510210035-8",
+        "type": "RB",
+        "number": "10301",
+        "direction": "Mönchengladbach Hbf",
+        "platform": "1",
+        "time": "2510210055",
+        "destination": "Mönchengladbach Hbf",
+        "path_stations": [
+          "Krefeld Hbf",
+          "Forsthaus",
+          "Anrath",
+          "Viersen",
+          "Mönchengladbach Hbf"
+        ]
+      },
+      {
+        "id": "-4598652334031389544-2510202348-3",
+        "type": "Bus",
+        "number": "60310",
+        "direction": "Krefeld Hbf",
+        "platform": "",
+        "time": "2510210025",
+        "destination": "Krefeld Hbf",
+        "path_stations": [
+          "Krefeld Hbf"
+        ]
+      },
+      {
+        "id": "7529602871628123055-2510210135-8",
+        "type": "RB",
+        "number": "10303",
+        "direction": "Mönchengladbach Hbf",
+        "platform": "1",
+        "time": "2510210155",
+        "destination": "Mönchengladbach Hbf",
+        "path_stations": [
+          "Krefeld Hbf",
+          "Forsthaus",
+          "Anrath",
+          "Viersen",
+          "Mönchengladbach Hbf"
+        ]
+      },
+      {
+        "id": "-915455945029208013-2510210000-4",
+        "type": "Bus",
+        "number": "720",
+        "direction": "Krefeld Hbf",
+        "platform": "",
+        "time": "2510210115",
+        "destination": "Krefeld Hbf",
+        "path_stations": [
+          "Krefeld Hbf"
+        ]
+      },
+      {
+        "id": "8478574534290984085-2510202337-20",
+        "type": "RB",
+        "number": "10346",
+        "direction": "Duisburg Hbf",
+        "platform": "2",
+        "time": "2510210102",
+        "destination": "Duisburg Hbf",
+        "path_stations": [
+          "Krefeld-Linn",
+          "Krefeld-Uerdingen",
+          "Krefeld-Hohenbudberg Chempark",
+          "Rheinhausen",
+          "Rheinhausen Ost",
+          "Duisburg-Hochfeld Süd",
+          "Duisburg Hbf"
+        ]
+      },
+      {
+        "id": "5774387740789274356-2510210100-4",
+        "type": "Bus",
+        "number": "722",
+        "direction": "Krefeld Hbf",
+        "platform": "",
+        "time": "2510210215",
+        "destination": "Krefeld Hbf",
+        "path_stations": [
+          "Krefeld Hbf"
+        ]
+      },
+      {
+        "id": "8864763218735258862-2510210401-2",
+        "type": "Bus",
+        "number": "61241",
+        "direction": "Düsseldorf Hbf",
+        "platform": "",
+        "time": "2510210410",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Meerbusch-Osterath",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "6410448351491880318-2510210435-2",
+        "type": "Bus",
+        "number": "60241",
+        "direction": "Düsseldorf Hbf",
+        "platform": "",
+        "time": "2510210444",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Meerbusch-Osterath",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-4049841179518522387-2510210417-3",
+        "type": "RRB",
+        "number": "82240",
+        "direction": "Kleve",
+        "platform": "3",
+        "time": "2510210500",
+        "destination": "Kleve",
+        "path_stations": [
+          "Krefeld Hbf",
+          "Kempen(Niederrhein)",
+          "Aldekerk",
+          "Nieukerk",
+          "Geldern",
+          "Kevelaer",
+          "Weeze",
+          "Goch",
+          "Bedburg-Hau",
+          "Kleve"
+        ]
+      },
+      {
+        "id": "8786498949532047971-2510210438-6",
+        "type": "RB",
+        "number": "10306",
+        "direction": "Essen-Steele",
+        "platform": "2",
+        "time": "2510210502",
+        "destination": "Essen-Steele",
+        "path_stations": [
+          "Krefeld-Linn",
+          "Krefeld-Uerdingen",
+          "Krefeld-Hohenbudberg Chempark",
+          "Rheinhausen",
+          "Rheinhausen Ost",
+          "Duisburg-Hochfeld Süd",
+          "Duisburg Hbf",
+          "Mülheim(Ruhr)Styrum",
+          "Mülheim(Ruhr)Hbf",
+          "Essen West",
+          "Essen Hbf",
+          "Essen-Steele"
+        ]
+      },
+      {
+        "id": "8719070097164291561-2510210505-8",
+        "type": "VIA",
+        "number": "52241",
+        "direction": "Mönchengladbach Hbf",
+        "platform": "1",
+        "time": "2510210525",
+        "destination": "Mönchengladbach Hbf",
+        "path_stations": [
+          "Krefeld Hbf",
+          "Forsthaus",
+          "Anrath",
+          "Viersen",
+          "Mönchengladbach Hbf"
+        ]
+      },
+      {
+        "id": "-8296834615449233461-2510210535-2",
+        "type": "RE",
+        "number": "17404",
+        "direction": "Rheine",
+        "platform": "4",
+        "time": "2510210539",
+        "destination": "Rheine",
+        "path_stations": [
+          "Meerbusch-Osterath",
+          "Neuss Hbf",
+          "Dormagen",
+          "Köln Hbf",
+          "Köln Messe/Deutz",
+          "Opladen",
+          "Solingen Hbf",
+          "Wuppertal Hbf",
+          "Wuppertal-Oberbarmen",
+          "Schwelm",
+          "Ennepetal",
+          "Hagen Hbf",
+          "Schwerte(Ruhr)",
+          "Holzwickede",
+          "Unna",
+          "Bönen",
+          "Hamm(Westf)Hbf",
+          "Drensteinfurt",
+          "Münster-Hiltrup",
+          "Münster(Westf)Hbf",
+          "Greven",
+          "Emsdetten",
+          "Rheine"
+        ]
+      },
+      {
+        "id": "-6103936026442184931-2510210454-11",
+        "type": "RRB",
+        "number": "82245",
+        "direction": "Düsseldorf Hbf",
+        "platform": "4",
+        "time": "2510210600",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Meerbusch-Osterath",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-4049841179518522387-2510210417-3",
+        "type": "RRB",
+        "number": "82240",
+        "direction": "Kleve",
+        "platform": "3",
+        "time": "2510210500",
+        "destination": "Kleve",
+        "path_stations": [
+          "Krefeld Hbf",
+          "Kempen(Niederrhein)",
+          "Aldekerk",
+          "Nieukerk",
+          "Geldern",
+          "Kevelaer",
+          "Weeze",
+          "Goch",
+          "Bedburg-Hau",
+          "Kleve"
+        ]
+      },
+      {
+        "id": "122974487112226176-2510210516-12",
+        "type": "RB",
+        "number": "10313",
+        "direction": "Aachen Hbf",
+        "platform": "1",
+        "time": "2510210555",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Krefeld Hbf",
+          "Forsthaus",
+          "Anrath",
+          "Viersen",
+          "Mönchengladbach Hbf",
+          "Rheydt Hbf",
+          "Wickrath",
+          "Herrath",
+          "Erkelenz",
+          "Hückelhoven-Baal",
+          "Brachelen",
+          "Lindern",
+          "Geilenkirchen",
+          "Übach-Palenberg",
+          "Herzogenrath",
+          "Kohlscheid",
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "-2163577249168074909-2510210538-4",
+        "type": "RRB",
+        "number": "82242",
+        "direction": "Kleve",
+        "platform": "3",
+        "time": "2510210600",
+        "destination": "Kleve",
+        "path_stations": [
+          "Krefeld Hbf",
+          "Kempen(Niederrhein)",
+          "Aldekerk",
+          "Nieukerk",
+          "Geldern",
+          "Kevelaer",
+          "Weeze",
+          "Goch",
+          "Bedburg-Hau",
+          "Kleve"
+        ]
+      },
+      {
+        "id": "7064208522619921573-2510210424-11",
+        "type": "RRB",
+        "number": "82243",
+        "direction": "Düsseldorf Hbf",
+        "platform": "4",
+        "time": "2510210530",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Meerbusch-Osterath",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Hbf"
+        ]
+      }
+    ]
+  }
+}

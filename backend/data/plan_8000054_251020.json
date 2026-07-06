@@ -1,0 +1,1134 @@
+{
+  "station_eva": "8000054",
+  "date": "251020",
+  "cached_at": "2025-10-20T16:52:28.976318",
+  "plan_data": {
+    "arrivals": [
+      {
+        "id": "1309585286763079849-2510201806-2",
+        "type": "RE",
+        "number": "10734",
+        "time": "2510201814",
+        "platform": "3",
+        "path_stations": [
+          "Brilon Stadt"
+        ],
+        "line": "17"
+      },
+      {
+        "id": "-163103718423655218-2510201834-2",
+        "type": "RB",
+        "number": "23257",
+        "time": "2510201842",
+        "platform": "5",
+        "path_stations": [
+          "Brilon Stadt"
+        ],
+        "line": "97"
+      },
+      {
+        "id": "8591630287314620641-2510201830-3",
+        "type": "RE",
+        "number": "10988",
+        "time": "2510201839",
+        "platform": "3",
+        "path_stations": [
+          "Messinghausen",
+          "Hoppecke"
+        ],
+        "line": "57"
+      },
+      {
+        "id": "4013474293696965215-2510201717-12",
+        "type": "RE",
+        "number": "10733",
+        "time": "2510201836",
+        "platform": "7",
+        "path_stations": [
+          "Hagen Hbf",
+          "Schwerte(Ruhr)",
+          "Fröndenberg",
+          "Wickede(Ruhr)",
+          "Neheim-Hüsten",
+          "Arnsberg(Westf)",
+          "Oeventrop",
+          "Freienohl",
+          "Meschede",
+          "Bestwig",
+          "Olsberg"
+        ],
+        "line": "17"
+      },
+      {
+        "id": "4059429500334046997-2510201641-12",
+        "type": "RE",
+        "number": "10717",
+        "time": "2510201808",
+        "platform": "5",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Hörde",
+          "Fröndenberg",
+          "Wickede(Ruhr)",
+          "Neheim-Hüsten",
+          "Arnsberg(Westf)",
+          "Oeventrop",
+          "Freienohl",
+          "Meschede",
+          "Bestwig",
+          "Olsberg"
+        ],
+        "line": "17"
+      },
+      {
+        "id": "6356909641140774179-2510201629-17",
+        "type": "RE",
+        "number": "23226",
+        "time": "2510201841",
+        "platform": "9",
+        "path_stations": [
+          "Marburg(Lahn)",
+          "Cölbe",
+          "Wetter(Hessen)",
+          "Simtshausen",
+          "Münchhausen",
+          "Ernsthausen",
+          "Wiesenfeld",
+          "Birkenbringhausen",
+          "Frankenberg(Eder)",
+          "Frankenberg-Goßberg",
+          "Frankenberg-Viermünden",
+          "Vöhl-Herzhausen",
+          "Korbach Süd",
+          "Korbach Hbf",
+          "Usseln",
+          "Willingen"
+        ],
+        "line": "97"
+      },
+      {
+        "id": "5914355730637244808-2510201741-12",
+        "type": "RE",
+        "number": "10985",
+        "time": "2510201908",
+        "platform": "5",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Hörde",
+          "Fröndenberg",
+          "Wickede(Ruhr)",
+          "Neheim-Hüsten",
+          "Arnsberg(Westf)",
+          "Oeventrop",
+          "Freienohl",
+          "Meschede",
+          "Bestwig",
+          "Olsberg"
+        ],
+        "line": "57"
+      },
+      {
+        "id": "-5999853450837439154-2510201817-12",
+        "type": "RE",
+        "number": "10735",
+        "time": "2510201936",
+        "platform": "5",
+        "path_stations": [
+          "Hagen Hbf",
+          "Schwerte(Ruhr)",
+          "Fröndenberg",
+          "Wickede(Ruhr)",
+          "Neheim-Hüsten",
+          "Arnsberg(Westf)",
+          "Oeventrop",
+          "Freienohl",
+          "Meschede",
+          "Bestwig",
+          "Olsberg"
+        ],
+        "line": "17"
+      },
+      {
+        "id": "4398946879592328156-2510201930-3",
+        "type": "RE",
+        "number": "10784",
+        "time": "2510201939",
+        "platform": "3",
+        "path_stations": [
+          "Messinghausen",
+          "Hoppecke"
+        ],
+        "line": "57"
+      },
+      {
+        "id": "5002666101748972153-2510201729-20",
+        "type": "RB",
+        "number": "23228",
+        "time": "2510201941",
+        "platform": "9",
+        "path_stations": [
+          "Marburg(Lahn)",
+          "Cölbe",
+          "Wetter(Hessen)",
+          "Simtshausen",
+          "Münchhausen",
+          "Ernsthausen",
+          "Wiesenfeld",
+          "Birkenbringhausen",
+          "Frankenberg(Eder)",
+          "Frankenberg-Goßberg",
+          "Frankenberg-Viermünden",
+          "Vöhl-Ederbringhausen",
+          "Vöhl-Schmittlotheim",
+          "Vöhl-Herzhausen",
+          "Vöhl-Thalitter",
+          "Korbach Süd",
+          "Korbach Hbf",
+          "Usseln",
+          "Willingen"
+        ],
+        "line": "97"
+      },
+      {
+        "id": "-3342285603003298566-2510201906-2",
+        "type": "RB",
+        "number": "23235",
+        "time": "2510201914",
+        "platform": "9",
+        "path_stations": [
+          "Brilon Stadt"
+        ],
+        "line": "97"
+      },
+      {
+        "id": "3689181936034228762-2510201841-12",
+        "type": "RE",
+        "number": "10729",
+        "time": "2510202008",
+        "platform": "5",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Hörde",
+          "Fröndenberg",
+          "Wickede(Ruhr)",
+          "Neheim-Hüsten",
+          "Arnsberg(Westf)",
+          "Oeventrop",
+          "Freienohl",
+          "Meschede",
+          "Bestwig",
+          "Olsberg"
+        ],
+        "line": "57"
+      },
+      {
+        "id": "-7920072726631154520-2510201829-17",
+        "type": "RE",
+        "number": "23230",
+        "time": "2510202041",
+        "platform": "9",
+        "path_stations": [
+          "Marburg(Lahn)",
+          "Cölbe",
+          "Wetter(Hessen)",
+          "Simtshausen",
+          "Münchhausen",
+          "Ernsthausen",
+          "Wiesenfeld",
+          "Birkenbringhausen",
+          "Frankenberg(Eder)",
+          "Frankenberg-Goßberg",
+          "Frankenberg-Viermünden",
+          "Vöhl-Herzhausen",
+          "Korbach Süd",
+          "Korbach Hbf",
+          "Usseln",
+          "Willingen"
+        ],
+        "line": "97"
+      },
+      {
+        "id": "404805235254735392-2510202006-2",
+        "type": "RE",
+        "number": "10738",
+        "time": "2510202014",
+        "platform": "3",
+        "path_stations": [
+          "Brilon Stadt"
+        ],
+        "line": "17"
+      },
+      {
+        "id": "-2473337171463306520-2510201917-12",
+        "type": "RE",
+        "number": "10737",
+        "time": "2510202036",
+        "platform": "5",
+        "path_stations": [
+          "Hagen Hbf",
+          "Schwerte(Ruhr)",
+          "Fröndenberg",
+          "Wickede(Ruhr)",
+          "Neheim-Hüsten",
+          "Arnsberg(Westf)",
+          "Oeventrop",
+          "Freienohl",
+          "Meschede",
+          "Bestwig",
+          "Olsberg"
+        ],
+        "line": "17"
+      },
+      {
+        "id": "-2993111009631502223-2510202030-3",
+        "type": "RE",
+        "number": "10786",
+        "time": "2510202039",
+        "platform": "3",
+        "path_stations": [
+          "Messinghausen",
+          "Hoppecke"
+        ],
+        "line": "57"
+      },
+      {
+        "id": "6139576060381192397-2510202130-3",
+        "type": "RE",
+        "number": "10742",
+        "time": "2510202139",
+        "platform": "3",
+        "path_stations": [
+          "Messinghausen",
+          "Hoppecke"
+        ],
+        "line": "57"
+      },
+      {
+        "id": "-7803346422170976119-2510202017-12",
+        "type": "RE",
+        "number": "10739",
+        "time": "2510202136",
+        "platform": "5",
+        "path_stations": [
+          "Hagen Hbf",
+          "Schwerte(Ruhr)",
+          "Fröndenberg",
+          "Wickede(Ruhr)",
+          "Neheim-Hüsten",
+          "Arnsberg(Westf)",
+          "Oeventrop",
+          "Freienohl",
+          "Meschede",
+          "Bestwig",
+          "Olsberg"
+        ],
+        "line": "17"
+      },
+      {
+        "id": "-5194716324580485418-2510201941-12",
+        "type": "RE",
+        "number": "10987",
+        "time": "2510202108",
+        "platform": "5",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Hörde",
+          "Fröndenberg",
+          "Wickede(Ruhr)",
+          "Neheim-Hüsten",
+          "Arnsberg(Westf)",
+          "Oeventrop",
+          "Freienohl",
+          "Meschede",
+          "Bestwig",
+          "Olsberg"
+        ],
+        "line": "57"
+      },
+      {
+        "id": "-8667680922109478553-2510202106-2",
+        "type": "RB",
+        "number": "23239",
+        "time": "2510202114",
+        "platform": "9",
+        "path_stations": [
+          "Brilon Stadt"
+        ],
+        "line": "97"
+      },
+      {
+        "id": "9087666729407546412-2510201929-20",
+        "type": "RB",
+        "number": "23232",
+        "time": "2510202141",
+        "platform": "9",
+        "path_stations": [
+          "Marburg(Lahn)",
+          "Cölbe",
+          "Wetter(Hessen)",
+          "Simtshausen",
+          "Münchhausen",
+          "Ernsthausen",
+          "Wiesenfeld",
+          "Birkenbringhausen",
+          "Frankenberg(Eder)",
+          "Frankenberg-Goßberg",
+          "Frankenberg-Viermünden",
+          "Vöhl-Ederbringhausen",
+          "Vöhl-Schmittlotheim",
+          "Vöhl-Herzhausen",
+          "Vöhl-Thalitter",
+          "Korbach Süd",
+          "Korbach Hbf",
+          "Usseln",
+          "Willingen"
+        ],
+        "line": "97"
+      },
+      {
+        "id": "3248789330964693625-2510202228-3",
+        "type": "RE",
+        "number": "10744",
+        "time": "2510202237",
+        "platform": "3",
+        "path_stations": [
+          "Messinghausen",
+          "Hoppecke"
+        ],
+        "line": "57"
+      },
+      {
+        "id": "-914410994516574440-2510202224-2",
+        "type": "RB",
+        "number": "23241",
+        "time": "2510202232",
+        "platform": "9",
+        "path_stations": [
+          "Brilon Stadt"
+        ],
+        "line": "97"
+      },
+      {
+        "id": "4542750070960076824-2510202123-15",
+        "type": "RE",
+        "number": "10989",
+        "time": "2510202259",
+        "platform": "5",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund Signal Iduna Park",
+          "Dortmund-Hörde",
+          "Dortmund-Aplerbeck Süd",
+          "Schwerte(Ruhr)",
+          "Fröndenberg",
+          "Wickede(Ruhr)",
+          "Neheim-Hüsten",
+          "Arnsberg(Westf)",
+          "Oeventrop",
+          "Freienohl",
+          "Meschede",
+          "Bestwig",
+          "Olsberg"
+        ],
+        "line": "57"
+      },
+      {
+        "id": "4542750070960076824-2510202123-15",
+        "type": "RE",
+        "number": "10989",
+        "time": "2510202259",
+        "platform": "5",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund Signal Iduna Park",
+          "Dortmund-Hörde",
+          "Dortmund-Aplerbeck Süd",
+          "Schwerte(Ruhr)",
+          "Fröndenberg",
+          "Wickede(Ruhr)",
+          "Neheim-Hüsten",
+          "Arnsberg(Westf)",
+          "Oeventrop",
+          "Freienohl",
+          "Meschede",
+          "Bestwig",
+          "Olsberg"
+        ],
+        "line": "57"
+      },
+      {
+        "id": "1422469895257140643-2510202202-9",
+        "type": "Bus",
+        "number": "90744",
+        "time": "2510202332",
+        "platform": "",
+        "path_stations": [
+          "Warburg(Westf)",
+          "Scherfede",
+          "Westheim(Westf)",
+          "Marsberg",
+          "Bredelar",
+          "Beringhausen",
+          "Messinghausen",
+          "Hoppecke"
+        ],
+        "line": "RE57"
+      },
+      {
+        "id": "-6708452821407758293-2510210506-4",
+        "type": "RE",
+        "number": "10701",
+        "time": "2510210527",
+        "platform": "5",
+        "path_stations": [
+          "Meschede",
+          "Bestwig",
+          "Olsberg"
+        ],
+        "line": "17"
+      },
+      {
+        "id": "-7398256256622347140-2510210543-2",
+        "type": "RE",
+        "number": "10970",
+        "time": "2510210551",
+        "platform": "7",
+        "path_stations": [
+          "Brilon Stadt"
+        ],
+        "line": "57"
+      },
+      {
+        "id": "-7132999402458379274-2510210515-4",
+        "type": "RB",
+        "number": "23200",
+        "time": "2510210546",
+        "platform": "9",
+        "path_stations": [
+          "Korbach Hbf",
+          "Usseln",
+          "Willingen"
+        ],
+        "line": "97"
+      },
+      {
+        "id": "6418114152002972230-2510210502-12",
+        "type": "RE",
+        "number": "10703",
+        "time": "2510210619",
+        "platform": "5",
+        "path_stations": [
+          "Hagen Hbf",
+          "Schwerte(Ruhr)",
+          "Fröndenberg",
+          "Wickede(Ruhr)",
+          "Neheim-Hüsten",
+          "Arnsberg(Westf)",
+          "Oeventrop",
+          "Freienohl",
+          "Meschede",
+          "Bestwig",
+          "Olsberg"
+        ],
+        "line": "17"
+      },
+      {
+        "id": "-500489813916582590-2510210643-2",
+        "type": "RE",
+        "number": "10972",
+        "time": "2510210651",
+        "platform": "3",
+        "path_stations": [
+          "Brilon Stadt"
+        ],
+        "line": "57"
+      },
+      {
+        "id": "-7140379087591827434-2510210610-3",
+        "type": "RE",
+        "number": "10704",
+        "time": "2510210619",
+        "platform": "3",
+        "path_stations": [
+          "Messinghausen",
+          "Hoppecke"
+        ],
+        "line": "17"
+      },
+      {
+        "id": "1835681424058892400-2510210505-12",
+        "type": "RB",
+        "number": "23202",
+        "time": "2510210615",
+        "platform": "9",
+        "path_stations": [
+          "Frankenberg(Eder)",
+          "Frankenberg-Goßberg",
+          "Frankenberg-Viermünden",
+          "Vöhl-Ederbringhausen",
+          "Vöhl-Schmittlotheim",
+          "Vöhl-Herzhausen",
+          "Vöhl-Thalitter",
+          "Korbach Süd",
+          "Korbach Hbf",
+          "Usseln",
+          "Willingen"
+        ],
+        "line": "97"
+      }
+    ],
+    "departures": [
+      {
+        "id": "1309585286763079849-2510201806-2",
+        "type": "RE",
+        "number": "10734",
+        "direction": "Hagen Hbf",
+        "platform": "3",
+        "time": "2510201820",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Olsberg",
+          "Bestwig",
+          "Meschede",
+          "Freienohl",
+          "Oeventrop",
+          "Arnsberg(Westf)",
+          "Neheim-Hüsten",
+          "Wickede(Ruhr)",
+          "Fröndenberg",
+          "Schwerte(Ruhr)",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "8591630287314620641-2510201830-3",
+        "type": "RE",
+        "number": "10988",
+        "direction": "Dortmund Hbf",
+        "platform": "3",
+        "time": "2510201849",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Olsberg",
+          "Bestwig",
+          "Meschede",
+          "Freienohl",
+          "Oeventrop",
+          "Arnsberg(Westf)",
+          "Neheim-Hüsten",
+          "Wickede(Ruhr)",
+          "Fröndenberg",
+          "Dortmund-Hörde",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "1471186621093077030-2510201822-1",
+        "type": "RE",
+        "number": "23233",
+        "direction": "Marburg(Lahn)",
+        "platform": "9",
+        "time": "2510201822",
+        "destination": "Marburg(Lahn)",
+        "path_stations": [
+          "Willingen",
+          "Usseln",
+          "Korbach Hbf",
+          "Korbach Süd",
+          "Vöhl-Herzhausen",
+          "Frankenberg-Viermünden",
+          "Frankenberg-Goßberg",
+          "Frankenberg(Eder)",
+          "Birkenbringhausen",
+          "Wiesenfeld",
+          "Ernsthausen",
+          "Münchhausen",
+          "Simtshausen",
+          "Wetter(Hessen)",
+          "Cölbe",
+          "Marburg(Lahn)"
+        ]
+      },
+      {
+        "id": "-1793155318104248314-2510201817-1",
+        "type": "RB",
+        "number": "23256",
+        "direction": "Brilon Stadt",
+        "platform": "7",
+        "time": "2510201817",
+        "destination": "Brilon Stadt",
+        "path_stations": [
+          "Brilon Stadt"
+        ]
+      },
+      {
+        "id": "4059429500334046997-2510201641-12",
+        "type": "RE",
+        "number": "10717",
+        "direction": "Messinghausen",
+        "platform": "5",
+        "time": "2510201819",
+        "destination": "Messinghausen",
+        "path_stations": [
+          "Hoppecke",
+          "Messinghausen"
+        ]
+      },
+      {
+        "id": "6356909641140774179-2510201629-17",
+        "type": "RE",
+        "number": "23226",
+        "direction": "Brilon Stadt",
+        "platform": "9",
+        "time": "2510201844",
+        "destination": "Brilon Stadt",
+        "path_stations": [
+          "Brilon Stadt"
+        ]
+      },
+      {
+        "id": "5914355730637244808-2510201741-12",
+        "type": "RE",
+        "number": "10985",
+        "direction": "Messinghausen",
+        "platform": "5",
+        "time": "2510201919",
+        "destination": "Messinghausen",
+        "path_stations": [
+          "Hoppecke",
+          "Messinghausen"
+        ]
+      },
+      {
+        "id": "-5999853450837439154-2510201817-12",
+        "type": "RE",
+        "number": "10735",
+        "direction": "Brilon Stadt",
+        "platform": "5",
+        "time": "2510201944",
+        "destination": "Brilon Stadt",
+        "path_stations": [
+          "Brilon Stadt"
+        ]
+      },
+      {
+        "id": "4398946879592328156-2510201930-3",
+        "type": "RE",
+        "number": "10784",
+        "direction": "Dortmund Hbf",
+        "platform": "3",
+        "time": "2510201949",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Olsberg",
+          "Bestwig",
+          "Meschede",
+          "Freienohl",
+          "Oeventrop",
+          "Arnsberg(Westf)",
+          "Neheim-Hüsten",
+          "Wickede(Ruhr)",
+          "Fröndenberg",
+          "Dortmund-Hörde",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "3848301645644586652-2510201920-1",
+        "type": "RE",
+        "number": "10736",
+        "direction": "Hagen Hbf",
+        "platform": "7",
+        "time": "2510201920",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Olsberg",
+          "Bestwig",
+          "Meschede",
+          "Freienohl",
+          "Oeventrop",
+          "Arnsberg(Westf)",
+          "Neheim-Hüsten",
+          "Wickede(Ruhr)",
+          "Fröndenberg",
+          "Schwerte(Ruhr)",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "-3342285603003298566-2510201906-2",
+        "type": "RB",
+        "number": "23235",
+        "direction": "Marburg(Lahn)",
+        "platform": "9",
+        "time": "2510201922",
+        "destination": "Marburg(Lahn)",
+        "path_stations": [
+          "Willingen",
+          "Usseln",
+          "Korbach Hbf",
+          "Korbach Süd",
+          "Vöhl-Thalitter",
+          "Vöhl-Herzhausen",
+          "Vöhl-Schmittlotheim",
+          "Vöhl-Ederbringhausen",
+          "Frankenberg-Viermünden",
+          "Frankenberg-Goßberg",
+          "Frankenberg(Eder)",
+          "Birkenbringhausen",
+          "Wiesenfeld",
+          "Ernsthausen",
+          "Münchhausen",
+          "Simtshausen",
+          "Wetter(Hessen)",
+          "Cölbe",
+          "Marburg(Lahn)"
+        ]
+      },
+      {
+        "id": "3689181936034228762-2510201841-12",
+        "type": "RE",
+        "number": "10729",
+        "direction": "Messinghausen",
+        "platform": "5",
+        "time": "2510202019",
+        "destination": "Messinghausen",
+        "path_stations": [
+          "Hoppecke",
+          "Messinghausen"
+        ]
+      },
+      {
+        "id": "-7920072726631154520-2510201829-17",
+        "type": "RE",
+        "number": "23230",
+        "direction": "Brilon Stadt",
+        "platform": "9",
+        "time": "2510202044",
+        "destination": "Brilon Stadt",
+        "path_stations": [
+          "Brilon Stadt"
+        ]
+      },
+      {
+        "id": "404805235254735392-2510202006-2",
+        "type": "RE",
+        "number": "10738",
+        "direction": "Hagen Hbf",
+        "platform": "3",
+        "time": "2510202020",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Olsberg",
+          "Bestwig",
+          "Meschede",
+          "Freienohl",
+          "Oeventrop",
+          "Arnsberg(Westf)",
+          "Neheim-Hüsten",
+          "Wickede(Ruhr)",
+          "Fröndenberg",
+          "Schwerte(Ruhr)",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "-4404143014118495081-2510202022-1",
+        "type": "RE",
+        "number": "23237",
+        "direction": "Korbach Hbf",
+        "platform": "9",
+        "time": "2510202022",
+        "destination": "Korbach Hbf",
+        "path_stations": [
+          "Willingen",
+          "Usseln",
+          "Korbach Hbf"
+        ]
+      },
+      {
+        "id": "-2993111009631502223-2510202030-3",
+        "type": "RE",
+        "number": "10786",
+        "direction": "Meschede",
+        "platform": "3",
+        "time": "2510202049",
+        "destination": "Meschede",
+        "path_stations": [
+          "Olsberg",
+          "Bestwig",
+          "Meschede"
+        ]
+      },
+      {
+        "id": "6139576060381192397-2510202130-3",
+        "type": "RE",
+        "number": "10742",
+        "direction": "Dortmund Hbf",
+        "platform": "3",
+        "time": "2510202149",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Olsberg",
+          "Bestwig",
+          "Meschede",
+          "Freienohl",
+          "Oeventrop",
+          "Arnsberg(Westf)",
+          "Neheim-Hüsten",
+          "Wickede(Ruhr)",
+          "Fröndenberg",
+          "Dortmund-Hörde",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-5194716324580485418-2510201941-12",
+        "type": "RE",
+        "number": "10987",
+        "direction": "Messinghausen",
+        "platform": "5",
+        "time": "2510202119",
+        "destination": "Messinghausen",
+        "path_stations": [
+          "Hoppecke",
+          "Messinghausen"
+        ]
+      },
+      {
+        "id": "-8667680922109478553-2510202106-2",
+        "type": "RB",
+        "number": "23239",
+        "direction": "Frankenberg(Eder)",
+        "platform": "9",
+        "time": "2510202122",
+        "destination": "Frankenberg(Eder)",
+        "path_stations": [
+          "Willingen",
+          "Usseln",
+          "Korbach Hbf",
+          "Korbach Süd",
+          "Vöhl-Thalitter",
+          "Vöhl-Herzhausen",
+          "Vöhl-Schmittlotheim",
+          "Vöhl-Ederbringhausen",
+          "Frankenberg-Viermünden",
+          "Frankenberg-Goßberg",
+          "Frankenberg(Eder)"
+        ]
+      },
+      {
+        "id": "9087666729407546412-2510201929-20",
+        "type": "RB",
+        "number": "23232",
+        "direction": "Brilon Stadt",
+        "platform": "9",
+        "time": "2510202144",
+        "destination": "Brilon Stadt",
+        "path_stations": [
+          "Brilon Stadt"
+        ]
+      },
+      {
+        "id": "3248789330964693625-2510202228-3",
+        "type": "RE",
+        "number": "10744",
+        "direction": "Meschede",
+        "platform": "3",
+        "time": "2510202238",
+        "destination": "Meschede",
+        "path_stations": [
+          "Olsberg",
+          "Bestwig",
+          "Meschede"
+        ]
+      },
+      {
+        "id": "4542750070960076824-2510202123-15",
+        "type": "RE",
+        "number": "10989",
+        "direction": "Brilon Stadt",
+        "platform": "5",
+        "time": "2510202300",
+        "destination": "Brilon Stadt",
+        "path_stations": [
+          "Brilon Stadt"
+        ]
+      },
+      {
+        "id": "4542750070960076824-2510202123-15",
+        "type": "RE",
+        "number": "10989",
+        "direction": "Brilon Stadt",
+        "platform": "5",
+        "time": "2510202300",
+        "destination": "Brilon Stadt",
+        "path_stations": [
+          "Brilon Stadt"
+        ]
+      },
+      {
+        "id": "-3458521955424683177-2510202311-1",
+        "type": "RB",
+        "number": "23243",
+        "direction": "Korbach Hbf",
+        "platform": "9",
+        "time": "2510202311",
+        "destination": "Korbach Hbf",
+        "path_stations": [
+          "Willingen",
+          "Usseln",
+          "Korbach Hbf"
+        ]
+      },
+      {
+        "id": "-6708452821407758293-2510210506-4",
+        "type": "RE",
+        "number": "10701",
+        "direction": "Messinghausen",
+        "platform": "5",
+        "time": "2510210527",
+        "destination": "Messinghausen",
+        "path_stations": [
+          "Hoppecke",
+          "Messinghausen"
+        ]
+      },
+      {
+        "id": "3656237668231389546-2510210558-1",
+        "type": "RB",
+        "number": "23205",
+        "direction": "Marburg(Lahn)",
+        "platform": "9",
+        "time": "2510210558",
+        "destination": "Marburg(Lahn)",
+        "path_stations": [
+          "Willingen",
+          "Usseln",
+          "Korbach Hbf",
+          "Korbach Süd",
+          "Vöhl-Thalitter",
+          "Vöhl-Herzhausen",
+          "Vöhl-Schmittlotheim",
+          "Vöhl-Ederbringhausen",
+          "Frankenberg-Viermünden",
+          "Frankenberg-Goßberg",
+          "Frankenberg(Eder)",
+          "Birkenbringhausen",
+          "Wiesenfeld",
+          "Ernsthausen",
+          "Münchhausen",
+          "Simtshausen",
+          "Wetter(Hessen)",
+          "Cölbe",
+          "Marburg(Lahn)"
+        ]
+      },
+      {
+        "id": "-7398256256622347140-2510210543-2",
+        "type": "RE",
+        "number": "10970",
+        "direction": "Dortmund Hbf",
+        "platform": "7",
+        "time": "2510210552",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Olsberg",
+          "Bestwig",
+          "Meschede",
+          "Freienohl",
+          "Oeventrop",
+          "Arnsberg(Westf)",
+          "Neheim-Hüsten",
+          "Wickede(Ruhr)",
+          "Fröndenberg",
+          "Dortmund-Hörde",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "6418114152002972230-2510210502-12",
+        "type": "RE",
+        "number": "10703",
+        "direction": "Messinghausen",
+        "platform": "5",
+        "time": "2510210622",
+        "destination": "Messinghausen",
+        "path_stations": [
+          "Hoppecke",
+          "Messinghausen"
+        ]
+      },
+      {
+        "id": "-500489813916582590-2510210643-2",
+        "type": "RE",
+        "number": "10972",
+        "direction": "Dortmund Hbf",
+        "platform": "3",
+        "time": "2510210653",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Olsberg",
+          "Bestwig",
+          "Meschede",
+          "Freienohl",
+          "Oeventrop",
+          "Arnsberg(Westf)",
+          "Neheim-Hüsten",
+          "Wickede(Ruhr)",
+          "Fröndenberg",
+          "Dortmund-Hörde",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "1741801920843988406-2510210654-1",
+        "type": "RB",
+        "number": "23207",
+        "direction": "Korbach Hbf",
+        "platform": "9",
+        "time": "2510210654",
+        "destination": "Korbach Hbf",
+        "path_stations": [
+          "Willingen",
+          "Usseln",
+          "Korbach Hbf"
+        ]
+      },
+      {
+        "id": "-7140379087591827434-2510210610-3",
+        "type": "RE",
+        "number": "10704",
+        "direction": "Hagen Hbf",
+        "platform": "3",
+        "time": "2510210620",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Olsberg",
+          "Bestwig",
+          "Meschede",
+          "Freienohl",
+          "Oeventrop",
+          "Arnsberg(Westf)",
+          "Neheim-Hüsten",
+          "Wickede(Ruhr)",
+          "Fröndenberg",
+          "Schwerte(Ruhr)",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "-5837569233305376824-2510210626-1",
+        "type": "RE",
+        "number": "10779",
+        "direction": "Brilon Stadt",
+        "platform": "7",
+        "time": "2510210626",
+        "destination": "Brilon Stadt",
+        "path_stations": [
+          "Brilon Stadt"
+        ]
+      }
+    ]
+  }
+}

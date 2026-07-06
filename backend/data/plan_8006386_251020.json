@@ -1,0 +1,1824 @@
+{
+  "station_eva": "8006386",
+  "date": "251020",
+  "cached_at": "2025-10-20T15:48:38.694599",
+  "plan_data": {
+    "arrivals": [
+      {
+        "id": "5033649121656058762-2510201709-3",
+        "type": "RE",
+        "number": "26428",
+        "time": "2510201724",
+        "platform": "2",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Witten Hbf"
+        ],
+        "line": "4"
+      },
+      {
+        "id": "8909041713043208865-2510201521-22",
+        "type": "RE",
+        "number": "26425",
+        "time": "2510201733",
+        "platform": "1",
+        "path_stations": [
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West",
+          "Herzogenrath",
+          "Übach-Palenberg",
+          "Geilenkirchen",
+          "Lindern",
+          "Hückelhoven-Baal",
+          "Erkelenz",
+          "Rheydt Hbf",
+          "Mönchengladbach Hbf",
+          "Neuss Hbf",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Hbf",
+          "Wuppertal-Vohwinkel",
+          "Wuppertal Hbf",
+          "Wuppertal-Barmen",
+          "Wuppertal-Oberbarmen",
+          "Schwelm",
+          "Ennepetal",
+          "Hagen Hbf"
+        ],
+        "line": "4"
+      },
+      {
+        "id": "4172032370327750561-2510201751-3",
+        "type": "S",
+        "number": "31561",
+        "time": "2510201759",
+        "platform": "1",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hagen-Vorhalle"
+        ],
+        "line": "5"
+      },
+      {
+        "id": "9040000253734195318-2510201716-3",
+        "type": "RB",
+        "number": "30782",
+        "time": "2510201724",
+        "platform": "1",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hagen-Vorhalle"
+        ],
+        "line": "40"
+      },
+      {
+        "id": "8773351494667447053-2510201736-2",
+        "type": "RB",
+        "number": "30781",
+        "time": "2510201741",
+        "platform": "2",
+        "path_stations": [
+          "Witten Hbf"
+        ],
+        "line": "40"
+      },
+      {
+        "id": "2783062143932316147-2510201730-6",
+        "type": "S",
+        "number": "31560",
+        "time": "2510201754",
+        "platform": "2",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Barop",
+          "Dortmund-Kruckel",
+          "Witten-Annen Nord",
+          "Witten Hbf"
+        ],
+        "line": "5"
+      },
+      {
+        "id": "-391994223279510474-2510201651-3",
+        "type": "S",
+        "number": "31557",
+        "time": "2510201659",
+        "platform": "1",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hagen-Vorhalle"
+        ],
+        "line": "5"
+      },
+      {
+        "id": "8492881050679500082-2510201809-3",
+        "type": "RE",
+        "number": "26430",
+        "time": "2510201824",
+        "platform": "2",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Witten Hbf"
+        ],
+        "line": "4"
+      },
+      {
+        "id": "-2935693617252737777-2510201621-22",
+        "type": "RE",
+        "number": "26427",
+        "time": "2510201833",
+        "platform": "1",
+        "path_stations": [
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West",
+          "Herzogenrath",
+          "Übach-Palenberg",
+          "Geilenkirchen",
+          "Lindern",
+          "Hückelhoven-Baal",
+          "Erkelenz",
+          "Rheydt Hbf",
+          "Mönchengladbach Hbf",
+          "Neuss Hbf",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Hbf",
+          "Wuppertal-Vohwinkel",
+          "Wuppertal Hbf",
+          "Wuppertal-Barmen",
+          "Wuppertal-Oberbarmen",
+          "Schwelm",
+          "Ennepetal",
+          "Hagen Hbf"
+        ],
+        "line": "4"
+      },
+      {
+        "id": "876006260193980944-2510201816-3",
+        "type": "RB",
+        "number": "30784",
+        "time": "2510201824",
+        "platform": "1",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hagen-Vorhalle"
+        ],
+        "line": "40"
+      },
+      {
+        "id": "4172032370327750561-2510201751-3",
+        "type": "S",
+        "number": "31561",
+        "time": "2510201759",
+        "platform": "1",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hagen-Vorhalle"
+        ],
+        "line": "5"
+      },
+      {
+        "id": "-7551418642928711125-2510201836-2",
+        "type": "RB",
+        "number": "30783",
+        "time": "2510201841",
+        "platform": "2",
+        "path_stations": [
+          "Witten Hbf"
+        ],
+        "line": "40"
+      },
+      {
+        "id": "8874872238193428783-2510201851-3",
+        "type": "S",
+        "number": "31565",
+        "time": "2510201859",
+        "platform": "1",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hagen-Vorhalle"
+        ],
+        "line": "5"
+      },
+      {
+        "id": "916164894838351053-2510201830-6",
+        "type": "S",
+        "number": "31564",
+        "time": "2510201854",
+        "platform": "2",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Barop",
+          "Dortmund-Kruckel",
+          "Witten-Annen Nord",
+          "Witten Hbf"
+        ],
+        "line": "5"
+      },
+      {
+        "id": "8874872238193428783-2510201851-3",
+        "type": "S",
+        "number": "31565",
+        "time": "2510201859",
+        "platform": "1",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hagen-Vorhalle"
+        ],
+        "line": "5"
+      },
+      {
+        "id": "1068212982267214245-2510201721-22",
+        "type": "RE",
+        "number": "26429",
+        "time": "2510201933",
+        "platform": "1",
+        "path_stations": [
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West",
+          "Herzogenrath",
+          "Übach-Palenberg",
+          "Geilenkirchen",
+          "Lindern",
+          "Hückelhoven-Baal",
+          "Erkelenz",
+          "Rheydt Hbf",
+          "Mönchengladbach Hbf",
+          "Neuss Hbf",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Hbf",
+          "Wuppertal-Vohwinkel",
+          "Wuppertal Hbf",
+          "Wuppertal-Barmen",
+          "Wuppertal-Oberbarmen",
+          "Schwelm",
+          "Ennepetal",
+          "Hagen Hbf"
+        ],
+        "line": "4"
+      },
+      {
+        "id": "-8214142692074132385-2510201936-2",
+        "type": "RB",
+        "number": "30785",
+        "time": "2510201941",
+        "platform": "2",
+        "path_stations": [
+          "Witten Hbf"
+        ],
+        "line": "40"
+      },
+      {
+        "id": "-7597581855357434688-2510201951-3",
+        "type": "S",
+        "number": "31569",
+        "time": "2510201959",
+        "platform": "1",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hagen-Vorhalle"
+        ],
+        "line": "5"
+      },
+      {
+        "id": "7954629446075791080-2510201916-3",
+        "type": "RB",
+        "number": "30786",
+        "time": "2510201924",
+        "platform": "1",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hagen-Vorhalle"
+        ],
+        "line": "40"
+      },
+      {
+        "id": "-7023175627699294460-2510201930-6",
+        "type": "S",
+        "number": "31568",
+        "time": "2510201954",
+        "platform": "2",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Barop",
+          "Dortmund-Kruckel",
+          "Witten-Annen Nord",
+          "Witten Hbf"
+        ],
+        "line": "5"
+      },
+      {
+        "id": "-901490187036978098-2510201909-3",
+        "type": "RE",
+        "number": "26432",
+        "time": "2510201924",
+        "platform": "2",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Witten Hbf"
+        ],
+        "line": "4"
+      },
+      {
+        "id": "3029820093565105971-2510202036-2",
+        "type": "RB",
+        "number": "30787",
+        "time": "2510202041",
+        "platform": "2",
+        "path_stations": [
+          "Witten Hbf"
+        ],
+        "line": "40"
+      },
+      {
+        "id": "2184049933202448469-2510202051-3",
+        "type": "S",
+        "number": "31573",
+        "time": "2510202059",
+        "platform": "1",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hagen-Vorhalle"
+        ],
+        "line": "5"
+      },
+      {
+        "id": "-5669108150784872705-2510202016-3",
+        "type": "RB",
+        "number": "30788",
+        "time": "2510202024",
+        "platform": "1",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hagen-Vorhalle"
+        ],
+        "line": "40"
+      },
+      {
+        "id": "-3390275805963925694-2510202030-6",
+        "type": "S",
+        "number": "31572",
+        "time": "2510202054",
+        "platform": "2",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Barop",
+          "Dortmund-Kruckel",
+          "Witten-Annen Nord",
+          "Witten Hbf"
+        ],
+        "line": "5"
+      },
+      {
+        "id": "-7597581855357434688-2510201951-3",
+        "type": "S",
+        "number": "31569",
+        "time": "2510201959",
+        "platform": "1",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hagen-Vorhalle"
+        ],
+        "line": "5"
+      },
+      {
+        "id": "-6813376667988938665-2510201821-22",
+        "type": "RE",
+        "number": "26431",
+        "time": "2510202033",
+        "platform": "1",
+        "path_stations": [
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West",
+          "Herzogenrath",
+          "Übach-Palenberg",
+          "Geilenkirchen",
+          "Lindern",
+          "Hückelhoven-Baal",
+          "Erkelenz",
+          "Rheydt Hbf",
+          "Mönchengladbach Hbf",
+          "Neuss Hbf",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Hbf",
+          "Wuppertal-Vohwinkel",
+          "Wuppertal Hbf",
+          "Wuppertal-Barmen",
+          "Wuppertal-Oberbarmen",
+          "Schwelm",
+          "Ennepetal",
+          "Hagen Hbf"
+        ],
+        "line": "4"
+      },
+      {
+        "id": "9042085335717021075-2510202009-3",
+        "type": "RE",
+        "number": "26434",
+        "time": "2510202024",
+        "platform": "2",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Witten Hbf"
+        ],
+        "line": "4"
+      },
+      {
+        "id": "-6791085153543725907-2510202136-2",
+        "type": "RB",
+        "number": "30789",
+        "time": "2510202141",
+        "platform": "2",
+        "path_stations": [
+          "Witten Hbf"
+        ],
+        "line": "40"
+      },
+      {
+        "id": "2184049933202448469-2510202051-3",
+        "type": "S",
+        "number": "31573",
+        "time": "2510202059",
+        "platform": "1",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hagen-Vorhalle"
+        ],
+        "line": "5"
+      },
+      {
+        "id": "-1188912274199941984-2510202116-3",
+        "type": "RB",
+        "number": "30790",
+        "time": "2510202124",
+        "platform": "1",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hagen-Vorhalle"
+        ],
+        "line": "40"
+      },
+      {
+        "id": "-9080355045759634856-2510202117-3",
+        "type": "Bus",
+        "number": "5059",
+        "time": "2510202144",
+        "platform": "",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hagen-Vorhalle"
+        ],
+        "line": "S5"
+      },
+      {
+        "id": "-5972514413000184209-2510202109-3",
+        "type": "RE",
+        "number": "26436",
+        "time": "2510202124",
+        "platform": "2",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Witten Hbf"
+        ],
+        "line": "4"
+      },
+      {
+        "id": "7627542345548093565-2510201921-22",
+        "type": "RE",
+        "number": "26433",
+        "time": "2510202133",
+        "platform": "1",
+        "path_stations": [
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West",
+          "Herzogenrath",
+          "Übach-Palenberg",
+          "Geilenkirchen",
+          "Lindern",
+          "Hückelhoven-Baal",
+          "Erkelenz",
+          "Rheydt Hbf",
+          "Mönchengladbach Hbf",
+          "Neuss Hbf",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Hbf",
+          "Wuppertal-Vohwinkel",
+          "Wuppertal Hbf",
+          "Wuppertal-Barmen",
+          "Wuppertal-Oberbarmen",
+          "Schwelm",
+          "Ennepetal",
+          "Hagen Hbf"
+        ],
+        "line": "4"
+      },
+      {
+        "id": "-8998158162874033067-2510202217-3",
+        "type": "Bus",
+        "number": "5063",
+        "time": "2510202244",
+        "platform": "",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hagen-Vorhalle"
+        ],
+        "line": "S5"
+      },
+      {
+        "id": "-4707204662753624239-2510202156-2",
+        "type": "Bus",
+        "number": "5050",
+        "time": "2510202208",
+        "platform": "",
+        "path_stations": [
+          "Witten Hbf"
+        ],
+        "line": "S5"
+      },
+      {
+        "id": "-2570598243506943265-2510202119-3",
+        "type": "Bus",
+        "number": "4003",
+        "time": "2510202204",
+        "platform": "",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Witten Hbf"
+        ],
+        "line": "RE4"
+      },
+      {
+        "id": "-6990840551848213830-2510202147-3",
+        "type": "Bus",
+        "number": "5061",
+        "time": "2510202214",
+        "platform": "",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hagen-Vorhalle"
+        ],
+        "line": "S5"
+      },
+      {
+        "id": "-89116584977974058-2510202235-2",
+        "type": "Bus",
+        "number": "4002",
+        "time": "2510202255",
+        "platform": "",
+        "path_stations": [
+          "Hagen Hbf"
+        ],
+        "line": "RE4"
+      },
+      {
+        "id": "2307767950662953244-2510202246-2",
+        "type": "Bus",
+        "number": "4009",
+        "time": "2510202301",
+        "platform": "",
+        "path_stations": [
+          "Witten Hbf"
+        ],
+        "line": "RB40"
+      },
+      {
+        "id": "1163563136445164164-2510202335-2",
+        "type": "Bus",
+        "number": "4004",
+        "time": "2510202355",
+        "platform": "",
+        "path_stations": [
+          "Hagen Hbf"
+        ],
+        "line": "RE4"
+      },
+      {
+        "id": "-4061512626151371898-2510202336-2",
+        "type": "RB",
+        "number": "30793",
+        "time": "2510202341",
+        "platform": "2",
+        "path_stations": [
+          "Witten Hbf"
+        ],
+        "line": "40"
+      },
+      {
+        "id": "-4197980711159568015-2510202230-3",
+        "type": "Bus",
+        "number": "4008",
+        "time": "2510202300",
+        "platform": "",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hagen-Vorhalle"
+        ],
+        "line": "RB40"
+      },
+      {
+        "id": "2280342494717693104-2510202317-3",
+        "type": "Bus",
+        "number": "5067",
+        "time": "2510202344",
+        "platform": "",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hagen-Vorhalle"
+        ],
+        "line": "S5"
+      },
+      {
+        "id": "-7550813399566809546-2510202243-3",
+        "type": "Bus",
+        "number": "5069",
+        "time": "2510202310",
+        "platform": "",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hagen-Vorhalle"
+        ],
+        "line": "S5"
+      },
+      {
+        "id": "7296113255265384195-2510202256-2",
+        "type": "Bus",
+        "number": "5052",
+        "time": "2510202308",
+        "platform": "",
+        "path_stations": [
+          "Witten Hbf"
+        ],
+        "line": "S5"
+      },
+      {
+        "id": "-2546063476750005041-2510202247-3",
+        "type": "Bus",
+        "number": "5065",
+        "time": "2510202314",
+        "platform": "",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hagen-Vorhalle"
+        ],
+        "line": "S5"
+      },
+      {
+        "id": "-4563442018058625336-2510202219-3",
+        "type": "Bus",
+        "number": "4005",
+        "time": "2510202304",
+        "platform": "",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Witten Hbf"
+        ],
+        "line": "RE4"
+      },
+      {
+        "id": "2628803490784327327-2510202356-2",
+        "type": "Bus",
+        "number": "5054",
+        "time": "2510210008",
+        "platform": "",
+        "path_stations": [
+          "Witten Hbf"
+        ],
+        "line": "S5"
+      },
+      {
+        "id": "7673853058539936880-2510210017-3",
+        "type": "Bus",
+        "number": "5051",
+        "time": "2510210044",
+        "platform": "",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hagen-Vorhalle"
+        ],
+        "line": "S5"
+      },
+      {
+        "id": "3996590109924085380-2510202333-3",
+        "type": "Bus",
+        "number": "4010",
+        "time": "2510210003",
+        "platform": "",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hagen-Vorhalle"
+        ],
+        "line": "RB40"
+      },
+      {
+        "id": "5819709905874372462-2510202346-2",
+        "type": "Bus",
+        "number": "4011",
+        "time": "2510210001",
+        "platform": "",
+        "path_stations": [
+          "Witten Hbf"
+        ],
+        "line": "RB40"
+      },
+      {
+        "id": "8758388571078966484-2510210030-3",
+        "type": "Bus",
+        "number": "4006",
+        "time": "2510210100",
+        "platform": "",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hagen-Vorhalle"
+        ],
+        "line": "RB40"
+      },
+      {
+        "id": "8348277243163136377-2510210025-6",
+        "type": "Bus",
+        "number": "40003",
+        "time": "2510210141",
+        "platform": "",
+        "path_stations": [
+          "Essen Hbf Kruppstraße/Am Thyssenhaus",
+          "Wattenscheid",
+          "Bochum West",
+          "Bochum Hbf (Buddenbergplatz)",
+          "Witten Hbf"
+        ],
+        "line": "RB40"
+      },
+      {
+        "id": "-1174294480995189621-2510210047-2",
+        "type": "Bus",
+        "number": "4007",
+        "time": "2510210102",
+        "platform": "",
+        "path_stations": [
+          "Witten Hbf"
+        ],
+        "line": "RB40"
+      },
+      {
+        "id": "-2557749045106841023-2510210047-3",
+        "type": "Bus",
+        "number": "5053",
+        "time": "2510210114",
+        "platform": "",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hagen-Vorhalle"
+        ],
+        "line": "S5"
+      },
+      {
+        "id": "2238998817635128170-2510210056-2",
+        "type": "Bus",
+        "number": "5056",
+        "time": "2510210108",
+        "platform": "",
+        "path_stations": [
+          "Witten Hbf"
+        ],
+        "line": "S5"
+      },
+      {
+        "id": "-6987830441758208856-2510210417-3",
+        "type": "Bus",
+        "number": "5055",
+        "time": "2510210444",
+        "platform": "",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hagen-Vorhalle"
+        ],
+        "line": "S5"
+      },
+      {
+        "id": "-644935674627333430-2510210400-3",
+        "type": "Bus",
+        "number": "40006",
+        "time": "2510210430",
+        "platform": "",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hagen-Vorhalle"
+        ],
+        "line": "RB40"
+      },
+      {
+        "id": "2435735674876330989-2510210447-3",
+        "type": "Bus",
+        "number": "5057",
+        "time": "2510210514",
+        "platform": "",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hagen-Vorhalle"
+        ],
+        "line": "S5"
+      },
+      {
+        "id": "-3530546713726621126-2510210530-6",
+        "type": "S",
+        "number": "31512",
+        "time": "2510210554",
+        "platform": "2",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Barop",
+          "Dortmund-Kruckel",
+          "Witten-Annen Nord",
+          "Witten Hbf"
+        ],
+        "line": "5"
+      },
+      {
+        "id": "1016031418116244288-2510210551-3",
+        "type": "S",
+        "number": "31513",
+        "time": "2510210559",
+        "platform": "1",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hagen-Vorhalle"
+        ],
+        "line": "5"
+      },
+      {
+        "id": "7043854075742711895-2510210456-2",
+        "type": "Bus",
+        "number": "5058",
+        "time": "2510210508",
+        "platform": "",
+        "path_stations": [
+          "Witten Hbf"
+        ],
+        "line": "S5"
+      },
+      {
+        "id": "3738247329104172180-2510210516-3",
+        "type": "RB",
+        "number": "30756",
+        "time": "2510210524",
+        "platform": "1",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hagen-Vorhalle"
+        ],
+        "line": "40"
+      },
+      {
+        "id": "-4427561266008451849-2510210537-2",
+        "type": "RB",
+        "number": "30757",
+        "time": "2510210541",
+        "platform": "2",
+        "path_stations": [
+          "Witten Hbf"
+        ],
+        "line": "40"
+      }
+    ],
+    "departures": [
+      {
+        "id": "5033649121656058762-2510201709-3",
+        "type": "RE",
+        "number": "26428",
+        "direction": "Aachen Hbf",
+        "platform": "2",
+        "time": "2510201725",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Hagen Hbf",
+          "Ennepetal",
+          "Schwelm",
+          "Wuppertal-Oberbarmen",
+          "Wuppertal-Barmen",
+          "Wuppertal Hbf",
+          "Wuppertal-Vohwinkel",
+          "Düsseldorf Hbf",
+          "Düsseldorf-Bilk",
+          "Neuss Hbf",
+          "Mönchengladbach Hbf",
+          "Rheydt Hbf",
+          "Erkelenz",
+          "Hückelhoven-Baal",
+          "Lindern",
+          "Geilenkirchen",
+          "Übach-Palenberg",
+          "Herzogenrath",
+          "Aachen West",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "8909041713043208865-2510201521-22",
+        "type": "RE",
+        "number": "26425",
+        "direction": "Dortmund Hbf",
+        "platform": "1",
+        "time": "2510201734",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Witten Hbf",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "4172032370327750561-2510201751-3",
+        "type": "S",
+        "number": "31561",
+        "direction": "Dortmund Hbf",
+        "platform": "1",
+        "time": "2510201800",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Witten Hbf",
+          "Witten-Annen Nord",
+          "Dortmund-Kruckel",
+          "Dortmund-Barop",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "9040000253734195318-2510201716-3",
+        "type": "RB",
+        "number": "30782",
+        "direction": "Witten Hbf",
+        "platform": "1",
+        "time": "2510201725",
+        "destination": "Witten Hbf",
+        "path_stations": [
+          "Witten Hbf"
+        ]
+      },
+      {
+        "id": "8773351494667447053-2510201736-2",
+        "type": "RB",
+        "number": "30781",
+        "direction": "Hagen Hbf",
+        "platform": "2",
+        "time": "2510201742",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Hagen-Vorhalle",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "2783062143932316147-2510201730-6",
+        "type": "S",
+        "number": "31560",
+        "direction": "Hagen Hbf",
+        "platform": "2",
+        "time": "2510201755",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Hagen-Vorhalle",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "-391994223279510474-2510201651-3",
+        "type": "S",
+        "number": "31557",
+        "direction": "Dortmund Hbf",
+        "platform": "1",
+        "time": "2510201700",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Witten Hbf",
+          "Witten-Annen Nord",
+          "Dortmund-Kruckel",
+          "Dortmund-Barop",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "8492881050679500082-2510201809-3",
+        "type": "RE",
+        "number": "26430",
+        "direction": "Aachen Hbf",
+        "platform": "2",
+        "time": "2510201825",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Hagen Hbf",
+          "Ennepetal",
+          "Schwelm",
+          "Wuppertal-Oberbarmen",
+          "Wuppertal-Barmen",
+          "Wuppertal Hbf",
+          "Wuppertal-Vohwinkel",
+          "Düsseldorf Hbf",
+          "Düsseldorf-Bilk",
+          "Neuss Hbf",
+          "Mönchengladbach Hbf",
+          "Rheydt Hbf",
+          "Erkelenz",
+          "Hückelhoven-Baal",
+          "Lindern",
+          "Geilenkirchen",
+          "Übach-Palenberg",
+          "Herzogenrath",
+          "Aachen West",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "-2935693617252737777-2510201621-22",
+        "type": "RE",
+        "number": "26427",
+        "direction": "Dortmund Hbf",
+        "platform": "1",
+        "time": "2510201834",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Witten Hbf",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "876006260193980944-2510201816-3",
+        "type": "RB",
+        "number": "30784",
+        "direction": "Witten Hbf",
+        "platform": "1",
+        "time": "2510201825",
+        "destination": "Witten Hbf",
+        "path_stations": [
+          "Witten Hbf"
+        ]
+      },
+      {
+        "id": "4172032370327750561-2510201751-3",
+        "type": "S",
+        "number": "31561",
+        "direction": "Dortmund Hbf",
+        "platform": "1",
+        "time": "2510201800",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Witten Hbf",
+          "Witten-Annen Nord",
+          "Dortmund-Kruckel",
+          "Dortmund-Barop",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-7551418642928711125-2510201836-2",
+        "type": "RB",
+        "number": "30783",
+        "direction": "Hagen Hbf",
+        "platform": "2",
+        "time": "2510201842",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Hagen-Vorhalle",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "8874872238193428783-2510201851-3",
+        "type": "S",
+        "number": "31565",
+        "direction": "Dortmund Hbf",
+        "platform": "1",
+        "time": "2510201900",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Witten Hbf",
+          "Witten-Annen Nord",
+          "Dortmund-Kruckel",
+          "Dortmund-Barop",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "916164894838351053-2510201830-6",
+        "type": "S",
+        "number": "31564",
+        "direction": "Hagen Hbf",
+        "platform": "2",
+        "time": "2510201855",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Hagen-Vorhalle",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "8874872238193428783-2510201851-3",
+        "type": "S",
+        "number": "31565",
+        "direction": "Dortmund Hbf",
+        "platform": "1",
+        "time": "2510201900",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Witten Hbf",
+          "Witten-Annen Nord",
+          "Dortmund-Kruckel",
+          "Dortmund-Barop",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "1068212982267214245-2510201721-22",
+        "type": "RE",
+        "number": "26429",
+        "direction": "Dortmund Hbf",
+        "platform": "1",
+        "time": "2510201934",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Witten Hbf",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-8214142692074132385-2510201936-2",
+        "type": "RB",
+        "number": "30785",
+        "direction": "Hagen Hbf",
+        "platform": "2",
+        "time": "2510201942",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Hagen-Vorhalle",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "-7597581855357434688-2510201951-3",
+        "type": "S",
+        "number": "31569",
+        "direction": "Dortmund Hbf",
+        "platform": "1",
+        "time": "2510202000",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Witten Hbf",
+          "Witten-Annen Nord",
+          "Dortmund-Kruckel",
+          "Dortmund-Barop",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "7954629446075791080-2510201916-3",
+        "type": "RB",
+        "number": "30786",
+        "direction": "Witten Hbf",
+        "platform": "1",
+        "time": "2510201925",
+        "destination": "Witten Hbf",
+        "path_stations": [
+          "Witten Hbf"
+        ]
+      },
+      {
+        "id": "-7023175627699294460-2510201930-6",
+        "type": "S",
+        "number": "31568",
+        "direction": "Hagen Hbf",
+        "platform": "2",
+        "time": "2510201955",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Hagen-Vorhalle",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "-901490187036978098-2510201909-3",
+        "type": "RE",
+        "number": "26432",
+        "direction": "Aachen Hbf",
+        "platform": "2",
+        "time": "2510201925",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Hagen Hbf",
+          "Ennepetal",
+          "Schwelm",
+          "Wuppertal-Oberbarmen",
+          "Wuppertal-Barmen",
+          "Wuppertal Hbf",
+          "Wuppertal-Vohwinkel",
+          "Düsseldorf Hbf",
+          "Düsseldorf-Bilk",
+          "Neuss Hbf",
+          "Mönchengladbach Hbf",
+          "Rheydt Hbf",
+          "Erkelenz",
+          "Hückelhoven-Baal",
+          "Lindern",
+          "Geilenkirchen",
+          "Übach-Palenberg",
+          "Herzogenrath",
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "3029820093565105971-2510202036-2",
+        "type": "RB",
+        "number": "30787",
+        "direction": "Hagen Hbf",
+        "platform": "2",
+        "time": "2510202042",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Hagen-Vorhalle",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "2184049933202448469-2510202051-3",
+        "type": "S",
+        "number": "31573",
+        "direction": "Dortmund Hbf",
+        "platform": "1",
+        "time": "2510202100",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Witten Hbf",
+          "Witten-Annen Nord",
+          "Dortmund-Kruckel",
+          "Dortmund-Barop",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-5669108150784872705-2510202016-3",
+        "type": "RB",
+        "number": "30788",
+        "direction": "Witten Hbf",
+        "platform": "1",
+        "time": "2510202025",
+        "destination": "Witten Hbf",
+        "path_stations": [
+          "Witten Hbf"
+        ]
+      },
+      {
+        "id": "-3390275805963925694-2510202030-6",
+        "type": "S",
+        "number": "31572",
+        "direction": "Hagen Hbf",
+        "platform": "2",
+        "time": "2510202055",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Hagen-Vorhalle",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "-7597581855357434688-2510201951-3",
+        "type": "S",
+        "number": "31569",
+        "direction": "Dortmund Hbf",
+        "platform": "1",
+        "time": "2510202000",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Witten Hbf",
+          "Witten-Annen Nord",
+          "Dortmund-Kruckel",
+          "Dortmund-Barop",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-6813376667988938665-2510201821-22",
+        "type": "RE",
+        "number": "26431",
+        "direction": "Dortmund Hbf",
+        "platform": "1",
+        "time": "2510202034",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Witten Hbf",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "9042085335717021075-2510202009-3",
+        "type": "RE",
+        "number": "26434",
+        "direction": "Aachen Hbf",
+        "platform": "2",
+        "time": "2510202025",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Hagen Hbf",
+          "Ennepetal",
+          "Schwelm",
+          "Wuppertal-Oberbarmen",
+          "Wuppertal-Barmen",
+          "Wuppertal Hbf",
+          "Wuppertal-Vohwinkel",
+          "Düsseldorf Hbf",
+          "Düsseldorf-Bilk",
+          "Neuss Hbf",
+          "Mönchengladbach Hbf",
+          "Rheydt Hbf",
+          "Erkelenz",
+          "Hückelhoven-Baal",
+          "Lindern",
+          "Geilenkirchen",
+          "Übach-Palenberg",
+          "Herzogenrath",
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "-6791085153543725907-2510202136-2",
+        "type": "RB",
+        "number": "30789",
+        "direction": "Hagen Hbf",
+        "platform": "2",
+        "time": "2510202142",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Hagen-Vorhalle",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "2184049933202448469-2510202051-3",
+        "type": "S",
+        "number": "31573",
+        "direction": "Dortmund Hbf",
+        "platform": "1",
+        "time": "2510202100",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Witten Hbf",
+          "Witten-Annen Nord",
+          "Dortmund-Kruckel",
+          "Dortmund-Barop",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-1188912274199941984-2510202116-3",
+        "type": "RB",
+        "number": "30790",
+        "direction": "Witten Hbf",
+        "platform": "1",
+        "time": "2510202125",
+        "destination": "Witten Hbf",
+        "path_stations": [
+          "Witten Hbf"
+        ]
+      },
+      {
+        "id": "-9080355045759634856-2510202117-3",
+        "type": "Bus",
+        "number": "5059",
+        "direction": "Witten Hbf",
+        "platform": "",
+        "time": "2510202144",
+        "destination": "Witten Hbf",
+        "path_stations": [
+          "Witten Hbf"
+        ]
+      },
+      {
+        "id": "-5972514413000184209-2510202109-3",
+        "type": "RE",
+        "number": "26436",
+        "direction": "Düsseldorf Hbf",
+        "platform": "2",
+        "time": "2510202125",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Hagen Hbf",
+          "Ennepetal",
+          "Schwelm",
+          "Wuppertal-Oberbarmen",
+          "Wuppertal-Barmen",
+          "Wuppertal Hbf",
+          "Wuppertal-Vohwinkel",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "7627542345548093565-2510201921-22",
+        "type": "RE",
+        "number": "26433",
+        "direction": "Dortmund Hbf",
+        "platform": "1",
+        "time": "2510202134",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Witten Hbf",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-8998158162874033067-2510202217-3",
+        "type": "Bus",
+        "number": "5063",
+        "direction": "Witten Hbf",
+        "platform": "",
+        "time": "2510202244",
+        "destination": "Witten Hbf",
+        "path_stations": [
+          "Witten Hbf"
+        ]
+      },
+      {
+        "id": "-4707204662753624239-2510202156-2",
+        "type": "Bus",
+        "number": "5050",
+        "direction": "Hagen Hbf",
+        "platform": "",
+        "time": "2510202208",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Hagen-Vorhalle",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "-2570598243506943265-2510202119-3",
+        "type": "Bus",
+        "number": "4003",
+        "direction": "Hagen Hbf",
+        "platform": "",
+        "time": "2510202204",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "-6990840551848213830-2510202147-3",
+        "type": "Bus",
+        "number": "5061",
+        "direction": "Witten Hbf",
+        "platform": "",
+        "time": "2510202214",
+        "destination": "Witten Hbf",
+        "path_stations": [
+          "Witten Hbf"
+        ]
+      },
+      {
+        "id": "-89116584977974058-2510202235-2",
+        "type": "Bus",
+        "number": "4002",
+        "direction": "Dortmund Hbf",
+        "platform": "",
+        "time": "2510202255",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Witten Hbf",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "2307767950662953244-2510202246-2",
+        "type": "Bus",
+        "number": "4009",
+        "direction": "Hagen Hbf",
+        "platform": "",
+        "time": "2510202301",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Hagen-Vorhalle",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "1163563136445164164-2510202335-2",
+        "type": "Bus",
+        "number": "4004",
+        "direction": "Dortmund Hbf",
+        "platform": "",
+        "time": "2510202355",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Witten Hbf",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-4061512626151371898-2510202336-2",
+        "type": "RB",
+        "number": "30793",
+        "direction": "Hagen Hbf",
+        "platform": "2",
+        "time": "2510202342",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Hagen-Vorhalle",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "-4197980711159568015-2510202230-3",
+        "type": "Bus",
+        "number": "4008",
+        "direction": "Witten Hbf",
+        "platform": "",
+        "time": "2510202300",
+        "destination": "Witten Hbf",
+        "path_stations": [
+          "Witten Hbf"
+        ]
+      },
+      {
+        "id": "2280342494717693104-2510202317-3",
+        "type": "Bus",
+        "number": "5067",
+        "direction": "Witten Hbf",
+        "platform": "",
+        "time": "2510202344",
+        "destination": "Witten Hbf",
+        "path_stations": [
+          "Witten Hbf"
+        ]
+      },
+      {
+        "id": "-7550813399566809546-2510202243-3",
+        "type": "Bus",
+        "number": "5069",
+        "direction": "Witten Hbf",
+        "platform": "",
+        "time": "2510202310",
+        "destination": "Witten Hbf",
+        "path_stations": [
+          "Witten Hbf"
+        ]
+      },
+      {
+        "id": "7296113255265384195-2510202256-2",
+        "type": "Bus",
+        "number": "5052",
+        "direction": "Hagen Hbf",
+        "platform": "",
+        "time": "2510202308",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Hagen-Vorhalle",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "-2546063476750005041-2510202247-3",
+        "type": "Bus",
+        "number": "5065",
+        "direction": "Witten Hbf",
+        "platform": "",
+        "time": "2510202314",
+        "destination": "Witten Hbf",
+        "path_stations": [
+          "Witten Hbf"
+        ]
+      },
+      {
+        "id": "-4563442018058625336-2510202219-3",
+        "type": "Bus",
+        "number": "4005",
+        "direction": "Hagen Hbf",
+        "platform": "",
+        "time": "2510202304",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "2628803490784327327-2510202356-2",
+        "type": "Bus",
+        "number": "5054",
+        "direction": "Hagen Hbf",
+        "platform": "",
+        "time": "2510210008",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Hagen-Vorhalle",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "7673853058539936880-2510210017-3",
+        "type": "Bus",
+        "number": "5051",
+        "direction": "Witten Hbf",
+        "platform": "",
+        "time": "2510210044",
+        "destination": "Witten Hbf",
+        "path_stations": [
+          "Witten Hbf"
+        ]
+      },
+      {
+        "id": "3996590109924085380-2510202333-3",
+        "type": "Bus",
+        "number": "4010",
+        "direction": "Witten Hbf",
+        "platform": "",
+        "time": "2510210003",
+        "destination": "Witten Hbf",
+        "path_stations": [
+          "Witten Hbf"
+        ]
+      },
+      {
+        "id": "5819709905874372462-2510202346-2",
+        "type": "Bus",
+        "number": "4011",
+        "direction": "Hagen Hbf",
+        "platform": "",
+        "time": "2510210001",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Hagen-Vorhalle",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "8758388571078966484-2510210030-3",
+        "type": "Bus",
+        "number": "4006",
+        "direction": "Witten Hbf",
+        "platform": "",
+        "time": "2510210100",
+        "destination": "Witten Hbf",
+        "path_stations": [
+          "Witten Hbf"
+        ]
+      },
+      {
+        "id": "8348277243163136377-2510210025-6",
+        "type": "Bus",
+        "number": "40003",
+        "direction": "Hagen Hbf",
+        "platform": "",
+        "time": "2510210141",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Hagen-Vorhalle",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "-1174294480995189621-2510210047-2",
+        "type": "Bus",
+        "number": "4007",
+        "direction": "Hagen Hbf",
+        "platform": "",
+        "time": "2510210102",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Hagen-Vorhalle",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "-2557749045106841023-2510210047-3",
+        "type": "Bus",
+        "number": "5053",
+        "direction": "Witten Hbf",
+        "platform": "",
+        "time": "2510210114",
+        "destination": "Witten Hbf",
+        "path_stations": [
+          "Witten Hbf"
+        ]
+      },
+      {
+        "id": "2238998817635128170-2510210056-2",
+        "type": "Bus",
+        "number": "5056",
+        "direction": "Hagen Hbf",
+        "platform": "",
+        "time": "2510210108",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Hagen-Vorhalle",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "-6987830441758208856-2510210417-3",
+        "type": "Bus",
+        "number": "5055",
+        "direction": "Witten Hbf",
+        "platform": "",
+        "time": "2510210444",
+        "destination": "Witten Hbf",
+        "path_stations": [
+          "Witten Hbf"
+        ]
+      },
+      {
+        "id": "-644935674627333430-2510210400-3",
+        "type": "Bus",
+        "number": "40006",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510210430",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Witten Hbf",
+          "Bochum Hbf (Buddenbergplatz)",
+          "Bochum West",
+          "Wattenscheid",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "2435735674876330989-2510210447-3",
+        "type": "Bus",
+        "number": "5057",
+        "direction": "Witten Hbf",
+        "platform": "",
+        "time": "2510210514",
+        "destination": "Witten Hbf",
+        "path_stations": [
+          "Witten Hbf"
+        ]
+      },
+      {
+        "id": "-3530546713726621126-2510210530-6",
+        "type": "S",
+        "number": "31512",
+        "direction": "Hagen Hbf",
+        "platform": "2",
+        "time": "2510210555",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Hagen-Vorhalle",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "1016031418116244288-2510210551-3",
+        "type": "S",
+        "number": "31513",
+        "direction": "Dortmund Hbf",
+        "platform": "1",
+        "time": "2510210600",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Witten Hbf",
+          "Witten-Annen Nord",
+          "Dortmund-Kruckel",
+          "Dortmund-Barop",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "7043854075742711895-2510210456-2",
+        "type": "Bus",
+        "number": "5058",
+        "direction": "Hagen Hbf",
+        "platform": "",
+        "time": "2510210508",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Hagen-Vorhalle",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "3738247329104172180-2510210516-3",
+        "type": "RB",
+        "number": "30756",
+        "direction": "Witten Hbf",
+        "platform": "1",
+        "time": "2510210525",
+        "destination": "Witten Hbf",
+        "path_stations": [
+          "Witten Hbf"
+        ]
+      },
+      {
+        "id": "-4427561266008451849-2510210537-2",
+        "type": "RB",
+        "number": "30757",
+        "direction": "Hagen Hbf",
+        "platform": "2",
+        "time": "2510210542",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Hagen-Vorhalle",
+          "Hagen Hbf"
+        ]
+      }
+    ]
+  }
+}

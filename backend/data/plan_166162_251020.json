@@ -1,0 +1,1342 @@
+{
+  "station_eva": "166162",
+  "date": "251020",
+  "cached_at": "2025-10-20T15:48:28.302197",
+  "plan_data": {
+    "arrivals": [
+      {
+        "id": "8953417866100544648-2510202232-4",
+        "type": "Bus",
+        "number": "2",
+        "time": "2510202250",
+        "platform": "",
+        "path_stations": [
+          "Donnersberger Straße, München",
+          "Hirschgarten, München",
+          "Laim, München"
+        ],
+        "line": "S"
+      },
+      {
+        "id": "-6735348885135344103-2510202237-4",
+        "type": "Bus",
+        "number": "4",
+        "time": "2510202255",
+        "platform": "",
+        "path_stations": [
+          "Donnersberger Straße, München",
+          "Hirschgarten, München",
+          "Laim, München"
+        ],
+        "line": "S"
+      },
+      {
+        "id": "7563364598595891798-2510202249-4",
+        "type": "Bus",
+        "number": "4012",
+        "time": "2510202316",
+        "platform": "",
+        "path_stations": [
+          "Puchheim Bahnhof (S) Südseite, Puchheim",
+          "Aubing, München",
+          "Leienfelsstraße, München"
+        ],
+        "line": "S4"
+      },
+      {
+        "id": "-6163255467488662468-2510202312-4",
+        "type": "Bus",
+        "number": "18",
+        "time": "2510202330",
+        "platform": "",
+        "path_stations": [
+          "Donnersberger Straße, München",
+          "Hirschgarten, München",
+          "Laim, München"
+        ],
+        "line": "S"
+      },
+      {
+        "id": "6114863545162071795-2510202332-4",
+        "type": "Bus",
+        "number": "26",
+        "time": "2510202350",
+        "platform": "",
+        "path_stations": [
+          "Donnersberger Straße, München",
+          "Hirschgarten, München",
+          "Laim, München"
+        ],
+        "line": "S"
+      },
+      {
+        "id": "-4924302124395811972-2510202322-4",
+        "type": "Bus",
+        "number": "22",
+        "time": "2510202340",
+        "platform": "",
+        "path_stations": [
+          "Donnersberger Straße, München",
+          "Hirschgarten, München",
+          "Laim, München"
+        ],
+        "line": "S"
+      },
+      {
+        "id": "-4101351387472445757-2510202257-4",
+        "type": "Bus",
+        "number": "12",
+        "time": "2510202315",
+        "platform": "",
+        "path_stations": [
+          "Donnersberger Straße, München",
+          "Hirschgarten, München",
+          "Laim, München"
+        ],
+        "line": "S"
+      },
+      {
+        "id": "-3750619288175035245-2510202302-4",
+        "type": "Bus",
+        "number": "14",
+        "time": "2510202320",
+        "platform": "",
+        "path_stations": [
+          "Donnersberger Straße, München",
+          "Hirschgarten, München",
+          "Laim, München"
+        ],
+        "line": "S"
+      },
+      {
+        "id": "8439815217654604529-2510202243-3",
+        "type": "Bus",
+        "number": "4006",
+        "time": "2510202316",
+        "platform": "",
+        "path_stations": [
+          "Buchenau, Fürstenfeldbruck",
+          "Fürstenfeldbruck"
+        ],
+        "line": "S4"
+      },
+      {
+        "id": "-7592798426500006984-2510202247-4",
+        "type": "Bus",
+        "number": "8",
+        "time": "2510202305",
+        "platform": "",
+        "path_stations": [
+          "Donnersberger Straße, München",
+          "Hirschgarten, München",
+          "Laim, München"
+        ],
+        "line": "S"
+      },
+      {
+        "id": "-1016055952179118720-2510202317-4",
+        "type": "Bus",
+        "number": "20",
+        "time": "2510202335",
+        "platform": "",
+        "path_stations": [
+          "Donnersberger Straße, München",
+          "Hirschgarten, München",
+          "Laim, München"
+        ],
+        "line": "S"
+      },
+      {
+        "id": "-3819097377411085970-2510202242-4",
+        "type": "Bus",
+        "number": "6",
+        "time": "2510202300",
+        "platform": "",
+        "path_stations": [
+          "Donnersberger Straße, München",
+          "Hirschgarten, München",
+          "Laim, München"
+        ],
+        "line": "S"
+      },
+      {
+        "id": "-3435763524064758861-2510202327-4",
+        "type": "Bus",
+        "number": "24",
+        "time": "2510202345",
+        "platform": "",
+        "path_stations": [
+          "Donnersberger Straße, München",
+          "Hirschgarten, München",
+          "Laim, München"
+        ],
+        "line": "S"
+      },
+      {
+        "id": "8015823379293911035-2510202337-4",
+        "type": "Bus",
+        "number": "28",
+        "time": "2510202355",
+        "platform": "",
+        "path_stations": [
+          "Donnersberger Straße, München",
+          "Hirschgarten, München",
+          "Laim, München"
+        ],
+        "line": "S"
+      },
+      {
+        "id": "-220342997877737741-2510202307-4",
+        "type": "Bus",
+        "number": "16",
+        "time": "2510202325",
+        "platform": "",
+        "path_stations": [
+          "Donnersberger Straße, München",
+          "Hirschgarten, München",
+          "Laim, München"
+        ],
+        "line": "S"
+      },
+      {
+        "id": "8299318205898978606-2510202252-4",
+        "type": "Bus",
+        "number": "10",
+        "time": "2510202310",
+        "platform": "",
+        "path_stations": [
+          "Donnersberger Straße, München",
+          "Hirschgarten, München",
+          "Laim, München"
+        ],
+        "line": "S"
+      },
+      {
+        "id": "-2046771123373545802-2510210032-4",
+        "type": "Bus",
+        "number": "52",
+        "time": "2510210050",
+        "platform": "",
+        "path_stations": [
+          "Donnersberger Straße, München",
+          "Hirschgarten, München",
+          "Laim, München"
+        ],
+        "line": "S"
+      },
+      {
+        "id": "5425787243613264286-2510202357-4",
+        "type": "Bus",
+        "number": "38",
+        "time": "2510210015",
+        "platform": "",
+        "path_stations": [
+          "Donnersberger Straße, München",
+          "Hirschgarten, München",
+          "Laim, München"
+        ],
+        "line": "S"
+      },
+      {
+        "id": "6442746021300324086-2510210037-4",
+        "type": "Bus",
+        "number": "54",
+        "time": "2510210055",
+        "platform": "",
+        "path_stations": [
+          "Donnersberger Straße, München",
+          "Hirschgarten, München",
+          "Laim, München"
+        ],
+        "line": "S"
+      },
+      {
+        "id": "-2016746332177302163-2510210002-4",
+        "type": "Bus",
+        "number": "40",
+        "time": "2510210020",
+        "platform": "",
+        "path_stations": [
+          "Donnersberger Straße, München",
+          "Hirschgarten, München",
+          "Laim, München"
+        ],
+        "line": "S"
+      },
+      {
+        "id": "-3091375281821168827-2510202343-3",
+        "type": "Bus",
+        "number": "4016",
+        "time": "2510210016",
+        "platform": "",
+        "path_stations": [
+          "Buchenau, Fürstenfeldbruck",
+          "Fürstenfeldbruck"
+        ],
+        "line": "S4"
+      },
+      {
+        "id": "3122140387270231440-2510210017-4",
+        "type": "Bus",
+        "number": "46",
+        "time": "2510210035",
+        "platform": "",
+        "path_stations": [
+          "Donnersberger Straße, München",
+          "Hirschgarten, München",
+          "Laim, München"
+        ],
+        "line": "S"
+      },
+      {
+        "id": "1322325297498095809-2510202342-4",
+        "type": "Bus",
+        "number": "30",
+        "time": "2510210000",
+        "platform": "",
+        "path_stations": [
+          "Donnersberger Straße, München",
+          "Hirschgarten, München",
+          "Laim, München"
+        ],
+        "line": "S"
+      },
+      {
+        "id": "3188031824216411810-2510210007-4",
+        "type": "Bus",
+        "number": "42",
+        "time": "2510210025",
+        "platform": "",
+        "path_stations": [
+          "Donnersberger Straße, München",
+          "Hirschgarten, München",
+          "Laim, München"
+        ],
+        "line": "S"
+      },
+      {
+        "id": "2694561980428646237-2510210027-4",
+        "type": "Bus",
+        "number": "50",
+        "time": "2510210045",
+        "platform": "",
+        "path_stations": [
+          "Donnersberger Straße, München",
+          "Hirschgarten, München",
+          "Laim, München"
+        ],
+        "line": "S"
+      },
+      {
+        "id": "4301632343251565771-2510202352-4",
+        "type": "Bus",
+        "number": "34",
+        "time": "2510210010",
+        "platform": "",
+        "path_stations": [
+          "Donnersberger Straße, München",
+          "Hirschgarten, München",
+          "Laim, München"
+        ],
+        "line": "S"
+      },
+      {
+        "id": "-5942401523512434168-2510202347-4",
+        "type": "Bus",
+        "number": "32",
+        "time": "2510210005",
+        "platform": "",
+        "path_stations": [
+          "Donnersberger Straße, München",
+          "Hirschgarten, München",
+          "Laim, München"
+        ],
+        "line": "S"
+      },
+      {
+        "id": "-739214604774125067-2510210012-4",
+        "type": "Bus",
+        "number": "44",
+        "time": "2510210030",
+        "platform": "",
+        "path_stations": [
+          "Donnersberger Straße, München",
+          "Hirschgarten, München",
+          "Laim, München"
+        ],
+        "line": "S"
+      },
+      {
+        "id": "-6039628313617688594-2510202349-4",
+        "type": "Bus",
+        "number": "4022",
+        "time": "2510210016",
+        "platform": "",
+        "path_stations": [
+          "Puchheim Bahnhof (S) Südseite, Puchheim",
+          "Aubing, München",
+          "Leienfelsstraße, München"
+        ],
+        "line": "S4"
+      },
+      {
+        "id": "-7435734658364981928-2510210022-4",
+        "type": "Bus",
+        "number": "48",
+        "time": "2510210040",
+        "platform": "",
+        "path_stations": [
+          "Donnersberger Straße, München",
+          "Hirschgarten, München",
+          "Laim, München"
+        ],
+        "line": "S"
+      },
+      {
+        "id": "-8587366447553509860-2510210117-4",
+        "type": "Bus",
+        "number": "70",
+        "time": "2510210135",
+        "platform": "",
+        "path_stations": [
+          "Donnersberger Straße, München",
+          "Hirschgarten, München",
+          "Laim, München"
+        ],
+        "line": "S"
+      },
+      {
+        "id": "-500745656009339419-2510210057-4",
+        "type": "Bus",
+        "number": "62",
+        "time": "2510210115",
+        "platform": "",
+        "path_stations": [
+          "Donnersberger Straße, München",
+          "Hirschgarten, München",
+          "Laim, München"
+        ],
+        "line": "S"
+      },
+      {
+        "id": "7298058060669962513-2510210137-4",
+        "type": "Bus",
+        "number": "76",
+        "time": "2510210155",
+        "platform": "",
+        "path_stations": [
+          "Donnersberger Straße, München",
+          "Hirschgarten, München",
+          "Laim, München"
+        ],
+        "line": "S"
+      },
+      {
+        "id": "2652329027225992954-2510210122-4",
+        "type": "Bus",
+        "number": "72",
+        "time": "2510210140",
+        "platform": "",
+        "path_stations": [
+          "Donnersberger Straße, München",
+          "Hirschgarten, München",
+          "Laim, München"
+        ],
+        "line": "S"
+      },
+      {
+        "id": "-2538392825756246269-2510210047-4",
+        "type": "Bus",
+        "number": "58",
+        "time": "2510210105",
+        "platform": "",
+        "path_stations": [
+          "Donnersberger Straße, München",
+          "Hirschgarten, München",
+          "Laim, München"
+        ],
+        "line": "S"
+      },
+      {
+        "id": "-4118734249811233112-2510210107-4",
+        "type": "Bus",
+        "number": "66",
+        "time": "2510210125",
+        "platform": "",
+        "path_stations": [
+          "Donnersberger Straße, München",
+          "Hirschgarten, München",
+          "Laim, München"
+        ],
+        "line": "S"
+      },
+      {
+        "id": "-2416945217354589979-2510210052-4",
+        "type": "Bus",
+        "number": "60",
+        "time": "2510210110",
+        "platform": "",
+        "path_stations": [
+          "Donnersberger Straße, München",
+          "Hirschgarten, München",
+          "Laim, München"
+        ],
+        "line": "S"
+      },
+      {
+        "id": "-677398792700422329-2510210127-4",
+        "type": "Bus",
+        "number": "74",
+        "time": "2510210145",
+        "platform": "",
+        "path_stations": [
+          "Donnersberger Straße, München",
+          "Hirschgarten, München",
+          "Laim, München"
+        ],
+        "line": "S"
+      },
+      {
+        "id": "-5606256951968147384-2510210042-4",
+        "type": "Bus",
+        "number": "56",
+        "time": "2510210100",
+        "platform": "",
+        "path_stations": [
+          "Donnersberger Straße, München",
+          "Hirschgarten, München",
+          "Laim, München"
+        ],
+        "line": "S"
+      },
+      {
+        "id": "-6194745355969467941-2510210112-4",
+        "type": "Bus",
+        "number": "68",
+        "time": "2510210130",
+        "platform": "",
+        "path_stations": [
+          "Donnersberger Straße, München",
+          "Hirschgarten, München",
+          "Laim, München"
+        ],
+        "line": "S"
+      },
+      {
+        "id": "-4155418913192474015-2510210102-4",
+        "type": "Bus",
+        "number": "64",
+        "time": "2510210120",
+        "platform": "",
+        "path_stations": [
+          "Donnersberger Straße, München",
+          "Hirschgarten, München",
+          "Laim, München"
+        ],
+        "line": "S"
+      },
+      {
+        "id": "4909437670854679975-2510210147-4",
+        "type": "Bus",
+        "number": "78",
+        "time": "2510210205",
+        "platform": "",
+        "path_stations": [
+          "Donnersberger Straße, München",
+          "Hirschgarten, München",
+          "Laim, München"
+        ],
+        "line": "S"
+      },
+      {
+        "id": "-3973070409745375302-2510210157-4",
+        "type": "Bus",
+        "number": "80",
+        "time": "2510210215",
+        "platform": "",
+        "path_stations": [
+          "Donnersberger Straße, München",
+          "Hirschgarten, München",
+          "Laim, München"
+        ],
+        "line": "S"
+      },
+      {
+        "id": "-263836555601969064-2510210207-4",
+        "type": "Bus",
+        "number": "82",
+        "time": "2510210225",
+        "platform": "",
+        "path_stations": [
+          "Donnersberger Straße, München",
+          "Hirschgarten, München",
+          "Laim, München"
+        ],
+        "line": "S"
+      },
+      {
+        "id": "-8562680196246349824-2510210217-4",
+        "type": "Bus",
+        "number": "84",
+        "time": "2510210235",
+        "platform": "",
+        "path_stations": [
+          "Donnersberger Straße, München",
+          "Hirschgarten, München",
+          "Laim, München"
+        ],
+        "line": "S"
+      },
+      {
+        "id": "-281145083588217115-2510210227-4",
+        "type": "Bus",
+        "number": "86",
+        "time": "2510210245",
+        "platform": "",
+        "path_stations": [
+          "Donnersberger Straße, München",
+          "Hirschgarten, München",
+          "Laim, München"
+        ],
+        "line": "S"
+      },
+      {
+        "id": "5571323504543798400-2510210237-4",
+        "type": "Bus",
+        "number": "88",
+        "time": "2510210255",
+        "platform": "",
+        "path_stations": [
+          "Donnersberger Straße, München",
+          "Hirschgarten, München",
+          "Laim, München"
+        ],
+        "line": "S"
+      },
+      {
+        "id": "8880006141402911055-2510210337-4",
+        "type": "Bus",
+        "number": "90",
+        "time": "2510210355",
+        "platform": "",
+        "path_stations": [
+          "Donnersberger Straße, München",
+          "Hirschgarten, München",
+          "Laim, München"
+        ],
+        "line": "S"
+      },
+      {
+        "id": "252559579194005254-2510210437-4",
+        "type": "Bus",
+        "number": "96",
+        "time": "2510210455",
+        "platform": "",
+        "path_stations": [
+          "Donnersberger Straße, München",
+          "Hirschgarten, München",
+          "Laim, München"
+        ],
+        "line": "S"
+      },
+      {
+        "id": "-1486138086470408383-2510210417-4",
+        "type": "Bus",
+        "number": "94",
+        "time": "2510210435",
+        "platform": "",
+        "path_stations": [
+          "Donnersberger Straße, München",
+          "Hirschgarten, München",
+          "Laim, München"
+        ],
+        "line": "S"
+      },
+      {
+        "id": "-7864168802124124451-2510210357-4",
+        "type": "Bus",
+        "number": "92",
+        "time": "2510210415",
+        "platform": "",
+        "path_stations": [
+          "Donnersberger Straße, München",
+          "Hirschgarten, München",
+          "Laim, München"
+        ],
+        "line": "S"
+      }
+    ],
+    "departures": [
+      {
+        "id": "3311200193037942760-2510202241-1",
+        "type": "Bus",
+        "number": "5",
+        "direction": "Donnersbergerbrücke, München",
+        "platform": "",
+        "time": "2510202241",
+        "destination": "Donnersbergerbrücke, München",
+        "path_stations": [
+          "Laim, München",
+          "Hirschgarten, München",
+          "Donnersbergerbrücke, München"
+        ]
+      },
+      {
+        "id": "-1013796318861694693-2510202246-1",
+        "type": "Bus",
+        "number": "7",
+        "direction": "Donnersbergerbrücke, München",
+        "platform": "",
+        "time": "2510202246",
+        "destination": "Donnersbergerbrücke, München",
+        "path_stations": [
+          "Laim, München",
+          "Hirschgarten, München",
+          "Donnersbergerbrücke, München"
+        ]
+      },
+      {
+        "id": "-3761253226796289447-2510202222-1",
+        "type": "Bus",
+        "number": "4309",
+        "direction": "Puchheim Bahnhof (S) Südseite, Puchheim",
+        "platform": "",
+        "time": "2510202222",
+        "destination": "Puchheim Bahnhof (S) Südseite, Puchheim",
+        "path_stations": [
+          "Leienfelsstraße, München",
+          "Aubing, München",
+          "Puchheim Bahnhof (S) Südseite, Puchheim"
+        ]
+      },
+      {
+        "id": "6782975225807761513-2510202251-1",
+        "type": "Bus",
+        "number": "9",
+        "direction": "Donnersbergerbrücke, München",
+        "platform": "",
+        "time": "2510202251",
+        "destination": "Donnersbergerbrücke, München",
+        "path_stations": [
+          "Laim, München",
+          "Hirschgarten, München",
+          "Donnersbergerbrücke, München"
+        ]
+      },
+      {
+        "id": "7727085686582756866-2510202222-1",
+        "type": "Bus",
+        "number": "4003",
+        "direction": "Buchenau, Fürstenfeldbruck",
+        "platform": "",
+        "time": "2510202222",
+        "destination": "Buchenau, Fürstenfeldbruck",
+        "path_stations": [
+          "Fürstenfeldbruck",
+          "Buchenau, Fürstenfeldbruck"
+        ]
+      },
+      {
+        "id": "8449560709807935957-2510202256-1",
+        "type": "Bus",
+        "number": "11",
+        "direction": "Donnersbergerbrücke, München",
+        "platform": "",
+        "time": "2510202256",
+        "destination": "Donnersbergerbrücke, München",
+        "path_stations": [
+          "Laim, München",
+          "Hirschgarten, München",
+          "Donnersbergerbrücke, München"
+        ]
+      },
+      {
+        "id": "-7340967853139796962-2510202231-1",
+        "type": "Bus",
+        "number": "1",
+        "direction": "Donnersbergerbrücke, München",
+        "platform": "",
+        "time": "2510202231",
+        "destination": "Donnersbergerbrücke, München",
+        "path_stations": [
+          "Laim, München",
+          "Hirschgarten, München",
+          "Donnersbergerbrücke, München"
+        ]
+      },
+      {
+        "id": "1115886065591011124-2510202236-1",
+        "type": "Bus",
+        "number": "3",
+        "direction": "Donnersbergerbrücke, München",
+        "platform": "",
+        "time": "2510202236",
+        "destination": "Donnersbergerbrücke, München",
+        "path_stations": [
+          "Laim, München",
+          "Hirschgarten, München",
+          "Donnersbergerbrücke, München"
+        ]
+      },
+      {
+        "id": "-1302124126567079989-2510202341-1",
+        "type": "Bus",
+        "number": "29",
+        "direction": "Donnersbergerbrücke, München",
+        "platform": "",
+        "time": "2510202341",
+        "destination": "Donnersbergerbrücke, München",
+        "path_stations": [
+          "Laim, München",
+          "Hirschgarten, München",
+          "Donnersbergerbrücke, München"
+        ]
+      },
+      {
+        "id": "8983050740442210192-2510202351-1",
+        "type": "Bus",
+        "number": "33",
+        "direction": "Donnersbergerbrücke, München",
+        "platform": "",
+        "time": "2510202351",
+        "destination": "Donnersbergerbrücke, München",
+        "path_stations": [
+          "Laim, München",
+          "Hirschgarten, München",
+          "Donnersbergerbrücke, München"
+        ]
+      },
+      {
+        "id": "3115571080308569985-2510202322-1",
+        "type": "Bus",
+        "number": "4013",
+        "direction": "Buchenau, Fürstenfeldbruck",
+        "platform": "",
+        "time": "2510202322",
+        "destination": "Buchenau, Fürstenfeldbruck",
+        "path_stations": [
+          "Fürstenfeldbruck",
+          "Buchenau, Fürstenfeldbruck"
+        ]
+      },
+      {
+        "id": "1067169562499200755-2510202331-1",
+        "type": "Bus",
+        "number": "25",
+        "direction": "Donnersbergerbrücke, München",
+        "platform": "",
+        "time": "2510202331",
+        "destination": "Donnersbergerbrücke, München",
+        "path_stations": [
+          "Laim, München",
+          "Hirschgarten, München",
+          "Donnersbergerbrücke, München"
+        ]
+      },
+      {
+        "id": "3373330736261246985-2510202321-1",
+        "type": "Bus",
+        "number": "21",
+        "direction": "Donnersbergerbrücke, München",
+        "platform": "",
+        "time": "2510202321",
+        "destination": "Donnersbergerbrücke, München",
+        "path_stations": [
+          "Laim, München",
+          "Hirschgarten, München",
+          "Donnersbergerbrücke, München"
+        ]
+      },
+      {
+        "id": "-6181976034652658479-2510202336-1",
+        "type": "Bus",
+        "number": "27",
+        "direction": "Donnersbergerbrücke, München",
+        "platform": "",
+        "time": "2510202336",
+        "destination": "Donnersbergerbrücke, München",
+        "path_stations": [
+          "Laim, München",
+          "Hirschgarten, München",
+          "Donnersbergerbrücke, München"
+        ]
+      },
+      {
+        "id": "-8823418121072423573-2510202316-1",
+        "type": "Bus",
+        "number": "19",
+        "direction": "Donnersbergerbrücke, München",
+        "platform": "",
+        "time": "2510202316",
+        "destination": "Donnersbergerbrücke, München",
+        "path_stations": [
+          "Laim, München",
+          "Hirschgarten, München",
+          "Donnersbergerbrücke, München"
+        ]
+      },
+      {
+        "id": "2932035034668811586-2510202356-1",
+        "type": "Bus",
+        "number": "35",
+        "direction": "Donnersbergerbrücke, München",
+        "platform": "",
+        "time": "2510202356",
+        "destination": "Donnersbergerbrücke, München",
+        "path_stations": [
+          "Laim, München",
+          "Hirschgarten, München",
+          "Donnersbergerbrücke, München"
+        ]
+      },
+      {
+        "id": "1514368196131321041-2510202301-1",
+        "type": "Bus",
+        "number": "13",
+        "direction": "Donnersbergerbrücke, München",
+        "platform": "",
+        "time": "2510202301",
+        "destination": "Donnersbergerbrücke, München",
+        "path_stations": [
+          "Laim, München",
+          "Hirschgarten, München",
+          "Donnersbergerbrücke, München"
+        ]
+      },
+      {
+        "id": "-674285913356342504-2510202346-1",
+        "type": "Bus",
+        "number": "31",
+        "direction": "Donnersbergerbrücke, München",
+        "platform": "",
+        "time": "2510202346",
+        "destination": "Donnersbergerbrücke, München",
+        "path_stations": [
+          "Laim, München",
+          "Hirschgarten, München",
+          "Donnersbergerbrücke, München"
+        ]
+      },
+      {
+        "id": "4659732608662789079-2510202306-1",
+        "type": "Bus",
+        "number": "15",
+        "direction": "Donnersbergerbrücke, München",
+        "platform": "",
+        "time": "2510202306",
+        "destination": "Donnersbergerbrücke, München",
+        "path_stations": [
+          "Laim, München",
+          "Hirschgarten, München",
+          "Donnersbergerbrücke, München"
+        ]
+      },
+      {
+        "id": "1451475062086450603-2510202326-1",
+        "type": "Bus",
+        "number": "23",
+        "direction": "Donnersbergerbrücke, München",
+        "platform": "",
+        "time": "2510202326",
+        "destination": "Donnersbergerbrücke, München",
+        "path_stations": [
+          "Laim, München",
+          "Hirschgarten, München",
+          "Donnersbergerbrücke, München"
+        ]
+      },
+      {
+        "id": "7195804940563765929-2510202311-1",
+        "type": "Bus",
+        "number": "17",
+        "direction": "Donnersbergerbrücke, München",
+        "platform": "",
+        "time": "2510202311",
+        "destination": "Donnersbergerbrücke, München",
+        "path_stations": [
+          "Laim, München",
+          "Hirschgarten, München",
+          "Donnersbergerbrücke, München"
+        ]
+      },
+      {
+        "id": "949548662102129628-2510202322-1",
+        "type": "Bus",
+        "number": "4319",
+        "direction": "Puchheim Bahnhof (S) Südseite, Puchheim",
+        "platform": "",
+        "time": "2510202322",
+        "destination": "Puchheim Bahnhof (S) Südseite, Puchheim",
+        "path_stations": [
+          "Leienfelsstraße, München",
+          "Aubing, München",
+          "Puchheim Bahnhof (S) Südseite, Puchheim"
+        ]
+      },
+      {
+        "id": "7852244515529061834-2510210001-1",
+        "type": "Bus",
+        "number": "37",
+        "direction": "Donnersbergerbrücke, München",
+        "platform": "",
+        "time": "2510210001",
+        "destination": "Donnersbergerbrücke, München",
+        "path_stations": [
+          "Laim, München",
+          "Hirschgarten, München",
+          "Donnersbergerbrücke, München"
+        ]
+      },
+      {
+        "id": "-1685271122644385560-2510210046-1",
+        "type": "Bus",
+        "number": "55",
+        "direction": "Donnersbergerbrücke, München",
+        "platform": "",
+        "time": "2510210046",
+        "destination": "Donnersbergerbrücke, München",
+        "path_stations": [
+          "Laim, München",
+          "Hirschgarten, München",
+          "Donnersbergerbrücke, München"
+        ]
+      },
+      {
+        "id": "2735288458301608717-2510210006-1",
+        "type": "Bus",
+        "number": "39",
+        "direction": "Donnersbergerbrücke, München",
+        "platform": "",
+        "time": "2510210006",
+        "destination": "Donnersbergerbrücke, München",
+        "path_stations": [
+          "Laim, München",
+          "Hirschgarten, München",
+          "Donnersbergerbrücke, München"
+        ]
+      },
+      {
+        "id": "8942143610370582405-2510210016-1",
+        "type": "Bus",
+        "number": "43",
+        "direction": "Donnersbergerbrücke, München",
+        "platform": "",
+        "time": "2510210016",
+        "destination": "Donnersbergerbrücke, München",
+        "path_stations": [
+          "Laim, München",
+          "Hirschgarten, München",
+          "Donnersbergerbrücke, München"
+        ]
+      },
+      {
+        "id": "-4491008709710682940-2510210036-1",
+        "type": "Bus",
+        "number": "51",
+        "direction": "Donnersbergerbrücke, München",
+        "platform": "",
+        "time": "2510210036",
+        "destination": "Donnersbergerbrücke, München",
+        "path_stations": [
+          "Laim, München",
+          "Hirschgarten, München",
+          "Donnersbergerbrücke, München"
+        ]
+      },
+      {
+        "id": "8181630799995056893-2510210031-1",
+        "type": "Bus",
+        "number": "49",
+        "direction": "Donnersbergerbrücke, München",
+        "platform": "",
+        "time": "2510210031",
+        "destination": "Donnersbergerbrücke, München",
+        "path_stations": [
+          "Laim, München",
+          "Hirschgarten, München",
+          "Donnersbergerbrücke, München"
+        ]
+      },
+      {
+        "id": "7022277820739668214-2510210056-1",
+        "type": "Bus",
+        "number": "59",
+        "direction": "Donnersbergerbrücke, München",
+        "platform": "",
+        "time": "2510210056",
+        "destination": "Donnersbergerbrücke, München",
+        "path_stations": [
+          "Laim, München",
+          "Hirschgarten, München",
+          "Donnersbergerbrücke, München"
+        ]
+      },
+      {
+        "id": "8415656204291036001-2510210026-1",
+        "type": "Bus",
+        "number": "47",
+        "direction": "Donnersbergerbrücke, München",
+        "platform": "",
+        "time": "2510210026",
+        "destination": "Donnersbergerbrücke, München",
+        "path_stations": [
+          "Laim, München",
+          "Hirschgarten, München",
+          "Donnersbergerbrücke, München"
+        ]
+      },
+      {
+        "id": "-1778461042405646622-2510210011-1",
+        "type": "Bus",
+        "number": "41",
+        "direction": "Donnersbergerbrücke, München",
+        "platform": "",
+        "time": "2510210011",
+        "destination": "Donnersbergerbrücke, München",
+        "path_stations": [
+          "Laim, München",
+          "Hirschgarten, München",
+          "Donnersbergerbrücke, München"
+        ]
+      },
+      {
+        "id": "3919401961308614662-2510210051-1",
+        "type": "Bus",
+        "number": "57",
+        "direction": "Donnersbergerbrücke, München",
+        "platform": "",
+        "time": "2510210051",
+        "destination": "Donnersbergerbrücke, München",
+        "path_stations": [
+          "Laim, München",
+          "Hirschgarten, München",
+          "Donnersbergerbrücke, München"
+        ]
+      },
+      {
+        "id": "7103363181837317690-2510210041-1",
+        "type": "Bus",
+        "number": "53",
+        "direction": "Donnersbergerbrücke, München",
+        "platform": "",
+        "time": "2510210041",
+        "destination": "Donnersbergerbrücke, München",
+        "path_stations": [
+          "Laim, München",
+          "Hirschgarten, München",
+          "Donnersbergerbrücke, München"
+        ]
+      },
+      {
+        "id": "-6972878602268090121-2510210021-1",
+        "type": "Bus",
+        "number": "45",
+        "direction": "Donnersbergerbrücke, München",
+        "platform": "",
+        "time": "2510210021",
+        "destination": "Donnersbergerbrücke, München",
+        "path_stations": [
+          "Laim, München",
+          "Hirschgarten, München",
+          "Donnersbergerbrücke, München"
+        ]
+      },
+      {
+        "id": "3240033794620478341-2510210126-1",
+        "type": "Bus",
+        "number": "69",
+        "direction": "Donnersbergerbrücke, München",
+        "platform": "",
+        "time": "2510210126",
+        "destination": "Donnersbergerbrücke, München",
+        "path_stations": [
+          "Laim, München",
+          "Hirschgarten, München",
+          "Donnersbergerbrücke, München"
+        ]
+      },
+      {
+        "id": "8456418393377943031-2510210136-1",
+        "type": "Bus",
+        "number": "71",
+        "direction": "Donnersbergerbrücke, München",
+        "platform": "",
+        "time": "2510210136",
+        "destination": "Donnersbergerbrücke, München",
+        "path_stations": [
+          "Laim, München",
+          "Hirschgarten, München",
+          "Donnersbergerbrücke, München"
+        ]
+      },
+      {
+        "id": "9176028540826221016-2510210116-1",
+        "type": "Bus",
+        "number": "67",
+        "direction": "Donnersbergerbrücke, München",
+        "platform": "",
+        "time": "2510210116",
+        "destination": "Donnersbergerbrücke, München",
+        "path_stations": [
+          "Laim, München",
+          "Hirschgarten, München",
+          "Donnersbergerbrücke, München"
+        ]
+      },
+      {
+        "id": "-6772465747355630540-2510210106-1",
+        "type": "Bus",
+        "number": "63",
+        "direction": "Donnersbergerbrücke, München",
+        "platform": "",
+        "time": "2510210106",
+        "destination": "Donnersbergerbrücke, München",
+        "path_stations": [
+          "Laim, München",
+          "Hirschgarten, München",
+          "Donnersbergerbrücke, München"
+        ]
+      },
+      {
+        "id": "8544242893943322644-2510210146-1",
+        "type": "Bus",
+        "number": "73",
+        "direction": "Donnersbergerbrücke, München",
+        "platform": "",
+        "time": "2510210146",
+        "destination": "Donnersbergerbrücke, München",
+        "path_stations": [
+          "Laim, München",
+          "Hirschgarten, München",
+          "Donnersbergerbrücke, München"
+        ]
+      },
+      {
+        "id": "-2146566518318395235-2510210101-1",
+        "type": "Bus",
+        "number": "61",
+        "direction": "Donnersbergerbrücke, München",
+        "platform": "",
+        "time": "2510210101",
+        "destination": "Donnersbergerbrücke, München",
+        "path_stations": [
+          "Laim, München",
+          "Hirschgarten, München",
+          "Donnersbergerbrücke, München"
+        ]
+      },
+      {
+        "id": "-6673582628583369522-2510210156-1",
+        "type": "Bus",
+        "number": "75",
+        "direction": "Donnersbergerbrücke, München",
+        "platform": "",
+        "time": "2510210156",
+        "destination": "Donnersbergerbrücke, München",
+        "path_stations": [
+          "Laim, München",
+          "Hirschgarten, München",
+          "Donnersbergerbrücke, München"
+        ]
+      },
+      {
+        "id": "-4977498418410909643-2510210111-1",
+        "type": "Bus",
+        "number": "65",
+        "direction": "Donnersbergerbrücke, München",
+        "platform": "",
+        "time": "2510210111",
+        "destination": "Donnersbergerbrücke, München",
+        "path_stations": [
+          "Laim, München",
+          "Hirschgarten, München",
+          "Donnersbergerbrücke, München"
+        ]
+      },
+      {
+        "id": "-8548586749906684922-2510210236-1",
+        "type": "Bus",
+        "number": "79",
+        "direction": "Donnersbergerbrücke, München",
+        "platform": "",
+        "time": "2510210236",
+        "destination": "Donnersbergerbrücke, München",
+        "path_stations": [
+          "Laim, München",
+          "Hirschgarten, München",
+          "Donnersbergerbrücke, München"
+        ]
+      },
+      {
+        "id": "4298304201257502198-2510210216-1",
+        "type": "Bus",
+        "number": "77",
+        "direction": "Donnersbergerbrücke, München",
+        "platform": "",
+        "time": "2510210216",
+        "destination": "Donnersbergerbrücke, München",
+        "path_stations": [
+          "Laim, München",
+          "Hirschgarten, München",
+          "Donnersbergerbrücke, München"
+        ]
+      },
+      {
+        "id": "8316826669630584054-2510210256-1",
+        "type": "Bus",
+        "number": "81",
+        "direction": "Donnersbergerbrücke, München",
+        "platform": "",
+        "time": "2510210256",
+        "destination": "Donnersbergerbrücke, München",
+        "path_stations": [
+          "Laim, München",
+          "Hirschgarten, München",
+          "Donnersbergerbrücke, München"
+        ]
+      },
+      {
+        "id": "2129783111932088581-2510210316-1",
+        "type": "Bus",
+        "number": "83",
+        "direction": "Donnersbergerbrücke, München",
+        "platform": "",
+        "time": "2510210316",
+        "destination": "Donnersbergerbrücke, München",
+        "path_stations": [
+          "Laim, München",
+          "Hirschgarten, München",
+          "Donnersbergerbrücke, München"
+        ]
+      },
+      {
+        "id": "4806268585014123483-2510210356-1",
+        "type": "Bus",
+        "number": "87",
+        "direction": "Donnersbergerbrücke, München",
+        "platform": "",
+        "time": "2510210356",
+        "destination": "Donnersbergerbrücke, München",
+        "path_stations": [
+          "Laim, München",
+          "Hirschgarten, München",
+          "Donnersbergerbrücke, München"
+        ]
+      },
+      {
+        "id": "-7023548757348864630-2510210336-1",
+        "type": "Bus",
+        "number": "85",
+        "direction": "Donnersbergerbrücke, München",
+        "platform": "",
+        "time": "2510210336",
+        "destination": "Donnersbergerbrücke, München",
+        "path_stations": [
+          "Laim, München",
+          "Hirschgarten, München",
+          "Donnersbergerbrücke, München"
+        ]
+      }
+    ]
+  }
+}

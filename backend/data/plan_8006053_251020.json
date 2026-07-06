@@ -1,0 +1,2364 @@
+{
+  "station_eva": "8006053",
+  "date": "251020",
+  "cached_at": "2025-10-20T16:52:20.690762",
+  "plan_data": {
+    "arrivals": [
+      {
+        "id": "-5201346519204025082-2510201806-5",
+        "type": "RE",
+        "number": "19683",
+        "time": "2510201841",
+        "platform": "2",
+        "path_stations": [
+          "Karlsruhe Hbf",
+          "Karlsruhe-Durlach",
+          "Pforzheim Hbf",
+          "Mühlacker"
+        ],
+        "line": "1"
+      },
+      {
+        "id": "5586854193745839626-2510201735-20",
+        "type": "MEX",
+        "number": "19633",
+        "time": "2510201838",
+        "platform": "1",
+        "path_stations": [
+          "Bruchsal",
+          "Bruchsal Tunnelstraße",
+          "Bruchsal Schlachthof",
+          "Heidelsheim Nord",
+          "Heidelsheim",
+          "Helmsheim",
+          "Gondelsheim Schlossstadion",
+          "Gondelsheim(Baden)",
+          "Diedelsheim",
+          "Bretten",
+          "Bretten Rechberg",
+          "Bretten-Ruit",
+          "Knittlingen-Kleinvillars",
+          "Ölbronn-Dürrn",
+          "Maulbronn West",
+          "Ötisheim",
+          "Mühlacker",
+          "Mühlacker Rößlesweg",
+          "Illingen(Württ)"
+        ],
+        "line": "17c"
+      },
+      {
+        "id": "-3933107762033925282-2510201748-7",
+        "type": "MEX",
+        "number": "19528",
+        "time": "2510201818",
+        "platform": "8",
+        "path_stations": [
+          "Stuttgart Hbf",
+          "Ludwigsburg",
+          "Bietigheim-Bissingen",
+          "Ellental",
+          "Sachsenheim",
+          "Sersheim"
+        ],
+        "line": "17a"
+      },
+      {
+        "id": "4104542834042767504-2510201832-2",
+        "type": "RE",
+        "number": "19026",
+        "time": "2510201847",
+        "platform": "7",
+        "path_stations": [
+          "Stuttgart Hbf"
+        ],
+        "line": "1"
+      },
+      {
+        "id": "-1995405770982571456-2510201542-8",
+        "type": "IC",
+        "number": "2068",
+        "time": "2510201815",
+        "platform": "7",
+        "path_stations": [
+          "Nürnberg Hbf",
+          "Ansbach",
+          "Crailsheim",
+          "Ellwangen",
+          "Aalen Hbf",
+          "Schwäbisch Gmünd",
+          "Stuttgart Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "5447065962815167666-2510201748-7",
+        "type": "MEX",
+        "number": "19628",
+        "time": "2510201818",
+        "platform": "8",
+        "path_stations": [
+          "Stuttgart Hbf",
+          "Ludwigsburg",
+          "Bietigheim-Bissingen",
+          "Ellental",
+          "Sachsenheim",
+          "Sersheim"
+        ],
+        "line": "17c"
+      },
+      {
+        "id": "1471724757551916418-2510201832-5",
+        "type": "MEX",
+        "number": "19574",
+        "time": "2510201845",
+        "platform": "8",
+        "path_stations": [
+          "Bietigheim-Bissingen",
+          "Ellental",
+          "Sachsenheim",
+          "Sersheim"
+        ],
+        "line": "17a"
+      },
+      {
+        "id": "8643875057572074760-2510201332-12",
+        "type": "IC",
+        "number": "1746",
+        "time": "2510201809",
+        "platform": "",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Hagen Hbf",
+          "Wuppertal Hbf",
+          "Solingen Hbf",
+          "Köln Hbf",
+          "Bonn Hbf",
+          "Koblenz Hbf",
+          "Mainz Hbf",
+          "Mannheim Hbf",
+          "Heidelberg Hbf",
+          "Wiesloch-Walldorf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-3984397051818368210-2510201732-6",
+        "type": "RE",
+        "number": "19025",
+        "time": "2510201807",
+        "platform": "2",
+        "path_stations": [
+          "Karlsruhe Hbf",
+          "Karlsruhe-Durlach",
+          "Wilferdingen-Singen",
+          "Pforzheim Hbf",
+          "Mühlacker"
+        ],
+        "line": "1"
+      },
+      {
+        "id": "-1645236532474773201-2510201814-8",
+        "type": "MEX",
+        "number": "19533",
+        "time": "2510201838",
+        "platform": "1",
+        "path_stations": [
+          "Pforzheim Hbf",
+          "Eutingen(Baden)",
+          "Niefern",
+          "Enzberg",
+          "Mühlacker",
+          "Mühlacker Rößlesweg",
+          "Illingen(Württ)"
+        ],
+        "line": "17a"
+      },
+      {
+        "id": "4932882228212202933-2510201712-11",
+        "type": "MEX",
+        "number": "19567",
+        "time": "2510201804",
+        "platform": "1",
+        "path_stations": [
+          "Karlsruhe Hbf",
+          "Karlsruhe-Durlach",
+          "Wilferdingen-Singen",
+          "Pforzheim Hbf",
+          "Eutingen(Baden)",
+          "Niefern",
+          "Enzberg",
+          "Mühlacker",
+          "Mühlacker Rößlesweg",
+          "Illingen(Württ)"
+        ],
+        "line": "17a"
+      },
+      {
+        "id": "7769290298118018497-2510201847-7",
+        "type": "MEX",
+        "number": "19630",
+        "time": "2510201918",
+        "platform": "8",
+        "path_stations": [
+          "Stuttgart Hbf",
+          "Ludwigsburg",
+          "Bietigheim-Bissingen",
+          "Ellental",
+          "Sachsenheim",
+          "Sersheim"
+        ],
+        "line": "17c"
+      },
+      {
+        "id": "-8688911990635227423-2510201932-2",
+        "type": "RE",
+        "number": "19028",
+        "time": "2510201947",
+        "platform": "7",
+        "path_stations": [
+          "Stuttgart Hbf"
+        ],
+        "line": "1"
+      },
+      {
+        "id": "5746335298978325933-2510201847-7",
+        "type": "MEX",
+        "number": "19530",
+        "time": "2510201918",
+        "platform": "8",
+        "path_stations": [
+          "Stuttgart Hbf",
+          "Ludwigsburg",
+          "Bietigheim-Bissingen",
+          "Ellental",
+          "Sachsenheim",
+          "Sersheim"
+        ],
+        "line": "17a"
+      },
+      {
+        "id": "2286746278251723039-2510201832-6",
+        "type": "RE",
+        "number": "19027",
+        "time": "2510201907",
+        "platform": "2",
+        "path_stations": [
+          "Karlsruhe Hbf",
+          "Karlsruhe-Durlach",
+          "Wilferdingen-Singen",
+          "Pforzheim Hbf",
+          "Mühlacker"
+        ],
+        "line": "1"
+      },
+      {
+        "id": "88139029874116301-2510201802-5",
+        "type": "RE",
+        "number": "19682",
+        "time": "2510201915",
+        "platform": "7",
+        "path_stations": [
+          "Aalen Hbf",
+          "Schwäbisch Gmünd",
+          "Schorndorf",
+          "Stuttgart Hbf"
+        ],
+        "line": "1"
+      },
+      {
+        "id": "-3179374894623818790-2510201914-8",
+        "type": "MEX",
+        "number": "19535",
+        "time": "2510201938",
+        "platform": "1",
+        "path_stations": [
+          "Pforzheim Hbf",
+          "Eutingen(Baden)",
+          "Niefern",
+          "Enzberg",
+          "Mühlacker",
+          "Mühlacker Rößlesweg",
+          "Illingen(Württ)"
+        ],
+        "line": "17a"
+      },
+      {
+        "id": "-5705924776918724036-2510201844-8",
+        "type": "MEX",
+        "number": "19569",
+        "time": "2510201904",
+        "platform": "1",
+        "path_stations": [
+          "Pforzheim Hbf",
+          "Eutingen(Baden)",
+          "Niefern",
+          "Enzberg",
+          "Mühlacker",
+          "Mühlacker Rößlesweg",
+          "Illingen(Württ)"
+        ],
+        "line": "17a"
+      },
+      {
+        "id": "-3537065778021606010-2510201835-20",
+        "type": "MEX",
+        "number": "19635",
+        "time": "2510201938",
+        "platform": "1",
+        "path_stations": [
+          "Bruchsal",
+          "Bruchsal Tunnelstraße",
+          "Bruchsal Schlachthof",
+          "Heidelsheim Nord",
+          "Heidelsheim",
+          "Helmsheim",
+          "Gondelsheim Schlossstadion",
+          "Gondelsheim(Baden)",
+          "Diedelsheim",
+          "Bretten",
+          "Bretten Rechberg",
+          "Bretten-Ruit",
+          "Knittlingen-Kleinvillars",
+          "Ölbronn-Dürrn",
+          "Maulbronn West",
+          "Ötisheim",
+          "Mühlacker",
+          "Mühlacker Rößlesweg",
+          "Illingen(Württ)"
+        ],
+        "line": "17c"
+      },
+      {
+        "id": "-8031600068786801903-2510201905-4",
+        "type": "IC",
+        "number": "2167",
+        "time": "2510201943",
+        "platform": "2",
+        "path_stations": [
+          "Karlsruhe Hbf",
+          "Pforzheim Hbf",
+          "Mühlacker"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-3759228091633272073-2510201932-5",
+        "type": "MEX",
+        "number": "19576",
+        "time": "2510201945",
+        "platform": "8",
+        "path_stations": [
+          "Bietigheim-Bissingen",
+          "Ellental",
+          "Sachsenheim",
+          "Sersheim"
+        ],
+        "line": "17a"
+      },
+      {
+        "id": "-3892470588894151283-2510201349-21",
+        "type": "IC",
+        "number": "2066",
+        "time": "2510202014",
+        "platform": "7",
+        "path_stations": [
+          "Leipzig Hbf",
+          "Weißenfels",
+          "Naumburg(Saale)Hbf",
+          "Jena Paradies",
+          "Jena-Göschwitz",
+          "Rudolstadt(Thür)",
+          "Saalfeld(Saale)",
+          "Ludwigsstadt",
+          "Kronach",
+          "Lichtenfels",
+          "Bamberg",
+          "Erlangen",
+          "Nürnberg Hbf",
+          "Ansbach",
+          "Crailsheim",
+          "Ellwangen",
+          "Aalen Hbf",
+          "Schwäbisch Gmünd",
+          "Schorndorf",
+          "Stuttgart Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-6814158503963715708-2510202032-5",
+        "type": "MEX",
+        "number": "19578",
+        "time": "2510202045",
+        "platform": "8",
+        "path_stations": [
+          "Bietigheim-Bissingen",
+          "Ellental",
+          "Sachsenheim",
+          "Sersheim"
+        ],
+        "line": "17a"
+      },
+      {
+        "id": "-5174498425268507193-2510201932-6",
+        "type": "RE",
+        "number": "19029",
+        "time": "2510202009",
+        "platform": "2",
+        "path_stations": [
+          "Karlsruhe Hbf",
+          "Karlsruhe-Durlach",
+          "Wilferdingen-Singen",
+          "Pforzheim Hbf",
+          "Mühlacker"
+        ],
+        "line": "1"
+      },
+      {
+        "id": "3276955362398523338-2510201912-11",
+        "type": "MEX",
+        "number": "19571",
+        "time": "2510202004",
+        "platform": "1",
+        "path_stations": [
+          "Karlsruhe Hbf",
+          "Karlsruhe-Durlach",
+          "Wilferdingen-Singen",
+          "Pforzheim Hbf",
+          "Eutingen(Baden)",
+          "Niefern",
+          "Enzberg",
+          "Mühlacker",
+          "Mühlacker Rößlesweg",
+          "Illingen(Württ)"
+        ],
+        "line": "17a"
+      },
+      {
+        "id": "-2444117709337335847-2510202032-2",
+        "type": "RE",
+        "number": "19030",
+        "time": "2510202047",
+        "platform": "7",
+        "path_stations": [
+          "Stuttgart Hbf"
+        ],
+        "line": "1"
+      },
+      {
+        "id": "-8449190673325764790-2510202006-5",
+        "type": "RE",
+        "number": "19685",
+        "time": "2510202041",
+        "platform": "2",
+        "path_stations": [
+          "Karlsruhe Hbf",
+          "Karlsruhe-Durlach",
+          "Pforzheim Hbf",
+          "Mühlacker"
+        ],
+        "line": "1"
+      },
+      {
+        "id": "-3853175925136838719-2510201947-7",
+        "type": "MEX",
+        "number": "19532",
+        "time": "2510202018",
+        "platform": "8",
+        "path_stations": [
+          "Stuttgart Hbf",
+          "Ludwigsburg",
+          "Bietigheim-Bissingen",
+          "Ellental",
+          "Sachsenheim",
+          "Sersheim"
+        ],
+        "line": "17a"
+      },
+      {
+        "id": "-4317009583427446377-2510201947-7",
+        "type": "MEX",
+        "number": "19632",
+        "time": "2510202018",
+        "platform": "8",
+        "path_stations": [
+          "Stuttgart Hbf",
+          "Ludwigsburg",
+          "Bietigheim-Bissingen",
+          "Ellental",
+          "Sachsenheim",
+          "Sersheim"
+        ],
+        "line": "17c"
+      },
+      {
+        "id": "6890321653011825456-2510201532-11",
+        "type": "IC",
+        "number": "1748",
+        "time": "2510202004",
+        "platform": "",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Hagen Hbf",
+          "Wuppertal Hbf",
+          "Solingen Hbf",
+          "Köln Hbf",
+          "Bonn Hbf",
+          "Koblenz Hbf",
+          "Mainz Hbf",
+          "Mannheim Hbf",
+          "Heidelberg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-8093000697463236928-2510202014-8",
+        "type": "MEX",
+        "number": "19573",
+        "time": "2510202038",
+        "platform": "1",
+        "path_stations": [
+          "Pforzheim Hbf",
+          "Eutingen(Baden)",
+          "Niefern",
+          "Enzberg",
+          "Mühlacker",
+          "Mühlacker Rößlesweg",
+          "Illingen(Württ)"
+        ],
+        "line": "17a"
+      },
+      {
+        "id": "-3024514573937466131-2510202047-7",
+        "type": "MEX",
+        "number": "19634",
+        "time": "2510202118",
+        "platform": "8",
+        "path_stations": [
+          "Stuttgart Hbf",
+          "Ludwigsburg",
+          "Bietigheim-Bissingen",
+          "Ellental",
+          "Sachsenheim",
+          "Sersheim"
+        ],
+        "line": "17c"
+      },
+      {
+        "id": "-2791458000270945298-2510202132-2",
+        "type": "RE",
+        "number": "19032",
+        "time": "2510202147",
+        "platform": "7",
+        "path_stations": [
+          "Stuttgart Hbf"
+        ],
+        "line": "1"
+      },
+      {
+        "id": "-4791262767992582053-2510202035-20",
+        "type": "MEX",
+        "number": "19637",
+        "time": "2510202138",
+        "platform": "1",
+        "path_stations": [
+          "Bruchsal",
+          "Bruchsal Tunnelstraße",
+          "Bruchsal Schlachthof",
+          "Heidelsheim Nord",
+          "Heidelsheim",
+          "Helmsheim",
+          "Gondelsheim Schlossstadion",
+          "Gondelsheim(Baden)",
+          "Diedelsheim",
+          "Bretten",
+          "Bretten Rechberg",
+          "Bretten-Ruit",
+          "Knittlingen-Kleinvillars",
+          "Ölbronn-Dürrn",
+          "Maulbronn West",
+          "Ötisheim",
+          "Mühlacker",
+          "Mühlacker Rößlesweg",
+          "Illingen(Württ)"
+        ],
+        "line": "17c"
+      },
+      {
+        "id": "-4623204494944719229-2510202133-5",
+        "type": "MEX",
+        "number": "19294",
+        "time": "2510202146",
+        "platform": "8",
+        "path_stations": [
+          "Bietigheim-Bissingen",
+          "Ellental",
+          "Sachsenheim",
+          "Sersheim"
+        ],
+        "line": "17a"
+      },
+      {
+        "id": "4084041044270891242-2510202047-7",
+        "type": "MEX",
+        "number": "19534",
+        "time": "2510202118",
+        "platform": "8",
+        "path_stations": [
+          "Stuttgart Hbf",
+          "Ludwigsburg",
+          "Bietigheim-Bissingen",
+          "Ellental",
+          "Sachsenheim",
+          "Sersheim"
+        ],
+        "line": "17a"
+      },
+      {
+        "id": "-6102362791874632686-2510202105-4",
+        "type": "IC",
+        "number": "2169",
+        "time": "2510202143",
+        "platform": "2",
+        "path_stations": [
+          "Karlsruhe Hbf",
+          "Pforzheim Hbf",
+          "Mühlacker"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-7655993334339442573-2510202002-5",
+        "type": "RE",
+        "number": "19684",
+        "time": "2510202115",
+        "platform": "7",
+        "path_stations": [
+          "Aalen Hbf",
+          "Schwäbisch Gmünd",
+          "Schorndorf",
+          "Stuttgart Hbf"
+        ],
+        "line": "1"
+      },
+      {
+        "id": "-7261750098290902360-2510202044-8",
+        "type": "MEX",
+        "number": "19293",
+        "time": "2510202104",
+        "platform": "1",
+        "path_stations": [
+          "Pforzheim Hbf",
+          "Eutingen(Baden)",
+          "Niefern",
+          "Enzberg",
+          "Mühlacker",
+          "Mühlacker Rößlesweg",
+          "Illingen(Württ)"
+        ],
+        "line": "17a"
+      },
+      {
+        "id": "-1057064685296734777-2510202032-6",
+        "type": "RE",
+        "number": "19031",
+        "time": "2510202107",
+        "platform": "2",
+        "path_stations": [
+          "Karlsruhe Hbf",
+          "Karlsruhe-Durlach",
+          "Wilferdingen-Singen",
+          "Pforzheim Hbf",
+          "Mühlacker"
+        ],
+        "line": "1"
+      },
+      {
+        "id": "-6845729400861309457-2510202147-7",
+        "type": "MEX",
+        "number": "19580",
+        "time": "2510202218",
+        "platform": "8",
+        "path_stations": [
+          "Stuttgart Hbf",
+          "Ludwigsburg",
+          "Bietigheim-Bissingen",
+          "Ellental",
+          "Sachsenheim",
+          "Sersheim"
+        ],
+        "line": "17a"
+      },
+      {
+        "id": "2044823728383562621-2510201549-21",
+        "type": "IC",
+        "number": "2064",
+        "time": "2510202214",
+        "platform": "7",
+        "path_stations": [
+          "Leipzig Hbf",
+          "Weißenfels",
+          "Naumburg(Saale)Hbf",
+          "Jena Paradies",
+          "Jena-Göschwitz",
+          "Rudolstadt(Thür)",
+          "Saalfeld(Saale)",
+          "Ludwigsstadt",
+          "Kronach",
+          "Lichtenfels",
+          "Bamberg",
+          "Erlangen",
+          "Nürnberg Hbf",
+          "Ansbach",
+          "Crailsheim",
+          "Ellwangen",
+          "Aalen Hbf",
+          "Schwäbisch Gmünd",
+          "Schorndorf",
+          "Stuttgart Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "7314869315265201005-2510202132-6",
+        "type": "RE",
+        "number": "19687",
+        "time": "2510202209",
+        "platform": "2",
+        "path_stations": [
+          "Karlsruhe Hbf",
+          "Karlsruhe-Durlach",
+          "Wilferdingen-Singen",
+          "Pforzheim Hbf",
+          "Mühlacker"
+        ],
+        "line": "1"
+      },
+      {
+        "id": "8874607945772018349-2510202211-4",
+        "type": "RE",
+        "number": "19033",
+        "time": "2510202241",
+        "platform": "2",
+        "path_stations": [
+          "Karlsruhe-Durlach",
+          "Pforzheim Hbf",
+          "Mühlacker"
+        ],
+        "line": "1"
+      },
+      {
+        "id": "2653288952983566122-2510202214-8",
+        "type": "MEX",
+        "number": "19577",
+        "time": "2510202236",
+        "platform": "1",
+        "path_stations": [
+          "Pforzheim Hbf",
+          "Eutingen(Baden)",
+          "Niefern",
+          "Enzberg",
+          "Mühlacker",
+          "Mühlacker Rößlesweg",
+          "Illingen(Württ)"
+        ],
+        "line": "17a"
+      },
+      {
+        "id": "-8985650993341541685-2510201732-11",
+        "type": "IC",
+        "number": "2340",
+        "time": "2510202215",
+        "platform": "",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Hagen Hbf",
+          "Wuppertal Hbf",
+          "Solingen Hbf",
+          "Köln Hbf",
+          "Bonn Hbf",
+          "Koblenz Hbf",
+          "Mainz Hbf",
+          "Mannheim Hbf",
+          "Heidelberg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-4646985337850723440-2510202236-5",
+        "type": "RE",
+        "number": "19035",
+        "time": "2510202307",
+        "platform": "7",
+        "path_stations": [
+          "Karlsruhe-Durlach",
+          "Wilferdingen-Singen",
+          "Pforzheim Hbf",
+          "Mühlacker"
+        ],
+        "line": "1"
+      },
+      {
+        "id": "1724593898137549213-2510202313-2",
+        "type": "RE",
+        "number": "19686",
+        "time": "2510202330",
+        "platform": "7",
+        "path_stations": [
+          "Stuttgart Hbf"
+        ],
+        "line": "1"
+      },
+      {
+        "id": "5008675302101761640-2510202244-8",
+        "type": "MEX",
+        "number": "19297",
+        "time": "2510202304",
+        "platform": "1",
+        "path_stations": [
+          "Pforzheim Hbf",
+          "Eutingen(Baden)",
+          "Niefern",
+          "Enzberg",
+          "Mühlacker",
+          "Mühlacker Rößlesweg",
+          "Illingen(Württ)"
+        ],
+        "line": "17a"
+      },
+      {
+        "id": "-2703871813082427678-2510202323-8",
+        "type": "MEX",
+        "number": "19579",
+        "time": "2510202344",
+        "platform": "1",
+        "path_stations": [
+          "Pforzheim Hbf",
+          "Eutingen(Baden)",
+          "Niefern",
+          "Enzberg",
+          "Mühlacker",
+          "Mühlacker Rößlesweg",
+          "Illingen(Württ)"
+        ],
+        "line": "17a"
+      },
+      {
+        "id": "4809404484709601338-2510202308-3",
+        "type": "ICE",
+        "number": "937",
+        "time": "2510210033",
+        "platform": "7",
+        "path_stations": [
+          "Frankfurt(Main)Hbf",
+          "Heidelberg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "3914756390975745361-2510202345-8",
+        "type": "MEX",
+        "number": "19373",
+        "time": "2510210007",
+        "platform": "1",
+        "path_stations": [
+          "Pforzheim Hbf",
+          "Eutingen(Baden)",
+          "Niefern",
+          "Enzberg",
+          "Mühlacker",
+          "Mühlacker Rößlesweg",
+          "Illingen(Württ)"
+        ],
+        "line": "17a"
+      },
+      {
+        "id": "-8332221861054296360-2510210016-2",
+        "type": "RE",
+        "number": "19036",
+        "time": "2510210037",
+        "platform": "8",
+        "path_stations": [
+          "Stuttgart Hbf"
+        ],
+        "line": "1"
+      },
+      {
+        "id": "-4949596631328210474-2510210438-8",
+        "type": "MEX",
+        "number": "19543",
+        "time": "2510210458",
+        "platform": "1",
+        "path_stations": [
+          "Pforzheim Hbf",
+          "Eutingen(Baden)",
+          "Niefern",
+          "Enzberg",
+          "Mühlacker",
+          "Mühlacker Rößlesweg",
+          "Illingen(Württ)"
+        ],
+        "line": "17a"
+      },
+      {
+        "id": "-6065310940048257316-2510210417-8",
+        "type": "MEX",
+        "number": "19541",
+        "time": "2510210437",
+        "platform": "1",
+        "path_stations": [
+          "Pforzheim Hbf",
+          "Eutingen(Baden)",
+          "Niefern",
+          "Enzberg",
+          "Mühlacker",
+          "Mühlacker Rößlesweg",
+          "Illingen(Württ)"
+        ],
+        "line": "17a"
+      },
+      {
+        "id": "718153316434026022-2510210504-5",
+        "type": "MEX",
+        "number": "19540",
+        "time": "2510210518",
+        "platform": "8",
+        "path_stations": [
+          "Bietigheim-Bissingen",
+          "Ellental",
+          "Sachsenheim",
+          "Sersheim"
+        ],
+        "line": "17a"
+      },
+      {
+        "id": "2643291846753523015-2510210425-20",
+        "type": "MEX",
+        "number": "19601",
+        "time": "2510210535",
+        "platform": "1",
+        "path_stations": [
+          "Bruchsal",
+          "Bruchsal Tunnelstraße",
+          "Bruchsal Schlachthof",
+          "Heidelsheim Nord",
+          "Heidelsheim",
+          "Helmsheim",
+          "Gondelsheim Schlossstadion",
+          "Gondelsheim(Baden)",
+          "Diedelsheim",
+          "Bretten",
+          "Bretten Rechberg",
+          "Bretten-Ruit",
+          "Knittlingen-Kleinvillars",
+          "Ölbronn-Dürrn",
+          "Maulbronn West",
+          "Ötisheim",
+          "Mühlacker",
+          "Mühlacker Rößlesweg",
+          "Illingen(Württ)"
+        ],
+        "line": "17c"
+      },
+      {
+        "id": "2282903592407009053-2510210514-7",
+        "type": "MEX",
+        "number": "19542",
+        "time": "2510210545",
+        "platform": "8",
+        "path_stations": [
+          "Stuttgart Hbf",
+          "Ludwigsburg",
+          "Bietigheim-Bissingen",
+          "Ellental",
+          "Sachsenheim",
+          "Sersheim"
+        ],
+        "line": "17a"
+      },
+      {
+        "id": "-5014994256132258392-2510210510-8",
+        "type": "MEX",
+        "number": "19501",
+        "time": "2510210535",
+        "platform": "1",
+        "path_stations": [
+          "Pforzheim Hbf",
+          "Eutingen(Baden)",
+          "Niefern",
+          "Enzberg",
+          "Mühlacker",
+          "Mühlacker Rößlesweg",
+          "Illingen(Württ)"
+        ],
+        "line": "17a"
+      },
+      {
+        "id": "7715317560156396880-2510210532-2",
+        "type": "RE",
+        "number": "19000",
+        "time": "2510210547",
+        "platform": "7",
+        "path_stations": [
+          "Stuttgart Hbf"
+        ],
+        "line": "1"
+      },
+      {
+        "id": "428699380039786739-2510210502-2",
+        "type": "ICE",
+        "number": "774",
+        "time": "2510210517",
+        "platform": "7",
+        "path_stations": [
+          "Stuttgart Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "6311908957437318181-2510210605-2",
+        "type": "IC",
+        "number": "2298",
+        "time": "2510210623",
+        "platform": "7",
+        "path_stations": [
+          "Stuttgart Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-3971428028512834423-2510210512-11",
+        "type": "MEX",
+        "number": "19545",
+        "time": "2510210602",
+        "platform": "1",
+        "path_stations": [
+          "Karlsruhe Hbf",
+          "Karlsruhe-Durlach",
+          "Wilferdingen-Singen",
+          "Pforzheim Hbf",
+          "Eutingen(Baden)",
+          "Niefern",
+          "Enzberg",
+          "Mühlacker",
+          "Mühlacker Rößlesweg",
+          "Illingen(Württ)"
+        ],
+        "line": "17a"
+      },
+      {
+        "id": "-3876592672855953228-2510210609-7",
+        "type": "MEX",
+        "number": "19546",
+        "time": "2510210642",
+        "platform": "8",
+        "path_stations": [
+          "Stuttgart Hbf",
+          "Ludwigsburg",
+          "Bietigheim-Bissingen",
+          "Ellental",
+          "Sachsenheim",
+          "Sersheim"
+        ],
+        "line": "17a"
+      },
+      {
+        "id": "355165098746529713-2510210532-6",
+        "type": "RE",
+        "number": "19001",
+        "time": "2510210607",
+        "platform": "2",
+        "path_stations": [
+          "Karlsruhe Hbf",
+          "Karlsruhe-Durlach",
+          "Wilferdingen-Singen",
+          "Pforzheim Hbf",
+          "Mühlacker"
+        ],
+        "line": "1"
+      },
+      {
+        "id": "-2134568593082033484-2510210602-5",
+        "type": "RE",
+        "number": "19671",
+        "time": "2510210639",
+        "platform": "2",
+        "path_stations": [
+          "Karlsruhe Hbf",
+          "Karlsruhe-Durlach",
+          "Pforzheim Hbf",
+          "Mühlacker"
+        ],
+        "line": "1"
+      },
+      {
+        "id": "6955312411791178764-2510210626-2",
+        "type": "ICE",
+        "number": "1118",
+        "time": "2510210641",
+        "platform": "7",
+        "path_stations": [
+          "Stuttgart Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-9044484065254194157-2510210632-2",
+        "type": "RE",
+        "number": "19002",
+        "time": "2510210647",
+        "platform": "7",
+        "path_stations": [
+          "Stuttgart Hbf"
+        ],
+        "line": "1"
+      },
+      {
+        "id": "-5881886114312715583-2510210611-8",
+        "type": "MEX",
+        "number": "19503",
+        "time": "2510210635",
+        "platform": "1",
+        "path_stations": [
+          "Pforzheim Hbf",
+          "Eutingen(Baden)",
+          "Niefern",
+          "Enzberg",
+          "Mühlacker",
+          "Mühlacker Rößlesweg",
+          "Illingen(Württ)"
+        ],
+        "line": "17a"
+      },
+      {
+        "id": "5965122661626269288-2510210534-20",
+        "type": "MEX",
+        "number": "19603",
+        "time": "2510210635",
+        "platform": "1",
+        "path_stations": [
+          "Bruchsal",
+          "Bruchsal Tunnelstraße",
+          "Bruchsal Schlachthof",
+          "Heidelsheim Nord",
+          "Heidelsheim",
+          "Helmsheim",
+          "Gondelsheim Schlossstadion",
+          "Gondelsheim(Baden)",
+          "Diedelsheim",
+          "Bretten",
+          "Bretten Rechberg",
+          "Bretten-Ruit",
+          "Knittlingen-Kleinvillars",
+          "Ölbronn-Dürrn",
+          "Maulbronn West",
+          "Ötisheim",
+          "Mühlacker",
+          "Mühlacker Rößlesweg",
+          "Illingen(Württ)"
+        ],
+        "line": "17c"
+      },
+      {
+        "id": "8536419679908261131-2510210604-5",
+        "type": "MEX",
+        "number": "19544",
+        "time": "2510210618",
+        "platform": "8",
+        "path_stations": [
+          "Bietigheim-Bissingen",
+          "Ellental",
+          "Sachsenheim",
+          "Sersheim"
+        ],
+        "line": "17a"
+      }
+    ],
+    "departures": [
+      {
+        "id": "-5201346519204025082-2510201806-5",
+        "type": "RE",
+        "number": "19683",
+        "direction": "Aalen Hbf",
+        "platform": "2",
+        "time": "2510201842",
+        "destination": "Aalen Hbf",
+        "path_stations": [
+          "Stuttgart Hbf",
+          "Schorndorf",
+          "Schwäbisch Gmünd",
+          "Aalen Hbf"
+        ]
+      },
+      {
+        "id": "5586854193745839626-2510201735-20",
+        "type": "MEX",
+        "number": "19633",
+        "direction": "Stuttgart Hbf",
+        "platform": "1",
+        "time": "2510201839",
+        "destination": "Stuttgart Hbf",
+        "path_stations": [
+          "Sersheim",
+          "Sachsenheim",
+          "Ellental",
+          "Bietigheim-Bissingen",
+          "Ludwigsburg",
+          "Stuttgart Hbf"
+        ]
+      },
+      {
+        "id": "-3933107762033925282-2510201748-7",
+        "type": "MEX",
+        "number": "19528",
+        "direction": "Pforzheim Hbf",
+        "platform": "8",
+        "time": "2510201819",
+        "destination": "Pforzheim Hbf",
+        "path_stations": [
+          "Illingen(Württ)",
+          "Mühlacker Rößlesweg",
+          "Mühlacker",
+          "Enzberg",
+          "Niefern",
+          "Eutingen(Baden)",
+          "Pforzheim Hbf"
+        ]
+      },
+      {
+        "id": "4104542834042767504-2510201832-2",
+        "type": "RE",
+        "number": "19026",
+        "direction": "Karlsruhe Hbf",
+        "platform": "7",
+        "time": "2510201848",
+        "destination": "Karlsruhe Hbf",
+        "path_stations": [
+          "Mühlacker",
+          "Pforzheim Hbf",
+          "Wilferdingen-Singen",
+          "Karlsruhe-Durlach",
+          "Karlsruhe Hbf"
+        ]
+      },
+      {
+        "id": "-1995405770982571456-2510201542-8",
+        "type": "IC",
+        "number": "2068",
+        "direction": "Karlsruhe Hbf",
+        "platform": "7",
+        "time": "2510201817",
+        "destination": "Karlsruhe Hbf",
+        "path_stations": [
+          "Mühlacker",
+          "Pforzheim Hbf",
+          "Karlsruhe Hbf"
+        ]
+      },
+      {
+        "id": "5447065962815167666-2510201748-7",
+        "type": "MEX",
+        "number": "19628",
+        "direction": "Bruchsal",
+        "platform": "8",
+        "time": "2510201819",
+        "destination": "Bruchsal",
+        "path_stations": [
+          "Illingen(Württ)",
+          "Mühlacker Rößlesweg",
+          "Mühlacker",
+          "Ötisheim",
+          "Maulbronn West",
+          "Ölbronn-Dürrn",
+          "Knittlingen-Kleinvillars",
+          "Bretten-Ruit",
+          "Bretten Rechberg",
+          "Bretten",
+          "Diedelsheim",
+          "Gondelsheim(Baden)",
+          "Gondelsheim Schlossstadion",
+          "Helmsheim",
+          "Heidelsheim",
+          "Heidelsheim Nord",
+          "Bruchsal Schlachthof",
+          "Bruchsal Tunnelstraße",
+          "Bruchsal"
+        ]
+      },
+      {
+        "id": "1471724757551916418-2510201832-5",
+        "type": "MEX",
+        "number": "19574",
+        "direction": "Pforzheim Hbf",
+        "platform": "8",
+        "time": "2510201852",
+        "destination": "Pforzheim Hbf",
+        "path_stations": [
+          "Illingen(Württ)",
+          "Mühlacker Rößlesweg",
+          "Mühlacker",
+          "Enzberg",
+          "Niefern",
+          "Eutingen(Baden)",
+          "Pforzheim Hbf"
+        ]
+      },
+      {
+        "id": "8643875057572074760-2510201332-12",
+        "type": "IC",
+        "number": "1746",
+        "direction": "Stuttgart Hbf",
+        "platform": "",
+        "time": "2510201810",
+        "destination": "Stuttgart Hbf",
+        "path_stations": [
+          "Stuttgart Hbf"
+        ]
+      },
+      {
+        "id": "-3984397051818368210-2510201732-6",
+        "type": "RE",
+        "number": "19025",
+        "direction": "Stuttgart Hbf",
+        "platform": "2",
+        "time": "2510201808",
+        "destination": "Stuttgart Hbf",
+        "path_stations": [
+          "Stuttgart Hbf"
+        ]
+      },
+      {
+        "id": "-1645236532474773201-2510201814-8",
+        "type": "MEX",
+        "number": "19533",
+        "direction": "Stuttgart Hbf",
+        "platform": "1",
+        "time": "2510201839",
+        "destination": "Stuttgart Hbf",
+        "path_stations": [
+          "Sersheim",
+          "Sachsenheim",
+          "Ellental",
+          "Bietigheim-Bissingen",
+          "Ludwigsburg",
+          "Stuttgart Hbf"
+        ]
+      },
+      {
+        "id": "4932882228212202933-2510201712-11",
+        "type": "MEX",
+        "number": "19567",
+        "direction": "Bietigheim-Bissingen",
+        "platform": "1",
+        "time": "2510201810",
+        "destination": "Bietigheim-Bissingen",
+        "path_stations": [
+          "Sersheim",
+          "Sachsenheim",
+          "Ellental",
+          "Bietigheim-Bissingen"
+        ]
+      },
+      {
+        "id": "7769290298118018497-2510201847-7",
+        "type": "MEX",
+        "number": "19630",
+        "direction": "Bruchsal",
+        "platform": "8",
+        "time": "2510201919",
+        "destination": "Bruchsal",
+        "path_stations": [
+          "Illingen(Württ)",
+          "Mühlacker Rößlesweg",
+          "Mühlacker",
+          "Ötisheim",
+          "Maulbronn West",
+          "Ölbronn-Dürrn",
+          "Knittlingen-Kleinvillars",
+          "Bretten-Ruit",
+          "Bretten Rechberg",
+          "Bretten",
+          "Diedelsheim",
+          "Gondelsheim(Baden)",
+          "Gondelsheim Schlossstadion",
+          "Helmsheim",
+          "Heidelsheim",
+          "Heidelsheim Nord",
+          "Bruchsal Schlachthof",
+          "Bruchsal Tunnelstraße",
+          "Bruchsal"
+        ]
+      },
+      {
+        "id": "-8688911990635227423-2510201932-2",
+        "type": "RE",
+        "number": "19028",
+        "direction": "Karlsruhe Hbf",
+        "platform": "7",
+        "time": "2510201948",
+        "destination": "Karlsruhe Hbf",
+        "path_stations": [
+          "Mühlacker",
+          "Pforzheim Hbf",
+          "Wilferdingen-Singen",
+          "Karlsruhe-Durlach",
+          "Karlsruhe Hbf"
+        ]
+      },
+      {
+        "id": "5746335298978325933-2510201847-7",
+        "type": "MEX",
+        "number": "19530",
+        "direction": "Pforzheim Hbf",
+        "platform": "8",
+        "time": "2510201919",
+        "destination": "Pforzheim Hbf",
+        "path_stations": [
+          "Illingen(Württ)",
+          "Mühlacker Rößlesweg",
+          "Mühlacker",
+          "Enzberg",
+          "Niefern",
+          "Eutingen(Baden)",
+          "Pforzheim Hbf"
+        ]
+      },
+      {
+        "id": "2286746278251723039-2510201832-6",
+        "type": "RE",
+        "number": "19027",
+        "direction": "Stuttgart Hbf",
+        "platform": "2",
+        "time": "2510201908",
+        "destination": "Stuttgart Hbf",
+        "path_stations": [
+          "Stuttgart Hbf"
+        ]
+      },
+      {
+        "id": "88139029874116301-2510201802-5",
+        "type": "RE",
+        "number": "19682",
+        "direction": "Karlsruhe Hbf",
+        "platform": "7",
+        "time": "2510201916",
+        "destination": "Karlsruhe Hbf",
+        "path_stations": [
+          "Mühlacker",
+          "Pforzheim Hbf",
+          "Karlsruhe-Durlach",
+          "Karlsruhe Hbf"
+        ]
+      },
+      {
+        "id": "-3179374894623818790-2510201914-8",
+        "type": "MEX",
+        "number": "19535",
+        "direction": "Stuttgart Hbf",
+        "platform": "1",
+        "time": "2510201939",
+        "destination": "Stuttgart Hbf",
+        "path_stations": [
+          "Sersheim",
+          "Sachsenheim",
+          "Ellental",
+          "Bietigheim-Bissingen",
+          "Ludwigsburg",
+          "Stuttgart Hbf"
+        ]
+      },
+      {
+        "id": "-5705924776918724036-2510201844-8",
+        "type": "MEX",
+        "number": "19569",
+        "direction": "Bietigheim-Bissingen",
+        "platform": "1",
+        "time": "2510201910",
+        "destination": "Bietigheim-Bissingen",
+        "path_stations": [
+          "Sersheim",
+          "Sachsenheim",
+          "Ellental",
+          "Bietigheim-Bissingen"
+        ]
+      },
+      {
+        "id": "-3537065778021606010-2510201835-20",
+        "type": "MEX",
+        "number": "19635",
+        "direction": "Stuttgart Hbf",
+        "platform": "1",
+        "time": "2510201939",
+        "destination": "Stuttgart Hbf",
+        "path_stations": [
+          "Sersheim",
+          "Sachsenheim",
+          "Ellental",
+          "Bietigheim-Bissingen",
+          "Ludwigsburg",
+          "Stuttgart Hbf"
+        ]
+      },
+      {
+        "id": "-8031600068786801903-2510201905-4",
+        "type": "IC",
+        "number": "2167",
+        "direction": "Nürnberg Hbf",
+        "platform": "2",
+        "time": "2510201945",
+        "destination": "Nürnberg Hbf",
+        "path_stations": [
+          "Stuttgart Hbf",
+          "Schwäbisch Gmünd",
+          "Aalen Hbf",
+          "Ellwangen",
+          "Crailsheim",
+          "Ansbach",
+          "Nürnberg Hbf"
+        ]
+      },
+      {
+        "id": "-3759228091633272073-2510201932-5",
+        "type": "MEX",
+        "number": "19576",
+        "direction": "Pforzheim Hbf",
+        "platform": "8",
+        "time": "2510201952",
+        "destination": "Pforzheim Hbf",
+        "path_stations": [
+          "Illingen(Württ)",
+          "Mühlacker Rößlesweg",
+          "Mühlacker",
+          "Enzberg",
+          "Niefern",
+          "Eutingen(Baden)",
+          "Pforzheim Hbf"
+        ]
+      },
+      {
+        "id": "-3892470588894151283-2510201349-21",
+        "type": "IC",
+        "number": "2066",
+        "direction": "Karlsruhe Hbf",
+        "platform": "7",
+        "time": "2510202016",
+        "destination": "Karlsruhe Hbf",
+        "path_stations": [
+          "Mühlacker",
+          "Pforzheim Hbf",
+          "Karlsruhe Hbf"
+        ]
+      },
+      {
+        "id": "-6814158503963715708-2510202032-5",
+        "type": "MEX",
+        "number": "19578",
+        "direction": "Pforzheim Hbf",
+        "platform": "8",
+        "time": "2510202052",
+        "destination": "Pforzheim Hbf",
+        "path_stations": [
+          "Illingen(Württ)",
+          "Mühlacker Rößlesweg",
+          "Mühlacker",
+          "Enzberg",
+          "Niefern",
+          "Eutingen(Baden)",
+          "Pforzheim Hbf"
+        ]
+      },
+      {
+        "id": "-5174498425268507193-2510201932-6",
+        "type": "RE",
+        "number": "19029",
+        "direction": "Stuttgart Hbf",
+        "platform": "2",
+        "time": "2510202010",
+        "destination": "Stuttgart Hbf",
+        "path_stations": [
+          "Stuttgart Hbf"
+        ]
+      },
+      {
+        "id": "3276955362398523338-2510201912-11",
+        "type": "MEX",
+        "number": "19571",
+        "direction": "Bietigheim-Bissingen",
+        "platform": "1",
+        "time": "2510202010",
+        "destination": "Bietigheim-Bissingen",
+        "path_stations": [
+          "Sersheim",
+          "Sachsenheim",
+          "Ellental",
+          "Bietigheim-Bissingen"
+        ]
+      },
+      {
+        "id": "-2444117709337335847-2510202032-2",
+        "type": "RE",
+        "number": "19030",
+        "direction": "Karlsruhe Hbf",
+        "platform": "7",
+        "time": "2510202048",
+        "destination": "Karlsruhe Hbf",
+        "path_stations": [
+          "Mühlacker",
+          "Pforzheim Hbf",
+          "Wilferdingen-Singen",
+          "Karlsruhe-Durlach",
+          "Karlsruhe Hbf"
+        ]
+      },
+      {
+        "id": "-8449190673325764790-2510202006-5",
+        "type": "RE",
+        "number": "19685",
+        "direction": "Aalen Hbf",
+        "platform": "2",
+        "time": "2510202042",
+        "destination": "Aalen Hbf",
+        "path_stations": [
+          "Stuttgart Hbf",
+          "Schorndorf",
+          "Schwäbisch Gmünd",
+          "Aalen Hbf"
+        ]
+      },
+      {
+        "id": "-3853175925136838719-2510201947-7",
+        "type": "MEX",
+        "number": "19532",
+        "direction": "Pforzheim Hbf",
+        "platform": "8",
+        "time": "2510202019",
+        "destination": "Pforzheim Hbf",
+        "path_stations": [
+          "Illingen(Württ)",
+          "Mühlacker Rößlesweg",
+          "Mühlacker",
+          "Enzberg",
+          "Niefern",
+          "Eutingen(Baden)",
+          "Pforzheim Hbf"
+        ]
+      },
+      {
+        "id": "-4317009583427446377-2510201947-7",
+        "type": "MEX",
+        "number": "19632",
+        "direction": "Bruchsal",
+        "platform": "8",
+        "time": "2510202019",
+        "destination": "Bruchsal",
+        "path_stations": [
+          "Illingen(Württ)",
+          "Mühlacker Rößlesweg",
+          "Mühlacker",
+          "Ötisheim",
+          "Maulbronn West",
+          "Ölbronn-Dürrn",
+          "Knittlingen-Kleinvillars",
+          "Bretten-Ruit",
+          "Bretten Rechberg",
+          "Bretten",
+          "Diedelsheim",
+          "Gondelsheim(Baden)",
+          "Gondelsheim Schlossstadion",
+          "Helmsheim",
+          "Heidelsheim",
+          "Heidelsheim Nord",
+          "Bruchsal Schlachthof",
+          "Bruchsal Tunnelstraße",
+          "Bruchsal"
+        ]
+      },
+      {
+        "id": "6890321653011825456-2510201532-11",
+        "type": "IC",
+        "number": "1748",
+        "direction": "Stuttgart Hbf",
+        "platform": "",
+        "time": "2510202005",
+        "destination": "Stuttgart Hbf",
+        "path_stations": [
+          "Stuttgart Hbf"
+        ]
+      },
+      {
+        "id": "-8093000697463236928-2510202014-8",
+        "type": "MEX",
+        "number": "19573",
+        "direction": "Stuttgart Hbf",
+        "platform": "1",
+        "time": "2510202039",
+        "destination": "Stuttgart Hbf",
+        "path_stations": [
+          "Sersheim",
+          "Sachsenheim",
+          "Ellental",
+          "Bietigheim-Bissingen",
+          "Ludwigsburg",
+          "Stuttgart Hbf"
+        ]
+      },
+      {
+        "id": "-3024514573937466131-2510202047-7",
+        "type": "MEX",
+        "number": "19634",
+        "direction": "Bretten",
+        "platform": "8",
+        "time": "2510202119",
+        "destination": "Bretten",
+        "path_stations": [
+          "Illingen(Württ)",
+          "Mühlacker Rößlesweg",
+          "Mühlacker",
+          "Ötisheim",
+          "Maulbronn West",
+          "Ölbronn-Dürrn",
+          "Knittlingen-Kleinvillars",
+          "Bretten-Ruit",
+          "Bretten Rechberg",
+          "Bretten"
+        ]
+      },
+      {
+        "id": "-2791458000270945298-2510202132-2",
+        "type": "RE",
+        "number": "19032",
+        "direction": "Karlsruhe-Durlach",
+        "platform": "7",
+        "time": "2510202148",
+        "destination": "Karlsruhe-Durlach",
+        "path_stations": [
+          "Mühlacker",
+          "Pforzheim Hbf",
+          "Wilferdingen-Singen",
+          "Karlsruhe-Durlach"
+        ]
+      },
+      {
+        "id": "-4791262767992582053-2510202035-20",
+        "type": "MEX",
+        "number": "19637",
+        "direction": "Stuttgart Hbf",
+        "platform": "1",
+        "time": "2510202139",
+        "destination": "Stuttgart Hbf",
+        "path_stations": [
+          "Sersheim",
+          "Sachsenheim",
+          "Ellental",
+          "Bietigheim-Bissingen",
+          "Ludwigsburg",
+          "Stuttgart Hbf"
+        ]
+      },
+      {
+        "id": "-4623204494944719229-2510202133-5",
+        "type": "MEX",
+        "number": "19294",
+        "direction": "Pforzheim Hbf",
+        "platform": "8",
+        "time": "2510202152",
+        "destination": "Pforzheim Hbf",
+        "path_stations": [
+          "Illingen(Württ)",
+          "Mühlacker Rößlesweg",
+          "Mühlacker",
+          "Enzberg",
+          "Niefern",
+          "Eutingen(Baden)",
+          "Pforzheim Hbf"
+        ]
+      },
+      {
+        "id": "4084041044270891242-2510202047-7",
+        "type": "MEX",
+        "number": "19534",
+        "direction": "Pforzheim Hbf",
+        "platform": "8",
+        "time": "2510202119",
+        "destination": "Pforzheim Hbf",
+        "path_stations": [
+          "Illingen(Württ)",
+          "Mühlacker Rößlesweg",
+          "Mühlacker",
+          "Enzberg",
+          "Niefern",
+          "Eutingen(Baden)",
+          "Pforzheim Hbf"
+        ]
+      },
+      {
+        "id": "-6102362791874632686-2510202105-4",
+        "type": "IC",
+        "number": "2169",
+        "direction": "Stuttgart Hbf",
+        "platform": "2",
+        "time": "2510202145",
+        "destination": "Stuttgart Hbf",
+        "path_stations": [
+          "Stuttgart Hbf"
+        ]
+      },
+      {
+        "id": "-7655993334339442573-2510202002-5",
+        "type": "RE",
+        "number": "19684",
+        "direction": "Karlsruhe-Durlach",
+        "platform": "7",
+        "time": "2510202116",
+        "destination": "Karlsruhe-Durlach",
+        "path_stations": [
+          "Mühlacker",
+          "Pforzheim Hbf",
+          "Karlsruhe-Durlach"
+        ]
+      },
+      {
+        "id": "-7261750098290902360-2510202044-8",
+        "type": "MEX",
+        "number": "19293",
+        "direction": "Bietigheim-Bissingen",
+        "platform": "1",
+        "time": "2510202110",
+        "destination": "Bietigheim-Bissingen",
+        "path_stations": [
+          "Sersheim",
+          "Sachsenheim",
+          "Ellental",
+          "Bietigheim-Bissingen"
+        ]
+      },
+      {
+        "id": "-1057064685296734777-2510202032-6",
+        "type": "RE",
+        "number": "19031",
+        "direction": "Stuttgart Hbf",
+        "platform": "2",
+        "time": "2510202108",
+        "destination": "Stuttgart Hbf",
+        "path_stations": [
+          "Stuttgart Hbf"
+        ]
+      },
+      {
+        "id": "-6845729400861309457-2510202147-7",
+        "type": "MEX",
+        "number": "19580",
+        "direction": "Pforzheim Hbf",
+        "platform": "8",
+        "time": "2510202219",
+        "destination": "Pforzheim Hbf",
+        "path_stations": [
+          "Illingen(Württ)",
+          "Mühlacker Rößlesweg",
+          "Mühlacker",
+          "Enzberg",
+          "Niefern",
+          "Eutingen(Baden)",
+          "Pforzheim Hbf"
+        ]
+      },
+      {
+        "id": "-7163022953070797410-2510202252-1",
+        "type": "MEX",
+        "number": "19296",
+        "direction": "Pforzheim Hbf",
+        "platform": "8",
+        "time": "2510202252",
+        "destination": "Pforzheim Hbf",
+        "path_stations": [
+          "Illingen(Württ)",
+          "Mühlacker Rößlesweg",
+          "Mühlacker",
+          "Enzberg",
+          "Niefern",
+          "Eutingen(Baden)",
+          "Pforzheim Hbf"
+        ]
+      },
+      {
+        "id": "2044823728383562621-2510201549-21",
+        "type": "IC",
+        "number": "2064",
+        "direction": "Karlsruhe Hbf",
+        "platform": "7",
+        "time": "2510202216",
+        "destination": "Karlsruhe Hbf",
+        "path_stations": [
+          "Mühlacker",
+          "Pforzheim Hbf",
+          "Karlsruhe-Durlach",
+          "Karlsruhe Hbf"
+        ]
+      },
+      {
+        "id": "7314869315265201005-2510202132-6",
+        "type": "RE",
+        "number": "19687",
+        "direction": "Stuttgart Hbf",
+        "platform": "2",
+        "time": "2510202210",
+        "destination": "Stuttgart Hbf",
+        "path_stations": [
+          "Stuttgart Hbf"
+        ]
+      },
+      {
+        "id": "8874607945772018349-2510202211-4",
+        "type": "RE",
+        "number": "19033",
+        "direction": "Stuttgart Hbf",
+        "platform": "2",
+        "time": "2510202243",
+        "destination": "Stuttgart Hbf",
+        "path_stations": [
+          "Stuttgart Hbf"
+        ]
+      },
+      {
+        "id": "-8985650993341541685-2510201732-11",
+        "type": "IC",
+        "number": "2340",
+        "direction": "Stuttgart Hbf",
+        "platform": "",
+        "time": "2510202216",
+        "destination": "Stuttgart Hbf",
+        "path_stations": [
+          "Stuttgart Hbf"
+        ]
+      },
+      {
+        "id": "-1152224742165827985-2510202354-1",
+        "type": "MEX",
+        "number": "19298",
+        "direction": "Pforzheim Hbf",
+        "platform": "8",
+        "time": "2510202354",
+        "destination": "Pforzheim Hbf",
+        "path_stations": [
+          "Illingen(Württ)",
+          "Mühlacker Rößlesweg",
+          "Mühlacker",
+          "Enzberg",
+          "Niefern",
+          "Eutingen(Baden)",
+          "Pforzheim Hbf"
+        ]
+      },
+      {
+        "id": "-4646985337850723440-2510202236-5",
+        "type": "RE",
+        "number": "19035",
+        "direction": "Stuttgart Hbf",
+        "platform": "7",
+        "time": "2510202308",
+        "destination": "Stuttgart Hbf",
+        "path_stations": [
+          "Stuttgart Hbf"
+        ]
+      },
+      {
+        "id": "1724593898137549213-2510202313-2",
+        "type": "RE",
+        "number": "19686",
+        "direction": "Karlsruhe Hbf",
+        "platform": "7",
+        "time": "2510202331",
+        "destination": "Karlsruhe Hbf",
+        "path_stations": [
+          "Mühlacker",
+          "Pforzheim Hbf",
+          "Wilferdingen-Singen",
+          "Karlsruhe-Durlach",
+          "Karlsruhe Hbf"
+        ]
+      },
+      {
+        "id": "3398533831125225256-2510202319-1",
+        "type": "MEX",
+        "number": "19582",
+        "direction": "Pforzheim Hbf",
+        "platform": "8",
+        "time": "2510202319",
+        "destination": "Pforzheim Hbf",
+        "path_stations": [
+          "Illingen(Württ)",
+          "Mühlacker Rößlesweg",
+          "Mühlacker",
+          "Enzberg",
+          "Niefern",
+          "Eutingen(Baden)",
+          "Pforzheim Hbf"
+        ]
+      },
+      {
+        "id": "4809404484709601338-2510202308-3",
+        "type": "ICE",
+        "number": "937",
+        "direction": "Stuttgart Hbf",
+        "platform": "7",
+        "time": "2510210035",
+        "destination": "Stuttgart Hbf",
+        "path_stations": [
+          "Stuttgart Hbf"
+        ]
+      },
+      {
+        "id": "-8332221861054296360-2510210016-2",
+        "type": "RE",
+        "number": "19036",
+        "direction": "Karlsruhe Hbf",
+        "platform": "8",
+        "time": "2510210043",
+        "destination": "Karlsruhe Hbf",
+        "path_stations": [
+          "Mühlacker",
+          "Pforzheim Hbf",
+          "Wilferdingen-Singen",
+          "Karlsruhe-Durlach",
+          "Karlsruhe Hbf"
+        ]
+      },
+      {
+        "id": "-1907182906752160648-2510210055-1",
+        "type": "MEX",
+        "number": "19584",
+        "direction": "Pforzheim Hbf",
+        "platform": "8",
+        "time": "2510210055",
+        "destination": "Pforzheim Hbf",
+        "path_stations": [
+          "Illingen(Württ)",
+          "Mühlacker Rößlesweg",
+          "Mühlacker",
+          "Enzberg",
+          "Niefern",
+          "Eutingen(Baden)",
+          "Pforzheim Hbf"
+        ]
+      },
+      {
+        "id": "360495048367861265-2510210019-1",
+        "type": "MEX",
+        "number": "19362",
+        "direction": "Pforzheim Hbf",
+        "platform": "8",
+        "time": "2510210019",
+        "destination": "Pforzheim Hbf",
+        "path_stations": [
+          "Illingen(Württ)",
+          "Mühlacker Rößlesweg",
+          "Mühlacker",
+          "Enzberg",
+          "Niefern",
+          "Eutingen(Baden)",
+          "Pforzheim Hbf"
+        ]
+      },
+      {
+        "id": "-4949596631328210474-2510210438-8",
+        "type": "MEX",
+        "number": "19543",
+        "direction": "Bietigheim-Bissingen",
+        "platform": "1",
+        "time": "2510210459",
+        "destination": "Bietigheim-Bissingen",
+        "path_stations": [
+          "Sersheim",
+          "Sachsenheim",
+          "Ellental",
+          "Bietigheim-Bissingen"
+        ]
+      },
+      {
+        "id": "-6065310940048257316-2510210417-8",
+        "type": "MEX",
+        "number": "19541",
+        "direction": "Stuttgart Hbf",
+        "platform": "1",
+        "time": "2510210438",
+        "destination": "Stuttgart Hbf",
+        "path_stations": [
+          "Sersheim",
+          "Sachsenheim",
+          "Ellental",
+          "Bietigheim-Bissingen",
+          "Ludwigsburg",
+          "Stuttgart Hbf"
+        ]
+      },
+      {
+        "id": "718153316434026022-2510210504-5",
+        "type": "MEX",
+        "number": "19540",
+        "direction": "Pforzheim Hbf",
+        "platform": "8",
+        "time": "2510210519",
+        "destination": "Pforzheim Hbf",
+        "path_stations": [
+          "Illingen(Württ)",
+          "Mühlacker Rößlesweg",
+          "Mühlacker",
+          "Enzberg",
+          "Niefern",
+          "Eutingen(Baden)",
+          "Pforzheim Hbf"
+        ]
+      },
+      {
+        "id": "2643291846753523015-2510210425-20",
+        "type": "MEX",
+        "number": "19601",
+        "direction": "Stuttgart Hbf",
+        "platform": "1",
+        "time": "2510210536",
+        "destination": "Stuttgart Hbf",
+        "path_stations": [
+          "Sersheim",
+          "Sachsenheim",
+          "Ellental",
+          "Bietigheim-Bissingen",
+          "Ludwigsburg",
+          "Stuttgart Hbf"
+        ]
+      },
+      {
+        "id": "2282903592407009053-2510210514-7",
+        "type": "MEX",
+        "number": "19542",
+        "direction": "Karlsruhe Hbf",
+        "platform": "8",
+        "time": "2510210552",
+        "destination": "Karlsruhe Hbf",
+        "path_stations": [
+          "Illingen(Württ)",
+          "Mühlacker Rößlesweg",
+          "Mühlacker",
+          "Enzberg",
+          "Niefern",
+          "Eutingen(Baden)",
+          "Pforzheim Hbf",
+          "Wilferdingen-Singen",
+          "Karlsruhe-Durlach",
+          "Karlsruhe Hbf"
+        ]
+      },
+      {
+        "id": "-5014994256132258392-2510210510-8",
+        "type": "MEX",
+        "number": "19501",
+        "direction": "Stuttgart Hbf",
+        "platform": "1",
+        "time": "2510210536",
+        "destination": "Stuttgart Hbf",
+        "path_stations": [
+          "Sersheim",
+          "Sachsenheim",
+          "Ellental",
+          "Bietigheim-Bissingen",
+          "Ludwigsburg",
+          "Stuttgart Hbf"
+        ]
+      },
+      {
+        "id": "7715317560156396880-2510210532-2",
+        "type": "RE",
+        "number": "19000",
+        "direction": "Karlsruhe Hbf",
+        "platform": "7",
+        "time": "2510210548",
+        "destination": "Karlsruhe Hbf",
+        "path_stations": [
+          "Mühlacker",
+          "Pforzheim Hbf",
+          "Wilferdingen-Singen",
+          "Karlsruhe-Durlach",
+          "Karlsruhe Hbf"
+        ]
+      },
+      {
+        "id": "428699380039786739-2510210502-2",
+        "type": "ICE",
+        "number": "774",
+        "direction": "Hamburg Hbf",
+        "platform": "7",
+        "time": "2510210519",
+        "destination": "Hamburg Hbf",
+        "path_stations": [
+          "Heidelberg Hbf",
+          "Mannheim Hbf",
+          "Frankfurt(M) Flughafen Fernbf",
+          "Frankfurt(Main)Hbf",
+          "Kassel-Wilhelmshöhe",
+          "Göttingen",
+          "Hannover Hbf",
+          "Hamburg Hbf"
+        ]
+      },
+      {
+        "id": "6311908957437318181-2510210605-2",
+        "type": "IC",
+        "number": "2298",
+        "direction": "Frankfurt(Main)Hbf",
+        "platform": "7",
+        "time": "2510210625",
+        "destination": "Frankfurt(Main)Hbf",
+        "path_stations": [
+          "Heidelberg Hbf",
+          "Weinheim(Bergstr)Hbf",
+          "Bensheim",
+          "Darmstadt Hbf",
+          "Frankfurt(Main)Hbf"
+        ]
+      },
+      {
+        "id": "-3971428028512834423-2510210512-11",
+        "type": "MEX",
+        "number": "19545",
+        "direction": "Bietigheim-Bissingen",
+        "platform": "1",
+        "time": "2510210609",
+        "destination": "Bietigheim-Bissingen",
+        "path_stations": [
+          "Sersheim",
+          "Sachsenheim",
+          "Ellental",
+          "Bietigheim-Bissingen"
+        ]
+      },
+      {
+        "id": "-3876592672855953228-2510210609-7",
+        "type": "MEX",
+        "number": "19546",
+        "direction": "Pforzheim Hbf",
+        "platform": "8",
+        "time": "2510210643",
+        "destination": "Pforzheim Hbf",
+        "path_stations": [
+          "Illingen(Württ)",
+          "Mühlacker Rößlesweg",
+          "Mühlacker",
+          "Enzberg",
+          "Niefern",
+          "Eutingen(Baden)",
+          "Pforzheim Hbf"
+        ]
+      },
+      {
+        "id": "355165098746529713-2510210532-6",
+        "type": "RE",
+        "number": "19001",
+        "direction": "Stuttgart Hbf",
+        "platform": "2",
+        "time": "2510210608",
+        "destination": "Stuttgart Hbf",
+        "path_stations": [
+          "Stuttgart Hbf"
+        ]
+      },
+      {
+        "id": "-2134568593082033484-2510210602-5",
+        "type": "RE",
+        "number": "19671",
+        "direction": "Aalen Hbf",
+        "platform": "2",
+        "time": "2510210639",
+        "destination": "Aalen Hbf",
+        "path_stations": [
+          "Stuttgart Hbf",
+          "Schorndorf",
+          "Schwäbisch Gmünd",
+          "Aalen Hbf"
+        ]
+      },
+      {
+        "id": "6955312411791178764-2510210626-2",
+        "type": "ICE",
+        "number": "1118",
+        "direction": "Wiesbaden Hbf",
+        "platform": "7",
+        "time": "2510210643",
+        "destination": "Wiesbaden Hbf",
+        "path_stations": [
+          "Heidelberg Hbf",
+          "Mannheim Hbf",
+          "Mainz Hbf",
+          "Wiesbaden Hbf"
+        ]
+      },
+      {
+        "id": "-9044484065254194157-2510210632-2",
+        "type": "RE",
+        "number": "19002",
+        "direction": "Karlsruhe Hbf",
+        "platform": "7",
+        "time": "2510210648",
+        "destination": "Karlsruhe Hbf",
+        "path_stations": [
+          "Mühlacker",
+          "Pforzheim Hbf",
+          "Wilferdingen-Singen",
+          "Karlsruhe-Durlach",
+          "Karlsruhe Hbf"
+        ]
+      },
+      {
+        "id": "-5881886114312715583-2510210611-8",
+        "type": "MEX",
+        "number": "19503",
+        "direction": "Stuttgart Hbf",
+        "platform": "1",
+        "time": "2510210639",
+        "destination": "Stuttgart Hbf",
+        "path_stations": [
+          "Sersheim",
+          "Sachsenheim",
+          "Ellental",
+          "Bietigheim-Bissingen",
+          "Ludwigsburg",
+          "Stuttgart Hbf"
+        ]
+      },
+      {
+        "id": "5965122661626269288-2510210534-20",
+        "type": "MEX",
+        "number": "19603",
+        "direction": "Stuttgart Hbf",
+        "platform": "1",
+        "time": "2510210639",
+        "destination": "Stuttgart Hbf",
+        "path_stations": [
+          "Sersheim",
+          "Sachsenheim",
+          "Ellental",
+          "Bietigheim-Bissingen",
+          "Ludwigsburg",
+          "Stuttgart Hbf"
+        ]
+      },
+      {
+        "id": "8536419679908261131-2510210604-5",
+        "type": "MEX",
+        "number": "19544",
+        "direction": "Pforzheim Hbf",
+        "platform": "8",
+        "time": "2510210619",
+        "destination": "Pforzheim Hbf",
+        "path_stations": [
+          "Illingen(Württ)",
+          "Mühlacker Rößlesweg",
+          "Mühlacker",
+          "Enzberg",
+          "Niefern",
+          "Eutingen(Baden)",
+          "Pforzheim Hbf"
+        ]
+      }
+    ]
+  }
+}

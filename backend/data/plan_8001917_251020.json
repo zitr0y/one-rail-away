@@ -1,0 +1,629 @@
+{
+  "station_eva": "8001917",
+  "date": "251020",
+  "cached_at": "2025-10-20T16:39:51.150383",
+  "plan_data": {
+    "arrivals": [
+      {
+        "id": "-5356427100870306234-2510201734-21",
+        "type": "RB",
+        "number": "30078",
+        "time": "2510201839",
+        "platform": "",
+        "path_stations": [
+          "Stolberg-Rathaus",
+          "Stolberg-Mühlener Bahnhof",
+          "Stolberg-Schneidmühle",
+          "Stolberg(Rheinl)Hbf Gl.27",
+          "Stolberg(Rheinl)Gbf",
+          "Stolberg(Rheinl)Hbf",
+          "Eilendorf",
+          "Aachen-Rothe Erde",
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West",
+          "Kohlscheid",
+          "Herzogenrath",
+          "Herzogenrath-Alt-Merkstein",
+          "Herzogenrath-August-Schmidt-Platz",
+          "Alsdorf-Busch",
+          "Alsdorf-Annapark",
+          "Alsdorf-Kellersberg",
+          "Alsdorf-Mariadorf",
+          "Alsdorf Poststraße"
+        ],
+        "line": "20"
+      },
+      {
+        "id": "8283963531820422264-2510201812-3",
+        "type": "RB",
+        "number": "30031",
+        "time": "2510201819",
+        "platform": "",
+        "path_stations": [
+          "Stolberg(Rheinl)Hbf Gl.44",
+          "Würselen-Merzbrück"
+        ],
+        "line": "20"
+      },
+      {
+        "id": "8695786270505834772-2510201912-3",
+        "type": "RB",
+        "number": "30033",
+        "time": "2510201919",
+        "platform": "",
+        "path_stations": [
+          "Stolberg(Rheinl)Hbf Gl.44",
+          "Würselen-Merzbrück"
+        ],
+        "line": "20"
+      },
+      {
+        "id": "1096955944459427262-2510201834-21",
+        "type": "RB",
+        "number": "30080",
+        "time": "2510201939",
+        "platform": "",
+        "path_stations": [
+          "Stolberg-Rathaus",
+          "Stolberg-Mühlener Bahnhof",
+          "Stolberg-Schneidmühle",
+          "Stolberg(Rheinl)Hbf Gl.27",
+          "Stolberg(Rheinl)Gbf",
+          "Stolberg(Rheinl)Hbf",
+          "Eilendorf",
+          "Aachen-Rothe Erde",
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West",
+          "Kohlscheid",
+          "Herzogenrath",
+          "Herzogenrath-Alt-Merkstein",
+          "Herzogenrath-August-Schmidt-Platz",
+          "Alsdorf-Busch",
+          "Alsdorf-Annapark",
+          "Alsdorf-Kellersberg",
+          "Alsdorf-Mariadorf",
+          "Alsdorf Poststraße"
+        ],
+        "line": "20"
+      },
+      {
+        "id": "1070772514473304501-2510202012-3",
+        "type": "RB",
+        "number": "30035",
+        "time": "2510202019",
+        "platform": "",
+        "path_stations": [
+          "Stolberg(Rheinl)Hbf Gl.44",
+          "Würselen-Merzbrück"
+        ],
+        "line": "20"
+      },
+      {
+        "id": "-4581662523979249023-2510201934-21",
+        "type": "RB",
+        "number": "30082",
+        "time": "2510202039",
+        "platform": "",
+        "path_stations": [
+          "Stolberg-Rathaus",
+          "Stolberg-Mühlener Bahnhof",
+          "Stolberg-Schneidmühle",
+          "Stolberg(Rheinl)Hbf Gl.27",
+          "Stolberg(Rheinl)Gbf",
+          "Stolberg(Rheinl)Hbf",
+          "Eilendorf",
+          "Aachen-Rothe Erde",
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West",
+          "Kohlscheid",
+          "Herzogenrath",
+          "Herzogenrath-Alt-Merkstein",
+          "Herzogenrath-August-Schmidt-Platz",
+          "Alsdorf-Busch",
+          "Alsdorf-Annapark",
+          "Alsdorf-Kellersberg",
+          "Alsdorf-Mariadorf",
+          "Alsdorf Poststraße"
+        ],
+        "line": "20"
+      },
+      {
+        "id": "-2730674727498638193-2510202034-21",
+        "type": "RB",
+        "number": "30084",
+        "time": "2510202139",
+        "platform": "",
+        "path_stations": [
+          "Stolberg-Rathaus",
+          "Stolberg-Mühlener Bahnhof",
+          "Stolberg-Schneidmühle",
+          "Stolberg(Rheinl)Hbf Gl.27",
+          "Stolberg(Rheinl)Gbf",
+          "Stolberg(Rheinl)Hbf",
+          "Eilendorf",
+          "Aachen-Rothe Erde",
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West",
+          "Kohlscheid",
+          "Herzogenrath",
+          "Herzogenrath-Alt-Merkstein",
+          "Herzogenrath-August-Schmidt-Platz",
+          "Alsdorf-Busch",
+          "Alsdorf-Annapark",
+          "Alsdorf-Kellersberg",
+          "Alsdorf-Mariadorf",
+          "Alsdorf Poststraße"
+        ],
+        "line": "20"
+      },
+      {
+        "id": "-3515297893740549448-2510202112-3",
+        "type": "RB",
+        "number": "30037",
+        "time": "2510202119",
+        "platform": "",
+        "path_stations": [
+          "Stolberg(Rheinl)Hbf Gl.44",
+          "Würselen-Merzbrück"
+        ],
+        "line": "20"
+      },
+      {
+        "id": "-678862891862806463-2510202150-16",
+        "type": "RB",
+        "number": "30036",
+        "time": "2510202239",
+        "platform": "",
+        "path_stations": [
+          "Stolberg(Rheinl)Hbf",
+          "Eilendorf",
+          "Aachen-Rothe Erde",
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West",
+          "Kohlscheid",
+          "Herzogenrath",
+          "Herzogenrath-Alt-Merkstein",
+          "Herzogenrath-August-Schmidt-Platz",
+          "Alsdorf-Busch",
+          "Alsdorf-Annapark",
+          "Alsdorf-Kellersberg",
+          "Alsdorf-Mariadorf",
+          "Alsdorf Poststraße"
+        ],
+        "line": "20"
+      },
+      {
+        "id": "-1931208181667454933-2510202212-3",
+        "type": "RB",
+        "number": "30039",
+        "time": "2510202219",
+        "platform": "",
+        "path_stations": [
+          "Stolberg(Rheinl)Hbf Gl.44",
+          "Würselen-Merzbrück"
+        ],
+        "line": "20"
+      },
+      {
+        "id": "-5079999310066140296-2510202250-5",
+        "type": "RB",
+        "number": "30046",
+        "time": "2510202339",
+        "platform": "",
+        "path_stations": [
+          "Alsdorf-Annapark",
+          "Alsdorf-Kellersberg",
+          "Alsdorf-Mariadorf",
+          "Alsdorf Poststraße"
+        ],
+        "line": "20"
+      },
+      {
+        "id": "1573967790757085557-2510202312-3",
+        "type": "RB",
+        "number": "30043",
+        "time": "2510202319",
+        "platform": "",
+        "path_stations": [
+          "Stolberg(Rheinl)Hbf Gl.44",
+          "Würselen-Merzbrück"
+        ],
+        "line": "20"
+      },
+      {
+        "id": "3833728364578108667-2510210511-3",
+        "type": "RB",
+        "number": "30005",
+        "time": "2510210518",
+        "platform": "",
+        "path_stations": [
+          "Stolberg(Rheinl)Hbf Gl.44",
+          "Würselen-Merzbrück"
+        ],
+        "line": "20"
+      },
+      {
+        "id": "1289268753873593751-2510210459-14",
+        "type": "RB",
+        "number": "30002",
+        "time": "2510210539",
+        "platform": "",
+        "path_stations": [
+          "Aachen-Rothe Erde",
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West",
+          "Kohlscheid",
+          "Herzogenrath",
+          "Herzogenrath-Alt-Merkstein",
+          "Herzogenrath-August-Schmidt-Platz",
+          "Alsdorf-Busch",
+          "Alsdorf-Annapark",
+          "Alsdorf-Kellersberg",
+          "Alsdorf-Mariadorf",
+          "Alsdorf Poststraße"
+        ],
+        "line": "20"
+      },
+      {
+        "id": "-2239312772507820721-2510210612-3",
+        "type": "RB",
+        "number": "30007",
+        "time": "2510210619",
+        "platform": "",
+        "path_stations": [
+          "Stolberg(Rheinl)Hbf Gl.44",
+          "Würselen-Merzbrück"
+        ],
+        "line": "20"
+      },
+      {
+        "id": "-2850531178178820756-2510210534-21",
+        "type": "RB",
+        "number": "30054",
+        "time": "2510210639",
+        "platform": "",
+        "path_stations": [
+          "Stolberg-Rathaus",
+          "Stolberg-Mühlener Bahnhof",
+          "Stolberg-Schneidmühle",
+          "Stolberg(Rheinl)Hbf Gl.27",
+          "Stolberg(Rheinl)Gbf",
+          "Stolberg(Rheinl)Hbf",
+          "Eilendorf",
+          "Aachen-Rothe Erde",
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West",
+          "Kohlscheid",
+          "Herzogenrath",
+          "Herzogenrath-Alt-Merkstein",
+          "Herzogenrath-August-Schmidt-Platz",
+          "Alsdorf-Busch",
+          "Alsdorf-Annapark",
+          "Alsdorf-Kellersberg",
+          "Alsdorf-Mariadorf",
+          "Alsdorf Poststraße"
+        ],
+        "line": "20"
+      }
+    ],
+    "departures": [
+      {
+        "id": "-5356427100870306234-2510201734-21",
+        "type": "RB",
+        "number": "30078",
+        "direction": "Stolberg(Rheinl)Hbf Gl.44",
+        "platform": "",
+        "time": "2510201839",
+        "destination": "Stolberg(Rheinl)Hbf Gl.44",
+        "path_stations": [
+          "Würselen-Merzbrück",
+          "Stolberg(Rheinl)Hbf Gl.44"
+        ]
+      },
+      {
+        "id": "8283963531820422264-2510201812-3",
+        "type": "RB",
+        "number": "30031",
+        "direction": "Stolberg(Rheinl)Hbf",
+        "platform": "",
+        "time": "2510201819",
+        "destination": "Stolberg(Rheinl)Hbf",
+        "path_stations": [
+          "Alsdorf Poststraße",
+          "Alsdorf-Mariadorf",
+          "Alsdorf-Kellersberg",
+          "Alsdorf-Annapark",
+          "Alsdorf-Busch",
+          "Herzogenrath-August-Schmidt-Platz",
+          "Herzogenrath-Alt-Merkstein",
+          "Herzogenrath",
+          "Kohlscheid",
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf",
+          "Aachen-Rothe Erde",
+          "Eilendorf",
+          "Stolberg(Rheinl)Hbf"
+        ]
+      },
+      {
+        "id": "8695786270505834772-2510201912-3",
+        "type": "RB",
+        "number": "30033",
+        "direction": "Stolberg(Rheinl)Hbf",
+        "platform": "",
+        "time": "2510201919",
+        "destination": "Stolberg(Rheinl)Hbf",
+        "path_stations": [
+          "Alsdorf Poststraße",
+          "Alsdorf-Mariadorf",
+          "Alsdorf-Kellersberg",
+          "Alsdorf-Annapark",
+          "Alsdorf-Busch",
+          "Herzogenrath-August-Schmidt-Platz",
+          "Herzogenrath-Alt-Merkstein",
+          "Herzogenrath",
+          "Kohlscheid",
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf",
+          "Aachen-Rothe Erde",
+          "Eilendorf",
+          "Stolberg(Rheinl)Hbf"
+        ]
+      },
+      {
+        "id": "1096955944459427262-2510201834-21",
+        "type": "RB",
+        "number": "30080",
+        "direction": "Stolberg(Rheinl)Hbf Gl.44",
+        "platform": "",
+        "time": "2510201939",
+        "destination": "Stolberg(Rheinl)Hbf Gl.44",
+        "path_stations": [
+          "Würselen-Merzbrück",
+          "Stolberg(Rheinl)Hbf Gl.44"
+        ]
+      },
+      {
+        "id": "1070772514473304501-2510202012-3",
+        "type": "RB",
+        "number": "30035",
+        "direction": "Stolberg(Rheinl)Hbf",
+        "platform": "",
+        "time": "2510202019",
+        "destination": "Stolberg(Rheinl)Hbf",
+        "path_stations": [
+          "Alsdorf Poststraße",
+          "Alsdorf-Mariadorf",
+          "Alsdorf-Kellersberg",
+          "Alsdorf-Annapark",
+          "Alsdorf-Busch",
+          "Herzogenrath-August-Schmidt-Platz",
+          "Herzogenrath-Alt-Merkstein",
+          "Herzogenrath",
+          "Kohlscheid",
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf",
+          "Aachen-Rothe Erde",
+          "Eilendorf",
+          "Stolberg(Rheinl)Hbf"
+        ]
+      },
+      {
+        "id": "-4581662523979249023-2510201934-21",
+        "type": "RB",
+        "number": "30082",
+        "direction": "Stolberg(Rheinl)Hbf Gl.44",
+        "platform": "",
+        "time": "2510202039",
+        "destination": "Stolberg(Rheinl)Hbf Gl.44",
+        "path_stations": [
+          "Würselen-Merzbrück",
+          "Stolberg(Rheinl)Hbf Gl.44"
+        ]
+      },
+      {
+        "id": "-2730674727498638193-2510202034-21",
+        "type": "RB",
+        "number": "30084",
+        "direction": "Stolberg(Rheinl)Hbf Gl.44",
+        "platform": "",
+        "time": "2510202139",
+        "destination": "Stolberg(Rheinl)Hbf Gl.44",
+        "path_stations": [
+          "Würselen-Merzbrück",
+          "Stolberg(Rheinl)Hbf Gl.44"
+        ]
+      },
+      {
+        "id": "-3515297893740549448-2510202112-3",
+        "type": "RB",
+        "number": "30037",
+        "direction": "Stolberg(Rheinl)Hbf",
+        "platform": "",
+        "time": "2510202119",
+        "destination": "Stolberg(Rheinl)Hbf",
+        "path_stations": [
+          "Alsdorf Poststraße",
+          "Alsdorf-Mariadorf",
+          "Alsdorf-Kellersberg",
+          "Alsdorf-Annapark",
+          "Alsdorf-Busch",
+          "Herzogenrath-August-Schmidt-Platz",
+          "Herzogenrath-Alt-Merkstein",
+          "Herzogenrath",
+          "Kohlscheid",
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf",
+          "Aachen-Rothe Erde",
+          "Eilendorf",
+          "Stolberg(Rheinl)Hbf"
+        ]
+      },
+      {
+        "id": "-678862891862806463-2510202150-16",
+        "type": "RB",
+        "number": "30036",
+        "direction": "Stolberg(Rheinl)Hbf Gl.44",
+        "platform": "",
+        "time": "2510202239",
+        "destination": "Stolberg(Rheinl)Hbf Gl.44",
+        "path_stations": [
+          "Würselen-Merzbrück",
+          "Stolberg(Rheinl)Hbf Gl.44"
+        ]
+      },
+      {
+        "id": "-1931208181667454933-2510202212-3",
+        "type": "RB",
+        "number": "30039",
+        "direction": "Stolberg(Rheinl)Hbf",
+        "platform": "",
+        "time": "2510202219",
+        "destination": "Stolberg(Rheinl)Hbf",
+        "path_stations": [
+          "Alsdorf Poststraße",
+          "Alsdorf-Mariadorf",
+          "Alsdorf-Kellersberg",
+          "Alsdorf-Annapark",
+          "Alsdorf-Busch",
+          "Herzogenrath-August-Schmidt-Platz",
+          "Herzogenrath-Alt-Merkstein",
+          "Herzogenrath",
+          "Kohlscheid",
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf",
+          "Aachen-Rothe Erde",
+          "Eilendorf",
+          "Stolberg(Rheinl)Hbf"
+        ]
+      },
+      {
+        "id": "-5079999310066140296-2510202250-5",
+        "type": "RB",
+        "number": "30046",
+        "direction": "Stolberg(Rheinl)Hbf Gl.44",
+        "platform": "",
+        "time": "2510202339",
+        "destination": "Stolberg(Rheinl)Hbf Gl.44",
+        "path_stations": [
+          "Würselen-Merzbrück",
+          "Stolberg(Rheinl)Hbf Gl.44"
+        ]
+      },
+      {
+        "id": "1573967790757085557-2510202312-3",
+        "type": "RB",
+        "number": "30043",
+        "direction": "Aachen-Rothe Erde",
+        "platform": "",
+        "time": "2510202319",
+        "destination": "Aachen-Rothe Erde",
+        "path_stations": [
+          "Alsdorf Poststraße",
+          "Alsdorf-Mariadorf",
+          "Alsdorf-Kellersberg",
+          "Alsdorf-Annapark",
+          "Alsdorf-Busch",
+          "Herzogenrath-August-Schmidt-Platz",
+          "Herzogenrath-Alt-Merkstein",
+          "Herzogenrath",
+          "Kohlscheid",
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf",
+          "Aachen-Rothe Erde"
+        ]
+      },
+      {
+        "id": "3833728364578108667-2510210511-3",
+        "type": "RB",
+        "number": "30005",
+        "direction": "Stolberg(Rheinl)Hbf",
+        "platform": "",
+        "time": "2510210519",
+        "destination": "Stolberg(Rheinl)Hbf",
+        "path_stations": [
+          "Alsdorf Poststraße",
+          "Alsdorf-Mariadorf",
+          "Alsdorf-Kellersberg",
+          "Alsdorf-Annapark",
+          "Alsdorf-Busch",
+          "Herzogenrath-August-Schmidt-Platz",
+          "Herzogenrath-Alt-Merkstein",
+          "Herzogenrath",
+          "Kohlscheid",
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf",
+          "Aachen-Rothe Erde",
+          "Eilendorf",
+          "Stolberg(Rheinl)Hbf"
+        ]
+      },
+      {
+        "id": "1289268753873593751-2510210459-14",
+        "type": "RB",
+        "number": "30002",
+        "direction": "Stolberg(Rheinl)Hbf Gl.44",
+        "platform": "",
+        "time": "2510210539",
+        "destination": "Stolberg(Rheinl)Hbf Gl.44",
+        "path_stations": [
+          "Würselen-Merzbrück",
+          "Stolberg(Rheinl)Hbf Gl.44"
+        ]
+      },
+      {
+        "id": "-2239312772507820721-2510210612-3",
+        "type": "RB",
+        "number": "30007",
+        "direction": "Stolberg(Rheinl)Hbf",
+        "platform": "",
+        "time": "2510210619",
+        "destination": "Stolberg(Rheinl)Hbf",
+        "path_stations": [
+          "Alsdorf Poststraße",
+          "Alsdorf-Mariadorf",
+          "Alsdorf-Kellersberg",
+          "Alsdorf-Annapark",
+          "Alsdorf-Busch",
+          "Herzogenrath-August-Schmidt-Platz",
+          "Herzogenrath-Alt-Merkstein",
+          "Herzogenrath",
+          "Kohlscheid",
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf",
+          "Aachen-Rothe Erde",
+          "Eilendorf",
+          "Stolberg(Rheinl)Hbf"
+        ]
+      },
+      {
+        "id": "-2850531178178820756-2510210534-21",
+        "type": "RB",
+        "number": "30054",
+        "direction": "Stolberg(Rheinl)Hbf Gl.44",
+        "platform": "",
+        "time": "2510210639",
+        "destination": "Stolberg(Rheinl)Hbf Gl.44",
+        "path_stations": [
+          "Würselen-Merzbrück",
+          "Stolberg(Rheinl)Hbf Gl.44"
+        ]
+      }
+    ]
+  }
+}

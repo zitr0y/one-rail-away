@@ -1,0 +1,1261 @@
+{
+  "station_eva": "8005590",
+  "date": "251020",
+  "cached_at": "2025-10-20T16:38:51.137566",
+  "plan_data": {
+    "arrivals": [
+      {
+        "id": "-5922691984163192005-2510201753-10",
+        "type": "RRB",
+        "number": "90131",
+        "time": "2510201833",
+        "platform": "1",
+        "path_stations": [
+          "Wuppertal Hbf",
+          "Wuppertal-Unterbarmen",
+          "Wuppertal-Barmen",
+          "Wuppertal-Oberbarmen",
+          "Wuppertal-Ronsdorf",
+          "Remscheid-Lüttringhausen",
+          "Remscheid-Lennep",
+          "Remscheid Hbf",
+          "Remscheid-Güldenwerth"
+        ],
+        "line": "S7"
+      },
+      {
+        "id": "7263198167976990659-2510201832-4",
+        "type": "RRB",
+        "number": "90130",
+        "time": "2510201844",
+        "platform": "2",
+        "path_stations": [
+          "Solingen Hbf",
+          "Solingen Grünewald",
+          "Solingen Mitte"
+        ],
+        "line": "S7"
+      },
+      {
+        "id": "8858590885556278103-2510201813-10",
+        "type": "RRB",
+        "number": "90133",
+        "time": "2510201853",
+        "platform": "1",
+        "path_stations": [
+          "Wuppertal Hbf",
+          "Wuppertal-Unterbarmen",
+          "Wuppertal-Barmen",
+          "Wuppertal-Oberbarmen",
+          "Wuppertal-Ronsdorf",
+          "Remscheid-Lüttringhausen",
+          "Remscheid-Lennep",
+          "Remscheid Hbf",
+          "Remscheid-Güldenwerth"
+        ],
+        "line": "S7"
+      },
+      {
+        "id": "-8047102371534334289-2510201752-4",
+        "type": "RRB",
+        "number": "90124",
+        "time": "2510201804",
+        "platform": "2",
+        "path_stations": [
+          "Solingen Hbf",
+          "Solingen Grünewald",
+          "Solingen Mitte"
+        ],
+        "line": "S7"
+      },
+      {
+        "id": "-2739937464046585691-2510201812-4",
+        "type": "RRB",
+        "number": "90126",
+        "time": "2510201824",
+        "platform": "2",
+        "path_stations": [
+          "Solingen Hbf",
+          "Solingen Grünewald",
+          "Solingen Mitte"
+        ],
+        "line": "S7"
+      },
+      {
+        "id": "5319391627115306923-2510201733-10",
+        "type": "RRB",
+        "number": "90127",
+        "time": "2510201813",
+        "platform": "1",
+        "path_stations": [
+          "Wuppertal Hbf",
+          "Wuppertal-Unterbarmen",
+          "Wuppertal-Barmen",
+          "Wuppertal-Oberbarmen",
+          "Wuppertal-Ronsdorf",
+          "Remscheid-Lüttringhausen",
+          "Remscheid-Lennep",
+          "Remscheid Hbf",
+          "Remscheid-Güldenwerth"
+        ],
+        "line": "S7"
+      },
+      {
+        "id": "-6580795905117709919-2510201913-10",
+        "type": "RRB",
+        "number": "90141",
+        "time": "2510201953",
+        "platform": "1",
+        "path_stations": [
+          "Wuppertal Hbf",
+          "Wuppertal-Unterbarmen",
+          "Wuppertal-Barmen",
+          "Wuppertal-Oberbarmen",
+          "Wuppertal-Ronsdorf",
+          "Remscheid-Lüttringhausen",
+          "Remscheid-Lennep",
+          "Remscheid Hbf",
+          "Remscheid-Güldenwerth"
+        ],
+        "line": "S7"
+      },
+      {
+        "id": "-6926209179335496090-2510201932-4",
+        "type": "RRB",
+        "number": "90138",
+        "time": "2510201944",
+        "platform": "2",
+        "path_stations": [
+          "Solingen Hbf",
+          "Solingen Grünewald",
+          "Solingen Mitte"
+        ],
+        "line": "S7"
+      },
+      {
+        "id": "-8481794205978370419-2510201833-10",
+        "type": "RRB",
+        "number": "90135",
+        "time": "2510201913",
+        "platform": "1",
+        "path_stations": [
+          "Wuppertal Hbf",
+          "Wuppertal-Unterbarmen",
+          "Wuppertal-Barmen",
+          "Wuppertal-Oberbarmen",
+          "Wuppertal-Ronsdorf",
+          "Remscheid-Lüttringhausen",
+          "Remscheid-Lennep",
+          "Remscheid Hbf",
+          "Remscheid-Güldenwerth"
+        ],
+        "line": "S7"
+      },
+      {
+        "id": "2295318603728592523-2510201852-4",
+        "type": "RRB",
+        "number": "90132",
+        "time": "2510201904",
+        "platform": "2",
+        "path_stations": [
+          "Solingen Hbf",
+          "Solingen Grünewald",
+          "Solingen Mitte"
+        ],
+        "line": "S7"
+      },
+      {
+        "id": "3867120790919686378-2510201853-10",
+        "type": "RRB",
+        "number": "90139",
+        "time": "2510201933",
+        "platform": "1",
+        "path_stations": [
+          "Wuppertal Hbf",
+          "Wuppertal-Unterbarmen",
+          "Wuppertal-Barmen",
+          "Wuppertal-Oberbarmen",
+          "Wuppertal-Ronsdorf",
+          "Remscheid-Lüttringhausen",
+          "Remscheid-Lennep",
+          "Remscheid Hbf",
+          "Remscheid-Güldenwerth"
+        ],
+        "line": "S7"
+      },
+      {
+        "id": "-7006862053147151901-2510201912-4",
+        "type": "RRB",
+        "number": "90134",
+        "time": "2510201924",
+        "platform": "2",
+        "path_stations": [
+          "Solingen Hbf",
+          "Solingen Grünewald",
+          "Solingen Mitte"
+        ],
+        "line": "S7"
+      },
+      {
+        "id": "-6989829172122889046-2510202022-4",
+        "type": "RRB",
+        "number": "90142",
+        "time": "2510202034",
+        "platform": "2",
+        "path_stations": [
+          "Solingen Hbf",
+          "Solingen Grünewald",
+          "Solingen Mitte"
+        ],
+        "line": "S7"
+      },
+      {
+        "id": "-2622893915376685262-2510202013-10",
+        "type": "RRB",
+        "number": "90147",
+        "time": "2510202053",
+        "platform": "1",
+        "path_stations": [
+          "Wuppertal Hbf",
+          "Wuppertal-Unterbarmen",
+          "Wuppertal-Barmen",
+          "Wuppertal-Oberbarmen",
+          "Wuppertal-Ronsdorf",
+          "Remscheid-Lüttringhausen",
+          "Remscheid-Lennep",
+          "Remscheid Hbf",
+          "Remscheid-Güldenwerth"
+        ],
+        "line": "S7"
+      },
+      {
+        "id": "-2022101004066980881-2510201943-10",
+        "type": "RRB",
+        "number": "90145",
+        "time": "2510202023",
+        "platform": "1",
+        "path_stations": [
+          "Wuppertal Hbf",
+          "Wuppertal-Unterbarmen",
+          "Wuppertal-Barmen",
+          "Wuppertal-Oberbarmen",
+          "Wuppertal-Ronsdorf",
+          "Remscheid-Lüttringhausen",
+          "Remscheid-Lennep",
+          "Remscheid Hbf",
+          "Remscheid-Güldenwerth"
+        ],
+        "line": "S7"
+      },
+      {
+        "id": "698754904808516706-2510201952-4",
+        "type": "RRB",
+        "number": "90140",
+        "time": "2510202004",
+        "platform": "2",
+        "path_stations": [
+          "Solingen Hbf",
+          "Solingen Grünewald",
+          "Solingen Mitte"
+        ],
+        "line": "S7"
+      },
+      {
+        "id": "8356563265676502118-2510202113-10",
+        "type": "RRB",
+        "number": "90151",
+        "time": "2510202153",
+        "platform": "1",
+        "path_stations": [
+          "Wuppertal Hbf",
+          "Wuppertal-Unterbarmen",
+          "Wuppertal-Barmen",
+          "Wuppertal-Oberbarmen",
+          "Wuppertal-Ronsdorf",
+          "Remscheid-Lüttringhausen",
+          "Remscheid-Lennep",
+          "Remscheid Hbf",
+          "Remscheid-Güldenwerth"
+        ],
+        "line": "S7"
+      },
+      {
+        "id": "4971728346942649445-2510202052-4",
+        "type": "RRB",
+        "number": "90144",
+        "time": "2510202104",
+        "platform": "2",
+        "path_stations": [
+          "Solingen Hbf",
+          "Solingen Grünewald",
+          "Solingen Mitte"
+        ],
+        "line": "S7"
+      },
+      {
+        "id": "-2136103076970841155-2510202043-10",
+        "type": "RRB",
+        "number": "90149",
+        "time": "2510202123",
+        "platform": "1",
+        "path_stations": [
+          "Wuppertal Hbf",
+          "Wuppertal-Unterbarmen",
+          "Wuppertal-Barmen",
+          "Wuppertal-Oberbarmen",
+          "Wuppertal-Ronsdorf",
+          "Remscheid-Lüttringhausen",
+          "Remscheid-Lennep",
+          "Remscheid Hbf",
+          "Remscheid-Güldenwerth"
+        ],
+        "line": "S7"
+      },
+      {
+        "id": "8523355140867363732-2510202122-4",
+        "type": "RRB",
+        "number": "90146",
+        "time": "2510202134",
+        "platform": "2",
+        "path_stations": [
+          "Solingen Hbf",
+          "Solingen Grünewald",
+          "Solingen Mitte"
+        ],
+        "line": "S7"
+      },
+      {
+        "id": "765368686931974322-2510202223-4",
+        "type": "Bus",
+        "number": "69152",
+        "time": "2510202246",
+        "platform": "",
+        "path_stations": [
+          "Solingen Hbf",
+          "Solingen Grünewald",
+          "Solingen Mitte"
+        ],
+        "line": "S7"
+      },
+      {
+        "id": "2763141720795534551-2510202223-3",
+        "type": "Bus",
+        "number": "69153",
+        "time": "2510202239",
+        "platform": "",
+        "path_stations": [
+          "Remscheid Hbf",
+          "Remscheid-Güldenwerth"
+        ],
+        "line": "S7"
+      },
+      {
+        "id": "-4983141904895091193-2510202222-4",
+        "type": "RRB",
+        "number": "90150",
+        "time": "2510202234",
+        "platform": "2",
+        "path_stations": [
+          "Solingen Hbf",
+          "Solingen Grünewald",
+          "Solingen Mitte"
+        ],
+        "line": "S7"
+      },
+      {
+        "id": "-2339647631891332608-2510202152-4",
+        "type": "RRB",
+        "number": "90148",
+        "time": "2510202204",
+        "platform": "2",
+        "path_stations": [
+          "Solingen Hbf",
+          "Solingen Grünewald",
+          "Solingen Mitte"
+        ],
+        "line": "S7"
+      },
+      {
+        "id": "-1108619387350240048-2510202253-3",
+        "type": "Bus",
+        "number": "69155",
+        "time": "2510202309",
+        "platform": "",
+        "path_stations": [
+          "Remscheid Hbf",
+          "Remscheid-Güldenwerth"
+        ],
+        "line": "S7"
+      },
+      {
+        "id": "848080095762032422-2510210002-4",
+        "type": "Bus",
+        "number": "69154",
+        "time": "2510210025",
+        "platform": "",
+        "path_stations": [
+          "Solingen Hbf",
+          "Solingen Grünewald",
+          "Solingen Mitte"
+        ],
+        "line": "S7"
+      },
+      {
+        "id": "1972399884462358275-2510202353-3",
+        "type": "Bus",
+        "number": "69157",
+        "time": "2510210009",
+        "platform": "",
+        "path_stations": [
+          "Remscheid Hbf",
+          "Remscheid-Güldenwerth"
+        ],
+        "line": "S7"
+      },
+      {
+        "id": "1717554734858559339-2510210102-4",
+        "type": "Bus",
+        "number": "69156",
+        "time": "2510210125",
+        "platform": "",
+        "path_stations": [
+          "Solingen Hbf",
+          "Solingen Grünewald",
+          "Solingen Mitte"
+        ],
+        "line": "S7"
+      },
+      {
+        "id": "6516143318944630461-2510210438-4",
+        "type": "RRB",
+        "number": "29101",
+        "time": "2510210453",
+        "platform": "1",
+        "path_stations": [
+          "Remscheid-Lennep",
+          "Remscheid Hbf",
+          "Remscheid-Güldenwerth"
+        ],
+        "line": "S7"
+      },
+      {
+        "id": "1148978951786116163-2510210518-4",
+        "type": "RRB",
+        "number": "29107",
+        "time": "2510210533",
+        "platform": "1",
+        "path_stations": [
+          "Remscheid-Lennep",
+          "Remscheid Hbf",
+          "Remscheid-Güldenwerth"
+        ],
+        "line": "S7"
+      },
+      {
+        "id": "8758146912494424815-2510210512-4",
+        "type": "RRB",
+        "number": "29104",
+        "time": "2510210524",
+        "platform": "2",
+        "path_stations": [
+          "Solingen Hbf",
+          "Solingen Grünewald",
+          "Solingen Mitte"
+        ],
+        "line": "S7"
+      },
+      {
+        "id": "-6553926535050168396-2510210532-4",
+        "type": "RRB",
+        "number": "29106",
+        "time": "2510210544",
+        "platform": "2",
+        "path_stations": [
+          "Solingen Hbf",
+          "Solingen Grünewald",
+          "Solingen Mitte"
+        ],
+        "line": "S7"
+      },
+      {
+        "id": "-4341982186289826194-2510210433-10",
+        "type": "RRB",
+        "number": "29103",
+        "time": "2510210513",
+        "platform": "1",
+        "path_stations": [
+          "Wuppertal Hbf",
+          "Wuppertal-Unterbarmen",
+          "Wuppertal-Barmen",
+          "Wuppertal-Oberbarmen",
+          "Wuppertal-Ronsdorf",
+          "Remscheid-Lüttringhausen",
+          "Remscheid-Lennep",
+          "Remscheid Hbf",
+          "Remscheid-Güldenwerth"
+        ],
+        "line": "S7"
+      },
+      {
+        "id": "8274628157276843938-2510210538-4",
+        "type": "RRB",
+        "number": "29109",
+        "time": "2510210553",
+        "platform": "1",
+        "path_stations": [
+          "Remscheid-Lennep",
+          "Remscheid Hbf",
+          "Remscheid-Güldenwerth"
+        ],
+        "line": "S7"
+      },
+      {
+        "id": "3944840843584220161-2510210552-4",
+        "type": "RRB",
+        "number": "29108",
+        "time": "2510210604",
+        "platform": "2",
+        "path_stations": [
+          "Solingen Hbf",
+          "Solingen Grünewald",
+          "Solingen Mitte"
+        ],
+        "line": "S7"
+      },
+      {
+        "id": "-4935474309846208552-2510210632-4",
+        "type": "RRB",
+        "number": "29114",
+        "time": "2510210644",
+        "platform": "2",
+        "path_stations": [
+          "Solingen Hbf",
+          "Solingen Grünewald",
+          "Solingen Mitte"
+        ],
+        "line": "S7"
+      },
+      {
+        "id": "-4027109520269664562-2510210612-4",
+        "type": "RRB",
+        "number": "29110",
+        "time": "2510210624",
+        "platform": "2",
+        "path_stations": [
+          "Solingen Hbf",
+          "Solingen Grünewald",
+          "Solingen Mitte"
+        ],
+        "line": "S7"
+      },
+      {
+        "id": "3863795806677062728-2510210533-10",
+        "type": "RRB",
+        "number": "29111",
+        "time": "2510210613",
+        "platform": "1",
+        "path_stations": [
+          "Wuppertal Hbf",
+          "Wuppertal-Unterbarmen",
+          "Wuppertal-Barmen",
+          "Wuppertal-Oberbarmen",
+          "Wuppertal-Ronsdorf",
+          "Remscheid-Lüttringhausen",
+          "Remscheid-Lennep",
+          "Remscheid Hbf",
+          "Remscheid-Güldenwerth"
+        ],
+        "line": "S7"
+      },
+      {
+        "id": "-1970722910225612323-2510210553-10",
+        "type": "RRB",
+        "number": "29115",
+        "time": "2510210633",
+        "platform": "1",
+        "path_stations": [
+          "Wuppertal Hbf",
+          "Wuppertal-Unterbarmen",
+          "Wuppertal-Barmen",
+          "Wuppertal-Oberbarmen",
+          "Wuppertal-Ronsdorf",
+          "Remscheid-Lüttringhausen",
+          "Remscheid-Lennep",
+          "Remscheid Hbf",
+          "Remscheid-Güldenwerth"
+        ],
+        "line": "S7"
+      },
+      {
+        "id": "-5509229324630978930-2510210613-10",
+        "type": "RRB",
+        "number": "29117",
+        "time": "2510210653",
+        "platform": "1",
+        "path_stations": [
+          "Wuppertal Hbf",
+          "Wuppertal-Unterbarmen",
+          "Wuppertal-Barmen",
+          "Wuppertal-Oberbarmen",
+          "Wuppertal-Ronsdorf",
+          "Remscheid-Lüttringhausen",
+          "Remscheid-Lennep",
+          "Remscheid Hbf",
+          "Remscheid-Güldenwerth"
+        ],
+        "line": "S7"
+      }
+    ],
+    "departures": [
+      {
+        "id": "-5922691984163192005-2510201753-10",
+        "type": "RRB",
+        "number": "90131",
+        "direction": "Solingen Hbf",
+        "platform": "1",
+        "time": "2510201834",
+        "destination": "Solingen Hbf",
+        "path_stations": [
+          "Solingen Mitte",
+          "Solingen Grünewald",
+          "Solingen Hbf"
+        ]
+      },
+      {
+        "id": "7263198167976990659-2510201832-4",
+        "type": "RRB",
+        "number": "90130",
+        "direction": "Wuppertal Hbf",
+        "platform": "2",
+        "time": "2510201845",
+        "destination": "Wuppertal Hbf",
+        "path_stations": [
+          "Remscheid-Güldenwerth",
+          "Remscheid Hbf",
+          "Remscheid-Lennep",
+          "Remscheid-Lüttringhausen",
+          "Wuppertal-Ronsdorf",
+          "Wuppertal-Oberbarmen",
+          "Wuppertal-Barmen",
+          "Wuppertal-Unterbarmen",
+          "Wuppertal Hbf"
+        ]
+      },
+      {
+        "id": "8858590885556278103-2510201813-10",
+        "type": "RRB",
+        "number": "90133",
+        "direction": "Solingen Hbf",
+        "platform": "1",
+        "time": "2510201854",
+        "destination": "Solingen Hbf",
+        "path_stations": [
+          "Solingen Mitte",
+          "Solingen Grünewald",
+          "Solingen Hbf"
+        ]
+      },
+      {
+        "id": "-8047102371534334289-2510201752-4",
+        "type": "RRB",
+        "number": "90124",
+        "direction": "Wuppertal Hbf",
+        "platform": "2",
+        "time": "2510201805",
+        "destination": "Wuppertal Hbf",
+        "path_stations": [
+          "Remscheid-Güldenwerth",
+          "Remscheid Hbf",
+          "Remscheid-Lennep",
+          "Remscheid-Lüttringhausen",
+          "Wuppertal-Ronsdorf",
+          "Wuppertal-Oberbarmen",
+          "Wuppertal-Barmen",
+          "Wuppertal-Unterbarmen",
+          "Wuppertal Hbf"
+        ]
+      },
+      {
+        "id": "-2739937464046585691-2510201812-4",
+        "type": "RRB",
+        "number": "90126",
+        "direction": "Wuppertal Hbf",
+        "platform": "2",
+        "time": "2510201825",
+        "destination": "Wuppertal Hbf",
+        "path_stations": [
+          "Remscheid-Güldenwerth",
+          "Remscheid Hbf",
+          "Remscheid-Lennep",
+          "Remscheid-Lüttringhausen",
+          "Wuppertal-Ronsdorf",
+          "Wuppertal-Oberbarmen",
+          "Wuppertal-Barmen",
+          "Wuppertal-Unterbarmen",
+          "Wuppertal Hbf"
+        ]
+      },
+      {
+        "id": "5319391627115306923-2510201733-10",
+        "type": "RRB",
+        "number": "90127",
+        "direction": "Solingen Hbf",
+        "platform": "1",
+        "time": "2510201814",
+        "destination": "Solingen Hbf",
+        "path_stations": [
+          "Solingen Mitte",
+          "Solingen Grünewald",
+          "Solingen Hbf"
+        ]
+      },
+      {
+        "id": "-6580795905117709919-2510201913-10",
+        "type": "RRB",
+        "number": "90141",
+        "direction": "Solingen Hbf",
+        "platform": "1",
+        "time": "2510201954",
+        "destination": "Solingen Hbf",
+        "path_stations": [
+          "Solingen Mitte",
+          "Solingen Grünewald",
+          "Solingen Hbf"
+        ]
+      },
+      {
+        "id": "-6926209179335496090-2510201932-4",
+        "type": "RRB",
+        "number": "90138",
+        "direction": "Wuppertal Hbf",
+        "platform": "2",
+        "time": "2510201945",
+        "destination": "Wuppertal Hbf",
+        "path_stations": [
+          "Remscheid-Güldenwerth",
+          "Remscheid Hbf",
+          "Remscheid-Lennep",
+          "Remscheid-Lüttringhausen",
+          "Wuppertal-Ronsdorf",
+          "Wuppertal-Oberbarmen",
+          "Wuppertal-Barmen",
+          "Wuppertal-Unterbarmen",
+          "Wuppertal Hbf"
+        ]
+      },
+      {
+        "id": "-8481794205978370419-2510201833-10",
+        "type": "RRB",
+        "number": "90135",
+        "direction": "Solingen Hbf",
+        "platform": "1",
+        "time": "2510201914",
+        "destination": "Solingen Hbf",
+        "path_stations": [
+          "Solingen Mitte",
+          "Solingen Grünewald",
+          "Solingen Hbf"
+        ]
+      },
+      {
+        "id": "2295318603728592523-2510201852-4",
+        "type": "RRB",
+        "number": "90132",
+        "direction": "Wuppertal Hbf",
+        "platform": "2",
+        "time": "2510201905",
+        "destination": "Wuppertal Hbf",
+        "path_stations": [
+          "Remscheid-Güldenwerth",
+          "Remscheid Hbf",
+          "Remscheid-Lennep",
+          "Remscheid-Lüttringhausen",
+          "Wuppertal-Ronsdorf",
+          "Wuppertal-Oberbarmen",
+          "Wuppertal-Barmen",
+          "Wuppertal-Unterbarmen",
+          "Wuppertal Hbf"
+        ]
+      },
+      {
+        "id": "3867120790919686378-2510201853-10",
+        "type": "RRB",
+        "number": "90139",
+        "direction": "Solingen Hbf",
+        "platform": "1",
+        "time": "2510201934",
+        "destination": "Solingen Hbf",
+        "path_stations": [
+          "Solingen Mitte",
+          "Solingen Grünewald",
+          "Solingen Hbf"
+        ]
+      },
+      {
+        "id": "-7006862053147151901-2510201912-4",
+        "type": "RRB",
+        "number": "90134",
+        "direction": "Wuppertal Hbf",
+        "platform": "2",
+        "time": "2510201925",
+        "destination": "Wuppertal Hbf",
+        "path_stations": [
+          "Remscheid-Güldenwerth",
+          "Remscheid Hbf",
+          "Remscheid-Lennep",
+          "Remscheid-Lüttringhausen",
+          "Wuppertal-Ronsdorf",
+          "Wuppertal-Oberbarmen",
+          "Wuppertal-Barmen",
+          "Wuppertal-Unterbarmen",
+          "Wuppertal Hbf"
+        ]
+      },
+      {
+        "id": "-6989829172122889046-2510202022-4",
+        "type": "RRB",
+        "number": "90142",
+        "direction": "Wuppertal Hbf",
+        "platform": "2",
+        "time": "2510202035",
+        "destination": "Wuppertal Hbf",
+        "path_stations": [
+          "Remscheid-Güldenwerth",
+          "Remscheid Hbf",
+          "Remscheid-Lennep",
+          "Remscheid-Lüttringhausen",
+          "Wuppertal-Ronsdorf",
+          "Wuppertal-Oberbarmen",
+          "Wuppertal-Barmen",
+          "Wuppertal-Unterbarmen",
+          "Wuppertal Hbf"
+        ]
+      },
+      {
+        "id": "-2622893915376685262-2510202013-10",
+        "type": "RRB",
+        "number": "90147",
+        "direction": "Solingen Hbf",
+        "platform": "1",
+        "time": "2510202054",
+        "destination": "Solingen Hbf",
+        "path_stations": [
+          "Solingen Mitte",
+          "Solingen Grünewald",
+          "Solingen Hbf"
+        ]
+      },
+      {
+        "id": "-2022101004066980881-2510201943-10",
+        "type": "RRB",
+        "number": "90145",
+        "direction": "Solingen Hbf",
+        "platform": "1",
+        "time": "2510202024",
+        "destination": "Solingen Hbf",
+        "path_stations": [
+          "Solingen Mitte",
+          "Solingen Grünewald",
+          "Solingen Hbf"
+        ]
+      },
+      {
+        "id": "698754904808516706-2510201952-4",
+        "type": "RRB",
+        "number": "90140",
+        "direction": "Wuppertal Hbf",
+        "platform": "2",
+        "time": "2510202005",
+        "destination": "Wuppertal Hbf",
+        "path_stations": [
+          "Remscheid-Güldenwerth",
+          "Remscheid Hbf",
+          "Remscheid-Lennep",
+          "Remscheid-Lüttringhausen",
+          "Wuppertal-Ronsdorf",
+          "Wuppertal-Oberbarmen",
+          "Wuppertal-Barmen",
+          "Wuppertal-Unterbarmen",
+          "Wuppertal Hbf"
+        ]
+      },
+      {
+        "id": "8356563265676502118-2510202113-10",
+        "type": "RRB",
+        "number": "90151",
+        "direction": "Solingen Hbf",
+        "platform": "1",
+        "time": "2510202154",
+        "destination": "Solingen Hbf",
+        "path_stations": [
+          "Solingen Mitte",
+          "Solingen Grünewald",
+          "Solingen Hbf"
+        ]
+      },
+      {
+        "id": "4971728346942649445-2510202052-4",
+        "type": "RRB",
+        "number": "90144",
+        "direction": "Wuppertal Hbf",
+        "platform": "2",
+        "time": "2510202105",
+        "destination": "Wuppertal Hbf",
+        "path_stations": [
+          "Remscheid-Güldenwerth",
+          "Remscheid Hbf",
+          "Remscheid-Lennep",
+          "Remscheid-Lüttringhausen",
+          "Wuppertal-Ronsdorf",
+          "Wuppertal-Oberbarmen",
+          "Wuppertal-Barmen",
+          "Wuppertal-Unterbarmen",
+          "Wuppertal Hbf"
+        ]
+      },
+      {
+        "id": "-2136103076970841155-2510202043-10",
+        "type": "RRB",
+        "number": "90149",
+        "direction": "Solingen Hbf",
+        "platform": "1",
+        "time": "2510202124",
+        "destination": "Solingen Hbf",
+        "path_stations": [
+          "Solingen Mitte",
+          "Solingen Grünewald",
+          "Solingen Hbf"
+        ]
+      },
+      {
+        "id": "8523355140867363732-2510202122-4",
+        "type": "RRB",
+        "number": "90146",
+        "direction": "Remscheid-Lennep",
+        "platform": "2",
+        "time": "2510202135",
+        "destination": "Remscheid-Lennep",
+        "path_stations": [
+          "Remscheid-Güldenwerth",
+          "Remscheid Hbf",
+          "Remscheid-Lennep"
+        ]
+      },
+      {
+        "id": "765368686931974322-2510202223-4",
+        "type": "Bus",
+        "number": "69152",
+        "direction": "Remscheid Hbf",
+        "platform": "",
+        "time": "2510202246",
+        "destination": "Remscheid Hbf",
+        "path_stations": [
+          "Remscheid-Güldenwerth",
+          "Remscheid Hbf"
+        ]
+      },
+      {
+        "id": "2763141720795534551-2510202223-3",
+        "type": "Bus",
+        "number": "69153",
+        "direction": "Solingen Hbf",
+        "platform": "",
+        "time": "2510202239",
+        "destination": "Solingen Hbf",
+        "path_stations": [
+          "Solingen Mitte",
+          "Solingen Grünewald",
+          "Solingen Hbf"
+        ]
+      },
+      {
+        "id": "-4983141904895091193-2510202222-4",
+        "type": "RRB",
+        "number": "90150",
+        "direction": "Remscheid-Lennep",
+        "platform": "2",
+        "time": "2510202235",
+        "destination": "Remscheid-Lennep",
+        "path_stations": [
+          "Remscheid-Güldenwerth",
+          "Remscheid Hbf",
+          "Remscheid-Lennep"
+        ]
+      },
+      {
+        "id": "-2339647631891332608-2510202152-4",
+        "type": "RRB",
+        "number": "90148",
+        "direction": "Wuppertal Hbf",
+        "platform": "2",
+        "time": "2510202205",
+        "destination": "Wuppertal Hbf",
+        "path_stations": [
+          "Remscheid-Güldenwerth",
+          "Remscheid Hbf",
+          "Remscheid-Lennep",
+          "Remscheid-Lüttringhausen",
+          "Wuppertal-Ronsdorf",
+          "Wuppertal-Oberbarmen",
+          "Wuppertal-Barmen",
+          "Wuppertal-Unterbarmen",
+          "Wuppertal Hbf"
+        ]
+      },
+      {
+        "id": "-1108619387350240048-2510202253-3",
+        "type": "Bus",
+        "number": "69155",
+        "direction": "Solingen Hbf",
+        "platform": "",
+        "time": "2510202309",
+        "destination": "Solingen Hbf",
+        "path_stations": [
+          "Solingen Mitte",
+          "Solingen Grünewald",
+          "Solingen Hbf"
+        ]
+      },
+      {
+        "id": "848080095762032422-2510210002-4",
+        "type": "Bus",
+        "number": "69154",
+        "direction": "Remscheid-Lennep",
+        "platform": "",
+        "time": "2510210025",
+        "destination": "Remscheid-Lennep",
+        "path_stations": [
+          "Remscheid-Güldenwerth",
+          "Remscheid Hbf",
+          "Remscheid-Lennep"
+        ]
+      },
+      {
+        "id": "1972399884462358275-2510202353-3",
+        "type": "Bus",
+        "number": "69157",
+        "direction": "Solingen Hbf",
+        "platform": "",
+        "time": "2510210009",
+        "destination": "Solingen Hbf",
+        "path_stations": [
+          "Solingen Mitte",
+          "Solingen Grünewald",
+          "Solingen Hbf"
+        ]
+      },
+      {
+        "id": "1717554734858559339-2510210102-4",
+        "type": "Bus",
+        "number": "69156",
+        "direction": "Remscheid-Lennep",
+        "platform": "",
+        "time": "2510210125",
+        "destination": "Remscheid-Lennep",
+        "path_stations": [
+          "Remscheid-Güldenwerth",
+          "Remscheid Hbf",
+          "Remscheid-Lennep"
+        ]
+      },
+      {
+        "id": "6516143318944630461-2510210438-4",
+        "type": "RRB",
+        "number": "29101",
+        "direction": "Solingen Hbf",
+        "platform": "1",
+        "time": "2510210454",
+        "destination": "Solingen Hbf",
+        "path_stations": [
+          "Solingen Mitte",
+          "Solingen Grünewald",
+          "Solingen Hbf"
+        ]
+      },
+      {
+        "id": "1148978951786116163-2510210518-4",
+        "type": "RRB",
+        "number": "29107",
+        "direction": "Solingen Hbf",
+        "platform": "1",
+        "time": "2510210534",
+        "destination": "Solingen Hbf",
+        "path_stations": [
+          "Solingen Mitte",
+          "Solingen Grünewald",
+          "Solingen Hbf"
+        ]
+      },
+      {
+        "id": "8758146912494424815-2510210512-4",
+        "type": "RRB",
+        "number": "29104",
+        "direction": "Wuppertal Hbf",
+        "platform": "2",
+        "time": "2510210525",
+        "destination": "Wuppertal Hbf",
+        "path_stations": [
+          "Remscheid-Güldenwerth",
+          "Remscheid Hbf",
+          "Remscheid-Lennep",
+          "Remscheid-Lüttringhausen",
+          "Wuppertal-Ronsdorf",
+          "Wuppertal-Oberbarmen",
+          "Wuppertal-Barmen",
+          "Wuppertal-Unterbarmen",
+          "Wuppertal Hbf"
+        ]
+      },
+      {
+        "id": "-6553926535050168396-2510210532-4",
+        "type": "RRB",
+        "number": "29106",
+        "direction": "Wuppertal Hbf",
+        "platform": "2",
+        "time": "2510210545",
+        "destination": "Wuppertal Hbf",
+        "path_stations": [
+          "Remscheid-Güldenwerth",
+          "Remscheid Hbf",
+          "Remscheid-Lennep",
+          "Remscheid-Lüttringhausen",
+          "Wuppertal-Ronsdorf",
+          "Wuppertal-Oberbarmen",
+          "Wuppertal-Barmen",
+          "Wuppertal-Unterbarmen",
+          "Wuppertal Hbf"
+        ]
+      },
+      {
+        "id": "-4341982186289826194-2510210433-10",
+        "type": "RRB",
+        "number": "29103",
+        "direction": "Solingen Hbf",
+        "platform": "1",
+        "time": "2510210514",
+        "destination": "Solingen Hbf",
+        "path_stations": [
+          "Solingen Mitte",
+          "Solingen Grünewald",
+          "Solingen Hbf"
+        ]
+      },
+      {
+        "id": "8274628157276843938-2510210538-4",
+        "type": "RRB",
+        "number": "29109",
+        "direction": "Solingen Hbf",
+        "platform": "1",
+        "time": "2510210554",
+        "destination": "Solingen Hbf",
+        "path_stations": [
+          "Solingen Mitte",
+          "Solingen Grünewald",
+          "Solingen Hbf"
+        ]
+      },
+      {
+        "id": "3944840843584220161-2510210552-4",
+        "type": "RRB",
+        "number": "29108",
+        "direction": "Wuppertal Hbf",
+        "platform": "2",
+        "time": "2510210605",
+        "destination": "Wuppertal Hbf",
+        "path_stations": [
+          "Remscheid-Güldenwerth",
+          "Remscheid Hbf",
+          "Remscheid-Lennep",
+          "Remscheid-Lüttringhausen",
+          "Wuppertal-Ronsdorf",
+          "Wuppertal-Oberbarmen",
+          "Wuppertal-Barmen",
+          "Wuppertal-Unterbarmen",
+          "Wuppertal Hbf"
+        ]
+      },
+      {
+        "id": "-4935474309846208552-2510210632-4",
+        "type": "RRB",
+        "number": "29114",
+        "direction": "Wuppertal Hbf",
+        "platform": "2",
+        "time": "2510210645",
+        "destination": "Wuppertal Hbf",
+        "path_stations": [
+          "Remscheid-Güldenwerth",
+          "Remscheid Hbf",
+          "Remscheid-Lennep",
+          "Remscheid-Lüttringhausen",
+          "Wuppertal-Ronsdorf",
+          "Wuppertal-Oberbarmen",
+          "Wuppertal-Barmen",
+          "Wuppertal-Unterbarmen",
+          "Wuppertal Hbf"
+        ]
+      },
+      {
+        "id": "-4027109520269664562-2510210612-4",
+        "type": "RRB",
+        "number": "29110",
+        "direction": "Wuppertal Hbf",
+        "platform": "2",
+        "time": "2510210625",
+        "destination": "Wuppertal Hbf",
+        "path_stations": [
+          "Remscheid-Güldenwerth",
+          "Remscheid Hbf",
+          "Remscheid-Lennep",
+          "Remscheid-Lüttringhausen",
+          "Wuppertal-Ronsdorf",
+          "Wuppertal-Oberbarmen",
+          "Wuppertal-Barmen",
+          "Wuppertal-Unterbarmen",
+          "Wuppertal Hbf"
+        ]
+      },
+      {
+        "id": "3863795806677062728-2510210533-10",
+        "type": "RRB",
+        "number": "29111",
+        "direction": "Solingen Hbf",
+        "platform": "1",
+        "time": "2510210614",
+        "destination": "Solingen Hbf",
+        "path_stations": [
+          "Solingen Mitte",
+          "Solingen Grünewald",
+          "Solingen Hbf"
+        ]
+      },
+      {
+        "id": "-1970722910225612323-2510210553-10",
+        "type": "RRB",
+        "number": "29115",
+        "direction": "Solingen Hbf",
+        "platform": "1",
+        "time": "2510210634",
+        "destination": "Solingen Hbf",
+        "path_stations": [
+          "Solingen Mitte",
+          "Solingen Grünewald",
+          "Solingen Hbf"
+        ]
+      },
+      {
+        "id": "-5509229324630978930-2510210613-10",
+        "type": "RRB",
+        "number": "29117",
+        "direction": "Solingen Hbf",
+        "platform": "1",
+        "time": "2510210654",
+        "destination": "Solingen Hbf",
+        "path_stations": [
+          "Solingen Mitte",
+          "Solingen Grünewald",
+          "Solingen Hbf"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,1913 @@
+{
+  "station_eva": "8000687",
+  "date": "251020",
+  "cached_at": "2025-10-20T15:33:10.563478",
+  "plan_data": {
+    "departures": [
+      {
+        "id": "-6812722505348393102-2510201653-19",
+        "type": "S",
+        "number": "31158",
+        "direction": "Düsseldorf Hbf",
+        "platform": "5",
+        "time": "2510201749",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Duisburg-Schlenk",
+          "Duisburg-Buchholz",
+          "Duisburg-Großenbaum",
+          "Duisburg-Rahm",
+          "Angermund",
+          "Düsseldorf Flughafen",
+          "Düsseldorf-Unterrath",
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "423322486358460511-2510201633-12",
+        "type": "S",
+        "number": "30353",
+        "direction": "Oberhausen Hbf",
+        "platform": "4",
+        "time": "2510201710",
+        "destination": "Oberhausen Hbf",
+        "path_stations": [
+          "Oberhausen Hbf"
+        ]
+      },
+      {
+        "id": "6301047045001093469-2510201657-13",
+        "type": "S",
+        "number": "31157",
+        "direction": "Dortmund Hbf",
+        "platform": "2",
+        "time": "2510201742",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf",
+          "Essen-Steele",
+          "Essen-Steele Ost",
+          "Essen-Eiberg",
+          "Wattenscheid-Höntrop",
+          "Bochum-Ehrenfeld",
+          "Bochum Hbf",
+          "Bochum-Langendreer West",
+          "Bochum-Langendreer",
+          "Dortmund-Kley",
+          "Dortmund-Oespel",
+          "Dortmund Universität",
+          "Dortmund-Dorstfeld Süd",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-8477202256276968351-2510201747-2",
+        "type": "S",
+        "number": "30356",
+        "direction": "Hattingen(Ruhr) Mitte",
+        "platform": "3",
+        "time": "2510201751",
+        "destination": "Hattingen(Ruhr) Mitte",
+        "path_stations": [
+          "Mülheim(Ruhr)West",
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf",
+          "Essen-Steele",
+          "Essen-Steele Ost",
+          "Essen-Horst",
+          "Bochum-Dahlhausen",
+          "Hattingen(Ruhr)",
+          "Hattingen(Ruhr) Mitte"
+        ]
+      },
+      {
+        "id": "-4123538427748528181-2510201703-12",
+        "type": "S",
+        "number": "30355",
+        "direction": "Oberhausen Hbf",
+        "platform": "4",
+        "time": "2510201740",
+        "destination": "Oberhausen Hbf",
+        "path_stations": [
+          "Oberhausen Hbf"
+        ]
+      },
+      {
+        "id": "-8568300893467469208-2510201608-10",
+        "type": "RE",
+        "number": "30993",
+        "direction": "Oberhausen Hbf",
+        "platform": "4",
+        "time": "2510201701",
+        "destination": "Oberhausen Hbf",
+        "path_stations": [
+          "Oberhausen Hbf"
+        ]
+      },
+      {
+        "id": "1080283967627842618-2510201637-13",
+        "type": "S",
+        "number": "31153",
+        "direction": "Dortmund Hbf",
+        "platform": "2",
+        "time": "2510201712",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf",
+          "Essen-Steele",
+          "Essen-Steele Ost",
+          "Essen-Eiberg",
+          "Wattenscheid-Höntrop",
+          "Bochum-Ehrenfeld",
+          "Bochum Hbf",
+          "Bochum-Langendreer West",
+          "Bochum-Langendreer",
+          "Dortmund-Kley",
+          "Dortmund-Oespel",
+          "Dortmund Universität",
+          "Dortmund-Dorstfeld Süd",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "8166382742810735249-2510201711-5",
+        "type": "RB",
+        "number": "10337",
+        "direction": "Aachen Hbf",
+        "platform": "5",
+        "time": "2510201728",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Duisburg-Hochfeld Süd",
+          "Rheinhausen Ost",
+          "Rheinhausen",
+          "Krefeld-Hohenbudberg Chempark",
+          "Krefeld-Uerdingen",
+          "Krefeld-Linn",
+          "Krefeld-Oppum",
+          "Krefeld Hbf",
+          "Forsthaus",
+          "Anrath",
+          "Viersen",
+          "Mönchengladbach Hbf",
+          "Rheydt Hbf",
+          "Wickrath",
+          "Herrath",
+          "Erkelenz",
+          "Hückelhoven-Baal",
+          "Brachelen",
+          "Lindern",
+          "Geilenkirchen",
+          "Übach-Palenberg",
+          "Herzogenrath",
+          "Kohlscheid",
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "5688086301269107211-2510201756-2",
+        "type": "RE",
+        "number": "30994",
+        "direction": "Wuppertal Hbf",
+        "platform": "3",
+        "time": "2510201800",
+        "destination": "Wuppertal Hbf",
+        "path_stations": [
+          "Mülheim(Ruhr)Hbf",
+          "Essen West",
+          "Essen Hbf",
+          "Essen-Steele",
+          "Essen-Kupferdreh",
+          "Velbert-Langenberg",
+          "Velbert-Neviges",
+          "Wuppertal-Vohwinkel",
+          "Wuppertal Hbf"
+        ]
+      },
+      {
+        "id": "2711871553970511824-2510201656-2",
+        "type": "RE",
+        "number": "30992",
+        "direction": "Wuppertal Hbf",
+        "platform": "3",
+        "time": "2510201700",
+        "destination": "Wuppertal Hbf",
+        "path_stations": [
+          "Mülheim(Ruhr)Hbf",
+          "Essen West",
+          "Essen Hbf",
+          "Essen-Steele",
+          "Essen-Kupferdreh",
+          "Velbert-Langenberg",
+          "Velbert-Neviges",
+          "Wuppertal-Vohwinkel",
+          "Wuppertal Hbf"
+        ]
+      },
+      {
+        "id": "7000942675076766201-2510201717-2",
+        "type": "S",
+        "number": "30354",
+        "direction": "Hattingen(Ruhr) Mitte",
+        "platform": "3",
+        "time": "2510201721",
+        "destination": "Hattingen(Ruhr) Mitte",
+        "path_stations": [
+          "Mülheim(Ruhr)West",
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf",
+          "Essen-Steele",
+          "Essen-Steele Ost",
+          "Essen-Horst",
+          "Bochum-Dahlhausen",
+          "Hattingen(Ruhr)",
+          "Hattingen(Ruhr) Mitte"
+        ]
+      },
+      {
+        "id": "5100772068058333677-2510201537-28",
+        "type": "RB",
+        "number": "10330",
+        "direction": "Essen-Steele",
+        "platform": "2",
+        "time": "2510201731",
+        "destination": "Essen-Steele",
+        "path_stations": [
+          "Mülheim(Ruhr)Hbf",
+          "Essen West",
+          "Essen Hbf",
+          "Essen-Steele"
+        ]
+      },
+      {
+        "id": "-4521664599156773151-2510201623-19",
+        "type": "S",
+        "number": "31154",
+        "direction": "Düsseldorf Hbf",
+        "platform": "5",
+        "time": "2510201719",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Duisburg-Schlenk",
+          "Duisburg-Buchholz",
+          "Duisburg-Großenbaum",
+          "Duisburg-Rahm",
+          "Angermund",
+          "Düsseldorf Flughafen",
+          "Düsseldorf-Unterrath",
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-8063860012819393966-2510201733-12",
+        "type": "S",
+        "number": "30357",
+        "direction": "Oberhausen Hbf",
+        "platform": "4",
+        "time": "2510201810",
+        "destination": "Oberhausen Hbf",
+        "path_stations": [
+          "Oberhausen Hbf"
+        ]
+      },
+      {
+        "id": "-3480121301683747990-2510201723-19",
+        "type": "S",
+        "number": "31166",
+        "direction": "Düsseldorf Hbf",
+        "platform": "5",
+        "time": "2510201819",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Duisburg-Schlenk",
+          "Duisburg-Buchholz",
+          "Duisburg-Großenbaum",
+          "Duisburg-Rahm",
+          "Angermund",
+          "Düsseldorf Flughafen",
+          "Düsseldorf-Unterrath",
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "3404670100132919255-2510201753-19",
+        "type": "S",
+        "number": "31170",
+        "direction": "Düsseldorf Hbf",
+        "platform": "5",
+        "time": "2510201849",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Duisburg-Schlenk",
+          "Duisburg-Buchholz",
+          "Duisburg-Großenbaum",
+          "Duisburg-Rahm",
+          "Angermund",
+          "Düsseldorf Flughafen",
+          "Düsseldorf-Unterrath",
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "7807422524941546938-2510201637-28",
+        "type": "RB",
+        "number": "10332",
+        "direction": "Essen-Steele",
+        "platform": "2",
+        "time": "2510201831",
+        "destination": "Essen-Steele",
+        "path_stations": [
+          "Mülheim(Ruhr)Hbf",
+          "Essen West",
+          "Essen Hbf",
+          "Essen-Steele"
+        ]
+      },
+      {
+        "id": "5904827168215272200-2510201856-2",
+        "type": "RE",
+        "number": "30996",
+        "direction": "Wuppertal Hbf",
+        "platform": "3",
+        "time": "2510201900",
+        "destination": "Wuppertal Hbf",
+        "path_stations": [
+          "Mülheim(Ruhr)Hbf",
+          "Essen West",
+          "Essen Hbf",
+          "Essen-Steele",
+          "Essen-Kupferdreh",
+          "Velbert-Langenberg",
+          "Velbert-Neviges",
+          "Wuppertal-Vohwinkel",
+          "Wuppertal Hbf"
+        ]
+      },
+      {
+        "id": "5849843044545452570-2510201803-12",
+        "type": "S",
+        "number": "30359",
+        "direction": "Oberhausen Hbf",
+        "platform": "4",
+        "time": "2510201840",
+        "destination": "Oberhausen Hbf",
+        "path_stations": [
+          "Oberhausen Hbf"
+        ]
+      },
+      {
+        "id": "4345033654595131569-2510201847-2",
+        "type": "S",
+        "number": "30360",
+        "direction": "Hattingen(Ruhr) Mitte",
+        "platform": "3",
+        "time": "2510201851",
+        "destination": "Hattingen(Ruhr) Mitte",
+        "path_stations": [
+          "Mülheim(Ruhr)West",
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf",
+          "Essen-Steele",
+          "Essen-Steele Ost",
+          "Essen-Horst",
+          "Bochum-Dahlhausen",
+          "Hattingen(Ruhr)",
+          "Hattingen(Ruhr) Mitte"
+        ]
+      },
+      {
+        "id": "7950184652389845405-2510201737-13",
+        "type": "S",
+        "number": "31165",
+        "direction": "Dortmund Hbf",
+        "platform": "2",
+        "time": "2510201812",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf",
+          "Essen-Steele",
+          "Essen-Steele Ost",
+          "Essen-Eiberg",
+          "Wattenscheid-Höntrop",
+          "Bochum-Ehrenfeld",
+          "Bochum Hbf",
+          "Bochum-Langendreer West",
+          "Bochum-Langendreer",
+          "Dortmund-Kley",
+          "Dortmund-Oespel",
+          "Dortmund Universität",
+          "Dortmund-Dorstfeld Süd",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "6380839625296265214-2510201817-2",
+        "type": "S",
+        "number": "30358",
+        "direction": "Hattingen(Ruhr) Mitte",
+        "platform": "3",
+        "time": "2510201821",
+        "destination": "Hattingen(Ruhr) Mitte",
+        "path_stations": [
+          "Mülheim(Ruhr)West",
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf",
+          "Essen-Steele",
+          "Essen-Steele Ost",
+          "Essen-Horst",
+          "Bochum-Dahlhausen",
+          "Hattingen(Ruhr)",
+          "Hattingen(Ruhr) Mitte"
+        ]
+      },
+      {
+        "id": "5688086301269107211-2510201756-2",
+        "type": "RE",
+        "number": "30994",
+        "direction": "Wuppertal Hbf",
+        "platform": "3",
+        "time": "2510201800",
+        "destination": "Wuppertal Hbf",
+        "path_stations": [
+          "Mülheim(Ruhr)Hbf",
+          "Essen West",
+          "Essen Hbf",
+          "Essen-Steele",
+          "Essen-Kupferdreh",
+          "Velbert-Langenberg",
+          "Velbert-Neviges",
+          "Wuppertal-Vohwinkel",
+          "Wuppertal Hbf"
+        ]
+      },
+      {
+        "id": "20060156742948078-2510201757-13",
+        "type": "S",
+        "number": "31169",
+        "direction": "Dortmund Hbf",
+        "platform": "2",
+        "time": "2510201842",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf",
+          "Essen-Steele",
+          "Essen-Steele Ost",
+          "Essen-Eiberg",
+          "Wattenscheid-Höntrop",
+          "Bochum-Ehrenfeld",
+          "Bochum Hbf",
+          "Bochum-Langendreer West",
+          "Bochum-Langendreer",
+          "Dortmund-Kley",
+          "Dortmund-Oespel",
+          "Dortmund Universität",
+          "Dortmund-Dorstfeld Süd",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "6923750626863208365-2510201708-10",
+        "type": "RE",
+        "number": "30995",
+        "direction": "Oberhausen Hbf",
+        "platform": "4",
+        "time": "2510201801",
+        "destination": "Oberhausen Hbf",
+        "path_stations": [
+          "Oberhausen Hbf"
+        ]
+      },
+      {
+        "id": "-4664029606652746532-2510201811-5",
+        "type": "RB",
+        "number": "10339",
+        "direction": "Aachen Hbf",
+        "platform": "5",
+        "time": "2510201828",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Duisburg-Hochfeld Süd",
+          "Rheinhausen Ost",
+          "Rheinhausen",
+          "Krefeld-Hohenbudberg Chempark",
+          "Krefeld-Uerdingen",
+          "Krefeld-Linn",
+          "Krefeld-Oppum",
+          "Krefeld Hbf",
+          "Forsthaus",
+          "Anrath",
+          "Viersen",
+          "Mönchengladbach Hbf",
+          "Rheydt Hbf",
+          "Wickrath",
+          "Herrath",
+          "Erkelenz",
+          "Hückelhoven-Baal",
+          "Brachelen",
+          "Lindern",
+          "Geilenkirchen",
+          "Übach-Palenberg",
+          "Herzogenrath",
+          "Kohlscheid",
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "-2175314878748239454-2510201857-13",
+        "type": "S",
+        "number": "31177",
+        "direction": "Dortmund Hbf",
+        "platform": "2",
+        "time": "2510201942",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf",
+          "Essen-Steele",
+          "Essen-Steele Ost",
+          "Essen-Eiberg",
+          "Wattenscheid-Höntrop",
+          "Bochum-Ehrenfeld",
+          "Bochum Hbf",
+          "Bochum-Langendreer West",
+          "Bochum-Langendreer",
+          "Dortmund-Kley",
+          "Dortmund-Oespel",
+          "Dortmund Universität",
+          "Dortmund-Dorstfeld Süd",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-1801333113396667008-2510201737-28",
+        "type": "RB",
+        "number": "10334",
+        "direction": "Essen Hbf",
+        "platform": "2",
+        "time": "2510201931",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Mülheim(Ruhr)Hbf",
+          "Essen West",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "7090038333405223439-2510201837-13",
+        "type": "S",
+        "number": "31175",
+        "direction": "Dortmund Hbf",
+        "platform": "2",
+        "time": "2510201912",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf",
+          "Essen-Steele",
+          "Essen-Steele Ost",
+          "Essen-Eiberg",
+          "Wattenscheid-Höntrop",
+          "Bochum-Ehrenfeld",
+          "Bochum Hbf",
+          "Bochum-Langendreer West",
+          "Bochum-Langendreer",
+          "Dortmund-Kley",
+          "Dortmund-Oespel",
+          "Dortmund Universität",
+          "Dortmund-Dorstfeld Süd",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "312775916287392950-2510201851-19",
+        "type": "S",
+        "number": "31178",
+        "direction": "Düsseldorf Hbf",
+        "platform": "5",
+        "time": "2510201949",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Duisburg-Schlenk",
+          "Duisburg-Buchholz",
+          "Duisburg-Großenbaum",
+          "Duisburg-Rahm",
+          "Angermund",
+          "Düsseldorf Flughafen",
+          "Düsseldorf-Unterrath",
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "8916179466030379923-2510201808-10",
+        "type": "RE",
+        "number": "30997",
+        "direction": "Oberhausen Hbf",
+        "platform": "4",
+        "time": "2510201901",
+        "destination": "Oberhausen Hbf",
+        "path_stations": [
+          "Oberhausen Hbf"
+        ]
+      },
+      {
+        "id": "-9057893175658635366-2510201911-5",
+        "type": "RB",
+        "number": "10341",
+        "direction": "Aachen Hbf",
+        "platform": "5",
+        "time": "2510201928",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Duisburg-Hochfeld Süd",
+          "Rheinhausen Ost",
+          "Rheinhausen",
+          "Krefeld-Hohenbudberg Chempark",
+          "Krefeld-Uerdingen",
+          "Krefeld-Linn",
+          "Krefeld-Oppum",
+          "Krefeld Hbf",
+          "Forsthaus",
+          "Anrath",
+          "Viersen",
+          "Mönchengladbach Hbf",
+          "Rheydt Hbf",
+          "Wickrath",
+          "Herrath",
+          "Erkelenz",
+          "Hückelhoven-Baal",
+          "Brachelen",
+          "Lindern",
+          "Geilenkirchen",
+          "Übach-Palenberg",
+          "Herzogenrath",
+          "Kohlscheid",
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "2390809721927293725-2510201823-19",
+        "type": "S",
+        "number": "31174",
+        "direction": "Düsseldorf Hbf",
+        "platform": "5",
+        "time": "2510201919",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Duisburg-Schlenk",
+          "Duisburg-Buchholz",
+          "Duisburg-Großenbaum",
+          "Duisburg-Rahm",
+          "Angermund",
+          "Düsseldorf Flughafen",
+          "Düsseldorf-Unterrath",
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-199269915617519590-2510201917-2",
+        "type": "S",
+        "number": "30362",
+        "direction": "Hattingen(Ruhr) Mitte",
+        "platform": "3",
+        "time": "2510201921",
+        "destination": "Hattingen(Ruhr) Mitte",
+        "path_stations": [
+          "Mülheim(Ruhr)West",
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf",
+          "Essen-Steele",
+          "Essen-Steele Ost",
+          "Essen-Horst",
+          "Bochum-Dahlhausen",
+          "Hattingen(Ruhr)",
+          "Hattingen(Ruhr) Mitte"
+        ]
+      },
+      {
+        "id": "-6033080727000589172-2510201947-2",
+        "type": "S",
+        "number": "30364",
+        "direction": "Hattingen(Ruhr) Mitte",
+        "platform": "3",
+        "time": "2510201951",
+        "destination": "Hattingen(Ruhr) Mitte",
+        "path_stations": [
+          "Mülheim(Ruhr)West",
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf",
+          "Essen-Steele",
+          "Essen-Steele Ost",
+          "Essen-Horst",
+          "Bochum-Dahlhausen",
+          "Hattingen(Ruhr)",
+          "Hattingen(Ruhr) Mitte"
+        ]
+      },
+      {
+        "id": "-9070208170418161881-2510201903-12",
+        "type": "S",
+        "number": "30363",
+        "direction": "Oberhausen Hbf",
+        "platform": "4",
+        "time": "2510201940",
+        "destination": "Oberhausen Hbf",
+        "path_stations": [
+          "Oberhausen Hbf"
+        ]
+      },
+      {
+        "id": "-6619273956750358554-2510201833-12",
+        "type": "S",
+        "number": "30361",
+        "direction": "Oberhausen Hbf",
+        "platform": "4",
+        "time": "2510201910",
+        "destination": "Oberhausen Hbf",
+        "path_stations": [
+          "Oberhausen Hbf"
+        ]
+      },
+      {
+        "id": "5904827168215272200-2510201856-2",
+        "type": "RE",
+        "number": "30996",
+        "direction": "Wuppertal Hbf",
+        "platform": "3",
+        "time": "2510201900",
+        "destination": "Wuppertal Hbf",
+        "path_stations": [
+          "Mülheim(Ruhr)Hbf",
+          "Essen West",
+          "Essen Hbf",
+          "Essen-Steele",
+          "Essen-Kupferdreh",
+          "Velbert-Langenberg",
+          "Velbert-Neviges",
+          "Wuppertal-Vohwinkel",
+          "Wuppertal Hbf"
+        ]
+      },
+      {
+        "id": "5384914388098684320-2510202047-2",
+        "type": "S",
+        "number": "30368",
+        "direction": "Essen Hbf",
+        "platform": "3",
+        "time": "2510202051",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Mülheim(Ruhr)West",
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "-2823655757709007819-2510202017-2",
+        "type": "S",
+        "number": "30366",
+        "direction": "Essen Hbf",
+        "platform": "3",
+        "time": "2510202021",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Mülheim(Ruhr)West",
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "7195377711743719015-2510202007-13",
+        "type": "S",
+        "number": "31185",
+        "direction": "Essen Hbf",
+        "platform": "2",
+        "time": "2510202042",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "5356887278008679065-2510201837-28",
+        "type": "RB",
+        "number": "10336",
+        "direction": "Essen Hbf",
+        "platform": "2",
+        "time": "2510202031",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Mülheim(Ruhr)Hbf",
+          "Essen West",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "2934134569438800148-2510201933-12",
+        "type": "S",
+        "number": "30365",
+        "direction": "Oberhausen Hbf",
+        "platform": "4",
+        "time": "2510202010",
+        "destination": "Oberhausen Hbf",
+        "path_stations": [
+          "Oberhausen Hbf"
+        ]
+      },
+      {
+        "id": "-4223550550386185055-2510202016-4",
+        "type": "RB",
+        "number": "10343",
+        "direction": "Aachen Hbf",
+        "platform": "5",
+        "time": "2510202028",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Duisburg-Hochfeld Süd",
+          "Rheinhausen Ost",
+          "Rheinhausen",
+          "Krefeld-Hohenbudberg Chempark",
+          "Krefeld-Uerdingen",
+          "Krefeld-Linn",
+          "Krefeld-Oppum",
+          "Krefeld Hbf",
+          "Forsthaus",
+          "Anrath",
+          "Viersen",
+          "Mönchengladbach Hbf",
+          "Rheydt Hbf",
+          "Wickrath",
+          "Herrath",
+          "Erkelenz",
+          "Hückelhoven-Baal",
+          "Brachelen",
+          "Lindern",
+          "Geilenkirchen",
+          "Übach-Palenberg",
+          "Herzogenrath",
+          "Kohlscheid",
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "5081566013175615924-2510201937-13",
+        "type": "S",
+        "number": "31183",
+        "direction": "Dortmund Hbf",
+        "platform": "2",
+        "time": "2510202012",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf",
+          "Essen-Steele",
+          "Essen-Steele Ost",
+          "Essen-Eiberg",
+          "Wattenscheid-Höntrop",
+          "Bochum-Ehrenfeld",
+          "Bochum Hbf",
+          "Bochum-Langendreer West",
+          "Bochum-Langendreer",
+          "Dortmund-Kley",
+          "Dortmund-Oespel",
+          "Dortmund Universität",
+          "Dortmund-Dorstfeld Süd",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-6877139240402722043-2510202003-12",
+        "type": "S",
+        "number": "30367",
+        "direction": "Oberhausen Hbf",
+        "platform": "4",
+        "time": "2510202040",
+        "destination": "Oberhausen Hbf",
+        "path_stations": [
+          "Oberhausen Hbf"
+        ]
+      },
+      {
+        "id": "-6439265394219046946-2510201953-19",
+        "type": "S",
+        "number": "31182",
+        "direction": "Düsseldorf Hbf",
+        "platform": "5",
+        "time": "2510202049",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Duisburg-Schlenk",
+          "Duisburg-Buchholz",
+          "Duisburg-Großenbaum",
+          "Duisburg-Rahm",
+          "Angermund",
+          "Düsseldorf Flughafen",
+          "Düsseldorf-Unterrath",
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-9027594124101845781-2510201921-19",
+        "type": "S",
+        "number": "31180",
+        "direction": "Düsseldorf Hbf",
+        "platform": "5",
+        "time": "2510202019",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Duisburg-Schlenk",
+          "Duisburg-Buchholz",
+          "Duisburg-Großenbaum",
+          "Duisburg-Rahm",
+          "Angermund",
+          "Düsseldorf Flughafen",
+          "Düsseldorf-Unterrath",
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-8579699905201603283-2510202117-2",
+        "type": "S",
+        "number": "30370",
+        "direction": "Essen Hbf",
+        "platform": "3",
+        "time": "2510202121",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Mülheim(Ruhr)West",
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "2572402660165950814-2510202033-12",
+        "type": "S",
+        "number": "30369",
+        "direction": "Oberhausen Hbf",
+        "platform": "4",
+        "time": "2510202110",
+        "destination": "Oberhausen Hbf",
+        "path_stations": [
+          "Oberhausen Hbf"
+        ]
+      },
+      {
+        "id": "-5930456924783341444-2510202023-19",
+        "type": "S",
+        "number": "31184",
+        "direction": "Düsseldorf Hbf",
+        "platform": "5",
+        "time": "2510202119",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Duisburg-Schlenk",
+          "Duisburg-Buchholz",
+          "Duisburg-Großenbaum",
+          "Duisburg-Rahm",
+          "Angermund",
+          "Düsseldorf Flughafen",
+          "Düsseldorf-Unterrath",
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "610494883884368585-2510202126-6",
+        "type": "S",
+        "number": "30371",
+        "direction": "Oberhausen Hbf",
+        "platform": "4",
+        "time": "2510202140",
+        "destination": "Oberhausen Hbf",
+        "path_stations": [
+          "Oberhausen Hbf"
+        ]
+      },
+      {
+        "id": "2658390677619558051-2510202147-2",
+        "type": "S",
+        "number": "30372",
+        "direction": "Essen Hbf",
+        "platform": "3",
+        "time": "2510202151",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Mülheim(Ruhr)West",
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "-4130516540586102412-2510202053-19",
+        "type": "S",
+        "number": "31186",
+        "direction": "Düsseldorf Hbf",
+        "platform": "5",
+        "time": "2510202149",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Duisburg-Schlenk",
+          "Duisburg-Buchholz",
+          "Duisburg-Großenbaum",
+          "Duisburg-Rahm",
+          "Angermund",
+          "Düsseldorf Flughafen",
+          "Düsseldorf-Unterrath",
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-5185695367606666233-2510202107-13",
+        "type": "S",
+        "number": "31189",
+        "direction": "Essen Hbf",
+        "platform": "2",
+        "time": "2510202142",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "-1672872613949795114-2510202116-4",
+        "type": "RB",
+        "number": "10345",
+        "direction": "Aachen Hbf",
+        "platform": "5",
+        "time": "2510202128",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Duisburg-Hochfeld Süd",
+          "Rheinhausen Ost",
+          "Rheinhausen",
+          "Krefeld-Hohenbudberg Chempark",
+          "Krefeld-Uerdingen",
+          "Krefeld-Linn",
+          "Krefeld-Oppum",
+          "Krefeld Hbf",
+          "Forsthaus",
+          "Anrath",
+          "Viersen",
+          "Mönchengladbach Hbf",
+          "Rheydt Hbf",
+          "Wickrath",
+          "Herrath",
+          "Erkelenz",
+          "Hückelhoven-Baal",
+          "Brachelen",
+          "Lindern",
+          "Geilenkirchen",
+          "Übach-Palenberg",
+          "Herzogenrath",
+          "Kohlscheid",
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "5995759368429194373-2510201937-28",
+        "type": "RB",
+        "number": "10338",
+        "direction": "Essen Hbf",
+        "platform": "2",
+        "time": "2510202131",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Mülheim(Ruhr)Hbf",
+          "Essen West",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "-4966414111834203309-2510202037-13",
+        "type": "S",
+        "number": "31187",
+        "direction": "Essen Hbf",
+        "platform": "2",
+        "time": "2510202112",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "6361874886333673128-2510202236-5",
+        "type": "S",
+        "number": "31190",
+        "direction": "Düsseldorf Hbf",
+        "platform": "5",
+        "time": "2510202249",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Duisburg-Schlenk",
+          "Duisburg-Buchholz",
+          "Duisburg-Großenbaum",
+          "Duisburg-Rahm",
+          "Angermund",
+          "Düsseldorf Flughafen",
+          "Düsseldorf-Unterrath",
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-3446039434704925479-2510202226-6",
+        "type": "S",
+        "number": "30375",
+        "direction": "Oberhausen Hbf",
+        "platform": "4",
+        "time": "2510202240",
+        "destination": "Oberhausen Hbf",
+        "path_stations": [
+          "Oberhausen Hbf"
+        ]
+      },
+      {
+        "id": "-2091098978807148229-2510202206-5",
+        "type": "S",
+        "number": "31188",
+        "direction": "Düsseldorf Hbf",
+        "platform": "5",
+        "time": "2510202219",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Duisburg-Schlenk",
+          "Duisburg-Buchholz",
+          "Duisburg-Großenbaum",
+          "Duisburg-Rahm",
+          "Angermund",
+          "Düsseldorf Flughafen",
+          "Düsseldorf-Unterrath",
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "3877311608492123870-2510202216-4",
+        "type": "RB",
+        "number": "10347",
+        "direction": "Aachen Hbf",
+        "platform": "5",
+        "time": "2510202228",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Duisburg-Hochfeld Süd",
+          "Rheinhausen Ost",
+          "Rheinhausen",
+          "Krefeld-Hohenbudberg Chempark",
+          "Krefeld-Uerdingen",
+          "Krefeld-Linn",
+          "Krefeld-Oppum",
+          "Krefeld Hbf",
+          "Forsthaus",
+          "Anrath",
+          "Viersen",
+          "Mönchengladbach Hbf",
+          "Rheydt Hbf",
+          "Wickrath",
+          "Herrath",
+          "Erkelenz",
+          "Hückelhoven-Baal",
+          "Brachelen",
+          "Lindern",
+          "Geilenkirchen",
+          "Übach-Palenberg",
+          "Herzogenrath",
+          "Kohlscheid",
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "-2389022620329876059-2510202207-13",
+        "type": "S",
+        "number": "31193",
+        "direction": "Essen Hbf",
+        "platform": "2",
+        "time": "2510202242",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "-7183493968897931528-2510202156-6",
+        "type": "S",
+        "number": "30373",
+        "direction": "Oberhausen Hbf",
+        "platform": "4",
+        "time": "2510202210",
+        "destination": "Oberhausen Hbf",
+        "path_stations": [
+          "Oberhausen Hbf"
+        ]
+      },
+      {
+        "id": "-93948079650213652-2510202137-13",
+        "type": "S",
+        "number": "31191",
+        "direction": "Essen Hbf",
+        "platform": "2",
+        "time": "2510202212",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "-984308395848723480-2510202217-2",
+        "type": "S",
+        "number": "30374",
+        "direction": "Essen Hbf",
+        "platform": "3",
+        "time": "2510202221",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Mülheim(Ruhr)West",
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "2831643269627950472-2510202226-2",
+        "type": "Bus",
+        "number": "336",
+        "direction": "Hattingen(Ruhr) Mitte",
+        "platform": "",
+        "time": "2510202236",
+        "destination": "Hattingen(Ruhr) Mitte",
+        "path_stations": [
+          "Mülheim(Ruhr)West",
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus",
+          "Essen-Steele",
+          "Essen-Steele Ost",
+          "Essen-Horst",
+          "Bochum-Dahlhausen",
+          "Hattingen(Ruhr)",
+          "Hattingen(Ruhr) Mitte"
+        ]
+      },
+      {
+        "id": "-3507760180532579777-2510202036-28",
+        "type": "RB",
+        "number": "10340",
+        "direction": "Essen Hbf",
+        "platform": "2",
+        "time": "2510202231",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Mülheim(Ruhr)Hbf",
+          "Essen West",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "66078863357781378-2510202142-12",
+        "type": "Bus",
+        "number": "341",
+        "direction": "Oberhausen Hbf",
+        "platform": "",
+        "time": "2510202307",
+        "destination": "Oberhausen Hbf",
+        "path_stations": [
+          "Oberhausen Hbf"
+        ]
+      },
+      {
+        "id": "4942987700389942236-2510202317-2",
+        "type": "S",
+        "number": "30378",
+        "direction": "Essen Hbf",
+        "platform": "3",
+        "time": "2510202321",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Mülheim(Ruhr)West",
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "2164813334721298154-2510202237-13",
+        "type": "S",
+        "number": "31195",
+        "direction": "Essen Hbf",
+        "platform": "2",
+        "time": "2510202312",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "5537531749197613212-2510202326-2",
+        "type": "Bus",
+        "number": "340",
+        "direction": "Hattingen(Ruhr) Mitte",
+        "platform": "",
+        "time": "2510202336",
+        "destination": "Hattingen(Ruhr) Mitte",
+        "path_stations": [
+          "Mülheim(Ruhr)West",
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus",
+          "Essen-Steele",
+          "Essen-Steele Ost",
+          "Essen-Horst",
+          "Bochum-Dahlhausen",
+          "Hattingen(Ruhr)",
+          "Hattingen(Ruhr) Mitte"
+        ]
+      },
+      {
+        "id": "-5761329669373786716-2510202336-5",
+        "type": "S",
+        "number": "31194",
+        "direction": "Düsseldorf Hbf",
+        "platform": "5",
+        "time": "2510202349",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Duisburg-Schlenk",
+          "Duisburg-Buchholz",
+          "Duisburg-Großenbaum",
+          "Duisburg-Rahm",
+          "Angermund",
+          "Düsseldorf Flughafen",
+          "Düsseldorf-Unterrath",
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "6428955226165067676-2510202326-6",
+        "type": "S",
+        "number": "30379",
+        "direction": "Oberhausen Hbf",
+        "platform": "4",
+        "time": "2510202340",
+        "destination": "Oberhausen Hbf",
+        "path_stations": [
+          "Oberhausen Hbf"
+        ]
+      },
+      {
+        "id": "2602687271452589574-2510202256-2",
+        "type": "Bus",
+        "number": "338",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510202306",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Mülheim(Ruhr)West",
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "3554000708093905771-2510202307-13",
+        "type": "S",
+        "number": "31197",
+        "direction": "Essen Hbf",
+        "platform": "2",
+        "time": "2510202342",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "-6216607233360207801-2510202212-12",
+        "type": "Bus",
+        "number": "345",
+        "direction": "Oberhausen Hbf",
+        "platform": "",
+        "time": "2510202337",
+        "destination": "Oberhausen Hbf",
+        "path_stations": [
+          "Oberhausen Hbf"
+        ]
+      },
+      {
+        "id": "74175046639774511-2510202256-6",
+        "type": "S",
+        "number": "30377",
+        "direction": "Oberhausen Hbf",
+        "platform": "4",
+        "time": "2510202310",
+        "destination": "Oberhausen Hbf",
+        "path_stations": [
+          "Oberhausen Hbf"
+        ]
+      },
+      {
+        "id": "8283504208782285902-2510202306-5",
+        "type": "S",
+        "number": "31192",
+        "direction": "Düsseldorf Hbf",
+        "platform": "5",
+        "time": "2510202319",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Duisburg-Schlenk",
+          "Duisburg-Buchholz",
+          "Duisburg-Großenbaum",
+          "Duisburg-Rahm",
+          "Angermund",
+          "Düsseldorf Flughafen",
+          "Düsseldorf-Unterrath",
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-162315690558344009-2510210026-2",
+        "type": "Bus",
+        "number": "332",
+        "direction": "Hattingen(Ruhr) Mitte",
+        "platform": "",
+        "time": "2510210036",
+        "destination": "Hattingen(Ruhr) Mitte",
+        "path_stations": [
+          "Mülheim(Ruhr)West",
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus",
+          "Essen-Steele",
+          "Essen-Steele Ost",
+          "Essen-Horst",
+          "Bochum-Dahlhausen",
+          "Hattingen(Ruhr)",
+          "Hattingen(Ruhr) Mitte"
+        ]
+      },
+      {
+        "id": "-3249081817069598195-2510210006-5",
+        "type": "S",
+        "number": "31196",
+        "direction": "Düsseldorf Hbf",
+        "platform": "5",
+        "time": "2510210019",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Duisburg-Schlenk",
+          "Duisburg-Buchholz",
+          "Duisburg-Großenbaum",
+          "Duisburg-Rahm",
+          "Angermund",
+          "Düsseldorf Flughafen",
+          "Düsseldorf-Unterrath",
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "201252502168494027-2510202242-12",
+        "type": "Bus",
+        "number": "349",
+        "direction": "Oberhausen Hbf",
+        "platform": "",
+        "time": "2510210007",
+        "destination": "Oberhausen Hbf",
+        "path_stations": [
+          "Oberhausen Hbf"
+        ]
+      },
+      {
+        "id": "-4444867576672218174-2510210026-6",
+        "type": "S",
+        "number": "30301",
+        "direction": "Oberhausen Hbf",
+        "platform": "4",
+        "time": "2510210040",
+        "destination": "Oberhausen Hbf",
+        "path_stations": [
+          "Oberhausen Hbf"
+        ]
+      },
+      {
+        "id": "1313664177792605240-2510202312-12",
+        "type": "Bus",
+        "number": "353",
+        "direction": "Oberhausen Hbf",
+        "platform": "",
+        "time": "2510210037",
+        "destination": "Oberhausen Hbf",
+        "path_stations": [
+          "Oberhausen Hbf"
+        ]
+      },
+      {
+        "id": "8508930744013894031-2510210017-2",
+        "type": "S",
+        "number": "30300",
+        "direction": "Essen Hbf",
+        "platform": "3",
+        "time": "2510210021",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Mülheim(Ruhr)West",
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "-3552515162721656457-2510210036-5",
+        "type": "S",
+        "number": "31198",
+        "direction": "Düsseldorf Hbf",
+        "platform": "5",
+        "time": "2510210049",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Duisburg-Schlenk",
+          "Duisburg-Buchholz",
+          "Duisburg-Großenbaum",
+          "Duisburg-Rahm",
+          "Angermund",
+          "Düsseldorf Flughafen",
+          "Düsseldorf-Unterrath",
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "1357697637198735008-2510202337-13",
+        "type": "S",
+        "number": "31199",
+        "direction": "Essen Hbf",
+        "platform": "2",
+        "time": "2510210012",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "5725591571076636546-2510210037-13",
+        "type": "S",
+        "number": "30101",
+        "direction": "Essen Hbf",
+        "platform": "2",
+        "time": "2510210112",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "-9156801588697148860-2510210012-12",
+        "type": "Bus",
+        "number": "333",
+        "direction": "Oberhausen Hbf",
+        "platform": "",
+        "time": "2510210146",
+        "destination": "Oberhausen Hbf",
+        "path_stations": [
+          "Oberhausen Hbf"
+        ]
+      },
+      {
+        "id": "-7827885900200630496-2510210136-5",
+        "type": "S",
+        "number": "30100",
+        "direction": "Düsseldorf Hbf",
+        "platform": "5",
+        "time": "2510210149",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Duisburg-Schlenk",
+          "Duisburg-Buchholz",
+          "Duisburg-Großenbaum",
+          "Duisburg-Rahm",
+          "Angermund",
+          "Düsseldorf Flughafen",
+          "Düsseldorf-Unterrath",
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-5463405634008665571-2510210137-13",
+        "type": "S",
+        "number": "30103",
+        "direction": "Essen Hbf",
+        "platform": "2",
+        "time": "2510210212",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "-6118637058233412882-2510210236-5",
+        "type": "S",
+        "number": "30102",
+        "direction": "Düsseldorf Hbf",
+        "platform": "5",
+        "time": "2510210249",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Duisburg-Schlenk",
+          "Duisburg-Buchholz",
+          "Duisburg-Großenbaum",
+          "Duisburg-Rahm",
+          "Angermund",
+          "Düsseldorf Flughafen",
+          "Düsseldorf-Unterrath",
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-7957821270062947808-2510210336-5",
+        "type": "S",
+        "number": "31594",
+        "direction": "Düsseldorf Hbf",
+        "platform": "5",
+        "time": "2510210349",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Duisburg-Schlenk",
+          "Duisburg-Buchholz",
+          "Duisburg-Großenbaum",
+          "Duisburg-Rahm",
+          "Angermund",
+          "Düsseldorf Flughafen",
+          "Düsseldorf-Unterrath",
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-3281777692721600585-2510210437-2",
+        "type": "S",
+        "number": "30109",
+        "direction": "Dortmund Hbf",
+        "platform": "2",
+        "time": "2510210442",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf",
+          "Essen-Steele",
+          "Essen-Steele Ost",
+          "Essen-Eiberg",
+          "Wattenscheid-Höntrop",
+          "Bochum-Ehrenfeld",
+          "Bochum Hbf",
+          "Bochum-Langendreer West",
+          "Bochum-Langendreer",
+          "Dortmund-Kley",
+          "Dortmund-Oespel",
+          "Dortmund Universität",
+          "Dortmund-Dorstfeld Süd",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-3984551627525172822-2510210404-2",
+        "type": "Bus",
+        "number": "334",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510210414",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Mülheim(Ruhr)West",
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-6460516812909385421-2510210337-13",
+        "type": "S",
+        "number": "30107",
+        "direction": "Dortmund Hbf",
+        "platform": "2",
+        "time": "2510210412",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf",
+          "Essen-Steele",
+          "Essen-Steele Ost",
+          "Essen-Eiberg",
+          "Wattenscheid-Höntrop",
+          "Bochum-Ehrenfeld",
+          "Bochum Hbf",
+          "Bochum-Langendreer West",
+          "Bochum-Langendreer",
+          "Dortmund-Kley",
+          "Dortmund-Oespel",
+          "Dortmund Universität",
+          "Dortmund-Dorstfeld Süd",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "4334055591869321858-2510210436-5",
+        "type": "S",
+        "number": "30110",
+        "direction": "Düsseldorf Hbf",
+        "platform": "5",
+        "time": "2510210449",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Duisburg-Schlenk",
+          "Duisburg-Buchholz",
+          "Duisburg-Großenbaum",
+          "Duisburg-Rahm",
+          "Angermund",
+          "Düsseldorf Flughafen",
+          "Düsseldorf-Unterrath",
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      }
+    ],
+    "arrivals": []
+  }
+}

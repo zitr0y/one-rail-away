@@ -1,0 +1,935 @@
+{
+  "station_eva": "8001909",
+  "date": "251020",
+  "cached_at": "2025-10-20T16:42:02.884522",
+  "plan_data": {
+    "arrivals": [
+      {
+        "id": "-8421522247246892215-2510201839-2",
+        "type": "VIA",
+        "number": "52269",
+        "time": "2510201842",
+        "platform": "1",
+        "path_stations": [
+          "Gelsenkirchen Hbf"
+        ],
+        "line": "RB35"
+      },
+      {
+        "id": "-6763685261936760744-2510201834-6",
+        "type": "RB",
+        "number": "31270",
+        "time": "2510201853",
+        "platform": "2",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Oberhausen Hbf",
+          "Essen-Dellwig",
+          "Essen-Bergeborbeck",
+          "Essen-Altenessen"
+        ],
+        "line": "32"
+      },
+      {
+        "id": "-253212051380884363-2510201801-2",
+        "type": "RB",
+        "number": "31269",
+        "time": "2510201804",
+        "platform": "1",
+        "path_stations": [
+          "Gelsenkirchen Hbf"
+        ],
+        "line": "32"
+      },
+      {
+        "id": "7991506129333906200-2510201708-18",
+        "type": "VIA",
+        "number": "52262",
+        "time": "2510201814",
+        "platform": "2",
+        "path_stations": [
+          "Mönchengladbach Hbf",
+          "Viersen",
+          "Anrath",
+          "Forsthaus",
+          "Krefeld Hbf",
+          "Krefeld-Oppum",
+          "Krefeld-Linn",
+          "Krefeld-Uerdingen",
+          "Krefeld-Hohenbudberg Chempark",
+          "Rheinhausen",
+          "Rheinhausen Ost",
+          "Duisburg-Hochfeld Süd",
+          "Duisburg Hbf",
+          "Oberhausen Hbf",
+          "Essen-Dellwig",
+          "Essen-Bergeborbeck",
+          "Essen-Altenessen"
+        ],
+        "line": "RB35"
+      },
+      {
+        "id": "7385360712422157622-2510201939-2",
+        "type": "VIA",
+        "number": "52271",
+        "time": "2510201942",
+        "platform": "1",
+        "path_stations": [
+          "Gelsenkirchen Hbf"
+        ],
+        "line": "RB35"
+      },
+      {
+        "id": "-8395225554000413805-2510201934-6",
+        "type": "RB",
+        "number": "31272",
+        "time": "2510201953",
+        "platform": "2",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Oberhausen Hbf",
+          "Essen-Dellwig",
+          "Essen-Bergeborbeck",
+          "Essen-Altenessen"
+        ],
+        "line": "32"
+      },
+      {
+        "id": "-7610410907441103742-2510201901-2",
+        "type": "RB",
+        "number": "31271",
+        "time": "2510201904",
+        "platform": "1",
+        "path_stations": [
+          "Gelsenkirchen Hbf"
+        ],
+        "line": "32"
+      },
+      {
+        "id": "608379063884191223-2510201808-18",
+        "type": "VIA",
+        "number": "52264",
+        "time": "2510201914",
+        "platform": "2",
+        "path_stations": [
+          "Mönchengladbach Hbf",
+          "Viersen",
+          "Anrath",
+          "Forsthaus",
+          "Krefeld Hbf",
+          "Krefeld-Oppum",
+          "Krefeld-Linn",
+          "Krefeld-Uerdingen",
+          "Krefeld-Hohenbudberg Chempark",
+          "Rheinhausen",
+          "Rheinhausen Ost",
+          "Duisburg-Hochfeld Süd",
+          "Duisburg Hbf",
+          "Oberhausen Hbf",
+          "Essen-Dellwig",
+          "Essen-Bergeborbeck",
+          "Essen-Altenessen"
+        ],
+        "line": "RB35"
+      },
+      {
+        "id": "5197849891127224719-2510202001-2",
+        "type": "RB",
+        "number": "31273",
+        "time": "2510202004",
+        "platform": "1",
+        "path_stations": [
+          "Gelsenkirchen Hbf"
+        ],
+        "line": "32"
+      },
+      {
+        "id": "3647811556346721539-2510202034-6",
+        "type": "RB",
+        "number": "31274",
+        "time": "2510202053",
+        "platform": "2",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Oberhausen Hbf",
+          "Essen-Dellwig",
+          "Essen-Bergeborbeck",
+          "Essen-Altenessen"
+        ],
+        "line": "32"
+      },
+      {
+        "id": "6115637361180188083-2510202134-6",
+        "type": "RB",
+        "number": "31276",
+        "time": "2510202153",
+        "platform": "2",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Oberhausen Hbf",
+          "Essen-Dellwig",
+          "Essen-Bergeborbeck",
+          "Essen-Altenessen"
+        ],
+        "line": "32"
+      },
+      {
+        "id": "-2400128801858569650-2510202101-2",
+        "type": "RB",
+        "number": "31275",
+        "time": "2510202104",
+        "platform": "1",
+        "path_stations": [
+          "Gelsenkirchen Hbf"
+        ],
+        "line": "32"
+      },
+      {
+        "id": "6862875673277646876-2510202212-2",
+        "type": "Bus",
+        "number": "317",
+        "time": "2510202226",
+        "platform": "",
+        "path_stations": [
+          "Gelsenkirchen Hbf"
+        ],
+        "line": "RB32"
+      },
+      {
+        "id": "7271053357127110959-2510210012-2",
+        "type": "Bus",
+        "number": "321",
+        "time": "2510210026",
+        "platform": "",
+        "path_stations": [
+          "Gelsenkirchen Hbf"
+        ],
+        "line": "RB32"
+      },
+      {
+        "id": "3668273527763559270-2510202342-6",
+        "type": "Bus",
+        "number": "312",
+        "time": "2510210051",
+        "platform": "",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Oberhausen Hbf",
+          "Essen-Dellwig",
+          "Essen-Bergeborbeck",
+          "Essen-Altenessen"
+        ],
+        "line": "RB32"
+      },
+      {
+        "id": "2680824758092337580-2510210042-6",
+        "type": "Bus",
+        "number": "300",
+        "time": "2510210151",
+        "platform": "",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Oberhausen Hbf",
+          "Essen-Dellwig",
+          "Essen-Bergeborbeck",
+          "Essen-Altenessen"
+        ],
+        "line": "RB32"
+      },
+      {
+        "id": "-4748916736848493479-2510210112-2",
+        "type": "Bus",
+        "number": "303",
+        "time": "2510210126",
+        "platform": "",
+        "path_stations": [
+          "Gelsenkirchen Hbf"
+        ],
+        "line": "RB32"
+      },
+      {
+        "id": "7575657602430597461-2510210212-2",
+        "type": "Bus",
+        "number": "305",
+        "time": "2510210226",
+        "platform": "",
+        "path_stations": [
+          "Gelsenkirchen Hbf"
+        ],
+        "line": "RB32"
+      },
+      {
+        "id": "7337191127485568696-2510210142-6",
+        "type": "Bus",
+        "number": "302",
+        "time": "2510210251",
+        "platform": "",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Oberhausen Hbf",
+          "Essen-Dellwig",
+          "Essen-Bergeborbeck",
+          "Essen-Altenessen"
+        ],
+        "line": "RB32"
+      },
+      {
+        "id": "-624418220032522267-2510210312-2",
+        "type": "Bus",
+        "number": "307",
+        "time": "2510210326",
+        "platform": "",
+        "path_stations": [
+          "Gelsenkirchen Hbf"
+        ],
+        "line": "RB32"
+      },
+      {
+        "id": "-4020808769534634545-2510210242-6",
+        "type": "Bus",
+        "number": "304",
+        "time": "2510210351",
+        "platform": "",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Oberhausen Hbf",
+          "Essen-Dellwig",
+          "Essen-Bergeborbeck",
+          "Essen-Altenessen"
+        ],
+        "line": "RB32"
+      },
+      {
+        "id": "-3854315492960167653-2510210412-2",
+        "type": "Bus",
+        "number": "309",
+        "time": "2510210426",
+        "platform": "",
+        "path_stations": [
+          "Gelsenkirchen Hbf"
+        ],
+        "line": "RB32"
+      },
+      {
+        "id": "-2796428905286433669-2510210342-6",
+        "type": "Bus",
+        "number": "306",
+        "time": "2510210451",
+        "platform": "",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Oberhausen Hbf",
+          "Essen-Dellwig",
+          "Essen-Bergeborbeck",
+          "Essen-Altenessen"
+        ],
+        "line": "RB32"
+      },
+      {
+        "id": "-1182021976660322188-2510210442-6",
+        "type": "Bus",
+        "number": "308",
+        "time": "2510210551",
+        "platform": "",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Oberhausen Hbf",
+          "Essen-Dellwig",
+          "Essen-Bergeborbeck",
+          "Essen-Altenessen"
+        ],
+        "line": "RB32"
+      },
+      {
+        "id": "-5879232233441680469-2510210539-2",
+        "type": "VIA",
+        "number": "52243",
+        "time": "2510210542",
+        "platform": "1",
+        "path_stations": [
+          "Gelsenkirchen Hbf"
+        ],
+        "line": "RB35"
+      },
+      {
+        "id": "-1483943322400311890-2510210534-6",
+        "type": "RB",
+        "number": "31244",
+        "time": "2510210553",
+        "platform": "2",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Oberhausen Hbf",
+          "Essen-Dellwig",
+          "Essen-Bergeborbeck",
+          "Essen-Altenessen"
+        ],
+        "line": "32"
+      },
+      {
+        "id": "-8010034694956434858-2510210501-2",
+        "type": "RB",
+        "number": "31241",
+        "time": "2510210504",
+        "platform": "1",
+        "path_stations": [
+          "Gelsenkirchen Hbf"
+        ],
+        "line": "32"
+      },
+      {
+        "id": "4397843630057340042-2510210456-6",
+        "type": "VIA",
+        "number": "52270",
+        "time": "2510210514",
+        "platform": "2",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Oberhausen Hbf",
+          "Essen-Dellwig",
+          "Essen-Bergeborbeck",
+          "Essen-Altenessen"
+        ],
+        "line": "RB35"
+      },
+      {
+        "id": "8875544170195539056-2510210601-2",
+        "type": "RB",
+        "number": "31245",
+        "time": "2510210604",
+        "platform": "1",
+        "path_stations": [
+          "Gelsenkirchen Hbf"
+        ],
+        "line": "32"
+      },
+      {
+        "id": "5753507105712955996-2510210556-6",
+        "type": "VIA",
+        "number": "52272",
+        "time": "2510210614",
+        "platform": "2",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Oberhausen Hbf",
+          "Essen-Dellwig",
+          "Essen-Bergeborbeck",
+          "Essen-Altenessen"
+        ],
+        "line": "RB35"
+      },
+      {
+        "id": "7552950262755971305-2510210634-6",
+        "type": "RB",
+        "number": "31246",
+        "time": "2510210653",
+        "platform": "2",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Oberhausen Hbf",
+          "Essen-Dellwig",
+          "Essen-Bergeborbeck",
+          "Essen-Altenessen"
+        ],
+        "line": "32"
+      },
+      {
+        "id": "-5514757383513024665-2510210639-2",
+        "type": "VIA",
+        "number": "52245",
+        "time": "2510210642",
+        "platform": "1",
+        "path_stations": [
+          "Gelsenkirchen Hbf"
+        ],
+        "line": "RB35"
+      }
+    ],
+    "departures": [
+      {
+        "id": "-8421522247246892215-2510201839-2",
+        "type": "VIA",
+        "number": "52269",
+        "direction": "Mönchengladbach Hbf",
+        "platform": "1",
+        "time": "2510201843",
+        "destination": "Mönchengladbach Hbf",
+        "path_stations": [
+          "Essen-Altenessen",
+          "Essen-Bergeborbeck",
+          "Essen-Dellwig",
+          "Oberhausen Hbf",
+          "Duisburg Hbf",
+          "Duisburg-Hochfeld Süd",
+          "Rheinhausen Ost",
+          "Rheinhausen",
+          "Krefeld-Hohenbudberg Chempark",
+          "Krefeld-Uerdingen",
+          "Krefeld-Linn",
+          "Krefeld-Oppum",
+          "Krefeld Hbf",
+          "Forsthaus",
+          "Anrath",
+          "Viersen",
+          "Mönchengladbach Hbf"
+        ]
+      },
+      {
+        "id": "-6763685261936760744-2510201834-6",
+        "type": "RB",
+        "number": "31270",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "2",
+        "time": "2510201854",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "-253212051380884363-2510201801-2",
+        "type": "RB",
+        "number": "31269",
+        "direction": "Duisburg Hbf",
+        "platform": "1",
+        "time": "2510201805",
+        "destination": "Duisburg Hbf",
+        "path_stations": [
+          "Essen-Altenessen",
+          "Essen-Bergeborbeck",
+          "Essen-Dellwig",
+          "Oberhausen Hbf",
+          "Duisburg Hbf"
+        ]
+      },
+      {
+        "id": "7991506129333906200-2510201708-18",
+        "type": "VIA",
+        "number": "52262",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "2",
+        "time": "2510201815",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "7385360712422157622-2510201939-2",
+        "type": "VIA",
+        "number": "52271",
+        "direction": "Duisburg Hbf",
+        "platform": "1",
+        "time": "2510201943",
+        "destination": "Duisburg Hbf",
+        "path_stations": [
+          "Essen-Altenessen",
+          "Essen-Bergeborbeck",
+          "Essen-Dellwig",
+          "Oberhausen Hbf",
+          "Duisburg Hbf"
+        ]
+      },
+      {
+        "id": "-8395225554000413805-2510201934-6",
+        "type": "RB",
+        "number": "31272",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "2",
+        "time": "2510201954",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "-7610410907441103742-2510201901-2",
+        "type": "RB",
+        "number": "31271",
+        "direction": "Duisburg Hbf",
+        "platform": "1",
+        "time": "2510201905",
+        "destination": "Duisburg Hbf",
+        "path_stations": [
+          "Essen-Altenessen",
+          "Essen-Bergeborbeck",
+          "Essen-Dellwig",
+          "Oberhausen Hbf",
+          "Duisburg Hbf"
+        ]
+      },
+      {
+        "id": "608379063884191223-2510201808-18",
+        "type": "VIA",
+        "number": "52264",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "2",
+        "time": "2510201915",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "5197849891127224719-2510202001-2",
+        "type": "RB",
+        "number": "31273",
+        "direction": "Duisburg Hbf",
+        "platform": "1",
+        "time": "2510202005",
+        "destination": "Duisburg Hbf",
+        "path_stations": [
+          "Essen-Altenessen",
+          "Essen-Bergeborbeck",
+          "Essen-Dellwig",
+          "Oberhausen Hbf",
+          "Duisburg Hbf"
+        ]
+      },
+      {
+        "id": "3647811556346721539-2510202034-6",
+        "type": "RB",
+        "number": "31274",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "2",
+        "time": "2510202054",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "6115637361180188083-2510202134-6",
+        "type": "RB",
+        "number": "31276",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "2",
+        "time": "2510202154",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "-2400128801858569650-2510202101-2",
+        "type": "RB",
+        "number": "31275",
+        "direction": "Duisburg Hbf",
+        "platform": "1",
+        "time": "2510202105",
+        "destination": "Duisburg Hbf",
+        "path_stations": [
+          "Essen-Altenessen",
+          "Essen-Bergeborbeck",
+          "Essen-Dellwig",
+          "Oberhausen Hbf",
+          "Duisburg Hbf"
+        ]
+      },
+      {
+        "id": "6862875673277646876-2510202212-2",
+        "type": "Bus",
+        "number": "317",
+        "direction": "Duisburg Hbf",
+        "platform": "",
+        "time": "2510202226",
+        "destination": "Duisburg Hbf",
+        "path_stations": [
+          "Essen-Altenessen",
+          "Essen-Bergeborbeck",
+          "Essen-Dellwig",
+          "Oberhausen Hbf",
+          "Duisburg Hbf"
+        ]
+      },
+      {
+        "id": "7271053357127110959-2510210012-2",
+        "type": "Bus",
+        "number": "321",
+        "direction": "Duisburg Hbf",
+        "platform": "",
+        "time": "2510210026",
+        "destination": "Duisburg Hbf",
+        "path_stations": [
+          "Essen-Altenessen",
+          "Essen-Bergeborbeck",
+          "Essen-Dellwig",
+          "Oberhausen Hbf",
+          "Duisburg Hbf"
+        ]
+      },
+      {
+        "id": "3668273527763559270-2510202342-6",
+        "type": "Bus",
+        "number": "312",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "",
+        "time": "2510210051",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "2680824758092337580-2510210042-6",
+        "type": "Bus",
+        "number": "300",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "",
+        "time": "2510210151",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "-4748916736848493479-2510210112-2",
+        "type": "Bus",
+        "number": "303",
+        "direction": "Duisburg Hbf",
+        "platform": "",
+        "time": "2510210126",
+        "destination": "Duisburg Hbf",
+        "path_stations": [
+          "Essen-Altenessen",
+          "Essen-Bergeborbeck",
+          "Essen-Dellwig",
+          "Oberhausen Hbf",
+          "Duisburg Hbf"
+        ]
+      },
+      {
+        "id": "7575657602430597461-2510210212-2",
+        "type": "Bus",
+        "number": "305",
+        "direction": "Duisburg Hbf",
+        "platform": "",
+        "time": "2510210226",
+        "destination": "Duisburg Hbf",
+        "path_stations": [
+          "Essen-Altenessen",
+          "Essen-Bergeborbeck",
+          "Essen-Dellwig",
+          "Oberhausen Hbf",
+          "Duisburg Hbf"
+        ]
+      },
+      {
+        "id": "7337191127485568696-2510210142-6",
+        "type": "Bus",
+        "number": "302",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "",
+        "time": "2510210251",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "-624418220032522267-2510210312-2",
+        "type": "Bus",
+        "number": "307",
+        "direction": "Duisburg Hbf",
+        "platform": "",
+        "time": "2510210326",
+        "destination": "Duisburg Hbf",
+        "path_stations": [
+          "Essen-Altenessen",
+          "Essen-Bergeborbeck",
+          "Essen-Dellwig",
+          "Oberhausen Hbf",
+          "Duisburg Hbf"
+        ]
+      },
+      {
+        "id": "-4020808769534634545-2510210242-6",
+        "type": "Bus",
+        "number": "304",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "",
+        "time": "2510210351",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "-3854315492960167653-2510210412-2",
+        "type": "Bus",
+        "number": "309",
+        "direction": "Duisburg Hbf",
+        "platform": "",
+        "time": "2510210426",
+        "destination": "Duisburg Hbf",
+        "path_stations": [
+          "Essen-Altenessen",
+          "Essen-Bergeborbeck",
+          "Essen-Dellwig",
+          "Oberhausen Hbf",
+          "Duisburg Hbf"
+        ]
+      },
+      {
+        "id": "-2796428905286433669-2510210342-6",
+        "type": "Bus",
+        "number": "306",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "",
+        "time": "2510210451",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "-1182021976660322188-2510210442-6",
+        "type": "Bus",
+        "number": "308",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "",
+        "time": "2510210551",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "-5879232233441680469-2510210539-2",
+        "type": "VIA",
+        "number": "52243",
+        "direction": "Mönchengladbach Hbf",
+        "platform": "1",
+        "time": "2510210543",
+        "destination": "Mönchengladbach Hbf",
+        "path_stations": [
+          "Essen-Altenessen",
+          "Essen-Bergeborbeck",
+          "Essen-Dellwig",
+          "Oberhausen Hbf",
+          "Duisburg Hbf",
+          "Duisburg-Hochfeld Süd",
+          "Rheinhausen Ost",
+          "Rheinhausen",
+          "Krefeld-Hohenbudberg Chempark",
+          "Krefeld-Uerdingen",
+          "Krefeld-Linn",
+          "Krefeld-Oppum",
+          "Krefeld Hbf",
+          "Forsthaus",
+          "Anrath",
+          "Viersen",
+          "Mönchengladbach Hbf"
+        ]
+      },
+      {
+        "id": "-1483943322400311890-2510210534-6",
+        "type": "RB",
+        "number": "31244",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "2",
+        "time": "2510210554",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "-8010034694956434858-2510210501-2",
+        "type": "RB",
+        "number": "31241",
+        "direction": "Duisburg Hbf",
+        "platform": "1",
+        "time": "2510210505",
+        "destination": "Duisburg Hbf",
+        "path_stations": [
+          "Essen-Altenessen",
+          "Essen-Bergeborbeck",
+          "Essen-Dellwig",
+          "Oberhausen Hbf",
+          "Duisburg Hbf"
+        ]
+      },
+      {
+        "id": "4397843630057340042-2510210456-6",
+        "type": "VIA",
+        "number": "52270",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "2",
+        "time": "2510210515",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "8875544170195539056-2510210601-2",
+        "type": "RB",
+        "number": "31245",
+        "direction": "Duisburg Hbf",
+        "platform": "1",
+        "time": "2510210605",
+        "destination": "Duisburg Hbf",
+        "path_stations": [
+          "Essen-Altenessen",
+          "Essen-Bergeborbeck",
+          "Essen-Dellwig",
+          "Oberhausen Hbf",
+          "Duisburg Hbf"
+        ]
+      },
+      {
+        "id": "5753507105712955996-2510210556-6",
+        "type": "VIA",
+        "number": "52272",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "2",
+        "time": "2510210615",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "7552950262755971305-2510210634-6",
+        "type": "RB",
+        "number": "31246",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "2",
+        "time": "2510210654",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "-5514757383513024665-2510210639-2",
+        "type": "VIA",
+        "number": "52245",
+        "direction": "Mönchengladbach Hbf",
+        "platform": "1",
+        "time": "2510210643",
+        "destination": "Mönchengladbach Hbf",
+        "path_stations": [
+          "Essen-Altenessen",
+          "Essen-Bergeborbeck",
+          "Essen-Dellwig",
+          "Oberhausen Hbf",
+          "Duisburg Hbf",
+          "Duisburg-Hochfeld Süd",
+          "Rheinhausen Ost",
+          "Rheinhausen",
+          "Krefeld-Hohenbudberg Chempark",
+          "Krefeld-Uerdingen",
+          "Krefeld-Linn",
+          "Krefeld-Oppum",
+          "Krefeld Hbf",
+          "Forsthaus",
+          "Anrath",
+          "Viersen",
+          "Mönchengladbach Hbf"
+        ]
+      }
+    ]
+  }
+}

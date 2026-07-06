@@ -1,0 +1,292 @@
+{
+  "station_eva": "8001911",
+  "date": "251020",
+  "cached_at": "2025-10-20T15:47:35.336602",
+  "plan_data": {
+    "departures": [
+      {
+        "id": "-5586226965168564048-2510201640-5",
+        "type": "Bus",
+        "number": "40032",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510201726",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-2505207735686136804-2510201655-2",
+        "type": "Bus",
+        "number": "41023",
+        "direction": "Witten Hbf",
+        "platform": "",
+        "time": "2510201710",
+        "destination": "Witten Hbf",
+        "path_stations": [
+          "Wattenscheid",
+          "Bochum West",
+          "Bochum Hbf (Buddenbergplatz)",
+          "Witten Hbf"
+        ]
+      },
+      {
+        "id": "4000250689572129164-2510201710-5",
+        "type": "Bus",
+        "number": "41022",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510201756",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "467849573460436506-2510201725-2",
+        "type": "Bus",
+        "number": "40035",
+        "direction": "Witten Hbf",
+        "platform": "",
+        "time": "2510201740",
+        "destination": "Witten Hbf",
+        "path_stations": [
+          "Wattenscheid",
+          "Bochum West",
+          "Bochum Hbf (Buddenbergplatz)",
+          "Witten Hbf"
+        ]
+      },
+      {
+        "id": "1444740774342860095-2510201825-2",
+        "type": "Bus",
+        "number": "40037",
+        "direction": "Witten Hbf",
+        "platform": "",
+        "time": "2510201840",
+        "destination": "Witten Hbf",
+        "path_stations": [
+          "Wattenscheid",
+          "Bochum West",
+          "Bochum Hbf (Buddenbergplatz)",
+          "Witten Hbf"
+        ]
+      },
+      {
+        "id": "2594854692551641804-2510201810-5",
+        "type": "Bus",
+        "number": "41024",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510201856",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "9159512474718046498-2510201755-2",
+        "type": "Bus",
+        "number": "41025",
+        "direction": "Witten Hbf",
+        "platform": "",
+        "time": "2510201810",
+        "destination": "Witten Hbf",
+        "path_stations": [
+          "Wattenscheid",
+          "Bochum West",
+          "Bochum Hbf (Buddenbergplatz)",
+          "Witten Hbf"
+        ]
+      },
+      {
+        "id": "6999798493782942250-2510201740-5",
+        "type": "Bus",
+        "number": "40034",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510201826",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "8744473417999274720-2510201910-5",
+        "type": "Bus",
+        "number": "41026",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510201956",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-4771390743550366162-2510201855-2",
+        "type": "Bus",
+        "number": "41027",
+        "direction": "Witten Hbf",
+        "platform": "",
+        "time": "2510201910",
+        "destination": "Witten Hbf",
+        "path_stations": [
+          "Wattenscheid",
+          "Bochum West",
+          "Bochum Hbf (Buddenbergplatz)",
+          "Witten Hbf"
+        ]
+      },
+      {
+        "id": "-8868153036652375948-2510201840-5",
+        "type": "Bus",
+        "number": "40036",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510201926",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "2952375516804484725-2510201925-2",
+        "type": "Bus",
+        "number": "40039",
+        "direction": "Witten Hbf",
+        "platform": "",
+        "time": "2510201940",
+        "destination": "Witten Hbf",
+        "path_stations": [
+          "Wattenscheid",
+          "Bochum West",
+          "Bochum Hbf (Buddenbergplatz)",
+          "Witten Hbf"
+        ]
+      },
+      {
+        "id": "5372864579435979565-2510201940-5",
+        "type": "Bus",
+        "number": "40038",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510202026",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-4773172978365174954-2510202010-5",
+        "type": "Bus",
+        "number": "41028",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510202056",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-8830647386091646345-2510202025-2",
+        "type": "Bus",
+        "number": "40041",
+        "direction": "Witten Hbf",
+        "platform": "",
+        "time": "2510202040",
+        "destination": "Witten Hbf",
+        "path_stations": [
+          "Wattenscheid",
+          "Bochum West",
+          "Bochum Hbf (Buddenbergplatz)",
+          "Witten Hbf"
+        ]
+      },
+      {
+        "id": "2914310123354533777-2510201955-2",
+        "type": "Bus",
+        "number": "41029",
+        "direction": "Witten Hbf",
+        "platform": "",
+        "time": "2510202010",
+        "destination": "Witten Hbf",
+        "path_stations": [
+          "Wattenscheid",
+          "Bochum West",
+          "Bochum Hbf (Buddenbergplatz)",
+          "Witten Hbf"
+        ]
+      },
+      {
+        "id": "-7501592733182360482-2510202125-2",
+        "type": "Bus",
+        "number": "40043",
+        "direction": "Witten Hbf",
+        "platform": "",
+        "time": "2510202140",
+        "destination": "Witten Hbf",
+        "path_stations": [
+          "Wattenscheid",
+          "Bochum West",
+          "Bochum Hbf (Buddenbergplatz)",
+          "Witten Hbf"
+        ]
+      },
+      {
+        "id": "-5396599124220382846-2510202040-5",
+        "type": "Bus",
+        "number": "40040",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510202126",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-5594013023136919373-2510202140-5",
+        "type": "Bus",
+        "number": "40042",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510202226",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-4098013467321340974-2510202225-2",
+        "type": "Bus",
+        "number": "40045",
+        "direction": "Witten Hbf",
+        "platform": "",
+        "time": "2510202240",
+        "destination": "Witten Hbf",
+        "path_stations": [
+          "Wattenscheid",
+          "Bochum West",
+          "Bochum Hbf (Buddenbergplatz)",
+          "Witten Hbf"
+        ]
+      },
+      {
+        "id": "-6327690437567306618-2510202240-5",
+        "type": "Bus",
+        "number": "40044",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510202326",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      }
+    ],
+    "arrivals": []
+  }
+}

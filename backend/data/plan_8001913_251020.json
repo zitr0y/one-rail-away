@@ -1,0 +1,1603 @@
+{
+  "station_eva": "8001913",
+  "date": "251020",
+  "cached_at": "2025-10-20T15:37:40.584284",
+  "plan_data": {
+    "departures": [
+      {
+        "id": "-6812722505348393102-2510201653-13",
+        "type": "S",
+        "number": "31158",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510201729",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Essen-Steele",
+          "Essen Hbf",
+          "Essen West",
+          "Essen-Frohnhausen",
+          "Mülheim(Ruhr)Hbf",
+          "Mülheim(Ruhr)Styrum",
+          "Duisburg Hbf",
+          "Duisburg-Schlenk",
+          "Duisburg-Buchholz",
+          "Duisburg-Großenbaum",
+          "Duisburg-Rahm",
+          "Angermund",
+          "Düsseldorf Flughafen",
+          "Düsseldorf-Unterrath",
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-8063860012819393966-2510201733-5",
+        "type": "S",
+        "number": "30357",
+        "direction": "Oberhausen Hbf",
+        "platform": "2",
+        "time": "2510201748",
+        "destination": "Oberhausen Hbf",
+        "path_stations": [
+          "Essen-Steele",
+          "Essen Hbf",
+          "Essen West",
+          "Essen-Frohnhausen",
+          "Mülheim(Ruhr)Hbf",
+          "Mülheim(Ruhr)West",
+          "Mülheim(Ruhr)Styrum",
+          "Oberhausen Hbf"
+        ]
+      },
+      {
+        "id": "-1510351639686562858-2510201638-13",
+        "type": "S",
+        "number": "31156",
+        "direction": "Essen Hbf",
+        "platform": "1",
+        "time": "2510201714",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Essen-Steele",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "-5591002608539522256-2510201710-3",
+        "type": "S",
+        "number": "31151",
+        "direction": "Dortmund Hbf",
+        "platform": "4",
+        "time": "2510201717",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Essen-Eiberg",
+          "Wattenscheid-Höntrop",
+          "Bochum-Ehrenfeld",
+          "Bochum Hbf",
+          "Bochum-Langendreer West",
+          "Bochum-Langendreer",
+          "Dortmund-Kley",
+          "Dortmund-Oespel",
+          "Dortmund Universität",
+          "Dortmund-Dorstfeld Süd",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "7318580699110420205-2510201739-3",
+        "type": "S",
+        "number": "31155",
+        "direction": "Dortmund Hbf",
+        "platform": "4",
+        "time": "2510201747",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Essen-Eiberg",
+          "Wattenscheid-Höntrop",
+          "Bochum-Ehrenfeld",
+          "Bochum Hbf",
+          "Bochum-Langendreer West",
+          "Bochum-Langendreer",
+          "Dortmund-Kley",
+          "Dortmund-Oespel",
+          "Dortmund Universität",
+          "Dortmund-Dorstfeld Süd",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-3565321146945399269-2510201647-9",
+        "type": "S",
+        "number": "30352",
+        "direction": "Hattingen(Ruhr) Mitte",
+        "platform": "4",
+        "time": "2510201712",
+        "destination": "Hattingen(Ruhr) Mitte",
+        "path_stations": [
+          "Essen-Horst",
+          "Bochum-Dahlhausen",
+          "Hattingen(Ruhr)",
+          "Hattingen(Ruhr) Mitte"
+        ]
+      },
+      {
+        "id": "-3480121301683747990-2510201723-13",
+        "type": "S",
+        "number": "31166",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510201759",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Essen-Steele",
+          "Essen Hbf",
+          "Essen West",
+          "Essen-Frohnhausen",
+          "Mülheim(Ruhr)Hbf",
+          "Mülheim(Ruhr)Styrum",
+          "Duisburg Hbf",
+          "Duisburg-Schlenk",
+          "Duisburg-Buchholz",
+          "Duisburg-Großenbaum",
+          "Duisburg-Rahm",
+          "Angermund",
+          "Düsseldorf Flughafen",
+          "Düsseldorf-Unterrath",
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-4123538427748528181-2510201703-5",
+        "type": "S",
+        "number": "30355",
+        "direction": "Oberhausen Hbf",
+        "platform": "2",
+        "time": "2510201718",
+        "destination": "Oberhausen Hbf",
+        "path_stations": [
+          "Essen-Steele",
+          "Essen Hbf",
+          "Essen West",
+          "Essen-Frohnhausen",
+          "Mülheim(Ruhr)Hbf",
+          "Mülheim(Ruhr)West",
+          "Mülheim(Ruhr)Styrum",
+          "Oberhausen Hbf"
+        ]
+      },
+      {
+        "id": "1080283967627842618-2510201637-19",
+        "type": "S",
+        "number": "31153",
+        "direction": "Dortmund Hbf",
+        "platform": "4",
+        "time": "2510201732",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Essen-Eiberg",
+          "Wattenscheid-Höntrop",
+          "Bochum-Ehrenfeld",
+          "Bochum Hbf",
+          "Bochum-Langendreer West",
+          "Bochum-Langendreer",
+          "Dortmund-Kley",
+          "Dortmund-Oespel",
+          "Dortmund Universität",
+          "Dortmund-Dorstfeld Süd",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-3817273139839909370-2510201708-13",
+        "type": "S",
+        "number": "31160",
+        "direction": "Essen Hbf",
+        "platform": "1",
+        "time": "2510201744",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Essen-Steele",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "-326102876900322331-2510201557-19",
+        "type": "S",
+        "number": "31145",
+        "direction": "Dortmund Hbf",
+        "platform": "4",
+        "time": "2510201702",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Essen-Eiberg",
+          "Wattenscheid-Höntrop",
+          "Bochum-Ehrenfeld",
+          "Bochum Hbf",
+          "Bochum-Langendreer West",
+          "Bochum-Langendreer",
+          "Dortmund-Kley",
+          "Dortmund-Oespel",
+          "Dortmund Universität",
+          "Dortmund-Dorstfeld Süd",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "7000942675076766201-2510201717-9",
+        "type": "S",
+        "number": "30354",
+        "direction": "Hattingen(Ruhr) Mitte",
+        "platform": "4",
+        "time": "2510201742",
+        "destination": "Hattingen(Ruhr) Mitte",
+        "path_stations": [
+          "Essen-Horst",
+          "Bochum-Dahlhausen",
+          "Hattingen(Ruhr)",
+          "Hattingen(Ruhr) Mitte"
+        ]
+      },
+      {
+        "id": "5528471899151255814-2510201839-3",
+        "type": "S",
+        "number": "31167",
+        "direction": "Dortmund Hbf",
+        "platform": "4",
+        "time": "2510201847",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Essen-Eiberg",
+          "Wattenscheid-Höntrop",
+          "Bochum-Ehrenfeld",
+          "Bochum Hbf",
+          "Bochum-Langendreer West",
+          "Bochum-Langendreer",
+          "Dortmund-Kley",
+          "Dortmund-Oespel",
+          "Dortmund Universität",
+          "Dortmund-Dorstfeld Süd",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "2390809721927293725-2510201823-13",
+        "type": "S",
+        "number": "31174",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510201859",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Essen-Steele",
+          "Essen Hbf",
+          "Essen West",
+          "Essen-Frohnhausen",
+          "Mülheim(Ruhr)Hbf",
+          "Mülheim(Ruhr)Styrum",
+          "Duisburg Hbf",
+          "Duisburg-Schlenk",
+          "Duisburg-Buchholz",
+          "Duisburg-Großenbaum",
+          "Duisburg-Rahm",
+          "Angermund",
+          "Düsseldorf Flughafen",
+          "Düsseldorf-Unterrath",
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "6301047045001093469-2510201657-19",
+        "type": "S",
+        "number": "31157",
+        "direction": "Dortmund Hbf",
+        "platform": "4",
+        "time": "2510201802",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Essen-Eiberg",
+          "Wattenscheid-Höntrop",
+          "Bochum-Ehrenfeld",
+          "Bochum Hbf",
+          "Bochum-Langendreer West",
+          "Bochum-Langendreer",
+          "Dortmund-Kley",
+          "Dortmund-Oespel",
+          "Dortmund Universität",
+          "Dortmund-Dorstfeld Süd",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-8477202256276968351-2510201747-9",
+        "type": "S",
+        "number": "30356",
+        "direction": "Hattingen(Ruhr) Mitte",
+        "platform": "4",
+        "time": "2510201812",
+        "destination": "Hattingen(Ruhr) Mitte",
+        "path_stations": [
+          "Essen-Horst",
+          "Bochum-Dahlhausen",
+          "Hattingen(Ruhr)",
+          "Hattingen(Ruhr) Mitte"
+        ]
+      },
+      {
+        "id": "3404670100132919255-2510201753-13",
+        "type": "S",
+        "number": "31170",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510201829",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Essen-Steele",
+          "Essen Hbf",
+          "Essen West",
+          "Essen-Frohnhausen",
+          "Mülheim(Ruhr)Hbf",
+          "Mülheim(Ruhr)Styrum",
+          "Duisburg Hbf",
+          "Duisburg-Schlenk",
+          "Duisburg-Buchholz",
+          "Duisburg-Großenbaum",
+          "Duisburg-Rahm",
+          "Angermund",
+          "Düsseldorf Flughafen",
+          "Düsseldorf-Unterrath",
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-823317713763147080-2510201810-3",
+        "type": "S",
+        "number": "31163",
+        "direction": "Dortmund Hbf",
+        "platform": "4",
+        "time": "2510201817",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Essen-Eiberg",
+          "Wattenscheid-Höntrop",
+          "Bochum-Ehrenfeld",
+          "Bochum Hbf",
+          "Bochum-Langendreer West",
+          "Bochum-Langendreer",
+          "Dortmund-Kley",
+          "Dortmund-Oespel",
+          "Dortmund Universität",
+          "Dortmund-Dorstfeld Süd",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "5849843044545452570-2510201803-5",
+        "type": "S",
+        "number": "30359",
+        "direction": "Oberhausen Hbf",
+        "platform": "2",
+        "time": "2510201818",
+        "destination": "Oberhausen Hbf",
+        "path_stations": [
+          "Essen-Steele",
+          "Essen Hbf",
+          "Essen West",
+          "Essen-Frohnhausen",
+          "Mülheim(Ruhr)Hbf",
+          "Mülheim(Ruhr)West",
+          "Mülheim(Ruhr)Styrum",
+          "Oberhausen Hbf"
+        ]
+      },
+      {
+        "id": "7950184652389845405-2510201737-19",
+        "type": "S",
+        "number": "31165",
+        "direction": "Dortmund Hbf",
+        "platform": "4",
+        "time": "2510201832",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Essen-Eiberg",
+          "Wattenscheid-Höntrop",
+          "Bochum-Ehrenfeld",
+          "Bochum Hbf",
+          "Bochum-Langendreer West",
+          "Bochum-Langendreer",
+          "Dortmund-Kley",
+          "Dortmund-Oespel",
+          "Dortmund Universität",
+          "Dortmund-Dorstfeld Süd",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "6380839625296265214-2510201817-9",
+        "type": "S",
+        "number": "30358",
+        "direction": "Hattingen(Ruhr) Mitte",
+        "platform": "4",
+        "time": "2510201842",
+        "destination": "Hattingen(Ruhr) Mitte",
+        "path_stations": [
+          "Essen-Horst",
+          "Bochum-Dahlhausen",
+          "Hattingen(Ruhr)",
+          "Hattingen(Ruhr) Mitte"
+        ]
+      },
+      {
+        "id": "-4443977932642763572-2510201738-13",
+        "type": "S",
+        "number": "31168",
+        "direction": "Essen Hbf",
+        "platform": "1",
+        "time": "2510201814",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Essen-Steele",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "6833459165979067814-2510201808-13",
+        "type": "S",
+        "number": "31172",
+        "direction": "Essen Hbf",
+        "platform": "1",
+        "time": "2510201844",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Essen-Steele",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "-6619273956750358554-2510201833-5",
+        "type": "S",
+        "number": "30361",
+        "direction": "Oberhausen Hbf",
+        "platform": "2",
+        "time": "2510201848",
+        "destination": "Oberhausen Hbf",
+        "path_stations": [
+          "Essen-Steele",
+          "Essen Hbf",
+          "Essen West",
+          "Essen-Frohnhausen",
+          "Mülheim(Ruhr)Hbf",
+          "Mülheim(Ruhr)West",
+          "Mülheim(Ruhr)Styrum",
+          "Oberhausen Hbf"
+        ]
+      },
+      {
+        "id": "87802430093025736-2510201838-13",
+        "type": "S",
+        "number": "31176",
+        "direction": "Essen Hbf",
+        "platform": "1",
+        "time": "2510201914",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Essen-Steele",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "7090038333405223439-2510201837-19",
+        "type": "S",
+        "number": "31175",
+        "direction": "Dortmund Hbf",
+        "platform": "4",
+        "time": "2510201932",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Essen-Eiberg",
+          "Wattenscheid-Höntrop",
+          "Bochum-Ehrenfeld",
+          "Bochum Hbf",
+          "Bochum-Langendreer West",
+          "Bochum-Langendreer",
+          "Dortmund-Kley",
+          "Dortmund-Oespel",
+          "Dortmund Universität",
+          "Dortmund-Dorstfeld Süd",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "312775916287392950-2510201851-13",
+        "type": "S",
+        "number": "31178",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510201929",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Essen-Steele",
+          "Essen Hbf",
+          "Essen West",
+          "Essen-Frohnhausen",
+          "Mülheim(Ruhr)Hbf",
+          "Mülheim(Ruhr)Styrum",
+          "Duisburg Hbf",
+          "Duisburg-Schlenk",
+          "Duisburg-Buchholz",
+          "Duisburg-Großenbaum",
+          "Duisburg-Rahm",
+          "Angermund",
+          "Düsseldorf Flughafen",
+          "Düsseldorf-Unterrath",
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "4345033654595131569-2510201847-9",
+        "type": "S",
+        "number": "30360",
+        "direction": "Hattingen(Ruhr) Mitte",
+        "platform": "4",
+        "time": "2510201912",
+        "destination": "Hattingen(Ruhr) Mitte",
+        "path_stations": [
+          "Essen-Horst",
+          "Bochum-Dahlhausen",
+          "Hattingen(Ruhr)",
+          "Hattingen(Ruhr) Mitte"
+        ]
+      },
+      {
+        "id": "2934134569438800148-2510201933-5",
+        "type": "S",
+        "number": "30365",
+        "direction": "Oberhausen Hbf",
+        "platform": "2",
+        "time": "2510201948",
+        "destination": "Oberhausen Hbf",
+        "path_stations": [
+          "Essen-Steele",
+          "Essen Hbf",
+          "Essen West",
+          "Essen-Frohnhausen",
+          "Mülheim(Ruhr)Hbf",
+          "Mülheim(Ruhr)West",
+          "Mülheim(Ruhr)Styrum",
+          "Oberhausen Hbf"
+        ]
+      },
+      {
+        "id": "-199269915617519590-2510201917-9",
+        "type": "S",
+        "number": "30362",
+        "direction": "Hattingen(Ruhr) Mitte",
+        "platform": "4",
+        "time": "2510201942",
+        "destination": "Hattingen(Ruhr) Mitte",
+        "path_stations": [
+          "Essen-Horst",
+          "Bochum-Dahlhausen",
+          "Hattingen(Ruhr)",
+          "Hattingen(Ruhr) Mitte"
+        ]
+      },
+      {
+        "id": "20060156742948078-2510201757-19",
+        "type": "S",
+        "number": "31169",
+        "direction": "Dortmund Hbf",
+        "platform": "4",
+        "time": "2510201902",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Essen-Eiberg",
+          "Wattenscheid-Höntrop",
+          "Bochum-Ehrenfeld",
+          "Bochum Hbf",
+          "Bochum-Langendreer West",
+          "Bochum-Langendreer",
+          "Dortmund-Kley",
+          "Dortmund-Oespel",
+          "Dortmund Universität",
+          "Dortmund-Dorstfeld Süd",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-9070208170418161881-2510201903-5",
+        "type": "S",
+        "number": "30363",
+        "direction": "Oberhausen Hbf",
+        "platform": "2",
+        "time": "2510201918",
+        "destination": "Oberhausen Hbf",
+        "path_stations": [
+          "Essen-Steele",
+          "Essen Hbf",
+          "Essen West",
+          "Essen-Frohnhausen",
+          "Mülheim(Ruhr)Hbf",
+          "Mülheim(Ruhr)West",
+          "Mülheim(Ruhr)Styrum",
+          "Oberhausen Hbf"
+        ]
+      },
+      {
+        "id": "-9027594124101845781-2510201921-13",
+        "type": "S",
+        "number": "31180",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510201959",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Essen-Steele",
+          "Essen Hbf",
+          "Essen West",
+          "Essen-Frohnhausen",
+          "Mülheim(Ruhr)Hbf",
+          "Mülheim(Ruhr)Styrum",
+          "Duisburg Hbf",
+          "Duisburg-Schlenk",
+          "Duisburg-Buchholz",
+          "Duisburg-Großenbaum",
+          "Duisburg-Rahm",
+          "Angermund",
+          "Düsseldorf Flughafen",
+          "Düsseldorf-Unterrath",
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "2572402660165950814-2510202033-5",
+        "type": "S",
+        "number": "30369",
+        "direction": "Oberhausen Hbf",
+        "platform": "2",
+        "time": "2510202048",
+        "destination": "Oberhausen Hbf",
+        "path_stations": [
+          "Essen-Steele",
+          "Essen Hbf",
+          "Essen West",
+          "Essen-Frohnhausen",
+          "Mülheim(Ruhr)Hbf",
+          "Mülheim(Ruhr)West",
+          "Mülheim(Ruhr)Styrum",
+          "Oberhausen Hbf"
+        ]
+      },
+      {
+        "id": "-2175314878748239454-2510201857-19",
+        "type": "S",
+        "number": "31177",
+        "direction": "Dortmund Hbf",
+        "platform": "4",
+        "time": "2510202002",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Essen-Eiberg",
+          "Wattenscheid-Höntrop",
+          "Bochum-Ehrenfeld",
+          "Bochum Hbf",
+          "Bochum-Langendreer West",
+          "Bochum-Langendreer",
+          "Dortmund-Kley",
+          "Dortmund-Oespel",
+          "Dortmund Universität",
+          "Dortmund-Dorstfeld Süd",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-5930456924783341444-2510202023-13",
+        "type": "S",
+        "number": "31184",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510202059",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Essen-Steele",
+          "Essen Hbf",
+          "Essen West",
+          "Essen-Frohnhausen",
+          "Mülheim(Ruhr)Hbf",
+          "Mülheim(Ruhr)Styrum",
+          "Duisburg Hbf",
+          "Duisburg-Schlenk",
+          "Duisburg-Buchholz",
+          "Duisburg-Großenbaum",
+          "Duisburg-Rahm",
+          "Angermund",
+          "Düsseldorf Flughafen",
+          "Düsseldorf-Unterrath",
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "5081566013175615924-2510201937-19",
+        "type": "S",
+        "number": "31183",
+        "direction": "Dortmund Hbf",
+        "platform": "4",
+        "time": "2510202032",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Essen-Eiberg",
+          "Wattenscheid-Höntrop",
+          "Bochum-Ehrenfeld",
+          "Bochum Hbf",
+          "Bochum-Langendreer West",
+          "Bochum-Langendreer",
+          "Dortmund-Kley",
+          "Dortmund-Oespel",
+          "Dortmund Universität",
+          "Dortmund-Dorstfeld Süd",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-6033080727000589172-2510201947-9",
+        "type": "S",
+        "number": "30364",
+        "direction": "Hattingen(Ruhr) Mitte",
+        "platform": "4",
+        "time": "2510202012",
+        "destination": "Hattingen(Ruhr) Mitte",
+        "path_stations": [
+          "Essen-Horst",
+          "Bochum-Dahlhausen",
+          "Hattingen(Ruhr)",
+          "Hattingen(Ruhr) Mitte"
+        ]
+      },
+      {
+        "id": "-6877139240402722043-2510202003-5",
+        "type": "S",
+        "number": "30367",
+        "direction": "Oberhausen Hbf",
+        "platform": "2",
+        "time": "2510202018",
+        "destination": "Oberhausen Hbf",
+        "path_stations": [
+          "Essen-Steele",
+          "Essen Hbf",
+          "Essen West",
+          "Essen-Frohnhausen",
+          "Mülheim(Ruhr)Hbf",
+          "Mülheim(Ruhr)West",
+          "Mülheim(Ruhr)Styrum",
+          "Oberhausen Hbf"
+        ]
+      },
+      {
+        "id": "-6439265394219046946-2510201953-13",
+        "type": "S",
+        "number": "31182",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510202029",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Essen-Steele",
+          "Essen Hbf",
+          "Essen West",
+          "Essen-Frohnhausen",
+          "Mülheim(Ruhr)Hbf",
+          "Mülheim(Ruhr)Styrum",
+          "Duisburg Hbf",
+          "Duisburg-Schlenk",
+          "Duisburg-Buchholz",
+          "Duisburg-Großenbaum",
+          "Duisburg-Rahm",
+          "Angermund",
+          "Düsseldorf Flughafen",
+          "Düsseldorf-Unterrath",
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "613311628191935511-2510202135-3",
+        "type": "Bus",
+        "number": "1891",
+        "direction": "Dortmund Hbf",
+        "platform": "",
+        "time": "2510202153",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Essen-Eiberg",
+          "Wattenscheid-Höntrop",
+          "Bochum-Ehrenfeld",
+          "Bochum Hbf",
+          "Bochum-Langendreer West",
+          "Bochum-Langendreer",
+          "Dortmund-Kley",
+          "Dortmund-Oespel",
+          "Dortmund Universität",
+          "Dortmund-Dorstfeld Süd",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "5020509917869517343-2510202114-3",
+        "type": "Bus",
+        "number": "30368",
+        "direction": "Hattingen(Ruhr) Mitte",
+        "platform": "",
+        "time": "2510202130",
+        "destination": "Hattingen(Ruhr) Mitte",
+        "path_stations": [
+          "Essen-Horst",
+          "Bochum-Dahlhausen",
+          "Hattingen(Ruhr)",
+          "Hattingen(Ruhr) Mitte"
+        ]
+      },
+      {
+        "id": "-4130516540586102412-2510202053-13",
+        "type": "S",
+        "number": "31186",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510202129",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Essen-Steele",
+          "Essen Hbf",
+          "Essen West",
+          "Essen-Frohnhausen",
+          "Mülheim(Ruhr)Hbf",
+          "Mülheim(Ruhr)Styrum",
+          "Duisburg Hbf",
+          "Duisburg-Schlenk",
+          "Duisburg-Buchholz",
+          "Duisburg-Großenbaum",
+          "Duisburg-Rahm",
+          "Angermund",
+          "Düsseldorf Flughafen",
+          "Düsseldorf-Unterrath",
+          "Düsseldorf-Derendorf",
+          "Düsseldorf-Zoo",
+          "Düsseldorf Wehrhahn",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "8027173460359892617-2510202105-3",
+        "type": "Bus",
+        "number": "1889",
+        "direction": "Dortmund Hbf",
+        "platform": "",
+        "time": "2510202123",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Essen-Eiberg",
+          "Wattenscheid-Höntrop",
+          "Bochum-Ehrenfeld",
+          "Bochum Hbf",
+          "Bochum-Langendreer West",
+          "Bochum-Langendreer",
+          "Dortmund-Kley",
+          "Dortmund-Oespel",
+          "Dortmund Universität",
+          "Dortmund-Dorstfeld Süd",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-7459491755798857683-2510202105-5",
+        "type": "Bus",
+        "number": "30371",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510202131",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Essen-Steele",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "3658431974847468278-2510202044-3",
+        "type": "Bus",
+        "number": "30366",
+        "direction": "Hattingen(Ruhr) Mitte",
+        "platform": "",
+        "time": "2510202100",
+        "destination": "Hattingen(Ruhr) Mitte",
+        "path_stations": [
+          "Essen-Horst",
+          "Bochum-Dahlhausen",
+          "Hattingen(Ruhr)",
+          "Hattingen(Ruhr) Mitte"
+        ]
+      },
+      {
+        "id": "66078863357781378-2510202142-5",
+        "type": "Bus",
+        "number": "341",
+        "direction": "Oberhausen Hbf",
+        "platform": "",
+        "time": "2510202208",
+        "destination": "Oberhausen Hbf",
+        "path_stations": [
+          "Essen-Steele",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus",
+          "Essen West",
+          "Essen-Frohnhausen",
+          "Mülheim(Ruhr)Hbf",
+          "Mülheim(Ruhr)West",
+          "Mülheim(Ruhr)Styrum",
+          "Oberhausen Hbf"
+        ]
+      },
+      {
+        "id": "-3120621249990551935-2510202214-3",
+        "type": "Bus",
+        "number": "30372",
+        "direction": "Hattingen(Ruhr) Mitte",
+        "platform": "",
+        "time": "2510202230",
+        "destination": "Hattingen(Ruhr) Mitte",
+        "path_stations": [
+          "Essen-Horst",
+          "Bochum-Dahlhausen",
+          "Hattingen(Ruhr)",
+          "Hattingen(Ruhr) Mitte"
+        ]
+      },
+      {
+        "id": "-6216607233360207801-2510202212-5",
+        "type": "Bus",
+        "number": "345",
+        "direction": "Oberhausen Hbf",
+        "platform": "",
+        "time": "2510202238",
+        "destination": "Oberhausen Hbf",
+        "path_stations": [
+          "Essen-Steele",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus",
+          "Essen West",
+          "Essen-Frohnhausen",
+          "Mülheim(Ruhr)Hbf",
+          "Mülheim(Ruhr)West",
+          "Mülheim(Ruhr)Styrum",
+          "Oberhausen Hbf"
+        ]
+      },
+      {
+        "id": "5112939826835543558-2510202235-3",
+        "type": "Bus",
+        "number": "31191",
+        "direction": "Dortmund Hbf",
+        "platform": "",
+        "time": "2510202253",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Essen-Eiberg",
+          "Wattenscheid-Höntrop",
+          "Bochum-Ehrenfeld",
+          "Bochum Hbf",
+          "Bochum-Langendreer West",
+          "Bochum-Langendreer",
+          "Dortmund-Kley",
+          "Dortmund-Oespel",
+          "Dortmund Universität",
+          "Dortmund-Dorstfeld Süd",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-7653190409757088555-2510202144-3",
+        "type": "Bus",
+        "number": "30370",
+        "direction": "Hattingen(Ruhr) Mitte",
+        "platform": "",
+        "time": "2510202200",
+        "destination": "Hattingen(Ruhr) Mitte",
+        "path_stations": [
+          "Essen-Horst",
+          "Bochum-Dahlhausen",
+          "Hattingen(Ruhr)",
+          "Hattingen(Ruhr) Mitte"
+        ]
+      },
+      {
+        "id": "-504120253217315578-2510202205-5",
+        "type": "Bus",
+        "number": "30375",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510202231",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Essen-Steele",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-3034755471719304774-2510202205-3",
+        "type": "Bus",
+        "number": "31189",
+        "direction": "Dortmund Hbf",
+        "platform": "",
+        "time": "2510202223",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Essen-Eiberg",
+          "Wattenscheid-Höntrop",
+          "Bochum-Ehrenfeld",
+          "Bochum Hbf",
+          "Bochum-Langendreer West",
+          "Bochum-Langendreer",
+          "Dortmund-Kley",
+          "Dortmund-Oespel",
+          "Dortmund Universität",
+          "Dortmund-Dorstfeld Süd",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-2790768571897797604-2510202135-5",
+        "type": "Bus",
+        "number": "30373",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510202201",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Essen-Steele",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "8647639397276282428-2510202244-3",
+        "type": "Bus",
+        "number": "30374",
+        "direction": "Hattingen(Ruhr) Mitte",
+        "platform": "",
+        "time": "2510202300",
+        "destination": "Hattingen(Ruhr) Mitte",
+        "path_stations": [
+          "Essen-Horst",
+          "Bochum-Dahlhausen",
+          "Hattingen(Ruhr)",
+          "Hattingen(Ruhr) Mitte"
+        ]
+      },
+      {
+        "id": "-1320229127587940600-2510202133-13",
+        "type": "Bus",
+        "number": "31188",
+        "direction": "Essen Hbf",
+        "platform": "",
+        "time": "2510202308",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Essen-Steele",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "201252502168494027-2510202242-5",
+        "type": "Bus",
+        "number": "349",
+        "direction": "Oberhausen Hbf",
+        "platform": "",
+        "time": "2510202308",
+        "destination": "Oberhausen Hbf",
+        "path_stations": [
+          "Essen-Steele",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus",
+          "Essen West",
+          "Essen-Frohnhausen",
+          "Mülheim(Ruhr)Hbf",
+          "Mülheim(Ruhr)West",
+          "Mülheim(Ruhr)Styrum",
+          "Oberhausen Hbf"
+        ]
+      },
+      {
+        "id": "-8298244037882314582-2510202203-13",
+        "type": "Bus",
+        "number": "31190",
+        "direction": "Essen Hbf",
+        "platform": "",
+        "time": "2510202338",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Essen-Steele",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "1313664177792605240-2510202312-5",
+        "type": "Bus",
+        "number": "353",
+        "direction": "Oberhausen Hbf",
+        "platform": "",
+        "time": "2510202338",
+        "destination": "Oberhausen Hbf",
+        "path_stations": [
+          "Essen-Steele",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus",
+          "Essen West",
+          "Essen-Frohnhausen",
+          "Mülheim(Ruhr)Hbf",
+          "Mülheim(Ruhr)West",
+          "Mülheim(Ruhr)Styrum",
+          "Oberhausen Hbf"
+        ]
+      },
+      {
+        "id": "2831643269627950472-2510202226-9",
+        "type": "Bus",
+        "number": "336",
+        "direction": "Hattingen(Ruhr) Mitte",
+        "platform": "",
+        "time": "2510202334",
+        "destination": "Hattingen(Ruhr) Mitte",
+        "path_stations": [
+          "Essen-Horst",
+          "Bochum-Dahlhausen",
+          "Hattingen(Ruhr)",
+          "Hattingen(Ruhr) Mitte"
+        ]
+      },
+      {
+        "id": "-8996720251017932138-2510202235-5",
+        "type": "Bus",
+        "number": "30377",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510202301",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Essen-Steele",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "2128336786717591849-2510202305-5",
+        "type": "Bus",
+        "number": "30379",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510202331",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Essen-Steele",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-6067409112296997014-2510202305-3",
+        "type": "Bus",
+        "number": "31193",
+        "direction": "Dortmund Hbf",
+        "platform": "",
+        "time": "2510202323",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Essen-Eiberg",
+          "Wattenscheid-Höntrop",
+          "Bochum-Ehrenfeld",
+          "Bochum Hbf",
+          "Bochum-Langendreer West",
+          "Bochum-Langendreer",
+          "Dortmund-Kley",
+          "Dortmund-Oespel",
+          "Dortmund Universität",
+          "Dortmund-Dorstfeld Süd",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-7989926485569150774-2510202335-3",
+        "type": "Bus",
+        "number": "31195",
+        "direction": "Dortmund Hbf",
+        "platform": "",
+        "time": "2510202353",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Essen-Eiberg",
+          "Wattenscheid-Höntrop",
+          "Bochum-Ehrenfeld",
+          "Bochum Hbf",
+          "Bochum-Langendreer West",
+          "Bochum-Langendreer",
+          "Dortmund-Kley",
+          "Dortmund-Oespel",
+          "Dortmund Universität",
+          "Dortmund-Dorstfeld Süd",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-2756686481866096413-2510202233-13",
+        "type": "Bus",
+        "number": "31192",
+        "direction": "Essen Hbf",
+        "platform": "",
+        "time": "2510210008",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Essen-Steele",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "6896317554156195109-2510210005-3",
+        "type": "Bus",
+        "number": "31197",
+        "direction": "Dortmund Hbf",
+        "platform": "",
+        "time": "2510210023",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Essen-Eiberg",
+          "Wattenscheid-Höntrop",
+          "Bochum-Ehrenfeld",
+          "Bochum Hbf",
+          "Bochum-Langendreer West",
+          "Bochum-Langendreer",
+          "Dortmund-Kley",
+          "Dortmund-Oespel",
+          "Dortmund Universität",
+          "Dortmund-Dorstfeld Süd",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "18758705649217731-2510210035-3",
+        "type": "Bus",
+        "number": "31199",
+        "direction": "Dortmund Hbf",
+        "platform": "",
+        "time": "2510210053",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Essen-Eiberg",
+          "Wattenscheid-Höntrop",
+          "Bochum-Ehrenfeld",
+          "Bochum Hbf",
+          "Bochum-Langendreer West",
+          "Bochum-Langendreer",
+          "Dortmund-Kley",
+          "Dortmund-Oespel",
+          "Dortmund Universität",
+          "Dortmund-Dorstfeld Süd",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "4000947229845511791-2510202335-5",
+        "type": "Bus",
+        "number": "331",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510210001",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Essen-Steele",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "5537531749197613212-2510202326-9",
+        "type": "Bus",
+        "number": "340",
+        "direction": "Hattingen(Ruhr) Mitte",
+        "platform": "",
+        "time": "2510210034",
+        "destination": "Hattingen(Ruhr) Mitte",
+        "path_stations": [
+          "Essen-Horst",
+          "Bochum-Dahlhausen",
+          "Hattingen(Ruhr)",
+          "Hattingen(Ruhr) Mitte"
+        ]
+      },
+      {
+        "id": "7584202062200357306-2510202344-3",
+        "type": "Bus",
+        "number": "30378",
+        "direction": "Hattingen(Ruhr) Mitte",
+        "platform": "",
+        "time": "2510210000",
+        "destination": "Hattingen(Ruhr) Mitte",
+        "path_stations": [
+          "Essen-Horst",
+          "Bochum-Dahlhausen",
+          "Hattingen(Ruhr)",
+          "Hattingen(Ruhr) Mitte"
+        ]
+      },
+      {
+        "id": "-9156801588697148860-2510210012-5",
+        "type": "Bus",
+        "number": "333",
+        "direction": "Oberhausen Hbf",
+        "platform": "",
+        "time": "2510210038",
+        "destination": "Oberhausen Hbf",
+        "path_stations": [
+          "Essen-Steele",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus",
+          "Essen West",
+          "Essen-Frohnhausen",
+          "Mülheim(Ruhr)Hbf",
+          "Mülheim(Ruhr)West",
+          "Mülheim(Ruhr)Styrum",
+          "Oberhausen Hbf"
+        ]
+      },
+      {
+        "id": "6870173906164045452-2510202303-13",
+        "type": "Bus",
+        "number": "31194",
+        "direction": "Essen Hbf",
+        "platform": "",
+        "time": "2510210038",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Essen-Steele",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "-7752938247192534040-2510210135-3",
+        "type": "Bus",
+        "number": "30101",
+        "direction": "Dortmund Hbf",
+        "platform": "",
+        "time": "2510210153",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Essen-Eiberg",
+          "Wattenscheid-Höntrop",
+          "Bochum-Ehrenfeld",
+          "Bochum Hbf",
+          "Bochum-Langendreer West",
+          "Bochum-Langendreer",
+          "Dortmund-Kley",
+          "Dortmund-Oespel",
+          "Dortmund Universität",
+          "Dortmund-Dorstfeld Süd",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-162315690558344009-2510210026-9",
+        "type": "Bus",
+        "number": "332",
+        "direction": "Hattingen(Ruhr) Mitte",
+        "platform": "",
+        "time": "2510210134",
+        "destination": "Hattingen(Ruhr) Mitte",
+        "path_stations": [
+          "Essen-Horst",
+          "Bochum-Dahlhausen",
+          "Hattingen(Ruhr)",
+          "Hattingen(Ruhr) Mitte"
+        ]
+      },
+      {
+        "id": "-2083421713638505446-2510210044-3",
+        "type": "Bus",
+        "number": "30300",
+        "direction": "Hattingen(Ruhr) Mitte",
+        "platform": "",
+        "time": "2510210100",
+        "destination": "Hattingen(Ruhr) Mitte",
+        "path_stations": [
+          "Essen-Horst",
+          "Bochum-Dahlhausen",
+          "Hattingen(Ruhr)",
+          "Hattingen(Ruhr) Mitte"
+        ]
+      },
+      {
+        "id": "5003995313904074344-2510210112-5",
+        "type": "Bus",
+        "number": "30303",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510210138",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Essen-Steele",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-4324217739425281264-2510202333-13",
+        "type": "Bus",
+        "number": "31196",
+        "direction": "Essen Hbf",
+        "platform": "",
+        "time": "2510210108",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Essen-Steele",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "9096733245290789327-2510210003-13",
+        "type": "Bus",
+        "number": "31198",
+        "direction": "Essen Hbf",
+        "platform": "",
+        "time": "2510210138",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Essen-Steele",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "6809197437334096838-2510210235-3",
+        "type": "Bus",
+        "number": "30103",
+        "direction": "Dortmund Hbf",
+        "platform": "",
+        "time": "2510210253",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Essen-Eiberg",
+          "Wattenscheid-Höntrop",
+          "Bochum-Ehrenfeld",
+          "Bochum Hbf",
+          "Bochum-Langendreer West",
+          "Bochum-Langendreer",
+          "Dortmund-Kley",
+          "Dortmund-Oespel",
+          "Dortmund Universität",
+          "Dortmund-Dorstfeld Süd",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "1346901100971160475-2510210103-13",
+        "type": "Bus",
+        "number": "30100",
+        "direction": "Essen Hbf",
+        "platform": "",
+        "time": "2510210238",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Essen-Steele",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "-8002924954358301579-2510210203-13",
+        "type": "Bus",
+        "number": "30102",
+        "direction": "Essen Hbf",
+        "platform": "",
+        "time": "2510210338",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Essen-Steele",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "4183518954290776475-2510210405-5",
+        "type": "Bus",
+        "number": "335",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510210431",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Essen-Steele",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-3038173356127129874-2510210303-13",
+        "type": "Bus",
+        "number": "30110",
+        "direction": "Essen Hbf",
+        "platform": "",
+        "time": "2510210438",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Essen-Steele",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "-6460516812909385421-2510210337-19",
+        "type": "S",
+        "number": "30107",
+        "direction": "Dortmund Hbf",
+        "platform": "4",
+        "time": "2510210432",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Essen-Eiberg",
+          "Wattenscheid-Höntrop",
+          "Bochum-Ehrenfeld",
+          "Bochum Hbf",
+          "Bochum-Langendreer West",
+          "Bochum-Langendreer",
+          "Dortmund-Kley",
+          "Dortmund-Oespel",
+          "Dortmund Universität",
+          "Dortmund-Dorstfeld Süd",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "2262485597202271968-2510210414-3",
+        "type": "Bus",
+        "number": "30386",
+        "direction": "Hattingen(Ruhr) Mitte",
+        "platform": "",
+        "time": "2510210430",
+        "destination": "Hattingen(Ruhr) Mitte",
+        "path_stations": [
+          "Essen-Horst",
+          "Bochum-Dahlhausen",
+          "Hattingen(Ruhr)",
+          "Hattingen(Ruhr) Mitte"
+        ]
+      }
+    ],
+    "arrivals": []
+  }
+}

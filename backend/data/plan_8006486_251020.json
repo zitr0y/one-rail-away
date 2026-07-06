@@ -1,0 +1,158 @@
+{
+  "station_eva": "8006486",
+  "date": "251020",
+  "cached_at": "2025-10-20T16:52:07.712312",
+  "plan_data": {
+    "arrivals": [
+      {
+        "id": "959233734712686270-2510201641-14",
+        "type": "RE",
+        "number": "10771",
+        "time": "2510201824",
+        "platform": "1",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Hörde",
+          "Fröndenberg",
+          "Wickede(Ruhr)",
+          "Neheim-Hüsten",
+          "Arnsberg(Westf)",
+          "Oeventrop",
+          "Freienohl",
+          "Meschede",
+          "Bestwig",
+          "Bigge",
+          "Siedlinghausen",
+          "Silbach"
+        ],
+        "line": "57"
+      },
+      {
+        "id": "-3573137413263550703-2510201841-14",
+        "type": "RE",
+        "number": "10773",
+        "time": "2510202024",
+        "platform": "1",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Hörde",
+          "Fröndenberg",
+          "Wickede(Ruhr)",
+          "Neheim-Hüsten",
+          "Arnsberg(Westf)",
+          "Oeventrop",
+          "Freienohl",
+          "Meschede",
+          "Bestwig",
+          "Bigge",
+          "Siedlinghausen",
+          "Silbach"
+        ],
+        "line": "57"
+      },
+      {
+        "id": "767842075325333541-2510210502-14",
+        "type": "RE",
+        "number": "10777",
+        "time": "2510210645",
+        "platform": "1",
+        "path_stations": [
+          "Hagen Hbf",
+          "Schwerte(Ruhr)",
+          "Fröndenberg",
+          "Wickede(Ruhr)",
+          "Neheim-Hüsten",
+          "Arnsberg(Westf)",
+          "Oeventrop",
+          "Freienohl",
+          "Meschede",
+          "Bestwig",
+          "Bigge",
+          "Siedlinghausen",
+          "Silbach"
+        ],
+        "line": "57"
+      }
+    ],
+    "departures": [
+      {
+        "id": "1187297819094461103-2510201831-1",
+        "type": "RE",
+        "number": "10772",
+        "direction": "Dortmund Hbf",
+        "platform": "1",
+        "time": "2510201831",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Silbach",
+          "Siedlinghausen",
+          "Bigge",
+          "Bestwig",
+          "Meschede",
+          "Freienohl",
+          "Oeventrop",
+          "Arnsberg(Westf)",
+          "Neheim-Hüsten",
+          "Wickede(Ruhr)",
+          "Fröndenberg",
+          "Dortmund-Hörde",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-7122940753470558049-2510202131-1",
+        "type": "RE",
+        "number": "10774",
+        "direction": "Bestwig",
+        "platform": "1",
+        "time": "2510202131",
+        "destination": "Bestwig",
+        "path_stations": [
+          "Silbach",
+          "Siedlinghausen",
+          "Bigge",
+          "Bestwig"
+        ]
+      },
+      {
+        "id": "-6054284350319138662-2510210616-1",
+        "type": "RE",
+        "number": "10778",
+        "direction": "Hagen Hbf",
+        "platform": "1",
+        "time": "2510210616",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Silbach",
+          "Siedlinghausen",
+          "Bigge",
+          "Bestwig",
+          "Meschede",
+          "Freienohl",
+          "Oeventrop",
+          "Arnsberg(Westf)",
+          "Neheim-Hüsten",
+          "Wickede(Ruhr)",
+          "Fröndenberg",
+          "Schwerte(Ruhr)",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "-1464238442224017525-2510210650-1",
+        "type": "RE",
+        "number": "10782",
+        "direction": "Bestwig",
+        "platform": "1",
+        "time": "2510210650",
+        "destination": "Bestwig",
+        "path_stations": [
+          "Silbach",
+          "Siedlinghausen",
+          "Bigge",
+          "Bestwig"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,1633 @@
+{
+  "station_eva": "8004173",
+  "date": "251020",
+  "cached_at": "2025-10-20T16:52:07.762137",
+  "plan_data": {
+    "arrivals": [
+      {
+        "id": "4621747675100731683-2510201835-2",
+        "type": "RB",
+        "number": "52346",
+        "time": "2510201838",
+        "platform": "3",
+        "path_stations": [
+          "Münster(Westf)Hbf"
+        ],
+        "line": "65"
+      },
+      {
+        "id": "-3020496332796237733-2510201838-2",
+        "type": "RB",
+        "number": "14994",
+        "time": "2510201842",
+        "platform": "2",
+        "path_stations": [
+          "Münster(Westf)Hbf"
+        ],
+        "line": "64"
+      },
+      {
+        "id": "-6382437368396309593-2510201813-2",
+        "type": "RB",
+        "number": "52344",
+        "time": "2510201816",
+        "platform": "3",
+        "path_stations": [
+          "Münster(Westf)Hbf"
+        ],
+        "line": "65"
+      },
+      {
+        "id": "-8140846277073801457-2510201808-2",
+        "type": "RB",
+        "number": "20226",
+        "time": "2510201813",
+        "platform": "2",
+        "path_stations": [
+          "Münster(Westf)Hbf"
+        ],
+        "line": "64"
+      },
+      {
+        "id": "9162948571152961790-2510201805-9",
+        "type": "RB",
+        "number": "14731",
+        "time": "2510201856",
+        "platform": "2",
+        "path_stations": [
+          "Coesfeld(Westf)",
+          "Coesfeld Schulzentrum",
+          "Lutum",
+          "Billerbeck",
+          "Havixbeck",
+          "Münster-Roxel",
+          "Münster-Mecklenbeck",
+          "Münster(Westf)Hbf"
+        ],
+        "line": "63"
+      },
+      {
+        "id": "-2942215866956044486-2510201733-13",
+        "type": "RB",
+        "number": "20223",
+        "time": "2510201838",
+        "platform": "2",
+        "path_stations": [
+          "Enschede",
+          "Enschede De Eschmarke",
+          "Glanerbrug",
+          "Gronau(Westf)",
+          "Ochtrup",
+          "Metelen Land",
+          "Steinfurt-Burgsteinfurt",
+          "Steinfurt-Grottenkamp",
+          "Steinfurt-Borghorst",
+          "Nordwalde",
+          "Altenberge",
+          "Münster-Häger"
+        ],
+        "line": "64"
+      },
+      {
+        "id": "-5662564437561064772-2510201742-7",
+        "type": "RB",
+        "number": "14999",
+        "time": "2510201809",
+        "platform": "2",
+        "path_stations": [
+          "Steinfurt-Burgsteinfurt",
+          "Steinfurt-Grottenkamp",
+          "Steinfurt-Borghorst",
+          "Nordwalde",
+          "Altenberge",
+          "Münster-Häger"
+        ],
+        "line": "64"
+      },
+      {
+        "id": "-4205108958797169033-2510201753-7",
+        "type": "RB",
+        "number": "52347",
+        "time": "2510201818",
+        "platform": "2",
+        "path_stations": [
+          "Rheine",
+          "Rheine-Mesum",
+          "Emsdetten",
+          "Reckenfeld",
+          "Greven",
+          "Münster-Sprakel"
+        ],
+        "line": "65"
+      },
+      {
+        "id": "-544253014850648749-2510201833-13",
+        "type": "RB",
+        "number": "20225",
+        "time": "2510201938",
+        "platform": "2",
+        "path_stations": [
+          "Enschede",
+          "Enschede De Eschmarke",
+          "Glanerbrug",
+          "Gronau(Westf)",
+          "Ochtrup",
+          "Metelen Land",
+          "Steinfurt-Burgsteinfurt",
+          "Steinfurt-Grottenkamp",
+          "Steinfurt-Borghorst",
+          "Nordwalde",
+          "Altenberge",
+          "Münster-Häger"
+        ],
+        "line": "64"
+      },
+      {
+        "id": "9135876238992906802-2510201853-7",
+        "type": "RB",
+        "number": "52351",
+        "time": "2510201918",
+        "platform": "2",
+        "path_stations": [
+          "Rheine",
+          "Rheine-Mesum",
+          "Emsdetten",
+          "Reckenfeld",
+          "Greven",
+          "Münster-Sprakel"
+        ],
+        "line": "65"
+      },
+      {
+        "id": "2078769880633547351-2510201935-2",
+        "type": "RB",
+        "number": "52350",
+        "time": "2510201938",
+        "platform": "3",
+        "path_stations": [
+          "Münster(Westf)Hbf"
+        ],
+        "line": "65"
+      },
+      {
+        "id": "8412948404346271401-2510201908-2",
+        "type": "RB",
+        "number": "20228",
+        "time": "2510201913",
+        "platform": "2",
+        "path_stations": [
+          "Münster(Westf)Hbf"
+        ],
+        "line": "64"
+      },
+      {
+        "id": "-134557069997905789-2510201905-9",
+        "type": "RB",
+        "number": "14733",
+        "time": "2510201956",
+        "platform": "2",
+        "path_stations": [
+          "Coesfeld(Westf)",
+          "Coesfeld Schulzentrum",
+          "Lutum",
+          "Billerbeck",
+          "Havixbeck",
+          "Münster-Roxel",
+          "Münster-Mecklenbeck",
+          "Münster(Westf)Hbf"
+        ],
+        "line": "63"
+      },
+      {
+        "id": "4766072301195119400-2510202008-2",
+        "type": "RB",
+        "number": "20230",
+        "time": "2510202013",
+        "platform": "2",
+        "path_stations": [
+          "Münster(Westf)Hbf"
+        ],
+        "line": "64"
+      },
+      {
+        "id": "7032607088015432522-2510201933-13",
+        "type": "RB",
+        "number": "20227",
+        "time": "2510202038",
+        "platform": "2",
+        "path_stations": [
+          "Enschede",
+          "Enschede De Eschmarke",
+          "Glanerbrug",
+          "Gronau(Westf)",
+          "Ochtrup",
+          "Metelen Land",
+          "Steinfurt-Burgsteinfurt",
+          "Steinfurt-Grottenkamp",
+          "Steinfurt-Borghorst",
+          "Nordwalde",
+          "Altenberge",
+          "Münster-Häger"
+        ],
+        "line": "64"
+      },
+      {
+        "id": "6090228758868284344-2510202035-2",
+        "type": "RB",
+        "number": "52352",
+        "time": "2510202038",
+        "platform": "3",
+        "path_stations": [
+          "Münster(Westf)Hbf"
+        ],
+        "line": "65"
+      },
+      {
+        "id": "3069707380370401808-2510201953-7",
+        "type": "RB",
+        "number": "52353",
+        "time": "2510202018",
+        "platform": "2",
+        "path_stations": [
+          "Rheine",
+          "Rheine-Mesum",
+          "Emsdetten",
+          "Reckenfeld",
+          "Greven",
+          "Münster-Sprakel"
+        ],
+        "line": "65"
+      },
+      {
+        "id": "-2517546130397205322-2510202053-7",
+        "type": "RB",
+        "number": "52355",
+        "time": "2510202118",
+        "platform": "2",
+        "path_stations": [
+          "Rheine",
+          "Rheine-Mesum",
+          "Emsdetten",
+          "Reckenfeld",
+          "Greven",
+          "Münster-Sprakel"
+        ],
+        "line": "65"
+      },
+      {
+        "id": "8578823675623039198-2510202108-2",
+        "type": "RB",
+        "number": "20232",
+        "time": "2510202113",
+        "platform": "2",
+        "path_stations": [
+          "Münster(Westf)Hbf"
+        ],
+        "line": "64"
+      },
+      {
+        "id": "8765147354208031550-2510202033-13",
+        "type": "RB",
+        "number": "20229",
+        "time": "2510202138",
+        "platform": "2",
+        "path_stations": [
+          "Enschede",
+          "Enschede De Eschmarke",
+          "Glanerbrug",
+          "Gronau(Westf)",
+          "Ochtrup",
+          "Metelen Land",
+          "Steinfurt-Burgsteinfurt",
+          "Steinfurt-Grottenkamp",
+          "Steinfurt-Borghorst",
+          "Nordwalde",
+          "Altenberge",
+          "Münster-Häger"
+        ],
+        "line": "64"
+      },
+      {
+        "id": "-4705707440919021676-2510202135-2",
+        "type": "RB",
+        "number": "52354",
+        "time": "2510202138",
+        "platform": "3",
+        "path_stations": [
+          "Münster(Westf)Hbf"
+        ],
+        "line": "65"
+      },
+      {
+        "id": "7597073892496609484-2510202153-7",
+        "type": "RB",
+        "number": "52357",
+        "time": "2510202218",
+        "platform": "2",
+        "path_stations": [
+          "Rheine",
+          "Rheine-Mesum",
+          "Emsdetten",
+          "Reckenfeld",
+          "Greven",
+          "Münster-Sprakel"
+        ],
+        "line": "65"
+      },
+      {
+        "id": "-4202560257404214898-2510202212-2",
+        "type": "WFB",
+        "number": "90300",
+        "time": "2510202215",
+        "platform": "3",
+        "path_stations": [
+          "Münster(Westf)Hbf"
+        ],
+        "line": "RE15"
+      },
+      {
+        "id": "2960297712658480378-2510202235-2",
+        "type": "RB",
+        "number": "52356",
+        "time": "2510202238",
+        "platform": "3",
+        "path_stations": [
+          "Münster(Westf)Hbf"
+        ],
+        "line": "65"
+      },
+      {
+        "id": "1992512697599982829-2510202208-2",
+        "type": "RB",
+        "number": "20234",
+        "time": "2510202213",
+        "platform": "2",
+        "path_stations": [
+          "Münster(Westf)Hbf"
+        ],
+        "line": "64"
+      },
+      {
+        "id": "-5367302227589786043-2510202133-13",
+        "type": "RB",
+        "number": "20231",
+        "time": "2510202240",
+        "platform": "2",
+        "path_stations": [
+          "Enschede",
+          "Enschede De Eschmarke",
+          "Glanerbrug",
+          "Gronau(Westf)",
+          "Ochtrup",
+          "Metelen Land",
+          "Steinfurt-Burgsteinfurt",
+          "Steinfurt-Grottenkamp",
+          "Steinfurt-Borghorst",
+          "Nordwalde",
+          "Altenberge",
+          "Münster-Häger"
+        ],
+        "line": "64"
+      },
+      {
+        "id": "637219038798480565-2510202312-2",
+        "type": "WFB",
+        "number": "90302",
+        "time": "2510202315",
+        "platform": "3",
+        "path_stations": [
+          "Münster(Westf)Hbf"
+        ],
+        "line": "RE15"
+      },
+      {
+        "id": "7110340465137512080-2510202233-13",
+        "type": "RB",
+        "number": "20233",
+        "time": "2510202338",
+        "platform": "2",
+        "path_stations": [
+          "Enschede",
+          "Enschede De Eschmarke",
+          "Glanerbrug",
+          "Gronau(Westf)",
+          "Ochtrup",
+          "Metelen Land",
+          "Steinfurt-Burgsteinfurt",
+          "Steinfurt-Grottenkamp",
+          "Steinfurt-Borghorst",
+          "Nordwalde",
+          "Altenberge",
+          "Münster-Häger"
+        ],
+        "line": "64"
+      },
+      {
+        "id": "-8926903299797833236-2510202253-7",
+        "type": "RB",
+        "number": "52359",
+        "time": "2510202318",
+        "platform": "2",
+        "path_stations": [
+          "Rheine",
+          "Rheine-Mesum",
+          "Emsdetten",
+          "Reckenfeld",
+          "Greven",
+          "Münster-Sprakel"
+        ],
+        "line": "65"
+      },
+      {
+        "id": "3477113942017088172-2510202308-2",
+        "type": "RB",
+        "number": "20236",
+        "time": "2510202313",
+        "platform": "2",
+        "path_stations": [
+          "Münster(Westf)Hbf"
+        ],
+        "line": "64"
+      },
+      {
+        "id": "-109431539876697361-2510210013-2",
+        "type": "RB",
+        "number": "52360",
+        "time": "2510210016",
+        "platform": "3",
+        "path_stations": [
+          "Münster(Westf)Hbf"
+        ],
+        "line": "65"
+      },
+      {
+        "id": "-121839421025912287-2510210008-2",
+        "type": "RB",
+        "number": "20238",
+        "time": "2510210013",
+        "platform": "2",
+        "path_stations": [
+          "Münster(Westf)Hbf"
+        ],
+        "line": "64"
+      },
+      {
+        "id": "-3352780807530743271-2510202214-19",
+        "type": "WFB",
+        "number": "90301",
+        "time": "2510210020",
+        "platform": "2",
+        "path_stations": [
+          "Emden Hbf",
+          "Leer(Ostfriesl)",
+          "Papenburg(Ems)",
+          "Aschendorf",
+          "Dörpen",
+          "Lathen",
+          "Haren(Ems)",
+          "Meppen",
+          "Geeste",
+          "Lingen(Ems)",
+          "Leschede",
+          "Salzbergen",
+          "Rheine",
+          "Rheine-Mesum",
+          "Emsdetten",
+          "Reckenfeld",
+          "Greven",
+          "Münster-Sprakel"
+        ],
+        "line": "RE15"
+      },
+      {
+        "id": "3762548195492777348-2510210535-2",
+        "type": "RB",
+        "number": "52300",
+        "time": "2510210538",
+        "platform": "3",
+        "path_stations": [
+          "Münster(Westf)Hbf"
+        ],
+        "line": "65"
+      },
+      {
+        "id": "-3558590691375544865-2510210502-2",
+        "type": "WFB",
+        "number": "90266",
+        "time": "2510210505",
+        "platform": "3",
+        "path_stations": [
+          "Münster(Westf)Hbf"
+        ],
+        "line": "RE15"
+      },
+      {
+        "id": "-3170763827464905858-2510210450-9",
+        "type": "WFB",
+        "number": "90265",
+        "time": "2510210552",
+        "platform": "2",
+        "path_stations": [
+          "Meppen",
+          "Geeste",
+          "Lingen(Ems)",
+          "Leschede",
+          "Salzbergen",
+          "Rheine",
+          "Emsdetten",
+          "Greven"
+        ],
+        "line": "RE15"
+      },
+      {
+        "id": "1231826160592946051-2510210508-2",
+        "type": "RB",
+        "number": "20200",
+        "time": "2510210512",
+        "platform": "2",
+        "path_stations": [
+          "Münster(Westf)Hbf"
+        ],
+        "line": "64"
+      },
+      {
+        "id": "1769391058592413639-2510210445-10",
+        "type": "RB",
+        "number": "14981",
+        "time": "2510210538",
+        "platform": "2",
+        "path_stations": [
+          "Gronau(Westf)",
+          "Ochtrup",
+          "Metelen Land",
+          "Steinfurt-Burgsteinfurt",
+          "Steinfurt-Grottenkamp",
+          "Steinfurt-Borghorst",
+          "Nordwalde",
+          "Altenberge",
+          "Münster-Häger"
+        ],
+        "line": "64"
+      },
+      {
+        "id": "2812183816605450724-2510210453-7",
+        "type": "RB",
+        "number": "52301",
+        "time": "2510210518",
+        "platform": "2",
+        "path_stations": [
+          "Rheine",
+          "Rheine-Mesum",
+          "Emsdetten",
+          "Reckenfeld",
+          "Greven",
+          "Münster-Sprakel"
+        ],
+        "line": "65"
+      },
+      {
+        "id": "-1344406117609016506-2510210635-2",
+        "type": "RB",
+        "number": "52304",
+        "time": "2510210638",
+        "platform": "3",
+        "path_stations": [
+          "Münster(Westf)Hbf"
+        ],
+        "line": "65"
+      },
+      {
+        "id": "1344516564372516743-2510210553-7",
+        "type": "RB",
+        "number": "52305",
+        "time": "2510210618",
+        "platform": "2",
+        "path_stations": [
+          "Rheine",
+          "Rheine-Mesum",
+          "Emsdetten",
+          "Reckenfeld",
+          "Greven",
+          "Münster-Sprakel"
+        ],
+        "line": "65"
+      },
+      {
+        "id": "-635585876718996895-2510210520-10",
+        "type": "RB",
+        "number": "14983",
+        "time": "2510210609",
+        "platform": "2",
+        "path_stations": [
+          "Gronau(Westf)",
+          "Ochtrup",
+          "Metelen Land",
+          "Steinfurt-Burgsteinfurt",
+          "Steinfurt-Grottenkamp",
+          "Steinfurt-Borghorst",
+          "Nordwalde",
+          "Altenberge",
+          "Münster-Häger"
+        ],
+        "line": "64"
+      },
+      {
+        "id": "-3507722088886233452-2510210602-2",
+        "type": "WFB",
+        "number": "90268",
+        "time": "2510210605",
+        "platform": "3",
+        "path_stations": [
+          "Münster(Westf)Hbf"
+        ],
+        "line": "RE15"
+      },
+      {
+        "id": "5623659416311256258-2510210605-8",
+        "type": "RB",
+        "number": "14705",
+        "time": "2510210656",
+        "platform": "2",
+        "path_stations": [
+          "Coesfeld(Westf)",
+          "Coesfeld Schulzentrum",
+          "Billerbeck",
+          "Havixbeck",
+          "Münster-Roxel",
+          "Münster-Mecklenbeck",
+          "Münster(Westf)Hbf"
+        ],
+        "line": "63"
+      },
+      {
+        "id": "4611235663805763196-2510210608-2",
+        "type": "RB",
+        "number": "20202",
+        "time": "2510210613",
+        "platform": "2",
+        "path_stations": [
+          "Münster(Westf)Hbf"
+        ],
+        "line": "64"
+      },
+      {
+        "id": "-3171154378423360997-2510210638-2",
+        "type": "RB",
+        "number": "14980",
+        "time": "2510210642",
+        "platform": "2",
+        "path_stations": [
+          "Münster(Westf)Hbf"
+        ],
+        "line": "64"
+      },
+      {
+        "id": "-6617944683281406732-2510210613-2",
+        "type": "RB",
+        "number": "52302",
+        "time": "2510210616",
+        "platform": "3",
+        "path_stations": [
+          "Münster(Westf)Hbf"
+        ],
+        "line": "65"
+      },
+      {
+        "id": "-2441118754353506185-2510210452-16",
+        "type": "WFB",
+        "number": "90267",
+        "time": "2510210652",
+        "platform": "2",
+        "path_stations": [
+          "Emden Hbf",
+          "Leer(Ostfriesl)",
+          "Papenburg(Ems)",
+          "Aschendorf",
+          "Dörpen",
+          "Lathen",
+          "Haren(Ems)",
+          "Meppen",
+          "Geeste",
+          "Lingen(Ems)",
+          "Leschede",
+          "Salzbergen",
+          "Rheine",
+          "Emsdetten",
+          "Greven"
+        ],
+        "line": "RE15"
+      },
+      {
+        "id": "4678559792670816478-2510210618-7",
+        "type": "RB",
+        "number": "52307",
+        "time": "2510210646",
+        "platform": "2",
+        "path_stations": [
+          "Rheine",
+          "Rheine-Mesum",
+          "Emsdetten",
+          "Reckenfeld",
+          "Greven",
+          "Münster-Sprakel"
+        ],
+        "line": "65"
+      },
+      {
+        "id": "8047337506388594690-2510210521-10",
+        "type": "RE",
+        "number": "17400",
+        "time": "2510210627",
+        "platform": "3",
+        "path_stations": [
+          "Hagen Hbf",
+          "Schwerte(Ruhr)",
+          "Holzwickede",
+          "Unna",
+          "Bönen",
+          "Hamm(Westf)Hbf",
+          "Drensteinfurt",
+          "Münster-Hiltrup",
+          "Münster(Westf)Hbf"
+        ],
+        "line": "7"
+      },
+      {
+        "id": "8130785200468791932-2510210545-10",
+        "type": "RB",
+        "number": "14985",
+        "time": "2510210638",
+        "platform": "2",
+        "path_stations": [
+          "Gronau(Westf)",
+          "Ochtrup",
+          "Metelen Land",
+          "Steinfurt-Burgsteinfurt",
+          "Steinfurt-Grottenkamp",
+          "Steinfurt-Borghorst",
+          "Nordwalde",
+          "Altenberge",
+          "Münster-Häger"
+        ],
+        "line": "64"
+      }
+    ],
+    "departures": [
+      {
+        "id": "4621747675100731683-2510201835-2",
+        "type": "RB",
+        "number": "52346",
+        "direction": "Rheine",
+        "platform": "3",
+        "time": "2510201839",
+        "destination": "Rheine",
+        "path_stations": [
+          "Münster-Sprakel",
+          "Greven",
+          "Reckenfeld",
+          "Emsdetten",
+          "Rheine-Mesum",
+          "Rheine"
+        ]
+      },
+      {
+        "id": "-3020496332796237733-2510201838-2",
+        "type": "RB",
+        "number": "14994",
+        "direction": "Gronau(Westf)",
+        "platform": "2",
+        "time": "2510201843",
+        "destination": "Gronau(Westf)",
+        "path_stations": [
+          "Münster-Häger",
+          "Altenberge",
+          "Nordwalde",
+          "Steinfurt-Borghorst",
+          "Steinfurt-Grottenkamp",
+          "Steinfurt-Burgsteinfurt",
+          "Metelen Land",
+          "Ochtrup",
+          "Gronau(Westf)"
+        ]
+      },
+      {
+        "id": "-6382437368396309593-2510201813-2",
+        "type": "RB",
+        "number": "52344",
+        "direction": "Rheine",
+        "platform": "3",
+        "time": "2510201817",
+        "destination": "Rheine",
+        "path_stations": [
+          "Münster-Sprakel",
+          "Greven",
+          "Reckenfeld",
+          "Emsdetten",
+          "Rheine-Mesum",
+          "Rheine"
+        ]
+      },
+      {
+        "id": "-8140846277073801457-2510201808-2",
+        "type": "RB",
+        "number": "20226",
+        "direction": "Enschede",
+        "platform": "2",
+        "time": "2510201814",
+        "destination": "Enschede",
+        "path_stations": [
+          "Münster-Häger",
+          "Altenberge",
+          "Nordwalde",
+          "Steinfurt-Borghorst",
+          "Steinfurt-Grottenkamp",
+          "Steinfurt-Burgsteinfurt",
+          "Metelen Land",
+          "Ochtrup",
+          "Gronau(Westf)",
+          "Glanerbrug",
+          "Enschede De Eschmarke",
+          "Enschede"
+        ]
+      },
+      {
+        "id": "-808681341544563842-2510201801-1",
+        "type": "RB",
+        "number": "14732",
+        "direction": "Coesfeld(Westf)",
+        "platform": "2",
+        "time": "2510201801",
+        "destination": "Coesfeld(Westf)",
+        "path_stations": [
+          "Münster(Westf)Hbf",
+          "Münster-Mecklenbeck",
+          "Münster-Roxel",
+          "Havixbeck",
+          "Billerbeck",
+          "Lutum",
+          "Coesfeld Schulzentrum",
+          "Coesfeld(Westf)"
+        ]
+      },
+      {
+        "id": "-2942215866956044486-2510201733-13",
+        "type": "RB",
+        "number": "20223",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "2",
+        "time": "2510201839",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-5662564437561064772-2510201742-7",
+        "type": "RB",
+        "number": "14999",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "2",
+        "time": "2510201809",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-4205108958797169033-2510201753-7",
+        "type": "RB",
+        "number": "52347",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "2",
+        "time": "2510201819",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-544253014850648749-2510201833-13",
+        "type": "RB",
+        "number": "20225",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "2",
+        "time": "2510201939",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "9135876238992906802-2510201853-7",
+        "type": "RB",
+        "number": "52351",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "2",
+        "time": "2510201919",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "2078769880633547351-2510201935-2",
+        "type": "RB",
+        "number": "52350",
+        "direction": "Rheine",
+        "platform": "3",
+        "time": "2510201939",
+        "destination": "Rheine",
+        "path_stations": [
+          "Münster-Sprakel",
+          "Greven",
+          "Reckenfeld",
+          "Emsdetten",
+          "Rheine-Mesum",
+          "Rheine"
+        ]
+      },
+      {
+        "id": "8412948404346271401-2510201908-2",
+        "type": "RB",
+        "number": "20228",
+        "direction": "Enschede",
+        "platform": "2",
+        "time": "2510201914",
+        "destination": "Enschede",
+        "path_stations": [
+          "Münster-Häger",
+          "Altenberge",
+          "Nordwalde",
+          "Steinfurt-Borghorst",
+          "Steinfurt-Grottenkamp",
+          "Steinfurt-Burgsteinfurt",
+          "Metelen Land",
+          "Ochtrup",
+          "Gronau(Westf)",
+          "Glanerbrug",
+          "Enschede De Eschmarke",
+          "Enschede"
+        ]
+      },
+      {
+        "id": "-3696552279590256655-2510201901-1",
+        "type": "RB",
+        "number": "14734",
+        "direction": "Coesfeld(Westf)",
+        "platform": "2",
+        "time": "2510201901",
+        "destination": "Coesfeld(Westf)",
+        "path_stations": [
+          "Münster(Westf)Hbf",
+          "Münster-Mecklenbeck",
+          "Münster-Roxel",
+          "Havixbeck",
+          "Billerbeck",
+          "Lutum",
+          "Coesfeld Schulzentrum",
+          "Coesfeld(Westf)"
+        ]
+      },
+      {
+        "id": "6522402944592591431-2510202001-1",
+        "type": "RB",
+        "number": "14736",
+        "direction": "Coesfeld(Westf)",
+        "platform": "2",
+        "time": "2510202001",
+        "destination": "Coesfeld(Westf)",
+        "path_stations": [
+          "Münster(Westf)Hbf",
+          "Münster-Mecklenbeck",
+          "Münster-Roxel",
+          "Havixbeck",
+          "Billerbeck",
+          "Lutum",
+          "Coesfeld Schulzentrum",
+          "Coesfeld(Westf)"
+        ]
+      },
+      {
+        "id": "4766072301195119400-2510202008-2",
+        "type": "RB",
+        "number": "20230",
+        "direction": "Enschede",
+        "platform": "2",
+        "time": "2510202014",
+        "destination": "Enschede",
+        "path_stations": [
+          "Münster-Häger",
+          "Altenberge",
+          "Nordwalde",
+          "Steinfurt-Borghorst",
+          "Steinfurt-Grottenkamp",
+          "Steinfurt-Burgsteinfurt",
+          "Metelen Land",
+          "Ochtrup",
+          "Gronau(Westf)",
+          "Glanerbrug",
+          "Enschede De Eschmarke",
+          "Enschede"
+        ]
+      },
+      {
+        "id": "7032607088015432522-2510201933-13",
+        "type": "RB",
+        "number": "20227",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "2",
+        "time": "2510202039",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "6090228758868284344-2510202035-2",
+        "type": "RB",
+        "number": "52352",
+        "direction": "Rheine",
+        "platform": "3",
+        "time": "2510202039",
+        "destination": "Rheine",
+        "path_stations": [
+          "Münster-Sprakel",
+          "Greven",
+          "Reckenfeld",
+          "Emsdetten",
+          "Rheine-Mesum",
+          "Rheine"
+        ]
+      },
+      {
+        "id": "3069707380370401808-2510201953-7",
+        "type": "RB",
+        "number": "52353",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "2",
+        "time": "2510202019",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-2517546130397205322-2510202053-7",
+        "type": "RB",
+        "number": "52355",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "2",
+        "time": "2510202119",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "8578823675623039198-2510202108-2",
+        "type": "RB",
+        "number": "20232",
+        "direction": "Enschede",
+        "platform": "2",
+        "time": "2510202114",
+        "destination": "Enschede",
+        "path_stations": [
+          "Münster-Häger",
+          "Altenberge",
+          "Nordwalde",
+          "Steinfurt-Borghorst",
+          "Steinfurt-Grottenkamp",
+          "Steinfurt-Burgsteinfurt",
+          "Metelen Land",
+          "Ochtrup",
+          "Gronau(Westf)",
+          "Glanerbrug",
+          "Enschede De Eschmarke",
+          "Enschede"
+        ]
+      },
+      {
+        "id": "8765147354208031550-2510202033-13",
+        "type": "RB",
+        "number": "20229",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "2",
+        "time": "2510202139",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-4705707440919021676-2510202135-2",
+        "type": "RB",
+        "number": "52354",
+        "direction": "Rheine",
+        "platform": "3",
+        "time": "2510202139",
+        "destination": "Rheine",
+        "path_stations": [
+          "Münster-Sprakel",
+          "Greven",
+          "Reckenfeld",
+          "Emsdetten",
+          "Rheine-Mesum",
+          "Rheine"
+        ]
+      },
+      {
+        "id": "7597073892496609484-2510202153-7",
+        "type": "RB",
+        "number": "52357",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "2",
+        "time": "2510202219",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-4202560257404214898-2510202212-2",
+        "type": "WFB",
+        "number": "90300",
+        "direction": "Emden Hbf",
+        "platform": "3",
+        "time": "2510202215",
+        "destination": "Emden Hbf",
+        "path_stations": [
+          "Greven",
+          "Reckenfeld",
+          "Emsdetten",
+          "Rheine-Mesum",
+          "Rheine",
+          "Salzbergen",
+          "Leschede",
+          "Lingen(Ems)",
+          "Geeste",
+          "Meppen",
+          "Haren(Ems)",
+          "Lathen",
+          "Dörpen",
+          "Aschendorf",
+          "Papenburg(Ems)",
+          "Leer(Ostfriesl)",
+          "Emden Hbf"
+        ]
+      },
+      {
+        "id": "2960297712658480378-2510202235-2",
+        "type": "RB",
+        "number": "52356",
+        "direction": "Rheine",
+        "platform": "3",
+        "time": "2510202239",
+        "destination": "Rheine",
+        "path_stations": [
+          "Münster-Sprakel",
+          "Greven",
+          "Reckenfeld",
+          "Emsdetten",
+          "Rheine-Mesum",
+          "Rheine"
+        ]
+      },
+      {
+        "id": "1992512697599982829-2510202208-2",
+        "type": "RB",
+        "number": "20234",
+        "direction": "Enschede",
+        "platform": "2",
+        "time": "2510202214",
+        "destination": "Enschede",
+        "path_stations": [
+          "Münster-Häger",
+          "Altenberge",
+          "Nordwalde",
+          "Steinfurt-Borghorst",
+          "Steinfurt-Grottenkamp",
+          "Steinfurt-Burgsteinfurt",
+          "Metelen Land",
+          "Ochtrup",
+          "Gronau(Westf)",
+          "Glanerbrug",
+          "Enschede De Eschmarke",
+          "Enschede"
+        ]
+      },
+      {
+        "id": "-5367302227589786043-2510202133-13",
+        "type": "RB",
+        "number": "20231",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "2",
+        "time": "2510202241",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "637219038798480565-2510202312-2",
+        "type": "WFB",
+        "number": "90302",
+        "direction": "Meppen",
+        "platform": "3",
+        "time": "2510202315",
+        "destination": "Meppen",
+        "path_stations": [
+          "Münster-Sprakel",
+          "Greven",
+          "Reckenfeld",
+          "Emsdetten",
+          "Rheine-Mesum",
+          "Rheine",
+          "Salzbergen",
+          "Leschede",
+          "Lingen(Ems)",
+          "Geeste",
+          "Meppen"
+        ]
+      },
+      {
+        "id": "7110340465137512080-2510202233-13",
+        "type": "RB",
+        "number": "20233",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "2",
+        "time": "2510202339",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-8926903299797833236-2510202253-7",
+        "type": "RB",
+        "number": "52359",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "2",
+        "time": "2510202319",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "3477113942017088172-2510202308-2",
+        "type": "RB",
+        "number": "20236",
+        "direction": "Enschede",
+        "platform": "2",
+        "time": "2510202314",
+        "destination": "Enschede",
+        "path_stations": [
+          "Münster-Häger",
+          "Altenberge",
+          "Nordwalde",
+          "Steinfurt-Borghorst",
+          "Steinfurt-Grottenkamp",
+          "Steinfurt-Burgsteinfurt",
+          "Metelen Land",
+          "Ochtrup",
+          "Gronau(Westf)",
+          "Glanerbrug",
+          "Enschede De Eschmarke",
+          "Enschede"
+        ]
+      },
+      {
+        "id": "-109431539876697361-2510210013-2",
+        "type": "RB",
+        "number": "52360",
+        "direction": "Rheine",
+        "platform": "3",
+        "time": "2510210017",
+        "destination": "Rheine",
+        "path_stations": [
+          "Münster-Sprakel",
+          "Greven",
+          "Reckenfeld",
+          "Emsdetten",
+          "Rheine-Mesum",
+          "Rheine"
+        ]
+      },
+      {
+        "id": "-121839421025912287-2510210008-2",
+        "type": "RB",
+        "number": "20238",
+        "direction": "Gronau(Westf)",
+        "platform": "2",
+        "time": "2510210014",
+        "destination": "Gronau(Westf)",
+        "path_stations": [
+          "Münster-Häger",
+          "Altenberge",
+          "Nordwalde",
+          "Steinfurt-Borghorst",
+          "Steinfurt-Grottenkamp",
+          "Steinfurt-Burgsteinfurt",
+          "Metelen Land",
+          "Ochtrup",
+          "Gronau(Westf)"
+        ]
+      },
+      {
+        "id": "-3352780807530743271-2510202214-19",
+        "type": "WFB",
+        "number": "90301",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "2",
+        "time": "2510210020",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "3762548195492777348-2510210535-2",
+        "type": "RB",
+        "number": "52300",
+        "direction": "Rheine",
+        "platform": "3",
+        "time": "2510210539",
+        "destination": "Rheine",
+        "path_stations": [
+          "Münster-Sprakel",
+          "Greven",
+          "Reckenfeld",
+          "Emsdetten",
+          "Rheine-Mesum",
+          "Rheine"
+        ]
+      },
+      {
+        "id": "-3558590691375544865-2510210502-2",
+        "type": "WFB",
+        "number": "90266",
+        "direction": "Emden Hbf",
+        "platform": "3",
+        "time": "2510210506",
+        "destination": "Emden Hbf",
+        "path_stations": [
+          "Greven",
+          "Reckenfeld",
+          "Emsdetten",
+          "Rheine-Mesum",
+          "Rheine",
+          "Salzbergen",
+          "Leschede",
+          "Lingen(Ems)",
+          "Geeste",
+          "Meppen",
+          "Haren(Ems)",
+          "Lathen",
+          "Dörpen",
+          "Aschendorf",
+          "Papenburg(Ems)",
+          "Leer(Ostfriesl)",
+          "Emden Hbf"
+        ]
+      },
+      {
+        "id": "-3170763827464905858-2510210450-9",
+        "type": "WFB",
+        "number": "90265",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "2",
+        "time": "2510210552",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "1231826160592946051-2510210508-2",
+        "type": "RB",
+        "number": "20200",
+        "direction": "Enschede",
+        "platform": "2",
+        "time": "2510210514",
+        "destination": "Enschede",
+        "path_stations": [
+          "Münster-Häger",
+          "Altenberge",
+          "Nordwalde",
+          "Steinfurt-Borghorst",
+          "Steinfurt-Grottenkamp",
+          "Steinfurt-Burgsteinfurt",
+          "Metelen Land",
+          "Ochtrup",
+          "Gronau(Westf)",
+          "Glanerbrug",
+          "Enschede De Eschmarke",
+          "Enschede"
+        ]
+      },
+      {
+        "id": "1769391058592413639-2510210445-10",
+        "type": "RB",
+        "number": "14981",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "2",
+        "time": "2510210539",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "2812183816605450724-2510210453-7",
+        "type": "RB",
+        "number": "52301",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "2",
+        "time": "2510210519",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-1344406117609016506-2510210635-2",
+        "type": "RB",
+        "number": "52304",
+        "direction": "Rheine",
+        "platform": "3",
+        "time": "2510210639",
+        "destination": "Rheine",
+        "path_stations": [
+          "Münster-Sprakel",
+          "Greven",
+          "Reckenfeld",
+          "Emsdetten",
+          "Rheine-Mesum",
+          "Rheine"
+        ]
+      },
+      {
+        "id": "1344516564372516743-2510210553-7",
+        "type": "RB",
+        "number": "52305",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "2",
+        "time": "2510210619",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-635585876718996895-2510210520-10",
+        "type": "RB",
+        "number": "14983",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "2",
+        "time": "2510210609",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-3507722088886233452-2510210602-2",
+        "type": "WFB",
+        "number": "90268",
+        "direction": "Emden Hbf",
+        "platform": "3",
+        "time": "2510210606",
+        "destination": "Emden Hbf",
+        "path_stations": [
+          "Greven",
+          "Reckenfeld",
+          "Emsdetten",
+          "Rheine-Mesum",
+          "Rheine",
+          "Salzbergen",
+          "Leschede",
+          "Lingen(Ems)",
+          "Geeste",
+          "Meppen",
+          "Haren(Ems)",
+          "Lathen",
+          "Dörpen",
+          "Aschendorf",
+          "Papenburg(Ems)",
+          "Leer(Ostfriesl)",
+          "Emden Hbf"
+        ]
+      },
+      {
+        "id": "4611235663805763196-2510210608-2",
+        "type": "RB",
+        "number": "20202",
+        "direction": "Enschede",
+        "platform": "2",
+        "time": "2510210614",
+        "destination": "Enschede",
+        "path_stations": [
+          "Münster-Häger",
+          "Altenberge",
+          "Nordwalde",
+          "Steinfurt-Borghorst",
+          "Steinfurt-Grottenkamp",
+          "Steinfurt-Burgsteinfurt",
+          "Metelen Land",
+          "Ochtrup",
+          "Gronau(Westf)",
+          "Glanerbrug",
+          "Enschede De Eschmarke",
+          "Enschede"
+        ]
+      },
+      {
+        "id": "-3171154378423360997-2510210638-2",
+        "type": "RB",
+        "number": "14980",
+        "direction": "Steinfurt-Burgsteinfurt",
+        "platform": "2",
+        "time": "2510210643",
+        "destination": "Steinfurt-Burgsteinfurt",
+        "path_stations": [
+          "Münster-Häger",
+          "Altenberge",
+          "Nordwalde",
+          "Steinfurt-Borghorst",
+          "Steinfurt-Grottenkamp",
+          "Steinfurt-Burgsteinfurt"
+        ]
+      },
+      {
+        "id": "-6617944683281406732-2510210613-2",
+        "type": "RB",
+        "number": "52302",
+        "direction": "Rheine",
+        "platform": "3",
+        "time": "2510210617",
+        "destination": "Rheine",
+        "path_stations": [
+          "Münster-Sprakel",
+          "Greven",
+          "Reckenfeld",
+          "Emsdetten",
+          "Rheine-Mesum",
+          "Rheine"
+        ]
+      },
+      {
+        "id": "-2441118754353506185-2510210452-16",
+        "type": "WFB",
+        "number": "90267",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "2",
+        "time": "2510210652",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "4678559792670816478-2510210618-7",
+        "type": "RB",
+        "number": "52307",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "2",
+        "time": "2510210647",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "8047337506388594690-2510210521-10",
+        "type": "RE",
+        "number": "17400",
+        "direction": "Rheine",
+        "platform": "3",
+        "time": "2510210628",
+        "destination": "Rheine",
+        "path_stations": [
+          "Münster-Sprakel",
+          "Greven",
+          "Reckenfeld",
+          "Emsdetten",
+          "Rheine-Mesum",
+          "Rheine"
+        ]
+      },
+      {
+        "id": "8130785200468791932-2510210545-10",
+        "type": "RB",
+        "number": "14985",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "2",
+        "time": "2510210639",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Münster(Westf)Hbf"
+        ]
+      }
+    ]
+  }
+}

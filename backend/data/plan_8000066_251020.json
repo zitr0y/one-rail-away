@@ -1,0 +1,630 @@
+{
+  "station_eva": "8000066",
+  "date": "251020",
+  "cached_at": "2025-10-20T15:46:49.594695",
+  "plan_data": {
+    "departures": [
+      {
+        "id": "291756574075123208-2510201703-9",
+        "type": "RB",
+        "number": "20275",
+        "direction": "Dortmund Hbf",
+        "platform": "4",
+        "time": "2510201803",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Lette(Kr Coesfeld)",
+          "Dülmen",
+          "Lüdinghausen",
+          "Selm",
+          "Selm-Beifang",
+          "Bork(Westf)",
+          "Lünen Hbf",
+          "Lünen-Preußen",
+          "Dortmund-Derne",
+          "Dortmund-Kirchderne",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "3319295167010485434-2510201653-12",
+        "type": "RB",
+        "number": "20276",
+        "direction": "Enschede",
+        "platform": "7",
+        "time": "2510201800",
+        "destination": "Enschede",
+        "path_stations": [
+          "Rosendahl-Holtwick",
+          "Legden",
+          "Ahaus",
+          "Epe(Westf)",
+          "Gronau(Westf)",
+          "Glanerbrug",
+          "Enschede De Eschmarke",
+          "Enschede"
+        ]
+      },
+      {
+        "id": "-1424138684200737364-2510201603-9",
+        "type": "RB",
+        "number": "20273",
+        "direction": "Dortmund Hbf",
+        "platform": "4",
+        "time": "2510201703",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Lette(Kr Coesfeld)",
+          "Dülmen",
+          "Lüdinghausen",
+          "Selm",
+          "Selm-Beifang",
+          "Bork(Westf)",
+          "Lünen Hbf",
+          "Lünen-Preußen",
+          "Dortmund-Derne",
+          "Dortmund-Kirchderne",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-3218078660680905500-2510201553-12",
+        "type": "RB",
+        "number": "20274",
+        "direction": "Enschede",
+        "platform": "7",
+        "time": "2510201700",
+        "destination": "Enschede",
+        "path_stations": [
+          "Rosendahl-Holtwick",
+          "Legden",
+          "Ahaus",
+          "Epe(Westf)",
+          "Gronau(Westf)",
+          "Glanerbrug",
+          "Enschede De Eschmarke",
+          "Enschede"
+        ]
+      },
+      {
+        "id": "5250967119327832549-2510201735-1",
+        "type": "RB",
+        "number": "14897",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "3",
+        "time": "2510201735",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Coesfeld Schulzentrum",
+          "Billerbeck",
+          "Havixbeck",
+          "Münster-Roxel",
+          "Münster-Mecklenbeck",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "2410016193303800607-2510201705-1",
+        "type": "RB",
+        "number": "14729",
+        "direction": "Münster(W)Zentrum Nord",
+        "platform": "3",
+        "time": "2510201705",
+        "destination": "Münster(W)Zentrum Nord",
+        "path_stations": [
+          "Coesfeld Schulzentrum",
+          "Lutum",
+          "Billerbeck",
+          "Havixbeck",
+          "Münster-Roxel",
+          "Münster-Mecklenbeck",
+          "Münster(Westf)Hbf",
+          "Münster(W)Zentrum Nord"
+        ]
+      },
+      {
+        "id": "56679115160914734-2510201710-1",
+        "type": "RRB",
+        "number": "89571",
+        "direction": "Essen Hbf",
+        "platform": "5",
+        "time": "2510201710",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Reken-Maria Veen",
+          "Reken",
+          "Reken-Klein Reken",
+          "Lembeck",
+          "Wulfen(Westf)",
+          "Hervest-Dorsten",
+          "Dorsten",
+          "Feldhausen",
+          "Gladbeck-Zweckel",
+          "Gladbeck West",
+          "Bottrop Hbf",
+          "Essen-Borbeck",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "291756574075123208-2510201703-9",
+        "type": "RB",
+        "number": "20275",
+        "direction": "Dortmund Hbf",
+        "platform": "4",
+        "time": "2510201803",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Lette(Kr Coesfeld)",
+          "Dülmen",
+          "Lüdinghausen",
+          "Selm",
+          "Selm-Beifang",
+          "Bork(Westf)",
+          "Lünen Hbf",
+          "Lünen-Preußen",
+          "Dortmund-Derne",
+          "Dortmund-Kirchderne",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "3319295167010485434-2510201653-12",
+        "type": "RB",
+        "number": "20276",
+        "direction": "Enschede",
+        "platform": "7",
+        "time": "2510201800",
+        "destination": "Enschede",
+        "path_stations": [
+          "Rosendahl-Holtwick",
+          "Legden",
+          "Ahaus",
+          "Epe(Westf)",
+          "Gronau(Westf)",
+          "Glanerbrug",
+          "Enschede De Eschmarke",
+          "Enschede"
+        ]
+      },
+      {
+        "id": "-7751023330920970385-2510201803-9",
+        "type": "RB",
+        "number": "20277",
+        "direction": "Dortmund Hbf",
+        "platform": "4",
+        "time": "2510201903",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Lette(Kr Coesfeld)",
+          "Dülmen",
+          "Lüdinghausen",
+          "Selm",
+          "Selm-Beifang",
+          "Bork(Westf)",
+          "Lünen Hbf",
+          "Lünen-Preußen",
+          "Dortmund-Derne",
+          "Dortmund-Kirchderne",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-5032408971114612465-2510201753-12",
+        "type": "RB",
+        "number": "20278",
+        "direction": "Enschede",
+        "platform": "7",
+        "time": "2510201900",
+        "destination": "Enschede",
+        "path_stations": [
+          "Rosendahl-Holtwick",
+          "Legden",
+          "Ahaus",
+          "Epe(Westf)",
+          "Gronau(Westf)",
+          "Glanerbrug",
+          "Enschede De Eschmarke",
+          "Enschede"
+        ]
+      },
+      {
+        "id": "9162948571152961790-2510201805-1",
+        "type": "RB",
+        "number": "14731",
+        "direction": "Münster(W)Zentrum Nord",
+        "platform": "3",
+        "time": "2510201805",
+        "destination": "Münster(W)Zentrum Nord",
+        "path_stations": [
+          "Coesfeld Schulzentrum",
+          "Lutum",
+          "Billerbeck",
+          "Havixbeck",
+          "Münster-Roxel",
+          "Münster-Mecklenbeck",
+          "Münster(Westf)Hbf",
+          "Münster(W)Zentrum Nord"
+        ]
+      },
+      {
+        "id": "4438057741061517399-2510201810-1",
+        "type": "RRB",
+        "number": "89577",
+        "direction": "Essen Hbf",
+        "platform": "5",
+        "time": "2510201810",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Reken-Maria Veen",
+          "Reken",
+          "Reken-Klein Reken",
+          "Lembeck",
+          "Wulfen(Westf)",
+          "Hervest-Dorsten",
+          "Dorsten",
+          "Feldhausen",
+          "Gladbeck-Zweckel",
+          "Gladbeck West",
+          "Bottrop Hbf",
+          "Essen-Borbeck",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "6416175074149377395-2510201835-1",
+        "type": "RB",
+        "number": "14899",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "3",
+        "time": "2510201835",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Coesfeld Schulzentrum",
+          "Billerbeck",
+          "Havixbeck",
+          "Münster-Roxel",
+          "Münster-Mecklenbeck",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-5032408971114612465-2510201753-12",
+        "type": "RB",
+        "number": "20278",
+        "direction": "Enschede",
+        "platform": "7",
+        "time": "2510201900",
+        "destination": "Enschede",
+        "path_stations": [
+          "Rosendahl-Holtwick",
+          "Legden",
+          "Ahaus",
+          "Epe(Westf)",
+          "Gronau(Westf)",
+          "Glanerbrug",
+          "Enschede De Eschmarke",
+          "Enschede"
+        ]
+      },
+      {
+        "id": "-4592694671867394456-2510201910-1",
+        "type": "RRB",
+        "number": "89581",
+        "direction": "Essen Hbf",
+        "platform": "5",
+        "time": "2510201910",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Reken-Maria Veen",
+          "Reken",
+          "Reken-Klein Reken",
+          "Lembeck",
+          "Wulfen(Westf)",
+          "Hervest-Dorsten",
+          "Dorsten",
+          "Feldhausen",
+          "Gladbeck-Zweckel",
+          "Gladbeck West",
+          "Bottrop Hbf",
+          "Essen-Borbeck",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "-7751023330920970385-2510201803-9",
+        "type": "RB",
+        "number": "20277",
+        "direction": "Dortmund Hbf",
+        "platform": "4",
+        "time": "2510201903",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Lette(Kr Coesfeld)",
+          "Dülmen",
+          "Lüdinghausen",
+          "Selm",
+          "Selm-Beifang",
+          "Bork(Westf)",
+          "Lünen Hbf",
+          "Lünen-Preußen",
+          "Dortmund-Derne",
+          "Dortmund-Kirchderne",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-2647418605895449248-2510201903-9",
+        "type": "RB",
+        "number": "20279",
+        "direction": "Dortmund Hbf",
+        "platform": "4",
+        "time": "2510202003",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Lette(Kr Coesfeld)",
+          "Dülmen",
+          "Lüdinghausen",
+          "Selm",
+          "Selm-Beifang",
+          "Bork(Westf)",
+          "Lünen Hbf",
+          "Lünen-Preußen",
+          "Dortmund-Derne",
+          "Dortmund-Kirchderne",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "306958347880731808-2510201853-12",
+        "type": "RB",
+        "number": "20280",
+        "direction": "Enschede",
+        "platform": "7",
+        "time": "2510202000",
+        "destination": "Enschede",
+        "path_stations": [
+          "Rosendahl-Holtwick",
+          "Legden",
+          "Ahaus",
+          "Epe(Westf)",
+          "Gronau(Westf)",
+          "Glanerbrug",
+          "Enschede De Eschmarke",
+          "Enschede"
+        ]
+      },
+      {
+        "id": "-134557069997905789-2510201905-1",
+        "type": "RB",
+        "number": "14733",
+        "direction": "Münster(W)Zentrum Nord",
+        "platform": "3",
+        "time": "2510201905",
+        "destination": "Münster(W)Zentrum Nord",
+        "path_stations": [
+          "Coesfeld Schulzentrum",
+          "Lutum",
+          "Billerbeck",
+          "Havixbeck",
+          "Münster-Roxel",
+          "Münster-Mecklenbeck",
+          "Münster(Westf)Hbf",
+          "Münster(W)Zentrum Nord"
+        ]
+      },
+      {
+        "id": "8384915799274079194-2510202005-1",
+        "type": "RB",
+        "number": "14735",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "3",
+        "time": "2510202005",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Coesfeld Schulzentrum",
+          "Lutum",
+          "Billerbeck",
+          "Havixbeck",
+          "Münster-Roxel",
+          "Münster-Mecklenbeck",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "6414448251890613464-2510202010-1",
+        "type": "RRB",
+        "number": "89585",
+        "direction": "Dorsten",
+        "platform": "5",
+        "time": "2510202010",
+        "destination": "Dorsten",
+        "path_stations": [
+          "Reken-Maria Veen",
+          "Reken",
+          "Reken-Klein Reken",
+          "Lembeck",
+          "Wulfen(Westf)",
+          "Hervest-Dorsten",
+          "Dorsten"
+        ]
+      },
+      {
+        "id": "-2647418605895449248-2510201903-9",
+        "type": "RB",
+        "number": "20279",
+        "direction": "Dortmund Hbf",
+        "platform": "4",
+        "time": "2510202003",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Lette(Kr Coesfeld)",
+          "Dülmen",
+          "Lüdinghausen",
+          "Selm",
+          "Selm-Beifang",
+          "Bork(Westf)",
+          "Lünen Hbf",
+          "Lünen-Preußen",
+          "Dortmund-Derne",
+          "Dortmund-Kirchderne",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "2227122890065625133-2510202003-9",
+        "type": "RB",
+        "number": "20281",
+        "direction": "Dortmund Hbf",
+        "platform": "4",
+        "time": "2510202103",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Lette(Kr Coesfeld)",
+          "Dülmen",
+          "Lüdinghausen",
+          "Selm",
+          "Selm-Beifang",
+          "Bork(Westf)",
+          "Lünen Hbf",
+          "Lünen-Preußen",
+          "Dortmund-Derne",
+          "Dortmund-Kirchderne",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "306958347880731808-2510201853-12",
+        "type": "RB",
+        "number": "20280",
+        "direction": "Enschede",
+        "platform": "7",
+        "time": "2510202000",
+        "destination": "Enschede",
+        "path_stations": [
+          "Rosendahl-Holtwick",
+          "Legden",
+          "Ahaus",
+          "Epe(Westf)",
+          "Gronau(Westf)",
+          "Glanerbrug",
+          "Enschede De Eschmarke",
+          "Enschede"
+        ]
+      },
+      {
+        "id": "-753642253633323002-2510202105-1",
+        "type": "RB",
+        "number": "14737",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "3",
+        "time": "2510202105",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Coesfeld Schulzentrum",
+          "Lutum",
+          "Billerbeck",
+          "Havixbeck",
+          "Münster-Roxel",
+          "Münster-Mecklenbeck",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "3249198173454568792-2510202110-1",
+        "type": "Bus",
+        "number": "20282",
+        "direction": "Gronau(Westf)",
+        "platform": "",
+        "time": "2510202110",
+        "destination": "Gronau(Westf)",
+        "path_stations": [
+          "Rosendahl-Holtwick",
+          "Legden",
+          "Ahaus",
+          "Epe(Westf)",
+          "Gronau(Westf)"
+        ]
+      },
+      {
+        "id": "2227122890065625133-2510202003-9",
+        "type": "RB",
+        "number": "20281",
+        "direction": "Dortmund Hbf",
+        "platform": "4",
+        "time": "2510202103",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Lette(Kr Coesfeld)",
+          "Dülmen",
+          "Lüdinghausen",
+          "Selm",
+          "Selm-Beifang",
+          "Bork(Westf)",
+          "Lünen Hbf",
+          "Lünen-Preußen",
+          "Dortmund-Derne",
+          "Dortmund-Kirchderne",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-5978758125835999709-2510202203-1",
+        "type": "RB",
+        "number": "11741",
+        "direction": "Dortmund Hbf",
+        "platform": "",
+        "time": "2510202203",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Lette(Kr Coesfeld)",
+          "Dülmen",
+          "Lüdinghausen",
+          "Selm",
+          "Selm-Beifang",
+          "Bork(Westf)",
+          "Lünen Hbf",
+          "Lünen-Preußen",
+          "Dortmund-Derne",
+          "Dortmund-Kirchderne",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "6546984663215890661-2510202210-1",
+        "type": "Bus",
+        "number": "20284",
+        "direction": "Gronau(Westf)",
+        "platform": "",
+        "time": "2510202210",
+        "destination": "Gronau(Westf)",
+        "path_stations": [
+          "Rosendahl-Holtwick",
+          "Legden",
+          "Ahaus",
+          "Epe(Westf)",
+          "Gronau(Westf)"
+        ]
+      },
+      {
+        "id": "-5794184540945231192-2510202205-1",
+        "type": "RB",
+        "number": "14739",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "3",
+        "time": "2510202205",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Coesfeld Schulzentrum",
+          "Lutum",
+          "Billerbeck",
+          "Havixbeck",
+          "Münster-Roxel",
+          "Münster-Mecklenbeck",
+          "Münster(Westf)Hbf"
+        ]
+      }
+    ],
+    "arrivals": []
+  }
+}

@@ -1,0 +1,1629 @@
+{
+  "station_eva": "8001520",
+  "date": "251020",
+  "cached_at": "2025-10-20T16:49:16.463084",
+  "plan_data": {
+    "arrivals": [
+      {
+        "id": "8811682645738108672-2510201804-10",
+        "type": "S",
+        "number": "30485",
+        "time": "2510201826",
+        "platform": "2",
+        "path_stations": [
+          "Unna-Königsborn",
+          "Massen",
+          "Dortmund-Wickede",
+          "Dortmund-Wickede West",
+          "Dortmund-Asseln Mitte",
+          "Dortmund-Brackel",
+          "Dortmund Knappschaftskrankenhaus",
+          "Dortmund-Körne",
+          "Dortmund-Körne West"
+        ],
+        "line": "4"
+      },
+      {
+        "id": "5893828940946615368-2510201811-8",
+        "type": "S",
+        "number": "30490",
+        "time": "2510201833",
+        "platform": "1",
+        "path_stations": [
+          "Dortmund-Lütgendortmund",
+          "Dortmund-Somborn",
+          "Dortmund-Germania",
+          "Dortmund-Marten Süd",
+          "Dortmund-Dorstfeld",
+          "Dortmund West",
+          "Dortmund Möllerbrücke"
+        ],
+        "line": "4"
+      },
+      {
+        "id": "-4518716810978842890-2510201756-8",
+        "type": "S",
+        "number": "30488",
+        "time": "2510201818",
+        "platform": "1",
+        "path_stations": [
+          "Dortmund-Lütgendortmund",
+          "Dortmund-Somborn",
+          "Dortmund-Germania",
+          "Dortmund-Marten Süd",
+          "Dortmund-Dorstfeld",
+          "Dortmund West",
+          "Dortmund Möllerbrücke"
+        ],
+        "line": "4"
+      },
+      {
+        "id": "-3835744326980285651-2510201741-8",
+        "type": "S",
+        "number": "30486",
+        "time": "2510201803",
+        "platform": "1",
+        "path_stations": [
+          "Dortmund-Lütgendortmund",
+          "Dortmund-Somborn",
+          "Dortmund-Germania",
+          "Dortmund-Marten Süd",
+          "Dortmund-Dorstfeld",
+          "Dortmund West",
+          "Dortmund Möllerbrücke"
+        ],
+        "line": "4"
+      },
+      {
+        "id": "-1194789169006806538-2510201834-10",
+        "type": "S",
+        "number": "30489",
+        "time": "2510201856",
+        "platform": "2",
+        "path_stations": [
+          "Unna-Königsborn",
+          "Massen",
+          "Dortmund-Wickede",
+          "Dortmund-Wickede West",
+          "Dortmund-Asseln Mitte",
+          "Dortmund-Brackel",
+          "Dortmund Knappschaftskrankenhaus",
+          "Dortmund-Körne",
+          "Dortmund-Körne West"
+        ],
+        "line": "4"
+      },
+      {
+        "id": "-7525160504096744399-2510201738-12",
+        "type": "S",
+        "number": "30483",
+        "time": "2510201811",
+        "platform": "2",
+        "path_stations": [
+          "Unna",
+          "Unna West",
+          "Unna-Königsborn",
+          "Massen",
+          "Dortmund-Wickede",
+          "Dortmund-Wickede West",
+          "Dortmund-Asseln Mitte",
+          "Dortmund-Brackel",
+          "Dortmund Knappschaftskrankenhaus",
+          "Dortmund-Körne",
+          "Dortmund-Körne West"
+        ],
+        "line": "4"
+      },
+      {
+        "id": "-7704384099316333256-2510201808-12",
+        "type": "S",
+        "number": "30487",
+        "time": "2510201841",
+        "platform": "2",
+        "path_stations": [
+          "Unna",
+          "Unna West",
+          "Unna-Königsborn",
+          "Massen",
+          "Dortmund-Wickede",
+          "Dortmund-Wickede West",
+          "Dortmund-Asseln Mitte",
+          "Dortmund-Brackel",
+          "Dortmund Knappschaftskrankenhaus",
+          "Dortmund-Körne",
+          "Dortmund-Körne West"
+        ],
+        "line": "4"
+      },
+      {
+        "id": "4372101914595388497-2510201826-8",
+        "type": "S",
+        "number": "30492",
+        "time": "2510201848",
+        "platform": "1",
+        "path_stations": [
+          "Dortmund-Lütgendortmund",
+          "Dortmund-Somborn",
+          "Dortmund-Germania",
+          "Dortmund-Marten Süd",
+          "Dortmund-Dorstfeld",
+          "Dortmund West",
+          "Dortmund Möllerbrücke"
+        ],
+        "line": "4"
+      },
+      {
+        "id": "-2414219677776479109-2510201856-8",
+        "type": "S",
+        "number": "30494",
+        "time": "2510201918",
+        "platform": "1",
+        "path_stations": [
+          "Dortmund-Lütgendortmund",
+          "Dortmund-Somborn",
+          "Dortmund-Germania",
+          "Dortmund-Marten Süd",
+          "Dortmund-Dorstfeld",
+          "Dortmund West",
+          "Dortmund Möllerbrücke"
+        ],
+        "line": "4"
+      },
+      {
+        "id": "-6152440729555346456-2510201908-12",
+        "type": "S",
+        "number": "30493",
+        "time": "2510201941",
+        "platform": "2",
+        "path_stations": [
+          "Unna",
+          "Unna West",
+          "Unna-Königsborn",
+          "Massen",
+          "Dortmund-Wickede",
+          "Dortmund-Wickede West",
+          "Dortmund-Asseln Mitte",
+          "Dortmund-Brackel",
+          "Dortmund Knappschaftskrankenhaus",
+          "Dortmund-Körne",
+          "Dortmund-Körne West"
+        ],
+        "line": "4"
+      },
+      {
+        "id": "8305065822271719500-2510201926-8",
+        "type": "S",
+        "number": "30496",
+        "time": "2510201948",
+        "platform": "1",
+        "path_stations": [
+          "Dortmund-Lütgendortmund",
+          "Dortmund-Somborn",
+          "Dortmund-Germania",
+          "Dortmund-Marten Süd",
+          "Dortmund-Dorstfeld",
+          "Dortmund West",
+          "Dortmund Möllerbrücke"
+        ],
+        "line": "4"
+      },
+      {
+        "id": "-783484379050506922-2510201838-12",
+        "type": "S",
+        "number": "30491",
+        "time": "2510201911",
+        "platform": "2",
+        "path_stations": [
+          "Unna",
+          "Unna West",
+          "Unna-Königsborn",
+          "Massen",
+          "Dortmund-Wickede",
+          "Dortmund-Wickede West",
+          "Dortmund-Asseln Mitte",
+          "Dortmund-Brackel",
+          "Dortmund Knappschaftskrankenhaus",
+          "Dortmund-Körne",
+          "Dortmund-Körne West"
+        ],
+        "line": "4"
+      },
+      {
+        "id": "-4551285179462180428-2510202008-12",
+        "type": "S",
+        "number": "30497",
+        "time": "2510202041",
+        "platform": "2",
+        "path_stations": [
+          "Unna",
+          "Unna West",
+          "Unna-Königsborn",
+          "Massen",
+          "Dortmund-Wickede",
+          "Dortmund-Wickede West",
+          "Dortmund-Asseln Mitte",
+          "Dortmund-Brackel",
+          "Dortmund Knappschaftskrankenhaus",
+          "Dortmund-Körne",
+          "Dortmund-Körne West"
+        ],
+        "line": "4"
+      },
+      {
+        "id": "-8084603088756958592-2510201938-12",
+        "type": "S",
+        "number": "30495",
+        "time": "2510202011",
+        "platform": "2",
+        "path_stations": [
+          "Unna",
+          "Unna West",
+          "Unna-Königsborn",
+          "Massen",
+          "Dortmund-Wickede",
+          "Dortmund-Wickede West",
+          "Dortmund-Asseln Mitte",
+          "Dortmund-Brackel",
+          "Dortmund Knappschaftskrankenhaus",
+          "Dortmund-Körne",
+          "Dortmund-Körne West"
+        ],
+        "line": "4"
+      },
+      {
+        "id": "1761923343999315767-2510202026-8",
+        "type": "S",
+        "number": "31400",
+        "time": "2510202048",
+        "platform": "1",
+        "path_stations": [
+          "Dortmund-Lütgendortmund",
+          "Dortmund-Somborn",
+          "Dortmund-Germania",
+          "Dortmund-Marten Süd",
+          "Dortmund-Dorstfeld",
+          "Dortmund West",
+          "Dortmund Möllerbrücke"
+        ],
+        "line": "4"
+      },
+      {
+        "id": "5189326127237812725-2510201956-8",
+        "type": "S",
+        "number": "30498",
+        "time": "2510202018",
+        "platform": "1",
+        "path_stations": [
+          "Dortmund-Lütgendortmund",
+          "Dortmund-Somborn",
+          "Dortmund-Germania",
+          "Dortmund-Marten Süd",
+          "Dortmund-Dorstfeld",
+          "Dortmund West",
+          "Dortmund Möllerbrücke"
+        ],
+        "line": "4"
+      },
+      {
+        "id": "5839674605107836137-2510202108-12",
+        "type": "S",
+        "number": "31401",
+        "time": "2510202141",
+        "platform": "2",
+        "path_stations": [
+          "Unna",
+          "Unna West",
+          "Unna-Königsborn",
+          "Massen",
+          "Dortmund-Wickede",
+          "Dortmund-Wickede West",
+          "Dortmund-Asseln Mitte",
+          "Dortmund-Brackel",
+          "Dortmund Knappschaftskrankenhaus",
+          "Dortmund-Körne",
+          "Dortmund-Körne West"
+        ],
+        "line": "4"
+      },
+      {
+        "id": "3174035848275579767-2510202056-8",
+        "type": "S",
+        "number": "31402",
+        "time": "2510202118",
+        "platform": "1",
+        "path_stations": [
+          "Dortmund-Lütgendortmund",
+          "Dortmund-Somborn",
+          "Dortmund-Germania",
+          "Dortmund-Marten Süd",
+          "Dortmund-Dorstfeld",
+          "Dortmund West",
+          "Dortmund Möllerbrücke"
+        ],
+        "line": "4"
+      },
+      {
+        "id": "-1381686253807608004-2510202038-12",
+        "type": "S",
+        "number": "30499",
+        "time": "2510202111",
+        "platform": "2",
+        "path_stations": [
+          "Unna",
+          "Unna West",
+          "Unna-Königsborn",
+          "Massen",
+          "Dortmund-Wickede",
+          "Dortmund-Wickede West",
+          "Dortmund-Asseln Mitte",
+          "Dortmund-Brackel",
+          "Dortmund Knappschaftskrankenhaus",
+          "Dortmund-Körne",
+          "Dortmund-Körne West"
+        ],
+        "line": "4"
+      },
+      {
+        "id": "974574173389606090-2510202126-8",
+        "type": "S",
+        "number": "31404",
+        "time": "2510202148",
+        "platform": "1",
+        "path_stations": [
+          "Dortmund-Lütgendortmund",
+          "Dortmund-Somborn",
+          "Dortmund-Germania",
+          "Dortmund-Marten Süd",
+          "Dortmund-Dorstfeld",
+          "Dortmund West",
+          "Dortmund Möllerbrücke"
+        ],
+        "line": "4"
+      },
+      {
+        "id": "3085262846661895372-2510202138-12",
+        "type": "S",
+        "number": "31403",
+        "time": "2510202211",
+        "platform": "2",
+        "path_stations": [
+          "Unna",
+          "Unna West",
+          "Unna-Königsborn",
+          "Massen",
+          "Dortmund-Wickede",
+          "Dortmund-Wickede West",
+          "Dortmund-Asseln Mitte",
+          "Dortmund-Brackel",
+          "Dortmund Knappschaftskrankenhaus",
+          "Dortmund-Körne",
+          "Dortmund-Körne West"
+        ],
+        "line": "4"
+      },
+      {
+        "id": "2296452487119715179-2510202208-12",
+        "type": "S",
+        "number": "31405",
+        "time": "2510202241",
+        "platform": "2",
+        "path_stations": [
+          "Unna",
+          "Unna West",
+          "Unna-Königsborn",
+          "Massen",
+          "Dortmund-Wickede",
+          "Dortmund-Wickede West",
+          "Dortmund-Asseln Mitte",
+          "Dortmund-Brackel",
+          "Dortmund Knappschaftskrankenhaus",
+          "Dortmund-Körne",
+          "Dortmund-Körne West"
+        ],
+        "line": "4"
+      },
+      {
+        "id": "4320071937074283907-2510202226-8",
+        "type": "S",
+        "number": "31408",
+        "time": "2510202248",
+        "platform": "1",
+        "path_stations": [
+          "Dortmund-Lütgendortmund",
+          "Dortmund-Somborn",
+          "Dortmund-Germania",
+          "Dortmund-Marten Süd",
+          "Dortmund-Dorstfeld",
+          "Dortmund West",
+          "Dortmund Möllerbrücke"
+        ],
+        "line": "4"
+      },
+      {
+        "id": "4046290487403337017-2510202156-8",
+        "type": "S",
+        "number": "31406",
+        "time": "2510202218",
+        "platform": "1",
+        "path_stations": [
+          "Dortmund-Lütgendortmund",
+          "Dortmund-Somborn",
+          "Dortmund-Germania",
+          "Dortmund-Marten Süd",
+          "Dortmund-Dorstfeld",
+          "Dortmund West",
+          "Dortmund Möllerbrücke"
+        ],
+        "line": "4"
+      },
+      {
+        "id": "-4230978587300604032-2510202308-12",
+        "type": "S",
+        "number": "31409",
+        "time": "2510202341",
+        "platform": "2",
+        "path_stations": [
+          "Unna",
+          "Unna West",
+          "Unna-Königsborn",
+          "Massen",
+          "Dortmund-Wickede",
+          "Dortmund-Wickede West",
+          "Dortmund-Asseln Mitte",
+          "Dortmund-Brackel",
+          "Dortmund Knappschaftskrankenhaus",
+          "Dortmund-Körne",
+          "Dortmund-Körne West"
+        ],
+        "line": "4"
+      },
+      {
+        "id": "2510884005072764074-2510202326-8",
+        "type": "S",
+        "number": "31412",
+        "time": "2510202348",
+        "platform": "1",
+        "path_stations": [
+          "Dortmund-Lütgendortmund",
+          "Dortmund-Somborn",
+          "Dortmund-Germania",
+          "Dortmund-Marten Süd",
+          "Dortmund-Dorstfeld",
+          "Dortmund West",
+          "Dortmund Möllerbrücke"
+        ],
+        "line": "4"
+      },
+      {
+        "id": "5333691707530389841-2510202238-12",
+        "type": "S",
+        "number": "31407",
+        "time": "2510202311",
+        "platform": "2",
+        "path_stations": [
+          "Unna",
+          "Unna West",
+          "Unna-Königsborn",
+          "Massen",
+          "Dortmund-Wickede",
+          "Dortmund-Wickede West",
+          "Dortmund-Asseln Mitte",
+          "Dortmund-Brackel",
+          "Dortmund Knappschaftskrankenhaus",
+          "Dortmund-Körne",
+          "Dortmund-Körne West"
+        ],
+        "line": "4"
+      },
+      {
+        "id": "6340525221139424226-2510202256-8",
+        "type": "S",
+        "number": "31410",
+        "time": "2510202318",
+        "platform": "1",
+        "path_stations": [
+          "Dortmund-Lütgendortmund",
+          "Dortmund-Somborn",
+          "Dortmund-Germania",
+          "Dortmund-Marten Süd",
+          "Dortmund-Dorstfeld",
+          "Dortmund West",
+          "Dortmund Möllerbrücke"
+        ],
+        "line": "4"
+      },
+      {
+        "id": "4722759157083053462-2510202338-12",
+        "type": "S",
+        "number": "31411",
+        "time": "2510210011",
+        "platform": "2",
+        "path_stations": [
+          "Unna",
+          "Unna West",
+          "Unna-Königsborn",
+          "Massen",
+          "Dortmund-Wickede",
+          "Dortmund-Wickede West",
+          "Dortmund-Asseln Mitte",
+          "Dortmund-Brackel",
+          "Dortmund Knappschaftskrankenhaus",
+          "Dortmund-Körne",
+          "Dortmund-Körne West"
+        ],
+        "line": "4"
+      },
+      {
+        "id": "3496181940757907218-2510210442-4",
+        "type": "S",
+        "number": "30402",
+        "time": "2510210448",
+        "platform": "1",
+        "path_stations": [
+          "Dortmund-Dorstfeld",
+          "Dortmund West",
+          "Dortmund Möllerbrücke"
+        ],
+        "line": "4"
+      },
+      {
+        "id": "-4443453918795160659-2510210456-8",
+        "type": "S",
+        "number": "30404",
+        "time": "2510210518",
+        "platform": "1",
+        "path_stations": [
+          "Dortmund-Lütgendortmund",
+          "Dortmund-Somborn",
+          "Dortmund-Germania",
+          "Dortmund-Marten Süd",
+          "Dortmund-Dorstfeld",
+          "Dortmund West",
+          "Dortmund Möllerbrücke"
+        ],
+        "line": "4"
+      },
+      {
+        "id": "1158534683902653660-2510210526-8",
+        "type": "S",
+        "number": "30406",
+        "time": "2510210548",
+        "platform": "1",
+        "path_stations": [
+          "Dortmund-Lütgendortmund",
+          "Dortmund-Somborn",
+          "Dortmund-Germania",
+          "Dortmund-Marten Süd",
+          "Dortmund-Dorstfeld",
+          "Dortmund West",
+          "Dortmund Möllerbrücke"
+        ],
+        "line": "4"
+      },
+      {
+        "id": "-8268530925087868636-2510210438-12",
+        "type": "S",
+        "number": "30401",
+        "time": "2510210511",
+        "platform": "2",
+        "path_stations": [
+          "Unna",
+          "Unna West",
+          "Unna-Königsborn",
+          "Massen",
+          "Dortmund-Wickede",
+          "Dortmund-Wickede West",
+          "Dortmund-Asseln Mitte",
+          "Dortmund-Brackel",
+          "Dortmund Knappschaftskrankenhaus",
+          "Dortmund-Körne",
+          "Dortmund-Körne West"
+        ],
+        "line": "4"
+      },
+      {
+        "id": "4002434764720863528-2510210508-12",
+        "type": "S",
+        "number": "30403",
+        "time": "2510210541",
+        "platform": "2",
+        "path_stations": [
+          "Unna",
+          "Unna West",
+          "Unna-Königsborn",
+          "Massen",
+          "Dortmund-Wickede",
+          "Dortmund-Wickede West",
+          "Dortmund-Asseln Mitte",
+          "Dortmund-Brackel",
+          "Dortmund Knappschaftskrankenhaus",
+          "Dortmund-Körne",
+          "Dortmund-Körne West"
+        ],
+        "line": "4"
+      },
+      {
+        "id": "5418544086928551594-2510210604-10",
+        "type": "S",
+        "number": "30407",
+        "time": "2510210626",
+        "platform": "2",
+        "path_stations": [
+          "Unna-Königsborn",
+          "Massen",
+          "Dortmund-Wickede",
+          "Dortmund-Wickede West",
+          "Dortmund-Asseln Mitte",
+          "Dortmund-Brackel",
+          "Dortmund Knappschaftskrankenhaus",
+          "Dortmund-Körne",
+          "Dortmund-Körne West"
+        ],
+        "line": "4"
+      },
+      {
+        "id": "-3457110184086676162-2510210634-10",
+        "type": "S",
+        "number": "30411",
+        "time": "2510210656",
+        "platform": "2",
+        "path_stations": [
+          "Unna-Königsborn",
+          "Massen",
+          "Dortmund-Wickede",
+          "Dortmund-Wickede West",
+          "Dortmund-Asseln Mitte",
+          "Dortmund-Brackel",
+          "Dortmund Knappschaftskrankenhaus",
+          "Dortmund-Körne",
+          "Dortmund-Körne West"
+        ],
+        "line": "4"
+      },
+      {
+        "id": "-1843157638281016362-2510210611-8",
+        "type": "S",
+        "number": "30412",
+        "time": "2510210633",
+        "platform": "1",
+        "path_stations": [
+          "Dortmund-Lütgendortmund",
+          "Dortmund-Somborn",
+          "Dortmund-Germania",
+          "Dortmund-Marten Süd",
+          "Dortmund-Dorstfeld",
+          "Dortmund West",
+          "Dortmund Möllerbrücke"
+        ],
+        "line": "4"
+      },
+      {
+        "id": "2177969070069549370-2510210541-8",
+        "type": "S",
+        "number": "30408",
+        "time": "2510210603",
+        "platform": "1",
+        "path_stations": [
+          "Dortmund-Lütgendortmund",
+          "Dortmund-Somborn",
+          "Dortmund-Germania",
+          "Dortmund-Marten Süd",
+          "Dortmund-Dorstfeld",
+          "Dortmund West",
+          "Dortmund Möllerbrücke"
+        ],
+        "line": "4"
+      },
+      {
+        "id": "3470915676184378159-2510210538-12",
+        "type": "S",
+        "number": "30405",
+        "time": "2510210611",
+        "platform": "2",
+        "path_stations": [
+          "Unna",
+          "Unna West",
+          "Unna-Königsborn",
+          "Massen",
+          "Dortmund-Wickede",
+          "Dortmund-Wickede West",
+          "Dortmund-Asseln Mitte",
+          "Dortmund-Brackel",
+          "Dortmund Knappschaftskrankenhaus",
+          "Dortmund-Körne",
+          "Dortmund-Körne West"
+        ],
+        "line": "4"
+      },
+      {
+        "id": "4163289562764881519-2510210626-8",
+        "type": "S",
+        "number": "30414",
+        "time": "2510210648",
+        "platform": "1",
+        "path_stations": [
+          "Dortmund-Lütgendortmund",
+          "Dortmund-Somborn",
+          "Dortmund-Germania",
+          "Dortmund-Marten Süd",
+          "Dortmund-Dorstfeld",
+          "Dortmund West",
+          "Dortmund Möllerbrücke"
+        ],
+        "line": "4"
+      },
+      {
+        "id": "2499974180732651108-2510210556-8",
+        "type": "S",
+        "number": "30410",
+        "time": "2510210618",
+        "platform": "1",
+        "path_stations": [
+          "Dortmund-Lütgendortmund",
+          "Dortmund-Somborn",
+          "Dortmund-Germania",
+          "Dortmund-Marten Süd",
+          "Dortmund-Dorstfeld",
+          "Dortmund West",
+          "Dortmund Möllerbrücke"
+        ],
+        "line": "4"
+      },
+      {
+        "id": "-3531993661526438833-2510210608-12",
+        "type": "S",
+        "number": "30409",
+        "time": "2510210641",
+        "platform": "2",
+        "path_stations": [
+          "Unna",
+          "Unna West",
+          "Unna-Königsborn",
+          "Massen",
+          "Dortmund-Wickede",
+          "Dortmund-Wickede West",
+          "Dortmund-Asseln Mitte",
+          "Dortmund-Brackel",
+          "Dortmund Knappschaftskrankenhaus",
+          "Dortmund-Körne",
+          "Dortmund-Körne West"
+        ],
+        "line": "4"
+      }
+    ],
+    "departures": [
+      {
+        "id": "8811682645738108672-2510201804-10",
+        "type": "S",
+        "number": "30485",
+        "direction": "Dortmund-Lütgendortmund",
+        "platform": "2",
+        "time": "2510201827",
+        "destination": "Dortmund-Lütgendortmund",
+        "path_stations": [
+          "Dortmund Möllerbrücke",
+          "Dortmund West",
+          "Dortmund-Dorstfeld",
+          "Dortmund-Marten Süd",
+          "Dortmund-Germania",
+          "Dortmund-Somborn",
+          "Dortmund-Lütgendortmund"
+        ]
+      },
+      {
+        "id": "5893828940946615368-2510201811-8",
+        "type": "S",
+        "number": "30490",
+        "direction": "Unna-Königsborn",
+        "platform": "1",
+        "time": "2510201834",
+        "destination": "Unna-Königsborn",
+        "path_stations": [
+          "Dortmund-Körne West",
+          "Dortmund-Körne",
+          "Dortmund Knappschaftskrankenhaus",
+          "Dortmund-Brackel",
+          "Dortmund-Asseln Mitte",
+          "Dortmund-Wickede West",
+          "Dortmund-Wickede",
+          "Massen",
+          "Unna-Königsborn"
+        ]
+      },
+      {
+        "id": "-4518716810978842890-2510201756-8",
+        "type": "S",
+        "number": "30488",
+        "direction": "Unna",
+        "platform": "1",
+        "time": "2510201819",
+        "destination": "Unna",
+        "path_stations": [
+          "Dortmund-Körne West",
+          "Dortmund-Körne",
+          "Dortmund Knappschaftskrankenhaus",
+          "Dortmund-Brackel",
+          "Dortmund-Asseln Mitte",
+          "Dortmund-Wickede West",
+          "Dortmund-Wickede",
+          "Massen",
+          "Unna-Königsborn",
+          "Unna West",
+          "Unna"
+        ]
+      },
+      {
+        "id": "-3835744326980285651-2510201741-8",
+        "type": "S",
+        "number": "30486",
+        "direction": "Unna-Königsborn",
+        "platform": "1",
+        "time": "2510201804",
+        "destination": "Unna-Königsborn",
+        "path_stations": [
+          "Dortmund-Körne West",
+          "Dortmund-Körne",
+          "Dortmund Knappschaftskrankenhaus",
+          "Dortmund-Brackel",
+          "Dortmund-Asseln Mitte",
+          "Dortmund-Wickede West",
+          "Dortmund-Wickede",
+          "Massen",
+          "Unna-Königsborn"
+        ]
+      },
+      {
+        "id": "-1194789169006806538-2510201834-10",
+        "type": "S",
+        "number": "30489",
+        "direction": "Dortmund-Lütgendortmund",
+        "platform": "2",
+        "time": "2510201857",
+        "destination": "Dortmund-Lütgendortmund",
+        "path_stations": [
+          "Dortmund Möllerbrücke",
+          "Dortmund West",
+          "Dortmund-Dorstfeld",
+          "Dortmund-Marten Süd",
+          "Dortmund-Germania",
+          "Dortmund-Somborn",
+          "Dortmund-Lütgendortmund"
+        ]
+      },
+      {
+        "id": "-7525160504096744399-2510201738-12",
+        "type": "S",
+        "number": "30483",
+        "direction": "Dortmund-Lütgendortmund",
+        "platform": "2",
+        "time": "2510201812",
+        "destination": "Dortmund-Lütgendortmund",
+        "path_stations": [
+          "Dortmund Möllerbrücke",
+          "Dortmund West",
+          "Dortmund-Dorstfeld",
+          "Dortmund-Marten Süd",
+          "Dortmund-Germania",
+          "Dortmund-Somborn",
+          "Dortmund-Lütgendortmund"
+        ]
+      },
+      {
+        "id": "-7704384099316333256-2510201808-12",
+        "type": "S",
+        "number": "30487",
+        "direction": "Dortmund-Lütgendortmund",
+        "platform": "2",
+        "time": "2510201842",
+        "destination": "Dortmund-Lütgendortmund",
+        "path_stations": [
+          "Dortmund Möllerbrücke",
+          "Dortmund West",
+          "Dortmund-Dorstfeld",
+          "Dortmund-Marten Süd",
+          "Dortmund-Germania",
+          "Dortmund-Somborn",
+          "Dortmund-Lütgendortmund"
+        ]
+      },
+      {
+        "id": "4372101914595388497-2510201826-8",
+        "type": "S",
+        "number": "30492",
+        "direction": "Unna",
+        "platform": "1",
+        "time": "2510201849",
+        "destination": "Unna",
+        "path_stations": [
+          "Dortmund-Körne West",
+          "Dortmund-Körne",
+          "Dortmund Knappschaftskrankenhaus",
+          "Dortmund-Brackel",
+          "Dortmund-Asseln Mitte",
+          "Dortmund-Wickede West",
+          "Dortmund-Wickede",
+          "Massen",
+          "Unna-Königsborn",
+          "Unna West",
+          "Unna"
+        ]
+      },
+      {
+        "id": "-2414219677776479109-2510201856-8",
+        "type": "S",
+        "number": "30494",
+        "direction": "Unna",
+        "platform": "1",
+        "time": "2510201919",
+        "destination": "Unna",
+        "path_stations": [
+          "Dortmund-Körne West",
+          "Dortmund-Körne",
+          "Dortmund Knappschaftskrankenhaus",
+          "Dortmund-Brackel",
+          "Dortmund-Asseln Mitte",
+          "Dortmund-Wickede West",
+          "Dortmund-Wickede",
+          "Massen",
+          "Unna-Königsborn",
+          "Unna West",
+          "Unna"
+        ]
+      },
+      {
+        "id": "-6152440729555346456-2510201908-12",
+        "type": "S",
+        "number": "30493",
+        "direction": "Dortmund-Lütgendortmund",
+        "platform": "2",
+        "time": "2510201942",
+        "destination": "Dortmund-Lütgendortmund",
+        "path_stations": [
+          "Dortmund Möllerbrücke",
+          "Dortmund West",
+          "Dortmund-Dorstfeld",
+          "Dortmund-Marten Süd",
+          "Dortmund-Germania",
+          "Dortmund-Somborn",
+          "Dortmund-Lütgendortmund"
+        ]
+      },
+      {
+        "id": "8305065822271719500-2510201926-8",
+        "type": "S",
+        "number": "30496",
+        "direction": "Unna",
+        "platform": "1",
+        "time": "2510201949",
+        "destination": "Unna",
+        "path_stations": [
+          "Dortmund-Körne West",
+          "Dortmund-Körne",
+          "Dortmund Knappschaftskrankenhaus",
+          "Dortmund-Brackel",
+          "Dortmund-Asseln Mitte",
+          "Dortmund-Wickede West",
+          "Dortmund-Wickede",
+          "Massen",
+          "Unna-Königsborn",
+          "Unna West",
+          "Unna"
+        ]
+      },
+      {
+        "id": "-783484379050506922-2510201838-12",
+        "type": "S",
+        "number": "30491",
+        "direction": "Dortmund-Lütgendortmund",
+        "platform": "2",
+        "time": "2510201912",
+        "destination": "Dortmund-Lütgendortmund",
+        "path_stations": [
+          "Dortmund Möllerbrücke",
+          "Dortmund West",
+          "Dortmund-Dorstfeld",
+          "Dortmund-Marten Süd",
+          "Dortmund-Germania",
+          "Dortmund-Somborn",
+          "Dortmund-Lütgendortmund"
+        ]
+      },
+      {
+        "id": "-4551285179462180428-2510202008-12",
+        "type": "S",
+        "number": "30497",
+        "direction": "Dortmund-Lütgendortmund",
+        "platform": "2",
+        "time": "2510202042",
+        "destination": "Dortmund-Lütgendortmund",
+        "path_stations": [
+          "Dortmund Möllerbrücke",
+          "Dortmund West",
+          "Dortmund-Dorstfeld",
+          "Dortmund-Marten Süd",
+          "Dortmund-Germania",
+          "Dortmund-Somborn",
+          "Dortmund-Lütgendortmund"
+        ]
+      },
+      {
+        "id": "-8084603088756958592-2510201938-12",
+        "type": "S",
+        "number": "30495",
+        "direction": "Dortmund-Lütgendortmund",
+        "platform": "2",
+        "time": "2510202012",
+        "destination": "Dortmund-Lütgendortmund",
+        "path_stations": [
+          "Dortmund Möllerbrücke",
+          "Dortmund West",
+          "Dortmund-Dorstfeld",
+          "Dortmund-Marten Süd",
+          "Dortmund-Germania",
+          "Dortmund-Somborn",
+          "Dortmund-Lütgendortmund"
+        ]
+      },
+      {
+        "id": "1761923343999315767-2510202026-8",
+        "type": "S",
+        "number": "31400",
+        "direction": "Unna",
+        "platform": "1",
+        "time": "2510202049",
+        "destination": "Unna",
+        "path_stations": [
+          "Dortmund-Körne West",
+          "Dortmund-Körne",
+          "Dortmund Knappschaftskrankenhaus",
+          "Dortmund-Brackel",
+          "Dortmund-Asseln Mitte",
+          "Dortmund-Wickede West",
+          "Dortmund-Wickede",
+          "Massen",
+          "Unna-Königsborn",
+          "Unna West",
+          "Unna"
+        ]
+      },
+      {
+        "id": "5189326127237812725-2510201956-8",
+        "type": "S",
+        "number": "30498",
+        "direction": "Unna",
+        "platform": "1",
+        "time": "2510202019",
+        "destination": "Unna",
+        "path_stations": [
+          "Dortmund-Körne West",
+          "Dortmund-Körne",
+          "Dortmund Knappschaftskrankenhaus",
+          "Dortmund-Brackel",
+          "Dortmund-Asseln Mitte",
+          "Dortmund-Wickede West",
+          "Dortmund-Wickede",
+          "Massen",
+          "Unna-Königsborn",
+          "Unna West",
+          "Unna"
+        ]
+      },
+      {
+        "id": "5839674605107836137-2510202108-12",
+        "type": "S",
+        "number": "31401",
+        "direction": "Dortmund-Lütgendortmund",
+        "platform": "2",
+        "time": "2510202142",
+        "destination": "Dortmund-Lütgendortmund",
+        "path_stations": [
+          "Dortmund Möllerbrücke",
+          "Dortmund West",
+          "Dortmund-Dorstfeld",
+          "Dortmund-Marten Süd",
+          "Dortmund-Germania",
+          "Dortmund-Somborn",
+          "Dortmund-Lütgendortmund"
+        ]
+      },
+      {
+        "id": "3174035848275579767-2510202056-8",
+        "type": "S",
+        "number": "31402",
+        "direction": "Unna",
+        "platform": "1",
+        "time": "2510202119",
+        "destination": "Unna",
+        "path_stations": [
+          "Dortmund-Körne West",
+          "Dortmund-Körne",
+          "Dortmund Knappschaftskrankenhaus",
+          "Dortmund-Brackel",
+          "Dortmund-Asseln Mitte",
+          "Dortmund-Wickede West",
+          "Dortmund-Wickede",
+          "Massen",
+          "Unna-Königsborn",
+          "Unna West",
+          "Unna"
+        ]
+      },
+      {
+        "id": "-1381686253807608004-2510202038-12",
+        "type": "S",
+        "number": "30499",
+        "direction": "Dortmund-Lütgendortmund",
+        "platform": "2",
+        "time": "2510202112",
+        "destination": "Dortmund-Lütgendortmund",
+        "path_stations": [
+          "Dortmund Möllerbrücke",
+          "Dortmund West",
+          "Dortmund-Dorstfeld",
+          "Dortmund-Marten Süd",
+          "Dortmund-Germania",
+          "Dortmund-Somborn",
+          "Dortmund-Lütgendortmund"
+        ]
+      },
+      {
+        "id": "974574173389606090-2510202126-8",
+        "type": "S",
+        "number": "31404",
+        "direction": "Unna",
+        "platform": "1",
+        "time": "2510202149",
+        "destination": "Unna",
+        "path_stations": [
+          "Dortmund-Körne West",
+          "Dortmund-Körne",
+          "Dortmund Knappschaftskrankenhaus",
+          "Dortmund-Brackel",
+          "Dortmund-Asseln Mitte",
+          "Dortmund-Wickede West",
+          "Dortmund-Wickede",
+          "Massen",
+          "Unna-Königsborn",
+          "Unna West",
+          "Unna"
+        ]
+      },
+      {
+        "id": "3085262846661895372-2510202138-12",
+        "type": "S",
+        "number": "31403",
+        "direction": "Dortmund-Lütgendortmund",
+        "platform": "2",
+        "time": "2510202212",
+        "destination": "Dortmund-Lütgendortmund",
+        "path_stations": [
+          "Dortmund Möllerbrücke",
+          "Dortmund West",
+          "Dortmund-Dorstfeld",
+          "Dortmund-Marten Süd",
+          "Dortmund-Germania",
+          "Dortmund-Somborn",
+          "Dortmund-Lütgendortmund"
+        ]
+      },
+      {
+        "id": "2296452487119715179-2510202208-12",
+        "type": "S",
+        "number": "31405",
+        "direction": "Dortmund-Lütgendortmund",
+        "platform": "2",
+        "time": "2510202242",
+        "destination": "Dortmund-Lütgendortmund",
+        "path_stations": [
+          "Dortmund Möllerbrücke",
+          "Dortmund West",
+          "Dortmund-Dorstfeld",
+          "Dortmund-Marten Süd",
+          "Dortmund-Germania",
+          "Dortmund-Somborn",
+          "Dortmund-Lütgendortmund"
+        ]
+      },
+      {
+        "id": "4320071937074283907-2510202226-8",
+        "type": "S",
+        "number": "31408",
+        "direction": "Unna",
+        "platform": "1",
+        "time": "2510202249",
+        "destination": "Unna",
+        "path_stations": [
+          "Dortmund-Körne West",
+          "Dortmund-Körne",
+          "Dortmund Knappschaftskrankenhaus",
+          "Dortmund-Brackel",
+          "Dortmund-Asseln Mitte",
+          "Dortmund-Wickede West",
+          "Dortmund-Wickede",
+          "Massen",
+          "Unna-Königsborn",
+          "Unna West",
+          "Unna"
+        ]
+      },
+      {
+        "id": "4046290487403337017-2510202156-8",
+        "type": "S",
+        "number": "31406",
+        "direction": "Unna",
+        "platform": "1",
+        "time": "2510202219",
+        "destination": "Unna",
+        "path_stations": [
+          "Dortmund-Körne West",
+          "Dortmund-Körne",
+          "Dortmund Knappschaftskrankenhaus",
+          "Dortmund-Brackel",
+          "Dortmund-Asseln Mitte",
+          "Dortmund-Wickede West",
+          "Dortmund-Wickede",
+          "Massen",
+          "Unna-Königsborn",
+          "Unna West",
+          "Unna"
+        ]
+      },
+      {
+        "id": "-4230978587300604032-2510202308-12",
+        "type": "S",
+        "number": "31409",
+        "direction": "Dortmund-Lütgendortmund",
+        "platform": "2",
+        "time": "2510202342",
+        "destination": "Dortmund-Lütgendortmund",
+        "path_stations": [
+          "Dortmund Möllerbrücke",
+          "Dortmund West",
+          "Dortmund-Dorstfeld",
+          "Dortmund-Marten Süd",
+          "Dortmund-Germania",
+          "Dortmund-Somborn",
+          "Dortmund-Lütgendortmund"
+        ]
+      },
+      {
+        "id": "2510884005072764074-2510202326-8",
+        "type": "S",
+        "number": "31412",
+        "direction": "Unna",
+        "platform": "1",
+        "time": "2510202349",
+        "destination": "Unna",
+        "path_stations": [
+          "Dortmund-Körne West",
+          "Dortmund-Körne",
+          "Dortmund Knappschaftskrankenhaus",
+          "Dortmund-Brackel",
+          "Dortmund-Asseln Mitte",
+          "Dortmund-Wickede West",
+          "Dortmund-Wickede",
+          "Massen",
+          "Unna-Königsborn",
+          "Unna West",
+          "Unna"
+        ]
+      },
+      {
+        "id": "5333691707530389841-2510202238-12",
+        "type": "S",
+        "number": "31407",
+        "direction": "Dortmund-Lütgendortmund",
+        "platform": "2",
+        "time": "2510202312",
+        "destination": "Dortmund-Lütgendortmund",
+        "path_stations": [
+          "Dortmund Möllerbrücke",
+          "Dortmund West",
+          "Dortmund-Dorstfeld",
+          "Dortmund-Marten Süd",
+          "Dortmund-Germania",
+          "Dortmund-Somborn",
+          "Dortmund-Lütgendortmund"
+        ]
+      },
+      {
+        "id": "6340525221139424226-2510202256-8",
+        "type": "S",
+        "number": "31410",
+        "direction": "Unna",
+        "platform": "1",
+        "time": "2510202319",
+        "destination": "Unna",
+        "path_stations": [
+          "Dortmund-Körne West",
+          "Dortmund-Körne",
+          "Dortmund Knappschaftskrankenhaus",
+          "Dortmund-Brackel",
+          "Dortmund-Asseln Mitte",
+          "Dortmund-Wickede West",
+          "Dortmund-Wickede",
+          "Massen",
+          "Unna-Königsborn",
+          "Unna West",
+          "Unna"
+        ]
+      },
+      {
+        "id": "4722759157083053462-2510202338-12",
+        "type": "S",
+        "number": "31411",
+        "direction": "Dortmund-Lütgendortmund",
+        "platform": "2",
+        "time": "2510210012",
+        "destination": "Dortmund-Lütgendortmund",
+        "path_stations": [
+          "Dortmund Möllerbrücke",
+          "Dortmund West",
+          "Dortmund-Dorstfeld",
+          "Dortmund-Marten Süd",
+          "Dortmund-Germania",
+          "Dortmund-Somborn",
+          "Dortmund-Lütgendortmund"
+        ]
+      },
+      {
+        "id": "3496181940757907218-2510210442-4",
+        "type": "S",
+        "number": "30402",
+        "direction": "Unna",
+        "platform": "1",
+        "time": "2510210449",
+        "destination": "Unna",
+        "path_stations": [
+          "Dortmund-Körne West",
+          "Dortmund-Körne",
+          "Dortmund Knappschaftskrankenhaus",
+          "Dortmund-Brackel",
+          "Dortmund-Asseln Mitte",
+          "Dortmund-Wickede West",
+          "Dortmund-Wickede",
+          "Massen",
+          "Unna-Königsborn",
+          "Unna West",
+          "Unna"
+        ]
+      },
+      {
+        "id": "-4443453918795160659-2510210456-8",
+        "type": "S",
+        "number": "30404",
+        "direction": "Unna",
+        "platform": "1",
+        "time": "2510210519",
+        "destination": "Unna",
+        "path_stations": [
+          "Dortmund-Körne West",
+          "Dortmund-Körne",
+          "Dortmund Knappschaftskrankenhaus",
+          "Dortmund-Brackel",
+          "Dortmund-Asseln Mitte",
+          "Dortmund-Wickede West",
+          "Dortmund-Wickede",
+          "Massen",
+          "Unna-Königsborn",
+          "Unna West",
+          "Unna"
+        ]
+      },
+      {
+        "id": "1158534683902653660-2510210526-8",
+        "type": "S",
+        "number": "30406",
+        "direction": "Unna",
+        "platform": "1",
+        "time": "2510210549",
+        "destination": "Unna",
+        "path_stations": [
+          "Dortmund-Körne West",
+          "Dortmund-Körne",
+          "Dortmund Knappschaftskrankenhaus",
+          "Dortmund-Brackel",
+          "Dortmund-Asseln Mitte",
+          "Dortmund-Wickede West",
+          "Dortmund-Wickede",
+          "Massen",
+          "Unna-Königsborn",
+          "Unna West",
+          "Unna"
+        ]
+      },
+      {
+        "id": "-8268530925087868636-2510210438-12",
+        "type": "S",
+        "number": "30401",
+        "direction": "Dortmund-Lütgendortmund",
+        "platform": "2",
+        "time": "2510210512",
+        "destination": "Dortmund-Lütgendortmund",
+        "path_stations": [
+          "Dortmund Möllerbrücke",
+          "Dortmund West",
+          "Dortmund-Dorstfeld",
+          "Dortmund-Marten Süd",
+          "Dortmund-Germania",
+          "Dortmund-Somborn",
+          "Dortmund-Lütgendortmund"
+        ]
+      },
+      {
+        "id": "4002434764720863528-2510210508-12",
+        "type": "S",
+        "number": "30403",
+        "direction": "Dortmund-Lütgendortmund",
+        "platform": "2",
+        "time": "2510210542",
+        "destination": "Dortmund-Lütgendortmund",
+        "path_stations": [
+          "Dortmund Möllerbrücke",
+          "Dortmund West",
+          "Dortmund-Dorstfeld",
+          "Dortmund-Marten Süd",
+          "Dortmund-Germania",
+          "Dortmund-Somborn",
+          "Dortmund-Lütgendortmund"
+        ]
+      },
+      {
+        "id": "5418544086928551594-2510210604-10",
+        "type": "S",
+        "number": "30407",
+        "direction": "Dortmund-Lütgendortmund",
+        "platform": "2",
+        "time": "2510210627",
+        "destination": "Dortmund-Lütgendortmund",
+        "path_stations": [
+          "Dortmund Möllerbrücke",
+          "Dortmund West",
+          "Dortmund-Dorstfeld",
+          "Dortmund-Marten Süd",
+          "Dortmund-Germania",
+          "Dortmund-Somborn",
+          "Dortmund-Lütgendortmund"
+        ]
+      },
+      {
+        "id": "-3457110184086676162-2510210634-10",
+        "type": "S",
+        "number": "30411",
+        "direction": "Dortmund-Lütgendortmund",
+        "platform": "2",
+        "time": "2510210657",
+        "destination": "Dortmund-Lütgendortmund",
+        "path_stations": [
+          "Dortmund Möllerbrücke",
+          "Dortmund West",
+          "Dortmund-Dorstfeld",
+          "Dortmund-Marten Süd",
+          "Dortmund-Germania",
+          "Dortmund-Somborn",
+          "Dortmund-Lütgendortmund"
+        ]
+      },
+      {
+        "id": "-1843157638281016362-2510210611-8",
+        "type": "S",
+        "number": "30412",
+        "direction": "Unna-Königsborn",
+        "platform": "1",
+        "time": "2510210634",
+        "destination": "Unna-Königsborn",
+        "path_stations": [
+          "Dortmund-Körne West",
+          "Dortmund-Körne",
+          "Dortmund Knappschaftskrankenhaus",
+          "Dortmund-Brackel",
+          "Dortmund-Asseln Mitte",
+          "Dortmund-Wickede West",
+          "Dortmund-Wickede",
+          "Massen",
+          "Unna-Königsborn"
+        ]
+      },
+      {
+        "id": "2177969070069549370-2510210541-8",
+        "type": "S",
+        "number": "30408",
+        "direction": "Unna-Königsborn",
+        "platform": "1",
+        "time": "2510210604",
+        "destination": "Unna-Königsborn",
+        "path_stations": [
+          "Dortmund-Körne West",
+          "Dortmund-Körne",
+          "Dortmund Knappschaftskrankenhaus",
+          "Dortmund-Brackel",
+          "Dortmund-Asseln Mitte",
+          "Dortmund-Wickede West",
+          "Dortmund-Wickede",
+          "Massen",
+          "Unna-Königsborn"
+        ]
+      },
+      {
+        "id": "3470915676184378159-2510210538-12",
+        "type": "S",
+        "number": "30405",
+        "direction": "Dortmund-Lütgendortmund",
+        "platform": "2",
+        "time": "2510210612",
+        "destination": "Dortmund-Lütgendortmund",
+        "path_stations": [
+          "Dortmund Möllerbrücke",
+          "Dortmund West",
+          "Dortmund-Dorstfeld",
+          "Dortmund-Marten Süd",
+          "Dortmund-Germania",
+          "Dortmund-Somborn",
+          "Dortmund-Lütgendortmund"
+        ]
+      },
+      {
+        "id": "4163289562764881519-2510210626-8",
+        "type": "S",
+        "number": "30414",
+        "direction": "Unna",
+        "platform": "1",
+        "time": "2510210649",
+        "destination": "Unna",
+        "path_stations": [
+          "Dortmund-Körne West",
+          "Dortmund-Körne",
+          "Dortmund Knappschaftskrankenhaus",
+          "Dortmund-Brackel",
+          "Dortmund-Asseln Mitte",
+          "Dortmund-Wickede West",
+          "Dortmund-Wickede",
+          "Massen",
+          "Unna-Königsborn",
+          "Unna West",
+          "Unna"
+        ]
+      },
+      {
+        "id": "2499974180732651108-2510210556-8",
+        "type": "S",
+        "number": "30410",
+        "direction": "Unna",
+        "platform": "1",
+        "time": "2510210619",
+        "destination": "Unna",
+        "path_stations": [
+          "Dortmund-Körne West",
+          "Dortmund-Körne",
+          "Dortmund Knappschaftskrankenhaus",
+          "Dortmund-Brackel",
+          "Dortmund-Asseln Mitte",
+          "Dortmund-Wickede West",
+          "Dortmund-Wickede",
+          "Massen",
+          "Unna-Königsborn",
+          "Unna West",
+          "Unna"
+        ]
+      },
+      {
+        "id": "-3531993661526438833-2510210608-12",
+        "type": "S",
+        "number": "30409",
+        "direction": "Dortmund-Lütgendortmund",
+        "platform": "2",
+        "time": "2510210642",
+        "destination": "Dortmund-Lütgendortmund",
+        "path_stations": [
+          "Dortmund Möllerbrücke",
+          "Dortmund West",
+          "Dortmund-Dorstfeld",
+          "Dortmund-Marten Süd",
+          "Dortmund-Germania",
+          "Dortmund-Somborn",
+          "Dortmund-Lütgendortmund"
+        ]
+      }
+    ]
+  }
+}

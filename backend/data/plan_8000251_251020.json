@@ -1,0 +1,2648 @@
+{
+  "station_eva": "8000251",
+  "date": "251020",
+  "cached_at": "2025-10-20T15:49:11.577649",
+  "plan_data": {
+    "arrivals": [
+      {
+        "id": "-846917952911190369-2510201702-2",
+        "type": "IC",
+        "number": "2325",
+        "time": "2510201712",
+        "platform": "4",
+        "path_stations": [
+          "Dortmund Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "4710379703759231632-2510201608-13",
+        "type": "RE",
+        "number": "33093",
+        "time": "2510201748",
+        "platform": "3",
+        "path_stations": [
+          "Siegen Hbf",
+          "Siegen-Weidenau",
+          "Kreuztal",
+          "Welschen Ennest",
+          "Lennestadt-Altenhundem",
+          "Lennestadt-Grevenbrück",
+          "Finnentrop",
+          "Plettenberg",
+          "Werdohl",
+          "Altena(Westf)",
+          "Letmathe",
+          "Hohenlimburg"
+        ],
+        "line": "34"
+      },
+      {
+        "id": "-409334650505466512-2510201625-6",
+        "type": "Bus",
+        "number": "40033",
+        "time": "2510201726",
+        "platform": "",
+        "path_stations": [
+          "Essen Hbf Kruppstraße/Am Thyssenhaus",
+          "Essen-Kray Süd",
+          "Wattenscheid",
+          "Bochum West",
+          "Bochum Hbf (Buddenbergplatz)"
+        ],
+        "line": "RB40"
+      },
+      {
+        "id": "-2505207735686136804-2510201655-6",
+        "type": "Bus",
+        "number": "41023",
+        "time": "2510201756",
+        "platform": "",
+        "path_stations": [
+          "Essen Hbf Kruppstraße/Am Thyssenhaus",
+          "Essen-Kray Süd",
+          "Wattenscheid",
+          "Bochum West",
+          "Bochum Hbf (Buddenbergplatz)"
+        ],
+        "line": "RE16"
+      },
+      {
+        "id": "5033649121656058762-2510201709-2",
+        "type": "RE",
+        "number": "26428",
+        "time": "2510201719",
+        "platform": "4",
+        "path_stations": [
+          "Dortmund Hbf"
+        ],
+        "line": "4"
+      },
+      {
+        "id": "8909041713043208865-2510201521-23",
+        "type": "RE",
+        "number": "26425",
+        "time": "2510201739",
+        "platform": "3",
+        "path_stations": [
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West",
+          "Herzogenrath",
+          "Übach-Palenberg",
+          "Geilenkirchen",
+          "Lindern",
+          "Hückelhoven-Baal",
+          "Erkelenz",
+          "Rheydt Hbf",
+          "Mönchengladbach Hbf",
+          "Neuss Hbf",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Hbf",
+          "Wuppertal-Vohwinkel",
+          "Wuppertal Hbf",
+          "Wuppertal-Barmen",
+          "Wuppertal-Oberbarmen",
+          "Schwelm",
+          "Ennepetal",
+          "Hagen Hbf",
+          "Wetter(Ruhr)"
+        ],
+        "line": "4"
+      },
+      {
+        "id": "9040000253734195318-2510201716-4",
+        "type": "RB",
+        "number": "30782",
+        "time": "2510201730",
+        "platform": "2",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hagen-Vorhalle",
+          "Wetter(Ruhr)"
+        ],
+        "line": "40"
+      },
+      {
+        "id": "-1298621150048747617-2510201702-2",
+        "type": "RE",
+        "number": "52325",
+        "time": "2510201712",
+        "platform": "4",
+        "path_stations": [
+          "Dortmund Hbf"
+        ],
+        "line": "34"
+      },
+      {
+        "id": "2783062143932316147-2510201730-5",
+        "type": "S",
+        "number": "31560",
+        "time": "2510201746",
+        "platform": "2",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Barop",
+          "Dortmund-Kruckel",
+          "Witten-Annen Nord"
+        ],
+        "line": "5"
+      },
+      {
+        "id": "-391994223279510474-2510201651-4",
+        "type": "S",
+        "number": "31557",
+        "time": "2510201705",
+        "platform": "1",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hagen-Vorhalle",
+          "Wetter(Ruhr)"
+        ],
+        "line": "5"
+      },
+      {
+        "id": "8764643433327469795-2510201700-5",
+        "type": "S",
+        "number": "31558",
+        "time": "2510201716",
+        "platform": "1",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Barop",
+          "Dortmund-Kruckel",
+          "Witten-Annen Nord"
+        ],
+        "line": "5"
+      },
+      {
+        "id": "8492881050679500082-2510201809-2",
+        "type": "RE",
+        "number": "26430",
+        "time": "2510201819",
+        "platform": "4",
+        "path_stations": [
+          "Dortmund Hbf"
+        ],
+        "line": "4"
+      },
+      {
+        "id": "-2935693617252737777-2510201621-23",
+        "type": "RE",
+        "number": "26427",
+        "time": "2510201839",
+        "platform": "3",
+        "path_stations": [
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West",
+          "Herzogenrath",
+          "Übach-Palenberg",
+          "Geilenkirchen",
+          "Lindern",
+          "Hückelhoven-Baal",
+          "Erkelenz",
+          "Rheydt Hbf",
+          "Mönchengladbach Hbf",
+          "Neuss Hbf",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Hbf",
+          "Wuppertal-Vohwinkel",
+          "Wuppertal Hbf",
+          "Wuppertal-Barmen",
+          "Wuppertal-Oberbarmen",
+          "Schwelm",
+          "Ennepetal",
+          "Hagen Hbf",
+          "Wetter(Ruhr)"
+        ],
+        "line": "4"
+      },
+      {
+        "id": "876006260193980944-2510201816-4",
+        "type": "RB",
+        "number": "30784",
+        "time": "2510201830",
+        "platform": "2",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hagen-Vorhalle",
+          "Wetter(Ruhr)"
+        ],
+        "line": "40"
+      },
+      {
+        "id": "-554969016224999503-2510201800-5",
+        "type": "S",
+        "number": "31562",
+        "time": "2510201816",
+        "platform": "1",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Barop",
+          "Dortmund-Kruckel",
+          "Witten-Annen Nord"
+        ],
+        "line": "5"
+      },
+      {
+        "id": "4172032370327750561-2510201751-4",
+        "type": "S",
+        "number": "31561",
+        "time": "2510201805",
+        "platform": "1",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hagen-Vorhalle",
+          "Wetter(Ruhr)"
+        ],
+        "line": "5"
+      },
+      {
+        "id": "-6034880667941900014-2510201759-2",
+        "type": "RE",
+        "number": "33094",
+        "time": "2510201809",
+        "platform": "4",
+        "path_stations": [
+          "Dortmund Hbf"
+        ],
+        "line": "34"
+      },
+      {
+        "id": "9159512474718046498-2510201755-6",
+        "type": "Bus",
+        "number": "41025",
+        "time": "2510201856",
+        "platform": "",
+        "path_stations": [
+          "Essen Hbf Kruppstraße/Am Thyssenhaus",
+          "Essen-Kray Süd",
+          "Wattenscheid",
+          "Bochum West",
+          "Bochum Hbf (Buddenbergplatz)"
+        ],
+        "line": "RE16"
+      },
+      {
+        "id": "467849573460436506-2510201725-6",
+        "type": "Bus",
+        "number": "40035",
+        "time": "2510201826",
+        "platform": "",
+        "path_stations": [
+          "Essen Hbf Kruppstraße/Am Thyssenhaus",
+          "Essen-Kray Süd",
+          "Wattenscheid",
+          "Bochum West",
+          "Bochum Hbf (Buddenbergplatz)"
+        ],
+        "line": "RB40"
+      },
+      {
+        "id": "-4492874168042325252-2510201636-12",
+        "type": "RE",
+        "number": "52226",
+        "time": "2510201845",
+        "platform": "3",
+        "path_stations": [
+          "Dillenburg",
+          "Siegen Hbf",
+          "Siegen-Weidenau",
+          "Kreuztal",
+          "Lennestadt-Altenhundem",
+          "Lennestadt-Grevenbrück",
+          "Finnentrop",
+          "Plettenberg",
+          "Werdohl",
+          "Altena(Westf)",
+          "Letmathe"
+        ],
+        "line": "34"
+      },
+      {
+        "id": "-3650220351546053834-2510201526-16",
+        "type": "IC",
+        "number": "2226",
+        "time": "2510201845",
+        "platform": "3",
+        "path_stations": [
+          "Frankfurt(Main)Hbf",
+          "Frankfurt(Main)West",
+          "Bad Nauheim",
+          "Wetzlar",
+          "Dillenburg",
+          "Siegen Hbf",
+          "Siegen-Weidenau",
+          "Kreuztal",
+          "Lennestadt-Altenhundem",
+          "Lennestadt-Grevenbrück",
+          "Finnentrop",
+          "Plettenberg",
+          "Werdohl",
+          "Altena(Westf)",
+          "Letmathe"
+        ],
+        "line": ""
+      },
+      {
+        "id": "916164894838351053-2510201830-5",
+        "type": "S",
+        "number": "31564",
+        "time": "2510201846",
+        "platform": "2",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Barop",
+          "Dortmund-Kruckel",
+          "Witten-Annen Nord"
+        ],
+        "line": "5"
+      },
+      {
+        "id": "8874872238193428783-2510201851-4",
+        "type": "S",
+        "number": "31565",
+        "time": "2510201905",
+        "platform": "1",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hagen-Vorhalle",
+          "Wetter(Ruhr)"
+        ],
+        "line": "5"
+      },
+      {
+        "id": "1068212982267214245-2510201721-23",
+        "type": "RE",
+        "number": "26429",
+        "time": "2510201939",
+        "platform": "3",
+        "path_stations": [
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West",
+          "Herzogenrath",
+          "Übach-Palenberg",
+          "Geilenkirchen",
+          "Lindern",
+          "Hückelhoven-Baal",
+          "Erkelenz",
+          "Rheydt Hbf",
+          "Mönchengladbach Hbf",
+          "Neuss Hbf",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Hbf",
+          "Wuppertal-Vohwinkel",
+          "Wuppertal Hbf",
+          "Wuppertal-Barmen",
+          "Wuppertal-Oberbarmen",
+          "Schwelm",
+          "Ennepetal",
+          "Hagen Hbf",
+          "Wetter(Ruhr)"
+        ],
+        "line": "4"
+      },
+      {
+        "id": "-4771390743550366162-2510201855-6",
+        "type": "Bus",
+        "number": "41027",
+        "time": "2510201956",
+        "platform": "",
+        "path_stations": [
+          "Essen Hbf Kruppstraße/Am Thyssenhaus",
+          "Essen-Kray Süd",
+          "Wattenscheid",
+          "Bochum West",
+          "Bochum Hbf (Buddenbergplatz)"
+        ],
+        "line": "RE16"
+      },
+      {
+        "id": "7954629446075791080-2510201916-4",
+        "type": "RB",
+        "number": "30786",
+        "time": "2510201930",
+        "platform": "2",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hagen-Vorhalle",
+          "Wetter(Ruhr)"
+        ],
+        "line": "40"
+      },
+      {
+        "id": "-7023175627699294460-2510201930-5",
+        "type": "S",
+        "number": "31568",
+        "time": "2510201946",
+        "platform": "2",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Barop",
+          "Dortmund-Kruckel",
+          "Witten-Annen Nord"
+        ],
+        "line": "5"
+      },
+      {
+        "id": "8478447081706015571-2510201900-5",
+        "type": "S",
+        "number": "31566",
+        "time": "2510201916",
+        "platform": "1",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Barop",
+          "Dortmund-Kruckel",
+          "Witten-Annen Nord"
+        ],
+        "line": "5"
+      },
+      {
+        "id": "1444740774342860095-2510201825-6",
+        "type": "Bus",
+        "number": "40037",
+        "time": "2510201926",
+        "platform": "",
+        "path_stations": [
+          "Essen Hbf Kruppstraße/Am Thyssenhaus",
+          "Essen-Kray Süd",
+          "Wattenscheid",
+          "Bochum West",
+          "Bochum Hbf (Buddenbergplatz)"
+        ],
+        "line": "RB40"
+      },
+      {
+        "id": "-3233372792649548718-2510201859-2",
+        "type": "HLB",
+        "number": "61848",
+        "time": "2510201909",
+        "platform": "4",
+        "path_stations": [
+          "Dortmund Hbf"
+        ],
+        "line": "RE34"
+      },
+      {
+        "id": "-901490187036978098-2510201909-2",
+        "type": "RE",
+        "number": "26432",
+        "time": "2510201919",
+        "platform": "4",
+        "path_stations": [
+          "Dortmund Hbf"
+        ],
+        "line": "4"
+      },
+      {
+        "id": "-6407591196353320755-2510201808-13",
+        "type": "RE",
+        "number": "33095",
+        "time": "2510201948",
+        "platform": "3",
+        "path_stations": [
+          "Siegen Hbf",
+          "Siegen-Weidenau",
+          "Kreuztal",
+          "Welschen Ennest",
+          "Lennestadt-Altenhundem",
+          "Lennestadt-Grevenbrück",
+          "Finnentrop",
+          "Plettenberg",
+          "Werdohl",
+          "Altena(Westf)",
+          "Letmathe",
+          "Hohenlimburg"
+        ],
+        "line": "34"
+      },
+      {
+        "id": "-5888736089639508299-2510201726-16",
+        "type": "IC",
+        "number": "2224",
+        "time": "2510202045",
+        "platform": "3",
+        "path_stations": [
+          "Frankfurt(Main)Hbf",
+          "Frankfurt(Main)West",
+          "Bad Nauheim",
+          "Wetzlar",
+          "Dillenburg",
+          "Siegen Hbf",
+          "Siegen-Weidenau",
+          "Kreuztal",
+          "Lennestadt-Altenhundem",
+          "Lennestadt-Grevenbrück",
+          "Finnentrop",
+          "Plettenberg",
+          "Werdohl",
+          "Altena(Westf)",
+          "Letmathe"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-5669108150784872705-2510202016-4",
+        "type": "RB",
+        "number": "30788",
+        "time": "2510202030",
+        "platform": "2",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hagen-Vorhalle",
+          "Wetter(Ruhr)"
+        ],
+        "line": "40"
+      },
+      {
+        "id": "-3390275805963925694-2510202030-5",
+        "type": "S",
+        "number": "31572",
+        "time": "2510202046",
+        "platform": "2",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Barop",
+          "Dortmund-Kruckel",
+          "Witten-Annen Nord"
+        ],
+        "line": "5"
+      },
+      {
+        "id": "-7597581855357434688-2510201951-4",
+        "type": "S",
+        "number": "31569",
+        "time": "2510202005",
+        "platform": "1",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hagen-Vorhalle",
+          "Wetter(Ruhr)"
+        ],
+        "line": "5"
+      },
+      {
+        "id": "-8440866711270974957-2510201836-12",
+        "type": "RE",
+        "number": "52224",
+        "time": "2510202045",
+        "platform": "3",
+        "path_stations": [
+          "Dillenburg",
+          "Siegen Hbf",
+          "Siegen-Weidenau",
+          "Kreuztal",
+          "Lennestadt-Altenhundem",
+          "Lennestadt-Grevenbrück",
+          "Finnentrop",
+          "Plettenberg",
+          "Werdohl",
+          "Altena(Westf)",
+          "Letmathe"
+        ],
+        "line": "34"
+      },
+      {
+        "id": "-4126473793448219495-2510202000-5",
+        "type": "S",
+        "number": "31570",
+        "time": "2510202016",
+        "platform": "1",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Barop",
+          "Dortmund-Kruckel",
+          "Witten-Annen Nord"
+        ],
+        "line": "5"
+      },
+      {
+        "id": "-6813376667988938665-2510201821-23",
+        "type": "RE",
+        "number": "26431",
+        "time": "2510202039",
+        "platform": "3",
+        "path_stations": [
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West",
+          "Herzogenrath",
+          "Übach-Palenberg",
+          "Geilenkirchen",
+          "Lindern",
+          "Hückelhoven-Baal",
+          "Erkelenz",
+          "Rheydt Hbf",
+          "Mönchengladbach Hbf",
+          "Neuss Hbf",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Hbf",
+          "Wuppertal-Vohwinkel",
+          "Wuppertal Hbf",
+          "Wuppertal-Barmen",
+          "Wuppertal-Oberbarmen",
+          "Schwelm",
+          "Ennepetal",
+          "Hagen Hbf",
+          "Wetter(Ruhr)"
+        ],
+        "line": "4"
+      },
+      {
+        "id": "2952375516804484725-2510201925-6",
+        "type": "Bus",
+        "number": "40039",
+        "time": "2510202026",
+        "platform": "",
+        "path_stations": [
+          "Essen Hbf Kruppstraße/Am Thyssenhaus",
+          "Essen-Kray Süd",
+          "Wattenscheid",
+          "Bochum West",
+          "Bochum Hbf (Buddenbergplatz)"
+        ],
+        "line": "RB40"
+      },
+      {
+        "id": "9042085335717021075-2510202009-2",
+        "type": "RE",
+        "number": "26434",
+        "time": "2510202019",
+        "platform": "4",
+        "path_stations": [
+          "Dortmund Hbf"
+        ],
+        "line": "4"
+      },
+      {
+        "id": "2914310123354533777-2510201955-6",
+        "type": "Bus",
+        "number": "41029",
+        "time": "2510202056",
+        "platform": "",
+        "path_stations": [
+          "Essen Hbf Kruppstraße/Am Thyssenhaus",
+          "Essen-Kray Süd",
+          "Wattenscheid",
+          "Bochum West",
+          "Bochum Hbf (Buddenbergplatz)"
+        ],
+        "line": "RE16"
+      },
+      {
+        "id": "-4445643833120023180-2510201959-2",
+        "type": "RE",
+        "number": "33096",
+        "time": "2510202009",
+        "platform": "4",
+        "path_stations": [
+          "Dortmund Hbf"
+        ],
+        "line": "34"
+      },
+      {
+        "id": "-5696606339935812688-2510202100-5",
+        "type": "S",
+        "number": "31574",
+        "time": "2510202116",
+        "platform": "1",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Barop",
+          "Dortmund-Kruckel",
+          "Witten-Annen Nord"
+        ],
+        "line": "5"
+      },
+      {
+        "id": "2184049933202448469-2510202051-4",
+        "type": "S",
+        "number": "31573",
+        "time": "2510202105",
+        "platform": "1",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hagen-Vorhalle",
+          "Wetter(Ruhr)"
+        ],
+        "line": "5"
+      },
+      {
+        "id": "6744455897603605293-2510202130-5",
+        "type": "S",
+        "number": "31576",
+        "time": "2510202146",
+        "platform": "2",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Barop",
+          "Dortmund-Kruckel",
+          "Witten-Annen Nord"
+        ],
+        "line": "5"
+      },
+      {
+        "id": "-8830647386091646345-2510202025-6",
+        "type": "Bus",
+        "number": "40041",
+        "time": "2510202126",
+        "platform": "",
+        "path_stations": [
+          "Essen Hbf Kruppstraße/Am Thyssenhaus",
+          "Essen-Kray Süd",
+          "Wattenscheid",
+          "Bochum West",
+          "Bochum Hbf (Buddenbergplatz)"
+        ],
+        "line": "RB40"
+      },
+      {
+        "id": "-2570598243506943265-2510202119-2",
+        "type": "Bus",
+        "number": "4003",
+        "time": "2510202149",
+        "platform": "",
+        "path_stations": [
+          "Dortmund Hbf"
+        ],
+        "line": "RE4"
+      },
+      {
+        "id": "-1188912274199941984-2510202116-4",
+        "type": "RB",
+        "number": "30790",
+        "time": "2510202130",
+        "platform": "2",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hagen-Vorhalle",
+          "Wetter(Ruhr)"
+        ],
+        "line": "40"
+      },
+      {
+        "id": "-9080355045759634856-2510202117-4",
+        "type": "Bus",
+        "number": "5059",
+        "time": "2510202156",
+        "platform": "",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hagen-Vorhalle",
+          "Wetter(Ruhr)"
+        ],
+        "line": "S5"
+      },
+      {
+        "id": "-5376449017606360923-2510202122-2",
+        "type": "Bus",
+        "number": "3400",
+        "time": "2510202151",
+        "platform": "",
+        "path_stations": [
+          "Dortmund Hbf"
+        ],
+        "line": "RE34"
+      },
+      {
+        "id": "-6135668272228981389-2510202008-13",
+        "type": "RE",
+        "number": "33097",
+        "time": "2510202148",
+        "platform": "3",
+        "path_stations": [
+          "Siegen Hbf",
+          "Siegen-Weidenau",
+          "Kreuztal",
+          "Welschen Ennest",
+          "Lennestadt-Altenhundem",
+          "Lennestadt-Grevenbrück",
+          "Finnentrop",
+          "Plettenberg",
+          "Werdohl",
+          "Altena(Westf)",
+          "Letmathe",
+          "Hohenlimburg"
+        ],
+        "line": "34"
+      },
+      {
+        "id": "-5972514413000184209-2510202109-2",
+        "type": "RE",
+        "number": "26436",
+        "time": "2510202119",
+        "platform": "4",
+        "path_stations": [
+          "Dortmund Hbf"
+        ],
+        "line": "4"
+      },
+      {
+        "id": "7627542345548093565-2510201921-23",
+        "type": "RE",
+        "number": "26433",
+        "time": "2510202139",
+        "platform": "3",
+        "path_stations": [
+          "Aachen Hbf",
+          "Aachen Schanz",
+          "Aachen West",
+          "Herzogenrath",
+          "Übach-Palenberg",
+          "Geilenkirchen",
+          "Lindern",
+          "Hückelhoven-Baal",
+          "Erkelenz",
+          "Rheydt Hbf",
+          "Mönchengladbach Hbf",
+          "Neuss Hbf",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Hbf",
+          "Wuppertal-Vohwinkel",
+          "Wuppertal Hbf",
+          "Wuppertal-Barmen",
+          "Wuppertal-Oberbarmen",
+          "Schwelm",
+          "Ennepetal",
+          "Hagen Hbf",
+          "Wetter(Ruhr)"
+        ],
+        "line": "4"
+      },
+      {
+        "id": "-8998158162874033067-2510202217-4",
+        "type": "Bus",
+        "number": "5063",
+        "time": "2510202256",
+        "platform": "",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hagen-Vorhalle",
+          "Wetter(Ruhr)"
+        ],
+        "line": "S5"
+      },
+      {
+        "id": "-7501592733182360482-2510202125-6",
+        "type": "Bus",
+        "number": "40043",
+        "time": "2510202226",
+        "platform": "",
+        "path_stations": [
+          "Essen Hbf Kruppstraße/Am Thyssenhaus",
+          "Essen-Kray Süd",
+          "Wattenscheid",
+          "Bochum West",
+          "Bochum Hbf (Buddenbergplatz)"
+        ],
+        "line": "RB40"
+      },
+      {
+        "id": "-7337648469504935058-2510202200-5",
+        "type": "S",
+        "number": "31578",
+        "time": "2510202216",
+        "platform": "1",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Barop",
+          "Dortmund-Kruckel",
+          "Witten-Annen Nord"
+        ],
+        "line": "5"
+      },
+      {
+        "id": "-6990840551848213830-2510202147-4",
+        "type": "Bus",
+        "number": "5061",
+        "time": "2510202226",
+        "platform": "",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hagen-Vorhalle",
+          "Wetter(Ruhr)"
+        ],
+        "line": "S5"
+      },
+      {
+        "id": "-5499184849743058209-2510202230-5",
+        "type": "S",
+        "number": "31580",
+        "time": "2510202246",
+        "platform": "2",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Barop",
+          "Dortmund-Kruckel",
+          "Witten-Annen Nord"
+        ],
+        "line": "5"
+      },
+      {
+        "id": "-4563442018058625336-2510202219-2",
+        "type": "Bus",
+        "number": "4005",
+        "time": "2510202249",
+        "platform": "",
+        "path_stations": [
+          "Dortmund Hbf"
+        ],
+        "line": "RE4"
+      },
+      {
+        "id": "-8091137661461493813-2510202330-5",
+        "type": "S",
+        "number": "31582",
+        "time": "2510202346",
+        "platform": "2",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Barop",
+          "Dortmund-Kruckel",
+          "Witten-Annen Nord"
+        ],
+        "line": "5"
+      },
+      {
+        "id": "-4197980711159568015-2510202230-4",
+        "type": "Bus",
+        "number": "4008",
+        "time": "2510202315",
+        "platform": "",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hagen-Vorhalle",
+          "Wetter(Ruhr)"
+        ],
+        "line": "RB40"
+      },
+      {
+        "id": "2280342494717693104-2510202317-4",
+        "type": "Bus",
+        "number": "5067",
+        "time": "2510202356",
+        "platform": "",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hagen-Vorhalle",
+          "Wetter(Ruhr)"
+        ],
+        "line": "S5"
+      },
+      {
+        "id": "-7550813399566809546-2510202243-4",
+        "type": "Bus",
+        "number": "5069",
+        "time": "2510202322",
+        "platform": "",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hagen-Vorhalle",
+          "Wetter(Ruhr)"
+        ],
+        "line": "S5"
+      },
+      {
+        "id": "-89116584977974058-2510202235-3",
+        "type": "Bus",
+        "number": "4002",
+        "time": "2510202310",
+        "platform": "",
+        "path_stations": [
+          "Hagen Hbf",
+          "Wetter(Ruhr)"
+        ],
+        "line": "RE4"
+      },
+      {
+        "id": "-2546063476750005041-2510202247-4",
+        "type": "Bus",
+        "number": "5065",
+        "time": "2510202326",
+        "platform": "",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hagen-Vorhalle",
+          "Wetter(Ruhr)"
+        ],
+        "line": "S5"
+      },
+      {
+        "id": "-4098013467321340974-2510202225-6",
+        "type": "Bus",
+        "number": "40045",
+        "time": "2510202326",
+        "platform": "",
+        "path_stations": [
+          "Essen Hbf Kruppstraße/Am Thyssenhaus",
+          "Essen-Kray Süd",
+          "Wattenscheid",
+          "Bochum West",
+          "Bochum Hbf (Buddenbergplatz)"
+        ],
+        "line": "RB40"
+      },
+      {
+        "id": "7673853058539936880-2510210017-4",
+        "type": "Bus",
+        "number": "5051",
+        "time": "2510210056",
+        "platform": "",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hagen-Vorhalle",
+          "Wetter(Ruhr)"
+        ],
+        "line": "S5"
+      },
+      {
+        "id": "3996590109924085380-2510202333-4",
+        "type": "Bus",
+        "number": "4010",
+        "time": "2510210018",
+        "platform": "",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hagen-Vorhalle",
+          "Wetter(Ruhr)"
+        ],
+        "line": "RB40"
+      },
+      {
+        "id": "-3266799172904776393-2510210030-5",
+        "type": "S",
+        "number": "31500",
+        "time": "2510210046",
+        "platform": "2",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Barop",
+          "Dortmund-Kruckel",
+          "Witten-Annen Nord"
+        ],
+        "line": "5"
+      },
+      {
+        "id": "-195833393579867748-2510202325-5",
+        "type": "Bus",
+        "number": "40001",
+        "time": "2510210026",
+        "platform": "",
+        "path_stations": [
+          "Essen Hbf Kruppstraße/Am Thyssenhaus",
+          "Wattenscheid",
+          "Bochum West",
+          "Bochum Hbf (Buddenbergplatz)"
+        ],
+        "line": "RB40"
+      },
+      {
+        "id": "1163563136445164164-2510202335-3",
+        "type": "Bus",
+        "number": "4004",
+        "time": "2510210010",
+        "platform": "",
+        "path_stations": [
+          "Hagen Hbf",
+          "Wetter(Ruhr)"
+        ],
+        "line": "RE4"
+      },
+      {
+        "id": "8758388571078966484-2510210030-4",
+        "type": "Bus",
+        "number": "4006",
+        "time": "2510210115",
+        "platform": "",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hagen-Vorhalle",
+          "Wetter(Ruhr)"
+        ],
+        "line": "RB40"
+      },
+      {
+        "id": "8348277243163136377-2510210025-5",
+        "type": "Bus",
+        "number": "40003",
+        "time": "2510210126",
+        "platform": "",
+        "path_stations": [
+          "Essen Hbf Kruppstraße/Am Thyssenhaus",
+          "Wattenscheid",
+          "Bochum West",
+          "Bochum Hbf (Buddenbergplatz)"
+        ],
+        "line": "RB40"
+      },
+      {
+        "id": "-2557749045106841023-2510210047-4",
+        "type": "Bus",
+        "number": "5053",
+        "time": "2510210126",
+        "platform": "",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hagen-Vorhalle",
+          "Wetter(Ruhr)"
+        ],
+        "line": "S5"
+      },
+      {
+        "id": "544582788371322102-2510210430-5",
+        "type": "S",
+        "number": "31508",
+        "time": "2510210446",
+        "platform": "2",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Barop",
+          "Dortmund-Kruckel",
+          "Witten-Annen Nord"
+        ],
+        "line": "5"
+      },
+      {
+        "id": "-6987830441758208856-2510210417-4",
+        "type": "Bus",
+        "number": "5055",
+        "time": "2510210456",
+        "platform": "",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hagen-Vorhalle",
+          "Wetter(Ruhr)"
+        ],
+        "line": "S5"
+      },
+      {
+        "id": "-644935674627333430-2510210400-4",
+        "type": "Bus",
+        "number": "40006",
+        "time": "2510210445",
+        "platform": "",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hagen-Vorhalle",
+          "Wetter(Ruhr)"
+        ],
+        "line": "RB40"
+      },
+      {
+        "id": "2435735674876330989-2510210447-4",
+        "type": "Bus",
+        "number": "5057",
+        "time": "2510210526",
+        "platform": "",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hagen-Vorhalle",
+          "Wetter(Ruhr)"
+        ],
+        "line": "S5"
+      },
+      {
+        "id": "-1802437219429945329-2510210500-5",
+        "type": "S",
+        "number": "31510",
+        "time": "2510210516",
+        "platform": "1",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Barop",
+          "Dortmund-Kruckel",
+          "Witten-Annen Nord"
+        ],
+        "line": "5"
+      },
+      {
+        "id": "-3530546713726621126-2510210530-5",
+        "type": "S",
+        "number": "31512",
+        "time": "2510210546",
+        "platform": "2",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Barop",
+          "Dortmund-Kruckel",
+          "Witten-Annen Nord"
+        ],
+        "line": "5"
+      },
+      {
+        "id": "-6508823820826240364-2510210502-2",
+        "type": "IC",
+        "number": "2223",
+        "time": "2510210512",
+        "platform": "4",
+        "path_stations": [
+          "Dortmund Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-2204791766157734511-2510210401-18",
+        "type": "RE",
+        "number": "33081",
+        "time": "2510210548",
+        "platform": "3",
+        "path_stations": [
+          "Siegen Hbf",
+          "Siegen-Weidenau",
+          "Siegen-Geisweid",
+          "Kreuztal",
+          "Eichen(Kr Siegen)",
+          "Kreuztal-Littfeld",
+          "Welschen Ennest",
+          "Kirchhundem",
+          "Lennestadt-Altenhundem",
+          "Lennestadt-Meggen",
+          "Lennestadt-Grevenbrück",
+          "Finnentrop",
+          "Plettenberg",
+          "Werdohl",
+          "Altena(Westf)",
+          "Letmathe",
+          "Hohenlimburg"
+        ],
+        "line": "34"
+      },
+      {
+        "id": "3738247329104172180-2510210516-4",
+        "type": "RB",
+        "number": "30756",
+        "time": "2510210530",
+        "platform": "2",
+        "path_stations": [
+          "Hagen Hbf",
+          "Hagen-Vorhalle",
+          "Wetter(Ruhr)"
+        ],
+        "line": "40"
+      },
+      {
+        "id": "2834775926475247198-2510210502-2",
+        "type": "RE",
+        "number": "52223",
+        "time": "2510210512",
+        "platform": "4",
+        "path_stations": [
+          "Dortmund Hbf"
+        ],
+        "line": "34"
+      },
+      {
+        "id": "-1160150403001563027-2510210425-5",
+        "type": "Bus",
+        "number": "40009",
+        "time": "2510210526",
+        "platform": "",
+        "path_stations": [
+          "Essen Hbf Kruppstraße/Am Thyssenhaus",
+          "Wattenscheid",
+          "Bochum West",
+          "Bochum Hbf (Buddenbergplatz)"
+        ],
+        "line": "RB40"
+      }
+    ],
+    "departures": [
+      {
+        "id": "-846917952911190369-2510201702-2",
+        "type": "IC",
+        "number": "2325",
+        "direction": "Frankfurt(Main)Hbf",
+        "platform": "4",
+        "time": "2510201714",
+        "destination": "Frankfurt(Main)Hbf",
+        "path_stations": [
+          "Letmathe",
+          "Altena(Westf)",
+          "Werdohl",
+          "Plettenberg",
+          "Finnentrop",
+          "Lennestadt-Grevenbrück",
+          "Lennestadt-Altenhundem",
+          "Kreuztal",
+          "Siegen-Weidenau",
+          "Siegen Hbf",
+          "Dillenburg",
+          "Wetzlar",
+          "Bad Nauheim",
+          "Frankfurt(Main)West",
+          "Frankfurt(Main)Hbf"
+        ]
+      },
+      {
+        "id": "4710379703759231632-2510201608-13",
+        "type": "RE",
+        "number": "33093",
+        "direction": "Dortmund Hbf",
+        "platform": "3",
+        "time": "2510201749",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "1238972975645802672-2510201736-1",
+        "type": "S",
+        "number": "31559",
+        "direction": "Dortmund Hbf",
+        "platform": "1",
+        "time": "2510201736",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Witten-Annen Nord",
+          "Dortmund-Kruckel",
+          "Dortmund-Barop",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "5033649121656058762-2510201709-2",
+        "type": "RE",
+        "number": "26428",
+        "direction": "Aachen Hbf",
+        "platform": "4",
+        "time": "2510201720",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Wetter(Ruhr)",
+          "Hagen Hbf",
+          "Ennepetal",
+          "Schwelm",
+          "Wuppertal-Oberbarmen",
+          "Wuppertal-Barmen",
+          "Wuppertal Hbf",
+          "Wuppertal-Vohwinkel",
+          "Düsseldorf Hbf",
+          "Düsseldorf-Bilk",
+          "Neuss Hbf",
+          "Mönchengladbach Hbf",
+          "Rheydt Hbf",
+          "Erkelenz",
+          "Hückelhoven-Baal",
+          "Lindern",
+          "Geilenkirchen",
+          "Übach-Palenberg",
+          "Herzogenrath",
+          "Aachen West",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "8909041713043208865-2510201521-23",
+        "type": "RE",
+        "number": "26425",
+        "direction": "Dortmund Hbf",
+        "platform": "3",
+        "time": "2510201740",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "4000250689572129164-2510201710-1",
+        "type": "Bus",
+        "number": "41022",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510201710",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Bochum Hbf (Buddenbergplatz)",
+          "Bochum West",
+          "Wattenscheid",
+          "Essen-Kray Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-1298621150048747617-2510201702-2",
+        "type": "RE",
+        "number": "52325",
+        "direction": "Dillenburg",
+        "platform": "4",
+        "time": "2510201714",
+        "destination": "Dillenburg",
+        "path_stations": [
+          "Letmathe",
+          "Altena(Westf)",
+          "Werdohl",
+          "Plettenberg",
+          "Finnentrop",
+          "Lennestadt-Grevenbrück",
+          "Lennestadt-Altenhundem",
+          "Kreuztal",
+          "Siegen-Weidenau",
+          "Siegen Hbf",
+          "Dillenburg"
+        ]
+      },
+      {
+        "id": "8773351494667447053-2510201736-1",
+        "type": "RB",
+        "number": "30781",
+        "direction": "Hagen Hbf",
+        "platform": "2",
+        "time": "2510201736",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Wetter(Ruhr)",
+          "Hagen-Vorhalle",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "6999798493782942250-2510201740-1",
+        "type": "Bus",
+        "number": "40034",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510201740",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Bochum Hbf (Buddenbergplatz)",
+          "Bochum West",
+          "Wattenscheid",
+          "Essen-Kray Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "2783062143932316147-2510201730-5",
+        "type": "S",
+        "number": "31560",
+        "direction": "Hagen Hbf",
+        "platform": "2",
+        "time": "2510201750",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Wetter(Ruhr)",
+          "Hagen-Vorhalle",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "-391994223279510474-2510201651-4",
+        "type": "S",
+        "number": "31557",
+        "direction": "Dortmund Hbf",
+        "platform": "1",
+        "time": "2510201706",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Witten-Annen Nord",
+          "Dortmund-Kruckel",
+          "Dortmund-Barop",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "8492881050679500082-2510201809-2",
+        "type": "RE",
+        "number": "26430",
+        "direction": "Aachen Hbf",
+        "platform": "4",
+        "time": "2510201820",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Wetter(Ruhr)",
+          "Hagen Hbf",
+          "Ennepetal",
+          "Schwelm",
+          "Wuppertal-Oberbarmen",
+          "Wuppertal-Barmen",
+          "Wuppertal Hbf",
+          "Wuppertal-Vohwinkel",
+          "Düsseldorf Hbf",
+          "Düsseldorf-Bilk",
+          "Neuss Hbf",
+          "Mönchengladbach Hbf",
+          "Rheydt Hbf",
+          "Erkelenz",
+          "Hückelhoven-Baal",
+          "Lindern",
+          "Geilenkirchen",
+          "Übach-Palenberg",
+          "Herzogenrath",
+          "Aachen West",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "-2935693617252737777-2510201621-23",
+        "type": "RE",
+        "number": "26427",
+        "direction": "Dortmund Hbf",
+        "platform": "3",
+        "time": "2510201840",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-8868153036652375948-2510201840-1",
+        "type": "Bus",
+        "number": "40036",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510201840",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Bochum Hbf (Buddenbergplatz)",
+          "Bochum West",
+          "Wattenscheid",
+          "Essen-Kray Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "4172032370327750561-2510201751-4",
+        "type": "S",
+        "number": "31561",
+        "direction": "Dortmund Hbf",
+        "platform": "1",
+        "time": "2510201806",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Witten-Annen Nord",
+          "Dortmund-Kruckel",
+          "Dortmund-Barop",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-7551418642928711125-2510201836-1",
+        "type": "RB",
+        "number": "30783",
+        "direction": "Hagen Hbf",
+        "platform": "2",
+        "time": "2510201836",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Wetter(Ruhr)",
+          "Hagen-Vorhalle",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "2594854692551641804-2510201810-1",
+        "type": "Bus",
+        "number": "41024",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510201810",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Bochum Hbf (Buddenbergplatz)",
+          "Bochum West",
+          "Wattenscheid",
+          "Essen-Kray Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-6034880667941900014-2510201759-2",
+        "type": "RE",
+        "number": "33094",
+        "direction": "Siegen Hbf",
+        "platform": "4",
+        "time": "2510201810",
+        "destination": "Siegen Hbf",
+        "path_stations": [
+          "Letmathe",
+          "Altena(Westf)",
+          "Werdohl",
+          "Plettenberg",
+          "Finnentrop",
+          "Lennestadt-Grevenbrück",
+          "Lennestadt-Altenhundem",
+          "Welschen Ennest",
+          "Kreuztal",
+          "Siegen-Weidenau",
+          "Siegen Hbf"
+        ]
+      },
+      {
+        "id": "-4492874168042325252-2510201636-12",
+        "type": "RE",
+        "number": "52226",
+        "direction": "Dortmund Hbf",
+        "platform": "3",
+        "time": "2510201847",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-5695004354203425190-2510201836-1",
+        "type": "S",
+        "number": "31563",
+        "direction": "Dortmund Hbf",
+        "platform": "1",
+        "time": "2510201836",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Witten-Annen Nord",
+          "Dortmund-Kruckel",
+          "Dortmund-Barop",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-3650220351546053834-2510201526-16",
+        "type": "IC",
+        "number": "2226",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "3",
+        "time": "2510201847",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Hamm(Westf)Hbf",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "916164894838351053-2510201830-5",
+        "type": "S",
+        "number": "31564",
+        "direction": "Hagen Hbf",
+        "platform": "2",
+        "time": "2510201850",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Wetter(Ruhr)",
+          "Hagen-Vorhalle",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "5372864579435979565-2510201940-1",
+        "type": "Bus",
+        "number": "40038",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510201940",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Bochum Hbf (Buddenbergplatz)",
+          "Bochum West",
+          "Wattenscheid",
+          "Essen-Kray Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "8874872238193428783-2510201851-4",
+        "type": "S",
+        "number": "31565",
+        "direction": "Dortmund Hbf",
+        "platform": "1",
+        "time": "2510201906",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Witten-Annen Nord",
+          "Dortmund-Kruckel",
+          "Dortmund-Barop",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "1068212982267214245-2510201721-23",
+        "type": "RE",
+        "number": "26429",
+        "direction": "Dortmund Hbf",
+        "platform": "3",
+        "time": "2510201940",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-8214142692074132385-2510201936-1",
+        "type": "RB",
+        "number": "30785",
+        "direction": "Hagen Hbf",
+        "platform": "2",
+        "time": "2510201936",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Wetter(Ruhr)",
+          "Hagen-Vorhalle",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "-210823881466291543-2510201936-1",
+        "type": "S",
+        "number": "31567",
+        "direction": "Dortmund Hbf",
+        "platform": "1",
+        "time": "2510201936",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Witten-Annen Nord",
+          "Dortmund-Kruckel",
+          "Dortmund-Barop",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "8744473417999274720-2510201910-1",
+        "type": "Bus",
+        "number": "41026",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510201910",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Bochum Hbf (Buddenbergplatz)",
+          "Bochum West",
+          "Wattenscheid",
+          "Essen-Kray Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-7023175627699294460-2510201930-5",
+        "type": "S",
+        "number": "31568",
+        "direction": "Hagen Hbf",
+        "platform": "2",
+        "time": "2510201950",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Wetter(Ruhr)",
+          "Hagen-Vorhalle",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "-3233372792649548718-2510201859-2",
+        "type": "HLB",
+        "number": "61848",
+        "direction": "Siegen Hbf",
+        "platform": "4",
+        "time": "2510201909",
+        "destination": "Siegen Hbf",
+        "path_stations": [
+          "Hohenlimburg",
+          "Letmathe",
+          "Altena(Westf)",
+          "Werdohl",
+          "Plettenberg",
+          "Finnentrop",
+          "Lennestadt-Grevenbrück",
+          "Lennestadt-Altenhundem",
+          "Welschen Ennest",
+          "Kreuztal",
+          "Siegen-Weidenau",
+          "Siegen Hbf"
+        ]
+      },
+      {
+        "id": "-901490187036978098-2510201909-2",
+        "type": "RE",
+        "number": "26432",
+        "direction": "Aachen Hbf",
+        "platform": "4",
+        "time": "2510201920",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Wetter(Ruhr)",
+          "Hagen Hbf",
+          "Ennepetal",
+          "Schwelm",
+          "Wuppertal-Oberbarmen",
+          "Wuppertal-Barmen",
+          "Wuppertal Hbf",
+          "Wuppertal-Vohwinkel",
+          "Düsseldorf Hbf",
+          "Düsseldorf-Bilk",
+          "Neuss Hbf",
+          "Mönchengladbach Hbf",
+          "Rheydt Hbf",
+          "Erkelenz",
+          "Hückelhoven-Baal",
+          "Lindern",
+          "Geilenkirchen",
+          "Übach-Palenberg",
+          "Herzogenrath",
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "-6407591196353320755-2510201808-13",
+        "type": "RE",
+        "number": "33095",
+        "direction": "Dortmund Hbf",
+        "platform": "3",
+        "time": "2510201949",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-4773172978365174954-2510202010-1",
+        "type": "Bus",
+        "number": "41028",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510202010",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Bochum Hbf (Buddenbergplatz)",
+          "Bochum West",
+          "Wattenscheid",
+          "Essen-Kray Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-977026409874847628-2510202036-1",
+        "type": "S",
+        "number": "31571",
+        "direction": "Dortmund Hbf",
+        "platform": "1",
+        "time": "2510202036",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Witten-Annen Nord",
+          "Dortmund-Kruckel",
+          "Dortmund-Barop",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "3029820093565105971-2510202036-1",
+        "type": "RB",
+        "number": "30787",
+        "direction": "Hagen Hbf",
+        "platform": "2",
+        "time": "2510202036",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Wetter(Ruhr)",
+          "Hagen-Vorhalle",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "-5888736089639508299-2510201726-16",
+        "type": "IC",
+        "number": "2224",
+        "direction": "Dortmund Hbf",
+        "platform": "3",
+        "time": "2510202047",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-3390275805963925694-2510202030-5",
+        "type": "S",
+        "number": "31572",
+        "direction": "Hagen Hbf",
+        "platform": "2",
+        "time": "2510202050",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Wetter(Ruhr)",
+          "Hagen-Vorhalle",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "-7597581855357434688-2510201951-4",
+        "type": "S",
+        "number": "31569",
+        "direction": "Dortmund Hbf",
+        "platform": "1",
+        "time": "2510202006",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Witten-Annen Nord",
+          "Dortmund-Kruckel",
+          "Dortmund-Barop",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-8440866711270974957-2510201836-12",
+        "type": "RE",
+        "number": "52224",
+        "direction": "Dortmund Hbf",
+        "platform": "3",
+        "time": "2510202047",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-6813376667988938665-2510201821-23",
+        "type": "RE",
+        "number": "26431",
+        "direction": "Dortmund Hbf",
+        "platform": "3",
+        "time": "2510202040",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "9042085335717021075-2510202009-2",
+        "type": "RE",
+        "number": "26434",
+        "direction": "Aachen Hbf",
+        "platform": "4",
+        "time": "2510202020",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Wetter(Ruhr)",
+          "Hagen Hbf",
+          "Ennepetal",
+          "Schwelm",
+          "Wuppertal-Oberbarmen",
+          "Wuppertal-Barmen",
+          "Wuppertal Hbf",
+          "Wuppertal-Vohwinkel",
+          "Düsseldorf Hbf",
+          "Düsseldorf-Bilk",
+          "Neuss Hbf",
+          "Mönchengladbach Hbf",
+          "Rheydt Hbf",
+          "Erkelenz",
+          "Hückelhoven-Baal",
+          "Lindern",
+          "Geilenkirchen",
+          "Übach-Palenberg",
+          "Herzogenrath",
+          "Aachen West",
+          "Aachen Schanz",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "-5396599124220382846-2510202040-1",
+        "type": "Bus",
+        "number": "40040",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510202040",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Bochum Hbf (Buddenbergplatz)",
+          "Bochum West",
+          "Wattenscheid",
+          "Essen-Kray Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-4445643833120023180-2510201959-2",
+        "type": "RE",
+        "number": "33096",
+        "direction": "Siegen Hbf",
+        "platform": "4",
+        "time": "2510202010",
+        "destination": "Siegen Hbf",
+        "path_stations": [
+          "Letmathe",
+          "Altena(Westf)",
+          "Werdohl",
+          "Plettenberg",
+          "Finnentrop",
+          "Lennestadt-Grevenbrück",
+          "Lennestadt-Altenhundem",
+          "Welschen Ennest",
+          "Kreuztal",
+          "Siegen-Weidenau",
+          "Siegen Hbf"
+        ]
+      },
+      {
+        "id": "-6791085153543725907-2510202136-1",
+        "type": "RB",
+        "number": "30789",
+        "direction": "Hagen Hbf",
+        "platform": "2",
+        "time": "2510202136",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Wetter(Ruhr)",
+          "Hagen-Vorhalle",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "232883097031411274-2510202136-1",
+        "type": "S",
+        "number": "31575",
+        "direction": "Dortmund Hbf",
+        "platform": "1",
+        "time": "2510202136",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Witten-Annen Nord",
+          "Dortmund-Kruckel",
+          "Dortmund-Barop",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-4707204662753624239-2510202156-1",
+        "type": "Bus",
+        "number": "5050",
+        "direction": "Hagen Hbf",
+        "platform": "",
+        "time": "2510202156",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Wetter(Ruhr)",
+          "Hagen-Vorhalle",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "2184049933202448469-2510202051-4",
+        "type": "S",
+        "number": "31573",
+        "direction": "Dortmund Hbf",
+        "platform": "1",
+        "time": "2510202106",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Witten-Annen Nord",
+          "Dortmund-Kruckel",
+          "Dortmund-Barop",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-2570598243506943265-2510202119-2",
+        "type": "Bus",
+        "number": "4003",
+        "direction": "Hagen Hbf",
+        "platform": "",
+        "time": "2510202149",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Wetter(Ruhr)",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "-5376449017606360923-2510202122-2",
+        "type": "Bus",
+        "number": "3400",
+        "direction": "Letmathe",
+        "platform": "",
+        "time": "2510202151",
+        "destination": "Letmathe",
+        "path_stations": [
+          "Letmathe"
+        ]
+      },
+      {
+        "id": "-6135668272228981389-2510202008-13",
+        "type": "RE",
+        "number": "33097",
+        "direction": "Dortmund Hbf",
+        "platform": "3",
+        "time": "2510202149",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-5972514413000184209-2510202109-2",
+        "type": "RE",
+        "number": "26436",
+        "direction": "Düsseldorf Hbf",
+        "platform": "4",
+        "time": "2510202120",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Wetter(Ruhr)",
+          "Hagen Hbf",
+          "Ennepetal",
+          "Schwelm",
+          "Wuppertal-Oberbarmen",
+          "Wuppertal-Barmen",
+          "Wuppertal Hbf",
+          "Wuppertal-Vohwinkel",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-5594013023136919373-2510202140-1",
+        "type": "Bus",
+        "number": "40042",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510202140",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Bochum Hbf (Buddenbergplatz)",
+          "Bochum West",
+          "Wattenscheid",
+          "Essen-Kray Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "7627542345548093565-2510201921-23",
+        "type": "RE",
+        "number": "26433",
+        "direction": "Dortmund Hbf",
+        "platform": "3",
+        "time": "2510202140",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "2307767950662953244-2510202246-1",
+        "type": "Bus",
+        "number": "4009",
+        "direction": "Hagen Hbf",
+        "platform": "",
+        "time": "2510202246",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Wetter(Ruhr)",
+          "Hagen-Vorhalle",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "-7846178092562226017-2510202206-1",
+        "type": "S",
+        "number": "31577",
+        "direction": "Dortmund Hbf",
+        "platform": "1",
+        "time": "2510202206",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Witten-Annen Nord",
+          "Dortmund-Kruckel",
+          "Dortmund-Barop",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-1157072337652934192-2510202236-1",
+        "type": "S",
+        "number": "31579",
+        "direction": "Dortmund Hbf",
+        "platform": "1",
+        "time": "2510202236",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Witten-Annen Nord",
+          "Dortmund-Kruckel",
+          "Dortmund-Barop",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-6327690437567306618-2510202240-1",
+        "type": "Bus",
+        "number": "40044",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510202240",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Bochum Hbf (Buddenbergplatz)",
+          "Bochum West",
+          "Wattenscheid",
+          "Essen-Kray Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "7296113255265384195-2510202256-1",
+        "type": "Bus",
+        "number": "5052",
+        "direction": "Hagen Hbf",
+        "platform": "",
+        "time": "2510202256",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Wetter(Ruhr)",
+          "Hagen-Vorhalle",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "-4563442018058625336-2510202219-2",
+        "type": "Bus",
+        "number": "4005",
+        "direction": "Hagen Hbf",
+        "platform": "",
+        "time": "2510202249",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Wetter(Ruhr)",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "2628803490784327327-2510202356-1",
+        "type": "Bus",
+        "number": "5054",
+        "direction": "Hagen Hbf",
+        "platform": "",
+        "time": "2510202356",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Wetter(Ruhr)",
+          "Hagen-Vorhalle",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "-1480646626733224543-2510202340-1",
+        "type": "Bus",
+        "number": "40046",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510202340",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Bochum Hbf (Buddenbergplatz)",
+          "Bochum West",
+          "Wattenscheid",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "5819709905874372462-2510202346-1",
+        "type": "Bus",
+        "number": "4011",
+        "direction": "Hagen Hbf",
+        "platform": "",
+        "time": "2510202346",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Wetter(Ruhr)",
+          "Hagen-Vorhalle",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "-4061512626151371898-2510202336-1",
+        "type": "RB",
+        "number": "30793",
+        "direction": "Hagen Hbf",
+        "platform": "2",
+        "time": "2510202336",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Wetter(Ruhr)",
+          "Hagen-Vorhalle",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "-5877370928694702365-2510202306-1",
+        "type": "S",
+        "number": "31581",
+        "direction": "Dortmund Hbf",
+        "platform": "1",
+        "time": "2510202306",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Witten-Annen Nord",
+          "Dortmund-Kruckel",
+          "Dortmund-Barop",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-89116584977974058-2510202235-3",
+        "type": "Bus",
+        "number": "4002",
+        "direction": "Dortmund Hbf",
+        "platform": "",
+        "time": "2510202310",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "9145764796407355035-2510210006-1",
+        "type": "S",
+        "number": "31583",
+        "direction": "Dortmund Hbf",
+        "platform": "1",
+        "time": "2510210006",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Witten-Annen Nord",
+          "Dortmund-Kruckel",
+          "Dortmund-Barop",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-1174294480995189621-2510210047-1",
+        "type": "Bus",
+        "number": "4007",
+        "direction": "Hagen Hbf",
+        "platform": "",
+        "time": "2510210047",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Wetter(Ruhr)",
+          "Hagen-Vorhalle",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "578561240065963630-2510210040-1",
+        "type": "Bus",
+        "number": "40000",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510210040",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Bochum Hbf (Buddenbergplatz)",
+          "Bochum West",
+          "Wattenscheid",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "1163563136445164164-2510202335-3",
+        "type": "Bus",
+        "number": "4004",
+        "direction": "Dortmund Hbf",
+        "platform": "",
+        "time": "2510210010",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "2238998817635128170-2510210056-1",
+        "type": "Bus",
+        "number": "5056",
+        "direction": "Hagen Hbf",
+        "platform": "",
+        "time": "2510210056",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Wetter(Ruhr)",
+          "Hagen-Vorhalle",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "8348277243163136377-2510210025-5",
+        "type": "Bus",
+        "number": "40003",
+        "direction": "Hagen Hbf",
+        "platform": "",
+        "time": "2510210126",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Wetter(Ruhr)",
+          "Hagen-Vorhalle",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "-4735097928571121339-2510210106-1",
+        "type": "S",
+        "number": "31501",
+        "direction": "Dortmund Hbf",
+        "platform": "1",
+        "time": "2510210106",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Witten-Annen Nord",
+          "Dortmund-Kruckel",
+          "Dortmund-Barop",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-5673466453405027805-2510210140-1",
+        "type": "Bus",
+        "number": "40002",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510210140",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Bochum Hbf (Buddenbergplatz)",
+          "Bochum West",
+          "Wattenscheid",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "8836213910327636624-2510210240-1",
+        "type": "Bus",
+        "number": "40004",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510210240",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Bochum Hbf (Buddenbergplatz)",
+          "Bochum West",
+          "Wattenscheid",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "7043854075742711895-2510210456-1",
+        "type": "Bus",
+        "number": "5058",
+        "direction": "Hagen Hbf",
+        "platform": "",
+        "time": "2510210456",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Wetter(Ruhr)",
+          "Hagen-Vorhalle",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "-644935674627333430-2510210400-4",
+        "type": "Bus",
+        "number": "40006",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510210445",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Bochum Hbf (Buddenbergplatz)",
+          "Bochum West",
+          "Wattenscheid",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-3530546713726621126-2510210530-5",
+        "type": "S",
+        "number": "31512",
+        "direction": "Hagen Hbf",
+        "platform": "2",
+        "time": "2510210550",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Wetter(Ruhr)",
+          "Hagen-Vorhalle",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "-6508823820826240364-2510210502-2",
+        "type": "IC",
+        "number": "2223",
+        "direction": "Frankfurt(Main)Hbf",
+        "platform": "4",
+        "time": "2510210514",
+        "destination": "Frankfurt(Main)Hbf",
+        "path_stations": [
+          "Letmathe",
+          "Altena(Westf)",
+          "Werdohl",
+          "Plettenberg",
+          "Finnentrop",
+          "Lennestadt-Grevenbrück",
+          "Lennestadt-Altenhundem",
+          "Kreuztal",
+          "Siegen-Weidenau",
+          "Siegen Hbf",
+          "Dillenburg",
+          "Wetzlar",
+          "Bad Nauheim",
+          "Frankfurt(Main)West",
+          "Frankfurt(Main)Hbf"
+        ]
+      },
+      {
+        "id": "7709009472878328262-2510210540-1",
+        "type": "Bus",
+        "number": "40008",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510210540",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Bochum Hbf (Buddenbergplatz)",
+          "Bochum West",
+          "Wattenscheid",
+          "Essen-Kray Süd",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-777248680235269647-2510210506-1",
+        "type": "S",
+        "number": "31509",
+        "direction": "Dortmund Hbf",
+        "platform": "1",
+        "time": "2510210506",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Witten-Annen Nord",
+          "Dortmund-Kruckel",
+          "Dortmund-Barop",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-2204791766157734511-2510210401-18",
+        "type": "RE",
+        "number": "33081",
+        "direction": "Dortmund Hbf",
+        "platform": "3",
+        "time": "2510210549",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "2834775926475247198-2510210502-2",
+        "type": "RE",
+        "number": "52223",
+        "direction": "Dillenburg",
+        "platform": "4",
+        "time": "2510210514",
+        "destination": "Dillenburg",
+        "path_stations": [
+          "Letmathe",
+          "Altena(Westf)",
+          "Werdohl",
+          "Plettenberg",
+          "Finnentrop",
+          "Lennestadt-Grevenbrück",
+          "Lennestadt-Altenhundem",
+          "Kreuztal",
+          "Siegen-Weidenau",
+          "Siegen Hbf",
+          "Dillenburg"
+        ]
+      },
+      {
+        "id": "1998710889313052970-2510210536-1",
+        "type": "S",
+        "number": "31511",
+        "direction": "Dortmund Hbf",
+        "platform": "1",
+        "time": "2510210536",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Witten-Annen Nord",
+          "Dortmund-Kruckel",
+          "Dortmund-Barop",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-4427561266008451849-2510210537-1",
+        "type": "RB",
+        "number": "30757",
+        "direction": "Hagen Hbf",
+        "platform": "2",
+        "time": "2510210537",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Wetter(Ruhr)",
+          "Hagen-Vorhalle",
+          "Hagen Hbf"
+        ]
+      }
+    ]
+  }
+}

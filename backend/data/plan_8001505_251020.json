@@ -1,0 +1,1313 @@
+{
+  "station_eva": "8001505",
+  "date": "251020",
+  "cached_at": "2025-10-20T16:49:16.447627",
+  "plan_data": {
+    "arrivals": [
+      {
+        "id": "1817684191720603357-2510201817-4",
+        "type": "S",
+        "number": "30261",
+        "time": "2510201825",
+        "platform": "1",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Dorstfeld",
+          "Dortmund-Wischlingen"
+        ],
+        "line": "2"
+      },
+      {
+        "id": "4781352900848420148-2510201732-8",
+        "type": "S",
+        "number": "30256",
+        "time": "2510201803",
+        "platform": "2",
+        "path_stations": [
+          "Recklinghausen Hbf",
+          "Recklinghausen Süd",
+          "Herne",
+          "Castrop-Rauxel Hbf",
+          "Dortmund-Mengede",
+          "Dortmund-Nette/Oestrich",
+          "Dortmund-Westerfilde"
+        ],
+        "line": "2"
+      },
+      {
+        "id": "-1903857096819911023-2510201847-4",
+        "type": "S",
+        "number": "30263",
+        "time": "2510201855",
+        "platform": "1",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Dorstfeld",
+          "Dortmund-Wischlingen"
+        ],
+        "line": "2"
+      },
+      {
+        "id": "-5335021667616538455-2510201802-8",
+        "type": "S",
+        "number": "30258",
+        "time": "2510201833",
+        "platform": "2",
+        "path_stations": [
+          "Gelsenkirchen Hbf",
+          "Wanne-Eickel Hbf",
+          "Herne",
+          "Castrop-Rauxel Hbf",
+          "Dortmund-Mengede",
+          "Dortmund-Nette/Oestrich",
+          "Dortmund-Westerfilde"
+        ],
+        "line": "2"
+      },
+      {
+        "id": "1345106269673531398-2510201905-8",
+        "type": "S",
+        "number": "30262",
+        "time": "2510201933",
+        "platform": "2",
+        "path_stations": [
+          "Gelsenkirchen Hbf",
+          "Wanne-Eickel Hbf",
+          "Herne",
+          "Castrop-Rauxel Hbf",
+          "Dortmund-Mengede",
+          "Dortmund-Nette/Oestrich",
+          "Dortmund-Westerfilde"
+        ],
+        "line": "2"
+      },
+      {
+        "id": "-3369409229162093789-2510201832-8",
+        "type": "S",
+        "number": "30260",
+        "time": "2510201903",
+        "platform": "2",
+        "path_stations": [
+          "Recklinghausen Hbf",
+          "Recklinghausen Süd",
+          "Herne",
+          "Castrop-Rauxel Hbf",
+          "Dortmund-Mengede",
+          "Dortmund-Nette/Oestrich",
+          "Dortmund-Westerfilde"
+        ],
+        "line": "2"
+      },
+      {
+        "id": "5385439516583052773-2510201947-4",
+        "type": "S",
+        "number": "30267",
+        "time": "2510201955",
+        "platform": "1",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Dorstfeld",
+          "Dortmund-Wischlingen"
+        ],
+        "line": "2"
+      },
+      {
+        "id": "-922177523971370161-2510201917-4",
+        "type": "S",
+        "number": "30265",
+        "time": "2510201925",
+        "platform": "1",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Dorstfeld",
+          "Dortmund-Wischlingen"
+        ],
+        "line": "2"
+      },
+      {
+        "id": "3568907334647208213-2510202017-4",
+        "type": "S",
+        "number": "30269",
+        "time": "2510202025",
+        "platform": "1",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Dorstfeld",
+          "Dortmund-Wischlingen"
+        ],
+        "line": "2"
+      },
+      {
+        "id": "7566730591368236692-2510201933-8",
+        "type": "S",
+        "number": "30264",
+        "time": "2510202003",
+        "platform": "2",
+        "path_stations": [
+          "Recklinghausen Hbf",
+          "Recklinghausen Süd",
+          "Herne",
+          "Castrop-Rauxel Hbf",
+          "Dortmund-Mengede",
+          "Dortmund-Nette/Oestrich",
+          "Dortmund-Westerfilde"
+        ],
+        "line": "2"
+      },
+      {
+        "id": "9056483478076769473-2510202009-8",
+        "type": "S",
+        "number": "30266",
+        "time": "2510202033",
+        "platform": "2",
+        "path_stations": [
+          "Gelsenkirchen Hbf",
+          "Wanne-Eickel Hbf",
+          "Herne",
+          "Castrop-Rauxel Hbf",
+          "Dortmund-Mengede",
+          "Dortmund-Nette/Oestrich",
+          "Dortmund-Westerfilde"
+        ],
+        "line": "2"
+      },
+      {
+        "id": "2562292363912826711-2510202047-4",
+        "type": "S",
+        "number": "30271",
+        "time": "2510202055",
+        "platform": "1",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Dorstfeld",
+          "Dortmund-Wischlingen"
+        ],
+        "line": "2"
+      },
+      {
+        "id": "9212429611903001368-2510202107-8",
+        "type": "S",
+        "number": "30270",
+        "time": "2510202133",
+        "platform": "2",
+        "path_stations": [
+          "Gelsenkirchen Hbf",
+          "Wanne-Eickel Hbf",
+          "Herne",
+          "Castrop-Rauxel Hbf",
+          "Dortmund-Mengede",
+          "Dortmund-Nette/Oestrich",
+          "Dortmund-Westerfilde"
+        ],
+        "line": "2"
+      },
+      {
+        "id": "3629160826480911816-2510202147-4",
+        "type": "S",
+        "number": "30275",
+        "time": "2510202155",
+        "platform": "1",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Dorstfeld",
+          "Dortmund-Wischlingen"
+        ],
+        "line": "2"
+      },
+      {
+        "id": "1098131851914614206-2510202117-4",
+        "type": "S",
+        "number": "30273",
+        "time": "2510202125",
+        "platform": "1",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Dorstfeld",
+          "Dortmund-Wischlingen"
+        ],
+        "line": "2"
+      },
+      {
+        "id": "8634841075307311040-2510202031-8",
+        "type": "S",
+        "number": "30268",
+        "time": "2510202103",
+        "platform": "2",
+        "path_stations": [
+          "Recklinghausen Hbf",
+          "Recklinghausen Süd",
+          "Herne",
+          "Castrop-Rauxel Hbf",
+          "Dortmund-Mengede",
+          "Dortmund-Nette/Oestrich",
+          "Dortmund-Westerfilde"
+        ],
+        "line": "2"
+      },
+      {
+        "id": "3442624314650770455-2510202133-8",
+        "type": "S",
+        "number": "30272",
+        "time": "2510202203",
+        "platform": "2",
+        "path_stations": [
+          "Recklinghausen Hbf",
+          "Recklinghausen Süd",
+          "Herne",
+          "Castrop-Rauxel Hbf",
+          "Dortmund-Mengede",
+          "Dortmund-Nette/Oestrich",
+          "Dortmund-Westerfilde"
+        ],
+        "line": "2"
+      },
+      {
+        "id": "-451286263090926745-2510202247-4",
+        "type": "S",
+        "number": "30279",
+        "time": "2510202255",
+        "platform": "1",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Dorstfeld",
+          "Dortmund-Wischlingen"
+        ],
+        "line": "2"
+      },
+      {
+        "id": "8045380513246255110-2510202207-8",
+        "type": "S",
+        "number": "30274",
+        "time": "2510202233",
+        "platform": "2",
+        "path_stations": [
+          "Gelsenkirchen Hbf",
+          "Wanne-Eickel Hbf",
+          "Herne",
+          "Castrop-Rauxel Hbf",
+          "Dortmund-Mengede",
+          "Dortmund-Nette/Oestrich",
+          "Dortmund-Westerfilde"
+        ],
+        "line": "2"
+      },
+      {
+        "id": "6082340962456072518-2510202217-4",
+        "type": "S",
+        "number": "30277",
+        "time": "2510202225",
+        "platform": "1",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Dorstfeld",
+          "Dortmund-Wischlingen"
+        ],
+        "line": "2"
+      },
+      {
+        "id": "-1619029766848941379-2510202232-8",
+        "type": "S",
+        "number": "30276",
+        "time": "2510202303",
+        "platform": "2",
+        "path_stations": [
+          "Recklinghausen Hbf",
+          "Recklinghausen Süd",
+          "Herne",
+          "Castrop-Rauxel Hbf",
+          "Dortmund-Mengede",
+          "Dortmund-Nette/Oestrich",
+          "Dortmund-Westerfilde"
+        ],
+        "line": "2"
+      },
+      {
+        "id": "-3853867593662097628-2510202317-4",
+        "type": "S",
+        "number": "30281",
+        "time": "2510202325",
+        "platform": "1",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Dorstfeld",
+          "Dortmund-Wischlingen"
+        ],
+        "line": "2"
+      },
+      {
+        "id": "6595985436810124013-2510202307-8",
+        "type": "S",
+        "number": "30278",
+        "time": "2510202333",
+        "platform": "2",
+        "path_stations": [
+          "Gelsenkirchen Hbf",
+          "Wanne-Eickel Hbf",
+          "Herne",
+          "Castrop-Rauxel Hbf",
+          "Dortmund-Mengede",
+          "Dortmund-Nette/Oestrich",
+          "Dortmund-Westerfilde"
+        ],
+        "line": "2"
+      },
+      {
+        "id": "713155576491447788-2510202347-4",
+        "type": "S",
+        "number": "30283",
+        "time": "2510202355",
+        "platform": "1",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Dorstfeld",
+          "Dortmund-Wischlingen"
+        ],
+        "line": "2"
+      },
+      {
+        "id": "-8551381297133856391-2510202332-8",
+        "type": "S",
+        "number": "30280",
+        "time": "2510210003",
+        "platform": "2",
+        "path_stations": [
+          "Recklinghausen Hbf",
+          "Recklinghausen Süd",
+          "Herne",
+          "Castrop-Rauxel Hbf",
+          "Dortmund-Mengede",
+          "Dortmund-Nette/Oestrich",
+          "Dortmund-Westerfilde"
+        ],
+        "line": "2"
+      },
+      {
+        "id": "5120707896695215275-2510210007-8",
+        "type": "S",
+        "number": "30282",
+        "time": "2510210033",
+        "platform": "2",
+        "path_stations": [
+          "Gelsenkirchen Hbf",
+          "Wanne-Eickel Hbf",
+          "Herne",
+          "Castrop-Rauxel Hbf",
+          "Dortmund-Mengede",
+          "Dortmund-Nette/Oestrich",
+          "Dortmund-Westerfilde"
+        ],
+        "line": "2"
+      },
+      {
+        "id": "-3860351201071312770-2510210017-4",
+        "type": "S",
+        "number": "30201",
+        "time": "2510210025",
+        "platform": "1",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Dorstfeld",
+          "Dortmund-Wischlingen"
+        ],
+        "line": "2"
+      },
+      {
+        "id": "4887798446852904735-2510210107-8",
+        "type": "S",
+        "number": "30200",
+        "time": "2510210133",
+        "platform": "2",
+        "path_stations": [
+          "Gelsenkirchen Hbf",
+          "Wanne-Eickel Hbf",
+          "Herne",
+          "Castrop-Rauxel Hbf",
+          "Dortmund-Mengede",
+          "Dortmund-Nette/Oestrich",
+          "Dortmund-Westerfilde"
+        ],
+        "line": "2"
+      },
+      {
+        "id": "1031466248248489431-2510210117-4",
+        "type": "S",
+        "number": "30203",
+        "time": "2510210125",
+        "platform": "1",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Dorstfeld",
+          "Dortmund-Wischlingen"
+        ],
+        "line": "2"
+      },
+      {
+        "id": "4584806807655155350-2510210217-4",
+        "type": "S",
+        "number": "30205",
+        "time": "2510210225",
+        "platform": "1",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Dorstfeld",
+          "Dortmund-Wischlingen"
+        ],
+        "line": "2"
+      },
+      {
+        "id": "-3847634946598460685-2510210207-8",
+        "type": "S",
+        "number": "30202",
+        "time": "2510210233",
+        "platform": "2",
+        "path_stations": [
+          "Gelsenkirchen Hbf",
+          "Wanne-Eickel Hbf",
+          "Herne",
+          "Castrop-Rauxel Hbf",
+          "Dortmund-Mengede",
+          "Dortmund-Nette/Oestrich",
+          "Dortmund-Westerfilde"
+        ],
+        "line": "2"
+      },
+      {
+        "id": "-7506078612137227600-2510210317-4",
+        "type": "S",
+        "number": "30285",
+        "time": "2510210325",
+        "platform": "1",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Dorstfeld",
+          "Dortmund-Wischlingen"
+        ],
+        "line": "2"
+      },
+      {
+        "id": "5927341399731218299-2510210307-8",
+        "type": "S",
+        "number": "30284",
+        "time": "2510210333",
+        "platform": "2",
+        "path_stations": [
+          "Gelsenkirchen Hbf",
+          "Wanne-Eickel Hbf",
+          "Herne",
+          "Castrop-Rauxel Hbf",
+          "Dortmund-Mengede",
+          "Dortmund-Nette/Oestrich",
+          "Dortmund-Westerfilde"
+        ],
+        "line": "2"
+      },
+      {
+        "id": "-3175803859938356317-2510210407-8",
+        "type": "S",
+        "number": "30204",
+        "time": "2510210433",
+        "platform": "2",
+        "path_stations": [
+          "Gelsenkirchen Hbf",
+          "Wanne-Eickel Hbf",
+          "Herne",
+          "Castrop-Rauxel Hbf",
+          "Dortmund-Mengede",
+          "Dortmund-Nette/Oestrich",
+          "Dortmund-Westerfilde"
+        ],
+        "line": "2"
+      },
+      {
+        "id": "8691072478849514590-2510210417-4",
+        "type": "S",
+        "number": "30207",
+        "time": "2510210425",
+        "platform": "1",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Dorstfeld",
+          "Dortmund-Wischlingen"
+        ],
+        "line": "2"
+      },
+      {
+        "id": "658173259174820648-2510210515-4",
+        "type": "S",
+        "number": "30209",
+        "time": "2510210523",
+        "platform": "1",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Dorstfeld",
+          "Dortmund-Wischlingen"
+        ],
+        "line": "2"
+      },
+      {
+        "id": "4190246180697712075-2510210507-8",
+        "type": "S",
+        "number": "30206",
+        "time": "2510210533",
+        "platform": "2",
+        "path_stations": [
+          "Gelsenkirchen Hbf",
+          "Wanne-Eickel Hbf",
+          "Herne",
+          "Castrop-Rauxel Hbf",
+          "Dortmund-Mengede",
+          "Dortmund-Nette/Oestrich",
+          "Dortmund-Westerfilde"
+        ],
+        "line": "2"
+      },
+      {
+        "id": "3799356477292755040-2510210547-4",
+        "type": "S",
+        "number": "30211",
+        "time": "2510210555",
+        "platform": "1",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Dorstfeld",
+          "Dortmund-Wischlingen"
+        ],
+        "line": "2"
+      },
+      {
+        "id": "5966191121740747601-2510210647-4",
+        "type": "S",
+        "number": "30215",
+        "time": "2510210655",
+        "platform": "1",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Dorstfeld",
+          "Dortmund-Wischlingen"
+        ],
+        "line": "2"
+      },
+      {
+        "id": "8529974279731596255-2510210532-8",
+        "type": "S",
+        "number": "30208",
+        "time": "2510210603",
+        "platform": "2",
+        "path_stations": [
+          "Recklinghausen Hbf",
+          "Recklinghausen Süd",
+          "Herne",
+          "Castrop-Rauxel Hbf",
+          "Dortmund-Mengede",
+          "Dortmund-Nette/Oestrich",
+          "Dortmund-Westerfilde"
+        ],
+        "line": "2"
+      },
+      {
+        "id": "-6129829367407747459-2510210607-8",
+        "type": "S",
+        "number": "30210",
+        "time": "2510210633",
+        "platform": "2",
+        "path_stations": [
+          "Gelsenkirchen Hbf",
+          "Wanne-Eickel Hbf",
+          "Herne",
+          "Castrop-Rauxel Hbf",
+          "Dortmund-Mengede",
+          "Dortmund-Nette/Oestrich",
+          "Dortmund-Westerfilde"
+        ],
+        "line": "2"
+      },
+      {
+        "id": "-1205591724610699528-2510210617-4",
+        "type": "S",
+        "number": "30213",
+        "time": "2510210625",
+        "platform": "1",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund-Dorstfeld",
+          "Dortmund-Wischlingen"
+        ],
+        "line": "2"
+      }
+    ],
+    "departures": [
+      {
+        "id": "1817684191720603357-2510201817-4",
+        "type": "S",
+        "number": "30261",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "1",
+        "time": "2510201826",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Dortmund-Westerfilde",
+          "Dortmund-Nette/Oestrich",
+          "Dortmund-Mengede",
+          "Castrop-Rauxel Hbf",
+          "Herne",
+          "Wanne-Eickel Hbf",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "4781352900848420148-2510201732-8",
+        "type": "S",
+        "number": "30256",
+        "direction": "Dortmund Hbf",
+        "platform": "2",
+        "time": "2510201804",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Dortmund-Wischlingen",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-1903857096819911023-2510201847-4",
+        "type": "S",
+        "number": "30263",
+        "direction": "Recklinghausen Hbf",
+        "platform": "1",
+        "time": "2510201856",
+        "destination": "Recklinghausen Hbf",
+        "path_stations": [
+          "Dortmund-Westerfilde",
+          "Dortmund-Nette/Oestrich",
+          "Dortmund-Mengede",
+          "Castrop-Rauxel Hbf",
+          "Herne",
+          "Recklinghausen Süd",
+          "Recklinghausen Hbf"
+        ]
+      },
+      {
+        "id": "-5335021667616538455-2510201802-8",
+        "type": "S",
+        "number": "30258",
+        "direction": "Dortmund Hbf",
+        "platform": "2",
+        "time": "2510201834",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Dortmund-Wischlingen",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "1345106269673531398-2510201905-8",
+        "type": "S",
+        "number": "30262",
+        "direction": "Dortmund Hbf",
+        "platform": "2",
+        "time": "2510201934",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Dortmund-Wischlingen",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-3369409229162093789-2510201832-8",
+        "type": "S",
+        "number": "30260",
+        "direction": "Dortmund Hbf",
+        "platform": "2",
+        "time": "2510201904",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Dortmund-Wischlingen",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "5385439516583052773-2510201947-4",
+        "type": "S",
+        "number": "30267",
+        "direction": "Recklinghausen Hbf",
+        "platform": "1",
+        "time": "2510201956",
+        "destination": "Recklinghausen Hbf",
+        "path_stations": [
+          "Dortmund-Westerfilde",
+          "Dortmund-Nette/Oestrich",
+          "Dortmund-Mengede",
+          "Castrop-Rauxel Hbf",
+          "Herne",
+          "Recklinghausen Süd",
+          "Recklinghausen Hbf"
+        ]
+      },
+      {
+        "id": "-922177523971370161-2510201917-4",
+        "type": "S",
+        "number": "30265",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "1",
+        "time": "2510201926",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Dortmund-Westerfilde",
+          "Dortmund-Nette/Oestrich",
+          "Dortmund-Mengede",
+          "Castrop-Rauxel Hbf",
+          "Herne",
+          "Wanne-Eickel Hbf",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "3568907334647208213-2510202017-4",
+        "type": "S",
+        "number": "30269",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "1",
+        "time": "2510202026",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Dortmund-Westerfilde",
+          "Dortmund-Nette/Oestrich",
+          "Dortmund-Mengede",
+          "Castrop-Rauxel Hbf",
+          "Herne",
+          "Wanne-Eickel Hbf",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "7566730591368236692-2510201933-8",
+        "type": "S",
+        "number": "30264",
+        "direction": "Dortmund Hbf",
+        "platform": "2",
+        "time": "2510202004",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Dortmund-Wischlingen",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "9056483478076769473-2510202009-8",
+        "type": "S",
+        "number": "30266",
+        "direction": "Dortmund Hbf",
+        "platform": "2",
+        "time": "2510202034",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Dortmund-Wischlingen",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "2562292363912826711-2510202047-4",
+        "type": "S",
+        "number": "30271",
+        "direction": "Recklinghausen Hbf",
+        "platform": "1",
+        "time": "2510202056",
+        "destination": "Recklinghausen Hbf",
+        "path_stations": [
+          "Dortmund-Westerfilde",
+          "Dortmund-Nette/Oestrich",
+          "Dortmund-Mengede",
+          "Castrop-Rauxel Hbf",
+          "Herne",
+          "Recklinghausen Süd",
+          "Recklinghausen Hbf"
+        ]
+      },
+      {
+        "id": "9212429611903001368-2510202107-8",
+        "type": "S",
+        "number": "30270",
+        "direction": "Dortmund Hbf",
+        "platform": "2",
+        "time": "2510202134",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Dortmund-Wischlingen",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "3629160826480911816-2510202147-4",
+        "type": "S",
+        "number": "30275",
+        "direction": "Recklinghausen Hbf",
+        "platform": "1",
+        "time": "2510202156",
+        "destination": "Recklinghausen Hbf",
+        "path_stations": [
+          "Dortmund-Westerfilde",
+          "Dortmund-Nette/Oestrich",
+          "Dortmund-Mengede",
+          "Castrop-Rauxel Hbf",
+          "Herne",
+          "Recklinghausen Süd",
+          "Recklinghausen Hbf"
+        ]
+      },
+      {
+        "id": "1098131851914614206-2510202117-4",
+        "type": "S",
+        "number": "30273",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "1",
+        "time": "2510202126",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Dortmund-Westerfilde",
+          "Dortmund-Nette/Oestrich",
+          "Dortmund-Mengede",
+          "Castrop-Rauxel Hbf",
+          "Herne",
+          "Wanne-Eickel Hbf",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "8634841075307311040-2510202031-8",
+        "type": "S",
+        "number": "30268",
+        "direction": "Dortmund Hbf",
+        "platform": "2",
+        "time": "2510202104",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Dortmund-Wischlingen",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "3442624314650770455-2510202133-8",
+        "type": "S",
+        "number": "30272",
+        "direction": "Dortmund Hbf",
+        "platform": "2",
+        "time": "2510202204",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Dortmund-Wischlingen",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-451286263090926745-2510202247-4",
+        "type": "S",
+        "number": "30279",
+        "direction": "Recklinghausen Hbf",
+        "platform": "1",
+        "time": "2510202256",
+        "destination": "Recklinghausen Hbf",
+        "path_stations": [
+          "Dortmund-Westerfilde",
+          "Dortmund-Nette/Oestrich",
+          "Dortmund-Mengede",
+          "Castrop-Rauxel Hbf",
+          "Herne",
+          "Recklinghausen Süd",
+          "Recklinghausen Hbf"
+        ]
+      },
+      {
+        "id": "8045380513246255110-2510202207-8",
+        "type": "S",
+        "number": "30274",
+        "direction": "Dortmund Hbf",
+        "platform": "2",
+        "time": "2510202234",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Dortmund-Wischlingen",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "6082340962456072518-2510202217-4",
+        "type": "S",
+        "number": "30277",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "1",
+        "time": "2510202226",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Dortmund-Westerfilde",
+          "Dortmund-Nette/Oestrich",
+          "Dortmund-Mengede",
+          "Castrop-Rauxel Hbf",
+          "Herne",
+          "Wanne-Eickel Hbf",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "-1619029766848941379-2510202232-8",
+        "type": "S",
+        "number": "30276",
+        "direction": "Dortmund Hbf",
+        "platform": "2",
+        "time": "2510202304",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Dortmund-Wischlingen",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-3853867593662097628-2510202317-4",
+        "type": "S",
+        "number": "30281",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "1",
+        "time": "2510202326",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Dortmund-Westerfilde",
+          "Dortmund-Nette/Oestrich",
+          "Dortmund-Mengede",
+          "Castrop-Rauxel Hbf",
+          "Herne",
+          "Wanne-Eickel Hbf",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "6595985436810124013-2510202307-8",
+        "type": "S",
+        "number": "30278",
+        "direction": "Dortmund Hbf",
+        "platform": "2",
+        "time": "2510202334",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Dortmund-Wischlingen",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "713155576491447788-2510202347-4",
+        "type": "S",
+        "number": "30283",
+        "direction": "Recklinghausen Hbf",
+        "platform": "1",
+        "time": "2510202356",
+        "destination": "Recklinghausen Hbf",
+        "path_stations": [
+          "Dortmund-Westerfilde",
+          "Dortmund-Nette/Oestrich",
+          "Dortmund-Mengede",
+          "Castrop-Rauxel Hbf",
+          "Herne",
+          "Recklinghausen Süd",
+          "Recklinghausen Hbf"
+        ]
+      },
+      {
+        "id": "-8551381297133856391-2510202332-8",
+        "type": "S",
+        "number": "30280",
+        "direction": "Dortmund Hbf",
+        "platform": "2",
+        "time": "2510210004",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Dortmund-Wischlingen",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "5120707896695215275-2510210007-8",
+        "type": "S",
+        "number": "30282",
+        "direction": "Dortmund Hbf",
+        "platform": "2",
+        "time": "2510210034",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Dortmund-Wischlingen",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-3860351201071312770-2510210017-4",
+        "type": "S",
+        "number": "30201",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "1",
+        "time": "2510210026",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Dortmund-Westerfilde",
+          "Dortmund-Nette/Oestrich",
+          "Dortmund-Mengede",
+          "Castrop-Rauxel Hbf",
+          "Herne",
+          "Wanne-Eickel Hbf",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "4887798446852904735-2510210107-8",
+        "type": "S",
+        "number": "30200",
+        "direction": "Dortmund Hbf",
+        "platform": "2",
+        "time": "2510210134",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Dortmund-Wischlingen",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "1031466248248489431-2510210117-4",
+        "type": "S",
+        "number": "30203",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "1",
+        "time": "2510210126",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Dortmund-Westerfilde",
+          "Dortmund-Nette/Oestrich",
+          "Dortmund-Mengede",
+          "Castrop-Rauxel Hbf",
+          "Herne",
+          "Wanne-Eickel Hbf",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "4584806807655155350-2510210217-4",
+        "type": "S",
+        "number": "30205",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "1",
+        "time": "2510210226",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Dortmund-Westerfilde",
+          "Dortmund-Nette/Oestrich",
+          "Dortmund-Mengede",
+          "Castrop-Rauxel Hbf",
+          "Herne",
+          "Wanne-Eickel Hbf",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "-3847634946598460685-2510210207-8",
+        "type": "S",
+        "number": "30202",
+        "direction": "Dortmund Hbf",
+        "platform": "2",
+        "time": "2510210234",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Dortmund-Wischlingen",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-7506078612137227600-2510210317-4",
+        "type": "S",
+        "number": "30285",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "1",
+        "time": "2510210326",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Dortmund-Westerfilde",
+          "Dortmund-Nette/Oestrich",
+          "Dortmund-Mengede",
+          "Castrop-Rauxel Hbf",
+          "Herne",
+          "Wanne-Eickel Hbf",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "5927341399731218299-2510210307-8",
+        "type": "S",
+        "number": "30284",
+        "direction": "Dortmund Hbf",
+        "platform": "2",
+        "time": "2510210334",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Dortmund-Wischlingen",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-3175803859938356317-2510210407-8",
+        "type": "S",
+        "number": "30204",
+        "direction": "Dortmund Hbf",
+        "platform": "2",
+        "time": "2510210434",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Dortmund-Wischlingen",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "8691072478849514590-2510210417-4",
+        "type": "S",
+        "number": "30207",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "1",
+        "time": "2510210426",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Dortmund-Westerfilde",
+          "Dortmund-Nette/Oestrich",
+          "Dortmund-Mengede",
+          "Castrop-Rauxel Hbf",
+          "Herne",
+          "Wanne-Eickel Hbf",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "658173259174820648-2510210515-4",
+        "type": "S",
+        "number": "30209",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "1",
+        "time": "2510210524",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Dortmund-Westerfilde",
+          "Dortmund-Nette/Oestrich",
+          "Dortmund-Mengede",
+          "Castrop-Rauxel Hbf",
+          "Herne",
+          "Wanne-Eickel Hbf",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "4190246180697712075-2510210507-8",
+        "type": "S",
+        "number": "30206",
+        "direction": "Dortmund Hbf",
+        "platform": "2",
+        "time": "2510210534",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Dortmund-Wischlingen",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "3799356477292755040-2510210547-4",
+        "type": "S",
+        "number": "30211",
+        "direction": "Recklinghausen Hbf",
+        "platform": "1",
+        "time": "2510210556",
+        "destination": "Recklinghausen Hbf",
+        "path_stations": [
+          "Dortmund-Westerfilde",
+          "Dortmund-Nette/Oestrich",
+          "Dortmund-Mengede",
+          "Castrop-Rauxel Hbf",
+          "Herne",
+          "Recklinghausen Süd",
+          "Recklinghausen Hbf"
+        ]
+      },
+      {
+        "id": "5966191121740747601-2510210647-4",
+        "type": "S",
+        "number": "30215",
+        "direction": "Recklinghausen Hbf",
+        "platform": "1",
+        "time": "2510210656",
+        "destination": "Recklinghausen Hbf",
+        "path_stations": [
+          "Dortmund-Westerfilde",
+          "Dortmund-Nette/Oestrich",
+          "Dortmund-Mengede",
+          "Castrop-Rauxel Hbf",
+          "Herne",
+          "Recklinghausen Süd",
+          "Recklinghausen Hbf"
+        ]
+      },
+      {
+        "id": "8529974279731596255-2510210532-8",
+        "type": "S",
+        "number": "30208",
+        "direction": "Dortmund Hbf",
+        "platform": "2",
+        "time": "2510210604",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Dortmund-Wischlingen",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-6129829367407747459-2510210607-8",
+        "type": "S",
+        "number": "30210",
+        "direction": "Dortmund Hbf",
+        "platform": "2",
+        "time": "2510210634",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Dortmund-Wischlingen",
+          "Dortmund-Dorstfeld",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-1205591724610699528-2510210617-4",
+        "type": "S",
+        "number": "30213",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "1",
+        "time": "2510210626",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Dortmund-Westerfilde",
+          "Dortmund-Nette/Oestrich",
+          "Dortmund-Mengede",
+          "Castrop-Rauxel Hbf",
+          "Herne",
+          "Wanne-Eickel Hbf",
+          "Gelsenkirchen Hbf"
+        ]
+      }
+    ]
+  }
+}

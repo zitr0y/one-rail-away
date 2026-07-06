@@ -1,0 +1,5188 @@
+{
+  "station_eva": "8000152",
+  "date": "251020",
+  "cached_at": "2025-10-20T15:35:35.858987",
+  "plan_data": {
+    "departures": [
+      {
+        "id": "-3655006337917117934-2510201612-13",
+        "type": "S",
+        "number": "34225",
+        "direction": "Haste",
+        "platform": "1",
+        "time": "2510201703",
+        "destination": "Haste",
+        "path_stations": [
+          "Hannover Bismarckstr.",
+          "Hannover-Linden/Fischerhof",
+          "Hannover-Bornum",
+          "Empelde",
+          "Ronnenberg",
+          "Weetzen",
+          "Lemmie",
+          "Wennigsen(Deister)",
+          "Egestorf(Deister)",
+          "Kirchdorf(Deister)",
+          "Barsinghausen",
+          "Winninghausen",
+          "Bantorf",
+          "Bad Nenndorf",
+          "Haste"
+        ]
+      },
+      {
+        "id": "-1302275594339840200-2510201323-7",
+        "type": "ICE",
+        "number": "576",
+        "direction": "Hamburg Hbf",
+        "platform": "7",
+        "time": "2510201720",
+        "destination": "Hamburg Hbf",
+        "path_stations": [
+          "Hamburg Hbf"
+        ]
+      },
+      {
+        "id": "-3065953031611318617-2510201709-1",
+        "type": "ENO",
+        "number": "83547",
+        "direction": "Wolfsburg Hbf",
+        "platform": "13",
+        "time": "2510201709",
+        "destination": "Wolfsburg Hbf",
+        "path_stations": [
+          "Lehrte",
+          "Immensen-Arpke",
+          "Dollbergen",
+          "Dedenhausen",
+          "Meinersen",
+          "Leiferde(b Gifhorn)",
+          "Gifhorn",
+          "Calberlah",
+          "Fallersleben",
+          "Wolfsburg Hbf"
+        ]
+      },
+      {
+        "id": "-2875990222590563976-2510201733-3",
+        "type": "S",
+        "number": "26659",
+        "direction": "Hannover Messe/Laatzen",
+        "platform": "1",
+        "time": "2510201744",
+        "destination": "Hannover Messe/Laatzen",
+        "path_stations": [
+          "Hannover Bismarckstr.",
+          "Hannover Messe/Laatzen"
+        ]
+      },
+      {
+        "id": "-2656098510500461080-2510201733-1",
+        "type": "S",
+        "number": "34183",
+        "direction": "Haste",
+        "platform": "1",
+        "time": "2510201733",
+        "destination": "Haste",
+        "path_stations": [
+          "Hannover Bismarckstr.",
+          "Hannover-Linden/Fischerhof",
+          "Hannover-Bornum",
+          "Empelde",
+          "Ronnenberg",
+          "Weetzen",
+          "Lemmie",
+          "Wennigsen(Deister)",
+          "Egestorf(Deister)",
+          "Kirchdorf(Deister)",
+          "Barsinghausen",
+          "Winninghausen",
+          "Bantorf",
+          "Bad Nenndorf",
+          "Haste"
+        ]
+      },
+      {
+        "id": "4560172541036709998-2510201317-8",
+        "type": "ICE",
+        "number": "586",
+        "direction": "Hamburg Hbf",
+        "platform": "8 D-G",
+        "time": "2510201736",
+        "destination": "Hamburg Hbf",
+        "path_stations": [
+          "Hamburg-Harburg",
+          "Hamburg Hbf"
+        ]
+      },
+      {
+        "id": "-6270903731699972278-2510201445-5",
+        "type": "ICE",
+        "number": "651",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "9",
+        "time": "2510201721",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin-Spandau",
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "-8171669615017157788-2510201710-1",
+        "type": "S",
+        "number": "34452",
+        "direction": "Bennemühlen",
+        "platform": "2",
+        "time": "2510201710",
+        "destination": "Bennemühlen",
+        "path_stations": [
+          "Hannover-Nordstadt",
+          "Hannover-Ledeburg",
+          "Hannover-Vinnhorst",
+          "Langenhagen Mitte",
+          "Langenhagen Pferdemarkt",
+          "Langenhagen-Kaltenweide",
+          "Bissendorf",
+          "Mellendorf",
+          "Bennemühlen"
+        ]
+      },
+      {
+        "id": "-8187411122646087446-2510201706-8",
+        "type": "S",
+        "number": "34454",
+        "direction": "Bennemühlen",
+        "platform": "2",
+        "time": "2510201740",
+        "destination": "Bennemühlen",
+        "path_stations": [
+          "Hannover-Nordstadt",
+          "Hannover-Ledeburg",
+          "Hannover-Vinnhorst",
+          "Langenhagen Mitte",
+          "Langenhagen Pferdemarkt",
+          "Langenhagen-Kaltenweide",
+          "Bissendorf",
+          "Mellendorf",
+          "Bennemühlen"
+        ]
+      },
+      {
+        "id": "1783494979915097951-2510201720-1",
+        "type": "RE",
+        "number": "4426",
+        "direction": "Norddeich Mole",
+        "platform": "12",
+        "time": "2510201720",
+        "destination": "Norddeich Mole",
+        "path_stations": [
+          "Wunstorf",
+          "Neustadt am Rübenberge",
+          "Nienburg(Weser)",
+          "Eystrup",
+          "Dörverden",
+          "Verden(Aller)",
+          "Achim",
+          "Bremen-Mahndorf",
+          "Bremen Hbf",
+          "Delmenhorst",
+          "Hude",
+          "Oldenburg(Oldb)Hbf",
+          "Bad Zwischenahn",
+          "Westerstede-Ocholt",
+          "Augustfehn",
+          "Leer(Ostfriesl)",
+          "Emden Hbf",
+          "Marienhafe",
+          "Norden",
+          "Norddeich",
+          "Norddeich Mole"
+        ]
+      },
+      {
+        "id": "1621090968478317690-2510201515-17",
+        "type": "S",
+        "number": "34568",
+        "direction": "Hannover Flughafen",
+        "platform": "2",
+        "time": "2510201705",
+        "destination": "Hannover Flughafen",
+        "path_stations": [
+          "Hannover-Nordstadt",
+          "Hannover-Ledeburg",
+          "Hannover-Vinnhorst",
+          "Langenhagen Mitte",
+          "Langenhagen Pferdemarkt",
+          "Hannover Flughafen"
+        ]
+      },
+      {
+        "id": "-5777610419921593424-2510201532-5",
+        "type": "ICE",
+        "number": "856",
+        "direction": "Köln Hbf",
+        "platform": "12",
+        "time": "2510201731",
+        "destination": "Köln Hbf",
+        "path_stations": [
+          "Hamm(Westf)Hbf",
+          "Hagen Hbf",
+          "Wuppertal Hbf",
+          "Köln Hbf"
+        ]
+      },
+      {
+        "id": "-8796610692411741434-2510201417-12",
+        "type": "IC",
+        "number": "2433",
+        "direction": "Leipzig Hbf",
+        "platform": "10",
+        "time": "2510201736",
+        "destination": "Leipzig Hbf",
+        "path_stations": [
+          "Braunschweig Hbf",
+          "Helmstedt",
+          "Magdeburg Hbf",
+          "Köthen",
+          "Halle(Saale)Hbf",
+          "Leipzig Hbf"
+        ]
+      },
+      {
+        "id": "3911588435942312844-2510201735-1",
+        "type": "S",
+        "number": "34570",
+        "direction": "Hannover Flughafen",
+        "platform": "2",
+        "time": "2510201735",
+        "destination": "Hannover Flughafen",
+        "path_stations": [
+          "Hannover-Nordstadt",
+          "Hannover-Ledeburg",
+          "Hannover-Vinnhorst",
+          "Langenhagen Mitte",
+          "Langenhagen Pferdemarkt",
+          "Hannover Flughafen"
+        ]
+      },
+      {
+        "id": "-3876277476123700807-2510201247-11",
+        "type": "ICE",
+        "number": "1051",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "9",
+        "time": "2510201705",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin-Spandau",
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "8751390133045952391-2510201704-16",
+        "type": "S",
+        "number": "34228",
+        "direction": "Nienburg(Weser)",
+        "platform": "2",
+        "time": "2510201758",
+        "destination": "Nienburg(Weser)",
+        "path_stations": [
+          "Hannover-Nordstadt",
+          "Hannover-Leinhausen",
+          "Letter",
+          "Seelze",
+          "Dedensen-Gümmer",
+          "Wunstorf",
+          "Poggenhagen",
+          "Neustadt am Rübenberge",
+          "Eilvese",
+          "Hagen(Han)",
+          "Linsburg",
+          "Nienburg(Weser)"
+        ]
+      },
+      {
+        "id": "-7949491460536242261-2510201309-10",
+        "type": "IC",
+        "number": "2442",
+        "direction": "Dortmund Hbf",
+        "platform": "11",
+        "time": "2510201740",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Minden(Westf)",
+          "Bad Oeynhausen",
+          "Bielefeld Hbf",
+          "Gütersloh Hbf",
+          "Hamm(Westf)Hbf",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "611303801109253107-2510201705-3",
+        "type": "S",
+        "number": "26658",
+        "direction": "Seelze",
+        "platform": "2",
+        "time": "2510201715",
+        "destination": "Seelze",
+        "path_stations": [
+          "Letter",
+          "Seelze"
+        ]
+      },
+      {
+        "id": "4871442066824623171-2510201751-1",
+        "type": "RB",
+        "number": "14430",
+        "direction": "Buchholz(Nordheide)",
+        "platform": "2",
+        "time": "2510201751",
+        "destination": "Buchholz(Nordheide)",
+        "path_stations": [
+          "Langenhagen Mitte",
+          "Mellendorf",
+          "Lindwedel",
+          "Schwarmstedt",
+          "Hodenhagen",
+          "Walsrode",
+          "Bad Fallingbostel",
+          "Dorfmark",
+          "Soltau(Han)",
+          "Soltau Nord",
+          "Wolterdingen(Han)",
+          "Schneverdingen",
+          "Wintermoor",
+          "Handeloh",
+          "Büsenbachtal",
+          "Holm-Seppensen",
+          "Suerhop",
+          "Buchholz(Nordheide)"
+        ]
+      },
+      {
+        "id": "236474687019113823-2510201704-1",
+        "type": "S",
+        "number": "34734",
+        "direction": "Celle",
+        "platform": "14",
+        "time": "2510201704",
+        "destination": "Celle",
+        "path_stations": [
+          "Hannover-Kleefeld",
+          "Hannover Karl-Wiechert-Allee",
+          "Hannover Anderten-Misburg",
+          "Ahlten",
+          "Lehrte",
+          "Aligse",
+          "Burgdorf",
+          "Otze",
+          "Ehlershausen",
+          "Celle"
+        ]
+      },
+      {
+        "id": "3019477855122644672-2510201740-1",
+        "type": "ME",
+        "number": "82884",
+        "direction": "Uelzen",
+        "platform": "4 D-G",
+        "time": "2510201740",
+        "destination": "Uelzen",
+        "path_stations": [
+          "Langenhagen Mitte",
+          "Isernhagen",
+          "Großburgwedel",
+          "Celle",
+          "Eschede",
+          "Unterlüß",
+          "Suderburg",
+          "Uelzen"
+        ]
+      },
+      {
+        "id": "2683252994559519477-2510201631-11",
+        "type": "WFB",
+        "number": "95833",
+        "direction": "Braunschweig Hbf",
+        "platform": "9",
+        "time": "2510201755",
+        "destination": "Braunschweig Hbf",
+        "path_stations": [
+          "Lehrte",
+          "Hämelerwald",
+          "Vöhrum",
+          "Peine",
+          "Vechelde",
+          "Braunschweig Hbf"
+        ]
+      },
+      {
+        "id": "-7443151309671820141-2510201532-5",
+        "type": "ICE",
+        "number": "846",
+        "direction": "Mönchengladbach Hbf",
+        "platform": "12",
+        "time": "2510201731",
+        "destination": "Mönchengladbach Hbf",
+        "path_stations": [
+          "Hamm(Westf)Hbf",
+          "Dortmund Hbf",
+          "Essen Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Hbf",
+          "Neuss Hbf",
+          "Mönchengladbach Hbf"
+        ]
+      },
+      {
+        "id": "-1532803659119824598-2510201750-1",
+        "type": "RE",
+        "number": "14048",
+        "direction": "Bremen Hbf",
+        "platform": "11",
+        "time": "2510201750",
+        "destination": "Bremen Hbf",
+        "path_stations": [
+          "Wunstorf",
+          "Neustadt am Rübenberge",
+          "Nienburg(Weser)",
+          "Eystrup",
+          "Dörverden",
+          "Verden(Aller)",
+          "Achim",
+          "Bremen-Mahndorf",
+          "Bremen Hbf"
+        ]
+      },
+      {
+        "id": "-3396372079513139118-2510201748-1",
+        "type": "erx",
+        "number": "83477",
+        "direction": "Bad Harzburg",
+        "platform": "7",
+        "time": "2510201748",
+        "destination": "Bad Harzburg",
+        "path_stations": [
+          "Sarstedt",
+          "Hildesheim Hbf",
+          "Hildesheim Ost",
+          "Derneburg(Han)",
+          "Baddeckenstedt",
+          "Salzgitter-Ringelheim",
+          "Goslar",
+          "Bad Harzburg"
+        ]
+      },
+      {
+        "id": "7188954872564278301-2510201451-7",
+        "type": "ICE",
+        "number": "641",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "9",
+        "time": "2510201731",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Wolfsburg Hbf",
+          "Berlin-Spandau",
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "8131002448481819974-2510201553-4",
+        "type": "IC",
+        "number": "140",
+        "direction": "Amsterdam Centraal",
+        "platform": "12",
+        "time": "2510201756",
+        "destination": "Amsterdam Centraal",
+        "path_stations": [
+          "Bünde(Westf)",
+          "Osnabrück Hbf",
+          "Rheine",
+          "Bad Bentheim",
+          "Hengelo",
+          "Deventer",
+          "Apeldoorn",
+          "Amersfoort Centraal",
+          "Hilversum",
+          "Amsterdam Centraal"
+        ]
+      },
+      {
+        "id": "6981062773394189308-2510201310-17",
+        "type": "ICE",
+        "number": "1576",
+        "direction": "Hamburg-Altona",
+        "platform": "8",
+        "time": "2510201759",
+        "destination": "Hamburg-Altona",
+        "path_stations": [
+          "Celle",
+          "Uelzen",
+          "Lüneburg",
+          "Hamburg-Harburg",
+          "Hamburg Hbf",
+          "Hamburg Dammtor",
+          "Hamburg-Altona"
+        ]
+      },
+      {
+        "id": "5077680880123388159-2510201741-1",
+        "type": "S",
+        "number": "34624",
+        "direction": "Celle",
+        "platform": "14 A-C",
+        "time": "2510201741",
+        "destination": "Celle",
+        "path_stations": [
+          "Hannover Karl-Wiechert-Allee",
+          "Aligse",
+          "Burgdorf",
+          "Otze",
+          "Ehlershausen",
+          "Celle"
+        ]
+      },
+      {
+        "id": "-9014879242082370041-2510201734-1",
+        "type": "S",
+        "number": "34327",
+        "direction": "Hildesheim Hbf",
+        "platform": "13",
+        "time": "2510201734",
+        "destination": "Hildesheim Hbf",
+        "path_stations": [
+          "Hannover-Kleefeld",
+          "Hannover Karl-Wiechert-Allee",
+          "Hannover Anderten-Misburg",
+          "Ahlten",
+          "Lehrte",
+          "Sehnde",
+          "Algermissen",
+          "Harsum",
+          "Hildesheim Hbf"
+        ]
+      },
+      {
+        "id": "-7363937864555845306-2510201716-1",
+        "type": "WFB",
+        "number": "95811",
+        "direction": "Braunschweig Hbf",
+        "platform": "13",
+        "time": "2510201716",
+        "destination": "Braunschweig Hbf",
+        "path_stations": [
+          "Lehrte",
+          "Hämelerwald",
+          "Vöhrum",
+          "Peine",
+          "Vechelde",
+          "Braunschweig Hbf"
+        ]
+      },
+      {
+        "id": "6697323725018542906-2510201736-1",
+        "type": "ME",
+        "number": "82827",
+        "direction": "Göttingen",
+        "platform": "4 A-C",
+        "time": "2510201736",
+        "destination": "Göttingen",
+        "path_stations": [
+          "Sarstedt",
+          "Nordstemmen",
+          "Elze(Han)",
+          "Banteln",
+          "Alfeld(Leine)",
+          "Freden(Leine)",
+          "Kreiensen",
+          "Einbeck-Salzderhelden",
+          "Northeim(Han)",
+          "Nörten-Hardenberg",
+          "Göttingen"
+        ]
+      },
+      {
+        "id": "-4860005095869853275-2510201736-7",
+        "type": "S",
+        "number": "34571",
+        "direction": "Paderborn Hbf",
+        "platform": "1",
+        "time": "2510201755",
+        "destination": "Paderborn Hbf",
+        "path_stations": [
+          "Hannover Bismarckstr.",
+          "Hannover-Linden/Fischerhof",
+          "Weetzen",
+          "Holtensen/Linderte",
+          "Bennigsen",
+          "Völksen/Eldagsen",
+          "Springe",
+          "Bad Münder(Deister)",
+          "Hameln",
+          "Emmerthal",
+          "Bad Pyrmont",
+          "Lügde",
+          "Schieder",
+          "Steinheim(Westf)",
+          "Altenbeken",
+          "Paderborn Hbf"
+        ]
+      },
+      {
+        "id": "-4531120744728068355-2510201512-5",
+        "type": "ICE",
+        "number": "1171",
+        "direction": "Basel SBB",
+        "platform": "3",
+        "time": "2510201741",
+        "destination": "Basel SBB",
+        "path_stations": [
+          "Göttingen",
+          "Kassel-Wilhelmshöhe",
+          "Frankfurt(Main)Hbf",
+          "Mannheim Hbf",
+          "Karlsruhe Hbf",
+          "Baden-Baden",
+          "Offenburg",
+          "Freiburg(Breisgau) Hbf",
+          "Basel Bad Bf",
+          "Basel SBB"
+        ]
+      },
+      {
+        "id": "-1237103206166062497-2510201750-1",
+        "type": "S",
+        "number": "34497",
+        "direction": "Barsinghausen",
+        "platform": "1",
+        "time": "2510201750",
+        "destination": "Barsinghausen",
+        "path_stations": [
+          "Hannover Bismarckstr.",
+          "Hannover-Linden/Fischerhof",
+          "Empelde",
+          "Weetzen",
+          "Wennigsen(Deister)",
+          "Barsinghausen"
+        ]
+      },
+      {
+        "id": "3520459826486736427-2510201610-8",
+        "type": "ICE",
+        "number": "1675",
+        "direction": "Frankfurt(Main)Hbf",
+        "platform": "4",
+        "time": "2510201801",
+        "destination": "Frankfurt(Main)Hbf",
+        "path_stations": [
+          "Göttingen",
+          "Kassel-Wilhelmshöhe",
+          "Wabern(Bz Kassel)",
+          "Treysa",
+          "Marburg(Lahn)",
+          "Gießen",
+          "Friedberg(Hess)",
+          "Frankfurt(Main)Hbf"
+        ]
+      },
+      {
+        "id": "8504037865478308349-2510201748-1",
+        "type": "ENO",
+        "number": "83527",
+        "direction": "Wolfsburg Hbf",
+        "platform": "14 D-F",
+        "time": "2510201748",
+        "destination": "Wolfsburg Hbf",
+        "path_stations": [
+          "Lehrte",
+          "Immensen-Arpke",
+          "Dollbergen",
+          "Dedenhausen",
+          "Meinersen",
+          "Leiferde(b Gifhorn)",
+          "Gifhorn",
+          "Calberlah",
+          "Fallersleben",
+          "Wolfsburg Hbf"
+        ]
+      },
+      {
+        "id": "-6209921216517335774-2510201728-1",
+        "type": "S",
+        "number": "34132",
+        "direction": "Minden(Westf)",
+        "platform": "2",
+        "time": "2510201728",
+        "destination": "Minden(Westf)",
+        "path_stations": [
+          "Hannover-Nordstadt",
+          "Hannover-Leinhausen",
+          "Letter",
+          "Seelze",
+          "Dedensen-Gümmer",
+          "Wunstorf",
+          "Haste",
+          "Lindhorst(Schaumb-Lippe)",
+          "Stadthagen",
+          "Kirchhorsten",
+          "Bückeburg",
+          "Minden(Westf)"
+        ]
+      },
+      {
+        "id": "-5502102779974041070-2510201651-10",
+        "type": "S",
+        "number": "34451",
+        "direction": "Hildesheim Hbf",
+        "platform": "1",
+        "time": "2510201719",
+        "destination": "Hildesheim Hbf",
+        "path_stations": [
+          "Hannover Bismarckstr.",
+          "Hannover Messe/Laatzen",
+          "Rethen(Leine)",
+          "Sarstedt",
+          "Barnten",
+          "Emmerke",
+          "Hildesheim Hbf"
+        ]
+      },
+      {
+        "id": "-988583344704703688-2510201554-4",
+        "type": "ICE",
+        "number": "883",
+        "direction": "München Hbf",
+        "platform": "3",
+        "time": "2510201726",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Göttingen",
+          "Kassel-Wilhelmshöhe",
+          "Fulda",
+          "Würzburg Hbf",
+          "Nürnberg Hbf",
+          "Ingolstadt Hbf",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "6496311521616229042-2510201317-8",
+        "type": "ICE",
+        "number": "536",
+        "direction": "Bremen Hbf",
+        "platform": "8 A-C",
+        "time": "2510201745",
+        "destination": "Bremen Hbf",
+        "path_stations": [
+          "Bremen Hbf"
+        ]
+      },
+      {
+        "id": "-1018015859379264914-2510201700-1",
+        "type": "WFB",
+        "number": "95808",
+        "direction": "Minden(Westf)",
+        "platform": "11",
+        "time": "2510201700",
+        "destination": "Minden(Westf)",
+        "path_stations": [
+          "Wunstorf",
+          "Haste",
+          "Lindhorst(Schaumb-Lippe)",
+          "Stadthagen",
+          "Kirchhorsten",
+          "Bückeburg",
+          "Minden(Westf)"
+        ]
+      },
+      {
+        "id": "8375696493341006692-2510201620-7",
+        "type": "WFB",
+        "number": "95782",
+        "direction": "Rheine",
+        "platform": "12",
+        "time": "2510201709",
+        "destination": "Rheine",
+        "path_stations": [
+          "Wunstorf",
+          "Haste",
+          "Stadthagen",
+          "Bückeburg",
+          "Minden(Westf)",
+          "Porta Westfalica",
+          "Bad Oeynhausen",
+          "Löhne(Westf)",
+          "Kirchlengern",
+          "Bünde(Westf)",
+          "Melle",
+          "Osnabrück Hbf",
+          "Osnabrück Altstadt",
+          "Ibbenbüren-Laggenbeck",
+          "Ibbenbüren",
+          "Ibbenbüren-Esch",
+          "Hörstel",
+          "Rheine"
+        ]
+      },
+      {
+        "id": "4193423936748907523-2510201806-8",
+        "type": "S",
+        "number": "34458",
+        "direction": "Bennemühlen",
+        "platform": "2",
+        "time": "2510201840",
+        "destination": "Bennemühlen",
+        "path_stations": [
+          "Hannover-Nordstadt",
+          "Hannover-Ledeburg",
+          "Hannover-Vinnhorst",
+          "Langenhagen Mitte",
+          "Langenhagen Pferdemarkt",
+          "Langenhagen-Kaltenweide",
+          "Bissendorf",
+          "Mellendorf",
+          "Bennemühlen"
+        ]
+      },
+      {
+        "id": "-8003596825707614150-2510201848-1",
+        "type": "ENO",
+        "number": "83529",
+        "direction": "Wolfsburg Hbf",
+        "platform": "14 D-F",
+        "time": "2510201848",
+        "destination": "Wolfsburg Hbf",
+        "path_stations": [
+          "Lehrte",
+          "Immensen-Arpke",
+          "Dollbergen",
+          "Dedenhausen",
+          "Meinersen",
+          "Leiferde(b Gifhorn)",
+          "Gifhorn",
+          "Calberlah",
+          "Fallersleben",
+          "Wolfsburg Hbf"
+        ]
+      },
+      {
+        "id": "434699660439512752-2510201715-2",
+        "type": "ICE",
+        "number": "633",
+        "direction": "München Hbf",
+        "platform": "4 A-C",
+        "time": "2510201826",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Göttingen",
+          "Kassel-Wilhelmshöhe",
+          "Fulda",
+          "Würzburg Hbf",
+          "Nürnberg Hbf",
+          "Ingolstadt Hbf",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "7511239805744604710-2510201820-1",
+        "type": "RE",
+        "number": "4428",
+        "direction": "Bremerhaven-Lehe",
+        "platform": "12",
+        "time": "2510201820",
+        "destination": "Bremerhaven-Lehe",
+        "path_stations": [
+          "Wunstorf",
+          "Neustadt am Rübenberge",
+          "Nienburg(Weser)",
+          "Eystrup",
+          "Dörverden",
+          "Verden(Aller)",
+          "Langwedel",
+          "Achim",
+          "Bremen-Mahndorf",
+          "Bremen Hbf",
+          "Osterholz-Scharmbeck",
+          "Bremerhaven Hbf",
+          "Bremerhaven-Lehe"
+        ]
+      },
+      {
+        "id": "56460516396021841-2510201804-16",
+        "type": "S",
+        "number": "34230",
+        "direction": "Nienburg(Weser)",
+        "platform": "2",
+        "time": "2510201858",
+        "destination": "Nienburg(Weser)",
+        "path_stations": [
+          "Hannover-Nordstadt",
+          "Hannover-Leinhausen",
+          "Letter",
+          "Seelze",
+          "Dedensen-Gümmer",
+          "Wunstorf",
+          "Poggenhagen",
+          "Neustadt am Rübenberge",
+          "Eilvese",
+          "Hagen(Han)",
+          "Linsburg",
+          "Nienburg(Weser)"
+        ]
+      },
+      {
+        "id": "776874307993202871-2510201306-10",
+        "type": "ICE",
+        "number": "72",
+        "direction": "Hamburg Hbf",
+        "platform": "7",
+        "time": "2510201820",
+        "destination": "Hamburg Hbf",
+        "path_stations": [
+          "Hamburg Hbf"
+        ]
+      },
+      {
+        "id": "6378881227509878523-2510201550-6",
+        "type": "ICE",
+        "number": "943",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "9",
+        "time": "2510201831",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Wolfsburg Hbf",
+          "Berlin-Spandau",
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "3225558202159569339-2510201709-9",
+        "type": "ME",
+        "number": "82829",
+        "direction": "Göttingen",
+        "platform": "3",
+        "time": "2510201833",
+        "destination": "Göttingen",
+        "path_stations": [
+          "Sarstedt",
+          "Nordstemmen",
+          "Elze(Han)",
+          "Banteln",
+          "Alfeld(Leine)",
+          "Freden(Leine)",
+          "Kreiensen",
+          "Einbeck-Salzderhelden",
+          "Northeim(Han)",
+          "Nörten-Hardenberg",
+          "Göttingen"
+        ]
+      },
+      {
+        "id": "4168750873833413702-2510201836-7",
+        "type": "S",
+        "number": "34575",
+        "direction": "Paderborn Hbf",
+        "platform": "1",
+        "time": "2510201855",
+        "destination": "Paderborn Hbf",
+        "path_stations": [
+          "Hannover Bismarckstr.",
+          "Hannover-Linden/Fischerhof",
+          "Weetzen",
+          "Holtensen/Linderte",
+          "Bennigsen",
+          "Völksen/Eldagsen",
+          "Springe",
+          "Bad Münder(Deister)",
+          "Hameln",
+          "Emmerthal",
+          "Bad Pyrmont",
+          "Lügde",
+          "Schieder",
+          "Steinheim(Westf)",
+          "Altenbeken",
+          "Paderborn Hbf"
+        ]
+      },
+      {
+        "id": "-7179928820236290043-2510201636-5",
+        "type": "ICE",
+        "number": "683",
+        "direction": "München Hbf",
+        "platform": "4",
+        "time": "2510201826",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Göttingen",
+          "Kassel-Wilhelmshöhe",
+          "Fulda",
+          "Würzburg Hbf",
+          "Nürnberg Hbf",
+          "Ingolstadt Hbf",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "-1502204392561133056-2510201804-1",
+        "type": "S",
+        "number": "34736",
+        "direction": "Celle",
+        "platform": "14",
+        "time": "2510201804",
+        "destination": "Celle",
+        "path_stations": [
+          "Hannover-Kleefeld",
+          "Hannover Karl-Wiechert-Allee",
+          "Hannover Anderten-Misburg",
+          "Ahlten",
+          "Lehrte",
+          "Aligse",
+          "Burgdorf",
+          "Otze",
+          "Ehlershausen",
+          "Celle"
+        ]
+      },
+      {
+        "id": "5254069718021379768-2510201400-11",
+        "type": "IC",
+        "number": "149",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "9",
+        "time": "2510201804",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin-Spandau",
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "5284622995079906848-2510201834-1",
+        "type": "S",
+        "number": "34329",
+        "direction": "Hildesheim Hbf",
+        "platform": "13",
+        "time": "2510201834",
+        "destination": "Hildesheim Hbf",
+        "path_stations": [
+          "Hannover-Kleefeld",
+          "Hannover Karl-Wiechert-Allee",
+          "Hannover Anderten-Misburg",
+          "Ahlten",
+          "Lehrte",
+          "Sehnde",
+          "Algermissen",
+          "Harsum",
+          "Hildesheim Hbf"
+        ]
+      },
+      {
+        "id": "-175566902845552507-2510201615-17",
+        "type": "S",
+        "number": "34572",
+        "direction": "Hannover Flughafen",
+        "platform": "2",
+        "time": "2510201805",
+        "destination": "Hannover Flughafen",
+        "path_stations": [
+          "Hannover-Nordstadt",
+          "Hannover-Ledeburg",
+          "Hannover-Vinnhorst",
+          "Langenhagen Mitte",
+          "Langenhagen Pferdemarkt",
+          "Hannover Flughafen"
+        ]
+      },
+      {
+        "id": "-3868286264905812646-2510201833-1",
+        "type": "S",
+        "number": "34185",
+        "direction": "Haste",
+        "platform": "1",
+        "time": "2510201833",
+        "destination": "Haste",
+        "path_stations": [
+          "Hannover Bismarckstr.",
+          "Hannover-Linden/Fischerhof",
+          "Hannover-Bornum",
+          "Empelde",
+          "Ronnenberg",
+          "Weetzen",
+          "Lemmie",
+          "Wennigsen(Deister)",
+          "Egestorf(Deister)",
+          "Kirchdorf(Deister)",
+          "Barsinghausen",
+          "Winninghausen",
+          "Bantorf",
+          "Bad Nenndorf",
+          "Haste"
+        ]
+      },
+      {
+        "id": "-2875979624331062252-2510201628-8",
+        "type": "IC",
+        "number": "2045",
+        "direction": "Dresden Hbf",
+        "platform": "10",
+        "time": "2510201836",
+        "destination": "Dresden Hbf",
+        "path_stations": [
+          "Braunschweig Hbf",
+          "Magdeburg Hbf",
+          "Köthen",
+          "Halle(Saale)Hbf",
+          "Leipzig/Halle Flughafen",
+          "Leipzig Hbf",
+          "Riesa",
+          "Dresden-Neustadt",
+          "Dresden Hbf"
+        ]
+      },
+      {
+        "id": "7223376607685568106-2510201632-2",
+        "type": "FLX",
+        "number": "1236",
+        "direction": "Köln Hbf",
+        "platform": "9",
+        "time": "2510201823",
+        "destination": "Köln Hbf",
+        "path_stations": [
+          "Bielefeld Hbf",
+          "Hamm(Westf)Hbf",
+          "Dortmund Hbf",
+          "Gelsenkirchen Hbf",
+          "Oberhausen Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Hbf",
+          "Köln Hbf"
+        ]
+      },
+      {
+        "id": "4263401729039526569-2510201720-7",
+        "type": "WFB",
+        "number": "95834",
+        "direction": "Bielefeld Hbf",
+        "platform": "12",
+        "time": "2510201809",
+        "destination": "Bielefeld Hbf",
+        "path_stations": [
+          "Wunstorf",
+          "Haste",
+          "Stadthagen",
+          "Bückeburg",
+          "Minden(Westf)",
+          "Porta Westfalica",
+          "Bad Oeynhausen",
+          "Löhne(Westf)",
+          "Herford",
+          "Bielefeld Hbf"
+        ]
+      },
+      {
+        "id": "8210477890964980741-2510201632-5",
+        "type": "ICE",
+        "number": "544",
+        "direction": "Köln Hbf",
+        "platform": "12",
+        "time": "2510201831",
+        "destination": "Köln Hbf",
+        "path_stations": [
+          "Minden(Westf)",
+          "Bielefeld Hbf",
+          "Dortmund Hbf",
+          "Essen Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Hbf",
+          "Köln Hbf"
+        ]
+      },
+      {
+        "id": "6553266607171879055-2510201810-1",
+        "type": "S",
+        "number": "34456",
+        "direction": "Bennemühlen",
+        "platform": "2",
+        "time": "2510201810",
+        "destination": "Bennemühlen",
+        "path_stations": [
+          "Hannover-Nordstadt",
+          "Hannover-Ledeburg",
+          "Hannover-Vinnhorst",
+          "Langenhagen Mitte",
+          "Langenhagen Pferdemarkt",
+          "Langenhagen-Kaltenweide",
+          "Bissendorf",
+          "Mellendorf",
+          "Bennemühlen"
+        ]
+      },
+      {
+        "id": "2974583188851636499-2510201800-1",
+        "type": "WFB",
+        "number": "95810",
+        "direction": "Minden(Westf)",
+        "platform": "10",
+        "time": "2510201800",
+        "destination": "Minden(Westf)",
+        "path_stations": [
+          "Wunstorf",
+          "Haste",
+          "Lindhorst(Schaumb-Lippe)",
+          "Stadthagen",
+          "Kirchhorsten",
+          "Bückeburg",
+          "Minden(Westf)"
+        ]
+      },
+      {
+        "id": "7416967594896664698-2510201851-1",
+        "type": "RB",
+        "number": "14432",
+        "direction": "Buchholz(Nordheide)",
+        "platform": "2",
+        "time": "2510201851",
+        "destination": "Buchholz(Nordheide)",
+        "path_stations": [
+          "Langenhagen Mitte",
+          "Mellendorf",
+          "Lindwedel",
+          "Schwarmstedt",
+          "Hodenhagen",
+          "Walsrode",
+          "Bad Fallingbostel",
+          "Dorfmark",
+          "Soltau(Han)",
+          "Soltau Nord",
+          "Wolterdingen(Han)",
+          "Schneverdingen",
+          "Wintermoor",
+          "Handeloh",
+          "Büsenbachtal",
+          "Holm-Seppensen",
+          "Suerhop",
+          "Buchholz(Nordheide)"
+        ]
+      },
+      {
+        "id": "3253351339503685343-2510201841-1",
+        "type": "S",
+        "number": "34626",
+        "direction": "Celle",
+        "platform": "14 A-C",
+        "time": "2510201841",
+        "destination": "Celle",
+        "path_stations": [
+          "Hannover Karl-Wiechert-Allee",
+          "Aligse",
+          "Burgdorf",
+          "Otze",
+          "Ehlershausen",
+          "Celle"
+        ]
+      },
+      {
+        "id": "-1399042432563079357-2510201542-7",
+        "type": "IC",
+        "number": "2034",
+        "direction": "Norddeich",
+        "platform": "11",
+        "time": "2510201845",
+        "destination": "Norddeich",
+        "path_stations": [
+          "Nienburg(Weser)",
+          "Verden(Aller)",
+          "Bremen Hbf",
+          "Delmenhorst",
+          "Hude",
+          "Oldenburg(Oldb)Hbf",
+          "Bad Zwischenahn",
+          "Westerstede-Ocholt",
+          "Augustfehn",
+          "Leer(Ostfriesl)",
+          "Emden Hbf",
+          "Marienhafe",
+          "Norden",
+          "Norddeich"
+        ]
+      },
+      {
+        "id": "-4337178204999180607-2510201815-1",
+        "type": "WFB",
+        "number": "95813",
+        "direction": "Braunschweig Hbf",
+        "platform": "13",
+        "time": "2510201815",
+        "destination": "Braunschweig Hbf",
+        "path_stations": [
+          "Lehrte",
+          "Hämelerwald",
+          "Vöhrum",
+          "Peine",
+          "Vechelde",
+          "Braunschweig Hbf"
+        ]
+      },
+      {
+        "id": "-2543841790748026663-2510201835-1",
+        "type": "S",
+        "number": "34574",
+        "direction": "Hannover Flughafen",
+        "platform": "2",
+        "time": "2510201835",
+        "destination": "Hannover Flughafen",
+        "path_stations": [
+          "Hannover-Nordstadt",
+          "Hannover-Ledeburg",
+          "Hannover-Vinnhorst",
+          "Langenhagen Mitte",
+          "Langenhagen Pferdemarkt",
+          "Hannover Flughafen"
+        ]
+      },
+      {
+        "id": "-1261071308251314263-2510201420-8",
+        "type": "ICE",
+        "number": "786",
+        "direction": "Hamburg Hbf",
+        "platform": "7",
+        "time": "2510201836",
+        "destination": "Hamburg Hbf",
+        "path_stations": [
+          "Hamburg-Harburg",
+          "Hamburg Hbf"
+        ]
+      },
+      {
+        "id": "6960601718829645706-2510201712-13",
+        "type": "S",
+        "number": "34227",
+        "direction": "Haste",
+        "platform": "1",
+        "time": "2510201803",
+        "destination": "Haste",
+        "path_stations": [
+          "Hannover Bismarckstr.",
+          "Hannover-Linden/Fischerhof",
+          "Hannover-Bornum",
+          "Empelde",
+          "Ronnenberg",
+          "Weetzen",
+          "Lemmie",
+          "Wennigsen(Deister)",
+          "Egestorf(Deister)",
+          "Kirchdorf(Deister)",
+          "Barsinghausen",
+          "Winninghausen",
+          "Bantorf",
+          "Bad Nenndorf",
+          "Haste"
+        ]
+      },
+      {
+        "id": "3520459826486736427-2510201610-8",
+        "type": "ICE",
+        "number": "1675",
+        "direction": "Frankfurt(Main)Hbf",
+        "platform": "4",
+        "time": "2510201801",
+        "destination": "Frankfurt(Main)Hbf",
+        "path_stations": [
+          "Göttingen",
+          "Kassel-Wilhelmshöhe",
+          "Wabern(Bz Kassel)",
+          "Treysa",
+          "Marburg(Lahn)",
+          "Gießen",
+          "Friedberg(Hess)",
+          "Frankfurt(Main)Hbf"
+        ]
+      },
+      {
+        "id": "-5957666693722375587-2510201716-3",
+        "type": "ICE",
+        "number": "773",
+        "direction": "Stuttgart Hbf",
+        "platform": "4",
+        "time": "2510201841",
+        "destination": "Stuttgart Hbf",
+        "path_stations": [
+          "Göttingen",
+          "Kassel-Wilhelmshöhe",
+          "Frankfurt(Main)Hbf",
+          "Frankfurt(M) Flughafen Fernbf",
+          "Mannheim Hbf",
+          "Heidelberg Hbf",
+          "Stuttgart Hbf"
+        ]
+      },
+      {
+        "id": "-7118898394809526921-2510201751-10",
+        "type": "S",
+        "number": "34455",
+        "direction": "Hildesheim Hbf",
+        "platform": "1",
+        "time": "2510201819",
+        "destination": "Hildesheim Hbf",
+        "path_stations": [
+          "Hannover Bismarckstr.",
+          "Hannover Messe/Laatzen",
+          "Rethen(Leine)",
+          "Sarstedt",
+          "Barnten",
+          "Emmerke",
+          "Hildesheim Hbf"
+        ]
+      },
+      {
+        "id": "6535130693367601290-2510201810-1",
+        "type": "ENO",
+        "number": "83549",
+        "direction": "Wolfsburg Hbf",
+        "platform": "13",
+        "time": "2510201810",
+        "destination": "Wolfsburg Hbf",
+        "path_stations": [
+          "Lehrte",
+          "Immensen-Arpke",
+          "Dollbergen",
+          "Dedenhausen",
+          "Meinersen",
+          "Leiferde(b Gifhorn)",
+          "Gifhorn",
+          "Calberlah",
+          "Fallersleben",
+          "Wolfsburg Hbf"
+        ]
+      },
+      {
+        "id": "-8775448358522516898-2510201828-1",
+        "type": "S",
+        "number": "34134",
+        "direction": "Minden(Westf)",
+        "platform": "2",
+        "time": "2510201828",
+        "destination": "Minden(Westf)",
+        "path_stations": [
+          "Hannover-Nordstadt",
+          "Hannover-Leinhausen",
+          "Letter",
+          "Seelze",
+          "Dedensen-Gümmer",
+          "Wunstorf",
+          "Haste",
+          "Lindhorst(Schaumb-Lippe)",
+          "Stadthagen",
+          "Kirchhorsten",
+          "Bückeburg",
+          "Minden(Westf)"
+        ]
+      },
+      {
+        "id": "7353825317409690668-2510201704-12",
+        "type": "ME",
+        "number": "82836",
+        "direction": "Uelzen",
+        "platform": "8",
+        "time": "2510201840",
+        "destination": "Uelzen",
+        "path_stations": [
+          "Langenhagen Mitte",
+          "Isernhagen",
+          "Großburgwedel",
+          "Celle",
+          "Eschede",
+          "Unterlüß",
+          "Suderburg",
+          "Uelzen"
+        ]
+      },
+      {
+        "id": "3639552795299979246-2510201638-19",
+        "type": "WFB",
+        "number": "95785",
+        "direction": "Braunschweig Hbf",
+        "platform": "9",
+        "time": "2510201855",
+        "destination": "Braunschweig Hbf",
+        "path_stations": [
+          "Lehrte",
+          "Hämelerwald",
+          "Vöhrum",
+          "Peine",
+          "Vechelde",
+          "Braunschweig Hbf"
+        ]
+      },
+      {
+        "id": "8855692517420642780-2510201645-4",
+        "type": "ICE",
+        "number": "554",
+        "direction": "Köln Hbf",
+        "platform": "12",
+        "time": "2510201840",
+        "destination": "Köln Hbf",
+        "path_stations": [
+          "Hagen Hbf",
+          "Wuppertal Hbf",
+          "Köln Hbf"
+        ]
+      },
+      {
+        "id": "-2402770247009421830-2510201848-1",
+        "type": "erx",
+        "number": "83479",
+        "direction": "Bad Harzburg",
+        "platform": "3",
+        "time": "2510201848",
+        "destination": "Bad Harzburg",
+        "path_stations": [
+          "Sarstedt",
+          "Hildesheim Hbf",
+          "Hildesheim Ost",
+          "Derneburg(Han)",
+          "Baddeckenstedt",
+          "Salzgitter-Ringelheim",
+          "Goslar",
+          "Bad Harzburg"
+        ]
+      },
+      {
+        "id": "-107298036587741504-2510201545-5",
+        "type": "ICE",
+        "number": "953",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "9",
+        "time": "2510201831",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Wolfsburg Hbf",
+          "Berlin-Spandau",
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "8088489625262557114-2510201536-16",
+        "type": "IC",
+        "number": "2435",
+        "direction": "Leipzig Hbf",
+        "platform": "10",
+        "time": "2510201936",
+        "destination": "Leipzig Hbf",
+        "path_stations": [
+          "Braunschweig Hbf",
+          "Helmstedt",
+          "Magdeburg Hbf",
+          "Köthen",
+          "Halle(Saale)Hbf",
+          "Leipzig Hbf"
+        ]
+      },
+      {
+        "id": "6205332934125754797-2510201910-1",
+        "type": "S",
+        "number": "34460",
+        "direction": "Bennemühlen",
+        "platform": "2",
+        "time": "2510201910",
+        "destination": "Bennemühlen",
+        "path_stations": [
+          "Hannover-Nordstadt",
+          "Hannover-Ledeburg",
+          "Hannover-Vinnhorst",
+          "Langenhagen Mitte",
+          "Langenhagen Pferdemarkt",
+          "Langenhagen-Kaltenweide",
+          "Bissendorf",
+          "Mellendorf",
+          "Bennemühlen"
+        ]
+      },
+      {
+        "id": "5790672125460812679-2510201920-1",
+        "type": "RE",
+        "number": "4430",
+        "direction": "Norddeich",
+        "platform": "12",
+        "time": "2510201920",
+        "destination": "Norddeich",
+        "path_stations": [
+          "Wunstorf",
+          "Neustadt am Rübenberge",
+          "Nienburg(Weser)",
+          "Eystrup",
+          "Dörverden",
+          "Verden(Aller)",
+          "Achim",
+          "Bremen-Mahndorf",
+          "Bremen Hbf",
+          "Delmenhorst",
+          "Hude",
+          "Oldenburg(Oldb)Hbf",
+          "Bad Zwischenahn",
+          "Westerstede-Ocholt",
+          "Augustfehn",
+          "Leer(Ostfriesl)",
+          "Emden Hbf",
+          "Marienhafe",
+          "Norden",
+          "Norddeich"
+        ]
+      },
+      {
+        "id": "8962756680051024040-2510201934-1",
+        "type": "S",
+        "number": "34331",
+        "direction": "Hildesheim Hbf",
+        "platform": "13",
+        "time": "2510201934",
+        "destination": "Hildesheim Hbf",
+        "path_stations": [
+          "Hannover-Kleefeld",
+          "Hannover Karl-Wiechert-Allee",
+          "Hannover Anderten-Misburg",
+          "Ahlten",
+          "Lehrte",
+          "Sehnde",
+          "Algermissen",
+          "Harsum",
+          "Hildesheim Hbf"
+        ]
+      },
+      {
+        "id": "-8879970034827069176-2510201933-1",
+        "type": "S",
+        "number": "34187",
+        "direction": "Haste",
+        "platform": "1",
+        "time": "2510201933",
+        "destination": "Haste",
+        "path_stations": [
+          "Hannover Bismarckstr.",
+          "Hannover-Linden/Fischerhof",
+          "Hannover-Bornum",
+          "Empelde",
+          "Ronnenberg",
+          "Weetzen",
+          "Lemmie",
+          "Wennigsen(Deister)",
+          "Egestorf(Deister)",
+          "Kirchdorf(Deister)",
+          "Barsinghausen",
+          "Winninghausen",
+          "Bantorf",
+          "Bad Nenndorf",
+          "Haste"
+        ]
+      },
+      {
+        "id": "-157208555968192668-2510201644-5",
+        "type": "ICE",
+        "number": "653",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "9",
+        "time": "2510201922",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin-Spandau",
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "-4105756300289354795-2510201936-7",
+        "type": "S",
+        "number": "34579",
+        "direction": "Paderborn Hbf",
+        "platform": "1",
+        "time": "2510201955",
+        "destination": "Paderborn Hbf",
+        "path_stations": [
+          "Hannover Bismarckstr.",
+          "Hannover-Linden/Fischerhof",
+          "Weetzen",
+          "Holtensen/Linderte",
+          "Bennigsen",
+          "Völksen/Eldagsen",
+          "Springe",
+          "Bad Münder(Deister)",
+          "Hameln",
+          "Emmerthal",
+          "Bad Pyrmont",
+          "Lügde",
+          "Schieder",
+          "Steinheim(Westf)",
+          "Altenbeken",
+          "Paderborn Hbf"
+        ]
+      },
+      {
+        "id": "3408382595256655331-2510201809-13",
+        "type": "S",
+        "number": "34229",
+        "direction": "Haste",
+        "platform": "1",
+        "time": "2510201903",
+        "destination": "Haste",
+        "path_stations": [
+          "Hannover Bismarckstr.",
+          "Hannover-Linden/Fischerhof",
+          "Hannover-Bornum",
+          "Empelde",
+          "Ronnenberg",
+          "Weetzen",
+          "Lemmie",
+          "Wennigsen(Deister)",
+          "Egestorf(Deister)",
+          "Kirchdorf(Deister)",
+          "Barsinghausen",
+          "Winninghausen",
+          "Bantorf",
+          "Bad Nenndorf",
+          "Haste"
+        ]
+      },
+      {
+        "id": "-1448145632787747533-2510201510-17",
+        "type": "ICE",
+        "number": "1574",
+        "direction": "Hamburg-Altona",
+        "platform": "7",
+        "time": "2510201959",
+        "destination": "Hamburg-Altona",
+        "path_stations": [
+          "Celle",
+          "Uelzen",
+          "Lüneburg",
+          "Hamburg-Harburg",
+          "Hamburg Hbf",
+          "Hamburg Dammtor",
+          "Hamburg-Altona"
+        ]
+      },
+      {
+        "id": "-4534432123066306437-2510201914-1",
+        "type": "WFB",
+        "number": "95815",
+        "direction": "Braunschweig Hbf",
+        "platform": "13",
+        "time": "2510201914",
+        "destination": "Braunschweig Hbf",
+        "path_stations": [
+          "Lehrte",
+          "Hämelerwald",
+          "Vöhrum",
+          "Peine",
+          "Vechelde",
+          "Braunschweig Hbf"
+        ]
+      },
+      {
+        "id": "-839999813854404939-2510201906-8",
+        "type": "S",
+        "number": "34462",
+        "direction": "Bennemühlen",
+        "platform": "2",
+        "time": "2510201940",
+        "destination": "Bennemühlen",
+        "path_stations": [
+          "Hannover-Nordstadt",
+          "Hannover-Ledeburg",
+          "Hannover-Vinnhorst",
+          "Langenhagen Mitte",
+          "Langenhagen Pferdemarkt",
+          "Langenhagen-Kaltenweide",
+          "Bissendorf",
+          "Mellendorf",
+          "Bennemühlen"
+        ]
+      },
+      {
+        "id": "502654172913099951-2510201820-7",
+        "type": "WFB",
+        "number": "95784",
+        "direction": "Rheine",
+        "platform": "11",
+        "time": "2510201905",
+        "destination": "Rheine",
+        "path_stations": [
+          "Wunstorf",
+          "Haste",
+          "Stadthagen",
+          "Bückeburg",
+          "Minden(Westf)",
+          "Porta Westfalica",
+          "Bad Oeynhausen",
+          "Löhne(Westf)",
+          "Kirchlengern",
+          "Bünde(Westf)",
+          "Melle",
+          "Osnabrück Hbf",
+          "Osnabrück Altstadt",
+          "Ibbenbüren-Laggenbeck",
+          "Ibbenbüren",
+          "Ibbenbüren-Esch",
+          "Hörstel",
+          "Rheine"
+        ]
+      },
+      {
+        "id": "4961379719230993157-2510201948-1",
+        "type": "erx",
+        "number": "83481",
+        "direction": "Bad Harzburg",
+        "platform": "4 A-C",
+        "time": "2510201948",
+        "destination": "Bad Harzburg",
+        "path_stations": [
+          "Sarstedt",
+          "Hildesheim Hbf",
+          "Hildesheim Ost",
+          "Derneburg(Han)",
+          "Baddeckenstedt",
+          "Salzgitter-Ringelheim",
+          "Goslar",
+          "Bad Harzburg"
+        ]
+      },
+      {
+        "id": "-1309662995930200381-2510201701-7",
+        "type": "ICE",
+        "number": "776",
+        "direction": "Oldenburg(Oldb)Hbf",
+        "platform": "7",
+        "time": "2510201951",
+        "destination": "Oldenburg(Oldb)Hbf",
+        "path_stations": [
+          "Bremen Hbf",
+          "Oldenburg(Oldb)Hbf"
+        ]
+      },
+      {
+        "id": "-5511541014003594580-2510201652-7",
+        "type": "ICE",
+        "number": "643",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "9",
+        "time": "2510201931",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Wolfsburg Hbf",
+          "Berlin-Spandau",
+          "Berlin Zoologischer Garten",
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "4804116960335233530-2510201509-10",
+        "type": "IC",
+        "number": "2444",
+        "direction": "Dortmund Hbf",
+        "platform": "11",
+        "time": "2510201940",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Minden(Westf)",
+          "Bad Oeynhausen",
+          "Bielefeld Hbf",
+          "Gütersloh Hbf",
+          "Hamm(Westf)Hbf",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "2936828438103251305-2510201817-3",
+        "type": "ICE",
+        "number": "273",
+        "direction": "Karlsruhe Hbf",
+        "platform": "3",
+        "time": "2510201941",
+        "destination": "Karlsruhe Hbf",
+        "path_stations": [
+          "Göttingen",
+          "Kassel-Wilhelmshöhe",
+          "Frankfurt(Main)Hbf",
+          "Mannheim Hbf",
+          "Karlsruhe Hbf"
+        ]
+      },
+      {
+        "id": "7453404058955256805-2510201715-17",
+        "type": "S",
+        "number": "34576",
+        "direction": "Hannover Flughafen",
+        "platform": "2",
+        "time": "2510201905",
+        "destination": "Hannover Flughafen",
+        "path_stations": [
+          "Hannover-Nordstadt",
+          "Hannover-Ledeburg",
+          "Hannover-Vinnhorst",
+          "Langenhagen Mitte",
+          "Langenhagen Pferdemarkt",
+          "Hannover Flughafen"
+        ]
+      },
+      {
+        "id": "7468334744528629490-2510201517-8",
+        "type": "ICE",
+        "number": "584",
+        "direction": "Lübeck Hbf",
+        "platform": "8",
+        "time": "2510201936",
+        "destination": "Lübeck Hbf",
+        "path_stations": [
+          "Lüneburg",
+          "Hamburg-Harburg",
+          "Hamburg Hbf",
+          "Lübeck Hbf"
+        ]
+      },
+      {
+        "id": "-4776595268609006900-2510201615-6",
+        "type": "ICE",
+        "number": "1594",
+        "direction": "Hamburg-Altona",
+        "platform": "7",
+        "time": "2510201918",
+        "destination": "Hamburg-Altona",
+        "path_stations": [
+          "Celle",
+          "Lüneburg",
+          "Hamburg-Harburg",
+          "Hamburg Hbf",
+          "Hamburg Dammtor",
+          "Hamburg-Altona"
+        ]
+      },
+      {
+        "id": "5612003499232383454-2510201523-5",
+        "type": "ICE",
+        "number": "1094",
+        "direction": "Kiel Hbf",
+        "platform": "8",
+        "time": "2510201915",
+        "destination": "Kiel Hbf",
+        "path_stations": [
+          "Hamburg Hbf",
+          "Hamburg Dammtor",
+          "Neumünster",
+          "Kiel Hbf"
+        ]
+      },
+      {
+        "id": "1940939251573764244-2510201851-10",
+        "type": "S",
+        "number": "34459",
+        "direction": "Hildesheim Hbf",
+        "platform": "1",
+        "time": "2510201919",
+        "destination": "Hildesheim Hbf",
+        "path_stations": [
+          "Hannover Bismarckstr.",
+          "Hannover Messe/Laatzen",
+          "Rethen(Leine)",
+          "Sarstedt",
+          "Barnten",
+          "Emmerke",
+          "Hildesheim Hbf"
+        ]
+      },
+      {
+        "id": "-6618830966898217825-2510201904-1",
+        "type": "S",
+        "number": "34738",
+        "direction": "Celle",
+        "platform": "14",
+        "time": "2510201904",
+        "destination": "Celle",
+        "path_stations": [
+          "Hannover-Kleefeld",
+          "Hannover Karl-Wiechert-Allee",
+          "Hannover Anderten-Misburg",
+          "Ahlten",
+          "Lehrte",
+          "Aligse",
+          "Burgdorf",
+          "Otze",
+          "Ehlershausen",
+          "Celle"
+        ]
+      },
+      {
+        "id": "7024061128126907342-2510201951-1",
+        "type": "RB",
+        "number": "14434",
+        "direction": "Buchholz(Nordheide)",
+        "platform": "2",
+        "time": "2510201951",
+        "destination": "Buchholz(Nordheide)",
+        "path_stations": [
+          "Langenhagen Mitte",
+          "Mellendorf",
+          "Lindwedel",
+          "Schwarmstedt",
+          "Hodenhagen",
+          "Walsrode",
+          "Bad Fallingbostel",
+          "Dorfmark",
+          "Soltau(Han)",
+          "Soltau Nord",
+          "Wolterdingen(Han)",
+          "Schneverdingen",
+          "Wintermoor",
+          "Handeloh",
+          "Büsenbachtal",
+          "Holm-Seppensen",
+          "Suerhop",
+          "Buchholz(Nordheide)"
+        ]
+      },
+      {
+        "id": "5735453695384784814-2510201445-10",
+        "type": "ICE",
+        "number": "1053",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "9",
+        "time": "2510201904",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin-Spandau",
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "-263789116210700888-2510201753-5",
+        "type": "ICE",
+        "number": "742",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "12",
+        "time": "2510201956",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Bünde(Westf)",
+          "Osnabrück Hbf",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "4920857102638433713-2510201525-10",
+        "type": "FLX",
+        "number": "1239",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "10",
+        "time": "2510201944",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "3325125859226755776-2510201904-16",
+        "type": "S",
+        "number": "34232",
+        "direction": "Nienburg(Weser)",
+        "platform": "2",
+        "time": "2510201958",
+        "destination": "Nienburg(Weser)",
+        "path_stations": [
+          "Hannover-Nordstadt",
+          "Hannover-Leinhausen",
+          "Letter",
+          "Seelze",
+          "Dedensen-Gümmer",
+          "Wunstorf",
+          "Poggenhagen",
+          "Neustadt am Rübenberge",
+          "Eilvese",
+          "Hagen(Han)",
+          "Linsburg",
+          "Nienburg(Weser)"
+        ]
+      },
+      {
+        "id": "-223421926958290666-2510201634-6",
+        "type": "ICE",
+        "number": "885",
+        "direction": "München Hbf",
+        "platform": "3",
+        "time": "2510201926",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Göttingen",
+          "Kassel-Wilhelmshöhe",
+          "Fulda",
+          "Würzburg Hbf",
+          "Nürnberg Hbf",
+          "Ingolstadt Hbf",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "4251988685605862791-2510201732-5",
+        "type": "ICE",
+        "number": "844",
+        "direction": "Köln Hbf",
+        "platform": "12",
+        "time": "2510201931",
+        "destination": "Köln Hbf",
+        "path_stations": [
+          "Hamm(Westf)Hbf",
+          "Dortmund Hbf",
+          "Essen Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf",
+          "Köln Hbf"
+        ]
+      },
+      {
+        "id": "7685739289771557959-2510201941-1",
+        "type": "S",
+        "number": "34628",
+        "direction": "Celle",
+        "platform": "14 A-C",
+        "time": "2510201941",
+        "destination": "Celle",
+        "path_stations": [
+          "Hannover Karl-Wiechert-Allee",
+          "Aligse",
+          "Burgdorf",
+          "Otze",
+          "Ehlershausen",
+          "Celle"
+        ]
+      },
+      {
+        "id": "2252175318322826763-2510201928-1",
+        "type": "S",
+        "number": "34136",
+        "direction": "Minden(Westf)",
+        "platform": "2",
+        "time": "2510201928",
+        "destination": "Minden(Westf)",
+        "path_stations": [
+          "Hannover-Nordstadt",
+          "Hannover-Leinhausen",
+          "Letter",
+          "Seelze",
+          "Dedensen-Gümmer",
+          "Wunstorf",
+          "Haste",
+          "Lindhorst(Schaumb-Lippe)",
+          "Stadthagen",
+          "Kirchhorsten",
+          "Bückeburg",
+          "Minden(Westf)"
+        ]
+      },
+      {
+        "id": "-5369776350714732009-2510201935-1",
+        "type": "S",
+        "number": "34578",
+        "direction": "Hannover Flughafen",
+        "platform": "2",
+        "time": "2510201935",
+        "destination": "Hannover Flughafen",
+        "path_stations": [
+          "Hannover-Nordstadt",
+          "Hannover-Ledeburg",
+          "Hannover-Vinnhorst",
+          "Langenhagen Mitte",
+          "Langenhagen Pferdemarkt",
+          "Hannover Flughafen"
+        ]
+      },
+      {
+        "id": "951117856217093443-2510201947-1",
+        "type": "ENO",
+        "number": "83531",
+        "direction": "Wolfsburg Hbf",
+        "platform": "14 D-F",
+        "time": "2510201947",
+        "destination": "Wolfsburg Hbf",
+        "path_stations": [
+          "Lehrte",
+          "Immensen-Arpke",
+          "Dollbergen",
+          "Dedenhausen",
+          "Meinersen",
+          "Leiferde(b Gifhorn)",
+          "Gifhorn",
+          "Calberlah",
+          "Fallersleben",
+          "Wolfsburg Hbf"
+        ]
+      },
+      {
+        "id": "8187349158793624860-2510201711-10",
+        "type": "ICE",
+        "number": "1687",
+        "direction": "Kassel-Wilhelmshöhe",
+        "platform": "4",
+        "time": "2510201909",
+        "destination": "Kassel-Wilhelmshöhe",
+        "path_stations": [
+          "Göttingen",
+          "Kassel-Wilhelmshöhe"
+        ]
+      },
+      {
+        "id": "2809927120407899405-2510201940-1",
+        "type": "ME",
+        "number": "82888",
+        "direction": "Uelzen",
+        "platform": "4 D-G",
+        "time": "2510201940",
+        "destination": "Uelzen",
+        "path_stations": [
+          "Langenhagen Mitte",
+          "Isernhagen",
+          "Großburgwedel",
+          "Celle",
+          "Eschede",
+          "Unterlüß",
+          "Suderburg",
+          "Uelzen"
+        ]
+      },
+      {
+        "id": "-6990129281608112740-2510201831-11",
+        "type": "WFB",
+        "number": "95835",
+        "direction": "Braunschweig Hbf",
+        "platform": "9",
+        "time": "2510201955",
+        "destination": "Braunschweig Hbf",
+        "path_stations": [
+          "Lehrte",
+          "Hämelerwald",
+          "Vöhrum",
+          "Peine",
+          "Vechelde",
+          "Braunschweig Hbf"
+        ]
+      },
+      {
+        "id": "-5136052413541263472-2510201936-1",
+        "type": "ME",
+        "number": "82831",
+        "direction": "Göttingen",
+        "platform": "7",
+        "time": "2510201936",
+        "destination": "Göttingen",
+        "path_stations": [
+          "Sarstedt",
+          "Nordstemmen",
+          "Elze(Han)",
+          "Banteln",
+          "Alfeld(Leine)",
+          "Freden(Leine)",
+          "Kreiensen",
+          "Einbeck-Salzderhelden",
+          "Northeim(Han)",
+          "Nörten-Hardenberg",
+          "Göttingen"
+        ]
+      },
+      {
+        "id": "1690497143864597407-2510201732-5",
+        "type": "ICE",
+        "number": "854",
+        "direction": "Wuppertal Hbf",
+        "platform": "12",
+        "time": "2510201931",
+        "destination": "Wuppertal Hbf",
+        "path_stations": [
+          "Hamm(Westf)Hbf",
+          "Hagen Hbf",
+          "Wuppertal Hbf"
+        ]
+      },
+      {
+        "id": "6616504281455544567-2510202028-1",
+        "type": "S",
+        "number": "34138",
+        "direction": "Minden(Westf)",
+        "platform": "2",
+        "time": "2510202028",
+        "destination": "Minden(Westf)",
+        "path_stations": [
+          "Hannover-Nordstadt",
+          "Hannover-Leinhausen",
+          "Letter",
+          "Seelze",
+          "Dedensen-Gümmer",
+          "Wunstorf",
+          "Haste",
+          "Lindhorst(Schaumb-Lippe)",
+          "Stadthagen",
+          "Kirchhorsten",
+          "Bückeburg",
+          "Minden(Westf)"
+        ]
+      },
+      {
+        "id": "4959401606751256562-2510201618-8",
+        "type": "ICE",
+        "number": "1204",
+        "direction": "Hamburg-Altona",
+        "platform": "8",
+        "time": "2510202058",
+        "destination": "Hamburg-Altona",
+        "path_stations": [
+          "Celle",
+          "Uelzen",
+          "Lüneburg",
+          "Hamburg-Harburg",
+          "Hamburg Hbf",
+          "Hamburg Dammtor",
+          "Hamburg-Altona"
+        ]
+      },
+      {
+        "id": "-6710283576631088829-2510202051-1",
+        "type": "RB",
+        "number": "14436",
+        "direction": "Buchholz(Nordheide)",
+        "platform": "2",
+        "time": "2510202051",
+        "destination": "Buchholz(Nordheide)",
+        "path_stations": [
+          "Langenhagen Mitte",
+          "Mellendorf",
+          "Lindwedel",
+          "Schwarmstedt",
+          "Hodenhagen",
+          "Walsrode",
+          "Bad Fallingbostel",
+          "Dorfmark",
+          "Soltau(Han)",
+          "Soltau Nord",
+          "Wolterdingen(Han)",
+          "Schneverdingen",
+          "Wintermoor",
+          "Handeloh",
+          "Büsenbachtal",
+          "Holm-Seppensen",
+          "Suerhop",
+          "Buchholz(Nordheide)"
+        ]
+      },
+      {
+        "id": "5181720942697741094-2510201916-3",
+        "type": "ICE",
+        "number": "775",
+        "direction": "Karlsruhe Hbf",
+        "platform": "7",
+        "time": "2510202041",
+        "destination": "Karlsruhe Hbf",
+        "path_stations": [
+          "Göttingen",
+          "Kassel-Wilhelmshöhe",
+          "Frankfurt(Main)Hbf",
+          "Frankfurt(M) Flughafen Fernbf",
+          "Mannheim Hbf",
+          "Karlsruhe Hbf"
+        ]
+      },
+      {
+        "id": "-6023224919967138564-2510202036-7",
+        "type": "S",
+        "number": "34583",
+        "direction": "Paderborn Hbf",
+        "platform": "1",
+        "time": "2510202055",
+        "destination": "Paderborn Hbf",
+        "path_stations": [
+          "Hannover Bismarckstr.",
+          "Hannover-Linden/Fischerhof",
+          "Weetzen",
+          "Holtensen/Linderte",
+          "Bennigsen",
+          "Völksen/Eldagsen",
+          "Springe",
+          "Bad Münder(Deister)",
+          "Hameln",
+          "Emmerthal",
+          "Bad Pyrmont",
+          "Lügde",
+          "Schieder",
+          "Steinheim(Westf)",
+          "Altenbeken",
+          "Paderborn Hbf"
+        ]
+      },
+      {
+        "id": "-592494834667377743-2510201909-9",
+        "type": "ME",
+        "number": "82833",
+        "direction": "Göttingen",
+        "platform": "3",
+        "time": "2510202033",
+        "destination": "Göttingen",
+        "path_stations": [
+          "Sarstedt",
+          "Nordstemmen",
+          "Elze(Han)",
+          "Banteln",
+          "Alfeld(Leine)",
+          "Freden(Leine)",
+          "Kreiensen",
+          "Einbeck-Salzderhelden",
+          "Northeim(Han)",
+          "Nörten-Hardenberg",
+          "Göttingen"
+        ]
+      },
+      {
+        "id": "6184154017925335529-2510201951-10",
+        "type": "S",
+        "number": "34463",
+        "direction": "Hildesheim Hbf",
+        "platform": "1",
+        "time": "2510202019",
+        "destination": "Hildesheim Hbf",
+        "path_stations": [
+          "Hannover Bismarckstr.",
+          "Hannover Messe/Laatzen",
+          "Rethen(Leine)",
+          "Sarstedt",
+          "Barnten",
+          "Emmerke",
+          "Hildesheim Hbf"
+        ]
+      },
+      {
+        "id": "3647875602828461414-2510202004-1",
+        "type": "S",
+        "number": "34740",
+        "direction": "Celle",
+        "platform": "14",
+        "time": "2510202004",
+        "destination": "Celle",
+        "path_stations": [
+          "Hannover-Kleefeld",
+          "Hannover Karl-Wiechert-Allee",
+          "Hannover Anderten-Misburg",
+          "Ahlten",
+          "Lehrte",
+          "Aligse",
+          "Burgdorf",
+          "Otze",
+          "Ehlershausen",
+          "Celle"
+        ]
+      },
+      {
+        "id": "-568038361379950450-2510202048-1",
+        "type": "ENO",
+        "number": "83533",
+        "direction": "Wolfsburg Hbf",
+        "platform": "12",
+        "time": "2510202048",
+        "destination": "Wolfsburg Hbf",
+        "path_stations": [
+          "Lehrte",
+          "Immensen-Arpke",
+          "Dollbergen",
+          "Dedenhausen",
+          "Meinersen",
+          "Leiferde(b Gifhorn)",
+          "Gifhorn",
+          "Calberlah",
+          "Fallersleben",
+          "Wolfsburg Hbf"
+        ]
+      },
+      {
+        "id": "-7763686466636471476-2510201740-7",
+        "type": "IC",
+        "number": "2032",
+        "direction": "Emden Hbf",
+        "platform": "11",
+        "time": "2510202045",
+        "destination": "Emden Hbf",
+        "path_stations": [
+          "Nienburg(Weser)",
+          "Verden(Aller)",
+          "Bremen Hbf",
+          "Delmenhorst",
+          "Hude",
+          "Oldenburg(Oldb)Hbf",
+          "Bad Zwischenahn",
+          "Westerstede-Ocholt",
+          "Augustfehn",
+          "Leer(Ostfriesl)",
+          "Emden Hbf"
+        ]
+      },
+      {
+        "id": "4080097634714228414-2510202048-1",
+        "type": "erx",
+        "number": "83483",
+        "direction": "Bad Harzburg",
+        "platform": "3",
+        "time": "2510202048",
+        "destination": "Bad Harzburg",
+        "path_stations": [
+          "Sarstedt",
+          "Hildesheim Hbf",
+          "Hildesheim Ost",
+          "Derneburg(Han)",
+          "Baddeckenstedt",
+          "Salzgitter-Ringelheim",
+          "Goslar",
+          "Bad Harzburg"
+        ]
+      },
+      {
+        "id": "8156866923314407266-2510202034-1",
+        "type": "S",
+        "number": "34333",
+        "direction": "Hildesheim Hbf",
+        "platform": "14 A-C",
+        "time": "2510202034",
+        "destination": "Hildesheim Hbf",
+        "path_stations": [
+          "Hannover-Kleefeld",
+          "Hannover Karl-Wiechert-Allee",
+          "Hannover Anderten-Misburg",
+          "Ahlten",
+          "Lehrte",
+          "Sehnde",
+          "Algermissen",
+          "Harsum",
+          "Hildesheim Hbf"
+        ]
+      },
+      {
+        "id": "-1809430765068385755-2510202033-1",
+        "type": "S",
+        "number": "34189",
+        "direction": "Haste",
+        "platform": "1",
+        "time": "2510202033",
+        "destination": "Haste",
+        "path_stations": [
+          "Hannover Bismarckstr.",
+          "Hannover-Linden/Fischerhof",
+          "Hannover-Bornum",
+          "Empelde",
+          "Ronnenberg",
+          "Weetzen",
+          "Lemmie",
+          "Wennigsen(Deister)",
+          "Egestorf(Deister)",
+          "Kirchdorf(Deister)",
+          "Barsinghausen",
+          "Winninghausen",
+          "Bantorf",
+          "Bad Nenndorf",
+          "Haste"
+        ]
+      },
+      {
+        "id": "-5499425279790483536-2510202010-1",
+        "type": "S",
+        "number": "34464",
+        "direction": "Bennemühlen",
+        "platform": "2",
+        "time": "2510202010",
+        "destination": "Bennemühlen",
+        "path_stations": [
+          "Hannover-Nordstadt",
+          "Hannover-Ledeburg",
+          "Hannover-Vinnhorst",
+          "Langenhagen Mitte",
+          "Langenhagen Pferdemarkt",
+          "Langenhagen-Kaltenweide",
+          "Bissendorf",
+          "Mellendorf",
+          "Bennemühlen"
+        ]
+      },
+      {
+        "id": "2307629782762426331-2510201912-13",
+        "type": "S",
+        "number": "34231",
+        "direction": "Haste",
+        "platform": "1",
+        "time": "2510202003",
+        "destination": "Haste",
+        "path_stations": [
+          "Hannover Bismarckstr.",
+          "Hannover-Linden/Fischerhof",
+          "Hannover-Bornum",
+          "Empelde",
+          "Ronnenberg",
+          "Weetzen",
+          "Lemmie",
+          "Wennigsen(Deister)",
+          "Egestorf(Deister)",
+          "Kirchdorf(Deister)",
+          "Barsinghausen",
+          "Winninghausen",
+          "Bantorf",
+          "Bad Nenndorf",
+          "Haste"
+        ]
+      },
+      {
+        "id": "-8275737537227179086-2510201750-6",
+        "type": "ICE",
+        "number": "945",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "9",
+        "time": "2510202031",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Wolfsburg Hbf",
+          "Stendal Hbf",
+          "Berlin-Spandau",
+          "Berlin Zoologischer Garten",
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "-4550645364654346112-2510201745-5",
+        "type": "ICE",
+        "number": "955",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "9",
+        "time": "2510202031",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Wolfsburg Hbf",
+          "Stendal Hbf",
+          "Berlin-Spandau",
+          "Berlin Zoologischer Garten",
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "3365409376481099659-2510201915-2",
+        "type": "ICE",
+        "number": "635",
+        "direction": "Nürnberg Hbf",
+        "platform": "4 A-C",
+        "time": "2510202026",
+        "destination": "Nürnberg Hbf",
+        "path_stations": [
+          "Göttingen",
+          "Kassel-Wilhelmshöhe",
+          "Fulda",
+          "Würzburg Hbf",
+          "Nürnberg Hbf"
+        ]
+      },
+      {
+        "id": "-721807130937592434-2510201313-13",
+        "type": "ICE",
+        "number": "90",
+        "direction": "Hamburg-Altona",
+        "platform": "7",
+        "time": "2510202036",
+        "destination": "Hamburg-Altona",
+        "path_stations": [
+          "Hamburg-Harburg",
+          "Hamburg Hbf",
+          "Hamburg Dammtor",
+          "Hamburg-Altona"
+        ]
+      },
+      {
+        "id": "-130190603183544299-2510201600-11",
+        "type": "IC",
+        "number": "241",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "9",
+        "time": "2510202004",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Berlin-Spandau",
+          "Berlin Zoologischer Garten",
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "4876078774529304572-2510202006-8",
+        "type": "S",
+        "number": "34466",
+        "direction": "Bennemühlen",
+        "platform": "2",
+        "time": "2510202040",
+        "destination": "Bennemühlen",
+        "path_stations": [
+          "Hannover-Nordstadt",
+          "Hannover-Ledeburg",
+          "Hannover-Vinnhorst",
+          "Langenhagen Mitte",
+          "Langenhagen Pferdemarkt",
+          "Langenhagen-Kaltenweide",
+          "Bissendorf",
+          "Mellendorf",
+          "Bennemühlen"
+        ]
+      },
+      {
+        "id": "-8488844539277976383-2510201844-4",
+        "type": "ICE",
+        "number": "552",
+        "direction": "Köln Hbf",
+        "platform": "12",
+        "time": "2510202040",
+        "destination": "Köln Hbf",
+        "path_stations": [
+          "Hagen Hbf",
+          "Wuppertal Hbf",
+          "Köln Hbf"
+        ]
+      },
+      {
+        "id": "8751662503671588597-2510201815-17",
+        "type": "S",
+        "number": "34580",
+        "direction": "Hannover Flughafen",
+        "platform": "2",
+        "time": "2510202005",
+        "destination": "Hannover Flughafen",
+        "path_stations": [
+          "Hannover-Nordstadt",
+          "Hannover-Ledeburg",
+          "Hannover-Vinnhorst",
+          "Langenhagen Mitte",
+          "Langenhagen Pferdemarkt",
+          "Hannover Flughafen"
+        ]
+      },
+      {
+        "id": "-4853549543155830626-2510201238-14",
+        "type": "ICE",
+        "number": "70",
+        "direction": "Hamburg Hbf",
+        "platform": "7",
+        "time": "2510202020",
+        "destination": "Hamburg Hbf",
+        "path_stations": [
+          "Hamburg-Harburg",
+          "Hamburg Hbf"
+        ]
+      },
+      {
+        "id": "3193692511452603741-2510201904-12",
+        "type": "ME",
+        "number": "82840",
+        "direction": "Uelzen",
+        "platform": "8",
+        "time": "2510202040",
+        "destination": "Uelzen",
+        "path_stations": [
+          "Langenhagen Mitte",
+          "Isernhagen",
+          "Großburgwedel",
+          "Celle",
+          "Eschede",
+          "Unterlüß",
+          "Suderburg",
+          "Uelzen"
+        ]
+      },
+      {
+        "id": "7478530496367099178-2510201838-19",
+        "type": "WFB",
+        "number": "95787",
+        "direction": "Braunschweig Hbf",
+        "platform": "9",
+        "time": "2510202055",
+        "destination": "Braunschweig Hbf",
+        "path_stations": [
+          "Lehrte",
+          "Hämelerwald",
+          "Vöhrum",
+          "Peine",
+          "Vechelde",
+          "Braunschweig Hbf"
+        ]
+      },
+      {
+        "id": "-524151628723159576-2510201854-4",
+        "type": "ICE",
+        "number": "685",
+        "direction": "Nürnberg Hbf",
+        "platform": "4",
+        "time": "2510202026",
+        "destination": "Nürnberg Hbf",
+        "path_stations": [
+          "Göttingen",
+          "Kassel-Wilhelmshöhe",
+          "Fulda",
+          "Würzburg Hbf",
+          "Nürnberg Hbf"
+        ]
+      },
+      {
+        "id": "1148856555558896584-2510201920-7",
+        "type": "WFB",
+        "number": "95836",
+        "direction": "Bielefeld Hbf",
+        "platform": "13",
+        "time": "2510202009",
+        "destination": "Bielefeld Hbf",
+        "path_stations": [
+          "Wunstorf",
+          "Haste",
+          "Stadthagen",
+          "Bückeburg",
+          "Minden(Westf)",
+          "Porta Westfalica",
+          "Bad Oeynhausen",
+          "Löhne(Westf)",
+          "Herford",
+          "Bielefeld Hbf"
+        ]
+      },
+      {
+        "id": "-893148775004719136-2510201711-12",
+        "type": "IC",
+        "number": "2043",
+        "direction": "Magdeburg Hbf",
+        "platform": "10",
+        "time": "2510202036",
+        "destination": "Magdeburg Hbf",
+        "path_stations": [
+          "Braunschweig Hbf",
+          "Magdeburg Hbf"
+        ]
+      },
+      {
+        "id": "-7095795228517801950-2510202020-1",
+        "type": "RE",
+        "number": "4432",
+        "direction": "Bremerhaven-Lehe",
+        "platform": "12",
+        "time": "2510202020",
+        "destination": "Bremerhaven-Lehe",
+        "path_stations": [
+          "Wunstorf",
+          "Neustadt am Rübenberge",
+          "Nienburg(Weser)",
+          "Eystrup",
+          "Dörverden",
+          "Verden(Aller)",
+          "Langwedel",
+          "Achim",
+          "Bremen-Mahndorf",
+          "Bremen Hbf",
+          "Osterholz-Scharmbeck",
+          "Bremerhaven Hbf",
+          "Bremerhaven-Lehe"
+        ]
+      },
+      {
+        "id": "-3520619006140243962-2510202016-1",
+        "type": "WFB",
+        "number": "95841",
+        "direction": "Braunschweig Hbf",
+        "platform": "13",
+        "time": "2510202016",
+        "destination": "Braunschweig Hbf",
+        "path_stations": [
+          "Lehrte",
+          "Hämelerwald",
+          "Vöhrum",
+          "Peine",
+          "Vechelde",
+          "Braunschweig Hbf"
+        ]
+      },
+      {
+        "id": "-2122093955306113061-2510202004-16",
+        "type": "S",
+        "number": "34234",
+        "direction": "Nienburg(Weser)",
+        "platform": "2",
+        "time": "2510202058",
+        "destination": "Nienburg(Weser)",
+        "path_stations": [
+          "Hannover-Nordstadt",
+          "Hannover-Leinhausen",
+          "Letter",
+          "Seelze",
+          "Dedensen-Gümmer",
+          "Wunstorf",
+          "Poggenhagen",
+          "Neustadt am Rübenberge",
+          "Eilvese",
+          "Hagen(Han)",
+          "Linsburg",
+          "Nienburg(Weser)"
+        ]
+      },
+      {
+        "id": "3742440961287674842-2510201832-5",
+        "type": "ICE",
+        "number": "542",
+        "direction": "Köln Hbf",
+        "platform": "12",
+        "time": "2510202031",
+        "destination": "Köln Hbf",
+        "path_stations": [
+          "Minden(Westf)",
+          "Bielefeld Hbf",
+          "Dortmund Hbf",
+          "Essen Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Hbf",
+          "Köln Hbf"
+        ]
+      },
+      {
+        "id": "-2537507248512187864-2510202035-1",
+        "type": "S",
+        "number": "34582",
+        "direction": "Hannover Flughafen",
+        "platform": "2",
+        "time": "2510202035",
+        "destination": "Hannover Flughafen",
+        "path_stations": [
+          "Hannover-Nordstadt",
+          "Hannover-Ledeburg",
+          "Hannover-Vinnhorst",
+          "Langenhagen Mitte",
+          "Langenhagen Pferdemarkt",
+          "Hannover Flughafen"
+        ]
+      },
+      {
+        "id": "-8871483404415728831-2510202041-1",
+        "type": "S",
+        "number": "34630",
+        "direction": "Celle",
+        "platform": "14 D-F",
+        "time": "2510202041",
+        "destination": "Celle",
+        "path_stations": [
+          "Hannover Karl-Wiechert-Allee",
+          "Aligse",
+          "Burgdorf",
+          "Otze",
+          "Ehlershausen",
+          "Celle"
+        ]
+      },
+      {
+        "id": "-6361292909790852701-2510201915-17",
+        "type": "S",
+        "number": "34584",
+        "direction": "Hannover Flughafen",
+        "platform": "2",
+        "time": "2510202105",
+        "destination": "Hannover Flughafen",
+        "path_stations": [
+          "Hannover-Nordstadt",
+          "Hannover-Ledeburg",
+          "Hannover-Vinnhorst",
+          "Langenhagen Mitte",
+          "Langenhagen Pferdemarkt",
+          "Hannover Flughafen"
+        ]
+      },
+      {
+        "id": "6992012378128167215-2510201956-4",
+        "type": "NJ",
+        "number": "40491",
+        "direction": "Innsbruck Hbf",
+        "platform": "4",
+        "time": "2510202153",
+        "destination": "Innsbruck Hbf",
+        "path_stations": [
+          "Göttingen",
+          "Würzburg Hbf",
+          "Nürnberg Hbf",
+          "München Hbf",
+          "Rosenheim",
+          "Kufstein",
+          "Wörgl Hbf",
+          "Jenbach",
+          "Innsbruck Hbf"
+        ]
+      },
+      {
+        "id": "4845754883347415766-2510202148-1",
+        "type": "erx",
+        "number": "83485",
+        "direction": "Bad Harzburg",
+        "platform": "3",
+        "time": "2510202148",
+        "destination": "Bad Harzburg",
+        "path_stations": [
+          "Sarstedt",
+          "Hildesheim Hbf",
+          "Hildesheim Ost",
+          "Derneburg(Han)",
+          "Baddeckenstedt",
+          "Salzgitter-Ringelheim",
+          "Goslar",
+          "Bad Harzburg"
+        ]
+      },
+      {
+        "id": "-566732643625155291-2510201716-8",
+        "type": "ICE",
+        "number": "582",
+        "direction": "Hamburg Hbf",
+        "platform": "8 D-G",
+        "time": "2510202136",
+        "destination": "Hamburg Hbf",
+        "path_stations": [
+          "Hamburg-Harburg",
+          "Hamburg Hbf"
+        ]
+      },
+      {
+        "id": "2168589304841869431-2510202135-1",
+        "type": "S",
+        "number": "34586",
+        "direction": "Hannover Flughafen",
+        "platform": "2",
+        "time": "2510202135",
+        "destination": "Hannover Flughafen",
+        "path_stations": [
+          "Hannover-Nordstadt",
+          "Hannover-Ledeburg",
+          "Hannover-Vinnhorst",
+          "Langenhagen Mitte",
+          "Langenhagen Pferdemarkt",
+          "Hannover Flughafen"
+        ]
+      },
+      {
+        "id": "53010060684000441-2510202051-10",
+        "type": "S",
+        "number": "34467",
+        "direction": "Hildesheim Hbf",
+        "platform": "1",
+        "time": "2510202119",
+        "destination": "Hildesheim Hbf",
+        "path_stations": [
+          "Hannover Bismarckstr.",
+          "Hannover Messe/Laatzen",
+          "Rethen(Leine)",
+          "Sarstedt",
+          "Barnten",
+          "Emmerke",
+          "Hildesheim Hbf"
+        ]
+      },
+      {
+        "id": "-2044723357159653206-2510201956-4",
+        "type": "NJ",
+        "number": "491",
+        "direction": "Wien Hbf",
+        "platform": "4",
+        "time": "2510202153",
+        "destination": "Wien Hbf",
+        "path_stations": [
+          "Göttingen",
+          "Würzburg Hbf",
+          "Nürnberg Hbf",
+          "Regensburg Hbf",
+          "Passau Hbf",
+          "Wels Hbf",
+          "Linz Hbf",
+          "St.Pölten Hbf",
+          "Wien Meidling",
+          "Wien Hbf"
+        ]
+      },
+      {
+        "id": "5367236167721192989-2510202136-7",
+        "type": "S",
+        "number": "34587",
+        "direction": "Paderborn Hbf",
+        "platform": "1",
+        "time": "2510202155",
+        "destination": "Paderborn Hbf",
+        "path_stations": [
+          "Hannover Bismarckstr.",
+          "Hannover-Linden/Fischerhof",
+          "Weetzen",
+          "Holtensen/Linderte",
+          "Bennigsen",
+          "Völksen/Eldagsen",
+          "Springe",
+          "Bad Münder(Deister)",
+          "Hameln",
+          "Emmerthal",
+          "Bad Pyrmont",
+          "Lügde",
+          "Schieder",
+          "Steinheim(Westf)",
+          "Altenbeken",
+          "Paderborn Hbf"
+        ]
+      },
+      {
+        "id": "1284421182583611192-2510202147-1",
+        "type": "ENO",
+        "number": "83535",
+        "direction": "Wolfsburg Hbf",
+        "platform": "14 D-F",
+        "time": "2510202147",
+        "destination": "Wolfsburg Hbf",
+        "path_stations": [
+          "Lehrte",
+          "Immensen-Arpke",
+          "Dollbergen",
+          "Dedenhausen",
+          "Meinersen",
+          "Leiferde(b Gifhorn)",
+          "Gifhorn",
+          "Calberlah",
+          "Fallersleben",
+          "Wolfsburg Hbf"
+        ]
+      },
+      {
+        "id": "-3066125373001280425-2510202104-1",
+        "type": "S",
+        "number": "34742",
+        "direction": "Celle",
+        "platform": "14",
+        "time": "2510202104",
+        "destination": "Celle",
+        "path_stations": [
+          "Hannover-Kleefeld",
+          "Hannover Karl-Wiechert-Allee",
+          "Hannover Anderten-Misburg",
+          "Ahlten",
+          "Lehrte",
+          "Aligse",
+          "Burgdorf",
+          "Otze",
+          "Ehlershausen",
+          "Celle"
+        ]
+      },
+      {
+        "id": "2125401442085932017-2510202104-16",
+        "type": "S",
+        "number": "34236",
+        "direction": "Seelze",
+        "platform": "2",
+        "time": "2510202158",
+        "destination": "Seelze",
+        "path_stations": [
+          "Hannover-Nordstadt",
+          "Hannover-Leinhausen",
+          "Letter",
+          "Seelze"
+        ]
+      },
+      {
+        "id": "601208318005647306-2510202020-7",
+        "type": "WFB",
+        "number": "95786",
+        "direction": "Rheine",
+        "platform": "12",
+        "time": "2510202109",
+        "destination": "Rheine",
+        "path_stations": [
+          "Wunstorf",
+          "Haste",
+          "Stadthagen",
+          "Bückeburg",
+          "Minden(Westf)",
+          "Porta Westfalica",
+          "Bad Oeynhausen",
+          "Löhne(Westf)",
+          "Kirchlengern",
+          "Bünde(Westf)",
+          "Melle",
+          "Osnabrück Hbf",
+          "Osnabrück Altstadt",
+          "Ibbenbüren-Laggenbeck",
+          "Ibbenbüren",
+          "Ibbenbüren-Esch",
+          "Hörstel",
+          "Rheine"
+        ]
+      },
+      {
+        "id": "-9100558576042697687-2510202110-1",
+        "type": "S",
+        "number": "34468",
+        "direction": "Bennemühlen",
+        "platform": "2",
+        "time": "2510202110",
+        "destination": "Bennemühlen",
+        "path_stations": [
+          "Hannover-Nordstadt",
+          "Hannover-Ledeburg",
+          "Hannover-Vinnhorst",
+          "Langenhagen Mitte",
+          "Langenhagen Pferdemarkt",
+          "Langenhagen-Kaltenweide",
+          "Bissendorf",
+          "Mellendorf",
+          "Bennemühlen"
+        ]
+      },
+      {
+        "id": "-8138362163861218620-2510201716-8",
+        "type": "ICE",
+        "number": "532",
+        "direction": "Oldenburg(Oldb)Hbf",
+        "platform": "8 A-C",
+        "time": "2510202145",
+        "destination": "Oldenburg(Oldb)Hbf",
+        "path_stations": [
+          "Nienburg(Weser)",
+          "Verden(Aller)",
+          "Bremen Hbf",
+          "Delmenhorst",
+          "Oldenburg(Oldb)Hbf"
+        ]
+      },
+      {
+        "id": "9016403526930832374-2510201845-5",
+        "type": "ICE",
+        "number": "655",
+        "direction": "Berlin Hbf",
+        "platform": "9",
+        "time": "2510202122",
+        "destination": "Berlin Hbf",
+        "path_stations": [
+          "Berlin-Spandau",
+          "Berlin Hbf"
+        ]
+      },
+      {
+        "id": "7874571169297830072-2510202009-13",
+        "type": "S",
+        "number": "34233",
+        "direction": "Haste",
+        "platform": "1",
+        "time": "2510202103",
+        "destination": "Haste",
+        "path_stations": [
+          "Hannover Bismarckstr.",
+          "Hannover-Linden/Fischerhof",
+          "Hannover-Bornum",
+          "Empelde",
+          "Ronnenberg",
+          "Weetzen",
+          "Lemmie",
+          "Wennigsen(Deister)",
+          "Egestorf(Deister)",
+          "Kirchdorf(Deister)",
+          "Barsinghausen",
+          "Winninghausen",
+          "Bantorf",
+          "Bad Nenndorf",
+          "Haste"
+        ]
+      },
+      {
+        "id": "-3236117013433278736-2510202151-1",
+        "type": "RB",
+        "number": "14438",
+        "direction": "Buchholz(Nordheide)",
+        "platform": "2",
+        "time": "2510202151",
+        "destination": "Buchholz(Nordheide)",
+        "path_stations": [
+          "Langenhagen Mitte",
+          "Mellendorf",
+          "Lindwedel",
+          "Schwarmstedt",
+          "Hodenhagen",
+          "Walsrode",
+          "Bad Fallingbostel",
+          "Dorfmark",
+          "Soltau(Han)",
+          "Soltau Nord",
+          "Wolterdingen(Han)",
+          "Schneverdingen",
+          "Wintermoor",
+          "Handeloh",
+          "Büsenbachtal",
+          "Holm-Seppensen",
+          "Suerhop",
+          "Buchholz(Nordheide)"
+        ]
+      },
+      {
+        "id": "-8941932149309778658-2510201723-8",
+        "type": "ICE",
+        "number": "572",
+        "direction": "Hamburg Hbf",
+        "platform": "8",
+        "time": "2510202122",
+        "destination": "Hamburg Hbf",
+        "path_stations": [
+          "Lüneburg",
+          "Hamburg-Harburg",
+          "Hamburg Hbf"
+        ]
+      },
+      {
+        "id": "5343395294244929730-2510202133-1",
+        "type": "S",
+        "number": "34191",
+        "direction": "Haste",
+        "platform": "1",
+        "time": "2510202133",
+        "destination": "Haste",
+        "path_stations": [
+          "Hannover Bismarckstr.",
+          "Hannover-Linden/Fischerhof",
+          "Hannover-Bornum",
+          "Empelde",
+          "Ronnenberg",
+          "Weetzen",
+          "Lemmie",
+          "Wennigsen(Deister)",
+          "Egestorf(Deister)",
+          "Kirchdorf(Deister)",
+          "Barsinghausen",
+          "Winninghausen",
+          "Bantorf",
+          "Bad Nenndorf",
+          "Haste"
+        ]
+      },
+      {
+        "id": "-8624610893606997940-2510202031-11",
+        "type": "WFB",
+        "number": "95837",
+        "direction": "Braunschweig Hbf",
+        "platform": "9",
+        "time": "2510202155",
+        "destination": "Braunschweig Hbf",
+        "path_stations": [
+          "Lehrte",
+          "Hämelerwald",
+          "Vöhrum",
+          "Peine",
+          "Vechelde",
+          "Braunschweig Hbf"
+        ]
+      },
+      {
+        "id": "-7895235402920416485-2510202128-1",
+        "type": "S",
+        "number": "34140",
+        "direction": "Wunstorf",
+        "platform": "2",
+        "time": "2510202128",
+        "destination": "Wunstorf",
+        "path_stations": [
+          "Hannover-Nordstadt",
+          "Hannover-Leinhausen",
+          "Letter",
+          "Seelze",
+          "Dedensen-Gümmer",
+          "Wunstorf"
+        ]
+      },
+      {
+        "id": "-7123580108217034731-2510202120-1",
+        "type": "RE",
+        "number": "4434",
+        "direction": "Oldenburg(Oldb)Hbf",
+        "platform": "12",
+        "time": "2510202120",
+        "destination": "Oldenburg(Oldb)Hbf",
+        "path_stations": [
+          "Wunstorf",
+          "Neustadt am Rübenberge",
+          "Nienburg(Weser)",
+          "Eystrup",
+          "Dörverden",
+          "Verden(Aller)",
+          "Achim",
+          "Bremen-Mahndorf",
+          "Bremen Hbf",
+          "Delmenhorst",
+          "Hude",
+          "Oldenburg(Oldb)Hbf"
+        ]
+      },
+      {
+        "id": "-5513036863442287046-2510202140-1",
+        "type": "ME",
+        "number": "82852",
+        "direction": "Celle",
+        "platform": "7 D-G",
+        "time": "2510202140",
+        "destination": "Celle",
+        "path_stations": [
+          "Langenhagen Mitte",
+          "Isernhagen",
+          "Großburgwedel",
+          "Celle"
+        ]
+      },
+      {
+        "id": "5587922004740547299-2510201816-12",
+        "type": "IC",
+        "number": "2437",
+        "direction": "Magdeburg Hbf",
+        "platform": "10",
+        "time": "2510202136",
+        "destination": "Magdeburg Hbf",
+        "path_stations": [
+          "Peine",
+          "Braunschweig Hbf",
+          "Helmstedt",
+          "Magdeburg Hbf"
+        ]
+      },
+      {
+        "id": "5446419279451908244-2510201954-5",
+        "type": "ICE",
+        "number": "887",
+        "direction": "Wiesbaden Hbf",
+        "platform": "4",
+        "time": "2510202126",
+        "destination": "Wiesbaden Hbf",
+        "path_stations": [
+          "Göttingen",
+          "Fulda",
+          "Hanau Hbf",
+          "Frankfurt(Main)Hbf",
+          "Mainz Hbf",
+          "Wiesbaden Hbf"
+        ]
+      },
+      {
+        "id": "624684981040080406-2510201934-5",
+        "type": "ICE",
+        "number": "842",
+        "direction": "Köln Hbf",
+        "platform": "12",
+        "time": "2510202136",
+        "destination": "Köln Hbf",
+        "path_stations": [
+          "Minden(Westf)",
+          "Bielefeld Hbf",
+          "Hamm(Westf)Hbf",
+          "Dortmund Hbf",
+          "Essen Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf",
+          "Köln Hbf"
+        ]
+      },
+      {
+        "id": "4447890004106418758-2510201852-7",
+        "type": "ICE",
+        "number": "645",
+        "direction": "Berlin Hbf",
+        "platform": "9",
+        "time": "2510202131",
+        "destination": "Berlin Hbf",
+        "path_stations": [
+          "Wolfsburg Hbf",
+          "Berlin-Spandau",
+          "Berlin Hbf"
+        ]
+      },
+      {
+        "id": "-5546964268730248435-2510202106-8",
+        "type": "S",
+        "number": "34470",
+        "direction": "Bennemühlen",
+        "platform": "2",
+        "time": "2510202140",
+        "destination": "Bennemühlen",
+        "path_stations": [
+          "Hannover-Nordstadt",
+          "Hannover-Ledeburg",
+          "Hannover-Vinnhorst",
+          "Langenhagen Mitte",
+          "Langenhagen Pferdemarkt",
+          "Langenhagen-Kaltenweide",
+          "Bissendorf",
+          "Mellendorf",
+          "Bennemühlen"
+        ]
+      },
+      {
+        "id": "-1127662010857074514-2510202136-1",
+        "type": "ME",
+        "number": "82835",
+        "direction": "Göttingen",
+        "platform": "7 A-C",
+        "time": "2510202136",
+        "destination": "Göttingen",
+        "path_stations": [
+          "Sarstedt",
+          "Nordstemmen",
+          "Elze(Han)",
+          "Banteln",
+          "Alfeld(Leine)",
+          "Freden(Leine)",
+          "Kreiensen",
+          "Einbeck-Salzderhelden",
+          "Northeim(Han)",
+          "Nörten-Hardenberg",
+          "Göttingen"
+        ]
+      },
+      {
+        "id": "-5796370532258542779-2510202116-1",
+        "type": "WFB",
+        "number": "95843",
+        "direction": "Braunschweig Hbf",
+        "platform": "13 A-C",
+        "time": "2510202116",
+        "destination": "Braunschweig Hbf",
+        "path_stations": [
+          "Lehrte",
+          "Hämelerwald",
+          "Vöhrum",
+          "Peine",
+          "Vechelde",
+          "Braunschweig Hbf"
+        ]
+      },
+      {
+        "id": "-4215389509482100177-2510202134-1",
+        "type": "S",
+        "number": "34335",
+        "direction": "Hildesheim Hbf",
+        "platform": "13",
+        "time": "2510202134",
+        "destination": "Hildesheim Hbf",
+        "path_stations": [
+          "Hannover-Kleefeld",
+          "Hannover Karl-Wiechert-Allee",
+          "Hannover Anderten-Misburg",
+          "Ahlten",
+          "Lehrte",
+          "Sehnde",
+          "Algermissen",
+          "Harsum",
+          "Hildesheim Hbf"
+        ]
+      },
+      {
+        "id": "2869769973922245820-2510202032-6",
+        "type": "ICE",
+        "number": "540",
+        "direction": "Oldenburg(Oldb)Hbf",
+        "platform": "12",
+        "time": "2510202245",
+        "destination": "Oldenburg(Oldb)Hbf",
+        "path_stations": [
+          "Nienburg(Weser)",
+          "Verden(Aller)",
+          "Bremen Hbf",
+          "Delmenhorst",
+          "Oldenburg(Oldb)Hbf"
+        ]
+      },
+      {
+        "id": "2937570699952391718-2510202151-10",
+        "type": "S",
+        "number": "34471",
+        "direction": "Hildesheim Hbf",
+        "platform": "1",
+        "time": "2510202219",
+        "destination": "Hildesheim Hbf",
+        "path_stations": [
+          "Hannover Bismarckstr.",
+          "Hannover Messe/Laatzen",
+          "Rethen(Leine)",
+          "Sarstedt",
+          "Barnten",
+          "Emmerke",
+          "Hildesheim Hbf"
+        ]
+      },
+      {
+        "id": "1826441346437418604-2510202228-1",
+        "type": "S",
+        "number": "34142",
+        "direction": "Seelze",
+        "platform": "2",
+        "time": "2510202228",
+        "destination": "Seelze",
+        "path_stations": [
+          "Hannover-Nordstadt",
+          "Hannover-Leinhausen",
+          "Letter",
+          "Seelze"
+        ]
+      },
+      {
+        "id": "6745484896867284765-2510202104-12",
+        "type": "ME",
+        "number": "82844",
+        "direction": "Uelzen",
+        "platform": "7",
+        "time": "2510202248",
+        "destination": "Uelzen",
+        "path_stations": [
+          "Langenhagen Mitte",
+          "Isernhagen",
+          "Großburgwedel",
+          "Celle",
+          "Eschede",
+          "Unterlüß",
+          "Suderburg",
+          "Uelzen"
+        ]
+      },
+      {
+        "id": "7607223771836657360-2510202251-1",
+        "type": "RB",
+        "number": "14440",
+        "direction": "Soltau(Han)",
+        "platform": "2",
+        "time": "2510202251",
+        "destination": "Soltau(Han)",
+        "path_stations": [
+          "Langenhagen Mitte",
+          "Mellendorf",
+          "Lindwedel",
+          "Schwarmstedt",
+          "Hodenhagen",
+          "Walsrode",
+          "Bad Fallingbostel",
+          "Dorfmark",
+          "Soltau(Han)"
+        ]
+      },
+      {
+        "id": "3058888118337102974-2510202233-1",
+        "type": "S",
+        "number": "34193",
+        "direction": "Haste",
+        "platform": "1",
+        "time": "2510202233",
+        "destination": "Haste",
+        "path_stations": [
+          "Hannover Bismarckstr.",
+          "Hannover-Linden/Fischerhof",
+          "Hannover-Bornum",
+          "Empelde",
+          "Ronnenberg",
+          "Weetzen",
+          "Lemmie",
+          "Wennigsen(Deister)",
+          "Egestorf(Deister)",
+          "Kirchdorf(Deister)",
+          "Barsinghausen",
+          "Winninghausen",
+          "Bantorf",
+          "Bad Nenndorf",
+          "Haste"
+        ]
+      },
+      {
+        "id": "5597303123860052865-2510201926-7",
+        "type": "ICE",
+        "number": "947",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "9",
+        "time": "2510202231",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Wolfsburg Hbf",
+          "Berlin-Spandau",
+          "Berlin Zoologischer Garten",
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "-7573651573329216408-2510201459-17",
+        "type": "ICE",
+        "number": "376",
+        "direction": "Hamburg-Altona",
+        "platform": "8",
+        "time": "2510202220",
+        "destination": "Hamburg-Altona",
+        "path_stations": [
+          "Hamburg Hbf",
+          "Hamburg Dammtor",
+          "Hamburg-Altona"
+        ]
+      },
+      {
+        "id": "-5781610653983957098-2510202236-7",
+        "type": "S",
+        "number": "34369",
+        "direction": "Bad Pyrmont",
+        "platform": "1",
+        "time": "2510202255",
+        "destination": "Bad Pyrmont",
+        "path_stations": [
+          "Hannover Bismarckstr.",
+          "Hannover-Linden/Fischerhof",
+          "Weetzen",
+          "Holtensen/Linderte",
+          "Bennigsen",
+          "Völksen/Eldagsen",
+          "Springe",
+          "Bad Münder(Deister)",
+          "Hameln",
+          "Emmerthal",
+          "Bad Pyrmont"
+        ]
+      },
+      {
+        "id": "-7502615824052335279-2510202204-1",
+        "type": "S",
+        "number": "34744",
+        "direction": "Celle",
+        "platform": "14",
+        "time": "2510202204",
+        "destination": "Celle",
+        "path_stations": [
+          "Hannover-Kleefeld",
+          "Hannover Karl-Wiechert-Allee",
+          "Hannover Anderten-Misburg",
+          "Ahlten",
+          "Aligse",
+          "Burgdorf",
+          "Otze",
+          "Ehlershausen",
+          "Celle"
+        ]
+      },
+      {
+        "id": "9012399229531177399-2510202204-16",
+        "type": "S",
+        "number": "34238",
+        "direction": "Seelze",
+        "platform": "2",
+        "time": "2510202258",
+        "destination": "Seelze",
+        "path_stations": [
+          "Hannover-Nordstadt",
+          "Hannover-Leinhausen",
+          "Letter",
+          "Seelze"
+        ]
+      },
+      {
+        "id": "-1290839640796586839-2510201818-8",
+        "type": "ICE",
+        "number": "782",
+        "direction": "Hamburg Hbf",
+        "platform": "8",
+        "time": "2510202236",
+        "destination": "Hamburg Hbf",
+        "path_stations": [
+          "Celle",
+          "Uelzen",
+          "Lüneburg",
+          "Hamburg-Harburg",
+          "Hamburg Hbf"
+        ]
+      },
+      {
+        "id": "-1653210131841273505-2510202248-1",
+        "type": "ENO",
+        "number": "83537",
+        "direction": "Wolfsburg Hbf",
+        "platform": "14 D-F",
+        "time": "2510202248",
+        "destination": "Wolfsburg Hbf",
+        "path_stations": [
+          "Lehrte",
+          "Immensen-Arpke",
+          "Dollbergen",
+          "Dedenhausen",
+          "Meinersen",
+          "Leiferde(b Gifhorn)",
+          "Gifhorn",
+          "Calberlah",
+          "Fallersleben",
+          "Wolfsburg Hbf"
+        ]
+      },
+      {
+        "id": "7621373856227750463-2510202248-1",
+        "type": "erx",
+        "number": "83487",
+        "direction": "Bad Harzburg",
+        "platform": "3",
+        "time": "2510202248",
+        "destination": "Bad Harzburg",
+        "path_stations": [
+          "Sarstedt",
+          "Hildesheim Hbf",
+          "Hildesheim Ost",
+          "Derneburg(Han)",
+          "Baddeckenstedt",
+          "Salzgitter-Ringelheim",
+          "Goslar",
+          "Bad Harzburg"
+        ]
+      },
+      {
+        "id": "8658864895166983083-2510202234-1",
+        "type": "S",
+        "number": "34337",
+        "direction": "Hildesheim Hbf",
+        "platform": "14 A-C",
+        "time": "2510202234",
+        "destination": "Hildesheim Hbf",
+        "path_stations": [
+          "Hannover-Kleefeld",
+          "Hannover Karl-Wiechert-Allee",
+          "Hannover Anderten-Misburg",
+          "Ahlten",
+          "Lehrte",
+          "Sehnde",
+          "Algermissen",
+          "Harsum",
+          "Hildesheim Hbf"
+        ]
+      },
+      {
+        "id": "-876254985661224810-2510202120-7",
+        "type": "WFB",
+        "number": "95838",
+        "direction": "Minden(Westf)",
+        "platform": "12",
+        "time": "2510202209",
+        "destination": "Minden(Westf)",
+        "path_stations": [
+          "Haste",
+          "Lindhorst(Schaumb-Lippe)",
+          "Stadthagen",
+          "Kirchhorsten",
+          "Bückeburg",
+          "Minden(Westf)"
+        ]
+      },
+      {
+        "id": "8483023150178432935-2510202235-1",
+        "type": "S",
+        "number": "34590",
+        "direction": "Hannover Flughafen",
+        "platform": "2",
+        "time": "2510202235",
+        "destination": "Hannover Flughafen",
+        "path_stations": [
+          "Hannover-Nordstadt",
+          "Hannover-Ledeburg",
+          "Hannover-Vinnhorst",
+          "Langenhagen Mitte",
+          "Langenhagen Pferdemarkt",
+          "Hannover Flughafen"
+        ]
+      },
+      {
+        "id": "8665047482682038790-2510202220-1",
+        "type": "RE",
+        "number": "4442",
+        "direction": "Bremen Hbf",
+        "platform": "12",
+        "time": "2510202220",
+        "destination": "Bremen Hbf",
+        "path_stations": [
+          "Wunstorf",
+          "Neustadt am Rübenberge",
+          "Nienburg(Weser)",
+          "Eystrup",
+          "Dörverden",
+          "Verden(Aller)",
+          "Langwedel",
+          "Etelsen",
+          "Baden(Verden)",
+          "Achim",
+          "Bremen-Mahndorf",
+          "Bremen-Sebaldsbrück",
+          "Bremen Hbf"
+        ]
+      },
+      {
+        "id": "115561099051937199-2510202206-8",
+        "type": "S",
+        "number": "34474",
+        "direction": "Bennemühlen",
+        "platform": "2",
+        "time": "2510202240",
+        "destination": "Bennemühlen",
+        "path_stations": [
+          "Hannover-Nordstadt",
+          "Hannover-Ledeburg",
+          "Hannover-Vinnhorst",
+          "Langenhagen Mitte",
+          "Langenhagen Pferdemarkt",
+          "Langenhagen-Kaltenweide",
+          "Bissendorf",
+          "Mellendorf",
+          "Bennemühlen"
+        ]
+      },
+      {
+        "id": "2998651517533835490-2510202038-20",
+        "type": "WFB",
+        "number": "95789",
+        "direction": "Braunschweig Hbf",
+        "platform": "9",
+        "time": "2510202255",
+        "destination": "Braunschweig Hbf",
+        "path_stations": [
+          "Lehrte",
+          "Hämelerwald",
+          "Vöhrum",
+          "Peine",
+          "Vechelde",
+          "Braunschweig Hbf"
+        ]
+      },
+      {
+        "id": "3366415709394720887-2510202114-9",
+        "type": "ME",
+        "number": "82837",
+        "direction": "Göttingen",
+        "platform": "3",
+        "time": "2510202236",
+        "destination": "Göttingen",
+        "path_stations": [
+          "Sarstedt",
+          "Nordstemmen",
+          "Elze(Han)",
+          "Banteln",
+          "Alfeld(Leine)",
+          "Freden(Leine)",
+          "Kreiensen",
+          "Einbeck-Salzderhelden",
+          "Northeim(Han)",
+          "Nörten-Hardenberg",
+          "Göttingen"
+        ]
+      },
+      {
+        "id": "-2047297994689258736-2510202015-17",
+        "type": "S",
+        "number": "34588",
+        "direction": "Hannover Flughafen",
+        "platform": "2",
+        "time": "2510202205",
+        "destination": "Hannover Flughafen",
+        "path_stations": [
+          "Hannover-Nordstadt",
+          "Hannover-Ledeburg",
+          "Hannover-Vinnhorst",
+          "Langenhagen Mitte",
+          "Langenhagen Pferdemarkt",
+          "Hannover Flughafen"
+        ]
+      },
+      {
+        "id": "-7233155797999363332-2510202348-1",
+        "type": "ENO",
+        "number": "83539",
+        "direction": "Wolfsburg Hbf",
+        "platform": "14 D-F",
+        "time": "2510202348",
+        "destination": "Wolfsburg Hbf",
+        "path_stations": [
+          "Lehrte",
+          "Immensen-Arpke",
+          "Dollbergen",
+          "Dedenhausen",
+          "Meinersen",
+          "Leiferde(b Gifhorn)",
+          "Gifhorn",
+          "Calberlah",
+          "Fallersleben",
+          "Wolfsburg Hbf"
+        ]
+      },
+      {
+        "id": "8045261376517871128-2510202333-1",
+        "type": "S",
+        "number": "34195",
+        "direction": "Haste",
+        "platform": "1",
+        "time": "2510202333",
+        "destination": "Haste",
+        "path_stations": [
+          "Hannover Bismarckstr.",
+          "Hannover-Linden/Fischerhof",
+          "Hannover-Bornum",
+          "Empelde",
+          "Ronnenberg",
+          "Weetzen",
+          "Lemmie",
+          "Wennigsen(Deister)",
+          "Egestorf(Deister)",
+          "Kirchdorf(Deister)",
+          "Barsinghausen",
+          "Winninghausen",
+          "Bantorf",
+          "Bad Nenndorf",
+          "Haste"
+        ]
+      },
+      {
+        "id": "2216752667362727965-2510202335-1",
+        "type": "S",
+        "number": "34594",
+        "direction": "Hannover Flughafen",
+        "platform": "2",
+        "time": "2510202335",
+        "destination": "Hannover Flughafen",
+        "path_stations": [
+          "Hannover-Nordstadt",
+          "Hannover-Ledeburg",
+          "Hannover-Vinnhorst",
+          "Langenhagen Mitte",
+          "Langenhagen Pferdemarkt",
+          "Hannover Flughafen"
+        ]
+      },
+      {
+        "id": "3731645877869987353-2510202320-1",
+        "type": "RE",
+        "number": "4444",
+        "direction": "Bremen Hbf",
+        "platform": "10",
+        "time": "2510202320",
+        "destination": "Bremen Hbf",
+        "path_stations": [
+          "Wunstorf",
+          "Neustadt am Rübenberge",
+          "Nienburg(Weser)",
+          "Eystrup",
+          "Dörverden",
+          "Verden(Aller)",
+          "Langwedel",
+          "Etelsen",
+          "Baden(Verden)",
+          "Achim",
+          "Bremen-Mahndorf",
+          "Bremen-Sebaldsbrück",
+          "Bremen Hbf"
+        ]
+      },
+      {
+        "id": "-6607067450570533820-2510202340-1",
+        "type": "ME",
+        "number": "81646",
+        "direction": "Uelzen",
+        "platform": "3",
+        "time": "2510202340",
+        "destination": "Uelzen",
+        "path_stations": [
+          "Langenhagen Mitte",
+          "Isernhagen",
+          "Großburgwedel",
+          "Celle",
+          "Eschede",
+          "Unterlüß",
+          "Suderburg",
+          "Uelzen"
+        ]
+      },
+      {
+        "id": "88568078225937621-2510202306-8",
+        "type": "S",
+        "number": "34478",
+        "direction": "Bennemühlen",
+        "platform": "2",
+        "time": "2510202340",
+        "destination": "Bennemühlen",
+        "path_stations": [
+          "Hannover-Nordstadt",
+          "Hannover-Ledeburg",
+          "Hannover-Vinnhorst",
+          "Langenhagen Mitte",
+          "Langenhagen Pferdemarkt",
+          "Langenhagen-Kaltenweide",
+          "Bissendorf",
+          "Mellendorf",
+          "Bennemühlen"
+        ]
+      },
+      {
+        "id": "-7422869786889116657-2510202251-10",
+        "type": "S",
+        "number": "34475",
+        "direction": "Hildesheim Hbf",
+        "platform": "1",
+        "time": "2510202319",
+        "destination": "Hildesheim Hbf",
+        "path_stations": [
+          "Hannover Bismarckstr.",
+          "Hannover Messe/Laatzen",
+          "Rethen(Leine)",
+          "Sarstedt",
+          "Barnten",
+          "Emmerke",
+          "Hildesheim Hbf"
+        ]
+      },
+      {
+        "id": "-6466199755408086456-2510202334-1",
+        "type": "S",
+        "number": "34339",
+        "direction": "Hildesheim Hbf",
+        "platform": "14 A-C",
+        "time": "2510202334",
+        "destination": "Hildesheim Hbf",
+        "path_stations": [
+          "Hannover-Kleefeld",
+          "Hannover Karl-Wiechert-Allee",
+          "Hannover Anderten-Misburg",
+          "Ahlten",
+          "Lehrte",
+          "Sehnde",
+          "Algermissen",
+          "Harsum",
+          "Hildesheim Hbf"
+        ]
+      },
+      {
+        "id": "-6936713572527964510-2510202358-1",
+        "type": "S",
+        "number": "34240",
+        "direction": "Seelze",
+        "platform": "2",
+        "time": "2510202358",
+        "destination": "Seelze",
+        "path_stations": [
+          "Hannover-Nordstadt",
+          "Hannover-Leinhausen",
+          "Letter",
+          "Seelze"
+        ]
+      },
+      {
+        "id": "1489430818110848027-2510202315-1",
+        "type": "Bus",
+        "number": "489",
+        "direction": "Hildesheim Hbf",
+        "platform": "",
+        "time": "2510202315",
+        "destination": "Hildesheim Hbf",
+        "path_stations": [
+          "Sarstedt",
+          "Hildesheim Hbf"
+        ]
+      },
+      {
+        "id": "7597089806492032299-2510202221-4",
+        "type": "ICE",
+        "number": "1081",
+        "direction": "München Hbf",
+        "platform": "3",
+        "time": "2510210003",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Göttingen",
+          "Würzburg Hbf",
+          "Nürnberg Hbf",
+          "Ingolstadt Hbf",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "7571284980414203001-2510202351-1",
+        "type": "RB",
+        "number": "14442",
+        "direction": "Soltau(Han)",
+        "platform": "2",
+        "time": "2510202351",
+        "destination": "Soltau(Han)",
+        "path_stations": [
+          "Langenhagen Mitte",
+          "Mellendorf",
+          "Lindwedel",
+          "Schwarmstedt",
+          "Hodenhagen",
+          "Walsrode",
+          "Bad Fallingbostel",
+          "Dorfmark",
+          "Soltau(Han)"
+        ]
+      },
+      {
+        "id": "6665658099000467023-2510202304-1",
+        "type": "S",
+        "number": "34746",
+        "direction": "Celle",
+        "platform": "14",
+        "time": "2510202304",
+        "destination": "Celle",
+        "path_stations": [
+          "Hannover-Kleefeld",
+          "Hannover Karl-Wiechert-Allee",
+          "Hannover Anderten-Misburg",
+          "Ahlten",
+          "Aligse",
+          "Burgdorf",
+          "Otze",
+          "Ehlershausen",
+          "Celle"
+        ]
+      },
+      {
+        "id": "6252347552889792227-2510202336-1",
+        "type": "ME",
+        "number": "82839",
+        "direction": "Göttingen",
+        "platform": "8",
+        "time": "2510202336",
+        "destination": "Göttingen",
+        "path_stations": [
+          "Sarstedt",
+          "Nordstemmen",
+          "Elze(Han)",
+          "Banteln",
+          "Alfeld(Leine)",
+          "Freden(Leine)",
+          "Kreiensen",
+          "Einbeck-Salzderhelden",
+          "Northeim(Han)",
+          "Nörten-Hardenberg",
+          "Göttingen"
+        ]
+      },
+      {
+        "id": "4456518626465571419-2510202220-7",
+        "type": "WFB",
+        "number": "95788",
+        "direction": "Osnabrück Hbf",
+        "platform": "12",
+        "time": "2510202309",
+        "destination": "Osnabrück Hbf",
+        "path_stations": [
+          "Haste",
+          "Lindhorst(Schaumb-Lippe)",
+          "Stadthagen",
+          "Kirchhorsten",
+          "Bückeburg",
+          "Minden(Westf)",
+          "Porta Westfalica",
+          "Bad Oeynhausen",
+          "Löhne(Westf)",
+          "Kirchlengern",
+          "Bünde(Westf)",
+          "Melle",
+          "Osnabrück Hbf"
+        ]
+      },
+      {
+        "id": "4236289435269760247-2510202328-1",
+        "type": "S",
+        "number": "34144",
+        "direction": "Seelze",
+        "platform": "2",
+        "time": "2510202328",
+        "destination": "Seelze",
+        "path_stations": [
+          "Hannover-Nordstadt",
+          "Hannover-Leinhausen",
+          "Letter",
+          "Seelze"
+        ]
+      },
+      {
+        "id": "-1155483089782900380-2510202115-17",
+        "type": "S",
+        "number": "34592",
+        "direction": "Hannover Flughafen",
+        "platform": "2",
+        "time": "2510202305",
+        "destination": "Hannover Flughafen",
+        "path_stations": [
+          "Hannover-Nordstadt",
+          "Hannover-Ledeburg",
+          "Hannover-Vinnhorst",
+          "Langenhagen Mitte",
+          "Langenhagen Pferdemarkt",
+          "Hannover Flughafen"
+        ]
+      },
+      {
+        "id": "7810579579456268310-2510202336-7",
+        "type": "S",
+        "number": "34595",
+        "direction": "Hameln",
+        "platform": "1",
+        "time": "2510202355",
+        "destination": "Hameln",
+        "path_stations": [
+          "Hannover Bismarckstr.",
+          "Hannover-Linden/Fischerhof",
+          "Weetzen",
+          "Holtensen/Linderte",
+          "Bennigsen",
+          "Völksen/Eldagsen",
+          "Springe",
+          "Bad Münder(Deister)",
+          "Hameln"
+        ]
+      },
+      {
+        "id": "1640260421649276864-2510210004-1",
+        "type": "S",
+        "number": "34700",
+        "direction": "Celle",
+        "platform": "14",
+        "time": "2510210004",
+        "destination": "Celle",
+        "path_stations": [
+          "Hannover-Kleefeld",
+          "Hannover Karl-Wiechert-Allee",
+          "Hannover Anderten-Misburg",
+          "Ahlten",
+          "Aligse",
+          "Burgdorf",
+          "Otze",
+          "Ehlershausen",
+          "Celle"
+        ]
+      },
+      {
+        "id": "-6171250346380856343-2510210048-1",
+        "type": "ENO",
+        "number": "83541",
+        "direction": "Wolfsburg Hbf",
+        "platform": "13",
+        "time": "2510210048",
+        "destination": "Wolfsburg Hbf",
+        "path_stations": [
+          "Lehrte",
+          "Immensen-Arpke",
+          "Dollbergen",
+          "Dedenhausen",
+          "Meinersen",
+          "Leiferde(b Gifhorn)",
+          "Gifhorn",
+          "Calberlah",
+          "Fallersleben",
+          "Wolfsburg Hbf"
+        ]
+      },
+      {
+        "id": "4731596700926155152-2510202320-7",
+        "type": "WFB",
+        "number": "95790",
+        "direction": "Minden(Westf)",
+        "platform": "9",
+        "time": "2510210009",
+        "destination": "Minden(Westf)",
+        "path_stations": [
+          "Haste",
+          "Stadthagen",
+          "Bückeburg",
+          "Minden(Westf)"
+        ]
+      },
+      {
+        "id": "-430306391697164748-2510210014-1",
+        "type": "WFB",
+        "number": "95793",
+        "direction": "Braunschweig Hbf",
+        "platform": "12",
+        "time": "2510210014",
+        "destination": "Braunschweig Hbf",
+        "path_stations": [
+          "Lehrte",
+          "Hämelerwald",
+          "Vöhrum",
+          "Peine",
+          "Vechelde",
+          "Braunschweig Hbf"
+        ]
+      },
+      {
+        "id": "4306935774403606716-2510202351-10",
+        "type": "S",
+        "number": "34479",
+        "direction": "Hannover Messe/Laatzen",
+        "platform": "1",
+        "time": "2510210019",
+        "destination": "Hannover Messe/Laatzen",
+        "path_stations": [
+          "Hannover Bismarckstr.",
+          "Hannover Messe/Laatzen"
+        ]
+      },
+      {
+        "id": "5489382238418385337-2510202152-8",
+        "type": "IC",
+        "number": "60471",
+        "direction": "Zürich HB",
+        "platform": "11",
+        "time": "2510210030",
+        "destination": "Zürich HB",
+        "path_stations": [
+          "Göttingen",
+          "Hanau Hbf",
+          "Frankfurt(Main)Süd",
+          "Darmstadt Hbf",
+          "Heidelberg Hbf",
+          "Karlsruhe Hbf",
+          "Offenburg",
+          "Freiburg(Breisgau) Hbf",
+          "Basel Bad Bf",
+          "Basel SBB",
+          "Zürich HB"
+        ]
+      },
+      {
+        "id": "7597089806492032299-2510202221-4",
+        "type": "ICE",
+        "number": "1081",
+        "direction": "München Hbf",
+        "platform": "3",
+        "time": "2510210003",
+        "destination": "München Hbf",
+        "path_stations": [
+          "Göttingen",
+          "Würzburg Hbf",
+          "Nürnberg Hbf",
+          "Ingolstadt Hbf",
+          "München Hbf"
+        ]
+      },
+      {
+        "id": "-4734125212072258210-2510210038-1",
+        "type": "Bus",
+        "number": "5146",
+        "direction": "Haste",
+        "platform": "",
+        "time": "2510210038",
+        "destination": "Haste",
+        "path_stations": [
+          "Hannover-Leinhausen",
+          "Letter",
+          "Seelze",
+          "Dedensen-Gümmer",
+          "Wunstorf",
+          "Haste"
+        ]
+      },
+      {
+        "id": "-6720494044942028133-2510202311-12",
+        "type": "ME",
+        "number": "82848",
+        "direction": "Uelzen",
+        "platform": "8",
+        "time": "2510210040",
+        "destination": "Uelzen",
+        "path_stations": [
+          "Langenhagen Mitte",
+          "Isernhagen",
+          "Großburgwedel",
+          "Celle",
+          "Eschede",
+          "Unterlüß",
+          "Suderburg",
+          "Uelzen"
+        ]
+      },
+      {
+        "id": "1988583780790970319-2510210030-3",
+        "type": "S",
+        "number": "34402",
+        "direction": "Bennemühlen",
+        "platform": "2",
+        "time": "2510210040",
+        "destination": "Bennemühlen",
+        "path_stations": [
+          "Hannover-Nordstadt",
+          "Hannover-Ledeburg",
+          "Hannover-Vinnhorst",
+          "Langenhagen Mitte",
+          "Langenhagen Pferdemarkt",
+          "Langenhagen-Kaltenweide",
+          "Bissendorf",
+          "Mellendorf",
+          "Bennemühlen"
+        ]
+      },
+      {
+        "id": "-521217330813819261-2510202152-8",
+        "type": "NJ",
+        "number": "471",
+        "direction": "Zürich HB",
+        "platform": "11",
+        "time": "2510210030",
+        "destination": "Zürich HB",
+        "path_stations": [
+          "Göttingen",
+          "Hanau Hbf",
+          "Frankfurt(Main)Süd",
+          "Darmstadt Hbf",
+          "Heidelberg Hbf",
+          "Karlsruhe Hbf",
+          "Offenburg",
+          "Freiburg(Breisgau) Hbf",
+          "Basel Bad Bf",
+          "Basel SBB",
+          "Zürich HB"
+        ]
+      },
+      {
+        "id": "2103026705683734524-2510210020-1",
+        "type": "RE",
+        "number": "4440",
+        "direction": "Bremen Hbf",
+        "platform": "10",
+        "time": "2510210020",
+        "destination": "Bremen Hbf",
+        "path_stations": [
+          "Wunstorf",
+          "Neustadt am Rübenberge",
+          "Nienburg(Weser)",
+          "Eystrup",
+          "Dörverden",
+          "Verden(Aller)",
+          "Langwedel",
+          "Etelsen",
+          "Baden(Verden)",
+          "Achim",
+          "Bremen-Mahndorf",
+          "Bremen-Sebaldsbrück",
+          "Bremen Hbf"
+        ]
+      },
+      {
+        "id": "7900681039391469138-2510202215-17",
+        "type": "S",
+        "number": "34596",
+        "direction": "Hannover Flughafen",
+        "platform": "2",
+        "time": "2510210005",
+        "destination": "Hannover Flughafen",
+        "path_stations": [
+          "Hannover-Nordstadt",
+          "Hannover-Ledeburg",
+          "Hannover-Vinnhorst",
+          "Langenhagen Mitte",
+          "Langenhagen Pferdemarkt",
+          "Hannover Flughafen"
+        ]
+      },
+      {
+        "id": "-6943258170325066751-2510210028-1",
+        "type": "S",
+        "number": "34146",
+        "direction": "Minden(Westf)",
+        "platform": "2",
+        "time": "2510210028",
+        "destination": "Minden(Westf)",
+        "path_stations": [
+          "Dedensen-Gümmer",
+          "Haste",
+          "Lindhorst(Schaumb-Lippe)",
+          "Stadthagen",
+          "Kirchhorsten",
+          "Bückeburg",
+          "Minden(Westf)"
+        ]
+      },
+      {
+        "id": "7540039806208816486-2510210033-1",
+        "type": "S",
+        "number": "34197",
+        "direction": "Haste",
+        "platform": "1",
+        "time": "2510210033",
+        "destination": "Haste",
+        "path_stations": [
+          "Hannover Bismarckstr.",
+          "Hannover-Linden/Fischerhof",
+          "Hannover-Bornum",
+          "Empelde",
+          "Ronnenberg",
+          "Weetzen",
+          "Lemmie",
+          "Wennigsen(Deister)",
+          "Egestorf(Deister)",
+          "Kirchdorf(Deister)",
+          "Barsinghausen",
+          "Winninghausen",
+          "Bantorf",
+          "Bad Nenndorf",
+          "Haste"
+        ]
+      },
+      {
+        "id": "-8211490357416700456-2510210035-1",
+        "type": "S",
+        "number": "34502",
+        "direction": "Hannover Flughafen",
+        "platform": "3",
+        "time": "2510210035",
+        "destination": "Hannover Flughafen",
+        "path_stations": [
+          "Hannover-Nordstadt",
+          "Hannover-Ledeburg",
+          "Hannover-Vinnhorst",
+          "Langenhagen Mitte",
+          "Langenhagen Pferdemarkt",
+          "Hannover Flughafen"
+        ]
+      },
+      {
+        "id": "436096027952993164-2510201659-13",
+        "type": "ICE",
+        "number": "272",
+        "direction": "Hamburg Hbf",
+        "platform": "8",
+        "time": "2510210042",
+        "destination": "Hamburg Hbf",
+        "path_stations": [
+          "Celle",
+          "Uelzen",
+          "Lüneburg",
+          "Hamburg-Harburg",
+          "Hamburg Hbf"
+        ]
+      },
+      {
+        "id": "8352762151701721590-2510210034-1",
+        "type": "S",
+        "number": "34301",
+        "direction": "Hildesheim Hbf",
+        "platform": "14",
+        "time": "2510210034",
+        "destination": "Hildesheim Hbf",
+        "path_stations": [
+          "Hannover-Kleefeld",
+          "Hannover Karl-Wiechert-Allee",
+          "Hannover Anderten-Misburg",
+          "Ahlten",
+          "Lehrte",
+          "Sehnde",
+          "Algermissen",
+          "Harsum",
+          "Hildesheim Hbf"
+        ]
+      },
+      {
+        "id": "-3652958189301705754-2510210036-7",
+        "type": "S",
+        "number": "34503",
+        "direction": "Hameln",
+        "platform": "1",
+        "time": "2510210055",
+        "destination": "Hameln",
+        "path_stations": [
+          "Hannover Bismarckstr.",
+          "Hannover-Linden/Fischerhof",
+          "Hannover-Bornum",
+          "Empelde",
+          "Ronnenberg",
+          "Weetzen",
+          "Holtensen/Linderte",
+          "Bennigsen",
+          "Völksen/Eldagsen",
+          "Springe",
+          "Bad Münder(Deister)",
+          "Hameln"
+        ]
+      },
+      {
+        "id": "-1781439465744467581-2510210113-1",
+        "type": "WFB",
+        "number": "95769",
+        "direction": "Braunschweig Hbf",
+        "platform": "12",
+        "time": "2510210113",
+        "destination": "Braunschweig Hbf",
+        "path_stations": [
+          "Lehrte",
+          "Hämelerwald",
+          "Vöhrum",
+          "Peine",
+          "Vechelde",
+          "Braunschweig Hbf"
+        ]
+      },
+      {
+        "id": "2735083336464781165-2510210133-1",
+        "type": "S",
+        "number": "34506",
+        "direction": "Hannover Flughafen",
+        "platform": "3",
+        "time": "2510210133",
+        "destination": "Hannover Flughafen",
+        "path_stations": [
+          "Hannover-Nordstadt",
+          "Hannover-Ledeburg",
+          "Hannover-Vinnhorst",
+          "Langenhagen Mitte",
+          "Langenhagen Pferdemarkt",
+          "Hannover Flughafen"
+        ]
+      },
+      {
+        "id": "4121683295209577191-2510202315-7",
+        "type": "ICE",
+        "number": "271",
+        "direction": "Chur",
+        "platform": "13",
+        "time": "2510210210",
+        "destination": "Chur",
+        "path_stations": [
+          "Göttingen",
+          "Fulda",
+          "Hanau Hbf",
+          "Frankfurt(Main)Hbf",
+          "Mannheim Hbf",
+          "Karlsruhe Hbf",
+          "Baden-Baden",
+          "Offenburg",
+          "Freiburg(Breisgau) Hbf",
+          "Basel Bad Bf",
+          "Basel SBB",
+          "Zürich HB",
+          "Sargans",
+          "Landquart",
+          "Chur"
+        ]
+      },
+      {
+        "id": "-7484560138445987642-2510210005-12",
+        "type": "S",
+        "number": "34504",
+        "direction": "Hannover Flughafen",
+        "platform": "3",
+        "time": "2510210105",
+        "destination": "Hannover Flughafen",
+        "path_stations": [
+          "Hannover-Nordstadt",
+          "Hannover-Ledeburg",
+          "Hannover-Vinnhorst",
+          "Langenhagen Mitte",
+          "Langenhagen Pferdemarkt",
+          "Hannover Flughafen"
+        ]
+      },
+      {
+        "id": "-7943794576343768944-2510210234-1",
+        "type": "S",
+        "number": "34510",
+        "direction": "Hannover Flughafen",
+        "platform": "2",
+        "time": "2510210234",
+        "destination": "Hannover Flughafen",
+        "path_stations": [
+          "Hannover-Nordstadt",
+          "Hannover-Ledeburg",
+          "Hannover-Vinnhorst",
+          "Langenhagen Mitte",
+          "Langenhagen Pferdemarkt",
+          "Hannover Flughafen"
+        ]
+      },
+      {
+        "id": "4121683295209577191-2510202315-7",
+        "type": "ICE",
+        "number": "271",
+        "direction": "Chur",
+        "platform": "13",
+        "time": "2510210210",
+        "destination": "Chur",
+        "path_stations": [
+          "Göttingen",
+          "Fulda",
+          "Hanau Hbf",
+          "Frankfurt(Main)Hbf",
+          "Mannheim Hbf",
+          "Karlsruhe Hbf",
+          "Baden-Baden",
+          "Offenburg",
+          "Freiburg(Breisgau) Hbf",
+          "Basel Bad Bf",
+          "Basel SBB",
+          "Zürich HB",
+          "Sargans",
+          "Landquart",
+          "Chur"
+        ]
+      },
+      {
+        "id": "-4674302681811850992-2510201913-18",
+        "type": "ICE",
+        "number": "100",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "9",
+        "time": "2510210240",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Braunschweig Hbf",
+          "Stendal Hbf",
+          "Potsdam Hbf",
+          "Berlin-Wannsee",
+          "Berlin Zoologischer Garten",
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "7990396791094350225-2510210335-1",
+        "type": "S",
+        "number": "34514",
+        "direction": "Hannover Flughafen",
+        "platform": "2",
+        "time": "2510210335",
+        "destination": "Hannover Flughafen",
+        "path_stations": [
+          "Hannover-Nordstadt",
+          "Hannover-Ledeburg",
+          "Hannover-Vinnhorst",
+          "Langenhagen Mitte",
+          "Langenhagen Pferdemarkt",
+          "Hannover Flughafen"
+        ]
+      },
+      {
+        "id": "3199623009169073885-2510210011-6",
+        "type": "ICE",
+        "number": "101",
+        "direction": "Basel SBB",
+        "platform": "12",
+        "time": "2510210313",
+        "destination": "Basel SBB",
+        "path_stations": [
+          "Minden(Westf)",
+          "Bielefeld Hbf",
+          "Gütersloh Hbf",
+          "Hamm(Westf)Hbf",
+          "Dortmund Hbf",
+          "Essen Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Hbf",
+          "Köln Hbf",
+          "Frankfurt(M) Flughafen Fernbf",
+          "Mannheim Hbf",
+          "Karlsruhe Hbf",
+          "Baden-Baden",
+          "Offenburg",
+          "Freiburg(Breisgau) Hbf",
+          "Basel Bad Bf",
+          "Basel SBB"
+        ]
+      },
+      {
+        "id": "-8071444848207572218-2510202335-7",
+        "type": "ICE",
+        "number": "674",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "10",
+        "time": "2510210418",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Wolfsburg Hbf",
+          "Stendal Hbf",
+          "Berlin-Spandau",
+          "Berlin Zoologischer Garten",
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "1278207342790959764-2510210448-1",
+        "type": "erx",
+        "number": "83451",
+        "direction": "Bad Harzburg",
+        "platform": "3",
+        "time": "2510210448",
+        "destination": "Bad Harzburg",
+        "path_stations": [
+          "Sarstedt",
+          "Hildesheim Hbf",
+          "Hildesheim Ost",
+          "Derneburg(Han)",
+          "Baddeckenstedt",
+          "Salzgitter-Ringelheim",
+          "Goslar",
+          "Bad Harzburg"
+        ]
+      },
+      {
+        "id": "4605589768762729065-2510210458-1",
+        "type": "S",
+        "number": "34202",
+        "direction": "Nienburg(Weser)",
+        "platform": "2",
+        "time": "2510210458",
+        "destination": "Nienburg(Weser)",
+        "path_stations": [
+          "Hannover-Nordstadt",
+          "Hannover-Leinhausen",
+          "Letter",
+          "Seelze",
+          "Dedensen-Gümmer",
+          "Wunstorf",
+          "Poggenhagen",
+          "Neustadt am Rübenberge",
+          "Eilvese",
+          "Hagen(Han)",
+          "Linsburg",
+          "Nienburg(Weser)"
+        ]
+      },
+      {
+        "id": "3596004209696842025-2510210433-1",
+        "type": "S",
+        "number": "34157",
+        "direction": "Haste",
+        "platform": "1",
+        "time": "2510210433",
+        "destination": "Haste",
+        "path_stations": [
+          "Hannover Bismarckstr.",
+          "Hannover-Linden/Fischerhof",
+          "Hannover-Bornum",
+          "Empelde",
+          "Ronnenberg",
+          "Weetzen",
+          "Lemmie",
+          "Wennigsen(Deister)",
+          "Egestorf(Deister)",
+          "Kirchdorf(Deister)",
+          "Barsinghausen",
+          "Winninghausen",
+          "Bantorf",
+          "Bad Nenndorf",
+          "Haste"
+        ]
+      },
+      {
+        "id": "6021127976714498926-2510210450-1",
+        "type": "S",
+        "number": "34481",
+        "direction": "Barsinghausen",
+        "platform": "1",
+        "time": "2510210450",
+        "destination": "Barsinghausen",
+        "path_stations": [
+          "Hannover Bismarckstr.",
+          "Hannover-Linden/Fischerhof",
+          "Empelde",
+          "Weetzen",
+          "Wennigsen(Deister)",
+          "Barsinghausen"
+        ]
+      },
+      {
+        "id": "-913709828250036697-2510210436-7",
+        "type": "S",
+        "number": "34519",
+        "direction": "Paderborn Hbf",
+        "platform": "1",
+        "time": "2510210455",
+        "destination": "Paderborn Hbf",
+        "path_stations": [
+          "Hannover Bismarckstr.",
+          "Hannover-Linden/Fischerhof",
+          "Weetzen",
+          "Holtensen/Linderte",
+          "Bennigsen",
+          "Völksen/Eldagsen",
+          "Springe",
+          "Bad Münder(Deister)",
+          "Hameln",
+          "Emmerthal",
+          "Bad Pyrmont",
+          "Lügde",
+          "Schieder",
+          "Steinheim(Westf)",
+          "Altenbeken",
+          "Paderborn Hbf"
+        ]
+      },
+      {
+        "id": "1596894595219539906-2510210444-1",
+        "type": "RB",
+        "number": "14444",
+        "direction": "Buchholz(Nordheide)",
+        "platform": "2",
+        "time": "2510210444",
+        "destination": "Buchholz(Nordheide)",
+        "path_stations": [
+          "Langenhagen Mitte",
+          "Mellendorf",
+          "Lindwedel",
+          "Schwarmstedt",
+          "Hodenhagen",
+          "Walsrode",
+          "Bad Fallingbostel",
+          "Dorfmark",
+          "Soltau(Han)",
+          "Soltau Nord",
+          "Wolterdingen(Han)",
+          "Schneverdingen",
+          "Wintermoor",
+          "Handeloh",
+          "Büsenbachtal",
+          "Holm-Seppensen",
+          "Suerhop",
+          "Buchholz(Nordheide)"
+        ]
+      },
+      {
+        "id": "-2698404167793237614-2510210420-1",
+        "type": "RE",
+        "number": "4400",
+        "direction": "Bremerhaven-Lehe",
+        "platform": "13",
+        "time": "2510210420",
+        "destination": "Bremerhaven-Lehe",
+        "path_stations": [
+          "Wunstorf",
+          "Neustadt am Rübenberge",
+          "Nienburg(Weser)",
+          "Eystrup",
+          "Dörverden",
+          "Verden(Aller)",
+          "Achim",
+          "Bremen-Mahndorf",
+          "Bremen Hbf",
+          "Osterholz-Scharmbeck",
+          "Bremerhaven Hbf",
+          "Bremerhaven-Lehe"
+        ]
+      },
+      {
+        "id": "-465753203744094819-2510210448-1",
+        "type": "ENO",
+        "number": "83501",
+        "direction": "Wolfsburg Hbf",
+        "platform": "14 A-C",
+        "time": "2510210448",
+        "destination": "Wolfsburg Hbf",
+        "path_stations": [
+          "Lehrte",
+          "Immensen-Arpke",
+          "Dollbergen",
+          "Dedenhausen",
+          "Meinersen",
+          "Leiferde(b Gifhorn)",
+          "Gifhorn",
+          "Calberlah",
+          "Fallersleben",
+          "Wolfsburg Hbf"
+        ]
+      },
+      {
+        "id": "-4809954286723406443-2510210411-1",
+        "type": "S",
+        "number": "34516",
+        "direction": "Hannover Flughafen",
+        "platform": "2",
+        "time": "2510210411",
+        "destination": "Hannover Flughafen",
+        "path_stations": [
+          "Hannover-Nordstadt",
+          "Hannover-Ledeburg",
+          "Hannover-Vinnhorst",
+          "Langenhagen Mitte",
+          "Langenhagen Pferdemarkt",
+          "Hannover Flughafen"
+        ]
+      },
+      {
+        "id": "8210273028372777276-2510210432-1",
+        "type": "ME",
+        "number": "82801",
+        "direction": "Göttingen",
+        "platform": "7",
+        "time": "2510210432",
+        "destination": "Göttingen",
+        "path_stations": [
+          "Sarstedt",
+          "Nordstemmen",
+          "Elze(Han)",
+          "Banteln",
+          "Alfeld(Leine)",
+          "Freden(Leine)",
+          "Kreiensen",
+          "Einbeck-Salzderhelden",
+          "Northeim(Han)",
+          "Nörten-Hardenberg",
+          "Göttingen"
+        ]
+      },
+      {
+        "id": "-797870557201185989-2510210403-7",
+        "type": "WFB",
+        "number": "95771",
+        "direction": "Braunschweig Hbf",
+        "platform": "9",
+        "time": "2510210455",
+        "destination": "Braunschweig Hbf",
+        "path_stations": [
+          "Lehrte",
+          "Hämelerwald",
+          "Vöhrum",
+          "Peine",
+          "Vechelde",
+          "Braunschweig Hbf"
+        ]
+      },
+      {
+        "id": "5846421337992271968-2510210435-1",
+        "type": "S",
+        "number": "34518",
+        "direction": "Hannover Flughafen",
+        "platform": "2",
+        "time": "2510210435",
+        "destination": "Hannover Flughafen",
+        "path_stations": [
+          "Hannover-Nordstadt",
+          "Hannover-Ledeburg",
+          "Hannover-Vinnhorst",
+          "Langenhagen Mitte",
+          "Langenhagen Pferdemarkt",
+          "Hannover Flughafen"
+        ]
+      },
+      {
+        "id": "-8071444848207572218-2510202335-7",
+        "type": "ICE",
+        "number": "674",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "10",
+        "time": "2510210418",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Wolfsburg Hbf",
+          "Stendal Hbf",
+          "Berlin-Spandau",
+          "Berlin Zoologischer Garten",
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      }
+    ],
+    "arrivals": []
+  }
+}

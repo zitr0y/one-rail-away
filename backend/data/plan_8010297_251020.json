@@ -1,0 +1,1778 @@
+{
+  "station_eva": "8010297",
+  "date": "251020",
+  "cached_at": "2025-10-20T16:52:30.293086",
+  "plan_data": {
+    "arrivals": [
+      {
+        "id": "6634368184557249806-2510201709-13",
+        "type": "RB",
+        "number": "74136",
+        "time": "2510201809",
+        "platform": "1",
+        "path_stations": [
+          "Chemnitz Hbf",
+          "Mittweida",
+          "Erlau(Sachs)",
+          "Schweikershain",
+          "Waldheim",
+          "Steina",
+          "Limmritz(Sachs)",
+          "Döbeln Hbf",
+          "Zschaitz",
+          "Ostrau",
+          "Stauchitz",
+          "Seerhausen"
+        ],
+        "line": "45"
+      },
+      {
+        "id": "-4822877454349863859-2510201810-3",
+        "type": "ICE",
+        "number": "1552",
+        "time": "2510201848",
+        "platform": "3",
+        "path_stations": [
+          "Dresden Hbf",
+          "Dresden-Neustadt"
+        ],
+        "line": ""
+      },
+      {
+        "id": "1152735529745397039-2510201813-8",
+        "type": "RB",
+        "number": "74139",
+        "time": "2510201838",
+        "platform": "1",
+        "path_stations": [
+          "Elsterwerda",
+          "Prösen",
+          "Prösen West",
+          "Gröditz(Riesa)",
+          "Tiefenau",
+          "Wülknitz",
+          "Zeithain"
+        ],
+        "line": "45"
+      },
+      {
+        "id": "6102273383218622995-2510201228-15",
+        "type": "IC",
+        "number": "2049",
+        "time": "2510201800",
+        "platform": "2",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Hamm(Westf)Hbf",
+          "Gütersloh Hbf",
+          "Bielefeld Hbf",
+          "Herford",
+          "Bad Oeynhausen",
+          "Minden(Westf)",
+          "Hannover Hbf",
+          "Braunschweig Hbf",
+          "Magdeburg Hbf",
+          "Köthen",
+          "Halle(Saale)Hbf",
+          "Leipzig/Halle Flughafen",
+          "Leipzig Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-2709698061996403329-2510201800-8",
+        "type": "RE",
+        "number": "16529",
+        "time": "2510201844",
+        "platform": "2",
+        "path_stations": [
+          "Leipzig Hbf",
+          "Leipzig-Engelsdorf",
+          "Borsdorf(Sachs)",
+          "Wurzen",
+          "Kühren",
+          "Dahlen(Sachs)",
+          "Oschatz"
+        ],
+        "line": "50"
+      },
+      {
+        "id": "-5849645620140906899-2510201715-11",
+        "type": "RE",
+        "number": "16526",
+        "time": "2510201805",
+        "platform": "3",
+        "path_stations": [
+          "Dresden Hbf",
+          "Dresden Mitte",
+          "Dresden-Neustadt",
+          "Radebeul Ost",
+          "Coswig(b Dresden)",
+          "Weinböhla Hp",
+          "Niederau",
+          "Priestewitz",
+          "Nünchritz",
+          "Glaubitz(Riesa)"
+        ],
+        "line": "50"
+      },
+      {
+        "id": "67273429190528841-2510201909-3",
+        "type": "IC",
+        "number": "2448",
+        "time": "2510201946",
+        "platform": "3",
+        "path_stations": [
+          "Dresden Hbf",
+          "Dresden-Neustadt"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-7329898838357482051-2510201815-11",
+        "type": "RE",
+        "number": "16528",
+        "time": "2510201905",
+        "platform": "3",
+        "path_stations": [
+          "Dresden Hbf",
+          "Dresden Mitte",
+          "Dresden-Neustadt",
+          "Radebeul Ost",
+          "Coswig(b Dresden)",
+          "Weinböhla Hp",
+          "Niederau",
+          "Priestewitz",
+          "Nünchritz",
+          "Glaubitz(Riesa)"
+        ],
+        "line": "50"
+      },
+      {
+        "id": "445699896068738766-2510201913-8",
+        "type": "RB",
+        "number": "74141",
+        "time": "2510201938",
+        "platform": "1",
+        "path_stations": [
+          "Elsterwerda",
+          "Prösen",
+          "Prösen West",
+          "Gröditz(Riesa)",
+          "Tiefenau",
+          "Wülknitz",
+          "Zeithain"
+        ],
+        "line": "45"
+      },
+      {
+        "id": "8317284780065095268-2510201426-11",
+        "type": "ICE",
+        "number": "1653",
+        "time": "2510201900",
+        "platform": "2",
+        "path_stations": [
+          "Wiesbaden Hbf",
+          "Mainz Hbf",
+          "Frankfurt(M) Flughafen Fernbf",
+          "Frankfurt(Main)Hbf",
+          "Fulda",
+          "Bad Hersfeld",
+          "Eisenach Hbf",
+          "Gotha",
+          "Erfurt Hbf",
+          "Leipzig Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-6136112805942097452-2510201809-13",
+        "type": "RB",
+        "number": "74138",
+        "time": "2510201909",
+        "platform": "1",
+        "path_stations": [
+          "Chemnitz Hbf",
+          "Mittweida",
+          "Erlau(Sachs)",
+          "Schweikershain",
+          "Waldheim",
+          "Steina",
+          "Limmritz(Sachs)",
+          "Döbeln Hbf",
+          "Zschaitz",
+          "Ostrau",
+          "Stauchitz",
+          "Seerhausen"
+        ],
+        "line": "45"
+      },
+      {
+        "id": "8364928914864311824-2510201900-8",
+        "type": "RE",
+        "number": "16531",
+        "time": "2510201944",
+        "platform": "2",
+        "path_stations": [
+          "Leipzig Hbf",
+          "Leipzig-Engelsdorf",
+          "Borsdorf(Sachs)",
+          "Wurzen",
+          "Kühren",
+          "Dahlen(Sachs)",
+          "Oschatz"
+        ],
+        "line": "50"
+      },
+      {
+        "id": "6828388597470840368-2510201909-13",
+        "type": "RB",
+        "number": "74140",
+        "time": "2510202009",
+        "platform": "1",
+        "path_stations": [
+          "Chemnitz Hbf",
+          "Mittweida",
+          "Erlau(Sachs)",
+          "Schweikershain",
+          "Waldheim",
+          "Steina",
+          "Limmritz(Sachs)",
+          "Döbeln Hbf",
+          "Zschaitz",
+          "Ostrau",
+          "Stauchitz",
+          "Seerhausen"
+        ],
+        "line": "45"
+      },
+      {
+        "id": "-2950490356695221515-2510201428-15",
+        "type": "IC",
+        "number": "2047",
+        "time": "2510202001",
+        "platform": "2",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Hamm(Westf)Hbf",
+          "Gütersloh Hbf",
+          "Bielefeld Hbf",
+          "Herford",
+          "Bad Oeynhausen",
+          "Minden(Westf)",
+          "Hannover Hbf",
+          "Braunschweig Hbf",
+          "Magdeburg Hbf",
+          "Köthen",
+          "Halle(Saale)Hbf",
+          "Leipzig/Halle Flughafen",
+          "Leipzig Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-480484934668334893-2510201915-11",
+        "type": "RE",
+        "number": "16530",
+        "time": "2510202005",
+        "platform": "3",
+        "path_stations": [
+          "Dresden Hbf",
+          "Dresden Mitte",
+          "Dresden-Neustadt",
+          "Radebeul Ost",
+          "Coswig(b Dresden)",
+          "Weinböhla Hp",
+          "Niederau",
+          "Priestewitz",
+          "Nünchritz",
+          "Glaubitz(Riesa)"
+        ],
+        "line": "50"
+      },
+      {
+        "id": "8943315403204299509-2510202013-8",
+        "type": "RB",
+        "number": "74143",
+        "time": "2510202038",
+        "platform": "1",
+        "path_stations": [
+          "Elsterwerda",
+          "Prösen",
+          "Prösen West",
+          "Gröditz(Riesa)",
+          "Tiefenau",
+          "Wülknitz",
+          "Zeithain"
+        ],
+        "line": "45"
+      },
+      {
+        "id": "-3573575252665072424-2510202000-8",
+        "type": "RE",
+        "number": "16533",
+        "time": "2510202044",
+        "platform": "2",
+        "path_stations": [
+          "Leipzig Hbf",
+          "Leipzig-Engelsdorf",
+          "Borsdorf(Sachs)",
+          "Wurzen",
+          "Kühren",
+          "Dahlen(Sachs)",
+          "Oschatz"
+        ],
+        "line": "50"
+      },
+      {
+        "id": "-6588310020860352560-2510201626-11",
+        "type": "ICE",
+        "number": "1655",
+        "time": "2510202100",
+        "platform": "2",
+        "path_stations": [
+          "Wiesbaden Hbf",
+          "Mainz Hbf",
+          "Frankfurt(M) Flughafen Fernbf",
+          "Frankfurt(Main)Hbf",
+          "Fulda",
+          "Bad Hersfeld",
+          "Eisenach Hbf",
+          "Gotha",
+          "Erfurt Hbf",
+          "Leipzig Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-7376546056820340077-2510202015-11",
+        "type": "RE",
+        "number": "16532",
+        "time": "2510202105",
+        "platform": "3",
+        "path_stations": [
+          "Dresden Hbf",
+          "Dresden Mitte",
+          "Dresden-Neustadt",
+          "Radebeul Ost",
+          "Coswig(b Dresden)",
+          "Weinböhla Hp",
+          "Niederau",
+          "Priestewitz",
+          "Nünchritz",
+          "Glaubitz(Riesa)"
+        ],
+        "line": "50"
+      },
+      {
+        "id": "-8149098461986911141-2510202102-8",
+        "type": "RE",
+        "number": "16535",
+        "time": "2510202153",
+        "platform": "2",
+        "path_stations": [
+          "Leipzig Hbf",
+          "Leipzig-Engelsdorf",
+          "Borsdorf(Sachs)",
+          "Wurzen",
+          "Kühren",
+          "Dahlen(Sachs)",
+          "Oschatz"
+        ],
+        "line": "50"
+      },
+      {
+        "id": "-8572647521164952896-2510201828-8",
+        "type": "EC",
+        "number": "458",
+        "time": "2510202141",
+        "platform": "3",
+        "path_stations": [
+          "Praha hl.n.",
+          "Praha-Holesovice",
+          "Usti nad Labem hl.n.",
+          "Decin hl.n.",
+          "Bad Schandau",
+          "Dresden Hbf",
+          "Dresden-Neustadt"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-3462280099253232434-2510202009-13",
+        "type": "RB",
+        "number": "74142",
+        "time": "2510202109",
+        "platform": "6",
+        "path_stations": [
+          "Chemnitz Hbf",
+          "Mittweida",
+          "Erlau(Sachs)",
+          "Schweikershain",
+          "Waldheim",
+          "Steina",
+          "Limmritz(Sachs)",
+          "Döbeln Hbf",
+          "Zschaitz",
+          "Ostrau",
+          "Stauchitz",
+          "Seerhausen"
+        ],
+        "line": "45"
+      },
+      {
+        "id": "-8716776747589038458-2510201828-8",
+        "type": "EN",
+        "number": "40458",
+        "time": "2510202141",
+        "platform": "3",
+        "path_stations": [
+          "Praha hl.n.",
+          "Praha-Holesovice",
+          "Usti nad Labem hl.n.",
+          "Decin hl.n.",
+          "Bad Schandau",
+          "Dresden Hbf",
+          "Dresden-Neustadt"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-8627406031601786859-2510202213-8",
+        "type": "RB",
+        "number": "74147",
+        "time": "2510202238",
+        "platform": "4",
+        "path_stations": [
+          "Elsterwerda",
+          "Prösen",
+          "Prösen West",
+          "Gröditz(Riesa)",
+          "Tiefenau",
+          "Wülknitz",
+          "Zeithain"
+        ],
+        "line": "45"
+      },
+      {
+        "id": "8496435950390075566-2510202203-8",
+        "type": "RE",
+        "number": "16537",
+        "time": "2510202253",
+        "platform": "2",
+        "path_stations": [
+          "Leipzig Hbf",
+          "Leipzig-Engelsdorf",
+          "Borsdorf(Sachs)",
+          "Wurzen",
+          "Kühren",
+          "Dahlen(Sachs)",
+          "Oschatz"
+        ],
+        "line": "50"
+      },
+      {
+        "id": "1292689210388594561-2510202137-17",
+        "type": "RB",
+        "number": "74144",
+        "time": "2510202240",
+        "platform": "1",
+        "path_stations": [
+          "Chemnitz Hbf",
+          "Chemnitz Kinderwaldstätte",
+          "Oberlichtenau",
+          "Ottendorf(Mittweida)",
+          "Altmittweida",
+          "Mittweida",
+          "Erlau(Sachs)",
+          "Schweikershain",
+          "Waldheim",
+          "Steina",
+          "Limmritz(Sachs)",
+          "Döbeln Hbf",
+          "Zschaitz",
+          "Ostrau",
+          "Stauchitz",
+          "Seerhausen"
+        ],
+        "line": "45"
+      },
+      {
+        "id": "-1037914935858453634-2510202115-11",
+        "type": "RE",
+        "number": "16534",
+        "time": "2510202205",
+        "platform": "3",
+        "path_stations": [
+          "Dresden Hbf",
+          "Dresden Mitte",
+          "Dresden-Neustadt",
+          "Radebeul Ost",
+          "Coswig(b Dresden)",
+          "Weinböhla Hp",
+          "Niederau",
+          "Priestewitz",
+          "Nünchritz",
+          "Glaubitz(Riesa)"
+        ],
+        "line": "50"
+      },
+      {
+        "id": "-2875979624331062252-2510201628-15",
+        "type": "IC",
+        "number": "2045",
+        "time": "2510202211",
+        "platform": "2",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Hamm(Westf)Hbf",
+          "Gütersloh Hbf",
+          "Bielefeld Hbf",
+          "Herford",
+          "Bad Oeynhausen",
+          "Minden(Westf)",
+          "Hannover Hbf",
+          "Braunschweig Hbf",
+          "Magdeburg Hbf",
+          "Köthen",
+          "Halle(Saale)Hbf",
+          "Leipzig/Halle Flughafen",
+          "Leipzig Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "5755582369422166953-2510202215-11",
+        "type": "RE",
+        "number": "16536",
+        "time": "2510202305",
+        "platform": "3",
+        "path_stations": [
+          "Dresden Hbf",
+          "Dresden Mitte",
+          "Dresden-Neustadt",
+          "Radebeul Ost",
+          "Coswig(b Dresden)",
+          "Weinböhla Hp",
+          "Niederau",
+          "Priestewitz",
+          "Nünchritz",
+          "Glaubitz(Riesa)"
+        ],
+        "line": "50"
+      },
+      {
+        "id": "1641055563929738419-2510202237-17",
+        "type": "RB",
+        "number": "74146",
+        "time": "2510202340",
+        "platform": "6",
+        "path_stations": [
+          "Chemnitz Hbf",
+          "Chemnitz Kinderwaldstätte",
+          "Oberlichtenau",
+          "Ottendorf(Mittweida)",
+          "Altmittweida",
+          "Mittweida",
+          "Erlau(Sachs)",
+          "Schweikershain",
+          "Waldheim",
+          "Steina",
+          "Limmritz(Sachs)",
+          "Döbeln Hbf",
+          "Zschaitz",
+          "Ostrau",
+          "Stauchitz",
+          "Seerhausen"
+        ],
+        "line": "45"
+      },
+      {
+        "id": "-5251979787845317603-2510201826-11",
+        "type": "ICE",
+        "number": "1657",
+        "time": "2510202311",
+        "platform": "2",
+        "path_stations": [
+          "Wiesbaden Hbf",
+          "Mainz Hbf",
+          "Frankfurt(M) Flughafen Fernbf",
+          "Frankfurt(Main)Hbf",
+          "Fulda",
+          "Bad Hersfeld",
+          "Eisenach Hbf",
+          "Gotha",
+          "Erfurt Hbf",
+          "Leipzig Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "7233618050490680461-2510202311-8",
+        "type": "RE",
+        "number": "16539",
+        "time": "2510210000",
+        "platform": "2",
+        "path_stations": [
+          "Leipzig Hbf",
+          "Leipzig-Engelsdorf",
+          "Borsdorf(Sachs)",
+          "Wurzen",
+          "Kühren",
+          "Dahlen(Sachs)",
+          "Oschatz"
+        ],
+        "line": "50"
+      },
+      {
+        "id": "-1682413305963437786-2510202315-11",
+        "type": "RE",
+        "number": "16538",
+        "time": "2510210005",
+        "platform": "3",
+        "path_stations": [
+          "Dresden Hbf",
+          "Dresden Mitte",
+          "Dresden-Neustadt",
+          "Radebeul Ost",
+          "Coswig(b Dresden)",
+          "Weinböhla Hp",
+          "Niederau",
+          "Priestewitz",
+          "Nünchritz",
+          "Glaubitz(Riesa)"
+        ],
+        "line": "50"
+      },
+      {
+        "id": "3537179868806053584-2510210400-8",
+        "type": "RE",
+        "number": "16501",
+        "time": "2510210453",
+        "platform": "2",
+        "path_stations": [
+          "Leipzig Hbf",
+          "Leipzig-Engelsdorf",
+          "Borsdorf(Sachs)",
+          "Wurzen",
+          "Kühren",
+          "Dahlen(Sachs)",
+          "Oschatz"
+        ],
+        "line": "50"
+      },
+      {
+        "id": "9040423167878226863-2510210409-13",
+        "type": "RB",
+        "number": "74110",
+        "time": "2510210509",
+        "platform": "1",
+        "path_stations": [
+          "Chemnitz Hbf",
+          "Mittweida",
+          "Erlau(Sachs)",
+          "Schweikershain",
+          "Waldheim",
+          "Steina",
+          "Limmritz(Sachs)",
+          "Döbeln Hbf",
+          "Zschaitz",
+          "Ostrau",
+          "Stauchitz",
+          "Seerhausen"
+        ],
+        "line": "45"
+      },
+      {
+        "id": "-6854790465211837245-2510210500-8",
+        "type": "RE",
+        "number": "16503",
+        "time": "2510210544",
+        "platform": "2",
+        "path_stations": [
+          "Leipzig Hbf",
+          "Leipzig-Engelsdorf",
+          "Borsdorf(Sachs)",
+          "Wurzen",
+          "Kühren",
+          "Dahlen(Sachs)",
+          "Oschatz"
+        ],
+        "line": "50"
+      },
+      {
+        "id": "-4114936208122999181-2510210417-11",
+        "type": "RE",
+        "number": "16500",
+        "time": "2510210505",
+        "platform": "3",
+        "path_stations": [
+          "Dresden Hbf",
+          "Dresden Mitte",
+          "Dresden-Neustadt",
+          "Radebeul Ost",
+          "Coswig(b Dresden)",
+          "Weinböhla Hp",
+          "Niederau",
+          "Priestewitz",
+          "Nünchritz",
+          "Glaubitz(Riesa)"
+        ],
+        "line": "50"
+      },
+      {
+        "id": "666711005360005078-2510210509-3",
+        "type": "IC",
+        "number": "2044",
+        "time": "2510210546",
+        "platform": "3",
+        "path_stations": [
+          "Dresden Hbf",
+          "Dresden-Neustadt"
+        ],
+        "line": ""
+      },
+      {
+        "id": "8373144598053362638-2510210513-8",
+        "type": "RB",
+        "number": "74113",
+        "time": "2510210538",
+        "platform": "1",
+        "path_stations": [
+          "Elsterwerda",
+          "Prösen",
+          "Prösen West",
+          "Gröditz(Riesa)",
+          "Tiefenau",
+          "Wülknitz",
+          "Zeithain"
+        ],
+        "line": "45"
+      },
+      {
+        "id": "5981134875112714787-2510201959-12",
+        "type": "EC",
+        "number": "459",
+        "time": "2510210620",
+        "platform": "2",
+        "path_stations": [
+          "Zürich HB",
+          "Basel SBB",
+          "Basel Bad Bf",
+          "Freiburg(Breisgau) Hbf",
+          "Offenburg",
+          "Karlsruhe Hbf",
+          "Mannheim Hbf",
+          "Frankfurt(Main)Süd",
+          "Fulda",
+          "Erfurt Hbf",
+          "Leipzig Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "4718406871562372308-2510210613-8",
+        "type": "RB",
+        "number": "74115",
+        "time": "2510210638",
+        "platform": "1",
+        "path_stations": [
+          "Elsterwerda",
+          "Prösen",
+          "Prösen West",
+          "Gröditz(Riesa)",
+          "Tiefenau",
+          "Wülknitz",
+          "Zeithain"
+        ],
+        "line": "45"
+      },
+      {
+        "id": "7851845108025641883-2510210509-13",
+        "type": "RB",
+        "number": "74112",
+        "time": "2510210609",
+        "platform": "1",
+        "path_stations": [
+          "Chemnitz Hbf",
+          "Mittweida",
+          "Erlau(Sachs)",
+          "Schweikershain",
+          "Waldheim",
+          "Steina",
+          "Limmritz(Sachs)",
+          "Döbeln Hbf",
+          "Zschaitz",
+          "Ostrau",
+          "Stauchitz",
+          "Seerhausen"
+        ],
+        "line": "45"
+      },
+      {
+        "id": "-3876736263946883288-2510210610-3",
+        "type": "ICE",
+        "number": "1654",
+        "time": "2510210648",
+        "platform": "3",
+        "path_stations": [
+          "Dresden Hbf",
+          "Dresden-Neustadt"
+        ],
+        "line": ""
+      },
+      {
+        "id": "6179301519079419558-2510210600-8",
+        "type": "RE",
+        "number": "16505",
+        "time": "2510210644",
+        "platform": "2",
+        "path_stations": [
+          "Leipzig Hbf",
+          "Leipzig-Engelsdorf",
+          "Borsdorf(Sachs)",
+          "Wurzen",
+          "Kühren",
+          "Dahlen(Sachs)",
+          "Oschatz"
+        ],
+        "line": "50"
+      },
+      {
+        "id": "1961181705396261168-2510201959-12",
+        "type": "EN",
+        "number": "40459",
+        "time": "2510210620",
+        "platform": "2",
+        "path_stations": [
+          "Zürich HB",
+          "Basel SBB",
+          "Basel Bad Bf",
+          "Freiburg(Breisgau) Hbf",
+          "Offenburg",
+          "Karlsruhe Hbf",
+          "Mannheim Hbf",
+          "Frankfurt(Main)Süd",
+          "Fulda",
+          "Erfurt Hbf",
+          "Leipzig Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "1756673151033213091-2510210515-11",
+        "type": "RE",
+        "number": "16502",
+        "time": "2510210605",
+        "platform": "3",
+        "path_stations": [
+          "Dresden Hbf",
+          "Dresden Mitte",
+          "Dresden-Neustadt",
+          "Radebeul Ost",
+          "Coswig(b Dresden)",
+          "Weinböhla Hp",
+          "Niederau",
+          "Priestewitz",
+          "Nünchritz",
+          "Glaubitz(Riesa)"
+        ],
+        "line": "50"
+      }
+    ],
+    "departures": [
+      {
+        "id": "6634368184557249806-2510201709-13",
+        "type": "RB",
+        "number": "74136",
+        "direction": "Elsterwerda",
+        "platform": "1",
+        "time": "2510201814",
+        "destination": "Elsterwerda",
+        "path_stations": [
+          "Zeithain",
+          "Wülknitz",
+          "Tiefenau",
+          "Gröditz(Riesa)",
+          "Prösen West",
+          "Prösen",
+          "Elsterwerda"
+        ]
+      },
+      {
+        "id": "-4822877454349863859-2510201810-3",
+        "type": "ICE",
+        "number": "1552",
+        "direction": "Frankfurt(Main)Hbf",
+        "platform": "3",
+        "time": "2510201849",
+        "destination": "Frankfurt(Main)Hbf",
+        "path_stations": [
+          "Leipzig Hbf",
+          "Erfurt Hbf",
+          "Gotha",
+          "Eisenach Hbf",
+          "Bad Hersfeld",
+          "Fulda",
+          "Frankfurt(Main)Hbf"
+        ]
+      },
+      {
+        "id": "1152735529745397039-2510201813-8",
+        "type": "RB",
+        "number": "74139",
+        "direction": "Chemnitz Hbf",
+        "platform": "1",
+        "time": "2510201839",
+        "destination": "Chemnitz Hbf",
+        "path_stations": [
+          "Seerhausen",
+          "Stauchitz",
+          "Ostrau",
+          "Zschaitz",
+          "Döbeln Hbf",
+          "Limmritz(Sachs)",
+          "Steina",
+          "Waldheim",
+          "Schweikershain",
+          "Erlau(Sachs)",
+          "Mittweida",
+          "Chemnitz Hbf"
+        ]
+      },
+      {
+        "id": "6102273383218622995-2510201228-15",
+        "type": "IC",
+        "number": "2049",
+        "direction": "Dresden Hbf",
+        "platform": "2",
+        "time": "2510201801",
+        "destination": "Dresden Hbf",
+        "path_stations": [
+          "Dresden-Neustadt",
+          "Dresden Hbf"
+        ]
+      },
+      {
+        "id": "-2709698061996403329-2510201800-8",
+        "type": "RE",
+        "number": "16529",
+        "direction": "Dresden Hbf",
+        "platform": "2",
+        "time": "2510201845",
+        "destination": "Dresden Hbf",
+        "path_stations": [
+          "Glaubitz(Riesa)",
+          "Nünchritz",
+          "Priestewitz",
+          "Niederau",
+          "Weinböhla Hp",
+          "Coswig(b Dresden)",
+          "Radebeul Ost",
+          "Dresden-Neustadt",
+          "Dresden Mitte",
+          "Dresden Hbf"
+        ]
+      },
+      {
+        "id": "-5849645620140906899-2510201715-11",
+        "type": "RE",
+        "number": "16526",
+        "direction": "Leipzig Hbf",
+        "platform": "3",
+        "time": "2510201806",
+        "destination": "Leipzig Hbf",
+        "path_stations": [
+          "Oschatz",
+          "Dahlen(Sachs)",
+          "Kühren",
+          "Wurzen",
+          "Borsdorf(Sachs)",
+          "Leipzig-Engelsdorf",
+          "Leipzig Hbf"
+        ]
+      },
+      {
+        "id": "67273429190528841-2510201909-3",
+        "type": "IC",
+        "number": "2448",
+        "direction": "Hannover Hbf",
+        "platform": "3",
+        "time": "2510201947",
+        "destination": "Hannover Hbf",
+        "path_stations": [
+          "Leipzig Hbf",
+          "Leipzig/Halle Flughafen",
+          "Halle(Saale)Hbf",
+          "Köthen",
+          "Magdeburg Hbf",
+          "Braunschweig Hbf",
+          "Hannover Hbf"
+        ]
+      },
+      {
+        "id": "-7329898838357482051-2510201815-11",
+        "type": "RE",
+        "number": "16528",
+        "direction": "Leipzig Hbf",
+        "platform": "3",
+        "time": "2510201906",
+        "destination": "Leipzig Hbf",
+        "path_stations": [
+          "Oschatz",
+          "Dahlen(Sachs)",
+          "Kühren",
+          "Wurzen",
+          "Borsdorf(Sachs)",
+          "Leipzig-Engelsdorf",
+          "Leipzig Hbf"
+        ]
+      },
+      {
+        "id": "445699896068738766-2510201913-8",
+        "type": "RB",
+        "number": "74141",
+        "direction": "Chemnitz Hbf",
+        "platform": "1",
+        "time": "2510201939",
+        "destination": "Chemnitz Hbf",
+        "path_stations": [
+          "Seerhausen",
+          "Stauchitz",
+          "Ostrau",
+          "Zschaitz",
+          "Döbeln Hbf",
+          "Limmritz(Sachs)",
+          "Steina",
+          "Waldheim",
+          "Schweikershain",
+          "Erlau(Sachs)",
+          "Mittweida",
+          "Chemnitz Hbf"
+        ]
+      },
+      {
+        "id": "8317284780065095268-2510201426-11",
+        "type": "ICE",
+        "number": "1653",
+        "direction": "Dresden Hbf",
+        "platform": "2",
+        "time": "2510201901",
+        "destination": "Dresden Hbf",
+        "path_stations": [
+          "Dresden-Neustadt",
+          "Dresden Hbf"
+        ]
+      },
+      {
+        "id": "-6136112805942097452-2510201809-13",
+        "type": "RB",
+        "number": "74138",
+        "direction": "Elsterwerda",
+        "platform": "1",
+        "time": "2510201914",
+        "destination": "Elsterwerda",
+        "path_stations": [
+          "Zeithain",
+          "Wülknitz",
+          "Tiefenau",
+          "Gröditz(Riesa)",
+          "Prösen West",
+          "Prösen",
+          "Elsterwerda"
+        ]
+      },
+      {
+        "id": "8364928914864311824-2510201900-8",
+        "type": "RE",
+        "number": "16531",
+        "direction": "Dresden Hbf",
+        "platform": "2",
+        "time": "2510201945",
+        "destination": "Dresden Hbf",
+        "path_stations": [
+          "Glaubitz(Riesa)",
+          "Nünchritz",
+          "Priestewitz",
+          "Niederau",
+          "Weinböhla Hp",
+          "Coswig(b Dresden)",
+          "Radebeul Ost",
+          "Dresden-Neustadt",
+          "Dresden Mitte",
+          "Dresden Hbf"
+        ]
+      },
+      {
+        "id": "6828388597470840368-2510201909-13",
+        "type": "RB",
+        "number": "74140",
+        "direction": "Elsterwerda",
+        "platform": "1",
+        "time": "2510202014",
+        "destination": "Elsterwerda",
+        "path_stations": [
+          "Zeithain",
+          "Wülknitz",
+          "Tiefenau",
+          "Gröditz(Riesa)",
+          "Prösen West",
+          "Prösen",
+          "Elsterwerda"
+        ]
+      },
+      {
+        "id": "-2950490356695221515-2510201428-15",
+        "type": "IC",
+        "number": "2047",
+        "direction": "Dresden Hbf",
+        "platform": "2",
+        "time": "2510202002",
+        "destination": "Dresden Hbf",
+        "path_stations": [
+          "Dresden-Neustadt",
+          "Dresden Hbf"
+        ]
+      },
+      {
+        "id": "-480484934668334893-2510201915-11",
+        "type": "RE",
+        "number": "16530",
+        "direction": "Leipzig Hbf",
+        "platform": "3",
+        "time": "2510202006",
+        "destination": "Leipzig Hbf",
+        "path_stations": [
+          "Oschatz",
+          "Dahlen(Sachs)",
+          "Kühren",
+          "Wurzen",
+          "Borsdorf(Sachs)",
+          "Leipzig-Engelsdorf",
+          "Leipzig Hbf"
+        ]
+      },
+      {
+        "id": "8943315403204299509-2510202013-8",
+        "type": "RB",
+        "number": "74143",
+        "direction": "Chemnitz Hbf",
+        "platform": "1",
+        "time": "2510202039",
+        "destination": "Chemnitz Hbf",
+        "path_stations": [
+          "Seerhausen",
+          "Stauchitz",
+          "Ostrau",
+          "Zschaitz",
+          "Döbeln Hbf",
+          "Limmritz(Sachs)",
+          "Steina",
+          "Waldheim",
+          "Schweikershain",
+          "Erlau(Sachs)",
+          "Mittweida",
+          "Chemnitz Hbf"
+        ]
+      },
+      {
+        "id": "-3573575252665072424-2510202000-8",
+        "type": "RE",
+        "number": "16533",
+        "direction": "Dresden Hbf",
+        "platform": "2",
+        "time": "2510202045",
+        "destination": "Dresden Hbf",
+        "path_stations": [
+          "Glaubitz(Riesa)",
+          "Nünchritz",
+          "Priestewitz",
+          "Niederau",
+          "Weinböhla Hp",
+          "Coswig(b Dresden)",
+          "Radebeul Ost",
+          "Dresden-Neustadt",
+          "Dresden Mitte",
+          "Dresden Hbf"
+        ]
+      },
+      {
+        "id": "-6588310020860352560-2510201626-11",
+        "type": "ICE",
+        "number": "1655",
+        "direction": "Dresden Hbf",
+        "platform": "2",
+        "time": "2510202101",
+        "destination": "Dresden Hbf",
+        "path_stations": [
+          "Dresden-Neustadt",
+          "Dresden Hbf"
+        ]
+      },
+      {
+        "id": "-7376546056820340077-2510202015-11",
+        "type": "RE",
+        "number": "16532",
+        "direction": "Leipzig Hbf",
+        "platform": "3",
+        "time": "2510202106",
+        "destination": "Leipzig Hbf",
+        "path_stations": [
+          "Oschatz",
+          "Dahlen(Sachs)",
+          "Kühren",
+          "Wurzen",
+          "Borsdorf(Sachs)",
+          "Leipzig-Engelsdorf",
+          "Leipzig Hbf"
+        ]
+      },
+      {
+        "id": "-8149098461986911141-2510202102-8",
+        "type": "RE",
+        "number": "16535",
+        "direction": "Dresden Hbf",
+        "platform": "2",
+        "time": "2510202154",
+        "destination": "Dresden Hbf",
+        "path_stations": [
+          "Glaubitz(Riesa)",
+          "Nünchritz",
+          "Priestewitz",
+          "Niederau",
+          "Weinböhla Hp",
+          "Coswig(b Dresden)",
+          "Radebeul Ost",
+          "Dresden-Neustadt",
+          "Dresden Mitte",
+          "Dresden Hbf"
+        ]
+      },
+      {
+        "id": "-8572647521164952896-2510201828-8",
+        "type": "EC",
+        "number": "458",
+        "direction": "Zürich HB",
+        "platform": "3",
+        "time": "2510202143",
+        "destination": "Zürich HB",
+        "path_stations": [
+          "Leipzig Hbf",
+          "Erfurt Hbf",
+          "Fulda",
+          "Frankfurt(Main)Süd",
+          "Mannheim Hbf",
+          "Karlsruhe Hbf",
+          "Baden-Baden",
+          "Offenburg",
+          "Freiburg(Breisgau) Hbf",
+          "Basel Bad Bf",
+          "Basel SBB",
+          "Zürich HB"
+        ]
+      },
+      {
+        "id": "-8716776747589038458-2510201828-8",
+        "type": "EN",
+        "number": "40458",
+        "direction": "Zürich HB",
+        "platform": "3",
+        "time": "2510202143",
+        "destination": "Zürich HB",
+        "path_stations": [
+          "Leipzig Hbf",
+          "Erfurt Hbf",
+          "Fulda",
+          "Frankfurt(Main)Süd",
+          "Mannheim Hbf",
+          "Karlsruhe Hbf",
+          "Baden-Baden",
+          "Offenburg",
+          "Freiburg(Breisgau) Hbf",
+          "Basel Bad Bf",
+          "Basel SBB",
+          "Zürich HB"
+        ]
+      },
+      {
+        "id": "-1329865482498026501-2510202153-1",
+        "type": "RB",
+        "number": "74145",
+        "direction": "Chemnitz Hbf",
+        "platform": "6",
+        "time": "2510202153",
+        "destination": "Chemnitz Hbf",
+        "path_stations": [
+          "Seerhausen",
+          "Stauchitz",
+          "Ostrau",
+          "Zschaitz",
+          "Döbeln Hbf",
+          "Limmritz(Sachs)",
+          "Steina",
+          "Waldheim",
+          "Schweikershain",
+          "Erlau(Sachs)",
+          "Mittweida",
+          "Altmittweida",
+          "Ottendorf(Mittweida)",
+          "Oberlichtenau",
+          "Chemnitz Kinderwaldstätte",
+          "Chemnitz Hbf"
+        ]
+      },
+      {
+        "id": "-8627406031601786859-2510202213-8",
+        "type": "RB",
+        "number": "74147",
+        "direction": "Chemnitz Hbf",
+        "platform": "4",
+        "time": "2510202253",
+        "destination": "Chemnitz Hbf",
+        "path_stations": [
+          "Seerhausen",
+          "Stauchitz",
+          "Ostrau",
+          "Zschaitz",
+          "Döbeln Hbf",
+          "Limmritz(Sachs)",
+          "Steina",
+          "Waldheim",
+          "Schweikershain",
+          "Erlau(Sachs)",
+          "Mittweida",
+          "Altmittweida",
+          "Ottendorf(Mittweida)",
+          "Oberlichtenau",
+          "Chemnitz Kinderwaldstätte",
+          "Chemnitz Hbf"
+        ]
+      },
+      {
+        "id": "8496435950390075566-2510202203-8",
+        "type": "RE",
+        "number": "16537",
+        "direction": "Dresden Hbf",
+        "platform": "2",
+        "time": "2510202254",
+        "destination": "Dresden Hbf",
+        "path_stations": [
+          "Glaubitz(Riesa)",
+          "Nünchritz",
+          "Priestewitz",
+          "Niederau",
+          "Weinböhla Hp",
+          "Coswig(b Dresden)",
+          "Radebeul Ost",
+          "Dresden-Neustadt",
+          "Dresden Mitte",
+          "Dresden Hbf"
+        ]
+      },
+      {
+        "id": "1292689210388594561-2510202137-17",
+        "type": "RB",
+        "number": "74144",
+        "direction": "Elsterwerda",
+        "platform": "1",
+        "time": "2510202249",
+        "destination": "Elsterwerda",
+        "path_stations": [
+          "Zeithain",
+          "Wülknitz",
+          "Tiefenau",
+          "Gröditz(Riesa)",
+          "Prösen West",
+          "Prösen",
+          "Elsterwerda"
+        ]
+      },
+      {
+        "id": "-1037914935858453634-2510202115-11",
+        "type": "RE",
+        "number": "16534",
+        "direction": "Leipzig Hbf",
+        "platform": "3",
+        "time": "2510202206",
+        "destination": "Leipzig Hbf",
+        "path_stations": [
+          "Oschatz",
+          "Dahlen(Sachs)",
+          "Kühren",
+          "Wurzen",
+          "Borsdorf(Sachs)",
+          "Leipzig-Engelsdorf",
+          "Leipzig Hbf"
+        ]
+      },
+      {
+        "id": "-2875979624331062252-2510201628-15",
+        "type": "IC",
+        "number": "2045",
+        "direction": "Dresden Hbf",
+        "platform": "2",
+        "time": "2510202212",
+        "destination": "Dresden Hbf",
+        "path_stations": [
+          "Dresden-Neustadt",
+          "Dresden Hbf"
+        ]
+      },
+      {
+        "id": "5755582369422166953-2510202215-11",
+        "type": "RE",
+        "number": "16536",
+        "direction": "Leipzig Hbf",
+        "platform": "3",
+        "time": "2510202306",
+        "destination": "Leipzig Hbf",
+        "path_stations": [
+          "Oschatz",
+          "Dahlen(Sachs)",
+          "Kühren",
+          "Wurzen",
+          "Borsdorf(Sachs)",
+          "Leipzig-Engelsdorf",
+          "Leipzig Hbf"
+        ]
+      },
+      {
+        "id": "-5251979787845317603-2510201826-11",
+        "type": "ICE",
+        "number": "1657",
+        "direction": "Dresden Hbf",
+        "platform": "2",
+        "time": "2510202312",
+        "destination": "Dresden Hbf",
+        "path_stations": [
+          "Dresden-Neustadt",
+          "Dresden Hbf"
+        ]
+      },
+      {
+        "id": "7233618050490680461-2510202311-8",
+        "type": "RE",
+        "number": "16539",
+        "direction": "Dresden Hbf",
+        "platform": "2",
+        "time": "2510210001",
+        "destination": "Dresden Hbf",
+        "path_stations": [
+          "Glaubitz(Riesa)",
+          "Nünchritz",
+          "Priestewitz",
+          "Niederau",
+          "Weinböhla Hp",
+          "Coswig(b Dresden)",
+          "Radebeul Ost",
+          "Dresden-Neustadt",
+          "Dresden Mitte",
+          "Dresden Hbf"
+        ]
+      },
+      {
+        "id": "-1682413305963437786-2510202315-11",
+        "type": "RE",
+        "number": "16538",
+        "direction": "Leipzig Hbf",
+        "platform": "3",
+        "time": "2510210006",
+        "destination": "Leipzig Hbf",
+        "path_stations": [
+          "Oschatz",
+          "Dahlen(Sachs)",
+          "Kühren",
+          "Wurzen",
+          "Borsdorf(Sachs)",
+          "Leipzig-Engelsdorf",
+          "Leipzig Hbf"
+        ]
+      },
+      {
+        "id": "3537179868806053584-2510210400-8",
+        "type": "RE",
+        "number": "16501",
+        "direction": "Dresden Hbf",
+        "platform": "2",
+        "time": "2510210454",
+        "destination": "Dresden Hbf",
+        "path_stations": [
+          "Glaubitz(Riesa)",
+          "Nünchritz",
+          "Priestewitz",
+          "Niederau",
+          "Weinböhla Hp",
+          "Coswig(b Dresden)",
+          "Radebeul Ost",
+          "Dresden-Neustadt",
+          "Dresden Mitte",
+          "Dresden Hbf"
+        ]
+      },
+      {
+        "id": "-504910577463859697-2510210439-1",
+        "type": "RB",
+        "number": "74111",
+        "direction": "Chemnitz Hbf",
+        "platform": "6",
+        "time": "2510210439",
+        "destination": "Chemnitz Hbf",
+        "path_stations": [
+          "Seerhausen",
+          "Stauchitz",
+          "Ostrau",
+          "Zschaitz",
+          "Döbeln Hbf",
+          "Limmritz(Sachs)",
+          "Steina",
+          "Waldheim",
+          "Schweikershain",
+          "Erlau(Sachs)",
+          "Mittweida",
+          "Chemnitz Hbf"
+        ]
+      },
+      {
+        "id": "9040423167878226863-2510210409-13",
+        "type": "RB",
+        "number": "74110",
+        "direction": "Elsterwerda",
+        "platform": "1",
+        "time": "2510210514",
+        "destination": "Elsterwerda",
+        "path_stations": [
+          "Zeithain",
+          "Wülknitz",
+          "Tiefenau",
+          "Gröditz(Riesa)",
+          "Prösen West",
+          "Prösen",
+          "Elsterwerda"
+        ]
+      },
+      {
+        "id": "-6854790465211837245-2510210500-8",
+        "type": "RE",
+        "number": "16503",
+        "direction": "Dresden Hbf",
+        "platform": "2",
+        "time": "2510210545",
+        "destination": "Dresden Hbf",
+        "path_stations": [
+          "Glaubitz(Riesa)",
+          "Nünchritz",
+          "Priestewitz",
+          "Niederau",
+          "Weinböhla Hp",
+          "Coswig(b Dresden)",
+          "Radebeul Ost",
+          "Dresden-Neustadt",
+          "Dresden Mitte",
+          "Dresden Hbf"
+        ]
+      },
+      {
+        "id": "-4114936208122999181-2510210417-11",
+        "type": "RE",
+        "number": "16500",
+        "direction": "Leipzig Hbf",
+        "platform": "3",
+        "time": "2510210506",
+        "destination": "Leipzig Hbf",
+        "path_stations": [
+          "Oschatz",
+          "Dahlen(Sachs)",
+          "Kühren",
+          "Wurzen",
+          "Borsdorf(Sachs)",
+          "Leipzig-Engelsdorf",
+          "Leipzig Hbf"
+        ]
+      },
+      {
+        "id": "666711005360005078-2510210509-3",
+        "type": "IC",
+        "number": "2044",
+        "direction": "Dortmund Hbf",
+        "platform": "3",
+        "time": "2510210547",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Leipzig Hbf",
+          "Leipzig/Halle Flughafen",
+          "Halle(Saale)Hbf",
+          "Köthen",
+          "Magdeburg Hbf",
+          "Braunschweig Hbf",
+          "Hannover Hbf",
+          "Minden(Westf)",
+          "Bad Oeynhausen",
+          "Bielefeld Hbf",
+          "Gütersloh Hbf",
+          "Hamm(Westf)Hbf",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "8373144598053362638-2510210513-8",
+        "type": "RB",
+        "number": "74113",
+        "direction": "Chemnitz Hbf",
+        "platform": "1",
+        "time": "2510210539",
+        "destination": "Chemnitz Hbf",
+        "path_stations": [
+          "Seerhausen",
+          "Stauchitz",
+          "Ostrau",
+          "Zschaitz",
+          "Döbeln Hbf",
+          "Limmritz(Sachs)",
+          "Steina",
+          "Waldheim",
+          "Schweikershain",
+          "Erlau(Sachs)",
+          "Mittweida",
+          "Chemnitz Hbf"
+        ]
+      },
+      {
+        "id": "5981134875112714787-2510201959-12",
+        "type": "EC",
+        "number": "459",
+        "direction": "Praha hl.n.",
+        "platform": "2",
+        "time": "2510210623",
+        "destination": "Praha hl.n.",
+        "path_stations": [
+          "Dresden-Neustadt",
+          "Dresden Hbf",
+          "Bad Schandau",
+          "Decin hl.n.",
+          "Usti nad Labem hl.n.",
+          "Praha-Holesovice",
+          "Praha hl.n."
+        ]
+      },
+      {
+        "id": "4718406871562372308-2510210613-8",
+        "type": "RB",
+        "number": "74115",
+        "direction": "Chemnitz Hbf",
+        "platform": "1",
+        "time": "2510210639",
+        "destination": "Chemnitz Hbf",
+        "path_stations": [
+          "Seerhausen",
+          "Stauchitz",
+          "Ostrau",
+          "Zschaitz",
+          "Döbeln Hbf",
+          "Limmritz(Sachs)",
+          "Steina",
+          "Waldheim",
+          "Schweikershain",
+          "Erlau(Sachs)",
+          "Mittweida",
+          "Chemnitz Hbf"
+        ]
+      },
+      {
+        "id": "7851845108025641883-2510210509-13",
+        "type": "RB",
+        "number": "74112",
+        "direction": "Elsterwerda",
+        "platform": "1",
+        "time": "2510210614",
+        "destination": "Elsterwerda",
+        "path_stations": [
+          "Zeithain",
+          "Wülknitz",
+          "Tiefenau",
+          "Gröditz(Riesa)",
+          "Prösen West",
+          "Prösen",
+          "Elsterwerda"
+        ]
+      },
+      {
+        "id": "-3876736263946883288-2510210610-3",
+        "type": "ICE",
+        "number": "1654",
+        "direction": "Wiesbaden Hbf",
+        "platform": "3",
+        "time": "2510210649",
+        "destination": "Wiesbaden Hbf",
+        "path_stations": [
+          "Leipzig Hbf",
+          "Erfurt Hbf",
+          "Gotha",
+          "Eisenach Hbf",
+          "Bad Hersfeld",
+          "Fulda",
+          "Frankfurt(Main)Hbf",
+          "Frankfurt(M) Flughafen Fernbf",
+          "Mainz Hbf",
+          "Wiesbaden Hbf"
+        ]
+      },
+      {
+        "id": "6179301519079419558-2510210600-8",
+        "type": "RE",
+        "number": "16505",
+        "direction": "Dresden Hbf",
+        "platform": "2",
+        "time": "2510210645",
+        "destination": "Dresden Hbf",
+        "path_stations": [
+          "Glaubitz(Riesa)",
+          "Nünchritz",
+          "Priestewitz",
+          "Niederau",
+          "Weinböhla Hp",
+          "Coswig(b Dresden)",
+          "Radebeul Ost",
+          "Dresden-Neustadt",
+          "Dresden Mitte",
+          "Dresden Hbf"
+        ]
+      },
+      {
+        "id": "1961181705396261168-2510201959-12",
+        "type": "EN",
+        "number": "40459",
+        "direction": "Praha hl.n.",
+        "platform": "2",
+        "time": "2510210623",
+        "destination": "Praha hl.n.",
+        "path_stations": [
+          "Dresden-Neustadt",
+          "Dresden Hbf",
+          "Bad Schandau",
+          "Decin hl.n.",
+          "Usti nad Labem hl.n.",
+          "Praha-Holesovice",
+          "Praha hl.n."
+        ]
+      },
+      {
+        "id": "1756673151033213091-2510210515-11",
+        "type": "RE",
+        "number": "16502",
+        "direction": "Leipzig Hbf",
+        "platform": "3",
+        "time": "2510210606",
+        "destination": "Leipzig Hbf",
+        "path_stations": [
+          "Oschatz",
+          "Dahlen(Sachs)",
+          "Kühren",
+          "Wurzen",
+          "Borsdorf(Sachs)",
+          "Leipzig-Engelsdorf",
+          "Leipzig Hbf"
+        ]
+      }
+    ]
+  }
+}

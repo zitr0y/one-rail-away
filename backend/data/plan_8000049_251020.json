@@ -1,0 +1,4514 @@
+{
+  "station_eva": "8000049",
+  "date": "251020",
+  "cached_at": "2025-10-20T15:48:25.029976",
+  "plan_data": {
+    "arrivals": [
+      {
+        "id": "1548779450320502918-2510201619-19",
+        "type": "RB",
+        "number": "16424",
+        "time": "2510201741",
+        "platform": "8",
+        "path_stations": [
+          "Biederitz",
+          "Magdeburg Herrenkrug",
+          "Magdeburg-Neustadt",
+          "Magdeburg Hbf",
+          "Magdeburg-Sudenburg",
+          "Niederndodeleben",
+          "Wellen(Magdeburg)",
+          "Ochtmersleben",
+          "Dreileben-Drackenstedt",
+          "Ovelgünne",
+          "Eilsleben(b Magdeburg)",
+          "Wefensleben",
+          "Marienborn",
+          "Helmstedt",
+          "Frellstedt",
+          "Königslutter",
+          "Schandelah",
+          "Weddel(Braunschw)"
+        ],
+        "line": "40"
+      },
+      {
+        "id": "-4146733989335135356-2510201720-5",
+        "type": "ENO",
+        "number": "75577",
+        "time": "2510201747",
+        "platform": "7",
+        "path_stations": [
+          "Hildesheim Hbf",
+          "Hoheneggelsen",
+          "Woltwiesche",
+          "Lengede-Broistedt"
+        ],
+        "line": "RE50"
+      },
+      {
+        "id": "6264673881775742533-2510201617-5",
+        "type": "ICE",
+        "number": "377",
+        "time": "2510201755",
+        "platform": "6",
+        "path_stations": [
+          "Berlin Ostbahnhof",
+          "Berlin Hbf",
+          "Berlin-Spandau",
+          "Wolfsburg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-7106033539035275477-2510201718-4",
+        "type": "ENO",
+        "number": "83574",
+        "time": "2510201738",
+        "platform": "6",
+        "path_stations": [
+          "Wolfsburg Hbf",
+          "Fallersleben",
+          "Weddel(Braunschw)"
+        ],
+        "line": "RE50"
+      },
+      {
+        "id": "-8726592906105325436-2510201645-6",
+        "type": "erx",
+        "number": "81526",
+        "time": "2510201735",
+        "platform": "2b",
+        "path_stations": [
+          "Bad Harzburg",
+          "Vienenburg",
+          "Schladen(Harz)",
+          "Börßum",
+          "Wolfenbüttel"
+        ],
+        "line": "RB42"
+      },
+      {
+        "id": "4961782681481677440-2510200959-20",
+        "type": "ICE",
+        "number": "278",
+        "time": "2510201759",
+        "platform": "7",
+        "path_stations": [
+          "Interlaken Ost",
+          "Interlaken West",
+          "Spiez",
+          "Thun",
+          "Bern",
+          "Olten",
+          "Liestal",
+          "Basel SBB",
+          "Basel Bad Bf",
+          "Freiburg(Breisgau) Hbf",
+          "Offenburg",
+          "Karlsruhe Hbf",
+          "Mannheim Hbf",
+          "Frankfurt(Main)Hbf",
+          "Hanau Hbf",
+          "Fulda",
+          "Kassel-Wilhelmshöhe",
+          "Göttingen",
+          "Hildesheim Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "7672270437966808001-2510201715-5",
+        "type": "RB",
+        "number": "14385",
+        "time": "2510201740",
+        "platform": "3a",
+        "path_stations": [
+          "Salzgitter-Lebenstedt",
+          "Salzgitter-Watenstedt",
+          "Salzgitter-Immendorf",
+          "Salzgitter-Thiede"
+        ],
+        "line": "44"
+      },
+      {
+        "id": "-4999142677314474643-2510201631-13",
+        "type": "erx",
+        "number": "83625",
+        "time": "2510201754",
+        "platform": "1",
+        "path_stations": [
+          "Bad Bodenteich",
+          "Wittingen",
+          "Knesebeck",
+          "Vorhop",
+          "Schönewörde",
+          "Wahrenholz",
+          "Triangel",
+          "Gifhorn Stadt",
+          "Gifhorn",
+          "Rötgesbüttel",
+          "Meine",
+          "Braunschweig-Gliesmarode"
+        ],
+        "line": "RB47"
+      },
+      {
+        "id": "-4505854492509757117-2510201634-4",
+        "type": "RB",
+        "number": "14242",
+        "time": "2510201703",
+        "platform": "3a",
+        "path_stations": [
+          "Schöppenstedt",
+          "Dettum",
+          "Wolfenbüttel"
+        ],
+        "line": "45"
+      },
+      {
+        "id": "-4062914221984966997-2510201616-7",
+        "type": "WFB",
+        "number": "95809",
+        "time": "2510201704",
+        "platform": "5",
+        "path_stations": [
+          "Hannover Hbf",
+          "Lehrte",
+          "Hämelerwald",
+          "Vöhrum",
+          "Peine",
+          "Vechelde"
+        ],
+        "line": "RE70"
+      },
+      {
+        "id": "-6036386918811435216-2510201438-25",
+        "type": "WFB",
+        "number": "95783",
+        "time": "2510201740",
+        "platform": "5",
+        "path_stations": [
+          "Rheine",
+          "Hörstel",
+          "Ibbenbüren-Esch",
+          "Ibbenbüren",
+          "Ibbenbüren-Laggenbeck",
+          "Osnabrück Altstadt",
+          "Osnabrück Hbf",
+          "Melle",
+          "Bünde(Westf)",
+          "Kirchlengern",
+          "Löhne(Westf)",
+          "Bad Oeynhausen",
+          "Porta Westfalica",
+          "Minden(Westf)",
+          "Bückeburg",
+          "Stadthagen",
+          "Haste",
+          "Wunstorf",
+          "Hannover Hbf",
+          "Lehrte",
+          "Hämelerwald",
+          "Vöhrum",
+          "Peine",
+          "Vechelde"
+        ],
+        "line": "RE60"
+      },
+      {
+        "id": "-1399042432563079357-2510201542-6",
+        "type": "IC",
+        "number": "2034",
+        "time": "2510201748",
+        "platform": "6",
+        "path_stations": [
+          "Leipzig Hbf",
+          "Halle(Saale)Hbf",
+          "Köthen",
+          "Magdeburg Hbf",
+          "Helmstedt"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-3231088687845695669-2510201650-5",
+        "type": "ENO",
+        "number": "83575",
+        "time": "2510201717",
+        "platform": "7",
+        "path_stations": [
+          "Hildesheim Hbf",
+          "Hoheneggelsen",
+          "Woltwiesche",
+          "Lengede-Broistedt"
+        ],
+        "line": "RE50"
+      },
+      {
+        "id": "-2841524892885065457-2510201649-3",
+        "type": "RB",
+        "number": "14283",
+        "time": "2510201709",
+        "platform": "3a",
+        "path_stations": [
+          "Salzgitter-Lebenstedt",
+          "Salzgitter-Thiede"
+        ],
+        "line": "48"
+      },
+      {
+        "id": "2518210087379988355-2510201645-7",
+        "type": "erx",
+        "number": "81576",
+        "time": "2510201735",
+        "platform": "2b",
+        "path_stations": [
+          "Goslar",
+          "Oker",
+          "Vienenburg",
+          "Schladen(Harz)",
+          "Börßum",
+          "Wolfenbüttel"
+        ],
+        "line": "RB43"
+      },
+      {
+        "id": "127200893185729190-2510201658-6",
+        "type": "RB",
+        "number": "14326",
+        "time": "2510201750",
+        "platform": "4a",
+        "path_stations": [
+          "Gittelde/Bad Grund(Harz)",
+          "Münchehof(Harz)",
+          "Seesen",
+          "Salzgitter-Ringelheim",
+          "Salzgitter-Bad"
+        ],
+        "line": "46"
+      },
+      {
+        "id": "-2950490356695221515-2510201428-9",
+        "type": "IC",
+        "number": "2047",
+        "time": "2510201708",
+        "platform": "7",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Hamm(Westf)Hbf",
+          "Gütersloh Hbf",
+          "Bielefeld Hbf",
+          "Herford",
+          "Bad Oeynhausen",
+          "Minden(Westf)",
+          "Hannover Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "8983673647294408675-2510200842-18",
+        "type": "ICE",
+        "number": "1218",
+        "time": "2510201701",
+        "platform": "7",
+        "path_stations": [
+          "Innsbruck Hbf",
+          "Jenbach",
+          "Wörgl Hbf",
+          "Kufstein",
+          "Rosenheim",
+          "München Ost",
+          "München Hbf",
+          "München-Pasing",
+          "Augsburg Hbf",
+          "Ulm Hbf",
+          "Stuttgart Hbf",
+          "Mannheim Hbf",
+          "Frankfurt(Main)Hbf",
+          "Fulda",
+          "Kassel-Wilhelmshöhe",
+          "Göttingen",
+          "Hildesheim Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "1625033122911392527-2510201719-19",
+        "type": "RB",
+        "number": "16426",
+        "time": "2510201841",
+        "platform": "8",
+        "path_stations": [
+          "Biederitz",
+          "Magdeburg Herrenkrug",
+          "Magdeburg-Neustadt",
+          "Magdeburg Hbf",
+          "Magdeburg-Sudenburg",
+          "Niederndodeleben",
+          "Wellen(Magdeburg)",
+          "Ochtmersleben",
+          "Dreileben-Drackenstedt",
+          "Ovelgünne",
+          "Eilsleben(b Magdeburg)",
+          "Wefensleben",
+          "Marienborn",
+          "Helmstedt",
+          "Frellstedt",
+          "Königslutter",
+          "Schandelah",
+          "Weddel(Braunschw)"
+        ],
+        "line": "40"
+      },
+      {
+        "id": "14592033035476869-2510201734-4",
+        "type": "RB",
+        "number": "14244",
+        "time": "2510201803",
+        "platform": "3a",
+        "path_stations": [
+          "Schöppenstedt",
+          "Dettum",
+          "Wolfenbüttel"
+        ],
+        "line": "45"
+      },
+      {
+        "id": "-4960371279055684886-2510201815-5",
+        "type": "RB",
+        "number": "14387",
+        "time": "2510201840",
+        "platform": "3a",
+        "path_stations": [
+          "Salzgitter-Lebenstedt",
+          "Salzgitter-Watenstedt",
+          "Salzgitter-Immendorf",
+          "Salzgitter-Thiede"
+        ],
+        "line": "44"
+      },
+      {
+        "id": "6267789318775144807-2510201750-5",
+        "type": "ENO",
+        "number": "83577",
+        "time": "2510201817",
+        "platform": "7",
+        "path_stations": [
+          "Hildesheim Hbf",
+          "Hoheneggelsen",
+          "Woltwiesche",
+          "Lengede-Broistedt"
+        ],
+        "line": "RE50"
+      },
+      {
+        "id": "4804116960335233530-2510201509-9",
+        "type": "IC",
+        "number": "2444",
+        "time": "2510201848",
+        "platform": "6",
+        "path_stations": [
+          "Dresden Hbf",
+          "Dresden-Neustadt",
+          "Riesa",
+          "Leipzig Hbf",
+          "Leipzig/Halle Flughafen",
+          "Halle(Saale)Hbf",
+          "Köthen",
+          "Magdeburg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-6107070251316569544-2510201749-3",
+        "type": "RB",
+        "number": "14285",
+        "time": "2510201809",
+        "platform": "3a",
+        "path_stations": [
+          "Salzgitter-Lebenstedt",
+          "Salzgitter-Thiede"
+        ],
+        "line": "48"
+      },
+      {
+        "id": "4961782681481677440-2510200959-20",
+        "type": "ICE",
+        "number": "278",
+        "time": "2510201759",
+        "platform": "7",
+        "path_stations": [
+          "Interlaken Ost",
+          "Interlaken West",
+          "Spiez",
+          "Thun",
+          "Bern",
+          "Olten",
+          "Liestal",
+          "Basel SBB",
+          "Basel Bad Bf",
+          "Freiburg(Breisgau) Hbf",
+          "Offenburg",
+          "Karlsruhe Hbf",
+          "Mannheim Hbf",
+          "Frankfurt(Main)Hbf",
+          "Hanau Hbf",
+          "Fulda",
+          "Kassel-Wilhelmshöhe",
+          "Göttingen",
+          "Hildesheim Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-6819592322023207721-2510201758-6",
+        "type": "RB",
+        "number": "14328",
+        "time": "2510201850",
+        "platform": "4a",
+        "path_stations": [
+          "Gittelde/Bad Grund(Harz)",
+          "Münchehof(Harz)",
+          "Seesen",
+          "Salzgitter-Ringelheim",
+          "Salzgitter-Bad"
+        ],
+        "line": "46"
+      },
+      {
+        "id": "-8796610692411741434-2510201417-13",
+        "type": "IC",
+        "number": "2433",
+        "time": "2510201808",
+        "platform": "7",
+        "path_stations": [
+          "Emden Hbf",
+          "Leer(Ostfriesl)",
+          "Augustfehn",
+          "Westerstede-Ocholt",
+          "Bad Zwischenahn",
+          "Oldenburg(Oldb)Hbf",
+          "Hude",
+          "Delmenhorst",
+          "Bremen Hbf",
+          "Verden(Aller)",
+          "Nienburg(Weser)",
+          "Hannover Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-8581641174433208817-2510201820-5",
+        "type": "ENO",
+        "number": "75579",
+        "time": "2510201847",
+        "platform": "7",
+        "path_stations": [
+          "Hildesheim Hbf",
+          "Hoheneggelsen",
+          "Woltwiesche",
+          "Lengede-Broistedt"
+        ],
+        "line": "RE50"
+      },
+      {
+        "id": "2683252994559519477-2510201631-17",
+        "type": "WFB",
+        "number": "95833",
+        "time": "2510201840",
+        "platform": "5",
+        "path_stations": [
+          "Bielefeld Hbf",
+          "Herford",
+          "Löhne(Westf)",
+          "Bad Oeynhausen",
+          "Porta Westfalica",
+          "Minden(Westf)",
+          "Bückeburg",
+          "Stadthagen",
+          "Haste",
+          "Wunstorf",
+          "Hannover Hbf",
+          "Lehrte",
+          "Hämelerwald",
+          "Vöhrum",
+          "Peine",
+          "Vechelde"
+        ],
+        "line": "RE70"
+      },
+      {
+        "id": "6202916625163174173-2510201724-5",
+        "type": "ICE",
+        "number": "695",
+        "time": "2510201855",
+        "platform": "6",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin-Spandau",
+          "Stendal Hbf",
+          "Wolfsburg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-7363937864555845306-2510201716-7",
+        "type": "WFB",
+        "number": "95811",
+        "time": "2510201803",
+        "platform": "5",
+        "path_stations": [
+          "Hannover Hbf",
+          "Lehrte",
+          "Hämelerwald",
+          "Vöhrum",
+          "Peine",
+          "Vechelde"
+        ],
+        "line": "RE70"
+      },
+      {
+        "id": "-4604221385965901094-2510201818-4",
+        "type": "ENO",
+        "number": "83576",
+        "time": "2510201838",
+        "platform": "6",
+        "path_stations": [
+          "Wolfsburg Hbf",
+          "Fallersleben",
+          "Weddel(Braunschw)"
+        ],
+        "line": "RE50"
+      },
+      {
+        "id": "2991051538622152364-2510201745-6",
+        "type": "erx",
+        "number": "81528",
+        "time": "2510201835",
+        "platform": "2b",
+        "path_stations": [
+          "Bad Harzburg",
+          "Vienenburg",
+          "Schladen(Harz)",
+          "Börßum",
+          "Wolfenbüttel"
+        ],
+        "line": "RB42"
+      },
+      {
+        "id": "6813622135553308823-2510201708-16",
+        "type": "erx",
+        "number": "83627",
+        "time": "2510201854",
+        "platform": "1",
+        "path_stations": [
+          "Uelzen",
+          "Stederdorf(Kr Uelzen)",
+          "Wieren",
+          "Bad Bodenteich",
+          "Wittingen",
+          "Knesebeck",
+          "Vorhop",
+          "Schönewörde",
+          "Wahrenholz",
+          "Triangel",
+          "Gifhorn Stadt",
+          "Gifhorn",
+          "Rötgesbüttel",
+          "Meine",
+          "Braunschweig-Gliesmarode"
+        ],
+        "line": "RB47"
+      },
+      {
+        "id": "6195134413866954961-2510201745-7",
+        "type": "erx",
+        "number": "81578",
+        "time": "2510201835",
+        "platform": "2b",
+        "path_stations": [
+          "Goslar",
+          "Oker",
+          "Vienenburg",
+          "Schladen(Harz)",
+          "Börßum",
+          "Wolfenbüttel"
+        ],
+        "line": "RB43"
+      },
+      {
+        "id": "6688529852418068954-2510201845-6",
+        "type": "erx",
+        "number": "81530",
+        "time": "2510201935",
+        "platform": "2b",
+        "path_stations": [
+          "Bad Harzburg",
+          "Vienenburg",
+          "Schladen(Harz)",
+          "Börßum",
+          "Wolfenbüttel"
+        ],
+        "line": "RB42"
+      },
+      {
+        "id": "4083739950560377043-2510201246-12",
+        "type": "ICE",
+        "number": "596",
+        "time": "2510201901",
+        "platform": "7",
+        "path_stations": [
+          "München Hbf",
+          "München-Pasing",
+          "Augsburg Hbf",
+          "Ulm Hbf",
+          "Stuttgart Hbf",
+          "Mannheim Hbf",
+          "Frankfurt(Main)Hbf",
+          "Fulda",
+          "Kassel-Wilhelmshöhe",
+          "Göttingen",
+          "Hildesheim Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "6549502554262000922-2510201819-19",
+        "type": "RB",
+        "number": "16428",
+        "time": "2510201941",
+        "platform": "8",
+        "path_stations": [
+          "Biederitz",
+          "Magdeburg Herrenkrug",
+          "Magdeburg-Neustadt",
+          "Magdeburg Hbf",
+          "Magdeburg-Sudenburg",
+          "Niederndodeleben",
+          "Wellen(Magdeburg)",
+          "Ochtmersleben",
+          "Dreileben-Drackenstedt",
+          "Ovelgünne",
+          "Eilsleben(b Magdeburg)",
+          "Wefensleben",
+          "Marienborn",
+          "Helmstedt",
+          "Frellstedt",
+          "Königslutter",
+          "Schandelah",
+          "Weddel(Braunschw)"
+        ],
+        "line": "40"
+      },
+      {
+        "id": "-1737131909597122358-2510201858-6",
+        "type": "RB",
+        "number": "14330",
+        "time": "2510201950",
+        "platform": "4a",
+        "path_stations": [
+          "Gittelde/Bad Grund(Harz)",
+          "Münchehof(Harz)",
+          "Seesen",
+          "Salzgitter-Ringelheim",
+          "Salzgitter-Bad"
+        ],
+        "line": "46"
+      },
+      {
+        "id": "-7763686466636471476-2510201740-6",
+        "type": "IC",
+        "number": "2032",
+        "time": "2510201948",
+        "platform": "6",
+        "path_stations": [
+          "Leipzig Hbf",
+          "Halle(Saale)Hbf",
+          "Köthen",
+          "Magdeburg Hbf",
+          "Helmstedt"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-4337178204999180607-2510201815-7",
+        "type": "WFB",
+        "number": "95813",
+        "time": "2510201904",
+        "platform": "5",
+        "path_stations": [
+          "Hannover Hbf",
+          "Lehrte",
+          "Hämelerwald",
+          "Vöhrum",
+          "Peine",
+          "Vechelde"
+        ],
+        "line": "RE70"
+      },
+      {
+        "id": "6161650900125964458-2510201850-5",
+        "type": "ENO",
+        "number": "83579",
+        "time": "2510201917",
+        "platform": "7",
+        "path_stations": [
+          "Hildesheim Hbf",
+          "Hoheneggelsen",
+          "Woltwiesche",
+          "Lengede-Broistedt"
+        ],
+        "line": "RE50"
+      },
+      {
+        "id": "-8203578369052827954-2510201817-5",
+        "type": "ICE",
+        "number": "877",
+        "time": "2510201955",
+        "platform": "6",
+        "path_stations": [
+          "Berlin Ostbahnhof",
+          "Berlin Hbf",
+          "Berlin-Spandau",
+          "Wolfsburg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "7943013947478088794-2510201849-3",
+        "type": "RB",
+        "number": "14287",
+        "time": "2510201909",
+        "platform": "3a",
+        "path_stations": [
+          "Salzgitter-Lebenstedt",
+          "Salzgitter-Thiede"
+        ],
+        "line": "48"
+      },
+      {
+        "id": "-7787442752752254572-2510201845-7",
+        "type": "erx",
+        "number": "81580",
+        "time": "2510201935",
+        "platform": "2b",
+        "path_stations": [
+          "Goslar",
+          "Oker",
+          "Vienenburg",
+          "Schladen(Harz)",
+          "Börßum",
+          "Wolfenbüttel"
+        ],
+        "line": "RB43"
+      },
+      {
+        "id": "-284004029155775930-2510201831-13",
+        "type": "erx",
+        "number": "83629",
+        "time": "2510201954",
+        "platform": "1",
+        "path_stations": [
+          "Bad Bodenteich",
+          "Wittingen",
+          "Knesebeck",
+          "Vorhop",
+          "Schönewörde",
+          "Wahrenholz",
+          "Triangel",
+          "Gifhorn Stadt",
+          "Gifhorn",
+          "Rötgesbüttel",
+          "Meine",
+          "Braunschweig-Gliesmarode"
+        ],
+        "line": "RB47"
+      },
+      {
+        "id": "2902314117169333339-2510201834-4",
+        "type": "RB",
+        "number": "14246",
+        "time": "2510201903",
+        "platform": "3a",
+        "path_stations": [
+          "Schöppenstedt",
+          "Dettum",
+          "Wolfenbüttel"
+        ],
+        "line": "45"
+      },
+      {
+        "id": "6170002538724052342-2510201413-13",
+        "type": "ICE",
+        "number": "276",
+        "time": "2510201959",
+        "platform": "7",
+        "path_stations": [
+          "Basel SBB",
+          "Basel Bad Bf",
+          "Freiburg(Breisgau) Hbf",
+          "Offenburg",
+          "Karlsruhe Hbf",
+          "Mannheim Hbf",
+          "Frankfurt(Main)Hbf",
+          "Hanau Hbf",
+          "Fulda",
+          "Kassel-Wilhelmshöhe",
+          "Göttingen",
+          "Hildesheim Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "3639552795299979246-2510201638-25",
+        "type": "WFB",
+        "number": "95785",
+        "time": "2510201940",
+        "platform": "5",
+        "path_stations": [
+          "Rheine",
+          "Hörstel",
+          "Ibbenbüren-Esch",
+          "Ibbenbüren",
+          "Ibbenbüren-Laggenbeck",
+          "Osnabrück Altstadt",
+          "Osnabrück Hbf",
+          "Melle",
+          "Bünde(Westf)",
+          "Kirchlengern",
+          "Löhne(Westf)",
+          "Bad Oeynhausen",
+          "Porta Westfalica",
+          "Minden(Westf)",
+          "Bückeburg",
+          "Stadthagen",
+          "Haste",
+          "Wunstorf",
+          "Hannover Hbf",
+          "Lehrte",
+          "Hämelerwald",
+          "Vöhrum",
+          "Peine",
+          "Vechelde"
+        ],
+        "line": "RE60"
+      },
+      {
+        "id": "5270998905588748805-2510201918-4",
+        "type": "ENO",
+        "number": "83578",
+        "time": "2510201938",
+        "platform": "6",
+        "path_stations": [
+          "Wolfsburg Hbf",
+          "Fallersleben",
+          "Weddel(Braunschw)"
+        ],
+        "line": "RE50"
+      },
+      {
+        "id": "1497116708466416332-2510201915-5",
+        "type": "RB",
+        "number": "14389",
+        "time": "2510201940",
+        "platform": "3a",
+        "path_stations": [
+          "Salzgitter-Lebenstedt",
+          "Salzgitter-Watenstedt",
+          "Salzgitter-Immendorf",
+          "Salzgitter-Thiede"
+        ],
+        "line": "44"
+      },
+      {
+        "id": "-2875979624331062252-2510201628-9",
+        "type": "IC",
+        "number": "2045",
+        "time": "2510201908",
+        "platform": "7",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Hamm(Westf)Hbf",
+          "Gütersloh Hbf",
+          "Bielefeld Hbf",
+          "Herford",
+          "Bad Oeynhausen",
+          "Minden(Westf)",
+          "Hannover Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "8088489625262557114-2510201536-17",
+        "type": "IC",
+        "number": "2435",
+        "time": "2510202008",
+        "platform": "7",
+        "path_stations": [
+          "Norddeich Mole",
+          "Norddeich",
+          "Norden",
+          "Marienhafe",
+          "Emden Hbf",
+          "Leer(Ostfriesl)",
+          "Augustfehn",
+          "Westerstede-Ocholt",
+          "Bad Zwischenahn",
+          "Oldenburg(Oldb)Hbf",
+          "Hude",
+          "Delmenhorst",
+          "Bremen Hbf",
+          "Verden(Aller)",
+          "Nienburg(Weser)",
+          "Hannover Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "1727073522629915379-2510201925-5",
+        "type": "ICE",
+        "number": "687",
+        "time": "2510202057",
+        "platform": "6",
+        "path_stations": [
+          "Berlin Hbf",
+          "Berlin-Spandau",
+          "Stendal Hbf",
+          "Wolfsburg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "7083303207829691696-2510201949-3",
+        "type": "RB",
+        "number": "14289",
+        "time": "2510202009",
+        "platform": "3a",
+        "path_stations": [
+          "Salzgitter-Lebenstedt",
+          "Salzgitter-Thiede"
+        ],
+        "line": "48"
+      },
+      {
+        "id": "1602345239899323536-2510202015-5",
+        "type": "RB",
+        "number": "14391",
+        "time": "2510202040",
+        "platform": "3a",
+        "path_stations": [
+          "Salzgitter-Lebenstedt",
+          "Salzgitter-Watenstedt",
+          "Salzgitter-Immendorf",
+          "Salzgitter-Thiede"
+        ],
+        "line": "44"
+      },
+      {
+        "id": "-4534432123066306437-2510201914-7",
+        "type": "WFB",
+        "number": "95815",
+        "time": "2510202003",
+        "platform": "5",
+        "path_stations": [
+          "Hannover Hbf",
+          "Lehrte",
+          "Hämelerwald",
+          "Vöhrum",
+          "Peine",
+          "Vechelde"
+        ],
+        "line": "RE70"
+      },
+      {
+        "id": "-6060070337982582722-2510201919-19",
+        "type": "RB",
+        "number": "16430",
+        "time": "2510202041",
+        "platform": "8",
+        "path_stations": [
+          "Biederitz",
+          "Magdeburg Herrenkrug",
+          "Magdeburg-Neustadt",
+          "Magdeburg Hbf",
+          "Magdeburg-Sudenburg",
+          "Niederndodeleben",
+          "Wellen(Magdeburg)",
+          "Ochtmersleben",
+          "Dreileben-Drackenstedt",
+          "Ovelgünne",
+          "Eilsleben(b Magdeburg)",
+          "Wefensleben",
+          "Marienborn",
+          "Helmstedt",
+          "Frellstedt",
+          "Königslutter",
+          "Schandelah",
+          "Weddel(Braunschw)"
+        ],
+        "line": "40"
+      },
+      {
+        "id": "-1493635504975736875-2510201958-6",
+        "type": "RB",
+        "number": "14332",
+        "time": "2510202050",
+        "platform": "4a",
+        "path_stations": [
+          "Gittelde/Bad Grund(Harz)",
+          "Münchehof(Harz)",
+          "Seesen",
+          "Salzgitter-Ringelheim",
+          "Salzgitter-Bad"
+        ],
+        "line": "46"
+      },
+      {
+        "id": "6979166558055392925-2510201908-16",
+        "type": "erx",
+        "number": "83631",
+        "time": "2510202054",
+        "platform": "1",
+        "path_stations": [
+          "Uelzen",
+          "Stederdorf(Kr Uelzen)",
+          "Wieren",
+          "Bad Bodenteich",
+          "Wittingen",
+          "Knesebeck",
+          "Vorhop",
+          "Schönewörde",
+          "Wahrenholz",
+          "Triangel",
+          "Gifhorn Stadt",
+          "Gifhorn",
+          "Rötgesbüttel",
+          "Meine",
+          "Braunschweig-Gliesmarode"
+        ],
+        "line": "RB47"
+      },
+      {
+        "id": "1297801680225336717-2510201709-9",
+        "type": "IC",
+        "number": "2446",
+        "time": "2510202048",
+        "platform": "6",
+        "path_stations": [
+          "Dresden Hbf",
+          "Dresden-Neustadt",
+          "Riesa",
+          "Leipzig Hbf",
+          "Leipzig/Halle Flughafen",
+          "Halle(Saale)Hbf",
+          "Köthen",
+          "Magdeburg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-4697456810072453316-2510202018-4",
+        "type": "ENO",
+        "number": "83580",
+        "time": "2510202038",
+        "platform": "6",
+        "path_stations": [
+          "Wolfsburg Hbf",
+          "Fallersleben",
+          "Weddel(Braunschw)"
+        ],
+        "line": "RE50"
+      },
+      {
+        "id": "4709252308131219254-2510201945-7",
+        "type": "erx",
+        "number": "81582",
+        "time": "2510202035",
+        "platform": "2b",
+        "path_stations": [
+          "Goslar",
+          "Oker",
+          "Vienenburg",
+          "Schladen(Harz)",
+          "Börßum",
+          "Wolfenbüttel"
+        ],
+        "line": "RB43"
+      },
+      {
+        "id": "-8931515763715846452-2510201945-6",
+        "type": "erx",
+        "number": "81532",
+        "time": "2510202035",
+        "platform": "2b",
+        "path_stations": [
+          "Bad Harzburg",
+          "Vienenburg",
+          "Schladen(Harz)",
+          "Börßum",
+          "Wolfenbüttel"
+        ],
+        "line": "RB42"
+      },
+      {
+        "id": "6170002538724052342-2510201413-13",
+        "type": "ICE",
+        "number": "276",
+        "time": "2510201959",
+        "platform": "7",
+        "path_stations": [
+          "Basel SBB",
+          "Basel Bad Bf",
+          "Freiburg(Breisgau) Hbf",
+          "Offenburg",
+          "Karlsruhe Hbf",
+          "Mannheim Hbf",
+          "Frankfurt(Main)Hbf",
+          "Hanau Hbf",
+          "Fulda",
+          "Kassel-Wilhelmshöhe",
+          "Göttingen",
+          "Hildesheim Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "8942518919891960155-2510201934-4",
+        "type": "RB",
+        "number": "14248",
+        "time": "2510202003",
+        "platform": "3a",
+        "path_stations": [
+          "Schöppenstedt",
+          "Dettum",
+          "Wolfenbüttel"
+        ],
+        "line": "45"
+      },
+      {
+        "id": "5905379045141482418-2510201950-5",
+        "type": "ENO",
+        "number": "83581",
+        "time": "2510202017",
+        "platform": "7",
+        "path_stations": [
+          "Hildesheim Hbf",
+          "Hoheneggelsen",
+          "Woltwiesche",
+          "Lengede-Broistedt"
+        ],
+        "line": "RE50"
+      },
+      {
+        "id": "-6990129281608112740-2510201831-17",
+        "type": "WFB",
+        "number": "95835",
+        "time": "2510202040",
+        "platform": "5",
+        "path_stations": [
+          "Bielefeld Hbf",
+          "Herford",
+          "Löhne(Westf)",
+          "Bad Oeynhausen",
+          "Porta Westfalica",
+          "Minden(Westf)",
+          "Bückeburg",
+          "Stadthagen",
+          "Haste",
+          "Wunstorf",
+          "Hannover Hbf",
+          "Lehrte",
+          "Hämelerwald",
+          "Vöhrum",
+          "Peine",
+          "Vechelde"
+        ],
+        "line": "RE70"
+      },
+      {
+        "id": "-929333280999120999-2510202031-13",
+        "type": "erx",
+        "number": "83633",
+        "time": "2510202154",
+        "platform": "1",
+        "path_stations": [
+          "Bad Bodenteich",
+          "Wittingen",
+          "Knesebeck",
+          "Vorhop",
+          "Schönewörde",
+          "Wahrenholz",
+          "Triangel",
+          "Gifhorn Stadt",
+          "Gifhorn",
+          "Rötgesbüttel",
+          "Meine",
+          "Braunschweig-Gliesmarode"
+        ],
+        "line": "RB47"
+      },
+      {
+        "id": "-8582937126189412550-2510202118-4",
+        "type": "ENO",
+        "number": "83582",
+        "time": "2510202138",
+        "platform": "6",
+        "path_stations": [
+          "Wolfsburg Hbf",
+          "Fallersleben",
+          "Weddel(Braunschw)"
+        ],
+        "line": "RE50"
+      },
+      {
+        "id": "-5547175344719739037-2510202058-6",
+        "type": "RB",
+        "number": "14334",
+        "time": "2510202150",
+        "platform": "4a",
+        "path_stations": [
+          "Gittelde/Bad Grund(Harz)",
+          "Münchehof(Harz)",
+          "Seesen",
+          "Salzgitter-Ringelheim",
+          "Salzgitter-Bad"
+        ],
+        "line": "46"
+      },
+      {
+        "id": "7306272110825769152-2510202045-7",
+        "type": "erx",
+        "number": "81584",
+        "time": "2510202135",
+        "platform": "2b",
+        "path_stations": [
+          "Goslar",
+          "Oker",
+          "Vienenburg",
+          "Schladen(Harz)",
+          "Börßum",
+          "Wolfenbüttel"
+        ],
+        "line": "RB43"
+      },
+      {
+        "id": "-3823375177266031132-2510202019-19",
+        "type": "RB",
+        "number": "16432",
+        "time": "2510202141",
+        "platform": "8",
+        "path_stations": [
+          "Biederitz",
+          "Magdeburg Herrenkrug",
+          "Magdeburg-Neustadt",
+          "Magdeburg Hbf",
+          "Magdeburg-Sudenburg",
+          "Niederndodeleben",
+          "Wellen(Magdeburg)",
+          "Ochtmersleben",
+          "Dreileben-Drackenstedt",
+          "Ovelgünne",
+          "Eilsleben(b Magdeburg)",
+          "Wefensleben",
+          "Marienborn",
+          "Helmstedt",
+          "Frellstedt",
+          "Königslutter",
+          "Schandelah",
+          "Weddel(Braunschw)"
+        ],
+        "line": "40"
+      },
+      {
+        "id": "1116577686148397167-2510201613-13",
+        "type": "ICE",
+        "number": "274",
+        "time": "2510202159",
+        "platform": "7",
+        "path_stations": [
+          "Basel SBB",
+          "Basel Bad Bf",
+          "Freiburg(Breisgau) Hbf",
+          "Offenburg",
+          "Karlsruhe Hbf",
+          "Mannheim Hbf",
+          "Frankfurt(Main)Hbf",
+          "Hanau Hbf",
+          "Fulda",
+          "Kassel-Wilhelmshöhe",
+          "Göttingen",
+          "Hildesheim Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "6458162671103439251-2510202034-4",
+        "type": "RB",
+        "number": "14250",
+        "time": "2510202103",
+        "platform": "3a",
+        "path_stations": [
+          "Schöppenstedt",
+          "Dettum",
+          "Wolfenbüttel"
+        ],
+        "line": "45"
+      },
+      {
+        "id": "7464281623919346673-2510202115-5",
+        "type": "RB",
+        "number": "14393",
+        "time": "2510202140",
+        "platform": "3a",
+        "path_stations": [
+          "Salzgitter-Lebenstedt",
+          "Salzgitter-Watenstedt",
+          "Salzgitter-Immendorf",
+          "Salzgitter-Thiede"
+        ],
+        "line": "44"
+      },
+      {
+        "id": "5534381725604797880-2510202050-5",
+        "type": "ENO",
+        "number": "83583",
+        "time": "2510202117",
+        "platform": "7",
+        "path_stations": [
+          "Hildesheim Hbf",
+          "Hoheneggelsen",
+          "Woltwiesche",
+          "Lengede-Broistedt"
+        ],
+        "line": "RE50"
+      },
+      {
+        "id": "-1075248341184214812-2510202045-6",
+        "type": "erx",
+        "number": "81534",
+        "time": "2510202135",
+        "platform": "2b",
+        "path_stations": [
+          "Bad Harzburg",
+          "Vienenburg",
+          "Schladen(Harz)",
+          "Börßum",
+          "Wolfenbüttel"
+        ],
+        "line": "RB42"
+      },
+      {
+        "id": "7478530496367099178-2510201838-25",
+        "type": "WFB",
+        "number": "95787",
+        "time": "2510202140",
+        "platform": "5",
+        "path_stations": [
+          "Rheine",
+          "Hörstel",
+          "Ibbenbüren-Esch",
+          "Ibbenbüren",
+          "Ibbenbüren-Laggenbeck",
+          "Osnabrück Altstadt",
+          "Osnabrück Hbf",
+          "Melle",
+          "Bünde(Westf)",
+          "Kirchlengern",
+          "Löhne(Westf)",
+          "Bad Oeynhausen",
+          "Porta Westfalica",
+          "Minden(Westf)",
+          "Bückeburg",
+          "Stadthagen",
+          "Haste",
+          "Wunstorf",
+          "Hannover Hbf",
+          "Lehrte",
+          "Hämelerwald",
+          "Vöhrum",
+          "Peine",
+          "Vechelde"
+        ],
+        "line": "RE60"
+      },
+      {
+        "id": "5472657106708035159-2510202049-3",
+        "type": "RB",
+        "number": "14291",
+        "time": "2510202109",
+        "platform": "3a",
+        "path_stations": [
+          "Salzgitter-Lebenstedt",
+          "Salzgitter-Thiede"
+        ],
+        "line": "48"
+      },
+      {
+        "id": "1140779865956290650-2510201446-12",
+        "type": "ICE",
+        "number": "594",
+        "time": "2510202101",
+        "platform": "7",
+        "path_stations": [
+          "München Hbf",
+          "München-Pasing",
+          "Augsburg Hbf",
+          "Ulm Hbf",
+          "Stuttgart Hbf",
+          "Mannheim Hbf",
+          "Frankfurt(Main)Hbf",
+          "Fulda",
+          "Kassel-Wilhelmshöhe",
+          "Göttingen",
+          "Hildesheim Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-893148775004719136-2510201711-13",
+        "type": "IC",
+        "number": "2043",
+        "time": "2510202108",
+        "platform": "7",
+        "path_stations": [
+          "Köln Hbf",
+          "Solingen Hbf",
+          "Wuppertal Hbf",
+          "Hagen Hbf",
+          "Dortmund Hbf",
+          "Hamm(Westf)Hbf",
+          "Gütersloh Hbf",
+          "Bielefeld Hbf",
+          "Herford",
+          "Bad Oeynhausen",
+          "Minden(Westf)",
+          "Hannover Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "8849850357444188253-2510202016-6",
+        "type": "ICE",
+        "number": "879",
+        "time": "2510202155",
+        "platform": "6",
+        "path_stations": [
+          "Berlin Ostbahnhof",
+          "Berlin Hbf",
+          "Berlin Zoologischer Garten",
+          "Berlin-Spandau",
+          "Wolfsburg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-3520619006140243962-2510202016-7",
+        "type": "WFB",
+        "number": "95841",
+        "time": "2510202104",
+        "platform": "5",
+        "path_stations": [
+          "Hannover Hbf",
+          "Lehrte",
+          "Hämelerwald",
+          "Vöhrum",
+          "Peine",
+          "Vechelde"
+        ],
+        "line": "RE70"
+      },
+      {
+        "id": "-1739239898171776184-2510202158-6",
+        "type": "RB",
+        "number": "14336",
+        "time": "2510202250",
+        "platform": "5",
+        "path_stations": [
+          "Gittelde/Bad Grund(Harz)",
+          "Münchehof(Harz)",
+          "Seesen",
+          "Salzgitter-Ringelheim",
+          "Salzgitter-Bad"
+        ],
+        "line": "46"
+      },
+      {
+        "id": "67273429190528841-2510201909-9",
+        "type": "IC",
+        "number": "2448",
+        "time": "2510202249",
+        "platform": "6",
+        "path_stations": [
+          "Dresden Hbf",
+          "Dresden-Neustadt",
+          "Riesa",
+          "Leipzig Hbf",
+          "Leipzig/Halle Flughafen",
+          "Halle(Saale)Hbf",
+          "Köthen",
+          "Magdeburg Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-5828359487274281785-2510202108-16",
+        "type": "erx",
+        "number": "83635",
+        "time": "2510202254",
+        "platform": "2a",
+        "path_stations": [
+          "Uelzen",
+          "Stederdorf(Kr Uelzen)",
+          "Wieren",
+          "Bad Bodenteich",
+          "Wittingen",
+          "Knesebeck",
+          "Vorhop",
+          "Schönewörde",
+          "Wahrenholz",
+          "Triangel",
+          "Gifhorn Stadt",
+          "Gifhorn",
+          "Rötgesbüttel",
+          "Meine",
+          "Braunschweig-Gliesmarode"
+        ],
+        "line": "RB47"
+      },
+      {
+        "id": "1116577686148397167-2510201613-13",
+        "type": "ICE",
+        "number": "274",
+        "time": "2510202159",
+        "platform": "7",
+        "path_stations": [
+          "Basel SBB",
+          "Basel Bad Bf",
+          "Freiburg(Breisgau) Hbf",
+          "Offenburg",
+          "Karlsruhe Hbf",
+          "Mannheim Hbf",
+          "Frankfurt(Main)Hbf",
+          "Hanau Hbf",
+          "Fulda",
+          "Kassel-Wilhelmshöhe",
+          "Göttingen",
+          "Hildesheim Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "2953224316075128688-2510202215-5",
+        "type": "RB",
+        "number": "14395",
+        "time": "2510202240",
+        "platform": "3a",
+        "path_stations": [
+          "Salzgitter-Lebenstedt",
+          "Salzgitter-Watenstedt",
+          "Salzgitter-Immendorf",
+          "Salzgitter-Thiede"
+        ],
+        "line": "44"
+      },
+      {
+        "id": "-8624610893606997940-2510202031-17",
+        "type": "WFB",
+        "number": "95837",
+        "time": "2510202240",
+        "platform": "5",
+        "path_stations": [
+          "Bielefeld Hbf",
+          "Herford",
+          "Löhne(Westf)",
+          "Bad Oeynhausen",
+          "Porta Westfalica",
+          "Minden(Westf)",
+          "Bückeburg",
+          "Stadthagen",
+          "Haste",
+          "Wunstorf",
+          "Hannover Hbf",
+          "Lehrte",
+          "Hämelerwald",
+          "Vöhrum",
+          "Peine",
+          "Vechelde"
+        ],
+        "line": "RE70"
+      },
+      {
+        "id": "5587922004740547299-2510201816-14",
+        "type": "IC",
+        "number": "2437",
+        "time": "2510202211",
+        "platform": "7",
+        "path_stations": [
+          "Emden Hbf",
+          "Leer(Ostfriesl)",
+          "Augustfehn",
+          "Westerstede-Ocholt",
+          "Bad Zwischenahn",
+          "Oldenburg(Oldb)Hbf",
+          "Hude",
+          "Delmenhorst",
+          "Bremen Hbf",
+          "Verden(Aller)",
+          "Nienburg(Weser)",
+          "Hannover Hbf",
+          "Peine"
+        ],
+        "line": ""
+      },
+      {
+        "id": "3911757503467462408-2510202134-4",
+        "type": "RB",
+        "number": "14252",
+        "time": "2510202203",
+        "platform": "3a",
+        "path_stations": [
+          "Schöppenstedt",
+          "Dettum",
+          "Wolfenbüttel"
+        ],
+        "line": "45"
+      },
+      {
+        "id": "4650285998698891192-2510202145-6",
+        "type": "erx",
+        "number": "81536",
+        "time": "2510202235",
+        "platform": "1",
+        "path_stations": [
+          "Bad Harzburg",
+          "Vienenburg",
+          "Schladen(Harz)",
+          "Börßum",
+          "Wolfenbüttel"
+        ],
+        "line": "RB42"
+      },
+      {
+        "id": "-588512521041650289-2510202145-7",
+        "type": "erx",
+        "number": "81586",
+        "time": "2510202235",
+        "platform": "1",
+        "path_stations": [
+          "Goslar",
+          "Oker",
+          "Vienenburg",
+          "Schladen(Harz)",
+          "Börßum",
+          "Wolfenbüttel"
+        ],
+        "line": "RB43"
+      },
+      {
+        "id": "-1605481557557112938-2510202150-5",
+        "type": "ENO",
+        "number": "83585",
+        "time": "2510202217",
+        "platform": "7",
+        "path_stations": [
+          "Hildesheim Hbf",
+          "Hoheneggelsen",
+          "Woltwiesche",
+          "Lengede-Broistedt"
+        ],
+        "line": "RE50"
+      },
+      {
+        "id": "6606826357131203295-2510202218-4",
+        "type": "ENO",
+        "number": "83584",
+        "time": "2510202238",
+        "platform": "6",
+        "path_stations": [
+          "Wolfsburg Hbf",
+          "Fallersleben",
+          "Weddel(Braunschw)"
+        ],
+        "line": "RE50"
+      },
+      {
+        "id": "-5796370532258542779-2510202116-7",
+        "type": "WFB",
+        "number": "95843",
+        "time": "2510202203",
+        "platform": "5",
+        "path_stations": [
+          "Hannover Hbf",
+          "Lehrte",
+          "Hämelerwald",
+          "Vöhrum",
+          "Peine",
+          "Vechelde"
+        ],
+        "line": "RE70"
+      },
+      {
+        "id": "-1558084987991632986-2510202149-3",
+        "type": "RB",
+        "number": "14293",
+        "time": "2510202209",
+        "platform": "3a",
+        "path_stations": [
+          "Salzgitter-Lebenstedt",
+          "Salzgitter-Thiede"
+        ],
+        "line": "48"
+      },
+      {
+        "id": "-1583601012487068670-2510202245-6",
+        "type": "erx",
+        "number": "81538",
+        "time": "2510202335",
+        "platform": "2b",
+        "path_stations": [
+          "Bad Harzburg",
+          "Vienenburg",
+          "Schladen(Harz)",
+          "Börßum",
+          "Wolfenbüttel"
+        ],
+        "line": "RB42"
+      },
+      {
+        "id": "9028481123844373298-2510202315-5",
+        "type": "RB",
+        "number": "14397",
+        "time": "2510202340",
+        "platform": "3a",
+        "path_stations": [
+          "Salzgitter-Lebenstedt",
+          "Salzgitter-Watenstedt",
+          "Salzgitter-Immendorf",
+          "Salzgitter-Thiede"
+        ],
+        "line": "44"
+      },
+      {
+        "id": "3274549378971109328-2510202205-16",
+        "type": "RB",
+        "number": "16436",
+        "time": "2510202313",
+        "platform": "4b",
+        "path_stations": [
+          "Magdeburg Hbf",
+          "Magdeburg-Sudenburg",
+          "Niederndodeleben",
+          "Wellen(Magdeburg)",
+          "Ochtmersleben",
+          "Dreileben-Drackenstedt",
+          "Ovelgünne",
+          "Eilsleben(b Magdeburg)",
+          "Wefensleben",
+          "Marienborn",
+          "Helmstedt",
+          "Frellstedt",
+          "Königslutter",
+          "Schandelah",
+          "Weddel(Braunschw)"
+        ],
+        "line": "40"
+      },
+      {
+        "id": "1685709864218984895-2510202318-4",
+        "type": "ENO",
+        "number": "83586",
+        "time": "2510202338",
+        "platform": "6",
+        "path_stations": [
+          "Wolfsburg Hbf",
+          "Fallersleben",
+          "Weddel(Braunschw)"
+        ],
+        "line": "RE50"
+      },
+      {
+        "id": "-6413490808314296119-2510202258-6",
+        "type": "RB",
+        "number": "14338",
+        "time": "2510202350",
+        "platform": "4a",
+        "path_stations": [
+          "Gittelde/Bad Grund(Harz)",
+          "Münchehof(Harz)",
+          "Seesen",
+          "Salzgitter-Ringelheim",
+          "Salzgitter-Bad"
+        ],
+        "line": "46"
+      },
+      {
+        "id": "-2710617917249169777-2510202234-4",
+        "type": "RB",
+        "number": "14254",
+        "time": "2510202303",
+        "platform": "3a",
+        "path_stations": [
+          "Schöppenstedt",
+          "Dettum",
+          "Wolfenbüttel"
+        ],
+        "line": "45"
+      },
+      {
+        "id": "-3467855955126336410-2510202245-7",
+        "type": "erx",
+        "number": "81588",
+        "time": "2510202335",
+        "platform": "2b",
+        "path_stations": [
+          "Goslar",
+          "Oker",
+          "Vienenburg",
+          "Schladen(Harz)",
+          "Börßum",
+          "Wolfenbüttel"
+        ],
+        "line": "RB43"
+      },
+      {
+        "id": "2998651517533835490-2510202038-26",
+        "type": "WFB",
+        "number": "95789",
+        "time": "2510202340",
+        "platform": "5",
+        "path_stations": [
+          "Rheine",
+          "Hörstel",
+          "Ibbenbüren-Esch",
+          "Ibbenbüren",
+          "Ibbenbüren-Laggenbeck",
+          "Osnabrück Altstadt",
+          "Osnabrück Hbf",
+          "Melle",
+          "Bünde(Westf)",
+          "Kirchlengern",
+          "Löhne(Westf)",
+          "Bad Oeynhausen",
+          "Porta Westfalica",
+          "Minden(Westf)",
+          "Bückeburg",
+          "Kirchhorsten",
+          "Stadthagen",
+          "Lindhorst(Schaumb-Lippe)",
+          "Haste",
+          "Hannover Hbf",
+          "Lehrte",
+          "Hämelerwald",
+          "Vöhrum",
+          "Peine",
+          "Vechelde"
+        ],
+        "line": "RE60"
+      },
+      {
+        "id": "-7900424203970545328-2510202231-13",
+        "type": "erx",
+        "number": "83637",
+        "time": "2510202354",
+        "platform": "1",
+        "path_stations": [
+          "Bad Bodenteich",
+          "Wittingen",
+          "Knesebeck",
+          "Vorhop",
+          "Schönewörde",
+          "Wahrenholz",
+          "Triangel",
+          "Gifhorn Stadt",
+          "Gifhorn",
+          "Rötgesbüttel",
+          "Meine",
+          "Braunschweig-Gliesmarode"
+        ],
+        "line": "RB47"
+      },
+      {
+        "id": "776363454793152283-2510202250-5",
+        "type": "ENO",
+        "number": "83587",
+        "time": "2510202317",
+        "platform": "7",
+        "path_stations": [
+          "Hildesheim Hbf",
+          "Hoheneggelsen",
+          "Woltwiesche",
+          "Lengede-Broistedt"
+        ],
+        "line": "RE50"
+      },
+      {
+        "id": "5089820149948252230-2510201646-12",
+        "type": "ICE",
+        "number": "592",
+        "time": "2510202327",
+        "platform": "7",
+        "path_stations": [
+          "München Hbf",
+          "München-Pasing",
+          "Augsburg Hbf",
+          "Ulm Hbf",
+          "Stuttgart Hbf",
+          "Mannheim Hbf",
+          "Frankfurt(Main)Hbf",
+          "Fulda",
+          "Kassel-Wilhelmshöhe",
+          "Göttingen",
+          "Hildesheim Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-430306391697164748-2510210014-7",
+        "type": "WFB",
+        "number": "95793",
+        "time": "2510210059",
+        "platform": "5",
+        "path_stations": [
+          "Hannover Hbf",
+          "Lehrte",
+          "Hämelerwald",
+          "Vöhrum",
+          "Peine",
+          "Vechelde"
+        ],
+        "line": "RE70"
+      },
+      {
+        "id": "-1781439465744467581-2510210113-7",
+        "type": "WFB",
+        "number": "95769",
+        "time": "2510210159",
+        "platform": "5",
+        "path_stations": [
+          "Hannover Hbf",
+          "Lehrte",
+          "Hämelerwald",
+          "Vöhrum",
+          "Peine",
+          "Vechelde"
+        ],
+        "line": "RE70"
+      },
+      {
+        "id": "3199623009169073885-2510210011-5",
+        "type": "ICE",
+        "number": "101",
+        "time": "2510210234",
+        "platform": "6",
+        "path_stations": [
+          "Berlin Ostbahnhof",
+          "Berlin Hbf",
+          "Berlin Zoologischer Garten",
+          "Stendal Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-4674302681811850992-2510201913-19",
+        "type": "ICE",
+        "number": "100",
+        "time": "2510210314",
+        "platform": "7",
+        "path_stations": [
+          "Basel SBB",
+          "Basel Bad Bf",
+          "Freiburg(Breisgau) Hbf",
+          "Offenburg",
+          "Baden-Baden",
+          "Karlsruhe Hbf",
+          "Mannheim Hbf",
+          "Frankfurt(M) Flughafen Fernbf",
+          "Siegburg/Bonn",
+          "Köln Hbf",
+          "Düsseldorf Hbf",
+          "Düsseldorf Flughafen",
+          "Duisburg Hbf",
+          "Essen Hbf",
+          "Dortmund Hbf",
+          "Hamm(Westf)Hbf",
+          "Minden(Westf)",
+          "Hannover Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "-868251179380997267-2510210527-2",
+        "type": "ICE",
+        "number": "649",
+        "time": "2510210559",
+        "platform": "7",
+        "path_stations": [
+          "Hannover Hbf"
+        ],
+        "line": ""
+      },
+      {
+        "id": "242506928565672783-2510210445-7",
+        "type": "erx",
+        "number": "81552",
+        "time": "2510210535",
+        "platform": "1",
+        "path_stations": [
+          "Goslar",
+          "Oker",
+          "Vienenburg",
+          "Schladen(Harz)",
+          "Börßum",
+          "Wolfenbüttel"
+        ],
+        "line": "RB43"
+      },
+      {
+        "id": "4485693937864141254-2510210408-16",
+        "type": "erx",
+        "number": "83601",
+        "time": "2510210554",
+        "platform": "2a",
+        "path_stations": [
+          "Uelzen",
+          "Stederdorf(Kr Uelzen)",
+          "Wieren",
+          "Bad Bodenteich",
+          "Wittingen",
+          "Knesebeck",
+          "Vorhop",
+          "Schönewörde",
+          "Wahrenholz",
+          "Triangel",
+          "Gifhorn Stadt",
+          "Gifhorn",
+          "Rötgesbüttel",
+          "Meine",
+          "Braunschweig-Gliesmarode"
+        ],
+        "line": "RB47"
+      },
+      {
+        "id": "6694280745766059737-2510210450-5",
+        "type": "ENO",
+        "number": "83551",
+        "time": "2510210517",
+        "platform": "7",
+        "path_stations": [
+          "Hildesheim Hbf",
+          "Hoheneggelsen",
+          "Woltwiesche",
+          "Lengede-Broistedt"
+        ],
+        "line": "RE50"
+      },
+      {
+        "id": "-797870557201185989-2510210403-13",
+        "type": "WFB",
+        "number": "95771",
+        "time": "2510210540",
+        "platform": "5",
+        "path_stations": [
+          "Minden(Westf)",
+          "Bückeburg",
+          "Kirchhorsten",
+          "Stadthagen",
+          "Lindhorst(Schaumb-Lippe)",
+          "Haste",
+          "Hannover Hbf",
+          "Lehrte",
+          "Hämelerwald",
+          "Vöhrum",
+          "Peine",
+          "Vechelde"
+        ],
+        "line": "RE60"
+      },
+      {
+        "id": "8022633377289551080-2510210456-6",
+        "type": "RB",
+        "number": "14300",
+        "time": "2510210550",
+        "platform": "4a",
+        "path_stations": [
+          "Kreiensen",
+          "Bad Gandersheim",
+          "Seesen",
+          "Salzgitter-Ringelheim",
+          "Salzgitter-Bad"
+        ],
+        "line": "46"
+      },
+      {
+        "id": "-233293869283406-2510210518-4",
+        "type": "ENO",
+        "number": "83550",
+        "time": "2510210538",
+        "platform": "6",
+        "path_stations": [
+          "Wolfsburg Hbf",
+          "Fallersleben",
+          "Weddel(Braunschw)"
+        ],
+        "line": "RE50"
+      },
+      {
+        "id": "-1346881581325835580-2510210500-3",
+        "type": "IC",
+        "number": "2436",
+        "time": "2510210548",
+        "platform": "6",
+        "path_stations": [
+          "Magdeburg Hbf",
+          "Helmstedt"
+        ],
+        "line": ""
+      },
+      {
+        "id": "582326108088596975-2510210515-5",
+        "type": "RB",
+        "number": "14361",
+        "time": "2510210540",
+        "platform": "3a",
+        "path_stations": [
+          "Salzgitter-Lebenstedt",
+          "Salzgitter-Watenstedt",
+          "Salzgitter-Immendorf",
+          "Salzgitter-Thiede"
+        ],
+        "line": "44"
+      },
+      {
+        "id": "-5871286963874661660-2510210419-19",
+        "type": "RB",
+        "number": "16400",
+        "time": "2510210541",
+        "platform": "8",
+        "path_stations": [
+          "Biederitz",
+          "Magdeburg Herrenkrug",
+          "Magdeburg-Neustadt",
+          "Magdeburg Hbf",
+          "Magdeburg-Sudenburg",
+          "Niederndodeleben",
+          "Wellen(Magdeburg)",
+          "Ochtmersleben",
+          "Dreileben-Drackenstedt",
+          "Ovelgünne",
+          "Eilsleben(b Magdeburg)",
+          "Wefensleben",
+          "Marienborn",
+          "Helmstedt",
+          "Frellstedt",
+          "Königslutter",
+          "Schandelah",
+          "Weddel(Braunschw)"
+        ],
+        "line": "40"
+      },
+      {
+        "id": "8877134481212521389-2510210416-6",
+        "type": "ICE",
+        "number": "275",
+        "time": "2510210555",
+        "platform": "6",
+        "path_stations": [
+          "Berlin Ostbahnhof",
+          "Berlin Hbf",
+          "Berlin Zoologischer Garten",
+          "Berlin-Spandau",
+          "Wolfsburg Hbf"
+        ],
+        "line": ""
+      }
+    ],
+    "departures": [
+      {
+        "id": "4382018783813184945-2510201705-1",
+        "type": "RB",
+        "number": "14325",
+        "direction": "Gittelde/Bad Grund(Harz)",
+        "platform": "4a",
+        "time": "2510201705",
+        "destination": "Gittelde/Bad Grund(Harz)",
+        "path_stations": [
+          "Salzgitter-Bad",
+          "Salzgitter-Ringelheim",
+          "Seesen",
+          "Münchehof(Harz)",
+          "Gittelde/Bad Grund(Harz)"
+        ]
+      },
+      {
+        "id": "3707668128778214968-2510201724-1",
+        "type": "erx",
+        "number": "81525",
+        "direction": "Bad Harzburg",
+        "platform": "1",
+        "time": "2510201724",
+        "destination": "Bad Harzburg",
+        "path_stations": [
+          "Wolfenbüttel",
+          "Börßum",
+          "Schladen(Harz)",
+          "Vienenburg",
+          "Bad Harzburg"
+        ]
+      },
+      {
+        "id": "6264673881775742533-2510201617-5",
+        "type": "ICE",
+        "number": "377",
+        "direction": "Basel SBB",
+        "platform": "6",
+        "time": "2510201757",
+        "destination": "Basel SBB",
+        "path_stations": [
+          "Hildesheim Hbf",
+          "Göttingen",
+          "Kassel-Wilhelmshöhe",
+          "Fulda",
+          "Hanau Hbf",
+          "Frankfurt(Main)Hbf",
+          "Mannheim Hbf",
+          "Karlsruhe Hbf",
+          "Baden-Baden",
+          "Offenburg",
+          "Freiburg(Breisgau) Hbf",
+          "Basel Bad Bf",
+          "Basel SBB"
+        ]
+      },
+      {
+        "id": "-7106033539035275477-2510201718-4",
+        "type": "ENO",
+        "number": "83574",
+        "direction": "Hildesheim Hbf",
+        "platform": "6",
+        "time": "2510201741",
+        "destination": "Hildesheim Hbf",
+        "path_stations": [
+          "Lengede-Broistedt",
+          "Woltwiesche",
+          "Hoheneggelsen",
+          "Hildesheim Hbf"
+        ]
+      },
+      {
+        "id": "4961782681481677440-2510200959-20",
+        "type": "ICE",
+        "number": "278",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "7",
+        "time": "2510201801",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Wolfsburg Hbf",
+          "Berlin-Spandau",
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "-2346648436863264537-2510201757-1",
+        "type": "RB",
+        "number": "14245",
+        "direction": "Schöppenstedt",
+        "platform": "3a",
+        "time": "2510201757",
+        "destination": "Schöppenstedt",
+        "path_stations": [
+          "Wolfenbüttel",
+          "Dettum",
+          "Schöppenstedt"
+        ]
+      },
+      {
+        "id": "-6045595576379766623-2510201711-1",
+        "type": "ENO",
+        "number": "75572",
+        "direction": "Hildesheim Hbf",
+        "platform": "6",
+        "time": "2510201711",
+        "destination": "Hildesheim Hbf",
+        "path_stations": [
+          "Lengede-Broistedt",
+          "Woltwiesche",
+          "Hoheneggelsen",
+          "Hildesheim Hbf"
+        ]
+      },
+      {
+        "id": "7168421443984839690-2510201716-1",
+        "type": "RB",
+        "number": "16431",
+        "direction": "Biederitz",
+        "platform": "8",
+        "time": "2510201716",
+        "destination": "Biederitz",
+        "path_stations": [
+          "Weddel(Braunschw)",
+          "Schandelah",
+          "Königslutter",
+          "Frellstedt",
+          "Helmstedt",
+          "Marienborn",
+          "Wefensleben",
+          "Eilsleben(b Magdeburg)",
+          "Ovelgünne",
+          "Dreileben-Drackenstedt",
+          "Ochtmersleben",
+          "Wellen(Magdeburg)",
+          "Niederndodeleben",
+          "Magdeburg-Sudenburg",
+          "Magdeburg Hbf",
+          "Magdeburg-Neustadt",
+          "Magdeburg Herrenkrug",
+          "Biederitz"
+        ]
+      },
+      {
+        "id": "4263401729039526569-2510201720-1",
+        "type": "WFB",
+        "number": "95834",
+        "direction": "Bielefeld Hbf",
+        "platform": "5",
+        "time": "2510201720",
+        "destination": "Bielefeld Hbf",
+        "path_stations": [
+          "Vechelde",
+          "Peine",
+          "Vöhrum",
+          "Hämelerwald",
+          "Lehrte",
+          "Hannover Hbf",
+          "Wunstorf",
+          "Haste",
+          "Stadthagen",
+          "Bückeburg",
+          "Minden(Westf)",
+          "Porta Westfalica",
+          "Bad Oeynhausen",
+          "Löhne(Westf)",
+          "Herford",
+          "Bielefeld Hbf"
+        ]
+      },
+      {
+        "id": "-1399042432563079357-2510201542-6",
+        "type": "IC",
+        "number": "2034",
+        "direction": "Norddeich",
+        "platform": "6",
+        "time": "2510201749",
+        "destination": "Norddeich",
+        "path_stations": [
+          "Hannover Hbf",
+          "Nienburg(Weser)",
+          "Verden(Aller)",
+          "Bremen Hbf",
+          "Delmenhorst",
+          "Hude",
+          "Oldenburg(Oldb)Hbf",
+          "Bad Zwischenahn",
+          "Westerstede-Ocholt",
+          "Augustfehn",
+          "Leer(Ostfriesl)",
+          "Emden Hbf",
+          "Marienhafe",
+          "Norden",
+          "Norddeich"
+        ]
+      },
+      {
+        "id": "-2850267255541736664-2510201719-1",
+        "type": "RB",
+        "number": "14384",
+        "direction": "Salzgitter-Lebenstedt",
+        "platform": "3a",
+        "time": "2510201719",
+        "destination": "Salzgitter-Lebenstedt",
+        "path_stations": [
+          "Salzgitter-Thiede",
+          "Salzgitter-Immendorf",
+          "Salzgitter-Watenstedt",
+          "Salzgitter-Lebenstedt"
+        ]
+      },
+      {
+        "id": "-3231088687845695669-2510201650-5",
+        "type": "ENO",
+        "number": "83575",
+        "direction": "Wolfsburg Hbf",
+        "platform": "7",
+        "time": "2510201721",
+        "destination": "Wolfsburg Hbf",
+        "path_stations": [
+          "Weddel(Braunschw)",
+          "Fallersleben",
+          "Wolfsburg Hbf"
+        ]
+      },
+      {
+        "id": "-4468958596765641877-2510201703-1",
+        "type": "erx",
+        "number": "83624",
+        "direction": "Uelzen",
+        "platform": "2b",
+        "time": "2510201703",
+        "destination": "Uelzen",
+        "path_stations": [
+          "Braunschweig-Gliesmarode",
+          "Meine",
+          "Rötgesbüttel",
+          "Gifhorn",
+          "Gifhorn Stadt",
+          "Triangel",
+          "Wahrenholz",
+          "Schönewörde",
+          "Vorhop",
+          "Knesebeck",
+          "Wittingen",
+          "Bad Bodenteich",
+          "Wieren",
+          "Stederdorf(Kr Uelzen)",
+          "Uelzen"
+        ]
+      },
+      {
+        "id": "-2950490356695221515-2510201428-9",
+        "type": "IC",
+        "number": "2047",
+        "direction": "Dresden Hbf",
+        "platform": "7",
+        "time": "2510201710",
+        "destination": "Dresden Hbf",
+        "path_stations": [
+          "Magdeburg Hbf",
+          "Köthen",
+          "Halle(Saale)Hbf",
+          "Leipzig/Halle Flughafen",
+          "Leipzig Hbf",
+          "Riesa",
+          "Dresden-Neustadt",
+          "Dresden Hbf"
+        ]
+      },
+      {
+        "id": "-9198714001882900346-2510201754-1",
+        "type": "WFB",
+        "number": "95844",
+        "direction": "Hannover Hbf",
+        "platform": "5",
+        "time": "2510201754",
+        "destination": "Hannover Hbf",
+        "path_stations": [
+          "Vechelde",
+          "Peine",
+          "Vöhrum",
+          "Hämelerwald",
+          "Lehrte",
+          "Hannover Hbf"
+        ]
+      },
+      {
+        "id": "8983673647294408675-2510200842-18",
+        "type": "ICE",
+        "number": "1218",
+        "direction": "Berlin Hbf",
+        "platform": "7",
+        "time": "2510201703",
+        "destination": "Berlin Hbf",
+        "path_stations": [
+          "Wolfsburg Hbf",
+          "Stendal Hbf",
+          "Berlin-Spandau",
+          "Berlin Hbf"
+        ]
+      },
+      {
+        "id": "7497407241065272813-2510201751-1",
+        "type": "RB",
+        "number": "14286",
+        "direction": "Salzgitter-Lebenstedt",
+        "platform": "3a",
+        "time": "2510201751",
+        "destination": "Salzgitter-Lebenstedt",
+        "path_stations": [
+          "Salzgitter-Thiede",
+          "Salzgitter-Lebenstedt"
+        ]
+      },
+      {
+        "id": "-4477056699429646527-2510201724-1",
+        "type": "erx",
+        "number": "81575",
+        "direction": "Goslar",
+        "platform": "1",
+        "time": "2510201724",
+        "destination": "Goslar",
+        "path_stations": [
+          "Wolfenbüttel",
+          "Börßum",
+          "Schladen(Harz)",
+          "Vienenburg",
+          "Oker",
+          "Goslar"
+        ]
+      },
+      {
+        "id": "-2157322095132480984-2510201803-1",
+        "type": "erx",
+        "number": "83626",
+        "direction": "Bad Bodenteich",
+        "platform": "2b",
+        "time": "2510201803",
+        "destination": "Bad Bodenteich",
+        "path_stations": [
+          "Braunschweig-Gliesmarode",
+          "Meine",
+          "Rötgesbüttel",
+          "Gifhorn",
+          "Gifhorn Stadt",
+          "Triangel",
+          "Wahrenholz",
+          "Schönewörde",
+          "Vorhop",
+          "Knesebeck",
+          "Wittingen",
+          "Bad Bodenteich"
+        ]
+      },
+      {
+        "id": "6267789318775144807-2510201750-5",
+        "type": "ENO",
+        "number": "83577",
+        "direction": "Wolfsburg Hbf",
+        "platform": "7",
+        "time": "2510201821",
+        "destination": "Wolfsburg Hbf",
+        "path_stations": [
+          "Weddel(Braunschw)",
+          "Fallersleben",
+          "Wolfsburg Hbf"
+        ]
+      },
+      {
+        "id": "4804116960335233530-2510201509-9",
+        "type": "IC",
+        "number": "2444",
+        "direction": "Dortmund Hbf",
+        "platform": "6",
+        "time": "2510201849",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Hannover Hbf",
+          "Minden(Westf)",
+          "Bad Oeynhausen",
+          "Bielefeld Hbf",
+          "Gütersloh Hbf",
+          "Hamm(Westf)Hbf",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "4961782681481677440-2510200959-20",
+        "type": "ICE",
+        "number": "278",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "7",
+        "time": "2510201801",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Wolfsburg Hbf",
+          "Berlin-Spandau",
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "-5340161184034003768-2510201851-1",
+        "type": "RB",
+        "number": "14288",
+        "direction": "Salzgitter-Lebenstedt",
+        "platform": "3a",
+        "time": "2510201851",
+        "destination": "Salzgitter-Lebenstedt",
+        "path_stations": [
+          "Salzgitter-Thiede",
+          "Salzgitter-Lebenstedt"
+        ]
+      },
+      {
+        "id": "-8796610692411741434-2510201417-13",
+        "type": "IC",
+        "number": "2433",
+        "direction": "Leipzig Hbf",
+        "platform": "7",
+        "time": "2510201810",
+        "destination": "Leipzig Hbf",
+        "path_stations": [
+          "Helmstedt",
+          "Magdeburg Hbf",
+          "Köthen",
+          "Halle(Saale)Hbf",
+          "Leipzig Hbf"
+        ]
+      },
+      {
+        "id": "-8726114460374335606-2510201857-1",
+        "type": "RB",
+        "number": "14247",
+        "direction": "Schöppenstedt",
+        "platform": "3a",
+        "time": "2510201857",
+        "destination": "Schöppenstedt",
+        "path_stations": [
+          "Wolfenbüttel",
+          "Dettum",
+          "Schöppenstedt"
+        ]
+      },
+      {
+        "id": "5323643017687423106-2510201805-1",
+        "type": "RB",
+        "number": "14327",
+        "direction": "Gittelde/Bad Grund(Harz)",
+        "platform": "4a",
+        "time": "2510201805",
+        "destination": "Gittelde/Bad Grund(Harz)",
+        "path_stations": [
+          "Salzgitter-Bad",
+          "Salzgitter-Ringelheim",
+          "Seesen",
+          "Münchehof(Harz)",
+          "Gittelde/Bad Grund(Harz)"
+        ]
+      },
+      {
+        "id": "536901249689093911-2510201854-1",
+        "type": "WFB",
+        "number": "95846",
+        "direction": "Hannover Hbf",
+        "platform": "5",
+        "time": "2510201854",
+        "destination": "Hannover Hbf",
+        "path_stations": [
+          "Vechelde",
+          "Peine",
+          "Vöhrum",
+          "Hämelerwald",
+          "Lehrte",
+          "Hannover Hbf"
+        ]
+      },
+      {
+        "id": "6202916625163174173-2510201724-5",
+        "type": "ICE",
+        "number": "695",
+        "direction": "Stuttgart Hbf",
+        "platform": "6",
+        "time": "2510201857",
+        "destination": "Stuttgart Hbf",
+        "path_stations": [
+          "Hildesheim Hbf",
+          "Göttingen",
+          "Kassel-Wilhelmshöhe",
+          "Fulda",
+          "Frankfurt(Main)Hbf",
+          "Mannheim Hbf",
+          "Stuttgart Hbf"
+        ]
+      },
+      {
+        "id": "502654172913099951-2510201820-1",
+        "type": "WFB",
+        "number": "95784",
+        "direction": "Rheine",
+        "platform": "5",
+        "time": "2510201820",
+        "destination": "Rheine",
+        "path_stations": [
+          "Vechelde",
+          "Peine",
+          "Vöhrum",
+          "Hämelerwald",
+          "Lehrte",
+          "Hannover Hbf",
+          "Wunstorf",
+          "Haste",
+          "Stadthagen",
+          "Bückeburg",
+          "Minden(Westf)",
+          "Porta Westfalica",
+          "Bad Oeynhausen",
+          "Löhne(Westf)",
+          "Kirchlengern",
+          "Bünde(Westf)",
+          "Melle",
+          "Osnabrück Hbf",
+          "Osnabrück Altstadt",
+          "Ibbenbüren-Laggenbeck",
+          "Ibbenbüren",
+          "Ibbenbüren-Esch",
+          "Hörstel",
+          "Rheine"
+        ]
+      },
+      {
+        "id": "4374180231798263538-2510201816-1",
+        "type": "RB",
+        "number": "16433",
+        "direction": "Biederitz",
+        "platform": "8",
+        "time": "2510201816",
+        "destination": "Biederitz",
+        "path_stations": [
+          "Weddel(Braunschw)",
+          "Schandelah",
+          "Königslutter",
+          "Frellstedt",
+          "Helmstedt",
+          "Marienborn",
+          "Wefensleben",
+          "Eilsleben(b Magdeburg)",
+          "Ovelgünne",
+          "Dreileben-Drackenstedt",
+          "Ochtmersleben",
+          "Wellen(Magdeburg)",
+          "Niederndodeleben",
+          "Magdeburg-Sudenburg",
+          "Magdeburg Hbf",
+          "Magdeburg-Neustadt",
+          "Magdeburg Herrenkrug",
+          "Biederitz"
+        ]
+      },
+      {
+        "id": "-4604221385965901094-2510201818-4",
+        "type": "ENO",
+        "number": "83576",
+        "direction": "Hildesheim Hbf",
+        "platform": "6",
+        "time": "2510201841",
+        "destination": "Hildesheim Hbf",
+        "path_stations": [
+          "Lengede-Broistedt",
+          "Woltwiesche",
+          "Hoheneggelsen",
+          "Hildesheim Hbf"
+        ]
+      },
+      {
+        "id": "-6475531252837952689-2510201824-1",
+        "type": "erx",
+        "number": "81577",
+        "direction": "Goslar",
+        "platform": "1",
+        "time": "2510201824",
+        "destination": "Goslar",
+        "path_stations": [
+          "Wolfenbüttel",
+          "Börßum",
+          "Schladen(Harz)",
+          "Vienenburg",
+          "Oker",
+          "Goslar"
+        ]
+      },
+      {
+        "id": "-860855873117727884-2510201811-1",
+        "type": "ENO",
+        "number": "75574",
+        "direction": "Hildesheim Hbf",
+        "platform": "6",
+        "time": "2510201811",
+        "destination": "Hildesheim Hbf",
+        "path_stations": [
+          "Lengede-Broistedt",
+          "Woltwiesche",
+          "Hoheneggelsen",
+          "Hildesheim Hbf"
+        ]
+      },
+      {
+        "id": "-4171828767516624146-2510201819-1",
+        "type": "RB",
+        "number": "14386",
+        "direction": "Salzgitter-Lebenstedt",
+        "platform": "3a",
+        "time": "2510201819",
+        "destination": "Salzgitter-Lebenstedt",
+        "path_stations": [
+          "Salzgitter-Thiede",
+          "Salzgitter-Immendorf",
+          "Salzgitter-Watenstedt",
+          "Salzgitter-Lebenstedt"
+        ]
+      },
+      {
+        "id": "-2410013767624235593-2510201824-1",
+        "type": "erx",
+        "number": "81527",
+        "direction": "Bad Harzburg",
+        "platform": "1",
+        "time": "2510201824",
+        "destination": "Bad Harzburg",
+        "path_stations": [
+          "Wolfenbüttel",
+          "Börßum",
+          "Schladen(Harz)",
+          "Vienenburg",
+          "Bad Harzburg"
+        ]
+      },
+      {
+        "id": "1716147912911998992-2510201924-1",
+        "type": "erx",
+        "number": "81579",
+        "direction": "Goslar",
+        "platform": "1",
+        "time": "2510201924",
+        "destination": "Goslar",
+        "path_stations": [
+          "Wolfenbüttel",
+          "Börßum",
+          "Schladen(Harz)",
+          "Vienenburg",
+          "Oker",
+          "Goslar"
+        ]
+      },
+      {
+        "id": "5493927138265339805-2510201951-1",
+        "type": "RB",
+        "number": "14290",
+        "direction": "Salzgitter-Lebenstedt",
+        "platform": "3a",
+        "time": "2510201951",
+        "destination": "Salzgitter-Lebenstedt",
+        "path_stations": [
+          "Salzgitter-Thiede",
+          "Salzgitter-Lebenstedt"
+        ]
+      },
+      {
+        "id": "4083739950560377043-2510201246-12",
+        "type": "ICE",
+        "number": "596",
+        "direction": "Berlin Hbf",
+        "platform": "7",
+        "time": "2510201903",
+        "destination": "Berlin Hbf",
+        "path_stations": [
+          "Wolfsburg Hbf",
+          "Stendal Hbf",
+          "Berlin-Spandau",
+          "Berlin Hbf"
+        ]
+      },
+      {
+        "id": "-5499485007815658182-2510201905-1",
+        "type": "RB",
+        "number": "14329",
+        "direction": "Gittelde/Bad Grund(Harz)",
+        "platform": "4a",
+        "time": "2510201905",
+        "destination": "Gittelde/Bad Grund(Harz)",
+        "path_stations": [
+          "Salzgitter-Bad",
+          "Salzgitter-Ringelheim",
+          "Seesen",
+          "Münchehof(Harz)",
+          "Gittelde/Bad Grund(Harz)"
+        ]
+      },
+      {
+        "id": "-7763686466636471476-2510201740-6",
+        "type": "IC",
+        "number": "2032",
+        "direction": "Emden Hbf",
+        "platform": "6",
+        "time": "2510201949",
+        "destination": "Emden Hbf",
+        "path_stations": [
+          "Hannover Hbf",
+          "Nienburg(Weser)",
+          "Verden(Aller)",
+          "Bremen Hbf",
+          "Delmenhorst",
+          "Hude",
+          "Oldenburg(Oldb)Hbf",
+          "Bad Zwischenahn",
+          "Westerstede-Ocholt",
+          "Augustfehn",
+          "Leer(Ostfriesl)",
+          "Emden Hbf"
+        ]
+      },
+      {
+        "id": "6161650900125964458-2510201850-5",
+        "type": "ENO",
+        "number": "83579",
+        "direction": "Wolfsburg Hbf",
+        "platform": "7",
+        "time": "2510201921",
+        "destination": "Wolfsburg Hbf",
+        "path_stations": [
+          "Weddel(Braunschw)",
+          "Fallersleben",
+          "Wolfsburg Hbf"
+        ]
+      },
+      {
+        "id": "-8203578369052827954-2510201817-5",
+        "type": "ICE",
+        "number": "877",
+        "direction": "Frankfurt(Main)Hbf",
+        "platform": "6",
+        "time": "2510201957",
+        "destination": "Frankfurt(Main)Hbf",
+        "path_stations": [
+          "Hildesheim Hbf",
+          "Göttingen",
+          "Kassel-Wilhelmshöhe",
+          "Fulda",
+          "Hanau Hbf",
+          "Frankfurt(Main)Hbf"
+        ]
+      },
+      {
+        "id": "-8500937555445071272-2510201957-1",
+        "type": "RB",
+        "number": "14249",
+        "direction": "Schöppenstedt",
+        "platform": "3a",
+        "time": "2510201957",
+        "destination": "Schöppenstedt",
+        "path_stations": [
+          "Wolfenbüttel",
+          "Dettum",
+          "Schöppenstedt"
+        ]
+      },
+      {
+        "id": "6170002538724052342-2510201413-13",
+        "type": "ICE",
+        "number": "276",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "7",
+        "time": "2510202001",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Wolfsburg Hbf",
+          "Berlin-Spandau",
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "5270998905588748805-2510201918-4",
+        "type": "ENO",
+        "number": "83578",
+        "direction": "Hildesheim Hbf",
+        "platform": "6",
+        "time": "2510201941",
+        "destination": "Hildesheim Hbf",
+        "path_stations": [
+          "Lengede-Broistedt",
+          "Woltwiesche",
+          "Hoheneggelsen",
+          "Hildesheim Hbf"
+        ]
+      },
+      {
+        "id": "-1350300360068400853-2510201919-1",
+        "type": "RB",
+        "number": "14388",
+        "direction": "Salzgitter-Lebenstedt",
+        "platform": "3a",
+        "time": "2510201919",
+        "destination": "Salzgitter-Lebenstedt",
+        "path_stations": [
+          "Salzgitter-Thiede",
+          "Salzgitter-Immendorf",
+          "Salzgitter-Watenstedt",
+          "Salzgitter-Lebenstedt"
+        ]
+      },
+      {
+        "id": "1148856555558896584-2510201920-1",
+        "type": "WFB",
+        "number": "95836",
+        "direction": "Bielefeld Hbf",
+        "platform": "5",
+        "time": "2510201920",
+        "destination": "Bielefeld Hbf",
+        "path_stations": [
+          "Vechelde",
+          "Peine",
+          "Vöhrum",
+          "Hämelerwald",
+          "Lehrte",
+          "Hannover Hbf",
+          "Wunstorf",
+          "Haste",
+          "Stadthagen",
+          "Bückeburg",
+          "Minden(Westf)",
+          "Porta Westfalica",
+          "Bad Oeynhausen",
+          "Löhne(Westf)",
+          "Herford",
+          "Bielefeld Hbf"
+        ]
+      },
+      {
+        "id": "-8367977109324849090-2510201916-1",
+        "type": "RB",
+        "number": "16435",
+        "direction": "Biederitz",
+        "platform": "8",
+        "time": "2510201916",
+        "destination": "Biederitz",
+        "path_stations": [
+          "Weddel(Braunschw)",
+          "Schandelah",
+          "Königslutter",
+          "Frellstedt",
+          "Helmstedt",
+          "Marienborn",
+          "Wefensleben",
+          "Eilsleben(b Magdeburg)",
+          "Ovelgünne",
+          "Dreileben-Drackenstedt",
+          "Ochtmersleben",
+          "Wellen(Magdeburg)",
+          "Niederndodeleben",
+          "Magdeburg-Sudenburg",
+          "Magdeburg Hbf",
+          "Magdeburg-Neustadt",
+          "Magdeburg Herrenkrug",
+          "Biederitz"
+        ]
+      },
+      {
+        "id": "-7886187336072450880-2510201954-1",
+        "type": "WFB",
+        "number": "95848",
+        "direction": "Hannover Hbf",
+        "platform": "5",
+        "time": "2510201954",
+        "destination": "Hannover Hbf",
+        "path_stations": [
+          "Vechelde",
+          "Peine",
+          "Vöhrum",
+          "Hämelerwald",
+          "Lehrte",
+          "Hannover Hbf"
+        ]
+      },
+      {
+        "id": "-580813889558930166-2510201903-1",
+        "type": "erx",
+        "number": "83628",
+        "direction": "Uelzen",
+        "platform": "2b",
+        "time": "2510201903",
+        "destination": "Uelzen",
+        "path_stations": [
+          "Braunschweig-Gliesmarode",
+          "Meine",
+          "Rötgesbüttel",
+          "Gifhorn",
+          "Gifhorn Stadt",
+          "Triangel",
+          "Wahrenholz",
+          "Schönewörde",
+          "Vorhop",
+          "Knesebeck",
+          "Wittingen",
+          "Bad Bodenteich",
+          "Wieren",
+          "Stederdorf(Kr Uelzen)",
+          "Uelzen"
+        ]
+      },
+      {
+        "id": "-795356884268041161-2510201924-1",
+        "type": "erx",
+        "number": "81529",
+        "direction": "Bad Harzburg",
+        "platform": "1",
+        "time": "2510201924",
+        "destination": "Bad Harzburg",
+        "path_stations": [
+          "Wolfenbüttel",
+          "Börßum",
+          "Schladen(Harz)",
+          "Vienenburg",
+          "Bad Harzburg"
+        ]
+      },
+      {
+        "id": "-2875979624331062252-2510201628-9",
+        "type": "IC",
+        "number": "2045",
+        "direction": "Dresden Hbf",
+        "platform": "7",
+        "time": "2510201910",
+        "destination": "Dresden Hbf",
+        "path_stations": [
+          "Magdeburg Hbf",
+          "Köthen",
+          "Halle(Saale)Hbf",
+          "Leipzig/Halle Flughafen",
+          "Leipzig Hbf",
+          "Riesa",
+          "Dresden-Neustadt",
+          "Dresden Hbf"
+        ]
+      },
+      {
+        "id": "8088489625262557114-2510201536-17",
+        "type": "IC",
+        "number": "2435",
+        "direction": "Leipzig Hbf",
+        "platform": "7",
+        "time": "2510202010",
+        "destination": "Leipzig Hbf",
+        "path_stations": [
+          "Helmstedt",
+          "Magdeburg Hbf",
+          "Köthen",
+          "Halle(Saale)Hbf",
+          "Leipzig Hbf"
+        ]
+      },
+      {
+        "id": "1727073522629915379-2510201925-5",
+        "type": "ICE",
+        "number": "687",
+        "direction": "Frankfurt(Main)Hbf",
+        "platform": "6",
+        "time": "2510202059",
+        "destination": "Frankfurt(Main)Hbf",
+        "path_stations": [
+          "Hildesheim Hbf",
+          "Göttingen",
+          "Eichenberg",
+          "Fulda",
+          "Frankfurt(Main)Hbf"
+        ]
+      },
+      {
+        "id": "-7285309427672702279-2510202005-1",
+        "type": "RB",
+        "number": "14331",
+        "direction": "Gittelde/Bad Grund(Harz)",
+        "platform": "4a",
+        "time": "2510202005",
+        "destination": "Gittelde/Bad Grund(Harz)",
+        "path_stations": [
+          "Salzgitter-Bad",
+          "Salzgitter-Ringelheim",
+          "Seesen",
+          "Münchehof(Harz)",
+          "Gittelde/Bad Grund(Harz)"
+        ]
+      },
+      {
+        "id": "-6297526935206149579-2510202003-1",
+        "type": "erx",
+        "number": "83630",
+        "direction": "Bad Bodenteich",
+        "platform": "2b",
+        "time": "2510202003",
+        "destination": "Bad Bodenteich",
+        "path_stations": [
+          "Braunschweig-Gliesmarode",
+          "Meine",
+          "Rötgesbüttel",
+          "Gifhorn",
+          "Gifhorn Stadt",
+          "Triangel",
+          "Wahrenholz",
+          "Schönewörde",
+          "Vorhop",
+          "Knesebeck",
+          "Wittingen",
+          "Bad Bodenteich"
+        ]
+      },
+      {
+        "id": "601208318005647306-2510202020-1",
+        "type": "WFB",
+        "number": "95786",
+        "direction": "Rheine",
+        "platform": "5",
+        "time": "2510202020",
+        "destination": "Rheine",
+        "path_stations": [
+          "Vechelde",
+          "Peine",
+          "Vöhrum",
+          "Hämelerwald",
+          "Lehrte",
+          "Hannover Hbf",
+          "Wunstorf",
+          "Haste",
+          "Stadthagen",
+          "Bückeburg",
+          "Minden(Westf)",
+          "Porta Westfalica",
+          "Bad Oeynhausen",
+          "Löhne(Westf)",
+          "Kirchlengern",
+          "Bünde(Westf)",
+          "Melle",
+          "Osnabrück Hbf",
+          "Osnabrück Altstadt",
+          "Ibbenbüren-Laggenbeck",
+          "Ibbenbüren",
+          "Ibbenbüren-Esch",
+          "Hörstel",
+          "Rheine"
+        ]
+      },
+      {
+        "id": "1297801680225336717-2510201709-9",
+        "type": "IC",
+        "number": "2446",
+        "direction": "Hannover Hbf",
+        "platform": "6",
+        "time": "2510202049",
+        "destination": "Hannover Hbf",
+        "path_stations": [
+          "Hannover Hbf"
+        ]
+      },
+      {
+        "id": "-4697456810072453316-2510202018-4",
+        "type": "ENO",
+        "number": "83580",
+        "direction": "Hildesheim Hbf",
+        "platform": "6",
+        "time": "2510202041",
+        "destination": "Hildesheim Hbf",
+        "path_stations": [
+          "Lengede-Broistedt",
+          "Woltwiesche",
+          "Hoheneggelsen",
+          "Hildesheim Hbf"
+        ]
+      },
+      {
+        "id": "-5894038517287874740-2510202024-1",
+        "type": "erx",
+        "number": "81581",
+        "direction": "Goslar",
+        "platform": "1",
+        "time": "2510202024",
+        "destination": "Goslar",
+        "path_stations": [
+          "Wolfenbüttel",
+          "Börßum",
+          "Schladen(Harz)",
+          "Vienenburg",
+          "Oker",
+          "Goslar"
+        ]
+      },
+      {
+        "id": "-3130099158233139043-2510202016-1",
+        "type": "RB",
+        "number": "16437",
+        "direction": "Biederitz",
+        "platform": "8",
+        "time": "2510202016",
+        "destination": "Biederitz",
+        "path_stations": [
+          "Weddel(Braunschw)",
+          "Schandelah",
+          "Königslutter",
+          "Frellstedt",
+          "Helmstedt",
+          "Marienborn",
+          "Wefensleben",
+          "Eilsleben(b Magdeburg)",
+          "Ovelgünne",
+          "Dreileben-Drackenstedt",
+          "Ochtmersleben",
+          "Wellen(Magdeburg)",
+          "Niederndodeleben",
+          "Magdeburg-Sudenburg",
+          "Magdeburg Hbf",
+          "Magdeburg-Neustadt",
+          "Magdeburg Herrenkrug",
+          "Biederitz"
+        ]
+      },
+      {
+        "id": "-2733482339736000462-2510202019-1",
+        "type": "RB",
+        "number": "14390",
+        "direction": "Salzgitter-Lebenstedt",
+        "platform": "3a",
+        "time": "2510202019",
+        "destination": "Salzgitter-Lebenstedt",
+        "path_stations": [
+          "Salzgitter-Thiede",
+          "Salzgitter-Immendorf",
+          "Salzgitter-Watenstedt",
+          "Salzgitter-Lebenstedt"
+        ]
+      },
+      {
+        "id": "-1869578197742975908-2510202051-1",
+        "type": "RB",
+        "number": "14292",
+        "direction": "Salzgitter-Lebenstedt",
+        "platform": "3a",
+        "time": "2510202051",
+        "destination": "Salzgitter-Lebenstedt",
+        "path_stations": [
+          "Salzgitter-Thiede",
+          "Salzgitter-Lebenstedt"
+        ]
+      },
+      {
+        "id": "-206506444341595594-2510202024-1",
+        "type": "erx",
+        "number": "81531",
+        "direction": "Bad Harzburg",
+        "platform": "1",
+        "time": "2510202024",
+        "destination": "Bad Harzburg",
+        "path_stations": [
+          "Wolfenbüttel",
+          "Börßum",
+          "Schladen(Harz)",
+          "Vienenburg",
+          "Bad Harzburg"
+        ]
+      },
+      {
+        "id": "6170002538724052342-2510201413-13",
+        "type": "ICE",
+        "number": "276",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "7",
+        "time": "2510202001",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Wolfsburg Hbf",
+          "Berlin-Spandau",
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "6630282762942580350-2510202057-1",
+        "type": "RB",
+        "number": "14251",
+        "direction": "Schöppenstedt",
+        "platform": "3a",
+        "time": "2510202057",
+        "destination": "Schöppenstedt",
+        "path_stations": [
+          "Wolfenbüttel",
+          "Dettum",
+          "Schöppenstedt"
+        ]
+      },
+      {
+        "id": "5905379045141482418-2510201950-5",
+        "type": "ENO",
+        "number": "83581",
+        "direction": "Wolfsburg Hbf",
+        "platform": "7",
+        "time": "2510202021",
+        "destination": "Wolfsburg Hbf",
+        "path_stations": [
+          "Weddel(Braunschw)",
+          "Fallersleben",
+          "Wolfsburg Hbf"
+        ]
+      },
+      {
+        "id": "-8582937126189412550-2510202118-4",
+        "type": "ENO",
+        "number": "83582",
+        "direction": "Hildesheim Hbf",
+        "platform": "6",
+        "time": "2510202141",
+        "destination": "Hildesheim Hbf",
+        "path_stations": [
+          "Lengede-Broistedt",
+          "Woltwiesche",
+          "Hoheneggelsen",
+          "Hildesheim Hbf"
+        ]
+      },
+      {
+        "id": "-8613368213751843731-2510202124-1",
+        "type": "erx",
+        "number": "81533",
+        "direction": "Bad Harzburg",
+        "platform": "1",
+        "time": "2510202124",
+        "destination": "Bad Harzburg",
+        "path_stations": [
+          "Wolfenbüttel",
+          "Börßum",
+          "Schladen(Harz)",
+          "Vienenburg",
+          "Bad Harzburg"
+        ]
+      },
+      {
+        "id": "-897359327365688304-2510202157-1",
+        "type": "RB",
+        "number": "14253",
+        "direction": "Schöppenstedt",
+        "platform": "3a",
+        "time": "2510202157",
+        "destination": "Schöppenstedt",
+        "path_stations": [
+          "Wolfenbüttel",
+          "Dettum",
+          "Schöppenstedt"
+        ]
+      },
+      {
+        "id": "-6110913436432337169-2510202103-1",
+        "type": "erx",
+        "number": "83632",
+        "direction": "Uelzen",
+        "platform": "2b",
+        "time": "2510202103",
+        "destination": "Uelzen",
+        "path_stations": [
+          "Braunschweig-Gliesmarode",
+          "Meine",
+          "Rötgesbüttel",
+          "Gifhorn",
+          "Gifhorn Stadt",
+          "Triangel",
+          "Wahrenholz",
+          "Schönewörde",
+          "Vorhop",
+          "Knesebeck",
+          "Wittingen",
+          "Bad Bodenteich",
+          "Wieren",
+          "Stederdorf(Kr Uelzen)",
+          "Uelzen"
+        ]
+      },
+      {
+        "id": "4784099332052874653-2510202105-1",
+        "type": "RB",
+        "number": "14333",
+        "direction": "Gittelde/Bad Grund(Harz)",
+        "platform": "4a",
+        "time": "2510202105",
+        "destination": "Gittelde/Bad Grund(Harz)",
+        "path_stations": [
+          "Salzgitter-Bad",
+          "Salzgitter-Ringelheim",
+          "Seesen",
+          "Münchehof(Harz)",
+          "Gittelde/Bad Grund(Harz)"
+        ]
+      },
+      {
+        "id": "3143817158085626717-2510202151-1",
+        "type": "RB",
+        "number": "14294",
+        "direction": "Salzgitter-Lebenstedt",
+        "platform": "3a",
+        "time": "2510202151",
+        "destination": "Salzgitter-Lebenstedt",
+        "path_stations": [
+          "Salzgitter-Thiede",
+          "Salzgitter-Lebenstedt"
+        ]
+      },
+      {
+        "id": "1116577686148397167-2510201613-13",
+        "type": "ICE",
+        "number": "274",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "7",
+        "time": "2510202201",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Wolfsburg Hbf",
+          "Berlin-Spandau",
+          "Berlin Zoologischer Garten",
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "-1863346966809565501-2510202116-1",
+        "type": "RB",
+        "number": "16439",
+        "direction": "Magdeburg Hbf",
+        "platform": "8",
+        "time": "2510202116",
+        "destination": "Magdeburg Hbf",
+        "path_stations": [
+          "Weddel(Braunschw)",
+          "Schandelah",
+          "Königslutter",
+          "Frellstedt",
+          "Helmstedt",
+          "Marienborn",
+          "Wefensleben",
+          "Eilsleben(b Magdeburg)",
+          "Ovelgünne",
+          "Dreileben-Drackenstedt",
+          "Ochtmersleben",
+          "Wellen(Magdeburg)",
+          "Niederndodeleben",
+          "Magdeburg-Sudenburg",
+          "Magdeburg Hbf"
+        ]
+      },
+      {
+        "id": "7765041937681950777-2510202124-1",
+        "type": "erx",
+        "number": "81583",
+        "direction": "Goslar",
+        "platform": "1",
+        "time": "2510202124",
+        "destination": "Goslar",
+        "path_stations": [
+          "Wolfenbüttel",
+          "Börßum",
+          "Schladen(Harz)",
+          "Vienenburg",
+          "Oker",
+          "Goslar"
+        ]
+      },
+      {
+        "id": "-876254985661224810-2510202120-1",
+        "type": "WFB",
+        "number": "95838",
+        "direction": "Minden(Westf)",
+        "platform": "5",
+        "time": "2510202120",
+        "destination": "Minden(Westf)",
+        "path_stations": [
+          "Vechelde",
+          "Peine",
+          "Vöhrum",
+          "Hämelerwald",
+          "Lehrte",
+          "Hannover Hbf",
+          "Haste",
+          "Lindhorst(Schaumb-Lippe)",
+          "Stadthagen",
+          "Kirchhorsten",
+          "Bückeburg",
+          "Minden(Westf)"
+        ]
+      },
+      {
+        "id": "5534381725604797880-2510202050-5",
+        "type": "ENO",
+        "number": "83583",
+        "direction": "Wolfsburg Hbf",
+        "platform": "7",
+        "time": "2510202121",
+        "destination": "Wolfsburg Hbf",
+        "path_stations": [
+          "Weddel(Braunschw)",
+          "Fallersleben",
+          "Wolfsburg Hbf"
+        ]
+      },
+      {
+        "id": "-7840838910561247354-2510202119-1",
+        "type": "RB",
+        "number": "14392",
+        "direction": "Salzgitter-Lebenstedt",
+        "platform": "3a",
+        "time": "2510202119",
+        "destination": "Salzgitter-Lebenstedt",
+        "path_stations": [
+          "Salzgitter-Thiede",
+          "Salzgitter-Immendorf",
+          "Salzgitter-Watenstedt",
+          "Salzgitter-Lebenstedt"
+        ]
+      },
+      {
+        "id": "1140779865956290650-2510201446-12",
+        "type": "ICE",
+        "number": "594",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "7",
+        "time": "2510202103",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Wolfsburg Hbf",
+          "Berlin-Spandau",
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "-893148775004719136-2510201711-13",
+        "type": "IC",
+        "number": "2043",
+        "direction": "Magdeburg Hbf",
+        "platform": "7",
+        "time": "2510202110",
+        "destination": "Magdeburg Hbf",
+        "path_stations": [
+          "Magdeburg Hbf"
+        ]
+      },
+      {
+        "id": "8849850357444188253-2510202016-6",
+        "type": "ICE",
+        "number": "879",
+        "direction": "Kassel-Wilhelmshöhe",
+        "platform": "6",
+        "time": "2510202157",
+        "destination": "Kassel-Wilhelmshöhe",
+        "path_stations": [
+          "Hildesheim Hbf",
+          "Göttingen",
+          "Kassel-Wilhelmshöhe"
+        ]
+      },
+      {
+        "id": "-6067237690107564769-2510202257-1",
+        "type": "RB",
+        "number": "14255",
+        "direction": "Schöppenstedt",
+        "platform": "3a",
+        "time": "2510202257",
+        "destination": "Schöppenstedt",
+        "path_stations": [
+          "Wolfenbüttel",
+          "Dettum",
+          "Schöppenstedt"
+        ]
+      },
+      {
+        "id": "5007585155233468205-2510202216-1",
+        "type": "RB",
+        "number": "16443",
+        "direction": "Magdeburg Hbf",
+        "platform": "8",
+        "time": "2510202216",
+        "destination": "Magdeburg Hbf",
+        "path_stations": [
+          "Weddel(Braunschw)",
+          "Schandelah",
+          "Königslutter",
+          "Frellstedt",
+          "Helmstedt",
+          "Marienborn",
+          "Wefensleben",
+          "Eilsleben(b Magdeburg)",
+          "Ovelgünne",
+          "Dreileben-Drackenstedt",
+          "Ochtmersleben",
+          "Wellen(Magdeburg)",
+          "Niederndodeleben",
+          "Magdeburg-Sudenburg",
+          "Magdeburg Hbf"
+        ]
+      },
+      {
+        "id": "67273429190528841-2510201909-9",
+        "type": "IC",
+        "number": "2448",
+        "direction": "Hannover Hbf",
+        "platform": "6",
+        "time": "2510202250",
+        "destination": "Hannover Hbf",
+        "path_stations": [
+          "Hannover Hbf"
+        ]
+      },
+      {
+        "id": "-6495792520545172594-2510202203-1",
+        "type": "erx",
+        "number": "83634",
+        "direction": "Bad Bodenteich",
+        "platform": "2b",
+        "time": "2510202203",
+        "destination": "Bad Bodenteich",
+        "path_stations": [
+          "Braunschweig-Gliesmarode",
+          "Meine",
+          "Rötgesbüttel",
+          "Gifhorn",
+          "Gifhorn Stadt",
+          "Triangel",
+          "Wahrenholz",
+          "Schönewörde",
+          "Vorhop",
+          "Knesebeck",
+          "Wittingen",
+          "Bad Bodenteich"
+        ]
+      },
+      {
+        "id": "9215098843244712408-2510202205-1",
+        "type": "RB",
+        "number": "14335",
+        "direction": "Gittelde/Bad Grund(Harz)",
+        "platform": "4a",
+        "time": "2510202205",
+        "destination": "Gittelde/Bad Grund(Harz)",
+        "path_stations": [
+          "Salzgitter-Bad",
+          "Salzgitter-Ringelheim",
+          "Seesen",
+          "Münchehof(Harz)",
+          "Gittelde/Bad Grund(Harz)"
+        ]
+      },
+      {
+        "id": "1116577686148397167-2510201613-13",
+        "type": "ICE",
+        "number": "274",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "7",
+        "time": "2510202201",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Wolfsburg Hbf",
+          "Berlin-Spandau",
+          "Berlin Zoologischer Garten",
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "-7150303469115887296-2510202219-1",
+        "type": "RB",
+        "number": "14394",
+        "direction": "Salzgitter-Lebenstedt",
+        "platform": "3a",
+        "time": "2510202219",
+        "destination": "Salzgitter-Lebenstedt",
+        "path_stations": [
+          "Salzgitter-Thiede",
+          "Salzgitter-Immendorf",
+          "Salzgitter-Watenstedt",
+          "Salzgitter-Lebenstedt"
+        ]
+      },
+      {
+        "id": "-1362349070858331695-2510202224-1",
+        "type": "erx",
+        "number": "81585",
+        "direction": "Goslar",
+        "platform": "1",
+        "time": "2510202224",
+        "destination": "Goslar",
+        "path_stations": [
+          "Wolfenbüttel",
+          "Börßum",
+          "Schladen(Harz)",
+          "Vienenburg",
+          "Oker",
+          "Goslar"
+        ]
+      },
+      {
+        "id": "5587922004740547299-2510201816-14",
+        "type": "IC",
+        "number": "2437",
+        "direction": "Magdeburg Hbf",
+        "platform": "7",
+        "time": "2510202213",
+        "destination": "Magdeburg Hbf",
+        "path_stations": [
+          "Helmstedt",
+          "Magdeburg Hbf"
+        ]
+      },
+      {
+        "id": "-1605481557557112938-2510202150-5",
+        "type": "ENO",
+        "number": "83585",
+        "direction": "Wolfsburg Hbf",
+        "platform": "7",
+        "time": "2510202221",
+        "destination": "Wolfsburg Hbf",
+        "path_stations": [
+          "Weddel(Braunschw)",
+          "Fallersleben",
+          "Wolfsburg Hbf"
+        ]
+      },
+      {
+        "id": "6606826357131203295-2510202218-4",
+        "type": "ENO",
+        "number": "83584",
+        "direction": "Hildesheim Hbf",
+        "platform": "6",
+        "time": "2510202241",
+        "destination": "Hildesheim Hbf",
+        "path_stations": [
+          "Lengede-Broistedt",
+          "Woltwiesche",
+          "Hoheneggelsen",
+          "Hildesheim Hbf"
+        ]
+      },
+      {
+        "id": "4456518626465571419-2510202220-1",
+        "type": "WFB",
+        "number": "95788",
+        "direction": "Osnabrück Hbf",
+        "platform": "5",
+        "time": "2510202220",
+        "destination": "Osnabrück Hbf",
+        "path_stations": [
+          "Vechelde",
+          "Peine",
+          "Vöhrum",
+          "Hämelerwald",
+          "Lehrte",
+          "Hannover Hbf",
+          "Haste",
+          "Lindhorst(Schaumb-Lippe)",
+          "Stadthagen",
+          "Kirchhorsten",
+          "Bückeburg",
+          "Minden(Westf)",
+          "Porta Westfalica",
+          "Bad Oeynhausen",
+          "Löhne(Westf)",
+          "Kirchlengern",
+          "Bünde(Westf)",
+          "Melle",
+          "Osnabrück Hbf"
+        ]
+      },
+      {
+        "id": "-6700461782185007076-2510202224-1",
+        "type": "erx",
+        "number": "81535",
+        "direction": "Bad Harzburg",
+        "platform": "1",
+        "time": "2510202224",
+        "destination": "Bad Harzburg",
+        "path_stations": [
+          "Wolfenbüttel",
+          "Börßum",
+          "Schladen(Harz)",
+          "Vienenburg",
+          "Bad Harzburg"
+        ]
+      },
+      {
+        "id": "-1794511816282847049-2510202303-1",
+        "type": "erx",
+        "number": "83636",
+        "direction": "Uelzen",
+        "platform": "2b",
+        "time": "2510202303",
+        "destination": "Uelzen",
+        "path_stations": [
+          "Braunschweig-Gliesmarode",
+          "Meine",
+          "Rötgesbüttel",
+          "Gifhorn",
+          "Gifhorn Stadt",
+          "Triangel",
+          "Wahrenholz",
+          "Schönewörde",
+          "Vorhop",
+          "Knesebeck",
+          "Wittingen",
+          "Bad Bodenteich",
+          "Wieren",
+          "Stederdorf(Kr Uelzen)",
+          "Uelzen"
+        ]
+      },
+      {
+        "id": "-7116609396192750762-2510202346-1",
+        "type": "RB",
+        "number": "16445",
+        "direction": "Helmstedt",
+        "platform": "4b",
+        "time": "2510202346",
+        "destination": "Helmstedt",
+        "path_stations": [
+          "Weddel(Braunschw)",
+          "Schandelah",
+          "Königslutter",
+          "Frellstedt",
+          "Helmstedt"
+        ]
+      },
+      {
+        "id": "-3871534095569211524-2510202319-1",
+        "type": "RB",
+        "number": "14396",
+        "direction": "Salzgitter-Lebenstedt",
+        "platform": "3a",
+        "time": "2510202319",
+        "destination": "Salzgitter-Lebenstedt",
+        "path_stations": [
+          "Salzgitter-Thiede",
+          "Salzgitter-Immendorf",
+          "Salzgitter-Watenstedt",
+          "Salzgitter-Lebenstedt"
+        ]
+      },
+      {
+        "id": "-1088955679650545870-2510202324-1",
+        "type": "erx",
+        "number": "81587",
+        "direction": "Goslar",
+        "platform": "1",
+        "time": "2510202324",
+        "destination": "Goslar",
+        "path_stations": [
+          "Wolfenbüttel",
+          "Börßum",
+          "Schladen(Harz)",
+          "Vienenburg",
+          "Oker",
+          "Goslar"
+        ]
+      },
+      {
+        "id": "1685709864218984895-2510202318-4",
+        "type": "ENO",
+        "number": "83586",
+        "direction": "Hildesheim Hbf",
+        "platform": "6",
+        "time": "2510202341",
+        "destination": "Hildesheim Hbf",
+        "path_stations": [
+          "Lengede-Broistedt",
+          "Woltwiesche",
+          "Hoheneggelsen",
+          "Hildesheim Hbf"
+        ]
+      },
+      {
+        "id": "4731596700926155152-2510202320-1",
+        "type": "WFB",
+        "number": "95790",
+        "direction": "Minden(Westf)",
+        "platform": "5",
+        "time": "2510202320",
+        "destination": "Minden(Westf)",
+        "path_stations": [
+          "Vechelde",
+          "Peine",
+          "Vöhrum",
+          "Hämelerwald",
+          "Lehrte",
+          "Hannover Hbf",
+          "Haste",
+          "Stadthagen",
+          "Bückeburg",
+          "Minden(Westf)"
+        ]
+      },
+      {
+        "id": "-5324933755662785438-2510202305-1",
+        "type": "RB",
+        "number": "14337",
+        "direction": "Kreiensen",
+        "platform": "4a",
+        "time": "2510202305",
+        "destination": "Kreiensen",
+        "path_stations": [
+          "Salzgitter-Bad",
+          "Salzgitter-Ringelheim",
+          "Seesen",
+          "Bad Gandersheim",
+          "Kreiensen"
+        ]
+      },
+      {
+        "id": "8984990873688814997-2510202324-1",
+        "type": "erx",
+        "number": "81537",
+        "direction": "Bad Harzburg",
+        "platform": "1",
+        "time": "2510202324",
+        "destination": "Bad Harzburg",
+        "path_stations": [
+          "Wolfenbüttel",
+          "Börßum",
+          "Schladen(Harz)",
+          "Vienenburg",
+          "Bad Harzburg"
+        ]
+      },
+      {
+        "id": "776363454793152283-2510202250-5",
+        "type": "ENO",
+        "number": "83587",
+        "direction": "Wolfsburg Hbf",
+        "platform": "7",
+        "time": "2510202321",
+        "destination": "Wolfsburg Hbf",
+        "path_stations": [
+          "Weddel(Braunschw)",
+          "Fallersleben",
+          "Wolfsburg Hbf"
+        ]
+      },
+      {
+        "id": "5089820149948252230-2510201646-12",
+        "type": "ICE",
+        "number": "592",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "7",
+        "time": "2510202329",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Wolfsburg Hbf",
+          "Stendal Hbf",
+          "Berlin-Spandau",
+          "Berlin Zoologischer Garten",
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "-2534056427099012540-2510210020-1",
+        "type": "WFB",
+        "number": "95792",
+        "direction": "Hannover Hbf",
+        "platform": "5",
+        "time": "2510210020",
+        "destination": "Hannover Hbf",
+        "path_stations": [
+          "Vechelde",
+          "Peine",
+          "Vöhrum",
+          "Hämelerwald",
+          "Lehrte",
+          "Hannover Hbf"
+        ]
+      },
+      {
+        "id": "3199623009169073885-2510210011-5",
+        "type": "ICE",
+        "number": "101",
+        "direction": "Basel SBB",
+        "platform": "6",
+        "time": "2510210236",
+        "destination": "Basel SBB",
+        "path_stations": [
+          "Hannover Hbf",
+          "Minden(Westf)",
+          "Bielefeld Hbf",
+          "Gütersloh Hbf",
+          "Hamm(Westf)Hbf",
+          "Dortmund Hbf",
+          "Essen Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Hbf",
+          "Köln Hbf",
+          "Frankfurt(M) Flughafen Fernbf",
+          "Mannheim Hbf",
+          "Karlsruhe Hbf",
+          "Baden-Baden",
+          "Offenburg",
+          "Freiburg(Breisgau) Hbf",
+          "Basel Bad Bf",
+          "Basel SBB"
+        ]
+      },
+      {
+        "id": "-4674302681811850992-2510201913-19",
+        "type": "ICE",
+        "number": "100",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "7",
+        "time": "2510210316",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Stendal Hbf",
+          "Potsdam Hbf",
+          "Berlin-Wannsee",
+          "Berlin Zoologischer Garten",
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "-5267756655093437719-2510210420-1",
+        "type": "WFB",
+        "number": "95770",
+        "direction": "Rheine",
+        "platform": "5",
+        "time": "2510210420",
+        "destination": "Rheine",
+        "path_stations": [
+          "Vechelde",
+          "Peine",
+          "Vöhrum",
+          "Hämelerwald",
+          "Lehrte",
+          "Hannover Hbf",
+          "Wunstorf",
+          "Haste",
+          "Stadthagen",
+          "Bückeburg",
+          "Minden(Westf)",
+          "Porta Westfalica",
+          "Bad Oeynhausen",
+          "Löhne(Westf)",
+          "Kirchlengern",
+          "Bünde(Westf)",
+          "Melle",
+          "Osnabrück Hbf",
+          "Osnabrück Altstadt",
+          "Ibbenbüren-Laggenbeck",
+          "Ibbenbüren",
+          "Ibbenbüren-Esch",
+          "Hörstel",
+          "Rheine"
+        ]
+      },
+      {
+        "id": "4811270722125224768-2510210451-1",
+        "type": "ENO",
+        "number": "75551",
+        "direction": "Wolfsburg Hbf",
+        "platform": "4b",
+        "time": "2510210451",
+        "destination": "Wolfsburg Hbf",
+        "path_stations": [
+          "Weddel(Braunschw)",
+          "Fallersleben",
+          "Wolfsburg Hbf"
+        ]
+      },
+      {
+        "id": "-1132791982209378039-2510210457-1",
+        "type": "WFB",
+        "number": "95750",
+        "direction": "Hannover Hbf",
+        "platform": "5",
+        "time": "2510210457",
+        "destination": "Hannover Hbf",
+        "path_stations": [
+          "Vechelde",
+          "Peine",
+          "Vöhrum",
+          "Hämelerwald",
+          "Lehrte",
+          "Hannover Hbf"
+        ]
+      },
+      {
+        "id": "-5800001161459629033-2510210524-1",
+        "type": "erx",
+        "number": "81501",
+        "direction": "Bad Harzburg",
+        "platform": "1",
+        "time": "2510210524",
+        "destination": "Bad Harzburg",
+        "path_stations": [
+          "Wolfenbüttel",
+          "Börßum",
+          "Schladen(Harz)",
+          "Vienenburg",
+          "Bad Harzburg"
+        ]
+      },
+      {
+        "id": "6542551083293742673-2510210554-1",
+        "type": "WFB",
+        "number": "95752",
+        "direction": "Hannover Hbf",
+        "platform": "5",
+        "time": "2510210554",
+        "destination": "Hannover Hbf",
+        "path_stations": [
+          "Vechelde",
+          "Peine",
+          "Vöhrum",
+          "Hämelerwald",
+          "Lehrte",
+          "Hannover Hbf"
+        ]
+      },
+      {
+        "id": "-868251179380997267-2510210527-2",
+        "type": "ICE",
+        "number": "649",
+        "direction": "Berlin Ostbahnhof",
+        "platform": "7",
+        "time": "2510210601",
+        "destination": "Berlin Ostbahnhof",
+        "path_stations": [
+          "Wolfsburg Hbf",
+          "Stendal Hbf",
+          "Berlin-Spandau",
+          "Berlin Hbf",
+          "Berlin Ostbahnhof"
+        ]
+      },
+      {
+        "id": "4813414002060362104-2510210551-1",
+        "type": "ENO",
+        "number": "75553",
+        "direction": "Wolfsburg Hbf",
+        "platform": "4b",
+        "time": "2510210551",
+        "destination": "Wolfsburg Hbf",
+        "path_stations": [
+          "Weddel(Braunschw)",
+          "Fallersleben",
+          "Wolfsburg Hbf"
+        ]
+      },
+      {
+        "id": "6694280745766059737-2510210450-5",
+        "type": "ENO",
+        "number": "83551",
+        "direction": "Wolfsburg Hbf",
+        "platform": "7",
+        "time": "2510210521",
+        "destination": "Wolfsburg Hbf",
+        "path_stations": [
+          "Weddel(Braunschw)",
+          "Fallersleben",
+          "Wolfsburg Hbf"
+        ]
+      },
+      {
+        "id": "3150200735315793614-2510210505-1",
+        "type": "RB",
+        "number": "14301",
+        "direction": "Gittelde/Bad Grund(Harz)",
+        "platform": "4a",
+        "time": "2510210505",
+        "destination": "Gittelde/Bad Grund(Harz)",
+        "path_stations": [
+          "Salzgitter-Bad",
+          "Salzgitter-Ringelheim",
+          "Seesen",
+          "Münchehof(Harz)",
+          "Gittelde/Bad Grund(Harz)"
+        ]
+      },
+      {
+        "id": "1170232270064587892-2510210557-1",
+        "type": "RB",
+        "number": "14221",
+        "direction": "Schöppenstedt",
+        "platform": "3a",
+        "time": "2510210557",
+        "destination": "Schöppenstedt",
+        "path_stations": [
+          "Wolfenbüttel",
+          "Dettum",
+          "Schöppenstedt"
+        ]
+      },
+      {
+        "id": "3113910608474688574-2510210551-1",
+        "type": "RB",
+        "number": "14262",
+        "direction": "Salzgitter-Lebenstedt",
+        "platform": "3a",
+        "time": "2510210551",
+        "destination": "Salzgitter-Lebenstedt",
+        "path_stations": [
+          "Salzgitter-Thiede",
+          "Salzgitter-Lebenstedt"
+        ]
+      },
+      {
+        "id": "-233293869283406-2510210518-4",
+        "type": "ENO",
+        "number": "83550",
+        "direction": "Hildesheim Hbf",
+        "platform": "6",
+        "time": "2510210541",
+        "destination": "Hildesheim Hbf",
+        "path_stations": [
+          "Lengede-Broistedt",
+          "Woltwiesche",
+          "Hoheneggelsen",
+          "Hildesheim Hbf"
+        ]
+      },
+      {
+        "id": "-2852109504185294276-2510210519-1",
+        "type": "RB",
+        "number": "14360",
+        "direction": "Salzgitter-Lebenstedt",
+        "platform": "3a",
+        "time": "2510210519",
+        "destination": "Salzgitter-Lebenstedt",
+        "path_stations": [
+          "Salzgitter-Thiede",
+          "Salzgitter-Immendorf",
+          "Salzgitter-Watenstedt",
+          "Salzgitter-Lebenstedt"
+        ]
+      },
+      {
+        "id": "-1346881581325835580-2510210500-3",
+        "type": "IC",
+        "number": "2436",
+        "direction": "Emden Hbf",
+        "platform": "6",
+        "time": "2510210549",
+        "destination": "Emden Hbf",
+        "path_stations": [
+          "Peine",
+          "Hannover Hbf",
+          "Nienburg(Weser)",
+          "Verden(Aller)",
+          "Bremen Hbf",
+          "Delmenhorst",
+          "Hude",
+          "Oldenburg(Oldb)Hbf",
+          "Bad Zwischenahn",
+          "Westerstede-Ocholt",
+          "Augustfehn",
+          "Leer(Ostfriesl)",
+          "Emden Hbf"
+        ]
+      },
+      {
+        "id": "5567324448600005039-2510210520-1",
+        "type": "WFB",
+        "number": "95820",
+        "direction": "Bielefeld Hbf",
+        "platform": "5",
+        "time": "2510210520",
+        "destination": "Bielefeld Hbf",
+        "path_stations": [
+          "Vechelde",
+          "Peine",
+          "Vöhrum",
+          "Hämelerwald",
+          "Lehrte",
+          "Hannover Hbf",
+          "Wunstorf",
+          "Haste",
+          "Stadthagen",
+          "Bückeburg",
+          "Minden(Westf)",
+          "Porta Westfalica",
+          "Bad Oeynhausen",
+          "Löhne(Westf)",
+          "Herford",
+          "Brake(b Bielefeld)",
+          "Bielefeld Hbf"
+        ]
+      },
+      {
+        "id": "6977888859461920741-2510210503-1",
+        "type": "erx",
+        "number": "83600",
+        "direction": "Uelzen",
+        "platform": "2b",
+        "time": "2510210503",
+        "destination": "Uelzen",
+        "path_stations": [
+          "Braunschweig-Gliesmarode",
+          "Meine",
+          "Rötgesbüttel",
+          "Gifhorn",
+          "Gifhorn Stadt",
+          "Triangel",
+          "Wahrenholz",
+          "Schönewörde",
+          "Vorhop",
+          "Knesebeck",
+          "Wittingen",
+          "Bad Bodenteich",
+          "Wieren",
+          "Stederdorf(Kr Uelzen)",
+          "Uelzen"
+        ]
+      },
+      {
+        "id": "6267288721805116602-2510210529-1",
+        "type": "RB",
+        "number": "14141",
+        "direction": "Helmstedt",
+        "platform": "2b",
+        "time": "2510210529",
+        "destination": "Helmstedt",
+        "path_stations": [
+          "Weddel(Braunschw)",
+          "Schandelah",
+          "Königslutter",
+          "Frellstedt",
+          "Helmstedt"
+        ]
+      },
+      {
+        "id": "13788208783371667-2510210524-1",
+        "type": "erx",
+        "number": "81551",
+        "direction": "Goslar",
+        "platform": "1",
+        "time": "2510210524",
+        "destination": "Goslar",
+        "path_stations": [
+          "Wolfenbüttel",
+          "Börßum",
+          "Schladen(Harz)",
+          "Vienenburg",
+          "Oker",
+          "Goslar"
+        ]
+      },
+      {
+        "id": "8877134481212521389-2510210416-6",
+        "type": "ICE",
+        "number": "275",
+        "direction": "Interlaken Ost",
+        "platform": "6",
+        "time": "2510210557",
+        "destination": "Interlaken Ost",
+        "path_stations": [
+          "Hildesheim Hbf",
+          "Göttingen",
+          "Kassel-Wilhelmshöhe",
+          "Fulda",
+          "Hanau Hbf",
+          "Frankfurt(Main)Hbf",
+          "Mannheim Hbf",
+          "Karlsruhe Hbf",
+          "Offenburg",
+          "Freiburg(Breisgau) Hbf",
+          "Basel Bad Bf",
+          "Basel SBB",
+          "Liestal",
+          "Olten",
+          "Bern",
+          "Thun",
+          "Spiez",
+          "Interlaken West",
+          "Interlaken Ost"
+        ]
+      }
+    ]
+  }
+}

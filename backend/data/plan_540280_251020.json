@@ -1,0 +1,51 @@
+{
+  "station_eva": "540280",
+  "date": "251020",
+  "cached_at": "2025-10-20T15:49:16.149861",
+  "plan_data": {
+    "arrivals": [
+      {
+        "id": "3192211056643549014-2510202254-11",
+        "type": "Bus",
+        "number": "301",
+        "time": "2510210043",
+        "platform": "",
+        "path_stations": [
+          "Abzw. Bahnhof, Tapfheim",
+          "Bahnhof, Donauwörth",
+          "Raiffeisenbank, Genderkingen",
+          "Bahnhof, Rain (Lech)",
+          "Bahnhof, Burgheim",
+          "Straß Kirche, Burgheim",
+          "Unterhausen Bahnhof, Oberhausen an der Donau",
+          "Bahnhof, Neuburg a.d. Donau",
+          "Rohrenfeld",
+          "Weichering"
+        ],
+        "line": "EV"
+      }
+    ],
+    "departures": [
+      {
+        "id": "7103561790149531780-2510210043-1",
+        "type": "Bus",
+        "number": "302",
+        "direction": "Bahnhof, Donauwörth",
+        "platform": "",
+        "time": "2510210043",
+        "destination": "Bahnhof, Donauwörth",
+        "path_stations": [
+          "Weichering",
+          "Rohrenfeld",
+          "Bahnhof, Neuburg a.d. Donau",
+          "Unterhausen Bahnhof, Oberhausen an der Donau",
+          "Straß Kirche, Burgheim",
+          "Bahnhof, Burgheim",
+          "Bahnhof, Rain (Lech)",
+          "Raiffeisenbank, Genderkingen",
+          "Bahnhof, Donauwörth"
+        ]
+      }
+    ]
+  }
+}

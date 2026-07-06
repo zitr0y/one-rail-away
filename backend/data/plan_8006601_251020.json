@@ -1,0 +1,1015 @@
+{
+  "station_eva": "8006601",
+  "date": "251020",
+  "cached_at": "2025-10-20T16:36:15.229063",
+  "plan_data": {
+    "arrivals": [
+      {
+        "id": "-4441481217903881523-2510201801-2",
+        "type": "Bus",
+        "number": "6133",
+        "time": "2510201810",
+        "platform": "",
+        "path_stations": [
+          "Mettmann Stadtwald"
+        ],
+        "line": "S28"
+      },
+      {
+        "id": "-1097074576232297396-2510201822-5",
+        "type": "Bus",
+        "number": "6142",
+        "time": "2510201848",
+        "platform": "",
+        "path_stations": [
+          "Wuppertal Hbf",
+          "Wuppertal-Steinbeck",
+          "Wuppertal-Zoologischer Garten",
+          "Wuppertal-Vohwinkel"
+        ],
+        "line": "S28"
+      },
+      {
+        "id": "-6387426198179714800-2510201742-5",
+        "type": "Bus",
+        "number": "6732",
+        "time": "2510201808",
+        "platform": "",
+        "path_stations": [
+          "Wuppertal Hbf",
+          "Wuppertal-Steinbeck",
+          "Wuppertal-Zoologischer Garten",
+          "Wuppertal-Vohwinkel"
+        ],
+        "line": "S28"
+      },
+      {
+        "id": "7765007376901577686-2510201841-2",
+        "type": "Bus",
+        "number": "6733",
+        "time": "2510201850",
+        "platform": "",
+        "path_stations": [
+          "Mettmann Stadtwald"
+        ],
+        "line": "S28"
+      },
+      {
+        "id": "24187002908316345-2510201842-5",
+        "type": "Bus",
+        "number": "6742",
+        "time": "2510201908",
+        "platform": "",
+        "path_stations": [
+          "Wuppertal Hbf",
+          "Wuppertal-Steinbeck",
+          "Wuppertal-Zoologischer Garten",
+          "Wuppertal-Vohwinkel"
+        ],
+        "line": "S28"
+      },
+      {
+        "id": "4314149269621704022-2510201922-5",
+        "type": "Bus",
+        "number": "6152",
+        "time": "2510201948",
+        "platform": "",
+        "path_stations": [
+          "Wuppertal Hbf",
+          "Wuppertal-Steinbeck",
+          "Wuppertal-Zoologischer Garten",
+          "Wuppertal-Vohwinkel"
+        ],
+        "line": "S28"
+      },
+      {
+        "id": "3811473248737893966-2510201901-2",
+        "type": "Bus",
+        "number": "6143",
+        "time": "2510201910",
+        "platform": "",
+        "path_stations": [
+          "Mettmann Stadtwald"
+        ],
+        "line": "S28"
+      },
+      {
+        "id": "8544875520591106863-2510201931-2",
+        "type": "Bus",
+        "number": "6943",
+        "time": "2510201940",
+        "platform": "",
+        "path_stations": [
+          "Mettmann Stadtwald"
+        ],
+        "line": "S28"
+      },
+      {
+        "id": "975262261031760345-2510202001-2",
+        "type": "Bus",
+        "number": "6153",
+        "time": "2510202010",
+        "platform": "",
+        "path_stations": [
+          "Mettmann Stadtwald"
+        ],
+        "line": "S28"
+      },
+      {
+        "id": "2449248992205437820-2510201952-5",
+        "type": "Bus",
+        "number": "6952",
+        "time": "2510202018",
+        "platform": "",
+        "path_stations": [
+          "Wuppertal Hbf",
+          "Wuppertal-Steinbeck",
+          "Wuppertal-Zoologischer Garten",
+          "Wuppertal-Vohwinkel"
+        ],
+        "line": "S28"
+      },
+      {
+        "id": "-1822153495960193154-2510202022-5",
+        "type": "Bus",
+        "number": "6162",
+        "time": "2510202048",
+        "platform": "",
+        "path_stations": [
+          "Wuppertal Hbf",
+          "Wuppertal-Steinbeck",
+          "Wuppertal-Zoologischer Garten",
+          "Wuppertal-Vohwinkel"
+        ],
+        "line": "S28"
+      },
+      {
+        "id": "-7451464004676281219-2510201923-19",
+        "type": "S",
+        "number": "77259",
+        "time": "2510202031",
+        "platform": "",
+        "path_stations": [
+          "Kaarster See",
+          "Kaarster Bahnhof",
+          "Kaarst Mitte/Holzbüttgen",
+          "Kaarst IKEA",
+          "Neuss Hbf",
+          "Neuss Am Kaiser",
+          "Neuss Rheinparkcenter",
+          "Düsseldorf-Hamm",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf Hbf",
+          "Düsseldorf-Flingern",
+          "Düsseldorf-Gerresheim",
+          "Erkrath-Nord",
+          "Neanderthal",
+          "Mettmann Zentrum",
+          "Mettmann Stadtwald"
+        ],
+        "line": "28"
+      },
+      {
+        "id": "203212035540220848-2510202113-5",
+        "type": "S",
+        "number": "77296",
+        "time": "2510202127",
+        "platform": "",
+        "path_stations": [
+          "Wuppertal Hbf",
+          "Wuppertal-Steinbeck",
+          "Wuppertal-Zoologischer Garten",
+          "Wuppertal-Vohwinkel"
+        ],
+        "line": "28"
+      },
+      {
+        "id": "546396644572880711-2510202143-5",
+        "type": "S",
+        "number": "77298",
+        "time": "2510202157",
+        "platform": "",
+        "path_stations": [
+          "Wuppertal Hbf",
+          "Wuppertal-Steinbeck",
+          "Wuppertal-Zoologischer Garten",
+          "Wuppertal-Vohwinkel"
+        ],
+        "line": "28"
+      },
+      {
+        "id": "5019535759543862918-2510202003-19",
+        "type": "S",
+        "number": "77265",
+        "time": "2510202101",
+        "platform": "",
+        "path_stations": [
+          "Kaarster See",
+          "Kaarster Bahnhof",
+          "Kaarst Mitte/Holzbüttgen",
+          "Kaarst IKEA",
+          "Neuss Hbf",
+          "Neuss Am Kaiser",
+          "Neuss Rheinparkcenter",
+          "Düsseldorf-Hamm",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf Hbf",
+          "Düsseldorf-Flingern",
+          "Düsseldorf-Gerresheim",
+          "Erkrath-Nord",
+          "Neanderthal",
+          "Mettmann Zentrum",
+          "Mettmann Stadtwald"
+        ],
+        "line": "28"
+      },
+      {
+        "id": "-2195514002621255354-2510202033-19",
+        "type": "S",
+        "number": "77267",
+        "time": "2510202131",
+        "platform": "",
+        "path_stations": [
+          "Kaarster See",
+          "Kaarster Bahnhof",
+          "Kaarst Mitte/Holzbüttgen",
+          "Kaarst IKEA",
+          "Neuss Hbf",
+          "Neuss Am Kaiser",
+          "Neuss Rheinparkcenter",
+          "Düsseldorf-Hamm",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf Hbf",
+          "Düsseldorf-Flingern",
+          "Düsseldorf-Gerresheim",
+          "Erkrath-Nord",
+          "Neanderthal",
+          "Mettmann Zentrum",
+          "Mettmann Stadtwald"
+        ],
+        "line": "28"
+      },
+      {
+        "id": "8994618182400318410-2510202243-5",
+        "type": "S",
+        "number": "77285",
+        "time": "2510202257",
+        "platform": "",
+        "path_stations": [
+          "Wuppertal Hbf",
+          "Wuppertal-Steinbeck",
+          "Wuppertal-Zoologischer Garten",
+          "Wuppertal-Vohwinkel"
+        ],
+        "line": "28"
+      },
+      {
+        "id": "-8417452943845116718-2510202213-5",
+        "type": "S",
+        "number": "77283",
+        "time": "2510202227",
+        "platform": "",
+        "path_stations": [
+          "Wuppertal Hbf",
+          "Wuppertal-Steinbeck",
+          "Wuppertal-Zoologischer Garten",
+          "Wuppertal-Vohwinkel"
+        ],
+        "line": "28"
+      },
+      {
+        "id": "4717533647827006533-2510202117-15",
+        "type": "S",
+        "number": "77269",
+        "time": "2510202201",
+        "platform": "",
+        "path_stations": [
+          "Neuss Hbf",
+          "Neuss Am Kaiser",
+          "Neuss Rheinparkcenter",
+          "Düsseldorf-Hamm",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf Hbf",
+          "Düsseldorf-Flingern",
+          "Düsseldorf-Gerresheim",
+          "Erkrath-Nord",
+          "Neanderthal",
+          "Mettmann Zentrum",
+          "Mettmann Stadtwald"
+        ],
+        "line": "28"
+      },
+      {
+        "id": "-7181477249459275172-2510202147-15",
+        "type": "S",
+        "number": "77271",
+        "time": "2510202231",
+        "platform": "",
+        "path_stations": [
+          "Neuss Hbf",
+          "Neuss Am Kaiser",
+          "Neuss Rheinparkcenter",
+          "Düsseldorf-Hamm",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf Hbf",
+          "Düsseldorf-Flingern",
+          "Düsseldorf-Gerresheim",
+          "Erkrath-Nord",
+          "Neanderthal",
+          "Mettmann Zentrum",
+          "Mettmann Stadtwald"
+        ],
+        "line": "28"
+      },
+      {
+        "id": "-8154530913437353903-2510202313-5",
+        "type": "S",
+        "number": "77289",
+        "time": "2510202327",
+        "platform": "",
+        "path_stations": [
+          "Wuppertal Hbf",
+          "Wuppertal-Steinbeck",
+          "Wuppertal-Zoologischer Garten",
+          "Wuppertal-Vohwinkel"
+        ],
+        "line": "28"
+      },
+      {
+        "id": "-7716481442700032689-2510202343-5",
+        "type": "S",
+        "number": "77291",
+        "time": "2510202357",
+        "platform": "",
+        "path_stations": [
+          "Wuppertal Hbf",
+          "Wuppertal-Steinbeck",
+          "Wuppertal-Zoologischer Garten",
+          "Wuppertal-Vohwinkel"
+        ],
+        "line": "28"
+      },
+      {
+        "id": "6488780246185059788-2510202217-15",
+        "type": "S",
+        "number": "77273",
+        "time": "2510202301",
+        "platform": "",
+        "path_stations": [
+          "Neuss Hbf",
+          "Neuss Am Kaiser",
+          "Neuss Rheinparkcenter",
+          "Düsseldorf-Hamm",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf Hbf",
+          "Düsseldorf-Flingern",
+          "Düsseldorf-Gerresheim",
+          "Erkrath-Nord",
+          "Neanderthal",
+          "Mettmann Zentrum",
+          "Mettmann Stadtwald"
+        ],
+        "line": "28"
+      },
+      {
+        "id": "8249020227594927500-2510210043-5",
+        "type": "S",
+        "number": "77128",
+        "time": "2510210057",
+        "platform": "",
+        "path_stations": [
+          "Wuppertal Hbf",
+          "Wuppertal-Steinbeck",
+          "Wuppertal-Zoologischer Garten",
+          "Wuppertal-Vohwinkel"
+        ],
+        "line": "28"
+      },
+      {
+        "id": "7135190760391732575-2510202317-15",
+        "type": "S",
+        "number": "77279",
+        "time": "2510210001",
+        "platform": "",
+        "path_stations": [
+          "Neuss Hbf",
+          "Neuss Am Kaiser",
+          "Neuss Rheinparkcenter",
+          "Düsseldorf-Hamm",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf Hbf",
+          "Düsseldorf-Flingern",
+          "Düsseldorf-Gerresheim",
+          "Erkrath-Nord",
+          "Neanderthal",
+          "Mettmann Zentrum",
+          "Mettmann Stadtwald"
+        ],
+        "line": "28"
+      },
+      {
+        "id": "574127997584735381-2510210501-2",
+        "type": "Bus",
+        "number": "6003",
+        "time": "2510210510",
+        "platform": "",
+        "path_stations": [
+          "Mettmann Stadtwald"
+        ],
+        "line": "S28"
+      },
+      {
+        "id": "-4862850665574282348-2510210541-2",
+        "type": "Bus",
+        "number": "6603",
+        "time": "2510210550",
+        "platform": "",
+        "path_stations": [
+          "Mettmann Stadtwald"
+        ],
+        "line": "S28"
+      },
+      {
+        "id": "-6848541856216457433-2510210522-5",
+        "type": "Bus",
+        "number": "6012",
+        "time": "2510210548",
+        "platform": "",
+        "path_stations": [
+          "Wuppertal Hbf",
+          "Wuppertal-Steinbeck",
+          "Wuppertal-Zoologischer Garten",
+          "Wuppertal-Vohwinkel"
+        ],
+        "line": "S28"
+      },
+      {
+        "id": "3875412756136362433-2510210542-5",
+        "type": "Bus",
+        "number": "6612",
+        "time": "2510210608",
+        "platform": "",
+        "path_stations": [
+          "Wuppertal Hbf",
+          "Wuppertal-Steinbeck",
+          "Wuppertal-Zoologischer Garten",
+          "Wuppertal-Vohwinkel"
+        ],
+        "line": "S28"
+      },
+      {
+        "id": "-6505225395266635926-2510210622-5",
+        "type": "Bus",
+        "number": "6022",
+        "time": "2510210648",
+        "platform": "",
+        "path_stations": [
+          "Wuppertal Hbf",
+          "Wuppertal-Steinbeck",
+          "Wuppertal-Zoologischer Garten",
+          "Wuppertal-Vohwinkel"
+        ],
+        "line": "S28"
+      },
+      {
+        "id": "7392356281046738526-2510210641-2",
+        "type": "Bus",
+        "number": "6613",
+        "time": "2510210650",
+        "platform": "",
+        "path_stations": [
+          "Mettmann Stadtwald"
+        ],
+        "line": "S28"
+      },
+      {
+        "id": "-1253289804165455078-2510210601-2",
+        "type": "Bus",
+        "number": "6013",
+        "time": "2510210610",
+        "platform": "",
+        "path_stations": [
+          "Mettmann Stadtwald"
+        ],
+        "line": "S28"
+      }
+    ],
+    "departures": [
+      {
+        "id": "-4441481217903881523-2510201801-2",
+        "type": "Bus",
+        "number": "6133",
+        "direction": "Wuppertal Hbf",
+        "platform": "",
+        "time": "2510201810",
+        "destination": "Wuppertal Hbf",
+        "path_stations": [
+          "Wuppertal-Vohwinkel",
+          "Wuppertal-Zoologischer Garten",
+          "Wuppertal-Steinbeck",
+          "Wuppertal Hbf"
+        ]
+      },
+      {
+        "id": "-1097074576232297396-2510201822-5",
+        "type": "Bus",
+        "number": "6142",
+        "direction": "Mettmann Stadtwald",
+        "platform": "",
+        "time": "2510201848",
+        "destination": "Mettmann Stadtwald",
+        "path_stations": [
+          "Mettmann Stadtwald"
+        ]
+      },
+      {
+        "id": "-6387426198179714800-2510201742-5",
+        "type": "Bus",
+        "number": "6732",
+        "direction": "Mettmann Stadtwald",
+        "platform": "",
+        "time": "2510201808",
+        "destination": "Mettmann Stadtwald",
+        "path_stations": [
+          "Mettmann Stadtwald"
+        ]
+      },
+      {
+        "id": "7765007376901577686-2510201841-2",
+        "type": "Bus",
+        "number": "6733",
+        "direction": "Wuppertal Hbf",
+        "platform": "",
+        "time": "2510201850",
+        "destination": "Wuppertal Hbf",
+        "path_stations": [
+          "Wuppertal-Vohwinkel",
+          "Wuppertal-Zoologischer Garten",
+          "Wuppertal-Steinbeck",
+          "Wuppertal Hbf"
+        ]
+      },
+      {
+        "id": "24187002908316345-2510201842-5",
+        "type": "Bus",
+        "number": "6742",
+        "direction": "Mettmann Stadtwald",
+        "platform": "",
+        "time": "2510201908",
+        "destination": "Mettmann Stadtwald",
+        "path_stations": [
+          "Mettmann Stadtwald"
+        ]
+      },
+      {
+        "id": "4314149269621704022-2510201922-5",
+        "type": "Bus",
+        "number": "6152",
+        "direction": "Mettmann Stadtwald",
+        "platform": "",
+        "time": "2510201948",
+        "destination": "Mettmann Stadtwald",
+        "path_stations": [
+          "Mettmann Stadtwald"
+        ]
+      },
+      {
+        "id": "3811473248737893966-2510201901-2",
+        "type": "Bus",
+        "number": "6143",
+        "direction": "Wuppertal Hbf",
+        "platform": "",
+        "time": "2510201910",
+        "destination": "Wuppertal Hbf",
+        "path_stations": [
+          "Wuppertal-Vohwinkel",
+          "Wuppertal-Zoologischer Garten",
+          "Wuppertal-Steinbeck",
+          "Wuppertal Hbf"
+        ]
+      },
+      {
+        "id": "8544875520591106863-2510201931-2",
+        "type": "Bus",
+        "number": "6943",
+        "direction": "Wuppertal Hbf",
+        "platform": "",
+        "time": "2510201940",
+        "destination": "Wuppertal Hbf",
+        "path_stations": [
+          "Wuppertal-Vohwinkel",
+          "Wuppertal-Zoologischer Garten",
+          "Wuppertal-Steinbeck",
+          "Wuppertal Hbf"
+        ]
+      },
+      {
+        "id": "975262261031760345-2510202001-2",
+        "type": "Bus",
+        "number": "6153",
+        "direction": "Wuppertal Hbf",
+        "platform": "",
+        "time": "2510202010",
+        "destination": "Wuppertal Hbf",
+        "path_stations": [
+          "Wuppertal-Vohwinkel",
+          "Wuppertal-Zoologischer Garten",
+          "Wuppertal-Steinbeck",
+          "Wuppertal Hbf"
+        ]
+      },
+      {
+        "id": "2449248992205437820-2510201952-5",
+        "type": "Bus",
+        "number": "6952",
+        "direction": "Mettmann Stadtwald",
+        "platform": "",
+        "time": "2510202018",
+        "destination": "Mettmann Stadtwald",
+        "path_stations": [
+          "Mettmann Stadtwald"
+        ]
+      },
+      {
+        "id": "-1822153495960193154-2510202022-5",
+        "type": "Bus",
+        "number": "6162",
+        "direction": "Mettmann Stadtwald",
+        "platform": "",
+        "time": "2510202048",
+        "destination": "Mettmann Stadtwald",
+        "path_stations": [
+          "Mettmann Stadtwald"
+        ]
+      },
+      {
+        "id": "-7451464004676281219-2510201923-19",
+        "type": "S",
+        "number": "77259",
+        "direction": "Wuppertal Hbf",
+        "platform": "",
+        "time": "2510202032",
+        "destination": "Wuppertal Hbf",
+        "path_stations": [
+          "Wuppertal-Vohwinkel",
+          "Wuppertal-Zoologischer Garten",
+          "Wuppertal-Steinbeck",
+          "Wuppertal Hbf"
+        ]
+      },
+      {
+        "id": "203212035540220848-2510202113-5",
+        "type": "S",
+        "number": "77296",
+        "direction": "Neuss Hbf",
+        "platform": "",
+        "time": "2510202128",
+        "destination": "Neuss Hbf",
+        "path_stations": [
+          "Mettmann Stadtwald",
+          "Mettmann Zentrum",
+          "Neanderthal",
+          "Erkrath-Nord",
+          "Düsseldorf-Gerresheim",
+          "Düsseldorf-Flingern",
+          "Düsseldorf Hbf",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Hamm",
+          "Neuss Rheinparkcenter",
+          "Neuss Am Kaiser",
+          "Neuss Hbf"
+        ]
+      },
+      {
+        "id": "546396644572880711-2510202143-5",
+        "type": "S",
+        "number": "77298",
+        "direction": "Neuss Hbf",
+        "platform": "",
+        "time": "2510202158",
+        "destination": "Neuss Hbf",
+        "path_stations": [
+          "Mettmann Stadtwald",
+          "Mettmann Zentrum",
+          "Neanderthal",
+          "Erkrath-Nord",
+          "Düsseldorf-Gerresheim",
+          "Düsseldorf-Flingern",
+          "Düsseldorf Hbf",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Hamm",
+          "Neuss Rheinparkcenter",
+          "Neuss Am Kaiser",
+          "Neuss Hbf"
+        ]
+      },
+      {
+        "id": "5019535759543862918-2510202003-19",
+        "type": "S",
+        "number": "77265",
+        "direction": "Wuppertal Hbf",
+        "platform": "",
+        "time": "2510202102",
+        "destination": "Wuppertal Hbf",
+        "path_stations": [
+          "Wuppertal-Vohwinkel",
+          "Wuppertal-Zoologischer Garten",
+          "Wuppertal-Steinbeck",
+          "Wuppertal Hbf"
+        ]
+      },
+      {
+        "id": "-2195514002621255354-2510202033-19",
+        "type": "S",
+        "number": "77267",
+        "direction": "Wuppertal Hbf",
+        "platform": "",
+        "time": "2510202132",
+        "destination": "Wuppertal Hbf",
+        "path_stations": [
+          "Wuppertal-Vohwinkel",
+          "Wuppertal-Zoologischer Garten",
+          "Wuppertal-Steinbeck",
+          "Wuppertal Hbf"
+        ]
+      },
+      {
+        "id": "8994618182400318410-2510202243-5",
+        "type": "S",
+        "number": "77285",
+        "direction": "Neuss Hbf",
+        "platform": "",
+        "time": "2510202258",
+        "destination": "Neuss Hbf",
+        "path_stations": [
+          "Mettmann Stadtwald",
+          "Mettmann Zentrum",
+          "Neanderthal",
+          "Erkrath-Nord",
+          "Düsseldorf-Gerresheim",
+          "Düsseldorf-Flingern",
+          "Düsseldorf Hbf",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Hamm",
+          "Neuss Rheinparkcenter",
+          "Neuss Am Kaiser",
+          "Neuss Hbf"
+        ]
+      },
+      {
+        "id": "-8417452943845116718-2510202213-5",
+        "type": "S",
+        "number": "77283",
+        "direction": "Neuss Hbf",
+        "platform": "",
+        "time": "2510202228",
+        "destination": "Neuss Hbf",
+        "path_stations": [
+          "Mettmann Stadtwald",
+          "Mettmann Zentrum",
+          "Neanderthal",
+          "Erkrath-Nord",
+          "Düsseldorf-Gerresheim",
+          "Düsseldorf-Flingern",
+          "Düsseldorf Hbf",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Hamm",
+          "Neuss Rheinparkcenter",
+          "Neuss Am Kaiser",
+          "Neuss Hbf"
+        ]
+      },
+      {
+        "id": "4717533647827006533-2510202117-15",
+        "type": "S",
+        "number": "77269",
+        "direction": "Wuppertal Hbf",
+        "platform": "",
+        "time": "2510202202",
+        "destination": "Wuppertal Hbf",
+        "path_stations": [
+          "Wuppertal-Vohwinkel",
+          "Wuppertal-Zoologischer Garten",
+          "Wuppertal-Steinbeck",
+          "Wuppertal Hbf"
+        ]
+      },
+      {
+        "id": "-7181477249459275172-2510202147-15",
+        "type": "S",
+        "number": "77271",
+        "direction": "Wuppertal Hbf",
+        "platform": "",
+        "time": "2510202232",
+        "destination": "Wuppertal Hbf",
+        "path_stations": [
+          "Wuppertal-Vohwinkel",
+          "Wuppertal-Zoologischer Garten",
+          "Wuppertal-Steinbeck",
+          "Wuppertal Hbf"
+        ]
+      },
+      {
+        "id": "-8154530913437353903-2510202313-5",
+        "type": "S",
+        "number": "77289",
+        "direction": "Mettmann Stadtwald",
+        "platform": "",
+        "time": "2510202328",
+        "destination": "Mettmann Stadtwald",
+        "path_stations": [
+          "Mettmann Stadtwald"
+        ]
+      },
+      {
+        "id": "-7716481442700032689-2510202343-5",
+        "type": "S",
+        "number": "77291",
+        "direction": "Kaarster See",
+        "platform": "",
+        "time": "2510202358",
+        "destination": "Kaarster See",
+        "path_stations": [
+          "Mettmann Stadtwald",
+          "Mettmann Zentrum",
+          "Neanderthal",
+          "Erkrath-Nord",
+          "Düsseldorf-Gerresheim",
+          "Düsseldorf-Flingern",
+          "Düsseldorf Hbf",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Hamm",
+          "Neuss Rheinparkcenter",
+          "Neuss Am Kaiser",
+          "Neuss Hbf",
+          "Kaarst IKEA",
+          "Kaarst Mitte/Holzbüttgen",
+          "Kaarster Bahnhof",
+          "Kaarster See"
+        ]
+      },
+      {
+        "id": "6488780246185059788-2510202217-15",
+        "type": "S",
+        "number": "77273",
+        "direction": "Wuppertal Hbf",
+        "platform": "",
+        "time": "2510202302",
+        "destination": "Wuppertal Hbf",
+        "path_stations": [
+          "Wuppertal-Vohwinkel",
+          "Wuppertal-Zoologischer Garten",
+          "Wuppertal-Steinbeck",
+          "Wuppertal Hbf"
+        ]
+      },
+      {
+        "id": "8249020227594927500-2510210043-5",
+        "type": "S",
+        "number": "77128",
+        "direction": "Mettmann Stadtwald",
+        "platform": "",
+        "time": "2510210058",
+        "destination": "Mettmann Stadtwald",
+        "path_stations": [
+          "Mettmann Stadtwald"
+        ]
+      },
+      {
+        "id": "7135190760391732575-2510202317-15",
+        "type": "S",
+        "number": "77279",
+        "direction": "Wuppertal Hbf",
+        "platform": "",
+        "time": "2510210002",
+        "destination": "Wuppertal Hbf",
+        "path_stations": [
+          "Wuppertal-Vohwinkel",
+          "Wuppertal-Zoologischer Garten",
+          "Wuppertal-Steinbeck",
+          "Wuppertal Hbf"
+        ]
+      },
+      {
+        "id": "574127997584735381-2510210501-2",
+        "type": "Bus",
+        "number": "6003",
+        "direction": "Wuppertal Hbf",
+        "platform": "",
+        "time": "2510210510",
+        "destination": "Wuppertal Hbf",
+        "path_stations": [
+          "Wuppertal-Vohwinkel",
+          "Wuppertal-Zoologischer Garten",
+          "Wuppertal-Steinbeck",
+          "Wuppertal Hbf"
+        ]
+      },
+      {
+        "id": "-4862850665574282348-2510210541-2",
+        "type": "Bus",
+        "number": "6603",
+        "direction": "Wuppertal Hbf",
+        "platform": "",
+        "time": "2510210550",
+        "destination": "Wuppertal Hbf",
+        "path_stations": [
+          "Wuppertal-Vohwinkel",
+          "Wuppertal-Zoologischer Garten",
+          "Wuppertal-Steinbeck",
+          "Wuppertal Hbf"
+        ]
+      },
+      {
+        "id": "-6848541856216457433-2510210522-5",
+        "type": "Bus",
+        "number": "6012",
+        "direction": "Mettmann Stadtwald",
+        "platform": "",
+        "time": "2510210548",
+        "destination": "Mettmann Stadtwald",
+        "path_stations": [
+          "Mettmann Stadtwald"
+        ]
+      },
+      {
+        "id": "3875412756136362433-2510210542-5",
+        "type": "Bus",
+        "number": "6612",
+        "direction": "Mettmann Stadtwald",
+        "platform": "",
+        "time": "2510210608",
+        "destination": "Mettmann Stadtwald",
+        "path_stations": [
+          "Mettmann Stadtwald"
+        ]
+      },
+      {
+        "id": "-6505225395266635926-2510210622-5",
+        "type": "Bus",
+        "number": "6022",
+        "direction": "Mettmann Stadtwald",
+        "platform": "",
+        "time": "2510210648",
+        "destination": "Mettmann Stadtwald",
+        "path_stations": [
+          "Mettmann Stadtwald"
+        ]
+      },
+      {
+        "id": "7392356281046738526-2510210641-2",
+        "type": "Bus",
+        "number": "6613",
+        "direction": "Wuppertal Hbf",
+        "platform": "",
+        "time": "2510210650",
+        "destination": "Wuppertal Hbf",
+        "path_stations": [
+          "Wuppertal-Vohwinkel",
+          "Wuppertal-Zoologischer Garten",
+          "Wuppertal-Steinbeck",
+          "Wuppertal Hbf"
+        ]
+      },
+      {
+        "id": "-1253289804165455078-2510210601-2",
+        "type": "Bus",
+        "number": "6013",
+        "direction": "Wuppertal Hbf",
+        "platform": "",
+        "time": "2510210610",
+        "destination": "Wuppertal Hbf",
+        "path_stations": [
+          "Wuppertal-Vohwinkel",
+          "Wuppertal-Zoologischer Garten",
+          "Wuppertal-Steinbeck",
+          "Wuppertal Hbf"
+        ]
+      }
+    ]
+  }
+}

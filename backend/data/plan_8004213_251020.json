@@ -1,0 +1,1566 @@
+{
+  "station_eva": "8004213",
+  "date": "251020",
+  "cached_at": "2025-10-20T16:36:29.416975",
+  "plan_data": {
+    "arrivals": [
+      {
+        "id": "451600244733258171-2510201743-16",
+        "type": "S",
+        "number": "77247",
+        "time": "2510201831",
+        "platform": "",
+        "path_stations": [
+          "Kaarster See",
+          "Kaarster Bahnhof",
+          "Kaarst Mitte/Holzbüttgen",
+          "Kaarst IKEA",
+          "Neuss Hbf",
+          "Neuss Am Kaiser",
+          "Neuss Rheinparkcenter",
+          "Düsseldorf-Hamm",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf Hbf",
+          "Düsseldorf-Flingern",
+          "Düsseldorf-Gerresheim",
+          "Erkrath-Nord"
+        ],
+        "line": "28"
+      },
+      {
+        "id": "2028729477315283775-2510201803-16",
+        "type": "S",
+        "number": "77249",
+        "time": "2510201851",
+        "platform": "",
+        "path_stations": [
+          "Kaarster See",
+          "Kaarster Bahnhof",
+          "Kaarst Mitte/Holzbüttgen",
+          "Kaarst IKEA",
+          "Neuss Hbf",
+          "Neuss Am Kaiser",
+          "Neuss Rheinparkcenter",
+          "Düsseldorf-Hamm",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf Hbf",
+          "Düsseldorf-Flingern",
+          "Düsseldorf-Gerresheim",
+          "Erkrath-Nord"
+        ],
+        "line": "28"
+      },
+      {
+        "id": "-6450515459978002825-2510201723-16",
+        "type": "S",
+        "number": "77243",
+        "time": "2510201811",
+        "platform": "",
+        "path_stations": [
+          "Kaarster See",
+          "Kaarster Bahnhof",
+          "Kaarst Mitte/Holzbüttgen",
+          "Kaarst IKEA",
+          "Neuss Hbf",
+          "Neuss Am Kaiser",
+          "Neuss Rheinparkcenter",
+          "Düsseldorf-Hamm",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf Hbf",
+          "Düsseldorf-Flingern",
+          "Düsseldorf-Gerresheim",
+          "Erkrath-Nord"
+        ],
+        "line": "28"
+      },
+      {
+        "id": "3566722618891094081-2510201843-3",
+        "type": "S",
+        "number": "77280",
+        "time": "2510201849",
+        "platform": "",
+        "path_stations": [
+          "Mettmann Stadtwald",
+          "Mettmann Zentrum"
+        ],
+        "line": "28"
+      },
+      {
+        "id": "6473674020655541900-2510201823-3",
+        "type": "S",
+        "number": "77276",
+        "time": "2510201829",
+        "platform": "",
+        "path_stations": [
+          "Mettmann Stadtwald",
+          "Mettmann Zentrum"
+        ],
+        "line": "28"
+      },
+      {
+        "id": "5938233094820411455-2510201803-3",
+        "type": "S",
+        "number": "77272",
+        "time": "2510201809",
+        "platform": "",
+        "path_stations": [
+          "Mettmann Stadtwald",
+          "Mettmann Zentrum"
+        ],
+        "line": "28"
+      },
+      {
+        "id": "-521558872693083101-2510201933-3",
+        "type": "S",
+        "number": "77286",
+        "time": "2510201939",
+        "platform": "",
+        "path_stations": [
+          "Mettmann Stadtwald",
+          "Mettmann Zentrum"
+        ],
+        "line": "28"
+      },
+      {
+        "id": "-72622681038882144-2510201843-16",
+        "type": "S",
+        "number": "77255",
+        "time": "2510201931",
+        "platform": "",
+        "path_stations": [
+          "Kaarster See",
+          "Kaarster Bahnhof",
+          "Kaarst Mitte/Holzbüttgen",
+          "Kaarst IKEA",
+          "Neuss Hbf",
+          "Neuss Am Kaiser",
+          "Neuss Rheinparkcenter",
+          "Düsseldorf-Hamm",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf Hbf",
+          "Düsseldorf-Flingern",
+          "Düsseldorf-Gerresheim",
+          "Erkrath-Nord"
+        ],
+        "line": "28"
+      },
+      {
+        "id": "-1501092596952390632-2510201903-3",
+        "type": "S",
+        "number": "77282",
+        "time": "2510201909",
+        "platform": "",
+        "path_stations": [
+          "Mettmann Stadtwald",
+          "Mettmann Zentrum"
+        ],
+        "line": "28"
+      },
+      {
+        "id": "-1315650275512591425-2510201823-16",
+        "type": "S",
+        "number": "77251",
+        "time": "2510201911",
+        "platform": "",
+        "path_stations": [
+          "Kaarster See",
+          "Kaarster Bahnhof",
+          "Kaarst Mitte/Holzbüttgen",
+          "Kaarst IKEA",
+          "Neuss Hbf",
+          "Neuss Am Kaiser",
+          "Neuss Rheinparkcenter",
+          "Düsseldorf-Hamm",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf Hbf",
+          "Düsseldorf-Flingern",
+          "Düsseldorf-Gerresheim",
+          "Erkrath-Nord"
+        ],
+        "line": "28"
+      },
+      {
+        "id": "-7895011825124768262-2510201903-16",
+        "type": "S",
+        "number": "77257",
+        "time": "2510201951",
+        "platform": "",
+        "path_stations": [
+          "Kaarster See",
+          "Kaarster Bahnhof",
+          "Kaarst Mitte/Holzbüttgen",
+          "Kaarst IKEA",
+          "Neuss Hbf",
+          "Neuss Am Kaiser",
+          "Neuss Rheinparkcenter",
+          "Düsseldorf-Hamm",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf Hbf",
+          "Düsseldorf-Flingern",
+          "Düsseldorf-Gerresheim",
+          "Erkrath-Nord"
+        ],
+        "line": "28"
+      },
+      {
+        "id": "-4996124314744009325-2510202033-3",
+        "type": "S",
+        "number": "77292",
+        "time": "2510202039",
+        "platform": "",
+        "path_stations": [
+          "Mettmann Stadtwald",
+          "Mettmann Zentrum"
+        ],
+        "line": "28"
+      },
+      {
+        "id": "5019535759543862918-2510202003-16",
+        "type": "S",
+        "number": "77265",
+        "time": "2510202051",
+        "platform": "",
+        "path_stations": [
+          "Kaarster See",
+          "Kaarster Bahnhof",
+          "Kaarst Mitte/Holzbüttgen",
+          "Kaarst IKEA",
+          "Neuss Hbf",
+          "Neuss Am Kaiser",
+          "Neuss Rheinparkcenter",
+          "Düsseldorf-Hamm",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf Hbf",
+          "Düsseldorf-Flingern",
+          "Düsseldorf-Gerresheim",
+          "Erkrath-Nord"
+        ],
+        "line": "28"
+      },
+      {
+        "id": "2043179101043099013-2510202003-3",
+        "type": "S",
+        "number": "77290",
+        "time": "2510202009",
+        "platform": "",
+        "path_stations": [
+          "Mettmann Stadtwald",
+          "Mettmann Zentrum"
+        ],
+        "line": "28"
+      },
+      {
+        "id": "1125751725552536488-2510201943-16",
+        "type": "S",
+        "number": "77263",
+        "time": "2510202031",
+        "platform": "",
+        "path_stations": [
+          "Kaarster See",
+          "Kaarster Bahnhof",
+          "Kaarst Mitte/Holzbüttgen",
+          "Kaarst IKEA",
+          "Neuss Hbf",
+          "Neuss Am Kaiser",
+          "Neuss Rheinparkcenter",
+          "Düsseldorf-Hamm",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf Hbf",
+          "Düsseldorf-Flingern",
+          "Düsseldorf-Gerresheim",
+          "Erkrath-Nord"
+        ],
+        "line": "28"
+      },
+      {
+        "id": "-7451464004676281219-2510201923-16",
+        "type": "S",
+        "number": "77259",
+        "time": "2510202021",
+        "platform": "",
+        "path_stations": [
+          "Kaarster See",
+          "Kaarster Bahnhof",
+          "Kaarst Mitte/Holzbüttgen",
+          "Kaarst IKEA",
+          "Neuss Hbf",
+          "Neuss Am Kaiser",
+          "Neuss Rheinparkcenter",
+          "Düsseldorf-Hamm",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf Hbf",
+          "Düsseldorf-Flingern",
+          "Düsseldorf-Gerresheim",
+          "Erkrath-Nord"
+        ],
+        "line": "28"
+      },
+      {
+        "id": "203212035540220848-2510202113-8",
+        "type": "S",
+        "number": "77296",
+        "time": "2510202139",
+        "platform": "",
+        "path_stations": [
+          "Wuppertal Hbf",
+          "Wuppertal-Steinbeck",
+          "Wuppertal-Zoologischer Garten",
+          "Wuppertal-Vohwinkel",
+          "Wuppertal-Hahnenfurth/Düssel",
+          "Mettmann Stadtwald",
+          "Mettmann Zentrum"
+        ],
+        "line": "28"
+      },
+      {
+        "id": "-8580843902993245405-2510202103-3",
+        "type": "S",
+        "number": "77294",
+        "time": "2510202109",
+        "platform": "",
+        "path_stations": [
+          "Mettmann Stadtwald",
+          "Mettmann Zentrum"
+        ],
+        "line": "28"
+      },
+      {
+        "id": "4717533647827006533-2510202117-12",
+        "type": "S",
+        "number": "77269",
+        "time": "2510202151",
+        "platform": "",
+        "path_stations": [
+          "Neuss Hbf",
+          "Neuss Am Kaiser",
+          "Neuss Rheinparkcenter",
+          "Düsseldorf-Hamm",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf Hbf",
+          "Düsseldorf-Flingern",
+          "Düsseldorf-Gerresheim",
+          "Erkrath-Nord"
+        ],
+        "line": "28"
+      },
+      {
+        "id": "-2195514002621255354-2510202033-16",
+        "type": "S",
+        "number": "77267",
+        "time": "2510202121",
+        "platform": "",
+        "path_stations": [
+          "Kaarster See",
+          "Kaarster Bahnhof",
+          "Kaarst Mitte/Holzbüttgen",
+          "Kaarst IKEA",
+          "Neuss Hbf",
+          "Neuss Am Kaiser",
+          "Neuss Rheinparkcenter",
+          "Düsseldorf-Hamm",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf Hbf",
+          "Düsseldorf-Flingern",
+          "Düsseldorf-Gerresheim",
+          "Erkrath-Nord"
+        ],
+        "line": "28"
+      },
+      {
+        "id": "546396644572880711-2510202143-8",
+        "type": "S",
+        "number": "77298",
+        "time": "2510202209",
+        "platform": "",
+        "path_stations": [
+          "Wuppertal Hbf",
+          "Wuppertal-Steinbeck",
+          "Wuppertal-Zoologischer Garten",
+          "Wuppertal-Vohwinkel",
+          "Wuppertal-Hahnenfurth/Düssel",
+          "Mettmann Stadtwald",
+          "Mettmann Zentrum"
+        ],
+        "line": "28"
+      },
+      {
+        "id": "-8417452943845116718-2510202213-8",
+        "type": "S",
+        "number": "77283",
+        "time": "2510202239",
+        "platform": "",
+        "path_stations": [
+          "Wuppertal Hbf",
+          "Wuppertal-Steinbeck",
+          "Wuppertal-Zoologischer Garten",
+          "Wuppertal-Vohwinkel",
+          "Wuppertal-Hahnenfurth/Düssel",
+          "Mettmann Stadtwald",
+          "Mettmann Zentrum"
+        ],
+        "line": "28"
+      },
+      {
+        "id": "6488780246185059788-2510202217-12",
+        "type": "S",
+        "number": "77273",
+        "time": "2510202251",
+        "platform": "",
+        "path_stations": [
+          "Neuss Hbf",
+          "Neuss Am Kaiser",
+          "Neuss Rheinparkcenter",
+          "Düsseldorf-Hamm",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf Hbf",
+          "Düsseldorf-Flingern",
+          "Düsseldorf-Gerresheim",
+          "Erkrath-Nord"
+        ],
+        "line": "28"
+      },
+      {
+        "id": "-7181477249459275172-2510202147-12",
+        "type": "S",
+        "number": "77271",
+        "time": "2510202221",
+        "platform": "",
+        "path_stations": [
+          "Neuss Hbf",
+          "Neuss Am Kaiser",
+          "Neuss Rheinparkcenter",
+          "Düsseldorf-Hamm",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf Hbf",
+          "Düsseldorf-Flingern",
+          "Düsseldorf-Gerresheim",
+          "Erkrath-Nord"
+        ],
+        "line": "28"
+      },
+      {
+        "id": "-1695883451582804858-2510202247-12",
+        "type": "S",
+        "number": "77275",
+        "time": "2510202321",
+        "platform": "",
+        "path_stations": [
+          "Neuss Hbf",
+          "Neuss Am Kaiser",
+          "Neuss Rheinparkcenter",
+          "Düsseldorf-Hamm",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf Hbf",
+          "Düsseldorf-Flingern",
+          "Düsseldorf-Gerresheim",
+          "Erkrath-Nord"
+        ],
+        "line": "28"
+      },
+      {
+        "id": "8994618182400318410-2510202243-8",
+        "type": "S",
+        "number": "77285",
+        "time": "2510202309",
+        "platform": "",
+        "path_stations": [
+          "Wuppertal Hbf",
+          "Wuppertal-Steinbeck",
+          "Wuppertal-Zoologischer Garten",
+          "Wuppertal-Vohwinkel",
+          "Wuppertal-Hahnenfurth/Düssel",
+          "Mettmann Stadtwald",
+          "Mettmann Zentrum"
+        ],
+        "line": "28"
+      },
+      {
+        "id": "7135190760391732575-2510202317-12",
+        "type": "S",
+        "number": "77279",
+        "time": "2510202351",
+        "platform": "",
+        "path_stations": [
+          "Neuss Hbf",
+          "Neuss Am Kaiser",
+          "Neuss Rheinparkcenter",
+          "Düsseldorf-Hamm",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf Hbf",
+          "Düsseldorf-Flingern",
+          "Düsseldorf-Gerresheim",
+          "Erkrath-Nord"
+        ],
+        "line": "28"
+      },
+      {
+        "id": "7427883514200691248-2510210017-12",
+        "type": "S",
+        "number": "77127",
+        "time": "2510210051",
+        "platform": "",
+        "path_stations": [
+          "Neuss Hbf",
+          "Neuss Am Kaiser",
+          "Neuss Rheinparkcenter",
+          "Düsseldorf-Hamm",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf Hbf",
+          "Düsseldorf-Flingern",
+          "Düsseldorf-Gerresheim",
+          "Erkrath-Nord"
+        ],
+        "line": "28"
+      },
+      {
+        "id": "-7716481442700032689-2510202343-8",
+        "type": "S",
+        "number": "77291",
+        "time": "2510210009",
+        "platform": "",
+        "path_stations": [
+          "Wuppertal Hbf",
+          "Wuppertal-Steinbeck",
+          "Wuppertal-Zoologischer Garten",
+          "Wuppertal-Vohwinkel",
+          "Wuppertal-Hahnenfurth/Düssel",
+          "Mettmann Stadtwald",
+          "Mettmann Zentrum"
+        ],
+        "line": "28"
+      },
+      {
+        "id": "-2487163887956989609-2510210443-3",
+        "type": "S",
+        "number": "77138",
+        "time": "2510210449",
+        "platform": "",
+        "path_stations": [
+          "Mettmann Stadtwald",
+          "Mettmann Zentrum"
+        ],
+        "line": "28"
+      },
+      {
+        "id": "-1775789105208849144-2510210423-3",
+        "type": "S",
+        "number": "77136",
+        "time": "2510210429",
+        "platform": "",
+        "path_stations": [
+          "Mettmann Stadtwald",
+          "Mettmann Zentrum"
+        ],
+        "line": "28"
+      },
+      {
+        "id": "8031440483654487683-2510210523-3",
+        "type": "S",
+        "number": "77142",
+        "time": "2510210529",
+        "platform": "",
+        "path_stations": [
+          "Mettmann Stadtwald",
+          "Mettmann Zentrum"
+        ],
+        "line": "28"
+      },
+      {
+        "id": "8676164830418115059-2510210516-5",
+        "type": "S",
+        "number": "77137",
+        "time": "2510210531",
+        "platform": "",
+        "path_stations": [
+          "Düsseldorf Hbf",
+          "Düsseldorf-Flingern",
+          "Düsseldorf-Gerresheim",
+          "Erkrath-Nord"
+        ],
+        "line": "28"
+      },
+      {
+        "id": "5269402021504496697-2510210503-16",
+        "type": "S",
+        "number": "77139",
+        "time": "2510210551",
+        "platform": "",
+        "path_stations": [
+          "Kaarster See",
+          "Kaarster Bahnhof",
+          "Kaarst Mitte/Holzbüttgen",
+          "Kaarst IKEA",
+          "Neuss Hbf",
+          "Neuss Am Kaiser",
+          "Neuss Rheinparkcenter",
+          "Düsseldorf-Hamm",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf Hbf",
+          "Düsseldorf-Flingern",
+          "Düsseldorf-Gerresheim",
+          "Erkrath-Nord"
+        ],
+        "line": "28"
+      },
+      {
+        "id": "6179609771039614140-2510210543-3",
+        "type": "S",
+        "number": "77146",
+        "time": "2510210549",
+        "platform": "",
+        "path_stations": [
+          "Mettmann Stadtwald",
+          "Mettmann Zentrum"
+        ],
+        "line": "28"
+      },
+      {
+        "id": "8808633574631563223-2510210503-3",
+        "type": "S",
+        "number": "77140",
+        "time": "2510210509",
+        "platform": "",
+        "path_stations": [
+          "Mettmann Stadtwald",
+          "Mettmann Zentrum"
+        ],
+        "line": "28"
+      },
+      {
+        "id": "3138294624555627331-2510210610-13",
+        "type": "S",
+        "number": "77149",
+        "time": "2510210651",
+        "platform": "",
+        "path_stations": [
+          "Kaarst IKEA",
+          "Neuss Hbf",
+          "Neuss Am Kaiser",
+          "Neuss Rheinparkcenter",
+          "Düsseldorf-Hamm",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf Hbf",
+          "Düsseldorf-Flingern",
+          "Düsseldorf-Gerresheim",
+          "Erkrath-Nord"
+        ],
+        "line": "28"
+      },
+      {
+        "id": "-751886630821399611-2510210523-16",
+        "type": "S",
+        "number": "77143",
+        "time": "2510210611",
+        "platform": "",
+        "path_stations": [
+          "Kaarster See",
+          "Kaarster Bahnhof",
+          "Kaarst Mitte/Holzbüttgen",
+          "Kaarst IKEA",
+          "Neuss Hbf",
+          "Neuss Am Kaiser",
+          "Neuss Rheinparkcenter",
+          "Düsseldorf-Hamm",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf Hbf",
+          "Düsseldorf-Flingern",
+          "Düsseldorf-Gerresheim",
+          "Erkrath-Nord"
+        ],
+        "line": "28"
+      },
+      {
+        "id": "5863057842137556161-2510210603-3",
+        "type": "S",
+        "number": "77148",
+        "time": "2510210609",
+        "platform": "",
+        "path_stations": [
+          "Mettmann Stadtwald",
+          "Mettmann Zentrum"
+        ],
+        "line": "28"
+      },
+      {
+        "id": "-1434841507591210671-2510210623-3",
+        "type": "S",
+        "number": "77152",
+        "time": "2510210629",
+        "platform": "",
+        "path_stations": [
+          "Mettmann Stadtwald",
+          "Mettmann Zentrum"
+        ],
+        "line": "28"
+      },
+      {
+        "id": "6065318273934688811-2510210550-13",
+        "type": "S",
+        "number": "77147",
+        "time": "2510210631",
+        "platform": "",
+        "path_stations": [
+          "Kaarst IKEA",
+          "Neuss Hbf",
+          "Neuss Am Kaiser",
+          "Neuss Rheinparkcenter",
+          "Düsseldorf-Hamm",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf Hbf",
+          "Düsseldorf-Flingern",
+          "Düsseldorf-Gerresheim",
+          "Erkrath-Nord"
+        ],
+        "line": "28"
+      },
+      {
+        "id": "-2216015318673595028-2510210643-3",
+        "type": "S",
+        "number": "77156",
+        "time": "2510210649",
+        "platform": "",
+        "path_stations": [
+          "Mettmann Stadtwald",
+          "Mettmann Zentrum"
+        ],
+        "line": "28"
+      }
+    ],
+    "departures": [
+      {
+        "id": "451600244733258171-2510201743-16",
+        "type": "S",
+        "number": "77247",
+        "direction": "Mettmann Stadtwald",
+        "platform": "",
+        "time": "2510201832",
+        "destination": "Mettmann Stadtwald",
+        "path_stations": [
+          "Mettmann Zentrum",
+          "Mettmann Stadtwald"
+        ]
+      },
+      {
+        "id": "2028729477315283775-2510201803-16",
+        "type": "S",
+        "number": "77249",
+        "direction": "Mettmann Stadtwald",
+        "platform": "",
+        "time": "2510201852",
+        "destination": "Mettmann Stadtwald",
+        "path_stations": [
+          "Mettmann Zentrum",
+          "Mettmann Stadtwald"
+        ]
+      },
+      {
+        "id": "-6450515459978002825-2510201723-16",
+        "type": "S",
+        "number": "77243",
+        "direction": "Mettmann Stadtwald",
+        "platform": "",
+        "time": "2510201812",
+        "destination": "Mettmann Stadtwald",
+        "path_stations": [
+          "Mettmann Zentrum",
+          "Mettmann Stadtwald"
+        ]
+      },
+      {
+        "id": "3566722618891094081-2510201843-3",
+        "type": "S",
+        "number": "77280",
+        "direction": "Kaarster See",
+        "platform": "",
+        "time": "2510201850",
+        "destination": "Kaarster See",
+        "path_stations": [
+          "Erkrath-Nord",
+          "Düsseldorf-Gerresheim",
+          "Düsseldorf-Flingern",
+          "Düsseldorf Hbf",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Hamm",
+          "Neuss Rheinparkcenter",
+          "Neuss Am Kaiser",
+          "Neuss Hbf",
+          "Kaarst IKEA",
+          "Kaarst Mitte/Holzbüttgen",
+          "Kaarster Bahnhof",
+          "Kaarster See"
+        ]
+      },
+      {
+        "id": "6473674020655541900-2510201823-3",
+        "type": "S",
+        "number": "77276",
+        "direction": "Kaarster See",
+        "platform": "",
+        "time": "2510201830",
+        "destination": "Kaarster See",
+        "path_stations": [
+          "Erkrath-Nord",
+          "Düsseldorf-Gerresheim",
+          "Düsseldorf-Flingern",
+          "Düsseldorf Hbf",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Hamm",
+          "Neuss Rheinparkcenter",
+          "Neuss Am Kaiser",
+          "Neuss Hbf",
+          "Kaarst IKEA",
+          "Kaarst Mitte/Holzbüttgen",
+          "Kaarster Bahnhof",
+          "Kaarster See"
+        ]
+      },
+      {
+        "id": "5938233094820411455-2510201803-3",
+        "type": "S",
+        "number": "77272",
+        "direction": "Kaarster See",
+        "platform": "",
+        "time": "2510201810",
+        "destination": "Kaarster See",
+        "path_stations": [
+          "Erkrath-Nord",
+          "Düsseldorf-Gerresheim",
+          "Düsseldorf-Flingern",
+          "Düsseldorf Hbf",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Hamm",
+          "Neuss Rheinparkcenter",
+          "Neuss Am Kaiser",
+          "Neuss Hbf",
+          "Kaarst IKEA",
+          "Kaarst Mitte/Holzbüttgen",
+          "Kaarster Bahnhof",
+          "Kaarster See"
+        ]
+      },
+      {
+        "id": "-521558872693083101-2510201933-3",
+        "type": "S",
+        "number": "77286",
+        "direction": "Kaarster See",
+        "platform": "",
+        "time": "2510201940",
+        "destination": "Kaarster See",
+        "path_stations": [
+          "Erkrath-Nord",
+          "Düsseldorf-Gerresheim",
+          "Düsseldorf-Flingern",
+          "Düsseldorf Hbf",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Hamm",
+          "Neuss Rheinparkcenter",
+          "Neuss Am Kaiser",
+          "Neuss Hbf",
+          "Kaarst IKEA",
+          "Kaarst Mitte/Holzbüttgen",
+          "Kaarster Bahnhof",
+          "Kaarster See"
+        ]
+      },
+      {
+        "id": "-72622681038882144-2510201843-16",
+        "type": "S",
+        "number": "77255",
+        "direction": "Mettmann Stadtwald",
+        "platform": "",
+        "time": "2510201932",
+        "destination": "Mettmann Stadtwald",
+        "path_stations": [
+          "Mettmann Zentrum",
+          "Mettmann Stadtwald"
+        ]
+      },
+      {
+        "id": "-1501092596952390632-2510201903-3",
+        "type": "S",
+        "number": "77282",
+        "direction": "Kaarster See",
+        "platform": "",
+        "time": "2510201910",
+        "destination": "Kaarster See",
+        "path_stations": [
+          "Erkrath-Nord",
+          "Düsseldorf-Gerresheim",
+          "Düsseldorf-Flingern",
+          "Düsseldorf Hbf",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Hamm",
+          "Neuss Rheinparkcenter",
+          "Neuss Am Kaiser",
+          "Neuss Hbf",
+          "Kaarst IKEA",
+          "Kaarst Mitte/Holzbüttgen",
+          "Kaarster Bahnhof",
+          "Kaarster See"
+        ]
+      },
+      {
+        "id": "-1315650275512591425-2510201823-16",
+        "type": "S",
+        "number": "77251",
+        "direction": "Mettmann Stadtwald",
+        "platform": "",
+        "time": "2510201912",
+        "destination": "Mettmann Stadtwald",
+        "path_stations": [
+          "Mettmann Zentrum",
+          "Mettmann Stadtwald"
+        ]
+      },
+      {
+        "id": "-7895011825124768262-2510201903-16",
+        "type": "S",
+        "number": "77257",
+        "direction": "Mettmann Stadtwald",
+        "platform": "",
+        "time": "2510201952",
+        "destination": "Mettmann Stadtwald",
+        "path_stations": [
+          "Mettmann Zentrum",
+          "Mettmann Stadtwald"
+        ]
+      },
+      {
+        "id": "-4996124314744009325-2510202033-3",
+        "type": "S",
+        "number": "77292",
+        "direction": "Neuss Hbf",
+        "platform": "",
+        "time": "2510202040",
+        "destination": "Neuss Hbf",
+        "path_stations": [
+          "Erkrath-Nord",
+          "Düsseldorf-Gerresheim",
+          "Düsseldorf-Flingern",
+          "Düsseldorf Hbf",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Hamm",
+          "Neuss Rheinparkcenter",
+          "Neuss Am Kaiser",
+          "Neuss Hbf"
+        ]
+      },
+      {
+        "id": "5019535759543862918-2510202003-16",
+        "type": "S",
+        "number": "77265",
+        "direction": "Wuppertal Hbf",
+        "platform": "",
+        "time": "2510202052",
+        "destination": "Wuppertal Hbf",
+        "path_stations": [
+          "Mettmann Zentrum",
+          "Mettmann Stadtwald",
+          "Wuppertal-Hahnenfurth/Düssel",
+          "Wuppertal-Vohwinkel",
+          "Wuppertal-Zoologischer Garten",
+          "Wuppertal-Steinbeck",
+          "Wuppertal Hbf"
+        ]
+      },
+      {
+        "id": "2043179101043099013-2510202003-3",
+        "type": "S",
+        "number": "77290",
+        "direction": "Neuss Hbf",
+        "platform": "",
+        "time": "2510202010",
+        "destination": "Neuss Hbf",
+        "path_stations": [
+          "Erkrath-Nord",
+          "Düsseldorf-Gerresheim",
+          "Düsseldorf-Flingern",
+          "Düsseldorf Hbf",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Hamm",
+          "Neuss Rheinparkcenter",
+          "Neuss Am Kaiser",
+          "Neuss Hbf"
+        ]
+      },
+      {
+        "id": "1125751725552536488-2510201943-16",
+        "type": "S",
+        "number": "77263",
+        "direction": "Mettmann Stadtwald",
+        "platform": "",
+        "time": "2510202032",
+        "destination": "Mettmann Stadtwald",
+        "path_stations": [
+          "Mettmann Zentrum",
+          "Mettmann Stadtwald"
+        ]
+      },
+      {
+        "id": "-7451464004676281219-2510201923-16",
+        "type": "S",
+        "number": "77259",
+        "direction": "Wuppertal Hbf",
+        "platform": "",
+        "time": "2510202022",
+        "destination": "Wuppertal Hbf",
+        "path_stations": [
+          "Mettmann Zentrum",
+          "Mettmann Stadtwald",
+          "Wuppertal-Hahnenfurth/Düssel",
+          "Wuppertal-Vohwinkel",
+          "Wuppertal-Zoologischer Garten",
+          "Wuppertal-Steinbeck",
+          "Wuppertal Hbf"
+        ]
+      },
+      {
+        "id": "203212035540220848-2510202113-8",
+        "type": "S",
+        "number": "77296",
+        "direction": "Neuss Hbf",
+        "platform": "",
+        "time": "2510202140",
+        "destination": "Neuss Hbf",
+        "path_stations": [
+          "Erkrath-Nord",
+          "Düsseldorf-Gerresheim",
+          "Düsseldorf-Flingern",
+          "Düsseldorf Hbf",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Hamm",
+          "Neuss Rheinparkcenter",
+          "Neuss Am Kaiser",
+          "Neuss Hbf"
+        ]
+      },
+      {
+        "id": "-8580843902993245405-2510202103-3",
+        "type": "S",
+        "number": "77294",
+        "direction": "Neuss Hbf",
+        "platform": "",
+        "time": "2510202110",
+        "destination": "Neuss Hbf",
+        "path_stations": [
+          "Erkrath-Nord",
+          "Düsseldorf-Gerresheim",
+          "Düsseldorf-Flingern",
+          "Düsseldorf Hbf",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Hamm",
+          "Neuss Rheinparkcenter",
+          "Neuss Am Kaiser",
+          "Neuss Hbf"
+        ]
+      },
+      {
+        "id": "4717533647827006533-2510202117-12",
+        "type": "S",
+        "number": "77269",
+        "direction": "Wuppertal Hbf",
+        "platform": "",
+        "time": "2510202152",
+        "destination": "Wuppertal Hbf",
+        "path_stations": [
+          "Mettmann Zentrum",
+          "Mettmann Stadtwald",
+          "Wuppertal-Hahnenfurth/Düssel",
+          "Wuppertal-Vohwinkel",
+          "Wuppertal-Zoologischer Garten",
+          "Wuppertal-Steinbeck",
+          "Wuppertal Hbf"
+        ]
+      },
+      {
+        "id": "-2195514002621255354-2510202033-16",
+        "type": "S",
+        "number": "77267",
+        "direction": "Wuppertal Hbf",
+        "platform": "",
+        "time": "2510202122",
+        "destination": "Wuppertal Hbf",
+        "path_stations": [
+          "Mettmann Zentrum",
+          "Mettmann Stadtwald",
+          "Wuppertal-Hahnenfurth/Düssel",
+          "Wuppertal-Vohwinkel",
+          "Wuppertal-Zoologischer Garten",
+          "Wuppertal-Steinbeck",
+          "Wuppertal Hbf"
+        ]
+      },
+      {
+        "id": "546396644572880711-2510202143-8",
+        "type": "S",
+        "number": "77298",
+        "direction": "Neuss Hbf",
+        "platform": "",
+        "time": "2510202210",
+        "destination": "Neuss Hbf",
+        "path_stations": [
+          "Erkrath-Nord",
+          "Düsseldorf-Gerresheim",
+          "Düsseldorf-Flingern",
+          "Düsseldorf Hbf",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Hamm",
+          "Neuss Rheinparkcenter",
+          "Neuss Am Kaiser",
+          "Neuss Hbf"
+        ]
+      },
+      {
+        "id": "-8417452943845116718-2510202213-8",
+        "type": "S",
+        "number": "77283",
+        "direction": "Neuss Hbf",
+        "platform": "",
+        "time": "2510202240",
+        "destination": "Neuss Hbf",
+        "path_stations": [
+          "Erkrath-Nord",
+          "Düsseldorf-Gerresheim",
+          "Düsseldorf-Flingern",
+          "Düsseldorf Hbf",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Hamm",
+          "Neuss Rheinparkcenter",
+          "Neuss Am Kaiser",
+          "Neuss Hbf"
+        ]
+      },
+      {
+        "id": "6488780246185059788-2510202217-12",
+        "type": "S",
+        "number": "77273",
+        "direction": "Wuppertal Hbf",
+        "platform": "",
+        "time": "2510202252",
+        "destination": "Wuppertal Hbf",
+        "path_stations": [
+          "Mettmann Zentrum",
+          "Mettmann Stadtwald",
+          "Wuppertal-Hahnenfurth/Düssel",
+          "Wuppertal-Vohwinkel",
+          "Wuppertal-Zoologischer Garten",
+          "Wuppertal-Steinbeck",
+          "Wuppertal Hbf"
+        ]
+      },
+      {
+        "id": "-7181477249459275172-2510202147-12",
+        "type": "S",
+        "number": "77271",
+        "direction": "Wuppertal Hbf",
+        "platform": "",
+        "time": "2510202222",
+        "destination": "Wuppertal Hbf",
+        "path_stations": [
+          "Mettmann Zentrum",
+          "Mettmann Stadtwald",
+          "Wuppertal-Hahnenfurth/Düssel",
+          "Wuppertal-Vohwinkel",
+          "Wuppertal-Zoologischer Garten",
+          "Wuppertal-Steinbeck",
+          "Wuppertal Hbf"
+        ]
+      },
+      {
+        "id": "-1695883451582804858-2510202247-12",
+        "type": "S",
+        "number": "77275",
+        "direction": "Mettmann Stadtwald",
+        "platform": "",
+        "time": "2510202322",
+        "destination": "Mettmann Stadtwald",
+        "path_stations": [
+          "Mettmann Zentrum",
+          "Mettmann Stadtwald"
+        ]
+      },
+      {
+        "id": "8994618182400318410-2510202243-8",
+        "type": "S",
+        "number": "77285",
+        "direction": "Neuss Hbf",
+        "platform": "",
+        "time": "2510202310",
+        "destination": "Neuss Hbf",
+        "path_stations": [
+          "Erkrath-Nord",
+          "Düsseldorf-Gerresheim",
+          "Düsseldorf-Flingern",
+          "Düsseldorf Hbf",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Hamm",
+          "Neuss Rheinparkcenter",
+          "Neuss Am Kaiser",
+          "Neuss Hbf"
+        ]
+      },
+      {
+        "id": "7135190760391732575-2510202317-12",
+        "type": "S",
+        "number": "77279",
+        "direction": "Wuppertal Hbf",
+        "platform": "",
+        "time": "2510202352",
+        "destination": "Wuppertal Hbf",
+        "path_stations": [
+          "Mettmann Zentrum",
+          "Mettmann Stadtwald",
+          "Wuppertal-Hahnenfurth/Düssel",
+          "Wuppertal-Vohwinkel",
+          "Wuppertal-Zoologischer Garten",
+          "Wuppertal-Steinbeck",
+          "Wuppertal Hbf"
+        ]
+      },
+      {
+        "id": "7427883514200691248-2510210017-12",
+        "type": "S",
+        "number": "77127",
+        "direction": "Mettmann Stadtwald",
+        "platform": "",
+        "time": "2510210052",
+        "destination": "Mettmann Stadtwald",
+        "path_stations": [
+          "Mettmann Zentrum",
+          "Mettmann Stadtwald"
+        ]
+      },
+      {
+        "id": "-7716481442700032689-2510202343-8",
+        "type": "S",
+        "number": "77291",
+        "direction": "Kaarster See",
+        "platform": "",
+        "time": "2510210010",
+        "destination": "Kaarster See",
+        "path_stations": [
+          "Erkrath-Nord",
+          "Düsseldorf-Gerresheim",
+          "Düsseldorf-Flingern",
+          "Düsseldorf Hbf",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Hamm",
+          "Neuss Rheinparkcenter",
+          "Neuss Am Kaiser",
+          "Neuss Hbf",
+          "Kaarst IKEA",
+          "Kaarst Mitte/Holzbüttgen",
+          "Kaarster Bahnhof",
+          "Kaarster See"
+        ]
+      },
+      {
+        "id": "-2487163887956989609-2510210443-3",
+        "type": "S",
+        "number": "77138",
+        "direction": "Kaarst IKEA",
+        "platform": "",
+        "time": "2510210450",
+        "destination": "Kaarst IKEA",
+        "path_stations": [
+          "Erkrath-Nord",
+          "Düsseldorf-Gerresheim",
+          "Düsseldorf-Flingern",
+          "Düsseldorf Hbf",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Hamm",
+          "Neuss Rheinparkcenter",
+          "Neuss Am Kaiser",
+          "Neuss Hbf",
+          "Kaarst IKEA"
+        ]
+      },
+      {
+        "id": "-1775789105208849144-2510210423-3",
+        "type": "S",
+        "number": "77136",
+        "direction": "Düsseldorf Hbf",
+        "platform": "",
+        "time": "2510210430",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Erkrath-Nord",
+          "Düsseldorf-Gerresheim",
+          "Düsseldorf-Flingern",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "8031440483654487683-2510210523-3",
+        "type": "S",
+        "number": "77142",
+        "direction": "Kaarst IKEA",
+        "platform": "",
+        "time": "2510210530",
+        "destination": "Kaarst IKEA",
+        "path_stations": [
+          "Erkrath-Nord",
+          "Düsseldorf-Gerresheim",
+          "Düsseldorf-Flingern",
+          "Düsseldorf Hbf",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Hamm",
+          "Neuss Rheinparkcenter",
+          "Neuss Am Kaiser",
+          "Neuss Hbf",
+          "Kaarst IKEA"
+        ]
+      },
+      {
+        "id": "8676164830418115059-2510210516-5",
+        "type": "S",
+        "number": "77137",
+        "direction": "Mettmann Stadtwald",
+        "platform": "",
+        "time": "2510210532",
+        "destination": "Mettmann Stadtwald",
+        "path_stations": [
+          "Mettmann Zentrum",
+          "Mettmann Stadtwald"
+        ]
+      },
+      {
+        "id": "5269402021504496697-2510210503-16",
+        "type": "S",
+        "number": "77139",
+        "direction": "Mettmann Stadtwald",
+        "platform": "",
+        "time": "2510210552",
+        "destination": "Mettmann Stadtwald",
+        "path_stations": [
+          "Mettmann Zentrum",
+          "Mettmann Stadtwald"
+        ]
+      },
+      {
+        "id": "6179609771039614140-2510210543-3",
+        "type": "S",
+        "number": "77146",
+        "direction": "Kaarst IKEA",
+        "platform": "",
+        "time": "2510210550",
+        "destination": "Kaarst IKEA",
+        "path_stations": [
+          "Erkrath-Nord",
+          "Düsseldorf-Gerresheim",
+          "Düsseldorf-Flingern",
+          "Düsseldorf Hbf",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Hamm",
+          "Neuss Rheinparkcenter",
+          "Neuss Am Kaiser",
+          "Neuss Hbf",
+          "Kaarst IKEA"
+        ]
+      },
+      {
+        "id": "8808633574631563223-2510210503-3",
+        "type": "S",
+        "number": "77140",
+        "direction": "Kaarst IKEA",
+        "platform": "",
+        "time": "2510210510",
+        "destination": "Kaarst IKEA",
+        "path_stations": [
+          "Erkrath-Nord",
+          "Düsseldorf-Gerresheim",
+          "Düsseldorf-Flingern",
+          "Düsseldorf Hbf",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Hamm",
+          "Neuss Rheinparkcenter",
+          "Neuss Am Kaiser",
+          "Neuss Hbf",
+          "Kaarst IKEA"
+        ]
+      },
+      {
+        "id": "3138294624555627331-2510210610-13",
+        "type": "S",
+        "number": "77149",
+        "direction": "Mettmann Stadtwald",
+        "platform": "",
+        "time": "2510210652",
+        "destination": "Mettmann Stadtwald",
+        "path_stations": [
+          "Mettmann Zentrum",
+          "Mettmann Stadtwald"
+        ]
+      },
+      {
+        "id": "-751886630821399611-2510210523-16",
+        "type": "S",
+        "number": "77143",
+        "direction": "Mettmann Stadtwald",
+        "platform": "",
+        "time": "2510210612",
+        "destination": "Mettmann Stadtwald",
+        "path_stations": [
+          "Mettmann Zentrum",
+          "Mettmann Stadtwald"
+        ]
+      },
+      {
+        "id": "5863057842137556161-2510210603-3",
+        "type": "S",
+        "number": "77148",
+        "direction": "Kaarst IKEA",
+        "platform": "",
+        "time": "2510210610",
+        "destination": "Kaarst IKEA",
+        "path_stations": [
+          "Erkrath-Nord",
+          "Düsseldorf-Gerresheim",
+          "Düsseldorf-Flingern",
+          "Düsseldorf Hbf",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Hamm",
+          "Neuss Rheinparkcenter",
+          "Neuss Am Kaiser",
+          "Neuss Hbf",
+          "Kaarst IKEA"
+        ]
+      },
+      {
+        "id": "-1434841507591210671-2510210623-3",
+        "type": "S",
+        "number": "77152",
+        "direction": "Kaarst IKEA",
+        "platform": "",
+        "time": "2510210630",
+        "destination": "Kaarst IKEA",
+        "path_stations": [
+          "Erkrath-Nord",
+          "Düsseldorf-Gerresheim",
+          "Düsseldorf-Flingern",
+          "Düsseldorf Hbf",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Hamm",
+          "Neuss Rheinparkcenter",
+          "Neuss Am Kaiser",
+          "Neuss Hbf",
+          "Kaarst IKEA"
+        ]
+      },
+      {
+        "id": "6065318273934688811-2510210550-13",
+        "type": "S",
+        "number": "77147",
+        "direction": "Mettmann Stadtwald",
+        "platform": "",
+        "time": "2510210632",
+        "destination": "Mettmann Stadtwald",
+        "path_stations": [
+          "Mettmann Zentrum",
+          "Mettmann Stadtwald"
+        ]
+      },
+      {
+        "id": "-2216015318673595028-2510210643-3",
+        "type": "S",
+        "number": "77156",
+        "direction": "Kaarst IKEA",
+        "platform": "",
+        "time": "2510210650",
+        "destination": "Kaarst IKEA",
+        "path_stations": [
+          "Erkrath-Nord",
+          "Düsseldorf-Gerresheim",
+          "Düsseldorf-Flingern",
+          "Düsseldorf Hbf",
+          "Düsseldorf Friedrichstadt",
+          "Düsseldorf-Bilk",
+          "Düsseldorf Völklinger Str.",
+          "Düsseldorf-Hamm",
+          "Neuss Rheinparkcenter",
+          "Neuss Am Kaiser",
+          "Neuss Hbf",
+          "Kaarst IKEA"
+        ]
+      }
+    ]
+  }
+}

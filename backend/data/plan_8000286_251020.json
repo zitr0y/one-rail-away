@@ -1,0 +1,2085 @@
+{
+  "station_eva": "8000286",
+  "date": "251020",
+  "cached_at": "2025-10-20T15:46:18.231314",
+  "plan_data": {
+    "departures": [
+      {
+        "id": "491595817851525722-2510201630-14",
+        "type": "TRI",
+        "number": "26667",
+        "direction": "Düsseldorf Hbf",
+        "platform": "9",
+        "time": "2510201743",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-3726819593680019142-2510201740-1",
+        "type": "Bus",
+        "number": "5860",
+        "direction": "Wesel",
+        "platform": "",
+        "time": "2510201740",
+        "destination": "Wesel",
+        "path_stations": [
+          "Oberhausen-Sterkrade",
+          "Oberhausen-Holten",
+          "Dinslaken",
+          "Voerde(Niederrhein)",
+          "Friedrichsfeld(Niederrhein)",
+          "Friedrichsfeld Post, Voerde (Niederrhein)",
+          "Friedrichsfeld Bahnhof, Voerde (Niederrhein)",
+          "Wesel"
+        ]
+      },
+      {
+        "id": "-6607065416810327598-2510201645-4",
+        "type": "RE",
+        "number": "89889",
+        "direction": "Hamm(Westf)Hbf",
+        "platform": "6",
+        "time": "2510201716",
+        "destination": "Hamm(Westf)Hbf",
+        "path_stations": [
+          "Essen-Altenessen",
+          "Gelsenkirchen Hbf",
+          "Wanne-Eickel Hbf",
+          "Herne",
+          "Castrop-Rauxel Hbf",
+          "Dortmund-Mengede",
+          "Dortmund Hbf",
+          "Dortmund-Scharnhorst",
+          "Dortmund-Kurl",
+          "Kamen-Methler",
+          "Kamen",
+          "Bönen-Nordbögge",
+          "Hamm(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "4696504423239649318-2510201654-5",
+        "type": "Bus",
+        "number": "68337",
+        "direction": "Bottrop Hbf",
+        "platform": "",
+        "time": "2510201723",
+        "destination": "Bottrop Hbf",
+        "path_stations": [
+          "Oberhausen-Osterfeld Süd",
+          "Bottrop-Vonderort",
+          "Bottrop Hbf"
+        ]
+      },
+      {
+        "id": "8508634824949438500-2510201655-4",
+        "type": "Bus",
+        "number": "68340",
+        "direction": "Duisburg-Ruhrort",
+        "platform": "",
+        "time": "2510201731",
+        "destination": "Duisburg-Ruhrort",
+        "path_stations": [
+          "Duisburg-Obermeiderich",
+          "Duisburg-Meiderich Ost",
+          "Duisburg-Meiderich Süd",
+          "Duisburg-Ruhrort"
+        ]
+      },
+      {
+        "id": "-2882197430592295029-2510201351-14",
+        "type": "IC",
+        "number": "2205",
+        "direction": "Köln Hbf",
+        "platform": "7",
+        "time": "2510201725",
+        "destination": "Köln Hbf",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Düsseldorf Hbf",
+          "Köln Hbf"
+        ]
+      },
+      {
+        "id": "-8477202256276968351-2510201747-1",
+        "type": "S",
+        "number": "30356",
+        "direction": "Hattingen(Ruhr) Mitte",
+        "platform": "11",
+        "time": "2510201747",
+        "destination": "Hattingen(Ruhr) Mitte",
+        "path_stations": [
+          "Mülheim(Ruhr)Styrum",
+          "Mülheim(Ruhr)West",
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf",
+          "Essen-Steele",
+          "Essen-Steele Ost",
+          "Essen-Horst",
+          "Bochum-Dahlhausen",
+          "Hattingen(Ruhr)",
+          "Hattingen(Ruhr) Mitte"
+        ]
+      },
+      {
+        "id": "-872546047464042377-2510201625-4",
+        "type": "Bus",
+        "number": "68338",
+        "direction": "Duisburg-Ruhrort",
+        "platform": "",
+        "time": "2510201701",
+        "destination": "Duisburg-Ruhrort",
+        "path_stations": [
+          "Duisburg-Obermeiderich",
+          "Duisburg-Meiderich Ost",
+          "Duisburg-Meiderich Süd",
+          "Duisburg-Ruhrort"
+        ]
+      },
+      {
+        "id": "-7280246599324333839-2510201739-6",
+        "type": "VIA",
+        "number": "52267",
+        "direction": "Mönchengladbach Hbf",
+        "platform": "7",
+        "time": "2510201758",
+        "destination": "Mönchengladbach Hbf",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Duisburg-Hochfeld Süd",
+          "Rheinhausen Ost",
+          "Rheinhausen",
+          "Krefeld-Hohenbudberg Chempark",
+          "Krefeld-Uerdingen",
+          "Krefeld-Linn",
+          "Krefeld-Oppum",
+          "Krefeld Hbf",
+          "Forsthaus",
+          "Anrath",
+          "Viersen",
+          "Mönchengladbach Hbf"
+        ]
+      },
+      {
+        "id": "4509844067835636673-2510201608-14",
+        "type": "VIA",
+        "number": "52260",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "6",
+        "time": "2510201702",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Essen-Dellwig",
+          "Essen-Bergeborbeck",
+          "Essen-Altenessen",
+          "Essen-Zollverein Nord",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "-6830713275867904596-2510201701-6",
+        "type": "RB",
+        "number": "31267",
+        "direction": "Duisburg Hbf",
+        "platform": "7",
+        "time": "2510201719",
+        "destination": "Duisburg Hbf",
+        "path_stations": [
+          "Duisburg Hbf"
+        ]
+      },
+      {
+        "id": "508539170227766230-2510201724-5",
+        "type": "Bus",
+        "number": "68339",
+        "direction": "Bottrop Hbf",
+        "platform": "",
+        "time": "2510201753",
+        "destination": "Bottrop Hbf",
+        "path_stations": [
+          "Oberhausen-Osterfeld Süd",
+          "Bottrop-Vonderort",
+          "Bottrop Hbf"
+        ]
+      },
+      {
+        "id": "5688086301269107211-2510201756-1",
+        "type": "RE",
+        "number": "30994",
+        "direction": "Wuppertal Hbf",
+        "platform": "12",
+        "time": "2510201756",
+        "destination": "Wuppertal Hbf",
+        "path_stations": [
+          "Mülheim(Ruhr)Styrum",
+          "Mülheim(Ruhr)Hbf",
+          "Essen West",
+          "Essen Hbf",
+          "Essen-Steele",
+          "Essen-Kupferdreh",
+          "Velbert-Langenberg",
+          "Velbert-Neviges",
+          "Wuppertal-Vohwinkel",
+          "Wuppertal Hbf"
+        ]
+      },
+      {
+        "id": "7535279051421670316-2510201751-1",
+        "type": "RE",
+        "number": "63774",
+        "direction": "Düsseldorf Hbf",
+        "platform": "13",
+        "time": "2510201751",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "7000942675076766201-2510201717-1",
+        "type": "S",
+        "number": "30354",
+        "direction": "Hattingen(Ruhr) Mitte",
+        "platform": "10",
+        "time": "2510201717",
+        "destination": "Hattingen(Ruhr) Mitte",
+        "path_stations": [
+          "Mülheim(Ruhr)Styrum",
+          "Mülheim(Ruhr)West",
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf",
+          "Essen-Steele",
+          "Essen-Steele Ost",
+          "Essen-Horst",
+          "Bochum-Dahlhausen",
+          "Hattingen(Ruhr)",
+          "Hattingen(Ruhr) Mitte"
+        ]
+      },
+      {
+        "id": "1377526282575811489-2510201733-1",
+        "type": "RE",
+        "number": "28527",
+        "direction": "Koblenz Hbf",
+        "platform": "12",
+        "time": "2510201733",
+        "destination": "Koblenz Hbf",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf",
+          "Düsseldorf-Benrath",
+          "Leverkusen Mitte",
+          "Köln-Mülheim",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln Süd",
+          "Brühl",
+          "Bonn Hbf",
+          "Bonn UN Campus",
+          "Bonn-Bad Godesberg",
+          "Oberwinter",
+          "Remagen",
+          "Sinzig(Rhein)",
+          "Bad Breisig",
+          "Andernach",
+          "Koblenz Stadtmitte",
+          "Koblenz Hbf"
+        ]
+      },
+      {
+        "id": "4321669649423203877-2510201734-2",
+        "type": "RB",
+        "number": "31268",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "6",
+        "time": "2510201741",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Essen-Dellwig",
+          "Essen-Bergeborbeck",
+          "Essen-Altenessen",
+          "Essen-Zollverein Nord",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "2967958518979164192-2510201720-1",
+        "type": "Bus",
+        "number": "4799",
+        "direction": "Wesel",
+        "platform": "",
+        "time": "2510201720",
+        "destination": "Wesel",
+        "path_stations": [
+          "Oberhausen-Sterkrade",
+          "Oberhausen-Holten",
+          "Dinslaken",
+          "Voerde(Niederrhein)",
+          "Friedrichsfeld Bahnhof, Voerde (Niederrhein)",
+          "Friedrichsfeld Post, Voerde (Niederrhein)",
+          "Friedrichsfeld(Niederrhein)",
+          "Wesel"
+        ]
+      },
+      {
+        "id": "-8421522247246892215-2510201839-6",
+        "type": "VIA",
+        "number": "52269",
+        "direction": "Mönchengladbach Hbf",
+        "platform": "7",
+        "time": "2510201858",
+        "destination": "Mönchengladbach Hbf",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Duisburg-Hochfeld Süd",
+          "Rheinhausen Ost",
+          "Rheinhausen",
+          "Krefeld-Hohenbudberg Chempark",
+          "Krefeld-Uerdingen",
+          "Krefeld-Linn",
+          "Krefeld-Oppum",
+          "Krefeld Hbf",
+          "Forsthaus",
+          "Anrath",
+          "Viersen",
+          "Mönchengladbach Hbf"
+        ]
+      },
+      {
+        "id": "8765020964454543127-2510201840-1",
+        "type": "Bus",
+        "number": "5862",
+        "direction": "Wesel",
+        "platform": "",
+        "time": "2510201840",
+        "destination": "Wesel",
+        "path_stations": [
+          "Oberhausen-Sterkrade",
+          "Oberhausen-Holten",
+          "Dinslaken",
+          "Voerde(Niederrhein)",
+          "Friedrichsfeld(Niederrhein)",
+          "Friedrichsfeld Post, Voerde (Niederrhein)",
+          "Friedrichsfeld Bahnhof, Voerde (Niederrhein)",
+          "Wesel"
+        ]
+      },
+      {
+        "id": "-6763685261936760744-2510201834-2",
+        "type": "RB",
+        "number": "31270",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "6",
+        "time": "2510201841",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Essen-Dellwig",
+          "Essen-Bergeborbeck",
+          "Essen-Altenessen",
+          "Essen-Zollverein Nord",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "1842709187140690773-2510201824-5",
+        "type": "Bus",
+        "number": "68343",
+        "direction": "Bottrop Hbf",
+        "platform": "",
+        "time": "2510201853",
+        "destination": "Bottrop Hbf",
+        "path_stations": [
+          "Oberhausen-Osterfeld Süd",
+          "Bottrop-Vonderort",
+          "Bottrop Hbf"
+        ]
+      },
+      {
+        "id": "-4409623362512070437-2510201851-1",
+        "type": "TRI",
+        "number": "89470",
+        "direction": "Düsseldorf Hbf",
+        "platform": "7",
+        "time": "2510201851",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-9166293144846532549-2510201725-4",
+        "type": "Bus",
+        "number": "68342",
+        "direction": "Duisburg-Ruhrort",
+        "platform": "",
+        "time": "2510201801",
+        "destination": "Duisburg-Ruhrort",
+        "path_stations": [
+          "Duisburg-Obermeiderich",
+          "Duisburg-Meiderich Ost",
+          "Duisburg-Meiderich Süd",
+          "Duisburg-Ruhrort"
+        ]
+      },
+      {
+        "id": "5904827168215272200-2510201856-1",
+        "type": "RE",
+        "number": "30996",
+        "direction": "Wuppertal Hbf",
+        "platform": "12",
+        "time": "2510201856",
+        "destination": "Wuppertal Hbf",
+        "path_stations": [
+          "Mülheim(Ruhr)Styrum",
+          "Mülheim(Ruhr)Hbf",
+          "Essen West",
+          "Essen Hbf",
+          "Essen-Steele",
+          "Essen-Kupferdreh",
+          "Velbert-Langenberg",
+          "Velbert-Neviges",
+          "Wuppertal-Vohwinkel",
+          "Wuppertal Hbf"
+        ]
+      },
+      {
+        "id": "-253212051380884363-2510201801-6",
+        "type": "RB",
+        "number": "31269",
+        "direction": "Duisburg Hbf",
+        "platform": "7",
+        "time": "2510201819",
+        "destination": "Duisburg Hbf",
+        "path_stations": [
+          "Duisburg Hbf"
+        ]
+      },
+      {
+        "id": "-463404969627888842-2510201745-4",
+        "type": "RE",
+        "number": "89891",
+        "direction": "Hamm(Westf)Hbf",
+        "platform": "6",
+        "time": "2510201816",
+        "destination": "Hamm(Westf)Hbf",
+        "path_stations": [
+          "Essen-Altenessen",
+          "Gelsenkirchen Hbf",
+          "Wanne-Eickel Hbf",
+          "Herne",
+          "Castrop-Rauxel Hbf",
+          "Dortmund-Mengede",
+          "Dortmund Hbf",
+          "Dortmund-Scharnhorst",
+          "Dortmund-Kurl",
+          "Kamen-Methler",
+          "Kamen",
+          "Bönen-Nordbögge",
+          "Hamm(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-5003122713984966200-2510201754-5",
+        "type": "Bus",
+        "number": "68341",
+        "direction": "Bottrop Hbf",
+        "platform": "",
+        "time": "2510201823",
+        "destination": "Bottrop Hbf",
+        "path_stations": [
+          "Oberhausen-Osterfeld Süd",
+          "Bottrop-Vonderort",
+          "Bottrop Hbf"
+        ]
+      },
+      {
+        "id": "4345033654595131569-2510201847-1",
+        "type": "S",
+        "number": "30360",
+        "direction": "Hattingen(Ruhr) Mitte",
+        "platform": "11",
+        "time": "2510201847",
+        "destination": "Hattingen(Ruhr) Mitte",
+        "path_stations": [
+          "Mülheim(Ruhr)Styrum",
+          "Mülheim(Ruhr)West",
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf",
+          "Essen-Steele",
+          "Essen-Steele Ost",
+          "Essen-Horst",
+          "Bochum-Dahlhausen",
+          "Hattingen(Ruhr)",
+          "Hattingen(Ruhr) Mitte"
+        ]
+      },
+      {
+        "id": "5472677830506864880-2510201820-1",
+        "type": "Bus",
+        "number": "4801",
+        "direction": "Wesel",
+        "platform": "",
+        "time": "2510201820",
+        "destination": "Wesel",
+        "path_stations": [
+          "Oberhausen-Sterkrade",
+          "Oberhausen-Holten",
+          "Dinslaken",
+          "Voerde(Niederrhein)",
+          "Friedrichsfeld Bahnhof, Voerde (Niederrhein)",
+          "Friedrichsfeld Post, Voerde (Niederrhein)",
+          "Friedrichsfeld(Niederrhein)",
+          "Wesel"
+        ]
+      },
+      {
+        "id": "8765295095727879976-2510201745-4",
+        "type": "IC",
+        "number": "2002",
+        "direction": "Emden Hbf",
+        "platform": "6",
+        "time": "2510201833",
+        "destination": "Emden Hbf",
+        "path_stations": [
+          "Gelsenkirchen Hbf",
+          "Wanne-Eickel Hbf",
+          "Recklinghausen Hbf",
+          "Münster(Westf)Hbf",
+          "Rheine",
+          "Lingen(Ems)",
+          "Meppen",
+          "Papenburg(Ems)",
+          "Leer(Ostfriesl)",
+          "Emden Hbf"
+        ]
+      },
+      {
+        "id": "6380839625296265214-2510201817-1",
+        "type": "S",
+        "number": "30358",
+        "direction": "Hattingen(Ruhr) Mitte",
+        "platform": "10",
+        "time": "2510201817",
+        "destination": "Hattingen(Ruhr) Mitte",
+        "path_stations": [
+          "Mülheim(Ruhr)Styrum",
+          "Mülheim(Ruhr)West",
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf",
+          "Essen-Steele",
+          "Essen-Steele Ost",
+          "Essen-Horst",
+          "Bochum-Dahlhausen",
+          "Hattingen(Ruhr)",
+          "Hattingen(Ruhr) Mitte"
+        ]
+      },
+      {
+        "id": "6630506945739936524-2510201730-14",
+        "type": "RE",
+        "number": "89892",
+        "direction": "Düsseldorf Hbf",
+        "platform": "7",
+        "time": "2510201843",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "1740752899960223692-2510201800-4",
+        "type": "Bus",
+        "number": "65344",
+        "direction": "Duisburg-Ruhrort",
+        "platform": "",
+        "time": "2510201831",
+        "destination": "Duisburg-Ruhrort",
+        "path_stations": [
+          "Duisburg-Obermeiderich",
+          "Duisburg-Meiderich Ost",
+          "Duisburg-Meiderich Süd",
+          "Duisburg-Ruhrort"
+        ]
+      },
+      {
+        "id": "4385958589636955869-2510201828-1",
+        "type": "RE",
+        "number": "28529",
+        "direction": "Koblenz Hbf",
+        "platform": "12",
+        "time": "2510201828",
+        "destination": "Koblenz Hbf",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf",
+          "Düsseldorf-Benrath",
+          "Leverkusen Mitte",
+          "Köln-Mülheim",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln Süd",
+          "Brühl",
+          "Bonn Hbf",
+          "Bonn UN Campus",
+          "Bonn-Bad Godesberg",
+          "Oberwinter",
+          "Remagen",
+          "Sinzig(Rhein)",
+          "Bad Breisig",
+          "Andernach",
+          "Koblenz Stadtmitte",
+          "Koblenz Hbf"
+        ]
+      },
+      {
+        "id": "7991506129333906200-2510201708-14",
+        "type": "VIA",
+        "number": "52262",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "6",
+        "time": "2510201802",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Essen-Dellwig",
+          "Essen-Bergeborbeck",
+          "Essen-Altenessen",
+          "Essen-Zollverein Nord",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "7385360712422157622-2510201939-6",
+        "type": "VIA",
+        "number": "52271",
+        "direction": "Duisburg Hbf",
+        "platform": "7",
+        "time": "2510201958",
+        "destination": "Duisburg Hbf",
+        "path_stations": [
+          "Duisburg Hbf"
+        ]
+      },
+      {
+        "id": "-8395225554000413805-2510201934-2",
+        "type": "RB",
+        "number": "31272",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "6",
+        "time": "2510201941",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Essen-Dellwig",
+          "Essen-Bergeborbeck",
+          "Essen-Altenessen",
+          "Essen-Zollverein Nord",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "-1551883868661232932-2510201900-4",
+        "type": "Bus",
+        "number": "68348",
+        "direction": "Duisburg-Ruhrort",
+        "platform": "",
+        "time": "2510201931",
+        "destination": "Duisburg-Ruhrort",
+        "path_stations": [
+          "Duisburg-Obermeiderich",
+          "Duisburg-Meiderich Ost",
+          "Duisburg-Meiderich Süd",
+          "Duisburg-Ruhrort"
+        ]
+      },
+      {
+        "id": "-8613071504061065375-2510201940-1",
+        "type": "Bus",
+        "number": "5864",
+        "direction": "Wesel",
+        "platform": "",
+        "time": "2510201940",
+        "destination": "Wesel",
+        "path_stations": [
+          "Oberhausen-Sterkrade",
+          "Oberhausen-Holten",
+          "Dinslaken",
+          "Voerde(Niederrhein)",
+          "Friedrichsfeld(Niederrhein)",
+          "Friedrichsfeld Post, Voerde (Niederrhein)",
+          "Friedrichsfeld Bahnhof, Voerde (Niederrhein)",
+          "Wesel"
+        ]
+      },
+      {
+        "id": "6761890177864973524-2510201830-14",
+        "type": "RE",
+        "number": "89894",
+        "direction": "Düsseldorf Hbf",
+        "platform": "7",
+        "time": "2510201943",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "961424817681070302-2510201924-5",
+        "type": "Bus",
+        "number": "68347",
+        "direction": "Bottrop Hbf",
+        "platform": "",
+        "time": "2510201953",
+        "destination": "Bottrop Hbf",
+        "path_stations": [
+          "Oberhausen-Osterfeld Süd",
+          "Bottrop-Vonderort",
+          "Bottrop Hbf"
+        ]
+      },
+      {
+        "id": "1767581860461023663-2510201512-11",
+        "type": "ICE",
+        "number": "118",
+        "direction": "Münster(Westf)Hbf",
+        "platform": "6",
+        "time": "2510201923",
+        "destination": "Münster(Westf)Hbf",
+        "path_stations": [
+          "Gelsenkirchen Hbf",
+          "Wanne-Eickel Hbf",
+          "Recklinghausen Hbf",
+          "Münster(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "9124182195417290215-2510201845-4",
+        "type": "TRI",
+        "number": "28543",
+        "direction": "Hamm(Westf)Hbf",
+        "platform": "",
+        "time": "2510201916",
+        "destination": "Hamm(Westf)Hbf",
+        "path_stations": [
+          "Essen-Altenessen",
+          "Gelsenkirchen Hbf",
+          "Wanne-Eickel Hbf",
+          "Herne",
+          "Castrop-Rauxel Hbf",
+          "Dortmund-Mengede",
+          "Dortmund Hbf",
+          "Dortmund-Scharnhorst",
+          "Dortmund-Kurl",
+          "Kamen-Methler",
+          "Kamen",
+          "Bönen-Nordbögge",
+          "Hamm(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-7610410907441103742-2510201901-6",
+        "type": "RB",
+        "number": "31271",
+        "direction": "Duisburg Hbf",
+        "platform": "7",
+        "time": "2510201919",
+        "destination": "Duisburg Hbf",
+        "path_stations": [
+          "Duisburg Hbf"
+        ]
+      },
+      {
+        "id": "-199269915617519590-2510201917-1",
+        "type": "S",
+        "number": "30362",
+        "direction": "Hattingen(Ruhr) Mitte",
+        "platform": "10",
+        "time": "2510201917",
+        "destination": "Hattingen(Ruhr) Mitte",
+        "path_stations": [
+          "Mülheim(Ruhr)Styrum",
+          "Mülheim(Ruhr)West",
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf",
+          "Essen-Steele",
+          "Essen-Steele Ost",
+          "Essen-Horst",
+          "Bochum-Dahlhausen",
+          "Hattingen(Ruhr)",
+          "Hattingen(Ruhr) Mitte"
+        ]
+      },
+      {
+        "id": "1492120664389609114-2510201604-12",
+        "type": "IC",
+        "number": "2207",
+        "direction": "Köln Hbf",
+        "platform": "7",
+        "time": "2510201926",
+        "destination": "Köln Hbf",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Düsseldorf Hbf",
+          "Köln Hbf"
+        ]
+      },
+      {
+        "id": "6193977705691107977-2510201830-4",
+        "type": "Bus",
+        "number": "68346",
+        "direction": "Duisburg-Ruhrort",
+        "platform": "",
+        "time": "2510201901",
+        "destination": "Duisburg-Ruhrort",
+        "path_stations": [
+          "Duisburg-Obermeiderich",
+          "Duisburg-Meiderich Ost",
+          "Duisburg-Meiderich Süd",
+          "Duisburg-Ruhrort"
+        ]
+      },
+      {
+        "id": "-6033080727000589172-2510201947-1",
+        "type": "S",
+        "number": "30364",
+        "direction": "Hattingen(Ruhr) Mitte",
+        "platform": "11",
+        "time": "2510201947",
+        "destination": "Hattingen(Ruhr) Mitte",
+        "path_stations": [
+          "Mülheim(Ruhr)Styrum",
+          "Mülheim(Ruhr)West",
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf",
+          "Essen-Steele",
+          "Essen-Steele Ost",
+          "Essen-Horst",
+          "Bochum-Dahlhausen",
+          "Hattingen(Ruhr)",
+          "Hattingen(Ruhr) Mitte"
+        ]
+      },
+      {
+        "id": "-1253548023198098278-2510201427-12",
+        "type": "ICE",
+        "number": "914",
+        "direction": "Dortmund Hbf",
+        "platform": "6",
+        "time": "2510201935",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Gelsenkirchen Hbf",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "3306556129119729994-2510201951-1",
+        "type": "RE",
+        "number": "63778",
+        "direction": "Düsseldorf Hbf",
+        "platform": "12",
+        "time": "2510201951",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-3175079351275758919-2510201933-1",
+        "type": "RE",
+        "number": "28531",
+        "direction": "Koblenz Hbf",
+        "platform": "12",
+        "time": "2510201933",
+        "destination": "Koblenz Hbf",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf",
+          "Düsseldorf-Benrath",
+          "Leverkusen Mitte",
+          "Köln-Mülheim",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln Süd",
+          "Brühl",
+          "Bonn Hbf",
+          "Bonn UN Campus",
+          "Bonn-Bad Godesberg",
+          "Oberwinter",
+          "Remagen",
+          "Sinzig(Rhein)",
+          "Bad Breisig",
+          "Andernach",
+          "Koblenz Stadtmitte",
+          "Koblenz Hbf"
+        ]
+      },
+      {
+        "id": "1838265877197984443-2510201854-5",
+        "type": "Bus",
+        "number": "68345",
+        "direction": "Bottrop Hbf",
+        "platform": "",
+        "time": "2510201923",
+        "destination": "Bottrop Hbf",
+        "path_stations": [
+          "Oberhausen-Osterfeld Süd",
+          "Bottrop-Vonderort",
+          "Bottrop Hbf"
+        ]
+      },
+      {
+        "id": "3571894298811748465-2510201920-1",
+        "type": "Bus",
+        "number": "4803",
+        "direction": "Wesel",
+        "platform": "",
+        "time": "2510201920",
+        "destination": "Wesel",
+        "path_stations": [
+          "Oberhausen-Sterkrade",
+          "Oberhausen-Holten",
+          "Dinslaken",
+          "Voerde(Niederrhein)",
+          "Friedrichsfeld Bahnhof, Voerde (Niederrhein)",
+          "Friedrichsfeld Post, Voerde (Niederrhein)",
+          "Friedrichsfeld(Niederrhein)",
+          "Wesel"
+        ]
+      },
+      {
+        "id": "608379063884191223-2510201808-14",
+        "type": "VIA",
+        "number": "52264",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "6",
+        "time": "2510201902",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Essen-Dellwig",
+          "Essen-Bergeborbeck",
+          "Essen-Altenessen",
+          "Essen-Zollverein Nord",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "5197849891127224719-2510202001-6",
+        "type": "RB",
+        "number": "31273",
+        "direction": "Duisburg Hbf",
+        "platform": "7",
+        "time": "2510202019",
+        "destination": "Duisburg Hbf",
+        "path_stations": [
+          "Duisburg Hbf"
+        ]
+      },
+      {
+        "id": "5384914388098684320-2510202047-1",
+        "type": "S",
+        "number": "30368",
+        "direction": "Essen Hbf",
+        "platform": "11",
+        "time": "2510202047",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Mülheim(Ruhr)Styrum",
+          "Mülheim(Ruhr)West",
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "-2823655757709007819-2510202017-1",
+        "type": "S",
+        "number": "30366",
+        "direction": "Essen Hbf",
+        "platform": "10",
+        "time": "2510202017",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Mülheim(Ruhr)Styrum",
+          "Mülheim(Ruhr)West",
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "-1687625518078930243-2510201945-4",
+        "type": "RE",
+        "number": "89895",
+        "direction": "Dortmund Hbf",
+        "platform": "6",
+        "time": "2510202016",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Essen-Altenessen",
+          "Gelsenkirchen Hbf",
+          "Wanne-Eickel Hbf",
+          "Herne",
+          "Castrop-Rauxel Hbf",
+          "Dortmund-Mengede",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "6060546869279204528-2510201930-14",
+        "type": "RE",
+        "number": "89896",
+        "direction": "Düsseldorf Hbf",
+        "platform": "7",
+        "time": "2510202043",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "183352330132559722-2510202024-5",
+        "type": "Bus",
+        "number": "68351",
+        "direction": "Bottrop Hbf",
+        "platform": "",
+        "time": "2510202053",
+        "destination": "Bottrop Hbf",
+        "path_stations": [
+          "Oberhausen-Osterfeld Süd",
+          "Bottrop-Vonderort",
+          "Bottrop Hbf"
+        ]
+      },
+      {
+        "id": "-2260455431683513227-2510202037-1",
+        "type": "Bus",
+        "number": "5866",
+        "direction": "Wesel",
+        "platform": "",
+        "time": "2510202037",
+        "destination": "Wesel",
+        "path_stations": [
+          "Oberhausen-Sterkrade",
+          "Oberhausen-Holten",
+          "Dinslaken",
+          "Voerde(Niederrhein)",
+          "Friedrichsfeld(Niederrhein)",
+          "Friedrichsfeld Post, Voerde (Niederrhein)",
+          "Friedrichsfeld Bahnhof, Voerde (Niederrhein)",
+          "Wesel"
+        ]
+      },
+      {
+        "id": "-7866439942540993541-2510201954-5",
+        "type": "Bus",
+        "number": "68349",
+        "direction": "Bottrop Hbf",
+        "platform": "",
+        "time": "2510202023",
+        "destination": "Bottrop Hbf",
+        "path_stations": [
+          "Oberhausen-Osterfeld Süd",
+          "Bottrop-Vonderort",
+          "Bottrop Hbf"
+        ]
+      },
+      {
+        "id": "3647811556346721539-2510202034-2",
+        "type": "RB",
+        "number": "31274",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "6",
+        "time": "2510202041",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Essen-Dellwig",
+          "Essen-Bergeborbeck",
+          "Essen-Altenessen",
+          "Essen-Zollverein Nord",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "1076371356213952781-2510201930-4",
+        "type": "Bus",
+        "number": "68350",
+        "direction": "Duisburg-Ruhrort",
+        "platform": "",
+        "time": "2510202001",
+        "destination": "Duisburg-Ruhrort",
+        "path_stations": [
+          "Duisburg-Obermeiderich",
+          "Duisburg-Meiderich Ost",
+          "Duisburg-Meiderich Süd",
+          "Duisburg-Ruhrort"
+        ]
+      },
+      {
+        "id": "4207114119507966576-2510202028-1",
+        "type": "RE",
+        "number": "28533",
+        "direction": "Koblenz Hbf",
+        "platform": "12",
+        "time": "2510202028",
+        "destination": "Koblenz Hbf",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf",
+          "Düsseldorf-Benrath",
+          "Leverkusen Mitte",
+          "Köln-Mülheim",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln Süd",
+          "Brühl",
+          "Bonn Hbf",
+          "Bonn UN Campus",
+          "Bonn-Bad Godesberg",
+          "Oberwinter",
+          "Remagen",
+          "Sinzig(Rhein)",
+          "Bad Breisig",
+          "Andernach",
+          "Koblenz Stadtmitte",
+          "Koblenz Hbf"
+        ]
+      },
+      {
+        "id": "7223376607685568106-2510201632-7",
+        "type": "FLX",
+        "number": "1236",
+        "direction": "Köln Hbf",
+        "platform": "7",
+        "time": "2510202057",
+        "destination": "Köln Hbf",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Düsseldorf Hbf",
+          "Köln Hbf"
+        ]
+      },
+      {
+        "id": "-8579699905201603283-2510202117-1",
+        "type": "S",
+        "number": "30370",
+        "direction": "Essen Hbf",
+        "platform": "10",
+        "time": "2510202117",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Mülheim(Ruhr)Styrum",
+          "Mülheim(Ruhr)West",
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "4594771126664263764-2510202045-4",
+        "type": "RE",
+        "number": "89897",
+        "direction": "Dortmund Hbf",
+        "platform": "6",
+        "time": "2510202116",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Essen-Altenessen",
+          "Gelsenkirchen Hbf",
+          "Wanne-Eickel Hbf",
+          "Herne",
+          "Castrop-Rauxel Hbf",
+          "Dortmund-Mengede",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "973115416817311320-2510202137-1",
+        "type": "Bus",
+        "number": "5868",
+        "direction": "Wesel",
+        "platform": "",
+        "time": "2510202137",
+        "destination": "Wesel",
+        "path_stations": [
+          "Oberhausen-Sterkrade",
+          "Oberhausen-Holten",
+          "Dinslaken",
+          "Voerde(Niederrhein)",
+          "Friedrichsfeld(Niederrhein)",
+          "Friedrichsfeld Post, Voerde (Niederrhein)",
+          "Friedrichsfeld Bahnhof, Voerde (Niederrhein)",
+          "Wesel"
+        ]
+      },
+      {
+        "id": "6115637361180188083-2510202134-2",
+        "type": "RB",
+        "number": "31276",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "6",
+        "time": "2510202141",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Essen-Dellwig",
+          "Essen-Bergeborbeck",
+          "Essen-Altenessen",
+          "Essen-Zollverein Nord",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "-3710085551487179462-2510202030-4",
+        "type": "Bus",
+        "number": "68352",
+        "direction": "Duisburg-Ruhrort",
+        "platform": "",
+        "time": "2510202101",
+        "destination": "Duisburg-Ruhrort",
+        "path_stations": [
+          "Duisburg-Obermeiderich",
+          "Duisburg-Meiderich Ost",
+          "Duisburg-Meiderich Süd",
+          "Duisburg-Ruhrort"
+        ]
+      },
+      {
+        "id": "-2810731113814921501-2510202124-5",
+        "type": "Bus",
+        "number": "68353",
+        "direction": "Bottrop Hbf",
+        "platform": "",
+        "time": "2510202153",
+        "destination": "Bottrop Hbf",
+        "path_stations": [
+          "Oberhausen-Osterfeld Süd",
+          "Bottrop-Vonderort",
+          "Bottrop Hbf"
+        ]
+      },
+      {
+        "id": "2658390677619558051-2510202147-1",
+        "type": "S",
+        "number": "30372",
+        "direction": "Essen Hbf",
+        "platform": "11",
+        "time": "2510202147",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Mülheim(Ruhr)Styrum",
+          "Mülheim(Ruhr)West",
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "-2400128801858569650-2510202101-6",
+        "type": "RB",
+        "number": "31275",
+        "direction": "Duisburg Hbf",
+        "platform": "7",
+        "time": "2510202119",
+        "destination": "Duisburg Hbf",
+        "path_stations": [
+          "Duisburg Hbf"
+        ]
+      },
+      {
+        "id": "4454497387984514669-2510202133-1",
+        "type": "RE",
+        "number": "28535",
+        "direction": "Koblenz Hbf",
+        "platform": "12",
+        "time": "2510202133",
+        "destination": "Koblenz Hbf",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf",
+          "Düsseldorf-Benrath",
+          "Leverkusen Mitte",
+          "Köln-Mülheim",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln Süd",
+          "Brühl",
+          "Bonn Hbf",
+          "Bonn UN Campus",
+          "Bonn-Bad Godesberg",
+          "Oberwinter",
+          "Remagen",
+          "Sinzig(Rhein)",
+          "Bad Breisig",
+          "Andernach",
+          "Koblenz Stadtmitte",
+          "Koblenz Hbf"
+        ]
+      },
+      {
+        "id": "-6264648509796476021-2510201628-11",
+        "type": "ICE",
+        "number": "1212",
+        "direction": "Dortmund Hbf",
+        "platform": "6",
+        "time": "2510202136",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Gelsenkirchen Hbf",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-4604417545031401799-2510202030-14",
+        "type": "RE",
+        "number": "89898",
+        "direction": "Düsseldorf Hbf",
+        "platform": "7",
+        "time": "2510202143",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "8008874820201141988-2510202124-4",
+        "type": "Bus",
+        "number": "3007",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "",
+        "time": "2510202234",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Essen-Altenessen",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "-2460966014074964076-2510202058-9",
+        "type": "Bus",
+        "number": "5869",
+        "direction": "Duisburg Hbf",
+        "platform": "",
+        "time": "2510202219",
+        "destination": "Duisburg Hbf",
+        "path_stations": [
+          "Duisburg Hbf"
+        ]
+      },
+      {
+        "id": "1025531159513107611-2510202130-4",
+        "type": "Bus",
+        "number": "68354",
+        "direction": "Duisburg-Ruhrort",
+        "platform": "",
+        "time": "2510202201",
+        "destination": "Duisburg-Ruhrort",
+        "path_stations": [
+          "Duisburg-Obermeiderich",
+          "Duisburg-Meiderich Ost",
+          "Duisburg-Meiderich Süd",
+          "Duisburg-Ruhrort"
+        ]
+      },
+      {
+        "id": "2602687271452589574-2510202256-1",
+        "type": "Bus",
+        "number": "338",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510202256",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Mülheim(Ruhr)Styrum",
+          "Mülheim(Ruhr)West",
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-3455261183488107808-2510202219-2",
+        "type": "Bus",
+        "number": "5870",
+        "direction": "Wesel",
+        "platform": "",
+        "time": "2510202237",
+        "destination": "Wesel",
+        "path_stations": [
+          "Oberhausen-Sterkrade",
+          "Oberhausen-Holten",
+          "Dinslaken",
+          "Voerde(Niederrhein)",
+          "Friedrichsfeld(Niederrhein)",
+          "Friedrichsfeld Post, Voerde (Niederrhein)",
+          "Friedrichsfeld Bahnhof, Voerde (Niederrhein)",
+          "Wesel"
+        ]
+      },
+      {
+        "id": "-984308395848723480-2510202217-1",
+        "type": "S",
+        "number": "30374",
+        "direction": "Essen Hbf",
+        "platform": "10",
+        "time": "2510202217",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Mülheim(Ruhr)Styrum",
+          "Mülheim(Ruhr)West",
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "2831643269627950472-2510202226-1",
+        "type": "Bus",
+        "number": "336",
+        "direction": "Hattingen(Ruhr) Mitte",
+        "platform": "",
+        "time": "2510202226",
+        "destination": "Hattingen(Ruhr) Mitte",
+        "path_stations": [
+          "Mülheim(Ruhr)Styrum",
+          "Mülheim(Ruhr)West",
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus",
+          "Essen-Steele",
+          "Essen-Steele Ost",
+          "Essen-Horst",
+          "Bochum-Dahlhausen",
+          "Hattingen(Ruhr)",
+          "Hattingen(Ruhr) Mitte"
+        ]
+      },
+      {
+        "id": "3462162865004817073-2510202145-4",
+        "type": "RE",
+        "number": "89899",
+        "direction": "Dortmund Hbf",
+        "platform": "6",
+        "time": "2510202216",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Essen-Altenessen",
+          "Gelsenkirchen Hbf",
+          "Wanne-Eickel Hbf",
+          "Herne",
+          "Castrop-Rauxel Hbf",
+          "Dortmund-Mengede",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "383262636395737531-2510202224-5",
+        "type": "Bus",
+        "number": "68355",
+        "direction": "Bottrop Hbf",
+        "platform": "",
+        "time": "2510202253",
+        "destination": "Bottrop Hbf",
+        "path_stations": [
+          "Oberhausen-Osterfeld Süd",
+          "Bottrop-Vonderort",
+          "Bottrop Hbf"
+        ]
+      },
+      {
+        "id": "-6889440490444993519-2510202238-3",
+        "type": "Bus",
+        "number": "3000",
+        "direction": "Düsseldorf Hbf",
+        "platform": "",
+        "time": "2510202323",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "6949367151260265793-2510202224-4",
+        "type": "Bus",
+        "number": "3013",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "",
+        "time": "2510202334",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Essen-Altenessen",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "4942987700389942236-2510202317-1",
+        "type": "S",
+        "number": "30378",
+        "direction": "Essen Hbf",
+        "platform": "10",
+        "time": "2510202317",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Mülheim(Ruhr)Styrum",
+          "Mülheim(Ruhr)West",
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "5537531749197613212-2510202326-1",
+        "type": "Bus",
+        "number": "340",
+        "direction": "Hattingen(Ruhr) Mitte",
+        "platform": "",
+        "time": "2510202326",
+        "destination": "Hattingen(Ruhr) Mitte",
+        "path_stations": [
+          "Mülheim(Ruhr)Styrum",
+          "Mülheim(Ruhr)West",
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus",
+          "Essen-Steele",
+          "Essen-Steele Ost",
+          "Essen-Horst",
+          "Bochum-Dahlhausen",
+          "Hattingen(Ruhr)",
+          "Hattingen(Ruhr) Mitte"
+        ]
+      },
+      {
+        "id": "-3154621970576716398-2510202242-2",
+        "type": "Bus",
+        "number": "310",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "",
+        "time": "2510202302",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Essen-Dellwig",
+          "Essen-Bergeborbeck",
+          "Essen-Altenessen",
+          "Essen-Zollverein Nord",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "8386611245275022576-2510202213-9",
+        "type": "Bus",
+        "number": "5873",
+        "direction": "Duisburg Hbf",
+        "platform": "",
+        "time": "2510202334",
+        "destination": "Duisburg Hbf",
+        "path_stations": [
+          "Duisburg Hbf"
+        ]
+      },
+      {
+        "id": "-6311027240783072325-2510202324-5",
+        "type": "Bus",
+        "number": "68357",
+        "direction": "Bottrop Hbf",
+        "platform": "",
+        "time": "2510202353",
+        "destination": "Bottrop Hbf",
+        "path_stations": [
+          "Oberhausen-Osterfeld Süd",
+          "Bottrop-Vonderort",
+          "Bottrop Hbf"
+        ]
+      },
+      {
+        "id": "6862875673277646876-2510202212-6",
+        "type": "Bus",
+        "number": "317",
+        "direction": "Duisburg Hbf",
+        "platform": "",
+        "time": "2510202315",
+        "destination": "Duisburg Hbf",
+        "path_stations": [
+          "Duisburg Hbf"
+        ]
+      },
+      {
+        "id": "985373162242226021-2510202230-4",
+        "type": "Bus",
+        "number": "68356",
+        "direction": "Duisburg-Ruhrort",
+        "platform": "",
+        "time": "2510202301",
+        "destination": "Duisburg-Ruhrort",
+        "path_stations": [
+          "Duisburg-Obermeiderich",
+          "Duisburg-Meiderich Ost",
+          "Duisburg-Meiderich Süd",
+          "Duisburg-Ruhrort"
+        ]
+      },
+      {
+        "id": "-162315690558344009-2510210026-1",
+        "type": "Bus",
+        "number": "332",
+        "direction": "Hattingen(Ruhr) Mitte",
+        "platform": "",
+        "time": "2510210026",
+        "destination": "Hattingen(Ruhr) Mitte",
+        "path_stations": [
+          "Mülheim(Ruhr)Styrum",
+          "Mülheim(Ruhr)West",
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus",
+          "Essen-Steele",
+          "Essen-Steele Ost",
+          "Essen-Horst",
+          "Bochum-Dahlhausen",
+          "Hattingen(Ruhr)",
+          "Hattingen(Ruhr) Mitte"
+        ]
+      },
+      {
+        "id": "6752084122772572127-2510202330-4",
+        "type": "Bus",
+        "number": "68358",
+        "direction": "Duisburg-Ruhrort",
+        "platform": "",
+        "time": "2510210001",
+        "destination": "Duisburg-Ruhrort",
+        "path_stations": [
+          "Duisburg-Obermeiderich",
+          "Duisburg-Meiderich Ost",
+          "Duisburg-Meiderich Süd",
+          "Duisburg-Ruhrort"
+        ]
+      },
+      {
+        "id": "8420068562853111502-2510202312-6",
+        "type": "Bus",
+        "number": "319",
+        "direction": "Duisburg Hbf",
+        "platform": "",
+        "time": "2510210015",
+        "destination": "Duisburg Hbf",
+        "path_stations": [
+          "Duisburg Hbf"
+        ]
+      },
+      {
+        "id": "8508930744013894031-2510210017-1",
+        "type": "S",
+        "number": "30300",
+        "direction": "Essen Hbf",
+        "platform": "10",
+        "time": "2510210017",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Mülheim(Ruhr)Styrum",
+          "Mülheim(Ruhr)West",
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "-3450686168573838582-2510210000-1",
+        "type": "Bus",
+        "number": "1942",
+        "direction": "Emmerich",
+        "platform": "",
+        "time": "2510210000",
+        "destination": "Emmerich",
+        "path_stations": [
+          "Oberhausen-Sterkrade",
+          "Oberhausen-Holten",
+          "Dinslaken",
+          "Voerde(Niederrhein)",
+          "Friedrichsfeld(Niederrhein)",
+          "Friedrichsfeld Post, Voerde (Niederrhein)",
+          "Friedrichsfeld Bahnhof, Voerde (Niederrhein)",
+          "Wesel",
+          "Wesel Feldmark",
+          "Mehrhoog",
+          "Haldern(Rheinl)",
+          "Empel-Rees",
+          "Millingen(b Rees)",
+          "Praest",
+          "Emmerich"
+        ]
+      },
+      {
+        "id": "3668273527763559270-2510202342-2",
+        "type": "Bus",
+        "number": "312",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "",
+        "time": "2510210002",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Essen-Dellwig",
+          "Essen-Bergeborbeck",
+          "Essen-Altenessen",
+          "Essen-Zollverein Nord",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "-2328683605287735860-2510202338-3",
+        "type": "Bus",
+        "number": "3006",
+        "direction": "Düsseldorf Hbf",
+        "platform": "",
+        "time": "2510210023",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-6985898205615833013-2510210100-1",
+        "type": "Bus",
+        "number": "1900",
+        "direction": "Wesel",
+        "platform": "",
+        "time": "2510210100",
+        "destination": "Wesel",
+        "path_stations": [
+          "Oberhausen-Sterkrade",
+          "Oberhausen-Holten",
+          "Dinslaken",
+          "Voerde(Niederrhein)",
+          "Friedrichsfeld(Niederrhein)",
+          "Friedrichsfeld Post, Voerde (Niederrhein)",
+          "Friedrichsfeld Bahnhof, Voerde (Niederrhein)",
+          "Wesel"
+        ]
+      },
+      {
+        "id": "7271053357127110959-2510210012-6",
+        "type": "Bus",
+        "number": "321",
+        "direction": "Duisburg Hbf",
+        "platform": "",
+        "time": "2510210115",
+        "destination": "Duisburg Hbf",
+        "path_stations": [
+          "Duisburg Hbf"
+        ]
+      },
+      {
+        "id": "2680824758092337580-2510210042-2",
+        "type": "Bus",
+        "number": "300",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "",
+        "time": "2510210102",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Essen-Dellwig",
+          "Essen-Bergeborbeck",
+          "Essen-Altenessen",
+          "Essen-Zollverein Nord",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "-4748916736848493479-2510210112-6",
+        "type": "Bus",
+        "number": "303",
+        "direction": "Duisburg Hbf",
+        "platform": "",
+        "time": "2510210215",
+        "destination": "Duisburg Hbf",
+        "path_stations": [
+          "Duisburg Hbf"
+        ]
+      },
+      {
+        "id": "4013721932434266113-2510210200-1",
+        "type": "Bus",
+        "number": "1902",
+        "direction": "Wesel",
+        "platform": "",
+        "time": "2510210200",
+        "destination": "Wesel",
+        "path_stations": [
+          "Oberhausen-Sterkrade",
+          "Oberhausen-Holten",
+          "Dinslaken",
+          "Voerde(Niederrhein)",
+          "Friedrichsfeld(Niederrhein)",
+          "Friedrichsfeld Post, Voerde (Niederrhein)",
+          "Friedrichsfeld Bahnhof, Voerde (Niederrhein)",
+          "Wesel"
+        ]
+      },
+      {
+        "id": "7337191127485568696-2510210142-2",
+        "type": "Bus",
+        "number": "302",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "",
+        "time": "2510210202",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Essen-Dellwig",
+          "Essen-Bergeborbeck",
+          "Essen-Altenessen",
+          "Essen-Zollverein Nord",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "-4020808769534634545-2510210242-2",
+        "type": "Bus",
+        "number": "304",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "",
+        "time": "2510210302",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Essen-Dellwig",
+          "Essen-Bergeborbeck",
+          "Essen-Altenessen",
+          "Essen-Zollverein Nord",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "7575657602430597461-2510210212-6",
+        "type": "Bus",
+        "number": "305",
+        "direction": "Duisburg Hbf",
+        "platform": "",
+        "time": "2510210315",
+        "destination": "Duisburg Hbf",
+        "path_stations": [
+          "Duisburg Hbf"
+        ]
+      },
+      {
+        "id": "-3984551627525172822-2510210404-1",
+        "type": "Bus",
+        "number": "334",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510210404",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Mülheim(Ruhr)Styrum",
+          "Mülheim(Ruhr)West",
+          "Mülheim(Ruhr)Hbf",
+          "Essen-Frohnhausen",
+          "Essen West",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-5873779746437927890-2510210431-1",
+        "type": "Bus",
+        "number": "65642",
+        "direction": "Duisburg-Ruhrort",
+        "platform": "",
+        "time": "2510210431",
+        "destination": "Duisburg-Ruhrort",
+        "path_stations": [
+          "Duisburg-Obermeiderich",
+          "Duisburg-Meiderich Ost",
+          "Duisburg-Meiderich Süd",
+          "Duisburg-Ruhrort"
+        ]
+      },
+      {
+        "id": "-7436889178381808281-2510210338-3",
+        "type": "Bus",
+        "number": "3012",
+        "direction": "Düsseldorf Hbf",
+        "platform": "",
+        "time": "2510210423",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-1452660709465522594-2510210412-1",
+        "type": "Bus",
+        "number": "1944",
+        "direction": "Emmerich",
+        "platform": "",
+        "time": "2510210412",
+        "destination": "Emmerich",
+        "path_stations": [
+          "Oberhausen-Sterkrade",
+          "Oberhausen-Holten",
+          "Dinslaken",
+          "Voerde(Niederrhein)",
+          "Friedrichsfeld(Niederrhein)",
+          "Friedrichsfeld Post, Voerde (Niederrhein)",
+          "Friedrichsfeld Bahnhof, Voerde (Niederrhein)",
+          "Wesel",
+          "Wesel Feldmark",
+          "Mehrhoog",
+          "Haldern(Rheinl)",
+          "Empel-Rees",
+          "Millingen(b Rees)",
+          "Praest",
+          "Emmerich"
+        ]
+      },
+      {
+        "id": "-624418220032522267-2510210312-6",
+        "type": "Bus",
+        "number": "307",
+        "direction": "Duisburg Hbf",
+        "platform": "",
+        "time": "2510210415",
+        "destination": "Duisburg Hbf",
+        "path_stations": [
+          "Duisburg Hbf"
+        ]
+      },
+      {
+        "id": "416421628433793880-2510210408-1",
+        "type": "VIA",
+        "number": "20003",
+        "direction": "Duisburg Hbf",
+        "platform": "12",
+        "time": "2510210408",
+        "destination": "Duisburg Hbf",
+        "path_stations": [
+          "Duisburg Hbf"
+        ]
+      },
+      {
+        "id": "-7477147699153648172-2510210417-1",
+        "type": "Bus",
+        "number": "65640",
+        "direction": "Duisburg-Ruhrort",
+        "platform": "",
+        "time": "2510210417",
+        "destination": "Duisburg-Ruhrort",
+        "path_stations": [
+          "Duisburg-Obermeiderich",
+          "Duisburg-Meiderich Ost",
+          "Duisburg-Meiderich Süd",
+          "Duisburg-Ruhrort"
+        ]
+      },
+      {
+        "id": "9204783673206153918-2510210440-1",
+        "type": "Bus",
+        "number": "5834",
+        "direction": "Wesel",
+        "platform": "",
+        "time": "2510210440",
+        "destination": "Wesel",
+        "path_stations": [
+          "Oberhausen-Sterkrade",
+          "Oberhausen-Holten",
+          "Dinslaken",
+          "Voerde(Niederrhein)",
+          "Friedrichsfeld(Niederrhein)",
+          "Friedrichsfeld Post, Voerde (Niederrhein)",
+          "Friedrichsfeld Bahnhof, Voerde (Niederrhein)",
+          "Wesel"
+        ]
+      },
+      {
+        "id": "5369223492151677246-2510210424-5",
+        "type": "Bus",
+        "number": "65641",
+        "direction": "Bottrop Hbf",
+        "platform": "",
+        "time": "2510210453",
+        "destination": "Bottrop Hbf",
+        "path_stations": [
+          "Oberhausen-Osterfeld Süd",
+          "Bottrop-Vonderort",
+          "Bottrop Hbf"
+        ]
+      },
+      {
+        "id": "-8570275015729015565-2510210324-4",
+        "type": "Bus",
+        "number": "3001",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "",
+        "time": "2510210434",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Essen-Altenessen",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "-2796428905286433669-2510210342-2",
+        "type": "Bus",
+        "number": "306",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "",
+        "time": "2510210402",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Essen-Dellwig",
+          "Essen-Bergeborbeck",
+          "Essen-Altenessen",
+          "Essen-Zollverein Nord",
+          "Gelsenkirchen Hbf"
+        ]
+      }
+    ],
+    "arrivals": []
+  }
+}

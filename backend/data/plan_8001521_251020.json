@@ -1,0 +1,655 @@
+{
+  "station_eva": "8001521",
+  "date": "251020",
+  "cached_at": "2025-10-20T16:51:55.183524",
+  "plan_data": {
+    "arrivals": [
+      {
+        "id": "1814748650730832505-2510201703-13",
+        "type": "RB",
+        "number": "14676",
+        "time": "2510201813",
+        "platform": "1",
+        "path_stations": [
+          "Lüdenscheid",
+          "Lüdenscheid-Brügge",
+          "Schalksmühle",
+          "Dahlerbrück",
+          "Rummenohl",
+          "Dahl",
+          "Hagen-Oberhagen",
+          "Hagen Hbf",
+          "Herdecke",
+          "Wittbräucke",
+          "Dortmund-Löttringhausen",
+          "Dortmund-Kirchhörde"
+        ],
+        "line": "52"
+      },
+      {
+        "id": "3487472044283077793-2510201837-3",
+        "type": "RB",
+        "number": "14679",
+        "time": "2510201845",
+        "platform": "1",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund Signal Iduna Park"
+        ],
+        "line": "52"
+      },
+      {
+        "id": "-4448190838152711907-2510201803-13",
+        "type": "RB",
+        "number": "14678",
+        "time": "2510201913",
+        "platform": "1",
+        "path_stations": [
+          "Lüdenscheid",
+          "Lüdenscheid-Brügge",
+          "Schalksmühle",
+          "Dahlerbrück",
+          "Rummenohl",
+          "Dahl",
+          "Hagen-Oberhagen",
+          "Hagen Hbf",
+          "Herdecke",
+          "Wittbräucke",
+          "Dortmund-Löttringhausen",
+          "Dortmund-Kirchhörde"
+        ],
+        "line": "52"
+      },
+      {
+        "id": "2671386873600530572-2510201937-3",
+        "type": "RB",
+        "number": "14681",
+        "time": "2510201945",
+        "platform": "1",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund Signal Iduna Park"
+        ],
+        "line": "52"
+      },
+      {
+        "id": "339615014752355294-2510201903-13",
+        "type": "RB",
+        "number": "14680",
+        "time": "2510202013",
+        "platform": "1",
+        "path_stations": [
+          "Lüdenscheid",
+          "Lüdenscheid-Brügge",
+          "Schalksmühle",
+          "Dahlerbrück",
+          "Rummenohl",
+          "Dahl",
+          "Hagen-Oberhagen",
+          "Hagen Hbf",
+          "Herdecke",
+          "Wittbräucke",
+          "Dortmund-Löttringhausen",
+          "Dortmund-Kirchhörde"
+        ],
+        "line": "52"
+      },
+      {
+        "id": "-1350864422521760315-2510202037-3",
+        "type": "RB",
+        "number": "14683",
+        "time": "2510202045",
+        "platform": "1",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund Signal Iduna Park"
+        ],
+        "line": "52"
+      },
+      {
+        "id": "5892877270021639003-2510202053-3",
+        "type": "Bus",
+        "number": "5207",
+        "time": "2510202113",
+        "platform": "",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund Signal Iduna Park"
+        ],
+        "line": "RB52"
+      },
+      {
+        "id": "-968640645875415488-2510202003-13",
+        "type": "RB",
+        "number": "14682",
+        "time": "2510202113",
+        "platform": "1",
+        "path_stations": [
+          "Lüdenscheid",
+          "Lüdenscheid-Brügge",
+          "Schalksmühle",
+          "Dahlerbrück",
+          "Rummenohl",
+          "Dahl",
+          "Hagen-Oberhagen",
+          "Hagen Hbf",
+          "Herdecke",
+          "Wittbräucke",
+          "Dortmund-Löttringhausen",
+          "Dortmund-Kirchhörde"
+        ],
+        "line": "52"
+      },
+      {
+        "id": "2181788179170797299-2510202153-3",
+        "type": "Bus",
+        "number": "5209",
+        "time": "2510202213",
+        "platform": "",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund Signal Iduna Park"
+        ],
+        "line": "RB52"
+      },
+      {
+        "id": "8048226040132986133-2510202103-13",
+        "type": "RB",
+        "number": "14684",
+        "time": "2510202213",
+        "platform": "1",
+        "path_stations": [
+          "Lüdenscheid",
+          "Lüdenscheid-Brügge",
+          "Schalksmühle",
+          "Dahlerbrück",
+          "Rummenohl",
+          "Dahl",
+          "Hagen-Oberhagen",
+          "Hagen Hbf",
+          "Herdecke",
+          "Wittbräucke",
+          "Dortmund-Löttringhausen",
+          "Dortmund-Kirchhörde"
+        ],
+        "line": "52"
+      },
+      {
+        "id": "8913980597389879827-2510202302-6",
+        "type": "Bus",
+        "number": "5212",
+        "time": "2510202350",
+        "platform": "",
+        "path_stations": [
+          "Hagen Hbf",
+          "Herdecke",
+          "Wittbräucke",
+          "Dortmund-Löttringhausen",
+          "Dortmund-Kirchhörde"
+        ],
+        "line": "RB52"
+      },
+      {
+        "id": "1406498713521907414-2510202253-3",
+        "type": "Bus",
+        "number": "5211",
+        "time": "2510202313",
+        "platform": "",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund Signal Iduna Park"
+        ],
+        "line": "RB52"
+      },
+      {
+        "id": "8617581081641015527-2510210002-6",
+        "type": "Bus",
+        "number": "5214",
+        "time": "2510210050",
+        "platform": "",
+        "path_stations": [
+          "Hagen Hbf",
+          "Herdecke",
+          "Wittbräucke",
+          "Dortmund-Löttringhausen",
+          "Dortmund-Kirchhörde"
+        ],
+        "line": "RB52"
+      },
+      {
+        "id": "8785270347247815991-2510202347-3",
+        "type": "Bus",
+        "number": "5213",
+        "time": "2510210007",
+        "platform": "",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund Signal Iduna Park"
+        ],
+        "line": "RB52"
+      },
+      {
+        "id": "1789600714141419659-2510210437-3",
+        "type": "RB",
+        "number": "14651",
+        "time": "2510210445",
+        "platform": "1",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund Signal Iduna Park"
+        ],
+        "line": "52"
+      },
+      {
+        "id": "-7811313927000747883-2510210415-6",
+        "type": "Bus",
+        "number": "5208",
+        "time": "2510210503",
+        "platform": "",
+        "path_stations": [
+          "Hagen Hbf",
+          "Herdecke",
+          "Wittbräucke",
+          "Dortmund-Löttringhausen",
+          "Dortmund-Kirchhörde"
+        ],
+        "line": "RB52"
+      },
+      {
+        "id": "2214132813388637083-2510210537-3",
+        "type": "RB",
+        "number": "14653",
+        "time": "2510210545",
+        "platform": "1",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund Signal Iduna Park"
+        ],
+        "line": "52"
+      },
+      {
+        "id": "3543801661541623522-2510210502-6",
+        "type": "Bus",
+        "number": "5210",
+        "time": "2510210550",
+        "platform": "",
+        "path_stations": [
+          "Hagen Hbf",
+          "Herdecke",
+          "Wittbräucke",
+          "Dortmund-Löttringhausen",
+          "Dortmund-Kirchhörde"
+        ],
+        "line": "RB52"
+      },
+      {
+        "id": "-6621536636613181851-2510210503-13",
+        "type": "RB",
+        "number": "14652",
+        "time": "2510210613",
+        "platform": "1",
+        "path_stations": [
+          "Lüdenscheid",
+          "Lüdenscheid-Brügge",
+          "Schalksmühle",
+          "Dahlerbrück",
+          "Rummenohl",
+          "Dahl",
+          "Hagen-Oberhagen",
+          "Hagen Hbf",
+          "Herdecke",
+          "Wittbräucke",
+          "Dortmund-Löttringhausen",
+          "Dortmund-Kirchhörde"
+        ],
+        "line": "52"
+      },
+      {
+        "id": "-4887809563268938381-2510210637-3",
+        "type": "RB",
+        "number": "14655",
+        "time": "2510210645",
+        "platform": "1",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Dortmund Signal Iduna Park"
+        ],
+        "line": "52"
+      }
+    ],
+    "departures": [
+      {
+        "id": "1814748650730832505-2510201703-13",
+        "type": "RB",
+        "number": "14676",
+        "direction": "Dortmund Hbf",
+        "platform": "1",
+        "time": "2510201814",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Dortmund Signal Iduna Park",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "3487472044283077793-2510201837-3",
+        "type": "RB",
+        "number": "14679",
+        "direction": "Lüdenscheid",
+        "platform": "1",
+        "time": "2510201845",
+        "destination": "Lüdenscheid",
+        "path_stations": [
+          "Dortmund-Kirchhörde",
+          "Dortmund-Löttringhausen",
+          "Wittbräucke",
+          "Herdecke",
+          "Hagen Hbf",
+          "Hagen-Oberhagen",
+          "Dahl",
+          "Rummenohl",
+          "Dahlerbrück",
+          "Schalksmühle",
+          "Lüdenscheid-Brügge",
+          "Lüdenscheid"
+        ]
+      },
+      {
+        "id": "-4448190838152711907-2510201803-13",
+        "type": "RB",
+        "number": "14678",
+        "direction": "Dortmund Hbf",
+        "platform": "1",
+        "time": "2510201914",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Dortmund Signal Iduna Park",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "2671386873600530572-2510201937-3",
+        "type": "RB",
+        "number": "14681",
+        "direction": "Lüdenscheid",
+        "platform": "1",
+        "time": "2510201945",
+        "destination": "Lüdenscheid",
+        "path_stations": [
+          "Dortmund-Kirchhörde",
+          "Dortmund-Löttringhausen",
+          "Wittbräucke",
+          "Herdecke",
+          "Hagen Hbf",
+          "Hagen-Oberhagen",
+          "Dahl",
+          "Rummenohl",
+          "Dahlerbrück",
+          "Schalksmühle",
+          "Lüdenscheid-Brügge",
+          "Lüdenscheid"
+        ]
+      },
+      {
+        "id": "339615014752355294-2510201903-13",
+        "type": "RB",
+        "number": "14680",
+        "direction": "Dortmund Hbf",
+        "platform": "1",
+        "time": "2510202014",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Dortmund Signal Iduna Park",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-1350864422521760315-2510202037-3",
+        "type": "RB",
+        "number": "14683",
+        "direction": "Lüdenscheid",
+        "platform": "1",
+        "time": "2510202045",
+        "destination": "Lüdenscheid",
+        "path_stations": [
+          "Dortmund-Kirchhörde",
+          "Dortmund-Löttringhausen",
+          "Wittbräucke",
+          "Herdecke",
+          "Hagen Hbf",
+          "Hagen-Oberhagen",
+          "Dahl",
+          "Rummenohl",
+          "Dahlerbrück",
+          "Schalksmühle",
+          "Lüdenscheid-Brügge",
+          "Lüdenscheid"
+        ]
+      },
+      {
+        "id": "5892877270021639003-2510202053-3",
+        "type": "Bus",
+        "number": "5207",
+        "direction": "Hagen Hbf",
+        "platform": "",
+        "time": "2510202113",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Dortmund-Kirchhörde",
+          "Dortmund-Löttringhausen",
+          "Wittbräucke",
+          "Herdecke",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "-968640645875415488-2510202003-13",
+        "type": "RB",
+        "number": "14682",
+        "direction": "Dortmund Hbf",
+        "platform": "1",
+        "time": "2510202114",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Dortmund Signal Iduna Park",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "2181788179170797299-2510202153-3",
+        "type": "Bus",
+        "number": "5209",
+        "direction": "Hagen Hbf",
+        "platform": "",
+        "time": "2510202213",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Dortmund-Kirchhörde",
+          "Dortmund-Löttringhausen",
+          "Wittbräucke",
+          "Herdecke",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "8048226040132986133-2510202103-13",
+        "type": "RB",
+        "number": "14684",
+        "direction": "Dortmund Hbf",
+        "platform": "1",
+        "time": "2510202214",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Dortmund Signal Iduna Park",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "8913980597389879827-2510202302-6",
+        "type": "Bus",
+        "number": "5212",
+        "direction": "Dortmund Hbf",
+        "platform": "",
+        "time": "2510202350",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Dortmund Signal Iduna Park",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "1406498713521907414-2510202253-3",
+        "type": "Bus",
+        "number": "5211",
+        "direction": "Hagen Hbf",
+        "platform": "",
+        "time": "2510202313",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Dortmund-Kirchhörde",
+          "Dortmund-Löttringhausen",
+          "Wittbräucke",
+          "Herdecke",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "8617581081641015527-2510210002-6",
+        "type": "Bus",
+        "number": "5214",
+        "direction": "Dortmund Hbf",
+        "platform": "",
+        "time": "2510210050",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Dortmund Signal Iduna Park",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "8785270347247815991-2510202347-3",
+        "type": "Bus",
+        "number": "5213",
+        "direction": "Hagen Hbf",
+        "platform": "",
+        "time": "2510210007",
+        "destination": "Hagen Hbf",
+        "path_stations": [
+          "Dortmund-Kirchhörde",
+          "Dortmund-Löttringhausen",
+          "Wittbräucke",
+          "Herdecke",
+          "Hagen Hbf"
+        ]
+      },
+      {
+        "id": "1789600714141419659-2510210437-3",
+        "type": "RB",
+        "number": "14651",
+        "direction": "Lüdenscheid",
+        "platform": "1",
+        "time": "2510210445",
+        "destination": "Lüdenscheid",
+        "path_stations": [
+          "Dortmund-Kirchhörde",
+          "Dortmund-Löttringhausen",
+          "Wittbräucke",
+          "Herdecke",
+          "Hagen Hbf",
+          "Hagen-Oberhagen",
+          "Dahl",
+          "Rummenohl",
+          "Dahlerbrück",
+          "Schalksmühle",
+          "Lüdenscheid-Brügge",
+          "Lüdenscheid"
+        ]
+      },
+      {
+        "id": "-7811313927000747883-2510210415-6",
+        "type": "Bus",
+        "number": "5208",
+        "direction": "Dortmund Hbf",
+        "platform": "",
+        "time": "2510210503",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Dortmund Signal Iduna Park",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "2214132813388637083-2510210537-3",
+        "type": "RB",
+        "number": "14653",
+        "direction": "Lüdenscheid",
+        "platform": "1",
+        "time": "2510210545",
+        "destination": "Lüdenscheid",
+        "path_stations": [
+          "Dortmund-Kirchhörde",
+          "Dortmund-Löttringhausen",
+          "Wittbräucke",
+          "Herdecke",
+          "Hagen Hbf",
+          "Hagen-Oberhagen",
+          "Dahl",
+          "Rummenohl",
+          "Dahlerbrück",
+          "Schalksmühle",
+          "Lüdenscheid-Brügge",
+          "Lüdenscheid"
+        ]
+      },
+      {
+        "id": "3543801661541623522-2510210502-6",
+        "type": "Bus",
+        "number": "5210",
+        "direction": "Dortmund Hbf",
+        "platform": "",
+        "time": "2510210550",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Dortmund Signal Iduna Park",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-6621536636613181851-2510210503-13",
+        "type": "RB",
+        "number": "14652",
+        "direction": "Dortmund Hbf",
+        "platform": "1",
+        "time": "2510210614",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Dortmund Signal Iduna Park",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-4887809563268938381-2510210637-3",
+        "type": "RB",
+        "number": "14655",
+        "direction": "Lüdenscheid",
+        "platform": "1",
+        "time": "2510210645",
+        "destination": "Lüdenscheid",
+        "path_stations": [
+          "Dortmund-Kirchhörde",
+          "Dortmund-Löttringhausen",
+          "Wittbräucke",
+          "Herdecke",
+          "Hagen Hbf",
+          "Hagen-Oberhagen",
+          "Dahl",
+          "Rummenohl",
+          "Dahlerbrück",
+          "Schalksmühle",
+          "Lüdenscheid-Brügge",
+          "Lüdenscheid"
+        ]
+      }
+    ]
+  }
+}

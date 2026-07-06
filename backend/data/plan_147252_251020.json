@@ -1,0 +1,101 @@
+{
+  "station_eva": "147252",
+  "date": "251020",
+  "cached_at": "2025-10-20T16:43:05.958613",
+  "plan_data": {
+    "arrivals": [
+      {
+        "id": "2861893523349543828-2510202108-3",
+        "type": "Bus",
+        "number": "46101",
+        "time": "2510202123",
+        "platform": "",
+        "path_stations": [
+          "Hauptbahnhof, Koblenz",
+          "Ehrenbreitstein Bahnhof, Koblenz"
+        ],
+        "line": "RB27"
+      },
+      {
+        "id": "1524425151386231742-2510202208-3",
+        "type": "Bus",
+        "number": "46103",
+        "time": "2510202223",
+        "platform": "",
+        "path_stations": [
+          "Hauptbahnhof, Koblenz",
+          "Ehrenbreitstein Bahnhof, Koblenz"
+        ],
+        "line": "RB27"
+      },
+      {
+        "id": "-1917479370528198446-2510202308-3",
+        "type": "Bus",
+        "number": "46105",
+        "time": "2510202323",
+        "platform": "",
+        "path_stations": [
+          "Hauptbahnhof, Koblenz",
+          "Ehrenbreitstein Bahnhof, Koblenz"
+        ],
+        "line": "RB27"
+      }
+    ],
+    "departures": [
+      {
+        "id": "2861893523349543828-2510202108-3",
+        "type": "Bus",
+        "number": "46101",
+        "direction": "Bahnhof, Linz am Rhein",
+        "platform": "",
+        "time": "2510202123",
+        "destination": "Bahnhof, Linz am Rhein",
+        "path_stations": [
+          "Engers Bahnhof, Neuwied",
+          "Bahnhof, Neuwied",
+          "Neuer Weg, Leutesdorf",
+          "Bahnhof, Rheinbrohl",
+          "Bahnhof, Bad Hönningen",
+          "Bahnhof, Leubsdorf (Rhein)",
+          "Bahnhof, Linz am Rhein"
+        ]
+      },
+      {
+        "id": "1524425151386231742-2510202208-3",
+        "type": "Bus",
+        "number": "46103",
+        "direction": "Bahnhof, Linz am Rhein",
+        "platform": "",
+        "time": "2510202223",
+        "destination": "Bahnhof, Linz am Rhein",
+        "path_stations": [
+          "Engers Bahnhof, Neuwied",
+          "Bahnhof, Neuwied",
+          "Neuer Weg, Leutesdorf",
+          "Bahnhof, Rheinbrohl",
+          "Bahnhof, Bad Hönningen",
+          "Bahnhof, Leubsdorf (Rhein)",
+          "Bahnhof, Linz am Rhein"
+        ]
+      },
+      {
+        "id": "-1917479370528198446-2510202308-3",
+        "type": "Bus",
+        "number": "46105",
+        "direction": "Bahnhof, Linz am Rhein",
+        "platform": "",
+        "time": "2510202323",
+        "destination": "Bahnhof, Linz am Rhein",
+        "path_stations": [
+          "Engers Bahnhof, Neuwied",
+          "Bahnhof, Neuwied",
+          "Neuer Weg, Leutesdorf",
+          "Bahnhof, Rheinbrohl",
+          "Bahnhof, Bad Hönningen",
+          "Bahnhof, Leubsdorf (Rhein)",
+          "Bahnhof, Linz am Rhein"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,310 @@
+{
+  "station_eva": "8001910",
+  "date": "251020",
+  "cached_at": "2025-10-20T15:47:09.045157",
+  "plan_data": {
+    "departures": [
+      {
+        "id": "5808861375121337948-2510201714-3",
+        "type": "S",
+        "number": "33635",
+        "direction": "Essen Hbf",
+        "platform": "4",
+        "time": "2510201719",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "-7551006900168391657-2510201734-2",
+        "type": "S",
+        "number": "33634",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "3",
+        "time": "2510201739",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Gelsenkirchen-Rotthausen",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "-6453629922507845198-2510201814-3",
+        "type": "S",
+        "number": "33637",
+        "direction": "Essen Hbf",
+        "platform": "4",
+        "time": "2510201821",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "6731044258429117876-2510201834-2",
+        "type": "S",
+        "number": "33636",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "3",
+        "time": "2510201839",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Gelsenkirchen-Rotthausen",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "-8295038471132816813-2510201914-3",
+        "type": "S",
+        "number": "33639",
+        "direction": "Essen Hbf",
+        "platform": "4",
+        "time": "2510201921",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "8687205819565578791-2510201934-2",
+        "type": "S",
+        "number": "33638",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "3",
+        "time": "2510201939",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Gelsenkirchen-Rotthausen",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "-3719045851633788215-2510202014-3",
+        "type": "S",
+        "number": "33641",
+        "direction": "Essen Hbf",
+        "platform": "4",
+        "time": "2510202021",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "-6060061207656078110-2510202036-2",
+        "type": "S",
+        "number": "33640",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "3",
+        "time": "2510202041",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Gelsenkirchen-Rotthausen",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "-2000239064520722736-2510202134-2",
+        "type": "S",
+        "number": "33642",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "3",
+        "time": "2510202139",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Gelsenkirchen-Rotthausen",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "3049220398118829651-2510202114-3",
+        "type": "S",
+        "number": "33643",
+        "direction": "Essen Hbf",
+        "platform": "4",
+        "time": "2510202121",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "791121605086281295-2510202214-3",
+        "type": "S",
+        "number": "33645",
+        "direction": "Essen Hbf",
+        "platform": "4",
+        "time": "2510202221",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "-2521888419673950332-2510202234-2",
+        "type": "S",
+        "number": "33644",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "3",
+        "time": "2510202239",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Gelsenkirchen-Rotthausen",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "25013476743268863-2510202334-2",
+        "type": "S",
+        "number": "33646",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "3",
+        "time": "2510202339",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Gelsenkirchen-Rotthausen",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "-4106987927378731467-2510202314-3",
+        "type": "S",
+        "number": "33647",
+        "direction": "Essen Hbf",
+        "platform": "4",
+        "time": "2510202321",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "6919204483331314012-2510210014-3",
+        "type": "S",
+        "number": "33601",
+        "direction": "Essen Hbf",
+        "platform": "4",
+        "time": "2510210021",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "3789902710309333127-2510210034-2",
+        "type": "S",
+        "number": "33600",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "3",
+        "time": "2510210039",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Gelsenkirchen-Rotthausen",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "-7284760667540347461-2510210114-3",
+        "type": "S",
+        "number": "33603",
+        "direction": "Essen Hbf",
+        "platform": "4",
+        "time": "2510210121",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "5773959649141616283-2510210134-2",
+        "type": "S",
+        "number": "33602",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "3",
+        "time": "2510210139",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Gelsenkirchen-Rotthausen",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "7220922161465944720-2510210214-3",
+        "type": "S",
+        "number": "33605",
+        "direction": "Essen Hbf",
+        "platform": "4",
+        "time": "2510210221",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "-6601534298015547040-2510210234-2",
+        "type": "S",
+        "number": "33604",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "3",
+        "time": "2510210239",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Gelsenkirchen-Rotthausen",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "-2651353784197948689-2510210334-2",
+        "type": "S",
+        "number": "33606",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "3",
+        "time": "2510210339",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Gelsenkirchen-Rotthausen",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "-8499637443260624726-2510210314-3",
+        "type": "S",
+        "number": "33607",
+        "direction": "Essen Hbf",
+        "platform": "4",
+        "time": "2510210321",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Essen Hbf"
+        ]
+      },
+      {
+        "id": "6366982564735456427-2510210434-2",
+        "type": "S",
+        "number": "33608",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "3",
+        "time": "2510210439",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Gelsenkirchen-Rotthausen",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "-8440635994712579786-2510210414-3",
+        "type": "S",
+        "number": "33609",
+        "direction": "Essen Hbf",
+        "platform": "4",
+        "time": "2510210421",
+        "destination": "Essen Hbf",
+        "path_stations": [
+          "Essen Hbf"
+        ]
+      }
+    ],
+    "arrivals": []
+  }
+}

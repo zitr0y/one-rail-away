@@ -1,0 +1,707 @@
+{
+  "station_eva": "8001900",
+  "date": "251020",
+  "cached_at": "2025-10-20T16:29:39.049250",
+  "plan_data": {
+    "departures": [
+      {
+        "id": "-8421522247246892215-2510201839-3",
+        "type": "VIA",
+        "number": "52269",
+        "direction": "Mönchengladbach Hbf",
+        "platform": "2",
+        "time": "2510201846",
+        "destination": "Mönchengladbach Hbf",
+        "path_stations": [
+          "Essen-Bergeborbeck",
+          "Essen-Dellwig",
+          "Oberhausen Hbf",
+          "Duisburg Hbf",
+          "Duisburg-Hochfeld Süd",
+          "Rheinhausen Ost",
+          "Rheinhausen",
+          "Krefeld-Hohenbudberg Chempark",
+          "Krefeld-Uerdingen",
+          "Krefeld-Linn",
+          "Krefeld-Oppum",
+          "Krefeld Hbf",
+          "Forsthaus",
+          "Anrath",
+          "Viersen",
+          "Mönchengladbach Hbf"
+        ]
+      },
+      {
+        "id": "-6763685261936760744-2510201834-5",
+        "type": "RB",
+        "number": "31270",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "1",
+        "time": "2510201851",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Essen-Zollverein Nord",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "-253212051380884363-2510201801-3",
+        "type": "RB",
+        "number": "31269",
+        "direction": "Duisburg Hbf",
+        "platform": "2",
+        "time": "2510201808",
+        "destination": "Duisburg Hbf",
+        "path_stations": [
+          "Essen-Bergeborbeck",
+          "Essen-Dellwig",
+          "Oberhausen Hbf",
+          "Duisburg Hbf"
+        ]
+      },
+      {
+        "id": "-463404969627888842-2510201745-5",
+        "type": "RE",
+        "number": "89891",
+        "direction": "Hamm(Westf)Hbf",
+        "platform": "1",
+        "time": "2510201823",
+        "destination": "Hamm(Westf)Hbf",
+        "path_stations": [
+          "Gelsenkirchen Hbf",
+          "Wanne-Eickel Hbf",
+          "Herne",
+          "Castrop-Rauxel Hbf",
+          "Dortmund-Mengede",
+          "Dortmund Hbf",
+          "Dortmund-Scharnhorst",
+          "Dortmund-Kurl",
+          "Kamen-Methler",
+          "Kamen",
+          "Bönen-Nordbögge",
+          "Hamm(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "6630506945739936524-2510201730-13",
+        "type": "RE",
+        "number": "89892",
+        "direction": "Düsseldorf Hbf",
+        "platform": "2",
+        "time": "2510201835",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Oberhausen Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "7991506129333906200-2510201708-17",
+        "type": "VIA",
+        "number": "52262",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "1",
+        "time": "2510201812",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Essen-Zollverein Nord",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "7385360712422157622-2510201939-3",
+        "type": "VIA",
+        "number": "52271",
+        "direction": "Duisburg Hbf",
+        "platform": "2",
+        "time": "2510201946",
+        "destination": "Duisburg Hbf",
+        "path_stations": [
+          "Essen-Bergeborbeck",
+          "Essen-Dellwig",
+          "Oberhausen Hbf",
+          "Duisburg Hbf"
+        ]
+      },
+      {
+        "id": "-8395225554000413805-2510201934-5",
+        "type": "RB",
+        "number": "31272",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "1",
+        "time": "2510201951",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Essen-Zollverein Nord",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "6761890177864973524-2510201830-13",
+        "type": "RE",
+        "number": "89894",
+        "direction": "Düsseldorf Hbf",
+        "platform": "2",
+        "time": "2510201935",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Oberhausen Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "9124182195417290215-2510201845-5",
+        "type": "TRI",
+        "number": "28543",
+        "direction": "Hamm(Westf)Hbf",
+        "platform": "",
+        "time": "2510201923",
+        "destination": "Hamm(Westf)Hbf",
+        "path_stations": [
+          "Gelsenkirchen Hbf",
+          "Wanne-Eickel Hbf",
+          "Herne",
+          "Castrop-Rauxel Hbf",
+          "Dortmund-Mengede",
+          "Dortmund Hbf",
+          "Dortmund-Scharnhorst",
+          "Dortmund-Kurl",
+          "Kamen-Methler",
+          "Kamen",
+          "Bönen-Nordbögge",
+          "Hamm(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-7610410907441103742-2510201901-3",
+        "type": "RB",
+        "number": "31271",
+        "direction": "Duisburg Hbf",
+        "platform": "2",
+        "time": "2510201908",
+        "destination": "Duisburg Hbf",
+        "path_stations": [
+          "Essen-Bergeborbeck",
+          "Essen-Dellwig",
+          "Oberhausen Hbf",
+          "Duisburg Hbf"
+        ]
+      },
+      {
+        "id": "608379063884191223-2510201808-17",
+        "type": "VIA",
+        "number": "52264",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "1",
+        "time": "2510201912",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Essen-Zollverein Nord",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "5197849891127224719-2510202001-3",
+        "type": "RB",
+        "number": "31273",
+        "direction": "Duisburg Hbf",
+        "platform": "2",
+        "time": "2510202008",
+        "destination": "Duisburg Hbf",
+        "path_stations": [
+          "Essen-Bergeborbeck",
+          "Essen-Dellwig",
+          "Oberhausen Hbf",
+          "Duisburg Hbf"
+        ]
+      },
+      {
+        "id": "-1687625518078930243-2510201945-5",
+        "type": "RE",
+        "number": "89895",
+        "direction": "Dortmund Hbf",
+        "platform": "1",
+        "time": "2510202023",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Gelsenkirchen Hbf",
+          "Wanne-Eickel Hbf",
+          "Herne",
+          "Castrop-Rauxel Hbf",
+          "Dortmund-Mengede",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "6060546869279204528-2510201930-13",
+        "type": "RE",
+        "number": "89896",
+        "direction": "Düsseldorf Hbf",
+        "platform": "2",
+        "time": "2510202035",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Oberhausen Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "3647811556346721539-2510202034-5",
+        "type": "RB",
+        "number": "31274",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "1",
+        "time": "2510202051",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Essen-Zollverein Nord",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "4594771126664263764-2510202045-5",
+        "type": "RE",
+        "number": "89897",
+        "direction": "Dortmund Hbf",
+        "platform": "1",
+        "time": "2510202123",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Gelsenkirchen Hbf",
+          "Wanne-Eickel Hbf",
+          "Herne",
+          "Castrop-Rauxel Hbf",
+          "Dortmund-Mengede",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "6115637361180188083-2510202134-5",
+        "type": "RB",
+        "number": "31276",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "1",
+        "time": "2510202151",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Essen-Zollverein Nord",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "-2400128801858569650-2510202101-3",
+        "type": "RB",
+        "number": "31275",
+        "direction": "Duisburg Hbf",
+        "platform": "2",
+        "time": "2510202108",
+        "destination": "Duisburg Hbf",
+        "path_stations": [
+          "Essen-Bergeborbeck",
+          "Essen-Dellwig",
+          "Oberhausen Hbf",
+          "Duisburg Hbf"
+        ]
+      },
+      {
+        "id": "-4604417545031401799-2510202030-13",
+        "type": "RE",
+        "number": "89898",
+        "direction": "Düsseldorf Hbf",
+        "platform": "2",
+        "time": "2510202135",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Oberhausen Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-6889440490444993519-2510202238-2",
+        "type": "Bus",
+        "number": "3000",
+        "direction": "Düsseldorf Hbf",
+        "platform": "",
+        "time": "2510202258",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Oberhausen Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "8008874820201141988-2510202124-5",
+        "type": "Bus",
+        "number": "3007",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "",
+        "time": "2510202259",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "3462162865004817073-2510202145-5",
+        "type": "RE",
+        "number": "89899",
+        "direction": "Dortmund Hbf",
+        "platform": "1",
+        "time": "2510202223",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Gelsenkirchen Hbf",
+          "Wanne-Eickel Hbf",
+          "Herne",
+          "Castrop-Rauxel Hbf",
+          "Dortmund-Mengede",
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "6862875673277646876-2510202212-3",
+        "type": "Bus",
+        "number": "317",
+        "direction": "Duisburg Hbf",
+        "platform": "",
+        "time": "2510202236",
+        "destination": "Duisburg Hbf",
+        "path_stations": [
+          "Essen-Bergeborbeck",
+          "Essen-Dellwig",
+          "Oberhausen Hbf",
+          "Duisburg Hbf"
+        ]
+      },
+      {
+        "id": "6949367151260265793-2510202224-5",
+        "type": "Bus",
+        "number": "3013",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "",
+        "time": "2510202359",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "8420068562853111502-2510202312-3",
+        "type": "Bus",
+        "number": "319",
+        "direction": "Duisburg Hbf",
+        "platform": "",
+        "time": "2510202336",
+        "destination": "Duisburg Hbf",
+        "path_stations": [
+          "Essen-Bergeborbeck",
+          "Essen-Dellwig",
+          "Oberhausen Hbf",
+          "Duisburg Hbf"
+        ]
+      },
+      {
+        "id": "-3154621970576716398-2510202242-5",
+        "type": "Bus",
+        "number": "310",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "",
+        "time": "2510202341",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Essen-Zollverein Nord",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "-2328683605287735860-2510202338-2",
+        "type": "Bus",
+        "number": "3006",
+        "direction": "Düsseldorf Hbf",
+        "platform": "",
+        "time": "2510202358",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Oberhausen Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "7271053357127110959-2510210012-3",
+        "type": "Bus",
+        "number": "321",
+        "direction": "Duisburg Hbf",
+        "platform": "",
+        "time": "2510210036",
+        "destination": "Duisburg Hbf",
+        "path_stations": [
+          "Essen-Bergeborbeck",
+          "Essen-Dellwig",
+          "Oberhausen Hbf",
+          "Duisburg Hbf"
+        ]
+      },
+      {
+        "id": "3668273527763559270-2510202342-5",
+        "type": "Bus",
+        "number": "312",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "",
+        "time": "2510210041",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Essen-Zollverein Nord",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "2680824758092337580-2510210042-5",
+        "type": "Bus",
+        "number": "300",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "",
+        "time": "2510210141",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Essen-Zollverein Nord",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "-4748916736848493479-2510210112-3",
+        "type": "Bus",
+        "number": "303",
+        "direction": "Duisburg Hbf",
+        "platform": "",
+        "time": "2510210136",
+        "destination": "Duisburg Hbf",
+        "path_stations": [
+          "Essen-Bergeborbeck",
+          "Essen-Dellwig",
+          "Oberhausen Hbf",
+          "Duisburg Hbf"
+        ]
+      },
+      {
+        "id": "7575657602430597461-2510210212-3",
+        "type": "Bus",
+        "number": "305",
+        "direction": "Duisburg Hbf",
+        "platform": "",
+        "time": "2510210236",
+        "destination": "Duisburg Hbf",
+        "path_stations": [
+          "Essen-Bergeborbeck",
+          "Essen-Dellwig",
+          "Oberhausen Hbf",
+          "Duisburg Hbf"
+        ]
+      },
+      {
+        "id": "7337191127485568696-2510210142-5",
+        "type": "Bus",
+        "number": "302",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "",
+        "time": "2510210241",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Essen-Zollverein Nord",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "-624418220032522267-2510210312-3",
+        "type": "Bus",
+        "number": "307",
+        "direction": "Duisburg Hbf",
+        "platform": "",
+        "time": "2510210336",
+        "destination": "Duisburg Hbf",
+        "path_stations": [
+          "Essen-Bergeborbeck",
+          "Essen-Dellwig",
+          "Oberhausen Hbf",
+          "Duisburg Hbf"
+        ]
+      },
+      {
+        "id": "-7436889178381808281-2510210338-2",
+        "type": "Bus",
+        "number": "3012",
+        "direction": "Düsseldorf Hbf",
+        "platform": "",
+        "time": "2510210358",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Oberhausen Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-4020808769534634545-2510210242-5",
+        "type": "Bus",
+        "number": "304",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "",
+        "time": "2510210341",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Essen-Zollverein Nord",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "-3854315492960167653-2510210412-3",
+        "type": "Bus",
+        "number": "309",
+        "direction": "Duisburg Hbf",
+        "platform": "",
+        "time": "2510210436",
+        "destination": "Duisburg Hbf",
+        "path_stations": [
+          "Essen-Bergeborbeck",
+          "Essen-Dellwig",
+          "Oberhausen Hbf",
+          "Duisburg Hbf"
+        ]
+      },
+      {
+        "id": "-8570275015729015565-2510210324-5",
+        "type": "Bus",
+        "number": "3001",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "",
+        "time": "2510210459",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "-2796428905286433669-2510210342-5",
+        "type": "Bus",
+        "number": "306",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "",
+        "time": "2510210441",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Essen-Zollverein Nord",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "-1182021976660322188-2510210442-5",
+        "type": "Bus",
+        "number": "308",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "",
+        "time": "2510210541",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Essen-Zollverein Nord",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "-5879232233441680469-2510210539-3",
+        "type": "VIA",
+        "number": "52243",
+        "direction": "Mönchengladbach Hbf",
+        "platform": "2",
+        "time": "2510210546",
+        "destination": "Mönchengladbach Hbf",
+        "path_stations": [
+          "Essen-Bergeborbeck",
+          "Essen-Dellwig",
+          "Oberhausen Hbf",
+          "Duisburg Hbf",
+          "Duisburg-Hochfeld Süd",
+          "Rheinhausen Ost",
+          "Rheinhausen",
+          "Krefeld-Hohenbudberg Chempark",
+          "Krefeld-Uerdingen",
+          "Krefeld-Linn",
+          "Krefeld-Oppum",
+          "Krefeld Hbf",
+          "Forsthaus",
+          "Anrath",
+          "Viersen",
+          "Mönchengladbach Hbf"
+        ]
+      },
+      {
+        "id": "-1483943322400311890-2510210534-5",
+        "type": "RB",
+        "number": "31244",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "1",
+        "time": "2510210551",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Essen-Zollverein Nord",
+          "Gelsenkirchen Hbf"
+        ]
+      },
+      {
+        "id": "-7575181202400861813-2510210503-7",
+        "type": "RE",
+        "number": "89866",
+        "direction": "Düsseldorf Hbf",
+        "platform": "2",
+        "time": "2510210535",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Oberhausen Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-8010034694956434858-2510210501-3",
+        "type": "RB",
+        "number": "31241",
+        "direction": "Duisburg Hbf",
+        "platform": "2",
+        "time": "2510210508",
+        "destination": "Duisburg Hbf",
+        "path_stations": [
+          "Essen-Bergeborbeck",
+          "Essen-Dellwig",
+          "Oberhausen Hbf",
+          "Duisburg Hbf"
+        ]
+      },
+      {
+        "id": "4397843630057340042-2510210456-5",
+        "type": "VIA",
+        "number": "52270",
+        "direction": "Gelsenkirchen Hbf",
+        "platform": "1",
+        "time": "2510210512",
+        "destination": "Gelsenkirchen Hbf",
+        "path_stations": [
+          "Essen-Zollverein Nord",
+          "Gelsenkirchen Hbf"
+        ]
+      }
+    ],
+    "arrivals": []
+  }
+}

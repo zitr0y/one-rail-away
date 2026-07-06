@@ -1,0 +1,1181 @@
+{
+  "station_eva": "8003168",
+  "date": "251020",
+  "cached_at": "2025-10-20T15:42:45.146967",
+  "plan_data": {
+    "departures": [
+      {
+        "id": "-9221916148632096480-2510201451-21",
+        "type": "RE",
+        "number": "63825",
+        "direction": "Hamm(Westf)Hbf",
+        "platform": "2",
+        "time": "2510201730",
+        "destination": "Hamm(Westf)Hbf",
+        "path_stations": [
+          "Hamm(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "4515974845225442367-2510201545-15",
+        "type": "RE",
+        "number": "89887",
+        "direction": "Hamm(Westf)Hbf",
+        "platform": "2",
+        "time": "2510201716",
+        "destination": "Hamm(Westf)Hbf",
+        "path_stations": [
+          "Bönen-Nordbögge",
+          "Hamm(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-4947340307894337225-2510201739-2",
+        "type": "RE",
+        "number": "26727",
+        "direction": "Kassel-Wilhelmshöhe",
+        "platform": "2",
+        "time": "2510201747",
+        "destination": "Kassel-Wilhelmshöhe",
+        "path_stations": [
+          "Hamm(Westf)Hbf",
+          "Soest",
+          "Lippstadt",
+          "Paderborn Hbf",
+          "Altenbeken",
+          "Willebadessen",
+          "Warburg(Westf)",
+          "Hofgeismar",
+          "Kassel-Wilhelmshöhe"
+        ]
+      },
+      {
+        "id": "9089568749300078487-2510201701-2",
+        "type": "RE",
+        "number": "26724",
+        "direction": "Dortmund Hbf",
+        "platform": "1",
+        "time": "2510201710",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-4660137635460001682-2510201655-2",
+        "type": "RE",
+        "number": "89727",
+        "direction": "Minden(Westf)",
+        "platform": "2",
+        "time": "2510201704",
+        "destination": "Minden(Westf)",
+        "path_stations": [
+          "Hamm(Westf)Hbf",
+          "Hamm-Heessen",
+          "Ahlen(Westf)",
+          "Beckum-Neubeckum",
+          "Oelde",
+          "Rheda-Wiedenbrück",
+          "Gütersloh Hbf",
+          "Bielefeld Hbf",
+          "Herford",
+          "Löhne(Westf)",
+          "Bad Oeynhausen",
+          "Porta Westfalica",
+          "Minden(Westf)"
+        ]
+      },
+      {
+        "id": "6630506945739936524-2510201730-3",
+        "type": "RE",
+        "number": "89892",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510201741",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Kamen-Methler",
+          "Dortmund-Kurl",
+          "Dortmund-Scharnhorst",
+          "Dortmund Hbf",
+          "Dortmund-Mengede",
+          "Castrop-Rauxel Hbf",
+          "Herne",
+          "Wanne-Eickel Hbf",
+          "Gelsenkirchen Hbf",
+          "Essen-Altenessen",
+          "Oberhausen Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-2460944781227951001-2510201720-2",
+        "type": "RE",
+        "number": "63828",
+        "direction": "Aachen Hbf",
+        "platform": "1",
+        "time": "2510201728",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Herne",
+          "Essen Hbf",
+          "Mülheim(Ruhr)Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf",
+          "Düsseldorf-Benrath",
+          "Leverkusen Mitte",
+          "Köln-Mülheim",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln-Ehrenfeld",
+          "Horrem",
+          "Düren",
+          "Langerwehe",
+          "Eschweiler Hbf",
+          "Stolberg(Rheinl)Hbf",
+          "Aachen-Rothe Erde",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "-3890211679245463785-2510201628-14",
+        "type": "RE",
+        "number": "89730",
+        "direction": "Dortmund Hbf",
+        "platform": "1",
+        "time": "2510201753",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-12373409110705271-2510201755-2",
+        "type": "RE",
+        "number": "89729",
+        "direction": "Minden(Westf)",
+        "platform": "2",
+        "time": "2510201804",
+        "destination": "Minden(Westf)",
+        "path_stations": [
+          "Hamm(Westf)Hbf",
+          "Hamm-Heessen",
+          "Ahlen(Westf)",
+          "Beckum-Neubeckum",
+          "Oelde",
+          "Rheda-Wiedenbrück",
+          "Gütersloh Hbf",
+          "Bielefeld Hbf",
+          "Herford",
+          "Löhne(Westf)",
+          "Bad Oeynhausen",
+          "Porta Westfalica",
+          "Minden(Westf)"
+        ]
+      },
+      {
+        "id": "-6607065416810327598-2510201645-15",
+        "type": "RE",
+        "number": "89889",
+        "direction": "Hamm(Westf)Hbf",
+        "platform": "2",
+        "time": "2510201816",
+        "destination": "Hamm(Westf)Hbf",
+        "path_stations": [
+          "Bönen-Nordbögge",
+          "Hamm(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "4853716973799954647-2510201820-2",
+        "type": "RE",
+        "number": "63830",
+        "direction": "Aachen Hbf",
+        "platform": "1",
+        "time": "2510201828",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Herne",
+          "Essen Hbf",
+          "Mülheim(Ruhr)Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf",
+          "Düsseldorf-Benrath",
+          "Leverkusen Mitte",
+          "Köln-Mülheim",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln-Ehrenfeld",
+          "Horrem",
+          "Düren",
+          "Langerwehe",
+          "Eschweiler Hbf",
+          "Stolberg(Rheinl)Hbf",
+          "Aachen-Rothe Erde",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "6761890177864973524-2510201830-3",
+        "type": "RE",
+        "number": "89894",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510201840",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Kamen-Methler",
+          "Dortmund-Kurl",
+          "Dortmund-Scharnhorst",
+          "Dortmund Hbf",
+          "Dortmund-Mengede",
+          "Castrop-Rauxel Hbf",
+          "Herne",
+          "Wanne-Eickel Hbf",
+          "Gelsenkirchen Hbf",
+          "Essen-Altenessen",
+          "Oberhausen Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "2412725812022579138-2510201728-14",
+        "type": "RE",
+        "number": "89732",
+        "direction": "Dortmund Hbf",
+        "platform": "1",
+        "time": "2510201853",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "8446179001498853928-2510201551-21",
+        "type": "RE",
+        "number": "63827",
+        "direction": "Hamm(Westf)Hbf",
+        "platform": "2",
+        "time": "2510201830",
+        "destination": "Hamm(Westf)Hbf",
+        "path_stations": [
+          "Hamm(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "727638923539642112-2510201937-2",
+        "type": "RE",
+        "number": "26731",
+        "direction": "Kassel-Wilhelmshöhe",
+        "platform": "2",
+        "time": "2510201947",
+        "destination": "Kassel-Wilhelmshöhe",
+        "path_stations": [
+          "Hamm(Westf)Hbf",
+          "Soest",
+          "Lippstadt",
+          "Paderborn Hbf",
+          "Altenbeken",
+          "Willebadessen",
+          "Warburg(Westf)",
+          "Hofgeismar",
+          "Kassel-Wilhelmshöhe"
+        ]
+      },
+      {
+        "id": "-463404969627888842-2510201745-15",
+        "type": "RE",
+        "number": "89891",
+        "direction": "Hamm(Westf)Hbf",
+        "platform": "2",
+        "time": "2510201916",
+        "destination": "Hamm(Westf)Hbf",
+        "path_stations": [
+          "Bönen-Nordbögge",
+          "Hamm(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "6127227233765962229-2510201855-2",
+        "type": "RE",
+        "number": "89731",
+        "direction": "Minden(Westf)",
+        "platform": "2",
+        "time": "2510201904",
+        "destination": "Minden(Westf)",
+        "path_stations": [
+          "Hamm(Westf)Hbf",
+          "Hamm-Heessen",
+          "Ahlen(Westf)",
+          "Beckum-Neubeckum",
+          "Oelde",
+          "Rheda-Wiedenbrück",
+          "Gütersloh Hbf",
+          "Bielefeld Hbf",
+          "Herford",
+          "Löhne(Westf)",
+          "Bad Oeynhausen",
+          "Porta Westfalica",
+          "Minden(Westf)"
+        ]
+      },
+      {
+        "id": "6306225813542830228-2510201651-21",
+        "type": "RE",
+        "number": "63829",
+        "direction": "Hamm(Westf)Hbf",
+        "platform": "2",
+        "time": "2510201930",
+        "destination": "Hamm(Westf)Hbf",
+        "path_stations": [
+          "Hamm(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "6060546869279204528-2510201930-3",
+        "type": "RE",
+        "number": "89896",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510201941",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Kamen-Methler",
+          "Dortmund-Kurl",
+          "Dortmund-Scharnhorst",
+          "Dortmund Hbf",
+          "Dortmund-Mengede",
+          "Castrop-Rauxel Hbf",
+          "Herne",
+          "Wanne-Eickel Hbf",
+          "Gelsenkirchen Hbf",
+          "Essen-Altenessen",
+          "Oberhausen Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-3646736515167545521-2510201828-14",
+        "type": "RE",
+        "number": "89734",
+        "direction": "Dortmund Hbf",
+        "platform": "1",
+        "time": "2510201953",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "3909903143609546984-2510201920-2",
+        "type": "RE",
+        "number": "63832",
+        "direction": "Aachen Hbf",
+        "platform": "1",
+        "time": "2510201928",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Herne",
+          "Essen Hbf",
+          "Mülheim(Ruhr)Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf",
+          "Düsseldorf-Benrath",
+          "Leverkusen Mitte",
+          "Köln-Mülheim",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln-Ehrenfeld",
+          "Horrem",
+          "Düren",
+          "Langerwehe",
+          "Eschweiler Hbf",
+          "Stolberg(Rheinl)Hbf",
+          "Aachen-Rothe Erde",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "-3286911570378173751-2510201703-10",
+        "type": "RE",
+        "number": "26728",
+        "direction": "Dortmund Hbf",
+        "platform": "1",
+        "time": "2510201906",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "431971826784164832-2510201751-21",
+        "type": "RE",
+        "number": "63831",
+        "direction": "Hamm(Westf)Hbf",
+        "platform": "2",
+        "time": "2510202030",
+        "destination": "Hamm(Westf)Hbf",
+        "path_stations": [
+          "Hamm(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "9124182195417290215-2510201845-15",
+        "type": "TRI",
+        "number": "28543",
+        "direction": "Hamm(Westf)Hbf",
+        "platform": "",
+        "time": "2510202016",
+        "destination": "Hamm(Westf)Hbf",
+        "path_stations": [
+          "Bönen-Nordbögge",
+          "Hamm(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-5125292636263010493-2510201928-14",
+        "type": "RE",
+        "number": "89736",
+        "direction": "Dortmund Hbf",
+        "platform": "1",
+        "time": "2510202053",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "-7294956573682553968-2510201955-2",
+        "type": "RE",
+        "number": "89733",
+        "direction": "Minden(Westf)",
+        "platform": "2",
+        "time": "2510202004",
+        "destination": "Minden(Westf)",
+        "path_stations": [
+          "Hamm(Westf)Hbf",
+          "Hamm-Heessen",
+          "Ahlen(Westf)",
+          "Beckum-Neubeckum",
+          "Oelde",
+          "Rheda-Wiedenbrück",
+          "Gütersloh Hbf",
+          "Bielefeld Hbf",
+          "Herford",
+          "Löhne(Westf)",
+          "Bad Oeynhausen",
+          "Porta Westfalica",
+          "Minden(Westf)"
+        ]
+      },
+      {
+        "id": "-8684631919837451404-2510202020-2",
+        "type": "RE",
+        "number": "63834",
+        "direction": "Aachen Hbf",
+        "platform": "1",
+        "time": "2510202028",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Herne",
+          "Essen Hbf",
+          "Mülheim(Ruhr)Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf",
+          "Düsseldorf-Benrath",
+          "Leverkusen Mitte",
+          "Köln-Mülheim",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln-Ehrenfeld",
+          "Horrem",
+          "Düren",
+          "Langerwehe",
+          "Eschweiler Hbf",
+          "Stolberg(Rheinl)Hbf",
+          "Aachen-Rothe Erde",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "-4604417545031401799-2510202030-3",
+        "type": "RE",
+        "number": "89898",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510202040",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Kamen-Methler",
+          "Dortmund-Kurl",
+          "Dortmund-Scharnhorst",
+          "Dortmund Hbf",
+          "Dortmund-Mengede",
+          "Castrop-Rauxel Hbf",
+          "Herne",
+          "Wanne-Eickel Hbf",
+          "Gelsenkirchen Hbf",
+          "Essen-Altenessen",
+          "Oberhausen Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "-6603414776301117468-2510202137-2",
+        "type": "RE",
+        "number": "26735",
+        "direction": "Kassel-Wilhelmshöhe",
+        "platform": "2",
+        "time": "2510202147",
+        "destination": "Kassel-Wilhelmshöhe",
+        "path_stations": [
+          "Hamm(Westf)Hbf",
+          "Soest",
+          "Lippstadt",
+          "Paderborn Hbf",
+          "Altenbeken",
+          "Willebadessen",
+          "Warburg(Westf)",
+          "Hofgeismar",
+          "Kassel-Wilhelmshöhe"
+        ]
+      },
+      {
+        "id": "-6689766698168916760-2510202120-2",
+        "type": "RE",
+        "number": "63836",
+        "direction": "Aachen Hbf",
+        "platform": "1",
+        "time": "2510202128",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Herne",
+          "Essen Hbf",
+          "Mülheim(Ruhr)Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf",
+          "Düsseldorf-Benrath",
+          "Leverkusen Mitte",
+          "Köln-Mülheim",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln-Ehrenfeld",
+          "Horrem",
+          "Düren",
+          "Langerwehe",
+          "Eschweiler Hbf",
+          "Stolberg(Rheinl)Hbf",
+          "Aachen-Rothe Erde",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "-8676076200742990182-2510202055-2",
+        "type": "RE",
+        "number": "89735",
+        "direction": "Minden(Westf)",
+        "platform": "2",
+        "time": "2510202104",
+        "destination": "Minden(Westf)",
+        "path_stations": [
+          "Hamm(Westf)Hbf",
+          "Hamm-Heessen",
+          "Ahlen(Westf)",
+          "Beckum-Neubeckum",
+          "Rheda-Wiedenbrück",
+          "Bielefeld Hbf",
+          "Herford",
+          "Löhne(Westf)",
+          "Bad Oeynhausen",
+          "Porta Westfalica",
+          "Minden(Westf)"
+        ]
+      },
+      {
+        "id": "6028821724648173548-2510201935-8",
+        "type": "Bus",
+        "number": "1074",
+        "direction": "Hamm(Westf)Hbf",
+        "platform": "",
+        "time": "2510202140",
+        "destination": "Hamm(Westf)Hbf",
+        "path_stations": [
+          "Bönen-Nordbögge",
+          "Hamm(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-7935879769966103594-2510202120-3",
+        "type": "Bus",
+        "number": "1083",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510202159",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Kamen-Methler",
+          "Dortmund-Kurl",
+          "Dortmund-Scharnhorst",
+          "Dortmund Hbf",
+          "Bochum Hbf (Buddenbergplatz)",
+          "Wattenscheid",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-4493706817461132274-2510201903-10",
+        "type": "RE",
+        "number": "26732",
+        "direction": "Dortmund Hbf",
+        "platform": "1",
+        "time": "2510202106",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "3116793615861921787-2510201851-21",
+        "type": "RE",
+        "number": "63833",
+        "direction": "Hamm(Westf)Hbf",
+        "platform": "2",
+        "time": "2510202130",
+        "destination": "Hamm(Westf)Hbf",
+        "path_stations": [
+          "Hamm(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "4116393508190134854-2510202050-3",
+        "type": "Bus",
+        "number": "1081",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510202129",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Kamen-Methler",
+          "Dortmund-Kurl",
+          "Dortmund-Scharnhorst",
+          "Dortmund Hbf",
+          "Bochum Hbf (Buddenbergplatz)",
+          "Wattenscheid",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-4812366603402288733-2510201951-21",
+        "type": "RE",
+        "number": "63835",
+        "direction": "Hamm(Westf)Hbf",
+        "platform": "2",
+        "time": "2510202230",
+        "destination": "Hamm(Westf)Hbf",
+        "path_stations": [
+          "Hamm(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "6844292419290637856-2510202005-8",
+        "type": "Bus",
+        "number": "1076",
+        "direction": "Hamm(Westf)Hbf",
+        "platform": "",
+        "time": "2510202210",
+        "destination": "Hamm(Westf)Hbf",
+        "path_stations": [
+          "Bönen-Nordbögge",
+          "Hamm(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "73633733534286672-2510202220-2",
+        "type": "RE",
+        "number": "63838",
+        "direction": "Aachen Hbf",
+        "platform": "1",
+        "time": "2510202228",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Herne",
+          "Essen Hbf",
+          "Mülheim(Ruhr)Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf",
+          "Düsseldorf-Benrath",
+          "Leverkusen Mitte",
+          "Köln-Mülheim",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln-Ehrenfeld",
+          "Horrem",
+          "Düren",
+          "Langerwehe",
+          "Eschweiler Hbf",
+          "Stolberg(Rheinl)Hbf",
+          "Aachen-Rothe Erde",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "45841186386860662-2510202220-3",
+        "type": "Bus",
+        "number": "1087",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510202259",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Kamen-Methler",
+          "Dortmund-Kurl",
+          "Dortmund-Scharnhorst",
+          "Dortmund Hbf",
+          "Bochum Hbf (Buddenbergplatz)",
+          "Wattenscheid",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-5471504808797007974-2510202035-8",
+        "type": "Bus",
+        "number": "1078",
+        "direction": "Hamm(Westf)Hbf",
+        "platform": "",
+        "time": "2510202240",
+        "destination": "Hamm(Westf)Hbf",
+        "path_stations": [
+          "Bönen-Nordbögge",
+          "Hamm(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "7208556528743135153-2510202150-3",
+        "type": "Bus",
+        "number": "1085",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510202229",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Kamen-Methler",
+          "Dortmund-Kurl",
+          "Dortmund-Scharnhorst",
+          "Dortmund Hbf",
+          "Bochum Hbf (Buddenbergplatz)",
+          "Wattenscheid",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "1115334887484968574-2510202135-8",
+        "type": "Bus",
+        "number": "1080",
+        "direction": "Hamm(Westf)Hbf",
+        "platform": "",
+        "time": "2510202336",
+        "destination": "Hamm(Westf)Hbf",
+        "path_stations": [
+          "Bönen-Nordbögge",
+          "Hamm(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-2634571858741069482-2510202250-3",
+        "type": "Bus",
+        "number": "1089",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510202329",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Kamen-Methler",
+          "Dortmund-Kurl",
+          "Dortmund-Scharnhorst",
+          "Dortmund Hbf",
+          "Bochum Hbf (Buddenbergplatz)",
+          "Wattenscheid",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "4956006036609249189-2510202320-2",
+        "type": "RE",
+        "number": "63840",
+        "direction": "Düsseldorf Hbf",
+        "platform": "1",
+        "time": "2510202329",
+        "destination": "Düsseldorf Hbf",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Herne",
+          "Essen Hbf",
+          "Mülheim(Ruhr)Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf"
+        ]
+      },
+      {
+        "id": "5243598226386037666-2510202304-2",
+        "type": "Bus",
+        "number": "1100",
+        "direction": "Dortmund Hbf",
+        "platform": "",
+        "time": "2510202342",
+        "destination": "Dortmund Hbf",
+        "path_stations": [
+          "Dortmund Hbf"
+        ]
+      },
+      {
+        "id": "6577650736749111359-2510202320-3",
+        "type": "Bus",
+        "number": "1091",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510202359",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Kamen-Methler",
+          "Dortmund-Kurl",
+          "Dortmund-Scharnhorst",
+          "Dortmund Hbf",
+          "Bochum Hbf (Buddenbergplatz)",
+          "Wattenscheid",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-837956258388045715-2510202051-21",
+        "type": "RE",
+        "number": "63837",
+        "direction": "Hamm(Westf)Hbf",
+        "platform": "2",
+        "time": "2510202330",
+        "destination": "Hamm(Westf)Hbf",
+        "path_stations": [
+          "Hamm(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "8326430290048004934-2510210020-3",
+        "type": "Bus",
+        "number": "1001",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510210059",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Kamen-Methler",
+          "Dortmund-Kurl",
+          "Dortmund-Scharnhorst",
+          "Dortmund Hbf",
+          "Bochum Hbf (Buddenbergplatz)",
+          "Wattenscheid",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-1862684883433501494-2510202350-3",
+        "type": "Bus",
+        "number": "1093",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510210029",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Kamen-Methler",
+          "Dortmund-Kurl",
+          "Dortmund-Scharnhorst",
+          "Dortmund Hbf",
+          "Bochum Hbf (Buddenbergplatz)",
+          "Wattenscheid",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-2968023535338810240-2510202151-21",
+        "type": "RE",
+        "number": "63839",
+        "direction": "Hamm(Westf)Hbf",
+        "platform": "2",
+        "time": "2510210030",
+        "destination": "Hamm(Westf)Hbf",
+        "path_stations": [
+          "Hamm(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "7466772189215854555-2510202205-8",
+        "type": "Bus",
+        "number": "1082",
+        "direction": "Hamm(Westf)Hbf",
+        "platform": "",
+        "time": "2510210006",
+        "destination": "Hamm(Westf)Hbf",
+        "path_stations": [
+          "Bönen-Nordbögge",
+          "Hamm(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "65264026544892332-2510202235-8",
+        "type": "Bus",
+        "number": "1084",
+        "direction": "Hamm(Westf)Hbf",
+        "platform": "",
+        "time": "2510210036",
+        "destination": "Hamm(Westf)Hbf",
+        "path_stations": [
+          "Bönen-Nordbögge",
+          "Hamm(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-1813952423523487450-2510202335-8",
+        "type": "Bus",
+        "number": "1088",
+        "direction": "Hamm(Westf)Hbf",
+        "platform": "",
+        "time": "2510210136",
+        "destination": "Hamm(Westf)Hbf",
+        "path_stations": [
+          "Bönen-Nordbögge",
+          "Hamm(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-7981999174023803660-2510210120-3",
+        "type": "Bus",
+        "number": "1003",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510210159",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Kamen-Methler",
+          "Dortmund-Kurl",
+          "Dortmund-Scharnhorst",
+          "Dortmund Hbf",
+          "Bochum Hbf (Buddenbergplatz)",
+          "Wattenscheid",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-2952111715038404971-2510202305-8",
+        "type": "Bus",
+        "number": "1086",
+        "direction": "Hamm(Westf)Hbf",
+        "platform": "",
+        "time": "2510210106",
+        "destination": "Hamm(Westf)Hbf",
+        "path_stations": [
+          "Bönen-Nordbögge",
+          "Hamm(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "6861118068401432511-2510202351-21",
+        "type": "RE",
+        "number": "63843",
+        "direction": "Hamm(Westf)Hbf",
+        "platform": "2",
+        "time": "2510210230",
+        "destination": "Hamm(Westf)Hbf",
+        "path_stations": [
+          "Hamm(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "530700669386025771-2510210220-3",
+        "type": "Bus",
+        "number": "1005",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510210259",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Kamen-Methler",
+          "Dortmund-Kurl",
+          "Dortmund-Scharnhorst",
+          "Dortmund Hbf",
+          "Bochum Hbf (Buddenbergplatz)",
+          "Wattenscheid",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "7100717143143276809-2510210005-8",
+        "type": "Bus",
+        "number": "1000",
+        "direction": "Hamm(Westf)Hbf",
+        "platform": "",
+        "time": "2510210206",
+        "destination": "Hamm(Westf)Hbf",
+        "path_stations": [
+          "Bönen-Nordbögge",
+          "Hamm(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "3420601797057640764-2510210320-2",
+        "type": "RE",
+        "number": "63800",
+        "direction": "Aachen Hbf",
+        "platform": "1",
+        "time": "2510210328",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Herne",
+          "Essen Hbf",
+          "Mülheim(Ruhr)Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf",
+          "Düsseldorf-Benrath",
+          "Leverkusen Mitte",
+          "Köln-Mülheim",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln-Ehrenfeld",
+          "Horrem",
+          "Düren",
+          "Langerwehe",
+          "Eschweiler Hbf",
+          "Stolberg(Rheinl)Hbf",
+          "Aachen-Rothe Erde",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "-3614445004552731289-2510210105-8",
+        "type": "Bus",
+        "number": "1002",
+        "direction": "Hamm(Westf)Hbf",
+        "platform": "",
+        "time": "2510210306",
+        "destination": "Hamm(Westf)Hbf",
+        "path_stations": [
+          "Bönen-Nordbögge",
+          "Hamm(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-7095488017273330305-2510210320-3",
+        "type": "Bus",
+        "number": "1007",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510210359",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Kamen-Methler",
+          "Dortmund-Kurl",
+          "Dortmund-Scharnhorst",
+          "Dortmund Hbf",
+          "Bochum Hbf (Buddenbergplatz)",
+          "Wattenscheid",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      },
+      {
+        "id": "-1413371878725604535-2510210205-8",
+        "type": "Bus",
+        "number": "1004",
+        "direction": "Hamm(Westf)Hbf",
+        "platform": "",
+        "time": "2510210406",
+        "destination": "Hamm(Westf)Hbf",
+        "path_stations": [
+          "Bönen-Nordbögge",
+          "Hamm(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "6164544895508624728-2510210420-2",
+        "type": "RE",
+        "number": "63802",
+        "direction": "Aachen Hbf",
+        "platform": "1",
+        "time": "2510210428",
+        "destination": "Aachen Hbf",
+        "path_stations": [
+          "Dortmund Hbf",
+          "Herne",
+          "Essen Hbf",
+          "Mülheim(Ruhr)Hbf",
+          "Duisburg Hbf",
+          "Düsseldorf Flughafen",
+          "Düsseldorf Hbf",
+          "Düsseldorf-Benrath",
+          "Leverkusen Mitte",
+          "Köln-Mülheim",
+          "Köln Messe/Deutz",
+          "Köln Hbf",
+          "Köln-Ehrenfeld",
+          "Horrem",
+          "Düren",
+          "Langerwehe",
+          "Eschweiler Hbf",
+          "Stolberg(Rheinl)Hbf",
+          "Aachen-Rothe Erde",
+          "Aachen Hbf"
+        ]
+      },
+      {
+        "id": "-4263115421425311591-2510210354-2",
+        "type": "Bus",
+        "number": "1101",
+        "direction": "Hamm(Westf)Hbf",
+        "platform": "",
+        "time": "2510210430",
+        "destination": "Hamm(Westf)Hbf",
+        "path_stations": [
+          "Hamm(Westf)Hbf"
+        ]
+      },
+      {
+        "id": "-8446384959799088332-2510210420-3",
+        "type": "Bus",
+        "number": "1011",
+        "direction": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "platform": "",
+        "time": "2510210459",
+        "destination": "Essen Hbf Kruppstraße/Am Thyssenhaus",
+        "path_stations": [
+          "Kamen-Methler",
+          "Dortmund-Kurl",
+          "Dortmund-Scharnhorst",
+          "Dortmund Hbf",
+          "Bochum Hbf (Buddenbergplatz)",
+          "Wattenscheid",
+          "Essen Hbf Kruppstraße/Am Thyssenhaus"
+        ]
+      }
+    ],
+    "arrivals": []
+  }
+}
