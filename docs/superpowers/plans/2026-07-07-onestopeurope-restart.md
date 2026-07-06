@@ -450,7 +450,7 @@ def fetch_all(
   - Stations (UIC): Alpha `1111111` (50.0, 8.0), Beta `2222222` (50.0, 9.0), Gamma `3333333` (50.0, 10.0) — Gamma exists in BOTH feeds (border station, must merge), Delta `4444444` (50.0, 11.0, only borderia).
   - landia trips: `IC 100` Alpha 08:00 → Beta 09:00 → (continues) Gamma 10:00; `IC 101` Alpha 12:00 → Beta 12:50; `IC 300` Beta dep 09:05 → Gamma 10:05 (5-min transfer from IC 100 — must be rejected); `RB 1` Alpha 07:00 → Beta 08:30 (regional — must be filtered out).
   - borderia trips: `TGV 10` Gamma 10:30 → Delta 12:00.
-  - **Hand-verified truths:** Alpha→Beta nonstop best = IC 101, 50 min, direct_per_day 2 (IC 100 + IC 101). Alpha→Gamma nonstop = IC 100, 120 min. Alpha→Delta = 2 trains (IC 100 then TGV 10 with 30-min transfer at Gamma), 08:00→12:00 = 240 min; NOT reachable nonstop. Beta→Gamma nonstop = IC 300 (60 min) — IC 300 is fine as a first train, only invalid as a 5-min transfer.
+  - **Hand-verified truths:** Alpha→Beta nonstop best = IC 101, 50 min, direct_per_day 2 (IC 100 + IC 101). Alpha→Gamma nonstop = IC 100, 120 min. Alpha→Delta = 2 trains (IC 100 then TGV 10 with 30-min transfer at Gamma), 08:00→12:00 = 240 min; NOT reachable nonstop. Beta→Gamma nonstop: best is IC 100 boarded mid-route at Beta (09:02→10:00, 58 min, so direct_per_day = 2); IC 300 (60 min) also exists and is fine as a first train, only invalid as a 5-min transfer. Do not assert "best Beta→Gamma = 60 min".
 
 - [ ] **Step 1: Write the fixture builder** (`tests/fixtures.py`):
 
