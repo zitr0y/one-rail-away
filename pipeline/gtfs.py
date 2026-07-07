@@ -49,9 +49,16 @@ def _minutes(hms: str) -> int:
 
 
 def _rows(zf: zipfile.ZipFile, name: str) -> list[dict]:
-    if name not in zf.namelist():
+    """Read a GTFS text file as dict rows, tolerating a subdirectory prefix.
+
+    Some feeds nest every file under one directory (OEBB uses
+    "GTFS_Fahrplan_2026/stops.txt"); match by basename so a bare name like
+    "stops.txt" still resolves.
+    """
+    member = next((n for n in zf.namelist() if n == name or n.endswith(f"/{name}")), None)
+    if member is None:
         return []
-    with zf.open(name) as f:
+    with zf.open(member) as f:
         return list(csv.DictReader(io.TextIOWrapper(f, encoding="utf-8-sig")))
 
 
@@ -83,19 +90,33 @@ def load_feed(
     (canonicalization to UIC happens later).
     """
     allow = [re.compile(p) for p in cfg.route_allow]
+    trip_allow = [re.compile(p) for p in cfg.trip_allow] if cfg.trip_allow else None
     with zipfile.ZipFile(zip_path) as zf:
         routes: dict[str, str] = {}
         for r in _rows(zf, "routes.txt"):
-            name = r.get("route_short_name") or r.get("route_long_name") or ""
-            if any(p.search(name) for p in allow):
-                routes[r["route_id"]] = name
+            short = (r.get("route_short_name") or "").strip()
+            long = (r.get("route_long_name") or "").strip()
+            # Match patterns against BOTH names: some feeds put the brand only in
+            # route_long_name even when short_name is populated (SNCF short_name is
+            # an opaque code like "001G"; the brand is a trailing word in long_name,
+            # e.g. "Lille - Alpes TGV"). The DISPLAY name still prefers short_name.
+            if any(p.search(short) or p.search(long) for p in allow):
+                routes[r["route_id"]] = short or long
 
         active = _active_services(zf, sample_date)
-        trip_train = {
-            t["trip_id"]: routes[t["route_id"]]
-            for t in _rows(zf, "trips.txt")
-            if t["route_id"] in routes and t["service_id"] in active
-        }
+        trip_train: dict[str, str] = {}
+        for t in _rows(zf, "trips.txt"):
+            if t["route_id"] not in routes or t["service_id"] not in active:
+                continue
+            if trip_allow is not None:
+                # Trip-level filter: keep only trips whose trip_short_name matches,
+                # and use that name as the label (see FeedConfig.trip_allow).
+                short = (t.get("trip_short_name") or "").strip()
+                if not any(p.search(short) for p in trip_allow):
+                    continue
+                trip_train[t["trip_id"]] = short
+            else:
+                trip_train[t["trip_id"]] = routes[t["route_id"]]
 
         stop_times: dict[str, list[tuple[int, StopTime]]] = {}
         used_stops: set[str] = set()

@@ -282,6 +282,83 @@ def test_route_long_name_used_when_short_name_empty(tmp_path):
     assert trip.train == "Intercity Direct"
 
 
+def test_route_allow_matches_against_long_name_even_when_short_name_present(tmp_path):
+    # SNCF: route_short_name is an opaque code ("001G"), the brand lives as a
+    # trailing word in route_long_name ("Lille - Alpes TGV"). A pattern must be
+    # able to match the long name even though short_name is non-empty. The
+    # DISPLAY name still prefers short_name when present.
+    cfg = FeedConfig(url="u", country="XX", license="t", route_allow=["\\bTGV\\b"])
+    zip_path = _make_feed(
+        tmp_path,
+        routes_txt=(
+            "route_id,route_short_name,route_long_name,route_type\n"
+            "R1,001G,Lille - Alpes TGV,2\n"
+        ),
+    )
+    _, trips = load_feed(zip_path, cfg, SAMPLE)
+    (trip,) = trips
+    assert trip.train == "001G"  # display name still the short code
+
+
+# --- trip-level filtering (OEBB) ---------------------------------------------
+
+
+def test_trip_allow_filters_by_trip_short_name_and_relabels(tmp_path):
+    # OEBB: route names are corridor codes carrying no category. route_allow lets
+    # every route through; trip_allow selects long-distance trips by their
+    # trip_short_name ("RJ 658") and that becomes the train label.
+    cfg = FeedConfig(
+        url="u", country="XX", license="t",
+        route_allow=["."], trip_allow=["^RJ\\b", "^ICE\\b"],
+    )
+    zip_path = _make_feed(
+        tmp_path,
+        routes_txt="route_id,route_short_name,route_type\nR1,A10-1,2\n",
+        trips_txt=(
+            "route_id,service_id,trip_id,trip_short_name\n"
+            "R1,S1,T1,RJ 658\n"
+            "R1,S1,T2,REX 5\n"  # regional, filtered out
+        ),
+        stop_times_txt=(
+            "trip_id,arrival_time,departure_time,stop_id,stop_sequence\n"
+            "T1,08:00:00,08:00:00,A,1\n"
+            "T1,09:00:00,09:00:00,B,2\n"
+            "T2,07:00:00,07:00:00,A,1\n"
+            "T2,07:30:00,07:30:00,B,2\n"
+        ),
+    )
+    _, trips = load_feed(zip_path, cfg, SAMPLE)
+    (trip,) = trips
+    assert trip.trip_id == "T1"
+    assert trip.train == "RJ 658"  # relabeled from trip_short_name
+
+
+def test_no_trip_allow_keeps_route_label(tmp_path):
+    # Without trip_allow, behavior is unchanged: the route name is the label and
+    # no trip_short_name filtering happens.
+    _, trips = load_feed(_make_feed(tmp_path), CFG, SAMPLE)
+    (trip,) = trips
+    assert trip.train == "IC 9"
+
+
+# --- nested archive layout ---------------------------------------------------
+
+
+def test_feed_files_nested_in_subdirectory_are_found(tmp_path):
+    # OEBB ships its GTFS files under a "GTFS_Fahrplan_2026/" prefix inside the
+    # zip. The loader must find e.g. "GTFS_Fahrplan_2026/stops.txt" when it looks
+    # up "stops.txt".
+    buf = io.BytesIO()
+    with zipfile.ZipFile(buf, "w") as zf:
+        for fname, content in _DEFAULT_FILES.items():
+            zf.writestr(f"GTFS_Fahrplan_2026/{fname}", content)
+    path = tmp_path / "nested.zip"
+    path.write_bytes(buf.getvalue())
+    stops, trips = load_feed(path, CFG, SAMPLE)
+    assert {s.stop_id for s in stops} == {"A", "B"}
+    assert len(trips) == 1
+
+
 # --- encoding ----------------------------------------------------------------
 
 

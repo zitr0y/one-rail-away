@@ -9,10 +9,11 @@ uic_regex = "(\\d{7})"
 url = "https://eu.ftp.opendatasoft.com/sncf/gtfs/export_gtfs_voyages.zip"
 country = "FR"
 license = "ODbL (transport.data.gouv.fr)"
-# route_long_name carries the brand as a trailing word (e.g. "Lille - Alpes TGV"),
-# not a leading one -- unanchored \b match, verified against the real 2026-07 export
-# (this feed only contains TGV-branded lines; INTERCIT/OUIGO/EUROSTAR/LYRIA never
-# appear in route_long_name here, so those patterns are kept for forward-compat).
+# SNCF route_short_name is an opaque code ("001G"); the brand is a trailing word in
+# route_long_name ("Lille - Alpes TGV"). The loader matches route_allow against BOTH
+# names, so an unanchored \b pattern catches it. Verified against the real 2026-07
+# export: this feed's long_names carry only TGV (45) and one "ice"; INTERCIT/OUIGO/
+# EUROSTAR/LYRIA never appear, so those patterns are kept for forward-compat only.
 route_allow = ["\\bTGV\\b", "\\bINTERCIT", "\\bOUIGO", "\\bEUROSTAR", "\\bICE\\b", "\\bLYRIA"]
 uic_regex = "87(\\d{5})$"
 
@@ -20,7 +21,15 @@ uic_regex = "87(\\d{5})$"
 url = "https://static.web.oebb.at/open-data/soll-fahrplan-gtfs/GTFS_Fahrplan_2026.zip"
 country = "AT"
 license = "CC BY 4.0"
-route_allow = ["^RJX?\\b", "^ICE?\\b", "^ECE?\\b", "^NJ\\b", "^D\\b"]
+# OEBB route names are corridor codes carrying no train category ("A10-1"), so no
+# routes.txt pattern can select long-distance trips. route_allow lets every route
+# through (all route_short_names are non-empty in the real 2026 export) and
+# trip_allow does the real filtering against trips.txt trip_short_name ("RJ 658",
+# "ICE 24", ...), which also becomes the train label. Categories verified present
+# in the real export: RJX, RJ, ICE, EC, IC, EN, NJ, D (regional S/REX/R/CJX/IR/CAT
+# excluded). "^EN\b" and "^NJ\b" are both nightjet-family; "^D\b" is D-Zug.
+route_allow = ["."]
+trip_allow = ["^RJX?\\b", "^ICE?\\b", "^ECE?\\b", "^NJ\\b", "^EN\\b", "^D\\b"]
 uic_regex = "(\\d{7})"
 
 [feeds.sbb]
