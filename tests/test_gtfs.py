@@ -341,6 +341,43 @@ def test_no_trip_allow_keeps_route_label(tmp_path):
     assert trip.train == "IC 9"
 
 
+# --- stop-id-level filtering (SNCF) -------------------------------------------
+
+
+def test_stop_id_allow_keeps_only_trips_on_matching_stop_ids(tmp_path):
+    # SNCF's combined feed (TGV+Intercites+TER) marks the commercial brand ONLY
+    # in the per-brand StopPoint ids ("StopPoint:OCETGV INOUI-87686006"); route
+    # names carry no brand for OUIGO/Lyria/Intercites trips. stop_id_allow keeps
+    # a trip only if its stop ids match one of the patterns.
+    cfg = FeedConfig(
+        url="u", country="XX", license="t",
+        route_allow=["."], stop_id_allow=["^SP:OCETGV\\b", "^SP:OCEOUIGO-"],
+    )
+    zip_path = _make_feed(
+        tmp_path,
+        stops_txt=(
+            "stop_id,stop_name,stop_lat,stop_lon\n"
+            "SP:OCETGV-1,Alpha,50.0,8.0\n"
+            "SP:OCETGV-2,Beta,50.0,9.0\n"
+            "SP:OCETER-1,Alpha,50.0,8.0\n"
+            "SP:OCETER-3,Gamma,50.1,8.1\n"
+        ),
+        routes_txt="route_id,route_short_name,route_type\nR1,001G,2\nR2,C30,2\n",
+        trips_txt="route_id,service_id,trip_id\nR1,S1,T1\nR2,S1,T2\n",
+        stop_times_txt=(
+            "trip_id,arrival_time,departure_time,stop_id,stop_sequence\n"
+            "T1,08:00:00,08:00:00,SP:OCETGV-1,1\n"
+            "T1,09:00:00,09:00:00,SP:OCETGV-2,2\n"
+            "T2,07:00:00,07:00:00,SP:OCETER-1,1\n"
+            "T2,07:30:00,07:30:00,SP:OCETER-3,2\n"
+        ),
+    )
+    stops, trips = load_feed(zip_path, cfg, SAMPLE)
+    (trip,) = trips  # TER trip filtered out
+    assert trip.trip_id == "T1"
+    assert {s.stop_id for s in stops} == {"SP:OCETGV-1", "SP:OCETGV-2"}
+
+
 # --- nested archive layout ---------------------------------------------------
 
 

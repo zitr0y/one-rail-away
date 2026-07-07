@@ -16,6 +16,12 @@ class FeedConfig(BaseModel):
     # route names carry no train category (OEBB: corridor codes like "A10-1",
     # with the real category "RJ 658" living in trip_short_name).
     trip_allow: list[str] | None = None
+    # Optional stop-id-level trip filter: regexes matched against the stop_ids a
+    # trip serves; a trip is kept only if at least one of its stop ids matches.
+    # Needed for feeds where the commercial brand lives only in per-brand stop
+    # ids (SNCF combined export: "StopPoint:OCETGV INOUI-87686006" vs
+    # "StopPoint:OCETrain TER-...", with no brand in route or trip fields).
+    stop_id_allow: list[str] | None = None
     uic_regex: str | None = None  # extracts UIC code from stop_id
 
 

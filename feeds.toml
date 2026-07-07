@@ -6,16 +6,39 @@ route_allow = ["^ICE?\\b", "^ECE?\\b", "^NJ\\b", "^RJX?\\b", "^FLX\\b", "^TGV\\b
 uic_regex = "(\\d{7})"
 
 [feeds.sncf]
-url = "https://eu.ftp.opendatasoft.com/sncf/gtfs/export_gtfs_voyages.zip"
+# The old opendatasoft FTP export (eu.ftp.opendatasoft.com/sncf/gtfs/
+# export_gtfs_voyages.zip) is STALE: as of 2026-07-07 it still serves a file whose
+# calendar_dates cover only 2025-01-22..2025-02-21, so every sample date resolves
+# to 0 trips. This is the current "Réseau SNCF TGV, Intercités et TER" GTFS from
+# transport.data.gouv.fr (stable resource permalink, updated ~daily; checked
+# 2026-07-07: covers 2026-07-07..2026-12-31).
+url = "https://www.data.gouv.fr/api/1/datasets/r/9ae758ec-cd7a-40cd-a890-bb3963224942"
 country = "FR"
 license = "ODbL (transport.data.gouv.fr)"
-# SNCF route_short_name is an opaque code ("001G"); the brand is a trailing word in
-# route_long_name ("Lille - Alpes TGV"). The loader matches route_allow against BOTH
-# names, so an unanchored \b pattern catches it. Verified against the real 2026-07
-# export: this feed's long_names carry only TGV (45) and one "ice"; INTERCIT/OUIGO/
-# EUROSTAR/LYRIA never appear, so those patterns are kept for forward-compat only.
-route_allow = ["\\bTGV\\b", "\\bINTERCIT", "\\bOUIGO", "\\bEUROSTAR", "\\bICE\\b", "\\bLYRIA"]
-uic_regex = "87(\\d{5})$"
+# The combined export carries no brand in route or trip fields: route_short_name is
+# an opaque line code ("003C", or "INCONNU"), and OUIGO/Lyria/Intercites long_names
+# are plain city pairs ("Paris - Lyon") indistinguishable from TER. The commercial
+# brand lives ONLY in the per-brand StopPoint ids ("StopPoint:OCETGV INOUI-87686006"
+# vs "StopPoint:OCETrain TER-...`), so route_allow passes every route and
+# stop_id_allow selects trips by brand. Brands verified in the real 2026-07 export
+# (trips): TGV INOUI 8864, INTERCITES 873, OUIGO 625, Lyria 341, ICE 243,
+# INTERCITES de nuit 248, Train 117 (the Paris-Bruxelles rail corridor). Excluded:
+# Train TER, Car TER, Car a reservation (road coaches), TramTrain, Navette.
+route_allow = ["."]
+stop_id_allow = [
+  "^StopPoint:OCETGV INOUI-",
+  "^StopPoint:OCEOUIGO-",
+  "^StopPoint:OCEICE-",
+  "^StopPoint:OCELyria-",
+  "^StopPoint:OCEINTERCITES-",
+  "^StopPoint:OCEINTERCITES de nuit-",
+  "^StopPoint:OCETrain-",
+]
+# No uic_regex: this export's stop ids end in the 8-digit UIC code WITH check digit
+# ("...-87686006"), while sbb/oebb carry 7-digit codes without it -- the values can
+# never merge, and merge.py's digit-adjacency guard rejects any 7-of-8 partial
+# capture anyway. Proximity+name matching (plus station_aliases.toml) handles
+# cross-feed merges for SNCF stations.
 
 [feeds.oebb]
 url = "https://static.web.oebb.at/open-data/soll-fahrplan-gtfs/GTFS_Fahrplan_2026.zip"

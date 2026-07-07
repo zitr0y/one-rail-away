@@ -96,6 +96,9 @@ def load_feed(
     """
     allow = [re.compile(p) for p in cfg.route_allow]
     trip_allow = [re.compile(p) for p in cfg.trip_allow] if cfg.trip_allow else None
+    stop_id_allow = (
+        [re.compile(p) for p in cfg.stop_id_allow] if cfg.stop_id_allow else None
+    )
     with zipfile.ZipFile(zip_path) as zf:
         routes: dict[str, str] = {}
         for r in _rows(zf, "routes.txt"):
@@ -124,7 +127,6 @@ def load_feed(
                 trip_train[t["trip_id"]] = routes[t["route_id"]]
 
         stop_times: dict[str, list[tuple[int, StopTime]]] = {}
-        used_stops: set[str] = set()
         for st in _rows(zf, "stop_times.txt"):
             tid = st["trip_id"]
             if tid not in trip_train:
@@ -143,12 +145,26 @@ def load_feed(
                 StopTime(station=st["stop_id"], arr=_minutes(arr), dep=_minutes(dep)),
             )
             stop_times.setdefault(tid, []).append(entry)
-            used_stops.add(st["stop_id"])
+
+        # Stop-id-level trip filter (see FeedConfig.stop_id_allow): keep a trip only
+        # if at least one of its stop ids matches. Verdicts are cached per stop_id --
+        # stop_times runs to millions of rows but only thousands of distinct stops.
+        id_ok: dict[str, bool] = {}
+
+        def _stop_id_passes(stop_id: str) -> bool:
+            if stop_id not in id_ok:
+                id_ok[stop_id] = any(p.search(stop_id) for p in stop_id_allow)
+            return id_ok[stop_id]
 
         trips = []
+        used_stops: set[str] = set()  # stop ids used by KEPT trips only
         for tid, entries in stop_times.items():
             entries.sort(key=lambda e: e[0])
-            trips.append(Trip(trip_id=tid, train=trip_train[tid], stops=[e[1] for e in entries]))
+            kept = [e[1] for e in entries]
+            if stop_id_allow is not None and not any(_stop_id_passes(s.station) for s in kept):
+                continue
+            used_stops.update(s.station for s in kept)
+            trips.append(Trip(trip_id=tid, train=trip_train[tid], stops=kept))
 
         stops: list[RawStop] = []
         for s in _rows(zf, "stops.txt"):
