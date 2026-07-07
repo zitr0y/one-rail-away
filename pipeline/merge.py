@@ -8,7 +8,8 @@ Canonical id precedence (first match wins):
   1. alias override  -- explicit "<feed>:<stop_id>" -> canonical id in `aliases`
   2. UIC regex       -- cfg.uic_regex extracts a UIC code from the stop_id
   3. proximity       -- an already-registered station <500 m away AND with the same
-                        normalized name (lowercase, alphanumeric only)
+                        normalized name (accent-transliterated, lowercase, alphanumeric
+                        only -- see `_norm`)
   4. fresh id        -- "x:<feed>:<stop_id>" (never merges with anything)
 
 The FIRST feed to register a canonical id wins its display name, coordinates, and
@@ -33,6 +34,7 @@ have a clean 7-digit run bounded by non-digits and still resolve to `3333333`.
 
 import math
 import re
+import unicodedata
 
 from pipeline.config import FeedConfig
 from pipeline.gtfs import RawStop
@@ -53,8 +55,23 @@ def _dist_m(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
 
 
 def _norm(name: str) -> str:
-    """Normalize a station name for comparison: lowercase, alphanumeric only."""
-    return re.sub(r"[^a-z0-9]", "", name.lower())
+    """Normalize a station name for comparison: transliterate accents, lowercase,
+    alphanumeric only.
+
+    NFKD-decomposes the name (splitting accented letters into base + combining
+    mark), drops the combining marks, lowercases, then strips everything but
+    [a-z0-9]. This makes "München Hbf" and "Munchen Hbf" compare equal, so the
+    same station spelled with or without diacritics across feeds still
+    proximity-merges instead of silently registering as two stations.
+
+    Known limit: German ue/oe/ae digraph spellings ("Muenchen") are NOT
+    equivalent to their umlaut form ("München") under this normalization --
+    "muenchenhbf" != "munchenhbf". Those variants need an explicit
+    station_aliases.toml entry.
+    """
+    decomposed = unicodedata.normalize("NFKD", name)
+    ascii_only = "".join(c for c in decomposed if not unicodedata.combining(c))
+    return re.sub(r"[^a-z0-9]", "", ascii_only.lower())
 
 
 def _uic_match(uic_re: re.Pattern[str] | None, stop_id: str) -> str | None:
@@ -68,7 +85,12 @@ def _uic_match(uic_re: re.Pattern[str] | None, stop_id: str) -> str | None:
     m = uic_re.search(stop_id)
     if m is None:
         return None
-    # Prefer an explicit capture group; fall back to the whole match.
+    # Prefer an explicit capture group; fall back to the whole match. If the
+    # regex has a group 1 but it didn't participate in this match (e.g. it sits
+    # in an unmatched alternation branch), m.group(1) is None and m.start(1)/
+    # m.end(1) are both -1 -- guard against that before using them.
+    if m.lastindex and m.group(1) is None:
+        return None
     start, end = (m.start(1), m.end(1)) if m.lastindex else (m.start(), m.end())
     before = stop_id[start - 1] if start > 0 else ""
     after = stop_id[end] if end < len(stop_id) else ""

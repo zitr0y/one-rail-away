@@ -202,3 +202,25 @@ def test_winning_feed_sets_country_and_coords():
 
 def test_norm_strips_punctuation_and_case():
     assert _norm("St. Gallen") == _norm("st gallen") == "stgallen"
+
+
+# --- accent transliteration: umlaut vs ASCII spelling must still proximity-merge ---
+
+
+def test_umlaut_and_ascii_spelling_merge_via_proximity():
+    # "München Hbf" (with umlaut) and "Munchen Hbf" (ASCII, accent dropped) refer to
+    # the same physical station. No usable UIC in either id, no alias configured --
+    # only _norm's transliteration (not mere deletion) can bridge them via proximity.
+    per_feed = {
+        "de": (
+            [RawStop("de:platform-1", "München Hbf", 48.1402, 11.5581)],
+            _cfg(uic_regex=r"^(\d{7})$"),
+        ),
+        "alt": (
+            [RawStop("alt:platform-1", "Munchen Hbf", 48.1403, 11.5582)],
+            _cfg(uic_regex=r"^(\d{7})$"),
+        ),
+    }
+    stations, mapping = merge_stations(per_feed, {})
+    assert len(stations) == 1
+    assert mapping[("de", "de:platform-1")] == mapping[("alt", "alt:platform-1")]
