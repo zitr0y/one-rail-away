@@ -1,0 +1,10 @@
+# Manual cross-feed station merge overrides.
+#
+# Each entry forces one feed-local stop to a chosen canonical station id, taking
+# precedence over UIC-regex extraction and proximity matching. Use this when the
+# validation step reports either a missed merge (two ids that are the same physical
+# station) or a wrong merge that automatic rules cannot resolve.
+#
+# Format:  "<feed>:<stop_id>" = "<canonical UIC id>"
+# Example: "borderia:bs-3333333" = "3333333"
+[aliases]
