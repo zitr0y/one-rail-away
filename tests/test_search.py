@@ -39,6 +39,14 @@ def _client(tmp_path):
             "country": "DE",
             "has_reach": False,
         },
+        {
+            "id": "5",
+            "name": "München",
+            "lat": 48.1,
+            "lon": 11.5,
+            "country": "DE",
+            "has_reach": True,
+        },
     ]
     (tmp_path / "stations.json").write_text(json.dumps({"stations": stations}))
     return TestClient(create_app(tmp_path))
@@ -52,6 +60,16 @@ def test_normalize_strips_accents():
 def test_search_prefix_beats_substring_and_skips_no_reach(tmp_path):
     got = _client(tmp_path).get("/api/stations/search", params={"q": "munchen"}).json()["stations"]
     names = [s["name"] for s in got]
-    assert names[0] == "München Hbf"  # prefix + shortest
+    assert names[0] == "München"  # prefix + shortest normalized name wins the tie-break
     assert "Bad München-Dorf" in names  # substring still found
     assert all(s["id"] != "4" for s in got)  # has_reach=False excluded
+
+
+def test_search_tier_tie_break_prefers_shorter_name_even_when_inserted_later(tmp_path):
+    # "München" is appended after two longer tier-0 (prefix) matches of equal length
+    # ("München Hbf", "München Ost" both normalize to 11 chars). A stable sort on
+    # insertion order alone would keep "München Hbf" first; only a real length
+    # tie-break promotes "München" (7 chars) to the top.
+    got = _client(tmp_path).get("/api/stations/search", params={"q": "munchen"}).json()["stations"]
+    names = [s["name"] for s in got]
+    assert names[0] == "München"
