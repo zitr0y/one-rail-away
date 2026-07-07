@@ -1,7 +1,8 @@
 import json
+import logging
 from datetime import date
 
-from pipeline.build import build, validate
+from pipeline.build import build, remap_trips, validate
 from pipeline.models import Station, StopTime, Trip
 from tests.fixtures import make_fixture_feeds
 
@@ -43,6 +44,43 @@ def test_build_produces_merged_graph(tmp_path):
     trips = json.loads((graph / "trips.json").read_text())["trips"]
     tgv = next(t for t in trips if t["train"] == "TGV 10")
     assert [s["station"] for s in tgv["stops"]] == ["3333333", "4444444"]
+
+
+def test_remap_strips_stops_absent_from_mapping(caplog):
+    # A stop whose (feed, stop_id) is missing from the mapping is an unresolved
+    # stub the merge stage dropped: strip it from the trip, keep the rest.
+    trip = Trip(
+        trip_id="T",
+        train="ICE 1",
+        stops=[
+            StopTime(station="a1", arr=0, dep=0),
+            StopTime(station="stub", arr=30, dep=30),
+            StopTime(station="a2", arr=60, dep=60),
+        ],
+    )
+    mapping = {("de", "a1"): "111", ("de", "a2"): "222"}  # no ("de", "stub")
+    with caplog.at_level(logging.WARNING, logger="pipeline.build"):
+        kept = remap_trips({"de": [trip]}, mapping)
+    (out,) = kept
+    assert [s.station for s in out.stops] == ["111", "222"]
+    assert any("stub" in r.message for r in caplog.records)
+
+
+def test_remap_drops_trip_left_with_fewer_than_two_stops(caplog):
+    trip = Trip(
+        trip_id="T",
+        train="ICE 1",
+        stops=[
+            StopTime(station="stub1", arr=0, dep=0),
+            StopTime(station="a1", arr=30, dep=30),
+            StopTime(station="stub2", arr=60, dep=60),
+        ],
+    )
+    mapping = {("de", "a1"): "111"}  # both stubs unresolved -> only 1 stop remains
+    with caplog.at_level(logging.WARNING, logger="pipeline.build"):
+        kept = remap_trips({"de": [trip]}, mapping)
+    assert kept == []
+    assert any("T" in r.message and "dropping trip" in r.message for r in caplog.records)
 
 
 def test_validate_flags_nonsense():

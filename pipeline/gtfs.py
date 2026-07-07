@@ -6,7 +6,9 @@ Behavior notes:
 - stop_times rows with BOTH arrival_time and departure_time empty are skipped
   with a logged warning naming the trip and stop (GTFS allows untimed
   intermediate stops; downstream reachability math needs concrete times).
-- Stops missing coordinates are skipped with a logged warning.
+- Stops missing coordinates (or at the (0,0) placeholder) are kept as
+  coordinate-less stubs (lat/lon None), not dropped; merge_stations resolves
+  them by name or drops them there.
 """
 
 import csv
@@ -30,8 +32,8 @@ WEEKDAY_COLS = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturda
 class RawStop:
     stop_id: str
     name: str
-    lat: float
-    lon: float
+    lat: float | None  # None == coordinate-less stub (see load_feed / merge_stations)
+    lon: float | None
 
 
 def next_tuesday(today: date) -> date:
@@ -128,14 +130,14 @@ def load_feed(
                 continue
             lat, lon = s.get("stop_lat"), s.get("stop_lon")
             # (0, 0) is mid-Atlantic, never a real European station -- some feeds use
-            # it as a placeholder for foreign stops they don't carry real coordinates
-            # for (seen in practice: ovapi/NS stubs for German stations reached by
-            # cross-border trains). Treat it the same as a missing coordinate.
+            # it as a placeholder for a foreign stop they carry no real coordinate for
+            # (seen in practice: ovapi/NS stubs for German stations reached by
+            # cross-border trains). Treat it the same as a missing coordinate: keep the
+            # stop as a coordinate-less STUB (lat/lon None) rather than dropping it. It
+            # is the foreign half of a real cross-border trip; merge_stations resolves
+            # it by name onto the real canonical station, or drops it there.
             if not (lat and lon) or (float(lat) == 0.0 and float(lon) == 0.0):
-                logger.warning(
-                    "skipping stop without real coordinates: %s (%s) in %s",
-                    s["stop_id"], s.get("stop_name", ""), zip_path.name,
-                )
-                continue
-            stops.append(RawStop(s["stop_id"], s["stop_name"], float(lat), float(lon)))
+                stops.append(RawStop(s["stop_id"], s["stop_name"], None, None))
+            else:
+                stops.append(RawStop(s["stop_id"], s["stop_name"], float(lat), float(lon)))
     return stops, trips

@@ -197,11 +197,13 @@ def test_row_with_both_times_empty_is_skipped_with_warning(tmp_path, caplog):
     assert any("T1" in rec.message and "M" in rec.message for rec in caplog.records)
 
 
-def test_stop_at_zero_zero_is_skipped_with_warning(tmp_path, caplog):
-    """(0, 0) is a placeholder some feeds use for a stop with no real coordinate on
-    file (observed in practice: ovapi/NS stubs for foreign stations reached by
-    cross-border trains) -- it must be treated like a missing coordinate, not a
-    real mid-Atlantic location."""
+def test_stop_at_zero_zero_is_kept_as_coordinateless_stub(tmp_path):
+    """(0, 0) is a placeholder some feeds use for a foreign station they carry no
+    real coordinate for (observed: ovapi/NS stubs for German stations reached by
+    cross-border trains). These are NOT dropped at load -- they are the foreign
+    half of a real cross-border trip. They are kept as coordinate-less stubs
+    (lat/lon None), and the merge stage resolves them by name onto the real
+    canonical station (or drops them there if unresolvable)."""
     zip_path = _make_feed(
         tmp_path,
         stops_txt=(
@@ -210,10 +212,28 @@ def test_stop_at_zero_zero_is_skipped_with_warning(tmp_path, caplog):
             "B,Beta,0,0\n"
         ),
     )
-    with caplog.at_level(logging.WARNING, logger="pipeline.gtfs"):
-        stops, trips = load_feed(zip_path, CFG, SAMPLE)
-    assert {s.stop_id for s in stops} == {"A"}
-    assert any("B" in rec.message for rec in caplog.records)
+    stops, trips = load_feed(zip_path, CFG, SAMPLE)
+    by_id = {s.stop_id: s for s in stops}
+    assert by_id["A"].lat == 50.0 and by_id["A"].lon == 8.0
+    assert by_id["B"].lat is None and by_id["B"].lon is None
+    (trip,) = trips
+    assert [s.station for s in trip.stops] == ["A", "B"]  # stub still in the trip
+
+
+def test_stop_with_missing_coordinates_is_kept_as_stub(tmp_path):
+    """An empty stop_lat/stop_lon is treated the same as (0,0): a coordinate-less
+    stub, kept rather than dropped."""
+    zip_path = _make_feed(
+        tmp_path,
+        stops_txt=(
+            "stop_id,stop_name,stop_lat,stop_lon\n"
+            "A,Alpha,50.0,8.0\n"
+            "B,Beta,,\n"
+        ),
+    )
+    stops, _ = load_feed(zip_path, CFG, SAMPLE)
+    by_id = {s.stop_id: s for s in stops}
+    assert by_id["B"].lat is None and by_id["B"].lon is None
 
 
 # --- filtering must not leak into stops --------------------------------------

@@ -4,6 +4,7 @@ by the rest of the pipeline (`data/graph/stations.json`, `data/graph/trips.json`
 """
 
 import json
+import logging
 import tomllib
 from datetime import date
 from pathlib import Path
@@ -12,6 +13,43 @@ from pipeline.config import load_feeds
 from pipeline.gtfs import load_feed
 from pipeline.merge import _dist_m, _norm, merge_stations
 from pipeline.models import Station, Trip
+
+logger = logging.getLogger(__name__)
+
+
+def remap_trips(
+    feed_trips: dict[str, list[Trip]], mapping: dict[tuple[str, str], str]
+) -> list[Trip]:
+    """Remap each trip's feed-local stop ids to canonical station ids.
+
+    A stop whose (feed, stop_id) is absent from `mapping` is an unresolved stub
+    the merge stage dropped (a coordinate-less foreign stop that could not be
+    matched onto a real station); it is STRIPPED from the trip with a warning.
+    Trips left with fewer than 2 stops afterwards are dropped with a warning.
+    """
+    kept: list[Trip] = []
+    for feed, trips in feed_trips.items():
+        for t in trips:
+            remapped = []
+            for s in t.stops:
+                canonical = mapping.get((feed, s.station))
+                if canonical is None:
+                    logger.warning(
+                        "stripping unresolved stub stop %s from trip %s (%s) in %s",
+                        s.station, t.trip_id, t.train, feed,
+                    )
+                    continue
+                s.station = canonical
+                remapped.append(s)
+            t.stops = remapped
+            if len(t.stops) >= 2:
+                kept.append(t)
+            else:
+                logger.warning(
+                    "dropping trip %s (%s) in %s: fewer than 2 stops after stub strip",
+                    t.trip_id, t.train, feed,
+                )
+    return kept
 
 
 def validate(stations: list[Station], trips: list[Trip]) -> list[str]:
@@ -71,14 +109,7 @@ def build(
         print(f"{name}: {len(stops)} stops, {len(trips)} long-distance trips")
 
     stations, mapping = merge_stations(per_feed, aliases)
-
-    all_trips: list[Trip] = []
-    for name, trips in feed_trips.items():
-        for t in trips:
-            for s in t.stops:
-                s.station = mapping[(name, s.station)]
-            if len(t.stops) >= 2:
-                all_trips.append(t)
+    all_trips = remap_trips(feed_trips, mapping)
 
     problems = validate(stations, all_trips)
     if problems:

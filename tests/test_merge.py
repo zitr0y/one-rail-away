@@ -236,3 +236,81 @@ def test_umlaut_and_ascii_spelling_merge_via_proximity():
     stations, mapping = merge_stations(per_feed, {})
     assert len(stations) == 1
     assert mapping[("de", "de:platform-1")] == mapping[("alt", "alt:platform-1")]
+
+
+# --- coordinate-less stub resolution -----------------------------------------
+#
+# A stub (lat/lon None) is the foreign half of a cross-border trip: the feed
+# carries the stop but no coordinate. It must NEVER create a canonical station.
+# After the normal alias/UIC/proximity merge settles, each remaining stub is
+# resolved by an UNAMBIGUOUS normalized-name match onto a real (coordinate-bearing)
+# canonical station. Unmatched or ambiguous stubs are dropped (absent from the
+# mapping) so the build stage strips them from trips.
+
+
+def _real(feed, sid, name, lat, lon):
+    return (feed, ([RawStop(sid, name, lat, lon)], _cfg(uic_regex=r"^(\d{7})$")))
+
+
+def test_stub_resolves_to_real_station_by_name():
+    per_feed = dict(
+        [
+            _real("de", "de:1", "Berlin Hbf", 52.525, 13.369),
+            ("nl", ([RawStop("nl:stub", "Berlin Hbf", None, None)], _cfg(uic_regex=r"^(\d{7})$"))),
+        ]
+    )
+    stations, mapping = merge_stations(per_feed, {})
+    assert len(stations) == 1  # stub created no new station
+    assert mapping[("nl", "nl:stub")] == mapping[("de", "de:1")]
+
+
+def test_stub_never_creates_a_canonical_station():
+    # A stub with no real station to resolve onto is dropped, not registered.
+    per_feed = {
+        "nl": ([RawStop("nl:stub", "Ghost Halt", None, None)], _cfg(uic_regex=r"^(\d{7})$")),
+    }
+    stations, mapping = merge_stations(per_feed, {})
+    assert stations == []
+    assert ("nl", "nl:stub") not in mapping
+
+
+def test_ambiguous_stub_is_dropped():
+    # Two distinct real stations share the stub's normalized name -> ambiguous,
+    # so the stub is dropped rather than guessed onto either one.
+    per_feed = dict(
+        [
+            _real("de", "de:1", "Nord", 52.0, 13.0),
+            _real("fr", "fr:1", "Nord", 48.0, 2.0),
+            ("nl", ([RawStop("nl:stub", "Nord", None, None)], _cfg(uic_regex=r"^(\d{7})$"))),
+        ]
+    )
+    stations, mapping = merge_stations(per_feed, {})
+    assert len(stations) == 2  # the two real stations; stub added none
+    assert ("nl", "nl:stub") not in mapping
+
+
+def test_stub_resolution_ignores_other_stubs():
+    # A stub must resolve only onto a REAL station, never onto another stub, even
+    # if their names match (two coordinate-less halves are not a resolution target).
+    per_feed = {
+        "nl": ([RawStop("nl:stub", "Wien Hbf", None, None)], _cfg(uic_regex=r"^(\d{7})$")),
+        "fr": ([RawStop("fr:stub", "Wien Hbf", None, None)], _cfg(uic_regex=r"^(\d{7})$")),
+    }
+    stations, mapping = merge_stations(per_feed, {})
+    assert stations == []
+    assert ("nl", "nl:stub") not in mapping and ("fr", "fr:stub") not in mapping
+
+
+def test_alias_still_resolves_a_stub():
+    # An explicit alias for a stub wins outright -- it maps onto the chosen
+    # canonical station even though the stub has no coordinates.
+    per_feed = dict(
+        [
+            _real("de", "de:1", "Real Station", 52.0, 13.0),
+            ("nl", ([RawStop("nl:stub", "Whatever", None, None)], _cfg(uic_regex=r"^(\d{7})$"))),
+        ]
+    )
+    # The de:1 UIC-less id falls to a fresh id; alias the stub straight onto it.
+    canonical = merge_stations(per_feed, {})[1][("de", "de:1")]
+    _, mapping = merge_stations(per_feed, {"nl:nl:stub": canonical})
+    assert mapping[("nl", "nl:stub")] == canonical
