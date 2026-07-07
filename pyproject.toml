@@ -27,5 +27,8 @@ packages = ["pipeline", "server"]
 line-length = 100
 target-version = "py314"
 
+[tool.ruff.lint]
+select = ["E", "F", "I", "W"]
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]

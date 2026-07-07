@@ -171,8 +171,14 @@ def test_feed_order_controls_precedence_and_is_deterministic():
     # priority signal: the first feed in iteration order wins the display name.
     # The merger does NOT sort feed names -- it honors the caller's order -- and is
     # deterministic (same input order -> same result every time).
-    landia = ([RawStop("st:3333333", "Gamma Hbf", 50.0, 10.0)], _cfg(uic_regex=r"(\d{7})", country="LA"))
-    borderia = ([RawStop("bs-3333333", "Gamma Central", 50.0001, 10.0001)], _cfg(uic_regex=r"(\d{7})", country="BO"))
+    landia = (
+        [RawStop("st:3333333", "Gamma Hbf", 50.0, 10.0)],
+        _cfg(uic_regex=r"(\d{7})", country="LA"),
+    )
+    borderia = (
+        [RawStop("bs-3333333", "Gamma Central", 50.0001, 10.0001)],
+        _cfg(uic_regex=r"(\d{7})", country="BO"),
+    )
 
     landia_first, _ = merge_stations({"landia": landia, "borderia": borderia}, {})
     borderia_first, _ = merge_stations({"borderia": borderia, "landia": landia}, {})
@@ -191,8 +197,14 @@ def test_feed_order_controls_precedence_and_is_deterministic():
 
 
 def test_winning_feed_sets_country_and_coords():
-    landia = ([RawStop("st:3333333", "Gamma Hbf", 50.0, 10.0)], _cfg(uic_regex=r"(\d{7})", country="LA"))
-    borderia = ([RawStop("bs-3333333", "Gamma Central", 50.0001, 10.0001)], _cfg(uic_regex=r"(\d{7})", country="BO"))
+    landia = (
+        [RawStop("st:3333333", "Gamma Hbf", 50.0, 10.0)],
+        _cfg(uic_regex=r"(\d{7})", country="LA"),
+    )
+    borderia = (
+        [RawStop("bs-3333333", "Gamma Central", 50.0001, 10.0001)],
+        _cfg(uic_regex=r"(\d{7})", country="BO"),
+    )
     stations, _ = merge_stations({"borderia": borderia, "landia": landia}, {})
     (gamma,) = stations
     # borderia is passed first, so its coords and country win.

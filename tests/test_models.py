@@ -1,8 +1,10 @@
-from pipeline.models import Leg, Journey, ReachFile, Destination
+from pipeline.models import Destination, Journey, Leg, ReachFile
 
 
 def test_leg_serializes_with_from_alias():
-    leg = Leg(train="ICE 517", dep="08:54", arr="11:26", **{"from": "8000105"}, to="8000261", via=[])
+    leg = Leg(
+        train="ICE 517", dep="08:54", arr="11:26", **{"from": "8000105"}, to="8000261", via=[]
+    )
     assert leg.model_dump(by_alias=True)["from"] == "8000105"
 
 

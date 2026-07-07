@@ -224,6 +224,25 @@ def test_filtered_route_stops_do_not_leak(tmp_path):
     assert {s.stop_id for s in stops} == {"A", "B"}  # Z used only by filtered RB 7
 
 
+# --- route naming fallback ----------------------------------------------------
+
+
+def test_route_long_name_used_when_short_name_empty(tmp_path):
+    # Real feeds (NS "^Intercity", SNCF "^EUROSTAR") often only populate
+    # route_long_name. The loader falls back to it when short_name is empty.
+    cfg = FeedConfig(url="u", country="XX", license="t", route_allow=["^Intercity"])
+    zip_path = _make_feed(
+        tmp_path,
+        routes_txt=(
+            "route_id,route_short_name,route_long_name,route_type\n"
+            "R1,,Intercity Direct,2\n"
+        ),
+    )
+    _, trips = load_feed(zip_path, cfg, SAMPLE)
+    (trip,) = trips
+    assert trip.train == "Intercity Direct"
+
+
 # --- encoding ----------------------------------------------------------------
 
 

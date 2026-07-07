@@ -161,3 +161,30 @@ def test_post_midnight_arithmetic_does_not_wrap():
     j = reach["X"][0]
     assert j.duration_min == 80
     assert j.legs[0].dep == "23:50" and j.legs[0].arr == "01:10"  # fmt wraps display
+
+
+def test_genuine_tie_drops_slower_train_count_tier():
+    # Danger zone #8: the tier collapse only keeps a higher train-count tier if it
+    # is STRICTLY faster (`j.duration_min < tiers[-1].duration_min`). A genuine tie
+    # between a 1-train and a legal 2-train journey to the same destination must
+    # collapse to exactly one tier (the 1-train one), not two.
+    #
+    # Arithmetic (minutes since midnight; floors are hourly 05:00-20:00 = 300..1200):
+    #   T1 (1 train, direct):  O --dep 1080 (18:00)--> D --arr 1200 (20:00)
+    #       duration = 1200 - 1080 = 120
+    #   T2a (leg 1 of 2-train): O --dep 600 (10:00)--> A --arr 650 (10:50)
+    #   T2b (leg 2 of 2-train): A --dep 660 (11:00)--> D --arr 720 (12:00)
+    #       transfer at A = 660 - 650 = 10 >= transfer_min(10) -> LEGAL
+    #       duration = 720 - 600 = 120  <- exactly equal to the 1-train duration
+    #   Both trip departures (1080 and 600) sit exactly on hourly floor values, so
+    #   both journeys are found (each from its own floor) with duration 120. Since
+    #   120 is not < 120, compute_reachability's collapse must drop the 2-train
+    #   tier and report only the 1-train tier.
+    t1 = Trip(trip_id="t1", train="Direct", stops=[_stop("O", 1080, 1080), _stop("D", 1200, 1200)])
+    t2a = Trip(trip_id="t2a", train="Feeder", stops=[_stop("O", 600, 600), _stop("A", 650, 650)])
+    t2b = Trip(trip_id="t2b", train="Onward", stops=[_stop("A", 660, 660), _stop("D", 720, 720)])
+    reach = compute_reachability([t1, t2a, t2b], "O", max_trains=2, transfer_min=10)
+    dest = reach["D"]
+    assert [j.trains for j in dest] == [1]
+    assert dest[0].trains == 1
+    assert dest[0].duration_min == 120
