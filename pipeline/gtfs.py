@@ -16,6 +16,7 @@ import io
 import logging
 import re
 import zipfile
+from collections.abc import Iterator
 from dataclasses import dataclass
 from datetime import date, timedelta
 from pathlib import Path
@@ -48,18 +49,22 @@ def _minutes(hms: str) -> int:
     return int(h) * 60 + int(m)
 
 
-def _rows(zf: zipfile.ZipFile, name: str) -> list[dict]:
-    """Read a GTFS text file as dict rows, tolerating a subdirectory prefix.
+def _rows(zf: zipfile.ZipFile, name: str) -> Iterator[dict]:
+    """Stream a GTFS text file as dict rows, tolerating a subdirectory prefix.
 
     Some feeds nest every file under one directory (OEBB uses
     "GTFS_Fahrplan_2026/stops.txt"); match by basename so a bare name like
     "stops.txt" still resolves.
+
+    Yields lazily: real stop_times.txt files run to tens of millions of rows
+    (ovapi/NS), and materializing them as a list of dicts costs gigabytes of
+    RSS. Every caller consumes the rows in a single pass.
     """
     member = next((n for n in zf.namelist() if n == name or n.endswith(f"/{name}")), None)
     if member is None:
-        return []
+        return
     with zf.open(member) as f:
-        return list(csv.DictReader(io.TextIOWrapper(f, encoding="utf-8-sig")))
+        yield from csv.DictReader(io.TextIOWrapper(f, encoding="utf-8-sig"))
 
 
 def _active_services(zf: zipfile.ZipFile, day: date) -> set[str]:
