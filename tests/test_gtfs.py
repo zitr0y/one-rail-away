@@ -197,6 +197,25 @@ def test_row_with_both_times_empty_is_skipped_with_warning(tmp_path, caplog):
     assert any("T1" in rec.message and "M" in rec.message for rec in caplog.records)
 
 
+def test_stop_at_zero_zero_is_skipped_with_warning(tmp_path, caplog):
+    """(0, 0) is a placeholder some feeds use for a stop with no real coordinate on
+    file (observed in practice: ovapi/NS stubs for foreign stations reached by
+    cross-border trains) -- it must be treated like a missing coordinate, not a
+    real mid-Atlantic location."""
+    zip_path = _make_feed(
+        tmp_path,
+        stops_txt=(
+            "stop_id,stop_name,stop_lat,stop_lon\n"
+            "A,Alpha,50.0,8.0\n"
+            "B,Beta,0,0\n"
+        ),
+    )
+    with caplog.at_level(logging.WARNING, logger="pipeline.gtfs"):
+        stops, trips = load_feed(zip_path, CFG, SAMPLE)
+    assert {s.stop_id for s in stops} == {"A"}
+    assert any("B" in rec.message for rec in caplog.records)
+
+
 # --- filtering must not leak into stops --------------------------------------
 
 
