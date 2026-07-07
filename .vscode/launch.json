@@ -1,0 +1,24 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "API (FastAPI)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "uvicorn",
+      "args": ["server.app:app", "--reload", "--port", "8000"],
+      "python": "${workspaceFolder}/.venv/bin/python"
+    },
+    {
+      "name": "Web (Chrome)",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:5173",
+      "webRoot": "${workspaceFolder}/web/src",
+      "preLaunchTask": "vite-dev"
+    }
+  ],
+  "compounds": [
+    { "name": "Full stack", "configurations": ["API (FastAPI)", "Web (Chrome)"] }
+  ]
+}
