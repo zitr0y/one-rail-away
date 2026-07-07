@@ -8,3 +8,24 @@
 # Format:  "<feed>:<stop_id>" = "<canonical UIC id>"
 # Example: "borderia:bs-3333333" = "3333333"
 [aliases]
+
+# Real-run merge fixes (first full build, 2026-07-07): db_fern uses internal
+# 4-6 digit stop ids, so its border stations get fresh ids while oebb/sbb
+# register the same station under its 7-digit UIC code -- proximity can't
+# bridge them because the UIC feed never consults proximity. Force the
+# db_fern stop onto the UIC id.
+"db_fern:113470" = "5433425" # Breclav (oebb)
+"db_fern:116121" = "8102336" # Bregenz (oebb)
+"db_fern:302822" = "8814001" # Bruxelles Midi (oebb NJ)
+"db_fern:288196" = "8301307" # Como S. Giovanni (sbb/oebb)
+"db_fern:578955" = "5457256" # Praha-Holesovice (oebb)
+"db_fern:308542" = "8014558" # Singen(Hohentwiel) (sbb)
+
+# Same pattern for SNCF border stations that sbb also carries under 7-digit
+# UIC ids: sncf StopPoint ids end in the 8-digit code WITH check digit, so
+# UIC extraction is off for sncf (see feeds.toml) and one alias per used
+# per-brand StopPoint is needed.
+"sncf:StopPoint:OCEICE-87182063" = "8718206"       # Mulhouse (sbb)
+"sncf:StopPoint:OCELyria-87182063" = "8718206"     # Mulhouse (sbb)
+"sncf:StopPoint:OCETGV INOUI-87182063" = "8718206" # Mulhouse (sbb)
+"sncf:StopPoint:OCELyria-87715136" = "8771513"     # Frasne (sbb)
