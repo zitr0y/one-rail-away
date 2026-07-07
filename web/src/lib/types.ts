@@ -1,0 +1,12 @@
+export interface Station {
+  id: string; name: string; lat: number; lon: number; country: string; has_reach: boolean;
+}
+export interface Leg {
+  train: string; dep: string; arr: string; from: string; to: string; via: string[];
+}
+export interface Journey { trains: number; duration_min: number; legs: Leg[] }
+export interface Destination { id: string; direct_per_day: number; journeys: Journey[] }
+export interface ReachFile {
+  origin: string; computed_at: string; sample_date: string; destinations: Destination[];
+}
+export interface Meta { computed_at: string; sample_date: string }
