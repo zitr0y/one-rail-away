@@ -156,21 +156,70 @@ def load_feed(
                 id_ok[stop_id] = any(p.search(stop_id) for p in stop_id_allow)
             return id_ok[stop_id]
 
+        # stop_id -> (name, lat, lon, parent_station); station-registry scale, small.
+        stop_recs: dict[str, tuple[str, str, str, str]] = {
+            s["stop_id"]: (
+                s["stop_name"],
+                s.get("stop_lat") or "",
+                s.get("stop_lon") or "",
+                s.get("parent_station") or "",
+            )
+            for s in _rows(zf, "stops.txt")
+        }
+
+        def _resolve(stop_id: str) -> str:
+            """Topmost ancestor of stop_id that has a stops.txt row (cycle-guarded).
+
+            Feeds reference per-platform stops in stop_times ("Linz/Donau
+            Hauptbahnhof 8"); left unresolved, each platform becomes its own
+            station and the router can never transfer there. A dangling parent
+            reference (no row) keeps the child.
+            """
+            seen = {stop_id}
+            while True:
+                parent = stop_recs[stop_id][3]
+                if not parent or parent not in stop_recs or parent in seen:
+                    return stop_id
+                seen.add(parent)
+                stop_id = parent
+
         trips = []
-        used_stops: set[str] = set()  # stop ids used by KEPT trips only
+        used_stops: set[str] = set()  # resolved stop ids used by KEPT trips only
+        resolved: dict[str, str] = {}
         for tid, entries in stop_times.items():
             entries.sort(key=lambda e: e[0])
             kept = [e[1] for e in entries]
+            # stop_id_allow patterns are written against the RAW feed ids (the
+            # brand-carrying StopPoints), so filter before parent resolution.
             if stop_id_allow is not None and not any(_stop_id_passes(s.station) for s in kept):
                 continue
+            for s in kept:
+                if s.station not in resolved:
+                    known = s.station in stop_recs
+                    resolved[s.station] = _resolve(s.station) if known else s.station
+                s.station = resolved[s.station]
             used_stops.update(s.station for s in kept)
             trips.append(Trip(trip_id=tid, train=trip_train[tid], stops=kept))
 
+        # Display name per resolved stop: the SHORTEST of the parent's own name
+        # and the used children's names (deterministic tie-break: lexicographic).
+        # db_fern parent rows sometimes carry context-free names ("Hauptbahnhof
+        # (oben)" over the child "Stuttgart Hbf"), while OEBB children carry
+        # platform-suffixed names ("Linz/Donau Hauptbahnhof 8" under the parent
+        # "Linz/Donau Hauptbahnhof"); the shortest name is the right one in both.
+        name_pool: dict[str, set[str]] = {}
+        for orig, res in resolved.items():
+            if orig in stop_recs and res in used_stops:
+                name_pool.setdefault(res, set()).add(stop_recs[orig][0])
+
         stops: list[RawStop] = []
-        for s in _rows(zf, "stops.txt"):
-            if s["stop_id"] not in used_stops:
+        # Iterate stop_recs (stops.txt file order), not used_stops: set order is
+        # hash-randomized and merge_stations treats first-registered as winner.
+        # A used id absent from stops.txt yields no RawStop; merge then strips it.
+        for sid, (own_name, lat, lon, _parent) in stop_recs.items():
+            if sid not in used_stops:
                 continue
-            lat, lon = s.get("stop_lat"), s.get("stop_lon")
+            name = min(name_pool.get(sid, set()) | {own_name}, key=lambda n: (len(n), n))
             # (0, 0) is mid-Atlantic, never a real European station -- some feeds use
             # it as a placeholder for a foreign stop they carry no real coordinate for
             # (seen in practice: ovapi/NS stubs for German stations reached by
@@ -179,7 +228,7 @@ def load_feed(
             # is the foreign half of a real cross-border trip; merge_stations resolves
             # it by name onto the real canonical station, or drops it there.
             if not (lat and lon) or (float(lat) == 0.0 and float(lon) == 0.0):
-                stops.append(RawStop(s["stop_id"], s["stop_name"], None, None))
+                stops.append(RawStop(sid, name, None, None))
             else:
-                stops.append(RawStop(s["stop_id"], s["stop_name"], float(lat), float(lon)))
+                stops.append(RawStop(sid, name, float(lat), float(lon)))
     return stops, trips

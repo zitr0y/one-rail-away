@@ -396,6 +396,126 @@ def test_feed_files_nested_in_subdirectory_are_found(tmp_path):
     assert len(trips) == 1
 
 
+# --- parent_station resolution -------------------------------------------------
+
+
+def test_platform_stops_resolve_to_parent_station(tmp_path):
+    # OEBB (and NS/SBB/SNCF) reference per-platform stops in stop_times
+    # ("Linz/Donau Hauptbahnhof 8", parent "Pat:44:41164" = the station). Trips
+    # boarding at different platforms of one station must land on ONE stop, or
+    # the router can never transfer there. Resolve every used stop to its
+    # topmost parent that has a stops.txt row, using the parent's id/name/coords.
+    zip_path = _make_feed(
+        tmp_path,
+        stops_txt=(
+            "stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station\n"
+            "P1,Linz Hauptbahnhof,48.2907,14.2912,1,\n"
+            "A1,Linz Hauptbahnhof 1,48.2910,14.2920,0,P1\n"
+            "A2,Linz Hauptbahnhof 2,48.2909,14.2921,0,P1\n"
+            "B,Beta,50.0,9.0,0,\n"
+        ),
+        stop_times_txt=(
+            "trip_id,arrival_time,departure_time,stop_id,stop_sequence\n"
+            "T1,08:00:00,08:00:00,A1,1\n"
+            "T1,09:00:00,09:00:00,B,2\n"
+        ),
+    )
+    stops, trips = load_feed(zip_path, CFG, SAMPLE)
+    (trip,) = trips
+    assert [s.station for s in trip.stops] == ["P1", "B"]
+    by_id = {s.stop_id: s for s in stops}
+    assert set(by_id) == {"P1", "B"}
+    assert by_id["P1"].name == "Linz Hauptbahnhof"
+    assert by_id["P1"].lat == 48.2907
+
+
+def test_resolved_stop_takes_shortest_name_of_parent_and_used_children(tmp_path):
+    # db_fern's parent rows sometimes carry context-free names ("Hauptbahnhof
+    # (oben)" as the parent of "Stuttgart Hbf"), while OEBB's children carry
+    # platform-suffixed names ("Linz Hauptbahnhof 8" under "Linz Hauptbahnhof").
+    # In both feeds the RIGHT display name is the shortest one on offer, so the
+    # resolved stop uses the shortest of the parent's and used children's names.
+    zip_path = _make_feed(
+        tmp_path,
+        stops_txt=(
+            "stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station\n"
+            "P1,Hauptbahnhof (oben),48.78473,9.183172,1,\n"
+            "A1,Stuttgart Hbf,48.78478,9.182757,0,P1\n"
+            "B,Beta,50.0,9.0,0,\n"
+        ),
+        stop_times_txt=(
+            "trip_id,arrival_time,departure_time,stop_id,stop_sequence\n"
+            "T1,08:00:00,08:00:00,A1,1\n"
+            "T1,09:00:00,09:00:00,B,2\n"
+        ),
+    )
+    stops, _ = load_feed(zip_path, CFG, SAMPLE)
+    by_id = {s.stop_id: s for s in stops}
+    assert by_id["P1"].name == "Stuttgart Hbf"  # child's name is shorter
+    assert by_id["P1"].lat == 48.78473  # coords stay the parent's
+
+
+def test_parent_resolution_is_transitive(tmp_path):
+    zip_path = _make_feed(
+        tmp_path,
+        stops_txt=(
+            "stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station\n"
+            "TOP,Station,48.0,14.0,1,\n"
+            "MID,Station Hall 1,48.0,14.0,1,TOP\n"
+            "A,Station Platform 1,48.0,14.0,0,MID\n"
+            "B,Beta,50.0,9.0,0,\n"
+        ),
+        stop_times_txt=(
+            "trip_id,arrival_time,departure_time,stop_id,stop_sequence\n"
+            "T1,08:00:00,08:00:00,A,1\n"
+            "T1,09:00:00,09:00:00,B,2\n"
+        ),
+    )
+    stops, trips = load_feed(zip_path, CFG, SAMPLE)
+    (trip,) = trips
+    assert trip.stops[0].station == "TOP"
+
+
+def test_parent_without_row_keeps_child(tmp_path):
+    # A dangling parent_station reference (no stops.txt row for it) must not
+    # invent a stop with no name/coords: the child stays as-is.
+    zip_path = _make_feed(
+        tmp_path,
+        stops_txt=(
+            "stop_id,stop_name,stop_lat,stop_lon,parent_station\n"
+            "A,Alpha,50.0,8.0,GHOST\n"
+            "B,Beta,50.0,9.0,\n"
+        ),
+    )
+    stops, trips = load_feed(zip_path, CFG, SAMPLE)
+    (trip,) = trips
+    assert [s.station for s in trip.stops] == ["A", "B"]
+    assert {s.stop_id for s in stops} == {"A", "B"}
+
+
+def test_zero_zero_platform_with_real_parent_becomes_real_stop(tmp_path):
+    # NS carries foreign platforms at (0,0) but the parent stoparea has real
+    # coordinates (e.g. stoparea:40205 "Berlin Hbf" 52.5256): after parent
+    # resolution the stop is real, no stub needed.
+    zip_path = _make_feed(
+        tmp_path,
+        stops_txt=(
+            "stop_id,stop_name,stop_lat,stop_lon,location_type,parent_station\n"
+            "SA,Berlin Hbf,52.5256,13.3694,1,\n"
+            "A,Berlin Hbf,0,0,0,SA\n"
+            "B,Beta,50.0,9.0,0,\n"
+        ),
+        stop_times_txt=(
+            "trip_id,arrival_time,departure_time,stop_id,stop_sequence\n"
+            "T1,08:00:00,08:00:00,A,1\n"
+            "T1,09:00:00,09:00:00,B,2\n"
+        ),
+    )
+    stops, _ = load_feed(zip_path, CFG, SAMPLE)
+    by_id = {s.stop_id: s for s in stops}
+    assert by_id["SA"].lat == 52.5256 and by_id["SA"].lon == 13.3694
+
+
 # --- encoding ----------------------------------------------------------------
 
 

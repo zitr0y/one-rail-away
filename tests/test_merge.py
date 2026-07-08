@@ -216,6 +216,21 @@ def test_norm_strips_punctuation_and_case():
     assert _norm("St. Gallen") == _norm("st gallen") == "stgallen"
 
 
+def test_norm_equates_german_station_words():
+    # Real cross-feed pairs (db_fern vs oebb/ns, all <50 m apart in the 2026-07
+    # build): "Hauptbahnhof" is spelled out or abbreviated "Hbf", small stations
+    # carry a trailing "Bahnhof", and db_fern parent stations prefix the
+    # S-Bahn/U-Bahn marker "S+U ". All three must normalize equal so proximity
+    # can merge them.
+    assert _norm("München Hauptbahnhof") == _norm("München Hbf") == "munchenhbf"
+    assert _norm("Rosenheim Bahnhof") == _norm("Rosenheim") == "rosenheim"
+    assert _norm("S+U Berlin Hauptbahnhof") == _norm("Berlin Hauptbahnhof") == "berlinhbf"
+    # "Bahnhof" is stripped only as a TRAILING word.
+    assert _norm("Bahnhof, Elsterwerda") == "bahnhofelsterwerda"
+    # "München Ostbahnhof" == "München Ost" (ns stub vs oebb name, same station).
+    assert _norm("München Ostbahnhof") == _norm("München Ost") == "munchenost"
+
+
 # --- accent transliteration: umlaut vs ASCII spelling must still proximity-merge ---
 
 

@@ -9,23 +9,68 @@
 # Example: "borderia:bs-3333333" = "3333333"
 [aliases]
 
-# Real-run merge fixes (first full build, 2026-07-07): db_fern uses internal
-# 4-6 digit stop ids, so its border stations get fresh ids while oebb/sbb
-# register the same station under its 7-digit UIC code -- proximity can't
-# bridge them because the UIC feed never consults proximity. Force the
-# db_fern stop onto the UIC id.
-"db_fern:113470" = "5433425" # Breclav (oebb)
-"db_fern:116121" = "8102336" # Bregenz (oebb)
-"db_fern:302822" = "8814001" # Bruxelles Midi (oebb NJ)
-"db_fern:288196" = "8301307" # Como S. Giovanni (sbb/oebb)
-"db_fern:578955" = "5457256" # Praha-Holesovice (oebb)
-"db_fern:308542" = "8014558" # Singen(Hohentwiel) (sbb)
+# Real-run merge fixes (first full build, 2026-07): db_fern uses internal stop
+# ids and sncf StopArea ids carry the 8-digit code with check digit, so these
+# border stations cannot UIC-merge with the 7-digit ids that oebb/sbb register
+# directly (and proximity never fires for a UIC-registered id). Force them
+# onto the UIC canonical id that validation reported.
+"db_fern:527240" = "5433425"              # Breclav (oebb)
+"db_fern:326611" = "8102336"              # Bregenz (oebb)
+"db_fern:329971" = "8814001"              # Bruxelles Midi (oebb NJ)
+"db_fern:306040" = "8301307"              # Como S. Giovanni (oebb/sbb)
+"db_fern:557701" = "5457256"              # Praha-Holesovice (oebb)
+"sncf:StopArea:OCE87182063" = "8718206"   # Mulhouse (sbb)
+"sncf:StopArea:OCE87715136" = "8771513"   # Frasne (sbb)
 
-# Same pattern for SNCF border stations that sbb also carries under 7-digit
-# UIC ids: sncf StopPoint ids end in the 8-digit code WITH check digit, so
-# UIC extraction is off for sncf (see feeds.toml) and one alias per used
-# per-brand StopPoint is needed.
-"sncf:StopPoint:OCEICE-87182063" = "8718206"       # Mulhouse (sbb)
-"sncf:StopPoint:OCELyria-87182063" = "8718206"     # Mulhouse (sbb)
-"sncf:StopPoint:OCETGV INOUI-87182063" = "8718206" # Mulhouse (sbb)
-"sncf:StopPoint:OCELyria-87715136" = "8771513"     # Frasne (sbb)
+# oebb carries a handful of Austrian stops BOTH as a 7-digit-UIC-id stop and
+# as an unparented platform stop; the UIC one registers first, so proximity
+# never fires for the platform twin.
+"oebb:at:48:585:0:3" = "8102329"          # Dornbirn
+"oebb:at:48:817:0:4" = "8101236"          # Feldkirch
+
+# db_fern's Singen resolves to child name "Singen(Hohentwiel)", norm-equal to
+# sbb's UIC-registered 8014558 twin.
+"db_fern:41818" = "8014558"               # Singen (Hohentwiel) (sbb)
+
+# Cross-feed same-station pairs found by scanning the built graph for stations
+# <500 m apart whose names do NOT normalize equal (different language/styling:
+# "Francfort sur le Main", "Linz/Donau Hauptbahnhof", "Brussel-Zuid", ...).
+# Target is the already-registered canonical id: the UIC id where one side has
+# one, else the first-registered feed's fresh id ("x:<feed>:<stop_id>").
+"oebb:de:08111:6115:1:1" = "x:db_fern:627018"      # Stuttgart Hbf (unparented oebb platform)
+"oebb:de:08111:6115:5:10" = "x:db_fern:627018"     # Stuttgart Hbf (unparented oebb platform)
+"oebb:Pch:23016:20309" = "x:db_fern:174423"        # St. Margrethen SG
+"sncf:StopArea:OCE85030007" = "x:db_fern:80006"    # Zuerich HB -> Zürich HB
+"sbb:Parentch:1:sloid:1008" = "x:sncf:StopArea:OCE85010082"  # Genève (Cornavin)
+"sncf:StopArea:OCE80253914" = "x:db_fern:179285"   # Sarrebruck -> Saarbrücken Hbf
+"oebb:Ppl:51020" = "x:db_fern:114174"              # Katowice
+"ns:stoparea:17987" = "x:db_fern:324498"           # Frankfurt Flughafen Fernb
+"oebb:Pat:42:3648" = "x:db_fern:524182"            # Pörtschach am Wörther See
+"oebb:Pat:42:3650" = "x:db_fern:627445"            # Velden am Wörther See
+"db_fern:519057" = "5455659"                       # Decin hl.n. (oebb UIC)
+"oebb:Psi:63:5948" = "x:db_fern:173425"            # Jesenice (SLO)
+"oebb:Pat:45:52385" = "x:db_fern:61"               # St. Johann im Pongau
+"sncf:StopArea:OCE80143255" = "x:db_fern:322146"   # Ringsheim/Europa-Park
+"ns:stoparea:489928" = "x:db_fern:124570"          # Siegburg/Bonn
+"db_fern:249778" = "5433295"                       # Brno hl.n. (oebb UIC)
+"oebb:Pch:23026:20038" = "x:db_fern:618757"        # Winterthur
+"oebb:Psk:56:1" = "x:db_fern:398048"               # Bratislava hl.st.
+"ns:stoparea:18180" = "x:sncf:StopArea:OCE87271007" # Paris-Nord -> Paris Gare du Nord
+"oebb:Pch:23016:20307" = "x:db_fern:247258"        # St. Gallen
+"oebb:Pcz:55100:NVBW_99212" = "x:db_fern:549400"   # Praha hl.n.
+"sncf:StopArea:OCE80110684" = "x:db_fern:296593"   # Francfort -> Frankfurt(Main)Hbf
+"ns:stoparea:17791" = "x:db_fern:296593"           # Frankfurt (M) Hbf
+"oebb:Pde:02000:80953" = "x:db_fern:501246"        # Hamburg-Altona
+"oebb:Pde:09162:5" = "x:db_fern:226810"            # München Ostbahnhof
+"ns:stoparea:589649" = "x:db_fern:226810"          # München Ost (ns (0,0) stub)
+"sncf:StopArea:OCE80143503" = "x:db_fern:605507"   # Freiburg (Breisgau) Hbf
+"sncf:StopArea:OCE80203471" = "x:db_fern:127002"   # Munich -> München Hbf
+"ns:stoparea:482359" = "8814001"                   # Brussel-Zuid -> Bruxelles Midi
+"oebb:Pat:46:3040" = "x:db_fern:403270"            # Graz Hbf
+"sncf:StopArea:OCE87193003" = "x:db_fern:356648"   # Forbach(F)
+"oebb:Pat:44:41164" = "x:db_fern:627784"           # Linz/Donau Hbf -> Linz Hbf
+"oebb:si:63:311:0:3" = "x:db_fern:419091"          # Ljubljana
+"oebb:Phu:17905:27000493" = "x:db_fern:305384"     # Hegyeshalom
+"sncf:StopArea:OCE87745000" = "8774500"            # Bellegarde(-sur-Valserine) (sbb UIC)
+"sbb:Parentch:1:sloid:6302" = "x:db_fern:247258"   # St. Gallen
+"ns:stoparea:18158" = "x:db_fern:605507"           # Freiburg (Breisgau) Hbf

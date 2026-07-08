@@ -71,14 +71,26 @@ def _norm(name: str) -> str:
     same station spelled with or without diacritics across feeds still
     proximity-merges instead of silently registering as two stations.
 
+    German station-word equivalence (driven by real cross-feed pairs <50 m apart
+    in the 2026-07 build): the leading S-Bahn/U-Bahn marker "S+U " (db_fern
+    parent stations) is dropped, "hauptbahnhof" collapses to "hbf" (db_fern "Hbf"
+    vs oebb "Hauptbahnhof"), and ONE trailing "bahnhof" is stripped (oebb
+    "Rosenheim Bahnhof" vs db_fern "Rosenheim", ns "München Ost" vs oebb
+    "München Ostbahnhof"). The <500 m proximity requirement still guards against
+    merging distinct stations that happen to normalize alike.
+
     Known limit: German ue/oe/ae digraph spellings ("Muenchen") are NOT
     equivalent to their umlaut form ("München") under this normalization --
     "muenchenhbf" != "munchenhbf". Those variants need an explicit
     station_aliases.toml entry.
     """
+    if name.lower().startswith("s+u "):
+        name = name[4:]
     decomposed = unicodedata.normalize("NFKD", name)
     ascii_only = "".join(c for c in decomposed if not unicodedata.combining(c))
-    return re.sub(r"[^a-z0-9]", "", ascii_only.lower())
+    collapsed = re.sub(r"[^a-z0-9]", "", ascii_only.lower())
+    collapsed = collapsed.replace("hauptbahnhof", "hbf")
+    return re.sub(r"(?<=.)bahnhof$", "", collapsed)
 
 
 def _uic_match(uic_re: re.Pattern[str] | None, stop_id: str) -> str | None:
