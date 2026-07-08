@@ -17,20 +17,41 @@ def normalize(s: str) -> str:
     return "".join(c for c in decomposed if not unicodedata.combining(c)).lower()
 
 
+def _reach_ids_on_disk(data_dir: Path) -> set[str]:
+    """Station ids with an actual reach_*.json file present.
+
+    stations.json's has_reach flag reflects what the pipeline computed, which may
+    not match what's on disk for this data dir (partial sample, partial local run,
+    fresh clone with only a few force-added sample files). Derive the servable set
+    from the filesystem so every endpoint that reports has_reach agrees with what
+    /api/reach can actually serve.
+    """
+    if not data_dir.is_dir():
+        return set()
+    return {p.stem.removeprefix("reach_") for p in data_dir.glob("reach_*.json")}
+
+
+def _with_disk_has_reach(stations: list[dict], reach_ids: set[str]) -> list[dict]:
+    return [{**s, "has_reach": s["id"] in reach_ids} for s in stations]
+
+
 def create_app(data_dir: Path) -> FastAPI:
     app = FastAPI(title="onestopeurope")
     app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"])
 
     @app.get("/api/stations")
     def stations() -> dict:
-        return _read(data_dir / "stations.json")
+        data = _read(data_dir / "stations.json")
+        reach_ids = _reach_ids_on_disk(data_dir)
+        return {"stations": _with_disk_has_reach(data["stations"], reach_ids)}
 
     @app.get("/api/stations/search")
     def search(q: str, limit: int = 10) -> dict:
         nq = normalize(q)
+        reach_ids = _reach_ids_on_disk(data_dir)
         scored = []
         for s in _read(data_dir / "stations.json")["stations"]:
-            if not s.get("has_reach"):
+            if s["id"] not in reach_ids:
                 continue
             name = normalize(s["name"])
             if name.startswith(nq):
@@ -38,7 +59,7 @@ def create_app(data_dir: Path) -> FastAPI:
             elif nq in name:
                 scored.append((1, len(name), s))
         scored.sort(key=lambda x: (x[0], x[1]))
-        return {"stations": [s for _, _, s in scored[:limit]]}
+        return {"stations": [{**s, "has_reach": True} for _, _, s in scored[:limit]]}
 
     @app.get("/api/reach/{station_id}")
     def reach(station_id: str) -> dict:

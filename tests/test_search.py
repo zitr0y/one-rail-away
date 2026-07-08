@@ -49,6 +49,9 @@ def _client(tmp_path):
         },
     ]
     (tmp_path / "stations.json").write_text(json.dumps({"stations": stations}))
+    for s in stations:
+        if s["has_reach"]:
+            (tmp_path / f"reach_{s['id']}.json").write_text(json.dumps({"origin": s["id"]}))
     return TestClient(create_app(tmp_path))
 
 
@@ -73,3 +76,50 @@ def test_search_tier_tie_break_prefers_shorter_name_even_when_inserted_later(tmp
     got = _client(tmp_path).get("/api/stations/search", params={"q": "munchen"}).json()["stations"]
     names = [s["name"] for s in got]
     assert names[0] == "München"
+
+
+def test_search_only_returns_stations_with_reach_file_on_disk(tmp_path):
+    # Simulates a fresh clone: stations.json flags more stations has_reach=True than
+    # there are reach_*.json files on disk (e.g. a partial sample or a full pipeline
+    # run's stations.json paired with only a handful of force-added sample reach
+    # files). Search must derive has_reach from file presence, not trust the stale
+    # flag, so every result is actually fetchable via /api/reach/{id}.
+    stations = [
+        {
+            "id": "1",
+            "name": "München Hbf",
+            "lat": 48.1,
+            "lon": 11.5,
+            "country": "DE",
+            "has_reach": True,
+        },
+        {
+            "id": "2",
+            "name": "München Ost",
+            "lat": 48.1,
+            "lon": 11.6,
+            "country": "DE",
+            "has_reach": True,
+        },
+        {
+            "id": "5",
+            "name": "München",
+            "lat": 48.1,
+            "lon": 11.5,
+            "country": "DE",
+            "has_reach": True,
+        },
+    ]
+    (tmp_path / "stations.json").write_text(json.dumps({"stations": stations}))
+    # Only station "1" has a reach file on disk; "2" and "5" are flagged
+    # has_reach=True in stations.json but have no file (the fresh-clone case).
+    (tmp_path / "reach_1.json").write_text(json.dumps({"origin": "1"}))
+    client = TestClient(create_app(tmp_path))
+
+    got = client.get("/api/stations/search", params={"q": "munchen"}).json()["stations"]
+    ids = {s["id"] for s in got}
+
+    assert ids == {"1"}
+    for s in got:
+        assert s["has_reach"] is True
+        assert client.get(f"/api/reach/{s['id']}").status_code == 200
