@@ -29,9 +29,26 @@ export default function App() {
     api.getReach(id).then(setReach).catch((e) => setError(String(e)));
   }
 
+  function clearSelection() {
+    setReach(null);
+    setSelectedDest(null);
+  }
+
   const origin = reach ? stationsById.get(reach.origin) : undefined;
   const dest = selectedDest && reach
     ? reach.destinations.find((d) => d.id === selectedDest) : undefined;
+
+  useEffect(() => {
+    function onKeyDown(e: KeyboardEvent) {
+      if (e.key !== "Escape") return;
+      const target = e.target as HTMLElement | null;
+      if (target && (target.tagName === "INPUT" || target.tagName === "TEXTAREA")) return;
+      if (selectedDest) setSelectedDest(null);
+      else if (reach) clearSelection();
+    }
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [reach, selectedDest]);
 
   return (
     <div className="app">
@@ -54,7 +71,8 @@ export default function App() {
       )}
       {origin && (
         <div className="status-bar">
-          {statusText(origin.name, (dest && stationsById.get(dest.id)?.name) || null)}
+          <span>{statusText(origin.name, (dest && stationsById.get(dest.id)?.name) || null)}</span>
+          <button className="close" onClick={clearSelection} aria-label="Unselect station">×</button>
         </div>
       )}
     </div>

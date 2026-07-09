@@ -2,7 +2,10 @@ import maplibregl from "maplibre-gl";
 import { useEffect, useRef } from "react";
 import { destinationsGeoJSON, linesGeoJSON, type MaxTrains } from "../lib/geojson";
 import { BUCKET_COLORS } from "../lib/colors";
+import { pickFeature } from "../lib/pickfeature";
 import type { ReachFile, Station } from "../lib/types";
+
+const CLICK_LAYERS = ["reach-dots", "all-stations"];
 
 const EMPTY = { type: "FeatureCollection", features: [] } as const;
 const bucketColor = ["to-color", ["at", ["get", "bucket"], ["literal", BUCKET_COLORS]]];
@@ -53,10 +56,14 @@ export default function MapView(props: Props) {
           "circle-stroke-width": 1, "circle-stroke-color": "#ffffff",
         },
       });
-      m.on("click", "all-stations", (e) =>
-        propsRef.current.onSelectOrigin(e.features![0].properties.id as string));
-      m.on("click", "reach-dots", (e) =>
-        propsRef.current.onSelectDestination(e.features![0].properties.id as string));
+      m.on("click", (e) => {
+        const hits = m.queryRenderedFeatures(e.point, { layers: CLICK_LAYERS })
+          .map((f) => ({ layer: f.layer.id, id: f.properties!.id as string }));
+        const pick = pickFeature(hits);
+        if (!pick) return;
+        if (pick.type === "dest") propsRef.current.onSelectDestination(pick.id);
+        else propsRef.current.onSelectOrigin(pick.id);
+      });
       for (const layer of ["all-stations", "reach-dots"]) {
         m.on("mouseenter", layer, () => (m.getCanvas().style.cursor = "pointer"));
         m.on("mouseleave", layer, () => (m.getCanvas().style.cursor = ""));
