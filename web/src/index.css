@@ -41,3 +41,15 @@ body { margin: 0; font-family: system-ui, sans-serif; }
   padding: 10px; border-radius: 8px; text-decoration: none; font-weight: 600;
 }
 .journey-card .fineprint { margin: 8px 0 0; font-size: 11px; color: #9ca3af; }
+.status-bar {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  padding: 6px 14px;
+  border-radius: 999px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+  z-index: 10;
+}
