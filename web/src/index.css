@@ -18,6 +18,7 @@ body { margin: 0; font-family: system-ui, sans-serif; }
 }
 .search-box li button { display: block; width: 100%; text-align: left; padding: 8px; border: 0; background: none; cursor: pointer; }
 .search-box li button:hover { background: #f3f4f6; }
+.search-box li.active button { background: #f3f4f6; }
 .search-box .country { color: #9ca3af; font-size: 12px; }
 .stop-toggle { display: flex; border: 1px solid #d1d5db; border-radius: 8px; overflow: hidden; }
 .stop-toggle button { flex: 1; padding: 8px 4px; border: 0; background: #fff; cursor: pointer; font-size: 13px; }
