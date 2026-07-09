@@ -68,15 +68,20 @@ export function linesGeoJSON(
 ): FC<LineString> {
   const features: Feature<LineString>[] = [];
   for (const { d, j } of shown(reach, maxTrains, maxMinutes)) {
-    const ids = [j.legs[0].from, ...j.legs.flatMap((leg) => [...leg.via, leg.to])];
-    const coords = ids
-      .map((id) => stationsById.get(id))
-      .filter((s): s is Station => s !== undefined)
-      .map((s): [number, number] => [s.lon, s.lat]);
+    const legCoords = j.legs.map((leg) =>
+      [leg.from, ...leg.via, leg.to]
+        .map((id) => stationsById.get(id))
+        .filter((s): s is Station => s !== undefined)
+        .map((s): [number, number] => [s.lon, s.lat]));
+    // Smooth per leg so transfer corners stay sharp: a hairpin via Paris otherwise
+    // rounds into a U whose apex floats over empty countryside (user report 2026-07-09).
+    const coords = legCoords
+      .filter((c) => c.length >= 1)
+      .flatMap((c, i) => (i === 0 ? chaikin(c, 2) : chaikin(c, 2).slice(1)));
     if (coords.length < 2) continue;
     features.push({
       type: "Feature",
-      geometry: { type: "LineString", coordinates: chaikin(coords, 2) },
+      geometry: { type: "LineString", coordinates: coords },
       properties: { id: d.id, bucket: timeBucket(j.duration_min), trains: j.trains },
     });
   }

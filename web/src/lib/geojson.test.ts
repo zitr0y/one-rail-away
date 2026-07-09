@@ -56,3 +56,46 @@ describe("chaikin", () => {
     expect(out.length).toBeGreaterThan(input.length);
   });
 });
+
+describe("linesGeoJSON per-leg smoothing", () => {
+  // Barcelona(A) -> Paris(B) -> Sens(C), where leg 2 doubles back near A: whole-line
+  // chaikin rounds the Paris corner into a U-curve whose apex lands ~100km short of
+  // Paris, over empty countryside near Auxerre (user report 2026-07-09). Smoothing
+  // each leg separately keeps B a sharp vertex the line visibly passes through.
+  const hairpinStations = new Map<string, Station>([
+    ["A", { id: "A", name: "A", lat: 41, lon: 2, country: "XX", has_reach: true }],
+    ["B", { id: "B", name: "B", lat: 49, lon: 2.3, country: "XX", has_reach: true }],
+    ["C", { id: "C", name: "C", lat: 48, lon: 3.3, country: "XX", has_reach: true }],
+  ]);
+  const hairpinReach: ReachFile = {
+    origin: "A", computed_at: "", sample_date: "2026-07-14",
+    destinations: [
+      { id: "C", direct_per_day: 0, journeys: [
+        { trains: 2, duration_min: 300, legs: [
+          { train: "AVE 100", dep: "08:00", arr: "13:00", from: "A", to: "B", via: [] },
+          { train: "TER 20", dep: "13:30", arr: "15:00", from: "B", to: "C", via: [] } ] } ] },
+    ],
+  };
+
+  it("keeps the transfer station as an exact vertex and preserves line endpoints", () => {
+    const fc = linesGeoJSON(hairpinReach, hairpinStations, 3, Infinity);
+    const feature = fc.features.find((f) => f.properties.id === "C")!;
+    const coords = feature.geometry.coordinates as [number, number][];
+    const b = hairpinStations.get("B")!;
+    const a = hairpinStations.get("A")!;
+    const c = hairpinStations.get("C")!;
+    expect(coords).toContainEqual([b.lon, b.lat]);
+    expect(coords[0]).toEqual([a.lon, a.lat]);
+    expect(coords[coords.length - 1]).toEqual([c.lon, c.lat]);
+  });
+
+  it("matches a direct chaikin call for single-leg journeys (regression guard)", () => {
+    const fc = linesGeoJSON(reach, stationsById, 1, Infinity);
+    const feature = fc.features.find((f) => f.properties.id === "C")!;
+    const a = stationsById.get("A")!;
+    const b = stationsById.get("B")!;
+    const c = stationsById.get("C")!;
+    const expected = chaikin([[a.lon, a.lat], [b.lon, b.lat], [c.lon, c.lat]], 2);
+    expect(feature.geometry.coordinates).toEqual(expected);
+  });
+});
