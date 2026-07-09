@@ -119,6 +119,24 @@ there; provenance belongs with SNCF.) Likely wants G solved first (their stops m
 cleanly). Relatedly: SNCF train labels task (`.superpowers/sdd/sncf-labels-findings.md`)
 touches the same load path — consider doing together.
 
+## I. Corridor bundling for reach lines (added 2026-07-10)
+
+User: Paris shows ~15 separate straight lines fanning over southern France; "I feel like
+they all go via Lyon or Vichy and should be just 2-4 lines with breakouts." Data check
+confirms the trains are genuinely direct (Paris→Valence TGV 16×/day NONSTOP, Mâcon-Loché
+6×, Le Creusot 3× — all via=[]), so each polyline is a single straight segment; the trains
+physically share the LGV corridor but our lines don't. Fix directions to brainstorm:
+(a) route along real rail geometry (GTFS shapes.txt if the feeds carry it, or OSM rail),
+(b) algorithmic edge bundling, (c) force lines through nearest corridor waypoints. Big
+visual win, medium-to-large effort. Related to D (map styling).
+
+## J. Highlight the selected journey (added 2026-07-10)
+
+User: when a specific journey is selected (e.g. Bern→Zürich card open), highlight that
+journey's line on the map and dim/hide the rest of the reach lines, instead of keeping
+all potential journeys at full strength. Small, self-contained web feature
+(Map.tsx gets the selected destination id; style split for selected vs rest).
+
 ## Smaller deferred notes
 
 - Search only finds stations that have reach files (`has_reach` gate in
