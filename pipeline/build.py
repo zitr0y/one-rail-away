@@ -100,7 +100,7 @@ def build(
         aliases = tomllib.loads(aliases_path.read_text()).get("aliases", {})
 
     country_overrides: dict[str, str] = {}
-    overrides_path = feeds_path.parent / "station_countries.toml"
+    overrides_path = Path(__file__).parent / "station_countries.toml"
     if overrides_path.exists():
         country_overrides = tomllib.loads(overrides_path.read_text()).get("countries", {})
 
