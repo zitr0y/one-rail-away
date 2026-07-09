@@ -1,6 +1,7 @@
 """Graph assembly: load every feed, merge stations across feeds, remap trip stop
-ids to canonical station ids, validate, and write the graph JSON files consumed
-by the rest of the pipeline (`data/graph/stations.json`, `data/graph/trips.json`).
+ids to canonical station ids, join border-split through-services, validate, and
+write the graph JSON files consumed by the rest of the pipeline
+(`data/graph/stations.json`, `data/graph/trips.json`).
 """
 
 import json
@@ -13,6 +14,7 @@ from pipeline.config import load_feeds
 from pipeline.gtfs import load_feed
 from pipeline.merge import _dist_m, _norm, merge_stations
 from pipeline.models import Station, Trip
+from pipeline.through import join_through_services
 
 logger = logging.getLogger(__name__)
 
@@ -109,7 +111,7 @@ def build(
         print(f"{name}: {len(stops)} stops, {len(trips)} long-distance trips")
 
     stations, mapping = merge_stations(per_feed, aliases)
-    all_trips = remap_trips(feed_trips, mapping)
+    all_trips = join_through_services(remap_trips(feed_trips, mapping))
 
     problems = validate(stations, all_trips)
     if problems:
