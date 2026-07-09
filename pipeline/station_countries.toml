@@ -4,6 +4,10 @@
 # Natural Earth boundaries misplace (only ~1 km accurate at borders).
 # Keys are canonical station ids, values ISO2 codes. Every entry needs an
 # evidence comment: which border, why the polygon result is wrong.
+#
+# This file intentionally lives here, next to build.py, not at repo root next
+# to feeds.toml -- deriving the path from feeds_path.parent silently loaded no
+# overrides at all (2026-07-09).
 
 [countries]
 # Konstanz: town straddles the Bodensee shoreline right at the DE/CH border;

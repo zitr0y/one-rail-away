@@ -100,6 +100,8 @@ def build(
         aliases = tomllib.loads(aliases_path.read_text()).get("aliases", {})
 
     country_overrides: dict[str, str] = {}
+    # Intentionally next to the code, not feeds_path.parent -- deriving from
+    # feeds_path.parent silently loaded no overrides at all (2026-07-09).
     overrides_path = Path(__file__).parent / "station_countries.toml"
     if overrides_path.exists():
         country_overrides = tomllib.loads(overrides_path.read_text()).get("countries", {})
