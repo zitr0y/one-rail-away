@@ -40,6 +40,15 @@ about becoming non-minimalist, wants design discussion. Likely approach: RAPTOR 
 several sample days (e.g. Tue + Sat, or 7 days) and aggregate per destination.
 Costs: compute time scales with days sampled (~15 min/day currently).
 
+**Seasonal / part-year trains (added 2026-07-09):** trains that only run part of the
+year — e.g. the night trains from NL/Germany/Austria toward Rome — are invisible if the
+sampled day(s) fall outside their season, and misleading if inside it (shown as if
+year-round). Sampling within one week does NOT solve this; it needs a season-aware idea:
+sample weeks spread across the year, or read GTFS calendar spans to tag connections
+"seasonal", and decide how the UI shows them (e.g. distinct style + "runs May–Sep"
+label). Discuss together with the frequency display above — same data model, same
+brainstorm.
+
 ## C. Dot sizing / clustering / city grouping (user item 4)
 
 Station dots are tiny and hard to click. User ideas, in their words:
