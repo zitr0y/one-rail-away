@@ -17,6 +17,61 @@ def normalize(s: str) -> str:
     return "".join(c for c in decomposed if not unicodedata.combining(c)).lower()
 
 
+# Query-name equivalences for search, applied as query expansion (never stored).
+# Left: what a user types (English/German exonym, or ae/oe/ue keyboard
+# transliteration that NFKD folding cannot produce); right: the normalize()d
+# form of a station name actually present in the data. Evidence: every right
+# side matches >=1 station in the 2026-07 build (verified via a one-off
+# `uv run python` snippet importing server.app.normalize over data/out/stations.json,
+# 1050 stations; match counts: praha=3, wien=7, warszawa=3, venezia=2, milano=2,
+# munchen=1, koln=3, nurnberg=1, wurzburg=1, dusseldorf=1, zurich=5, geneve=2,
+# barcelone=1, bruxelles=2 - no entries dropped).
+EXONYMS = {
+    "prague": "praha",
+    "prag": "praha",
+    "vienna": "wien",
+    "warsaw": "warszawa",
+    "warschau": "warszawa",
+    "venice": "venezia",
+    "venedig": "venezia",
+    "milan": "milano",
+    "mailand": "milano",
+    "munich": "munchen",
+    "muenchen": "munchen",
+    "cologne": "koln",
+    "koeln": "koln",
+    "nuremberg": "nurnberg",
+    "nuernberg": "nurnberg",
+    "wuerzburg": "wurzburg",
+    "duesseldorf": "dusseldorf",
+    "zuerich": "zurich",
+    "geneva": "geneve",
+    "genf": "geneve",
+    "barcelona": "barcelone",
+    "brussels": "bruxelles",
+    "bruessel": "bruxelles",
+}
+
+
+def _query_variants(nq: str) -> set[str]:
+    """The normalized query plus exonym translations.
+
+    A user mid-word ("vien") must already hit the exonym, so any key the query
+    prefixes contributes its translation; a query that starts with a key
+    ("barcelona sants") contributes the key replaced by its translation.
+    3-char minimum avoids flooding short queries with unrelated variants.
+    """
+    variants = {nq}
+    if len(nq) < 3:
+        return variants
+    for key, native in EXONYMS.items():
+        if key.startswith(nq):
+            variants.add(native)
+        elif nq.startswith(key):
+            variants.add(nq.replace(key, native, 1))
+    return variants
+
+
 def _reach_ids_on_disk(data_dir: Path) -> set[str]:
     """Station ids with an actual reach_*.json file present.
 
@@ -47,17 +102,24 @@ def create_app(data_dir: Path) -> FastAPI:
 
     @app.get("/api/stations/search")
     def search(q: str, limit: int = 10) -> dict:
-        nq = normalize(q)
+        variants = _query_variants(normalize(q))
         reach_ids = _reach_ids_on_disk(data_dir)
         scored = []
         for s in _read(data_dir / "stations.json")["stations"]:
             if s["id"] not in reach_ids:
                 continue
             name = normalize(s["name"])
-            if name.startswith(nq):
-                scored.append((0, len(name), s))
-            elif nq in name:
-                scored.append((1, len(name), s))
+            best = None
+            for v in variants:
+                if name.startswith(v):
+                    cand = (0, len(name))
+                elif v in name:
+                    cand = (1, len(name))
+                else:
+                    continue
+                best = cand if best is None else min(best, cand)
+            if best is not None:
+                scored.append((*best, s))
         scored.sort(key=lambda x: (x[0], x[1]))
         return {"stations": [{**s, "has_reach": True} for _, _, s in scored[:limit]]}
 
