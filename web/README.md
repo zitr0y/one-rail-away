@@ -1,32 +1,28 @@
-# React + TypeScript + Vite
+# onestopeurope — web
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+The MapLibre client for [onestopeurope](https://onestopeurope.eu): pick a station, see
+how far you can get by train — nonstopeurope with onestopeurope.
 
-Currently, two official plugins are available:
+It renders every reachable long-distance station as a colored dot on the map (colored
+by trains-per-day / journey time), draws the connecting routes, and shows a booking
+link for the selected journey. Reachability data is served by the FastAPI backend in
+`../server` (precomputed by the `../pipeline`).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Dev commands
 
-## React Compiler
+From this directory:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```sh
+npm run dev     # start the Vite dev server
+npm test        # run the vitest suite once
+npm run build   # typecheck (tsc -b) and produce a production build
+npm run lint    # oxlint
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+Or, from the repo root, `just dev` starts both the API (port 8000) and this dev
+server together and stops both on Ctrl-C.
+
+## Environment variables
+
+- `VITE_TRAINLINE_REF` — optional Trainline affiliate reference appended to booking
+  links generated in `JourneyCard`. Leave unset for plain (non-affiliate) links.
