@@ -11,6 +11,7 @@ from datetime import date
 from pathlib import Path
 
 from pipeline.config import load_feeds
+from pipeline.geo import ASSET, assign_countries, load_countries
 from pipeline.gtfs import load_feed
 from pipeline.merge import _dist_m, _norm, merge_stations
 from pipeline.models import Station, Trip
@@ -98,6 +99,11 @@ def build(
     if aliases_path and aliases_path.exists():
         aliases = tomllib.loads(aliases_path.read_text()).get("aliases", {})
 
+    country_overrides: dict[str, str] = {}
+    overrides_path = feeds_path.parent / "station_countries.toml"
+    if overrides_path.exists():
+        country_overrides = tomllib.loads(overrides_path.read_text()).get("countries", {})
+
     per_feed = {}
     feed_trips: dict[str, list[Trip]] = {}
     for name, cfg in feeds.items():
@@ -111,6 +117,8 @@ def build(
         print(f"{name}: {len(stops)} stops, {len(trips)} long-distance trips")
 
     stations, mapping = merge_stations(per_feed, aliases)
+    for line in assign_countries(stations, load_countries(ASSET), country_overrides):
+        print(f"country: {line}")
     all_trips = join_through_services(remap_trips(feed_trips, mapping))
 
     problems = validate(stations, all_trips)

@@ -1,0 +1,11 @@
+# pipeline/station_countries.toml
+#
+# Per-station country overrides for pipeline/geo.py, for stations the 50m
+# Natural Earth boundaries misplace (only ~1 km accurate at borders).
+# Keys are canonical station ids, values ISO2 codes. Every entry needs an
+# evidence comment: which border, why the polygon result is wrong.
+#
+# Empty so far: the 2026-07 rebuild's change log showed no misassignments
+# needing manual correction. (Update this comment when adding the first one.)
+
+[countries]
