@@ -1,6 +1,7 @@
 """`ose` command-line entry point: fetch / build / compute pipeline stages."""
 
 import argparse
+import logging
 from datetime import date
 from pathlib import Path
 
@@ -10,6 +11,7 @@ RAW, GRAPH, OUT = Path("data/raw"), Path("data/graph"), Path("data/out")
 
 
 def main() -> None:
+    logging.basicConfig(level=logging.INFO, format="%(message)s")
     parser = argparse.ArgumentParser(prog="ose", description="onestopeurope data pipeline")
     sub = parser.add_subparsers(dest="cmd", required=True)
     sub.add_parser("fetch")

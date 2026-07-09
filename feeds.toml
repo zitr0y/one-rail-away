@@ -59,7 +59,17 @@ uic_regex = "(\\d{7})"
 url = "https://data.opentransportdata.swiss/dataset/timetable-2026-gtfs2020/permalink"
 country = "CH"
 license = "Open data (opentransportdata.swiss)"
-route_allow = ["^ICE?\\b", "^ECE?\\b", "^TGV", "^RJX?\\b", "^NJ\\b", "^IR\\b"]
+# SBB brands domestic lines spaceless (IC1, IC51, IR16 -- 2026 GTFS routes.txt); "^IC\b"
+# cannot match a letter->digit boundary, which silently dropped most Swiss domestic
+# IC/IR service; user-reported 2026-07-09. The unanchored "^IC\d" form also matched
+# foreign routes carried in the Swiss feed (French Intercites "IC190A", agency 87_LEX),
+# whose bare-UIC stops duplicated SNCF stations; "\d{1,2}$" matches only Swiss
+# operators' line numbers (verified against 2026 routes.txt+agency.txt: agencies
+# 11/33/65/72/82 only).
+route_allow = [
+  "^ICE?\\b", "^ECE?\\b", "^TGV", "^RJX?\\b", "^NJ\\b", "^IR\\b",
+  "^ICE?\\d{1,2}$", "^IR\\d{1,2}$",
+]
 uic_regex = "(\\d{7})"
 
 [feeds.ns]

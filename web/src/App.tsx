@@ -7,6 +7,7 @@ import StopToggle from "./components/StopToggle";
 import TimeSlider from "./components/TimeSlider";
 import { api } from "./lib/api";
 import type { MaxTrains } from "./lib/geojson";
+import { statusText } from "./lib/status";
 import type { ReachFile, Station } from "./lib/types";
 
 export default function App() {
@@ -50,6 +51,11 @@ export default function App() {
         <JourneyCard origin={origin} destination={stationsById.get(dest.id)!} dest={dest}
                      maxTrains={maxTrains} stationsById={stationsById}
                      onClose={() => setSelectedDest(null)} />
+      )}
+      {origin && (
+        <div className="status-bar">
+          {statusText(origin.name, (dest && stationsById.get(dest.id)?.name) || null)}
+        </div>
       )}
     </div>
   );

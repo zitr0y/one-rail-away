@@ -18,6 +18,7 @@ body { margin: 0; font-family: system-ui, sans-serif; }
 }
 .search-box li button { display: block; width: 100%; text-align: left; padding: 8px; border: 0; background: none; cursor: pointer; }
 .search-box li button:hover { background: #f3f4f6; }
+.search-box li.active button { background: #f3f4f6; }
 .search-box .country { color: #9ca3af; font-size: 12px; }
 .stop-toggle { display: flex; border: 1px solid #d1d5db; border-radius: 8px; overflow: hidden; }
 .stop-toggle button { flex: 1; padding: 8px 4px; border: 0; background: #fff; cursor: pointer; font-size: 13px; }
@@ -40,3 +41,15 @@ body { margin: 0; font-family: system-ui, sans-serif; }
   padding: 10px; border-radius: 8px; text-decoration: none; font-weight: 600;
 }
 .journey-card .fineprint { margin: 8px 0 0; font-size: 11px; color: #9ca3af; }
+.status-bar {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  padding: 6px 14px;
+  border-radius: 999px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+  z-index: 10;
+}

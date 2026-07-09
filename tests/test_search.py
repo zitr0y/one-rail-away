@@ -123,3 +123,49 @@ def test_search_only_returns_stations_with_reach_file_on_disk(tmp_path):
     for s in got:
         assert s["has_reach"] is True
         assert client.get(f"/api/reach/{s['id']}").status_code == 200
+
+
+def _exonym_client(tmp_path):
+    stations = [
+        {"id": "p1", "name": "Praha hl.n.", "lat": 50.08, "lon": 14.44,
+         "country": "CZ", "has_reach": True},
+        {"id": "k1", "name": "Köln Hbf", "lat": 50.94, "lon": 6.96,
+         "country": "DE", "has_reach": True},
+        {"id": "b1", "name": "Barcelone-Sants", "lat": 41.38, "lon": 2.14,
+         "country": "ES", "has_reach": True},
+        {"id": "w1", "name": "Wien Hbf", "lat": 48.19, "lon": 16.38,
+         "country": "AT", "has_reach": True},
+    ]
+    (tmp_path / "stations.json").write_text(json.dumps({"stations": stations}))
+    for s in stations:
+        (tmp_path / f"reach_{s['id']}.json").write_text("{}")
+    return TestClient(create_app(tmp_path))
+
+
+def _ids(resp):
+    return [s["id"] for s in resp.json()["stations"]]
+
+
+def test_search_english_exonym(tmp_path):
+    c = _exonym_client(tmp_path)
+    assert _ids(c.get("/api/stations/search", params={"q": "prague"})) == ["p1"]
+    assert _ids(c.get("/api/stations/search", params={"q": "barcelona"})) == ["b1"]
+
+
+def test_search_german_exonym_and_transliteration(tmp_path):
+    c = _exonym_client(tmp_path)
+    assert _ids(c.get("/api/stations/search", params={"q": "prag"})) == ["p1"]
+    assert _ids(c.get("/api/stations/search", params={"q": "cologne"})) == ["k1"]
+    assert _ids(c.get("/api/stations/search", params={"q": "koeln"})) == ["k1"]
+
+
+def test_search_exonym_prefix_while_typing(tmp_path):
+    c = _exonym_client(tmp_path)
+    # "vien" is a prefix of the exonym "vienna" -> must already find Wien
+    assert _ids(c.get("/api/stations/search", params={"q": "vien"})) == ["w1"]
+
+
+def test_search_native_names_unaffected(tmp_path):
+    c = _exonym_client(tmp_path)
+    assert _ids(c.get("/api/stations/search", params={"q": "praha"})) == ["p1"]
+    assert _ids(c.get("/api/stations/search", params={"q": "wien"})) == ["w1"]

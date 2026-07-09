@@ -21,6 +21,10 @@
 "db_fern:557701" = "5457256"              # Praha-Holesovice (oebb)
 "sncf:StopArea:OCE87182063" = "8718206"   # Mulhouse (sbb)
 "sncf:StopArea:OCE87715136" = "8771513"   # Frasne (sbb)
+# THURBO IR75 (Zürich-Konstanz), newly admitted by the Swiss-operators route filter
+# 2026-07-10, registers Konstanz as UIC 8014586; proximity never fires for
+# UIC-registered ids (same pattern as Mulhouse/Frasne above).
+"db_fern:185018" = "8014586"              # Konstanz (sbb IR75)
 
 # oebb carries a handful of Austrian stops BOTH as a 7-digit-UIC-id stop and
 # as an unparented platform stop; the UIC one registers first, so proximity

@@ -27,16 +27,16 @@ export default function JourneyCard({ origin, destination, dest, maxTrains, stat
         : `${journey.trains} trains`}</p>
       <ol className="legs">
         {journey.legs.map((leg) => (
-          <li key={`${leg.train}-${leg.dep}`}>
-            <strong>{leg.train}</strong> {leg.dep} {stationsById.get(leg.from)?.name ?? leg.from}
-            {" → "} {leg.arr} {stationsById.get(leg.to)?.name ?? leg.to}
+          <li key={`${leg.train}-${leg.to}`}>
+            <strong>{leg.train}</strong> {stationsById.get(leg.from)?.name ?? leg.from}
+            {" → "} {stationsById.get(leg.to)?.name ?? leg.to}
           </li>
         ))}
       </ol>
       <a className="book" href={bookingUrl(origin, destination, REF)} target="_blank" rel="noopener noreferrer">
         Book this trip
       </a>
-      <p className="fineprint">Times from a sample weekday — pick your date at checkout.</p>
+      <p className="fineprint">Durations from a sample weekday — pick your date at checkout.</p>
     </div>
   );
 }

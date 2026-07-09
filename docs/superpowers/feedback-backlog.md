@@ -40,6 +40,15 @@ about becoming non-minimalist, wants design discussion. Likely approach: RAPTOR 
 several sample days (e.g. Tue + Sat, or 7 days) and aggregate per destination.
 Costs: compute time scales with days sampled (~15 min/day currently).
 
+**Seasonal / part-year trains (added 2026-07-09):** trains that only run part of the
+year — e.g. the night trains from NL/Germany/Austria toward Rome — are invisible if the
+sampled day(s) fall outside their season, and misleading if inside it (shown as if
+year-round). Sampling within one week does NOT solve this; it needs a season-aware idea:
+sample weeks spread across the year, or read GTFS calendar spans to tag connections
+"seasonal", and decide how the UI shows them (e.g. distinct style + "runs May–Sep"
+label). Discuss together with the frequency display above — same data model, same
+brainstorm.
+
 ## C. Dot sizing / clustering / city grouping (user item 4)
 
 Station dots are tiny and hard to click. User ideas, in their words:
@@ -67,6 +76,48 @@ unreachability — could be "not yet in our system". Needs: corrected geographic
 `country` field (done in bug batch), a notion of "covered country" (probably: countries
 whose national feed we ingest, i.e. feeds.toml, NOT countries that merely have leaked
 stations), and a map fill layer. Interacts with A (each new feed un-greys a country).
+
+## F. Selection UX: unselect + origin/destination clicking (added 2026-07-09 evening)
+
+User report: "unselecting a station/selecting a new station is wonky by clicking. You can
+always select a new station via the search bar, but not via clicking — you'll be stuck in
+the choose-next-station/nothing-happens state. Should probably have an unselect button on
+the footer (status bar). Also selecting one station and then another does not always show
+the connection — sometimes it just switches to the new station."
+
+Likely mechanism (verify when picking this up): in `web/src/components/Map.tsx` the
+`all-stations` and `reach-dots` layers overlap once a reach is loaded — a colored
+destination dot usually ALSO has an all-stations dot underneath, and MapLibre fires a
+click handler per layer, so one click can trigger BOTH `onSelectOrigin` (switching
+origin!) and `onSelectDestination`. Whether you see "connection" or "switched station"
+depends on handler order/feature hit — matches the "sometimes" behavior. Fix sketch:
+single click handler with `queryRenderedFeatures` + explicit precedence
+(destination-dot wins while a reach is active), plus an unselect (×) affordance in the
+status bar and Escape-to-unselect.
+
+## G. Merge-logic gap: UIC-registered stops never proximity-merge (found 2026-07-10)
+
+Systemic (documented in station_aliases.toml's header, hit again during the SBB filter
+fix): a stop that registers via UIC-regex extraction becomes canonical directly —
+name+proximity matching never runs for it, so it duplicates any existing non-UIC
+canonical station (evidence: 48 SNCF `StopArea:OCE…`-vs-bare-UIC pairs + Konstanz when
+French Intercités briefly entered via the Swiss feed; each currently needs a manual
+alias). Design options: (a) sncf `uic_regex` extracting the 7-digit code from
+`StopArea:OCE<8digit>` ids — SNCF stations then UIC-merge automatically, but ALL SNCF
+canonical ids change (regenerate everything, check nothing hardcodes them); (b) make
+merge fall back to name+proximity before minting a fresh UIC canonical. Read
+`.superpowers/sdd/progress.md` Session 4 + final-review-triage before touching merge.
+
+## H. Cheap FR coverage win: SNCF Intercités are filtered out (found 2026-07-10)
+
+The sncf feed's route_allow currently keeps TGV-style only; France's Intercités network
+(POLT Paris–Limoges–Toulouse, Nantes–Lyon, Paris–Clermont, night Intercités…) exists in
+the sncf feed but is dropped. They're real long-distance trains — ingesting them
+meaningfully densifies France without adding any new feed. (They also exist duplicated
+inside the Swiss feed under labels like "IC190A", agency 87_LEX — do NOT ingest them from
+there; provenance belongs with SNCF.) Likely wants G solved first (their stops must merge
+cleanly). Relatedly: SNCF train labels task (`.superpowers/sdd/sncf-labels-findings.md`)
+touches the same load path — consider doing together.
 
 ## Smaller deferred notes
 
