@@ -2,12 +2,13 @@
 
 import io
 import logging
+import re
 import zipfile
 from datetime import date, timedelta
 from pathlib import Path
 
 from pipeline.config import FeedConfig
-from pipeline.gtfs import load_feed, next_tuesday
+from pipeline.gtfs import _brand_label, load_feed, next_tuesday
 from tests.fixtures import make_fixture_feeds
 
 SAMPLE = date(2026, 7, 14)  # a Tuesday
@@ -525,3 +526,82 @@ def test_bom_in_stops_txt_is_stripped(tmp_path):
     assert {s.stop_id for s in stops} == {"A", "B"}
     assert len(trips) == 1
     assert stops[0].lat == 50.0 and stops[0].lon == 8.0
+
+
+# --- stop-id brand labeling (SNCF) ---------------------------------------------
+
+
+def test_brand_label_first_matching_stop_wins_in_sequence_order():
+    patterns = [(re.compile("^A-"), "Alpha"), (re.compile("^B-"), "Beta")]
+    # First stop matches nothing, second matches the SECOND pattern: the first
+    # MATCHING STOP decides (not the first pattern with any match anywhere).
+    assert _brand_label(["X-1", "B-2", "A-3"], patterns, "42") == "Beta 42"
+    assert _brand_label(["X-1"], patterns, "42") is None  # no brand stop
+    assert _brand_label(["A-1"], patterns, "") is None  # empty headsign
+
+
+def test_stop_id_brand_filters_and_labels_brand_plus_headsign(tmp_path):
+    # SNCF: the brand lives only in per-brand StopPoint ids and the train number
+    # only in trip_headsign. stop_id_brand's patterns act as the stop-id trip
+    # filter AND relabel each kept trip "<brand> <trip_headsign>".
+    cfg = FeedConfig(
+        url="u", country="XX", license="t", route_allow=["."],
+        stop_id_brand={"^SP:OCETGV INOUI-": "TGV INOUI", "^SP:OCEOUIGO-": "OUIGO"},
+    )
+    zip_path = _make_feed(
+        tmp_path,
+        stops_txt=(
+            "stop_id,stop_name,stop_lat,stop_lon\n"
+            "SP:OCETGV INOUI-1,Alpha,50.0,8.0\n"
+            "SP:OCETGV INOUI-2,Beta,50.0,9.0\n"
+            "SP:OCEOUIGO-1,Alpha,50.0,8.0\n"
+            "SP:OCEOUIGO-3,Gamma,50.1,8.1\n"
+            "SP:OCETER-1,Alpha,50.0,8.0\n"
+            "SP:OCETER-3,Gamma,50.1,8.1\n"
+        ),
+        routes_txt="route_id,route_short_name,route_type\nR1,001G,2\nR2,C30,2\nR3,C31,2\n",
+        trips_txt=(
+            "route_id,service_id,trip_id,trip_headsign\n"
+            "R1,S1,T1,9704\n"
+            "R2,S1,T2,7871\n"
+            "R3,S1,T3,4402\n"  # TER stops only: filtered out
+        ),
+        stop_times_txt=(
+            "trip_id,arrival_time,departure_time,stop_id,stop_sequence\n"
+            "T1,08:00:00,08:00:00,SP:OCETGV INOUI-1,1\n"
+            "T1,09:00:00,09:00:00,SP:OCETGV INOUI-2,2\n"
+            "T2,07:00:00,07:00:00,SP:OCEOUIGO-1,1\n"
+            "T2,07:30:00,07:30:00,SP:OCEOUIGO-3,2\n"
+            "T3,07:00:00,07:00:00,SP:OCETER-1,1\n"
+            "T3,07:30:00,07:30:00,SP:OCETER-3,2\n"
+        ),
+    )
+    _, trips = load_feed(zip_path, cfg, SAMPLE)
+    assert {t.trip_id: t.train for t in trips} == {"T1": "TGV INOUI 9704", "T2": "OUIGO 7871"}
+
+
+def test_stop_id_brand_empty_headsign_falls_back_to_route_label(tmp_path):
+    # 100% headsign coverage in the real export, but a feed quirk must not
+    # produce a dangling "TGV INOUI " label.
+    cfg = FeedConfig(
+        url="u", country="XX", license="t", route_allow=["."],
+        stop_id_brand={"^SP:OCETGV-": "TGV INOUI"},
+    )
+    zip_path = _make_feed(
+        tmp_path,
+        stops_txt=(
+            "stop_id,stop_name,stop_lat,stop_lon\n"
+            "SP:OCETGV-1,Alpha,50.0,8.0\n"
+            "SP:OCETGV-2,Beta,50.0,9.0\n"
+        ),
+        routes_txt="route_id,route_short_name,route_type\nR1,001G,2\n",
+        trips_txt="route_id,service_id,trip_id,trip_headsign\nR1,S1,T1,\n",
+        stop_times_txt=(
+            "trip_id,arrival_time,departure_time,stop_id,stop_sequence\n"
+            "T1,08:00:00,08:00:00,SP:OCETGV-1,1\n"
+            "T1,09:00:00,09:00:00,SP:OCETGV-2,2\n"
+        ),
+    )
+    _, trips = load_feed(zip_path, cfg, SAMPLE)
+    (trip,) = trips
+    assert trip.train == "001G"
