@@ -35,3 +35,7 @@
 # station's real position (43.3532, -1.7817, OSM) -- in France.
 # Verified 2026-07-10.
 "x:sncf:StopArea:OCE87677005" = "FR"
+# Viana do Castelo: Portuguese town on the border; the polygon match missed it
+# so it inherited the feed country (ES).
+# Verified 2026-07-10.
+"x:renfe:94033" = "PT"
