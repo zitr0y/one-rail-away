@@ -73,7 +73,9 @@ def _ambiguous(cands: list[tuple[int, int, int]], trips: list[Trip]) -> set[tupl
                 skip.add((i2, j2))
                 logger.warning(
                     "ambiguous through-join for %s at %s (gap %d min): skipping",
-                    trips[i].train, trips[i].stops[-1].station, gap,
+                    trips[i].train,
+                    trips[i].stops[-1].station,
+                    gap,
                 )
     return skip
 

@@ -21,11 +21,7 @@ CAL_ALL_DAYS = (
 )
 
 _DEFAULT_FILES = {
-    "stops.txt": (
-        "stop_id,stop_name,stop_lat,stop_lon\n"
-        "A,Alpha,50.0,8.0\n"
-        "B,Beta,50.0,9.0\n"
-    ),
+    "stops.txt": ("stop_id,stop_name,stop_lat,stop_lon\nA,Alpha,50.0,8.0\nB,Beta,50.0,9.0\n"),
     "routes.txt": "route_id,route_short_name,route_type\nR1,IC 9,2\n",
     "trips.txt": "route_id,service_id,trip_id\nR1,S1,T1\n",
     "stop_times.txt": (
@@ -207,11 +203,7 @@ def test_stop_at_zero_zero_is_kept_as_coordinateless_stub(tmp_path):
     canonical station (or drops them there if unresolvable)."""
     zip_path = _make_feed(
         tmp_path,
-        stops_txt=(
-            "stop_id,stop_name,stop_lat,stop_lon\n"
-            "A,Alpha,50.0,8.0\n"
-            "B,Beta,0,0\n"
-        ),
+        stops_txt=("stop_id,stop_name,stop_lat,stop_lon\nA,Alpha,50.0,8.0\nB,Beta,0,0\n"),
     )
     stops, trips = load_feed(zip_path, CFG, SAMPLE)
     by_id = {s.stop_id: s for s in stops}
@@ -226,11 +218,7 @@ def test_stop_with_missing_coordinates_is_kept_as_stub(tmp_path):
     stub, kept rather than dropped."""
     zip_path = _make_feed(
         tmp_path,
-        stops_txt=(
-            "stop_id,stop_name,stop_lat,stop_lon\n"
-            "A,Alpha,50.0,8.0\n"
-            "B,Beta,,\n"
-        ),
+        stops_txt=("stop_id,stop_name,stop_lat,stop_lon\nA,Alpha,50.0,8.0\nB,Beta,,\n"),
     )
     stops, _ = load_feed(zip_path, CFG, SAMPLE)
     by_id = {s.stop_id: s for s in stops}
@@ -274,8 +262,7 @@ def test_route_long_name_used_when_short_name_empty(tmp_path):
     zip_path = _make_feed(
         tmp_path,
         routes_txt=(
-            "route_id,route_short_name,route_long_name,route_type\n"
-            "R1,,Intercity Direct,2\n"
+            "route_id,route_short_name,route_long_name,route_type\nR1,,Intercity Direct,2\n"
         ),
     )
     _, trips = load_feed(zip_path, cfg, SAMPLE)
@@ -292,8 +279,7 @@ def test_route_allow_matches_against_long_name_even_when_short_name_present(tmp_
     zip_path = _make_feed(
         tmp_path,
         routes_txt=(
-            "route_id,route_short_name,route_long_name,route_type\n"
-            "R1,001G,Lille - Alpes TGV,2\n"
+            "route_id,route_short_name,route_long_name,route_type\nR1,001G,Lille - Alpes TGV,2\n"
         ),
     )
     _, trips = load_feed(zip_path, cfg, SAMPLE)
@@ -309,8 +295,11 @@ def test_trip_allow_filters_by_trip_short_name_and_relabels(tmp_path):
     # every route through; trip_allow selects long-distance trips by their
     # trip_short_name ("RJ 658") and that becomes the train label.
     cfg = FeedConfig(
-        url="u", country="XX", license="t",
-        route_allow=["."], trip_allow=["^RJ\\b", "^ICE\\b"],
+        url="u",
+        country="XX",
+        license="t",
+        route_allow=["."],
+        trip_allow=["^RJ\\b", "^ICE\\b"],
     )
     zip_path = _make_feed(
         tmp_path,
@@ -351,8 +340,11 @@ def test_stop_id_allow_keeps_only_trips_on_matching_stop_ids(tmp_path):
     # names carry no brand for OUIGO/Lyria/Intercites trips. stop_id_allow keeps
     # a trip only if its stop ids match one of the patterns.
     cfg = FeedConfig(
-        url="u", country="XX", license="t",
-        route_allow=["."], stop_id_allow=["^SP:OCETGV\\b", "^SP:OCEOUIGO-"],
+        url="u",
+        country="XX",
+        license="t",
+        route_allow=["."],
+        stop_id_allow=["^SP:OCETGV\\b", "^SP:OCEOUIGO-"],
     )
     zip_path = _make_feed(
         tmp_path,
@@ -570,7 +562,10 @@ def test_stop_id_brand_filters_and_labels_brand_plus_headsign(tmp_path):
     # only in trip_headsign. stop_id_brand's patterns act as the stop-id trip
     # filter AND relabel each kept trip "<brand> <trip_headsign>".
     cfg = FeedConfig(
-        url="u", country="XX", license="t", route_allow=["."],
+        url="u",
+        country="XX",
+        license="t",
+        route_allow=["."],
         stop_id_brand={"^SP:OCETGV INOUI-": "TGV INOUI", "^SP:OCEOUIGO-": "OUIGO"},
     )
     zip_path = _make_feed(
@@ -609,7 +604,10 @@ def test_stop_id_brand_empty_headsign_falls_back_to_route_label(tmp_path):
     # 100% headsign coverage in the real export, but a feed quirk must not
     # produce a dangling "TGV INOUI " label.
     cfg = FeedConfig(
-        url="u", country="XX", license="t", route_allow=["."],
+        url="u",
+        country="XX",
+        license="t",
+        route_allow=["."],
         stop_id_brand={"^SP:OCETGV-": "TGV INOUI"},
     )
     zip_path = _make_feed(

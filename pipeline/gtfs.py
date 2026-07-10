@@ -82,10 +82,7 @@ def _active_services(zf: zipfile.ZipFile, day: date) -> set[str]:
     ymd = day.strftime("%Y%m%d")
     active: set[str] = set()
     for row in _rows(zf, "calendar.txt"):
-        if (
-            row["start_date"] <= ymd <= row["end_date"]
-            and row[WEEKDAY_COLS[day.weekday()]] == "1"
-        ):
+        if row["start_date"] <= ymd <= row["end_date"] and row[WEEKDAY_COLS[day.weekday()]] == "1":
             active.add(row["service_id"])
     for row in _rows(zf, "calendar_dates.txt"):
         if row["date"] == ymd:
@@ -127,9 +124,7 @@ def load_feed(
     allow = [re.compile(p) for p in cfg.route_allow]
     trip_allow = [re.compile(p) for p in cfg.trip_allow] if cfg.trip_allow else None
     brand_patterns = (
-        [(re.compile(p), b) for p, b in cfg.stop_id_brand.items()]
-        if cfg.stop_id_brand
-        else None
+        [(re.compile(p), b) for p, b in cfg.stop_id_brand.items()] if cfg.stop_id_brand else None
     )
     if cfg.stop_id_allow:
         stop_id_allow = [re.compile(p) for p in cfg.stop_id_allow]
@@ -179,7 +174,10 @@ def load_feed(
             if not arr:  # both empty: untimed intermediate stop, unusable downstream
                 logger.warning(
                     "skipping untimed stop_times row: trip %s stop %s (seq %s) in %s",
-                    tid, st["stop_id"], st.get("stop_sequence"), zip_path.name,
+                    tid,
+                    st["stop_id"],
+                    st.get("stop_sequence"),
+                    zip_path.name,
                 )
                 continue
             entry = (
