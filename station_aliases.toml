@@ -95,3 +95,24 @@
 # Evidence: renfe stop 71801 (41.3791, 2.1397) vs SNCF OCE71718010 (41.379,
 # 2.14) — same station, <50 m apart. Verified 2026-07-10.
 "renfe:71801" = "x:sncf:StopArea:OCE71718010"
+
+# Renfe's three remaining French stops (AVE Madrid/Barcelona-Marseille route)
+# do not normalize equal to their SNCF canonicals, so the proximity+name
+# fallback never fires and each minted a fresh x:renfe:* station. Found by the
+# <500 m graph scan (build was validation-clean because the names differ).
+# Verified 2026-07-10.
+#
+# Marseille St Charles (renfe 87089, 43.30349, 5.382236) vs SNCF canonical
+# "Marseille Saint-Charles" (x:sncf:StopArea:OCE87751008, 43.302666, 5.380407):
+# 174 m apart, within the terminal footprint; "st" != "saint" blocks the
+# name-equality merge. Same physical station.
+"renfe:87089" = "x:sncf:StopArea:OCE87751008"
+# Nimes (renfe 87302, 43.832291, 4.365845) vs SNCF canonical "Nîmes Centre"
+# (x:sncf:StopArea:OCE87775007, 43.832313, 4.365872): 3 m apart; the extra
+# "Centre" word blocks the merge. Same physical station.
+"renfe:87302" = "x:sncf:StopArea:OCE87775007"
+# Valence TGV (renfe 87810, 44.991545, 4.978703) vs SNCF canonical "Valence
+# TGV Rhône-Alpes Sud" (x:sncf:StopArea:OCE87763029, 44.991907, 4.978652):
+# 40 m apart; the "Rhône-Alpes Sud" suffix blocks the merge. Same physical
+# station.
+"renfe:87810" = "x:sncf:StopArea:OCE87763029"

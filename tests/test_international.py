@@ -88,3 +88,42 @@ def test_wien_budapest_direct_reach():
     # direct railjet Wien->Budapest is ~2h40; pre-fix this showed 2 trains / 219 min
     assert dest["journeys"][0]["trains"] == 1
     assert dest["journeys"][0]["duration_min"] < 200
+
+
+# --- Renfe feed regression guards (2026-07-10) --------------------------------
+
+# Canonical ids from the 2026-07-10 build. Barcelona merges onto the SNCF
+# canonical via station_aliases.toml; Madrid/Porto are new renfe-only stations.
+BARCELONA_SANTS = "x:sncf:StopArea:OCE71718010"  # merged via alias
+
+
+def test_barcelona_merged_and_renamed():
+    by_id = {s["id"]: s for s in _stations()}
+    bcn = by_id[BARCELONA_SANTS]
+    assert bcn["name"] == "Barcelona-Sants"
+    assert bcn["country"] == "ES"
+    # No duplicate Barcelona station <500 m
+    import math
+
+    for s in _stations():
+        if s["id"] != BARCELONA_SANTS and "barcelona" in s["name"].lower():
+            lat1, lon1 = bcn["lat"], bcn["lon"]
+            lat2, lon2 = s["lat"], s["lon"]
+            x = math.radians(lon2 - lon1) * math.cos(math.radians((lat1 + lat2) / 2))
+            y = math.radians(lat2 - lat1)
+            assert math.hypot(x, y) * 6_371_000 >= 500, (
+                f"duplicate Barcelona <500 m: {s['id']} ({s['name']})"
+            )
+
+
+def test_madrid_barcelona_direct():
+    stations = {s["id"]: s for s in _stations()}
+    madrid_ids = {sid for sid, s in stations.items() if "madrid" in s["name"].lower()}
+    bcn_ids = {BARCELONA_SANTS}
+    direct = [
+        t
+        for t in _trips()
+        if {s["station"] for s in t["stops"]} & madrid_ids
+        and {s["station"] for s in t["stops"]} & bcn_ids
+    ]
+    assert len(direct) >= 10, f"expected >=10 Madrid-Barcelona direct trips, got {len(direct)}"

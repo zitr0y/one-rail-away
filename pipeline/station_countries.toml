@@ -29,3 +29,9 @@
 # (verified coords match Venezia S. Lucia on OSM); feed country was AT
 # (leaked in via the OEBB cross-border feed) with nothing to override it to IT.
 "x:oebb:it:22099:110:51:1" = "IT"
+# Hendaye: French town right on the ES/FR border (the Bidasoa river is the
+# boundary); the polygon match flipped the station FR -> ES due to 50m
+# boundary imprecision. Station coords (43.353132, -1.781724) match Hendaye
+# station's real position (43.3532, -1.7817, OSM) -- in France.
+# Verified 2026-07-10.
+"x:sncf:StopArea:OCE87677005" = "FR"
