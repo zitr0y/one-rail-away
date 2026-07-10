@@ -53,6 +53,7 @@ export default function App() {
   return (
     <div className="app">
       <MapView stations={stations} reach={reach} maxTrains={maxTrains} maxMinutes={maxMinutes}
+               selectedDest={selectedDest}
                onSelectOrigin={selectOrigin} onSelectDestination={setSelectedDest} />
       <header className="panel">
         <h1>onestopeurope</h1>

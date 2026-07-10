@@ -2,6 +2,7 @@ import maplibregl from "maplibre-gl";
 import { useEffect, useRef } from "react";
 import { destinationsGeoJSON, linesGeoJSON, type MaxTrains } from "../lib/geojson";
 import { BUCKET_COLORS } from "../lib/colors";
+import { baseLineOpacity, selectedLineFilter } from "../lib/highlight";
 import { pickFeature } from "../lib/pickfeature";
 import type { ReachFile, Station } from "../lib/types";
 
@@ -15,6 +16,7 @@ interface Props {
   reach: ReachFile | null;
   maxTrains: MaxTrains;
   maxMinutes: number;
+  selectedDest: string | null;
   onSelectOrigin: (id: string) => void;
   onSelectDestination: (id: string) => void;
 }
@@ -46,7 +48,17 @@ export default function MapView(props: Props) {
         paint: {
           "line-color": bucketColor as never,
           "line-width": ["case", ["==", ["get", "trains"], 1], 2.5, 1.5] as never,
-          "line-opacity": 0.75,
+          "line-opacity": baseLineOpacity(false),
+        },
+      });
+      m.addLayer({
+        id: "reach-lines-selected", type: "line", source: "reach-lines",
+        layout: { "line-cap": "round", "line-join": "round" },
+        filter: selectedLineFilter(null) as never,
+        paint: {
+          "line-color": bucketColor as never,
+          "line-width": 4,
+          "line-opacity": 1,
         },
       });
       m.addLayer({
@@ -70,6 +82,7 @@ export default function MapView(props: Props) {
       }
       map.current = m;
       syncData();
+      syncHighlight();
     });
     return () => m.remove();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -97,6 +110,16 @@ export default function MapView(props: Props) {
   }
 
   useEffect(syncData, [props.stations, props.reach, props.maxTrains, props.maxMinutes]);
+
+  function syncHighlight() {
+    const m = map.current;
+    if (!m) return;
+    const { selectedDest } = propsRef.current;
+    m.setFilter("reach-lines-selected", selectedLineFilter(selectedDest) as never);
+    m.setPaintProperty("reach-lines", "line-opacity", baseLineOpacity(selectedDest !== null));
+  }
+
+  useEffect(syncHighlight, [props.selectedDest]);
 
   return <div ref={container} style={{ position: "absolute", inset: 0 }} />;
 }
