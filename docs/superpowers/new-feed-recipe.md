@@ -86,7 +86,7 @@ review before continuing.
 | Country | Feed | Difficulty | Notes |
 |---------|------|------------|-------|
 | Poland | mkuran.pl community GTFS | DONE | CC BY 4.0, internal PLK stop ids |
-| Denmark | Rejseplanen official GTFS | BLOCKED | GTFS behind Labs registration |
+| Denmark | Rejseplanen official GTFS | MEDIUM | direct URL open (HEAD 200, 57.5 MB, 2026-07-11); big all-modes zip needs aggressive filtering |
 | Portugal | CP | HARD | Rolling 7-10-day calendar |
 | Italy | Trenitalia/RFI | HARD | NeTEx-only, Italo absent |
 | Czechia | ČD | HARD | NeTEx/CZPTT official, GTFS only Prague-regional |

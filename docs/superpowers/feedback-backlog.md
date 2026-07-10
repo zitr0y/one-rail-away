@@ -28,9 +28,10 @@ AVE, AVE INT, ALVIA, AVLO, Intercity, EUROMED, TRENCELTA. Competitor check
 publish public GTFS.
 
 Poland long-distance feed ingested (backlog A, feed 2 of N). Warszawa, Kraków,
-Gdańsk on the map. Products: EIP, EIC, IC, TLK, EC, EN, LEO, RJ. Denmark (Rejseplanen)
-research (2026-07-10): Rejseplanen GTFS is gated behind Labs developer registration,
-violating our open-data mandate; deferred pending discussion.
+Gdańsk on the map. Products: EIP, EIC, IC, TLK, EC, EN, LEO, RJ. Denmark: an
+earlier note claimed the Rejseplanen GTFS is registration-gated — WRONG
+(direct URL HEAD-verified open 2026-07-11, 57.5 MB, no registration); Denmark
+stays a MEDIUM candidate for the next batch.
 
 New-feed recipe: `docs/superpowers/new-feed-recipe.md`. Research verdicts
 for remaining countries in the recipe doc.
@@ -149,6 +150,20 @@ Spec: `docs/superpowers/specs/2026-07-10-journey-highlight-design.md`.
 
 ## Smaller deferred notes
 
+- **Ł-norm fix (from PL ingestion review 2026-07-11):** NFKD cannot decompose
+  stroke letters (ł/Ł, also ø, đ), so `_norm` drops them — "Główny" →
+  "gowny" never matches "Glowny". 33 of 44 PKP aliases exist ONLY for this.
+  Mapping ł→l (etc.) in `_norm`, guarded by the existing <500 m rule, would
+  auto-merge most and shrink the alias block. Document beside the ue/oe/ae
+  limitation in `_norm`'s docstring when done.
+- **Validator blind spot (renfe T3 + review 2026-07-11):** `validate()` only
+  flags <500 m duplicates whose names normalize EQUAL; the renfe French stops
+  ("Marseille St Charles" vs "Saint-Charles") passed a "clean" build and were
+  caught only by a manual any-name scan. Consider a <100 m any-name cross-feed
+  warning in validation.
+- **meta.json under-reports feeds:** `data/out/meta.json` lists only the five
+  original feeds — renfe/pkp were curl'd targeted (per recipe) and never enter
+  `fetch_meta.json`, which compute copies. Fix when meta drives any UI.
 - Search only finds stations that have reach files (`has_reach` gate in
   `server/app.py::search`) — fine today, revisit when coverage grows.
 - Cross-feed duplicate trains observed (ICE 82 Paris–Frankfurt appears in both SNCF

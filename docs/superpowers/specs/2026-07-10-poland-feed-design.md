@@ -1,17 +1,17 @@
 # Integrate Poland GTFS (and Denmark status)
 
 ## Goal
-Integrate the Polish national GTFS feed into the One Rail Away dataset to map long-distance connections across Poland. Address the Denmark feed addition request.
+Integrate the Polish national GTFS feed into the onestopeurope dataset to map long-distance connections across Poland.
 
-## Open Questions
+## Denmark status (corrected 2026-07-11)
 
-> [!WARNING]
-> **Denmark (Rejseplanen) Feed Access**
-> Rejseplanen Labs no longer provides an openly accessible, registration-free URL for their static GTFS feed. It is gated behind a registration process for developers on their Labs portal. Since our principle is to use registration-free open datasets wherever possible, how would you like to proceed?
-> - Option A: We skip Denmark for now and stick to Poland.
-> - Option B: If you have an authorized download link or want me to use a specific mirror, please provide it.
-> 
-> *The plan below currently outlines the integration of Poland only.*
+The original draft claimed Rejseplanen's GTFS is "gated behind Labs developer
+registration" and deferred Denmark on that basis. That claim was WRONG: the
+Labs *portal* requires an account, but the direct download URL is open —
+HEAD-verified 2026-07-11: `https://www.rejseplanen.info/labs/GTFS.zip`
+returns 200, 57 575 381 bytes, no registration. Denmark remains a live
+MEDIUM candidate for the next batch, per the user-approved research table in
+the renfe spec.
 
 ## Proposed Changes
 
