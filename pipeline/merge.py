@@ -6,7 +6,9 @@ station id, building one `Station` registry shared by the router.
 
 Canonical id precedence (first match wins):
   1. alias override  -- explicit "<feed>:<stop_id>" -> canonical id in `aliases`
-  2. UIC regex       -- cfg.uic_regex extracts a UIC code from the stop_id
+  2. UIC regex       -- cfg.uic_regex extracts a UIC code from the stop_id; a
+                        known code merges onto its station, an UNKNOWN code first
+                        falls back to the rule-3 proximity check (#7)
   3. proximity       -- an already-registered station <500 m away AND with the same
                         normalized name (accent-transliterated, lowercase, alphanumeric
                         only -- see `_norm`)
@@ -37,6 +39,19 @@ would happily match the first 7 digits of a longer run -- e.g. the real DE IFOPT
 match whose captured digits are immediately adjacent to another digit, i.e. we only
 accept a run of EXACTLY the matched length. Fixture ids (`st:3333333`, `bs-3333333`)
 have a clean 7-digit run bounded by non-digits and still resolve to `3333333`.
+
+UIC fallback (#7, 2026-07-10): a UIC-extracted stop used to become canonical
+immediately, so it could never proximity-merge onto a station already registered
+under a non-UIC id (every sncf StopArea:OCE.../db_fern internal id) -- each
+collision needed a manual station_aliases.toml entry (Konstanz, Mulhouse,
+Frasne). Now an unknown code first runs the same proximity+name check as rule 3;
+on a hit the code is recorded in a run-local uic_aliases map so every later feed
+carrying the same code lands on the same station regardless of its coordinates
+or spelling, and on a miss the code is minted as canonical exactly as before.
+The fallback may merge onto a DIFFERENT UIC canonical (dual-code border
+stations; symmetric with rule 3 -- user decision 2026-07-10). Cross-language
+name twins ("Sarrebruck" vs "Saarbruecken Hbf") do not normalize equal and
+still need explicit aliases.
 """
 
 import math
@@ -119,6 +134,23 @@ def _uic_match(uic_re: re.Pattern[str] | None, stop_id: str) -> str | None:
     return m.group(1) if m.lastindex else m.group()
 
 
+def _proximity_match(registry: dict[str, Station], name: str, lat: float, lon: float) -> str | None:
+    """First registered station <PROXIMITY_M away whose name normalizes equal.
+
+    "First" is registry insertion order -- the documented feed-priority signal
+    (#5) -- matching the behavior the inline scan had before extraction.
+    """
+    norm = _norm(name)
+    return next(
+        (
+            sid
+            for sid, s in registry.items()
+            if _norm(s.name) == norm and _dist_m(s.lat, s.lon, lat, lon) < PROXIMITY_M
+        ),
+        None,
+    )
+
+
 def merge_stations(
     per_feed: dict[str, tuple[list[RawStop], FeedConfig]],
     aliases: dict[str, str],
@@ -134,6 +166,7 @@ def merge_stations(
     registry: dict[str, Station] = {}
     mapping: dict[tuple[str, str], str] = {}
     stubs: list[tuple[str, str, str, FeedConfig]] = []  # (feed, stop_id, name, cfg)
+    uic_aliases: dict[str, str] = {}  # UIC code -> canonical, from fallback merges (#7)
 
     # Pass 1: real (coordinate-bearing) stops. Stubs (lat/lon None) are deferred so
     # they can only resolve ONTO settled real stations, never seed one themselves.
@@ -145,17 +178,22 @@ def merge_stations(
                 continue
             canonical = aliases.get(f"{feed}:{stop.stop_id}")
             if canonical is None:
-                canonical = _uic_match(uic_re, stop.stop_id)
+                code = _uic_match(uic_re, stop.stop_id)
+                if code is not None:
+                    if code in registry or code in uic_aliases:
+                        canonical = uic_aliases.get(code, code)
+                    else:
+                        # Unknown code: run the same proximity+name check as
+                        # rule 3 before minting it as canonical (#7).
+                        near = _proximity_match(registry, stop.name, stop.lat, stop.lon)
+                        if near is not None:
+                            uic_aliases[code] = near
+                        canonical = near or code
             if canonical is None:
-                canonical = next(
-                    (
-                        sid
-                        for sid, s in registry.items()
-                        if _norm(s.name) == _norm(stop.name)
-                        and _dist_m(s.lat, s.lon, stop.lat, stop.lon) < PROXIMITY_M
-                    ),
-                    None,
-                ) or f"x:{feed}:{stop.stop_id}"
+                canonical = (
+                    _proximity_match(registry, stop.name, stop.lat, stop.lon)
+                    or f"x:{feed}:{stop.stop_id}"
+                )
             if canonical not in registry:
                 registry[canonical] = Station(
                     id=canonical,

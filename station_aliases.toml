@@ -5,6 +5,15 @@
 # validation step reports either a missed merge (two ids that are the same physical
 # station) or a wrong merge that automatic rules cannot resolve.
 #
+# Since 2026-07-10 (backlog G, merge.py rule #7) an unknown UIC code falls back
+# to the same proximity+name check as other stops before minting itself as
+# canonical, so most same-name UIC-vs-non-UIC collisions below would now merge
+# automatically. The entries are KEPT deliberately: removing one would re-key
+# its canonical id (first-registered id wins), silently regressing anything
+# keyed by the old id (station_countries.toml overrides -- Konstanz precedent).
+# Cross-language name twins ("Sarrebruck" vs "Saarbruecken Hbf") still need
+# aliases -- the fallback requires normalized-name equality.
+#
 # Format:  "<feed>:<stop_id>" = "<canonical UIC id>"
 # Example: "borderia:bs-3333333" = "3333333"
 [aliases]

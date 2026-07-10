@@ -329,3 +329,122 @@ def test_alias_still_resolves_a_stub():
     canonical = merge_stations(per_feed, {})[1][("de", "de:1")]
     _, mapping = merge_stations(per_feed, {"nl:nl:stub": canonical})
     assert mapping[("nl", "nl:stub")] == canonical
+
+
+# --- #7 UIC fallback: an unknown UIC code proximity-merges before minting ----
+#
+# Before 2026-07-10 a UIC match was terminal: an unknown code was minted as
+# canonical without ever running the proximity+name check, duplicating any same
+# station already registered under a non-UIC id (every sncf StopArea:OCE... and
+# db_fern internal id). Each collision needed a manual station_aliases.toml
+# entry (Konstanz, Mulhouse, Frasne). Spec:
+# docs/superpowers/specs/2026-07-10-uic-merge-gap-design.md
+
+
+def test_uic_stop_merges_onto_existing_non_uic_station():
+    # sncf-style feed (no uic_regex) registers first under a fresh x: id; a later
+    # feed's UIC stop for the same station must proximity-merge instead of
+    # minting a duplicate canonical.
+    per_feed = {
+        "sncfish": (
+            [RawStop("StopArea:OCE87686006", "Gare Centrale", 50.0, 10.0)],
+            _cfg(),
+        ),
+        "sbbish": (
+            [RawStop("st:8768600", "Gare Centrale", 50.0001, 10.0001)],
+            _cfg(uic_regex=r"(\d{7})"),
+        ),
+    }
+    stations, mapping = merge_stations(per_feed, {})
+    assert len(stations) == 1
+    assert stations[0].id == "x:sncfish:StopArea:OCE87686006"  # no id churn
+    assert (
+        mapping[("sncfish", "StopArea:OCE87686006")]
+        == mapping[("sbbish", "st:8768600")]
+        == "x:sncfish:StopArea:OCE87686006"
+    )
+
+
+def test_uic_stop_far_from_same_name_station_mints_uic_canonical():
+    # Same name but ~1.1 km apart: fallback must NOT fire; the code is minted
+    # exactly as before.
+    per_feed = {
+        "a": ([RawStop("weird", "Neustadt", 50.0, 10.0)], _cfg()),
+        "b": ([RawStop("st:1234567", "Neustadt", 50.01, 10.0)], _cfg(uic_regex=r"(\d{7})")),
+    }
+    assert _dist_m(50.0, 10.0, 50.01, 10.0) > PROXIMITY_M  # sanity
+    stations, mapping = merge_stations(per_feed, {})
+    assert len(stations) == 2
+    assert mapping[("b", "st:1234567")] == "1234567"
+
+
+def test_uic_stop_near_different_name_station_mints_uic_canonical():
+    # Paris Est / Paris Nord are ~280 m apart but genuinely different stations:
+    # different normalized name -> no fallback merge.
+    per_feed = {
+        "a": ([RawStop("weird", "Paris Est", 48.8766, 2.3592)], _cfg()),
+        "b": (
+            [RawStop("st:1234567", "Paris Nord", 48.8790, 2.3580)],
+            _cfg(uic_regex=r"(\d{7})"),
+        ),
+    }
+    stations, mapping = merge_stations(per_feed, {})
+    assert len(stations) == 2
+    assert mapping[("b", "st:1234567")] == "1234567"
+
+
+def test_same_uic_code_from_third_feed_follows_fallback_merge():
+    # After 8768600 fallback-merges onto the x: station, a THIRD feed carrying
+    # the same code must land there too -- even offset >500 m with a different
+    # spelling, where proximity alone could never match (uic_aliases table).
+    per_feed = {
+        "sncfish": (
+            [RawStop("StopArea:OCE87686006", "Gare Centrale", 50.0, 10.0)],
+            _cfg(),
+        ),
+        "sbbish": (
+            [RawStop("st:8768600", "Gare Centrale", 50.0001, 10.0001)],
+            _cfg(uic_regex=r"(\d{7})"),
+        ),
+        "oebbish": (
+            [RawStop("bs-8768600", "Zentralbahnhof", 50.02, 10.02)],
+            _cfg(uic_regex=r"(\d{7})"),
+        ),
+    }
+    stations, mapping = merge_stations(per_feed, {})
+    assert len(stations) == 1
+    assert mapping[("oebbish", "bs-8768600")] == "x:sncfish:StopArea:OCE87686006"
+
+
+def test_uic_stop_merges_onto_different_uic_canonical():
+    # Dual-code border station (same building, FR 87... and CH 85... codes):
+    # the second UIC identity <500 m away with the same normalized name merges
+    # onto the first. Symmetric with rule-3 proximity merging (user decision
+    # 2026-07-10).
+    per_feed = {
+        "fr": (
+            [RawStop("st:8718206", "Mulhouse Ville", 47.7418, 7.3428)],
+            _cfg(uic_regex=r"(\d{7})"),
+        ),
+        "ch": (
+            [RawStop("st:8500090", "Mulhouse Ville", 47.7419, 7.3429)],
+            _cfg(uic_regex=r"(\d{7})"),
+        ),
+    }
+    stations, mapping = merge_stations(per_feed, {})
+    assert len(stations) == 1
+    assert mapping[("fr", "st:8718206")] == mapping[("ch", "st:8500090")] == "8718206"
+
+
+def test_alias_beats_uic_fallback_merge():
+    # The stop WOULD fallback-merge onto the nearby same-name station, but an
+    # explicit alias must still win outright (precedence rule 1 unchanged).
+    per_feed = {
+        "a": ([RawStop("weird", "Gare Centrale", 50.0, 10.0)], _cfg()),
+        "b": (
+            [RawStop("st:8768600", "Gare Centrale", 50.0001, 10.0001)],
+            _cfg(uic_regex=r"(\d{7})"),
+        ),
+    }
+    _, mapping = merge_stations(per_feed, {"b:st:8768600": "9999999"})
+    assert mapping[("b", "st:8768600")] == "9999999"

@@ -95,29 +95,28 @@ single click handler with `queryRenderedFeatures` + explicit precedence
 (destination-dot wins while a reach is active), plus an unselect (×) affordance in the
 status bar and Escape-to-unselect.
 
-## G. Merge-logic gap: UIC-registered stops never proximity-merge (found 2026-07-10)
+## G. Merge-logic gap: UIC stops never proximity-merge — DONE 2026-07-10
 
-Systemic (documented in station_aliases.toml's header, hit again during the SBB filter
-fix): a stop that registers via UIC-regex extraction becomes canonical directly —
-name+proximity matching never runs for it, so it duplicates any existing non-UIC
-canonical station (evidence: 48 SNCF `StopArea:OCE…`-vs-bare-UIC pairs + Konstanz when
-French Intercités briefly entered via the Swiss feed; each currently needs a manual
-alias). Design options: (a) sncf `uic_regex` extracting the 7-digit code from
-`StopArea:OCE<8digit>` ids — SNCF stations then UIC-merge automatically, but ALL SNCF
-canonical ids change (regenerate everything, check nothing hardcodes them); (b) make
-merge fall back to name+proximity before minting a fresh UIC canonical. Read
-`.superpowers/sdd/progress.md` Session 4 + final-review-triage before touching merge.
+Fixed in `pipeline/merge.py` (rule #7): an unknown UIC code now falls back to the
+same proximity+name check as other stops before minting itself as canonical, with
+a run-local `uic_aliases` map so later feeds carrying the same code follow the
+merge deterministically. Symmetric UIC-vs-UIC merging included (dual-code border
+stations). Zero id churn: existing `station_aliases.toml` entries kept on purpose
+(removing one re-keys its canonical id — Konstanz/`station_countries.toml` trap).
+Verified a byte-identical no-op rebuild on current feeds; the payoff is backlog A
+(new feeds need ~no manual aliases). Known limit: cross-language name twins
+("Sarrebruck" vs "Saarbrücken Hbf") still need aliases.
+Spec: `docs/superpowers/specs/2026-07-10-uic-merge-gap-design.md`.
 
-## H. Cheap FR coverage win: SNCF Intercités are filtered out (found 2026-07-10)
+## H. Cheap FR coverage win: SNCF Intercités — DONE (verified 2026-07-10)
 
-The sncf feed's route_allow currently keeps TGV-style only; France's Intercités network
-(POLT Paris–Limoges–Toulouse, Nantes–Lyon, Paris–Clermont, night Intercités…) exists in
-the sncf feed but is dropped. They're real long-distance trains — ingesting them
-meaningfully densifies France without adding any new feed. (They also exist duplicated
-inside the Swiss feed under labels like "IC190A", agency 87_LEX — do NOT ingest them from
-there; provenance belongs with SNCF.) Likely wants G solved first (their stops must merge
-cleanly). Relatedly: SNCF train labels task (`.superpowers/sdd/sncf-labels-findings.md`)
-touches the same load path — consider doing together.
+Already shipped as a side effect of the SNCF labels task (merge f9ca9f1): sncf
+`route_allow = ["."]` with the `stop_id_brand` table selecting and labeling
+INTERCITES / INTERCITES de nuit — 72 Intercités + 15 night trips live in the
+2026-07-10 data. The "stops must merge cleanly" prerequisite is item G (done,
+see above). Reminder kept: Intercités also appear inside the Swiss feed
+(agency 87_LEX, "IC190A") — never ingest them from there; provenance belongs
+with SNCF (see the sbb route_allow evidence comments in feeds.toml).
 
 ## I. Corridor bundling for reach lines (added 2026-07-10)
 
