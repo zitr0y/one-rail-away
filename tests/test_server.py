@@ -15,7 +15,17 @@ def client(tmp_path_factory):
     tmp = tmp_path_factory.mktemp("world")
     raw = tmp / "raw"
     cfgs = make_fixture_feeds(raw)
-    build(raw, tmp / "graph", _write_feeds_toml(tmp, cfgs), None, date(2026, 7, 14))
+    # Pass empty station_countries_path so prod keys don't trip stale-id validation.
+    countries_toml = tmp / "station_countries.toml"
+    countries_toml.write_text("[countries]\n")
+    build(
+        raw,
+        tmp / "graph",
+        _write_feeds_toml(tmp, cfgs),
+        None,
+        date(2026, 7, 14),
+        station_countries_path=countries_toml,
+    )
     compute_all(tmp / "graph", tmp / "out")
     return TestClient(create_app(tmp / "out"))
 

@@ -9,10 +9,24 @@ from tests.test_build import _write_feeds_toml
 SAMPLE = date(2026, 7, 14)
 
 
+def _empty_countries(tmp_path):
+    """Create an empty station_countries.toml so prod keys don't trip stale-id validation."""
+    p = tmp_path / "station_countries.toml"
+    p.write_text("[countries]\n")
+    return p
+
+
 def test_compute_all_writes_reach_files(tmp_path):
     raw = tmp_path / "raw"
     cfgs = make_fixture_feeds(raw)
-    build(raw, tmp_path / "graph", _write_feeds_toml(tmp_path, cfgs), None, SAMPLE)
+    build(
+        raw,
+        tmp_path / "graph",
+        _write_feeds_toml(tmp_path, cfgs),
+        None,
+        SAMPLE,
+        station_countries_path=_empty_countries(tmp_path),
+    )
     compute_all(tmp_path / "graph", tmp_path / "out")
 
     reach = json.loads((tmp_path / "out" / "reach_1111111.json").read_text())
@@ -35,7 +49,14 @@ def test_compute_all_prunes_stale_reach_files(tmp_path):
     # disk, so a stale file resurrects a dead station in search. Prune it.
     raw = tmp_path / "raw"
     cfgs = make_fixture_feeds(raw)
-    build(raw, tmp_path / "graph", _write_feeds_toml(tmp_path, cfgs), None, SAMPLE)
+    build(
+        raw,
+        tmp_path / "graph",
+        _write_feeds_toml(tmp_path, cfgs),
+        None,
+        SAMPLE,
+        station_countries_path=_empty_countries(tmp_path),
+    )
     out = tmp_path / "out"
     out.mkdir()
     stale = out / "reach_9999999.json"
@@ -48,7 +69,14 @@ def test_compute_all_prunes_stale_reach_files(tmp_path):
 def test_compute_all_parallel_matches_serial(tmp_path):
     raw = tmp_path / "raw"
     cfgs = make_fixture_feeds(raw)
-    build(raw, tmp_path / "graph", _write_feeds_toml(tmp_path, cfgs), None, SAMPLE)
+    build(
+        raw,
+        tmp_path / "graph",
+        _write_feeds_toml(tmp_path, cfgs),
+        None,
+        SAMPLE,
+        station_countries_path=_empty_countries(tmp_path),
+    )
     compute_all(tmp_path / "graph", tmp_path / "serial", workers=1)
     compute_all(tmp_path / "graph", tmp_path / "par", workers=2)
 

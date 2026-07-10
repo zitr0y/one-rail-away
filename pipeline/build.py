@@ -39,7 +39,10 @@ def remap_trips(
                 if canonical is None:
                     logger.warning(
                         "stripping unresolved stub stop %s from trip %s (%s) in %s",
-                        s.station, t.trip_id, t.train, feed,
+                        s.station,
+                        t.trip_id,
+                        t.train,
+                        feed,
                     )
                     continue
                 s.station = canonical
@@ -50,7 +53,9 @@ def remap_trips(
             else:
                 logger.warning(
                     "dropping trip %s (%s) in %s: fewer than 2 stops after stub strip",
-                    t.trip_id, t.train, feed,
+                    t.trip_id,
+                    t.train,
+                    feed,
                 )
     return kept
 
@@ -85,6 +90,9 @@ def build(
     feeds_path: Path,
     aliases_path: Path | None,
     sample_date: date,
+    *,
+    station_names_path: Path | None = None,
+    station_countries_path: Path | None = None,
 ) -> None:
     """Assemble the station/trip graph for `sample_date` from every `<name>.zip`
     present in `raw_dir`, and write it to `graph_dir`.
@@ -99,12 +107,19 @@ def build(
     if aliases_path and aliases_path.exists():
         aliases = tomllib.loads(aliases_path.read_text()).get("aliases", {})
 
+    # --- override files: intentionally next to the code, not feeds_path.parent
+    # --- deriving from feeds_path.parent silently loaded no overrides at all (2026-07-09).
+    if station_countries_path is None:
+        station_countries_path = Path(__file__).parent / "station_countries.toml"
     country_overrides: dict[str, str] = {}
-    # Intentionally next to the code, not feeds_path.parent -- deriving from
-    # feeds_path.parent silently loaded no overrides at all (2026-07-09).
-    overrides_path = Path(__file__).parent / "station_countries.toml"
-    if overrides_path.exists():
-        country_overrides = tomllib.loads(overrides_path.read_text()).get("countries", {})
+    if station_countries_path.exists():
+        country_overrides = tomllib.loads(station_countries_path.read_text()).get("countries", {})
+
+    if station_names_path is None:
+        station_names_path = Path(__file__).parent / "station_names.toml"
+    name_overrides: dict[str, str] = {}
+    if station_names_path.exists():
+        name_overrides = tomllib.loads(station_names_path.read_text()).get("names", {})
 
     per_feed = {}
     feed_trips: dict[str, list[Trip]] = {}
@@ -122,6 +137,27 @@ def build(
     for line in assign_countries(stations, load_countries(ASSET), country_overrides):
         print(f"country: {line}")
     all_trips = join_through_services(remap_trips(feed_trips, mapping))
+
+    # --- stale-id validation for BOTH override files (loud, not silent — the
+    # --- Konstanz staleness trap bit us before; spec requires SystemExit(1)).
+    station_ids = {s.id for s in stations}
+    stale: list[str] = []
+    for sid in country_overrides:
+        if sid not in station_ids:
+            stale.append(f"station_countries.toml: stale key {sid!r}")
+    for sid in name_overrides:
+        if sid not in station_ids:
+            stale.append(f"station_names.toml: stale key {sid!r}")
+    if stale:
+        for msg in stale:
+            print(f"OVERRIDE STALE: {msg}")
+        raise SystemExit(1)
+
+    # Apply display-name overrides (after merge + country, before serialization).
+    for s in stations:
+        if s.id in name_overrides:
+            print(f"name: {s.id} ({s.name}) -> {name_overrides[s.id]}")
+            s.name = name_overrides[s.id]
 
     problems = validate(stations, all_trips)
     if problems:

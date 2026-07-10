@@ -1,0 +1,18 @@
+# pipeline/station_names.toml
+#
+# Per-station display-name overrides, applied in build after merge + country
+# assignment. Mechanism mirrors station_countries.toml exactly: lives in
+# pipeline/ next to the code (same loading-trap comment — deriving from
+# feeds_path.parent silently loaded no overrides at all, 2026-07-09), keyed
+# by canonical station id.
+#
+# Every entry needs an evidence comment: real station name, why the merged
+# name is wrong (e.g. French spelling, SHOUTY caps, abbreviation). A key
+# whose id doesn't exist in the station registry fails the build (loud,
+# not silent — the Konstanz staleness trap).
+#
+# This file intentionally lives here, next to build.py, not at repo root next
+# to feeds.toml -- deriving the path from feeds_path.parent silently loaded no
+# overrides at all (2026-07-09).
+
+[names]
