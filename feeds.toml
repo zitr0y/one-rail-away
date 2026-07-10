@@ -111,6 +111,8 @@ route_allow = ["^Intercity", "^ICE?\\b", "^Eurostar", "^Nightjet"]
 # data.renfe.com/legal) — reuse allowed with attribution "Renfe".
 # Position: LAST — name-ownership priority: renfe must not register first for
 # the 7 French stops it carries (that would re-key SNCF canonicals).
+# Quirk (2026-07-10, Task 3a): export pads every line (headers too) to fixed
+# ~350-byte width with trailing spaces; gtfs.py _rows strips fieldnames+values.
 url = "https://ssl.renfe.com/gtransit/Fichero_AV_LD/google_transit.zip"
 country = "ES"
 license = "Spanish public-sector reuse (attribution: Renfe)"

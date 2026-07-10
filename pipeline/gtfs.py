@@ -64,7 +64,17 @@ def _rows(zf: zipfile.ZipFile, name: str) -> Iterator[dict]:
     if member is None:
         return
     with zf.open(member) as f:
-        yield from csv.DictReader(io.TextIOWrapper(f, encoding="utf-8-sig"))
+        # Some exports (Renfe 2026-07) right-pad EVERY line -- headers included --
+        # to a fixed ~350-byte width with trailing spaces. Unstripped, the last
+        # fieldname becomes "end_date" + ~300 spaces, so row["end_date"] raises
+        # KeyError before any row is usable; padded cell values would likewise
+        # poison stop_ids/names downstream. Strip fieldnames once and every
+        # string cell per row.
+        reader = csv.DictReader(io.TextIOWrapper(f, encoding="utf-8-sig"))
+        if reader.fieldnames:
+            reader.fieldnames = [fn.strip() for fn in reader.fieldnames]
+        for row in reader:
+            yield {k: v.strip() if isinstance(v, str) else v for k, v in row.items()}
 
 
 def _active_services(zf: zipfile.ZipFile, day: date) -> set[str]:

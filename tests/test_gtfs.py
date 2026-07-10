@@ -528,6 +528,31 @@ def test_bom_in_stops_txt_is_stripped(tmp_path):
     assert stops[0].lat == 50.0 and stops[0].lon == 8.0
 
 
+# --- fixed-width padded exports (Renfe) ---------------------------------------
+
+
+def test_fixed_width_padded_feed_loads(tmp_path):
+    # Evidence: the real 2026-07 Renfe export (data/raw/renfe.zip) pads EVERY
+    # line -- including header rows -- to a fixed ~350-byte width with
+    # trailing spaces. Discovered 2026-07-10 (Task 3 blocker): the padded
+    # calendar.txt header turns the last fieldname into "end_date" plus ~300
+    # spaces, so row["end_date"] raises KeyError in _active_services before
+    # any row is usable. Padded cell values would also poison stop_ids/names
+    # downstream, so every file (not just calendar.txt) is padded here.
+    width = 350
+    padded = {
+        name: "\n".join(line.ljust(width) for line in content.splitlines()) + "\n"
+        for name, content in _DEFAULT_FILES.items()
+    }
+    zip_path = _make_feed(tmp_path, **{k.replace(".txt", "_txt"): v for k, v in padded.items()})
+    stops, trips = load_feed(zip_path, CFG, SAMPLE)
+    assert {s.stop_id for s in stops} == {"A", "B"}
+    (trip,) = trips
+    assert trip.train == "IC 9"
+    assert [s.station for s in trip.stops] == ["A", "B"]
+    assert trip.stops[0].dep == 8 * 60 and trip.stops[1].arr == 9 * 60
+
+
 # --- stop-id brand labeling (SNCF) ---------------------------------------------
 
 
