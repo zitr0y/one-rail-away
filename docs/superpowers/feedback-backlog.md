@@ -130,12 +130,12 @@ physically share the LGV corridor but our lines don't. Fix directions to brainst
 (b) algorithmic edge bundling, (c) force lines through nearest corridor waypoints. Big
 visual win, medium-to-large effort. Related to D (map styling).
 
-## J. Highlight the selected journey (added 2026-07-10)
+## J. Highlight the selected journey — DONE 2026-07-10
 
-User: when a specific journey is selected (e.g. Bern→Zürich card open), highlight that
-journey's line on the map and dim/hide the rest of the reach lines, instead of keeping
-all potential journeys at full strength. Small, self-contained web feature
-(Map.tsx gets the selected destination id; style split for selected vs rest).
+Shipped (merge b01fb6f): selected journey's line 4px full-opacity on a dedicated
+`reach-lines-selected` layer, others dim to 0.12; dots untouched. Thick-line styling is
+provisional — revisit for an animated train when branding (D) lands.
+Spec: `docs/superpowers/specs/2026-07-10-journey-highlight-design.md`.
 
 ## Smaller deferred notes
 
@@ -144,7 +144,16 @@ all potential journeys at full strength. Small, self-contained web feature
 - Cross-feed duplicate trains observed (ICE 82 Paris–Frankfurt appears in both SNCF
   and DB feeds as separate trips) — may double-count `direct_per_day`; worth checking
   when touching compute.
-- Pre-existing deferred minors from the build ledger still open: SNCF train labels are
-  opaque line codes (top user-visible), `remap_trips` in-place mutation trap,
-  dead `uic_regex` comment, O(n²) validate check, search `limit` validation,
-  `web/README.md` boilerplate, map `easeTo` re-centering on every filter change.
+- Pre-existing deferred minors from the build ledger still open: `remap_trips` in-place
+  mutation trap, dead `uic_regex` comment, O(n²) validate check, search `limit`
+  validation, map `easeTo` re-centering on every filter change.
+- ~~SNCF train labels~~ DONE 2026-07-10 (merge f9ca9f1): brand+number via
+  `stop_id_brand` + trip_headsign ("TGV INOUI 9704", "IC 50" Paris–Bruxelles); join
+  safety verified (201 non-SNCF joins unchanged, 0 SNCF-touching).
+- Pipeline QoL DONE 2026-07-10 (merge 4b9ca46): `ose compute` now parallel
+  (`--workers`, default one per CPU) and prunes stale reach files (stale files broke
+  has_reach-from-disk when canonical ids change). The 46-min compute run on 2026-07-10
+  was on battery power; mains + parallelism should be minutes.
+- Final-review note (sncf-labels): document near through.py that SNCF ICE numbers
+  (95xx) are disjoint from db_fern ICE numbers — a future feed refresh with a shared
+  number would silently start joining.
