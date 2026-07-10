@@ -17,7 +17,8 @@ def main() -> None:
     sub.add_parser("fetch")
     b = sub.add_parser("build")
     b.add_argument("--date", type=date.fromisoformat, default=next_tuesday(date.today()))
-    sub.add_parser("compute")
+    c = sub.add_parser("compute")
+    c.add_argument("--workers", type=int, default=None, help="process count (default: one per CPU)")
     args = parser.parse_args()
 
     if args.cmd == "fetch":
@@ -32,4 +33,4 @@ def main() -> None:
     elif args.cmd == "compute":
         from pipeline.compute import compute_all
 
-        compute_all(GRAPH, OUT)
+        compute_all(GRAPH, OUT, args.workers)
