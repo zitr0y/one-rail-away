@@ -19,7 +19,7 @@ implementation (established process convention).
 - Station `country` was assigned from the feed, not geography (Praha tagged "DE") —
   fixed in the bug batch; item E (greying) builds on the corrected field.
 
-## A. Add more national feeds — Renfe (ES) DONE 2026-07-10; batches 2+ open
+## A. Add more national feeds — Renfe (ES) DONE 2026-07-10; Poland (PL) DONE 2026-07-10
 
 Renfe long-distance feed ingested (backlog A, feed 1 of N). Madrid, Barcelona
 (merged onto SNCF canonical, renamed), Porto (via TRENCELTA) on the map. Products:
@@ -27,12 +27,19 @@ AVE, AVE INT, ALVIA, AVLO, Intercity, EUROMED, TRENCELTA. Competitor check
 (2026-07-10): Ouigo España publishes GTFS on nap.transportes.gob.es; iryo does not
 publish public GTFS.
 
-New-feed recipe: `docs/superpowers/new-feed-recipe.md`. Suggested batch 2:
-Poland (mkuran.pl, MEDIUM) + Denmark (Rejseplanen, MEDIUM). Research verdicts
+Poland long-distance feed ingested (backlog A, feed 2 of N). Warszawa, Kraków,
+Gdańsk on the map. Products: EIP, EIC, IC, TLK, EC, EN, LEO, RJ. Denmark (Rejseplanen)
+research (2026-07-10): Rejseplanen GTFS is gated behind Labs developer registration,
+violating our open-data mandate; deferred pending discussion.
+
+New-feed recipe: `docs/superpowers/new-feed-recipe.md`. Research verdicts
 for remaining countries in the recipe doc.
 
 Spec: `docs/superpowers/specs/2026-07-10-renfe-feed-design.md`.
 Plan: `docs/superpowers/plans/2026-07-10-renfe-feed.md`.
+
+Spec (Poland): `docs/superpowers/specs/2026-07-10-poland-feed-design.md`.
+Plan (Poland): `docs/superpowers/plans/2026-07-10-poland-feed.md`.
 
 ## B. Multi-day sampling / service frequency (user item 6)
 

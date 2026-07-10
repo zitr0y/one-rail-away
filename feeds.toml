@@ -128,3 +128,14 @@ route_allow = ["^AVE$", "^AVE INT$", "^ALVIA$", "^AVLO$", "^Intercity$", "^EUROM
 # currently publish a public GTFS feed. No scraping or proprietary APIs
 # were attempted. If feeds become fully available and integrated, add them
 # as separate entries (same route_allow product filtering approach as renfe).
+
+[feeds.pkp]
+# mkuran.pl community GTFS for Polish trains (incorporates PKP PLK schedule).
+# Single zip with multiple agencies (Polregio, PKP Intercity, KM, etc).
+# Stop IDs are 5-digit PLK internal codes (not UIC codes).
+# Products by route_short_name: EIC, EIP, IC, TLK (PKP Intercity), EC, EN (International), LEO, RJ.
+url = "https://mkuran.pl/gtfs/polish_trains.zip"
+country = "PL"
+license = "CC BY 4.0 / PKP PLK public sector data (mkuran.pl)"
+route_allow = ["^EIP$", "^EIC$", "^IC$", "^TLK$", "^LEO$", "^RJ$", "^EC$", "^EN$"]
+

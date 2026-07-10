@@ -116,3 +116,49 @@
 # 40 m apart; the "Rhône-Alpes Sud" suffix blocks the merge. Same physical
 # station.
 "renfe:87810" = "x:sncf:StopArea:OCE87763029"
+
+# PKP cross-feed manual aliases (2026-07-10)
+"pkp:124879" = "x:oebb:Pua:22005" # Київ-Пасажирськи vs Kyjiw-Passaschyrskyj
+"pkp:125266" = "x:oebb:Pua:22025" # Львів-Головний vs Lviv
+"pkp:127420" = "x:db_fern:268800" # Ostrava hlavní nádraží vs Ostrava hl.n.
+"pkp:128006" = "x:db_fern:450318" # Kolín vs Kolin(CZ)
+"pkp:128071" = "x:db_fern:5587" # Pardubice hlavní nádraží vs Pardubice hl.n.
+"pkp:129059" = "x:db_fern:549400" # Praha hlavní nádraží vs Praha hl.n.
+"pkp:130985" = "x:db_fern:398048" # Bratislava hlavná stanica vs Bratislava hl.st.
+"pkp:139064" = "x:oebb:Psi:63:106" # Maribor vs Maribor Železniška postaja
+"pkp:146659" = "x:db_fern:226810" # München Ost vs Ostbahnhof
+"pkp:157163" = "x:db_fern:145404" # Bruck an der Mur vs Bruck/Mur
+"pkp:18408" = "x:db_fern:199392" # Bydgoszcz Główna vs Bydgoszcz Glowna
+"pkp:18705" = "x:db_fern:16783" # Inowrocław vs Inowroclaw
+"pkp:273" = "x:db_fern:645358" # Szczecin Główny vs Szczecin Glowny
+"pkp:27805" = "x:db_fern:490454" # Zielona Góra Główna vs Zielona Gora Glowna
+"pkp:28803" = "x:db_fern:396922" # Szamotuły vs Szamotuly
+"pkp:30601" = "x:db_fern:341180" # Poznań Główny vs Poznan Glowny
+"pkp:42200" = "x:db_fern:322321" # Głogów vs Glogow
+"pkp:46409" = "x:db_fern:620749" # Łódź Widzew vs Lodz Widzew
+"pkp:46565" = "x:db_fern:49048" # Łódź Chojny vs Lodz Chojny
+"pkp:46649" = "x:db_fern:219822" # Łask vs Lask
+"pkp:48959" = "x:db_fern:185282" # Opoczno Południe vs Opoczno Poludnie
+"pkp:50021" = "x:db_fern:584066" # Puławy Miasto vs Pulawy Miasto
+"pkp:50104" = "x:db_fern:493008" # Nałęczów vs Naleczow
+"pkp:50500" = "x:db_fern:157947" # Lublin Główny vs Lublin
+"pkp:50906" = "x:db_fern:461849" # Chełm vs Chelm
+"pkp:50948" = "x:db_fern:358168" # Chełm Miasto vs Chelm Miasto
+"pkp:53850" = "x:db_fern:264135" # Bolesławiec vs Boleslawiec
+"pkp:5900" = "x:db_fern:11503" # Gdynia Główna vs Gdynia Glowna
+"pkp:60103" = "x:db_fern:110574" # Wrocław Główny vs Wroclaw Glowny
+"pkp:60335" = "x:db_fern:620279" # Wołów vs Wolow
+"pkp:60608" = "x:db_fern:236997" # Opole Główne vs Opole Glowne
+"pkp:64899" = "x:db_fern:76359" # Włoszczowa Północ vs Wloszczowa Polnoc
+"pkp:67900" = "x:db_fern:166716" # Chałupki vs Chalupki
+"pkp:68205" = "x:db_fern:295342" # Rybnik vs Rybnik(PL)
+"pkp:73502" = "x:db_fern:61790" # Mysłowice vs Myslowice
+"pkp:74658" = "x:db_fern:21843" # Sosnowiec Główny vs Sosnowiec Glowny
+"pkp:7500" = "x:db_fern:276659" # Gdańsk Główny vs Gdansk Glowny
+"pkp:79905" = "x:db_fern:49692" # Kraków Płaszów vs Krakow Plaszow
+"pkp:80416" = "x:db_fern:104713" # Kraków Główny vs Krakow Glowny
+"pkp:81265" = "x:db_fern:422802" # Sędziszów Małopolski vs Sedziszow Malopolski
+"pkp:82669" = "x:db_fern:634880" # Rzeszów Główny vs Rzeszow Glowny
+"pkp:83022" = "x:db_fern:113884" # Łańcut vs Lancut
+"pkp:83261" = "x:db_fern:263827" # Jarosław vs Jaroslaw
+"pkp:84400" = "x:db_fern:255307" # Przemyśl Główny vs Przemysl Glowny
