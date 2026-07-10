@@ -32,14 +32,22 @@ def _write_feeds_toml(tmp_path, cfgs):
     return p
 
 
+def empty_overrides(tmp_path):
+    """Empty countries+names override files: isolate fixture-graph tests from
+    the real pipeline/*.toml overrides, whose production ids are stale
+    against fixture stations (loud stale-id validation would kill the build)."""
+    countries = tmp_path / "empty_countries.toml"
+    countries.write_text("[countries]\n")
+    names = tmp_path / "empty_names.toml"
+    names.write_text("[names]\n")
+    return countries, names
+
+
 def test_build_produces_merged_graph(tmp_path):
     raw = tmp_path / "raw"
     cfgs = make_fixture_feeds(raw)
     feeds_toml = _write_feeds_toml(tmp_path, cfgs)
-    # Pass empty station_countries_path so the real pipeline/station_countries.toml
-    # (which has prod station IDs absent from fixtures) doesn't trip stale-id validation.
-    countries_toml = tmp_path / "station_countries.toml"
-    countries_toml.write_text("[countries]\n")
+    countries_toml, names_toml = empty_overrides(tmp_path)
     graph = tmp_path / "graph"
     build(
         raw,
@@ -47,6 +55,7 @@ def test_build_produces_merged_graph(tmp_path):
         feeds_toml,
         aliases_path=None,
         sample_date=SAMPLE,
+        station_names_path=names_toml,
         station_countries_path=countries_toml,
     )
 
@@ -125,9 +134,7 @@ def test_station_names_override_applied(tmp_path):
     names_toml = tmp_path / "station_names.toml"
     names_toml.write_text('[names]\n"3333333" = "Gamma Zentral"\n')
 
-    # Pass empty station_countries_path so prod keys don't trip stale-id validation.
-    countries_toml = tmp_path / "station_countries.toml"
-    countries_toml.write_text("[countries]\n")
+    countries_toml, _ = empty_overrides(tmp_path)
 
     graph = tmp_path / "graph"
     build(
@@ -154,6 +161,8 @@ def test_station_names_stale_id_fails_build(tmp_path):
     names_toml = tmp_path / "station_names.toml"
     names_toml.write_text('[names]\n"GHOST_ID" = "Phantom"\n')
 
+    countries_toml, _ = empty_overrides(tmp_path)
+
     graph = tmp_path / "graph"
     with pytest.raises(SystemExit):
         build(
@@ -163,6 +172,7 @@ def test_station_names_stale_id_fails_build(tmp_path):
             aliases_path=None,
             sample_date=SAMPLE,
             station_names_path=names_toml,
+            station_countries_path=countries_toml,
         )
 
 
@@ -180,6 +190,8 @@ def test_station_countries_stale_id_fails_build(tmp_path):
     countries_toml = tmp_path / "station_countries.toml"
     countries_toml.write_text('[countries]\n"GHOST_ID" = "XX"\n')
 
+    _, names_toml = empty_overrides(tmp_path)
+
     graph = tmp_path / "graph"
     with pytest.raises(SystemExit):
         build(
@@ -188,5 +200,6 @@ def test_station_countries_stale_id_fails_build(tmp_path):
             feeds_toml,
             aliases_path=None,
             sample_date=SAMPLE,
+            station_names_path=names_toml,
             station_countries_path=countries_toml,
         )
