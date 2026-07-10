@@ -122,3 +122,9 @@ license = "Spanish public-sector reuse (attribution: Renfe)"
 route_allow = ["^AVE$", "^AVE INT$", "^ALVIA$", "^AVLO$", "^Intercity$", "^EUROMED$", "^TRENCELTA$"]
 # No uic_regex: 5-digit internal stop ids (e.g. 17000 = Madrid-Chamartín),
 # not UIC codes. Falls back to proximity+name matching for cross-feed merges.
+
+# Competitor feed check (2026-07-10): Ouigo España publishes GTFS via the
+# Spanish National Access Point (nap.transportes.gob.es). iryo does not
+# currently publish a public GTFS feed. No scraping or proprietary APIs
+# were attempted. If feeds become fully available and integrated, add them
+# as separate entries (same route_allow product filtering approach as renfe).

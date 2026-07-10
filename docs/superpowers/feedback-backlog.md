@@ -19,16 +19,20 @@ implementation (established process convention).
 - Station `country` was assigned from the feed, not geography (Praha tagged "DE") —
   fixed in the bug batch; item E (greying) builds on the corrected field.
 
-## A. Add more national feeds (user item 2 — "Barcelona only shows France")
+## A. Add more national feeds — Renfe (ES) DONE 2026-07-10; batches 2+ open
 
-From Barcelona only the SNCF corridor shows; Madrid/Porto are unfindable because Spain/
-Portugal aren't ingested at all. Candidate feeds to research (all publish GTFS): Renfe
-(ES), CP (PT), Trenitalia/RFI (IT), PKP Intercity (PL), ČD (CZ), MÁV (HU), DSB (DK).
-Each new feed needs: entry in `feeds.toml` with evidence comments, route_allow filter
-for long-distance only, merge aliases for border stations (`station_aliases.toml`), and
-a full pipeline re-run. Expect merge/station-name collisions — read
-`.superpowers/sdd/progress.md` Session 4 + final-review-triage notes before touching
-merge code.
+Renfe long-distance feed ingested (backlog A, feed 1 of N). Madrid, Barcelona
+(merged onto SNCF canonical, renamed), Porto (via TRENCELTA) on the map. Products:
+AVE, AVE INT, ALVIA, AVLO, Intercity, EUROMED, TRENCELTA. Competitor check
+(2026-07-10): Ouigo España publishes GTFS on nap.transportes.gob.es; iryo does not
+publish public GTFS.
+
+New-feed recipe: `docs/superpowers/new-feed-recipe.md`. Suggested batch 2:
+Poland (mkuran.pl, MEDIUM) + Denmark (Rejseplanen, MEDIUM). Research verdicts
+for remaining countries in the recipe doc.
+
+Spec: `docs/superpowers/specs/2026-07-10-renfe-feed-design.md`.
+Plan: `docs/superpowers/plans/2026-07-10-renfe-feed.md`.
 
 ## B. Multi-day sampling / service frequency (user item 6)
 
