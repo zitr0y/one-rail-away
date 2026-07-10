@@ -134,9 +134,7 @@ def _uic_match(uic_re: re.Pattern[str] | None, stop_id: str) -> str | None:
     return m.group(1) if m.lastindex else m.group()
 
 
-def _proximity_match(
-    registry: dict[str, Station], name: str, lat: float, lon: float
-) -> str | None:
+def _proximity_match(registry: dict[str, Station], name: str, lat: float, lon: float) -> str | None:
     """First registered station <PROXIMITY_M away whose name normalizes equal.
 
     "First" is registry insertion order -- the documented feed-priority signal
@@ -192,9 +190,10 @@ def merge_stations(
                             uic_aliases[code] = near
                         canonical = near or code
             if canonical is None:
-                canonical = _proximity_match(
-                    registry, stop.name, stop.lat, stop.lon
-                ) or f"x:{feed}:{stop.stop_id}"
+                canonical = (
+                    _proximity_match(registry, stop.name, stop.lat, stop.lon)
+                    or f"x:{feed}:{stop.stop_id}"
+                )
             if canonical not in registry:
                 registry[canonical] = Station(
                     id=canonical,
