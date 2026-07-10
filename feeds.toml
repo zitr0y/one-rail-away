@@ -20,25 +20,33 @@ license = "ODbL (transport.data.gouv.fr)"
 # are plain city pairs ("Paris - Lyon") indistinguishable from TER. The commercial
 # brand lives ONLY in the per-brand StopPoint ids ("StopPoint:OCETGV INOUI-87686006"
 # vs "StopPoint:OCETrain TER-...`), so route_allow passes every route and
-# stop_id_allow selects trips by brand. Brands verified in the real 2026-07 export
-# (trips): TGV INOUI 8864, INTERCITES 873, OUIGO 625, Lyria 341, ICE 243,
+# stop_id_brand selects trips by brand (and labels them). Brands verified in the real
+# 2026-07 export (trips): TGV INOUI 8864, INTERCITES 873, OUIGO 625, Lyria 341, ICE 243,
 # INTERCITES de nuit 248, Train 117 (the Paris-Bruxelles rail corridor). Excluded:
 # Train TER, Car TER, Car a reservation (road coaches), TramTrain, Navette.
 route_allow = ["."]
-stop_id_allow = [
-  "^StopPoint:OCETGV INOUI-",
-  "^StopPoint:OCEOUIGO-",
-  "^StopPoint:OCEICE-",
-  "^StopPoint:OCELyria-",
-  "^StopPoint:OCEINTERCITES-",
-  "^StopPoint:OCEINTERCITES de nuit-",
-  "^StopPoint:OCETrain-",
-]
 # No uic_regex: this export's stop ids end in the 8-digit UIC code WITH check digit
 # ("...-87686006"), while sbb/oebb carry 7-digit codes without it -- the values can
 # never merge, and merge.py's digit-adjacency guard rejects any 7-of-8 partial
 # capture anyway. Proximity+name matching (plus station_aliases.toml) handles
 # cross-feed merges for SNCF stations.
+# stop_id_brand doubles as the stop-id trip filter (same semantics as the old
+# stop_id_allow list) and relabels each kept trip "<brand> <trip_headsign>".
+# trip_headsign is 100% populated and numeric in this export (all 50,977 trips,
+# verified 2026-07-09); route_short_name stays an opaque line code ("802A").
+# Brand words are the official sub-brands (user decision 2026-07-10).
+# "OCETrain-" is the classic-line Paris-Bruxelles corridor (via Aulnoye-Aymeries,
+# train numbers 50-69, verified in the 2026-07 export): labeled "IC".
+# "Train TER"/"Car TER" cannot match: every pattern requires "-" right after the
+# brand, TER ids have " TER" there.
+[feeds.sncf.stop_id_brand]
+"^StopPoint:OCETGV INOUI-" = "TGV INOUI"
+"^StopPoint:OCEOUIGO-" = "OUIGO"
+"^StopPoint:OCEICE-" = "ICE"
+"^StopPoint:OCELyria-" = "TGV Lyria"
+"^StopPoint:OCEINTERCITES-" = "Intercités"
+"^StopPoint:OCEINTERCITES de nuit-" = "Intercités de nuit"
+"^StopPoint:OCETrain-" = "IC"
 
 [feeds.oebb]
 url = "https://static.web.oebb.at/open-data/soll-fahrplan-gtfs/GTFS_Fahrplan_2026.zip"
