@@ -1,7 +1,9 @@
 import re
 from pathlib import Path
 
-from pipeline.config import load_feeds
+import pytest
+
+from pipeline.config import FeedConfig, load_feeds
 
 
 def test_load_feeds_parses_repo_feeds_toml():
@@ -29,3 +31,21 @@ def test_sbb_route_allow_matches_spaceless_swiss_labels():
     # they must stay excluded or their bare-UIC stops duplicate SNCF stations.
     for name in ("S10", "EXT", "EV1", "PB", "SL", "GB", "R", "RE", "IC190A", "IC190"):
         assert not allowed(name), name
+
+
+def test_stop_id_brand_accepts_pattern_to_brand_table():
+    cfg = FeedConfig(
+        url="u", country="XX", license="t", route_allow=["."],
+        stop_id_brand={"^SP:OCETGV INOUI-": "TGV INOUI"},
+    )
+    assert cfg.stop_id_brand == {"^SP:OCETGV INOUI-": "TGV INOUI"}
+
+
+def test_stop_id_brand_and_stop_id_allow_are_mutually_exclusive():
+    # Both fields drive the same stop-id trip filter; two sources of truth would
+    # let them silently disagree.
+    with pytest.raises(ValueError, match="not both"):
+        FeedConfig(
+            url="u", country="XX", license="t", route_allow=["."],
+            stop_id_allow=["^SP:"], stop_id_brand={"^SP:": "TGV"},
+        )
