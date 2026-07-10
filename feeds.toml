@@ -92,3 +92,31 @@ route_allow = ["^Intercity", "^ICE?\\b", "^Eurostar", "^Nightjet"]
 # real 2026-07 export: caused ~900 unmerged-duplicate validation failures).
 # Omitting uic_regex here falls back to proximity+name matching, which
 # correctly collapses same-named stops within 500m into one station.
+
+[feeds.renfe]
+# Renfe long-distance GTFS (registration-free), inspected 2026-07-10.
+# https://ssl.renfe.com/gtransit/Fichero_AV_LD/google_transit.zip (776 KB).
+# Single agency: 1071 RENFE OPERADORA. Calendar: 2026-07-10..2026-12-08.
+# 1017 stops, 5-digit internal stop ids (NOT UIC — no uic_regex).
+# parent_station hierarchy present; names carry proper Spanish diacritics.
+# Route products by route_short_name (routes.txt row counts, 2026-07-10):
+#   136 MD, 110 REG.EXP., 102 REGIONAL, 77 AVE, 73 ALVIA, 51 Intercity,
+#   40 PROXIMDAD, 30 AVANT, 24 AVLO, 10 AVE INT, 7 EUROMED, 3 TRENCELTA,
+#   2 AVANT EXP
+# Excluded (medium-distance/commuter): AVANT, AVANT EXP, MD, REGIONAL,
+# REG.EXP., PROXIMDAD.
+# TRENCELTA (Vigo–Porto cross-border, ~2.5 h) IN by user decision — puts Porto
+# on the map.
+# License: Spanish public-sector reuse (Ley 37/2007 / RD 1495/2011,
+# data.renfe.com/legal) — reuse allowed with attribution "Renfe".
+# Position: LAST — name-ownership priority: renfe must not register first for
+# the 7 French stops it carries (that would re-key SNCF canonicals).
+url = "https://ssl.renfe.com/gtransit/Fichero_AV_LD/google_transit.zip"
+country = "ES"
+license = "Spanish public-sector reuse (attribution: Renfe)"
+# route_allow: patterns matched via re.search against route_short_name (when
+# set, else route_long_name). Anchored ^...$ because route_short_name is the
+# full product word in this feed.
+route_allow = ["^AVE$", "^AVE INT$", "^ALVIA$", "^AVLO$", "^Intercity$", "^EUROMED$", "^TRENCELTA$"]
+# No uic_regex: 5-digit internal stop ids (e.g. 17000 = Madrid-Chamartín),
+# not UIC codes. Falls back to proximity+name matching for cross-feed merges.

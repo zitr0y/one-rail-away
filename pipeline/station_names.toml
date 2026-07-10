@@ -16,3 +16,13 @@
 # overrides at all (2026-07-09).
 
 [names]
+# Barcelona-Sants: SNCF canonical name is "Barcelone-Sants" (French spelling);
+# display as the Spanish name used by the station itself. Renfe feed name:
+# "Barcelona" (parent of stop 71801). Verified 2026-07-10.
+"x:sncf:StopArea:OCE71718010" = "Barcelona-Sants"
+# Girona: SNCF canonical name is "GIRONA" (all-caps). Renfe feed name:
+# "Girona" (stop 79300). Verified 2026-07-10.
+"x:sncf:StopArea:OCE71793000" = "Girona"
+# Figueres-Vilafant: SNCF canonical name is "FIGUERES-VILAFANT" (all-caps).
+# Renfe feed name: "Figueres Vilafant" (stop 04307). Verified 2026-07-10.
+"x:sncf:StopArea:OCE71043075" = "Figueres-Vilafant"

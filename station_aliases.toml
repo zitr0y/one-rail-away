@@ -87,3 +87,11 @@
 "sncf:StopArea:OCE87745000" = "8774500"            # Bellegarde(-sur-Valserine) (sbb UIC)
 "sbb:Parentch:1:sloid:6302" = "x:db_fern:247258"   # St. Gallen
 "ns:stoparea:18158" = "x:db_fern:605507"           # Freiburg (Breisgau) Hbf
+
+# Renfe Barcelona-Sants (stop 71801, parent "Barcelona") does NOT normalize
+# equal to the SNCF canonical "Barcelone-Sants" (x:sncf:StopArea:OCE71718010):
+# "barcelona" != "barcelone". Girona and Figueres-Vilafant normalize equal and
+# merge via proximity (rule 3), no aliases needed.
+# Evidence: renfe stop 71801 (41.3791, 2.1397) vs SNCF OCE71718010 (41.379,
+# 2.14) — same station, <50 m apart. Verified 2026-07-10.
+"renfe:71801" = "x:sncf:StopArea:OCE71718010"

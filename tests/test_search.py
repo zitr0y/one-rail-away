@@ -127,14 +127,38 @@ def test_search_only_returns_stations_with_reach_file_on_disk(tmp_path):
 
 def _exonym_client(tmp_path):
     stations = [
-        {"id": "p1", "name": "Praha hl.n.", "lat": 50.08, "lon": 14.44,
-         "country": "CZ", "has_reach": True},
-        {"id": "k1", "name": "Köln Hbf", "lat": 50.94, "lon": 6.96,
-         "country": "DE", "has_reach": True},
-        {"id": "b1", "name": "Barcelone-Sants", "lat": 41.38, "lon": 2.14,
-         "country": "ES", "has_reach": True},
-        {"id": "w1", "name": "Wien Hbf", "lat": 48.19, "lon": 16.38,
-         "country": "AT", "has_reach": True},
+        {
+            "id": "p1",
+            "name": "Praha hl.n.",
+            "lat": 50.08,
+            "lon": 14.44,
+            "country": "CZ",
+            "has_reach": True,
+        },
+        {
+            "id": "k1",
+            "name": "Köln Hbf",
+            "lat": 50.94,
+            "lon": 6.96,
+            "country": "DE",
+            "has_reach": True,
+        },
+        {
+            "id": "b1",
+            "name": "Barcelona-Sants",
+            "lat": 41.38,
+            "lon": 2.14,
+            "country": "ES",
+            "has_reach": True,
+        },
+        {
+            "id": "w1",
+            "name": "Wien Hbf",
+            "lat": 48.19,
+            "lon": 16.38,
+            "country": "AT",
+            "has_reach": True,
+        },
     ]
     (tmp_path / "stations.json").write_text(json.dumps({"stations": stations}))
     for s in stations:
@@ -149,7 +173,15 @@ def _ids(resp):
 def test_search_english_exonym(tmp_path):
     c = _exonym_client(tmp_path)
     assert _ids(c.get("/api/stations/search", params={"q": "prague"})) == ["p1"]
+    # "barcelona" is now the native name; search finds it directly.
     assert _ids(c.get("/api/stations/search", params={"q": "barcelona"})) == ["b1"]
+
+
+def test_search_french_exonym_barcelone(tmp_path):
+    """After the EXONYMS flip, searching 'barcelone' (French spelling) still finds
+    Barcelona-Sants via the exonym table."""
+    c = _exonym_client(tmp_path)
+    assert _ids(c.get("/api/stations/search", params={"q": "barcelone"})) == ["b1"]
 
 
 def test_search_german_exonym_and_transliteration(tmp_path):
