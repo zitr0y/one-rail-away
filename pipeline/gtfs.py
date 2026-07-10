@@ -16,7 +16,7 @@ import io
 import logging
 import re
 import zipfile
-from collections.abc import Iterator
+from collections.abc import Iterable, Iterator
 from dataclasses import dataclass
 from datetime import date, timedelta
 from pathlib import Path
@@ -86,6 +86,26 @@ def _active_services(zf: zipfile.ZipFile, day: date) -> set[str]:
     return active
 
 
+def _brand_label(
+    stop_ids: Iterable[str],
+    brand_patterns: list[tuple[re.Pattern[str], str]],
+    headsign: str,
+) -> str | None:
+    """Brand+number label ("TGV INOUI 9704"), or None to keep the route label.
+
+    The brand comes from the first stop id (stop-sequence order) that matches
+    any brand pattern, patterns checked in config table order. An empty
+    headsign yields None: "TGV INOUI " would be worse than the opaque code.
+    """
+    if not headsign:
+        return None
+    for sid in stop_ids:
+        for pattern, brand in brand_patterns:
+            if pattern.search(sid):
+                return f"{brand} {headsign}"
+    return None
+
+
 def load_feed(
     zip_path: Path, cfg: FeedConfig, sample_date: date
 ) -> tuple[list[RawStop], list[Trip]]:
@@ -96,9 +116,18 @@ def load_feed(
     """
     allow = [re.compile(p) for p in cfg.route_allow]
     trip_allow = [re.compile(p) for p in cfg.trip_allow] if cfg.trip_allow else None
-    stop_id_allow = (
-        [re.compile(p) for p in cfg.stop_id_allow] if cfg.stop_id_allow else None
+    brand_patterns = (
+        [(re.compile(p), b) for p, b in cfg.stop_id_brand.items()]
+        if cfg.stop_id_brand
+        else None
     )
+    if cfg.stop_id_allow:
+        stop_id_allow = [re.compile(p) for p in cfg.stop_id_allow]
+    elif brand_patterns:
+        # stop_id_brand doubles as the stop-id trip filter (config forbids both).
+        stop_id_allow = [p for p, _ in brand_patterns]
+    else:
+        stop_id_allow = None
     with zipfile.ZipFile(zip_path) as zf:
         routes: dict[str, str] = {}
         for r in _rows(zf, "routes.txt"):
@@ -113,6 +142,7 @@ def load_feed(
 
         active = _active_services(zf, sample_date)
         trip_train: dict[str, str] = {}
+        trip_headsign: dict[str, str] = {}
         for t in _rows(zf, "trips.txt"):
             if t["route_id"] not in routes or t["service_id"] not in active:
                 continue
@@ -125,6 +155,8 @@ def load_feed(
                 trip_train[t["trip_id"]] = short
             else:
                 trip_train[t["trip_id"]] = routes[t["route_id"]]
+            if brand_patterns is not None and t["trip_id"] in trip_train:
+                trip_headsign[t["trip_id"]] = (t.get("trip_headsign") or "").strip()
 
         stop_times: dict[str, list[tuple[int, StopTime]]] = {}
         for st in _rows(zf, "stop_times.txt"):
@@ -193,6 +225,13 @@ def load_feed(
             # brand-carrying StopPoints), so filter before parent resolution.
             if stop_id_allow is not None and not any(_stop_id_passes(s.station) for s in kept):
                 continue
+            if brand_patterns is not None:
+                # Brand also lives in the RAW ids: label before parent resolution.
+                label = _brand_label(
+                    (s.station for s in kept), brand_patterns, trip_headsign.get(tid, "")
+                )
+                if label is not None:
+                    trip_train[tid] = label
             for s in kept:
                 if s.station not in resolved:
                     known = s.station in stop_recs
