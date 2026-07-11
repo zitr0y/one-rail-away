@@ -733,6 +733,25 @@ git commit -m "feat: renfe build — aliases, country/name overrides, regression
 
 ---
 
+### Task 3a (interposed 2026-07-10): GTFS reader robustness for fixed-width padded exports
+
+Task 3's `uv run ose build` hit `KeyError: 'end_date'` in `_active_services`: the
+real Renfe export (`data/raw/renfe.zip`) right-pads EVERY line — headers
+included — to a fixed ~350-byte width with trailing spaces, so the padded
+calendar.txt header turned the last fieldname into `"end_date" + spaces`.
+
+- [x] Wrote a failing test (`test_fixed_width_padded_feed_loads` in
+      `tests/test_gtfs.py`) building a minimal feed zip with every line padded
+      to 350 bytes; confirmed RED with the same `KeyError: 'end_date'`.
+- [x] Fixed `pipeline/gtfs.py::_rows` to strip fieldnames once and every string
+      cell value per row, preserving the streaming/generator design (no
+      materialization). Confirmed GREEN.
+- [x] Added an evidence comment to `feeds.toml`'s `[feeds.renfe]` noting the
+      padding quirk and the fix.
+- [x] Full suite green except the expected structural red
+      (`test_exonym_targets_exist`, which flips green after Task 3's build);
+      ruff check/format clean on touched files.
+
 ### Task 4: Compute + sample refresh + acceptance checks + counts diff
 
 **Files:**

@@ -47,7 +47,10 @@ EXONYMS = {
     "zuerich": "zurich",
     "geneva": "geneve",
     "genf": "geneve",
-    "barcelona": "barcelone",
+    # Flipped 2026-07-10: station renamed Barcelona-Sants (pipeline/station_names.toml
+    # override); French spelling "barcelone" now finds the Spanish-named station.
+    # Match count: barcelone still matches 1 station after rename (verified).
+    "barcelone": "barcelona",
     "brussels": "bruxelles",
     "bruessel": "bruxelles",
 }

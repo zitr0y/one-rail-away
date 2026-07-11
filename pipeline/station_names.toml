@@ -1,0 +1,28 @@
+# pipeline/station_names.toml
+#
+# Per-station display-name overrides, applied in build after merge + country
+# assignment. Mechanism mirrors station_countries.toml exactly: lives in
+# pipeline/ next to the code (same loading-trap comment — deriving from
+# feeds_path.parent silently loaded no overrides at all, 2026-07-09), keyed
+# by canonical station id.
+#
+# Every entry needs an evidence comment: real station name, why the merged
+# name is wrong (e.g. French spelling, SHOUTY caps, abbreviation). A key
+# whose id doesn't exist in the station registry fails the build (loud,
+# not silent — the Konstanz staleness trap).
+#
+# This file intentionally lives here, next to build.py, not at repo root next
+# to feeds.toml -- deriving the path from feeds_path.parent silently loaded no
+# overrides at all (2026-07-09).
+
+[names]
+# Barcelona-Sants: SNCF canonical name is "Barcelone-Sants" (French spelling);
+# display as the Spanish name used by the station itself. Renfe feed name:
+# "Barcelona" (parent of stop 71801). Verified 2026-07-10.
+"x:sncf:StopArea:OCE71718010" = "Barcelona-Sants"
+# Girona: SNCF canonical name is "GIRONA" (all-caps). Renfe feed name:
+# "Girona" (stop 79300). Verified 2026-07-10.
+"x:sncf:StopArea:OCE71793000" = "Girona"
+# Figueres-Vilafant: SNCF canonical name is "FIGUERES-VILAFANT" (all-caps).
+# Renfe feed name: "Figueres Vilafant" (stop 04307). Verified 2026-07-10.
+"x:sncf:StopArea:OCE71043075" = "Figueres-Vilafant"

@@ -19,16 +19,28 @@ implementation (established process convention).
 - Station `country` was assigned from the feed, not geography (Praha tagged "DE") —
   fixed in the bug batch; item E (greying) builds on the corrected field.
 
-## A. Add more national feeds (user item 2 — "Barcelona only shows France")
+## A. Add more national feeds — Renfe (ES) DONE 2026-07-10; Poland (PL) DONE 2026-07-10
 
-From Barcelona only the SNCF corridor shows; Madrid/Porto are unfindable because Spain/
-Portugal aren't ingested at all. Candidate feeds to research (all publish GTFS): Renfe
-(ES), CP (PT), Trenitalia/RFI (IT), PKP Intercity (PL), ČD (CZ), MÁV (HU), DSB (DK).
-Each new feed needs: entry in `feeds.toml` with evidence comments, route_allow filter
-for long-distance only, merge aliases for border stations (`station_aliases.toml`), and
-a full pipeline re-run. Expect merge/station-name collisions — read
-`.superpowers/sdd/progress.md` Session 4 + final-review-triage notes before touching
-merge code.
+Renfe long-distance feed ingested (backlog A, feed 1 of N). Madrid, Barcelona
+(merged onto SNCF canonical, renamed), Porto (via TRENCELTA) on the map. Products:
+AVE, AVE INT, ALVIA, AVLO, Intercity, EUROMED, TRENCELTA. Competitor check
+(2026-07-10): Ouigo España publishes GTFS on nap.transportes.gob.es; iryo does not
+publish public GTFS.
+
+Poland long-distance feed ingested (backlog A, feed 2 of N). Warszawa, Kraków,
+Gdańsk on the map. Products: EIP, EIC, IC, TLK, EC, EN, LEO, RJ. Denmark: an
+earlier note claimed the Rejseplanen GTFS is registration-gated — WRONG
+(direct URL HEAD-verified open 2026-07-11, 57.5 MB, no registration); Denmark
+stays a MEDIUM candidate for the next batch.
+
+New-feed recipe: `docs/superpowers/new-feed-recipe.md`. Research verdicts
+for remaining countries in the recipe doc.
+
+Spec: `docs/superpowers/specs/2026-07-10-renfe-feed-design.md`.
+Plan: `docs/superpowers/plans/2026-07-10-renfe-feed.md`.
+
+Spec (Poland): `docs/superpowers/specs/2026-07-10-poland-feed-design.md`.
+Plan (Poland): `docs/superpowers/plans/2026-07-10-poland-feed.md`.
 
 ## B. Multi-day sampling / service frequency (user item 6)
 
@@ -138,6 +150,20 @@ Spec: `docs/superpowers/specs/2026-07-10-journey-highlight-design.md`.
 
 ## Smaller deferred notes
 
+- **Ł-norm fix (from PL ingestion review 2026-07-11):** NFKD cannot decompose
+  stroke letters (ł/Ł, also ø, đ), so `_norm` drops them — "Główny" →
+  "gowny" never matches "Glowny". 33 of 44 PKP aliases exist ONLY for this.
+  Mapping ł→l (etc.) in `_norm`, guarded by the existing <500 m rule, would
+  auto-merge most and shrink the alias block. Document beside the ue/oe/ae
+  limitation in `_norm`'s docstring when done.
+- **Validator blind spot (renfe T3 + review 2026-07-11):** `validate()` only
+  flags <500 m duplicates whose names normalize EQUAL; the renfe French stops
+  ("Marseille St Charles" vs "Saint-Charles") passed a "clean" build and were
+  caught only by a manual any-name scan. Consider a <100 m any-name cross-feed
+  warning in validation.
+- **meta.json under-reports feeds:** `data/out/meta.json` lists only the five
+  original feeds — renfe/pkp were curl'd targeted (per recipe) and never enter
+  `fetch_meta.json`, which compute copies. Fix when meta drives any UI.
 - Search only finds stations that have reach files (`has_reach` gate in
   `server/app.py::search`) — fine today, revisit when coverage grows.
 - Cross-feed duplicate trains observed (ICE 82 Paris–Frankfurt appears in both SNCF

@@ -4,7 +4,7 @@ from datetime import date
 from pipeline.build import build
 from pipeline.compute import compute_all
 from tests.fixtures import make_fixture_feeds
-from tests.test_build import _write_feeds_toml
+from tests.test_build import _write_feeds_toml, empty_overrides
 
 SAMPLE = date(2026, 7, 14)
 
@@ -12,7 +12,16 @@ SAMPLE = date(2026, 7, 14)
 def test_compute_all_writes_reach_files(tmp_path):
     raw = tmp_path / "raw"
     cfgs = make_fixture_feeds(raw)
-    build(raw, tmp_path / "graph", _write_feeds_toml(tmp_path, cfgs), None, SAMPLE)
+    countries_toml, names_toml = empty_overrides(tmp_path)
+    build(
+        raw,
+        tmp_path / "graph",
+        _write_feeds_toml(tmp_path, cfgs),
+        None,
+        SAMPLE,
+        station_names_path=names_toml,
+        station_countries_path=countries_toml,
+    )
     compute_all(tmp_path / "graph", tmp_path / "out")
 
     reach = json.loads((tmp_path / "out" / "reach_1111111.json").read_text())
@@ -35,7 +44,16 @@ def test_compute_all_prunes_stale_reach_files(tmp_path):
     # disk, so a stale file resurrects a dead station in search. Prune it.
     raw = tmp_path / "raw"
     cfgs = make_fixture_feeds(raw)
-    build(raw, tmp_path / "graph", _write_feeds_toml(tmp_path, cfgs), None, SAMPLE)
+    countries_toml, names_toml = empty_overrides(tmp_path)
+    build(
+        raw,
+        tmp_path / "graph",
+        _write_feeds_toml(tmp_path, cfgs),
+        None,
+        SAMPLE,
+        station_names_path=names_toml,
+        station_countries_path=countries_toml,
+    )
     out = tmp_path / "out"
     out.mkdir()
     stale = out / "reach_9999999.json"
@@ -48,7 +66,16 @@ def test_compute_all_prunes_stale_reach_files(tmp_path):
 def test_compute_all_parallel_matches_serial(tmp_path):
     raw = tmp_path / "raw"
     cfgs = make_fixture_feeds(raw)
-    build(raw, tmp_path / "graph", _write_feeds_toml(tmp_path, cfgs), None, SAMPLE)
+    countries_toml, names_toml = empty_overrides(tmp_path)
+    build(
+        raw,
+        tmp_path / "graph",
+        _write_feeds_toml(tmp_path, cfgs),
+        None,
+        SAMPLE,
+        station_names_path=names_toml,
+        station_countries_path=countries_toml,
+    )
     compute_all(tmp_path / "graph", tmp_path / "serial", workers=1)
     compute_all(tmp_path / "graph", tmp_path / "par", workers=2)
 

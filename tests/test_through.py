@@ -80,5 +80,8 @@ def test_three_segment_chain_joins_fully():
     out = join_through_services([a, b, c])
     assert len(out) == 1
     assert [s.station for s in out[0].stops] == [
-        "venezia", "tarvisio", "villach", "klagenfurt",
+        "venezia",
+        "tarvisio",
+        "villach",
+        "klagenfurt",
     ]

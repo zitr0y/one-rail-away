@@ -2,6 +2,8 @@ import json
 import logging
 from datetime import date
 
+import pytest
+
 from pipeline.build import build, remap_trips, validate
 from pipeline.models import Station, StopTime, Trip
 from tests.fixtures import make_fixture_feeds
@@ -30,12 +32,32 @@ def _write_feeds_toml(tmp_path, cfgs):
     return p
 
 
+def empty_overrides(tmp_path):
+    """Empty countries+names override files: isolate fixture-graph tests from
+    the real pipeline/*.toml overrides, whose production ids are stale
+    against fixture stations (loud stale-id validation would kill the build)."""
+    countries = tmp_path / "empty_countries.toml"
+    countries.write_text("[countries]\n")
+    names = tmp_path / "empty_names.toml"
+    names.write_text("[names]\n")
+    return countries, names
+
+
 def test_build_produces_merged_graph(tmp_path):
     raw = tmp_path / "raw"
     cfgs = make_fixture_feeds(raw)
     feeds_toml = _write_feeds_toml(tmp_path, cfgs)
+    countries_toml, names_toml = empty_overrides(tmp_path)
     graph = tmp_path / "graph"
-    build(raw, graph, feeds_toml, aliases_path=None, sample_date=SAMPLE)
+    build(
+        raw,
+        graph,
+        feeds_toml,
+        aliases_path=None,
+        sample_date=SAMPLE,
+        station_names_path=names_toml,
+        station_countries_path=countries_toml,
+    )
 
     stations = json.loads((graph / "stations.json").read_text())
     ids = {s["id"] for s in stations["stations"]}
@@ -92,3 +114,92 @@ def test_validate_flags_nonsense():
     )
     problems = validate([bad_station], [bad_trip])
     assert any("0,0" in p for p in problems) and any("non-increasing" in p for p in problems)
+
+
+# --- station_names.toml display-name overrides --------------------------------
+#
+# pipeline/station_names.toml overrides canonical station display names after
+# merge + country assignment, mirroring station_countries.toml exactly
+# (same loading pattern, same stale-id validation). Spec:
+# docs/superpowers/specs/2026-07-10-renfe-feed-design.md §3.
+
+
+def test_station_names_override_applied(tmp_path):
+    """A station_names.toml entry replaces the merged display name."""
+    raw = tmp_path / "raw"
+    cfgs = make_fixture_feeds(raw)
+    feeds_toml = _write_feeds_toml(tmp_path, cfgs)
+
+    # Gamma Hbf's canonical id is "3333333" (UIC merge from fixtures).
+    names_toml = tmp_path / "station_names.toml"
+    names_toml.write_text('[names]\n"3333333" = "Gamma Zentral"\n')
+
+    countries_toml, _ = empty_overrides(tmp_path)
+
+    graph = tmp_path / "graph"
+    build(
+        raw,
+        graph,
+        feeds_toml,
+        aliases_path=None,
+        sample_date=SAMPLE,
+        station_names_path=names_toml,
+        station_countries_path=countries_toml,
+    )
+
+    stations = json.loads((graph / "stations.json").read_text())
+    gamma = next(s for s in stations["stations"] if s["id"] == "3333333")
+    assert gamma["name"] == "Gamma Zentral"
+
+
+def test_station_names_stale_id_fails_build(tmp_path):
+    """A station_names.toml key not matching any station id must fail the build."""
+    raw = tmp_path / "raw"
+    cfgs = make_fixture_feeds(raw)
+    feeds_toml = _write_feeds_toml(tmp_path, cfgs)
+
+    names_toml = tmp_path / "station_names.toml"
+    names_toml.write_text('[names]\n"GHOST_ID" = "Phantom"\n')
+
+    countries_toml, _ = empty_overrides(tmp_path)
+
+    graph = tmp_path / "graph"
+    with pytest.raises(SystemExit):
+        build(
+            raw,
+            graph,
+            feeds_toml,
+            aliases_path=None,
+            sample_date=SAMPLE,
+            station_names_path=names_toml,
+            station_countries_path=countries_toml,
+        )
+
+
+def test_station_countries_stale_id_fails_build(tmp_path):
+    """Align station_countries.toml: a stale override key must also fail the build.
+
+    Today station_countries.toml silently ignores unknown keys. The spec requires
+    BOTH override files to fail loudly on stale ids (Konstanz precedent).
+    """
+    raw = tmp_path / "raw"
+    cfgs = make_fixture_feeds(raw)
+    feeds_toml = _write_feeds_toml(tmp_path, cfgs)
+
+    # Write a station_countries.toml with a key that doesn't match any station.
+    countries_toml = tmp_path / "station_countries.toml"
+    countries_toml.write_text('[countries]\n"GHOST_ID" = "XX"\n')
+
+    _, names_toml = empty_overrides(tmp_path)
+
+    graph = tmp_path / "graph"
+    with pytest.raises(SystemExit):
+        build(
+            raw,
+            graph,
+            feeds_toml,
+            aliases_path=None,
+            sample_date=SAMPLE,
+            station_names_path=names_toml,
+            station_countries_path=countries_toml,
+        )

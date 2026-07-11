@@ -12,9 +12,7 @@ from pipeline.merge import PROXIMITY_M, _dist_m, _norm, merge_stations
 
 
 def _cfg(**kw) -> FeedConfig:
-    return FeedConfig(
-        url="u", country=kw.pop("country", "XX"), license="t", route_allow=[], **kw
-    )
+    return FeedConfig(url="u", country=kw.pop("country", "XX"), license="t", route_allow=[], **kw)
 
 
 # --- Brief tests -------------------------------------------------------------
@@ -34,11 +32,7 @@ def test_border_station_merges_via_uic():
     stations, mapping = merge_stations(per_feed, {})
     assert len(stations) == 1
     assert stations[0].id == "3333333" and stations[0].name == "Gamma Hbf"
-    assert (
-        mapping[("landia", "st:3333333")]
-        == mapping[("borderia", "bs-3333333")]
-        == "3333333"
-    )
+    assert mapping[("landia", "st:3333333")] == mapping[("borderia", "bs-3333333")] == "3333333"
 
 
 def test_proximity_fallback_merges_unmatched_ids():

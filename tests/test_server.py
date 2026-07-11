@@ -7,7 +7,7 @@ from pipeline.build import build
 from pipeline.compute import compute_all
 from server.app import create_app
 from tests.fixtures import make_fixture_feeds
-from tests.test_build import _write_feeds_toml
+from tests.test_build import _write_feeds_toml, empty_overrides
 
 
 @pytest.fixture(scope="module")
@@ -15,7 +15,16 @@ def client(tmp_path_factory):
     tmp = tmp_path_factory.mktemp("world")
     raw = tmp / "raw"
     cfgs = make_fixture_feeds(raw)
-    build(raw, tmp / "graph", _write_feeds_toml(tmp, cfgs), None, date(2026, 7, 14))
+    countries_toml, names_toml = empty_overrides(tmp)
+    build(
+        raw,
+        tmp / "graph",
+        _write_feeds_toml(tmp, cfgs),
+        None,
+        date(2026, 7, 14),
+        station_names_path=names_toml,
+        station_countries_path=countries_toml,
+    )
     compute_all(tmp / "graph", tmp / "out")
     return TestClient(create_app(tmp / "out"))
 

@@ -23,8 +23,21 @@ def test_sbb_route_allow_matches_spaceless_swiss_labels():
         return any(re.search(p, name) for p in patterns)
 
     for name in (
-        "IC", "IC1", "IC9", "IC51", "IC55", "IC61", "IR", "IR13", "IR36", "IR38", "IR75",
-        "ICE", "EC", "RJX", "NJ",
+        "IC",
+        "IC1",
+        "IC9",
+        "IC51",
+        "IC55",
+        "IC61",
+        "IR",
+        "IR13",
+        "IR36",
+        "IR38",
+        "IR75",
+        "ICE",
+        "EC",
+        "RJX",
+        "NJ",
     ):
         assert allowed(name), name
     # "IC190A"/"IC190" are French Intercites carried in the Swiss feed (agency 87_LEX);
@@ -35,7 +48,10 @@ def test_sbb_route_allow_matches_spaceless_swiss_labels():
 
 def test_stop_id_brand_accepts_pattern_to_brand_table():
     cfg = FeedConfig(
-        url="u", country="XX", license="t", route_allow=["."],
+        url="u",
+        country="XX",
+        license="t",
+        route_allow=["."],
         stop_id_brand={"^SP:OCETGV INOUI-": "TGV INOUI"},
     )
     assert cfg.stop_id_brand == {"^SP:OCETGV INOUI-": "TGV INOUI"}
@@ -46,8 +62,12 @@ def test_stop_id_brand_and_stop_id_allow_are_mutually_exclusive():
     # let them silently disagree.
     with pytest.raises(ValueError, match="not both"):
         FeedConfig(
-            url="u", country="XX", license="t", route_allow=["."],
-            stop_id_allow=["^SP:"], stop_id_brand={"^SP:": "TGV"},
+            url="u",
+            country="XX",
+            license="t",
+            route_allow=["."],
+            stop_id_allow=["^SP:"],
+            stop_id_brand={"^SP:": "TGV"},
         )
 
 
