@@ -96,10 +96,22 @@ describe("sortForClusterList", () => {
 });
 
 describe("drawStarIcon", () => {
-  it("returns an HTMLCanvasElement of the requested size", () => {
-    const canvas = drawStarIcon(30);
-    expect(canvas).toBeInstanceOf(HTMLCanvasElement);
-    expect(canvas.width).toBe(30);
-    expect(canvas.height).toBe(30);
+  // map.addImage accepts {width, height, data} but NOT a raw canvas element —
+  // passing a canvas throws at runtime and aborts the whole map load handler.
+  it("returns addImage-compatible {width, height, data} of the requested size", () => {
+    const img = drawStarIcon(30);
+    expect(img.width).toBe(30);
+    expect(img.height).toBe(30);
+    expect(img.data).toBeInstanceOf(Uint8ClampedArray);
+    expect(img.data.length).toBe(30 * 30 * 4);
+  });
+
+  it("paints a grey star center and transparent corners", () => {
+    const img = drawStarIcon(30);
+    const at = (x: number, y: number) => (y * 30 + x) * 4;
+    expect(img.data[at(15, 15) + 3]).toBe(255); // center opaque
+    expect(img.data[at(15, 15)]).toBe(156); // grey fill
+    expect(img.data[at(0, 0) + 3]).toBe(0); // corner transparent
+    expect(img.data[at(29, 29) + 3]).toBe(0);
   });
 });

@@ -114,7 +114,7 @@ export default function MapView(props: Props) {
           "circle-stroke-width": 1, "circle-stroke-color": "#ffffff",
         },
       });
-      m.addImage("star-icon", drawStarIcon(30) as any, { pixelRatio: 2 });
+      m.addImage("star-icon", drawStarIcon(30), { pixelRatio: 2 });
       m.addLayer({
         id: "capital-stars", type: "symbol", source: "capitals",
         layout: {
