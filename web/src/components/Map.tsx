@@ -7,6 +7,7 @@ import { pickFeature } from "../lib/pickfeature";
 import { veilTooltip, showVeilTooltip } from "../lib/coverage";
 import { api } from "../lib/api";
 import { dotRadiusExpression, starSizeExpression, drawStarIcon } from "../lib/dots";
+import { styleUrl } from "../lib/mapstyle";
 import type { ReachFile, Station } from "../lib/types";
 
 const CLICK_LAYERS = ["reach-dots", "capital-stars", "all-stations"];
@@ -35,7 +36,7 @@ export default function MapView(props: Props) {
     const coveragePromise = api.getCoverage();
     const m = new maplibregl.Map({
       container: container.current!,
-      style: "https://tiles.openfreemap.org/styles/positron",
+      style: styleUrl("light"),
       center: [8, 50],
       zoom: 4.5,
     });
