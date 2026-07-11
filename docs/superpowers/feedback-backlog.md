@@ -82,6 +82,28 @@ physically share the LGV corridor but our lines don't. Fix directions to brainst
 (b) algorithmic edge bundling, (c) force lines through nearest corridor waypoints. Big
 visual win, medium-to-large effort. Related to D (map styling).
 
+## K. Alternative / supplementary data sources (added 2026-07-11)
+
+User pointer via chronotrains' attribution: "data from the Deutsche Bahn through
+Direkt Bahn Guru … Night train data from Back On Track." Research candidates:
+- **FlixTrain / FlixBus** — Flix publishes open GTFS; FlixTrain would add real
+  long-distance coverage in DE, FlixBus could be a separate (bus) layer or out
+  of scope — decide product-wise first.
+- **Direkt Bahn Guru** (direct-connection dataset derived from DB) — possible
+  cross-check or gap-filler for direct connections.
+- **Back On Track** night-train data — could tag/add night trains (relates to
+  the seasonal-trains discussion in item B).
+Research first (licensing, format, freshness), then per-source brainstorm.
+
+## L. Fade off-trajectory stations when a journey is selected (added 2026-07-11)
+
+When a specific trajectory is selected, non-selected LINES already dim to 0.04
+(shipped 2026-07-11) — but station dots/reach-dots not on the selected journey
+stay at full opacity. Dim those too (grey all-stations dots and non-journey
+destination dots), so the selected journey pops. Likely a small change in the
+same shape as baseLineOpacity: data-driven circle-opacity keyed on the
+selected journey's station ids (origin, legs' stops, destination).
+
 ## Smaller deferred notes
 
 - **Ł-norm fix (from PL ingestion review 2026-07-11):** NFKD cannot decompose
