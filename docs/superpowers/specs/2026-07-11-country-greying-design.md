@@ -1,0 +1,75 @@
+# Country greying — design (backlog item E)
+
+**Date:** 2026-07-11
+**Status:** approved by user (treatment, data flow, binary-state decision, and all
+three design sections confirmed in brainstorm)
+**Backlog:** item E in `docs/superpowers/feedback-backlog.md` — make it visually
+clear which countries are not yet covered, WITHOUT implying unreachability.
+
+## Decisions (user, 2026-07-11)
+
+- **Treatment:** translucent grey veil over non-covered countries + hover tooltip
+  ("<Country> — not yet in our system") + one legend line. Styling is provisional
+  until branding (backlog D) lands.
+- **Data flow:** the pipeline emits `data/out/coverage.json`; web fetches it via
+  the server. Adding a feed auto-un-greys its country on the next pipeline run —
+  zero web changes (the A interaction the backlog asks for).
+- **Binary state:** covered = a feed in `feeds.toml` declares that `country`.
+  No "partial" state for leak-served countries (Belgium, Czechia, Italy…) —
+  their colored reachability dots render ON TOP of the veil, which itself
+  demonstrates greyed ≠ unreachable. YAGNI.
+
+## Design
+
+### 1. Pipeline: `data/out/coverage.json`
+
+- Source polygons: `pipeline/assets/countries_europe_50m.geojson` (42 features,
+  content-verified Natural Earth 50m subset already used for country assignment).
+- Covered set: `{cfg.country for cfg in feeds.toml}` — read from `feeds.toml` at
+  pipeline time, NOT from `fetch_meta.json` (known to under-report curl'd feeds;
+  see backlog note). Today that is {DE, FR, AT, CH, NL, ES, PL}.
+- Output: GeoJSON FeatureCollection; each feature keeps its geometry, ISO code,
+  and display-name property (verify the asset's name property key and carry it
+  through), plus `covered: true|false`.
+- Which stage writes it: whichever stage owns `data/out` outputs by existing
+  convention (compute's output pass, like `meta.json`) — the plan pins this
+  after reading the code. It must survive the stale-reach-file pruning untouched.
+- TDD with fixture feeds: fixture countries flagged covered, all others not,
+  feature count preserved, name property present.
+
+### 2. Server: `GET /coverage`
+
+Serves `data/out/coverage.json` exactly like the other data/out artifacts (same
+FileResponse/caching pattern as `stations.json`). 404 if the pipeline hasn't
+produced it (consistent with the server's thin-layer behavior). Nothing else.
+
+### 3. Web: veil layer, tooltip, legend
+
+- One fetch on load; one geojson source; one `fill` layer inserted BELOW all
+  existing station/line layers, filter `covered == false`.
+- Provisional paint: grey, fill-opacity ≈ 0.25 (revisit at branding).
+- Hover tooltip: "<Name> — not yet in our system". The veil has NO click
+  handler, and the tooltip shows only when no station/dot feature is under the
+  cursor — the single-click selection precedence in `web/src/lib/pickfeature.ts`
+  is untouched (regression risk called out for review).
+- Legend line (status bar), exact copy: "Grey countries: not yet in our system".
+- Pure logic (veil filter expression, tooltip-text builder, hover-precedence
+  predicate) lives in a new `web/src/lib/coverage.ts` with unit tests; Map.tsx
+  wiring follows the existing source/layer/effect patterns.
+
+## Acceptance checks (data/API level — user does visual checks)
+
+1. `coverage.json` exists after a pipeline run: 42 features, `covered` true for
+   exactly the feeds.toml countries (post-ES/PL merge: DE, FR, AT, CH, NL, ES,
+   PL), false otherwise, name property present on every feature.
+2. `GET /coverage` returns 200 + valid GeoJSON; 404 when the file is absent.
+3. Web unit tests green for coverage.ts helpers; full pytest + web tests + ruff
+   green.
+4. No new click handlers on the veil layer (code-level check) — selection
+   behavior unchanged.
+
+## Out of scope
+
+Partial-coverage states, veil styling polish (branding D), any change to how
+countries are assigned to stations (done, geo.py), Denmark or other new feeds
+(backlog A batch 3).
