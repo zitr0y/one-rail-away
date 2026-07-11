@@ -64,7 +64,11 @@ Station dots are tiny and hard to click. User ideas, in their words:
 The union idea has data-model implications (city entity above stations) — brainstorm
 before building.
 
-## D. Branding / map styling (user item 7)
+## D. Branding / map styling (user item 7) — SPEC DONE 2026-07-11
+
+Brainstormed and specced: `docs/superpowers/specs/2026-07-11-branding-design.md`
+(mascot "train on the line", viridis-reversed buckets, EU-duotone brand chrome,
+warm-paper + deep-night basemaps, Barlow). Delete this item when Phase 1 ships.
 
 Water should read differently from stations; overall corporate identity still needed.
 User's sketch: EU-train theme, cute EU train in the logo that could "bend along the
