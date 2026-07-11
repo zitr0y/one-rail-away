@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { bestJourney, chaikin, destinationsGeoJSON, linesGeoJSON, timeBucket } from "./geojson";
+import { bestJourney, chaikin, destinationsGeoJSON, journeyLegPaths, linesGeoJSON, timeBucket } from "./geojson";
 import type { ReachFile, Station } from "./types";
 
 const S = (id: string, lon: number): Station =>
@@ -101,5 +101,38 @@ describe("linesGeoJSON per-leg smoothing", () => {
     const c = stationsById.get("C")!;
     const expected = chaikin([[a.lon, a.lat], [b.lon, b.lat], [c.lon, c.lat]], 2);
     expect(feature.geometry.coordinates).toEqual(expected);
+  });
+});
+
+describe("journeyLegPaths", () => {
+  const stations = new Map([
+    ["a", { id: "a", name: "A", lat: 0, lon: 0, country: "DE", has_reach: true }],
+    ["b", { id: "b", name: "B", lat: 0, lon: 1, country: "DE", has_reach: true }],
+    ["c", { id: "c", name: "C", lat: 1, lon: 1, country: "DE", has_reach: true }],
+  ]);
+  const journey = {
+    trains: 2, duration_min: 100,
+    legs: [
+      { train: "ICE 1", dep: "08:00", arr: "09:00", from: "a", to: "b", via: [] },
+      { train: "ICE 2", dep: "09:10", arr: "10:00", from: "b", to: "c", via: [] },
+    ],
+  };
+
+  it("returns one chaikin(2)-smoothed path per leg", () => {
+    const paths = journeyLegPaths(journey, stations);
+    expect(paths).toHaveLength(2);
+    expect(paths[0]).toEqual(chaikin([[0, 0], [1, 0]], 2));
+    expect(paths[1]).toEqual(chaikin([[1, 0], [1, 1]], 2));
+  });
+
+  it("is exactly the geometry linesGeoJSON renders", () => {
+    const reachData = {
+      origin: "a", computed_at: "", sample_date: "",
+      destinations: [{ id: "c", direct_per_day: 0, journeys: [journey] }],
+    };
+    const line = linesGeoJSON(reachData, stations, 3, 1440).features[0];
+    const paths = journeyLegPaths(journey, stations);
+    const flattened = paths.flatMap((c, i) => (i === 0 ? c : c.slice(1)));
+    expect(line.geometry.coordinates).toEqual(flattened);
   });
 });

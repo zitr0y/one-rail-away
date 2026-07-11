@@ -64,21 +64,31 @@ export function destinationsGeoJSON(
   return { type: "FeatureCollection", features };
 }
 
+/** Per-leg chaikin(2)-smoothed coordinate paths for a journey — shared by
+ *  linesGeoJSON and the mascot rider (ride.ts) so the two can never drift.
+ *  Smoothing is per leg so transfer corners stay sharp: a hairpin via Paris
+ *  otherwise rounds into a U whose apex floats over empty countryside
+ *  (user report 2026-07-09). */
+export function journeyLegPaths(
+  j: Journey, stationsById: Map<string, Station>,
+): [number, number][][] {
+  return j.legs
+    .map((leg) =>
+      [leg.from, ...leg.via, leg.to]
+        .map((id) => stationsById.get(id))
+        .filter((s): s is Station => s !== undefined)
+        .map((s): [number, number] => [s.lon, s.lat]))
+    .filter((c) => c.length >= 1)
+    .map((c) => chaikin(c, 2));
+}
+
 export function linesGeoJSON(
   reach: ReachFile, stationsById: Map<string, Station>, maxTrains: MaxTrains, maxMinutes: number,
 ): FC<LineString> {
   const features: Feature<LineString>[] = [];
   for (const { d, j } of shown(reach, maxTrains, maxMinutes)) {
-    const legCoords = j.legs.map((leg) =>
-      [leg.from, ...leg.via, leg.to]
-        .map((id) => stationsById.get(id))
-        .filter((s): s is Station => s !== undefined)
-        .map((s): [number, number] => [s.lon, s.lat]));
-    // Smooth per leg so transfer corners stay sharp: a hairpin via Paris otherwise
-    // rounds into a U whose apex floats over empty countryside (user report 2026-07-09).
-    const coords = legCoords
-      .filter((c) => c.length >= 1)
-      .flatMap((c, i) => (i === 0 ? chaikin(c, 2) : chaikin(c, 2).slice(1)));
+    const coords = journeyLegPaths(j, stationsById)
+      .flatMap((c, i) => (i === 0 ? c : c.slice(1)));
     if (coords.length < 2) continue;
     features.push({
       type: "Feature",
