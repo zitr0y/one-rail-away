@@ -16,6 +16,7 @@ from concurrent.futures import ProcessPoolExecutor
 from datetime import UTC, datetime
 from pathlib import Path
 
+from pipeline.capitals import load_capitals
 from pipeline.coverage import build_coverage, covered_from_feeds
 from pipeline.models import Destination, ReachFile, Station, Trip
 from pipeline.raptor import compute_reachability
@@ -108,13 +109,22 @@ def compute_all(
             for station_id, n in pool.map(_compute_one, tasks, chunksize=8):
                 results[station_id] = n
 
+    capital_ids, cap_warnings = load_capitals(
+        Path("capitals.toml"), stations
+    )
+    for w in cap_warnings:
+        print(w)
+
     written: set[str] = set()
     for station in stations:
         n = results[station.id]
+        station.n_dest = n
         if n:
             station.has_reach = True
             written.add(f"reach_{station.id}.json")
             print(f"reach_{station.id}.json: {n} destinations")
+        if station.id in capital_ids:
+            station.is_capital = True
 
     for path in out_dir.glob("reach_*.json"):
         if path.name not in written:

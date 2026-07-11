@@ -33,6 +33,9 @@ def client(tmp_path_factory):
 def test_stations_endpoint(client):
     stations = client.get("/api/stations").json()["stations"]
     assert {s["id"] for s in stations} == {"1111111", "2222222", "3333333", "4444444"}
+    alpha = next(s for s in stations if s["id"] == "1111111")
+    assert "n_dest" in alpha
+    assert "is_capital" in alpha
 
 
 def test_reach_endpoint(client):

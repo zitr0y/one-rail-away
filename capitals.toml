@@ -1,0 +1,14 @@
+# Capital cities: ISO 2-letter country code → exact canonical station name.
+# Matched by exact name AND country during `ose compute`; an entry that matches
+# no station logs a warning and is skipped (never fails the build).
+# Edit taste here — the pipeline just flags `is_capital: true`.
+[capitals]
+DE = "Berlin Hbf"
+FR = "Paris Gare du Nord"
+AT = "Wien Hbf"
+NL = "Amsterdam Centraal"
+ES = "Madrid-Puerta de Atocha-Almudena Grandes"
+PL = "Warszawa Centralna"
+CH = "Bern"
+BE = "Bruxelles Midi"
+CZ = "Praha hl.n."
