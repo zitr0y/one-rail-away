@@ -10,3 +10,13 @@ export interface ReachFile {
   origin: string; computed_at: string; sample_date: string; destinations: Destination[];
 }
 export interface Meta { computed_at: string; sample_date: string }
+
+export interface CoverageFeature {
+  type: "Feature";
+  geometry: unknown;
+  properties: { ISO_A2_EH: string; name: string; covered: boolean };
+}
+export interface CoverageCollection {
+  type: "FeatureCollection";
+  features: CoverageFeature[];
+}
