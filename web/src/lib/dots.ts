@@ -22,6 +22,20 @@ export function dotRadiusExpression(): ExpressionSpecification {
 }
 
 /**
+ * Reach-destination dots share the hub scale but keep a higher floor so small
+ * destinations stay clickable (they sit above the all-stations layer).
+ */
+export function reachDotRadiusExpression(): ExpressionSpecification {
+  return [
+    "interpolate",
+    ["linear"],
+    ["sqrt", ["max", ["get", "n_routes"], 0]],
+    0, 4.5,
+    Math.sqrt(74), 9,
+  ] as ExpressionSpecification;
+}
+
+/**
  * Data-driven icon-size for capital stars: same sqrt(n_routes) hub scale as
  * the dots, so Wien Hbf (74 routes) reads bigger than a quiet capital.
  * 0.55–1.05 of the 22px logical star = ~12px to ~23px.

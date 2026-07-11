@@ -53,11 +53,14 @@ body { margin: 0; font-family: "Barlow", system-ui, sans-serif; }
   font-weight: 700;
   font-size: 20px;
 }
+.header-wordmark-eu {
+  color: #ffcc00;
+}
 .header-tagline {
   margin-left: auto;
   color: #ffcc00;
   font-style: italic;
-  font-size: 12px;
+  font-size: 14px;
 }
 .panel {
   position: absolute;

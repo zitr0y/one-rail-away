@@ -6,7 +6,7 @@ import { baseLineOpacity, selectedLineFilter, stationOpacityExpression } from ".
 import { pickFeature } from "../lib/pickfeature";
 import { veilTooltip, showVeilTooltip } from "../lib/coverage";
 import { api } from "../lib/api";
-import { dotRadiusExpression, starSizeExpression, drawStarIcon } from "../lib/dots";
+import { dotRadiusExpression, reachDotRadiusExpression, starSizeExpression, drawStarIcon } from "../lib/dots";
 import { styleUrl } from "../lib/mapstyle";
 import type { ReachFile, Station } from "../lib/types";
 
@@ -50,7 +50,7 @@ export default function MapView(props: Props) {
         id: "all-stations", type: "circle", source: "all-stations",
         paint: {
           "circle-radius": dotRadiusExpression() as never,
-          "circle-color": "#9ca3af", "circle-opacity": 0.7,
+          "circle-color": "#4A74C9", "circle-opacity": 0.7,
         },
       });
       m.addLayer(
@@ -80,14 +80,14 @@ export default function MapView(props: Props) {
         filter: selectedLineFilter(null) as never,
         paint: {
           "line-color": bucketColor as never,
-          "line-width": 4,
+          "line-width": 5.5,
           "line-opacity": 1,
         },
       });
       m.addLayer({
         id: "reach-dots", type: "circle", source: "reach-dots",
         paint: {
-          "circle-radius": 5.5, "circle-color": bucketColor as never,
+          "circle-radius": reachDotRadiusExpression() as never, "circle-color": bucketColor as never,
           "circle-stroke-width": 1, "circle-stroke-color": "#F2EFE9",
         },
       });

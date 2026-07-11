@@ -32,7 +32,7 @@ if (typeof globalThis.document === "undefined") {
   } as unknown as Document;
 }
 
-import { dotRadiusExpression, starSizeExpression, drawStarIcon } from "./dots";
+import { dotRadiusExpression, reachDotRadiusExpression, starSizeExpression, drawStarIcon } from "./dots";
 
 describe("dotRadiusExpression", () => {
   it("returns a MapLibre expression array", () => {
@@ -48,6 +48,15 @@ describe("dotRadiusExpression", () => {
     const stops = expr.slice(3); // after interpolation type + input
     expect(stops[0]).toBe(0);
     expect(stops[1]).toBe(2); // most dots stay small (p50 n_routes = 3)
+    expect(stops[stops.length - 1]).toBe(9);
+  });
+
+  it("sizes reach dots by n_routes with a clickability floor of 4.5", () => {
+    const expr = reachDotRadiusExpression();
+    expect(JSON.stringify(expr)).toContain('"n_routes"');
+    const stops = expr.slice(3);
+    expect(stops[0]).toBe(0);
+    expect(stops[1]).toBe(4.5); // floor: never smaller than near the old uniform 5.5
     expect(stops[stops.length - 1]).toBe(9);
   });
 

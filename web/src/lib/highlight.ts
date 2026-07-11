@@ -7,8 +7,10 @@ export function selectedLineFilter(id: string | null): SelectedLineFilter {
   return ["==", ["get", "id"], id ?? ""];
 }
 
+// Lines dim harder (0.05) than station dots (0.08): dots must stay findable as
+// click targets while a journey is selected (user calibration 2026-07-11).
 export function baseLineOpacity(hasSelection: boolean): number {
-  return hasSelection ? 0.08 : 0.75;
+  return hasSelection ? 0.05 : 0.75;
 }
 
 export type StationOpacityExpression = number | ["match", ["get", "id"], string[], number, number];

@@ -75,8 +75,8 @@ export default function App() {
                onSelectOrigin={selectOrigin} onSelectDestination={setSelectedDest}
                onEmptyClick={onEmptyClick} />
       <header className="header-bar">
-        <img src="/logo-mascot.svg" alt="" className="header-mascot" />
-        <span className="header-wordmark">onestopeurope</span>
+        <img src="/logo-mascot-light.svg" alt="" className="header-mascot" />
+        <span className="header-wordmark">onestop<span className="header-wordmark-eu">europe</span></span>
         <span className="header-tagline">nonstopeurope with onestopeurope</span>
       </header>
       <aside className="panel">

@@ -64,13 +64,23 @@ Station dots are tiny and hard to click. User ideas, in their words:
 The union idea has data-model implications (city entity above stations) — brainstorm
 before building.
 
-## D. Branding / map styling (user item 7) — SPEC DONE 2026-07-11
+## D. Branding / map styling (user item 7) — PHASE 1 SHIPPED 2026-07-11
 
-Brainstormed and specced: `docs/superpowers/specs/2026-07-11-branding-design.md`
-(mascot "train on the line", viridis-reversed buckets, EU-duotone brand chrome,
-warm-paper + deep-night basemaps, Barlow). Delete this item when Phase 1 ships.
+Spec: `docs/superpowers/specs/2026-07-11-branding-design.md`. Phase 1 (light
+identity) + first user calibration round shipped 2026-07-11. Remaining:
 
-Water should read differently from stations; overall corporate identity still needed.
+- **Phase 2: dark mode (deep night)** — user asked for it during calibration
+  ("dark mode?"); spec §Map styling has the tokens. Next: agy-Opus plan in the
+  house format, then Flash execution (same pipeline as Phase 1,
+  `docs/superpowers/plans/2026-07-11-branding-phase1.md` is the template).
+- **Mascot riding the selected journey line** — explicit user request 2026-07-11
+  ("the actual selected journey line … should have the mascot riding it :))").
+  Animated marker (mascot SVG) moving along the selected reach-line geometry.
+  Note: `web/src/lib/highlight.ts` header already marks the thick-line treatment
+  provisional pending exactly this (backlog item J lineage). Bend-along-route
+  (spec Phase 3) can build on it later.
+- Open user-judged tuning: bucket-0 yellow on cream (spec TUNING POINT) — user
+  has not yet objected; revisit after more map time.
 User's sketch: EU-train theme, cute EU train in the logo that could "bend along the
 chosen route if exists". Map style should follow the identity (OpenFreeMap styles can
 be customized). Tagline is fixed: "nonstopeurope with onestopeurope".

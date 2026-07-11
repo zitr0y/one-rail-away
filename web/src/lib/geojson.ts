@@ -57,6 +57,7 @@ export function destinationsGeoJSON(
       properties: {
         id: d.id, name: s.name, duration_min: j.duration_min, trains: j.trains,
         bucket: timeBucket(j.duration_min), direct_per_day: d.direct_per_day,
+        n_routes: s.n_routes ?? 0,
       },
     });
   }

@@ -13,7 +13,7 @@ describe("selectedLineFilter", () => {
 
 describe("baseLineOpacity", () => {
   it("dims the other lines strongly while a journey is selected", () => {
-    expect(baseLineOpacity(true)).toBe(0.08);
+    expect(baseLineOpacity(true)).toBe(0.05);
   });
 
   it("keeps normal opacity when nothing is selected", () => {

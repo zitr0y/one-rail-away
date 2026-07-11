@@ -33,6 +33,10 @@ describe("geojson builders", () => {
     const fc = destinationsGeoJSON(reach, stationsById, 1, Infinity);
     expect(fc.features.map((f) => f.properties.id)).toEqual(["C"]);
   });
+  it("carries n_routes for reach-dot sizing, defaulting to 0", () => {
+    const fc = destinationsGeoJSON(reach, stationsById, 3, Infinity);
+    for (const f of fc.features) expect(f.properties.n_routes).toBe(0);
+  });
   it("max-minutes filter applies", () => {
     const fc = destinationsGeoJSON(reach, stationsById, 3, 130);
     expect(fc.features.map((f) => f.properties.id)).toEqual(["C"]);
