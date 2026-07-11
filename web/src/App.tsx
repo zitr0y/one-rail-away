@@ -35,11 +35,6 @@ export default function App() {
     setSelectedDest(null);
   }
 
-  function onStartHere() {
-    if (!selectedDest) return;
-    selectOrigin(selectedDest);
-  }
-
   function swapSelection() {
     if (!selectedDest || !reach) return;
     const destId = selectedDest;
@@ -93,7 +88,7 @@ export default function App() {
         <JourneyCard origin={origin} destination={stationsById.get(dest.id)!} dest={dest}
                      maxTrains={maxTrains} stationsById={stationsById}
                      onClose={() => setSelectedDest(null)}
-                     onStartHere={onStartHere} onSwap={swapSelection} />
+                     onSwap={swapSelection} />
       )}
       {origin && (
         <div className="status-bar">

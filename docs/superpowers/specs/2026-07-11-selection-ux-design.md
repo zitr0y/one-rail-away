@@ -13,11 +13,10 @@ new origin by clicking.
 
 ### 1. Journey-card actions
 
-`web/src/components/JourneyCard.tsx` gains two buttons beside the existing ×:
+`web/src/components/JourneyCard.tsx` gains one button beside the existing ×
+(a "Start here" promote button shipped briefly and was removed on user feedback
+2026-07-11 — Swap covers the need):
 
-- **"Start here"** — promotes the shown destination B to the new origin:
-  exactly `selectOrigin(B)` (loads B's full fan, journey card closes because
-  `selectedDest` resets).
 - **"⇄ Swap"** — origin A + dest B become origin B + dest A: load B's reach,
   then select A as destination **iff A is among B's destinations**; otherwise
   fall back to origin B with no destination selected (no error shown).
