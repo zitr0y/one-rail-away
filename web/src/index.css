@@ -62,6 +62,17 @@ body { margin: 0; font-family: "Barlow", system-ui, sans-serif; }
   font-style: italic;
   font-size: 14px;
 }
+.theme-toggle {
+  margin-left: 12px;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+  padding: 4px 6px;
+  border-radius: 6px;
+}
+.theme-toggle:hover { background: rgb(255 255 255 / 0.12); }
 .panel {
   position: absolute;
   top: 64px;       /* below the header bar */

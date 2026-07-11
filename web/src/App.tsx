@@ -10,6 +10,8 @@ import { api } from "./lib/api";
 import type { MaxTrains } from "./lib/geojson";
 import { statusText } from "./lib/status";
 import type { ReachFile, Station } from "./lib/types";
+import { useTheme } from "./lib/theme";
+
 
 export default function App() {
   const [stations, setStations] = useState<Station[]>([]);
@@ -18,6 +20,7 @@ export default function App() {
   const [maxMinutes, setMaxMinutes] = useState(1440);
   const [selectedDest, setSelectedDest] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [theme, toggleTheme] = useTheme();
 
   const stationsById = useMemo(() => new Map(stations.map((s) => [s.id, s])), [stations]);
 
@@ -78,6 +81,10 @@ export default function App() {
         <img src="/logo-mascot-light.svg" alt="" className="header-mascot" />
         <span className="header-wordmark">onestop<span className="header-wordmark-eu">europe</span></span>
         <span className="header-tagline">nonstopeurope with onestopeurope</span>
+        <button className="theme-toggle" onClick={toggleTheme}
+                aria-label={theme === "light" ? "Switch to dark mode" : "Switch to light mode"}>
+          {theme === "light" ? "🌙" : "☀️"}
+        </button>
       </header>
       <aside className="panel">
         <SearchBox onSelect={(s) => selectOrigin(s.id)} />
