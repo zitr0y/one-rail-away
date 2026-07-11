@@ -15,3 +15,29 @@ export const BRAND = {
   navy: "#003399",
   gold: "#FFCC00",
 } as const;
+
+export interface ThemeTokens {
+  stationDot: string;
+  reachDotStroke: string;
+  veil: string;
+  riderStroke: string;
+  riderHollow: string;
+}
+
+export function themeTokens(theme: "light" | "dark"): ThemeTokens {
+  return theme === "dark"
+    ? {
+        stationDot: "#5B7FDB",
+        reachDotStroke: "#101C36",
+        veil: "#6B7590",
+        riderStroke: "#F2EFE9",
+        riderHollow: "#101C36",
+      }
+    : {
+        stationDot: "#003399",
+        reachDotStroke: "#F2EFE9",
+        veil: "#9c9589",
+        riderStroke: "#003399",
+        riderHollow: "#F2EFE9",
+      };
+}

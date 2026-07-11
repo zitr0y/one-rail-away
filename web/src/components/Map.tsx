@@ -1,7 +1,9 @@
 import maplibregl from "maplibre-gl";
 import { useEffect, useRef } from "react";
 import { destinationsGeoJSON, linesGeoJSON, bestJourney, type MaxTrains } from "../lib/geojson";
-import { BUCKET_COLORS } from "../lib/colors";
+import { BUCKET_COLORS, themeTokens } from "../lib/colors";
+import { mergeCustomStyle } from "../lib/themeswap";
+import type { Theme } from "../lib/theme";
 import { baseLineOpacity, selectedLineFilter, stationOpacityExpression } from "../lib/highlight";
 import { pickFeature } from "../lib/pickfeature";
 import { veilTooltip, showVeilTooltip } from "../lib/coverage";
@@ -21,6 +23,7 @@ interface Props {
   maxTrains: MaxTrains;
   maxMinutes: number;
   selectedDest: string | null;
+  theme: Theme;
   onSelectOrigin: (id: string) => void;
   onSelectDestination: (id: string) => void;
   onEmptyClick: () => void;
@@ -36,11 +39,12 @@ export default function MapView(props: Props) {
     const coveragePromise = api.getCoverage();
     const m = new maplibregl.Map({
       container: container.current!,
-      style: styleUrl("light"),
+      style: styleUrl(props.theme),
       center: [8, 50],
       zoom: 4.5,
     });
     m.on("load", () => {
+      const tokens = themeTokens(propsRef.current.theme);
       m.addSource("all-stations", { type: "geojson", data: EMPTY as never });
       m.addSource("reach-lines", { type: "geojson", data: EMPTY as never });
       m.addSource("reach-dots", { type: "geojson", data: EMPTY as never });
@@ -50,7 +54,7 @@ export default function MapView(props: Props) {
         id: "all-stations", type: "circle", source: "all-stations",
         paint: {
           "circle-radius": dotRadiusExpression() as never,
-          "circle-color": "#003399", "circle-opacity": 0.7,
+          "circle-color": tokens.stationDot, "circle-opacity": 0.7,
         },
       });
       m.addLayer(
@@ -59,7 +63,7 @@ export default function MapView(props: Props) {
           type: "fill",
           source: "coverage",
           paint: {
-            "fill-color": "#9c9589",
+            "fill-color": tokens.veil,
             "fill-opacity": ["match", ["get", "tier"], "light", 0.08, 0.16] as never,
           },
         },
@@ -88,7 +92,7 @@ export default function MapView(props: Props) {
         id: "reach-dots", type: "circle", source: "reach-dots",
         paint: {
           "circle-radius": reachDotRadiusExpression() as never, "circle-color": bucketColor as never,
-          "circle-stroke-width": 1, "circle-stroke-color": "#F2EFE9",
+          "circle-stroke-width": 1, "circle-stroke-color": tokens.reachDotStroke,
         },
       });
       m.addImage("star-icon", drawStarIcon(44), { pixelRatio: 2 });
@@ -237,6 +241,20 @@ export default function MapView(props: Props) {
   useEffect(syncHighlight, [
     props.selectedDest, props.reach, props.maxTrains, props.maxMinutes, props.stations,
   ]);
+
+  const appliedTheme = useRef(props.theme);
+  useEffect(() => {
+    const m = map.current;
+    const { theme } = props;
+    if (!m || appliedTheme.current === theme) return;
+    appliedTheme.current = theme;
+    m.setStyle(styleUrl(theme), {
+      transformStyle: (prev, next) => mergeCustomStyle(prev, next, theme),
+    });
+    m.once("styledata", () => {
+      if (!m.hasImage("star-icon")) m.addImage("star-icon", drawStarIcon(44), { pixelRatio: 2 });
+    });
+  }, [props.theme]);
 
   return <div ref={container} style={{ position: "absolute", inset: 0 }} />;
 }

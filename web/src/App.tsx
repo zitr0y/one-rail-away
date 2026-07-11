@@ -74,7 +74,7 @@ export default function App() {
   return (
     <div className="app">
       <MapView stations={stations} reach={reach} maxTrains={maxTrains} maxMinutes={maxMinutes}
-               selectedDest={selectedDest}
+               selectedDest={selectedDest} theme={theme}
                onSelectOrigin={selectOrigin} onSelectDestination={setSelectedDest}
                onEmptyClick={onEmptyClick} />
       <header className="header-bar">
