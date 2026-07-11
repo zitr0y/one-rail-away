@@ -50,7 +50,7 @@ export default function MapView(props: Props) {
         id: "all-stations", type: "circle", source: "all-stations",
         paint: {
           "circle-radius": dotRadiusExpression() as never,
-          "circle-color": "#4A74C9", "circle-opacity": 0.7,
+          "circle-color": "#3A5FB5", "circle-opacity": 0.7,
         },
       });
       m.addLayer(
@@ -206,10 +206,13 @@ export default function MapView(props: Props) {
       }
     }
 
+    // With a reach shown, unreachable stations fade into the background: the
+    // colored reach-dots already mark everything reachable (user calibration
+    // 2026-07-11 round 2). Journey selection then dims via the match expression.
     m.setPaintProperty(
       "all-stations",
       "circle-opacity",
-      stationOpacityExpression(selectedStationIds, 0.7) as never,
+      stationOpacityExpression(selectedStationIds, selectedStationIds || !reach ? 0.7 : 0.25) as never,
     );
     m.setPaintProperty(
       "reach-dots",
@@ -219,7 +222,7 @@ export default function MapView(props: Props) {
     m.setPaintProperty(
       "capital-stars",
       "icon-opacity",
-      stationOpacityExpression(selectedStationIds, 1.0) as never,
+      stationOpacityExpression(selectedStationIds, selectedStationIds || !reach ? 1.0 : 0.4) as never,
     );
   }
 

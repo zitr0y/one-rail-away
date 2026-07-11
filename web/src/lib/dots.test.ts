@@ -80,11 +80,12 @@ describe("drawStarIcon", () => {
     expect(img.data.length).toBe(30 * 30 * 4);
   });
 
-  it("paints a grey star center and transparent corners", () => {
+  it("paints a gold star center and transparent corners", () => {
     const img = drawStarIcon(30);
     const at = (x: number, y: number) => (y * 30 + x) * 4;
     expect(img.data[at(15, 15) + 3]).toBe(255); // center opaque
-    expect(img.data[at(15, 15)]).toBe(55); // darker grey fill for paper basemap
+    expect(img.data[at(15, 15)]).toBe(255); // brand-gold fill (255,204,0)
+    expect(img.data[at(15, 15) + 1]).toBe(204);
     expect(img.data[at(0, 0) + 3]).toBe(0); // corner transparent
     expect(img.data[at(29, 29) + 3]).toBe(0);
   });

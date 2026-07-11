@@ -55,7 +55,8 @@ export function starSizeExpression(): ExpressionSpecification {
  * one of addImage's accepted shapes (a raw canvas element is NOT: passing one
  * throws and aborts the whole map load handler). Pure math, no DOM/canvas, so
  * it behaves identically in the browser and in tests.
- * Darker grey fill (#374151) for authority against warm-paper basemap; white rim.
+ * Brand-gold fill (#FFCC00) with a navy rim (#003399): the EU star, readable on
+ * both the warm-paper land and the pale water.
  */
 export function drawStarIcon(size: number): { width: number; height: number; data: Uint8ClampedArray } {
   const cx = size / 2;
@@ -90,10 +91,10 @@ export function drawStarIcon(size: number): { width: number; height: number; dat
       const py = y + 0.5;
       if (!inside(px, py, rim)) continue;
       const o = (y * size + x) * 4;
-      const grey = inside(px, py, fill);
-      data[o] = grey ? 55 : 255;
-      data[o + 1] = grey ? 65 : 255;
-      data[o + 2] = grey ? 81 : 255;
+      const gold = inside(px, py, fill);
+      data[o] = gold ? 255 : 0;
+      data[o + 1] = gold ? 204 : 51;
+      data[o + 2] = gold ? 0 : 153;
       data[o + 3] = 255;
     }
   }
