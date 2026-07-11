@@ -66,24 +66,6 @@ User's sketch: EU-train theme, cute EU train in the logo that could "bend along 
 chosen route if exists". Map style should follow the identity (OpenFreeMap styles can
 be customized). Tagline is fixed: "nonstopeurope with onestopeurope".
 
-## F. Selection UX: unselect + origin/destination clicking (added 2026-07-09 evening)
-
-User report: "unselecting a station/selecting a new station is wonky by clicking. You can
-always select a new station via the search bar, but not via clicking — you'll be stuck in
-the choose-next-station/nothing-happens state. Should probably have an unselect button on
-the footer (status bar). Also selecting one station and then another does not always show
-the connection — sometimes it just switches to the new station."
-
-Likely mechanism (verify when picking this up): in `web/src/components/Map.tsx` the
-`all-stations` and `reach-dots` layers overlap once a reach is loaded — a colored
-destination dot usually ALSO has an all-stations dot underneath, and MapLibre fires a
-click handler per layer, so one click can trigger BOTH `onSelectOrigin` (switching
-origin!) and `onSelectDestination`. Whether you see "connection" or "switched station"
-depends on handler order/feature hit — matches the "sometimes" behavior. Fix sketch:
-single click handler with `queryRenderedFeatures` + explicit precedence
-(destination-dot wins while a reach is active), plus an unselect (×) affordance in the
-status bar and Escape-to-unselect.
-
 ## I. Corridor bundling for reach lines (added 2026-07-10)
 
 User: Paris shows ~15 separate straight lines fanning over southern France; "I feel like
