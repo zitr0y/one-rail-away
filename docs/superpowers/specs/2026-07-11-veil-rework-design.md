@@ -107,6 +107,17 @@ dependencies (Isle of Man etc. are separate NE admin-0 features).
    the wire) and the coverage fetch starts in parallel with map style loading
    instead of after the `load` event.
 
+## Iteration 3 (2026-07-11 live-test feedback)
+
+1. **Two-tier veil.** Light tier (`fill-opacity 0.08`): countries with ≥1
+   station in our network but no covered feed (`reachable = station countries −
+   covered`, computed in `compute_all`), clipped to `EUROPE_BBOX`. Dark tier
+   (`0.16`): all remaining land. `build_coverage(covered, reachable)` emits one
+   Feature per non-empty tier with `{"tier": "light"|"dark"}`; tooltip copy
+   differs per tier (`veilTooltip(tier)`).
+2. **Feather dropped.** The blur edge layer never read as feathering; crisp
+   edges at the lower opacities look clean.
+
 ## Out of scope
 
 - Exact OSM boundary matching (PMTiles) — revisit only if 10m + feathering
