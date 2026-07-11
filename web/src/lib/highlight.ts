@@ -18,10 +18,11 @@ export type StationOpacityExpression = number | ["match", ["get", "id"], string[
 export function stationOpacityExpression(
   selectedStationIds: string[] | null,
   normalOpacity: number,
+  dimmedOpacity = 0.08,
 ): StationOpacityExpression {
   if (!selectedStationIds || selectedStationIds.length === 0) {
     return normalOpacity;
   }
-  return ["match", ["get", "id"], selectedStationIds, normalOpacity, 0.08];
+  return ["match", ["get", "id"], selectedStationIds, normalOpacity, dimmedOpacity];
 }
 

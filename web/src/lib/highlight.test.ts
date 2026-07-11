@@ -30,6 +30,16 @@ describe("stationOpacityExpression", () => {
     expect(stationOpacityExpression([], 1.0)).toBe(1.0);
   });
 
+  it("accepts a custom dimmed opacity (reach-view star fade)", () => {
+    expect(stationOpacityExpression(["8507000"], 1.0, 0.4)).toEqual([
+      "match",
+      ["get", "id"],
+      ["8507000"],
+      1.0,
+      0.4,
+    ]);
+  });
+
   it("returns a match expression when selectedStationIds is provided", () => {
     expect(stationOpacityExpression(["8507000", "8000001"], 0.7)).toEqual([
       "match",

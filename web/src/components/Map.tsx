@@ -50,7 +50,7 @@ export default function MapView(props: Props) {
         id: "all-stations", type: "circle", source: "all-stations",
         paint: {
           "circle-radius": dotRadiusExpression() as never,
-          "circle-color": "#3A5FB5", "circle-opacity": 0.7,
+          "circle-color": "#003399", "circle-opacity": 0.7,
         },
       });
       m.addLayer(
@@ -182,7 +182,7 @@ export default function MapView(props: Props) {
   function syncHighlight() {
     const m = map.current;
     if (!m) return;
-    const { selectedDest, reach, maxTrains } = propsRef.current;
+    const { selectedDest, reach, maxTrains, maxMinutes, stations } = propsRef.current;
     m.setFilter("reach-lines-selected", selectedLineFilter(selectedDest) as never);
     m.setPaintProperty("reach-lines", "line-opacity", baseLineOpacity(selectedDest !== null));
 
@@ -219,14 +219,24 @@ export default function MapView(props: Props) {
       "circle-opacity",
       stationOpacityExpression(selectedStationIds, 1.0) as never,
     );
-    m.setPaintProperty(
-      "capital-stars",
-      "icon-opacity",
-      stationOpacityExpression(selectedStationIds, selectedStationIds || !reach ? 1.0 : 0.4) as never,
-    );
+    // capital-stars is the topmost layer, but a 0.4-faded star still loses
+    // visually to the full-opacity reach-dot beneath it — so during reach view
+    // only UNREACHABLE capitals fade; reachable ones stay lit and cover their dot.
+    let starOpacity: ReturnType<typeof stationOpacityExpression> = 1.0;
+    if (selectedStationIds) {
+      starOpacity = stationOpacityExpression(selectedStationIds, 1.0);
+    } else if (reach) {
+      const byId = new Map(stations.map((s) => [s.id, s]));
+      const reachableIds = destinationsGeoJSON(reach, byId, maxTrains, maxMinutes)
+        .features.map((f) => f.properties.id);
+      starOpacity = stationOpacityExpression(reachableIds, 1.0, 0.4);
+    }
+    m.setPaintProperty("capital-stars", "icon-opacity", starOpacity as never);
   }
 
-  useEffect(syncHighlight, [props.selectedDest, props.reach, props.maxTrains]);
+  useEffect(syncHighlight, [
+    props.selectedDest, props.reach, props.maxTrains, props.maxMinutes, props.stations,
+  ]);
 
   return <div ref={container} style={{ position: "absolute", inset: 0 }} />;
 }
