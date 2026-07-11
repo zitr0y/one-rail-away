@@ -1,7 +1,6 @@
-/**
- * Resolves the MapLibre style URL for the current theme.
- * Phase 1: light only. Phase 2 will add "dark" → mapstyle-dark.json.
- */
-export function styleUrl(_theme: "light"): string {
-  return "/mapstyle-light.json";
+import type { Theme } from "./theme";
+
+/** Resolves the MapLibre style URL for the current theme (both forked local files). */
+export function styleUrl(theme: Theme): string {
+  return theme === "dark" ? "/mapstyle-dark.json" : "/mapstyle-light.json";
 }
