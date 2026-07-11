@@ -16,16 +16,17 @@ def client(tmp_path_factory):
     raw = tmp / "raw"
     cfgs = make_fixture_feeds(raw)
     countries_toml, names_toml = empty_overrides(tmp)
+    feeds_toml = _write_feeds_toml(tmp, cfgs)
     build(
         raw,
         tmp / "graph",
-        _write_feeds_toml(tmp, cfgs),
+        feeds_toml,
         None,
         date(2026, 7, 14),
         station_names_path=names_toml,
         station_countries_path=countries_toml,
     )
-    compute_all(tmp / "graph", tmp / "out")
+    compute_all(tmp / "graph", tmp / "out", feeds_path=feeds_toml)
     return TestClient(create_app(tmp / "out"))
 
 
