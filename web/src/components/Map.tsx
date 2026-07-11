@@ -6,9 +6,10 @@ import { baseLineOpacity, selectedLineFilter } from "../lib/highlight";
 import { pickFeature } from "../lib/pickfeature";
 import { veilTooltip, showVeilTooltip } from "../lib/coverage";
 import { api } from "../lib/api";
+import { dotRadiusExpression, clusterRadiusExpression, sortForClusterList, drawStarIcon } from "../lib/dots";
 import type { ReachFile, Station } from "../lib/types";
 
-const CLICK_LAYERS = ["reach-dots", "all-stations"];
+const CLICK_LAYERS = ["reach-dots", "capital-stars", "all-stations"];
 
 const EMPTY = { type: "FeatureCollection", features: [] } as const;
 const bucketColor = ["to-color", ["at", ["get", "bucket"], ["literal", BUCKET_COLORS]]];
@@ -39,13 +40,41 @@ export default function MapView(props: Props) {
       zoom: 4.5,
     });
     m.on("load", () => {
-      m.addSource("all-stations", { type: "geojson", data: EMPTY as never });
+      m.addSource("all-stations", {
+        type: "geojson",
+        data: EMPTY as never,
+        cluster: true,
+        clusterRadius: 30,
+        clusterMaxZoom: 7,
+      });
       m.addSource("reach-lines", { type: "geojson", data: EMPTY as never });
       m.addSource("reach-dots", { type: "geojson", data: EMPTY as never });
       m.addSource("coverage", { type: "geojson", data: EMPTY as never });
+      m.addSource("capitals", { type: "geojson", data: EMPTY as never });
       m.addLayer({
         id: "all-stations", type: "circle", source: "all-stations",
-        paint: { "circle-radius": 3, "circle-color": "#9ca3af", "circle-opacity": 0.7 },
+        filter: ["!", ["has", "point_count"]],
+        paint: {
+          "circle-radius": dotRadiusExpression() as never,
+          "circle-color": "#9ca3af", "circle-opacity": 0.7,
+        },
+      });
+      m.addLayer({
+        id: "station-clusters", type: "circle", source: "all-stations",
+        filter: ["has", "point_count"],
+        paint: {
+          "circle-radius": clusterRadiusExpression() as never,
+          "circle-color": "#9ca3af", "circle-opacity": 0.6,
+        },
+      });
+      m.addLayer({
+        id: "station-cluster-count", type: "symbol", source: "all-stations",
+        filter: ["has", "point_count"],
+        layout: {
+          "text-field": ["get", "point_count_abbreviated"],
+          "text-size": 11,
+        },
+        paint: { "text-color": "#ffffff" },
       });
       m.addLayer(
         {
@@ -85,7 +114,50 @@ export default function MapView(props: Props) {
           "circle-stroke-width": 1, "circle-stroke-color": "#ffffff",
         },
       });
+      m.addImage("star-icon", drawStarIcon(30) as any, { pixelRatio: 2 });
+      m.addLayer({
+        id: "capital-stars", type: "symbol", source: "capitals",
+        layout: {
+          "icon-image": "star-icon",
+          "icon-size": 0.5,
+          "icon-allow-overlap": true,
+        },
+      });
+      const clusterPopup = new maplibregl.Popup({ closeButton: true, closeOnClick: true });
       m.on("click", (e) => {
+        // 1. Cluster click — highest priority
+        const clusterHits = m.queryRenderedFeatures(e.point, { layers: ["station-clusters"] });
+        if (clusterHits.length) {
+          const clusterId = clusterHits[0].properties!.cluster_id as number;
+          const src = m.getSource("all-stations") as maplibregl.GeoJSONSource;
+          src.getClusterLeaves(clusterId, 25, 0).then((leaves) => {
+            const members = leaves.map((f) => ({
+              id: f.properties!.id as string,
+              name: f.properties!.name as string,
+              n_dest: (f.properties!.n_dest as number) || 0,
+            }));
+            const sorted = sortForClusterList(members);
+            const container = document.createElement("div");
+            container.className = "cluster-popup";
+            const ul = document.createElement("ul");
+            for (const s of sorted) {
+              const li = document.createElement("li");
+              const btn = document.createElement("button");
+              btn.textContent = s.name;
+              btn.addEventListener("click", () => {
+                propsRef.current.onSelectOrigin(s.id);
+                clusterPopup.remove();
+              });
+              li.appendChild(btn);
+              ul.appendChild(li);
+            }
+            container.appendChild(ul);
+            clusterPopup.setLngLat(e.lngLat).setDOMContent(container).addTo(m);
+          });
+          return;
+        }
+
+        // 2. pickFeature — reach-dots > capital-stars > all-stations
         const hits = m.queryRenderedFeatures(e.point, { layers: CLICK_LAYERS })
           .map((f) => ({ layer: f.layer.id, id: f.properties!.id as string }));
         const pick = pickFeature(hits);
@@ -96,7 +168,7 @@ export default function MapView(props: Props) {
         if (pick.type === "dest") propsRef.current.onSelectDestination(pick.id);
         else propsRef.current.onSelectOrigin(pick.id);
       });
-      for (const layer of ["all-stations", "reach-dots"]) {
+      for (const layer of ["all-stations", "reach-dots", "capital-stars", "station-clusters"]) {
         m.on("mouseenter", layer, () => (m.getCanvas().style.cursor = "pointer"));
         m.on("mouseleave", layer, () => (m.getCanvas().style.cursor = ""));
       }
@@ -131,14 +203,27 @@ export default function MapView(props: Props) {
     if (!m) return;
     const { stations, reach, maxTrains, maxMinutes } = propsRef.current;
     const byId = new Map(stations.map((s) => [s.id, s]));
+
+    const nonCapitals = stations.filter((s) => s.has_reach && !s.is_capital);
     (m.getSource("all-stations") as maplibregl.GeoJSONSource).setData({
       type: "FeatureCollection",
-      features: stations.filter((s) => s.has_reach).map((s) => ({
+      features: nonCapitals.map((s) => ({
         type: "Feature" as const,
         geometry: { type: "Point" as const, coordinates: [s.lon, s.lat] },
-        properties: { id: s.id, name: s.name },
+        properties: { id: s.id, name: s.name, n_dest: s.n_dest },
       })),
     });
+
+    const capitalStations = stations.filter((s) => s.is_capital);
+    (m.getSource("capitals") as maplibregl.GeoJSONSource).setData({
+      type: "FeatureCollection",
+      features: capitalStations.map((s) => ({
+        type: "Feature" as const,
+        geometry: { type: "Point" as const, coordinates: [s.lon, s.lat] },
+        properties: { id: s.id, name: s.name, n_dest: s.n_dest },
+      })),
+    });
+
     (m.getSource("reach-lines") as maplibregl.GeoJSONSource).setData(
       reach ? (linesGeoJSON(reach, byId, maxTrains, maxMinutes) as never) : (EMPTY as never));
     (m.getSource("reach-dots") as maplibregl.GeoJSONSource).setData(
