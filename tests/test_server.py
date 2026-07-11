@@ -44,3 +44,17 @@ def test_meta_and_503(client, tmp_path):
     assert client.get("/api/meta").json()["sample_date"] == "2026-07-14"
     empty = TestClient(create_app(tmp_path))
     assert empty.get("/api/meta").status_code == 503
+
+
+def test_coverage_endpoint(client):
+    r = client.get("/api/coverage")
+    assert r.status_code == 200
+    fc = r.json()
+    assert fc["type"] == "FeatureCollection"
+    assert len(fc["features"]) == 42
+    assert all("name" in f["properties"] for f in fc["features"])
+
+
+def test_coverage_404_when_absent(tmp_path):
+    empty = TestClient(create_app(tmp_path))
+    assert empty.get("/api/coverage").status_code == 404
