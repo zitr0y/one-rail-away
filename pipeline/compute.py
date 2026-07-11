@@ -132,4 +132,7 @@ def compute_all(
     )
 
     covered = covered_from_feeds(feeds_path) if feeds_path.exists() else set()
-    (out_dir / "coverage.json").write_text(json.dumps(build_coverage(covered), ensure_ascii=False))
+    reachable = {s.country for s in stations} - covered
+    (out_dir / "coverage.json").write_text(
+        json.dumps(build_coverage(covered, reachable), ensure_ascii=False)
+    )

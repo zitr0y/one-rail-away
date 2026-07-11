@@ -14,7 +14,7 @@ export interface Meta { computed_at: string; sample_date: string }
 export interface CoverageFeature {
   type: "Feature";
   geometry: unknown;
-  properties: Record<string, never>;
+  properties: { tier: "light" | "dark" };
 }
 export interface CoverageCollection {
   type: "FeatureCollection";

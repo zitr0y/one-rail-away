@@ -4,7 +4,7 @@ import { destinationsGeoJSON, linesGeoJSON, type MaxTrains } from "../lib/geojso
 import { BUCKET_COLORS } from "../lib/colors";
 import { baseLineOpacity, selectedLineFilter } from "../lib/highlight";
 import { pickFeature } from "../lib/pickfeature";
-import { VEIL_TOOLTIP, showVeilTooltip } from "../lib/coverage";
+import { veilTooltip, showVeilTooltip } from "../lib/coverage";
 import { api } from "../lib/api";
 import type { ReachFile, Station } from "../lib/types";
 
@@ -51,20 +51,9 @@ export default function MapView(props: Props) {
           id: "coverage-veil",
           type: "fill",
           source: "coverage",
-          paint: { "fill-color": "#6b7280", "fill-opacity": 0.25 },
-        },
-        "all-stations",
-      );
-      m.addLayer(
-        {
-          id: "coverage-veil-edge",
-          type: "line",
-          source: "coverage",
           paint: {
-            "line-color": "#6b7280",
-            "line-width": 10,
-            "line-blur": 10,
-            "line-opacity": 0.25,
+            "fill-color": "#6b7280",
+            "fill-opacity": ["match", ["get", "tier"], "light", 0.08, 0.16] as never,
           },
         },
         "all-stations",
@@ -114,7 +103,8 @@ export default function MapView(props: Props) {
           veilPopup.remove();
           return;
         }
-        veilPopup.setLngLat(e.lngLat).setText(VEIL_TOOLTIP).addTo(m);
+        const tier = e.features?.[0]?.properties?.tier;
+        veilPopup.setLngLat(e.lngLat).setText(veilTooltip(tier)).addTo(m);
       });
       m.on("mouseleave", "coverage-veil", () => veilPopup.remove());
       map.current = m;

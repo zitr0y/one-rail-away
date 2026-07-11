@@ -32,44 +32,63 @@ EUROPE_BBOX = box(-25, 27, 45, 72)
 WORLD_ASSET = Path(__file__).parent / "assets" / "countries_world_10m.geojson"
 
 
-def build_coverage(covered: set[str], asset_path: Path = WORLD_ASSET) -> dict:
-    """GeoJSON FeatureCollection with one Feature: a dissolved MultiPolygon of
-    every country NOT in `covered`. Ocean is never veiled. Returns a single-
-    feature FeatureCollection with empty properties."""
+def build_coverage(covered: set[str], reachable: set[str], asset_path: Path = WORLD_ASSET) -> dict:
+    """GeoJSON FeatureCollection with one Feature per NON-EMPTY geometry:
+    light first with properties {"tier": "light"} (countries in reachable - covered,
+    intersected with EUROPE_BBOX), then dark with properties {"tier": "dark"}
+    (all land minus covered holes and light geom)."""
     fc = json.loads(asset_path.read_text(encoding="utf-8"))
+
+    # caller guarantees nothing: reachable must ignore codes also present in covered
+    effective_reachable = reachable - covered
+
     all_geoms = []
+    light_geoms = []
     covered_geoms = []
+
     for f in fc["features"]:
         geom = shape(f["geometry"])
         all_geoms.append(geom)
         iso = f["properties"].get("ISO_A2_EH")
-        if iso and iso != "-99" and iso in covered:
-            covered_geoms.append(geom)
+        if iso and iso != "-99":
+            if iso in covered:
+                covered_geoms.append(geom)
+            elif iso in effective_reachable:
+                light_geoms.append(geom)
 
-    if not all_geoms:
-        return {"type": "FeatureCollection", "features": []}
+    # Geometry rules, using the existing EUROPE_BBOX:
+    # light_geom = unary_union(features whose ISO is in (reachable - covered))
+    # intersected with EUROPE_BBOX
+    light_geom = unary_union(light_geoms).intersection(EUROPE_BBOX)
 
+    # covered_holes = unary_union(features whose ISO is in covered) intersected with EUROPE_BBOX
+    covered_holes = unary_union(covered_geoms).intersection(EUROPE_BBOX)
+
+    # dark_geom = unary_union(ALL features) minus covered_holes minus light_geom
     all_union = unary_union(all_geoms)
+    dark_geom = all_union.difference(covered_holes).difference(light_geom)
 
-    if covered_geoms:
-        covered_union = unary_union(covered_geoms)
-        covered_clipped = covered_union.intersection(EUROPE_BBOX)
-        veil = all_union.difference(covered_clipped)
-    else:
-        veil = all_union
-
-    if veil.is_empty:
-        return {"type": "FeatureCollection", "features": []}
+    features = []
+    if not light_geom.is_empty:
+        features.append(
+            {
+                "type": "Feature",
+                "geometry": json.loads(json.dumps(light_geom.__geo_interface__)),
+                "properties": {"tier": "light"},
+            }
+        )
+    if not dark_geom.is_empty:
+        features.append(
+            {
+                "type": "Feature",
+                "geometry": json.loads(json.dumps(dark_geom.__geo_interface__)),
+                "properties": {"tier": "dark"},
+            }
+        )
 
     return {
         "type": "FeatureCollection",
-        "features": [
-            {
-                "type": "Feature",
-                "geometry": json.loads(json.dumps(veil.__geo_interface__)),
-                "properties": {},
-            }
-        ],
+        "features": features,
     }
 
 

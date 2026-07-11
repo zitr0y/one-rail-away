@@ -6,8 +6,14 @@
 // explanation).
 
 // Generic tooltip shown on hover over the veil (spec §3, exact copy).
-export const VEIL_TOOLTIP =
-  "May be reachable by international trains from other countries, but we don't yet have data from this country's rail providers.";
+export const VEIL_TOOLTIP_LIGHT =
+  "Reachable by international trains, but we don't yet have data from this country's rail providers.";
+export const VEIL_TOOLTIP_DARK =
+  "We don't yet have train data for this country.";
+
+export function veilTooltip(tier?: string): string {
+  return tier === "light" ? VEIL_TOOLTIP_LIGHT : VEIL_TOOLTIP_DARK;
+}
 
 // Hover precedence: the veil tooltip appears only when no station/dot feature is
 // under the cursor, so it never competes with the click-selection layers
