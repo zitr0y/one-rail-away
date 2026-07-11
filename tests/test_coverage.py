@@ -44,6 +44,18 @@ def test_veil_excludes_ocean():
     assert not veil.contains(atlantic)
 
 
+def test_veil_overseas_and_uncovered_territories():
+    fc_covered = build_coverage({"FR", "NL"})
+    veil_covered = shape(fc_covered["features"][0]["geometry"])
+    assert not veil_covered.contains(Point(2.35, 48.85))  # Paris (covered, in Europe)
+    assert veil_covered.contains(Point(-52.3, 4.9))  # Cayenne (overseas, outside Europe)
+    assert veil_covered.contains(Point(-68.26, 12.2))  # Bonaire (overseas, outside Europe)
+
+    fc_empty = build_coverage(set())
+    veil_empty = shape(fc_empty["features"][0]["geometry"])
+    assert veil_empty.contains(Point(44.06, 9.56))  # Hargeisa, Somaliland (missing/uncovered)
+
+
 def test_covered_from_feeds_reads_country_fields(tmp_path):
     raw = tmp_path / "raw"
     cfgs = make_fixture_feeds(raw)

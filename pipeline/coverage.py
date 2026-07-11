@@ -22,9 +22,12 @@ import json
 from pathlib import Path
 
 from shapely import unary_union
-from shapely.geometry import shape
+from shapely.geometry import box, shape
 
 from pipeline.config import load_feeds
+
+# Bounding box for Europe: includes Canaries and Iceland, excludes all overseas territories
+EUROPE_BBOX = box(-25, 27, 45, 72)
 
 WORLD_ASSET = Path(__file__).parent / "assets" / "countries_world_10m.geojson"
 
@@ -34,21 +37,36 @@ def build_coverage(covered: set[str], asset_path: Path = WORLD_ASSET) -> dict:
     every country NOT in `covered`. Ocean is never veiled. Returns a single-
     feature FeatureCollection with empty properties."""
     fc = json.loads(asset_path.read_text(encoding="utf-8"))
-    non_covered_geoms = []
+    all_geoms = []
+    covered_geoms = []
     for f in fc["features"]:
+        geom = shape(f["geometry"])
+        all_geoms.append(geom)
         iso = f["properties"].get("ISO_A2_EH")
-        if not iso or iso == "-99" or iso in covered:
-            continue
-        non_covered_geoms.append(shape(f["geometry"]))
-    if not non_covered_geoms:
+        if iso and iso != "-99" and iso in covered:
+            covered_geoms.append(geom)
+
+    if not all_geoms:
         return {"type": "FeatureCollection", "features": []}
-    dissolved = unary_union(non_covered_geoms)
+
+    all_union = unary_union(all_geoms)
+
+    if covered_geoms:
+        covered_union = unary_union(covered_geoms)
+        covered_clipped = covered_union.intersection(EUROPE_BBOX)
+        veil = all_union.difference(covered_clipped)
+    else:
+        veil = all_union
+
+    if veil.is_empty:
+        return {"type": "FeatureCollection", "features": []}
+
     return {
         "type": "FeatureCollection",
         "features": [
             {
                 "type": "Feature",
-                "geometry": json.loads(json.dumps(dissolved.__geo_interface__)),
+                "geometry": json.loads(json.dumps(veil.__geo_interface__)),
                 "properties": {},
             }
         ],

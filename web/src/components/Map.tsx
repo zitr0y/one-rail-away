@@ -30,6 +30,7 @@ export default function MapView(props: Props) {
   propsRef.current = props;
 
   useEffect(() => {
+    const coveragePromise = api.getCoverage();
     const m = new maplibregl.Map({
       container: container.current!,
       style: "https://tiles.openfreemap.org/styles/positron",
@@ -61,9 +62,9 @@ export default function MapView(props: Props) {
           source: "coverage",
           paint: {
             "line-color": "#6b7280",
-            "line-width": 2.5,
-            "line-blur": 3,
-            "line-opacity": 0.2,
+            "line-width": 10,
+            "line-blur": 10,
+            "line-opacity": 0.25,
           },
         },
         "all-stations",
@@ -117,8 +118,7 @@ export default function MapView(props: Props) {
       });
       m.on("mouseleave", "coverage-veil", () => veilPopup.remove());
       map.current = m;
-      api
-        .getCoverage()
+      coveragePromise
         .then((fc) =>
           (m.getSource("coverage") as maplibregl.GeoJSONSource).setData(fc as never),
         )

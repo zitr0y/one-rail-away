@@ -56,6 +56,12 @@ def test_coverage_endpoint(client):
     assert fc["features"][0]["properties"] == {}
 
 
+def test_coverage_gzip_compression(client):
+    r = client.get("/api/coverage", headers={"Accept-Encoding": "gzip"})
+    assert r.status_code == 200
+    assert r.headers.get("content-encoding") == "gzip"
+
+
 def test_coverage_404_when_absent(tmp_path):
     empty = TestClient(create_app(tmp_path))
     assert empty.get("/api/coverage").status_code == 404

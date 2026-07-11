@@ -4,6 +4,7 @@ from pathlib import Path
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.middleware.gzip import GZipMiddleware
 
 
 def _read(path: Path) -> dict:
@@ -96,6 +97,7 @@ def _with_disk_has_reach(stations: list[dict], reach_ids: set[str]) -> list[dict
 def create_app(data_dir: Path) -> FastAPI:
     app = FastAPI(title="onestopeurope")
     app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"])
+    app.add_middleware(GZipMiddleware, minimum_size=1024)
 
     @app.get("/api/stations")
     def stations() -> dict:
