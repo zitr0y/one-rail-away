@@ -28,20 +28,23 @@ clear which countries are not yet covered, WITHOUT implying unreachability.
 - Covered set: `{cfg.country for cfg in feeds.toml}` — read from `feeds.toml` at
   pipeline time, NOT from `fetch_meta.json` (known to under-report curl'd feeds;
   see backlog note). Today that is {DE, FR, AT, CH, NL, ES, PL}.
-- Output: GeoJSON FeatureCollection; each feature keeps its geometry, ISO code,
-  and display-name property (verify the asset's name property key and carry it
-  through), plus `covered: true|false`.
+- Output: GeoJSON FeatureCollection; each feature keeps its geometry and ISO
+  code, plus `covered: true|false` and a display name. (Plan correction
+  2026-07-11: the asset carries ONLY `ISO_A2_EH` — no name property — so names
+  come from a tested `COUNTRY_NAMES` ISO2→name table in `pipeline/coverage.py`.)
 - Which stage writes it: whichever stage owns `data/out` outputs by existing
   convention (compute's output pass, like `meta.json`) — the plan pins this
   after reading the code. It must survive the stale-reach-file pruning untouched.
 - TDD with fixture feeds: fixture countries flagged covered, all others not,
   feature count preserved, name property present.
 
-### 2. Server: `GET /coverage`
+### 2. Server: `GET /api/coverage`
 
-Serves `data/out/coverage.json` exactly like the other data/out artifacts (same
-FileResponse/caching pattern as `stations.json`). 404 if the pipeline hasn't
-produced it (consistent with the server's thin-layer behavior). Nothing else.
+Serves `data/out/coverage.json` like the other data/out artifacts. (Plan
+corrections 2026-07-11: path is `/api/coverage` — all endpoints live under
+`/api/*` and the vite proxy forwards only `/api`; 404-on-missing follows the
+`reach` endpoint precedent — the server has no FileResponse pattern and
+`stations.json` uses 503 via `_read`.) Nothing else.
 
 ### 3. Web: veil layer, tooltip, legend
 
@@ -52,7 +55,10 @@ produced it (consistent with the server's thin-layer behavior). Nothing else.
   handler, and the tooltip shows only when no station/dot feature is under the
   cursor — the single-click selection precedence in `web/src/lib/pickfeature.ts`
   is untouched (regression risk called out for review).
-- Legend line (status bar), exact copy: "Grey countries: not yet in our system".
+- Legend line, exact copy: "Grey countries: not yet in our system". (Plan
+  correction 2026-07-11: lives in the always-rendered `Legend.tsx`, not the
+  status bar — the status bar only renders once an origin is selected, while
+  the veil is always visible.)
 - Pure logic (veil filter expression, tooltip-text builder, hover-precedence
   predicate) lives in a new `web/src/lib/coverage.ts` with unit tests; Map.tsx
   wiring follows the existing source/layer/effect patterns.
