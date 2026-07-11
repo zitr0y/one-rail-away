@@ -81,13 +81,17 @@ User's sketch: EU-train theme, cute EU train in the logo that could "bend along 
 chosen route if exists". Map style should follow the identity (OpenFreeMap styles can
 be customized). Tagline is fixed: "nonstopeurope with onestopeurope".
 
-## E. Grey out countries not in the system (user item 8)
+## E. Grey out countries not in the system — DONE 2026-07-11 (two-tier veil)
 
-Make it visually clear which countries are (not yet) covered, without implying
-unreachability — could be "not yet in our system". Needs: corrected geographic
-`country` field (done in bug batch), a notion of "covered country" (probably: countries
-whose national feed we ingest, i.e. feeds.toml, NOT countries that merely have leaked
-stations), and a map fill layer. Interacts with A (each new feed un-greys a country).
+Shipped in three live-test iterations (merge 11eae10, then commits 012d4eb…d258a49):
+world-wide dissolved veil from a new NE-10m asset (40% retention — 10% was coarser
+than the old 50m!), shapely union in `build_coverage`, covered holes clipped to
+EUROPE_BBOX (overseas territories + ISO-"-99" features stay veiled), gzip + parallel
+fetch for load latency. Final form: TWO tiers — light 0.08 for reachable-but-no-feed
+countries (data-driven: station countries − covered), dark 0.16 for the rest;
+per-tier tooltips, no legend entry, no feather (tried, dropped).
+Spec (all iterations): `docs/superpowers/specs/2026-07-11-veil-rework-design.md`.
+Plan: `docs/superpowers/plans/2026-07-11-veil-rework.md`.
 
 ## F. Selection UX: unselect + origin/destination clicking (added 2026-07-09 evening)
 
