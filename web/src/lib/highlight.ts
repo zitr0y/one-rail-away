@@ -8,5 +8,5 @@ export function selectedLineFilter(id: string | null): SelectedLineFilter {
 }
 
 export function baseLineOpacity(hasSelection: boolean): number {
-  return hasSelection ? 0.12 : 0.75;
+  return hasSelection ? 0.04 : 0.75;
 }
