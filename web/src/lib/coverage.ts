@@ -1,21 +1,13 @@
 // Pure helpers for the country-coverage veil.
-// Spec: docs/superpowers/specs/2026-07-11-country-greying-design.md §3.
-// Kept out of Map.tsx so the filter expression, tooltip copy, and hover-precedence
-// rule are unit-testable without a live map.
+// Spec: docs/superpowers/specs/2026-07-11-veil-rework-design.md §3.
+// The veil source is now a single dissolved MultiPolygon (no per-country
+// features), so the old filter and per-country tooltip are gone. The tooltip
+// is a generic constant; the legend entry is removed (tooltip is the only
+// explanation).
 
-// Exact legend copy (spec §3). Defined here so the wording is asserted in one place.
-export const VEIL_LEGEND = "Grey countries: not yet in our system";
-
-// MapLibre fill-layer filter: show the veil only over non-covered countries.
-export type VeilFilter = ["==", ["get", "covered"], boolean];
-export function veilFilter(): VeilFilter {
-  return ["==", ["get", "covered"], false];
-}
-
-// Tooltip text for a hovered grey country (spec §3, exact copy; em dash U+2014).
-export function coverageTooltip(name: string): string {
-  return `${name} — not yet in our system`;
-}
+// Generic tooltip shown on hover over the veil (spec §3, exact copy).
+export const VEIL_TOOLTIP =
+  "May be reachable by international trains from other countries, but we don't yet have data from this country's rail providers.";
 
 // Hover precedence: the veil tooltip appears only when no station/dot feature is
 // under the cursor, so it never competes with the click-selection layers

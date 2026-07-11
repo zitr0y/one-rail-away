@@ -1,15 +1,11 @@
 import { describe, expect, it } from "vitest";
-import { VEIL_LEGEND, coverageTooltip, showVeilTooltip, veilFilter } from "./coverage";
+import { VEIL_TOOLTIP, showVeilTooltip } from "./coverage";
 
-describe("veilFilter", () => {
-  it("matches only non-covered countries", () => {
-    expect(veilFilter()).toEqual(["==", ["get", "covered"], false]);
-  });
-});
-
-describe("coverageTooltip", () => {
-  it("formats the not-yet-in-system tooltip", () => {
-    expect(coverageTooltip("Italy")).toBe("Italy — not yet in our system");
+describe("VEIL_TOOLTIP", () => {
+  it("is the exact approved copy", () => {
+    expect(VEIL_TOOLTIP).toBe(
+      "May be reachable by international trains from other countries, but we don't yet have data from this country's rail providers.",
+    );
   });
 });
 
@@ -21,11 +17,5 @@ describe("showVeilTooltip", () => {
   it("hides when a station or dot is under the cursor", () => {
     expect(showVeilTooltip(1)).toBe(false);
     expect(showVeilTooltip(3)).toBe(false);
-  });
-});
-
-describe("VEIL_LEGEND", () => {
-  it("is the exact approved copy", () => {
-    expect(VEIL_LEGEND).toBe("Grey countries: not yet in our system");
   });
 });

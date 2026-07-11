@@ -4,7 +4,7 @@ import { destinationsGeoJSON, linesGeoJSON, type MaxTrains } from "../lib/geojso
 import { BUCKET_COLORS } from "../lib/colors";
 import { baseLineOpacity, selectedLineFilter } from "../lib/highlight";
 import { pickFeature } from "../lib/pickfeature";
-import { coverageTooltip, showVeilTooltip, veilFilter } from "../lib/coverage";
+import { VEIL_TOOLTIP, showVeilTooltip } from "../lib/coverage";
 import { api } from "../lib/api";
 import type { ReachFile, Station } from "../lib/types";
 
@@ -50,8 +50,21 @@ export default function MapView(props: Props) {
           id: "coverage-veil",
           type: "fill",
           source: "coverage",
-          filter: veilFilter() as never,
           paint: { "fill-color": "#6b7280", "fill-opacity": 0.25 },
+        },
+        "all-stations",
+      );
+      m.addLayer(
+        {
+          id: "coverage-veil-edge",
+          type: "line",
+          source: "coverage",
+          paint: {
+            "line-color": "#6b7280",
+            "line-width": 2.5,
+            "line-blur": 3,
+            "line-opacity": 0.2,
+          },
         },
         "all-stations",
       );
@@ -96,12 +109,11 @@ export default function MapView(props: Props) {
       const veilPopup = new maplibregl.Popup({ closeButton: false, closeOnClick: false });
       m.on("mousemove", "coverage-veil", (e) => {
         const stationHits = m.queryRenderedFeatures(e.point, { layers: CLICK_LAYERS }).length;
-        const name = e.features?.[0]?.properties?.name as string | undefined;
-        if (!showVeilTooltip(stationHits) || !name) {
+        if (!showVeilTooltip(stationHits)) {
           veilPopup.remove();
           return;
         }
-        veilPopup.setLngLat(e.lngLat).setText(coverageTooltip(name)).addTo(m);
+        veilPopup.setLngLat(e.lngLat).setText(VEIL_TOOLTIP).addTo(m);
       });
       m.on("mouseleave", "coverage-veil", () => veilPopup.remove());
       map.current = m;

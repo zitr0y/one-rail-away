@@ -14,7 +14,7 @@ export interface Meta { computed_at: string; sample_date: string }
 export interface CoverageFeature {
   type: "Feature";
   geometry: unknown;
-  properties: { ISO_A2_EH: string; name: string; covered: boolean };
+  properties: Record<string, never>;
 }
 export interface CoverageCollection {
   type: "FeatureCollection";
