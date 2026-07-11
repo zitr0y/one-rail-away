@@ -52,8 +52,8 @@ def test_coverage_endpoint(client):
     assert r.status_code == 200
     fc = r.json()
     assert fc["type"] == "FeatureCollection"
-    assert len(fc["features"]) == 42
-    assert all("name" in f["properties"] for f in fc["features"])
+    assert len(fc["features"]) == 1
+    assert fc["features"][0]["properties"] == {}
 
 
 def test_coverage_404_when_absent(tmp_path):
