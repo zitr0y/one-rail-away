@@ -68,10 +68,3 @@ body { margin: 0; font-family: system-ui, sans-serif; }
 }
 .status-bar .close:hover { background: #f3f4f6; }
 
-.cluster-popup ul { list-style: none; margin: 0; padding: 0; max-height: 220px; overflow-y: auto; }
-.cluster-popup li + li { border-top: 1px solid #e5e7eb; }
-.cluster-popup button {
-  display: block; width: 100%; padding: 6px 10px; border: 0; background: none;
-  text-align: left; font-size: 13px; cursor: pointer;
-}
-.cluster-popup button:hover { background: #f3f4f6; }

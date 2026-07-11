@@ -73,6 +73,18 @@ unsafe; capitals are hand-curated.
 - Server test: stations endpoint passes `n_dest`/`is_capital` through.
 - Visual verification is the user's (no screenshot checks).
 
+## Iteration 2 (2026-07-11 live-test feedback)
+
+1. **Clustering removed.** At the default zoom nearly everything merged into
+   uniform bubbles (headless check: 102 bubbles vs 10 raw dots) and the density
+   picture died. §4 shipped and was reverted; sized dots + stars stay. If tiny
+   stations need decluttering later, revisit inside C3 (city grouping).
+2. **Stars enlarged/darkened.** They rendered but were imperceptible (7.5px,
+   same grey as dots). Now 44px asset at icon-size 0.8 (~17.6px), fill #4b5563.
+3. **addImage regression note:** a canvas element is not a valid addImage
+   argument; drawStarIcon returns {width, height, data} rasterized in pure
+   math (no DOM), with pixel-level tests.
+
 ## Out of scope
 
 - C3 city-union entity (own brainstorm next).

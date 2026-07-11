@@ -46,7 +46,12 @@ sample weeks spread across the year, or read GTFS calendar spans to tag connecti
 label). Discuss together with the frequency display above — same data model, same
 brainstorm.
 
-## C. Dot sizing / clustering / city grouping (user item 4)
+## C. Dot sizing / clustering / city grouping (user item 4) — C1 DONE, C2 tried+rejected, C3 open
+
+C1 (dots sized by n_dest) + capital stars shipped 2026-07-11
+(spec 2026-07-11-dots-clustering-design.md). C2 clustering shipped and was
+removed same day (killed the density picture). C3 city-union still needs its
+own brainstorm; may absorb the declutter goal.
 
 Station dots are tiny and hard to click. User ideas, in their words:
 - bigger dots for stations with more connections ("more connections is already a

@@ -1,4 +1,4 @@
-// Pure helpers for dot sizing, cluster rendering, and star icons.
+// Pure helpers for dot sizing and the capital star icon.
 // Spec: docs/superpowers/specs/2026-07-11-dots-clustering-design.md §2–4.
 
 import type { ExpressionSpecification } from "maplibre-gl";
@@ -19,38 +19,11 @@ export function dotRadiusExpression(): ExpressionSpecification {
 }
 
 /**
- * circle-radius for station-clusters bubble, scaled by point_count.
- */
-export function clusterRadiusExpression(): ExpressionSpecification {
-  return [
-    "step",
-    ["get", "point_count"],
-    15,   // default (2+)
-    5, 18,
-    10, 22,
-    25, 26,
-  ] as ExpressionSpecification;
-}
-
-/**
- * Sort stations for the cluster pick-list popup:
- * descending n_dest, then ascending name for ties.
- * Returns a new sorted array (does not mutate).
- */
-export function sortForClusterList<T extends { name: string; n_dest: number }>(
-  stations: T[],
-): T[] {
-  return [...stations].sort((a, b) =>
-    b.n_dest - a.n_dest || a.name.localeCompare(b.name),
-  );
-}
-
-/**
  * Rasterize a 5-point star for map.addImage() as {width, height, data} —
  * one of addImage's accepted shapes (a raw canvas element is NOT: passing one
  * throws and aborts the whole map load handler). Pure math, no DOM/canvas, so
  * it behaves identically in the browser and in tests.
- * Grey fill (#9ca3af) matching the dot palette, white rim.
+ * Dark grey fill (#4b5563) so capitals stand out from the dot palette; white rim.
  */
 export function drawStarIcon(size: number): { width: number; height: number; data: Uint8ClampedArray } {
   const cx = size / 2;
@@ -86,9 +59,9 @@ export function drawStarIcon(size: number): { width: number; height: number; dat
       if (!inside(px, py, rim)) continue;
       const o = (y * size + x) * 4;
       const grey = inside(px, py, fill);
-      data[o] = grey ? 156 : 255;
-      data[o + 1] = grey ? 163 : 255;
-      data[o + 2] = grey ? 175 : 255;
+      data[o] = grey ? 75 : 255;
+      data[o + 1] = grey ? 85 : 255;
+      data[o + 2] = grey ? 99 : 255;
       data[o + 3] = 255;
     }
   }
