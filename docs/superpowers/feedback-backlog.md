@@ -64,23 +64,35 @@ Station dots are tiny and hard to click. User ideas, in their words:
 The union idea has data-model implications (city entity above stations) — brainstorm
 before building.
 
-## D. Branding / map styling (user item 7) — PHASE 1 SHIPPED 2026-07-11
+## D. Branding / map styling (user item 7) — PHASE 1 + PHASE 2 SHIPPED
 
-Spec: `docs/superpowers/specs/2026-07-11-branding-design.md`. Phase 1 (light
-identity) + first user calibration round shipped 2026-07-11. Remaining:
+Phase 1 spec: `docs/superpowers/specs/2026-07-11-branding-design.md`.
+Phase 2 spec: `docs/superpowers/specs/2026-07-12-branding-phase2-design.md`,
+plan `docs/superpowers/plans/2026-07-12-branding-phase2.md`.
 
-- **Phase 2: dark mode (deep night)** — user asked for it during calibration
-  ("dark mode?"); spec §Map styling has the tokens. Next: agy-Opus plan in the
-  house format, then Flash execution (same pipeline as Phase 1,
-  `docs/superpowers/plans/2026-07-11-branding-phase1.md` is the template).
-- **Mascot riding the selected journey line** — explicit user request 2026-07-11
-  ("the actual selected journey line … should have the mascot riding it :))").
-  Animated marker (mascot SVG) moving along the selected reach-line geometry.
-  Note: `web/src/lib/highlight.ts` header already marks the thick-line treatment
-  provisional pending exactly this (backlog item J lineage). Bend-along-route
-  (spec Phase 3) can build on it later.
-- Open user-judged tuning: bucket-0 yellow on cream (spec TUNING POINT) — user
-  has not yet objected; revisit after more map time.
+- Phase 1 (light identity) + calibration shipped 2026-07-11.
+- **Phase 2 (dark mode + mascot rider) shipped 2026-07-12** (commits
+  de6ffa8..e236fb2, Flash-executed, controller-reviewed, 89 web tests green,
+  NOT yet pushed). Deep-night basemap + theme toggle (`prefers-color-scheme`
+  + persisted `ose-theme`), per-theme overlay tokens, CSS-var panel chrome;
+  C0 mascot loops the selected journey line (rotate+flip, transfer pauses,
+  reduced-motion parks at destination).
+
+Open user-judged tuning (all AWAITING the user's visual calibration pass —
+none auto-resolved, all easy to nudge):
+- **Dark starting hexes** — `themeTokens("dark")` in `web/src/lib/colors.ts`
+  (stationDot `#5B7FDB`, veil `#6B7590`, rider cream) and the
+  `[data-theme="dark"]` CSS block (panel `#0B1533` etc.) are starting points.
+- **Mascot traverse speed** — `TRAVERSE_MS = 7000` in `web/src/lib/ride.ts`
+  is a flagged TUNING POINT; user unsure fixed-vs-length-scaled ("we shall
+  find out"). Fallback (documented): ~5–10 s clamped scaling.
+- **Mascot rotation sign** — `riderTransform` math is tested but only visual
+  check confirms MapLibre's rotation direction; a wrong sign is a one-line fix.
+- Open from Phase 1: bucket-0 yellow on cream (spec TUNING POINT) — not yet
+  objected to.
+
+- **Phase 3 (still out of scope):** mascot bends along the actual route
+  geometry / logo draw-itself animation. Shares ground with item I.
 User's sketch: EU-train theme, cute EU train in the logo that could "bend along the
 chosen route if exists". Map style should follow the identity (OpenFreeMap styles can
 be customized). Tagline is fixed: "nonstopeurope with onestopeurope".
