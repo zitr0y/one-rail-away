@@ -16,6 +16,7 @@ from concurrent.futures import ProcessPoolExecutor
 from datetime import UTC, datetime
 from pathlib import Path
 
+from pipeline.coverage import build_coverage, covered_from_feeds
 from pipeline.models import Destination, ReachFile, Station, Trip
 from pipeline.raptor import compute_reachability
 
@@ -74,7 +75,12 @@ def _compute_one(args: tuple[str, str, str, str]) -> tuple[str, int]:
     return station_id, _write_reach(_worker_trips, station_id, Path(out_dir_str), sample_date, now)
 
 
-def compute_all(graph_dir: Path, out_dir: Path, workers: int | None = None) -> None:
+def compute_all(
+    graph_dir: Path,
+    out_dir: Path,
+    workers: int | None = None,
+    feeds_path: Path = Path("feeds.toml"),
+) -> None:
     """For each station in the graph, compute reachability and, if any
     destination is reached, write `out_dir/reach_<id>.json`. Always writes
     `out_dir/stations.json` (registry with `has_reach` flags) and
@@ -124,3 +130,6 @@ def compute_all(graph_dir: Path, out_dir: Path, workers: int | None = None) -> N
     (out_dir / "meta.json").write_text(
         json.dumps({"computed_at": now, "sample_date": sample_date, "feeds": feeds_meta})
     )
+
+    covered = covered_from_feeds(feeds_path) if feeds_path.exists() else set()
+    (out_dir / "coverage.json").write_text(json.dumps(build_coverage(covered), ensure_ascii=False))

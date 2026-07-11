@@ -137,6 +137,13 @@ def create_app(data_dir: Path) -> FastAPI:
     def meta() -> dict:
         return _read(data_dir / "meta.json")
 
+    @app.get("/api/coverage")
+    def coverage() -> dict:
+        path = data_dir / "coverage.json"
+        if not path.exists():
+            raise HTTPException(status_code=404, detail="No coverage data")
+        return json.loads(path.read_text(encoding="utf-8"))
+
     return app
 
 

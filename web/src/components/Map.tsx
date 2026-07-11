@@ -4,6 +4,8 @@ import { destinationsGeoJSON, linesGeoJSON, type MaxTrains } from "../lib/geojso
 import { BUCKET_COLORS } from "../lib/colors";
 import { baseLineOpacity, selectedLineFilter } from "../lib/highlight";
 import { pickFeature } from "../lib/pickfeature";
+import { coverageTooltip, showVeilTooltip, veilFilter } from "../lib/coverage";
+import { api } from "../lib/api";
 import type { ReachFile, Station } from "../lib/types";
 
 const CLICK_LAYERS = ["reach-dots", "all-stations"];
@@ -38,10 +40,21 @@ export default function MapView(props: Props) {
       m.addSource("all-stations", { type: "geojson", data: EMPTY as never });
       m.addSource("reach-lines", { type: "geojson", data: EMPTY as never });
       m.addSource("reach-dots", { type: "geojson", data: EMPTY as never });
+      m.addSource("coverage", { type: "geojson", data: EMPTY as never });
       m.addLayer({
         id: "all-stations", type: "circle", source: "all-stations",
         paint: { "circle-radius": 3, "circle-color": "#9ca3af", "circle-opacity": 0.7 },
       });
+      m.addLayer(
+        {
+          id: "coverage-veil",
+          type: "fill",
+          source: "coverage",
+          filter: veilFilter() as never,
+          paint: { "fill-color": "#6b7280", "fill-opacity": 0.25 },
+        },
+        "all-stations",
+      );
       m.addLayer({
         id: "reach-lines", type: "line", source: "reach-lines",
         layout: { "line-cap": "round", "line-join": "round" },
@@ -80,7 +93,26 @@ export default function MapView(props: Props) {
         m.on("mouseenter", layer, () => (m.getCanvas().style.cursor = "pointer"));
         m.on("mouseleave", layer, () => (m.getCanvas().style.cursor = ""));
       }
+      const veilPopup = new maplibregl.Popup({ closeButton: false, closeOnClick: false });
+      m.on("mousemove", "coverage-veil", (e) => {
+        const stationHits = m.queryRenderedFeatures(e.point, { layers: CLICK_LAYERS }).length;
+        const name = e.features?.[0]?.properties?.name as string | undefined;
+        if (!showVeilTooltip(stationHits) || !name) {
+          veilPopup.remove();
+          return;
+        }
+        veilPopup.setLngLat(e.lngLat).setText(coverageTooltip(name)).addTo(m);
+      });
+      m.on("mouseleave", "coverage-veil", () => veilPopup.remove());
       map.current = m;
+      api
+        .getCoverage()
+        .then((fc) =>
+          (m.getSource("coverage") as maplibregl.GeoJSONSource).setData(fc as never),
+        )
+        .catch(() => {
+          // Veil is decorative; a missing coverage.json (404) just means no veil.
+        });
       syncData();
       syncHighlight();
     });

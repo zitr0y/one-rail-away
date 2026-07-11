@@ -13,16 +13,17 @@ def test_compute_all_writes_reach_files(tmp_path):
     raw = tmp_path / "raw"
     cfgs = make_fixture_feeds(raw)
     countries_toml, names_toml = empty_overrides(tmp_path)
+    feeds_toml = _write_feeds_toml(tmp_path, cfgs)
     build(
         raw,
         tmp_path / "graph",
-        _write_feeds_toml(tmp_path, cfgs),
+        feeds_toml,
         None,
         SAMPLE,
         station_names_path=names_toml,
         station_countries_path=countries_toml,
     )
-    compute_all(tmp_path / "graph", tmp_path / "out")
+    compute_all(tmp_path / "graph", tmp_path / "out", feeds_path=feeds_toml)
 
     reach = json.loads((tmp_path / "out" / "reach_1111111.json").read_text())
     beta = next(d for d in reach["destinations"] if d["id"] == "2222222")
@@ -45,10 +46,11 @@ def test_compute_all_prunes_stale_reach_files(tmp_path):
     raw = tmp_path / "raw"
     cfgs = make_fixture_feeds(raw)
     countries_toml, names_toml = empty_overrides(tmp_path)
+    feeds_toml = _write_feeds_toml(tmp_path, cfgs)
     build(
         raw,
         tmp_path / "graph",
-        _write_feeds_toml(tmp_path, cfgs),
+        feeds_toml,
         None,
         SAMPLE,
         station_names_path=names_toml,
@@ -58,7 +60,7 @@ def test_compute_all_prunes_stale_reach_files(tmp_path):
     out.mkdir()
     stale = out / "reach_9999999.json"
     stale.write_text("{}")
-    compute_all(tmp_path / "graph", out, workers=1)
+    compute_all(tmp_path / "graph", out, workers=1, feeds_path=feeds_toml)
     assert not stale.exists()
     assert (out / "reach_1111111.json").exists()  # fresh files kept
 
@@ -67,17 +69,18 @@ def test_compute_all_parallel_matches_serial(tmp_path):
     raw = tmp_path / "raw"
     cfgs = make_fixture_feeds(raw)
     countries_toml, names_toml = empty_overrides(tmp_path)
+    feeds_toml = _write_feeds_toml(tmp_path, cfgs)
     build(
         raw,
         tmp_path / "graph",
-        _write_feeds_toml(tmp_path, cfgs),
+        feeds_toml,
         None,
         SAMPLE,
         station_names_path=names_toml,
         station_countries_path=countries_toml,
     )
-    compute_all(tmp_path / "graph", tmp_path / "serial", workers=1)
-    compute_all(tmp_path / "graph", tmp_path / "par", workers=2)
+    compute_all(tmp_path / "graph", tmp_path / "serial", workers=1, feeds_path=feeds_toml)
+    compute_all(tmp_path / "graph", tmp_path / "par", workers=2, feeds_path=feeds_toml)
 
     def reach_files(d):  # computed_at differs across runs (not within), drop it
         return {

@@ -16,16 +16,17 @@ def client(tmp_path_factory):
     raw = tmp / "raw"
     cfgs = make_fixture_feeds(raw)
     countries_toml, names_toml = empty_overrides(tmp)
+    feeds_toml = _write_feeds_toml(tmp, cfgs)
     build(
         raw,
         tmp / "graph",
-        _write_feeds_toml(tmp, cfgs),
+        feeds_toml,
         None,
         date(2026, 7, 14),
         station_names_path=names_toml,
         station_countries_path=countries_toml,
     )
-    compute_all(tmp / "graph", tmp / "out")
+    compute_all(tmp / "graph", tmp / "out", feeds_path=feeds_toml)
     return TestClient(create_app(tmp / "out"))
 
 
@@ -44,3 +45,17 @@ def test_meta_and_503(client, tmp_path):
     assert client.get("/api/meta").json()["sample_date"] == "2026-07-14"
     empty = TestClient(create_app(tmp_path))
     assert empty.get("/api/meta").status_code == 503
+
+
+def test_coverage_endpoint(client):
+    r = client.get("/api/coverage")
+    assert r.status_code == 200
+    fc = r.json()
+    assert fc["type"] == "FeatureCollection"
+    assert len(fc["features"]) == 42
+    assert all("name" in f["properties"] for f in fc["features"])
+
+
+def test_coverage_404_when_absent(tmp_path):
+    empty = TestClient(create_app(tmp_path))
+    assert empty.get("/api/coverage").status_code == 404
