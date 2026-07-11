@@ -74,16 +74,19 @@ export default function App() {
                selectedDest={selectedDest}
                onSelectOrigin={selectOrigin} onSelectDestination={setSelectedDest}
                onEmptyClick={onEmptyClick} />
-      <header className="panel">
-        <h1>onestopeurope</h1>
-        <p className="tagline">nonstopeurope with onestopeurope</p>
+      <header className="header-bar">
+        <img src="/logo-mascot.svg" alt="" className="header-mascot" />
+        <span className="header-wordmark">onestopeurope</span>
+        <span className="header-tagline">nonstopeurope with onestopeurope</span>
+      </header>
+      <aside className="panel">
         <SearchBox onSelect={(s) => selectOrigin(s.id)} />
         <StopToggle value={maxTrains} onChange={setMaxTrains} />
         <TimeSlider value={maxMinutes} onChange={setMaxMinutes} />
         <Legend />
         {!reach && <p className="hint">Search or click a station to begin.</p>}
         {error && <p className="error">{error}</p>}
-      </header>
+      </aside>
       {origin && dest && stationsById.get(dest.id) && (
         <JourneyCard origin={origin} destination={stationsById.get(dest.id)!} dest={dest}
                      maxTrains={maxTrains} stationsById={stationsById}

@@ -3,13 +3,47 @@
 * { box-sizing: border-box; }
 body { margin: 0; font-family: system-ui, sans-serif; }
 .app { position: fixed; inset: 0; }
-.panel {
-  position: absolute; top: 16px; left: 16px; z-index: 10; width: 300px;
-  background: #fff; border-radius: 12px; padding: 16px;
-  box-shadow: 0 4px 16px rgb(0 0 0 / 0.15); display: flex; flex-direction: column; gap: 10px;
+.header-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  background: #003399;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
 }
-.panel h1 { margin: 0; font-size: 22px; }
-.tagline { margin: 0; color: #6b7280; font-size: 13px; }
+.header-mascot {
+  height: 28px;
+  width: auto;
+}
+.header-wordmark {
+  margin-left: 10px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+}
+.header-tagline {
+  margin-left: auto;
+  color: #ffcc00;
+  font-style: italic;
+  font-size: 12px;
+}
+.panel {
+  position: absolute;
+  top: 64px;       /* below the header bar */
+  left: 16px;
+  z-index: 10;
+  width: 300px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 16px rgb(0 0 0 / 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 .search-box { position: relative; }
 .search-box input { width: 100%; padding: 8px; border: 1px solid #d1d5db; border-radius: 8px; }
 .search-box ul {
@@ -22,7 +56,7 @@ body { margin: 0; font-family: system-ui, sans-serif; }
 .search-box .country { color: #9ca3af; font-size: 12px; }
 .stop-toggle { display: flex; border: 1px solid #d1d5db; border-radius: 8px; overflow: hidden; }
 .stop-toggle button { flex: 1; padding: 8px 4px; border: 0; background: #fff; cursor: pointer; font-size: 13px; }
-.stop-toggle button.active { background: #111827; color: #fff; }
+.stop-toggle button.active { background: #003399; color: #fff; }
 .time-slider { font-size: 13px; display: flex; flex-direction: column; gap: 4px; }
 .legend { display: flex; gap: 10px; font-size: 12px; flex-wrap: wrap; }
 .legend i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 3px; }
@@ -43,7 +77,7 @@ body { margin: 0; font-family: system-ui, sans-serif; }
 }
 .journey-card .action-btn:hover { background: #f3f4f6; }
 .journey-card .book {
-  display: block; text-align: center; background: #111827; color: #fff;
+  display: block; text-align: center; background: #003399; color: #fff;
   padding: 10px; border-radius: 8px; text-decoration: none; font-weight: 600;
 }
 .journey-card .fineprint { margin: 8px 0 0; font-size: 11px; color: #9ca3af; }
