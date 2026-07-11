@@ -39,7 +39,6 @@ def build_coverage(covered: set[str], reachable: set[str], asset_path: Path = WO
     (all land minus covered holes and light geom)."""
     fc = json.loads(asset_path.read_text(encoding="utf-8"))
 
-    # caller guarantees nothing: reachable must ignore codes also present in covered
     effective_reachable = reachable - covered
 
     all_geoms = []
@@ -56,15 +55,10 @@ def build_coverage(covered: set[str], reachable: set[str], asset_path: Path = WO
             elif iso in effective_reachable:
                 light_geoms.append(geom)
 
-    # Geometry rules, using the existing EUROPE_BBOX:
-    # light_geom = unary_union(features whose ISO is in (reachable - covered))
-    # intersected with EUROPE_BBOX
     light_geom = unary_union(light_geoms).intersection(EUROPE_BBOX)
 
-    # covered_holes = unary_union(features whose ISO is in covered) intersected with EUROPE_BBOX
     covered_holes = unary_union(covered_geoms).intersection(EUROPE_BBOX)
 
-    # dark_geom = unary_union(ALL features) minus covered_holes minus light_geom
     all_union = unary_union(all_geoms)
     dark_geom = all_union.difference(covered_holes).difference(light_geom)
 
