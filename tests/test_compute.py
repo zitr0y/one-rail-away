@@ -120,6 +120,10 @@ def test_compute_all_writes_n_dest(tmp_path):
     assert alpha["n_dest"] == 3
     # Delta has no reach
     assert delta["n_dest"] == 0
+    # n_routes counts distinct trip endpoint pairs calling at the station;
+    # every fixture station lies on at least one trip, so all are >= 1
+    assert alpha["n_routes"] >= 1
+    assert all(s["n_routes"] >= 1 for s in stations["stations"])
 
 
 def test_compute_all_sets_is_capital(tmp_path):
@@ -141,6 +145,7 @@ def test_compute_all_sets_is_capital(tmp_path):
     # Write a capitals.toml that matches Alpha Hbf in Landia (country=LA)
     (tmp_path / "capitals.toml").write_text('[capitals]\nLA = "Alpha Hbf"\n')
     import os
+
     old_cwd = os.getcwd()
     os.chdir(tmp_path)
     try:

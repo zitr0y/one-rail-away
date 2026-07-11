@@ -9,6 +9,7 @@ class Station(BaseModel):
     country: str
     has_reach: bool = False
     n_dest: int = 0
+    n_routes: int = 0
     is_capital: bool = False
 
 

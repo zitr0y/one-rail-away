@@ -154,7 +154,7 @@ export default function MapView(props: Props) {
       features: nonCapitals.map((s) => ({
         type: "Feature" as const,
         geometry: { type: "Point" as const, coordinates: [s.lon, s.lat] },
-        properties: { id: s.id, name: s.name, n_dest: s.n_dest },
+        properties: { id: s.id, name: s.name, n_routes: s.n_routes },
       })),
     });
 
@@ -164,7 +164,7 @@ export default function MapView(props: Props) {
       features: capitalStations.map((s) => ({
         type: "Feature" as const,
         geometry: { type: "Point" as const, coordinates: [s.lon, s.lat] },
-        properties: { id: s.id, name: s.name, n_dest: s.n_dest },
+        properties: { id: s.id, name: s.name, n_routes: s.n_routes },
       })),
     });
 

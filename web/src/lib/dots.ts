@@ -4,17 +4,20 @@
 import type { ExpressionSpecification } from "maplibre-gl";
 
 /**
- * Data-driven circle-radius for the grey all-stations layer.
- * sqrt scale from 2.5px (n_dest=0) to 8px, clamped at n_dest=400.
- * sqrt(0)=0, sqrt(400)=20 — we interpolate linearly in sqrt-space.
+ * Data-driven circle-radius for the grey all-stations layer, driven by
+ * n_routes = distinct train routes calling at the station (hub value).
+ * Calibrated on the 2026-07-11 build: p50=3, p90=16, p99=42, max=74 —
+ * most dots stay small (p50 -> ~2.9px), only true hubs reach 8px.
  */
 export function dotRadiusExpression(): ExpressionSpecification {
   return [
     "interpolate",
     ["linear"],
-    ["sqrt", ["max", ["get", "n_dest"], 0]],
-    0, 2.5,
-    Math.sqrt(400), 8,
+    ["sqrt", ["max", ["get", "n_routes"], 0]],
+    0, 2,
+    2, 3,
+    5, 5,
+    Math.sqrt(74), 8,
   ] as ExpressionSpecification;
 }
 

@@ -41,17 +41,13 @@ describe("dotRadiusExpression", () => {
     expect(expr[0]).toBe("interpolate");
   });
 
-  it("maps n_dest 0 to radius 2.5", () => {
+  it("sizes by n_routes, small at 0, capped at 8", () => {
     const expr = dotRadiusExpression();
-    // Expression structure: ["interpolate", ["linear"], input, 0, 2.5, sqrt(400), 8]
+    expect(JSON.stringify(expr)).toContain('"n_routes"');
+    // Expression structure: ["interpolate", ["linear"], input, ...stop pairs]
     const stops = expr.slice(3); // after interpolation type + input
     expect(stops[0]).toBe(0);
-    expect(stops[1]).toBe(2.5);
-  });
-
-  it("maps n_dest >= 400 to radius 8", () => {
-    const expr = dotRadiusExpression();
-    const stops = expr.slice(3);
+    expect(stops[1]).toBe(2); // most dots stay small (p50 n_routes = 3)
     expect(stops[stops.length - 1]).toBe(8);
   });
 });

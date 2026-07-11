@@ -76,6 +76,23 @@ def _compute_one(args: tuple[str, str, str, str]) -> tuple[str, int]:
     return station_id, _write_reach(_worker_trips, station_id, Path(out_dir_str), sample_date, now)
 
 
+def route_counts(trips_path: Path) -> dict[str, int]:
+    """Distinct train routes (unordered endpoint pair) calling at each station.
+
+    Counts lines meeting at a station rather than stops made or stations
+    reachable, so long stopping trains (PKP TLK) don't inflate hub size the way
+    n_dest does. Used for dot sizing on the map.
+    """
+    raw = json.loads(trips_path.read_text())["trips"]
+    routes: dict[str, set[frozenset[str]]] = {}
+    for t in raw:
+        stops = [st["station"] for st in t["stops"]]
+        key = frozenset((stops[0], stops[-1]))
+        for sid in stops:
+            routes.setdefault(sid, set()).add(key)
+    return {sid: len(keys) for sid, keys in routes.items()}
+
+
 def compute_all(
     graph_dir: Path,
     out_dir: Path,
@@ -109,16 +126,16 @@ def compute_all(
             for station_id, n in pool.map(_compute_one, tasks, chunksize=8):
                 results[station_id] = n
 
-    capital_ids, cap_warnings = load_capitals(
-        Path("capitals.toml"), stations
-    )
+    capital_ids, cap_warnings = load_capitals(Path("capitals.toml"), stations)
     for w in cap_warnings:
         print(w)
 
+    n_routes = route_counts(graph_dir / "trips.json")
     written: set[str] = set()
     for station in stations:
         n = results[station.id]
         station.n_dest = n
+        station.n_routes = n_routes.get(station.id, 0)
         if n:
             station.has_reach = True
             written.add(f"reach_{station.id}.json")
