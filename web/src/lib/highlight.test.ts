@@ -13,7 +13,7 @@ describe("selectedLineFilter", () => {
 
 describe("baseLineOpacity", () => {
   it("dims the other lines strongly while a journey is selected", () => {
-    expect(baseLineOpacity(true)).toBe(0.04);
+    expect(baseLineOpacity(true)).toBe(0.08);
   });
 
   it("keeps normal opacity when nothing is selected", () => {
@@ -36,7 +36,7 @@ describe("stationOpacityExpression", () => {
       ["get", "id"],
       ["8507000", "8000001"],
       0.7,
-      0.04,
+      0.08,
     ]);
   });
 });

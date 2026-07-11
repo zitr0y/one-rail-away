@@ -41,7 +41,7 @@ export function starSizeExpression(): ExpressionSpecification {
  * one of addImage's accepted shapes (a raw canvas element is NOT: passing one
  * throws and aborts the whole map load handler). Pure math, no DOM/canvas, so
  * it behaves identically in the browser and in tests.
- * Dark grey fill (#4b5563) so capitals stand out from the dot palette; white rim.
+ * Darker grey fill (#374151) for authority against warm-paper basemap; white rim.
  */
 export function drawStarIcon(size: number): { width: number; height: number; data: Uint8ClampedArray } {
   const cx = size / 2;
@@ -77,9 +77,9 @@ export function drawStarIcon(size: number): { width: number; height: number; dat
       if (!inside(px, py, rim)) continue;
       const o = (y * size + x) * 4;
       const grey = inside(px, py, fill);
-      data[o] = grey ? 75 : 255;
-      data[o + 1] = grey ? 85 : 255;
-      data[o + 2] = grey ? 99 : 255;
+      data[o] = grey ? 55 : 255;
+      data[o + 1] = grey ? 65 : 255;
+      data[o + 2] = grey ? 81 : 255;
       data[o + 3] = 255;
     }
   }

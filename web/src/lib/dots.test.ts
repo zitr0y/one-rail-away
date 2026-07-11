@@ -75,7 +75,7 @@ describe("drawStarIcon", () => {
     const img = drawStarIcon(30);
     const at = (x: number, y: number) => (y * 30 + x) * 4;
     expect(img.data[at(15, 15) + 3]).toBe(255); // center opaque
-    expect(img.data[at(15, 15)]).toBe(75); // dark grey fill
+    expect(img.data[at(15, 15)]).toBe(55); // darker grey fill for paper basemap
     expect(img.data[at(0, 0) + 3]).toBe(0); // corner transparent
     expect(img.data[at(29, 29) + 3]).toBe(0);
   });

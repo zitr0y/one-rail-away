@@ -59,7 +59,7 @@ export default function MapView(props: Props) {
           type: "fill",
           source: "coverage",
           paint: {
-            "fill-color": "#6b7280",
+            "fill-color": "#9c9589",
             "fill-opacity": ["match", ["get", "tier"], "light", 0.08, 0.16] as never,
           },
         },
@@ -88,7 +88,7 @@ export default function MapView(props: Props) {
         id: "reach-dots", type: "circle", source: "reach-dots",
         paint: {
           "circle-radius": 5.5, "circle-color": bucketColor as never,
-          "circle-stroke-width": 1, "circle-stroke-color": "#ffffff",
+          "circle-stroke-width": 1, "circle-stroke-color": "#F2EFE9",
         },
       });
       m.addImage("star-icon", drawStarIcon(44), { pixelRatio: 2 });
