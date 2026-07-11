@@ -19,28 +19,13 @@ implementation (established process convention).
 - Station `country` was assigned from the feed, not geography (Praha tagged "DE") —
   fixed in the bug batch; item E (greying) builds on the corrected field.
 
-## A. Add more national feeds — Renfe (ES) DONE 2026-07-10; Poland (PL) DONE 2026-07-10
+## A. Add more national feeds — ongoing (Renfe + PKP shipped)
 
-Renfe long-distance feed ingested (backlog A, feed 1 of N). Madrid, Barcelona
-(merged onto SNCF canonical, renamed), Porto (via TRENCELTA) on the map. Products:
-AVE, AVE INT, ALVIA, AVLO, Intercity, EUROMED, TRENCELTA. Competitor check
-(2026-07-10): Ouigo España publishes GTFS on nap.transportes.gob.es; iryo does not
-publish public GTFS.
-
-Poland long-distance feed ingested (backlog A, feed 2 of N). Warszawa, Kraków,
-Gdańsk on the map. Products: EIP, EIC, IC, TLK, EC, EN, LEO, RJ. Denmark: an
-earlier note claimed the Rejseplanen GTFS is registration-gated — WRONG
-(direct URL HEAD-verified open 2026-07-11, 57.5 MB, no registration); Denmark
-stays a MEDIUM candidate for the next batch.
-
-New-feed recipe: `docs/superpowers/new-feed-recipe.md`. Research verdicts
-for remaining countries in the recipe doc.
-
-Spec: `docs/superpowers/specs/2026-07-10-renfe-feed-design.md`.
-Plan: `docs/superpowers/plans/2026-07-10-renfe-feed.md`.
-
-Spec (Poland): `docs/superpowers/specs/2026-07-10-poland-feed-design.md`.
-Plan (Poland): `docs/superpowers/plans/2026-07-10-poland-feed.md`.
+Next candidates and research verdicts live in `docs/superpowers/new-feed-recipe.md`.
+Denmark (Rejseplanen GTFS) is MEDIUM and verified open (direct URL, 57.5 MB, no
+registration, HEAD-checked 2026-07-11). Each new feed un-greys a country (see the
+two-tier veil). Competitor note: Ouigo España publishes GTFS on
+nap.transportes.gob.es; iryo does not.
 
 ## B. Multi-day sampling / service frequency (user item 6)
 
@@ -81,18 +66,6 @@ User's sketch: EU-train theme, cute EU train in the logo that could "bend along 
 chosen route if exists". Map style should follow the identity (OpenFreeMap styles can
 be customized). Tagline is fixed: "nonstopeurope with onestopeurope".
 
-## E. Grey out countries not in the system — DONE 2026-07-11 (two-tier veil)
-
-Shipped in three live-test iterations (merge 11eae10, then commits 012d4eb…d258a49):
-world-wide dissolved veil from a new NE-10m asset (40% retention — 10% was coarser
-than the old 50m!), shapely union in `build_coverage`, covered holes clipped to
-EUROPE_BBOX (overseas territories + ISO-"-99" features stay veiled), gzip + parallel
-fetch for load latency. Final form: TWO tiers — light 0.08 for reachable-but-no-feed
-countries (data-driven: station countries − covered), dark 0.16 for the rest;
-per-tier tooltips, no legend entry, no feather (tried, dropped).
-Spec (all iterations): `docs/superpowers/specs/2026-07-11-veil-rework-design.md`.
-Plan: `docs/superpowers/plans/2026-07-11-veil-rework.md`.
-
 ## F. Selection UX: unselect + origin/destination clicking (added 2026-07-09 evening)
 
 User report: "unselecting a station/selecting a new station is wonky by clicking. You can
@@ -111,29 +84,6 @@ single click handler with `queryRenderedFeatures` + explicit precedence
 (destination-dot wins while a reach is active), plus an unselect (×) affordance in the
 status bar and Escape-to-unselect.
 
-## G. Merge-logic gap: UIC stops never proximity-merge — DONE 2026-07-10
-
-Fixed in `pipeline/merge.py` (rule #7): an unknown UIC code now falls back to the
-same proximity+name check as other stops before minting itself as canonical, with
-a run-local `uic_aliases` map so later feeds carrying the same code follow the
-merge deterministically. Symmetric UIC-vs-UIC merging included (dual-code border
-stations). Zero id churn: existing `station_aliases.toml` entries kept on purpose
-(removing one re-keys its canonical id — Konstanz/`station_countries.toml` trap).
-Verified a byte-identical no-op rebuild on current feeds; the payoff is backlog A
-(new feeds need ~no manual aliases). Known limit: cross-language name twins
-("Sarrebruck" vs "Saarbrücken Hbf") still need aliases.
-Spec: `docs/superpowers/specs/2026-07-10-uic-merge-gap-design.md`.
-
-## H. Cheap FR coverage win: SNCF Intercités — DONE (verified 2026-07-10)
-
-Already shipped as a side effect of the SNCF labels task (merge f9ca9f1): sncf
-`route_allow = ["."]` with the `stop_id_brand` table selecting and labeling
-INTERCITES / INTERCITES de nuit — 72 Intercités + 15 night trips live in the
-2026-07-10 data. The "stops must merge cleanly" prerequisite is item G (done,
-see above). Reminder kept: Intercités also appear inside the Swiss feed
-(agency 87_LEX, "IC190A") — never ingest them from there; provenance belongs
-with SNCF (see the sbb route_allow evidence comments in feeds.toml).
-
 ## I. Corridor bundling for reach lines (added 2026-07-10)
 
 User: Paris shows ~15 separate straight lines fanning over southern France; "I feel like
@@ -144,13 +94,6 @@ physically share the LGV corridor but our lines don't. Fix directions to brainst
 (a) route along real rail geometry (GTFS shapes.txt if the feeds carry it, or OSM rail),
 (b) algorithmic edge bundling, (c) force lines through nearest corridor waypoints. Big
 visual win, medium-to-large effort. Related to D (map styling).
-
-## J. Highlight the selected journey — DONE 2026-07-10
-
-Shipped (merge b01fb6f): selected journey's line 4px full-opacity on a dedicated
-`reach-lines-selected` layer, others dim to 0.12; dots untouched. Thick-line styling is
-provisional — revisit for an animated train when branding (D) lands.
-Spec: `docs/superpowers/specs/2026-07-10-journey-highlight-design.md`.
 
 ## Smaller deferred notes
 
@@ -176,13 +119,6 @@ Spec: `docs/superpowers/specs/2026-07-10-journey-highlight-design.md`.
 - Pre-existing deferred minors from the build ledger still open: `remap_trips` in-place
   mutation trap, dead `uic_regex` comment, O(n²) validate check, search `limit`
   validation, map `easeTo` re-centering on every filter change.
-- ~~SNCF train labels~~ DONE 2026-07-10 (merge f9ca9f1): brand+number via
-  `stop_id_brand` + trip_headsign ("TGV INOUI 9704", "IC 50" Paris–Bruxelles); join
-  safety verified (201 non-SNCF joins unchanged, 0 SNCF-touching).
-- Pipeline QoL DONE 2026-07-10 (merge 4b9ca46): `ose compute` now parallel
-  (`--workers`, default one per CPU) and prunes stale reach files (stale files broke
-  has_reach-from-disk when canonical ids change). The 46-min compute run on 2026-07-10
-  was on battery power; mains + parallelism should be minutes.
 - Final-review note (sncf-labels): document near through.py that SNCF ICE numbers
   (95xx) are disjoint from db_fern ICE numbers — a future feed refresh with a shared
   number would silently start joining.
