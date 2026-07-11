@@ -1,7 +1,36 @@
 @import "maplibre-gl/dist/maplibre-gl.css";
 
+@font-face {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/barlow-v13-latin-regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/barlow-v13-latin-600.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/barlow-v13-latin-700.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Barlow";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/barlow-v13-latin-italic.woff2") format("woff2");
+}
+
 * { box-sizing: border-box; }
-body { margin: 0; font-family: system-ui, sans-serif; }
+body { margin: 0; font-family: "Barlow", system-ui, sans-serif; }
 .app { position: fixed; inset: 0; }
 .header-bar {
   position: absolute;
