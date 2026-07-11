@@ -30,7 +30,7 @@ domain). The exact download URL and mapshaper command are recorded in the
 `pipeline/coverage.py` module docstring (same provenance pattern as `geo.py`):
 
 - properties reduced to `ISO_A2_EH`
-- simplified ~10% (visvalingam, keep-shapes) — clean at z4–8
+- simplified to 40% retention (visvalingam, keep-shapes) — clean at z4–8
 - coordinates rounded to 4 decimals (~11 m, well inside 1:10M accuracy)
 - target size ≤ ~5 MB committed
 

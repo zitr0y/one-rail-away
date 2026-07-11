@@ -8,11 +8,11 @@ from ne_10m_admin_0_countries.geojson (Natural Earth, public domain):
 Built one-off with:
   npx -y mapshaper ne_10m_admin_0_countries.geojson \\
     -filter-fields ISO_A2_EH \\
-    -simplify visvalingam 10% keep-shapes \\
+    -simplify visvalingam 40% keep-shapes \\
     -o precision=0.0001 format=geojson \\
     pipeline/assets/countries_world_10m.geojson
 
-Properties reduced to ISO_A2_EH, simplified ~10% (visvalingam, keep-shapes),
+Properties reduced to ISO_A2_EH, simplified to 40% retention (visvalingam, keep-shapes),
 coordinates rounded to 4 decimals (~11 m). The existing
 countries_europe_50m.geojson is untouched — geo.py station->country assignment
 keeps using it.
