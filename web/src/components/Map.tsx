@@ -1,8 +1,8 @@
 import maplibregl from "maplibre-gl";
 import { useEffect, useRef } from "react";
-import { destinationsGeoJSON, linesGeoJSON, type MaxTrains } from "../lib/geojson";
+import { destinationsGeoJSON, linesGeoJSON, bestJourney, type MaxTrains } from "../lib/geojson";
 import { BUCKET_COLORS } from "../lib/colors";
-import { baseLineOpacity, selectedLineFilter } from "../lib/highlight";
+import { baseLineOpacity, selectedLineFilter, stationOpacityExpression } from "../lib/highlight";
 import { pickFeature } from "../lib/pickfeature";
 import { veilTooltip, showVeilTooltip } from "../lib/coverage";
 import { api } from "../lib/api";
@@ -181,12 +181,48 @@ export default function MapView(props: Props) {
   function syncHighlight() {
     const m = map.current;
     if (!m) return;
-    const { selectedDest } = propsRef.current;
+    const { selectedDest, reach, maxTrains } = propsRef.current;
     m.setFilter("reach-lines-selected", selectedLineFilter(selectedDest) as never);
     m.setPaintProperty("reach-lines", "line-opacity", baseLineOpacity(selectedDest !== null));
+
+    let selectedStationIds: string[] | null = null;
+    if (reach && selectedDest) {
+      const dest = reach.destinations.find((d) => d.id === selectedDest);
+      const journey = dest ? bestJourney(dest, maxTrains) : null;
+      if (journey) {
+        const ids = new Set<string>();
+        ids.add(reach.origin);
+        for (const leg of journey.legs) {
+          ids.add(leg.from);
+          ids.add(leg.to);
+          if (leg.via) {
+            for (const v of leg.via) {
+              ids.add(v);
+            }
+          }
+        }
+        selectedStationIds = Array.from(ids);
+      }
+    }
+
+    m.setPaintProperty(
+      "all-stations",
+      "circle-opacity",
+      stationOpacityExpression(selectedStationIds, 0.7) as never,
+    );
+    m.setPaintProperty(
+      "reach-dots",
+      "circle-opacity",
+      stationOpacityExpression(selectedStationIds, 1.0) as never,
+    );
+    m.setPaintProperty(
+      "capital-stars",
+      "icon-opacity",
+      stationOpacityExpression(selectedStationIds, 1.0) as never,
+    );
   }
 
-  useEffect(syncHighlight, [props.selectedDest]);
+  useEffect(syncHighlight, [props.selectedDest, props.reach, props.maxTrains]);
 
   return <div ref={container} style={{ position: "absolute", inset: 0 }} />;
 }

@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { baseLineOpacity, selectedLineFilter } from "./highlight";
+import { baseLineOpacity, selectedLineFilter, stationOpacityExpression } from "./highlight";
 
 describe("selectedLineFilter", () => {
   it("matches the line feature with the selected destination id", () => {
@@ -20,3 +20,24 @@ describe("baseLineOpacity", () => {
     expect(baseLineOpacity(false)).toBe(0.75);
   });
 });
+
+describe("stationOpacityExpression", () => {
+  it("returns normal opacity when selectedStationIds is null", () => {
+    expect(stationOpacityExpression(null, 0.7)).toBe(0.7);
+  });
+
+  it("returns normal opacity when selectedStationIds is empty", () => {
+    expect(stationOpacityExpression([], 1.0)).toBe(1.0);
+  });
+
+  it("returns a match expression when selectedStationIds is provided", () => {
+    expect(stationOpacityExpression(["8507000", "8000001"], 0.7)).toEqual([
+      "match",
+      ["get", "id"],
+      ["8507000", "8000001"],
+      0.7,
+      0.04,
+    ]);
+  });
+});
+

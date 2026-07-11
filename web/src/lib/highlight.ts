@@ -10,3 +10,16 @@ export function selectedLineFilter(id: string | null): SelectedLineFilter {
 export function baseLineOpacity(hasSelection: boolean): number {
   return hasSelection ? 0.04 : 0.75;
 }
+
+export type StationOpacityExpression = number | ["match", ["get", "id"], string[], number, number];
+
+export function stationOpacityExpression(
+  selectedStationIds: string[] | null,
+  normalOpacity: number,
+): StationOpacityExpression {
+  if (!selectedStationIds || selectedStationIds.length === 0) {
+    return normalOpacity;
+  }
+  return ["match", ["get", "id"], selectedStationIds, normalOpacity, 0.04];
+}
+
