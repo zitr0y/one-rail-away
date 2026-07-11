@@ -1,6 +1,8 @@
 import maplibregl from "maplibre-gl";
 import { useEffect, useRef } from "react";
-import { destinationsGeoJSON, linesGeoJSON, bestJourney, type MaxTrains } from "../lib/geojson";
+import { destinationsGeoJSON, linesGeoJSON, bestJourney, journeyLegPaths, type MaxTrains } from "../lib/geojson";
+import { buildRideTimeline, rideStateAt, riderTransform } from "../lib/ride";
+import { riderSvg } from "../lib/ridersvg";
 import { BUCKET_COLORS, themeTokens } from "../lib/colors";
 import { mergeCustomStyle } from "../lib/themeswap";
 import type { Theme } from "../lib/theme";
@@ -142,8 +144,12 @@ export default function MapView(props: Props) {
         });
       syncData();
       syncHighlight();
+      syncRider();
     });
-    return () => m.remove();
+    return () => {
+      stopRider();
+      m.remove();
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -240,6 +246,68 @@ export default function MapView(props: Props) {
 
   useEffect(syncHighlight, [
     props.selectedDest, props.reach, props.maxTrains, props.maxMinutes, props.stations,
+  ]);
+
+  const rider = useRef<{ marker: maplibregl.Marker; raf: number } | null>(null);
+
+  function stopRider() {
+    if (!rider.current) return;
+    cancelAnimationFrame(rider.current.raf);
+    rider.current.marker.remove();
+    rider.current = null;
+  }
+
+  function syncRider() {
+    stopRider();
+    const m = map.current;
+    if (!m) return;
+    const { reach, selectedDest, maxTrains, maxMinutes, stations, theme } = propsRef.current;
+    if (!reach || !selectedDest) return;
+    const dest = reach.destinations.find((d) => d.id === selectedDest);
+    const journey = dest ? bestJourney(dest, maxTrains) : null;
+    // Mirror shown()'s cutoff: no rider for a journey the line layer won't draw.
+    if (!journey || journey.duration_min > maxMinutes) return;
+    const byId = new Map(stations.map((s) => [s.id, s]));
+    const timeline = buildRideTimeline(journeyLegPaths(journey, byId));
+    if (!timeline) return;
+
+    const tokens = themeTokens(theme);
+    const el = document.createElement("div");
+    el.style.pointerEvents = "none"; // never steal clicks from dots beneath
+    const inner = document.createElement("div");
+    inner.innerHTML = riderSvg(tokens.riderStroke, tokens.riderHollow);
+    el.appendChild(inner);
+    const marker = new maplibregl.Marker({
+      element: el, rotationAlignment: "map", pitchAlignment: "map",
+    });
+
+    function apply(tMs: number) {
+      const s = rideStateAt(timeline!, tMs);
+      const tf = riderTransform(s.bearingDeg);
+      marker.setLngLat([s.lng, s.lat]);
+      marker.setRotation(tf.rotateDeg);
+      inner.style.transform = tf.mirror ? "scaleX(-1)" : "";
+    }
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      apply(timeline.totalMs - 1); // park at the destination, no animation
+      marker.addTo(m);
+      rider.current = { marker, raf: 0 };
+      return;
+    }
+    apply(0);
+    marker.addTo(m);
+    const start = performance.now();
+    const frame = (now: number) => {
+      apply(now - start);
+      if (rider.current) rider.current.raf = requestAnimationFrame(frame);
+    };
+    rider.current = { marker, raf: requestAnimationFrame(frame) };
+  }
+
+  useEffect(syncRider, [
+    props.selectedDest, props.reach, props.maxTrains, props.maxMinutes,
+    props.stations, props.theme,
   ]);
 
   const appliedTheme = useRef(props.theme);

@@ -1,5 +1,5 @@
-// Styling for backlog item J (selected-journey highlight). The thick-line treatment is
-// provisional: to be revisited for an animated train once branding (item D) lands.
+// Styling for the selected-journey highlight (backlog item J). The thick line is
+// the rail the mascot rides (branding Phase 2, 2026-07-12) — no longer provisional.
 export type SelectedLineFilter = ["==", ["get", "id"], string];
 
 // "" is never a station id, so a null selection matches no feature.
