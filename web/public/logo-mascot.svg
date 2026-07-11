@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+  <!-- Route line segments -->
+  <path d="M4 80 H38" stroke="#003399" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M152 80 H196" stroke="#003399" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- Station dots on the line -->
+  <circle cx="14" cy="80" r="3.5" fill="#f6f4ee" stroke="#003399" stroke-width="2.5"/>
+  <circle cx="184" cy="80" r="3.5" fill="#f6f4ee" stroke="#003399" stroke-width="2.5"/>
+  <!-- Train body -->
+  <path d="M38 80 V46 Q38 36 48 36 H118 Q136 36 146 50 L156 68 Q160 76 152 80 Z" stroke="#003399" stroke-width="3" fill="none" stroke-linejoin="round"/>
+  <!-- Wheels -->
+  <circle cx="58" cy="80" r="7" stroke="#003399" stroke-width="2.5" fill="#f6f4ee"/>
+  <circle cx="126" cy="80" r="7" stroke="#003399" stroke-width="2.5" fill="#f6f4ee"/>
+  <!-- Dot eyes -->
+  <circle cx="122" cy="52" r="2.2" fill="#003399"/>
+  <circle cx="136" cy="56" r="2.2" fill="#003399"/>
+  <!-- Smile -->
+  <path d="M124 62 Q130 66 135 61" stroke="#003399" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Dotted window line -->
+  <path d="M48 46 H100" stroke="#003399" stroke-width="2" stroke-dasharray="1 7" stroke-linecap="round"/>
+  <!-- Gold star -->
+  <text x="66" y="70" font-size="15" fill="#ffcc00" stroke="#eab308" stroke-width="0.5">★</text>
+</svg>
