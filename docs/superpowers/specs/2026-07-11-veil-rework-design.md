@@ -91,6 +91,22 @@ dependencies (Isle of Man etc. are separate NE admin-0 features).
   ocean point falls outside.
 - Visual verification is the user's (no screenshot-based checks).
 
+## Iteration 2 (2026-07-11 live-test feedback)
+
+1. **ISO `-99` features veiled.** NE marks 13 features (Somaliland, N. Cyprus,
+   Kosovo, …) with `ISO_A2_EH: "-99"`; `build_coverage` skipped them, so they
+   rendered unveiled. Now everything not in the covered set is veiled.
+2. **Covered holes clipped to Europe.** NE's France/Netherlands features span
+   the Caribbean, French Guiana, Réunion and Bonaire; those became unveiled
+   holes. Covered-country holes are now intersected with a Europe bbox
+   `box(-25, 27, 45, 72)` (includes Canaries + Iceland, excludes all overseas
+   territories), i.e. veil = union(all) − (union(covered) ∩ bbox).
+3. **Feather made visible.** Edge paint raised to line-width 10, line-blur 10,
+   line-opacity 0.25 (2.5/3/0.2 was imperceptible).
+4. **Veil load latency.** GZipMiddleware on the API (3.43 MB → ~0.8 MB over
+   the wire) and the coverage fetch starts in parallel with map style loading
+   instead of after the `load` event.
+
 ## Out of scope
 
 - Exact OSM boundary matching (PMTiles) — revisit only if 10m + feathering
