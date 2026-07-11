@@ -11,9 +11,11 @@ interface Props {
   maxTrains: MaxTrains;
   stationsById: Map<string, Station>;
   onClose: () => void;
+  onStartHere: () => void;
+  onSwap: () => void;
 }
 
-export default function JourneyCard({ origin, destination, dest, maxTrains, stationsById, onClose }: Props) {
+export default function JourneyCard({ origin, destination, dest, maxTrains, stationsById, onClose, onStartHere, onSwap }: Props) {
   const journey = bestJourney(dest, maxTrains);
   if (!journey) return null;
   const h = Math.floor(journey.duration_min / 60);
@@ -25,6 +27,10 @@ export default function JourneyCard({ origin, destination, dest, maxTrains, stat
       <p className="duration">{h} h {m ? `${m} min` : ""} · {journey.trains === 1
         ? `nonstop · ${dest.direct_per_day}× per day`
         : `${journey.trains} trains`}</p>
+      <div className="actions">
+        <button className="action-btn" onClick={onStartHere}>Start here</button>
+        <button className="action-btn" onClick={onSwap}>⇄ Swap</button>
+      </div>
       <ol className="legs">
         {journey.legs.map((leg) => (
           <li key={`${leg.train}-${leg.to}`}>

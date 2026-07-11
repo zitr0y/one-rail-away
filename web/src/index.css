@@ -36,6 +36,12 @@ body { margin: 0; font-family: system-ui, sans-serif; }
 .journey-card .duration { margin: 0 0 8px; color: #374151; }
 .journey-card .legs { margin: 0 0 12px; padding-left: 18px; font-size: 13px; }
 .journey-card .close { position: absolute; top: 8px; right: 12px; border: 0; background: none; font-size: 18px; cursor: pointer; }
+.journey-card .actions { display: flex; gap: 8px; margin: 0 0 10px; }
+.journey-card .action-btn {
+  flex: 1; padding: 7px 0; border: 1px solid #d1d5db; border-radius: 8px;
+  background: #fff; font-size: 13px; cursor: pointer; text-align: center;
+}
+.journey-card .action-btn:hover { background: #f3f4f6; }
 .journey-card .book {
   display: block; text-align: center; background: #111827; color: #fff;
   padding: 10px; border-radius: 8px; text-decoration: none; font-weight: 600;

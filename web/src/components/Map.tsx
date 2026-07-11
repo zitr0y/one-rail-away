@@ -21,6 +21,7 @@ interface Props {
   selectedDest: string | null;
   onSelectOrigin: (id: string) => void;
   onSelectDestination: (id: string) => void;
+  onEmptyClick: () => void;
 }
 
 export default function MapView(props: Props) {
@@ -88,7 +89,10 @@ export default function MapView(props: Props) {
         const hits = m.queryRenderedFeatures(e.point, { layers: CLICK_LAYERS })
           .map((f) => ({ layer: f.layer.id, id: f.properties!.id as string }));
         const pick = pickFeature(hits);
-        if (!pick) return;
+        if (!pick) {
+          propsRef.current.onEmptyClick();
+          return;
+        }
         if (pick.type === "dest") propsRef.current.onSelectDestination(pick.id);
         else propsRef.current.onSelectOrigin(pick.id);
       });

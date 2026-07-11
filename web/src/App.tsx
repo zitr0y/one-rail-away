@@ -1,4 +1,5 @@
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
+import { emptyClickAction, swapDest } from "./lib/selection";
 import MapView from "./components/Map";
 import JourneyCard from "./components/JourneyCard";
 import Legend from "./components/Legend";
@@ -34,6 +35,28 @@ export default function App() {
     setSelectedDest(null);
   }
 
+  function onStartHere() {
+    if (!selectedDest) return;
+    selectOrigin(selectedDest);
+  }
+
+  function swapSelection() {
+    if (!selectedDest || !reach) return;
+    const destId = selectedDest;
+    const prevOrigin = reach.origin;
+    setSelectedDest(null);
+    api.getReach(destId).then((newReach) => {
+      setReach(newReach);
+      setSelectedDest(swapDest(newReach.destinations, prevOrigin));
+    }).catch((e) => setError(String(e)));
+  }
+
+  const onEmptyClick = useCallback(() => {
+    const action = emptyClickAction(selectedDest !== null, reach !== null);
+    if (action === "clearDest") setSelectedDest(null);
+    else if (action === "clearAll") clearSelection();
+  }, [selectedDest, reach]);
+
   const origin = reach ? stationsById.get(reach.origin) : undefined;
   const dest = selectedDest && reach
     ? reach.destinations.find((d) => d.id === selectedDest) : undefined;
@@ -54,7 +77,8 @@ export default function App() {
     <div className="app">
       <MapView stations={stations} reach={reach} maxTrains={maxTrains} maxMinutes={maxMinutes}
                selectedDest={selectedDest}
-               onSelectOrigin={selectOrigin} onSelectDestination={setSelectedDest} />
+               onSelectOrigin={selectOrigin} onSelectDestination={setSelectedDest}
+               onEmptyClick={onEmptyClick} />
       <header className="panel">
         <h1>onestopeurope</h1>
         <p className="tagline">nonstopeurope with onestopeurope</p>
@@ -68,7 +92,8 @@ export default function App() {
       {origin && dest && stationsById.get(dest.id) && (
         <JourneyCard origin={origin} destination={stationsById.get(dest.id)!} dest={dest}
                      maxTrains={maxTrains} stationsById={stationsById}
-                     onClose={() => setSelectedDest(null)} />
+                     onClose={() => setSelectedDest(null)}
+                     onStartHere={onStartHere} onSwap={swapSelection} />
       )}
       {origin && (
         <div className="status-bar">
