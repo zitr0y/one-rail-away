@@ -15,9 +15,24 @@ export function dotRadiusExpression(): ExpressionSpecification {
     ["linear"],
     ["sqrt", ["max", ["get", "n_routes"], 0]],
     0, 2,
-    2, 3,
-    5, 5,
-    Math.sqrt(74), 8,
+    2, 2.6,
+    4, 4.5,
+    Math.sqrt(74), 9,
+  ] as ExpressionSpecification;
+}
+
+/**
+ * Data-driven icon-size for capital stars: same sqrt(n_routes) hub scale as
+ * the dots, so Wien Hbf (74 routes) reads bigger than a quiet capital.
+ * 0.55–1.05 of the 22px logical star = ~12px to ~23px.
+ */
+export function starSizeExpression(): ExpressionSpecification {
+  return [
+    "interpolate",
+    ["linear"],
+    ["sqrt", ["max", ["get", "n_routes"], 0]],
+    0, 0.55,
+    Math.sqrt(74), 1.05,
   ] as ExpressionSpecification;
 }
 

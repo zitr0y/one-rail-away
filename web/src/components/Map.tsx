@@ -6,7 +6,7 @@ import { baseLineOpacity, selectedLineFilter } from "../lib/highlight";
 import { pickFeature } from "../lib/pickfeature";
 import { veilTooltip, showVeilTooltip } from "../lib/coverage";
 import { api } from "../lib/api";
-import { dotRadiusExpression, drawStarIcon } from "../lib/dots";
+import { dotRadiusExpression, starSizeExpression, drawStarIcon } from "../lib/dots";
 import type { ReachFile, Station } from "../lib/types";
 
 const CLICK_LAYERS = ["reach-dots", "capital-stars", "all-stations"];
@@ -95,7 +95,7 @@ export default function MapView(props: Props) {
         id: "capital-stars", type: "symbol", source: "capitals",
         layout: {
           "icon-image": "star-icon",
-          "icon-size": 0.8,
+          "icon-size": starSizeExpression() as never,
           "icon-allow-overlap": true,
         },
       });

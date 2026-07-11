@@ -32,7 +32,7 @@ if (typeof globalThis.document === "undefined") {
   } as unknown as Document;
 }
 
-import { dotRadiusExpression, drawStarIcon } from "./dots";
+import { dotRadiusExpression, starSizeExpression, drawStarIcon } from "./dots";
 
 describe("dotRadiusExpression", () => {
   it("returns a MapLibre expression array", () => {
@@ -48,7 +48,15 @@ describe("dotRadiusExpression", () => {
     const stops = expr.slice(3); // after interpolation type + input
     expect(stops[0]).toBe(0);
     expect(stops[1]).toBe(2); // most dots stay small (p50 n_routes = 3)
-    expect(stops[stops.length - 1]).toBe(8);
+    expect(stops[stops.length - 1]).toBe(9);
+  });
+
+  it("scales capital stars by n_routes on the same sqrt scale", () => {
+    const expr = starSizeExpression();
+    expect(JSON.stringify(expr)).toContain('"n_routes"');
+    const stops = expr.slice(3);
+    expect(stops[1]).toBe(0.55);
+    expect(stops[stops.length - 1]).toBe(1.05);
   });
 });
 
