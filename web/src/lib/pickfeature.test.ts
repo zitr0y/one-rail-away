@@ -33,4 +33,38 @@ describe("pickFeature", () => {
   it("ignores unrelated layers", () => {
     expect(pickFeature([{ layer: "background", id: "x" }])).toBeNull();
   });
+
+  it("picks a capital-star as origin when only capital-stars is hit", () => {
+    expect(pickFeature([{ layer: "capital-stars", id: "CAP1" }]))
+      .toEqual({ type: "origin", id: "CAP1" });
+  });
+
+  it("prefers reach-dots over capital-stars", () => {
+    expect(pickFeature([
+      { layer: "capital-stars", id: "CAP1" },
+      { layer: "reach-dots", id: "DEST1" },
+    ])).toEqual({ type: "dest", id: "DEST1" });
+  });
+
+  it("prefers capital-stars over all-stations", () => {
+    expect(pickFeature([
+      { layer: "all-stations", id: "ALL1" },
+      { layer: "capital-stars", id: "CAP1" },
+    ])).toEqual({ type: "origin", id: "CAP1" });
+  });
+
+  it("prefers reach-dots over capital-stars over all-stations when all three hit", () => {
+    expect(pickFeature([
+      { layer: "all-stations", id: "ALL1" },
+      { layer: "capital-stars", id: "CAP1" },
+      { layer: "reach-dots", id: "DEST1" },
+    ])).toEqual({ type: "dest", id: "DEST1" });
+  });
+
+  it("handles capital-stars among unrelated layers", () => {
+    expect(pickFeature([
+      { layer: "background", id: "x" },
+      { layer: "capital-stars", id: "CAP1" },
+    ])).toEqual({ type: "origin", id: "CAP1" });
+  });
 });

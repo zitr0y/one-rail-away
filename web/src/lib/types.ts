@@ -1,5 +1,6 @@
 export interface Station {
   id: string; name: string; lat: number; lon: number; country: string; has_reach: boolean;
+  n_dest?: number; is_capital?: boolean;
 }
 export interface Leg {
   train: string; dep: string; arr: string; from: string; to: string; via: string[];
