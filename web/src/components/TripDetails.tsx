@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { bookingUrl, localDate } from "../lib/booking";
+import { useEffect, useRef, useState } from "react";
+import { bookingUrl, friendlyDateLabel, localDate, shiftDate } from "../lib/booking";
 import { bestJourney, type MaxTrains } from "../lib/geojson";
 import type { Destination, Station } from "../lib/types";
 
@@ -17,11 +17,22 @@ export default function TripDetails(
   { origin, destination, dest, maxTrains, stationsById }: Props,
 ) {
   const [bookingDate, setBookingDate] = useState(() => localDate(1));
+  const dateInputRef = useRef<HTMLInputElement>(null);
   const today = localDate();
 
   useEffect(() => {
     setBookingDate(localDate(1));
   }, [origin.id, destination.id]);
+
+  const openCalendar = () => {
+    const input = dateInputRef.current;
+    if (!input) return;
+    try {
+      input.showPicker();
+    } catch {
+      input.click();
+    }
+  };
 
   const journey = bestJourney(dest, maxTrains);
   if (!journey) return <p className="hint">No route within your filters.</p>;
@@ -41,16 +52,24 @@ export default function TripDetails(
           </li>
         ))}
       </ol>
-      <label className="booking-date">
-        <span>Travel date</span>
-        <input type="date" value={bookingDate} min={today}
-               onChange={(event) => setBookingDate(event.target.value)} />
-      </label>
+      <div className="booking-date-picker">
+        <input ref={dateInputRef} className="booking-date-native" type="date"
+               value={bookingDate} min={today} tabIndex={-1}
+               aria-label="Travel date" onChange={(event) => setBookingDate(event.target.value)} />
+        <button type="button" className="booking-date-step" aria-label="Previous day"
+                disabled={bookingDate === today}
+                onClick={() => setBookingDate(shiftDate(bookingDate, -1))}>‹</button>
+        <button type="button" className="booking-date-current" onClick={openCalendar}
+                aria-label={`Choose travel date, ${friendlyDateLabel(bookingDate, today)}`}>
+          {friendlyDateLabel(bookingDate, today)}
+        </button>
+        <button type="button" className="booking-date-step" aria-label="Next day"
+                onClick={() => setBookingDate(shiftDate(bookingDate, 1))}>›</button>
+      </div>
       <a className="book" href={bookingUrl(origin, destination, bookingDate, REF)}
          target="_blank" rel="noopener noreferrer">
         Book this trip
       </a>
-      <p className="fineprint">Pick your time at checkout</p>
     </div>
   );
 }

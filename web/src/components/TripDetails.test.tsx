@@ -20,15 +20,19 @@ describe("TripDetails booking date", () => {
 
   afterEach(() => vi.useRealTimers());
 
-  it("renders tomorrow's native date input and booking URL for an eligible journey", () => {
+  it("renders a friendly date selector and booking URL for an eligible journey", () => {
     const markup = renderToStaticMarkup(
       <TripDetails origin={origin} destination={destination} dest={dest}
                    maxTrains={2} stationsById={stationsById} />,
     );
+    expect(markup).toContain('aria-label="Previous day"');
+    expect(markup).toContain(">Tomorrow</button>");
+    expect(markup).toContain('aria-label="Next day"');
     expect(markup).toContain('type="date"');
     expect(markup).toContain('value="2026-07-13"');
     expect(markup).toContain('min="2026-07-12"');
     expect(markup).toContain('/2026-07-13/');
+    expect(markup).not.toContain("Pick your time at checkout");
   });
 
   it("does not render a date input without an eligible journey", () => {

@@ -182,10 +182,19 @@ body { margin: 0; font-family: "Barlow", system-ui, sans-serif; color: var(--tex
   display: block; text-align: center; background: #003399; color: #fff;
   padding: 10px; border-radius: 8px; text-decoration: none; font-weight: 600;
 }
-.trip-details .booking-date { display: block; margin: 0 0 10px; color: var(--text-subtle); font-size: 12px; }
-.trip-details .booking-date span { display: block; margin-bottom: 4px; }
-.trip-details .booking-date input {
-  box-sizing: border-box; width: 100%; padding: 8px; border: 1px solid var(--border);
-  border-radius: 8px; background: var(--surface); color: var(--text); font: inherit;
+.trip-details .booking-date-picker {
+  position: relative; display: grid; grid-template-columns: 52px minmax(0, 1fr) 52px;
+  gap: 6px; margin: 0 0 10px;
 }
-.trip-details .fineprint { margin: 8px 0 0; font-size: 11px; color: var(--text-subtle); }
+.trip-details .booking-date-picker button {
+  min-height: 48px; border: 0; border-radius: 10px; background: #003399; color: #fff;
+  cursor: pointer; font: inherit; font-weight: 700;
+}
+.trip-details .booking-date-current { font-size: 17px; }
+.trip-details .booking-date-step { font-size: 30px; line-height: 1; }
+.trip-details .booking-date-picker button:hover:not(:disabled) { background: #1749ae; }
+.trip-details .booking-date-picker button:focus-visible { outline: 3px solid #77a5ff; outline-offset: 2px; }
+.trip-details .booking-date-picker button:disabled { cursor: default; opacity: 0.45; }
+.trip-details .booking-date-native {
+  position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none;
+}
