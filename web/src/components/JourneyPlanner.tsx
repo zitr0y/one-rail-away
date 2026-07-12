@@ -38,8 +38,8 @@ export default function JourneyPlanner(props: Props) {
     [],
   );
   const searchTo = useCallback(
-    (q: string) => destOptions(reach, stationsById, q, maxTrains, filterMinutes),
-    [reach, stationsById, maxTrains, filterMinutes],
+    (q: string) => destOptions(reach, stationsById, q, filterMinutes),
+    [reach, stationsById, filterMinutes],
   );
 
   return (

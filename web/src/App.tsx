@@ -42,9 +42,20 @@ export default function App() {
   }, []);
 
   const selectDest = useCallback((id: string) => {
+    // Picking a destination that needs more trains than the current filter bumps
+    // the stop filter to accommodate it (rather than showing "no route").
+    const d = reach?.destinations.find((x) => x.id === id);
+    if (d) {
+      const eff = maxMinutes >= TIME_MAX ? Infinity : maxMinutes;
+      const within = d.journeys.filter((j) => j.duration_min <= eff);
+      if (within.length) {
+        const need = Math.min(...within.map((j) => j.trains)) as MaxTrains;
+        setMaxTrains((cur) => (need > cur ? need : cur));
+      }
+    }
     setHint(null);
     setSelectedDest(id);
-  }, []);
+  }, [reach, maxMinutes]);
 
   const swapSelection = useCallback(() => {
     if (!selectedDest || !reach) return;

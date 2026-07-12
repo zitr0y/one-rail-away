@@ -64,6 +64,16 @@ Station dots are tiny and hard to click. User ideas, in their words:
 The union idea has data-model implications (city entity above stations) — brainstorm
 before building.
 
+**Intra-city "local transit" reachability (added 2026-07-12):** when the origin is
+one of a city's stations, the OTHER stations of the same city currently show as
+"Not reachable" or "two stops+" in the To search (e.g. from one Paris station, the
+other Paris stations look far). They should instead be treated as reachable with a
+short hop — label it **"local transit"** (we don't model the metro/tram, but
+intra-city travel is obviously possible). Applies to Paris, Brussels
+(Midi/Nord/Central), and other multi-"central"-station cities. Part of the
+city-grouping brainstorm (C3 / the union idea) — needs a city→stations grouping to
+know which stations share a city.
+
 **Hide small location dots at smaller zoom levels (added 2026-07-12):** at zoomed-out
 views the small (low-connection) dots crowd the map; consider fading/hiding them below a
 zoom threshold and revealing them as the user zooms in, so only major hubs/capitals show

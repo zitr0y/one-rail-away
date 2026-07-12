@@ -34,38 +34,32 @@ describe("norm", () => {
 });
 
 describe("destOptions", () => {
-  it("groups by min trains and disables options beyond the current filter", () => {
+  it("groups by min trains; every reachable option is selectable (filter bumps on pick)", () => {
     // "ar" matches Arnhem, Aarhus, Warszawa, Barcelona (not Nijmegen origin).
-    const opts = destOptions(reach, stationsById, "ar", 1, Infinity);
+    const opts = destOptions(reach, stationsById, "ar", Infinity);
     expect(opts.map((o) => [o.station.id, o.group, o.disabled])).toEqual([
-      ["arn", "Nonstop", false], // reachable nonstop → selectable
-      ["aar", "One stop", true], // needs 2 trains, filter is nonstop → grayed
-      ["war", "One stop", true],
-      ["bcn", "Not reachable", true], // not a destination at all
+      ["arn", "Nonstop", false],
+      ["aar", "One stop", false], // needs 2 trains but still selectable
+      ["war", "One stop", false],
+      ["bcn", "Not reachable", true], // not a destination at all → disabled
     ]);
   });
 
-  it("enables the one-stop options when the filter allows two trains", () => {
-    const opts = destOptions(reach, stationsById, "ar", 2, Infinity);
-    const byId = Object.fromEntries(opts.map((o) => [o.station.id, o.disabled]));
-    expect(byId).toEqual({ arn: false, aar: false, war: false, bcn: true });
-  });
-
-  it("marks a destination over the time cap as Not reachable", () => {
-    const opts = destOptions(reach, stationsById, "warszawa", 3, 600); // 800 min > 600
+  it("marks a destination over the time cap as Not reachable (disabled)", () => {
+    const opts = destOptions(reach, stationsById, "warszawa", 600); // 800 min > 600
     expect(opts).toHaveLength(1);
     expect(opts[0].group).toBe("Not reachable");
     expect(opts[0].disabled).toBe(true);
   });
 
   it("matches diacritics-insensitively", () => {
-    const opts = destOptions(reach, stationsById, "zur", 1, Infinity);
+    const opts = destOptions(reach, stationsById, "zur", Infinity);
     expect(opts.map((o) => o.station.id)).toEqual(["zur"]);
   });
 
   it("is empty for a short query or when there is no reach", () => {
-    expect(destOptions(reach, stationsById, "a", 3, Infinity)).toEqual([]);
-    expect(destOptions(null, stationsById, "arnhem", 3, Infinity)).toEqual([]);
+    expect(destOptions(reach, stationsById, "a", Infinity)).toEqual([]);
+    expect(destOptions(null, stationsById, "arnhem", Infinity)).toEqual([]);
   });
 });
 

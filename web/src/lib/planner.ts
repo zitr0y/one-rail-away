@@ -1,6 +1,5 @@
 // Pure helpers for the unified journey planner. No React, unit-testable.
 // Spec: docs/superpowers/specs/2026-07-12-unified-planner-panel-design.md.
-import type { MaxTrains } from "./geojson";
 import type { ReachFile, Station } from "./types";
 
 /** Fold diacritics + lowercase so "zur" matches "Zürich", "munch" → "München".
@@ -28,15 +27,15 @@ export function toFieldOptions(stations: Station[]): FieldOption[] {
 /**
  * To-field options for the current origin, grouped by the minimum number of
  * trains needed to reach each match within the time cap. Searches ALL stations
- * (so genuinely unreachable ones can be shown as "Not reachable") and marks an
- * option `disabled` when it needs more trains than the current filter allows or
- * isn't reachable at all. Reachable-under-the-current-filter options come first.
+ * (so genuinely unreachable ones can be shown as "Not reachable"). Every
+ * reachable option is selectable regardless of the current stop filter — picking
+ * one bumps the filter to accommodate (handled in App); only genuinely
+ * unreachable options (not a destination, or over the time cap) are disabled.
  */
 export function destOptions(
   reach: ReachFile | null,
   stationsById: Map<string, Station>,
   query: string,
-  maxTrains: MaxTrains,
   filterMinutes: number,
   limit = 12,
 ): FieldOption[] {
@@ -65,7 +64,7 @@ export function destOptions(
       } else {
         const minTrains = Math.min(...within.map((j) => j.trains));
         group = GROUP_BY_TRAINS[minTrains - 1] ?? "Two stops";
-        disabled = minTrains > maxTrains; // needs more trains than the current filter
+        disabled = false; // selectable; picking it bumps the stop filter in App
       }
     }
     out.push({ station: s, group, disabled });
