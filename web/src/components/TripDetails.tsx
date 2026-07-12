@@ -66,7 +66,7 @@ export default function TripDetails(
       </div>
       <a className="book" href={bookingUrl()}
          target="_blank" rel="noopener noreferrer">
-        Book this trip
+        Search on Trainline
       </a>
     </div>
   );
