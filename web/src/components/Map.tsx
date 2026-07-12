@@ -86,7 +86,7 @@ export default function MapView(props: Props) {
         filter: selectedLineFilter(null) as never,
         paint: {
           "line-color": bucketColor as never,
-          "line-width": 5.5,
+          "line-width": 6.5,
           "line-opacity": 1,
         },
       });
@@ -274,6 +274,11 @@ export default function MapView(props: Props) {
     const tokens = themeTokens(theme);
     const el = document.createElement("div");
     el.style.pointerEvents = "none"; // never steal clicks from dots beneath
+    // Casing so the mascot lifts off the bright reach line it rides: a soft dark
+    // drop on paper, a light glow on deep night (user calibration 2026-07-12).
+    el.style.filter = theme === "dark"
+      ? "drop-shadow(0 0 3px rgba(255,255,255,0.55))"
+      : "drop-shadow(0 1px 2px rgba(0,0,0,0.4))";
     const inner = document.createElement("div");
     inner.innerHTML = riderSvg(tokens.riderStroke, tokens.riderHollow);
     el.appendChild(inner);

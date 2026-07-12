@@ -48,6 +48,14 @@ describe("rideStateAt", () => {
     expect(s.moving).toBe(true);
   });
 
+  it("eases in: lags behind linear early in a leg (gradual acceleration)", () => {
+    // 25% through leg 1's move time. Linear would be lng 0.25; smoothstep(0.25)
+    // = 0.15625, so the rider is still building speed away from the origin.
+    const s = rideStateAt(tl, TRAVERSE_MS * 0.25 * 0.25);
+    expect(s.lng).toBeLessThan(0.25);
+    expect(s.lng).toBeCloseTo(0.15625, 5);
+  });
+
   it("pins to the transfer station during the transfer dwell", () => {
     const s = rideStateAt(tl, TRAVERSE_MS * 0.25 + TRANSFER_PAUSE_MS / 2);
     expect(s.lng).toBeCloseTo(1, 6);

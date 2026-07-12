@@ -24,4 +24,9 @@ describe("riderSvg", () => {
   it("is vertically centered on the rail (y=80) for center-anchored rotation", () => {
     expect(svg).toContain('viewBox="32 28 132 104"');
   });
+
+  it("uses a heavier body stroke and larger size for on-map visibility", () => {
+    expect(svg).toContain('width="46"');
+    expect(svg).toContain('stroke-width="4"'); // body outline
+  });
 });

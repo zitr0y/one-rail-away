@@ -40,6 +40,14 @@ export interface RideState {
   moving: boolean;
 }
 
+/** Smoothstep ease-in-out applied to each leg's progress: the rider accelerates
+ *  away from a station and decelerates into the next, so transfer stops feel
+ *  gradual, not abrupt (user calibration 2026-07-12). Fixes endpoints and the
+ *  midpoint (0, 0.5, 1), so per-leg timing is unchanged. */
+function easeInOut(f: number): number {
+  return f * f * (3 - 2 * f);
+}
+
 /** Equirectangular distance with cos-latitude correction — plenty at journey scale. */
 function segmentKm(a: [number, number], b: [number, number]): number {
   const kmPerDegLat = 111.32;
@@ -117,7 +125,7 @@ export function rideStateAt(timeline: RideTimeline, tMs: number): RideState {
   if (phase.kind === "dwell") {
     return { lng: phase.at[0], lat: phase.at[1], bearingDeg: phase.bearingDeg, moving: false };
   }
-  const f = (t - phase.startMs) / (phase.endMs - phase.startMs);
+  const f = easeInOut((t - phase.startMs) / (phase.endMs - phase.startMs));
   const target = f * phase.totalKm;
   let i = 1;
   while (i < phase.cumKm.length - 1 && phase.cumKm[i] < target) i++;
