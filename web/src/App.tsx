@@ -123,7 +123,7 @@ export default function App() {
           <path d="M124 62 Q130 66 135 61" fill="none" stroke="#ffffff" strokeWidth="2.2" strokeLinecap="round" />
           <path d="M48 46 H100" fill="none" stroke="#ffffff" strokeWidth="2.2" strokeDasharray="1 7" strokeLinecap="round" />
           <text x="84.424" y="70" fontSize="16" fill="#ffcc00">★</text>
-          <text x="182" y="79.226" fontFamily="Barlow, sans-serif" fontWeight="800" fontSize="40">
+          <text x="182" y="79.226" fontFamily="Barlow, sans-serif" fontWeight="700" fontSize="40">
             <tspan fill="#ffffff">onestop</tspan><tspan fill="#ffcc00">europe</tspan>
           </text>
         </svg>

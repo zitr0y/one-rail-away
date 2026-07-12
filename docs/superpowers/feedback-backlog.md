@@ -175,6 +175,15 @@ up; flagged here so it isn't lost.
 
 ## Smaller deferred notes
 
+- **Outdated logo/brand assets cleanup (added 2026-07-12):** several brand files
+  linger unused after the logo went inline in `web/src/App.tsx`. `web/public/
+  logo-mascot.svg` and `logo-mascot-light.svg` are referenced nowhere;
+  `logo-train-light.svg` and `logo-lockup.svg` were already deleted. Audit
+  `web/public/*` + `design/logo/*` and drop what nothing imports (keep the
+  Inkscape source `onestopeurope-lockup-A1.svg` and `favicon.svg`). The header
+  logo needs a real ExtraBold: ship `barlow-…-800.woff2` (only 400/600/700 are
+  bundled) so the wordmark can use weight 800 instead of falling back to 700.
+
 - **Ł-norm fix (from PL ingestion review 2026-07-11):** NFKD cannot decompose
   stroke letters (ł/Ł, also ø, đ), so `_norm` drops them — "Główny" →
   "gowny" never matches "Glowny". 33 of 44 PKP aliases exist ONLY for this.
