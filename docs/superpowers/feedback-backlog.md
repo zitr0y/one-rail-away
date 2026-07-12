@@ -164,15 +164,17 @@ Effectively merges SearchBox + status bar + JourneyCard into one left-column
 planner. Brainstorm the layout (interacts with StopToggle/TimeSlider placement,
 and with item L dimming). Design-first; no data changes.
 
-## N. BUG: Trainline booking link — FIXED (2026-07-12)
+## N. Trainline booking handoff — landing-page fallback shipped (2026-07-13)
 
-`bookingUrl` now follows Trainline's current path-based search-link format:
-`https://www.trainline.eu/search/{origin}/{destination}/{date}/`, with each
-station name URL-encoded. The old free-text query endpoint
-(`thetrainline.com/book/results`) was the broken URL. The implementation lives
-in `web/src/lib/booking.ts` and is used by `TripDetails`; its regression test
-also covers the documented route shape. A representative generated URL returned
-HTTP 200 on 2026-07-12.
+The old `trainline.eu/search/{origin}/{destination}/{date}/` path is not a
+reliable live search handoff. The CTA now opens the ordinary Trainline landing
+page, intentionally without claiming to prefill the selected journey or date.
+
+The full investigation and the required future Partnerize/affiliate/widget
+work are recorded in
+[`research/2026-07-13-trainline-booking-handoff.md`](research/2026-07-13-trainline-booking-handoff.md).
+Do not reintroduce query parameters or an affiliate code until Trainline has
+provided an approved integration format.
 
 ## Smaller deferred notes
 

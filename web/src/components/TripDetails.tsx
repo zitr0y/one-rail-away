@@ -3,8 +3,6 @@ import { bookingUrl, friendlyDateLabel, localDate, shiftDate } from "../lib/book
 import { bestJourney, type MaxTrains } from "../lib/geojson";
 import type { Destination, Station } from "../lib/types";
 
-const REF = import.meta.env.VITE_TRAINLINE_REF ?? "";
-
 interface Props {
   origin: Station;
   destination: Station;
@@ -66,7 +64,7 @@ export default function TripDetails(
         <button type="button" className="booking-date-step" aria-label="Next day"
                 onClick={() => setBookingDate(shiftDate(bookingDate, 1))}>›</button>
       </div>
-      <a className="book" href={bookingUrl(origin, destination, bookingDate, REF)}
+      <a className="book" href={bookingUrl()}
          target="_blank" rel="noopener noreferrer">
         Book this trip
       </a>

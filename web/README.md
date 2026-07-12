@@ -21,8 +21,3 @@ npm run lint    # oxlint
 
 Or, from the repo root, `just dev` starts both the API (port 8000) and this dev
 server together and stops both on Ctrl-C.
-
-## Environment variables
-
-- `VITE_TRAINLINE_REF` — optional Trainline affiliate reference appended to booking
-  links generated in `JourneyCard`. Leave unset for plain (non-affiliate) links.

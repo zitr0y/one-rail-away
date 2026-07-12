@@ -1,5 +1,3 @@
-import type { Station } from "./types";
-
 export function localDate(offsetDays = 0, now = new Date()): string {
   const date = new Date(now);
   date.setDate(date.getDate() + offsetDays);
@@ -26,9 +24,6 @@ export function friendlyDateLabel(date: string, today = localDate()): string {
     .format(new Date(`${date}T12:00:00`)).replace(",", "");
 }
 
-export function bookingUrl(origin: Station, dest: Station, date: string, ref: string): string {
-  const params = new URLSearchParams();
-  if (ref) params.set("aff", ref);
-  const route = [origin.name, dest.name, date].map(encodeURIComponent).join("/");
-  return `https://www.trainline.eu/search/${route}/${params.size ? `?${params}` : ""}`;
+export function bookingUrl(): string {
+  return "https://www.thetrainline.com/";
 }

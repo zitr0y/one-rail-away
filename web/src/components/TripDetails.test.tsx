@@ -31,7 +31,7 @@ describe("TripDetails booking date", () => {
     expect(markup).toContain('type="date"');
     expect(markup).toContain('value="2026-07-13"');
     expect(markup).toContain('min="2026-07-12"');
-    expect(markup).toContain('/2026-07-13/');
+    expect(markup).toContain('href="https://www.thetrainline.com/"');
     expect(markup).not.toContain("Pick your time at checkout");
   });
 
