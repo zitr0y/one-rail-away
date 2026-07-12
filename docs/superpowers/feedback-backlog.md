@@ -64,6 +64,12 @@ Station dots are tiny and hard to click. User ideas, in their words:
 The union idea has data-model implications (city entity above stations) — brainstorm
 before building.
 
+**Hide small location dots at smaller zoom levels (added 2026-07-12):** at zoomed-out
+views the small (low-connection) dots crowd the map; consider fading/hiding them below a
+zoom threshold and revealing them as the user zooms in, so only major hubs/capitals show
+at a glance. A declutter approach that overlaps C3 — decide together with the city-union
+idea whether this replaces or complements it.
+
 ## D. Branding / map styling (user item 7) — PHASE 1 + PHASE 2 SHIPPED
 
 Phase 1 spec: `docs/superpowers/specs/2026-07-11-branding-design.md`.
