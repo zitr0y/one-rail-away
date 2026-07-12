@@ -7,7 +7,7 @@ import { BUCKET_COLORS, themeTokens } from "../lib/colors";
 import { mergeCustomStyle } from "../lib/themeswap";
 import type { Theme } from "../lib/theme";
 import { baseLineOpacity, selectedLineFilter, stationOpacityExpression } from "../lib/highlight";
-import { pickFeature } from "../lib/pickfeature";
+import { pickFeature, type FeaturePick } from "../lib/pickfeature";
 import { veilTooltip, showVeilTooltip } from "../lib/coverage";
 import { api } from "../lib/api";
 import { dotRadiusExpression, reachDotRadiusExpression, starSizeExpression, drawStarIcon } from "../lib/dots";
@@ -26,8 +26,7 @@ interface Props {
   maxMinutes: number;
   selectedDest: string | null;
   theme: Theme;
-  onSelectOrigin: (id: string) => void;
-  onSelectDestination: (id: string) => void;
+  onStationClick: (pick: FeaturePick) => void;
   onEmptyClick: () => void;
 }
 
@@ -114,8 +113,7 @@ export default function MapView(props: Props) {
           propsRef.current.onEmptyClick();
           return;
         }
-        if (pick.type === "dest") propsRef.current.onSelectDestination(pick.id);
-        else propsRef.current.onSelectOrigin(pick.id);
+        propsRef.current.onStationClick(pick);
       });
       for (const layer of ["all-stations", "reach-dots", "capital-stars"]) {
         m.on("mouseenter", layer, () => (m.getCanvas().style.cursor = "pointer"));
