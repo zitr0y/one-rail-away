@@ -37,7 +37,7 @@ export default function TripDetails(
          target="_blank" rel="noopener noreferrer">
         Book this trip
       </a>
-      <p className="fineprint">Durations from a sample weekday — pick your date at checkout.</p>
+      <p className="fineprint">Pick your date/time at checkout</p>
     </div>
   );
 }
