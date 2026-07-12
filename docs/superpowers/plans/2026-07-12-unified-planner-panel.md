@@ -79,12 +79,20 @@ describe("reachableDestOptions", () => {
     expect(reachableDestOptions(null, stationsById, "paris")).toEqual([]);
   });
   it("respects the limit", () => {
-    expect(reachableDestOptions(reach, stationsById, "", 1)).toEqual([]); // empty query short-circuits
-    const big = { ...reach, destinations: [
-      { id: "p", direct_per_day: 1, journeys: [] },
-      { id: "b", direct_per_day: 1, journeys: [] },
-    ] };
-    expect(reachableDestOptions(big, stationsById, "i", 1)).toHaveLength(1); // "Paris"/"Midi" both contain "i"
+    const many = new Map<string, Station>([
+      ["a", st("a", "Anytown Central")],
+      ["b", st("b", "Anytown East")],
+      ["c", st("c", "Anytown West")],
+    ]);
+    const big: ReachFile = {
+      origin: "o", computed_at: "", sample_date: "",
+      destinations: [
+        { id: "a", direct_per_day: 1, journeys: [] },
+        { id: "b", direct_per_day: 1, journeys: [] },
+        { id: "c", direct_per_day: 1, journeys: [] },
+      ],
+    };
+    expect(reachableDestOptions(big, many, "anytown", 2)).toHaveLength(2);
   });
 });
 
