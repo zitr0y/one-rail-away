@@ -1,11 +1,10 @@
 // Mascot-rider geometry & timing: pure helpers, no MapLibre/DOM.
 // Spec: docs/superpowers/specs/2026-07-12-branding-phase2-design.md §Mascot rider.
 
-/** One full origin→destination traverse, regardless of journey length.
- *  TUNING POINT: the user is explicitly unsure about fixed duration for long
- *  and short journeys alike ("we shall find out", 2026-07-12). If fixed feels
- *  wrong on the real map, the prepared fallback is mild scaling with path
- *  length (~5–10 s clamped). Judged on the real map by the user. */
+/** One full origin→destination traverse, regardless of journey length. Fixed
+ *  duration confirmed on the real map (user, 2026-07-12): longer journeys are
+ *  usually viewed more zoomed-out, so a constant wall-clock traverse — i.e.
+ *  faster per km on long trips — reads as natural rather than sluggish. */
 export const TRAVERSE_MS = 7000;
 /** Dwell at each transfer station — reads as "changing trains". */
 export const TRANSFER_PAUSE_MS = 500;
