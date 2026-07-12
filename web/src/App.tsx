@@ -109,11 +109,24 @@ export default function App() {
                selectedDest={selectedDest} theme={theme}
                onStationClick={onStationClick} onEmptyClick={onEmptyClick} />
       <header className="header-bar">
-        <span className="header-brand">
-          <img src="/logo-train-light.svg" alt="" className="header-train" />
-          <span className="header-wordmark">onestop<span className="header-wordmark-eu">europe</span></span>
-          <span className="header-endstop" aria-hidden="true" />
-        </span>
+        {/* Full lockup as one inline SVG (train + rail + wordmark + endstop), lifted
+            verbatim from design/logo/onestopeurope-lockup-A1.svg. Wordmark stays live
+            text so it uses the page's Barlow @font-face. */}
+        <svg className="header-logo" viewBox="0 0 600 100" role="img" aria-label="onestopeurope">
+          <line x1="-0.271" y1="80.491" x2="473.587" y2="80.491" fill="none" stroke="#ffffff" strokeWidth="2.93228" strokeLinecap="round" />
+          <circle cx="479.908" cy="80.375" r="5" fill="#003399" stroke="#ffffff" strokeWidth="3" />
+          <path d="M38 80 V46 Q38 36 48 36 H118 Q136 36 146 50 L156 68 Q160 76 152 80 Z" fill="none" stroke="#ffffff" strokeWidth="4" strokeLinejoin="round" />
+          <circle cx="65.356" cy="79.874" r="4" fill="#003399" stroke="#ffffff" strokeWidth="3" />
+          <circle cx="119.736" cy="79.887" r="4" fill="#003399" stroke="#ffffff" strokeWidth="3" />
+          <circle cx="122" cy="52" r="2.4" fill="#ffffff" />
+          <circle cx="136" cy="56" r="2.4" fill="#ffffff" />
+          <path d="M124 62 Q130 66 135 61" fill="none" stroke="#ffffff" strokeWidth="2.2" strokeLinecap="round" />
+          <path d="M48 46 H100" fill="none" stroke="#ffffff" strokeWidth="2.2" strokeDasharray="1 7" strokeLinecap="round" />
+          <text x="84.424" y="70" fontSize="16" fill="#ffcc00">★</text>
+          <text x="182" y="79.226" fontFamily="Barlow, sans-serif" fontWeight="800" fontSize="40">
+            <tspan fill="#ffffff">onestop</tspan><tspan fill="#ffcc00">europe</tspan>
+          </text>
+        </svg>
         <span className="header-tagline">nonstopeurope with onestopeurope</span>
         <button className="theme-toggle" onClick={toggleTheme}
                 aria-label={theme === "light" ? "Switch to dark mode" : "Switch to light mode"}>

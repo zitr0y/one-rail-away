@@ -68,57 +68,11 @@ body { margin: 0; font-family: "Barlow", system-ui, sans-serif; color: var(--tex
   display: flex;
   align-items: center;
 }
-/* Brand lockup: the train sits on a rail that continues under the wordmark, so
-   the wordmark "stands on the track". Vertical alignment is tuned for the 40px
-   train height at bottom:6px — nudge together if the height changes. */
-.header-brand {
-  position: relative;
-  display: flex;
-  align-items: flex-end;
-  gap: 8px;
-}
-.header-train {
-  height: 40px;   /* viewBox hugs the train, so this renders it large */
+/* Whole brand lockup is one inline SVG (viewBox 0 0 600 100 → 6:1). */
+.header-logo {
+  height: 40px;
   width: auto;
   display: block;
-  position: relative;
-  z-index: 1;
-  transform: translateY(4px);   /* drop train so its rail meets the lowered track */
-}
-/* The rail continued rightward beneath the wordmark (the train's own rail is in
-   the SVG; this picks it up at the same height and runs it under the text).
-   Sits ~4px below the wordmark baseline so it reads as a track, not an underline. */
-.header-brand::after {
-  content: "";
-  position: absolute;
-  left: 4px;
-  right: 2px;
-  bottom: 2px;
-  border-top: 3px solid #ffffff;
-  z-index: 0;
-}
-.header-endstop {
-  align-self: flex-end;
-  margin-bottom: -3px;   /* center the dot on the lowered rail */
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #003399;
-  border: 2.5px solid #ffffff;
-  position: relative;
-  z-index: 1;
-}
-.header-wordmark {
-  color: #fff;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 1;
-  padding-bottom: 5px;   /* lift the baseline to rest on the rail */
-  position: relative;
-  z-index: 1;
-}
-.header-wordmark-eu {
-  color: #ffcc00;
 }
 .header-tagline {
   margin-left: auto;
