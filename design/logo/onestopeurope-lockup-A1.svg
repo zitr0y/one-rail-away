@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 100" width="600" height="100">
+  <!-- onestopeurope header lockup — variation A (rail lockup), wheels-on-track fix, tight gap.
+       White strokes for the navy header bar. The navy <rect> is a preview background; delete
+       it to place the mark on other colours. Wordmark is live text in Barlow Bold (800) —
+       convert to path in your editor (Path > Object to Path) if Barlow isn't installed. -->
+  <rect x="0" y="0" width="600" height="100" fill="#003399"/>
+  <!-- Rail (runs under the wheels) + left station dot + end-stop dot -->
+  <line x1="4" y1="87" x2="500" y2="87" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="14" cy="87" r="4" fill="#003399" stroke="#ffffff" stroke-width="3"/>
+  <circle cx="500" cy="87" r="5" fill="#003399" stroke="#ffffff" stroke-width="3"/>
+  <!-- Train (sits on the rail; wheels tangent at y=87) -->
+  <path d="M38 80 V46 Q38 36 48 36 H118 Q136 36 146 50 L156 68 Q160 76 152 80 Z" fill="none" stroke="#ffffff" stroke-width="4" stroke-linejoin="round"/>
+  <circle cx="58" cy="80" r="7" fill="#003399" stroke="#ffffff" stroke-width="3"/>
+  <circle cx="126" cy="80" r="7" fill="#003399" stroke="#ffffff" stroke-width="3"/>
+  <circle cx="122" cy="52" r="2.4" fill="#ffffff"/>
+  <circle cx="136" cy="56" r="2.4" fill="#ffffff"/>
+  <path d="M124 62 Q130 66 135 61" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M48 46 H100" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-dasharray="1 7" stroke-linecap="round"/>
+  <text x="66" y="70" font-size="16" fill="#ffcc00">★</text>
+  <!-- Wordmark: "onestop" white, "europe" gold -->
+  <text x="182" y="76" font-family="Barlow, sans-serif" font-weight="800" font-size="40">
+    <tspan fill="#ffffff">onestop</tspan><tspan fill="#ffcc00">europe</tspan>
+  </text>
+</svg>
