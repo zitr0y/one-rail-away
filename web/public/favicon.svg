@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 200 100">
-  <!-- Thick-stroke train + line, no face/windows -->
-  <path d="M4 80 H38 M38 80 V46 Q38 36 48 36 H118 Q136 36 146 50 L156 68 Q160 76 152 80 Z M152 80 H196"
-        stroke="#003399" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-  <!-- Bigger gold star -->
+  <!-- Filled train silhouette and route line. -->
+  <path d="M4 77 H38 V46 Q38 36 48 36 H118 Q136 36 146 50 L156 68 Q160 76 152 80 H196 V83 H152 Q149 83 147 80 L143 73 Q139 67 132 67 H48 Q44 67 44 71 V83 H4 Z"
+        fill="#003399"/>
+  <!-- Gold star accent. -->
   <text x="60" y="74" font-size="30" fill="#ffcc00">★</text>
 </svg>
