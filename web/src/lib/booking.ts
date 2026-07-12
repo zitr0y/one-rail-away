@@ -1,12 +1,17 @@
 import type { Station } from "./types";
 
-export function bookingUrl(origin: Station, dest: Station, ref: string): string {
-  const tomorrow = new Date(Date.now() + 24 * 3600 * 1000).toISOString().slice(0, 10);
-  const params = new URLSearchParams({
-    origin: origin.name,
-    destination: dest.name,
-    outwardDate: tomorrow,
-  });
+export function localDate(offsetDays = 0, now = new Date()): string {
+  const date = new Date(now);
+  date.setDate(date.getDate() + offsetDays);
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+}
+
+export function bookingUrl(origin: Station, dest: Station, date: string, ref: string): string {
+  const params = new URLSearchParams();
   if (ref) params.set("aff", ref);
-  return `https://www.thetrainline.com/book/results?${params.toString()}`;
+  const route = [origin.name, dest.name, date].map(encodeURIComponent).join("/");
+  return `https://www.trainline.eu/search/${route}/${params.size ? `?${params}` : ""}`;
 }

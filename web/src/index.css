@@ -182,4 +182,10 @@ body { margin: 0; font-family: "Barlow", system-ui, sans-serif; color: var(--tex
   display: block; text-align: center; background: #003399; color: #fff;
   padding: 10px; border-radius: 8px; text-decoration: none; font-weight: 600;
 }
+.trip-details .booking-date { display: block; margin: 0 0 10px; color: var(--text-subtle); font-size: 12px; }
+.trip-details .booking-date span { display: block; margin-bottom: 4px; }
+.trip-details .booking-date input {
+  box-sizing: border-box; width: 100%; padding: 8px; border: 1px solid var(--border);
+  border-radius: 8px; background: var(--surface); color: var(--text); font: inherit;
+}
 .trip-details .fineprint { margin: 8px 0 0; font-size: 11px; color: var(--text-subtle); }

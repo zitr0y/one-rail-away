@@ -1,4 +1,5 @@
-import { bookingUrl } from "../lib/booking";
+import { useEffect, useState } from "react";
+import { bookingUrl, localDate } from "../lib/booking";
 import { bestJourney, type MaxTrains } from "../lib/geojson";
 import type { Destination, Station } from "../lib/types";
 
@@ -15,6 +16,13 @@ interface Props {
 export default function TripDetails(
   { origin, destination, dest, maxTrains, stationsById }: Props,
 ) {
+  const [bookingDate, setBookingDate] = useState(() => localDate(1));
+  const today = localDate();
+
+  useEffect(() => {
+    setBookingDate(localDate(1));
+  }, [origin.id, destination.id]);
+
   const journey = bestJourney(dest, maxTrains);
   if (!journey) return <p className="hint">No route within your filters.</p>;
   const h = Math.floor(journey.duration_min / 60);
@@ -33,11 +41,16 @@ export default function TripDetails(
           </li>
         ))}
       </ol>
-      <a className="book" href={bookingUrl(origin, destination, REF)}
+      <label className="booking-date">
+        <span>Travel date</span>
+        <input type="date" value={bookingDate} min={today}
+               onChange={(event) => setBookingDate(event.target.value)} />
+      </label>
+      <a className="book" href={bookingUrl(origin, destination, bookingDate, REF)}
          target="_blank" rel="noopener noreferrer">
         Book this trip
       </a>
-      <p className="fineprint">Pick your date/time at checkout</p>
+      <p className="fineprint">Pick your time at checkout</p>
     </div>
   );
 }
