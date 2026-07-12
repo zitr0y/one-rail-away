@@ -130,6 +130,33 @@ destination dots), so the selected journey pops. Likely a small change in the
 same shape as baseLineOpacity: data-driven circle-opacity keyed on the
 selected journey's station ids (origin, legs' stops, destination).
 
+## M. Unified journey-planner panel, upper-left (added 2026-07-12)
+
+User wants the scattered controls consolidated into one journey-planner card in
+the upper-left corner, shaped like a real trip planner:
+- **From** field — fills automatically when you select a station on the map
+  (currently map-click sets origin but the panel doesn't show it as an editable
+  field); also typeable.
+- **To** field — optional; lets you type a destination directly instead of only
+  clicking the map. Selecting a dest on the map fills it.
+- **Swap** — reverse From/To (swap already exists in the status bar / journey
+  card; fold it into the panel).
+- **Trip details + booking** — the JourneyCard (duration, legs, book link) moves
+  to sit *below* the From/To fields in the same panel, instead of a separate
+  bottom-left card.
+Effectively merges SearchBox + status bar + JourneyCard into one left-column
+planner. Brainstorm the layout (interacts with StopToggle/TimeSlider placement,
+and with item L dimming). Design-first; no data changes.
+
+## N. BUG: Trainline booking link is broken (added 2026-07-12)
+
+The "book" deep link in the JourneyCard currently does not resolve to a valid
+Trainline booking (reported broken 2026-07-12). Booking is the product's CTA —
+verify the deep-link URL format / params against Trainline's current scheme and
+fix. Check `web/src/components/JourneyCard.tsx` (link construction) and any
+station-code mapping it depends on. Bug, not design — fix directly when picked
+up; flagged here so it isn't lost.
+
 ## Smaller deferred notes
 
 - **Ł-norm fix (from PL ingestion review 2026-07-11):** NFKD cannot decompose
