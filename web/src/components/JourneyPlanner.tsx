@@ -3,7 +3,6 @@ import StationField from "./StationField";
 import TripDetails from "./TripDetails";
 import StopToggle from "./StopToggle";
 import TimeSlider from "./TimeSlider";
-import Legend from "./Legend";
 import { api } from "../lib/api";
 import { reachableDestOptions, swapEnabled, toEnabled } from "../lib/planner";
 import type { MaxTrains } from "../lib/geojson";
@@ -17,6 +16,7 @@ interface Props {
   dest?: Destination;
   maxTrains: MaxTrains;
   maxMinutes: number;
+  armed: "from" | "to"; // which field the next map click fills — always highlighted
   error: string | null;
   hint: string | null;
   onSetOrigin: (s: Station) => void;
@@ -30,7 +30,7 @@ interface Props {
 }
 
 export default function JourneyPlanner(props: Props) {
-  const { reach, stationsById, origin, destination, dest, maxTrains, maxMinutes, error, hint } = props;
+  const { reach, stationsById, origin, destination, dest, maxTrains, maxMinutes, armed, error, hint } = props;
 
   const searchFrom = useCallback(
     (q: string) => api.searchStations(q).then((r) => r.stations),
@@ -43,26 +43,31 @@ export default function JourneyPlanner(props: Props) {
 
   return (
     <aside className="panel planner">
-      <StationField
-        placeholder="Start from…"
-        value={origin?.name ?? ""}
-        search={searchFrom}
-        onPick={props.onSetOrigin}
-        onClear={props.onClearOrigin}
-        onFocusField={() => props.onArm("from")}
-      />
-      <button className="swap-btn" onClick={props.onSwap}
-              disabled={!swapEnabled(!!origin, !!destination)}
-              aria-label="Swap From and To">⇄</button>
-      <StationField
-        placeholder="To… (or click the map)"
-        disabled={!toEnabled(!!origin)}
-        value={destination?.name ?? ""}
-        search={searchTo}
-        onPick={props.onSetDest}
-        onClear={props.onClearDest}
-        onFocusField={() => props.onArm("to")}
-      />
+      <div className="planner-fields">
+        <span className="fields-gutter" aria-hidden="true" />
+        <StationField
+          placeholder="Start from…"
+          armed={armed === "from"}
+          value={origin?.name ?? ""}
+          search={searchFrom}
+          onPick={props.onSetOrigin}
+          onClear={props.onClearOrigin}
+          onFocusField={() => props.onArm("from")}
+        />
+        <button className="swap-btn" onClick={props.onSwap}
+                disabled={!swapEnabled(!!origin, !!destination)}
+                aria-label="Swap From and To">⇄</button>
+        <StationField
+          placeholder="To… (or click the map)"
+          disabled={!toEnabled(!!origin)}
+          armed={armed === "to"}
+          value={destination?.name ?? ""}
+          search={searchTo}
+          onPick={props.onSetDest}
+          onClear={props.onClearDest}
+          onFocusField={() => props.onArm("to")}
+        />
+      </div>
 
       <div className="planner-divider" />
       <StopToggle value={maxTrains} onChange={props.onMaxTrains} />
@@ -79,13 +84,6 @@ export default function JourneyPlanner(props: Props) {
       {hint && <p className="hint">{hint}</p>}
       {!reach && <p className="hint">Search or click a station to begin.</p>}
       {error && <p className="error">{error}</p>}
-
-      {reach && (
-        <>
-          <div className="planner-divider" />
-          <Legend />
-        </>
-      )}
     </aside>
   );
 }

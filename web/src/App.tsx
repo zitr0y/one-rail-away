@@ -3,6 +3,7 @@ import { emptyClickAction, swapDest } from "./lib/selection";
 import { armedTarget, routeMapClick, type ActiveField } from "./lib/mapclick";
 import MapView from "./components/Map";
 import JourneyPlanner from "./components/JourneyPlanner";
+import { TIME_MAX } from "./components/TimeSlider";
 import { api } from "./lib/api";
 import type { MaxTrains } from "./lib/geojson";
 import type { FeaturePick } from "./lib/pickfeature";
@@ -13,7 +14,7 @@ export default function App() {
   const [stations, setStations] = useState<Station[]>([]);
   const [reach, setReach] = useState<ReachFile | null>(null);
   const [maxTrains, setMaxTrains] = useState<MaxTrains>(1);
-  const [maxMinutes, setMaxMinutes] = useState(1440);
+  const [maxMinutes, setMaxMinutes] = useState(TIME_MAX); // start at "max" (no cap)
   const [selectedDest, setSelectedDest] = useState<string | null>(null);
   const [activeField, setActiveField] = useState<ActiveField>(null);
   const [hint, setHint] = useState<string | null>(null);
@@ -56,6 +57,10 @@ export default function App() {
     }).catch((e) => setError(String(e)));
   }, [selectedDest, reach]);
 
+  // At the top of the slider ("max") there is no upper time limit.
+  const filterMinutes = maxMinutes >= TIME_MAX ? Infinity : maxMinutes;
+  const armed = armedTarget(activeField, reach !== null);
+
   const origin = reach ? stationsById.get(reach.origin) : undefined;
   const dest = selectedDest && reach
     ? reach.destinations.find((d) => d.id === selectedDest) : undefined;
@@ -89,7 +94,7 @@ export default function App() {
 
   return (
     <div className="app">
-      <MapView stations={stations} reach={reach} maxTrains={maxTrains} maxMinutes={maxMinutes}
+      <MapView stations={stations} reach={reach} maxTrains={maxTrains} maxMinutes={filterMinutes}
                selectedDest={selectedDest} theme={theme}
                onStationClick={onStationClick} onEmptyClick={onEmptyClick} />
       <header className="header-bar">
@@ -108,7 +113,7 @@ export default function App() {
         reach={reach} stationsById={stationsById}
         origin={origin} destination={destination} dest={dest}
         maxTrains={maxTrains} maxMinutes={maxMinutes}
-        error={error} hint={hint}
+        armed={armed} error={error} hint={hint}
         onSetOrigin={(s) => selectOrigin(s.id)}
         onClearOrigin={clearSelection}
         onSetDest={(s) => selectDest(s.id)}

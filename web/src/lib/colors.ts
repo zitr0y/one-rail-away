@@ -2,7 +2,8 @@
 // Spec: docs/superpowers/specs/2026-07-11-branding-design.md §Color tokens.
 
 /** Viridis-reversed data palette — validated for CVD separation (worst adjacent
- *  ΔE 24.6 deutan). Consumed by Map.tsx bucket expression and Legend.tsx. */
+ *  ΔE 24.6 deutan). Consumed by Map.tsx bucket expression and the TimeSlider
+ *  gradient legend. */
 export const BUCKET_COLORS = ["#FDE725", "#35B779", "#31688E", "#440154"] as const;
 // TUNING POINT: bucket-0 yellow (#FDE725) is ~1.2:1 against cream land (#F2EFE9).
 // Resolve at implementation with either a slightly deepened yellow or a hairline
