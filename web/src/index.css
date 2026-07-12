@@ -223,3 +223,20 @@ body { margin: 0; font-family: "Barlow", system-ui, sans-serif; color: var(--tex
 .station-field li button:hover { background: var(--surface-hover); }
 .station-field li.active button { background: var(--surface-hover); }
 .station-field .country { color: var(--text-subtle); font-size: 12px; }
+
+.planner .swap-btn {
+  align-self: center; width: 34px; height: 34px; margin: -2px 0;
+  border: 1px solid var(--border); border-radius: 999px; background: var(--surface);
+  color: var(--text); font-size: 16px; cursor: pointer;
+}
+.planner .swap-btn:hover:not(:disabled) { background: var(--surface-hover); }
+.planner .swap-btn:disabled { opacity: 0.4; cursor: default; }
+.planner-divider { height: 1px; background: var(--border); margin: 2px 0; }
+.trip-details h2 { margin: 0 0 4px; font-size: 16px; }
+.trip-details .duration { margin: 0 0 8px; color: var(--text-strong); }
+.trip-details .legs { margin: 0 0 12px; padding-left: 18px; font-size: 13px; }
+.trip-details .book {
+  display: block; text-align: center; background: #003399; color: #fff;
+  padding: 10px; border-radius: 8px; text-decoration: none; font-weight: 600;
+}
+.trip-details .fineprint { margin: 8px 0 0; font-size: 11px; color: var(--text-subtle); }
