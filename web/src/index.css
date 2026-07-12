@@ -75,12 +75,10 @@ body { margin: 0; font-family: "Barlow", system-ui, sans-serif; color: var(--tex
   display: flex;
   align-items: center;
 }
-/* Whole brand lockup is one inline SVG (viewBox 0 0 600 100 → 6:1). */
-.header-logo {
-  height: 40px;
-  width: auto;
-  display: block;
-}
+/* Brand lockup — inlined SVG from web/src/assets/header-logo.svg. CSS sizes the
+   inner <svg> so Inkscape's width/height attrs don't matter. */
+.header-logo { display: inline-flex; }
+.header-logo svg { height: 40px; width: auto; display: block; }
 .header-tagline {
   margin-left: auto;
   color: #ffcc00;
