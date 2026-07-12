@@ -78,8 +78,11 @@ export default function App() {
                onSelectOrigin={selectOrigin} onSelectDestination={setSelectedDest}
                onEmptyClick={onEmptyClick} />
       <header className="header-bar">
-        <img src="/logo-mascot-light.svg" alt="" className="header-mascot" />
-        <span className="header-wordmark">onestop<span className="header-wordmark-eu">europe</span></span>
+        <span className="header-brand">
+          <img src="/logo-train-light.svg" alt="" className="header-train" />
+          <span className="header-wordmark">onestop<span className="header-wordmark-eu">europe</span></span>
+          <span className="header-endstop" aria-hidden="true" />
+        </span>
         <span className="header-tagline">nonstopeurope with onestopeurope</span>
         <button className="theme-toggle" onClick={toggleTheme}
                 aria-label={theme === "light" ? "Switch to dark mode" : "Switch to light mode"}>
