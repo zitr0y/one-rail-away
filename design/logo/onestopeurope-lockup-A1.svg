@@ -15,7 +15,7 @@
      id="defs8" />
   <sodipodi:namedview
      id="namedview8"
-     pagecolor="#ffffff"
+     pagecolor="#003399"
      bordercolor="#000000"
      borderopacity="0.25"
      inkscape:showpageshadow="2"
@@ -33,16 +33,8 @@
      inkscape:current-layer="svg8" />
   <!-- onestopeurope header lockup — variation A. Rail at the belly (lower body): the car rests ON
        the rail (nothing of the body dips below) and the wheels hang UNDER it. Wordmark ON the rail.
-       White strokes for the navy header bar. The navy <rect> is a preview background; delete it to
-       place the mark on other colours. Wordmark is live text in Barlow Bold (800) — convert to path
-       (Path > Object to Path) if Barlow isn't installed. -->
-  <rect
-     x="0"
-     y="0"
-     width="600"
-     height="100"
-     fill="#003399"
-     id="rect1" />
+       The navy page preview is Inkscape-only metadata; the exported SVG remains transparent.
+       Wordmark is live Barlow ExtraBold (800). -->
   <!-- Rail (at the belly line) + left station dot + end-stop dot -->
   <line
      x1="-0.27119094"
@@ -106,15 +98,16 @@
      id="text7">★</text>
   <!-- Wordmark: "onestop" white, "europe" gold -->
   <text
-     x="182"
-     y="79.225861"
+     x="172.17503"
+     y="79.182014"
      font-family="Barlow, sans-serif"
      font-weight="800"
      font-size="40px"
-     id="text8"><tspan
-       fill="#ffffff"
+     id="text8"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:42.6667px;font-family:Barlow;-inkscape-font-specification:'Barlow Bold'"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:42.6667px;font-family:Barlow;-inkscape-font-specification:'Barlow Ultra-Bold';fill:#ffffff"
        id="tspan7">onestop</tspan><tspan
-       fill="#ffcc00"
+       style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:42.6667px;font-family:Barlow;-inkscape-font-specification:'Barlow Ultra-Bold';fill:#ffcc00;fill-opacity:1"
        id="tspan8">europe</tspan></text>
   <circle
      cx="65.355804"
