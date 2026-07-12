@@ -23,6 +23,13 @@
 }
 @font-face {
   font-family: "Barlow";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("/fonts/barlow-v13-latin-800.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Barlow";
   font-style: italic;
   font-weight: 400;
   font-display: swap;
