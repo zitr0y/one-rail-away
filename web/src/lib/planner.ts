@@ -1,31 +1,83 @@
 // Pure helpers for the unified journey planner. No React, unit-testable.
 // Spec: docs/superpowers/specs/2026-07-12-unified-planner-panel-design.md.
+import type { MaxTrains } from "./geojson";
 import type { ReachFile, Station } from "./types";
 
+/** Fold diacritics + lowercase so "zur" matches "Zürich", "munch" → "München".
+ *  Mirrors the server's NFKD-to-base-letter folding (ö→o, not ö→oe). */
+export function norm(s: string): string {
+  // ̀-ͯ = combining diacritical marks left after NFD decomposition.
+  return s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+}
+
+export type DestGroup = "Nonstop" | "One stop" | "Two stops" | "Not reachable";
+const GROUP_BY_TRAINS: DestGroup[] = ["Nonstop", "One stop", "Two stops"];
+export const GROUP_ORDER: DestGroup[] = ["Nonstop", "One stop", "Two stops", "Not reachable"];
+
+export interface FieldOption {
+  station: Station;
+  group: DestGroup | ""; // "" = ungrouped (the From field)
+  disabled: boolean; // grayed + non-selectable (beyond current filter / unreachable)
+}
+
+/** Wrap plain search results (the From field) as ungrouped, selectable options. */
+export function toFieldOptions(stations: Station[]): FieldOption[] {
+  return stations.map((station) => ({ station, group: "" as const, disabled: false }));
+}
+
 /**
- * Reachable destinations of the current origin whose name matches `query`,
- * resolved to Station objects via `stationsById`. Runs entirely client-side,
- * so the To field can only ever offer stations that are actually reachable.
- * Empty/short queries return nothing (the dropdown only opens on typing).
+ * To-field options for the current origin, grouped by the minimum number of
+ * trains needed to reach each match within the time cap. Searches ALL stations
+ * (so genuinely unreachable ones can be shown as "Not reachable") and marks an
+ * option `disabled` when it needs more trains than the current filter allows or
+ * isn't reachable at all. Reachable-under-the-current-filter options come first.
  */
-export function reachableDestOptions(
+export function destOptions(
   reach: ReachFile | null,
   stationsById: Map<string, Station>,
   query: string,
-  limit = 8,
-): Station[] {
+  maxTrains: MaxTrains,
+  filterMinutes: number,
+  limit = 12,
+): FieldOption[] {
   if (!reach) return [];
-  const q = query.trim().toLowerCase();
+  const q = norm(query.trim());
   if (q.length < 2) return [];
-  const out: Station[] = [];
-  for (const d of reach.destinations) {
-    const s = stationsById.get(d.id);
-    if (s && s.name.toLowerCase().includes(q)) {
-      out.push(s);
-      if (out.length >= limit) break;
+
+  const destById = new Map(reach.destinations.map((d) => [d.id, d]));
+  const out: FieldOption[] = [];
+
+  for (const s of stationsById.values()) {
+    if (s.id === reach.origin) continue; // don't offer the origin as a destination
+    if (!norm(s.name).includes(q)) continue;
+
+    const d = destById.get(s.id);
+    let group: DestGroup;
+    let disabled: boolean;
+    if (!d) {
+      group = "Not reachable";
+      disabled = true;
+    } else {
+      const within = d.journeys.filter((j) => j.duration_min <= filterMinutes);
+      if (within.length === 0) {
+        group = "Not reachable"; // reachable, but not within the time cap
+        disabled = true;
+      } else {
+        const minTrains = Math.min(...within.map((j) => j.trains));
+        group = GROUP_BY_TRAINS[minTrains - 1] ?? "Two stops";
+        disabled = minTrains > maxTrains; // needs more trains than the current filter
+      }
     }
+    out.push({ station: s, group, disabled });
   }
-  return out;
+
+  out.sort((a, b) => {
+    const ga = GROUP_ORDER.indexOf(a.group as DestGroup);
+    const gb = GROUP_ORDER.indexOf(b.group as DestGroup);
+    if (ga !== gb) return ga - gb;
+    return a.station.name.localeCompare(b.station.name);
+  });
+  return out.slice(0, limit);
 }
 
 /** Swap is only meaningful when both endpoints are set. */

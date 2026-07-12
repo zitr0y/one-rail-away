@@ -28,7 +28,7 @@ export default function TimeSlider(props: { value: number; onChange: (v: number)
              value={Math.min(props.value, TIME_MAX)}
              onChange={(e) => props.onChange(Number(e.target.value))}
              style={{ background: GRADIENT }} />
-      <span className="time-scale"><span>1 h</span><span>16 h → max</span></span>
+      <span className="time-scale"><span>1 h</span><span>max</span></span>
     </label>
   );
 }

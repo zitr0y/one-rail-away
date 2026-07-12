@@ -203,6 +203,11 @@ body { margin: 0; font-family: "Barlow", system-ui, sans-serif; color: var(--tex
 .station-field li button:hover { background: var(--surface-hover); }
 .station-field li.active button { background: var(--surface-hover); }
 .station-field .country { color: var(--text-subtle); font-size: 12px; }
+.station-field li.group-header {
+  padding: 6px 8px 2px; font-size: 10px; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.05em; color: var(--text-subtle);
+}
+.station-field li.opt-row.disabled { padding: 8px; color: var(--text-subtle); opacity: 0.55; cursor: default; }
 /* Armed field — the box the next map click fills — always outlined in brand blue. */
 .station-field.active input,
 .station-field.active .field-value {

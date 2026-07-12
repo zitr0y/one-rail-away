@@ -1,5 +1,6 @@
-import { useEffect, useRef, useState } from "react";
+import { Fragment, useEffect, useRef, useState } from "react";
 import { keyNav } from "../lib/keynav";
+import type { FieldOption } from "../lib/planner";
 import type { Station } from "../lib/types";
 
 interface Props {
@@ -7,7 +8,7 @@ interface Props {
   disabled?: boolean;
   armed?: boolean; // this is the armed field — the next map click fills it
   value: string; // selected station name, or "" when none
-  search: (q: string) => Station[] | Promise<Station[]>;
+  search: (q: string) => FieldOption[] | Promise<FieldOption[]>;
   onPick: (s: Station) => void;
   onClear: () => void;
   onFocusField: () => void;
@@ -17,10 +18,13 @@ export default function StationField(
   { placeholder, disabled, armed, value, search, onPick, onClear, onFocusField }: Props,
 ) {
   const [q, setQ] = useState("");
-  const [results, setResults] = useState<Station[]>([]);
+  const [results, setResults] = useState<FieldOption[]>([]);
   const [active, setActive] = useState(-1);
   const [editing, setEditing] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
+
+  // The keyboard/selection index only walks the selectable (enabled) options.
+  const selectable = results.filter((o) => !o.disabled);
 
   // When the parent supplies a new selected value (e.g. filled by a map click),
   // drop back to the chip display.
@@ -68,11 +72,11 @@ export default function StationField(
   }
 
   function onKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
-    const r = keyNav(e.key, { index: active, count: results.length });
+    const r = keyNav(e.key, { index: active, count: selectable.length });
     if (r.type === "pass") return;
     e.preventDefault();
     if (r.type === "move") setActive(r.index);
-    else if (r.type === "select") pick(results[r.index]);
+    else if (r.type === "select") pick(selectable[r.index].station);
     else {
       setResults([]);
       setActive(-1);
@@ -89,6 +93,10 @@ export default function StationField(
     );
   }
 
+  // Walk results, inserting group headers on change and mapping enabled rows to
+  // their index within `selectable` for the active highlight.
+  let prevGroup: string | null = null;
+  let selIndex = -1;
   return (
     <div className={`station-field${armed ? " active" : ""}`}>
       <input
@@ -105,18 +113,39 @@ export default function StationField(
       />
       {results.length > 0 && (
         <ul>
-          {results.map((s, i) => (
-            <li key={s.id} className={i === active ? "active" : ""}>
-              {/* onMouseDown preventDefault keeps the input from blurring before click */}
-              <button
-                onMouseDown={(e) => e.preventDefault()}
-                onClick={() => pick(s)}
-                onMouseEnter={() => setActive(i)}
-              >
-                {s.name} <span className="country">{s.country}</span>
-              </button>
-            </li>
-          ))}
+          {results.map((o) => {
+            const header = o.group && o.group !== prevGroup
+              ? <li key={`h-${o.group}`} className="group-header" aria-hidden="true">{o.group}</li>
+              : null;
+            prevGroup = o.group || prevGroup;
+            if (o.disabled) {
+              return (
+                <Fragment key={o.station.id}>
+                  {header}
+                  <li className="opt-row disabled">
+                    {o.station.name} <span className="country">{o.station.country}</span>
+                  </li>
+                </Fragment>
+              );
+            }
+            selIndex += 1;
+            const i = selIndex;
+            return (
+              <Fragment key={o.station.id}>
+                {header}
+                <li className={`opt-row${i === active ? " active" : ""}`}>
+                  {/* onMouseDown preventDefault keeps the input from blurring before click */}
+                  <button
+                    onMouseDown={(e) => e.preventDefault()}
+                    onClick={() => pick(o.station)}
+                    onMouseEnter={() => setActive(i)}
+                  >
+                    {o.station.name} <span className="country">{o.station.country}</span>
+                  </button>
+                </li>
+              </Fragment>
+            );
+          })}
         </ul>
       )}
     </div>

@@ -112,7 +112,7 @@ export default function App() {
       <JourneyPlanner
         reach={reach} stationsById={stationsById}
         origin={origin} destination={destination} dest={dest}
-        maxTrains={maxTrains} maxMinutes={maxMinutes}
+        maxTrains={maxTrains} maxMinutes={maxMinutes} filterMinutes={filterMinutes}
         armed={armed} error={error} hint={hint}
         onSetOrigin={(s) => selectOrigin(s.id)}
         onClearOrigin={clearSelection}

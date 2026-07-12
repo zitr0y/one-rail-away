@@ -4,7 +4,7 @@ import TripDetails from "./TripDetails";
 import StopToggle from "./StopToggle";
 import TimeSlider from "./TimeSlider";
 import { api } from "../lib/api";
-import { reachableDestOptions, swapEnabled, toEnabled } from "../lib/planner";
+import { destOptions, swapEnabled, toEnabled, toFieldOptions } from "../lib/planner";
 import type { MaxTrains } from "../lib/geojson";
 import type { Destination, ReachFile, Station } from "../lib/types";
 
@@ -16,6 +16,7 @@ interface Props {
   dest?: Destination;
   maxTrains: MaxTrains;
   maxMinutes: number;
+  filterMinutes: number; // effective time cap (Infinity at "max") for To results
   armed: "from" | "to"; // which field the next map click fills — always highlighted
   error: string | null;
   hint: string | null;
@@ -30,15 +31,15 @@ interface Props {
 }
 
 export default function JourneyPlanner(props: Props) {
-  const { reach, stationsById, origin, destination, dest, maxTrains, maxMinutes, armed, error, hint } = props;
+  const { reach, stationsById, origin, destination, dest, maxTrains, maxMinutes, filterMinutes, armed } = props;
 
   const searchFrom = useCallback(
-    (q: string) => api.searchStations(q).then((r) => r.stations),
+    (q: string) => api.searchStations(q).then((r) => toFieldOptions(r.stations)),
     [],
   );
   const searchTo = useCallback(
-    (q: string) => reachableDestOptions(reach, stationsById, q),
-    [reach, stationsById],
+    (q: string) => destOptions(reach, stationsById, q, maxTrains, filterMinutes),
+    [reach, stationsById, maxTrains, filterMinutes],
   );
 
   return (
@@ -81,9 +82,6 @@ export default function JourneyPlanner(props: Props) {
         </>
       )}
 
-      {hint && <p className="hint">{hint}</p>}
-      {!reach && <p className="hint">Search or click a station to begin.</p>}
-      {error && <p className="error">{error}</p>}
     </aside>
   );
 }
