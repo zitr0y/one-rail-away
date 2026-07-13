@@ -63,13 +63,15 @@ describe("destOptions", () => {
     expect(destOptions(null, stationsById, "arnhem", Infinity)).toEqual([]);
   });
 
-  it("labels an unreachable same-city sibling as local transit", () => {
+  it("labels a same-city sibling as local transit even with a reach entry", () => {
     const stations = new Map([
       ["paris-nord", st("paris-nord", "Paris Gare du Nord")],
       ["paris-lyon", st("paris-lyon", "Paris Gare de Lyon")],
     ]);
     const localReach: ReachFile = {
-      origin: "paris-nord", computed_at: "", sample_date: "", destinations: [],
+      origin: "paris-nord", computed_at: "", sample_date: "", destinations: [
+        { id: "paris-lyon", direct_per_day: 1, journeys: [jrny(3, 513)] },
+      ],
     };
     const cities = buildCityLookup({ Paris: ["paris-nord", "paris-lyon"] });
 
