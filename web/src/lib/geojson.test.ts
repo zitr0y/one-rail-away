@@ -135,4 +135,41 @@ describe("journeyLegPaths", () => {
     const flattened = paths.flatMap((c, i) => (i === 0 ? c : c.slice(1)));
     expect(line.geometry.coordinates).toEqual(flattened);
   });
+
+  it("routes a direct Paris to Marseille leg through the curated corridor", () => {
+    const paris = { lon: 2.373481, lat: 48.844945 };
+    const lyon = { lon: 4.859409, lat: 45.760596 };
+    const valence = { lon: 4.978652, lat: 44.991907 };
+    const avignon = { lon: 4.786136, lat: 43.92194 };
+    const marseille = { lon: 5.380407, lat: 43.302666 };
+    const corridorStations = new Map([
+      ["paris", { id: "paris", name: "Paris", ...paris, country: "FR", has_reach: true }],
+      [
+        "marseille",
+        { id: "marseille", name: "Marseille", ...marseille, country: "FR", has_reach: true },
+      ],
+    ]);
+    const directJourney = {
+      trains: 1,
+      duration_min: 190,
+      legs: [{
+        train: "TGV 6103",
+        dep: "07:00",
+        arr: "10:10",
+        from: "paris",
+        to: "marseille",
+        via: [],
+      }],
+    };
+
+    expect(journeyLegPaths(directJourney, corridorStations)).toEqual([
+      chaikin([
+        [paris.lon, paris.lat],
+        [lyon.lon, lyon.lat],
+        [valence.lon, valence.lat],
+        [avignon.lon, avignon.lat],
+        [marseille.lon, marseille.lat],
+      ], 2),
+    ]);
+  });
 });

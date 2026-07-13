@@ -1,3 +1,4 @@
+import { CORRIDORS, corridorPath } from "./corridors";
 import type { Destination, Journey, ReachFile, Station } from "./types";
 
 export type MaxTrains = 1 | 2 | 3;
@@ -73,11 +74,21 @@ export function journeyLegPaths(
   j: Journey, stationsById: Map<string, Station>,
 ): [number, number][][] {
   return j.legs
-    .map((leg) =>
-      [leg.from, ...leg.via, leg.to]
+    .map((leg) => {
+      const stationCoordinates = [leg.from, ...leg.via, leg.to]
         .map((id) => stationsById.get(id))
         .filter((s): s is Station => s !== undefined)
-        .map((s): [number, number] => [s.lon, s.lat]))
+        .map((s): [number, number] => [s.lon, s.lat]);
+      if (leg.via.length > 0) return stationCoordinates;
+
+      const from = stationsById.get(leg.from);
+      const to = stationsById.get(leg.to);
+      if (!from || !to) return stationCoordinates;
+      const corridor = corridorPath(from, to, CORRIDORS);
+      return corridor
+        ? corridor.map(({ lon, lat }): [number, number] => [lon, lat])
+        : stationCoordinates;
+    })
     .filter((c) => c.length >= 1)
     .map((c) => chaikin(c, 2));
 }
