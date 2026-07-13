@@ -102,10 +102,10 @@ User's sketch: EU-train theme, cute EU train in the logo that could "bend along 
 chosen route if exists". Map style should follow the identity (OpenFreeMap styles can
 be customized). Tagline is fixed: "nonstopeurope with onestopeurope".
 
-**De-emphasise roads in map styling (added 2026-07-13):** roads carry little meaning
-for a rail-reachability product; consider styling them more faintly (lower opacity /
-thinner / muted colour) so rail lines and station dots read as the primary layer.
-Part of the OpenFreeMap style customisation under this item; do per-theme (light + dark).
+**De-emphasise roads in map styling — SHIPPED 2026-07-13:** all `highway_*` /
+`tunnel_*` line layers in both forked styles now carry a flat `line-opacity`
+(light 0.45, dark 0.55 — TUNING POINTS; script-applied, railway layers untouched).
+Road labels/shields (z12+) not faded — revisit if they still shout at street zoom.
 
 ## I. Corridor bundling for reach lines (added 2026-07-10)
 
@@ -273,7 +273,23 @@ nonstopeurope.eu.) Frontend URL/param handling.
   the whole-city union. Consider: clicking a member offers "select all of <City>".
   Design-first; interacts with the C3 union flow.
 
-## X. Reach lines splay one polyline per stop instead of one shared trunk (added 2026-07-13)
+## X. Reach lines splay one polyline per stop instead of one shared trunk — SHIPPED 2026-07-13
+
+Fixed as diagnosed below, both halves (no user brainstorm — explicit "just do it"):
+- `journeyLegPaths` keeps served stops as EXACT vertices (chaikin no longer cuts
+  the corner at a via stop, which was what splayed identical trunks). Nonstop
+  legs still follow curated corridors, chaikin-smoothed.
+- New `geojson.ts::segmentsGeoJSON` + `legSegments`: the base line layer now
+  draws direction-normalized, deduped stop-to-stop segments (new map source
+  `reach-segments`) — each physical hop drawn once, bucket = fastest journey
+  through it, width class = most direct. Per-destination `linesGeoJSON` remains
+  only for the selected-journey highlight (filter-by-id) and the rider, which
+  share geometry with the segments by construction.
+- Verified on Berlin Hbf reach: trunks collapse to a tree with per-segment color
+  progression outward. Item I (genuinely-direct Paris fan) remains open — that
+  half needs corridor geometry, see NOTE below.
+
+### Original report (kept for context)
 
 User report: a single train that stops at many stations renders as a SEPARATE
 "offspring" line from the origin per stop, not as one line threading through the
@@ -337,17 +353,29 @@ Two parts:
   other ungrouped multi-station cities (Hamburg, Frankfurt, Köln, Wien, Milano, etc.)
   and add the clear ones. Same C3 mechanism.
 
-## AA. Dark-mode veil tooltip unreadable — white text on white background (added 2026-07-13)
+## AA. Dark-mode veil tooltip unreadable — SHIPPED 2026-07-13
 
-In dark mode the hover tooltip over the greyed-out (unreachable) countries is
-unreadable: the text turns white (theme text var) but the tooltip **background stays
-white**. The veil popup is a MapLibre `Popup` (`veilPopup`, created in
-`web/src/components/Map.tsx` ~L129–138, copy from `web/src/lib/coverage.ts`
-`veilTooltip`). MapLibre's default popup chrome is white and isn't themed. Fix: add a
-theme-aware background (+ border/arrow) for the veil popup content in `web/src/index.css`
-under the `[data-theme="dark"]` block (target the popup's container class, e.g. a
-dedicated class set via the popup's `className`, or `.maplibregl-popup-content`). Ensure
-the popup tip/arrow colour matches. Small CSS fix.
+Fixed as sketched: the popup gets `className: "veil-popup"`; `index.css` themes
+`.veil-popup .maplibregl-popup-content` (background/color/shadow via theme vars)
+plus all 8 anchor-side `.maplibregl-popup-tip` border colours. Verified computed
+styles in dark mode (#0B1533 surface, #E8ECF7 text, tip matches). NOTE: local
+`data/out` subset has no coverage.json, so the real veil can't render locally —
+verified via injected popup markup instead.
+
+## AB. all-stations fade/pin opacity expression is invalid — silently rejected (found 2026-07-13)
+
+PRE-EXISTING bug (console error, not user-visible as a crash): whenever a reach
+is loaded, `Map.tsx::syncHighlight` sets `all-stations` `circle-opacity` to
+`["*", stationDotOpacityByZoom(), matchExpr]` (and the always-visible variant
+wrapping it in `["match", ...]`). MapLibre REJECTS it — `["zoom"]` may only sit
+at the top level of a `step`/`interpolate` — so `setPaintProperty` errors and
+the previous opacity stays. Consequence: with a reach shown, unreachable
+stations never dim to 0.25 and the origin/journey pinning of `all-stations`
+dots never applies (the C3 "pin member dots" nit sits on top of this). Fix
+direction: invert nesting — top-level `interpolate` on zoom whose outputs are
+`match`-on-id expressions (zoom-free), or drop the zoom term while a reach is
+shown. Lives right beside the zoom-declutter rework (item U) — both touch
+`stationDotOpacityByZoom`; consider fixing together.
 
 ## Smaller deferred notes
 
