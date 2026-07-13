@@ -61,12 +61,12 @@ sample weeks spread across the year, or read GTFS calendar spans to tag connecti
 label). Discuss together with the frequency display above — same data model, same
 brainstorm.
 
-## C. Dot sizing / clustering / city grouping (user item 4) — C1 DONE, C2 tried+rejected, C3 open
+## C. Dot sizing / clustering / city grouping (user item 4) — C1 DONE, C2 tried+rejected, remainder SHIPPED
 
 C1 (dots sized by n_dest) + capital stars shipped 2026-07-11
 (spec 2026-07-11-dots-clustering-design.md). C2 clustering shipped and was
-removed same day (killed the density picture). C3 city-union still needs its
-own brainstorm; may absorb the declutter goal.
+removed same day (killed the density picture). C3 city-union and the remaining
+click-disambiguation work are shipped; neither changes the density picture.
 
 Station dots are tiny and hard to click. Progress:
 - bigger dots for stations with more connections / capitals — **C1 SHIPPED**.
@@ -80,9 +80,10 @@ Station dots are tiny and hard to click. Progress:
   entry — **SHIPPED 2026-07-13** (`planner.ts::destOptions`).
 - **hide small dots at low zoom** (declutter) — **SHIPPED 2026-07-13**
   (`dots.ts::stationDotOpacityByZoom`; n_dest≥150@z4 … all@z9, TUNING POINTS).
-- STILL OPEN: stations too close together should **bunch** and be chosen by name
-  from the cluster on click (a click-disambiguation UI, distinct from the union —
-  for when several stations overlap at a zoom level). Not built.
+- stations too close together now present a quiet, name-sorted station chooser on
+  click when several visible dots overlap (with a small click tolerance); hits
+  are deduplicated by station id and a lone station still selects directly —
+  **SHIPPED 2026-07-14**.
 
 ## D. Branding / map styling (user item 7) — PHASE 1 + PHASE 2 SHIPPED
 

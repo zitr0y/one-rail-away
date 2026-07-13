@@ -11,7 +11,8 @@ import { mergeCustomStyle } from "../lib/themeswap";
 import type { Theme } from "../lib/theme";
 import { cityForStation } from "../lib/cities";
 import { baseLineOpacity, selectedLineFilter, stationOpacityExpression } from "../lib/highlight";
-import { pickFeature, type FeaturePick } from "../lib/pickfeature";
+import type { FeaturePick } from "../lib/pickfeature";
+import { overlapStationChoices } from "../lib/overlap";
 import { veilTooltip, showVeilTooltip } from "../lib/coverage";
 import { api } from "../lib/api";
 import {
@@ -27,6 +28,7 @@ import { styleUrl } from "../lib/mapstyle";
 import type { CityGroups, ReachFile, Station } from "../lib/types";
 
 const CLICK_LAYERS = ["reach-dots", "capital-stars", "all-stations"];
+const CLICK_TOLERANCE_PX = 6;
 
 const EMPTY = { type: "FeatureCollection", features: [] } as const;
 const bucketColor = ["to-color", ["at", ["get", "bucket"], ["literal", BUCKET_COLORS]]];
@@ -142,13 +144,24 @@ export default function MapView(props: Props) {
       });
       m.on("click", (e) => {
         removeCityPopup();
-        const hits = m.queryRenderedFeatures(e.point, { layers: CLICK_LAYERS })
+        const hits = m.queryRenderedFeatures([
+          [e.point.x - CLICK_TOLERANCE_PX, e.point.y - CLICK_TOLERANCE_PX],
+          [e.point.x + CLICK_TOLERANCE_PX, e.point.y + CLICK_TOLERANCE_PX],
+        ], { layers: CLICK_LAYERS })
           .map((f) => ({ layer: f.layer.id, id: f.properties!.id as string }));
-        const pick = pickFeature(hits);
-        if (!pick) {
+        const choices = overlapStationChoices(hits, propsRef.current.stations);
+        if (choices.length === 0) {
           propsRef.current.onEmptyClick();
           return;
         }
+        if (choices.length === 1) {
+          selectStation(choices[0].pick);
+          return;
+        }
+        showOverlapChoice(choices, e.lngLat);
+      });
+
+      function selectStation(pick: FeaturePick) {
         if (propsRef.current.armed === "to") {
           propsRef.current.onStationClick(pick);
           return;
@@ -195,7 +208,36 @@ export default function MapView(props: Props) {
           if (cityPopup.current === popup) cityPopup.current = null;
           propsRef.current.onSelectCityOrigin(city.city, city.memberIds);
         });
-      });
+      }
+
+      function showOverlapChoice(
+        choices: ReturnType<typeof overlapStationChoices>, lngLat: maplibregl.LngLat,
+      ) {
+        const content = document.createElement("div");
+        content.className = "overlap-station-popup";
+        content.setAttribute("role", "group");
+        content.setAttribute("aria-label", "Choose a station");
+        for (const choice of choices) {
+          const button = document.createElement("button");
+          button.type = "button";
+          button.textContent = choice.name;
+          button.setAttribute("aria-label", `Select ${choice.name}`);
+          button.addEventListener("click", (event) => {
+            event.stopPropagation();
+            popup.remove();
+            if (cityPopup.current === popup) cityPopup.current = null;
+            selectStation(choice.pick);
+          });
+          content.append(button);
+        }
+        const popup = new maplibregl.Popup({
+          closeButton: false, closeOnClick: false, className: "overlap-station-map-popup",
+        })
+          .setLngLat(lngLat)
+          .setDOMContent(content)
+          .addTo(m);
+        cityPopup.current = popup;
+      }
       for (const layer of ["all-stations", "reach-dots", "capital-stars"]) {
         m.on("mouseenter", layer, () => (m.getCanvas().style.cursor = "pointer"));
         m.on("mouseleave", layer, () => (m.getCanvas().style.cursor = ""));
