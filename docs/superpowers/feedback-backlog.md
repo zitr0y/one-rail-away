@@ -202,6 +202,40 @@ Relates to K (data sources) and Q (adapting to new data shapes).
   along real track. Research licensing (ODbL) and extract format (Overpass /
   planet rail layer). Relates to I and to the coverage gaps in A/K.
 
+## U. C3 testing round 2 — reverts + reworks (2026-07-13)
+
+Second browser test after the C3 fix batch. Two fixes REVERTED (didn't achieve
+the goal), two kept, plus reworks:
+- **Local transit — REVERTED** (revert of 90e967a). Label-only doesn't help:
+  selecting a same-city sibling still routes the absurd real journey (Paris Gare
+  de Lyon → Paris Austerlitz = 14h via Montpellier night train). PROPER FIX (user
+  decision): add **fake intra-city transfer connections in the pipeline data** —
+  short hops (~every few min) between same-city stations (from cities.toml groups)
+  injected as transfer edges so RAPTOR routes through them cleanly. This ALSO fixes
+  the Lille→Forbach detour (Paris Nord→Est transfer). Pipeline change + recompute.
+- **Zoom declutter — REVERTED to near-inert** (revert of ba79538; original
+  150/50/10 restored, effectively invisible). User dislikes that ES/FR empty out
+  while DE/AT/PL stay overfull — uneven station density. REWORK: make it
+  **density-aware** (normalise by local/country density, not a global n_dest
+  threshold). Disabled for now; bundle with a density calc.
+- **City exonyms — KEPT (d24160b), needs more:** works for EN (Brussels, Vienna…)
+  but the CITY "all stations" option doesn't match other-language exonyms — e.g.
+  German **"Warschau"** finds the Warsaw stations but not "Warszawa (all stations)".
+  Add multilingual exonyms (DE/FR/IT/ES/... → native) to the city-option matcher.
+  Also RELABEL "Paris — all stations" (em dash) → **"Paris (All stations)"** (user
+  preference).
+- **Corridor bundling — KEPT (e81c086) but insufficient:** Paris–Lyon region still
+  a clusterfuck; only marginally better. Rework: many lines converge Paris→Lyon;
+  needs better bundling (more corridors, or a real edge-bundling/geometry approach,
+  possibly density-aware). See item I.
+
+## V. Default-stops parameter + domain routing (2026-07-13)
+
+Add a parameter for the default number of stops (1/2/3 trains) preselected on load.
+Domain routing: **nonstopeurope.eu** forwards to onestopeurope with **nonstop
+(1 train)** preselected; **onestopeurope.eu** defaults to **onestop**. (User owns
+nonstopeurope.eu.) Frontend URL/param handling.
+
 ## T. Search & planner UX polish (added 2026-07-13)
 
 - **Station-search exonyms** — typing an English/common name should find the
