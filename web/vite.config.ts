@@ -3,5 +3,7 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
   plugins: [react()],
-  server: { proxy: { "/api": "http://localhost:8000" } },
+  // 127.0.0.1, not "localhost": uvicorn binds IPv4 only, but Node resolves
+  // "localhost" to IPv6 ::1 first, so a "localhost" target fails ECONNREFUSED.
+  server: { proxy: { "/api": "http://127.0.0.1:8000" } },
 });
