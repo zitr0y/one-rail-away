@@ -229,6 +229,17 @@ the goal), two kept, plus reworks:
   needs better bundling (more corridors, or a real edge-bundling/geometry approach,
   possibly density-aware). See item I.
 
+## W. Logo drive-off animation (2026-07-13)
+
+Hovering/clicking the header logo triggers a playful animation (relates to D
+Phase 3 — the inline lockup SVG in `web/src/App.tsx`):
+- the **train logo only** (NOT the wordmark text) **winks**, then **drives off
+  screen to the right and reappears from the left**;
+- the **rail tracks expand ahead of it** (extend forward as it drives);
+- the **stop circle** (the endstop after the text) **fades out** when the
+  animation triggers.
+CSS/SVG animation on the lockup sub-elements; respect prefers-reduced-motion.
+
 ## V. Default-stops parameter + domain routing (2026-07-13)
 
 Add a parameter for the default number of stops (1/2/3 trains) preselected on load.
