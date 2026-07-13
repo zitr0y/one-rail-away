@@ -26,3 +26,12 @@
 # Figueres-Vilafant: SNCF canonical name is "FIGUERES-VILAFANT" (all-caps).
 # Renfe feed name: "Figueres Vilafant" (stop 04307). Verified 2026-07-10.
 "x:sncf:StopArea:OCE71043075" = "Figueres-Vilafant"
+# NOTE: FlixTrain Darmstadt (x:flix:06cc0192-…) and Hamburg-Bergedorf
+# (x:flix:4a2656a8-…) name overrides were removed 2026-07-13: their FLX routes
+# do not run on the 2026-07-14 sample Tuesday, so the stations never mint and
+# the keys are stale (station_names validates keys against the registry). The
+# Bergedorf same-coord merge alias is kept in station_aliases.toml (inert until
+# those trains run). Re-add these display names when multi-day sampling
+# (backlog B) brings the FLX20/30 service days into the build.
+# Erfurt: db_fern's canonical is the context-free "Hauptbahnhof"; include city.
+"x:db_fern:338323" = "Erfurt Hbf"

@@ -2,7 +2,7 @@
 url = "https://download.gtfs.de/germany/fv_free/latest.zip"
 country = "DE"
 license = "CC BY 4.0 - verify commercial terms before monetizing (fallback: DELFI NAP)"
-route_allow = ["^ICE?\\b", "^ECE?\\b", "^NJ\\b", "^RJX?\\b", "^FLX\\b", "^TGV\\b", "^EST\\b"]
+route_allow = ["^ICE?\\b", "^ECE?\\b", "^NJ\\b", "^RJX?\\b", "^TGV\\b", "^EST\\b"]
 uic_regex = "(\\d{7})"
 
 [feeds.sncf]
@@ -93,6 +93,35 @@ route_allow = ["^Intercity", "^ICE?\\b", "^Eurostar", "^Nightjet"]
 # Omitting uic_regex here falls back to proximity+name matching, which
 # correctly collapses same-named stops within 500m into one station.
 
+[feeds.rejseplanen]
+url = "https://www.rejseplanen.info/labs/GTFS.zip"
+country = "DK"
+license = "Rejseplanen open data (rejseplanen.info/labs) - VERIFY reuse terms before monetizing"
+# All-Denmark, all-modes feed (36k stops: bus/metro/ferry/S-tog/rail). Filter to DSB
+# long-distance rail by route_short_name: IC (InterCity), ICL (InterCityLyn), EC/ECE
+# (EuroCity), RJ. Excludes RE (regional), S-tog (route_type 109), buses (700/715/3),
+# ferries (4), metro (1), and all non-DSB rail operators (Lokaltog, Skanetrafiken).
+# Verified 2026-07-13: these four patterns match ONLY DSB route_type=2 routes.
+route_allow = ["^IC$", "^ICL$", "^ECE?$", "^RJ$"]
+# No uic_regex: stop ids are 12-digit zero-padded (Kobenhavn H = 000008600626);
+# leading zeros defeat (\d{7}) extraction. Proximity+name merge (like ns/renfe/pkp)
+# collapses the 8 Jylland stops that already leak from db_fern (EC toward Hamburg).
+
+[feeds.flix]
+url = "http://gtfs.gis.flix.tech/gtfs_generic_eu.zip"
+country = "DE"
+license = "ODbL 1.0 (Flix open data / transport.data.gouv.fr)"
+# Flix generic EU feed carries FlixTrain (route_type=2, route_short_name
+# "FlixTrain FLX10/20/30") and FlixBus (route_type=3, coach). ^FlixTrain selects
+# only the 3 rail routes (218 trips); FlixBus is intentionally excluded (a separate
+# "allow buses" overlay is a later feature). db_fern's ^FLX pattern is removed so
+# flix is the single FlixTrain source (db_fern yields 0 FLX trips as of 2026-07-13;
+# two sources would risk double-counting via through.py).
+route_allow = ["^FlixTrain "]
+# No uic_regex: UUID stop ids. FlixTrain names German stops "X Central Station
+# (FlixTrain)" which never _norm-matches db's "X Hbf"; station_aliases.toml forces
+# each onto its db_fern canonical (id->id).
+
 [feeds.renfe]
 # Renfe long-distance GTFS (registration-free), inspected 2026-07-10.
 # https://ssl.renfe.com/gtransit/Fichero_AV_LD/google_transit.zip (776 KB).
@@ -138,4 +167,3 @@ url = "https://mkuran.pl/gtfs/polish_trains.zip"
 country = "PL"
 license = "CC BY 4.0 / PKP PLK public sector data (mkuran.pl)"
 route_allow = ["^EIP$", "^EIC$", "^IC$", "^TLK$", "^LEO$", "^RJ$", "^EC$", "^EN$"]
-

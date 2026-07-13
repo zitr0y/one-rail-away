@@ -162,3 +162,32 @@
 "pkp:83022" = "x:db_fern:113884" # Łańcut vs Lancut
 "pkp:83261" = "x:db_fern:263827" # Jarosław vs Jaroslaw
 "pkp:84400" = "x:db_fern:255307" # Przemyśl Główny vs Przemysl Glowny
+
+# Rejseplanen (DK): the ø in "Rødekro" does not NFKD-decompose, so it won't
+# _norm-match db_fern's "Roedekro st"; force the merge. The other 7 Jylland leaks
+# _norm-match cleanly (St. == st).
+"rejseplanen:000008600094" = "x:db_fern:493376"  # Rødekro St. -> Roedekro st (db_fern)
+# German stops on the DSB EC Hamburg corridor that db_fern also carries under a
+# differently-normalizing name; forced merges (found by <150m any-name scan
+# 2026-07-13, the validator blind spot -- backlog Q).
+"rejseplanen:000008020403" = "x:db_fern:501246"  # Hamburg-Altona -> Hamburg-Altona(S)
+"rejseplanen:000008024643" = "x:db_fern:220127"  # Neumünster St. -> Neumünster
+
+# FlixTrain (flix): "X Central Station (FlixTrain)" names never _norm-match db's
+# canonicals; force each onto its db_fern station id (verified <200m, 2026-07-13).
+"flix:086064da-8914-415f-83cc-8d6a087f5ed2" = "x:db_fern:108700"  # Basel Bad Bf
+"flix:206a3e42-ff08-4902-b26c-fb192c94048e" = "x:db_fern:72773"   # Leipzig Hbf
+"flix:2b263035-0646-413d-b76a-1c61cf9b1bee" = "x:db_fern:338323"  # Erfurt (db name "Hauptbahnhof")
+"flix:38c4c04e-e957-4115-ac23-6fa87012bde4" = "x:db_fern:490623"  # Hamburg Hbf
+"flix:394a5408-d778-4959-a63e-973253443ed2" = "x:db_fern:569849"  # Berlin Hbf
+"flix:68c5db74-0034-41b2-b3ae-6947c837f77b" = "x:db_fern:408738"  # Halle(Saale)Hbf
+"flix:80f34827-2a46-48b0-81f1-5271a8a675d4" = "x:db_fern:605507"  # Freiburg Hbf
+"flix:8111f454-465d-4ec9-8e95-ebb530e0bc38" = "x:db_fern:421594"  # Offenburg
+"flix:895f31c8-7f88-4d8f-a070-4b4a6320160a" = "x:db_fern:95820"   # Berlin Südkreuz
+"flix:a661a63c-ac57-45c8-a3f4-141478a0b99c" = "x:db_fern:365732"  # Karlsruhe Hbf
+"flix:cd27dc81-a5a0-42f2-8662-650411b4a7e7" = "x:db_fern:358804"  # Frankfurt(Main)Süd
+"flix:d39ec3fd-a7a9-4868-960c-8f4aa4c9c926" = "x:db_fern:479871"  # Fulda
+"flix:e6f7f0f4-4bb5-45a0-bcc2-d5e7279686dd" = "x:db_fern:645393"  # Berlin-Spandau
+"flix:ee967467-b7c5-457f-b71e-f81a430dc959" = "x:db_fern:115097"  # Heidelberg Hbf
+"flix:f6d07c4e-fa7e-4ab6-86bc-71b34ffb8cca" = "x:db_fern:627018"  # Stuttgart Hbf
+"flix:8492e27a-1647-4abf-8cff-6cecdf2329c6" = "x:flix:4a2656a8-5fd2-45c8-8cef-9a4b55cb1577"
