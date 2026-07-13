@@ -330,7 +330,7 @@
       },
       "paint": {
         "line-color": "#C5C2B8",
-        "line-opacity": 0.45,
+        "line-opacity": 0.25,
         "line-width": [
           "interpolate",
           [
@@ -395,7 +395,7 @@
       },
       "paint": {
         "line-color": "#F8F6F2",
-        "line-opacity": 0.45,
+        "line-opacity": 0.25,
         "line-width": [
           "interpolate",
           [
@@ -724,7 +724,7 @@
       },
       "paint": {
         "line-color": "#D5D2CA",
-        "line-opacity": 0.45,
+        "line-opacity": 0.25,
         "line-width": [
           "interpolate",
           [
@@ -782,7 +782,7 @@
       },
       "paint": {
         "line-color": "#D5D2CA",
-        "line-opacity": 0.45,
+        "line-opacity": 0.25,
         "line-width": [
           "interpolate",
           [
@@ -845,7 +845,7 @@
           12,
           0
         ],
-        "line-opacity": 0.45,
+        "line-opacity": 0.25,
         "line-width": [
           "interpolate",
           [
@@ -904,7 +904,7 @@
       },
       "paint": {
         "line-color": "#fff",
-        "line-opacity": 0.45,
+        "line-opacity": 0.25,
         "line-width": [
           "interpolate",
           [
@@ -963,7 +963,7 @@
       },
       "paint": {
         "line-color": "#D5D2CA",
-        "line-opacity": 0.45,
+        "line-opacity": 0.25,
         "line-width": 2
       }
     },
@@ -1022,7 +1022,7 @@
           2,
           0
         ],
-        "line-opacity": 0.45,
+        "line-opacity": 0.25,
         "line-width": [
           "interpolate",
           [
@@ -1104,7 +1104,7 @@
           6,
           "#fff"
         ],
-        "line-opacity": 0.45,
+        "line-opacity": 0.25,
         "line-width": [
           "interpolate",
           [
@@ -1158,7 +1158,7 @@
       },
       "paint": {
         "line-color": "#D5D2CA",
-        "line-opacity": 0.45,
+        "line-opacity": 0.25,
         "line-width": [
           "interpolate",
           [
@@ -1377,7 +1377,7 @@
       "type": "line",
       "source": "openmaptiles",
       "source-layer": "transportation",
-      "minzoom": 13,
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -1415,7 +1415,8 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "#D5D2CA",
+        "line-color": "#B0A99B",
+        "line-opacity": 0.9,
         "line-width": [
           "interpolate",
           [
@@ -1425,6 +1426,10 @@
           [
             "zoom"
           ],
+          8,
+          0.75,
+          13,
+          1.8,
           16,
           3,
           20,
@@ -1546,7 +1551,7 @@
           2,
           0
         ],
-        "line-opacity": 0.45,
+        "line-opacity": 0.25,
         "line-width": [
           "interpolate",
           [
@@ -1623,7 +1628,7 @@
           6,
           "#fff"
         ],
-        "line-opacity": 0.45,
+        "line-opacity": 0.25,
         "line-width": [
           "interpolate",
           [
@@ -1691,7 +1696,7 @@
         ]
       ],
       "paint": {
-        "line-color": "#C5C2B8",
+        "line-color": "#B3AC9E",
         "line-dasharray": [
           1,
           1
@@ -1756,7 +1761,7 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "#C5C2B8",
+        "line-color": "#A9A294",
         "line-opacity": [
           "interpolate",
           [

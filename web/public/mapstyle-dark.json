@@ -665,7 +665,7 @@
           1.5,
           1.5
         ],
-        "line-opacity": 0.55,
+        "line-opacity": 0.2,
         "line-width": [
           "interpolate",
           [
@@ -723,7 +723,7 @@
       },
       "paint": {
         "line-color": "#1C2C50",
-        "line-opacity": 0.55,
+        "line-opacity": 0.2,
         "line-width": [
           "interpolate",
           [
@@ -786,7 +786,7 @@
           12,
           0
         ],
-        "line-opacity": 0.55,
+        "line-opacity": 0.2,
         "line-width": [
           "interpolate",
           [
@@ -845,7 +845,7 @@
       },
       "paint": {
         "line-color": "#253760",
-        "line-opacity": 0.55,
+        "line-opacity": 0.2,
         "line-width": [
           "interpolate",
           [
@@ -905,7 +905,7 @@
       },
       "paint": {
         "line-color": "#253760",
-        "line-opacity": 0.55,
+        "line-opacity": 0.2,
         "line-width": [
           "interpolate",
           [
@@ -960,7 +960,7 @@
           2,
           0
         ],
-        "line-opacity": 0.55,
+        "line-opacity": 0.2,
         "line-width": [
           "interpolate",
           [
@@ -1014,7 +1014,7 @@
       },
       "paint": {
         "line-color": "#253760",
-        "line-opacity": 0.55,
+        "line-opacity": 0.2,
         "line-width": [
           "interpolate",
           [
@@ -1146,7 +1146,7 @@
       },
       "paint": {
         "line-color": "#253760",
-        "line-opacity": 0.55,
+        "line-opacity": 0.2,
         "line-width": [
           "interpolate",
           [
@@ -1368,7 +1368,7 @@
       "type": "line",
       "source": "openmaptiles",
       "source-layer": "transportation",
-      "minzoom": 13,
+      "minzoom": 8,
       "filter": [
         "all",
         [
@@ -1403,7 +1403,8 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "rgb(35,35,35)",
+        "line-color": "#4C639A",
+        "line-opacity": 0.9,
         "line-width": [
           "interpolate",
           [
@@ -1413,6 +1414,10 @@
           [
             "zoom"
           ],
+          8,
+          0.75,
+          13,
+          1.8,
           16,
           3,
           20,
@@ -1635,7 +1640,7 @@
       },
       "paint": {
         "line-blur": 0.4,
-        "line-color": "#3D4E7C",
+        "line-color": "#49598A",
         "line-dasharray": [
           2,
           2
@@ -1699,7 +1704,7 @@
           22,
           4
         ],
-        "line-color": "#3D4E7C",
+        "line-color": "#55689C",
         "line-opacity": 1,
         "line-width": [
           "interpolate",
@@ -1749,7 +1754,7 @@
           22,
           4
         ],
-        "line-color": "#3D4E7C",
+        "line-color": "#55689C",
         "line-opacity": 1,
         "line-width": [
           "interpolate",
