@@ -18,6 +18,13 @@
 # Example: "borderia:bs-3333333" = "3333333"
 [aliases]
 
+# CP's national GTFS is registered before Renfe so Portugal owns its stations.
+# Renfe's TRENCELTA cross-border trip describes these Portuguese termini with
+# bilingual/diacritic variants that cannot normalize-match CP's names; the
+# 2026-07-14 CP+Renfe targeted build measured the pairs at 55m and 28m.
+"renfe:94346" = "x:cp:94_2006"                  # Porto Campanha - O Porto Campaña -> Porto Campanha
+"renfe:22402" = "x:cp:94_7005"                  # Valença do Minho -> Valenca
+
 # Real-run merge fixes (first full build, 2026-07): db_fern uses internal stop
 # ids and sncf StopArea ids carry the 8-digit code with check digit, so these
 # border stations cannot UIC-merge with the 7-digit ids that oebb/sbb register

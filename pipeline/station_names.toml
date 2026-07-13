@@ -16,6 +16,9 @@
 # overrides at all (2026-07-09).
 
 [names]
+# CP's official GTFS supplies this Portuguese station name without its accent;
+# spell it as used by the station. Verified in the official CP feed 2026-07-14.
+"x:cp:94_7005" = "Valença"
 # Barcelona-Sants: SNCF canonical name is "Barcelone-Sants" (French spelling);
 # display as the Spanish name used by the station itself. Renfe feed name:
 # "Barcelona" (parent of stop 71801). Verified 2026-07-10.

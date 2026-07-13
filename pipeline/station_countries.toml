@@ -64,3 +64,13 @@ country = "PT"
 # so it inherited the feed country (ES).
 # Feed coords (41.69517, -8.83134) are from data/raw/renfe.zip stops.txt.
 # Verified 2026-07-10.
+
+[[override]]
+name = "Vilar Formoso"
+lat = 40.60610657
+lon = -6.828972113
+country = "PT"
+# Vilar Formoso is the Portuguese border station opposite Fuentes de Oñoro,
+# Spain. The 50m Natural Earth polygon assigns CP's station coordinate to ES;
+# its official CP GTFS stop `94_49460` places it in Portugal. Verified against
+# the official CP feed on 2026-07-14.

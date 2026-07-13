@@ -61,6 +61,23 @@ def test_rejseplanen_allowlist_keeps_only_dsb_national_rail_products():
         assert not allowed(name), name
 
 
+def test_cp_allowlist_keeps_national_products_not_urban_lines():
+    """Official CP GTFS, inspected 2026-07-14: AP/IC/IR/R are national or
+    interregional products; U and named Lisbon/Porto lines are urban services."""
+    feeds = load_feeds(Path("feeds.toml"))
+    cp = feeds["cp"]
+    assert cp.country == "PT"
+    assert cp.uic_regex is None  # CP ids such as 94_1008 are internal, not UIC.
+
+    def allowed(name):
+        return any(re.search(p, name) for p in cp.route_allow)
+
+    for name in ("AP", "IC", "IR", "R"):
+        assert allowed(name), name
+    for name in ("U", "Linha de Aveiro", "Linha da Azambuja", "IC 500", "Regional"):
+        assert not allowed(name), name
+
+
 def test_stop_id_brand_accepts_pattern_to_brand_table():
     cfg = FeedConfig(
         url="u",
