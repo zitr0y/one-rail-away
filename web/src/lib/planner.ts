@@ -90,13 +90,15 @@ export function destOptions(
     const d = destById.get(s.id);
     let group: DestGroup;
     let disabled: boolean;
-    const originCity = cities?.cityForStation(reach.origin);
-    if (originCity && originCity === cities?.cityForStation(s.id)) {
-      group = "local transit";
-      disabled = false;
-    } else if (!d) {
-      group = "Not reachable";
-      disabled = true;
+    if (!d) {
+      const originCity = cities?.cityForStation(reach.origin);
+      if (originCity && originCity === cities?.cityForStation(s.id)) {
+        group = "local transit";
+        disabled = false;
+      } else {
+        group = "Not reachable";
+        disabled = true;
+      }
     } else {
       const within = d.journeys.filter((j) => j.duration_min <= filterMinutes);
       if (within.length === 0) {
