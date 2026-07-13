@@ -26,6 +26,7 @@ describe("themeTokens", () => {
       veil: "#9c9589",
       riderStroke: "#003399",
       riderHollow: "#F2EFE9",
+      transferRing: "#F2EFE9",
     });
   });
   it("dark swaps to deep-night starting values", () => {
@@ -35,6 +36,7 @@ describe("themeTokens", () => {
       veil: "#6B7590",
       riderStroke: "#F2EFE9",
       riderHollow: "#101C36",
+      transferRing: "#101C36",
     });
   });
 });

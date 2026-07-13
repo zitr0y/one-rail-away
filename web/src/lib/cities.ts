@@ -18,6 +18,16 @@ export interface CityLookup {
   memberIds: (city: string) => string[];
 }
 
+/** Return a multi-station city group for an origin-selection popup. */
+export function cityForStation(
+  id: string, cityGroups: CityGroups,
+): { city: string; memberIds: string[] } | null {
+  for (const [city, memberIds] of Object.entries(cityGroups)) {
+    if (memberIds.length >= 2 && memberIds.includes(id)) return { city, memberIds };
+  }
+  return null;
+}
+
 /** Build the bidirectional city lookup once when cities.json is loaded. */
 export function buildCityLookup(groups: CityGroups): CityLookup {
   const cityByStationId = new Map<string, string>();

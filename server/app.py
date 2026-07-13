@@ -21,12 +21,17 @@ def normalize(s: str) -> str:
 # Query-name equivalences for search, applied as query expansion (never stored).
 # Left: what a user types (English/German exonym, or ae/oe/ue keyboard
 # transliteration that NFKD folding cannot produce); right: the normalize()d
-# form of a station name actually present in the data. Evidence: every right
-# side matches >=1 station in the 2026-07 build (verified via a one-off
-# `uv run python` snippet importing server.app.normalize over data/out/stations.json,
-# 1050 stations; match counts: praha=3, wien=7, warszawa=3, venezia=2, milano=2,
-# munchen=1, koln=3, nurnberg=1, wurzburg=1, dusseldorf=1, zurich=5, geneve=2,
-# barcelone=1, bruxelles=2 - no entries dropped).
+# form of a station name actually present in the data. Evidence: verified via
+# the `uv run python` snippet importing server.app.normalize over the 1,725
+# station 2026-07-13 output. Match counts: a coruna=1, aachen=2, antwerpen=1,
+# barcelona=1, basel=2, bern=6, bratislava=2, braunschweig=1, bruxelles=2,
+# bucuresti=1, den haag=3, dusseldorf=1, frankfurt=7, gdansk=5, geneve=4,
+# girona=1, hannover=2, koblenz=1, koln=3, krakow=3, københavn=2, lleida=1,
+# luzern=1, lviv=1, lyon=4, mainz=1, marseille=2, milano=2, munchen=1,
+# nurnberg=1, poznan=1, praha=4, regensburg=1, rijeka=1, roma=2,
+# s-hertogenbosch=1, sevilla=1, strasbourg=1, szczecin=3, venezia=2,
+# vlissingen=2, warszawa=4, wien=7, wroclaw=2, wurzburg=1, zagreb=1,
+# zaragoza=1, zurich=5, łodz=6. No entries dropped.
 EXONYMS = {
     "prague": "praha",
     "prag": "praha",
@@ -54,6 +59,41 @@ EXONYMS = {
     "barcelone": "barcelona",
     "brussels": "bruxelles",
     "bruessel": "bruxelles",
+    "rome": "roma",
+    "antwerp": "antwerpen",
+    "the hague": "den haag",
+    "copenhagen": "københavn",
+    "lyons": "lyon",
+    "marseilles": "marseille",
+    "seville": "sevilla",
+    "aix-la-chapelle": "aachen",
+    "ratisbon": "regensburg",
+    "brunswick": "braunschweig",
+    "hanover": "hannover",
+    "coblenz": "koblenz",
+    "mayence": "mainz",
+    "francfort": "frankfurt",
+    "strassburg": "strasbourg",
+    "bale": "basel",
+    "lucerne": "luzern",
+    "berne": "bern",
+    "bucharest": "bucuresti",
+    "danzig": "gdansk",
+    "breslau": "wroclaw",
+    "stettin": "szczecin",
+    "posen": "poznan",
+    "cracow": "krakow",
+    "lodz": "łodz",
+    "saragossa": "zaragoza",
+    "gerona": "girona",
+    "lerida": "lleida",
+    "corunna": "a coruna",
+    "bois-le-duc": "s-hertogenbosch",
+    "flushing": "vlissingen",
+    "pressburg": "bratislava",
+    "lemberg": "lviv",
+    "zagabria": "zagreb",
+    "fiume": "rijeka",
 }
 
 

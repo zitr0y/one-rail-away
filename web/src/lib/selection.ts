@@ -17,6 +17,13 @@ export function emptyClickAction(
   return "noop";
 }
 
+/** Decide whether clearing an origin promotes its selected destination. */
+export function clearOriginAction(
+  selectedDest: string | null,
+): { promote: string } | { clearAll: true } {
+  return selectedDest === null ? { clearAll: true } : { promote: selectedDest };
+}
+
 /**
  * After swapping origin and destination, check whether the old origin
  * appears among the *new* origin's destinations.

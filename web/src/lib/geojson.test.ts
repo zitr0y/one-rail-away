@@ -1,6 +1,8 @@
 import { describe, expect, it } from "vitest";
-import { bestJourney, chaikin, destinationsGeoJSON, journeyLegPaths, linesGeoJSON, timeBucket } from "./geojson";
-import type { ReachFile, Station } from "./types";
+import {
+  bestJourney, chaikin, destinationsGeoJSON, journeyLegPaths, linesGeoJSON, timeBucket, transferPoints,
+} from "./geojson";
+import type { Journey, ReachFile, Station } from "./types";
 
 const S = (id: string, lon: number): Station =>
   ({ id, name: id, lat: 50, lon, country: "XX", has_reach: true });
@@ -25,6 +27,48 @@ describe("bestJourney / timeBucket", () => {
   });
   it("buckets by duration", () => {
     expect([timeBucket(100), timeBucket(200), timeBucket(400), timeBucket(700)]).toEqual([0, 1, 2, 3]);
+  });
+});
+
+describe("transferPoints", () => {
+  const pointStations = new Map(["A", "B", "C", "D"].map((id, i) => [id, S(id, i)]));
+  const leg = (from: string, to: string, via: string[] = []) => ({
+    train: "ICE", dep: "08:00", arr: "09:00", from, to, via,
+  });
+
+  it("returns no transfer for a one-leg journey, even with a via station", () => {
+    const journey: Journey = { trains: 1, duration_min: 60, legs: [leg("A", "C", ["B"])] };
+    expect(transferPoints(journey, pointStations)).toEqual([]);
+  });
+
+  it("returns the first leg destination for a two-leg journey", () => {
+    const journey: Journey = {
+      trains: 2, duration_min: 120, legs: [leg("A", "C", ["B"]), leg("C", "D")],
+    };
+    expect(transferPoints(journey, pointStations)).toEqual([[2, 50]]);
+  });
+
+  it("returns transfer boundaries in order for a three-leg journey", () => {
+    const journey: Journey = {
+      trains: 3, duration_min: 180, legs: [leg("A", "B"), leg("B", "C"), leg("C", "D")],
+    };
+    expect(transferPoints(journey, pointStations)).toEqual([[1, 50], [2, 50]]);
+  });
+
+  it("omits missing transfer stations while retaining later boundaries", () => {
+    const journey: Journey = {
+      trains: 3, duration_min: 180, legs: [leg("A", "B"), leg("B", "C"), leg("C", "D")],
+    };
+    const withoutB = new Map(pointStations);
+    withoutB.delete("B");
+    expect(transferPoints(journey, withoutB)).toEqual([[2, 50]]);
+  });
+
+  it("never emits through stops as transfer points", () => {
+    const journey: Journey = {
+      trains: 2, duration_min: 120, legs: [leg("A", "C", ["B"]), leg("C", "D")],
+    };
+    expect(transferPoints(journey, pointStations)).not.toContainEqual([1, 50]);
   });
 });
 

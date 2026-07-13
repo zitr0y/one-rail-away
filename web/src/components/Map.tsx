@@ -1,11 +1,14 @@
 import maplibregl from "maplibre-gl";
 import { useEffect, useRef } from "react";
-import { destinationsGeoJSON, linesGeoJSON, bestJourney, journeyLegPaths, type MaxTrains } from "../lib/geojson";
+import {
+  destinationsGeoJSON, linesGeoJSON, bestJourney, journeyLegPaths, transferPoints, type MaxTrains,
+} from "../lib/geojson";
 import { buildRideTimeline, rideStateAt, riderTransform } from "../lib/ride";
 import { riderSvg } from "../lib/ridersvg";
 import { BUCKET_COLORS, themeTokens } from "../lib/colors";
 import { mergeCustomStyle } from "../lib/themeswap";
 import type { Theme } from "../lib/theme";
+import { cityForStation } from "../lib/cities";
 import { baseLineOpacity, selectedLineFilter, stationOpacityExpression } from "../lib/highlight";
 import { pickFeature, type FeaturePick } from "../lib/pickfeature";
 import { veilTooltip, showVeilTooltip } from "../lib/coverage";
@@ -18,7 +21,7 @@ import {
   drawStarIcon,
 } from "../lib/dots";
 import { styleUrl } from "../lib/mapstyle";
-import type { ReachFile, Station } from "../lib/types";
+import type { CityGroups, ReachFile, Station } from "../lib/types";
 
 const CLICK_LAYERS = ["reach-dots", "capital-stars", "all-stations"];
 
@@ -32,13 +35,17 @@ interface Props {
   maxMinutes: number;
   selectedDest: string | null;
   theme: Theme;
+  cityGroups: CityGroups;
+  armed: "from" | "to";
   onStationClick: (pick: FeaturePick) => void;
+  onSelectCityOrigin: (city: string, memberIds: string[]) => void;
   onEmptyClick: () => void;
 }
 
 export default function MapView(props: Props) {
   const container = useRef<HTMLDivElement>(null);
   const map = useRef<maplibregl.Map | null>(null);
+  const cityPopup = useRef<maplibregl.Popup | null>(null);
   const propsRef = useRef(props);
   propsRef.current = props;
 
@@ -54,28 +61,19 @@ export default function MapView(props: Props) {
       const tokens = themeTokens(propsRef.current.theme);
       m.addSource("all-stations", { type: "geojson", data: EMPTY as never });
       m.addSource("reach-lines", { type: "geojson", data: EMPTY as never });
+      m.addSource("transfer-points", { type: "geojson", data: EMPTY as never });
       m.addSource("reach-dots", { type: "geojson", data: EMPTY as never });
       m.addSource("coverage", { type: "geojson", data: EMPTY as never });
       m.addSource("capitals", { type: "geojson", data: EMPTY as never });
       m.addLayer({
-        id: "all-stations", type: "circle", source: "all-stations",
+        id: "coverage-veil",
+        type: "fill",
+        source: "coverage",
         paint: {
-          "circle-radius": dotRadiusExpression() as never,
-          "circle-color": tokens.stationDot, "circle-opacity": stationDotOpacityByZoom() as never,
+          "fill-color": tokens.veil,
+          "fill-opacity": ["match", ["get", "tier"], "light", 0.08, 0.16] as never,
         },
       });
-      m.addLayer(
-        {
-          id: "coverage-veil",
-          type: "fill",
-          source: "coverage",
-          paint: {
-            "fill-color": tokens.veil,
-            "fill-opacity": ["match", ["get", "tier"], "light", 0.08, 0.16] as never,
-          },
-        },
-        "all-stations",
-      );
       m.addLayer({
         id: "reach-lines", type: "line", source: "reach-lines",
         layout: { "line-cap": "round", "line-join": "round" },
@@ -96,6 +94,22 @@ export default function MapView(props: Props) {
         },
       });
       m.addLayer({
+        id: "transfer-points", type: "circle", source: "transfer-points",
+        paint: {
+          "circle-color": "transparent",
+          "circle-radius": 10,
+          "circle-stroke-width": 2.5,
+          "circle-stroke-color": tokens.transferRing,
+        },
+      });
+      m.addLayer({
+        id: "all-stations", type: "circle", source: "all-stations",
+        paint: {
+          "circle-radius": dotRadiusExpression() as never,
+          "circle-color": tokens.stationDot, "circle-opacity": stationDotOpacityByZoom() as never,
+        },
+      });
+      m.addLayer({
         id: "reach-dots", type: "circle", source: "reach-dots",
         paint: {
           "circle-radius": reachDotRadiusExpression() as never, "circle-color": bucketColor as never,
@@ -112,6 +126,7 @@ export default function MapView(props: Props) {
         },
       });
       m.on("click", (e) => {
+        removeCityPopup();
         const hits = m.queryRenderedFeatures(e.point, { layers: CLICK_LAYERS })
           .map((f) => ({ layer: f.layer.id, id: f.properties!.id as string }));
         const pick = pickFeature(hits);
@@ -119,7 +134,52 @@ export default function MapView(props: Props) {
           propsRef.current.onEmptyClick();
           return;
         }
-        propsRef.current.onStationClick(pick);
+        if (propsRef.current.armed === "to") {
+          propsRef.current.onStationClick(pick);
+          return;
+        }
+        const city = cityForStation(pick.id, propsRef.current.cityGroups);
+        if (!city) {
+          propsRef.current.onStationClick(pick);
+          return;
+        }
+        const station = propsRef.current.stations.find((candidate) => candidate.id === pick.id);
+        if (!station) {
+          propsRef.current.onStationClick(pick);
+          return;
+        }
+
+        const content = document.createElement("div");
+        content.className = "city-origin-popup";
+        const stationButton = document.createElement("button");
+        stationButton.type = "button";
+        stationButton.className = "city-origin-popup-station";
+        stationButton.textContent = station.name;
+        const cityButton = document.createElement("button");
+        cityButton.type = "button";
+        cityButton.className = "city-origin-popup-city";
+        cityButton.textContent = `All of ${city.city}`;
+        content.append(stationButton, cityButton);
+
+        const popup = new maplibregl.Popup({
+          closeButton: false, closeOnClick: false, className: "city-origin-map-popup",
+        })
+          .setLngLat([station.lon, station.lat])
+          .setDOMContent(content)
+          .addTo(m);
+        cityPopup.current = popup;
+        stationButton.addEventListener("click", (event) => {
+          event.stopPropagation();
+          popup.remove();
+          if (cityPopup.current === popup) cityPopup.current = null;
+          propsRef.current.onStationClick(pick);
+        });
+        cityButton.addEventListener("click", (event) => {
+          event.stopPropagation();
+          popup.remove();
+          if (cityPopup.current === popup) cityPopup.current = null;
+          propsRef.current.onSelectCityOrigin(city.city, city.memberIds);
+        });
       });
       for (const layer of ["all-stations", "reach-dots", "capital-stars"]) {
         m.on("mouseenter", layer, () => (m.getCanvas().style.cursor = "pointer"));
@@ -148,14 +208,25 @@ export default function MapView(props: Props) {
         });
       syncData();
       syncHighlight();
+      syncTransfers();
       syncRider();
     });
     return () => {
       stopRider();
+      removeCityPopup();
       m.remove();
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  function removeCityPopup() {
+    cityPopup.current?.remove();
+    cityPopup.current = null;
+  }
+
+  useEffect(() => {
+    if (props.armed !== "from") removeCityPopup();
+  }, [props.armed]);
 
   function syncData() {
     const m = map.current;
@@ -192,6 +263,36 @@ export default function MapView(props: Props) {
   }
 
   useEffect(syncData, [props.stations, props.reach, props.maxTrains, props.maxMinutes]);
+
+  function syncTransfers() {
+    const m = map.current;
+    if (!m) return;
+    const { selectedDest, reach, maxTrains, maxMinutes, stations } = propsRef.current;
+    const source = m.getSource("transfer-points") as maplibregl.GeoJSONSource;
+    if (!reach || !selectedDest) {
+      source.setData(EMPTY as never);
+      return;
+    }
+    const destination = reach.destinations.find((d) => d.id === selectedDest);
+    const journey = destination ? bestJourney(destination, maxTrains) : null;
+    if (!journey || journey.duration_min > maxMinutes) {
+      source.setData(EMPTY as never);
+      return;
+    }
+    const stationsById = new Map(stations.map((station) => [station.id, station]));
+    source.setData({
+      type: "FeatureCollection",
+      features: transferPoints(journey, stationsById).map((coordinates) => ({
+        type: "Feature" as const,
+        geometry: { type: "Point" as const, coordinates },
+        properties: {},
+      })),
+    } as never);
+  }
+
+  useEffect(syncTransfers, [
+    props.selectedDest, props.reach, props.maxTrains, props.maxMinutes, props.stations,
+  ]);
 
   function syncHighlight() {
     const m = map.current;

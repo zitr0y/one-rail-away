@@ -3,11 +3,11 @@ import { themeTokens, type ThemeTokens } from "./colors";
 import type { Theme } from "./theme";
 
 export const CUSTOM_SOURCE_IDS =
-  ["all-stations", "reach-lines", "reach-dots", "coverage", "capitals"] as const;
+  ["all-stations", "reach-lines", "transfer-points", "reach-dots", "coverage", "capitals"] as const;
 
 const CUSTOM_LAYER_IDS = new Set([
-  "coverage-veil", "all-stations", "reach-lines",
-  "reach-lines-selected", "reach-dots", "capital-stars",
+  "coverage-veil", "reach-lines", "reach-lines-selected", "transfer-points",
+  "all-stations", "reach-dots", "capital-stars",
 ]);
 
 function withPaint(layer: LayerSpecification, extra: Record<string, unknown>): LayerSpecification {
@@ -20,6 +20,9 @@ function retintLayer(layer: LayerSpecification, tokens: ThemeTokens): LayerSpeci
   if (layer.id === "coverage-veil") return withPaint(layer, { "fill-color": tokens.veil });
   if (layer.id === "reach-dots") {
     return withPaint(layer, { "circle-stroke-color": tokens.reachDotStroke });
+  }
+  if (layer.id === "transfer-points") {
+    return withPaint(layer, { "circle-stroke-color": tokens.transferRing });
   }
   return layer;
 }
