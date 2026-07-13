@@ -6,8 +6,8 @@ export const CUSTOM_SOURCE_IDS =
   ["all-stations", "reach-lines", "transfer-points", "reach-dots", "coverage", "capitals"] as const;
 
 const CUSTOM_LAYER_IDS = new Set([
-  "coverage-veil", "reach-lines", "reach-lines-selected", "transfer-points",
-  "all-stations", "reach-dots", "capital-stars",
+  "coverage-veil", "reach-lines", "reach-lines-selected",
+  "all-stations", "reach-dots", "capital-stars", "transfer-points",
 ]);
 
 function withPaint(layer: LayerSpecification, extra: Record<string, unknown>): LayerSpecification {

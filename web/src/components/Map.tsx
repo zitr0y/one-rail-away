@@ -94,16 +94,6 @@ export default function MapView(props: Props) {
           "line-opacity": 1,
         },
       });
-      m.addImage("stop-sign-icon", drawStopSignIcon(44), { pixelRatio: 2 });
-      m.addLayer({
-        id: "transfer-points", type: "symbol", source: "transfer-points",
-        layout: {
-          "icon-image": "stop-sign-icon",
-          "icon-size": 0.7, // TUNING POINT: ~15px stop sign, calibrate on the real map
-          "icon-allow-overlap": true,
-          "icon-ignore-placement": true,
-        },
-      });
       m.addLayer({
         id: "all-stations", type: "circle", source: "all-stations",
         paint: {
@@ -125,6 +115,19 @@ export default function MapView(props: Props) {
           "icon-image": "star-icon",
           "icon-size": starSizeExpression() as never,
           "icon-allow-overlap": true,
+        },
+      });
+      // Transfer stop-signs are the TOPMOST layer: an interchange marker must
+      // sit ON TOP of (and effectively replace) the station dot / capital star
+      // at that same coordinate, or it is hidden beneath them.
+      m.addImage("stop-sign-icon", drawStopSignIcon(44), { pixelRatio: 2 });
+      m.addLayer({
+        id: "transfer-points", type: "symbol", source: "transfer-points",
+        layout: {
+          "icon-image": "stop-sign-icon",
+          "icon-size": 0.7, // TUNING POINT: ~15px stop sign, calibrate on the real map
+          "icon-allow-overlap": true,
+          "icon-ignore-placement": true,
         },
       });
       m.on("click", (e) => {

@@ -119,13 +119,18 @@ describe("drawStopSignIcon", () => {
     expect(img.data.length).toBe(30 * 30 * 4);
   });
 
-  it("paints a stop-red center and transparent corners", () => {
+  it("paints a red field with a white centre stripe and transparent corners", () => {
     const img = drawStopSignIcon(30);
     const at = (x: number, y: number) => (y * 30 + x) * 4;
-    expect(img.data[at(15, 15) + 3]).toBe(255); // center opaque
-    expect(img.data[at(15, 15)]).toBe(193); // #C1121F red (193,18,31)
-    expect(img.data[at(15, 15) + 1]).toBe(18);
-    expect(img.data[at(15, 15) + 2]).toBe(31);
+    // Centre row is the white stripe.
+    expect(img.data[at(15, 15) + 3]).toBe(255); // opaque
+    expect(img.data[at(15, 15)]).toBe(255); // white stripe
+    expect(img.data[at(15, 15) + 1]).toBe(255);
+    expect(img.data[at(15, 15) + 2]).toBe(255);
+    // Off the stripe, inside the octagon: stop-red.
+    expect(img.data[at(15, 8)]).toBe(193); // #C1121F red (193,18,31)
+    expect(img.data[at(15, 8) + 1]).toBe(18);
+    expect(img.data[at(15, 8) + 2]).toBe(31);
     expect(img.data[at(0, 0) + 3]).toBe(0); // octagon corner transparent
     expect(img.data[at(29, 29) + 3]).toBe(0);
   });

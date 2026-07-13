@@ -150,6 +150,7 @@ export function drawStopSignIcon(size: number): { width: number; height: number;
 
   const rim = octagonVertices(size / 2 - 0.5);
   const fill = octagonVertices((size / 2 - 0.5) * 0.82);
+  const stripeHalf = size * 0.12; // white horizontal bar through the middle
   const data = new Uint8ClampedArray(size * size * 4);
   for (let y = 0; y < size; y++) {
     for (let x = 0; x < size; x++) {
@@ -157,8 +158,9 @@ export function drawStopSignIcon(size: number): { width: number; height: number;
       const py = y + 0.5;
       if (!inside(px, py, rim)) continue;
       const o = (y * size + x) * 4;
-      const red = inside(px, py, fill);
-      data[o] = red ? 193 : 255; // #C1121F red field inside a white rim
+      // Red field inside a white rim, crossed by a white centre stripe.
+      const red = inside(px, py, fill) && Math.abs(py - cy) > stripeHalf;
+      data[o] = red ? 193 : 255; // #C1121F red / white
       data[o + 1] = red ? 18 : 255;
       data[o + 2] = red ? 31 : 255;
       data[o + 3] = 255;

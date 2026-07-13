@@ -20,13 +20,13 @@ function fakePrevious(): StyleSpecification {
         paint: { "fill-color": "#9c9589", "fill-opacity": 0.5 } },
       { id: "reach-lines", type: "line", source: "reach-lines", paint: { "line-opacity": 0.05 } },
       { id: "reach-lines-selected", type: "line", source: "reach-lines", paint: {} },
-      { id: "transfer-points", type: "symbol", source: "transfer-points",
-        layout: { "icon-image": "stop-sign-icon", "icon-allow-overlap": true } },
       { id: "all-stations", type: "circle", source: "all-stations",
         paint: { "circle-color": "#003399", "circle-opacity": 0.25 } },
       { id: "reach-dots", type: "circle", source: "reach-dots",
         paint: { "circle-stroke-color": "#F2EFE9" } },
       { id: "capital-stars", type: "symbol", source: "capitals", layout: {} },
+      { id: "transfer-points", type: "symbol", source: "transfer-points",
+        layout: { "icon-image": "stop-sign-icon", "icon-allow-overlap": true } },
     ],
   } as StyleSpecification;
 }
@@ -57,7 +57,7 @@ describe("mergeCustomStyle", () => {
     const merged = mergeCustomStyle(fakePrevious(), fakeNext(), "dark");
     expect(merged.layers.map((l) => l.id)).toEqual([
       "background", "coverage-veil", "reach-lines", "reach-lines-selected",
-      "transfer-points", "all-stations", "reach-dots", "capital-stars",
+      "all-stations", "reach-dots", "capital-stars", "transfer-points",
     ]);
   });
 
