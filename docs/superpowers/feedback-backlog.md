@@ -102,6 +102,11 @@ User's sketch: EU-train theme, cute EU train in the logo that could "bend along 
 chosen route if exists". Map style should follow the identity (OpenFreeMap styles can
 be customized). Tagline is fixed: "nonstopeurope with onestopeurope".
 
+**De-emphasise roads in map styling (added 2026-07-13):** roads carry little meaning
+for a rail-reachability product; consider styling them more faintly (lower opacity /
+thinner / muted colour) so rail lines and station dots read as the primary layer.
+Part of the OpenFreeMap style customisation under this item; do per-theme (light + dark).
+
 ## I. Corridor bundling for reach lines (added 2026-07-10)
 
 User: Paris shows ~15 separate straight lines fanning over southern France; "I feel like
