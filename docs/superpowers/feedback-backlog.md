@@ -102,12 +102,24 @@ User's sketch: EU-train theme, cute EU train in the logo that could "bend along 
 chosen route if exists". Map style should follow the identity (OpenFreeMap styles can
 be customized). Tagline is fixed: "nonstopeurope with onestopeurope".
 
-**De-emphasise roads in map styling — SHIPPED 2026-07-13:** all `highway_*` /
-`tunnel_*` line layers in both forked styles now carry a flat `line-opacity`
-(light 0.45, dark 0.55 — TUNING POINTS; script-applied, railway layers untouched).
-Road labels/shields (z12+) not faded — revisit if they still shout at street zoom.
+**De-emphasise roads + surface railways/borders — SHIPPED 2026-07-13, user-calibrated
+(2 rounds):** all `highway_*`/`tunnel_*` line layers carry flat `line-opacity`
+**0.25 light / 0.2 dark**. The basemap `railway` layer (real OSM rail) now starts at
+**z8** (was 13; tiles carry no rail below ~z8) with width ramp 0.75@z8→7@z20,
+colored to outrank roads: `#B0A99B` light / `#4C639A` dark, opacity 0.9. Country +
+state boundary colors strengthened (`#A9A294`/`#B3AC9E` light, `#55689C`/`#49598A`
+dark). All TUNING POINTS. Road labels/shields (z12+) not faded — revisit if they
+shout at street zoom.
 
 ## I. Corridor bundling for reach lines (added 2026-07-10)
+
+**Direction agreed with user (2026-07-13, after the X trunk-merge):** route reach
+lines along REAL rail geometry (OpenRailwayMap/OSM rail extract — see item S),
+not a spline through stops; synthetic curves that don't follow track are exactly
+what the user dislikes. The X fix helps here: the base layer now draws deduped
+per-hop segments (`segmentsGeoJSON`), so real geometry can be attached per
+physical hop (station-pair → track path lookup) instead of per journey. Curated
+`corridors.ts` becomes a stopgap to retire.
 
 User: Paris shows ~15 separate straight lines fanning over southern France; "I feel like
 they all go via Lyon or Vichy and should be just 2-4 lines with breakouts." Data check
