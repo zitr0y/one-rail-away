@@ -79,9 +79,9 @@ describe("stationDotOpacityByZoom", () => {
   it("reveals lower-destination stations at progressively closer zoom levels", () => {
     expect(stationDotOpacityByZoom()).toEqual([
       "interpolate", ["linear"], ["zoom"],
-      4, ["step", ["get", "n_dest"], 0, 150, 0.7],
-      5.5, ["step", ["get", "n_dest"], 0, 50, 0.7],
-      7, ["step", ["get", "n_dest"], 0, 10, 0.7],
+      4, ["step", ["get", "n_dest"], 0, 750, 0.7],
+      5.5, ["step", ["get", "n_dest"], 0, 450, 0.7],
+      7, ["step", ["get", "n_dest"], 0, 60, 0.7],
       9, 0.7,
     ]);
   });
