@@ -273,6 +273,50 @@ nonstopeurope.eu.) Frontend URL/param handling.
   the whole-city union. Consider: clicking a member offers "select all of <City>".
   Design-first; interacts with the C3 union flow.
 
+## X. Reach lines splay one polyline per stop instead of one shared trunk (added 2026-07-13)
+
+User report: a single train that stops at many stations renders as a SEPARATE
+"offspring" line from the origin per stop, not as one line threading through the
+stops it serves. From Nijmegen you see one line ending at Arnhem, another
+"going around Arnhem" to Dieren, another to Zutphen, another to Deventer — all
+the same physical train. Looks bad and is likely part of the southern-France
+mess (relates to item I).
+
+**Data is NOT the cause (verified 2026-07-13).** Nijmegen's `reach_*.json`
+journeys carry correct `via` lists: Dieren `via=[Arnhem]`, Zutphen
+`via=[Arnhem, Dieren]`, Deventer `via=[Arnhem, Dieren, Zutphen]`. The stop
+sequence is right in the data.
+
+**It's a RENDERING problem** in `web/src/lib/geojson.ts::linesGeoJSON`: it emits
+ONE independent LineString per destination and `journeyLegPaths` chaikin-smooths
+each separately. So the shared trunk (Nijmegen→Arnhem) is drawn once per
+downstream destination, and per-line smoothing rounds the Arnhem corner
+differently each time, so overlapping trunks splay into a fan instead of
+collapsing to a single trunk. Fix directions to brainstorm:
+- **Merge into a tree**: group reach journeys by shared stop-sequence prefix and
+  draw each physical segment (A→B) exactly once; destinations become endpoints on
+  the shared trunk. Biggest, cleanest win.
+- Or dedupe/snap overlapping segments before rendering.
+- Reconsider per-line smoothing so shared segments can't diverge.
+
+NOTE this differs from item I's Paris case: there the trains are genuinely direct
+(`via=[]`), so there is no shared stop-sequence in the data to merge — that needs
+real rail geometry / edge bundling. Same "too many lines" symptom, two mechanisms.
+Do both under one brainstorm; a tree-merge here plus corridor geometry there.
+
+## Y. Search ranking by station importance/size (added 2026-07-13)
+
+Search ties are currently broken by NAME LENGTH (shorter wins) after the
+prefix/substring tier — see `server/app.py::search` sort key `(tier, len(name))`.
+So a minor station with a shorter name outranks the major hub the user meant:
+typing "barce" surfaces **Barcelos** over **Barcelona**; typing "rome" surfaces
+**Romanshorn** over **Roma** (noted while adding the Unit-3 exonyms). Rework the
+ranking to weight station importance/size, e.g. `n_dest` (reach breadth, already
+on stations and used for dot sizing) and/or capital/`n_routes`, so big hubs win
+same-prefix ties. Keep prefix-over-substring as the primary tier; add an
+importance term before (or instead of) name length. Small server change; add
+ranking tests. Improves the exonym results from item T Unit 3 too.
+
 ## Smaller deferred notes
 
 - **Outdated logo/brand assets cleanup (added 2026-07-12):** several brand files
