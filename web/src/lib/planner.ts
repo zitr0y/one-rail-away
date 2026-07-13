@@ -1,7 +1,7 @@
 // Pure helpers for the unified journey planner. No React, unit-testable.
 // Spec: docs/superpowers/specs/2026-07-12-unified-planner-panel-design.md.
 import type { CityGroups, ReachFile, Station } from "./types";
-import type { CityLookup } from "./cities";
+import { CITY_EXONYMS, type CityLookup } from "./cities";
 
 /** Fold diacritics + lowercase so "zur" matches "Zürich", "munch" → "München".
  *  Mirrors the server's NFKD-to-base-letter folding (ö→o, not ö→oe). */
@@ -46,7 +46,9 @@ export function cityOptions(cities: CityGroups, query: string): FieldOption[] {
   const q = norm(query.trim());
   if (q.length < 2) return [];
   return Object.entries(cities)
-    .filter(([city]) => norm(city).includes(q))
+    .filter(([city]) => (
+      norm(city).includes(q) || CITY_EXONYMS[city]?.some((alias) => norm(alias).includes(q))
+    ))
     .sort(([a], [b]) => a.localeCompare(b))
     .map(([city, memberIds]) => ({
       kind: "city" as const,

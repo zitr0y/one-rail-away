@@ -1,5 +1,18 @@
 import type { CityGroups } from "./types";
 
+/** English/common city names used to expand native-name city search matches. */
+export const CITY_EXONYMS: Record<string, readonly string[]> = {
+  Bruxelles: ["Brussels"],
+  Wien: ["Vienna"],
+  Köln: ["Cologne"],
+  Warszawa: ["Warsaw"],
+  Praha: ["Prague"],
+  København: ["Copenhagen"],
+  Zürich: ["Zurich"],
+  "Den Haag": ["The Hague"],
+  München: ["Munich"],
+};
+
 export interface CityLookup {
   cityForStation: (stationId: string) => string | undefined;
   memberIds: (city: string) => string[];

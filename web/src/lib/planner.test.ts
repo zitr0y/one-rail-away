@@ -132,6 +132,20 @@ describe("cityOptions", () => {
       },
     ]);
   });
+
+  it.each([
+    ["brussels", "Bruxelles"],
+    ["vienna", "Wien"],
+    ["cologne", "Köln"],
+  ])("matches the %s exonym to %s", (query, city) => {
+    const cities = {
+      Bruxelles: ["brussels-midi"],
+      Wien: ["wien-hbf"],
+      Köln: ["koln-hbf"],
+    };
+
+    expect(cityOptions(cities, query)).toMatchObject([{ kind: "city", city }]);
+  });
 });
 
 describe("swapEnabled / toEnabled", () => {
