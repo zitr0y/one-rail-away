@@ -53,32 +53,21 @@ C1 (dots sized by n_dest) + capital stars shipped 2026-07-11
 removed same day (killed the density picture). C3 city-union still needs its
 own brainstorm; may absorb the declutter goal.
 
-Station dots are tiny and hard to click. User ideas, in their words:
-- bigger dots for stations with more connections ("more connections is already a
-  useful proxy/metric") and/or capitals;
-- stations too close together at some zoom levels could bunch together and be
-  chosen by name from the bunch;
-- multiple main stations of one city (e.g. Brussels Midi/Nord) should be selectable
-  by the city name and show the **union** of all their connections — "otherwise the
-  options are artificially cut off".
-The union idea has data-model implications (city entity above stations) — brainstorm
-before building.
-
-**Intra-city "local transit" reachability (added 2026-07-12):** when the origin is
-one of a city's stations, the OTHER stations of the same city currently show as
-"Not reachable" or "two stops+" in the To search (e.g. from one Paris station, the
-other Paris stations look far). They should instead be treated as reachable with a
-short hop — label it **"local transit"** (we don't model the metro/tram, but
-intra-city travel is obviously possible). Applies to Paris, Brussels
-(Midi/Nord/Central), and other multi-"central"-station cities. Part of the
-city-grouping brainstorm (C3 / the union idea) — needs a city→stations grouping to
-know which stations share a city.
-
-**Hide small location dots at smaller zoom levels (added 2026-07-12):** at zoomed-out
-views the small (low-connection) dots crowd the map; consider fading/hiding them below a
-zoom threshold and revealing them as the user zooms in, so only major hubs/capitals show
-at a glance. A declutter approach that overlaps C3 — decide together with the city-union
-idea whether this replaces or complements it.
+Station dots are tiny and hard to click. Progress:
+- bigger dots for stations with more connections / capitals — **C1 SHIPPED**.
+- multiple stations of one city selectable by **city name** showing the **union**
+  of their connections — **C3 SHIPPED 2026-07-13** (curated `cities.toml` →
+  `data/out/cities.json`, 15 cities; `cityunion.ts::unionReach` merges by
+  destination keeping fewest-trains-then-shortest-duration; `/api/cities`). Nit
+  DEFERRED: a city-union origin pins only ONE member dot visible at low zoom, so
+  sibling termini can fade — thread member ids into the map's always-visible set.
+- intra-city **"local transit"** label for same-city siblings with no direct reach
+  entry — **SHIPPED 2026-07-13** (`planner.ts::destOptions`).
+- **hide small dots at low zoom** (declutter) — **SHIPPED 2026-07-13**
+  (`dots.ts::stationDotOpacityByZoom`; n_dest≥150@z4 … all@z9, TUNING POINTS).
+- STILL OPEN: stations too close together should **bunch** and be chosen by name
+  from the cluster on click (a click-disambiguation UI, distinct from the union —
+  for when several stations overlap at a zoom level). Not built.
 
 ## D. Branding / map styling (user item 7) — PHASE 1 + PHASE 2 SHIPPED
 
@@ -137,33 +126,6 @@ Direkt Bahn Guru … Night train data from Back On Track." Research candidates:
   the seasonal-trains discussion in item B).
 Research first (licensing, format, freshness), then per-source brainstorm.
 
-## L. Fade off-trajectory stations when a journey is selected (added 2026-07-11)
-
-When a specific trajectory is selected, non-selected LINES already dim to 0.04
-(shipped 2026-07-11) — but station dots/reach-dots not on the selected journey
-stay at full opacity. Dim those too (grey all-stations dots and non-journey
-destination dots), so the selected journey pops. Likely a small change in the
-same shape as baseLineOpacity: data-driven circle-opacity keyed on the
-selected journey's station ids (origin, legs' stops, destination).
-
-## M. Unified journey-planner panel, upper-left (added 2026-07-12)
-
-User wants the scattered controls consolidated into one journey-planner card in
-the upper-left corner, shaped like a real trip planner:
-- **From** field — fills automatically when you select a station on the map
-  (currently map-click sets origin but the panel doesn't show it as an editable
-  field); also typeable.
-- **To** field — optional; lets you type a destination directly instead of only
-  clicking the map. Selecting a dest on the map fills it.
-- **Swap** — reverse From/To (swap already exists in the status bar / journey
-  card; fold it into the panel).
-- **Trip details + booking** — the JourneyCard (duration, legs, book link) moves
-  to sit *below* the From/To fields in the same panel, instead of a separate
-  bottom-left card.
-Effectively merges SearchBox + status bar + JourneyCard into one left-column
-planner. Brainstorm the layout (interacts with StopToggle/TimeSlider placement,
-and with item L dimming). Design-first; no data changes.
-
 ## N. Trainline booking handoff — landing-page fallback shipped (2026-07-13)
 
 The old `trainline.eu/search/{origin}/{destination}/{date}/` path is not a
@@ -175,6 +137,70 @@ work are recorded in
 [`research/2026-07-13-trainline-booking-handoff.md`](research/2026-07-13-trainline-booking-handoff.md).
 Do not reintroduce query parameters or an affiliate code until Trainline has
 provided an approved integration format.
+
+## O. Reachability previews on hover (added 2026-07-13)
+
+Consider a lightweight hover preview for a station: reveal its reachable area or
+connection summary before committing it as the origin, so exploratory map use feels
+faster. Design the preview to stay visually quiet and avoid competing with selected
+journeys or the planner panel.
+
+## P. Performance optimisation pass (added 2026-07-13)
+
+Reserve a dedicated optimisation pass as the map and feed coverage grow. Profile the
+full interaction path (initial data load, map layers, hover/select updates, search,
+reach-file fetching, and route rendering), then prioritise the largest measured
+bottlenecks. The work should keep the app responsive with substantially more stations
+and connections. It is needed regardless of whether hover previews are built; any
+future hover preview must simply avoid adding an expensive per-pointer computation.
+
+## Q. Log unfit / dropped data during build (observability) (added 2026-07-13)
+
+Trains and feeds change constantly, so the pipeline must SURFACE anything it
+can't place instead of silently dropping it. Whenever build/merge/filter drops
+a trip (<2 stops, stub, filtered by route_allow), can't merge a station
+(near-duplicate with a different name — the validator blind spot), can't
+geo-assign a country (the "no polygon match" warnings seen adding Denmark
+2026-07-13; Fredericia retained feed country DE), or a new feed introduces an
+unrecognised route category / stop-id shape, it should LOG it to a structured,
+persistent place (e.g. `data/out/unfit.json` or a build report), not just a
+transient stderr warning. Goal: a standing "here is what today's feeds threw at
+us that we didn't model" list we can review and adapt to. Builds on the existing
+validator-blind-spot and meta.json-under-reports notes below.
+
+## R. Future-proof for EU mandatory mobility data APIs (added 2026-07-13)
+
+The EU is moving toward mandatory operator data/APIs; user flagged
+https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng as the pointer. NOTE: verify
+the actual instrument — 2024/1689 is the AI Act; the mobility-data mandate is
+more likely the ITS Directive revision / Multimodal Travel Information Services
+delegated regulation or the proposed Multimodal Digital Mobility Services (MDMS)
+regulation. Research which regulation actually mandates what (real-time +
+booking data via national access points), timelines, and whether it unlocks
+cleaner official feeds than the current national-GTFS patchwork. The rule also
+pushes **single-seller through-ticketing** — buy a whole multi-leg journey from
+one seller with start-to-end / missed-connection money-back guarantees. That
+"buy all tickets from one seller" model is an appealing product direction for
+onestopeurope's booking handoff (relates to N and S): if such sellers/APIs
+emerge, prefer one that covers the whole planned journey with a guarantee.
+Relates to K (data sources) and Q (adapting to new data shapes).
+
+## S. Rail Europe (ticket seller + API) & OpenRailwayMap (added 2026-07-13)
+
+- **Rail Europe** — evaluate as (a) a booking handoff / ticket seller,
+  alternative or complement to Trainline (item N), and (b) a data API more
+  generally (coverage, fares, connections). Research their partner/affiliate
+  and API terms; compare booking-handoff quality to the current Trainline
+  landing-page fallback.
+- **Flix as ticket seller** — if/when FlixBus is added (F2 bus overlay), we will
+  likely need Flix's own booking/seller handoff for those tickets (Trainline/Rail
+  Europe may not resell FlixBus). Unclear whether FlixTrain also needs it or is
+  resold elsewhere — verify. Booking-handoff item, relates to N.
+- **OpenRailwayMap** (OSM-based rail data) — use to fill MISSING railway
+  station locations / cross-check station coordinates, and as the OSM-rail
+  geometry source floated in item I (corridor bundling) if we ever route lines
+  along real track. Research licensing (ODbL) and extract format (Overpass /
+  planet rail layer). Relates to I and to the coverage gaps in A/K.
 
 ## Smaller deferred notes
 
