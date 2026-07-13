@@ -1,6 +1,13 @@
 from pydantic import BaseModel, ConfigDict, Field
 
 
+class CountryOverride(BaseModel):
+    name: str
+    lat: float
+    lon: float
+    country: str
+
+
 class Station(BaseModel):
     id: str
     name: str

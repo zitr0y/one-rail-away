@@ -20,15 +20,18 @@ of the simplified coastline) keeps its feed country, logged for review.
 
 import json
 import logging
+import math
 from pathlib import Path
 
-from pipeline.models import Station
+from pipeline.models import CountryOverride, Station
 
 logger = logging.getLogger(__name__)
 
 Ring = list[tuple[float, float]]
 
 ASSET = Path(__file__).parent / "assets" / "countries_europe_50m.geojson"
+
+OVERRIDE_RADIUS_M = 500
 
 
 def load_countries(path: Path) -> list[tuple[str, list[list[Ring]]]]:
@@ -69,19 +72,76 @@ def country_at(lat: float, lon: float, countries: list[tuple[str, list[list[Ring
     return None
 
 
+def _haversine_m(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
+    """Great-circle distance in metres between two latitude/longitude points."""
+    phi1 = math.radians(lat1)
+    phi2 = math.radians(lat2)
+    dphi = math.radians(lat2 - lat1)
+    dlambda = math.radians(lon2 - lon1)
+    a = (
+        math.sin(dphi / 2) ** 2
+        + math.cos(phi1) * math.cos(phi2) * math.sin(dlambda / 2) ** 2
+    )
+    return 2 * 6_371_000 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
+
+
 def assign_countries(
     stations: list[Station],
     countries: list[tuple[str, list[list[Ring]]]],
-    overrides: dict[str, str],
+    overrides: list[CountryOverride],
 ) -> list[str]:
-    """Set each station's country from geography (override table wins); return
-    human-readable change-log lines for the build output."""
+    """Set station countries from coordinate overrides, then geography.
+
+    Overrides match the nearest station within OVERRIDE_RADIUS_M and always emit
+    an audit line. Non-overridden stations retain the existing polygon behavior.
+    Returned lines are printed by the build stage, including unused/ambiguous warnings.
+    """
     changes: list[str] = []
-    for s in stations:
-        new = overrides.get(s.id) or country_at(s.lat, s.lon, countries)
+    overridden_ids: set[str] = set()
+
+    for override in overrides:
+        distances = sorted(
+            (
+                (_haversine_m(override.lat, override.lon, station.lat, station.lon), station)
+                for station in stations
+            ),
+            key=lambda item: item[0],
+        )
+        within_radius = [item for item in distances if item[0] <= OVERRIDE_RADIUS_M]
+        if not within_radius:
+            changes.append(
+                f"unused override {override.name!r} ({override.lat:.6f}, {override.lon:.6f}): "
+                f"no station within {OVERRIDE_RADIUS_M}m"
+            )
+            continue
+
+        _, nearest = within_radius[0]
+        if len(within_radius) > 1:
+            candidates = ", ".join(
+                f"{station.id} ({station.name})" for _, station in within_radius
+            )
+            changes.append(
+                f"ambiguous override {override.name!r} "
+                f"({override.lat:.6f}, {override.lon:.6f}): "
+                f"{len(within_radius)} stations within {OVERRIDE_RADIUS_M}m "
+                f"({candidates}); using {nearest.id} ({nearest.name})"
+            )
+
+        old = nearest.country
+        nearest.country = override.country
+        overridden_ids.add(nearest.id)
+        changes.append(f"{nearest.id} ({nearest.name}): {old} -> {override.country}")
+
+    for station in stations:
+        if station.id in overridden_ids:
+            continue
+        new = country_at(station.lat, station.lon, countries)
         if new is None:
-            changes.append(f"{s.id} ({s.name}): no polygon match, keeping feed country {s.country}")
-        elif new != s.country:
-            changes.append(f"{s.id} ({s.name}): {s.country} -> {new}")
-            s.country = new
+            changes.append(
+                f"{station.id} ({station.name}): no polygon match, "
+                f"keeping feed country {station.country}"
+            )
+        elif new != station.country:
+            changes.append(f"{station.id} ({station.name}): {station.country} -> {new}")
+            station.country = new
     return changes

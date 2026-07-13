@@ -1,7 +1,7 @@
 import json
 
 from pipeline.geo import assign_countries, country_at, load_countries
-from pipeline.models import Station
+from pipeline.models import CountryOverride, Station
 
 
 def _fixture(tmp_path):
@@ -63,7 +63,7 @@ def _station(sid, lat, lon, country):
 def test_assign_countries_corrects_and_logs(tmp_path):
     countries = _fixture(tmp_path)
     s = _station("a", 2.0, 12.0, "DE")  # geographically in FR square
-    changes = assign_countries([s], countries, {})
+    changes = assign_countries([s], countries, [])
     assert s.country == "FR"
     assert changes == ["a (a): DE -> FR"]
 
@@ -71,13 +71,50 @@ def test_assign_countries_corrects_and_logs(tmp_path):
 def test_assign_countries_override_wins(tmp_path):
     countries = _fixture(tmp_path)
     s = _station("a", 2.0, 12.0, "DE")
-    assign_countries([s], countries, {"a": "CH"})
+    override = CountryOverride(name="A border override", lat=2.0, lon=12.0, country="CH")
+    changes = assign_countries([s], countries, [override])
     assert s.country == "CH"
+    assert changes == ["a (a): DE -> CH"]
+
+
+def test_assign_countries_override_matches_station_within_radius(tmp_path):
+    countries = _fixture(tmp_path)
+    s = _station("a", 2.001, 12.0, "DE")  # about 111m north of the override
+    override = CountryOverride(name="Nearby override", lat=2.0, lon=12.0, country="CH")
+    changes = assign_countries([s], countries, [override])
+    assert s.country == "CH"
+    assert changes == ["a (a): DE -> CH"]
+
+
+def test_assign_countries_unmatched_override_warns_and_continues(tmp_path):
+    countries = _fixture(tmp_path)
+    s = _station("a", 2.0, 12.0, "DE")  # polygon lookup must still change it to FR
+    override = CountryOverride(name="Nowhere", lat=50.0, lon=50.0, country="CH")
+    changes = assign_countries([s], countries, [override])
+    assert s.country == "FR"
+    assert changes == [
+        "unused override 'Nowhere' (50.000000, 50.000000): no station within 500m",
+        "a (a): DE -> FR",
+    ]
+
+
+def test_assign_countries_ambiguous_override_warns_and_nearest_wins():
+    near = _station("near", 2.0002, 12.0, "DE")
+    far = _station("far", 2.001, 12.0, "DE")
+    override = CountryOverride(name="Border", lat=2.0, lon=12.0, country="CH")
+    changes = assign_countries([near, far], [], [override])
+    assert near.country == "CH"
+    assert far.country == "DE"
+    assert changes[0] == (
+        "ambiguous override 'Border' (2.000000, 12.000000): 2 stations within 500m "
+        "(near (near), far (far)); using near (near)"
+    )
+    assert changes[1] == "near (near): DE -> CH"
 
 
 def test_assign_countries_no_match_keeps_feed_country(tmp_path):
     countries = _fixture(tmp_path)
     s = _station("a", 50.0, 50.0, "DE")
-    changes = assign_countries([s], countries, {})
+    changes = assign_countries([s], countries, [])
     assert s.country == "DE"
     assert "no polygon match" in changes[0]
