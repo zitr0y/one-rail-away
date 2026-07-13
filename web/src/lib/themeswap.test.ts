@@ -9,6 +9,7 @@ function fakePrevious(): StyleSpecification {
       openmaptiles: { type: "vector", url: "https://old-basemap" },
       "all-stations": { type: "geojson", data: { type: "FeatureCollection", features: [] } },
       "reach-lines": { type: "geojson", data: { type: "FeatureCollection", features: [] } },
+      "reach-segments": { type: "geojson", data: { type: "FeatureCollection", features: [] } },
       "reach-dots": { type: "geojson", data: { type: "FeatureCollection", features: [] } },
       coverage: { type: "geojson", data: { type: "FeatureCollection", features: [] } },
       capitals: { type: "geojson", data: { type: "FeatureCollection", features: [] } },
@@ -19,7 +20,7 @@ function fakePrevious(): StyleSpecification {
         paint: { "fill-color": "#9c9589", "fill-opacity": 0.5 } },
       { id: "all-stations", type: "circle", source: "all-stations",
         paint: { "circle-color": "#003399", "circle-opacity": 0.25 } },
-      { id: "reach-lines", type: "line", source: "reach-lines", paint: { "line-opacity": 0.05 } },
+      { id: "reach-lines", type: "line", source: "reach-segments", paint: { "line-opacity": 0.05 } },
       { id: "reach-lines-selected", type: "line", source: "reach-lines", paint: {} },
       { id: "reach-dots", type: "circle", source: "reach-dots",
         paint: { "circle-stroke-color": "#F2EFE9" } },
@@ -42,9 +43,11 @@ describe("mergeCustomStyle", () => {
     expect(mergeCustomStyle(undefined, next, "dark")).toBe(next);
   });
 
-  it("carries the five custom sources; basemap sources come from next", () => {
+  it("carries the six custom sources; basemap sources come from next", () => {
     const merged = mergeCustomStyle(fakePrevious(), fakeNext(), "dark");
-    for (const id of ["all-stations", "reach-lines", "reach-dots", "coverage", "capitals"]) {
+    for (const id of [
+      "all-stations", "reach-lines", "reach-segments", "reach-dots", "coverage", "capitals",
+    ]) {
       expect(merged.sources[id]).toBeDefined();
     }
     expect((merged.sources.openmaptiles as { url: string }).url).toBe("https://new-basemap");

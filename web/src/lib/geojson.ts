@@ -1,5 +1,5 @@
 import { CORRIDORS, corridorPath } from "./corridors";
-import type { Destination, Journey, ReachFile, Station } from "./types";
+import type { Destination, Journey, Leg, ReachFile, Station } from "./types";
 
 export type MaxTrains = 1 | 2 | 3;
 
@@ -65,34 +65,97 @@ export function destinationsGeoJSON(
   return { type: "FeatureCollection", features };
 }
 
-/** Per-leg chaikin(2)-smoothed coordinate paths for a journey — shared by
- *  linesGeoJSON and the mascot rider (ride.ts) so the two can never drift.
- *  Smoothing is per leg so transfer corners stay sharp: a hairpin via Paris
- *  otherwise rounds into a U whose apex floats over empty countryside
- *  (user report 2026-07-09). */
+/** One physical piece of a leg: a stop-to-stop hop, or a whole nonstop leg
+ *  (corridor-routed when one matches). `key` is direction-normalized so the
+ *  same track traversed by many journeys collapses to one drawn segment. */
+export interface LegSegment { key: string; coords: [number, number][] }
+
+function segmentKey(a: string, b: string): string {
+  return a < b ? `${a}|${b}` : `${b}|${a}`;
+}
+
+export function legSegments(leg: Leg, stationsById: Map<string, Station>): LegSegment[] {
+  const stops = [leg.from, ...leg.via, leg.to]
+    .map((id) => ({ id, station: stationsById.get(id) }))
+    .filter((x): x is { id: string; station: Station } => x.station !== undefined);
+  if (stops.length < 2) return [];
+
+  if (leg.via.length === 0) {
+    const [from, to] = stops;
+    const corridor = corridorPath(from.station, to.station, CORRIDORS);
+    const coords = corridor
+      ? chaikin(corridor.map(({ lon, lat }): [number, number] => [lon, lat]), 2)
+      : stops.map(({ station }): [number, number] => [station.lon, station.lat]);
+    return [{ key: segmentKey(from.id, to.id), coords }];
+  }
+
+  const segments: LegSegment[] = [];
+  for (let i = 0; i < stops.length - 1; i++) {
+    const a = stops[i];
+    const b = stops[i + 1];
+    segments.push({
+      key: segmentKey(a.id, b.id),
+      coords: [[a.station.lon, a.station.lat], [b.station.lon, b.station.lat]],
+    });
+  }
+  return segments;
+}
+
+/** Per-leg coordinate paths for a journey — shared by linesGeoJSON and the
+ *  mascot rider (ride.ts) so the two can never drift. Served stops are EXACT
+ *  vertices: smoothing must never cut a stop's corner, otherwise journeys
+ *  sharing a trunk round it differently per destination and the overlapping
+ *  trunks splay into a fan (backlog X, user report 2026-07-13). Nonstop legs
+ *  still follow curated corridors, chaikin-smoothed — corridor waypoints are
+ *  shape points, not served stops. Paths stay per leg so transfer corners
+ *  stay sharp (user report 2026-07-09). */
 export function journeyLegPaths(
   j: Journey, stationsById: Map<string, Station>,
 ): [number, number][][] {
   return j.legs
-    .map((leg) => {
-      const stationCoordinates = [leg.from, ...leg.via, leg.to]
-        .map((id) => stationsById.get(id))
-        .filter((s): s is Station => s !== undefined)
-        .map((s): [number, number] => [s.lon, s.lat]);
-      if (leg.via.length > 0) return stationCoordinates;
-
-      const from = stationsById.get(leg.from);
-      const to = stationsById.get(leg.to);
-      if (!from || !to) return stationCoordinates;
-      const corridor = corridorPath(from, to, CORRIDORS);
-      return corridor
-        ? corridor.map(({ lon, lat }): [number, number] => [lon, lat])
-        : stationCoordinates;
-    })
-    .filter((c) => c.length >= 1)
-    .map((c) => chaikin(c, 2));
+    .map((leg) => legSegments(leg, stationsById))
+    .filter((segments) => segments.length > 0)
+    .map((segments) => segments.flatMap((s, i) => (i === 0 ? s.coords : s.coords.slice(1))));
 }
 
+/** Deduplicated physical segments across all shown journeys — feeds the base
+ *  reach-lines layer (backlog X). Each stop-to-stop hop (or nonstop corridor
+ *  leg) is drawn exactly once, so a multi-stop train reads as one trunk
+ *  threading its stops instead of a per-destination fan. A shared segment
+ *  takes the bucket of the fastest journey through it and the width class
+ *  (trains) of the most direct one. */
+export function segmentsGeoJSON(
+  reach: ReachFile, stationsById: Map<string, Station>, maxTrains: MaxTrains, maxMinutes: number,
+): FC<LineString> {
+  const best = new Map<string, { coords: [number, number][]; duration_min: number; trains: number }>();
+  for (const { j } of shown(reach, maxTrains, maxMinutes)) {
+    for (const leg of j.legs) {
+      for (const segment of legSegments(leg, stationsById)) {
+        const prev = best.get(segment.key);
+        if (!prev) {
+          best.set(segment.key, {
+            coords: segment.coords, duration_min: j.duration_min, trains: j.trains,
+          });
+        } else {
+          prev.duration_min = Math.min(prev.duration_min, j.duration_min);
+          prev.trains = Math.min(prev.trains, j.trains);
+        }
+      }
+    }
+  }
+  const features: Feature<LineString>[] = [];
+  for (const [key, s] of best) {
+    features.push({
+      type: "Feature",
+      geometry: { type: "LineString", coordinates: s.coords },
+      properties: { id: key, bucket: timeBucket(s.duration_min), trains: s.trains },
+    });
+  }
+  return { type: "FeatureCollection", features };
+}
+
+/** One full LineString per destination — feeds only the selected-journey
+ *  highlight layer; the base layer draws segmentsGeoJSON. */
 export function linesGeoJSON(
   reach: ReachFile, stationsById: Map<string, Station>, maxTrains: MaxTrains, maxMinutes: number,
 ): FC<LineString> {

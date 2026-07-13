@@ -1,5 +1,8 @@
 import { describe, expect, it } from "vitest";
-import { bestJourney, chaikin, destinationsGeoJSON, journeyLegPaths, linesGeoJSON, timeBucket } from "./geojson";
+import {
+  bestJourney, chaikin, destinationsGeoJSON, journeyLegPaths, linesGeoJSON, segmentsGeoJSON,
+  timeBucket,
+} from "./geojson";
 import type { ReachFile, Station } from "./types";
 
 const S = (id: string, lon: number): Station =>
@@ -93,14 +96,56 @@ describe("linesGeoJSON per-leg smoothing", () => {
     expect(coords[coords.length - 1]).toEqual([c.lon, c.lat]);
   });
 
-  it("matches a direct chaikin call for single-leg journeys (regression guard)", () => {
+  it("keeps every served stop as an exact vertex — no corner cutting (backlog X)", () => {
+    // Chaikin used to round the corner at via stop B differently per destination,
+    // splaying identical trunks into a fan (Nijmegen report 2026-07-13).
     const fc = linesGeoJSON(reach, stationsById, 1, Infinity);
     const feature = fc.features.find((f) => f.properties.id === "C")!;
     const a = stationsById.get("A")!;
     const b = stationsById.get("B")!;
     const c = stationsById.get("C")!;
-    const expected = chaikin([[a.lon, a.lat], [b.lon, b.lat], [c.lon, c.lat]], 2);
-    expect(feature.geometry.coordinates).toEqual(expected);
+    expect(feature.geometry.coordinates).toEqual([
+      [a.lon, a.lat], [b.lon, b.lat], [c.lon, c.lat],
+    ]);
+  });
+
+  it("journeys sharing a trunk produce identical trunk coordinates (backlog X)", () => {
+    const splayReach: ReachFile = {
+      origin: "A", computed_at: "", sample_date: "2026-07-14",
+      destinations: [
+        { id: "B", direct_per_day: 4, journeys: [
+          { trains: 1, duration_min: 20, legs: [
+            { train: "IC 1", dep: "08:00", arr: "08:20", from: "A", to: "B", via: [] } ] } ] },
+        { id: "D", direct_per_day: 4, journeys: [
+          { trains: 1, duration_min: 60, legs: [
+            { train: "IC 1", dep: "08:00", arr: "09:00", from: "A", to: "D", via: ["B", "C"] } ] } ] },
+      ],
+    };
+    const fc = linesGeoJSON(splayReach, stationsById, 3, Infinity);
+    const toB = fc.features.find((f) => f.properties.id === "B")!.geometry.coordinates;
+    const toD = fc.features.find((f) => f.properties.id === "D")!.geometry.coordinates;
+    expect(toD.slice(0, toB.length)).toEqual(toB); // same trunk, point for point
+  });
+});
+
+describe("segmentsGeoJSON", () => {
+  it("draws each physical stop-to-stop segment exactly once (backlog X)", () => {
+    // reach has A→C via B (120 min) and A→C via B then C→D (240 min): the shared
+    // A–B and B–C hops must appear once, tagged with the fastest/most-direct user.
+    const fc = segmentsGeoJSON(reach, stationsById, 3, Infinity);
+    expect(fc.features.map((f) => f.properties.id).sort()).toEqual(["A|B", "B|C", "C|D"]);
+    const ab = fc.features.find((f) => f.properties.id === "A|B")!;
+    expect(ab.properties.bucket).toBe(timeBucket(120)); // fastest journey through it
+    expect(ab.properties.trains).toBe(1);               // most direct journey through it
+    const cd = fc.features.find((f) => f.properties.id === "C|D")!;
+    expect(cd.properties.bucket).toBe(timeBucket(240));
+    expect(cd.properties.trains).toBe(2);
+  });
+
+  it("respects the train budget and max-minutes filters like linesGeoJSON", () => {
+    const fc = segmentsGeoJSON(reach, stationsById, 1, Infinity);
+    expect(fc.features.map((f) => f.properties.id).sort()).toEqual(["A|B", "B|C"]);
+    expect(segmentsGeoJSON(reach, stationsById, 3, 60).features).toEqual([]);
   });
 });
 

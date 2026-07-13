@@ -330,7 +330,7 @@
       },
       "paint": {
         "line-color": "#C5C2B8",
-        "line-opacity": 1,
+        "line-opacity": 0.45,
         "line-width": [
           "interpolate",
           [
@@ -395,6 +395,7 @@
       },
       "paint": {
         "line-color": "#F8F6F2",
+        "line-opacity": 0.45,
         "line-width": [
           "interpolate",
           [
@@ -723,7 +724,7 @@
       },
       "paint": {
         "line-color": "#D5D2CA",
-        "line-opacity": 0.9,
+        "line-opacity": 0.45,
         "line-width": [
           "interpolate",
           [
@@ -781,7 +782,7 @@
       },
       "paint": {
         "line-color": "#D5D2CA",
-        "line-opacity": 0.9,
+        "line-opacity": 0.45,
         "line-width": [
           "interpolate",
           [
@@ -844,6 +845,7 @@
           12,
           0
         ],
+        "line-opacity": 0.45,
         "line-width": [
           "interpolate",
           [
@@ -902,6 +904,7 @@
       },
       "paint": {
         "line-color": "#fff",
+        "line-opacity": 0.45,
         "line-width": [
           "interpolate",
           [
@@ -960,6 +963,7 @@
       },
       "paint": {
         "line-color": "#D5D2CA",
+        "line-opacity": 0.45,
         "line-width": 2
       }
     },
@@ -1018,7 +1022,7 @@
           2,
           0
         ],
-        "line-opacity": 1,
+        "line-opacity": 0.45,
         "line-width": [
           "interpolate",
           [
@@ -1100,6 +1104,7 @@
           6,
           "#fff"
         ],
+        "line-opacity": 0.45,
         "line-width": [
           "interpolate",
           [
@@ -1153,6 +1158,7 @@
       },
       "paint": {
         "line-color": "#D5D2CA",
+        "line-opacity": 0.45,
         "line-width": [
           "interpolate",
           [
@@ -1540,7 +1546,7 @@
           2,
           0
         ],
-        "line-opacity": 1,
+        "line-opacity": 0.45,
         "line-width": [
           "interpolate",
           [
@@ -1617,6 +1623,7 @@
           6,
           "#fff"
         ],
+        "line-opacity": 0.45,
         "line-width": [
           "interpolate",
           [

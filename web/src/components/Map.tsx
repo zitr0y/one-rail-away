@@ -1,6 +1,9 @@
 import maplibregl from "maplibre-gl";
 import { useEffect, useRef } from "react";
-import { destinationsGeoJSON, linesGeoJSON, bestJourney, journeyLegPaths, type MaxTrains } from "../lib/geojson";
+import {
+  destinationsGeoJSON, linesGeoJSON, segmentsGeoJSON, bestJourney, journeyLegPaths,
+  type MaxTrains,
+} from "../lib/geojson";
 import { buildRideTimeline, rideStateAt, riderTransform } from "../lib/ride";
 import { riderSvg } from "../lib/ridersvg";
 import { BUCKET_COLORS, themeTokens } from "../lib/colors";
@@ -54,6 +57,7 @@ export default function MapView(props: Props) {
       const tokens = themeTokens(propsRef.current.theme);
       m.addSource("all-stations", { type: "geojson", data: EMPTY as never });
       m.addSource("reach-lines", { type: "geojson", data: EMPTY as never });
+      m.addSource("reach-segments", { type: "geojson", data: EMPTY as never });
       m.addSource("reach-dots", { type: "geojson", data: EMPTY as never });
       m.addSource("coverage", { type: "geojson", data: EMPTY as never });
       m.addSource("capitals", { type: "geojson", data: EMPTY as never });
@@ -76,8 +80,11 @@ export default function MapView(props: Props) {
         },
         "all-stations",
       );
+      // Base layer draws deduped physical segments (backlog X): a shared trunk
+      // is one feature, not one per destination. The selected layer keeps full
+      // per-destination lines from "reach-lines" so its filter-by-id still works.
       m.addLayer({
-        id: "reach-lines", type: "line", source: "reach-lines",
+        id: "reach-lines", type: "line", source: "reach-segments",
         layout: { "line-cap": "round", "line-join": "round" },
         paint: {
           "line-color": bucketColor as never,
@@ -125,7 +132,11 @@ export default function MapView(props: Props) {
         m.on("mouseenter", layer, () => (m.getCanvas().style.cursor = "pointer"));
         m.on("mouseleave", layer, () => (m.getCanvas().style.cursor = ""));
       }
-      const veilPopup = new maplibregl.Popup({ closeButton: false, closeOnClick: false });
+      // className lets index.css theme the popup chrome — MapLibre's default is
+      // hardcoded white, unreadable in dark mode (backlog AA).
+      const veilPopup = new maplibregl.Popup({
+        closeButton: false, closeOnClick: false, className: "veil-popup",
+      });
       m.on("mousemove", "coverage-veil", (e) => {
         const stationHits = m.queryRenderedFeatures(e.point, { layers: CLICK_LAYERS }).length;
         if (!showVeilTooltip(stationHits)) {
@@ -185,6 +196,8 @@ export default function MapView(props: Props) {
 
     (m.getSource("reach-lines") as maplibregl.GeoJSONSource).setData(
       reach ? (linesGeoJSON(reach, byId, maxTrains, maxMinutes) as never) : (EMPTY as never));
+    (m.getSource("reach-segments") as maplibregl.GeoJSONSource).setData(
+      reach ? (segmentsGeoJSON(reach, byId, maxTrains, maxMinutes) as never) : (EMPTY as never));
     (m.getSource("reach-dots") as maplibregl.GeoJSONSource).setData(
       reach ? (destinationsGeoJSON(reach, byId, maxTrains, maxMinutes) as never) : (EMPTY as never));
     const origin = reach && byId.get(reach.origin);
