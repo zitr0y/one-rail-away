@@ -1,5 +1,6 @@
 import tomllib
 from pathlib import Path
+from typing import Literal
 
 from pydantic import BaseModel, model_validator
 
@@ -9,6 +10,9 @@ class FeedConfig(BaseModel):
     country: str
     license: str
     route_allow: list[str]  # regexes matched against route short/long name
+    # The Italian national access point publishes the Trenitalia timetable as
+    # NeTEx L1 gzipped XML; all other current feeds are GTFS zip archives.
+    format: Literal["gtfs", "netex"] = "gtfs"
     # Optional trip-level filter: regexes matched against trips.txt
     # trip_short_name. When set, a trip is kept only if its route passes
     # route_allow AND its trip_short_name matches one of these, and the

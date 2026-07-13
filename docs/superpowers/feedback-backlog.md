@@ -26,10 +26,13 @@ Denmark is now covered by the Rejseplanen DSB feed: IC, ICL, ECE, RJ, and RE
 official CP Portugal feed are also shipped. CP is a direct, registration-free GTFS
 download from `publico.cp.pt`; it includes AP, IC, IR, and R services and carries a
 rolling publication horizon, which the per-feed coverage-aware sampler excludes from
-out-of-horizon denominators. Further national feeds remain ongoing; next candidates
-and research verdicts live in `docs/superpowers/new-feed-recipe.md`. Each new feed
-un-greys a country (see the two-tier veil). Competitor note: Ouigo España publishes
-GTFS on nap.transportes.gob.es; iryo does not.
+out-of-horizon denominators. Italy is now covered by the official Trenitalia Italian
+NAP NeTEx L1 publication: FR/FA/FB/EC/IC/ICN/EN/EXP, with the source’s explicit
+“No licence – No contract” metadata retained as a commercial-reuse caveat. Further
+national feeds remain ongoing; next candidates and research verdicts live in
+`docs/superpowers/new-feed-recipe.md`. Each new feed un-greys a country (see the
+two-tier veil). Competitor note: Ouigo España publishes GTFS on
+nap.transportes.gob.es; iryo does not.
 
 ## B. Multi-day sampling / service frequency (user item 6) — SHIPPED 2026-07-13
 

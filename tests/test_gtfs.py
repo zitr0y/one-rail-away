@@ -1,5 +1,7 @@
 """Tests for pipeline.gtfs: feed loading, service-day logic, and long-distance filtering."""
+# ruff: noqa: E501  # compact XML fixture below is clearer as literal NeTEx.
 
+import gzip
 import io
 import logging
 import re
@@ -9,6 +11,9 @@ from pathlib import Path
 
 from pipeline.config import FeedConfig
 from pipeline.gtfs import _brand_label, load_feed, next_tuesday
+from pipeline.netex import COORDINATE_FIXES
+from pipeline.netex import feed_validity_window as netex_validity_window
+from pipeline.netex import load_feed as load_netex
 from tests.fixtures import make_fixture_feeds
 
 SAMPLE = date(2026, 7, 14)  # a Tuesday
@@ -74,6 +79,44 @@ def test_load_feed_respects_calendar(tmp_path):
 def test_next_tuesday():
     assert next_tuesday(date(2026, 7, 7)) == date(2026, 7, 14)  # Tue -> next Tue
     assert next_tuesday(date(2026, 7, 8)) == date(2026, 7, 14)  # Wed -> coming Tue
+
+
+def test_load_trenitalia_netex_profile_filters_products_and_days(tmp_path):
+    """The narrow NeTEx reader handles the actual NAP element relationships."""
+    xml = """<PublicationDelivery xmlns="http://www.netex.org.uk/netex"><dataObjects>
+    <SiteFrame><stopPlaces>
+      <StopPlace id="A"><Name>ALPHA</Name><Centroid><Location><Latitude>45</Latitude><Longitude>9</Longitude></Location></Centroid></StopPlace>
+      <StopPlace id="B"><Name>BETA</Name><Centroid><Location><Latitude>46</Latitude><Longitude>10</Longitude></Location></Centroid></StopPlace>
+    </stopPlaces><scheduledStopPoints>
+      <ScheduledStopPoint id="SA"><Name>ALPHA</Name><Location><Latitude>45</Latitude><Longitude>9</Longitude></Location></ScheduledStopPoint><ScheduledStopPoint id="SB"><Name>BETA</Name><Location><Latitude>46</Latitude><Longitude>10</Longitude></Location></ScheduledStopPoint>
+    </scheduledStopPoints></SiteFrame>
+    <ServiceFrame><lines><Line id="FR"><ShortName>FR</ShortName><Name>Frecciarossa</Name></Line><Line id="REG"><ShortName>REG</ShortName></Line></lines>
+    <journeyPatterns><ServiceJourneyPattern id="P"><RouteView><LineRef ref="FR"/></RouteView><pointsInSequence>
+      <StopPointInJourneyPattern id="PA"><ScheduledStopPointRef ref="SA"/></StopPointInJourneyPattern><StopPointInJourneyPattern id="PB"><ScheduledStopPointRef ref="SB"/></StopPointInJourneyPattern>
+    </pointsInSequence></ServiceJourneyPattern></journeyPatterns>
+    <vehicleJourneys><ServiceJourney id="J"><Name>9500</Name><dayTypes><DayTypeRef ref="D"/></dayTypes><ServiceJourneyPatternRef ref="P"/><passingTimes>
+      <TimetabledPassingTime><StopPointInJourneyPatternRef ref="PA"/><DepartureTime>23:55:00</DepartureTime><DepartureDayOffset>0</DepartureDayOffset></TimetabledPassingTime>
+      <TimetabledPassingTime><StopPointInJourneyPatternRef ref="PB"/><ArrivalTime>00:15:00</ArrivalTime><ArrivalDayOffset>1</ArrivalDayOffset></TimetabledPassingTime>
+    </passingTimes></ServiceJourney></vehicleJourneys></ServiceFrame>
+    <ServiceCalendarFrame><operatingPeriods><UicOperatingPeriod id="O"><FromDate>2026-07-13</FromDate><ToDate>2026-07-15</ToDate><ValidDayBits>010</ValidDayBits></UicOperatingPeriod></operatingPeriods>
+    <dayTypeAssignments><DayTypeAssignment><OperatingPeriodRef ref="O"/><DayTypeRef ref="D"/></DayTypeAssignment></dayTypeAssignments></ServiceCalendarFrame>
+    </dataObjects></PublicationDelivery>"""
+    path = tmp_path / "trenitalia.zip"
+    with gzip.open(path, "wb") as out:
+        out.write(xml.encode())
+    cfg = FeedConfig(url="u", country="IT", license="t", format="netex", route_allow=["^FR$"])
+    stops, trips = load_netex(path, cfg, SAMPLE)
+    assert netex_validity_window(path) == ("20260713", "20260715")
+    assert [stop.stop_id for stop in stops] == ["SA", "SB"]
+    assert [(trip.train, trip.stops[-1].arr) for trip in trips] == [("FR 9500", 24 * 60 + 15)]
+    assert load_netex(path, cfg, date(2026, 7, 15))[1] == []
+
+
+def test_trenitalia_napoli_afragola_upstream_coordinate_is_corrected():
+    assert COORDINATE_FIXES["IT::ScheduledStopPoint:otherTRENITALIA:830009988"] == (
+        40.931758,
+        14.331131,
+    )
 
 
 # --- next_tuesday: every weekday ---------------------------------------------

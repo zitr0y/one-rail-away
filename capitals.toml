@@ -19,7 +19,9 @@ CZ = "Praha hl.n."
 GB = "London St. Pancras Int."
 UA = "Kyjiw-Passaschyrskyj"
 RO = "București Nord Gara A"
-IT = "Roma, Stazione di Roma Tiburtina"
+IT = "ROMA TERMINI"
+# Official Trenitalia NeTEx national feed (2026-07-14) owns the Italian capital
+# now; its all-caps StopPlace name replaces the old cross-border leak label.
 LU = "Luxembourg"
 SI = "Ljubljana"
 HU = "Budapest-Keleti"

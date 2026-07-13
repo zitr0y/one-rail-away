@@ -154,6 +154,25 @@ license = "No licence – No contract (Portuguese NAP record 176; attribution: C
 route_allow = ["^AP$", "^IC$", "^IR$", "^R$"]
 # No uic_regex: `94_1008` / `71_37606` are CP internal stop ids, not UIC codes.
 
+[feeds.trenitalia]
+# Official Italian National Access Point, direct and registration-free. Its asset
+# 1080596 is Trenitalia's validated NeTEx L1 gz:xml timetable. Checked 2026-07-14:
+# 13 MB; publication timestamp 2026-07-09; UIC operating periods cover
+# 2026-06-13..2026-12-12. NAP metadata says "No licence – No contract"; retain
+# attribution to Trenitalia and re-check reuse terms before monetizing.
+#
+# The live feed: one Trenitalia operator; 1,948 StopPlaces, mostly all-caps names;
+# 21 foreign stops (DE 6, AT 4, FR 10, plus one malformed Napoli coordinate). It
+# follows DB/OEBB/SNCF so it cannot own foreign canonical station names. Pattern
+# rows: REG 13,350, RV 1,807, FR 1,505, IC 701, ICN 533, EC 237, FB 55, FA 48,
+# EN 32, EXP 12; excluded BUS 6,564, SFM 598, MET 502, regional REG/RV and FL bus.
+url = "https://www.cciss.it/nap/mmtis/public/api/v1/download/blob/Asset/1080596/checkedResource"
+country = "IT"
+license = "No licence – No contract (Italian NAP asset 1080596; attribution: Trenitalia)"
+format = "netex"
+route_allow = ["^FR$", "^FA$", "^FB$", "^EC$", "^IC$", "^ICN$", "^EN$", "^EXP$"]
+# NeTEx ScheduledStopPoint ids carry Trenitalia's internal 9-digit station code, not UIC.
+
 [feeds.renfe]
 # Renfe long-distance GTFS (registration-free), inspected 2026-07-10.
 # https://ssl.renfe.com/gtransit/Fichero_AV_LD/google_transit.zip (776 KB).

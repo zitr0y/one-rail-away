@@ -12,6 +12,7 @@ from concurrent.futures import ProcessPoolExecutor
 from datetime import date
 from pathlib import Path
 
+from pipeline import netex
 from pipeline.config import FeedConfig, load_feeds
 from pipeline.geo import ASSET, assign_countries, load_countries
 from pipeline.gtfs import feed_validity_window, load_feed
@@ -32,8 +33,9 @@ def _load_feed_samples(
     keeps graph JSON and console output deterministic.
     """
     name, zip_path, cfg, days = task
+    loader = netex.load_feed if cfg.format == "netex" else load_feed
     return name, {
-        day.isoformat(): load_feed(zip_path, cfg, day)
+        day.isoformat(): loader(zip_path, cfg, day)
         for day in days
     }
 
@@ -154,8 +156,10 @@ def build(
     feed_trips_by_date: dict[str, dict[str, list[Trip]]] = {}
     feed_validity_by_date: dict[str, dict[str, dict[str, object]]] = {}
     feed_windows = {
-        name: feed_validity_window(raw_dir / f"{name}.zip")
-        for name in feeds
+        name: (netex.feed_validity_window if cfg.format == "netex" else feed_validity_window)(
+            raw_dir / f"{name}.zip"
+        )
+        for name, cfg in feeds.items()
         if (raw_dir / f"{name}.zip").exists()
     }
 
