@@ -14,7 +14,7 @@ from pipeline.config import load_feeds
 from pipeline.geo import ASSET, assign_countries, load_countries
 from pipeline.gtfs import load_feed
 from pipeline.merge import _dist_m, _norm, merge_stations
-from pipeline.models import Station, Trip
+from pipeline.models import CountryOverride, Station, Trip
 from pipeline.through import join_through_services
 
 logger = logging.getLogger(__name__)
@@ -111,9 +111,14 @@ def build(
     # --- deriving from feeds_path.parent silently loaded no overrides at all (2026-07-09).
     if station_countries_path is None:
         station_countries_path = Path(__file__).parent / "station_countries.toml"
-    country_overrides: dict[str, str] = {}
+    country_overrides: list[CountryOverride] = []
     if station_countries_path.exists():
-        country_overrides = tomllib.loads(station_countries_path.read_text()).get("countries", {})
+        raw_country_overrides = tomllib.loads(station_countries_path.read_text()).get(
+            "override", []
+        )
+        country_overrides = [
+            CountryOverride.model_validate(item) for item in raw_country_overrides
+        ]
 
     if station_names_path is None:
         station_names_path = Path(__file__).parent / "station_names.toml"
@@ -138,16 +143,14 @@ def build(
         print(f"country: {line}")
     all_trips = join_through_services(remap_trips(feed_trips, mapping))
 
-    # --- stale-id validation for BOTH override files (loud, not silent — the
-    # --- Konstanz staleness trap bit us before; spec requires SystemExit(1)).
+    # Country overrides are coordinate-keyed; unmatched entries already warn in
+    # assign_countries. Display-name overrides remain id-keyed and stale ids abort.
     station_ids = {s.id for s in stations}
-    stale: list[str] = []
-    for sid in country_overrides:
-        if sid not in station_ids:
-            stale.append(f"station_countries.toml: stale key {sid!r}")
-    for sid in name_overrides:
-        if sid not in station_ids:
-            stale.append(f"station_names.toml: stale key {sid!r}")
+    stale = [
+        f"station_names.toml: stale key {sid!r}"
+        for sid in name_overrides
+        if sid not in station_ids
+    ]
     if stale:
         for msg in stale:
             print(f"OVERRIDE STALE: {msg}")
