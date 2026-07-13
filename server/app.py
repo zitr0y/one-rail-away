@@ -154,19 +154,25 @@ def create_app(data_dir: Path) -> FastAPI:
             if s["id"] not in reach_ids:
                 continue
             name = normalize(s["name"])
-            best = None
+            tier = None
             for v in variants:
                 if name.startswith(v):
-                    cand = (0, len(name))
+                    cand = 0
                 elif v in name:
-                    cand = (1, len(name))
+                    cand = 1
                 else:
                     continue
-                best = cand if best is None else min(best, cand)
-            if best is not None:
-                scored.append((*best, s))
-        scored.sort(key=lambda x: (x[0], x[1]))
-        return {"stations": [{**s, "has_reach": True} for _, _, s in scored[:limit]]}
+                tier = cand if tier is None else min(tier, cand)
+            if tier is not None:
+                # Rank: prefix over substring, then station importance (capitals
+                # first, then reach breadth), then shorter name. Importance beats
+                # name length so a big hub wins a same-prefix tie over a minor
+                # station with a shorter name (Barcelona > Barcelos), and the
+                # capital term keeps Roma above the bigger-by-reach Romanshorn.
+                key = (tier, 0 if s.get("is_capital") else 1, -s.get("n_dest", 0), len(name))
+                scored.append((key, s))
+        scored.sort(key=lambda x: x[0])
+        return {"stations": [{**s, "has_reach": True} for _, s in scored[:limit]]}
 
     @app.get("/api/reach/{station_id}")
     def reach(station_id: str) -> dict:
