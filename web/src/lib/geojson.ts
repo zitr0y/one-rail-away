@@ -12,7 +12,8 @@ export function bestJourney(d: Destination, maxTrains: MaxTrains): Journey | nul
 
 /** Old reach files have no evidence metadata, so retain their established solid style. */
 export function frequencyClass(d: Destination): "frequent" | "infrequent" {
-  return d.frequency?.availability === "seasonal_or_limited" ? "infrequent" : "frequent";
+  return d.frequency?.seasonal || d.frequency?.availability === "seasonal_or_limited"
+    ? "infrequent" : "frequent";
 }
 
 export function timeBucket(min: number): 0 | 1 | 2 | 3 {

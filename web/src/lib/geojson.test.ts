@@ -36,7 +36,7 @@ describe("frequency styling", () => {
     expect(frequencyClass(reach.destinations[0])).toBe("frequent");
     expect(frequencyClass({ ...reach.destinations[0], frequency: {
       sample_days: 8, available_days: 2, direct_days: 2, direct_trips: 2,
-      availability: "seasonal_or_limited", active_months: ["Jul"],
+      availability: "seasonal_or_limited", seasonal: true, active_months: ["Jul"],
     } })).toBe("infrequent");
   });
 });

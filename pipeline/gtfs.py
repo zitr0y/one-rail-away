@@ -28,6 +28,12 @@ logger = logging.getLogger(__name__)
 
 WEEKDAY_COLS = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
 
+# A service must be at least four weeks shorter than the feed horizon before
+# its calendar bounds alone count as limited/seasonal.  Feed publishers often
+# differ by a day or two at a timetable boundary; that is not useful evidence
+# of a materially part-year service.
+LIMITED_SERVICE_SHORTFALL_DAYS = 28
+
 
 @dataclass
 class RawStop:
@@ -109,6 +115,42 @@ def feed_validity_window(zip_path: Path) -> tuple[str, str] | None:
     return (min(bounds), max(bounds)) if bounds else None
 
 
+def limited_seasonal_services(
+    zip_path: Path, sample_dates: list[date]
+) -> tuple[set[str], set[str]]:
+    """Return (limited, absent_from_week) GTFS service ids.
+
+    A service whose declared calendar is at least
+    ``LIMITED_SERVICE_SHORTFALL_DAYS`` shorter than its feed's published
+    calendar is retained as limited/seasonal evidence.  Pure exception
+    services are retained too.  This uses only explicit GTFS calendar bounds;
+    it never guesses a season from a quiet sampled week.
+    """
+    with zipfile.ZipFile(zip_path) as zf:
+        window = feed_validity_window(zip_path)
+        if window is None:
+            return set(), set()
+        limited: set[str] = set()
+        calendar_ids: set[str] = set()
+        for row in _rows(zf, "calendar.txt"):
+            service_id = row["service_id"]
+            calendar_ids.add(service_id)
+            service_days = (
+                date.fromisoformat(row["end_date"]) - date.fromisoformat(row["start_date"])
+            ).days
+            horizon_days = (
+                date.fromisoformat(window[1]) - date.fromisoformat(window[0])
+            ).days
+            if horizon_days - service_days >= LIMITED_SERVICE_SHORTFALL_DAYS:
+                limited.add(service_id)
+        exception_ids = {row["service_id"] for row in _rows(zf, "calendar_dates.txt")}
+        limited.update(exception_ids - calendar_ids)
+        active_in_week: set[str] = set()
+        for day in sample_dates:
+            active_in_week.update(_active_services(zf, day))
+        return limited, limited - active_in_week
+
+
 def _brand_label(
     stop_ids: Iterable[str],
     brand_patterns: list[tuple[re.Pattern[str], str]],
@@ -130,7 +172,8 @@ def _brand_label(
 
 
 def load_feed(
-    zip_path: Path, cfg: FeedConfig, sample_date: date
+    zip_path: Path, cfg: FeedConfig, sample_date: date,
+    *, service_ids: set[str] | None = None, seasonal_service_ids: set[str] | None = None,
 ) -> tuple[list[RawStop], list[Trip]]:
     """Load one GTFS zip: keep trips active on sample_date on allowlisted routes.
 
@@ -161,9 +204,11 @@ def load_feed(
             if any(p.search(short) or p.search(long) for p in allow):
                 routes[r["route_id"]] = short or long
 
-        active = _active_services(zf, sample_date)
+        active = service_ids if service_ids is not None else _active_services(zf, sample_date)
+        seasonal_service_ids = seasonal_service_ids or set()
         trip_train: dict[str, str] = {}
         trip_headsign: dict[str, str] = {}
+        trip_seasonal: dict[str, bool] = {}
         for t in _rows(zf, "trips.txt"):
             if t["route_id"] not in routes or t["service_id"] not in active:
                 continue
@@ -176,6 +221,7 @@ def load_feed(
                 trip_train[t["trip_id"]] = short
             else:
                 trip_train[t["trip_id"]] = routes[t["route_id"]]
+            trip_seasonal[t["trip_id"]] = t["service_id"] in seasonal_service_ids
             if brand_patterns is not None and t["trip_id"] in trip_train:
                 trip_headsign[t["trip_id"]] = (t.get("trip_headsign") or "").strip()
 
@@ -262,7 +308,10 @@ def load_feed(
                     resolved[s.station] = _resolve(s.station) if known else s.station
                 s.station = resolved[s.station]
             used_stops.update(s.station for s in kept)
-            trips.append(Trip(trip_id=tid, train=trip_train[tid], stops=kept))
+            trips.append(Trip(
+                trip_id=tid, train=trip_train[tid], stops=kept,
+                seasonal=trip_seasonal[tid],
+            ))
 
         # Display name per resolved stop: the SHORTEST of the parent's own name
         # and the used children's names (deterministic tie-break: lexicographic).

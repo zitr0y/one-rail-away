@@ -46,6 +46,8 @@ def _frequency(
     covered_dates: list[str],
     reaches: dict[str, list[Journey]],
     directs: dict[str, int],
+    *,
+    seasonal: bool = False,
 ) -> Frequency:
     """Summarize finite sampling evidence without turning it into calendar truth."""
     active_dates = [day for day in covered_dates if day in reaches]
@@ -53,7 +55,7 @@ def _frequency(
     direct_trips = sum(directs.values())
     months = list(dict.fromkeys(MONTH_NAMES[int(day[5:7]) - 1] for day in active_dates))
     direct_per_active_day = round(direct_trips / len(direct_dates), 1) if direct_dates else None
-    # Eight probes cannot prove a timetable.  This is intentionally a rounded
+    # One sampled week cannot prove a timetable.  This is intentionally a rounded
     # rate for the UI's "about N/week" wording, not an asserted service count.
     weekly = (
         round(direct_trips * 7 / len(covered_dates)) if direct_trips and covered_dates else None
@@ -62,6 +64,9 @@ def _frequency(
     # seasonal one.  Say exactly that instead of turning feed expiry into a
     # misleading seasonal classification.
     availability = (
+        "seasonal_or_limited"
+        if seasonal
+        else
         "coverage_limited"
         if len(covered_dates) < 3
         else "year_round"
@@ -77,6 +82,7 @@ def _frequency(
         direct_per_active_day=direct_per_active_day,
         weekly_direct_estimate=weekly,
         availability=availability,
+        seasonal=seasonal,
         active_months=months,
     )
 
@@ -85,6 +91,7 @@ def _aggregate_reach(
     trips_by_date: dict[str, list[Trip]],
     station_id: str,
     feed_validity_by_date: dict[str, dict[str, dict[str, object]]] | None = None,
+    seasonal_trips: list[Trip] | None = None,
 ) -> list[Destination]:
     """Keep each date's routes independent, then select the best tier per dest."""
     sample_dates = list(trips_by_date)
@@ -95,6 +102,16 @@ def _aggregate_reach(
             evidence.setdefault(dest, {})[day] = journeys
         for dest, n in _direct_counts(trips, station_id).items():
             directs.setdefault(dest, {})[day] = n
+    # A limited service may run in the selected week; it is still seasonal
+    # evidence.  Inactive-in-week trips are supplied separately so they remain
+    # routable rather than disappearing altogether.
+    calendar_seasonal_trips = list(seasonal_trips or []) + [
+        trip for trips in trips_by_date.values() for trip in trips if trip.seasonal
+    ]
+    seasonal_evidence = compute_reachability(seasonal_trips or [], station_id)
+    seasonal_destinations = set(compute_reachability(calendar_seasonal_trips, station_id))
+    for dest, journeys in seasonal_evidence.items():
+        evidence.setdefault(dest, {})["seasonal"] = journeys
 
     destinations: list[Destination] = []
     for dest in sorted(evidence):
@@ -111,9 +128,9 @@ def _aggregate_reach(
                 tiers.append(journey)
         # A destination can have alternatives that use different feeds.  A date
         # is valid evidence when at least one observed route's complete feed set
-        # is within its feeds' published GTFS horizon.  ``covered=False`` is the
-        # only exclusion; a feed with no declared horizon remains unknown, not a
-        # negative sample.
+        # is inside that feed's selected, published service week. ``covered``
+        # distinguishes expired GTFS from no service; ``sampled`` prevents a
+        # different feed's week inflating this feed's frequency denominator.
         feed_sets = {
             frozenset(feed for leg in journey.legs for feed in leg.feeds)
             for journeys in evidence[dest].values()
@@ -127,6 +144,8 @@ def _aggregate_reach(
                     all(
                         feed_validity_by_date.get(day, {}).get(feed, {}).get("covered", True)
                         is not False
+                        and feed_validity_by_date.get(day, {}).get(feed, {}).get("sampled", True)
+                        is not False
                         for feed in feed_set
                     )
                     for feed_set in feed_sets
@@ -135,7 +154,10 @@ def _aggregate_reach(
             if feed_validity_by_date is not None and feed_sets
             else sample_dates
         )
-        freq = _frequency(sample_dates, covered_dates, evidence[dest], directs.get(dest, {}))
+        seasonal = dest in seasonal_destinations
+        freq = _frequency(
+            sample_dates, covered_dates, evidence[dest], directs.get(dest, {}), seasonal=seasonal
+        )
         # Legacy field remains present.  On a multi-day run it is the rounded
         # average on observed direct days; consumers should prefer frequency.
         direct_per_day = round(freq.direct_per_active_day or 0)
@@ -157,11 +179,14 @@ def _write_reach(
     sample_date: str,
     now: str,
     feed_validity_by_date: dict[str, dict[str, dict[str, object]]] | None = None,
+    seasonal_trips: list[Trip] | None = None,
 ) -> int:
     """Compute one origin's reachability and write its reach file.
 
     Returns the destination count (0 = nothing reachable, no file written)."""
-    destinations = _aggregate_reach(trips_by_date, station_id, feed_validity_by_date)
+    destinations = _aggregate_reach(
+        trips_by_date, station_id, feed_validity_by_date, seasonal_trips
+    )
     if not destinations:
         return 0
     rf = ReachFile(
@@ -178,14 +203,16 @@ def _write_reach(
 # instead of the parent pickling the whole trip list for every origin.
 _worker_trips_by_date: dict[str, list[Trip]] = {}
 _worker_feed_validity_by_date: dict[str, dict[str, dict[str, object]]] = {}
+_worker_seasonal_trips: list[Trip] = []
 
 
 def _worker_init(graph_dir_str: str) -> None:
-    global _worker_trips_by_date, _worker_feed_validity_by_date
+    global _worker_trips_by_date, _worker_feed_validity_by_date, _worker_seasonal_trips
     raw = json.loads((Path(graph_dir_str) / "trips.json").read_text())
     by_date = raw.get("trips_by_date") or {"legacy": raw["trips"]}
     _worker_trips_by_date = {day: [Trip(**t) for t in trips] for day, trips in by_date.items()}
     _worker_feed_validity_by_date = raw.get("feed_validity_by_date", {})
+    _worker_seasonal_trips = [Trip(**trip) for trip in raw.get("seasonal_trips", [])]
 
 
 def _compute_one(args: tuple[str, str, str, str]) -> tuple[str, int]:
@@ -197,6 +224,7 @@ def _compute_one(args: tuple[str, str, str, str]) -> tuple[str, int]:
         sample_date,
         now,
         _worker_feed_validity_by_date,
+        _worker_seasonal_trips,
     )
 
 
@@ -246,9 +274,11 @@ def compute_all(
         by_date = raw_trips.get("trips_by_date") or {"legacy": raw_trips["trips"]}
         trips_by_date = {day: [Trip(**t) for t in trips] for day, trips in by_date.items()}
         feed_validity_by_date = raw_trips.get("feed_validity_by_date", {})
+        seasonal_trips = [Trip(**trip) for trip in raw_trips.get("seasonal_trips", [])]
         for station in stations:
             results[station.id] = _write_reach(
-                trips_by_date, station.id, out_dir, sample_date, now, feed_validity_by_date
+                trips_by_date, station.id, out_dir, sample_date, now, feed_validity_by_date,
+                seasonal_trips,
             )
     else:
         with ProcessPoolExecutor(

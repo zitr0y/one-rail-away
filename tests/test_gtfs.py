@@ -10,7 +10,13 @@ from datetime import date, timedelta
 from pathlib import Path
 
 from pipeline.config import FeedConfig
-from pipeline.gtfs import _brand_label, load_feed, next_tuesday
+from pipeline.gtfs import (
+    LIMITED_SERVICE_SHORTFALL_DAYS,
+    _brand_label,
+    limited_seasonal_services,
+    load_feed,
+    next_tuesday,
+)
 from pipeline.netex import COORDINATE_FIXES
 from pipeline.netex import feed_validity_window as netex_validity_window
 from pipeline.netex import load_feed as load_netex
@@ -74,6 +80,41 @@ def test_load_feed_respects_calendar(tmp_path):
     cfgs = make_fixture_feeds(tmp_path)
     _, trips = load_feed(tmp_path / "landia.zip", cfgs["landia"], date(2027, 1, 1))
     assert trips == []  # outside service range
+
+
+def test_limited_seasonal_service_is_loaded_even_when_absent_from_selected_week(tmp_path):
+    calendar = (
+        "service_id,monday,tuesday,wednesday,thursday,friday,saturday,sunday,start_date,end_date\n"
+        "ALL,1,1,1,1,1,1,1,20260101,20261231\n"
+        "WINTER,1,1,1,1,1,1,1,20260101,20260331\n"
+    )
+    trips = "route_id,service_id,trip_id\nR1,ALL,T1\nR1,WINTER,TW\n"
+    stop_times = _DEFAULT_FILES["stop_times.txt"] + (
+        "TW,10:00:00,10:00:00,A,1\nTW,11:00:00,11:00:00,B,2\n"
+    )
+    path = _make_feed(tmp_path, calendar_txt=calendar, trips_txt=trips, stop_times_txt=stop_times)
+    week = [date(2026, 7, 13) + timedelta(days=offset) for offset in range(7)]
+    limited, absent = limited_seasonal_services(path, week)
+    assert limited == absent == {"WINTER"}
+    _, retained = load_feed(path, CFG, week[0], service_ids=absent, seasonal_service_ids=limited)
+    assert [(trip.trip_id, trip.seasonal) for trip in retained] == [("TW", True)]
+
+
+def test_limited_seasonal_services_ignores_trivial_calendar_boundary_difference(tmp_path):
+    calendar = (
+        "service_id,monday,tuesday,wednesday,thursday,friday,saturday,sunday,start_date,end_date\n"
+        "ALL,1,1,1,1,1,1,1,20260101,20261231\n"
+        "ONE_DAY_SHORT,1,1,1,1,1,1,1,20260102,20261231\n"
+        "FOUR_WEEKS_SHORT,1,1,1,1,1,1,1,20260129,20261231\n"
+    )
+    path = _make_feed(tmp_path, calendar_txt=calendar)
+    week = [date(2026, 7, 13) + timedelta(days=offset) for offset in range(7)]
+
+    limited, absent = limited_seasonal_services(path, week)
+
+    assert LIMITED_SERVICE_SHORTFALL_DAYS == 28
+    assert limited == {"FOUR_WEEKS_SHORT"}
+    assert absent == set()
 
 
 def test_next_tuesday():

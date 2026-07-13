@@ -34,24 +34,24 @@ national feeds remain ongoing; next candidates and research verdicts live in
 two-tier veil). Competitor note: Ouigo España publishes GTFS on
 nap.transportes.gob.es; iryo does not.
 
-## B. Multi-day sampling / service frequency (user item 6) — SHIPPED 2026-07-13
+## B. Service-week sampling / seasonal services (user item 6) — SHIPPED 2026-07-14
 
-The pipeline now samples deterministic Tuesday + Saturday probes in January,
-April, July, and October (8 dates across the anchor year). Each date retains its
-own graph and RAPTOR result; aggregation picks the best route per train-count
-tier, never joins legs from different dates. Reach destinations carry sampled
-availability, direct-trip evidence, active sample months, and only a rounded
-weekly estimate. The map renders limited/seasonal sampled connections dashed;
-the planner says e.g. "about 3× per week" and identifies the sampled months.
-Tuning point: `pipeline/sampling.py` (`SEASON_MONTHS`, `SAMPLE_WEEKDAYS`).
-Probes outside a route feed's published GTFS horizon are excluded from its
-denominator, and a route with fewer than three covered probes is labeled limited
-feed coverage rather than seasonal. Limitation: sparse probes cannot prove an
-exact timetable or a continuous season, so the UI deliberately avoids claiming
-operating dates.
+The pipeline selects one deterministic consecutive service week per feed
+(normally seven days), fully inside that feed's published calendar horizon.
+Each date retains its own graph and RAPTOR result, so routes never join legs
+from different dates. Frequency denominators use only the relevant feed's own
+selected week; feeds with a short rolling horizon use its complete shorter
+span. The planner reports cautious direct-train-per-day/week samples.
+
+Calendar rows whose declared range is narrower than their feed's publication
+horizon (plus exception-only services) are retained as explicit seasonal/limited
+evidence. This includes services absent from the selected week: they remain on
+the map and in the planner with a seasonal label and dashed line, but do not
+inflate the selected-week frequency. The calendar is evidence of a limited
+service, not a promise of exact operating dates.
 
 **Follow-up fix 2026-07-14:** coverage is now checked independently for every
-feed before parsing a probe: out-of-horizon dates are logged once per feed and
+feed before parsing a requested day: out-of-horizon dates are logged once per feed and
 skipped, never treated as zero-service evidence. Frequency denominators retain
 only the relevant route feeds' usable probes, even when other feeds cover a
 different horizon. Independent feed loading now runs in separate processes;
@@ -65,22 +65,13 @@ stations. Both now index stations by normalized name while preserving insertion
 and report order. On the 2,442-station production graph, validation fell from
 43.467 seconds to 0.018 seconds (~2,400×), and merge profiles at 0.080 seconds.
 
-Currently one representative Tuesday. Problems: weekend-only trains invisible;
-construction weeks (see EC 95 finding above) silently delete corridors; no way to say
-"3× a week". User's sketch: also show per-week frequency ("3×/day" vs "3×/week"),
-render infrequent connections dashed/weaker, maybe frequent ones thicker — worried
-about becoming non-minimalist, wants design discussion. Likely approach: RAPTOR over
-several sample days (e.g. Tue + Sat, or 7 days) and aggregate per destination.
-Costs: compute time scales with days sampled (~15 min/day currently).
+The original concern was that a single Tuesday hid weekend-only trains and could
+silently lose corridors during construction. The selected-week design above supersedes
+that proposal while keeping the cautious weekly-frequency presentation.
 
-**Seasonal / part-year trains (added 2026-07-09):** trains that only run part of the
-year — e.g. the night trains from NL/Germany/Austria toward Rome — are invisible if the
-sampled day(s) fall outside their season, and misleading if inside it (shown as if
-year-round). Sampling within one week does NOT solve this; it needs a season-aware idea:
-sample weeks spread across the year, or read GTFS calendar spans to tag connections
-"seasonal", and decide how the UI shows them (e.g. distinct style + "runs May–Sep"
-label). Discuss together with the frequency display above — same data model, same
-brainstorm.
+**Seasonal / part-year trains (added 2026-07-09):** resolved by the calendar-derived
+limited-service evidence described above. The UI deliberately says “seasonal service”
+rather than inferring or promising a precise operating season.
 
 ## C. Dot sizing / clustering / city grouping (user item 4) — C1 DONE, C2 tried+rejected, remainder SHIPPED
 

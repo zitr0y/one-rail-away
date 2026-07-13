@@ -101,6 +101,10 @@ def join_through_services(trips: list[Trip]) -> list[Trip]:
                 train=a.train,
                 stops=[*a.stops[:-1], boundary, *b.stops[1:]],
                 feeds=list(dict.fromkeys([*a.feeds, *b.feeds])),
+                # A joined route is limited if either source segment is.  Losing
+                # that evidence would make a cross-border seasonal service look
+                # year-round.
+                seasonal=a.seasonal or b.seasonal,
             )
             touched.update((i, j))
             absorbed.add(j)

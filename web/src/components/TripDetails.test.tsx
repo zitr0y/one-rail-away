@@ -47,10 +47,17 @@ describe("TripDetails booking date", () => {
 });
 
 describe("frequencyLabel", () => {
-  it("uses cautious sampled weekly and seasonal wording", () => {
+  it("says when a seasonal service is present in the selected week", () => {
     expect(frequencyLabel({ ...dest, frequency: {
       sample_days: 8, available_days: 3, direct_days: 3, direct_trips: 3,
-      weekly_direct_estimate: 3, availability: "seasonal_or_limited", active_months: ["Apr", "Jul"],
-    } })).toBe("about 3 direct trains per week · seasonal / limited · sampled Apr, Jul · 3/8 covered dates");
+      weekly_direct_estimate: 3, availability: "seasonal_or_limited", seasonal: true, active_months: [],
+    } })).toBe("about 3 direct trains per week · seasonal service · found on 3/8 selected dates");
+  });
+
+  it("says when a seasonal service is absent from the selected week", () => {
+    expect(frequencyLabel({ ...dest, frequency: {
+      sample_days: 8, available_days: 0, direct_days: 0, direct_trips: 0,
+      weekly_direct_estimate: 0, availability: "seasonal_or_limited", seasonal: true, active_months: [],
+    } })).toBe("seasonal service · not included in the selected service week");
   });
 });

@@ -22,6 +22,16 @@ def test_joins_split_through_service():
     assert (t.stops[1].arr, t.stops[1].dep) == (700, 715)
 
 
+def test_join_preserves_seasonal_evidence_from_either_segment():
+    a = _trip("A", "RJX 19929", ("kufstein", 600, 600), ("hegyeshalom", 700, 702))
+    b = _trip("B", "RJX 19929", ("hegyeshalom", 700, 715), ("budapest", 760, 760))
+    b.seasonal = True
+
+    [joined] = join_through_services([a, b])
+
+    assert joined.seasonal is True
+
+
 def test_does_not_mutate_inputs():
     a = _trip("A", "RJX 1", ("x", 0, 0), ("y", 60, 60))
     b = _trip("B", "RJX 1", ("y", 60, 70), ("z", 120, 120))

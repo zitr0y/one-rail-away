@@ -5,7 +5,7 @@ from pipeline.build import build
 from pipeline.capitals import load_capitals
 from pipeline.compute import compute_all, route_counts
 from pipeline.models import StopTime, Trip
-from pipeline.sampling import service_year_sample_dates
+from pipeline.sampling import service_week_dates
 from tests.fixtures import make_fixture_feeds
 from tests.test_build import _write_feeds_toml, empty_overrides
 
@@ -241,6 +241,7 @@ def test_compute_aggregates_independent_sample_days_and_frequency(tmp_path):
         "direct_per_active_day": 1.0,
         "weekly_direct_estimate": 4,
         "availability": "coverage_limited",
+        "seasonal": False,
         "active_months": ["Jan"],
     }
 
@@ -327,16 +328,43 @@ def test_route_counts_deduplicates_the_same_endpoint_pair_across_sample_dates(tm
     assert route_counts(trips) == {"A": 1, "B": 1}
 
 
-def test_service_year_samples_are_deterministic_and_spread_weekday_weekend():
-    dates = service_year_sample_dates(date(2026, 7, 14))
+def test_service_week_is_deterministic_and_respects_feed_coverage():
+    dates = service_week_dates(date(2026, 7, 14))
     assert [d.isoformat() for d in dates] == [
-        "2026-01-10",
-        "2026-01-13",
-        "2026-04-11",
-        "2026-04-14",
-        "2026-07-11",
-        "2026-07-14",
-        "2026-10-10",
-        "2026-10-13",
+        "2026-07-13", "2026-07-14", "2026-07-15", "2026-07-16",
+        "2026-07-17", "2026-07-18", "2026-07-19",
     ]
-    assert {d.weekday() for d in dates} == {1, 5}
+    short_window = service_week_dates(date(2026, 7, 14), ("20260716", "20260721"))
+    assert [d.isoformat() for d in short_window] == [
+        "2026-07-16", "2026-07-17", "2026-07-18", "2026-07-19", "2026-07-20", "2026-07-21",
+    ]
+
+
+def test_compute_keeps_inactive_seasonal_trip_visible_and_labeled(tmp_path):
+    graph = tmp_path / "graph"
+    graph.mkdir()
+    dates = [f"2026-07-{day:02d}" for day in range(13, 20)]
+    graph.joinpath("stations.json").write_text(json.dumps({
+        "sample_date": dates[0], "sample_dates": dates,
+        "stations": [
+            {"id": "A", "name": "Alpha", "lat": 50, "lon": 8, "country": "XX"},
+            {"id": "B", "name": "Beta", "lat": 51, "lon": 9, "country": "XX"},
+        ],
+    }))
+    seasonal = Trip(
+        trip_id="winter", train="Night", feeds=["rail"], seasonal=True,
+        stops=[StopTime(station="A", arr=480, dep=480), StopTime(station="B", arr=540, dep=540)],
+    )
+    graph.joinpath("trips.json").write_text(json.dumps({
+        "trips": [], "trips_by_date": {day: [] for day in dates},
+        "seasonal_trips": [seasonal.model_dump()],
+        "feed_validity_by_date": {
+            day: {"rail": {"covered": True, "sampled": True}} for day in dates
+        },
+    }))
+    compute_all(graph, tmp_path / "out", workers=1, feeds_path=tmp_path / "no-feeds.toml")
+    reach = json.loads((tmp_path / "out" / "reach_A.json").read_text())
+    frequency = reach["destinations"][0]["frequency"]
+    assert frequency["seasonal"] is True
+    assert frequency["availability"] == "seasonal_or_limited"
+    assert frequency["direct_trips"] == 0

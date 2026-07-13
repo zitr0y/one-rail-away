@@ -1,22 +1,28 @@
-"""Deterministic, season-aware GTFS service-date sampling."""
+"""Deterministic GTFS service-week selection."""
 
 from datetime import date, timedelta
 
-# One Tuesday and one Saturday in each quarter.  This deliberately samples both
-# a normal weekday and a weekend, while avoiding a misleading contiguous week.
-SEASON_MONTHS = (1, 4, 7, 10)
-SAMPLE_WEEKDAYS = (1, 5)  # Tuesday, Saturday (datetime.date weekday numbers)
 
+def service_week_dates(
+    anchor: date, window: tuple[str, str] | None = None
+) -> list[date]:
+    """Return one consecutive, fully covered service week for a feed.
 
-def service_year_sample_dates(anchor: date) -> list[date]:
-    """Return the eight fixed service-date probes for ``anchor.year``.
-
-    Each date is the first requested weekday on or after the 8th of Jan/Apr/
-    Jul/Oct.  Keeping this independent of today makes rebuilds reproducible.
+    The Monday containing ``anchor`` is preferred.  A published calendar
+    horizon moves that week to the nearest seven-day interval it can wholly
+    cover; a shorter horizon contributes its complete consecutive span.  This
+    is deliberately independent of the clock, so rebuilding a snapshot is
+    reproducible.
     """
-    dates: list[date] = []
-    for month in SEASON_MONTHS:
-        start = date(anchor.year, month, 8)
-        for weekday in SAMPLE_WEEKDAYS:
-            dates.append(start + timedelta(days=(weekday - start.weekday()) % 7))
-    return sorted(dates)
+    target = anchor - timedelta(days=anchor.weekday())
+    if window is None:
+        return [target + timedelta(days=offset) for offset in range(7)]
+
+    start = date.fromisoformat(f"{window[0][:4]}-{window[0][4:6]}-{window[0][6:]}")
+    end = date.fromisoformat(f"{window[1][:4]}-{window[1][4:6]}-{window[1][6:]}")
+    if (end - start).days < 6:
+        return [start + timedelta(days=offset) for offset in range((end - start).days + 1)]
+    first = start
+    last = end - timedelta(days=6)
+    week_start = min(max(target, first), last)
+    return [week_start + timedelta(days=offset) for offset in range(7)]
