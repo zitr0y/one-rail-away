@@ -6,11 +6,13 @@ write the graph JSON files consumed by the rest of the pipeline
 
 import json
 import logging
+import os
 import tomllib
+from concurrent.futures import ProcessPoolExecutor
 from datetime import date
 from pathlib import Path
 
-from pipeline.config import load_feeds
+from pipeline.config import FeedConfig, load_feeds
 from pipeline.geo import ASSET, assign_countries, load_countries
 from pipeline.gtfs import feed_validity_window, load_feed
 from pipeline.merge import _dist_m, _norm, merge_stations
@@ -18,6 +20,22 @@ from pipeline.models import CountryOverride, Station, Trip
 from pipeline.through import join_through_services
 
 logger = logging.getLogger(__name__)
+
+
+def _load_feed_samples(
+    task: tuple[str, Path, FeedConfig, list[date]],
+) -> tuple[str, dict[str, tuple[list, list[Trip]]]]:
+    """Load all in-coverage probes for one feed in an isolated process.
+
+    One task owns one zip, so workers never share mutable GTFS objects or write
+    output.  The parent merges the returned data in feed/date order, which
+    keeps graph JSON and console output deterministic.
+    """
+    name, zip_path, cfg, days = task
+    return name, {
+        day.isoformat(): load_feed(zip_path, cfg, day)
+        for day in days
+    }
 
 
 def remap_trips(
@@ -94,6 +112,7 @@ def build(
     sample_dates: list[date] | None = None,
     station_names_path: Path | None = None,
     station_countries_path: Path | None = None,
+    workers: int | None = None,
 ) -> None:
     """Assemble station/trip graphs for one or more service dates.
 
@@ -139,6 +158,48 @@ def build(
         for name in feeds
         if (raw_dir / f"{name}.zip").exists()
     }
+
+    # Filter before calling load_feed: an out-of-horizon date is not a zero
+    # service day, and parsing its often very large stop_times.txt just to find
+    # that out is both misleading and needlessly expensive.
+    feed_days: dict[str, list[date]] = {}
+    for name in feeds:
+        window = feed_windows.get(name)
+        if window is None:
+            feed_days[name] = list(dates)
+            continue
+        usable = [day for day in dates if window[0] <= day.strftime("%Y%m%d") <= window[1]]
+        feed_days[name] = usable
+        skipped = [day for day in dates if day not in usable]
+        if skipped:
+            logger.warning(
+                "feed %s: skipping %d/%d probes outside published GTFS coverage %s..%s (%s)",
+                name,
+                len(skipped),
+                len(dates),
+                window[0],
+                window[1],
+                ", ".join(day.isoformat() for day in skipped),
+            )
+
+    tasks = [
+        (name, raw_dir / f"{name}.zip", cfg, feed_days[name])
+        for name, cfg in feeds.items()
+        if (raw_dir / f"{name}.zip").exists() and feed_days[name]
+    ]
+    loaded_by_feed: dict[str, dict[str, tuple[list, list[Trip]]]] = {}
+    max_workers = min(workers or os.process_cpu_count() or 1, len(tasks))
+    if max_workers > 1:
+        with ProcessPoolExecutor(max_workers=max_workers) as pool:
+            # executor.map preserves task order; the following date loop also
+            # makes the final serialized graph independent of worker timing.
+            for name, loaded in pool.map(_load_feed_samples, tasks):
+                loaded_by_feed[name] = loaded
+    else:
+        for task in tasks:
+            name, loaded = _load_feed_samples(task)
+            loaded_by_feed[name] = loaded
+
     for day in dates:
         feed_trips: dict[str, list[Trip]] = {}
         validity: dict[str, dict[str, object]] = {}
@@ -155,7 +216,13 @@ def build(
                 "start_date": window[0] if window else None,
                 "end_date": window[1] if window else None,
             }
-            stops, trips = load_feed(zip_path, cfg, day)
+            loaded = loaded_by_feed.get(name, {}).get(day.isoformat())
+            if loaded is None:
+                # This sample is outside this feed's published coverage.  It
+                # remains in metadata for downstream frequency denominators,
+                # but deliberately contributes no zero-service graph.
+                continue
+            stops, trips = loaded
             for trip in trips:
                 trip.feeds = [name]
             # merge_stations wants each feed's stops once; union all sampled

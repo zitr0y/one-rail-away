@@ -44,6 +44,13 @@ feed coverage rather than seasonal. Limitation: sparse probes cannot prove an
 exact timetable or a continuous season, so the UI deliberately avoids claiming
 operating dates.
 
+**Follow-up fix 2026-07-14:** coverage is now checked independently for every
+feed before parsing a probe: out-of-horizon dates are logged once per feed and
+skipped, never treated as zero-service evidence. Frequency denominators retain
+only the relevant route feeds' usable probes, even when other feeds cover a
+different horizon. Independent feed loading now runs in separate processes;
+the parent merges results in a fixed order for deterministic output.
+
 Currently one representative Tuesday. Problems: weekend-only trains invisible;
 construction weeks (see EC 95 finding above) silently delete corridors; no way to say
 "3× a week". User's sketch: also show per-week frequency ("3×/day" vs "3×/week"),

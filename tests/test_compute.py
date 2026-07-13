@@ -284,7 +284,14 @@ def test_compute_ignores_probes_outside_a_route_feeds_validity_window(tmp_path):
                             "covered": day == dates[0],
                             "start_date": "20260101",
                             "end_date": "20260131",
-                        }
+                        },
+                        # An unrelated feed remains usable for every probe.
+                        # Its coverage must not inflate narrow's denominator.
+                        "broad": {
+                            "covered": True,
+                            "start_date": "20260101",
+                            "end_date": "20261231",
+                        },
                     }
                     for day in dates
                 },

@@ -6,7 +6,7 @@ import pytest
 
 from pipeline.build import build, remap_trips, validate
 from pipeline.models import Station, StopTime, Trip
-from tests.fixtures import make_fixture_feeds
+from tests.fixtures import LANDIA, _zip, make_fixture_feeds
 
 SAMPLE = date(2026, 7, 14)
 
@@ -64,6 +64,65 @@ def test_build_produces_merged_graph(tmp_path):
     trips = json.loads((graph / "trips.json").read_text())["trips"]
     tgv = next(t for t in trips if t["train"] == "TGV 10")
     assert [s["station"] for s in tgv["stops"]] == ["3333333", "4444444"]
+
+
+def test_build_skips_each_feeds_out_of_coverage_probes(tmp_path, caplog):
+    """A narrow feed must not be parsed or represented as a zero-service day."""
+    raw = tmp_path / "raw"
+    cfgs = make_fixture_feeds(raw)
+    narrow = dict(LANDIA)
+    narrow["calendar.txt"] = narrow["calendar.txt"].replace("20261231", "20260131")
+    (raw / "landia.zip").write_bytes(_zip(narrow))
+    feeds_toml = _write_feeds_toml(tmp_path, cfgs)
+    countries_toml, names_toml = empty_overrides(tmp_path)
+    graph = tmp_path / "graph"
+    dates = [date(2026, 1, 13), date(2026, 7, 14)]
+
+    with caplog.at_level(logging.WARNING, logger="pipeline.build"):
+        build(
+            raw,
+            graph,
+            feeds_toml,
+            aliases_path=None,
+            sample_date=dates[0],
+            sample_dates=dates,
+            station_names_path=names_toml,
+            station_countries_path=countries_toml,
+            workers=1,
+        )
+
+    payload = json.loads((graph / "trips.json").read_text())
+    assert payload["feed_validity_by_date"]["2026-01-13"]["landia"]["covered"] is True
+    assert payload["feed_validity_by_date"]["2026-07-14"]["landia"]["covered"] is False
+    assert {trip["trip_id"] for trip in payload["trips_by_date"]["2026-07-14"]} == {"TT10"}
+    assert any(
+        "landia" in record.message and "2026-07-14" in record.message
+        for record in caplog.records
+    )
+
+
+def test_parallel_feed_loading_matches_serial_graph(tmp_path):
+    raw = tmp_path / "raw"
+    cfgs = make_fixture_feeds(raw)
+    feeds_toml = _write_feeds_toml(tmp_path, cfgs)
+    countries_toml, names_toml = empty_overrides(tmp_path)
+    dates = [date(2026, 1, 13), date(2026, 7, 14)]
+    serial, parallel = tmp_path / "serial", tmp_path / "parallel"
+    kwargs = {
+        "aliases_path": None,
+        "sample_date": dates[0],
+        "sample_dates": dates,
+        "station_names_path": names_toml,
+        "station_countries_path": countries_toml,
+    }
+
+    build(raw, serial, feeds_toml, workers=1, **kwargs)
+    build(raw, parallel, feeds_toml, workers=2, **kwargs)
+
+    for filename in ("stations.json", "trips.json"):
+        serial_json = json.loads((serial / filename).read_text())
+        parallel_json = json.loads((parallel / filename).read_text())
+        assert serial_json == parallel_json
 
 
 def test_remap_strips_stops_absent_from_mapping(caplog):

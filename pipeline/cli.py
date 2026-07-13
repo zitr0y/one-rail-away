@@ -21,6 +21,8 @@ def main() -> None:
                    help="anchor year for the deterministic seasonal sample set")
     b.add_argument("--single-date", action="store_true",
                    help="build only --date (useful for focused debugging)")
+    b.add_argument("--workers", type=int, default=None,
+                   help="feed-loading process count (default: one per CPU)")
     c = sub.add_parser("compute")
     c.add_argument("--workers", type=int, default=None, help="process count (default: one per CPU)")
     args = parser.parse_args()
@@ -35,7 +37,7 @@ def main() -> None:
 
         sample_dates = [args.date] if args.single_date else service_year_sample_dates(args.date)
         build(RAW, GRAPH, Path("feeds.toml"), Path("station_aliases.toml"), args.date,
-              sample_dates=sample_dates)
+              sample_dates=sample_dates, workers=args.workers)
     elif args.cmd == "compute":
         from pipeline.compute import compute_all
 
