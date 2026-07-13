@@ -331,6 +331,11 @@ Two parts:
   München Ostbahnhof (and München-Pasing etc. if present) so the C3 city-union works
   for Munich like it does for Paris. Relates to C3 (`cities.toml` → `cities.json`) and
   item T Unit 4 (map city-selection popup).
+- **More multi-station cities need groups (added 2026-07-13):** the 15-city
+  `cities.toml` is missing obvious multi-station cities. **Prague** has ≥4 (Praha hl.n.,
+  Praha-Holešovice, Praha-Podbaba, Praha-Libeň) and needs a group too. Do a sweep for
+  other ungrouped multi-station cities (Hamburg, Frankfurt, Köln, Wien, Milano, etc.)
+  and add the clear ones. Same C3 mechanism.
 
 ## AA. Dark-mode veil tooltip unreadable — white text on white background (added 2026-07-13)
 
