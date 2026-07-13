@@ -19,6 +19,7 @@ import {
   reachDotRadiusExpression,
   starSizeExpression,
   stationDotOpacityByZoom,
+  allStationOpacityExpression,
   drawStarIcon,
   drawStopSignIcon,
 } from "../lib/dots";
@@ -346,10 +347,7 @@ export default function MapView(props: Props) {
       ...(selectedStationIds ?? []),
       ...(reach ? [reach.origin] : []),
     ]));
-    const allStationOpacity = alwaysVisibleIds.length
-      ? ["match", ["get", "id"], alwaysVisibleIds, 0.7,
-        ["*", stationDotOpacityByZoom(), selectedOpacity]]
-      : stationDotOpacityByZoom();
+    const allStationOpacity = allStationOpacityExpression(alwaysVisibleIds, selectedOpacity);
     m.setPaintProperty("all-stations", "circle-opacity", allStationOpacity as never);
     m.setPaintProperty(
       "reach-dots",

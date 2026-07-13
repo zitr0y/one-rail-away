@@ -37,9 +37,11 @@ import {
   reachDotRadiusExpression,
   starSizeExpression,
   stationDotOpacityByZoom,
+  allStationOpacityExpression,
   drawStarIcon,
   drawStopSignIcon,
 } from "./dots";
+import { stationOpacityExpression } from "./highlight";
 
 describe("dotRadiusExpression", () => {
   it("returns a MapLibre expression array", () => {
@@ -85,6 +87,48 @@ describe("stationDotOpacityByZoom", () => {
       7, ["step", ["get", "n_dest"], 0, 10, 0.7],
       9, 0.7,
     ]);
+  });
+});
+
+describe("allStationOpacityExpression", () => {
+  function zoomIsOnlyTheTopLevelInput(expression: unknown): boolean {
+    if (!Array.isArray(expression) || expression[0] !== "interpolate") return false;
+    let zoomCount = 0;
+    const visit = (value: unknown, isTopLevelInput = false) => {
+      if (!Array.isArray(value)) return;
+      if (value[0] === "zoom") {
+        zoomCount += 1;
+        expect(isTopLevelInput).toBe(true);
+      }
+      value.forEach((child, index) => visit(child, value === expression && index === 2));
+    };
+    visit(expression);
+    return zoomCount === 1;
+  }
+
+  it("keeps zoom as the outer interpolate input when pinning reach stations", () => {
+    const expression = allStationOpacityExpression(["origin", "journey"], 0.25);
+    expect(zoomIsOnlyTheTopLevelInput(expression)).toBe(true);
+    expect(expression).toEqual([
+      "interpolate", ["linear"], ["zoom"],
+      4, ["match", ["get", "id"], ["origin", "journey"], 0.7,
+        ["*", ["step", ["get", "n_dest"], 0, 150, 0.7], 0.25]],
+      5.5, ["match", ["get", "id"], ["origin", "journey"], 0.7,
+        ["*", ["step", ["get", "n_dest"], 0, 50, 0.7], 0.25]],
+      7, ["match", ["get", "id"], ["origin", "journey"], 0.7,
+        ["*", ["step", ["get", "n_dest"], 0, 10, 0.7], 0.25]],
+      9, ["match", ["get", "id"], ["origin", "journey"], 0.7,
+        ["*", 0.7, 0.25]],
+    ]);
+  });
+
+  it("pins origin and journey ids while dimming all other stations", () => {
+    const journeyOpacity = stationOpacityExpression(["journey"], 0.7);
+    const expression = allStationOpacityExpression(["origin", "journey"], journeyOpacity);
+    const closeZoomOutput = expression[10] as unknown[];
+
+    expect(closeZoomOutput.slice(1, 4)).toEqual([["get", "id"], ["origin", "journey"], 0.7]);
+    expect(closeZoomOutput[4]).toEqual(["*", 0.7, journeyOpacity]);
   });
 });
 

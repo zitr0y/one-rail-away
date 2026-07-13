@@ -2,6 +2,7 @@
 // Spec: docs/superpowers/specs/2026-07-11-dots-clustering-design.md §2–4.
 
 import type { ExpressionSpecification } from "maplibre-gl";
+import type { StationOpacityExpression } from "./highlight";
 
 /**
  * Data-driven circle-radius for the grey all-stations layer, driven by
@@ -35,6 +36,30 @@ export function stationDotOpacityByZoom(): ExpressionSpecification {
     7, ["step", ["get", "n_dest"], 0, 10, 0.7],
     9, 0.7,
   ] as ExpressionSpecification;
+}
+
+/**
+ * Combine zoom decluttering with the reach/journey highlight without nesting
+ * `zoom` below another expression. MapLibre only accepts `zoom` as the input
+ * to the outermost step or interpolate expression, so each zoom stop gets its
+ * own zoom-free id match instead of multiplying the whole interpolation.
+ */
+export function allStationOpacityExpression(
+  alwaysVisibleIds: string[],
+  fallbackOpacity: StationOpacityExpression,
+): ExpressionSpecification {
+  const opacityByZoom = stationDotOpacityByZoom();
+  if (alwaysVisibleIds.length === 0) return opacityByZoom;
+
+  return opacityByZoom.map((part, index) => {
+    // An interpolate expression has stop/output pairs starting at index 3;
+    // outputs are therefore the even indexes from 4 onward.
+    if (index < 4 || index % 2 !== 0) return part;
+    return [
+      "match", ["get", "id"], alwaysVisibleIds, 0.7,
+      ["*", part, fallbackOpacity],
+    ];
+  }) as ExpressionSpecification;
 }
 
 /**

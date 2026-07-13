@@ -358,20 +358,14 @@ styles in dark mode (#0B1533 surface, #E8ECF7 text, tip matches). NOTE: local
 `data/out` subset has no coverage.json, so the real veil can't render locally —
 verified via injected popup markup instead.
 
-## AB. all-stations fade/pin opacity expression is invalid — silently rejected (found 2026-07-13)
+## AB. all-stations fade/pin opacity expression is invalid — SHIPPED 2026-07-13
 
-PRE-EXISTING bug (console error, not user-visible as a crash): whenever a reach
-is loaded, `Map.tsx::syncHighlight` sets `all-stations` `circle-opacity` to
-`["*", stationDotOpacityByZoom(), matchExpr]` (and the always-visible variant
-wrapping it in `["match", ...]`). MapLibre REJECTS it — `["zoom"]` may only sit
-at the top level of a `step`/`interpolate` — so `setPaintProperty` errors and
-the previous opacity stays. Consequence: with a reach shown, unreachable
-stations never dim to 0.25 and the origin/journey pinning of `all-stations`
-dots never applies (the C3 "pin member dots" nit sits on top of this). Fix
-direction: invert nesting — top-level `interpolate` on zoom whose outputs are
-`match`-on-id expressions (zoom-free), or drop the zoom term while a reach is
-shown. Lives right beside the zoom-declutter rework (item U) — both touch
-`stationDotOpacityByZoom`; consider fixing together.
+`allStationOpacityExpression` now keeps `zoom` as the input of the outer
+`interpolate`; each zoom-stop output uses a zoom-free id `match`. This retains
+the established zoom decluttering, fades non-pinned stations during reach and
+journey views, and pins the origin plus journey stations at 0.7. Focused tests
+assert the generated expression has no nested `zoom` and retains both fade and
+pin branches.
 
 ## Smaller deferred notes
 
