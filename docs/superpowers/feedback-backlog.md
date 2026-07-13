@@ -309,9 +309,10 @@ ranking tests. Improves the exonym results from item T Unit 3 too.
 Two parts:
 - **Naming/merge:** the station shown as bare **"Ostbahnhof"** (`x:db_fern:226810`,
   48.128, 11.605) is **München Ostbahnhof** with its city prefix stripped — it sits
-  right beside `München Hbf` (`x:db_fern:127002`, 48.14, 11.56). It should carry the
-  "München" prefix so it's findable/groupable (fix via `pipeline/station_names.toml`
-  override), and if a second feed carries the same station under another name/id they
+  right beside `München Hbf` (`x:db_fern:127002`, 48.14, 11.56). **Rename it to
+  "München Ostbahnhof"** (user-confirmed 2026-07-13) so it's findable/groupable (fix
+  via `pipeline/station_names.toml` override keyed on `x:db_fern:226810`), and if a
+  second feed carries the same station under another name/id they
   should merge (validator blind spot: different names, <500 m — see the note below and
   item Q observability). Watch out: `Graz Ostbahnhof` (AT) is a DIFFERENT station.
 - **City option:** add **München** to `pipeline/cities.toml` grouping München Hbf +
@@ -337,6 +338,17 @@ dedicated class set via the popup's `className`, or `.maplibregl-popup-content`)
 the popup tip/arrow colour matches. Small CSS fix.
 
 ## Smaller deferred notes
+
+- **Pre-existing flaky compute test on Python 3.14 (found 2026-07-13):**
+  `tests/test_compute.py::test_compute_all_sets_is_capital` FAILS on `main`
+  (independent of any recent change) with `capitals.toml: no station matches
+  LA='Alpha Hbf'`. Cause: the test does `os.chdir(tmp_path)` then runs
+  `compute_all`, but Python 3.14 no longer defaults `multiprocessing` to `fork`,
+  so worker processes don't inherit the changed cwd and read the wrong (or no)
+  `capitals.toml`. codex also saw compute tests fail under a sandboxed
+  forkserver. Fix by passing an explicit path into the capitals loader (don't
+  rely on cwd) or setting the mp start method in the test. Not caused by search
+  or the item-T work.
 
 - **Outdated logo/brand assets cleanup (added 2026-07-12):** several brand files
   linger unused after the logo went inline in `web/src/App.tsx`. `web/public/
