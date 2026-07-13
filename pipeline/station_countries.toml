@@ -2,40 +2,65 @@
 #
 # Per-station country overrides for pipeline/geo.py, for stations the 50m
 # Natural Earth boundaries misplace (only ~1 km accurate at borders).
-# Keys are canonical station ids, values ISO2 codes. Every entry needs an
-# evidence comment: which border, why the polygon result is wrong.
+# Each override is keyed by feed coordinates; name is a human label only.
+# Every entry needs an evidence comment: which border, why the polygon result
+# is wrong.
 #
 # This file intentionally lives here, next to build.py, not at repo root next
 # to feeds.toml -- deriving the path from feeds_path.parent silently loaded no
 # overrides at all (2026-07-09).
 
-[countries]
+[[override]]
+name = "Konstanz Hbf"
+lat = 47.65874
+lon = 9.177333
+country = "DE"
 # Konstanz: town straddles the Bodensee shoreline right at the DE/CH border;
 # the 2026-07 rebuild's polygon match flipped the station DE -> CH. Station
 # coords (47.65874, 9.177333) are ~284m from Konstanz Hbf's real position
 # (47.6612, 9.1763, OSM) -- the station itself is in Germany. Canonical id
 # changed x:db_fern:185018 -> 8014586 when the station_aliases.toml Konstanz
 # entry merged it onto sbb's UIC id (THURBO IR75 admission, 2026-07-10).
-"8014586" = "DE"
+
+[[override]]
+name = "Weil am Rhein"
+lat = 47.593693
+lon = 7.608739
+country = "DE"
 # Weil am Rhein: sits in the Basel tri-border (Dreiländereck) area where
 # France/Germany/Switzerland meet within a few km; the polygon match flipped
 # the station DE -> FR. Station coords (47.593693, 7.608739) are ~680m from
 # the real Weil am Rhein station (47.5934, 7.6178, OSM) -- in Germany.
-"x:db_fern:391436" = "DE"
+
+[[override]]
+name = "Venezia Santa Lucia"
+lat = 45.4424108
+lon = 12.31972937
+country = "IT"
 # Venezia Santa Lucia (x:oebb:it:22099:110:51:1, 45.4424108, 12.31972937): "no
 # polygon match" -- the 50m Natural Earth coastline is simplified across the
 # Venice lagoon and the closest IT ring vertex is ~5km away, missing the
 # barrier-island/reclaimed-land station site entirely. Real station, in Italy
 # (verified coords match Venezia S. Lucia on OSM); feed country was AT
 # (leaked in via the OEBB cross-border feed) with nothing to override it to IT.
-"x:oebb:it:22099:110:51:1" = "IT"
+
+[[override]]
+name = "Hendaye"
+lat = 43.353132
+lon = -1.781724
+country = "FR"
 # Hendaye: French town right on the ES/FR border (the Bidasoa river is the
 # boundary); the polygon match flipped the station FR -> ES due to 50m
 # boundary imprecision. Station coords (43.353132, -1.781724) match Hendaye
 # station's real position (43.3532, -1.7817, OSM) -- in France.
 # Verified 2026-07-10.
-"x:sncf:StopArea:OCE87677005" = "FR"
+
+[[override]]
+name = "Viana do Castelo"
+lat = 41.69517
+lon = -8.83134
+country = "PT"
 # Viana do Castelo: Portuguese town on the border; the polygon match missed it
 # so it inherited the feed country (ES).
+# Feed coords (41.69517, -8.83134) are from data/raw/renfe.zip stops.txt.
 # Verified 2026-07-10.
-"x:renfe:94033" = "PT"
