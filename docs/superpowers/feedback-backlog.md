@@ -227,8 +227,7 @@ the goal), two kept, plus reworks:
   but the CITY "all stations" option doesn't match other-language exonyms — e.g.
   German **"Warschau"** finds the Warsaw stations but not "Warszawa (all stations)".
   Add multilingual exonyms (DE/FR/IT/ES/... → native) to the city-option matcher.
-  Also RELABEL "Paris — all stations" (em dash) → **"Paris (All stations)"** (user
-  preference).
+  (The "Paris (All stations)" relabel shipped 2026-07-13 with item T Unit 3.)
 - **Corridor bundling — KEPT (e81c086) but insufficient:** Paris–Lyon region still
   a clusterfuck; only marginally better. Rework: many lines converge Paris→Lyon;
   needs better bundling (more corridors, or a real edge-bundling/geometry approach,
@@ -252,26 +251,14 @@ Domain routing: **nonstopeurope.eu** forwards to onestopeurope with **nonstop
 (1 train)** preselected; **onestopeurope.eu** defaults to **onestop**. (User owns
 nonstopeurope.eu.) Frontend URL/param handling.
 
-## T. Search & planner UX polish (added 2026-07-13)
+## T. Search & planner UX polish — SHIPPED 2026-07-13
 
-- **Station-search exonyms** — typing an English/common name should find the
-  native station (e.g. "Rome" → Roma, general beyond the city-search exonyms
-  added this session). Extend the server EXONYMS map (server/app.py) and/or the
-  client search so common exonyms resolve for ALL stations, not only the 15
-  grouped cities.
-- **Clearing the origin promotes the destination** — when the user deletes/clears
-  the From (start) station while a To (destination) is set, move the destination
-  into the From box (so you can keep exploring from there) instead of resetting
-  both. Small planner-state change in App/JourneyPlanner.
-- **Mark stepovers/transfers on the map** — when a journey has a change of train,
-  the interchange (stepover) station should be visually marked on the map (e.g. a
-  distinct node/ring on the route line at each transfer), so multi-leg journeys
-  are legible. Route lines already carry per-leg geometry (journeyLegPaths); the
-  transfer point is the boundary between consecutive legs.
-- **Map city-selection** (from 2026-07-13 testing) — cities are only selectable
-  via the search today; clicking a city's member station on the map does not offer
-  the whole-city union. Consider: clicking a member offers "select all of <City>".
-  Design-first; interacts with the C3 union flow.
+All four sub-features shipped (commit dc208e6; spec + plan 2026-07-13-planner-
+search-ux-polish). Follow-on/adjacent work lives in items Y (search ranking by
+importance — "rome" still surfaces Romanshorn over Roma), X (reach-line splay),
+and U (multilingual city exonyms). Curated exonyms are extensible in
+`server/app.py::EXONYMS`; the transfer-ring style and the city-choice popup are
+flagged tuning points awaiting the user's visual calibration.
 
 ## X. Reach lines splay one polyline per stop instead of one shared trunk (added 2026-07-13)
 
