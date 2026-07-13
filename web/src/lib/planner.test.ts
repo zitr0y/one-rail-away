@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { destOptions, norm, swapEnabled, toEnabled, toFieldOptions } from "./planner";
+import { buildCityLookup } from "./cities";
+import { cityOptions, destOptions, norm, swapEnabled, toEnabled, toFieldOptions } from "./planner";
 import type { Journey, ReachFile, Station } from "./types";
 
 const st = (id: string, name: string): Station => ({
@@ -61,11 +62,73 @@ describe("destOptions", () => {
     expect(destOptions(reach, stationsById, "a", Infinity)).toEqual([]);
     expect(destOptions(null, stationsById, "arnhem", Infinity)).toEqual([]);
   });
+
+  it("labels an unreachable same-city sibling as local transit", () => {
+    const stations = new Map([
+      ["paris-nord", st("paris-nord", "Paris Gare du Nord")],
+      ["paris-lyon", st("paris-lyon", "Paris Gare de Lyon")],
+    ]);
+    const localReach: ReachFile = {
+      origin: "paris-nord", computed_at: "", sample_date: "", destinations: [],
+    };
+    const cities = buildCityLookup({ Paris: ["paris-nord", "paris-lyon"] });
+
+    expect(destOptions(localReach, stations, "lyon", Infinity, cities)).toMatchObject([
+      { station: { id: "paris-lyon" }, group: "local transit", disabled: false },
+    ]);
+  });
+
+  it("keeps a genuinely unreachable station labeled Not reachable", () => {
+    const stations = new Map([
+      ["paris-nord", st("paris-nord", "Paris Gare du Nord")],
+      ["berlin", st("berlin", "Berlin Hbf")],
+    ]);
+    const localReach: ReachFile = {
+      origin: "paris-nord", computed_at: "", sample_date: "", destinations: [],
+    };
+    const cities = buildCityLookup({ Paris: ["paris-nord", "paris-lyon"] });
+
+    expect(destOptions(localReach, stations, "berlin", Infinity, cities)).toMatchObject([
+      { station: { id: "berlin" }, group: "Not reachable", disabled: true },
+    ]);
+  });
+
+  it("keeps an origin outside a city labeled Not reachable", () => {
+    const stations = new Map([
+      ["utrecht", st("utrecht", "Utrecht Centraal")],
+      ["paris-lyon", st("paris-lyon", "Paris Gare de Lyon")],
+    ]);
+    const localReach: ReachFile = {
+      origin: "utrecht", computed_at: "", sample_date: "", destinations: [],
+    };
+    const cities = buildCityLookup({ Paris: ["paris-nord", "paris-lyon"] });
+
+    expect(destOptions(localReach, stations, "lyon", Infinity, cities)).toMatchObject([
+      { station: { id: "paris-lyon" }, group: "Not reachable", disabled: true },
+    ]);
+  });
 });
 
 describe("toFieldOptions", () => {
   it("wraps stations as ungrouped selectable options", () => {
-    expect(toFieldOptions([st("x", "X")])).toEqual([{ station: st("x", "X"), group: "", disabled: false }]);
+    expect(toFieldOptions([st("x", "X")])).toEqual([
+      { kind: "station", station: st("x", "X"), group: "", disabled: false },
+    ]);
+  });
+});
+
+describe("cityOptions", () => {
+  it("surfaces matching city origins as all-stations options", () => {
+    expect(cityOptions({ Paris: ["paris-nord", "paris-lyon"] }, "par")).toEqual([
+      {
+        kind: "city",
+        city: "Paris",
+        memberIds: ["paris-nord", "paris-lyon"],
+        label: "Paris — all stations",
+        group: "",
+        disabled: false,
+      },
+    ]);
   });
 });
 

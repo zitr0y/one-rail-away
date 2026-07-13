@@ -1,4 +1,4 @@
-import type { CoverageCollection, Meta, ReachFile, Station } from "./types";
+import type { CityGroups, CoverageCollection, Meta, ReachFile, Station } from "./types";
 
 async function get<T>(path: string): Promise<T> {
   const res = await fetch(path);
@@ -13,4 +13,5 @@ export const api = {
     get<{ stations: Station[] }>(`/api/stations/search?q=${encodeURIComponent(q)}`),
   getMeta: () => get<Meta>("/api/meta"),
   getCoverage: () => get<CoverageCollection>("/api/coverage"),
+  getCities: () => get<CityGroups>("/api/cities"),
 };

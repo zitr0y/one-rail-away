@@ -36,4 +36,25 @@ describe("corridorPath", () => {
       paris,
     ]);
   });
+
+  it("snaps endpoints within 20km but rejects one just outside the boundary", () => {
+    const nearParis = { lon: paris.lon, lat: paris.lat + 0.1 }; // ~11km north
+    const outsideParis = { lon: paris.lon, lat: paris.lat + 0.19 }; // ~21km north
+
+    expect(corridorPath(nearParis, marseille, CORRIDORS)).toEqual([
+      nearParis,
+      lyon,
+      valence,
+      avignon,
+      marseille,
+    ]);
+    expect(corridorPath(outsideParis, marseille, CORRIDORS)).toBeNull();
+  });
+
+  it("returns null when both endpoints snap to the same waypoint", () => {
+    const northOfParis = { lon: paris.lon, lat: paris.lat + 0.05 };
+    const southOfParis = { lon: paris.lon, lat: paris.lat - 0.05 };
+
+    expect(corridorPath(northOfParis, southOfParis, CORRIDORS)).toBeNull();
+  });
 });

@@ -4,13 +4,18 @@ import TripDetails from "./TripDetails";
 import StopToggle from "./StopToggle";
 import TimeSlider from "./TimeSlider";
 import { api } from "../lib/api";
-import { destOptions, swapEnabled, toEnabled, toFieldOptions } from "../lib/planner";
+import type { CityLookup } from "../lib/cities";
+import { cityOptions, destOptions, swapEnabled, toEnabled, toFieldOptions } from "../lib/planner";
 import type { MaxTrains } from "../lib/geojson";
-import type { Destination, ReachFile, Station } from "../lib/types";
+import type { CityGroups, Destination, ReachFile, Station } from "../lib/types";
+import type { FieldOption } from "../lib/planner";
 
 interface Props {
   reach: ReachFile | null;
   stationsById: Map<string, Station>;
+  cities: CityLookup;
+  cityGroups: CityGroups;
+  originLabel?: string;
   origin?: Station;
   destination?: Station;
   dest?: Destination;
@@ -20,7 +25,7 @@ interface Props {
   armed: "from" | "to"; // which field the next map click fills — always highlighted
   error: string | null;
   hint: string | null;
-  onSetOrigin: (s: Station) => void;
+  onSetOrigin: (option: FieldOption) => void;
   onClearOrigin: () => void;
   onSetDest: (s: Station) => void;
   onClearDest: () => void;
@@ -31,15 +36,21 @@ interface Props {
 }
 
 export default function JourneyPlanner(props: Props) {
-  const { reach, stationsById, origin, destination, dest, maxTrains, maxMinutes, filterMinutes, armed } = props;
+  const {
+    reach, stationsById, cities, cityGroups, origin, originLabel, destination, dest,
+    maxTrains, maxMinutes, filterMinutes, armed,
+  } = props;
 
   const searchFrom = useCallback(
-    (q: string) => api.searchStations(q).then((r) => toFieldOptions(r.stations)),
-    [],
+    (q: string) => api.searchStations(q).then((r) => [
+      ...cityOptions(cityGroups, q),
+      ...toFieldOptions(r.stations),
+    ]),
+    [cityGroups],
   );
   const searchTo = useCallback(
-    (q: string) => destOptions(reach, stationsById, q, filterMinutes),
-    [reach, stationsById, filterMinutes],
+    (q: string) => destOptions(reach, stationsById, q, filterMinutes, cities),
+    [reach, stationsById, filterMinutes, cities],
   );
 
   return (
@@ -49,7 +60,7 @@ export default function JourneyPlanner(props: Props) {
         <StationField
           placeholder="Start from…"
           armed={armed === "from"}
-          value={origin?.name ?? ""}
+          value={originLabel ?? origin?.name ?? ""}
           search={searchFrom}
           onPick={props.onSetOrigin}
           onClear={props.onClearOrigin}
@@ -64,7 +75,9 @@ export default function JourneyPlanner(props: Props) {
           armed={armed === "to"}
           value={destination?.name ?? ""}
           search={searchTo}
-          onPick={props.onSetDest}
+          onPick={(option) => {
+            if (option.kind === "station") props.onSetDest(option.station);
+          }}
           onClear={props.onClearDest}
           onFocusField={() => props.onArm("to")}
         />

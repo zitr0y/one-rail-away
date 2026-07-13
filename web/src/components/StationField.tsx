@@ -1,7 +1,6 @@
 import { Fragment, useEffect, useRef, useState } from "react";
 import { keyNav } from "../lib/keynav";
 import type { FieldOption } from "../lib/planner";
-import type { Station } from "../lib/types";
 
 interface Props {
   placeholder: string;
@@ -9,7 +8,7 @@ interface Props {
   armed?: boolean; // this is the armed field — the next map click fills it
   value: string; // selected station name, or "" when none
   search: (q: string) => FieldOption[] | Promise<FieldOption[]>;
-  onPick: (s: Station) => void;
+  onPick: (option: FieldOption) => void;
   onClear: () => void;
   onFocusField: () => void;
 }
@@ -63,8 +62,8 @@ export default function StationField(
     requestAnimationFrame(() => inputRef.current?.focus());
   }
 
-  function pick(s: Station) {
-    onPick(s);
+  function pick(option: FieldOption) {
+    onPick(option);
     setEditing(false);
     setQ("");
     setResults([]);
@@ -76,7 +75,7 @@ export default function StationField(
     if (r.type === "pass") return;
     e.preventDefault();
     if (r.type === "move") setActive(r.index);
-    else if (r.type === "select") pick(selectable[r.index].station);
+    else if (r.type === "select") pick(selectable[r.index]);
     else {
       setResults([]);
       setActive(-1);
@@ -118,9 +117,10 @@ export default function StationField(
               ? <li key={`h-${o.group}`} className="group-header" aria-hidden="true">{o.group}</li>
               : null;
             prevGroup = o.group || prevGroup;
+            const key = o.kind === "city" ? `city-${o.city}` : o.station.id;
             if (o.disabled) {
               return (
-                <Fragment key={o.station.id}>
+                <Fragment key={key}>
                   {header}
                   <li className="opt-row disabled">
                     {o.station.name} <span className="country">{o.station.country}</span>
@@ -131,16 +131,18 @@ export default function StationField(
             selIndex += 1;
             const i = selIndex;
             return (
-              <Fragment key={o.station.id}>
+              <Fragment key={key}>
                 {header}
                 <li className={`opt-row${i === active ? " active" : ""}`}>
                   {/* onMouseDown preventDefault keeps the input from blurring before click */}
                   <button
                     onMouseDown={(e) => e.preventDefault()}
-                    onClick={() => pick(o.station)}
+                    onClick={() => pick(o)}
                     onMouseEnter={() => setActive(i)}
                   >
-                    {o.station.name} <span className="country">{o.station.country}</span>
+                    {o.kind === "city"
+                      ? o.label
+                      : <>{o.station.name} <span className="country">{o.station.country}</span></>}
                   </button>
                 </li>
               </Fragment>

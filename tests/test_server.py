@@ -1,3 +1,4 @@
+import json
 from datetime import date
 
 import pytest
@@ -70,3 +71,15 @@ def test_coverage_gzip_compression(client):
 def test_coverage_404_when_absent(tmp_path):
     empty = TestClient(create_app(tmp_path))
     assert empty.get("/api/coverage").status_code == 404
+
+
+def test_cities_endpoint_and_404_when_absent(tmp_path):
+    cities = {"Paris": ["paris-nord", "paris-lyon"]}
+    (tmp_path / "cities.json").write_text(json.dumps(cities))
+    client = TestClient(create_app(tmp_path))
+    assert client.get("/api/cities").json() == cities
+
+    empty_dir = tmp_path / "empty"
+    empty_dir.mkdir()
+    empty = TestClient(create_app(empty_dir))
+    assert empty.get("/api/cities").status_code == 404

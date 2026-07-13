@@ -32,7 +32,13 @@ if (typeof globalThis.document === "undefined") {
   } as unknown as Document;
 }
 
-import { dotRadiusExpression, reachDotRadiusExpression, starSizeExpression, drawStarIcon } from "./dots";
+import {
+  dotRadiusExpression,
+  reachDotRadiusExpression,
+  starSizeExpression,
+  stationDotOpacityByZoom,
+  drawStarIcon,
+} from "./dots";
 
 describe("dotRadiusExpression", () => {
   it("returns a MapLibre expression array", () => {
@@ -66,6 +72,18 @@ describe("dotRadiusExpression", () => {
     const stops = expr.slice(3);
     expect(stops[1]).toBe(0.55);
     expect(stops[stops.length - 1]).toBe(1.05);
+  });
+});
+
+describe("stationDotOpacityByZoom", () => {
+  it("reveals lower-destination stations at progressively closer zoom levels", () => {
+    expect(stationDotOpacityByZoom()).toEqual([
+      "interpolate", ["linear"], ["zoom"],
+      4, ["step", ["get", "n_dest"], 0, 150, 0.7],
+      5.5, ["step", ["get", "n_dest"], 0, 50, 0.7],
+      7, ["step", ["get", "n_dest"], 0, 10, 0.7],
+      9, 0.7,
+    ]);
   });
 });
 

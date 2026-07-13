@@ -1,6 +1,7 @@
 // Pure helpers for the unified journey planner. No React, unit-testable.
 // Spec: docs/superpowers/specs/2026-07-12-unified-planner-panel-design.md.
-import type { ReachFile, Station } from "./types";
+import type { CityGroups, ReachFile, Station } from "./types";
+import type { CityLookup } from "./cities";
 
 /** Fold diacritics + lowercase so "zur" matches "Zürich", "munch" → "München".
  *  Mirrors the server's NFKD-to-base-letter folding (ö→o, not ö→oe). */
@@ -9,19 +10,52 @@ export function norm(s: string): string {
   return s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
 }
 
-export type DestGroup = "Nonstop" | "One stop" | "Two stops" | "Not reachable";
+export type DestGroup = "local transit" | "Nonstop" | "One stop" | "Two stops" | "Not reachable";
 const GROUP_BY_TRAINS: DestGroup[] = ["Nonstop", "One stop", "Two stops"];
-export const GROUP_ORDER: DestGroup[] = ["Nonstop", "One stop", "Two stops", "Not reachable"];
+export const GROUP_ORDER: DestGroup[] = [
+  "local transit", "Nonstop", "One stop", "Two stops", "Not reachable",
+];
 
-export interface FieldOption {
+export interface StationFieldOption {
+  kind: "station";
   station: Station;
   group: DestGroup | ""; // "" = ungrouped (the From field)
   disabled: boolean; // grayed + non-selectable (beyond current filter / unreachable)
 }
 
+export interface CityFieldOption {
+  kind: "city";
+  city: string;
+  memberIds: string[];
+  label: string;
+  group: "";
+  disabled: false;
+}
+
+export type FieldOption = StationFieldOption | CityFieldOption;
+
 /** Wrap plain search results (the From field) as ungrouped, selectable options. */
 export function toFieldOptions(stations: Station[]): FieldOption[] {
-  return stations.map((station) => ({ station, group: "" as const, disabled: false }));
+  return stations.map((station) => ({
+    kind: "station", station, group: "" as const, disabled: false,
+  }));
+}
+
+/** Matching curated city origins for the From field. */
+export function cityOptions(cities: CityGroups, query: string): FieldOption[] {
+  const q = norm(query.trim());
+  if (q.length < 2) return [];
+  return Object.entries(cities)
+    .filter(([city]) => norm(city).includes(q))
+    .sort(([a], [b]) => a.localeCompare(b))
+    .map(([city, memberIds]) => ({
+      kind: "city" as const,
+      city,
+      memberIds,
+      label: `${city} — all stations`,
+      group: "" as const,
+      disabled: false,
+    }));
 }
 
 /**
@@ -37,14 +71,15 @@ export function destOptions(
   stationsById: Map<string, Station>,
   query: string,
   filterMinutes: number,
+  cities?: CityLookup,
   limit = 12,
-): FieldOption[] {
+): StationFieldOption[] {
   if (!reach) return [];
   const q = norm(query.trim());
   if (q.length < 2) return [];
 
   const destById = new Map(reach.destinations.map((d) => [d.id, d]));
-  const out: FieldOption[] = [];
+  const out: StationFieldOption[] = [];
 
   for (const s of stationsById.values()) {
     if (s.id === reach.origin) continue; // don't offer the origin as a destination
@@ -54,8 +89,14 @@ export function destOptions(
     let group: DestGroup;
     let disabled: boolean;
     if (!d) {
-      group = "Not reachable";
-      disabled = true;
+      const originCity = cities?.cityForStation(reach.origin);
+      if (originCity && originCity === cities?.cityForStation(s.id)) {
+        group = "local transit";
+        disabled = false;
+      } else {
+        group = "Not reachable";
+        disabled = true;
+      }
     } else {
       const within = d.journeys.filter((j) => j.duration_min <= filterMinutes);
       if (within.length === 0) {
@@ -67,7 +108,7 @@ export function destOptions(
         disabled = false; // selectable; picking it bumps the stop filter in App
       }
     }
-    out.push({ station: s, group, disabled });
+    out.push({ kind: "station", station: s, group, disabled });
   }
 
   out.sort((a, b) => {

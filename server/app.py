@@ -146,6 +146,13 @@ def create_app(data_dir: Path) -> FastAPI:
             raise HTTPException(status_code=404, detail="No coverage data")
         return json.loads(path.read_text(encoding="utf-8"))
 
+    @app.get("/api/cities")
+    def cities() -> dict:
+        path = data_dir / "cities.json"
+        if not path.exists():
+            raise HTTPException(status_code=404, detail="No cities data")
+        return json.loads(path.read_text(encoding="utf-8"))
+
     return app
 
 

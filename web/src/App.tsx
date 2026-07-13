@@ -5,14 +5,18 @@ import MapView from "./components/Map";
 import JourneyPlanner from "./components/JourneyPlanner";
 import { TIME_MAX } from "./components/TimeSlider";
 import { api } from "./lib/api";
+import { buildCityLookup } from "./lib/cities";
+import { unionReach } from "./lib/cityunion";
 import type { MaxTrains } from "./lib/geojson";
 import type { FeaturePick } from "./lib/pickfeature";
-import type { ReachFile, Station } from "./lib/types";
+import type { CityGroups, ReachFile, Station } from "./lib/types";
 import { useTheme } from "./lib/theme";
 import headerLogo from "./assets/header-logo.svg?raw";
 
 export default function App() {
   const [stations, setStations] = useState<Station[]>([]);
+  const [cityGroups, setCityGroups] = useState<CityGroups>({});
+  const [cityOrigin, setCityOrigin] = useState<{ city: string; memberIds: string[] } | null>(null);
   const [reach, setReach] = useState<ReachFile | null>(null);
   const [maxTrains, setMaxTrains] = useState<MaxTrains>(1);
   const [maxMinutes, setMaxMinutes] = useState(TIME_MAX); // start at "max" (no cap)
@@ -23,19 +27,40 @@ export default function App() {
   const [theme, toggleTheme] = useTheme();
 
   const stationsById = useMemo(() => new Map(stations.map((s) => [s.id, s])), [stations]);
+  const cities = useMemo(() => buildCityLookup(cityGroups), [cityGroups]);
 
   useEffect(() => {
     api.getStations().then((r) => setStations(r.stations)).catch((e) => setError(String(e)));
+    api.getCities().then(setCityGroups).catch(() => setCityGroups({}));
   }, []);
 
   const selectOrigin = useCallback((id: string) => {
+    setCityOrigin(null);
     setSelectedDest(null);
     setHint(null);
     setActiveField("to"); // auto-advance arming to To
     api.getReach(id).then(setReach).catch((e) => setError(String(e)));
   }, []);
 
+  const selectCityOrigin = useCallback(async (city: string, memberIds: string[]) => {
+    setCityOrigin({ city, memberIds });
+    setSelectedDest(null);
+    setHint(null);
+    setActiveField("to");
+    try {
+      const results = await Promise.allSettled(memberIds.map((id) => api.getReach(id)));
+      const reaches = results.flatMap((result) =>
+        result.status === "fulfilled" ? [result.value] : [],
+      );
+      if (reaches.length === 0) throw new Error(`No reach data for ${city}`);
+      setReach(unionReach(reaches));
+    } catch (e) {
+      setError(String(e));
+    }
+  }, []);
+
   const clearSelection = useCallback(() => {
+    setCityOrigin(null);
     setReach(null);
     setSelectedDest(null);
     setHint(null);
@@ -61,6 +86,7 @@ export default function App() {
   const swapSelection = useCallback(() => {
     if (!selectedDest || !reach) return;
     const destId = selectedDest;
+    setCityOrigin(null);
     const prevOrigin = reach.origin;
     setSelectedDest(null);
     api.getReach(destId).then((newReach) => {
@@ -122,10 +148,14 @@ export default function App() {
       </header>
       <JourneyPlanner
         reach={reach} stationsById={stationsById}
+        cities={cities} cityGroups={cityGroups} originLabel={cityOrigin?.city}
         origin={origin} destination={destination} dest={dest}
         maxTrains={maxTrains} maxMinutes={maxMinutes} filterMinutes={filterMinutes}
         armed={armed} error={error} hint={hint}
-        onSetOrigin={(s) => selectOrigin(s.id)}
+        onSetOrigin={(option) => {
+          if (option.kind === "city") selectCityOrigin(option.city, option.memberIds);
+          else selectOrigin(option.station.id);
+        }}
         onClearOrigin={clearSelection}
         onSetDest={(s) => selectDest(s.id)}
         onClearDest={() => { setSelectedDest(null); setHint(null); }}

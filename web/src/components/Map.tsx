@@ -10,7 +10,13 @@ import { baseLineOpacity, selectedLineFilter, stationOpacityExpression } from ".
 import { pickFeature, type FeaturePick } from "../lib/pickfeature";
 import { veilTooltip, showVeilTooltip } from "../lib/coverage";
 import { api } from "../lib/api";
-import { dotRadiusExpression, reachDotRadiusExpression, starSizeExpression, drawStarIcon } from "../lib/dots";
+import {
+  dotRadiusExpression,
+  reachDotRadiusExpression,
+  starSizeExpression,
+  stationDotOpacityByZoom,
+  drawStarIcon,
+} from "../lib/dots";
 import { styleUrl } from "../lib/mapstyle";
 import type { ReachFile, Station } from "../lib/types";
 
@@ -55,7 +61,7 @@ export default function MapView(props: Props) {
         id: "all-stations", type: "circle", source: "all-stations",
         paint: {
           "circle-radius": dotRadiusExpression() as never,
-          "circle-color": tokens.stationDot, "circle-opacity": 0.7,
+          "circle-color": tokens.stationDot, "circle-opacity": stationDotOpacityByZoom() as never,
         },
       });
       m.addLayer(
@@ -163,7 +169,7 @@ export default function MapView(props: Props) {
       features: nonCapitals.map((s) => ({
         type: "Feature" as const,
         geometry: { type: "Point" as const, coordinates: [s.lon, s.lat] },
-        properties: { id: s.id, name: s.name, n_routes: s.n_routes },
+        properties: { id: s.id, name: s.name, n_dest: s.n_dest, n_routes: s.n_routes },
       })),
     });
 
@@ -217,11 +223,17 @@ export default function MapView(props: Props) {
     // With a reach shown, unreachable stations fade into the background: the
     // colored reach-dots already mark everything reachable (user calibration
     // 2026-07-11 round 2). Journey selection then dims via the match expression.
-    m.setPaintProperty(
-      "all-stations",
-      "circle-opacity",
-      stationOpacityExpression(selectedStationIds, selectedStationIds || !reach ? 0.7 : 0.25) as never,
-    );
+    const normalOpacity = selectedStationIds || !reach ? 0.7 : 0.25;
+    const selectedOpacity = stationOpacityExpression(selectedStationIds, normalOpacity);
+    const alwaysVisibleIds = Array.from(new Set([
+      ...(selectedStationIds ?? []),
+      ...(reach ? [reach.origin] : []),
+    ]));
+    const allStationOpacity = alwaysVisibleIds.length
+      ? ["match", ["get", "id"], alwaysVisibleIds, 0.7,
+        ["*", stationDotOpacityByZoom(), selectedOpacity]]
+      : stationDotOpacityByZoom();
+    m.setPaintProperty("all-stations", "circle-opacity", allStationOpacity as never);
     m.setPaintProperty(
       "reach-dots",
       "circle-opacity",

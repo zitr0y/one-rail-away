@@ -22,6 +22,22 @@ export function dotRadiusExpression(): ExpressionSpecification {
 }
 
 /**
+ * Fade low-connection stations out at continental zoom levels, then reveal
+ * them as the map closes in. TUNING POINTS: 150 / 50 / 10 destinations and
+ * zoom 4 / 5.5 / 7 / 9 were chosen to leave only major hubs at a glance.
+ * Capital stars and reach dots have separate layers and remain visible.
+ */
+export function stationDotOpacityByZoom(): ExpressionSpecification {
+  return [
+    "interpolate", ["linear"], ["zoom"],
+    4, ["step", ["get", "n_dest"], 0, 150, 0.7],
+    5.5, ["step", ["get", "n_dest"], 0, 50, 0.7],
+    7, ["step", ["get", "n_dest"], 0, 10, 0.7],
+    9, 0.7,
+  ] as ExpressionSpecification;
+}
+
+/**
  * Reach-destination dots share the hub scale but keep a higher floor so small
  * destinations stay clickable (they sit above the all-stations layer).
  */
