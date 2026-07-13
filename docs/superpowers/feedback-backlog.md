@@ -239,8 +239,7 @@ the goal), two kept, plus reworks:
   but the CITY "all stations" option doesn't match other-language exonyms — e.g.
   German **"Warschau"** finds the Warsaw stations but not "Warszawa (all stations)".
   Add multilingual exonyms (DE/FR/IT/ES/... → native) to the city-option matcher.
-  Also RELABEL "Paris — all stations" (em dash) → **"Paris (All stations)"** (user
-  preference).
+  (The "Paris (All stations)" relabel shipped 2026-07-13 with item T Unit 3.)
 - **Corridor bundling — KEPT (e81c086) but insufficient:** Paris–Lyon region still
   a clusterfuck; only marginally better. Rework: many lines converge Paris→Lyon;
   needs better bundling (more corridors, or a real edge-bundling/geometry approach,
@@ -264,26 +263,14 @@ Domain routing: **nonstopeurope.eu** forwards to onestopeurope with **nonstop
 (1 train)** preselected; **onestopeurope.eu** defaults to **onestop**. (User owns
 nonstopeurope.eu.) Frontend URL/param handling.
 
-## T. Search & planner UX polish (added 2026-07-13)
+## T. Search & planner UX polish — SHIPPED 2026-07-13
 
-- **Station-search exonyms** — typing an English/common name should find the
-  native station (e.g. "Rome" → Roma, general beyond the city-search exonyms
-  added this session). Extend the server EXONYMS map (server/app.py) and/or the
-  client search so common exonyms resolve for ALL stations, not only the 15
-  grouped cities.
-- **Clearing the origin promotes the destination** — when the user deletes/clears
-  the From (start) station while a To (destination) is set, move the destination
-  into the From box (so you can keep exploring from there) instead of resetting
-  both. Small planner-state change in App/JourneyPlanner.
-- **Mark stepovers/transfers on the map** — when a journey has a change of train,
-  the interchange (stepover) station should be visually marked on the map (e.g. a
-  distinct node/ring on the route line at each transfer), so multi-leg journeys
-  are legible. Route lines already carry per-leg geometry (journeyLegPaths); the
-  transfer point is the boundary between consecutive legs.
-- **Map city-selection** (from 2026-07-13 testing) — cities are only selectable
-  via the search today; clicking a city's member station on the map does not offer
-  the whole-city union. Consider: clicking a member offers "select all of <City>".
-  Design-first; interacts with the C3 union flow.
+All four sub-features shipped (commit dc208e6; spec + plan 2026-07-13-planner-
+search-ux-polish). Follow-on/adjacent work lives in items Y (search ranking by
+importance — "rome" still surfaces Romanshorn over Roma), X (reach-line splay),
+and U (multilingual city exonyms). Curated exonyms are extensible in
+`server/app.py::EXONYMS`; the transfer-ring style and the city-choice popup are
+flagged tuning points awaiting the user's visual calibration.
 
 ## X. Reach lines splay one polyline per stop instead of one shared trunk — SHIPPED 2026-07-13
 
@@ -332,27 +319,23 @@ NOTE this differs from item I's Paris case: there the trains are genuinely direc
 real rail geometry / edge bundling. Same "too many lines" symptom, two mechanisms.
 Do both under one brainstorm; a tree-merge here plus corridor geometry there.
 
-## Y. Search ranking by station importance/size (added 2026-07-13)
+## Y. Search ranking by station importance — SHIPPED 2026-07-13
 
-Search ties are currently broken by NAME LENGTH (shorter wins) after the
-prefix/substring tier — see `server/app.py::search` sort key `(tier, len(name))`.
-So a minor station with a shorter name outranks the major hub the user meant:
-typing "barce" surfaces **Barcelos** over **Barcelona**; typing "rome" surfaces
-**Romanshorn** over **Roma** (noted while adding the Unit-3 exonyms). Rework the
-ranking to weight station importance/size, e.g. `n_dest` (reach breadth, already
-on stations and used for dot sizing) and/or capital/`n_routes`, so big hubs win
-same-prefix ties. Keep prefix-over-substring as the primary tier; add an
-importance term before (or instead of) name length. Small server change; add
-ranking tests. Improves the exonym results from item T Unit 3 too.
+Sort key is now `(prefix-before-substring, capitals-first, -n_dest, name-length)`
+(commit b42de81). Fixed "barce"→Barcelona and "rome"→Roma; capitals-on-top is a
+general win. NOTE: `n_dest` alone would have ranked Romanshorn ABOVE Roma (it has
+more reach), so `is_capital` carries the Roma case — which fully resolves anyway
+once Italian data lands.
 
 ## Z. "Ostbahnhof" is München Ostbahnhof; add a München city option (added 2026-07-13)
 
 Two parts:
 - **Naming/merge:** the station shown as bare **"Ostbahnhof"** (`x:db_fern:226810`,
   48.128, 11.605) is **München Ostbahnhof** with its city prefix stripped — it sits
-  right beside `München Hbf` (`x:db_fern:127002`, 48.14, 11.56). It should carry the
-  "München" prefix so it's findable/groupable (fix via `pipeline/station_names.toml`
-  override), and if a second feed carries the same station under another name/id they
+  right beside `München Hbf` (`x:db_fern:127002`, 48.14, 11.56). **Rename it to
+  "München Ostbahnhof"** (user-confirmed 2026-07-13) so it's findable/groupable (fix
+  via `pipeline/station_names.toml` override keyed on `x:db_fern:226810`), and if a
+  second feed carries the same station under another name/id they
   should merge (validator blind spot: different names, <500 m — see the note below and
   item Q observability). Watch out: `Graz Ostbahnhof` (AT) is a DIFFERENT station.
 - **City option:** add **München** to `pipeline/cities.toml` grouping München Hbf +
@@ -390,6 +373,17 @@ shown. Lives right beside the zoom-declutter rework (item U) — both touch
 `stationDotOpacityByZoom`; consider fixing together.
 
 ## Smaller deferred notes
+
+- **Pre-existing flaky compute test on Python 3.14 (found 2026-07-13):**
+  `tests/test_compute.py::test_compute_all_sets_is_capital` FAILS on `main`
+  (independent of any recent change) with `capitals.toml: no station matches
+  LA='Alpha Hbf'`. Cause: the test does `os.chdir(tmp_path)` then runs
+  `compute_all`, but Python 3.14 no longer defaults `multiprocessing` to `fork`,
+  so worker processes don't inherit the changed cwd and read the wrong (or no)
+  `capitals.toml`. codex also saw compute tests fail under a sandboxed
+  forkserver. Fix by passing an explicit path into the capitals loader (don't
+  rely on cwd) or setting the mp start method in the test. Not caused by search
+  or the item-T work.
 
 - **Outdated logo/brand assets cleanup (added 2026-07-12):** several brand files
   linger unused after the logo went inline in `web/src/App.tsx`. `web/public/

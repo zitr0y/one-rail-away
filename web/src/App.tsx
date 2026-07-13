@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { emptyClickAction, swapDest } from "./lib/selection";
+import { clearOriginAction, emptyClickAction, swapDest } from "./lib/selection";
 import { armedTarget, routeMapClick, type ActiveField } from "./lib/mapclick";
 import MapView from "./components/Map";
 import JourneyPlanner from "./components/JourneyPlanner";
@@ -66,6 +66,21 @@ export default function App() {
     setHint(null);
     setActiveField(null);
   }, []);
+
+  const onClearOrigin = useCallback(() => {
+    const action = clearOriginAction(selectedDest);
+    if ("clearAll" in action) {
+      clearSelection();
+      return;
+    }
+
+    const promoteId = action.promote;
+    setCityOrigin(null);
+    setSelectedDest(null);
+    setHint(null);
+    setActiveField("to");
+    api.getReach(promoteId).then(setReach).catch((e) => setError(String(e)));
+  }, [selectedDest, clearSelection]);
 
   const selectDest = useCallback((id: string) => {
     // Picking a destination that needs more trains than the current filter bumps
@@ -134,7 +149,9 @@ export default function App() {
     <div className="app">
       <MapView stations={stations} reach={reach} maxTrains={maxTrains} maxMinutes={filterMinutes}
                selectedDest={selectedDest} theme={theme}
-               onStationClick={onStationClick} onEmptyClick={onEmptyClick} />
+               cityGroups={cityGroups} armed={armed}
+               onStationClick={onStationClick} onSelectCityOrigin={selectCityOrigin}
+               onEmptyClick={onEmptyClick} />
       <header className="header-bar">
         {/* Brand lockup — edit web/src/assets/header-logo.svg in Inkscape; it is
             inlined here (Vite ?raw) so the wordmark uses the page's Barlow font. */}
@@ -156,7 +173,7 @@ export default function App() {
           if (option.kind === "city") selectCityOrigin(option.city, option.memberIds);
           else selectOrigin(option.station.id);
         }}
-        onClearOrigin={clearSelection}
+        onClearOrigin={onClearOrigin}
         onSetDest={(s) => selectDest(s.id)}
         onClearDest={() => { setSelectedDest(null); setHint(null); }}
         onSwap={swapSelection}

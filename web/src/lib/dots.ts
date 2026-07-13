@@ -116,3 +116,55 @@ export function drawStarIcon(size: number): { width: number; height: number; dat
   }
   return { width: size, height: size, data };
 }
+
+/**
+ * Rasterize a red octagonal stop sign for map.addImage(), same {width,height,
+ * data} shape as drawStarIcon. Marks a transfer on the selected route — the
+ * "stop" where you change trains. Fixed stop-red (#C1121F) with a white rim,
+ * legible on both the warm-paper and deep-night basemaps, so it is
+ * theme-independent (never retinted, like the capital star). Pure math, no
+ * DOM/canvas, so it behaves identically in the browser and in tests.
+ */
+export function drawStopSignIcon(size: number): { width: number; height: number; data: Uint8ClampedArray } {
+  const cx = size / 2;
+  const cy = size / 2;
+
+  function octagonVertices(r: number): [number, number][] {
+    const pts: [number, number][] = [];
+    for (let i = 0; i < 8; i++) {
+      const angle = (Math.PI / 4) * i + Math.PI / 8; // flat-topped octagon
+      pts.push([cx + r * Math.cos(angle), cy + r * Math.sin(angle)]);
+    }
+    return pts;
+  }
+
+  function inside(x: number, y: number, poly: [number, number][]): boolean {
+    let odd = false;
+    for (let i = 0, j = poly.length - 1; i < poly.length; j = i++) {
+      const [xi, yi] = poly[i];
+      const [xj, yj] = poly[j];
+      if (yi > y !== yj > y && x < ((xj - xi) * (y - yi)) / (yj - yi) + xi) odd = !odd;
+    }
+    return odd;
+  }
+
+  const rim = octagonVertices(size / 2 - 0.5);
+  const fill = octagonVertices((size / 2 - 0.5) * 0.82);
+  const stripeHalf = size * 0.12; // white horizontal bar through the middle
+  const data = new Uint8ClampedArray(size * size * 4);
+  for (let y = 0; y < size; y++) {
+    for (let x = 0; x < size; x++) {
+      const px = x + 0.5;
+      const py = y + 0.5;
+      if (!inside(px, py, rim)) continue;
+      const o = (y * size + x) * 4;
+      // Red field inside a white rim, crossed by a white centre stripe.
+      const red = inside(px, py, fill) && Math.abs(py - cy) > stripeHalf;
+      data[o] = red ? 193 : 255; // #C1121F red / white
+      data[o + 1] = red ? 18 : 255;
+      data[o + 2] = red ? 31 : 255;
+      data[o + 3] = 255;
+    }
+  }
+  return { width: size, height: size, data };
+}

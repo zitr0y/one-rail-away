@@ -124,7 +124,7 @@ describe("cityOptions", () => {
         kind: "city",
         city: "Paris",
         memberIds: ["paris-nord", "paris-lyon"],
-        label: "Paris — all stations",
+        label: "Paris (All stations)",
         group: "",
         disabled: false,
       },

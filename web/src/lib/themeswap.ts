@@ -3,11 +3,12 @@ import { themeTokens, type ThemeTokens } from "./colors";
 import type { Theme } from "./theme";
 
 export const CUSTOM_SOURCE_IDS =
-  ["all-stations", "reach-lines", "reach-segments", "reach-dots", "coverage", "capitals"] as const;
+  ["all-stations", "reach-lines", "reach-segments", "transfer-points",
+    "reach-dots", "coverage", "capitals"] as const;
 
 const CUSTOM_LAYER_IDS = new Set([
-  "coverage-veil", "all-stations", "reach-lines",
-  "reach-lines-selected", "reach-dots", "capital-stars",
+  "coverage-veil", "reach-lines", "reach-lines-selected",
+  "all-stations", "reach-dots", "capital-stars", "transfer-points",
 ]);
 
 function withPaint(layer: LayerSpecification, extra: Record<string, unknown>): LayerSpecification {

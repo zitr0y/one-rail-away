@@ -17,6 +17,16 @@ export function timeBucket(min: number): 0 | 1 | 2 | 3 {
   return 3;
 }
 
+/** Coordinates of the stations where a selected journey changes legs. */
+export function transferPoints(
+  journey: Journey, stationsById: Map<string, Station>,
+): [number, number][] {
+  return journey.legs.slice(0, -1).flatMap((leg) => {
+    const station = stationsById.get(leg.to);
+    return station ? [[station.lon, station.lat] as [number, number]] : [];
+  });
+}
+
 export function chaikin(coords: [number, number][], iterations: number): [number, number][] {
   let pts = coords;
   for (let it = 0; it < iterations; it++) {

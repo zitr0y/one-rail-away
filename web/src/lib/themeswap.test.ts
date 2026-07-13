@@ -10,6 +10,7 @@ function fakePrevious(): StyleSpecification {
       "all-stations": { type: "geojson", data: { type: "FeatureCollection", features: [] } },
       "reach-lines": { type: "geojson", data: { type: "FeatureCollection", features: [] } },
       "reach-segments": { type: "geojson", data: { type: "FeatureCollection", features: [] } },
+      "transfer-points": { type: "geojson", data: { type: "FeatureCollection", features: [] } },
       "reach-dots": { type: "geojson", data: { type: "FeatureCollection", features: [] } },
       coverage: { type: "geojson", data: { type: "FeatureCollection", features: [] } },
       capitals: { type: "geojson", data: { type: "FeatureCollection", features: [] } },
@@ -18,13 +19,15 @@ function fakePrevious(): StyleSpecification {
       { id: "background", type: "background", paint: { "background-color": "#F2EFE9" } },
       { id: "coverage-veil", type: "fill", source: "coverage",
         paint: { "fill-color": "#9c9589", "fill-opacity": 0.5 } },
-      { id: "all-stations", type: "circle", source: "all-stations",
-        paint: { "circle-color": "#003399", "circle-opacity": 0.25 } },
       { id: "reach-lines", type: "line", source: "reach-segments", paint: { "line-opacity": 0.05 } },
       { id: "reach-lines-selected", type: "line", source: "reach-lines", paint: {} },
+      { id: "all-stations", type: "circle", source: "all-stations",
+        paint: { "circle-color": "#003399", "circle-opacity": 0.25 } },
       { id: "reach-dots", type: "circle", source: "reach-dots",
         paint: { "circle-stroke-color": "#F2EFE9" } },
       { id: "capital-stars", type: "symbol", source: "capitals", layout: {} },
+      { id: "transfer-points", type: "symbol", source: "transfer-points",
+        layout: { "icon-image": "stop-sign-icon", "icon-allow-overlap": true } },
     ],
   } as StyleSpecification;
 }
@@ -43,21 +46,22 @@ describe("mergeCustomStyle", () => {
     expect(mergeCustomStyle(undefined, next, "dark")).toBe(next);
   });
 
-  it("carries the six custom sources; basemap sources come from next", () => {
+  it("carries the seven custom sources; basemap sources come from next", () => {
     const merged = mergeCustomStyle(fakePrevious(), fakeNext(), "dark");
     for (const id of [
-      "all-stations", "reach-lines", "reach-segments", "reach-dots", "coverage", "capitals",
+      "all-stations", "reach-lines", "reach-segments", "transfer-points",
+      "reach-dots", "coverage", "capitals",
     ]) {
       expect(merged.sources[id]).toBeDefined();
     }
     expect((merged.sources.openmaptiles as { url: string }).url).toBe("https://new-basemap");
   });
 
-  it("appends the six custom layers after the basemap layers, in order", () => {
+  it("appends the seven custom layers after the basemap layers, in order", () => {
     const merged = mergeCustomStyle(fakePrevious(), fakeNext(), "dark");
     expect(merged.layers.map((l) => l.id)).toEqual([
-      "background", "coverage-veil", "all-stations", "reach-lines",
-      "reach-lines-selected", "reach-dots", "capital-stars",
+      "background", "coverage-veil", "reach-lines", "reach-lines-selected",
+      "all-stations", "reach-dots", "capital-stars", "transfer-points",
     ]);
   });
 
@@ -72,6 +76,10 @@ describe("mergeCustomStyle", () => {
     expect(veil.paint["fill-opacity"]).toBe(0.5);
     const dots = byId.get("reach-dots") as { paint: Record<string, unknown> };
     expect(dots.paint["circle-stroke-color"]).toBe("#101C36");
+    // transfer-points is a fixed-colour stop-sign symbol; carried across the
+    // swap without retinting, its icon layout preserved.
+    const transfers = byId.get("transfer-points") as { layout: Record<string, unknown> };
+    expect(transfers.layout["icon-image"]).toBe("stop-sign-icon");
   });
 
   it("light theme re-tints back to light values", () => {

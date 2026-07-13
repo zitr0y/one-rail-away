@@ -54,7 +54,7 @@ export function cityOptions(cities: CityGroups, query: string): FieldOption[] {
       kind: "city" as const,
       city,
       memberIds,
-      label: `${city} — all stations`,
+      label: `${city} (All stations)`,
       group: "" as const,
       disabled: false,
     }));

@@ -1,5 +1,6 @@
 import json
 
+import pytest
 from fastapi.testclient import TestClient
 
 from server.app import create_app, normalize
@@ -159,6 +160,46 @@ def _exonym_client(tmp_path):
             "country": "AT",
             "has_reach": True,
         },
+        {
+            "id": "r1",
+            "name": "Roma Termini",
+            "lat": 41.9,
+            "lon": 12.5,
+            "country": "IT",
+            "has_reach": True,
+        },
+        {
+            "id": "c1",
+            "name": "København H",
+            "lat": 55.7,
+            "lon": 12.6,
+            "country": "DK",
+            "has_reach": True,
+        },
+        {
+            "id": "h1",
+            "name": "Den Haag Centraal",
+            "lat": 52.1,
+            "lon": 4.3,
+            "country": "NL",
+            "has_reach": True,
+        },
+        {
+            "id": "bu1",
+            "name": "București Nord",
+            "lat": 44.4,
+            "lon": 26.1,
+            "country": "RO",
+            "has_reach": True,
+        },
+        {
+            "id": "l1",
+            "name": "Łódź Fabryczna",
+            "lat": 51.8,
+            "lon": 19.5,
+            "country": "PL",
+            "has_reach": True,
+        },
     ]
     (tmp_path / "stations.json").write_text(json.dumps({"stations": stations}))
     for s in stations:
@@ -197,7 +238,66 @@ def test_search_exonym_prefix_while_typing(tmp_path):
     assert _ids(c.get("/api/stations/search", params={"q": "vien"})) == ["w1"]
 
 
+@pytest.mark.parametrize(("query", "station_id"), [
+    ("rome", "r1"),
+    ("copenhagen", "c1"),
+    ("the hague", "h1"),
+    ("bucharest", "bu1"),
+    ("lodz", "l1"),
+])
+def test_search_new_english_exonyms(tmp_path, query, station_id):
+    c = _exonym_client(tmp_path)
+    assert _ids(c.get("/api/stations/search", params={"q": query})) == [station_id]
+
+
+def test_search_copenhagen_exonym_prefix_while_typing(tmp_path):
+    c = _exonym_client(tmp_path)
+    assert _ids(c.get("/api/stations/search", params={"q": "copen"})) == ["c1"]
+
+
+def _rank_client(tmp_path):
+    # Same-prefix collisions where a minor station has the shorter name, so the
+    # old name-length tie-break surfaced the wrong one. Barcelona (huge reach) is
+    # separated from Barcelos by n_dest; Roma (a capital) from Romanshorn (a
+    # bigger junction by reach) by is_capital, since n_dest would rank Romanshorn
+    # ABOVE Roma.
+    stations = [
+        {"id": "bcn", "name": "Barcelona-Sants", "lat": 41.4, "lon": 2.1,
+         "country": "ES", "has_reach": True, "is_capital": False, "n_dest": 420},
+        {"id": "bcs", "name": "Barcelos", "lat": 41.5, "lon": -8.6,
+         "country": "PT", "has_reach": True, "is_capital": False, "n_dest": 5},
+        {"id": "roma", "name": "Roma Termini", "lat": 41.9, "lon": 12.5,
+         "country": "IT", "has_reach": True, "is_capital": True, "n_dest": 23},
+        {"id": "rmh", "name": "Romanshorn", "lat": 47.6, "lon": 9.4,
+         "country": "CH", "has_reach": True, "is_capital": False, "n_dest": 339},
+    ]
+    (tmp_path / "stations.json").write_text(json.dumps({"stations": stations}))
+    for s in stations:
+        (tmp_path / f"reach_{s['id']}.json").write_text("{}")
+    return TestClient(create_app(tmp_path))
+
+
+def test_search_ranks_bigger_hub_over_minor_same_prefix(tmp_path):
+    c = _rank_client(tmp_path)
+    # "barce" prefixes both; n_dest (420 vs 5) must beat name length (Barcelos is
+    # shorter and used to win).
+    assert _ids(c.get("/api/stations/search", params={"q": "barce"})) == ["bcn", "bcs"]
+
+
+def test_search_ranks_capital_over_bigger_noncapital_same_prefix(tmp_path):
+    c = _rank_client(tmp_path)
+    # "rome" -> "roma" prefixes both Roma Termini and Romanshorn. Romanshorn has
+    # more reach, so only is_capital keeps Roma on top.
+    assert _ids(c.get("/api/stations/search", params={"q": "rome"}))[0] == "roma"
+    assert _ids(c.get("/api/stations/search", params={"q": "roma"}))[0] == "roma"
+
+
 def test_search_native_names_unaffected(tmp_path):
     c = _exonym_client(tmp_path)
     assert _ids(c.get("/api/stations/search", params={"q": "praha"})) == ["p1"]
     assert _ids(c.get("/api/stations/search", params={"q": "wien"})) == ["w1"]
+    assert _ids(c.get("/api/stations/search", params={"q": "roma"})) == ["r1"]
+    assert _ids(c.get("/api/stations/search", params={"q": "københavn"})) == ["c1"]
+    assert _ids(c.get("/api/stations/search", params={"q": "den haag"})) == ["h1"]
+    assert _ids(c.get("/api/stations/search", params={"q": "bucurești"})) == ["bu1"]
+    assert _ids(c.get("/api/stations/search", params={"q": "łódź"})) == ["l1"]
