@@ -57,6 +57,14 @@ only the relevant route feeds' usable probes, even when other feeds cover a
 different horizon. Independent feed loading now runs in separate processes;
 the parent merges results in a fixed order for deterministic output.
 
+**Performance follow-up 2026-07-14:** profiling showed `ose compute` already
+keeps its reachability work in worker processes; its parent-only tail is about
+2 seconds. The reported long single-core interval after feed sampling was in
+`ose build`: station merge and duplicate validation repeatedly scanned all
+stations. Both now index stations by normalized name while preserving insertion
+and report order. On the 2,442-station production graph, validation fell from
+43.467 seconds to 0.018 seconds (~2,400×), and merge profiles at 0.080 seconds.
+
 Currently one representative Tuesday. Problems: weekend-only trains invisible;
 construction weeks (see EC 95 finding above) silently delete corridors; no way to say
 "3× a week". User's sketch: also show per-week frequency ("3×/day" vs "3×/week"),
@@ -396,6 +404,12 @@ assert the generated expression has no nested `zoom` and retains both fade and
 pin branches.
 
 ## Smaller deferred notes
+
+- **Click-disambiguation popup ranking (added 2026-07-14):** when clicking
+  bunched-up station dots, put the "City (all stations)" entry first and in
+  **bold** when one exists, then sort the remaining stations by connection count,
+  matching the ranking already used by search. This refines item C, whose current
+  interaction the user otherwise likes.
 
 - **Pre-existing flaky compute test on Python 3.14 (found 2026-07-13):**
   `tests/test_compute.py::test_compute_all_sets_is_capital` FAILS on `main`

@@ -97,10 +97,21 @@ def validate(stations: list[Station], trips: list[Trip]) -> list[str]:
             if b.arr < a.dep:
                 problems.append(f"trip {t.trip_id} ({t.train}) has non-increasing times")
                 break
-    for i, a in enumerate(stations):
-        for b in stations[i + 1 :]:
-            if _norm(a.name) == _norm(b.name) and _dist_m(a.lat, a.lon, b.lat, b.lon) < 500:
+    # Preserve the original station-order report order, but only compare pairs
+    # that can possibly match.  The former all-pairs loop dominated the serial
+    # tail after feed sampling on the production graph.
+    stations_by_norm: dict[str, list[Station]] = {}
+    for station in stations:
+        stations_by_norm.setdefault(_norm(station.name), []).append(station)
+    seen_by_norm: dict[str, int] = {}
+    for a in stations:
+        norm = _norm(a.name)
+        peers = stations_by_norm[norm]
+        start = seen_by_norm.get(norm, 0) + 1
+        for b in peers[start:]:
+            if _dist_m(a.lat, a.lon, b.lat, b.lon) < 500:
                 problems.append(f"unmerged duplicate: {a.id} / {b.id} ({a.name})")
+        seen_by_norm[norm] = start
     return problems
 
 

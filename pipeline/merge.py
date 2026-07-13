@@ -134,18 +134,25 @@ def _uic_match(uic_re: re.Pattern[str] | None, stop_id: str) -> str | None:
     return m.group(1) if m.lastindex else m.group()
 
 
-def _proximity_match(registry: dict[str, Station], name: str, lat: float, lon: float) -> str | None:
+def _proximity_match(
+    registry: dict[str, Station],
+    by_norm: dict[str, list[str]],
+    name: str,
+    lat: float,
+    lon: float,
+) -> str | None:
     """First registered station <PROXIMITY_M away whose name normalizes equal.
 
-    "First" is registry insertion order -- the documented feed-priority signal
-    (#5) -- matching the behavior the inline scan had before extraction.
+    ``by_norm`` contains station ids in registry insertion order, retaining the
+    documented feed-priority tie-break while avoiding a full registry scan for
+    every stop.
     """
     norm = _norm(name)
     return next(
         (
             sid
-            for sid, s in registry.items()
-            if _norm(s.name) == norm and _dist_m(s.lat, s.lon, lat, lon) < PROXIMITY_M
+            for sid in by_norm.get(norm, [])
+            if _dist_m(registry[sid].lat, registry[sid].lon, lat, lon) < PROXIMITY_M
         ),
         None,
     )
@@ -164,6 +171,9 @@ def merge_stations(
         `mapping` maps every (feed_name, stop_id) to its canonical station id.
     """
     registry: dict[str, Station] = {}
+    # Lists preserve the registry's insertion order, which is the intentional
+    # feed-priority tie-break for equal-name proximity matches.
+    by_norm: dict[str, list[str]] = {}
     mapping: dict[tuple[str, str], str] = {}
     stubs: list[tuple[str, str, str, FeedConfig]] = []  # (feed, stop_id, name, cfg)
     uic_aliases: dict[str, str] = {}  # UIC code -> canonical, from fallback merges (#7)
@@ -185,13 +195,13 @@ def merge_stations(
                     else:
                         # Unknown code: run the same proximity+name check as
                         # rule 3 before minting it as canonical (#7).
-                        near = _proximity_match(registry, stop.name, stop.lat, stop.lon)
+                        near = _proximity_match(registry, by_norm, stop.name, stop.lat, stop.lon)
                         if near is not None:
                             uic_aliases[code] = near
                         canonical = near or code
             if canonical is None:
                 canonical = (
-                    _proximity_match(registry, stop.name, stop.lat, stop.lon)
+                    _proximity_match(registry, by_norm, stop.name, stop.lat, stop.lon)
                     or f"x:{feed}:{stop.stop_id}"
                 )
             if canonical not in registry:
@@ -202,6 +212,7 @@ def merge_stations(
                     lon=stop.lon,
                     country=cfg.country,
                 )
+                by_norm.setdefault(_norm(stop.name), []).append(canonical)
             mapping[(feed, stop.stop_id)] = canonical
 
     # Pass 2: coordinate-less stubs. An explicit alias wins; otherwise resolve by an
