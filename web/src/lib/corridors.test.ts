@@ -6,6 +6,11 @@ const lyon = { lon: 4.859409, lat: 45.760596 };
 const valence = { lon: 4.978652, lat: 44.991907 };
 const avignon = { lon: 4.786136, lat: 43.92194 };
 const marseille = { lon: 5.380407, lat: 43.302666 };
+const parisMontparnasse = { lon: 2.320514, lat: 48.841172 };
+const saintPierreDesCorps = { lon: 0.723539, lat: 47.38614 };
+const poitiers = { lon: 0.333136, lat: 46.582232 };
+const angouleme = { lon: 0.164608, lat: 45.653572 };
+const bordeaux = { lon: -0.556697, lat: 44.825873 };
 
 describe("corridorPath", () => {
   it("routes Paris to Marseille through the LGV corridor waypoints", () => {
@@ -15,6 +20,16 @@ describe("corridorPath", () => {
       valence,
       avignon,
       marseille,
+    ]);
+  });
+
+  it("routes Paris Montparnasse to Bordeaux through the Atlantic LGV waypoints", () => {
+    expect(corridorPath(parisMontparnasse, bordeaux, CORRIDORS)).toEqual([
+      parisMontparnasse,
+      saintPierreDesCorps,
+      poitiers,
+      angouleme,
+      bordeaux,
     ]);
   });
 

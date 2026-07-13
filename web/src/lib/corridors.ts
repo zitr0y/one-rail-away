@@ -16,6 +16,36 @@ export const CORRIDORS: readonly Corridor[] = [
       { name: "Marseille Saint-Charles", lon: 5.380407, lat: 43.302666 },
     ],
   },
+  {
+    name: "Atlantic LGV",
+    waypoints: [
+      { name: "Paris Montparnasse Hall 1 - 2", lon: 2.320514, lat: 48.841172 },
+      { name: "Saint-Pierre-des-Corps", lon: 0.723539, lat: 47.38614 },
+      { name: "Poitiers", lon: 0.333136, lat: 46.582232 },
+      { name: "Angoulême", lon: 0.164608, lat: 45.653572 },
+      { name: "Bordeaux Saint-Jean", lon: -0.556697, lat: 44.825873 },
+    ],
+  },
+  {
+    name: "LGV Est",
+    waypoints: [
+      { name: "Paris Est", lon: 2.35912, lat: 48.876976 },
+      { name: "Champagne-Ardenne TGV", lon: 3.994523, lat: 49.214769 },
+      { name: "Lorraine TGV", lon: 6.169778, lat: 48.947713 },
+      { name: "Strasbourg", lon: 7.734067, lat: 48.58534 },
+    ],
+  },
+  {
+    name: "Riviera trunk",
+    waypoints: [
+      { name: "Marseille Saint-Charles", lon: 5.380407, lat: 43.302666 },
+      { name: "Toulon", lon: 5.929404, lat: 43.128353 },
+      { name: "Les Arcs - Draguignan", lon: 6.482424, lat: 43.455725 },
+      { name: "Cannes", lon: 7.019711, lat: 43.553908 },
+      { name: "Antibes", lon: 7.119913, lat: 43.585971 },
+      { name: "Nice-Ville", lon: 7.261904, lat: 43.704556 },
+    ],
+  },
 ];
 
 function distanceKm(a: CorridorPoint, b: CorridorPoint): number {
