@@ -19,6 +19,7 @@ import {
   starSizeExpression,
   stationDotOpacityByZoom,
   drawStarIcon,
+  drawStopSignIcon,
 } from "../lib/dots";
 import { styleUrl } from "../lib/mapstyle";
 import type { CityGroups, ReachFile, Station } from "../lib/types";
@@ -93,13 +94,14 @@ export default function MapView(props: Props) {
           "line-opacity": 1,
         },
       });
+      m.addImage("stop-sign-icon", drawStopSignIcon(44), { pixelRatio: 2 });
       m.addLayer({
-        id: "transfer-points", type: "circle", source: "transfer-points",
-        paint: {
-          "circle-color": "transparent",
-          "circle-radius": 10,
-          "circle-stroke-width": 2.5,
-          "circle-stroke-color": tokens.transferRing,
+        id: "transfer-points", type: "symbol", source: "transfer-points",
+        layout: {
+          "icon-image": "stop-sign-icon",
+          "icon-size": 0.7, // TUNING POINT: ~15px stop sign, calibrate on the real map
+          "icon-allow-overlap": true,
+          "icon-ignore-placement": true,
         },
       });
       m.addLayer({
@@ -437,6 +439,7 @@ export default function MapView(props: Props) {
     });
     m.once("styledata", () => {
       if (!m.hasImage("star-icon")) m.addImage("star-icon", drawStarIcon(44), { pixelRatio: 2 });
+      if (!m.hasImage("stop-sign-icon")) m.addImage("stop-sign-icon", drawStopSignIcon(44), { pixelRatio: 2 });
     });
   }, [props.theme]);
 

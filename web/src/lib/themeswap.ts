@@ -21,9 +21,6 @@ function retintLayer(layer: LayerSpecification, tokens: ThemeTokens): LayerSpeci
   if (layer.id === "reach-dots") {
     return withPaint(layer, { "circle-stroke-color": tokens.reachDotStroke });
   }
-  if (layer.id === "transfer-points") {
-    return withPaint(layer, { "circle-stroke-color": tokens.transferRing });
-  }
   return layer;
 }
 

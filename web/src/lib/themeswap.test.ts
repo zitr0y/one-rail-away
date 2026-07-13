@@ -20,8 +20,8 @@ function fakePrevious(): StyleSpecification {
         paint: { "fill-color": "#9c9589", "fill-opacity": 0.5 } },
       { id: "reach-lines", type: "line", source: "reach-lines", paint: { "line-opacity": 0.05 } },
       { id: "reach-lines-selected", type: "line", source: "reach-lines", paint: {} },
-      { id: "transfer-points", type: "circle", source: "transfer-points",
-        paint: { "circle-radius": 10, "circle-stroke-width": 2.5, "circle-stroke-color": "#F2EFE9" } },
+      { id: "transfer-points", type: "symbol", source: "transfer-points",
+        layout: { "icon-image": "stop-sign-icon", "icon-allow-overlap": true } },
       { id: "all-stations", type: "circle", source: "all-stations",
         paint: { "circle-color": "#003399", "circle-opacity": 0.25 } },
       { id: "reach-dots", type: "circle", source: "reach-dots",
@@ -72,10 +72,10 @@ describe("mergeCustomStyle", () => {
     expect(veil.paint["fill-opacity"]).toBe(0.5);
     const dots = byId.get("reach-dots") as { paint: Record<string, unknown> };
     expect(dots.paint["circle-stroke-color"]).toBe("#101C36");
-    const transfers = byId.get("transfer-points") as { paint: Record<string, unknown> };
-    expect(transfers.paint["circle-stroke-color"]).toBe("#101C36");
-    expect(transfers.paint["circle-radius"]).toBe(10);
-    expect(transfers.paint["circle-stroke-width"]).toBe(2.5);
+    // transfer-points is a fixed-colour stop-sign symbol; carried across the
+    // swap without retinting, its icon layout preserved.
+    const transfers = byId.get("transfer-points") as { layout: Record<string, unknown> };
+    expect(transfers.layout["icon-image"]).toBe("stop-sign-icon");
   });
 
   it("light theme re-tints back to light values", () => {
@@ -83,8 +83,5 @@ describe("mergeCustomStyle", () => {
     const stations = merged.layers.find((l) => l.id === "all-stations") as
       { paint: Record<string, unknown> };
     expect(stations.paint["circle-color"]).toBe("#003399");
-    const transfers = merged.layers.find((l) => l.id === "transfer-points") as
-      { paint: Record<string, unknown> };
-    expect(transfers.paint["circle-stroke-color"]).toBe("#F2EFE9");
   });
 });

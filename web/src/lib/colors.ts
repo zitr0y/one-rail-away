@@ -23,7 +23,6 @@ export interface ThemeTokens {
   veil: string;
   riderStroke: string;
   riderHollow: string;
-  transferRing: string;
 }
 
 export function themeTokens(theme: "light" | "dark"): ThemeTokens {
@@ -34,7 +33,6 @@ export function themeTokens(theme: "light" | "dark"): ThemeTokens {
         veil: "#6B7590",
         riderStroke: "#F2EFE9",
         riderHollow: "#101C36",
-        transferRing: "#101C36",
       }
     : {
         stationDot: "#003399",
@@ -42,6 +40,5 @@ export function themeTokens(theme: "light" | "dark"): ThemeTokens {
         veil: "#9c9589",
         riderStroke: "#003399",
         riderHollow: "#F2EFE9",
-        transferRing: "#F2EFE9",
       };
 }
