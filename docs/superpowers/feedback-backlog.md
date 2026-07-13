@@ -202,6 +202,27 @@ Relates to K (data sources) and Q (adapting to new data shapes).
   along real track. Research licensing (ODbL) and extract format (Overpass /
   planet rail layer). Relates to I and to the coverage gaps in A/K.
 
+## T. Search & planner UX polish (added 2026-07-13)
+
+- **Station-search exonyms** — typing an English/common name should find the
+  native station (e.g. "Rome" → Roma, general beyond the city-search exonyms
+  added this session). Extend the server EXONYMS map (server/app.py) and/or the
+  client search so common exonyms resolve for ALL stations, not only the 15
+  grouped cities.
+- **Clearing the origin promotes the destination** — when the user deletes/clears
+  the From (start) station while a To (destination) is set, move the destination
+  into the From box (so you can keep exploring from there) instead of resetting
+  both. Small planner-state change in App/JourneyPlanner.
+- **Mark stepovers/transfers on the map** — when a journey has a change of train,
+  the interchange (stepover) station should be visually marked on the map (e.g. a
+  distinct node/ring on the route line at each transfer), so multi-leg journeys
+  are legible. Route lines already carry per-leg geometry (journeyLegPaths); the
+  transfer point is the boundary between consecutive legs.
+- **Map city-selection** (from 2026-07-13 testing) — cities are only selectable
+  via the search today; clicking a city's member station on the map does not offer
+  the whole-city union. Consider: clicking a member offers "select all of <City>".
+  Design-first; interacts with the C3 union flow.
+
 ## Smaller deferred notes
 
 - **Outdated logo/brand assets cleanup (added 2026-07-12):** several brand files
