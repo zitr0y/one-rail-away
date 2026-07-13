@@ -291,18 +291,13 @@ NOTE this differs from item I's Paris case: there the trains are genuinely direc
 real rail geometry / edge bundling. Same "too many lines" symptom, two mechanisms.
 Do both under one brainstorm; a tree-merge here plus corridor geometry there.
 
-## Y. Search ranking by station importance/size (added 2026-07-13)
+## Y. Search ranking by station importance — SHIPPED 2026-07-13
 
-Search ties are currently broken by NAME LENGTH (shorter wins) after the
-prefix/substring tier — see `server/app.py::search` sort key `(tier, len(name))`.
-So a minor station with a shorter name outranks the major hub the user meant:
-typing "barce" surfaces **Barcelos** over **Barcelona**; typing "rome" surfaces
-**Romanshorn** over **Roma** (noted while adding the Unit-3 exonyms). Rework the
-ranking to weight station importance/size, e.g. `n_dest` (reach breadth, already
-on stations and used for dot sizing) and/or capital/`n_routes`, so big hubs win
-same-prefix ties. Keep prefix-over-substring as the primary tier; add an
-importance term before (or instead of) name length. Small server change; add
-ranking tests. Improves the exonym results from item T Unit 3 too.
+Sort key is now `(prefix-before-substring, capitals-first, -n_dest, name-length)`
+(commit b42de81). Fixed "barce"→Barcelona and "rome"→Roma; capitals-on-top is a
+general win. NOTE: `n_dest` alone would have ranked Romanshorn ABOVE Roma (it has
+more reach), so `is_capital` carries the Roma case — which fully resolves anyway
+once Italian data lands.
 
 ## Z. "Ostbahnhof" is München Ostbahnhof; add a München city option (added 2026-07-13)
 
