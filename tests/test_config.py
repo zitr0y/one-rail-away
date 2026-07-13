@@ -46,6 +46,21 @@ def test_sbb_route_allow_matches_spaceless_swiss_labels():
         assert not allowed(name), name
 
 
+def test_rejseplanen_allowlist_keeps_only_dsb_national_rail_products():
+    """Live 2026-07-13 archive: these are DSB's route_type=2 long-distance and
+    useful regional products; all other listed examples are non-rail or local rail."""
+    feeds = load_feeds(Path("feeds.toml"))
+    patterns = feeds["rejseplanen"].route_allow
+
+    def allowed(name):
+        return any(re.search(p, name) for p in patterns)
+
+    for name in ("IC", "ICL", "ECE", "RJ", "RE"):
+        assert allowed(name), name
+    for name in ("EC", "ICE", "IR", "RX", "A", "M1", "L", "Færge", "100", "Særbus"):
+        assert not allowed(name), name
+
+
 def test_stop_id_brand_accepts_pattern_to_brand_table():
     cfg = FeedConfig(
         url="u",

@@ -97,12 +97,20 @@ route_allow = ["^Intercity", "^ICE?\\b", "^Eurostar", "^Nightjet"]
 url = "https://www.rejseplanen.info/labs/GTFS.zip"
 country = "DK"
 license = "Rejseplanen open data (rejseplanen.info/labs) - VERIFY reuse terms before monetizing"
-# All-Denmark, all-modes feed (36k stops: bus/metro/ferry/S-tog/rail). Filter to DSB
-# long-distance rail by route_short_name: IC (InterCity), ICL (InterCityLyn), EC/ECE
-# (EuroCity), RJ. Excludes RE (regional), S-tog (route_type 109), buses (700/715/3),
-# ferries (4), metro (1), and all non-DSB rail operators (Lokaltog, Skanetrafiken).
-# Verified 2026-07-13: these four patterns match ONLY DSB route_type=2 routes.
-route_allow = ["^IC$", "^ICL$", "^ECE?$", "^RJ$"]
+# Official Rejseplanen all-modes GTFS, directly downloadable without registration.
+# Live archive inspected 2026-07-13: 59,233,966 bytes (Last-Modified 2026-07-13),
+# 26 agencies, 1,614 route rows and 36,366 stops. Its 1,595 calendar services and
+# 16,441 exceptions cover 2026-07-13..2026-10-07 (including sample 2026-07-14).
+# All stops have location_type=0 and no parent_station (12-digit zero-padded stop
+# ids); names retain Danish diacritics. It also carries DE (30), SE (49), AT (7),
+# and GL (50) stops, so this entry follows db_fern/oebb and cannot own those names.
+# DSB route_type=2 products (route rows): IC/ICL/ECE/RJ/RE = 1/1/1/1/2. Keep those
+# national intercity, EuroCity and regional services; exclude all other rail
+# operators plus bus (3/700/715), S-tog (109), metro/light rail (0/1), and ferry
+# (4). On 2026-07-14 this yields 882 trips: RE 485, IC 260, ICL 127, ECE 10,
+# RJ 0. The public Labs page did not expose explicit reuse terms when checked;
+# retain Rejseplanen attribution and verify commercial reuse before monetizing.
+route_allow = ["^IC$", "^ICL$", "^ECE$", "^RJ$", "^RE$"]
 # No uic_regex: stop ids are 12-digit zero-padded (Kobenhavn H = 000008600626);
 # leading zeros defeat (\d{7}) extraction. Proximity+name merge (like ns/renfe/pkp)
 # collapses the 8 Jylland stops that already leak from db_fern (EC toward Hamburg).
