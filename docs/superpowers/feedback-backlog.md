@@ -317,6 +317,33 @@ same-prefix ties. Keep prefix-over-substring as the primary tier; add an
 importance term before (or instead of) name length. Small server change; add
 ranking tests. Improves the exonym results from item T Unit 3 too.
 
+## Z. "Ostbahnhof" is München Ostbahnhof; add a München city option (added 2026-07-13)
+
+Two parts:
+- **Naming/merge:** the station shown as bare **"Ostbahnhof"** (`x:db_fern:226810`,
+  48.128, 11.605) is **München Ostbahnhof** with its city prefix stripped — it sits
+  right beside `München Hbf` (`x:db_fern:127002`, 48.14, 11.56). It should carry the
+  "München" prefix so it's findable/groupable (fix via `pipeline/station_names.toml`
+  override), and if a second feed carries the same station under another name/id they
+  should merge (validator blind spot: different names, <500 m — see the note below and
+  item Q observability). Watch out: `Graz Ostbahnhof` (AT) is a DIFFERENT station.
+- **City option:** add **München** to `pipeline/cities.toml` grouping München Hbf +
+  München Ostbahnhof (and München-Pasing etc. if present) so the C3 city-union works
+  for Munich like it does for Paris. Relates to C3 (`cities.toml` → `cities.json`) and
+  item T Unit 4 (map city-selection popup).
+
+## AA. Dark-mode veil tooltip unreadable — white text on white background (added 2026-07-13)
+
+In dark mode the hover tooltip over the greyed-out (unreachable) countries is
+unreadable: the text turns white (theme text var) but the tooltip **background stays
+white**. The veil popup is a MapLibre `Popup` (`veilPopup`, created in
+`web/src/components/Map.tsx` ~L129–138, copy from `web/src/lib/coverage.ts`
+`veilTooltip`). MapLibre's default popup chrome is white and isn't themed. Fix: add a
+theme-aware background (+ border/arrow) for the veil popup content in `web/src/index.css`
+under the `[data-theme="dark"]` block (target the popup's container class, e.g. a
+dedicated class set via the popup's `className`, or `.maplibregl-popup-content`). Ensure
+the popup tip/arrow colour matches. Small CSS fix.
+
 ## Smaller deferred notes
 
 - **Outdated logo/brand assets cleanup (added 2026-07-12):** several brand files
