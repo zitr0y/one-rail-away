@@ -17,6 +17,7 @@ from datetime import UTC, datetime
 from pathlib import Path
 
 from pipeline.capitals import load_capitals
+from pipeline.cities import load_cities
 from pipeline.coverage import build_coverage, covered_from_feeds
 from pipeline.models import Destination, ReachFile, Station, Trip
 from pipeline.raptor import compute_reachability
@@ -130,6 +131,10 @@ def compute_all(
     for w in cap_warnings:
         print(w)
 
+    city_groups, city_warnings = load_cities(Path("cities.toml"), stations)
+    for w in city_warnings:
+        print(w)
+
     n_routes = route_counts(graph_dir / "trips.json")
     written: set[str] = set()
     for station in stations:
@@ -151,6 +156,8 @@ def compute_all(
     (out_dir / "stations.json").write_text(
         json.dumps({"stations": [s.model_dump() for s in stations]}, ensure_ascii=False)
     )
+
+    (out_dir / "cities.json").write_text(json.dumps(city_groups, ensure_ascii=False))
 
     fetch_meta_path = Path("data/raw/fetch_meta.json")
     feeds_meta = json.loads(fetch_meta_path.read_text()) if fetch_meta_path.exists() else {}

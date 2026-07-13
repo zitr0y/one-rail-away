@@ -1,0 +1,33 @@
+# Multi-station cities: display city name → list of EXACT canonical member
+# station names. Resolved by pipeline/cities.py during `ose compute` (writes
+# data/out/cities.json); a member that matches no station logs a warning and is
+# skipped (never fails the build). A city needs ≥2 resolved members to form a
+# "union".
+#
+# Purpose (backlog C3): let the UI select a city by name and show the UNION of
+# all its stations' reachable destinations, and treat same-city stations as
+# reachable by a short "local transit" hop instead of "Not reachable".
+#
+# Curation notes (2026-07-13): coordinate auto-clustering was rejected (real
+# termini and rural branch-line stops share the same distance band). Members are
+# the long-distance termini a traveller would treat as interchangeable within
+# one city — deliberately excluding false name-prefix twins (Wiener Neustadt is
+# NOT Wien; Frankfurt(Oder) is NOT Frankfurt am Main; Romanshorn is NOT Roma) and
+# minor freight/commuter halts. Leak-only "cities" (Milano, most Italian/Spanish
+# interiors) are omitted until their feeds are ingested. Edit taste freely here.
+[cities]
+"Paris" = ["Paris Gare de Lyon Hall 1 - 2", "Paris Est", "Paris Gare du Nord", "Paris Austerlitz", "Paris Montparnasse Hall 1 - 2", "Paris Bercy Bourg. Pays d'Auv."]
+"Bruxelles" = ["Bruxelles Midi", "Bruxelles-Nord"]
+"Wien" = ["Wien Hbf", "Wien Meidling", "Wien Westbahnhof", "Wien Hütteldorf"]
+"Zürich" = ["Zürich HB", "Zürich Flughafen", "Zürich Oerlikon"]
+"Frankfurt" = ["Frankfurt(Main)Hbf", "Frankfurt(Main)Süd", "Frankfurt(M) Flughafen Fernbf", "Frankfurt(Main)West"]
+"Hamburg" = ["Hamburg Hbf", "Hamburg Dammtor", "Hamburg-Altona(S)", "Hamburg-Harburg(S)"]
+"Amsterdam" = ["Amsterdam Centraal", "Amsterdam Zuid", "Amsterdam Sloterdijk", "Amsterdam Amstel", "Amsterdam Bijlmer ArenA"]
+"Köln" = ["Köln Hbf", "Köln Messe/Deutz", "Köln/Bonn Flughafen"]
+"Rotterdam" = ["Rotterdam Centraal", "Rotterdam Blaak", "Rotterdam Alexander"]
+"Den Haag" = ["Den Haag Laan v NOI", "Den Haag HS", "Den Haag Centraal"]
+"Berlin" = ["Berlin Hbf", "Berlin Südkreuz", "Berlin-Spandau", "Berlin Gesundbrunnen", "Berlin Ostkreuz"]
+"Warszawa" = ["Warszawa Centralna", "Warszawa Zachodnia", "Warszawa Wschodnia"]
+"Praha" = ["Praha hl.n.", "Praha-Libeň", "Praha-Holesovice"]
+"København" = ["København H", "København Syd St."]
+"Madrid" = ["Madrid-Puerta de Atocha-Almudena Grandes", "Madrid-Chamartín-Clara Campoamor"]
