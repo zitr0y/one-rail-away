@@ -10,6 +10,11 @@ export function bestJourney(d: Destination, maxTrains: MaxTrains): Journey | nul
     : null;
 }
 
+/** Old reach files have no evidence metadata, so retain their established solid style. */
+export function frequencyClass(d: Destination): "frequent" | "infrequent" {
+  return d.frequency?.availability === "seasonal_or_limited" ? "infrequent" : "frequent";
+}
+
 export function timeBucket(min: number): 0 | 1 | 2 | 3 {
   if (min < 180) return 0;
   if (min < 360) return 1;
@@ -68,6 +73,7 @@ export function destinationsGeoJSON(
       properties: {
         id: d.id, name: s.name, duration_min: j.duration_min, trains: j.trains,
         bucket: timeBucket(j.duration_min), direct_per_day: d.direct_per_day,
+        frequency_class: frequencyClass(d),
         n_routes: s.n_routes ?? 0,
       },
     });
@@ -137,18 +143,23 @@ export function journeyLegPaths(
 export function segmentsGeoJSON(
   reach: ReachFile, stationsById: Map<string, Station>, maxTrains: MaxTrains, maxMinutes: number,
 ): FC<LineString> {
-  const best = new Map<string, { coords: [number, number][]; duration_min: number; trains: number }>();
-  for (const { j } of shown(reach, maxTrains, maxMinutes)) {
+  const best = new Map<string, {
+    coords: [number, number][]; duration_min: number; trains: number; frequency_class: string;
+  }>();
+  for (const { d, j } of shown(reach, maxTrains, maxMinutes)) {
     for (const leg of j.legs) {
       for (const segment of legSegments(leg, stationsById)) {
         const prev = best.get(segment.key);
         if (!prev) {
           best.set(segment.key, {
             coords: segment.coords, duration_min: j.duration_min, trains: j.trains,
+            frequency_class: frequencyClass(d),
           });
         } else {
           prev.duration_min = Math.min(prev.duration_min, j.duration_min);
           prev.trains = Math.min(prev.trains, j.trains);
+          // A shared trunk stays visually dominant when any frequent route uses it.
+          if (frequencyClass(d) === "frequent") prev.frequency_class = "frequent";
         }
       }
     }
@@ -158,7 +169,10 @@ export function segmentsGeoJSON(
     features.push({
       type: "Feature",
       geometry: { type: "LineString", coordinates: s.coords },
-      properties: { id: key, bucket: timeBucket(s.duration_min), trains: s.trains },
+      properties: {
+        id: key, bucket: timeBucket(s.duration_min), trains: s.trains,
+        frequency_class: s.frequency_class,
+      },
     });
   }
   return { type: "FeatureCollection", features };
@@ -177,7 +191,10 @@ export function linesGeoJSON(
     features.push({
       type: "Feature",
       geometry: { type: "LineString", coordinates: coords },
-      properties: { id: d.id, bucket: timeBucket(j.duration_min), trains: j.trains },
+      properties: {
+        id: d.id, bucket: timeBucket(j.duration_min), trains: j.trains,
+        frequency_class: frequencyClass(d),
+      },
     });
   }
   return { type: "FeatureCollection", features };

@@ -88,6 +88,8 @@ export default function MapView(props: Props) {
           "line-color": bucketColor as never,
           "line-width": ["case", ["==", ["get", "trains"], 1], 2.5, 1.5] as never,
           "line-opacity": baseLineOpacity(false),
+          "line-dasharray": ["case", ["==", ["get", "frequency_class"], "infrequent"],
+            [1.2, 1.8], [1, 0.01]] as never,
         },
       });
       m.addLayer({
@@ -98,6 +100,8 @@ export default function MapView(props: Props) {
           "line-color": bucketColor as never,
           "line-width": 6.5,
           "line-opacity": 1,
+          "line-dasharray": ["case", ["==", ["get", "frequency_class"], "infrequent"],
+            [1.2, 1.8], [1, 0.01]] as never,
         },
       });
       m.addLayer({

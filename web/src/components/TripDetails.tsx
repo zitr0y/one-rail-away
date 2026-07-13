@@ -3,6 +3,21 @@ import { bookingUrl, friendlyDateLabel, localDate, shiftDate } from "../lib/book
 import { bestJourney, type MaxTrains } from "../lib/geojson";
 import type { Destination, Station } from "../lib/types";
 
+export function frequencyLabel(dest: Destination): string {
+  const f = dest.frequency;
+  if (!f) return `${dest.direct_per_day}× per day`;
+  const availability = f.availability === "coverage_limited"
+    ? `limited feed coverage · route found on ${f.available_days}/${f.sample_days} covered dates`
+    : f.availability === "year_round"
+    ? "available on every sampled date"
+    : `seasonal / limited · sampled ${f.active_months.join(", ")} · ${f.available_days}/${f.sample_days} covered dates`;
+  if (!f.direct_trips) return availability;
+  if (f.direct_days === f.sample_days && f.direct_per_active_day != null) {
+    return `${f.direct_per_active_day} direct trains per day · ${availability}`;
+  }
+  return `about ${f.weekly_direct_estimate ?? 0} direct trains per week · ${availability}`;
+}
+
 interface Props {
   origin: Station;
   destination: Station;
@@ -40,8 +55,8 @@ export default function TripDetails(
     <div className="trip-details">
       <h2>{origin.name} → {destination.name}</h2>
       <p className="duration">{h} h {m ? `${m} min` : ""} · {journey.trains === 1
-        ? `nonstop · ${dest.direct_per_day}× per day`
-        : `${journey.trains} trains`}</p>
+        ? `nonstop · ${frequencyLabel(dest)}`
+        : `${journey.trains} trains · ${frequencyLabel(dest)}`}</p>
       <ol className="legs">
         {journey.legs.map((leg) => (
           <li key={`${leg.train}-${leg.to}`}>

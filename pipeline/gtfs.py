@@ -93,6 +93,22 @@ def _active_services(zf: zipfile.ZipFile, day: date) -> set[str]:
     return active
 
 
+def feed_validity_window(zip_path: Path) -> tuple[str, str] | None:
+    """Return the published GTFS calendar horizon, if the feed exposes one.
+
+    A date outside this window is not negative service evidence: the snapshot
+    simply cannot speak to it.  A feed without calendar dates has an unknown
+    horizon, which remains eligible rather than being guessed unavailable.
+    """
+    bounds: list[str] = []
+    with zipfile.ZipFile(zip_path) as zf:
+        for row in _rows(zf, "calendar.txt"):
+            bounds.extend((row["start_date"], row["end_date"]))
+        for row in _rows(zf, "calendar_dates.txt"):
+            bounds.append(row["date"])
+    return (min(bounds), max(bounds)) if bounds else None
+
+
 def _brand_label(
     stop_ids: Iterable[str],
     brand_patterns: list[tuple[re.Pattern[str], str]],

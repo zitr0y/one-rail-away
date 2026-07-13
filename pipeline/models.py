@@ -1,3 +1,5 @@
+from typing import Literal
+
 from pydantic import BaseModel, ConfigDict, Field
 
 
@@ -30,6 +32,9 @@ class Trip(BaseModel):
     trip_id: str
     train: str  # display name, e.g. "ICE 517"
     stops: list[StopTime]
+    # Feed provenance survives through-routing so sampled availability can
+    # distinguish an absent service from a date the upstream feed cannot cover.
+    feeds: list[str] = Field(default_factory=list)
 
 
 class Leg(BaseModel):
@@ -40,6 +45,7 @@ class Leg(BaseModel):
     from_: str = Field(alias="from")
     to: str
     via: list[str]  # station ids strictly between from and to
+    feeds: list[str] = Field(default_factory=list, exclude=True)
 
 
 class Journey(BaseModel):
@@ -52,6 +58,27 @@ class Destination(BaseModel):
     id: str
     direct_per_day: int
     journeys: list[Journey]  # ascending trains; each strictly faster than previous
+    frequency: "Frequency | None" = None
+
+
+class Frequency(BaseModel):
+    """Evidence from the finite set of sampled service dates.
+
+    ``weekly_direct_estimate`` is deliberately rounded and only an estimate;
+    the dates are sparse probes, not a complete calendar read.
+    """
+
+    # ``sample_days`` is the number of probes for which this route had feed
+    # coverage. ``requested_sample_days`` keeps the sampling provenance visible.
+    requested_sample_days: int
+    sample_days: int
+    available_days: int
+    direct_days: int
+    direct_trips: int
+    direct_per_active_day: float | None = None
+    weekly_direct_estimate: int | None = None
+    availability: Literal["year_round", "seasonal_or_limited", "coverage_limited"]
+    active_months: list[str]
 
 
 class ReachFile(BaseModel):

@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import {
-  bestJourney, chaikin, destinationsGeoJSON, journeyLegPaths, linesGeoJSON, segmentsGeoJSON,
+  bestJourney, chaikin, destinationsGeoJSON, frequencyClass, journeyLegPaths, linesGeoJSON, segmentsGeoJSON,
   timeBucket, transferPoints,
 } from "./geojson";
 import type { Journey, ReachFile, Station } from "./types";
@@ -28,6 +28,16 @@ describe("bestJourney / timeBucket", () => {
   });
   it("buckets by duration", () => {
     expect([timeBucket(100), timeBucket(200), timeBucket(400), timeBucket(700)]).toEqual([0, 1, 2, 3]);
+  });
+});
+
+describe("frequency styling", () => {
+  it("marks seasonal evidence infrequent and keeps legacy files frequent", () => {
+    expect(frequencyClass(reach.destinations[0])).toBe("frequent");
+    expect(frequencyClass({ ...reach.destinations[0], frequency: {
+      sample_days: 8, available_days: 2, direct_days: 2, direct_trips: 2,
+      availability: "seasonal_or_limited", active_months: ["Jul"],
+    } })).toBe("infrequent");
   });
 });
 

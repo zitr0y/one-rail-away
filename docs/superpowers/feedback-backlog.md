@@ -28,7 +28,21 @@ live in `docs/superpowers/new-feed-recipe.md`. Each new feed un-greys a country 
 the two-tier veil). Competitor note: Ouigo España publishes GTFS on
 nap.transportes.gob.es; iryo does not.
 
-## B. Multi-day sampling / service frequency (user item 6)
+## B. Multi-day sampling / service frequency (user item 6) — SHIPPED 2026-07-13
+
+The pipeline now samples deterministic Tuesday + Saturday probes in January,
+April, July, and October (8 dates across the anchor year). Each date retains its
+own graph and RAPTOR result; aggregation picks the best route per train-count
+tier, never joins legs from different dates. Reach destinations carry sampled
+availability, direct-trip evidence, active sample months, and only a rounded
+weekly estimate. The map renders limited/seasonal sampled connections dashed;
+the planner says e.g. "about 3× per week" and identifies the sampled months.
+Tuning point: `pipeline/sampling.py` (`SEASON_MONTHS`, `SAMPLE_WEEKDAYS`).
+Probes outside a route feed's published GTFS horizon are excluded from its
+denominator, and a route with fewer than three covered probes is labeled limited
+feed coverage rather than seasonal. Limitation: sparse probes cannot prove an
+exact timetable or a continuous season, so the UI deliberately avoids claiming
+operating dates.
 
 Currently one representative Tuesday. Problems: weekend-only trains invisible;
 construction weeks (see EC 95 finding above) silently delete corridors; no way to say

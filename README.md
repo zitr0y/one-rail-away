@@ -25,8 +25,11 @@ merged stations and 4,100 trips per sample day.
 
 - `pipeline/` downloads national long-distance GTFS feeds, merges stations
   across feeds (UIC codes, proximity + normalized names, aliases), and runs a
-  RAPTOR search (max 3 trains, 10-min minimum transfer) for one representative
-  weekday.
+  RAPTOR search (max 3 trains, 10-min minimum transfer) independently for eight
+  deterministic probes: Tuesday + Saturday in January, April, July, and October.
+  The best sampled route is retained and reach JSON reports cautious availability
+  evidence only for probes covered by every GTFS feed used by that route; "per
+  week" is a rounded direct-service sample estimate, not a timetable promise.
 - `server/` is a thin FastAPI that serves the precomputed JSON in `data/out/`.
 - `web/` is Vite + React + MapLibre GL (OpenFreeMap tiles).
 

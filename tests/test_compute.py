@@ -3,7 +3,9 @@ from datetime import date
 
 from pipeline.build import build
 from pipeline.capitals import load_capitals
-from pipeline.compute import compute_all
+from pipeline.compute import compute_all, route_counts
+from pipeline.models import StopTime, Trip
+from pipeline.sampling import service_year_sample_dates
 from tests.fixtures import make_fixture_feeds
 from tests.test_build import _write_feeds_toml, empty_overrides
 
@@ -180,3 +182,154 @@ def test_load_capitals_missing_file(tmp_path):
     ids, warnings = load_capitals(tmp_path / "nope.toml", [])
     assert ids == set()
     assert warnings == []
+
+
+def test_compute_aggregates_independent_sample_days_and_frequency(tmp_path):
+    """A seasonal trip contributes evidence, but cannot join a different day's trip."""
+    graph = tmp_path / "graph"
+    graph.mkdir()
+    graph.joinpath("stations.json").write_text(
+        json.dumps(
+            {
+                "sample_date": "2026-01-13",
+                "sample_dates": ["2026-01-13", "2026-07-14"],
+                "stations": [
+                    {"id": "A", "name": "Alpha", "lat": 50, "lon": 8, "country": "XX"},
+                    {"id": "B", "name": "Beta", "lat": 51, "lon": 9, "country": "XX"},
+                    {"id": "C", "name": "Gamma", "lat": 52, "lon": 10, "country": "XX"},
+                ],
+            }
+        )
+    )
+    jan = Trip(
+        trip_id="jan",
+        train="IC Jan",
+        stops=[
+            StopTime(station="A", arr=480, dep=480),
+            StopTime(station="B", arr=540, dep=540),
+        ],
+    )
+    jul = Trip(
+        trip_id="jul",
+        train="IC Jul",
+        stops=[
+            StopTime(station="B", arr=560, dep=560),
+            StopTime(station="C", arr=620, dep=620),
+        ],
+    )
+    graph.joinpath("trips.json").write_text(
+        json.dumps(
+            {
+                "trips_by_date": {
+                    "2026-01-13": [jan.model_dump()],
+                    "2026-07-14": [jul.model_dump()],
+                },
+                "trips": [jan.model_dump()],
+            }
+        )
+    )
+    compute_all(graph, tmp_path / "out", workers=1, feeds_path=tmp_path / "no-feeds.toml")
+    reach = json.loads((tmp_path / "out" / "reach_A.json").read_text())
+    assert [d["id"] for d in reach["destinations"]] == ["B"]  # never cross-date A→B→C
+    frequency = reach["destinations"][0]["frequency"]
+    assert frequency == {
+        "requested_sample_days": 2,
+        "sample_days": 2,
+        "available_days": 1,
+        "direct_days": 1,
+        "direct_trips": 1,
+        "direct_per_active_day": 1.0,
+        "weekly_direct_estimate": 4,
+        "availability": "coverage_limited",
+        "active_months": ["Jan"],
+    }
+
+
+def test_compute_ignores_probes_outside_a_route_feeds_validity_window(tmp_path):
+    """A narrow downloaded feed must not make its normal route look seasonal."""
+    graph = tmp_path / "graph"
+    graph.mkdir()
+    dates = ["2026-01-13", "2026-04-14", "2026-07-14", "2026-10-13"]
+    graph.joinpath("stations.json").write_text(
+        json.dumps(
+            {
+                "sample_date": dates[0],
+                "sample_dates": dates,
+                "stations": [
+                    {"id": "A", "name": "Alpha", "lat": 50, "lon": 8, "country": "XX"},
+                    {"id": "B", "name": "Beta", "lat": 51, "lon": 9, "country": "XX"},
+                ],
+            }
+        )
+    )
+    trip = Trip(
+        trip_id="normal",
+        train="IC",
+        feeds=["narrow"],
+        stops=[
+            StopTime(station="A", arr=480, dep=480),
+            StopTime(station="B", arr=540, dep=540),
+        ],
+    )
+    graph.joinpath("trips.json").write_text(
+        json.dumps(
+            {
+                "trips": [trip.model_dump()],
+                "trips_by_date": {
+                    day: [trip.model_dump()] if day == dates[0] else [] for day in dates
+                },
+                "feed_validity_by_date": {
+                    day: {
+                        "narrow": {
+                            "covered": day == dates[0],
+                            "start_date": "20260101",
+                            "end_date": "20260131",
+                        }
+                    }
+                    for day in dates
+                },
+            }
+        )
+    )
+    compute_all(graph, tmp_path / "out", workers=1, feeds_path=tmp_path / "no-feeds.toml")
+    reach = json.loads((tmp_path / "out" / "reach_A.json").read_text())
+    frequency = reach["destinations"][0]["frequency"]
+    assert frequency["requested_sample_days"] == 4
+    assert frequency["sample_days"] == frequency["available_days"] == 1
+    assert frequency["availability"] == "coverage_limited"
+
+
+def test_route_counts_deduplicates_the_same_endpoint_pair_across_sample_dates(tmp_path):
+    trip = Trip(
+        trip_id="jan",
+        train="IC",
+        stops=[
+            StopTime(station="A", arr=480, dep=480),
+            StopTime(station="B", arr=540, dep=540),
+        ],
+    ).model_dump()
+    trips = tmp_path / "trips.json"
+    trips.write_text(
+        json.dumps(
+            {
+                "trips": [trip],
+                "trips_by_date": {"2026-01-13": [trip], "2026-07-14": [trip]},
+            }
+        )
+    )
+    assert route_counts(trips) == {"A": 1, "B": 1}
+
+
+def test_service_year_samples_are_deterministic_and_spread_weekday_weekend():
+    dates = service_year_sample_dates(date(2026, 7, 14))
+    assert [d.isoformat() for d in dates] == [
+        "2026-01-10",
+        "2026-01-13",
+        "2026-04-11",
+        "2026-04-14",
+        "2026-07-11",
+        "2026-07-14",
+        "2026-10-10",
+        "2026-10-13",
+    ]
+    assert {d.weekday() for d in dates} == {1, 5}

@@ -100,6 +100,7 @@ def join_through_services(trips: list[Trip]) -> list[Trip]:
                 trip_id=f"{a.trip_id}+{b.trip_id}",
                 train=a.train,
                 stops=[*a.stops[:-1], boundary, *b.stops[1:]],
+                feeds=list(dict.fromkeys([*a.feeds, *b.feeds])),
             )
             touched.update((i, j))
             absorbed.add(j)

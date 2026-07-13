@@ -1,6 +1,7 @@
 import { renderToStaticMarkup } from "react-dom/server";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import TripDetails from "./TripDetails";
+import { frequencyLabel } from "./TripDetails";
 
 const origin = { id: "A", name: "Amsterdam Centraal", lat: 52.4, lon: 4.9, country: "NL", has_reach: true };
 const destination = { id: "B", name: "Paris Nord", lat: 48.9, lon: 2.4, country: "FR", has_reach: true };
@@ -42,5 +43,14 @@ describe("TripDetails booking date", () => {
                    maxTrains={1} stationsById={stationsById} />,
     );
     expect(markup).not.toContain('type="date"');
+  });
+});
+
+describe("frequencyLabel", () => {
+  it("uses cautious sampled weekly and seasonal wording", () => {
+    expect(frequencyLabel({ ...dest, frequency: {
+      sample_days: 8, available_days: 3, direct_days: 3, direct_trips: 3,
+      weekly_direct_estimate: 3, availability: "seasonal_or_limited", active_months: ["Apr", "Jul"],
+    } })).toBe("about 3 direct trains per week · seasonal / limited · sampled Apr, Jul · 3/8 covered dates");
   });
 });

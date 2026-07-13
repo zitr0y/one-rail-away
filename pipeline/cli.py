@@ -6,6 +6,7 @@ from datetime import date
 from pathlib import Path
 
 from pipeline.gtfs import next_tuesday
+from pipeline.sampling import service_year_sample_dates
 
 RAW, GRAPH, OUT = Path("data/raw"), Path("data/graph"), Path("data/out")
 
@@ -16,7 +17,10 @@ def main() -> None:
     sub = parser.add_subparsers(dest="cmd", required=True)
     sub.add_parser("fetch")
     b = sub.add_parser("build")
-    b.add_argument("--date", type=date.fromisoformat, default=next_tuesday(date.today()))
+    b.add_argument("--date", type=date.fromisoformat, default=next_tuesday(date.today()),
+                   help="anchor year for the deterministic seasonal sample set")
+    b.add_argument("--single-date", action="store_true",
+                   help="build only --date (useful for focused debugging)")
     c = sub.add_parser("compute")
     c.add_argument("--workers", type=int, default=None, help="process count (default: one per CPU)")
     args = parser.parse_args()
@@ -29,7 +33,9 @@ def main() -> None:
     elif args.cmd == "build":
         from pipeline.build import build
 
-        build(RAW, GRAPH, Path("feeds.toml"), Path("station_aliases.toml"), args.date)
+        sample_dates = [args.date] if args.single_date else service_year_sample_dates(args.date)
+        build(RAW, GRAPH, Path("feeds.toml"), Path("station_aliases.toml"), args.date,
+              sample_dates=sample_dates)
     elif args.cmd == "compute":
         from pipeline.compute import compute_all
 

@@ -12,7 +12,7 @@ from pathlib import Path
 
 from pipeline.config import load_feeds
 from pipeline.geo import ASSET, assign_countries, load_countries
-from pipeline.gtfs import load_feed
+from pipeline.gtfs import feed_validity_window, load_feed
 from pipeline.merge import _dist_m, _norm, merge_stations
 from pipeline.models import CountryOverride, Station, Trip
 from pipeline.through import join_through_services
@@ -91,11 +91,15 @@ def build(
     aliases_path: Path | None,
     sample_date: date,
     *,
+    sample_dates: list[date] | None = None,
     station_names_path: Path | None = None,
     station_countries_path: Path | None = None,
 ) -> None:
-    """Assemble the station/trip graph for `sample_date` from every `<name>.zip`
-    present in `raw_dir`, and write it to `graph_dir`.
+    """Assemble station/trip graphs for one or more service dates.
+
+    ``sample_dates=None`` preserves the original one-date API.  Multi-date
+    builds share one canonical station registry and serialize independent
+    timetable graphs by date; routes must never transfer between dates.
 
     Missing zips are skipped with a printed notice (a feed that failed to fetch
     should not abort the whole build). Trips left with fewer than 2 stops after
@@ -116,9 +120,7 @@ def build(
         raw_country_overrides = tomllib.loads(station_countries_path.read_text()).get(
             "override", []
         )
-        country_overrides = [
-            CountryOverride.model_validate(item) for item in raw_country_overrides
-        ]
+        country_overrides = [CountryOverride.model_validate(item) for item in raw_country_overrides]
 
     if station_names_path is None:
         station_names_path = Path(__file__).parent / "station_names.toml"
@@ -126,30 +128,61 @@ def build(
     if station_names_path.exists():
         name_overrides = tomllib.loads(station_names_path.read_text()).get("names", {})
 
-    per_feed = {}
-    feed_trips: dict[str, list[Trip]] = {}
-    for name, cfg in feeds.items():
-        zip_path = raw_dir / f"{name}.zip"
-        if not zip_path.exists():
-            print(f"skipping {name}: no zip in {raw_dir}")
-            continue
-        stops, trips = load_feed(zip_path, cfg, sample_date)
-        per_feed[name] = (stops, cfg)
-        feed_trips[name] = trips
-        print(f"{name}: {len(stops)} stops, {len(trips)} long-distance trips")
+    dates = sample_dates or [sample_date]
+    dates = list(dict.fromkeys(dates))
+    primary_day = sample_date if sample_date in dates else dates[0]
+    per_feed: dict[str, tuple[list, object]] = {}
+    feed_trips_by_date: dict[str, dict[str, list[Trip]]] = {}
+    feed_validity_by_date: dict[str, dict[str, dict[str, object]]] = {}
+    feed_windows = {
+        name: feed_validity_window(raw_dir / f"{name}.zip")
+        for name in feeds
+        if (raw_dir / f"{name}.zip").exists()
+    }
+    for day in dates:
+        feed_trips: dict[str, list[Trip]] = {}
+        validity: dict[str, dict[str, object]] = {}
+        for name, cfg in feeds.items():
+            zip_path = raw_dir / f"{name}.zip"
+            if not zip_path.exists():
+                if day == dates[0]:
+                    print(f"skipping {name}: no zip in {raw_dir}")
+                continue
+            window = feed_windows[name]
+            ymd = day.strftime("%Y%m%d")
+            validity[name] = {
+                "covered": window is None or window[0] <= ymd <= window[1],
+                "start_date": window[0] if window else None,
+                "end_date": window[1] if window else None,
+            }
+            stops, trips = load_feed(zip_path, cfg, day)
+            for trip in trips:
+                trip.feeds = [name]
+            # merge_stations wants each feed's stops once; union all sampled
+            # stops by feed-local id so a seasonal-only stop is retained.
+            if name not in per_feed:
+                per_feed[name] = ([], cfg)
+            known = {s.stop_id for s in per_feed[name][0]}
+            per_feed[name][0].extend(s for s in stops if s.stop_id not in known)
+            feed_trips[name] = trips
+            print(f"{day.isoformat()} {name}: {len(stops)} stops, {len(trips)} long-distance trips")
+        feed_trips_by_date[day.isoformat()] = feed_trips
+        feed_validity_by_date[day.isoformat()] = validity
 
     stations, mapping = merge_stations(per_feed, aliases)
     for line in assign_countries(stations, load_countries(ASSET), country_overrides):
         print(f"country: {line}")
-    all_trips = join_through_services(remap_trips(feed_trips, mapping))
+    trips_by_date = {
+        day: join_through_services(remap_trips(feed_trips, mapping))
+        for day, feed_trips in feed_trips_by_date.items()
+    }
+    all_trips = [trip for trips in trips_by_date.values() for trip in trips]
 
     # Country overrides are coordinate-keyed; unmatched entries already warn in
     # assign_countries. Display-name overrides remain id-keyed and stale ids abort.
     station_ids = {s.id for s in stations}
     stale = [
-        f"station_names.toml: stale key {sid!r}"
-        for sid in name_overrides
-        if sid not in station_ids
+        f"station_names.toml: stale key {sid!r}" for sid in name_overrides if sid not in station_ids
     ]
     if stale:
         for msg in stale:
@@ -173,12 +206,23 @@ def build(
         json.dumps(
             {
                 "sample_date": sample_date.isoformat(),
+                "sample_dates": [day.isoformat() for day in dates],
                 "stations": [s.model_dump() for s in stations],
             },
             ensure_ascii=False,
         )
     )
     (graph_dir / "trips.json").write_text(
-        json.dumps({"trips": [t.model_dump() for t in all_trips]}, ensure_ascii=False)
+        json.dumps(
+            {
+                # Retained for one-date tools and older compute consumers.
+                "trips": [t.model_dump() for t in trips_by_date[primary_day.isoformat()]],
+                "trips_by_date": {
+                    day: [t.model_dump() for t in trips] for day, trips in trips_by_date.items()
+                },
+                "feed_validity_by_date": feed_validity_by_date,
+            },
+            ensure_ascii=False,
+        )
     )
     print(f"graph: {len(stations)} stations, {len(all_trips)} trips -> {graph_dir}")

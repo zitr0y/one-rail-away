@@ -19,7 +19,7 @@ from pathlib import Path
 from pipeline.capitals import load_capitals
 from pipeline.cities import load_cities
 from pipeline.coverage import build_coverage, covered_from_feeds
-from pipeline.models import Destination, ReachFile, Station, Trip
+from pipeline.models import Destination, Frequency, Journey, ReachFile, Station, Trip
 from pipeline.raptor import compute_reachability
 
 
@@ -38,43 +38,166 @@ def _direct_counts(trips: list[Trip], origin: str) -> Counter:
     return counts
 
 
+MONTH_NAMES = ("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
+
+
+def _frequency(
+    requested_dates: list[str],
+    covered_dates: list[str],
+    reaches: dict[str, list[Journey]],
+    directs: dict[str, int],
+) -> Frequency:
+    """Summarize finite sampling evidence without turning it into calendar truth."""
+    active_dates = [day for day in covered_dates if day in reaches]
+    direct_dates = [day for day in covered_dates if directs.get(day, 0)]
+    direct_trips = sum(directs.values())
+    months = list(dict.fromkeys(MONTH_NAMES[int(day[5:7]) - 1] for day in active_dates))
+    direct_per_active_day = round(direct_trips / len(direct_dates), 1) if direct_dates else None
+    # Eight probes cannot prove a timetable.  This is intentionally a rounded
+    # rate for the UI's "about N/week" wording, not an asserted service count.
+    weekly = (
+        round(direct_trips * 7 / len(covered_dates)) if direct_trips and covered_dates else None
+    )
+    # One or two in-horizon probes cannot distinguish a normal route from a
+    # seasonal one.  Say exactly that instead of turning feed expiry into a
+    # misleading seasonal classification.
+    availability = (
+        "coverage_limited"
+        if len(covered_dates) < 3
+        else "year_round"
+        if len(active_dates) == len(covered_dates)
+        else "seasonal_or_limited"
+    )
+    return Frequency(
+        requested_sample_days=len(requested_dates),
+        sample_days=len(covered_dates),
+        available_days=len(active_dates),
+        direct_days=len(direct_dates),
+        direct_trips=direct_trips,
+        direct_per_active_day=direct_per_active_day,
+        weekly_direct_estimate=weekly,
+        availability=availability,
+        active_months=months,
+    )
+
+
+def _aggregate_reach(
+    trips_by_date: dict[str, list[Trip]],
+    station_id: str,
+    feed_validity_by_date: dict[str, dict[str, dict[str, object]]] | None = None,
+) -> list[Destination]:
+    """Keep each date's routes independent, then select the best tier per dest."""
+    sample_dates = list(trips_by_date)
+    evidence: dict[str, dict[str, list[Journey]]] = {}
+    directs: dict[str, dict[str, int]] = {}
+    for day, trips in trips_by_date.items():
+        for dest, journeys in compute_reachability(trips, station_id).items():
+            evidence.setdefault(dest, {})[day] = journeys
+        for dest, n in _direct_counts(trips, station_id).items():
+            directs.setdefault(dest, {})[day] = n
+
+    destinations: list[Destination] = []
+    for dest in sorted(evidence):
+        best_by_trains: dict[int, Journey] = {}
+        for journeys in evidence[dest].values():
+            for journey in journeys:
+                current = best_by_trains.get(journey.trains)
+                if current is None or journey.duration_min < current.duration_min:
+                    best_by_trains[journey.trains] = journey
+        tiers: list[Journey] = []
+        for trains in sorted(best_by_trains):
+            journey = best_by_trains[trains]
+            if not tiers or journey.duration_min < tiers[-1].duration_min:
+                tiers.append(journey)
+        # A destination can have alternatives that use different feeds.  A date
+        # is valid evidence when at least one observed route's complete feed set
+        # is within its feeds' published GTFS horizon.  ``covered=False`` is the
+        # only exclusion; a feed with no declared horizon remains unknown, not a
+        # negative sample.
+        feed_sets = {
+            frozenset(feed for leg in journey.legs for feed in leg.feeds)
+            for journeys in evidence[dest].values()
+            for journey in journeys
+        }
+        covered_dates = (
+            [
+                day
+                for day in sample_dates
+                if any(
+                    all(
+                        feed_validity_by_date.get(day, {}).get(feed, {}).get("covered", True)
+                        is not False
+                        for feed in feed_set
+                    )
+                    for feed_set in feed_sets
+                )
+            ]
+            if feed_validity_by_date is not None and feed_sets
+            else sample_dates
+        )
+        freq = _frequency(sample_dates, covered_dates, evidence[dest], directs.get(dest, {}))
+        # Legacy field remains present.  On a multi-day run it is the rounded
+        # average on observed direct days; consumers should prefer frequency.
+        direct_per_day = round(freq.direct_per_active_day or 0)
+        destinations.append(
+            Destination(
+                id=dest,
+                direct_per_day=direct_per_day,
+                journeys=tiers,
+                frequency=freq,
+            )
+        )
+    return destinations
+
+
 def _write_reach(
-    trips: list[Trip], station_id: str, out_dir: Path, sample_date: str, now: str
+    trips_by_date: dict[str, list[Trip]],
+    station_id: str,
+    out_dir: Path,
+    sample_date: str,
+    now: str,
+    feed_validity_by_date: dict[str, dict[str, dict[str, object]]] | None = None,
 ) -> int:
     """Compute one origin's reachability and write its reach file.
 
     Returns the destination count (0 = nothing reachable, no file written)."""
-    reach = compute_reachability(trips, station_id)
-    if not reach:
+    destinations = _aggregate_reach(trips_by_date, station_id, feed_validity_by_date)
+    if not destinations:
         return 0
-    directs = _direct_counts(trips, station_id)
     rf = ReachFile(
         origin=station_id,
         computed_at=now,
         sample_date=sample_date,
-        destinations=[
-            Destination(id=dest, direct_per_day=directs.get(dest, 0), journeys=js)
-            for dest, js in sorted(reach.items())
-        ],
+        destinations=destinations,
     )
     (out_dir / f"reach_{station_id}.json").write_text(rf.model_dump_json(by_alias=True))
-    return len(reach)
+    return len(destinations)
 
 
 # Worker-process state: each worker parses trips.json once in _worker_init
 # instead of the parent pickling the whole trip list for every origin.
-_worker_trips: list[Trip] = []
+_worker_trips_by_date: dict[str, list[Trip]] = {}
+_worker_feed_validity_by_date: dict[str, dict[str, dict[str, object]]] = {}
 
 
 def _worker_init(graph_dir_str: str) -> None:
-    global _worker_trips
+    global _worker_trips_by_date, _worker_feed_validity_by_date
     raw = json.loads((Path(graph_dir_str) / "trips.json").read_text())
-    _worker_trips = [Trip(**t) for t in raw["trips"]]
+    by_date = raw.get("trips_by_date") or {"legacy": raw["trips"]}
+    _worker_trips_by_date = {day: [Trip(**t) for t in trips] for day, trips in by_date.items()}
+    _worker_feed_validity_by_date = raw.get("feed_validity_by_date", {})
 
 
 def _compute_one(args: tuple[str, str, str, str]) -> tuple[str, int]:
     station_id, out_dir_str, sample_date, now = args
-    return station_id, _write_reach(_worker_trips, station_id, Path(out_dir_str), sample_date, now)
+    return station_id, _write_reach(
+        _worker_trips_by_date,
+        station_id,
+        Path(out_dir_str),
+        sample_date,
+        now,
+        _worker_feed_validity_by_date,
+    )
 
 
 def route_counts(trips_path: Path) -> dict[str, int]:
@@ -84,7 +207,10 @@ def route_counts(trips_path: Path) -> dict[str, int]:
     reachable, so long stopping trains (PKP TLK) don't inflate hub size the way
     n_dest does. Used for dot sizing on the map.
     """
-    raw = json.loads(trips_path.read_text())["trips"]
+    payload = json.loads(trips_path.read_text())
+    raw = [
+        trip for trips in payload.get("trips_by_date", {}).values() for trip in trips
+    ] or payload["trips"]
     routes: dict[str, set[frozenset[str]]] = {}
     for t in raw:
         stops = [st["station"] for st in t["stops"]]
@@ -116,9 +242,14 @@ def compute_all(
 
     results: dict[str, int] = {}
     if workers == 1:
-        trips = [Trip(**t) for t in json.loads((graph_dir / "trips.json").read_text())["trips"]]
+        raw_trips = json.loads((graph_dir / "trips.json").read_text())
+        by_date = raw_trips.get("trips_by_date") or {"legacy": raw_trips["trips"]}
+        trips_by_date = {day: [Trip(**t) for t in trips] for day, trips in by_date.items()}
+        feed_validity_by_date = raw_trips.get("feed_validity_by_date", {})
         for station in stations:
-            results[station.id] = _write_reach(trips, station.id, out_dir, sample_date, now)
+            results[station.id] = _write_reach(
+                trips_by_date, station.id, out_dir, sample_date, now, feed_validity_by_date
+            )
     else:
         with ProcessPoolExecutor(
             max_workers=workers, initializer=_worker_init, initargs=(str(graph_dir),)
@@ -162,7 +293,14 @@ def compute_all(
     fetch_meta_path = Path("data/raw/fetch_meta.json")
     feeds_meta = json.loads(fetch_meta_path.read_text()) if fetch_meta_path.exists() else {}
     (out_dir / "meta.json").write_text(
-        json.dumps({"computed_at": now, "sample_date": sample_date, "feeds": feeds_meta})
+        json.dumps(
+            {
+                "computed_at": now,
+                "sample_date": sample_date,
+                "sample_dates": graph.get("sample_dates", [sample_date]),
+                "feeds": feeds_meta,
+            }
+        )
     )
 
     covered = covered_from_feeds(feeds_path) if feeds_path.exists() else set()

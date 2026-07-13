@@ -78,6 +78,7 @@ def _reconstruct(parent, k, dest, origin):
                 **{"from": b_st},
                 to=st,
                 via=[x.station for x in trip.stops[bi + 1 : ai]],
+                feeds=trip.feeds,
             )
         )
         # Step back to the station we boarded this leg at, one fewer train.
