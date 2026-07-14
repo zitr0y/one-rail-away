@@ -52,3 +52,56 @@ def test_parse_maxspeed():
     assert parse_maxspeed("120 mph") == 120 * 1.609344
     assert parse_maxspeed("5") == 10.0     # clamped up
     assert parse_maxspeed("400") == 320.0  # clamped down
+
+
+from pipeline.railpaths import RailWay, build_graph, snap_stations
+
+# A tiny synthetic network in lon/lat. 0.01° lon at lat 0 ≈ 1.11 km.
+#   1 --- 2 --- 3 --- 4    slow line, 100 km/h (nodes 2,3 are degree-2)
+#   1 --------- 5 ---- 4   fast bypass, 300 km/h
+NODES = {
+    1: (0.00, 0.0), 2: (0.01, 0.0), 3: (0.02, 0.0), 4: (0.03, 0.0),
+    5: (0.015, 0.005),
+}
+SLOW = RailWay(refs=(1, 2, 3, 4), speed_kmh=100.0)
+FAST = RailWay(refs=(1, 5, 4), speed_kmh=300.0)
+
+
+def test_build_graph_contracts_degree2_chains():
+    graph = build_graph([SLOW, FAST], NODES, extra_junctions=set())
+    # Vertices: only 1 and 4 (2, 3, 5 are interior degree-2 nodes).
+    assert set(graph.adjacency) == {1, 4}
+    assert len(graph.edges) == 2
+    slow_edge = next(e for e in graph.edges if len(e.coords) == 4)
+    assert slow_edge.coords == [NODES[1], NODES[2], NODES[3], NODES[4]]
+
+
+def test_build_graph_extra_junctions_split_edges():
+    graph = build_graph([SLOW], NODES, extra_junctions={2})
+    assert set(graph.adjacency) == {1, 2, 4}
+    assert len(graph.edges) == 2
+
+
+def test_build_graph_speed_weights_cost():
+    graph = build_graph([SLOW, FAST], NODES, extra_junctions=set())
+    slow_edge = next(e for e in graph.edges if len(e.coords) == 4)
+    fast_edge = next(e for e in graph.edges if len(e.coords) == 3)
+    # The bypass is geometrically longer but 3× faster → cheaper.
+    assert fast_edge.cost_h < slow_edge.cost_h
+
+
+def test_build_graph_skips_way_with_missing_node():
+    graph = build_graph([RailWay(refs=(1, 99), speed_kmh=100.0)], NODES,
+                        extra_junctions=set())
+    assert graph.edges == []
+
+
+def test_snap_stations():
+    stations = [
+        {"id": "s:near", "lon": 0.0101, "lat": 0.0001},  # ~15 m from node 2
+        {"id": "s:far", "lon": 1.0, "lat": 1.0},         # ~150 km from anything
+    ]
+    snapped, failures = snap_stations(stations, NODES)
+    assert snapped == {"s:near": 2}
+    assert [f["station"] for f in failures] == ["s:far"]
+    assert failures[0]["reason"] == "no_rail_within_snap_radius"
