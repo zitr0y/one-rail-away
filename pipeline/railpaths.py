@@ -308,6 +308,69 @@ def download_extracts(countries: list[str], osm_dir: Path, force: bool) -> list[
     return paths
 
 
+def filter_rail_extract(src: Path, dst: Path) -> Path:
+    """Filter a raw Geofabrik extract down to railway=rail ways plus the nodes
+    they reference, writing the result to `dst`.
+
+    Uses pyosmium's C++-level filtering (FileProcessor + filters) rather than
+    per-object Python callbacks, since a per-object Python callback is far too
+    slow to run over a 24 GB corpus of raw extracts. BackReferenceWriter adds
+    the referenced nodes back in a second pass over `src`, emitting a
+    correctly ordered PBF. Writes to a `.part` file and renames on success, so
+    an interrupted filter never leaves a corrupt file at `dst`.
+    """
+    import osmium
+
+    part = dst.with_suffix(".part")
+    if part.exists():
+        part.unlink()
+    log.info("filtering rail ways: %s -> %s", src.name, dst.name)
+    # Explicit format: the ".part" extension isn't one osmium recognizes.
+    writer = osmium.BackReferenceWriter(
+        osmium.io.File(str(part), "pbf"), ref_src=str(src))
+    try:
+        for obj in (
+            osmium.FileProcessor(str(src))
+            .with_filter(osmium.filter.EntityFilter(osmium.osm.WAY))
+            .with_filter(osmium.filter.TagFilter(("railway", "rail")))
+        ):
+            writer.add(obj)
+    finally:
+        writer.close()
+    part.rename(dst)
+    return dst
+
+
+def prepare_extracts(countries: list[str], osm_dir: Path, force: bool) -> list[Path]:
+    """Rail-only extract per country: cached if present, else downloaded raw
+    (or reused from cache) and filtered, then the raw extract is deleted.
+
+    The rail-only cache (~50-150 MB per country) replaces the raw Geofabrik
+    extract (multiple GB per country) as the on-disk cache, so repeated runs
+    don't re-scan the full planet slice.
+    """
+    osm_dir.mkdir(parents=True, exist_ok=True)
+    paths = []
+    for code in countries:
+        region = GEOFABRIK_REGION[code]
+        stem = region.rsplit("/", 1)[-1]
+        rail_target = osm_dir / f"{stem}-rail.osm.pbf"
+        if rail_target.exists() and not force:
+            paths.append(rail_target)
+            continue
+        (raw,) = download_extracts([code], osm_dir, force)
+        raw_size = raw.stat().st_size
+        filter_rail_extract(raw, rail_target)
+        rail_size = rail_target.stat().st_size
+        raw.unlink()
+        log.info(
+            "filtered %s (%.1f MB) -> %s (%.1f MB); raw deleted",
+            raw.name, raw_size / 1e6, rail_target.name, rail_size / 1e6,
+        )
+        paths.append(rail_target)
+    return paths
+
+
 def read_rail_network(
     pbf_paths: list[Path],
 ) -> tuple[list[RailWay], dict[int, tuple[float, float]]]:
@@ -364,7 +427,7 @@ def build_rail_paths(out_dir: Path, osm_dir: Path, force_download: bool = False)
     countries, unmapped = needed_countries(hops, stations_by_id)
     if unmapped:
         log.warning("no Geofabrik region mapped for countries: %s", unmapped)
-    pbf_paths = download_extracts(countries, osm_dir, force_download)
+    pbf_paths = prepare_extracts(countries, osm_dir, force_download)
     ways, node_locs = read_rail_network(pbf_paths)
     hop_station_ids = sorted(
         {sid for pair in hops for sid in pair if sid in stations_by_id})

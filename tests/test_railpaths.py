@@ -1,5 +1,8 @@
 import json
 
+import osmium
+import osmium.osm.mutable as osmium_mutable
+
 from pipeline.railpaths import (
     GEOFABRIK_REGION,
     RailWay,
@@ -7,8 +10,11 @@ from pipeline.railpaths import (
     build_graph,
     collect_hops,
     download_extracts,
+    filter_rail_extract,
     needed_countries,
     parse_maxspeed,
+    prepare_extracts,
+    read_rail_network,
     route,
     snap_stations,
     write_outputs,
@@ -196,3 +202,72 @@ def test_download_extracts_skips_cached(tmp_path):
     paths = download_extracts(["DE"], tmp_path, force=False)
     assert paths == [cached]
     assert cached.read_bytes() == b"cached"  # untouched, no network call
+
+
+def _write_osm_fixture(path):
+    """A tiny OSM PBF: one railway=rail way, one highway=residential way,
+    and the two nodes each of them reference."""
+    writer = osmium.SimpleWriter(str(path))
+    common = {
+        "version": 1, "visible": True, "changeset": 1,
+        "timestamp": "2020-01-01T00:00:00Z", "uid": 1,
+    }
+    writer.add_node(osmium_mutable.Node(id=1, location=(10.0, 47.0), tags={}, **common))
+    writer.add_node(osmium_mutable.Node(id=2, location=(10.01, 47.0), tags={}, **common))
+    writer.add_node(osmium_mutable.Node(id=3, location=(11.0, 48.0), tags={}, **common))
+    writer.add_node(osmium_mutable.Node(id=4, location=(11.01, 48.0), tags={}, **common))
+    writer.add_way(osmium_mutable.Way(
+        id=100, nodes=[1, 2], tags={"railway": "rail"}, **common))
+    writer.add_way(osmium_mutable.Way(
+        id=200, nodes=[3, 4], tags={"highway": "residential"}, **common))
+    writer.close()
+
+
+def test_filter_rail_extract_keeps_only_rail_ways_and_their_nodes(tmp_path):
+    src = tmp_path / "fixture.osm.pbf"
+    _write_osm_fixture(src)
+    dst = tmp_path / "fixture-rail.osm.pbf"
+
+    result = filter_rail_extract(src, dst)
+
+    assert result == dst
+    assert dst.exists()
+    assert not dst.with_suffix(".part").exists()
+    ways, node_locs = read_rail_network([dst])
+    assert len(ways) == 1
+    assert ways[0].refs == (1, 2)
+    assert node_locs == {1: (10.0, 47.0), 2: (10.01, 47.0)}
+
+
+def test_prepare_extracts_uses_cached_rail_file(tmp_path, monkeypatch):
+    rail = tmp_path / "germany-rail.osm.pbf"
+    rail.write_bytes(b"cached rail")
+
+    def _boom(*args, **kwargs):
+        raise AssertionError("filter_rail_extract should not be called")
+
+    monkeypatch.setattr("pipeline.railpaths.filter_rail_extract", _boom)
+    monkeypatch.setattr("pipeline.railpaths.download_extracts", _boom)
+
+    paths = prepare_extracts(["DE"], tmp_path, force=False)
+
+    assert paths == [rail]
+    assert rail.read_bytes() == b"cached rail"
+
+
+def test_prepare_extracts_filters_and_deletes_raw(tmp_path, monkeypatch):
+    raw = tmp_path / "germany-latest.osm.pbf"
+    raw.write_bytes(b"raw extract")
+
+    def _stub_filter(src, dst):
+        dst.write_bytes(b"filtered")
+        return dst
+
+    monkeypatch.setattr("pipeline.railpaths.filter_rail_extract", _stub_filter)
+
+    paths = prepare_extracts(["DE"], tmp_path, force=False)
+
+    rail = tmp_path / "germany-rail.osm.pbf"
+    assert paths == [rail]
+    assert rail.read_bytes() == b"filtered"
+    assert not raw.exists()
