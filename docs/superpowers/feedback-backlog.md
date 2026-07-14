@@ -633,3 +633,22 @@ pin branches.
   fade by zoom alone; a density-aware rule (hide low-importance stops where
   station density is high, reveal on zoom-in) would address it without
   hardcoding per-country rules.
+
+- **AJ — Rider still swings near stations.** User (2026-07-14): mostly good on the
+  open track now, but the rider still turns oddly right at stations. Cause is real
+  geometry, not the smoothing: station approach tracks genuinely enter the city at
+  sharp angles, and each hop is stitched to the exact station coordinate via a short
+  stub (median 14 m, p90 38 m) that points sideways off the running line. The
+  ~350 m look-ahead window (`BEARING_WINDOW_KM` in `web/src/lib/ride.ts`) averages
+  the open-track case but still sees the stub near a stop. Options: widen the window
+  near leg ends, damp rotation rate while inside the dwell approach, or drop the
+  stub from the rider's path (draw to the station, but steer by the track). Low
+  priority — user says "not too bad".
+
+- **AK — No timetable-operator attribution in the UI.** We credit OpenStreetMap
+  (ODbL, in the map attribution control) but credit NO feed operator. `feeds.toml`
+  explicitly requires retaining attribution for CP ("CP - Comboios de Portugal"),
+  Trenitalia, and Renfe — all "No licence – No contract" / public-sector-reuse
+  sources where attribution is the condition of use — plus Rejseplanen. Needs a
+  credits/about surface listing the data sources (see `docs/data-sources.md`).
+  **Do before showing the site publicly.**
