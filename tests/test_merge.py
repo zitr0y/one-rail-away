@@ -4,6 +4,9 @@ Precedence under test: alias override -> UIC regex on stop_id -> proximity
 fallback (existing station <500 m AND same normalized name) -> fresh id.
 """
 
+import tomllib
+from pathlib import Path
+
 import pytest
 
 from pipeline.config import FeedConfig
@@ -49,6 +52,43 @@ def test_alias_override_wins():
     per_feed = {"a": ([RawStop("odd", "X", 40.0, 4.0)], _cfg())}
     stations, mapping = merge_stations(per_feed, {"a:odd": "1234567"})
     assert mapping[("a", "odd")] == "1234567"
+
+
+def test_production_aliases_merge_current_duplicate_validation_pairs():
+    """Keep feed-id churn from making the full production build abort."""
+    aliases = tomllib.loads(Path("station_aliases.toml").read_text())["aliases"]
+    per_feed = {
+        "db_fern": (
+            [
+                RawStop("464324", "Dornbirn", 47.414, 9.742),
+                RawStop("335019", "Feldkirch", 47.238, 9.603),
+                RawStop("338323", "Erfurt Hbf", 50.972, 11.038),
+            ],
+            _cfg(country="DE", uic_regex=r"(\d{7})"),
+        ),
+        "sncf": (
+            [RawStop("StopArea:OCE80160432", "Erfurt Hbf", 50.9721, 11.0381)],
+            _cfg(country="FR"),
+        ),
+        "oebb": (
+            [
+                RawStop("8102329", "Dornbirn", 47.4141, 9.7421),
+                RawStop("8101236", "Feldkirch", 47.2381, 9.6031),
+            ],
+            _cfg(country="AT", uic_regex=r"(\d{7})"),
+        ),
+    }
+
+    stations, mapping = merge_stations(per_feed, aliases)
+
+    assert len(stations) == 3
+    assert mapping[("db_fern", "464324")] == mapping[("oebb", "8102329")] == "8102329"
+    assert mapping[("db_fern", "335019")] == mapping[("oebb", "8101236")] == "8101236"
+    assert (
+        mapping[("sncf", "StopArea:OCE80160432")]
+        == mapping[("db_fern", "338323")]
+        == "x:db_fern:338323"
+    )
 
 
 # --- #1 precedence: alias must beat a MATCHING UIC regex ---------------------

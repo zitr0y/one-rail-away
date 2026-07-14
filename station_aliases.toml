@@ -47,6 +47,11 @@
 # never fires for the platform twin.
 "oebb:at:48:585:0:3" = "8102329"          # Dornbirn
 "oebb:at:48:817:0:4" = "8101236"          # Feldkirch
+# db_fern's 2026-07-14 feed switched these two Austrian station ids from the
+# ones above to 464324/335019. They are the same physical UIC stations; without
+# these aliases the production build fails duplicate validation before compute.
+"db_fern:464324" = "8102329"               # Dornbirn (oebb UIC)
+"db_fern:335019" = "8101236"               # Feldkirch (oebb UIC)
 
 # db_fern's Singen resolves to child name "Singen(Hohentwiel)", norm-equal to
 # sbb's UIC-registered 8014558 twin.
@@ -85,6 +90,7 @@
 "ns:stoparea:589649" = "x:db_fern:226810"          # München Ost (ns (0,0) stub)
 "sncf:StopArea:OCE80143503" = "x:db_fern:605507"   # Freiburg (Breisgau) Hbf
 "sncf:StopArea:OCE80203471" = "x:db_fern:127002"   # Munich -> München Hbf
+"sncf:StopArea:OCE80160432" = "x:db_fern:338323"   # Erfurt Hbf
 "ns:stoparea:482359" = "8814001"                   # Brussel-Zuid -> Bruxelles Midi
 "oebb:Pat:46:3040" = "x:db_fern:403270"            # Graz Hbf
 "sncf:StopArea:OCE87193003" = "x:db_fern:356648"   # Forbach(F)
