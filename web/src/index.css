@@ -204,6 +204,10 @@ body { margin: 0; font-family: "Barlow", system-ui, sans-serif; color: var(--tex
   text-align: left;
   cursor: pointer;
 }
+
+.overlap-station-popup .overlap-station-popup-city {
+  font-weight: 700;
+}
 .overlap-station-popup button:hover { background: var(--surface-hover); }
 .overlap-station-popup button:focus-visible { outline: 2px solid var(--text); outline-offset: 2px; }
 

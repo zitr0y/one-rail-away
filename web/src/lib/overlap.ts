@@ -4,6 +4,7 @@ import type { Station } from "./types";
 export interface StationChoice {
   pick: FeaturePick;
   name: string;
+  nDest: number;
 }
 
 /**
@@ -24,8 +25,10 @@ export function overlapStationChoices(hits: FeatureHit[], stations: Station[]): 
   for (const [id, stationHits] of hitsById) {
     const pick = pickFeature(stationHits);
     const station = stationsById.get(id);
-    if (pick && station) choices.push({ pick, name: station.name });
+    if (pick && station) choices.push({ pick, name: station.name, nDest: station.n_dest ?? 0 });
   }
   return choices.sort((a, b) =>
-    a.name.localeCompare(b.name, undefined, { sensitivity: "base" }) || a.pick.id.localeCompare(b.pick.id));
+    b.nDest - a.nDest
+    || a.name.localeCompare(b.name, undefined, { sensitivity: "base" })
+    || a.pick.id.localeCompare(b.pick.id));
 }

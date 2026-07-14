@@ -489,11 +489,10 @@ pin branches.
 
 ## Smaller deferred notes
 
-- **Click-disambiguation popup ranking (added 2026-07-14):** when clicking
+- **Click-disambiguation popup ranking — SHIPPED 2026-07-14:** when clicking
   bunched-up station dots, put the "City (all stations)" entry first and in
-  **bold** when one exists, then sort the remaining stations by connection count,
-  matching the ranking already used by search. This refines item C, whose current
-  interaction the user otherwise likes.
+  **bold** when one exists, then sort the remaining stations by connection count
+  (with stable name/id ties), matching the ranking already used by search.
 
 - **Pre-existing flaky compute test on Python 3.14 (found 2026-07-13):**
   `tests/test_compute.py::test_compute_all_sets_is_capital` FAILS on `main`

@@ -3,9 +3,9 @@ import { overlapStationChoices } from "./overlap";
 import type { Station } from "./types";
 
 const stations = [
-  { id: "b", name: "Beta", lon: 8, lat: 50 },
-  { id: "a", name: "Alpha", lon: 8, lat: 50 },
-  { id: "a2", name: "alpha", lon: 8, lat: 50 },
+  { id: "b", name: "Beta", lon: 8, lat: 50, n_dest: 20 },
+  { id: "a", name: "Alpha", lon: 8, lat: 50, n_dest: 50 },
+  { id: "a2", name: "alpha", lon: 8, lat: 50, n_dest: 50 },
 ] as Station[];
 
 describe("overlapStationChoices", () => {
@@ -15,12 +15,12 @@ describe("overlapStationChoices", () => {
       { layer: "reach-dots", id: "b" },
       { layer: "all-stations", id: "a" },
     ], stations)).toEqual([
-      { name: "Alpha", pick: { type: "origin", id: "a" } },
-      { name: "Beta", pick: { type: "dest", id: "b" } },
+      { name: "Alpha", nDest: 50, pick: { type: "origin", id: "a" } },
+      { name: "Beta", nDest: 20, pick: { type: "dest", id: "b" } },
     ]);
   });
 
-  it("orders choices deterministically by name, then station id", () => {
+  it("orders choices by connection count, then deterministically by name and id", () => {
     expect(overlapStationChoices([
       { layer: "all-stations", id: "b" },
       { layer: "all-stations", id: "a2" },

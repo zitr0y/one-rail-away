@@ -217,6 +217,25 @@ export default function MapView(props: Props) {
         content.className = "overlap-station-popup";
         content.setAttribute("role", "group");
         content.setAttribute("aria-label", "Choose a station");
+        const cityChoices = new Map<string, string[]>();
+        for (const choice of choices) {
+          const city = cityForStation(choice.pick.id, propsRef.current.cityGroups);
+          if (city) cityChoices.set(city.city, city.memberIds);
+        }
+        for (const [city, memberIds] of [...cityChoices].sort(([a], [b]) => a.localeCompare(b))) {
+          const button = document.createElement("button");
+          button.type = "button";
+          button.className = "overlap-station-popup-city";
+          button.textContent = `${city} (all stations)`;
+          button.setAttribute("aria-label", `Select all ${city} stations`);
+          button.addEventListener("click", (event) => {
+            event.stopPropagation();
+            popup.remove();
+            if (cityPopup.current === popup) cityPopup.current = null;
+            propsRef.current.onSelectCityOrigin(city, memberIds);
+          });
+          content.append(button);
+        }
         for (const choice of choices) {
           const button = document.createElement("button");
           button.type = "button";
