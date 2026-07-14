@@ -1,5 +1,6 @@
 import { pickFeature, type FeatureHit, type FeaturePick } from "./pickfeature";
-import type { Station } from "./types";
+import type { MaxTrains } from "./geojson";
+import type { ReachFile, Station } from "./types";
 
 export interface StationChoice {
   pick: FeaturePick;
@@ -31,4 +32,45 @@ export function overlapStationChoices(hits: FeatureHit[], stations: Station[]): 
     b.nDest - a.nDest
     || a.name.localeCompare(b.name, undefined, { sensitivity: "base" })
     || a.pick.id.localeCompare(b.pick.id));
+}
+
+export interface TargetChoice extends StationChoice {
+  /** Fewest trains from the current origin under active filters; null = unreachable. */
+  minTrains: number | null;
+}
+
+/** Fewest trains per destination among journeys within BOTH active filters.
+ *  Deliberately not bestJourney(): that is the fastest journey, whose train
+ *  count can exceed the minimum (backlog AE — "steps to reach"). */
+export function reachableMinTrains(
+  reach: ReachFile | null, maxTrains: MaxTrains, maxMinutes: number,
+): Map<string, number> {
+  const result = new Map<string, number>();
+  if (!reach) return result;
+  for (const d of reach.destinations) {
+    const eligible = d.journeys.filter(
+      (j) => j.trains <= maxTrains && j.duration_min <= maxMinutes);
+    if (eligible.length) result.set(d.id, Math.min(...eligible.map((j) => j.trains)));
+  }
+  return result;
+}
+
+/** Target-mode ordering (backlog AE): reachable first by fewest trains, then
+ *  connection count; unreachable last, muted but still selectable. */
+export function rankTargetChoices(
+  choices: StationChoice[], minTrainsById: Map<string, number>,
+): TargetChoice[] {
+  return choices
+    .map((c) => ({ ...c, minTrains: minTrainsById.get(c.pick.id) ?? null }))
+    .sort((a, b) => {
+      if ((a.minTrains === null) !== (b.minTrains === null)) {
+        return a.minTrains === null ? 1 : -1;
+      }
+      if (a.minTrains !== null && b.minTrains !== null && a.minTrains !== b.minTrains) {
+        return a.minTrains - b.minTrains;
+      }
+      return b.nDest - a.nDest
+        || a.name.localeCompare(b.name, undefined, { sensitivity: "base" })
+        || a.pick.id.localeCompare(b.pick.id);
+    });
 }

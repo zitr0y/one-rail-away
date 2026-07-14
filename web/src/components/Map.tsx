@@ -12,7 +12,10 @@ import type { Theme } from "../lib/theme";
 import { cityForStation } from "../lib/cities";
 import { baseLineOpacity, selectedLineFilter, stationOpacityExpression } from "../lib/highlight";
 import type { FeaturePick } from "../lib/pickfeature";
-import { overlapStationChoices } from "../lib/overlap";
+import {
+  overlapStationChoices, rankTargetChoices, reachableMinTrains,
+  type StationChoice, type TargetChoice,
+} from "../lib/overlap";
 import { veilTooltip, showVeilTooltip } from "../lib/coverage";
 import { api } from "../lib/api";
 import {
@@ -218,30 +221,49 @@ export default function MapView(props: Props) {
         content.className = "overlap-station-popup";
         content.setAttribute("role", "group");
         content.setAttribute("aria-label", "Choose a station");
-        const cityChoices = new Map<string, string[]>();
-        for (const choice of choices) {
-          const city = cityForStation(choice.pick.id, propsRef.current.cityGroups);
-          if (city) cityChoices.set(city.city, city.memberIds);
+        const targeting = propsRef.current.armed === "to";
+        if (!targeting) {
+          // Origin mode keeps city union entries (bug AE: these buttons set the
+          // ORIGIN, so they must never render while picking a target).
+          const cityChoices = new Map<string, string[]>();
+          for (const choice of choices) {
+            const city = cityForStation(choice.pick.id, propsRef.current.cityGroups);
+            if (city) cityChoices.set(city.city, city.memberIds);
+          }
+          for (const [city, memberIds] of [...cityChoices].sort(([a], [b]) => a.localeCompare(b))) {
+            const button = document.createElement("button");
+            button.type = "button";
+            button.className = "overlap-station-popup-city";
+            button.textContent = `${city} (all stations)`;
+            button.setAttribute("aria-label", `Select all ${city} stations`);
+            button.addEventListener("click", (event) => {
+              event.stopPropagation();
+              popup.remove();
+              if (cityPopup.current === popup) cityPopup.current = null;
+              propsRef.current.onSelectCityOrigin(city, memberIds);
+            });
+            content.append(button);
+          }
         }
-        for (const [city, memberIds] of [...cityChoices].sort(([a], [b]) => a.localeCompare(b))) {
-          const button = document.createElement("button");
-          button.type = "button";
-          button.className = "overlap-station-popup-city";
-          button.textContent = `${city} (all stations)`;
-          button.setAttribute("aria-label", `Select all ${city} stations`);
-          button.addEventListener("click", (event) => {
-            event.stopPropagation();
-            popup.remove();
-            if (cityPopup.current === popup) cityPopup.current = null;
-            propsRef.current.onSelectCityOrigin(city, memberIds);
-          });
-          content.append(button);
-        }
-        for (const choice of choices) {
+        const ordered: (StationChoice | TargetChoice)[] = targeting
+          ? rankTargetChoices(choices, reachableMinTrains(
+              propsRef.current.reach, propsRef.current.maxTrains,
+              propsRef.current.maxMinutes))
+          : choices;
+        for (const choice of ordered) {
           const button = document.createElement("button");
           button.type = "button";
           button.textContent = choice.name;
           button.setAttribute("aria-label", `Select ${choice.name}`);
+          if (targeting && (choice as TargetChoice).minTrains === null) {
+            button.classList.add("unreachable");
+            button.setAttribute("aria-label",
+              `Select ${choice.name} (not reachable with current filters)`);
+            const hint = document.createElement("span");
+            hint.className = "overlap-unreachable-hint";
+            hint.textContent = "not reachable";
+            button.append(hint);
+          }
           button.addEventListener("click", (event) => {
             event.stopPropagation();
             popup.remove();
