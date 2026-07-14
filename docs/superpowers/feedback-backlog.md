@@ -670,3 +670,22 @@ pin branches.
   hold their polylines; route hops in batches. Also worth re-checking the disk
   floor (extracts are already downloaded/filtered/deleted one country at a time,
   so peak disk is ~one extract, not 24 GB).
+
+- **AM — `db_fern` station ids are not stable across feed refreshes (breaks every
+  shared link).** The gtfs.de feed reissues its stop ids, so a canonical station id
+  changes identity from one weekly run to the next. Concretely, on 2026-07-14:
+  `x:db_fern:569849` was **Berlin Hbf** in the live data set (1248 destinations),
+  and in the very next build the same id is an unrelated minor station (152
+  destinations) while Berlin Hbf has become `x:db_fern:414176` (1472 destinations).
+  Consequences: (1) every URL a user has shared or bookmarked silently points at a
+  *different station* after a refresh — worse than 404, it looks like real data;
+  (2) reach files force-added as repo samples (`data/out/reach_x:db_fern:*.json`)
+  are keyed by ids that no longer exist; (3) any future user-facing state (saved
+  trips, favourites) built on these ids is unsafe.
+  Fix direction: stop deriving canonical ids from a feed's stop id. Prefer a stable
+  key — UIC code where we have one, else a hash of (normalized name, rounded
+  coordinates) — and keep a `station_id_aliases` map from retired feed ids to the
+  canonical id so old links keep resolving. The merge step already reconciles
+  stations across feeds by UIC/proximity/name, so the stable identity largely
+  exists; it just is not what we key the public id on.
+  **Do before inviting people to share links.**
