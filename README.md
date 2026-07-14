@@ -12,14 +12,31 @@ or three trains — colored by travel time — and click through to book.
 
 ## Refresh the data
 
-    just pipeline     # fetch GTFS feeds -> build graph -> compute reachability
+    just pipeline     # fetch -> build graph -> compute reachability -> rail geometry
 
 Runs weekly by hand for now. Feeds are declared in `feeds.toml`; station-merge
-overrides live in `station_aliases.toml`.
+overrides live in `station_aliases.toml`. Everything lands in `data/out/`, which is
+gitignored apart from a handful of committed sample files — **a fresh clone has only
+those samples, so a host must run this pipeline** (or be given a populated
+`data/out/`) before the site shows real data.
 
-Current coverage (2026-07 run): DE (gtfs.de long-distance), FR (SNCF
-TGV/OUIGO/Intercités/Lyria), AT (ÖBB), CH (SBB), NL (NS/ovapi) — about 1,050
-merged stations and 4,100 trips per sample day.
+The last stage, `uv run ose paths`, derives real railway geometry from
+OpenStreetMap so reach lines follow actual track. On a **first** run it needs:
+
+- **~35–45 min** wall time, dominated by downloading ~24 GB of Geofabrik extracts
+- **~6 GB free disk**, not 24 GB: each country's extract is downloaded, filtered to
+  rail-only, and deleted before the next one, so only the largest single extract
+  (France, ~5 GB) is ever on disk at once. What persists is a ~100 MB rail-only
+  cache in `data/osm/`.
+- **~8 GB RAM** (peak RSS ~5.9 GB while routing the European rail graph)
+
+Later runs reuse the `data/osm/` cache and take a few minutes. Without this stage
+the site still works — reach lines just fall back to straight lines between stations.
+
+Current coverage (2026-07 run): DE (gtfs.de long-distance + FlixTrain), FR (SNCF),
+AT (ÖBB), CH (SBB), NL (NS/ovapi), DK (Rejseplanen), PT (CP), IT (Trenitalia),
+ES (Renfe), PL (PKP). Neighbouring countries appear only where an international
+train reaches them. Full inventory and known gaps: [`docs/data-sources.md`](docs/data-sources.md).
 
 ## How it works
 
