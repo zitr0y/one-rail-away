@@ -19,4 +19,5 @@ web/.env.local
 data/raw/
 data/graph/
 data/out/
+data/osm/
 .superpowers/
