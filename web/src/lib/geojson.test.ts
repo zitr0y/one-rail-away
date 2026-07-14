@@ -32,12 +32,19 @@ describe("bestJourney / timeBucket", () => {
 });
 
 describe("frequency styling", () => {
-  it("marks seasonal evidence infrequent and keeps legacy files frequent", () => {
+  it("marks limited evidence infrequent and keeps legacy files frequent", () => {
     expect(frequencyClass(reach.destinations[0])).toBe("frequent");
     expect(frequencyClass({ ...reach.destinations[0], frequency: {
       sample_days: 8, available_days: 2, direct_days: 2, direct_trips: 2,
-      availability: "seasonal_or_limited", seasonal: true, active_months: ["Jul"],
+      availability: "limited", active_months: ["Jul"],
     } })).toBe("infrequent");
+  });
+  it("treats a retired availability value (stale reach file) as frequent, not a crash", () => {
+    expect(frequencyClass({ ...reach.destinations[0], frequency: {
+      sample_days: 8, available_days: 2, direct_days: 2, direct_trips: 2,
+      // @ts-expect-error -- old files carry the retired "seasonal_or_limited" value
+      availability: "seasonal_or_limited", active_months: ["Jul"],
+    } })).toBe("frequent");
   });
 });
 

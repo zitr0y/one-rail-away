@@ -9,7 +9,7 @@ export interface Journey { trains: number; duration_min: number; legs: Leg[] }
 export interface Frequency {
   requested_sample_days?: number; sample_days: number; available_days: number; direct_days: number; direct_trips: number;
   direct_per_active_day?: number | null; weekly_direct_estimate?: number | null;
-  availability: "year_round" | "seasonal_or_limited" | "coverage_limited"; seasonal?: boolean; active_months: string[];
+  availability: "year_round" | "limited" | "coverage_limited"; active_months: string[];
 }
 export interface Destination {
   id: string; direct_per_day: number; journeys: Journey[]; frequency?: Frequency | null;

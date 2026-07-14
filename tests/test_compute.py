@@ -187,7 +187,8 @@ def test_load_capitals_missing_file(tmp_path):
 
 
 def test_compute_aggregates_independent_sample_days_and_frequency(tmp_path):
-    """A seasonal trip contributes evidence, but cannot join a different day's trip."""
+    """A trip seen on one sampled date contributes evidence, but cannot join a
+    different sampled date's trip into a single journey."""
     graph = tmp_path / "graph"
     graph.mkdir()
     graph.joinpath("stations.json").write_text(
@@ -243,13 +244,12 @@ def test_compute_aggregates_independent_sample_days_and_frequency(tmp_path):
         "direct_per_active_day": 1.0,
         "weekly_direct_estimate": 4,
         "availability": "coverage_limited",
-        "seasonal": False,
         "active_months": ["Jan"],
     }
 
 
 def test_compute_ignores_probes_outside_a_route_feeds_validity_window(tmp_path):
-    """A narrow downloaded feed must not make its normal route look seasonal."""
+    """A narrow downloaded feed must not make its normal route look limited."""
     graph = tmp_path / "graph"
     graph.mkdir()
     dates = ["2026-01-13", "2026-04-14", "2026-07-14", "2026-10-13"]
@@ -342,7 +342,12 @@ def test_service_week_is_deterministic_and_respects_feed_coverage():
     ]
 
 
-def test_compute_keeps_inactive_seasonal_trip_visible_and_labeled(tmp_path):
+def test_compute_keeps_absent_from_week_trip_visible(tmp_path):
+    """A trip whose service is absent from every sampled date (see
+    services_absent_from_week / build.py's extra_trips) still makes its
+    destination reachable -- this is real map coverage, not a classification.
+    It carries no direct-day evidence and is honestly reported "limited", never
+    "seasonal": that label is retired (backlog AF)."""
     graph = tmp_path / "graph"
     graph.mkdir()
     dates = [f"2026-07-{day:02d}" for day in range(13, 20)]
@@ -353,13 +358,48 @@ def test_compute_keeps_inactive_seasonal_trip_visible_and_labeled(tmp_path):
             {"id": "B", "name": "Beta", "lat": 51, "lon": 9, "country": "XX"},
         ],
     }))
-    seasonal = Trip(
-        trip_id="winter", train="Night", feeds=["rail"], seasonal=True,
+    extra = Trip(
+        trip_id="winter", train="Night", feeds=["rail"],
         stops=[StopTime(station="A", arr=480, dep=480), StopTime(station="B", arr=540, dep=540)],
     )
     graph.joinpath("trips.json").write_text(json.dumps({
         "trips": [], "trips_by_date": {day: [] for day in dates},
-        "seasonal_trips": [seasonal.model_dump()],
+        "extra_trips": [extra.model_dump()],
+        "feed_validity_by_date": {
+            day: {"rail": {"covered": True, "sampled": True}} for day in dates
+        },
+    }))
+    compute_all(graph, tmp_path / "out", workers=1, feeds_path=tmp_path / "no-feeds.toml")
+    reach = json.loads((tmp_path / "out" / "reach_A.json").read_text())
+    assert [d["id"] for d in reach["destinations"]] == ["B"]  # still on the map
+    frequency = reach["destinations"][0]["frequency"]
+    assert "seasonal" not in frequency
+    assert frequency["availability"] == "limited"
+    assert frequency["direct_trips"] == 0
+
+
+def test_compute_marks_year_round_when_reachable_every_sampled_date(tmp_path):
+    """Regression for the removed calendar-shortfall classification (backlog
+    AF): a destination reachable on every sampled date must be "year_round",
+    no matter how short its underlying GTFS calendar row looked upstream --
+    compute.py never sees calendar spans at all, only observed reachability."""
+    graph = tmp_path / "graph"
+    graph.mkdir()
+    dates = [f"2026-07-{day:02d}" for day in range(13, 20)]
+    graph.joinpath("stations.json").write_text(json.dumps({
+        "sample_date": dates[0], "sample_dates": dates,
+        "stations": [
+            {"id": "A", "name": "Alpha", "lat": 50, "lon": 8, "country": "XX"},
+            {"id": "B", "name": "Beta", "lat": 51, "lon": 9, "country": "XX"},
+        ],
+    }))
+    trip = Trip(
+        trip_id="ice", train="ICE 100", feeds=["rail"],
+        stops=[StopTime(station="A", arr=480, dep=480), StopTime(station="B", arr=540, dep=540)],
+    )
+    graph.joinpath("trips.json").write_text(json.dumps({
+        "trips": [trip.model_dump()],
+        "trips_by_date": {day: [trip.model_dump()] for day in dates},
         "feed_validity_by_date": {
             day: {"rail": {"covered": True, "sampled": True}} for day in dates
         },
@@ -367,6 +407,5 @@ def test_compute_keeps_inactive_seasonal_trip_visible_and_labeled(tmp_path):
     compute_all(graph, tmp_path / "out", workers=1, feeds_path=tmp_path / "no-feeds.toml")
     reach = json.loads((tmp_path / "out" / "reach_A.json").read_text())
     frequency = reach["destinations"][0]["frequency"]
-    assert frequency["seasonal"] is True
-    assert frequency["availability"] == "seasonal_or_limited"
-    assert frequency["direct_trips"] == 0
+    assert frequency["availability"] == "year_round"
+    assert frequency["direct_trips"] == 7

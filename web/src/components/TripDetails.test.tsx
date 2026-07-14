@@ -47,17 +47,27 @@ describe("TripDetails booking date", () => {
 });
 
 describe("frequencyLabel", () => {
-  it("says when a seasonal service is present in the selected week", () => {
+  it("says when a limited service is present in the selected week", () => {
     expect(frequencyLabel({ ...dest, frequency: {
       sample_days: 8, available_days: 3, direct_days: 3, direct_trips: 3,
-      weekly_direct_estimate: 3, availability: "seasonal_or_limited", seasonal: true, active_months: [],
-    } })).toBe("about 3 direct trains per week · seasonal service · found on 3/8 selected dates");
+      weekly_direct_estimate: 3, availability: "limited", active_months: [],
+    } })).toBe("about 3 direct trains per week · limited service · found on 3/8 selected dates");
   });
 
-  it("says when a seasonal service is absent from the selected week", () => {
+  it("says when a limited service is absent from the selected week", () => {
     expect(frequencyLabel({ ...dest, frequency: {
       sample_days: 8, available_days: 0, direct_days: 0, direct_trips: 0,
-      weekly_direct_estimate: 0, availability: "seasonal_or_limited", seasonal: true, active_months: [],
-    } })).toBe("seasonal service · not included in the selected service week");
+      weekly_direct_estimate: 0, availability: "limited", active_months: [],
+    } })).toBe("not running in the selected service week");
+  });
+
+  it("never mentions seasonality, even for a stale reach file's retired availability value", () => {
+    const label = frequencyLabel({ ...dest, frequency: {
+      sample_days: 8, available_days: 3, direct_days: 3, direct_trips: 3,
+      weekly_direct_estimate: 3, active_months: [],
+      // @ts-expect-error -- old files carry the retired "seasonal_or_limited" value
+      availability: "seasonal_or_limited",
+    } });
+    expect(label.toLowerCase()).not.toContain("seasonal");
   });
 });

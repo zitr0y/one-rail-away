@@ -9,10 +9,10 @@ export function bestJourney(d: Destination, maxTrains: MaxTrains): Journey | nul
     : null;
 }
 
-/** Old reach files have no evidence metadata, so retain their established solid style. */
+/** Old reach files have no evidence metadata (or carry a retired availability
+ *  value), so anything but the honest "limited" signal renders solid. */
 export function frequencyClass(d: Destination): "frequent" | "infrequent" {
-  return d.frequency?.seasonal || d.frequency?.availability === "seasonal_or_limited"
-    ? "infrequent" : "frequent";
+  return d.frequency?.availability === "limited" ? "infrequent" : "frequent";
 }
 
 export function timeBucket(min: number): 0 | 1 | 2 | 3 {

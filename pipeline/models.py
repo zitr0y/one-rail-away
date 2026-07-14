@@ -35,9 +35,6 @@ class Trip(BaseModel):
     # Feed provenance survives through-routing so sampled availability can
     # distinguish an absent service from a date the upstream feed cannot cover.
     feeds: list[str] = Field(default_factory=list)
-    # Calendar-derived limited-season evidence, including trips not active in
-    # the selected service week.
-    seasonal: bool = False
 
 
 class Leg(BaseModel):
@@ -80,8 +77,7 @@ class Frequency(BaseModel):
     direct_trips: int
     direct_per_active_day: float | None = None
     weekly_direct_estimate: int | None = None
-    availability: Literal["year_round", "seasonal_or_limited", "coverage_limited"]
-    seasonal: bool = False
+    availability: Literal["year_round", "limited", "coverage_limited"]
     active_months: list[str]
 
 

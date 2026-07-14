@@ -6,15 +6,13 @@ import type { Destination, Station } from "../lib/types";
 export function frequencyLabel(dest: Destination): string {
   const f = dest.frequency;
   if (!f) return `${dest.direct_per_day}× per day`;
-  const availability = f.seasonal
-    ? f.available_days > 0 || f.direct_trips > 0
-      ? `seasonal service · found on ${f.available_days}/${f.sample_days} selected dates`
-      : "seasonal service · not included in the selected service week"
-    : f.availability === "coverage_limited"
+  const availability = f.availability === "coverage_limited"
     ? `limited feed coverage · route found on ${f.available_days}/${f.sample_days} covered dates`
     : f.availability === "year_round"
     ? "available on every sampled date"
-    : `limited service · found on ${f.available_days}/${f.sample_days} selected dates`;
+    : f.available_days > 0
+    ? `limited service · found on ${f.available_days}/${f.sample_days} selected dates`
+    : "not running in the selected service week";
   if (!f.direct_trips) return availability;
   if (f.direct_days === f.sample_days && f.direct_per_active_day != null) {
     return `${f.direct_per_active_day} direct trains per day · ${availability}`;

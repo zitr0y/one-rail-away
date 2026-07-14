@@ -15,7 +15,7 @@ from pathlib import Path
 from pipeline import netex
 from pipeline.config import FeedConfig, load_feeds
 from pipeline.geo import ASSET, assign_countries, load_countries
-from pipeline.gtfs import feed_validity_window, limited_seasonal_services, load_feed
+from pipeline.gtfs import feed_validity_window, load_feed, services_absent_from_week
 from pipeline.merge import _dist_m, _norm, merge_stations
 from pipeline.models import CountryOverride, Station, Trip
 from pipeline.through import join_through_services
@@ -24,7 +24,7 @@ logger = logging.getLogger(__name__)
 
 
 def _load_feed_samples(
-    task: tuple[str, Path, FeedConfig, list[date], set[str], set[str]],
+    task: tuple[str, Path, FeedConfig, list[date], set[str]],
 ) -> tuple[str, dict[str, tuple[list, list[Trip]]], tuple[list, list[Trip]] | None]:
     """Load all in-coverage probes for one feed in an isolated process.
 
@@ -32,22 +32,14 @@ def _load_feed_samples(
     output.  The parent merges the returned data in feed/date order, which
     keeps graph JSON and console output deterministic.
     """
-    name, zip_path, cfg, days, seasonal_ids, absent_seasonal_ids = task
+    name, zip_path, cfg, days, absent_ids = task
     loader = netex.load_feed if cfg.format == "netex" else load_feed
     if cfg.format == "netex":
         return name, {day.isoformat(): loader(zip_path, cfg, day) for day in days}, None
     return (
         name,
-        {
-            day.isoformat(): loader(
-                zip_path, cfg, day, seasonal_service_ids=seasonal_ids
-            )
-            for day in days
-        },
-        loader(
-            zip_path, cfg, days[0], service_ids=absent_seasonal_ids,
-            seasonal_service_ids=seasonal_ids,
-        ) if absent_seasonal_ids else None,
+        {day.isoformat(): loader(zip_path, cfg, day) for day in days},
+        loader(zip_path, cfg, days[0], service_ids=absent_ids) if absent_ids else None,
     )
 
 
@@ -211,36 +203,39 @@ def build(
                 ", ".join(day.isoformat() for day in skipped),
             )
 
-    seasonal_services: dict[str, tuple[set[str], set[str]]] = {
-        name: limited_seasonal_services(raw_dir / f"{name}.zip", feed_days[name])
+    absent_services: dict[str, set[str]] = {
+        name: services_absent_from_week(raw_dir / f"{name}.zip", feed_days[name])
         for name, cfg in feeds.items()
         if cfg.format != "netex" and (raw_dir / f"{name}.zip").exists() and feed_days[name]
     }
     tasks = [
         (
             name, raw_dir / f"{name}.zip", cfg, feed_days[name],
-            *seasonal_services.get(name, (set(), set())),
+            absent_services.get(name, set()),
         )
         for name, cfg in feeds.items()
         if (raw_dir / f"{name}.zip").exists() and feed_days[name]
     ]
     loaded_by_feed: dict[str, dict[str, tuple[list, list[Trip]]]] = {}
-    seasonal_by_feed: dict[str, tuple[list, list[Trip]]] = {}
+    # Extra sample per feed: trips active on a day outside the selected week,
+    # loaded only for services absent from every sampled date (see
+    # services_absent_from_week) so destinations they alone serve still appear.
+    extra_by_feed: dict[str, tuple[list, list[Trip]]] = {}
     max_workers = min(workers or os.process_cpu_count() or 1, len(tasks))
     if max_workers > 1:
         with ProcessPoolExecutor(max_workers=max_workers) as pool:
             # executor.map preserves task order; the following date loop also
             # makes the final serialized graph independent of worker timing.
-            for name, loaded, seasonal in pool.map(_load_feed_samples, tasks):
+            for name, loaded, extra in pool.map(_load_feed_samples, tasks):
                 loaded_by_feed[name] = loaded
-                if seasonal is not None:
-                    seasonal_by_feed[name] = seasonal
+                if extra is not None:
+                    extra_by_feed[name] = extra
     else:
         for task in tasks:
-            name, loaded, seasonal = _load_feed_samples(task)
+            name, loaded, extra = _load_feed_samples(task)
             loaded_by_feed[name] = loaded
-            if seasonal is not None:
-                seasonal_by_feed[name] = seasonal
+            if extra is not None:
+                extra_by_feed[name] = extra
 
     for day in dates:
         feed_trips: dict[str, list[Trip]] = {}
@@ -269,7 +264,7 @@ def build(
             for trip in trips:
                 trip.feeds = [name]
             # merge_stations wants each feed's stops once; union all sampled
-            # stops by feed-local id so a seasonal-only stop is retained.
+            # stops by feed-local id so an out-of-week-only stop is retained.
             if name not in per_feed:
                 per_feed[name] = ([], cfg)
             known = {s.stop_id for s in per_feed[name][0]}
@@ -279,9 +274,10 @@ def build(
         feed_trips_by_date[day.isoformat()] = feed_trips
         feed_validity_by_date[day.isoformat()] = validity
 
-    # An inactive-in-week seasonal trip can introduce stops not used by the
-    # selected week.  Retain them in the shared station registry too.
-    for name, (stops, _trips) in seasonal_by_feed.items():
+    # A trip whose service is absent from the selected week can introduce
+    # stops not used by the selected week.  Retain them in the shared station
+    # registry too.
+    for name, (stops, _trips) in extra_by_feed.items():
         for trip in _trips:
             trip.feeds = [name]
         if name not in per_feed:
@@ -296,10 +292,10 @@ def build(
         day: join_through_services(remap_trips(feed_trips, mapping))
         for day, feed_trips in feed_trips_by_date.items()
     }
-    seasonal_trips = join_through_services(remap_trips(
+    extra_trips = join_through_services(remap_trips(
         {
             name: trips
-            for name, (_stops, trips) in seasonal_by_feed.items()
+            for name, (_stops, trips) in extra_by_feed.items()
         },
         mapping,
     ))
@@ -347,7 +343,7 @@ def build(
                 "trips_by_date": {
                     day: [t.model_dump() for t in trips] for day, trips in trips_by_date.items()
                 },
-                "seasonal_trips": [t.model_dump() for t in seasonal_trips],
+                "extra_trips": [t.model_dump() for t in extra_trips],
                 "feed_validity_by_date": feed_validity_by_date,
             },
             ensure_ascii=False,

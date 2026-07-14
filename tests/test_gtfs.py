@@ -11,11 +11,10 @@ from pathlib import Path
 
 from pipeline.config import FeedConfig
 from pipeline.gtfs import (
-    LIMITED_SERVICE_SHORTFALL_DAYS,
     _brand_label,
-    limited_seasonal_services,
     load_feed,
     next_tuesday,
+    services_absent_from_week,
 )
 from pipeline.netex import COORDINATE_FIXES
 from pipeline.netex import feed_validity_window as netex_validity_window
@@ -82,7 +81,10 @@ def test_load_feed_respects_calendar(tmp_path):
     assert trips == []  # outside service range
 
 
-def test_limited_seasonal_service_is_loaded_even_when_absent_from_selected_week(tmp_path):
+def test_service_absent_from_week_is_still_loaded_via_extra_sample(tmp_path):
+    """A service with no active day in the sampled week is real coverage, not a
+    label: build.py loads one extra probe with service_ids=absent so a
+    destination reached only by it still appears on the map (backlog AF)."""
     calendar = (
         "service_id,monday,tuesday,wednesday,thursday,friday,saturday,sunday,start_date,end_date\n"
         "ALL,1,1,1,1,1,1,1,20260101,20261231\n"
@@ -94,26 +96,27 @@ def test_limited_seasonal_service_is_loaded_even_when_absent_from_selected_week(
     )
     path = _make_feed(tmp_path, calendar_txt=calendar, trips_txt=trips, stop_times_txt=stop_times)
     week = [date(2026, 7, 13) + timedelta(days=offset) for offset in range(7)]
-    limited, absent = limited_seasonal_services(path, week)
-    assert limited == absent == {"WINTER"}
-    _, retained = load_feed(path, CFG, week[0], service_ids=absent, seasonal_service_ids=limited)
-    assert [(trip.trip_id, trip.seasonal) for trip in retained] == [("TW", True)]
+    absent = services_absent_from_week(path, week)
+    assert absent == {"WINTER"}
+    _, retained = load_feed(path, CFG, week[0], service_ids=absent)
+    assert [trip.trip_id for trip in retained] == ["TW"]
 
 
-def test_limited_seasonal_services_ignores_trivial_calendar_boundary_difference(tmp_path):
+def test_services_absent_from_week_ignores_calendar_span_when_service_runs_in_week(tmp_path):
+    """Regression for the removed `limited_seasonal_services`: a short published
+    calendar is not seasonality evidence. A service that actually runs on every
+    sampled day is never "absent", no matter how short its calendar row is
+    relative to the feed's published horizon."""
     calendar = (
         "service_id,monday,tuesday,wednesday,thursday,friday,saturday,sunday,start_date,end_date\n"
         "ALL,1,1,1,1,1,1,1,20260101,20261231\n"
-        "ONE_DAY_SHORT,1,1,1,1,1,1,1,20260102,20261231\n"
-        "FOUR_WEEKS_SHORT,1,1,1,1,1,1,1,20260129,20261231\n"
+        "SHORT_BUT_ACTIVE,1,1,1,1,1,1,1,20260701,20260801\n"
     )
     path = _make_feed(tmp_path, calendar_txt=calendar)
     week = [date(2026, 7, 13) + timedelta(days=offset) for offset in range(7)]
 
-    limited, absent = limited_seasonal_services(path, week)
+    absent = services_absent_from_week(path, week)
 
-    assert LIMITED_SERVICE_SHORTFALL_DAYS == 28
-    assert limited == {"FOUR_WEEKS_SHORT"}
     assert absent == set()
 
 
