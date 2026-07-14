@@ -199,6 +199,13 @@ def create_app(data_dir: Path) -> FastAPI:
             raise HTTPException(status_code=404, detail="No cities data")
         return json.loads(path.read_text(encoding="utf-8"))
 
+    @app.get("/api/rail-paths")
+    def rail_paths() -> dict:
+        path = data_dir / "rail_paths.json"
+        if not path.exists():
+            raise HTTPException(status_code=404, detail="No rail path data")
+        return json.loads(path.read_text(encoding="utf-8"))
+
     return app
 
 

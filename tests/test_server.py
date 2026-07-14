@@ -83,3 +83,18 @@ def test_cities_endpoint_and_404_when_absent(tmp_path):
     empty_dir.mkdir()
     empty = TestClient(create_app(empty_dir))
     assert empty.get("/api/cities").status_code == 404
+
+
+def test_rail_paths_served(tmp_path):
+    (tmp_path / "rail_paths.json").write_text(
+        '{"attribution": "© OpenStreetMap contributors (ODbL)", '
+        '"paths": {"a|b": [[0, 0], [1, 1]]}}',
+        encoding="utf-8")
+    client = TestClient(create_app(tmp_path))
+    body = client.get("/api/rail-paths").json()
+    assert body["paths"]["a|b"] == [[0, 0], [1, 1]]
+
+
+def test_rail_paths_404_when_missing(tmp_path):
+    client = TestClient(create_app(tmp_path))
+    assert client.get("/api/rail-paths").status_code == 404
