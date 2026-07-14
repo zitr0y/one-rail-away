@@ -34,6 +34,27 @@ national feeds remain ongoing; next candidates and research verdicts live in
 two-tier veil). Competitor note: Ouigo España publishes GTFS on
 nap.transportes.gob.es; iryo does not.
 
+**Ouigo España verdict (2026-07-14 — not shipped):** Spain's official National
+Access Point lists the official Ouigo high-speed GTFS dataset at
+`https://nap.transportes.gob.es/Files/Detail/1515`: one operator (OUIGO España),
+11 routes, 69 trips and 16 stops, valid 2026-06-26 through 2026-12-12, last
+updated 2026-07-02. The record says it includes route geometry and labels its
+terms “Licence and Free of charge”, pointing to the Ministry's open-data licence.
+That licence permits commercial and non-commercial reuse with attribution, but
+also makes the original source's stricter terms prevail. Crucially, the record's
+two download links explicitly say “Inicia sesión para descargar”; an anonymous
+`HEAD` and `GET` of its official asset endpoint
+`https://nap.transportes.gob.es/api/Fichero/download/1766` returned HTTP 401 on
+2026-07-14. Thus the actual archive is registration-gated and cannot be
+inspected for its GTFS agency row, exact route-product table, stop-id scheme,
+parent hierarchy, station coordinates, names, or foreign stops; nor can it be
+automatically refreshed under this project's registration-free-source rule. Do
+not ingest a mirror, use a guessed endpoint, or add a feed entry. Revisit only
+when the NAP provides an anonymous HTTP 200 download of the official ZIP (and
+the source-specific terms remain commercially compatible); then inspect the
+real archive and require usable station geometry plus a verified narrow Ouigo
+passenger-rail filter before integration.
+
 **Czechia verdict (2026-07-14 — not shipped):** the best official source is the
 Ministry of Transport's CIS JŘ national-rail CZPTT NeTEx publication,
 `https://portal.cisjr.cz/pub/netex/NeTEx_GVD2026.zip`. It is directly downloadable
