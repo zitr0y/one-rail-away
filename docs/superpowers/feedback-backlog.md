@@ -261,6 +261,12 @@ physically share the LGV corridor but our lines don't. Fix directions to brainst
 (b) algorithmic edge bundling, (c) force lines through nearest corridor waypoints. Big
 visual win, medium-to-large effort. Related to D (map styling).
 
+**Paths not rendering (user report 2026-07-14):** after the id-change fix and full
+rebuild, the user reports reach paths still do NOT show on the map. Per user
+decision, do not chase this separately — it will be addressed together with this
+item's move to proper track-following geometry (real rail paths). When item I is
+implemented, verify rendering end-to-end with human eyes.
+
 ## K. Alternative / supplementary data sources (added 2026-07-11)
 
 User pointer via chronotrains' attribution: "data from the Deutsche Bahn through
@@ -499,6 +505,34 @@ quarantine or skip only the affected feed/stations with a loud build warning, an
 fail the build only when the resulting output would be substantially degraded. The
 precise design is open, but another isolated upstream change must not replace the
 working site with example data. Relates to Q (persistent unfit-data reporting).
+
+## AD. Harden against station-id churn — no hardcoded live ids (added 2026-07-14)
+
+User is explicitly skeptical of the 036a1fb approach: the 6 failing tests were
+"fixed" by swapping in the NEW live DB station ids — but upstream ids demonstrably
+change (that's what broke the site, see AC), so the next id churn breaks the same
+tests again. Hardening, not id-chasing:
+- **Tests must not hardcode live feed ids.** Use synthetic fixtures, or derive
+  expected ids from the fixture input, or match on stable properties (name +
+  coordinates) instead of raw `x:db_fern:NNNNNN` literals.
+- **Pipeline:** treat id churn as a normal, expected upstream event. Extend the
+  9d99eea merge-changed-ids logic into a general mechanism (stable internal ids
+  keyed on name+geo, with feed ids as volatile aliases), so an upstream renumber
+  is absorbed instead of propagating through data files, reach caches, and tests.
+- Relates directly to AC (graceful degradation) and Q (surface what changed);
+  consider doing AD and AC as one hardening pass.
+
+## AE. Target chooser in click-disambiguation changes the ORIGIN (bug, added 2026-07-14)
+
+When bunched dots trigger the station chooser while picking a **target**, selecting
+"City (all stations)" changes the **start** instead of the target. To avoid
+re-wiring the targeting, agreed direction (user, 2026-07-14):
+- **Target chooser:** drop the "City (all stations)" entry entirely; sort stations
+  by **number of steps/trains to reach from the current origin** (primary), then by
+  **size (connection count)** (secondary).
+- **Origin chooser:** keep the current ranking unchanged (bold "City (all
+  stations)" first, rest by connections — b43faec).
+Relates to C (click disambiguation) and the shipped popup-ranking note below.
 
 ## AB. all-stations fade/pin opacity expression is invalid — SHIPPED 2026-07-13
 
