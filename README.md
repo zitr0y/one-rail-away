@@ -41,4 +41,6 @@ merged stations and 4,100 trips per sample day.
 
 VS Code: "Full stack" launch config debugs API + browser together.
 
+**What data we use — and what we still want:** [`docs/data-sources.md`](docs/data-sources.md).
+
 Design docs: `docs/superpowers/specs/`, plans: `docs/superpowers/plans/`.
