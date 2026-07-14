@@ -595,3 +595,41 @@ pin branches.
 - Final-review note (sncf-labels): document near through.py that SNCF ICE numbers
   (95xx) are disjoint from db_fern ICE numbers — a future feed refresh with a shared
   number would silently start joining.
+
+## 2026-07-14 (user session: rail geometry)
+
+- **AF — Seasonal detection is broken (false positives everywhere).** User report:
+  Dortmund–Munich is labelled seasonal but obviously isn't. Confirmed from the
+  live data: Dortmund→München Hbf has direct trains on all 7 sampled days,
+  122 direct trips/week (17.4/day), and is still `seasonal: true` /
+  `availability: "seasonal_or_limited"`. **64% of Dortmund's 1558 destinations
+  are flagged seasonal** — a rule that fires on two-thirds of everything is not
+  detecting seasonality.
+  Cause: `pipeline/gtfs.py::limited_seasonal_services` flags a service when its
+  GTFS calendar span is `>= LIMITED_SERVICE_SHORTFALL_DAYS` (28) shorter than the
+  feed's whole validity window. DB publishes a long horizon but defines services
+  per timetable period, so almost every ordinary service looks "short". The rule
+  measures the length of a calendar row, not whether the train only runs in
+  summer. Flows to the dashed "infrequent" line style via
+  `Destination.frequency.seasonal` → `web/src/lib/geojson.ts::frequencyClass`.
+  Fix direction: derive seasonality from OBSERVED operating days — union the
+  operating days (calendar day-of-week flags x date range, plus calendar_dates
+  exceptions) of every trip serving a destination, and only call it limited when
+  that union covers a small share of the feed window. Do NOT just retune the
+  28-day constant; that only moves the false-positive line.
+  Related: `active_months` is similarly misleading (it reports `["Jul"]` merely
+  because we sample one week in July, not because service stops in August).
+
+- **AG — Rome needs a city grouping.** Rome's stations (Termini, Tiburtina, ...)
+  are not grouped into a city union the way other multi-station cities are.
+  See `pipeline`/`cities` grouping + `web/src/lib/cities.ts`.
+
+- **AH — Lisbon and Copenhagen are missing capital stars.** Both are capitals but
+  render without the `capital-stars` marker (`is_capital` presumably unset).
+
+- **AI — Density-aware station hiding on zoom.** Some countries expose a LOT of
+  small stations (Portugal, Denmark — essentially every regional stop), which
+  clutters the map. Current `stationDotOpacityByZoom` / `dotRadiusExpression`
+  fade by zoom alone; a density-aware rule (hide low-importance stops where
+  station density is high, reveal on zoom-in) would address it without
+  hardcoding per-country rules.
