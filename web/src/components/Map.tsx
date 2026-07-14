@@ -2,7 +2,7 @@ import maplibregl from "maplibre-gl";
 import { useEffect, useRef } from "react";
 import {
   destinationsGeoJSON, linesGeoJSON, segmentsGeoJSON, bestJourney, journeyLegPaths,
-  transferPoints, type MaxTrains,
+  transferPoints, type MaxTrains, type RailPathLookup,
 } from "../lib/geojson";
 import { buildRideTimeline, rideStateAt, riderTransform } from "../lib/ride";
 import { riderSvg } from "../lib/ridersvg";
@@ -42,6 +42,7 @@ interface Props {
   theme: Theme;
   cityGroups: CityGroups;
   armed: "from" | "to";
+  railPaths: RailPathLookup | null;
   onStationClick: (pick: FeaturePick) => void;
   onSelectCityOrigin: (city: string, memberIds: string[]) => void;
   onEmptyClick: () => void;
@@ -311,7 +312,7 @@ export default function MapView(props: Props) {
   function syncData() {
     const m = map.current;
     if (!m) return;
-    const { stations, reach, maxTrains, maxMinutes } = propsRef.current;
+    const { stations, reach, maxTrains, maxMinutes, railPaths } = propsRef.current;
     const byId = new Map(stations.map((s) => [s.id, s]));
 
     const nonCapitals = stations.filter((s) => s.has_reach && !s.is_capital);
@@ -335,16 +336,20 @@ export default function MapView(props: Props) {
     });
 
     (m.getSource("reach-lines") as maplibregl.GeoJSONSource).setData(
-      reach ? (linesGeoJSON(reach, byId, maxTrains, maxMinutes) as never) : (EMPTY as never));
+      reach ? (linesGeoJSON(reach, byId, maxTrains, maxMinutes, railPaths) as never) : (EMPTY as never));
     (m.getSource("reach-segments") as maplibregl.GeoJSONSource).setData(
-      reach ? (segmentsGeoJSON(reach, byId, maxTrains, maxMinutes) as never) : (EMPTY as never));
+      reach
+        ? (segmentsGeoJSON(reach, byId, maxTrains, maxMinutes, railPaths) as never)
+        : (EMPTY as never));
     (m.getSource("reach-dots") as maplibregl.GeoJSONSource).setData(
       reach ? (destinationsGeoJSON(reach, byId, maxTrains, maxMinutes) as never) : (EMPTY as never));
     const origin = reach && byId.get(reach.origin);
     if (origin) m.easeTo({ center: [origin.lon, origin.lat], zoom: 5 });
   }
 
-  useEffect(syncData, [props.stations, props.reach, props.maxTrains, props.maxMinutes]);
+  useEffect(syncData, [
+    props.stations, props.reach, props.maxTrains, props.maxMinutes, props.railPaths,
+  ]);
 
   function syncTransfers() {
     const m = map.current;
@@ -458,7 +463,7 @@ export default function MapView(props: Props) {
     // Mirror shown()'s cutoff: no rider for a journey the line layer won't draw.
     if (!journey || journey.duration_min > maxMinutes) return;
     const byId = new Map(stations.map((s) => [s.id, s]));
-    const timeline = buildRideTimeline(journeyLegPaths(journey, byId));
+    const timeline = buildRideTimeline(journeyLegPaths(journey, byId, propsRef.current.railPaths));
     if (!timeline) return;
 
     const tokens = themeTokens(theme);
@@ -502,7 +507,7 @@ export default function MapView(props: Props) {
 
   useEffect(syncRider, [
     props.selectedDest, props.reach, props.maxTrains, props.maxMinutes,
-    props.stations, props.theme,
+    props.stations, props.theme, props.railPaths,
   ]);
 
   const appliedTheme = useRef(props.theme);

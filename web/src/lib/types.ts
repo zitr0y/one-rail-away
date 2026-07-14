@@ -29,3 +29,8 @@ export interface CoverageCollection {
   type: "FeatureCollection";
   features: CoverageFeature[];
 }
+
+export interface RailPathsFile {
+  attribution: string;
+  paths: Record<string, [number, number][]>;
+}

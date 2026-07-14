@@ -7,7 +7,7 @@ import { TIME_MAX } from "./components/TimeSlider";
 import { api } from "./lib/api";
 import { buildCityLookup } from "./lib/cities";
 import { unionReach } from "./lib/cityunion";
-import type { MaxTrains } from "./lib/geojson";
+import type { MaxTrains, RailPathLookup } from "./lib/geojson";
 import type { FeaturePick } from "./lib/pickfeature";
 import type { CityGroups, ReachFile, Station } from "./lib/types";
 import { useTheme } from "./lib/theme";
@@ -18,6 +18,7 @@ export default function App() {
   const [cityGroups, setCityGroups] = useState<CityGroups>({});
   const [cityOrigin, setCityOrigin] = useState<{ city: string; memberIds: string[] } | null>(null);
   const [reach, setReach] = useState<ReachFile | null>(null);
+  const [railPaths, setRailPaths] = useState<RailPathLookup | null>(null);
   const [maxTrains, setMaxTrains] = useState<MaxTrains>(1);
   const [maxMinutes, setMaxMinutes] = useState(TIME_MAX); // start at "max" (no cap)
   const [selectedDest, setSelectedDest] = useState<string | null>(null);
@@ -32,6 +33,9 @@ export default function App() {
   useEffect(() => {
     api.getStations().then((r) => setStations(r.stations)).catch((e) => setError(String(e)));
     api.getCities().then(setCityGroups).catch(() => setCityGroups({}));
+    api.getRailPaths()
+      .then((r) => setRailPaths(new Map(Object.entries(r.paths))))
+      .catch(() => setRailPaths(null)); // straight-line fallback, by design
   }, []);
 
   const selectOrigin = useCallback((id: string) => {
@@ -149,7 +153,7 @@ export default function App() {
     <div className="app">
       <MapView stations={stations} reach={reach} maxTrains={maxTrains} maxMinutes={filterMinutes}
                selectedDest={selectedDest} theme={theme}
-               cityGroups={cityGroups} armed={armed}
+               cityGroups={cityGroups} armed={armed} railPaths={railPaths}
                onStationClick={onStationClick} onSelectCityOrigin={selectCityOrigin}
                onEmptyClick={onEmptyClick} />
       <header className="header-bar">
