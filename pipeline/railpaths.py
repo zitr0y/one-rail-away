@@ -19,7 +19,7 @@ import urllib.request
 from dataclasses import dataclass, field
 from pathlib import Path
 
-from shapely.geometry import LineString, Point
+from shapely.geometry import LineString, Point, box
 from shapely.strtree import STRtree
 
 from pipeline.geo import _haversine_m
@@ -27,6 +27,21 @@ from pipeline.geo import _haversine_m
 log = logging.getLogger(__name__)
 
 SNAP_MAX_M = 1000.0
+# Bounding-box half-width used to pre-filter STRtree candidates before exact
+# haversine distance checks. 0.02 deg comfortably exceeds 1 km (SNAP_MAX_M)
+# at European latitudes.
+SNAP_QUERY_DEG = 0.02
+
+# Railway types a scheduled passenger train in our timetable can run on.
+# Deliberately generous: the filtered extract is the on-disk CACHE, so a value
+# omitted here can only be recovered by re-downloading the raw extract (~24 GB).
+RAIL_RAILWAY_VALUES = ("rail", "narrow_gauge", "light_rail")
+
+# Minimum node count for a connected component to be eligible for station
+# snapping. Filters out isolated stubs/yard fragments/museum tracks (typically
+# a handful of nodes) while keeping genuine separate networks intact (e.g. the
+# Rhaetian Railway's metre-gauge network alone has thousands of nodes).
+MIN_COMPONENT_NODES = 50
 
 DEFAULT_SPEED_KMH = 100.0
 MIN_SPEED_KMH = 10.0
@@ -138,26 +153,110 @@ def build_graph(
     return graph
 
 
+def connected_components(ways: list[RailWay]) -> dict[int, int]:
+    """Union-find over way node refs -> node_id -> component_id.
+
+    Iterative (no recursion) with path compression and union by size, so it
+    stays efficient at real scale: ~1M ways / ~8.6M nodes.
+    """
+    parent: dict[int, int] = {}
+    size: dict[int, int] = {}
+
+    def find(node: int) -> int:
+        root = node
+        while parent[root] != root:
+            root = parent[root]
+        while parent[node] != root:
+            parent[node], node = root, parent[node]
+        return root
+
+    def union(a: int, b: int) -> None:
+        root_a, root_b = find(a), find(b)
+        if root_a == root_b:
+            return
+        if size[root_a] < size[root_b]:
+            root_a, root_b = root_b, root_a
+        parent[root_b] = root_a
+        size[root_a] += size[root_b]
+
+    for way in ways:
+        for ref in way.refs:
+            if ref not in parent:
+                parent[ref] = ref
+                size[ref] = 1
+        for a, b in itertools.pairwise(way.refs):
+            union(a, b)
+
+    return {node: find(node) for node in parent}
+
+
+@dataclass(frozen=True)
+class SnapCandidate:
+    node: int
+    distance_m: float
+    component: int
+
+
 def snap_stations(
     stations: list[dict], node_locs: dict[int, tuple[float, float]],
-) -> tuple[dict[str, int], list[dict]]:
-    node_ids = list(node_locs)
-    tree = STRtree([Point(*node_locs[n]) for n in node_ids])
-    snapped: dict[str, int] = {}
+    components: dict[int, int],
+) -> tuple[dict[str, list[SnapCandidate]], list[dict]]:
+    """For each station, the nearest rail node per eligible connected
+    component within SNAP_MAX_M, sorted nearest-first. A station can get
+    multiple candidates (e.g. an interchange served by both a standard-gauge
+    and a metre-gauge network); nodes on components below MIN_COMPONENT_NODES
+    (isolated stubs/yards) are never considered.
+    """
+    component_sizes: dict[int, int] = {}
+    for comp in components.values():
+        component_sizes[comp] = component_sizes.get(comp, 0) + 1
+
+    eligible_ids = [
+        n for n in node_locs
+        if n in components and component_sizes[components[n]] >= MIN_COMPONENT_NODES
+    ]
+    # shapely.strtree.STRtree.query_nearest gives only the single nearest
+    # node, which isn't enough here (we need one candidate per component), so
+    # we query a bounding box around each station and filter by exact
+    # haversine distance instead.
+    tree = STRtree([Point(*node_locs[n]) for n in eligible_ids])
+
+    candidates: dict[str, list[SnapCandidate]] = {}
     failures: list[dict] = []
     for station in stations:
-        index = tree.nearest(Point(station["lon"], station["lat"]))
-        node_id = node_ids[index]
-        lon, lat = node_locs[node_id]
-        distance_m = _haversine_m(station["lat"], station["lon"], lat, lon)
-        if distance_m <= SNAP_MAX_M:
-            snapped[station["id"]] = node_id
-        else:
-            failures.append({
-                "station": station["id"], "reason": "no_rail_within_snap_radius",
-                "nearest_m": round(distance_m),
-            })
-    return snapped, failures
+        lon, lat = station["lon"], station["lat"]
+        query_box = box(
+            lon - SNAP_QUERY_DEG, lat - SNAP_QUERY_DEG,
+            lon + SNAP_QUERY_DEG, lat + SNAP_QUERY_DEG,
+        )
+        best_by_component: dict[int, SnapCandidate] = {}
+        for index in tree.query(query_box):
+            node_id = eligible_ids[index]
+            node_lon, node_lat = node_locs[node_id]
+            distance_m = _haversine_m(lat, lon, node_lat, node_lon)
+            if distance_m > SNAP_MAX_M:
+                continue
+            comp = components[node_id]
+            existing = best_by_component.get(comp)
+            if existing is None or distance_m < existing.distance_m:
+                best_by_component[comp] = SnapCandidate(
+                    node=node_id, distance_m=distance_m, component=comp)
+        if best_by_component:
+            candidates[station["id"]] = sorted(
+                best_by_component.values(), key=lambda c: c.distance_m)
+            continue
+        nearest_m = None
+        if eligible_ids:
+            nearest_index = tree.nearest(Point(lon, lat))
+            if nearest_index is not None:
+                node_id = eligible_ids[nearest_index]
+                node_lon, node_lat = node_locs[node_id]
+                nearest_m = _haversine_m(lat, lon, node_lat, node_lon)
+        failures.append({
+            "station": station["id"], "reason": "no_rail_within_snap_radius",
+            "nearest_m": round(nearest_m) if nearest_m is not None else None,
+        })
+    return candidates, failures
 
 
 SIMPLIFY_TOLERANCE_DEG = 0.0003  # ~30 m; TUNING POINT
@@ -210,18 +309,33 @@ def route(graph: RailGraph, start: int, goal: int) -> list[tuple[float, float]] 
 
 
 def assemble_paths(
-    hops: set[tuple[str, str]], snapped: dict[str, int], graph: RailGraph,
-    stations_by_id: dict[str, dict],
+    hops: set[tuple[str, str]], candidates: dict[str, list[SnapCandidate]],
+    graph: RailGraph, stations_by_id: dict[str, dict],
 ) -> tuple[dict[str, list[list[float]]], list[dict]]:
     paths: dict[str, list[list[float]]] = {}
     failures: list[dict] = []
     for a_id, b_id in sorted(hops):
         key = f"{a_id}|{b_id}"
-        node_a, node_b = snapped.get(a_id), snapped.get(b_id)
-        if node_a is None or node_b is None:
+        cands_a, cands_b = candidates.get(a_id), candidates.get(b_id)
+        if not cands_a or not cands_b:
             failures.append({"hop": key, "reason": "endpoint_not_snapped"})
             continue
-        coords = route(graph, node_a, node_b)
+        by_component_a = {c.component: c for c in cands_a}
+        by_component_b = {c.component: c for c in cands_b}
+        shared = by_component_a.keys() & by_component_b.keys()
+        if not shared:
+            failures.append({"hop": key, "reason": "no_shared_rail_component"})
+            continue
+        ordered_components = sorted(
+            shared,
+            key=lambda comp: by_component_a[comp].distance_m
+            + by_component_b[comp].distance_m,
+        )
+        coords = None
+        for comp in ordered_components:
+            coords = route(graph, by_component_a[comp].node, by_component_b[comp].node)
+            if coords is not None:
+                break
         if coords is None:
             failures.append({"hop": key, "reason": "no_rail_path"})
             continue
@@ -309,8 +423,9 @@ def download_extracts(countries: list[str], osm_dir: Path, force: bool) -> list[
 
 
 def filter_rail_extract(src: Path, dst: Path) -> Path:
-    """Filter a raw Geofabrik extract down to railway=rail ways plus the nodes
-    they reference, writing the result to `dst`.
+    """Filter a raw Geofabrik extract down to ways with railway in
+    RAIL_RAILWAY_VALUES plus the nodes they reference, writing the result to
+    `dst`.
 
     Uses pyosmium's C++-level filtering (FileProcessor + filters) rather than
     per-object Python callbacks, since a per-object Python callback is far too
@@ -332,7 +447,8 @@ def filter_rail_extract(src: Path, dst: Path) -> Path:
         for obj in (
             osmium.FileProcessor(str(src))
             .with_filter(osmium.filter.EntityFilter(osmium.osm.WAY))
-            .with_filter(osmium.filter.TagFilter(("railway", "rail")))
+            .with_filter(osmium.filter.TagFilter(
+                *[("railway", value) for value in RAIL_RAILWAY_VALUES]))
         ):
             writer.add(obj)
     finally:
@@ -387,7 +503,7 @@ def read_rail_network(
             self.ways: dict[int, RailWay] = {}
 
         def way(self, w) -> None:  # noqa: ANN001 - osmium type
-            if w.tags.get("railway") == "rail":
+            if w.tags.get("railway") in RAIL_RAILWAY_VALUES:
                 self.ways[w.id] = RailWay(
                     refs=tuple(n.ref for n in w.nodes),
                     speed_kmh=parse_maxspeed(w.tags.get("maxspeed")),
@@ -429,10 +545,25 @@ def build_rail_paths(out_dir: Path, osm_dir: Path, force_download: bool = False)
         log.warning("no Geofabrik region mapped for countries: %s", unmapped)
     pbf_paths = prepare_extracts(countries, osm_dir, force_download)
     ways, node_locs = read_rail_network(pbf_paths)
+
+    components = connected_components(ways)
+    component_sizes: dict[int, int] = {}
+    for comp in components.values():
+        component_sizes[comp] = component_sizes.get(comp, 0) + 1
+    kept_components = sum(
+        1 for s in component_sizes.values() if s >= MIN_COMPONENT_NODES)
+    log.info("rail network: %d connected components, %d with >= %d nodes",
+              len(component_sizes), kept_components, MIN_COMPONENT_NODES)
+
     hop_station_ids = sorted(
         {sid for pair in hops for sid in pair if sid in stations_by_id})
-    snapped, snap_failures = snap_stations(
-        [stations_by_id[sid] for sid in hop_station_ids], node_locs)
-    graph = build_graph(ways, node_locs, extra_junctions=set(snapped.values()))
-    paths, hop_failures = assemble_paths(hops, snapped, graph, stations_by_id)
+    candidates, snap_failures = snap_stations(
+        [stations_by_id[sid] for sid in hop_station_ids], node_locs, components)
+    total_candidates = sum(len(v) for v in candidates.values())
+    log.info("snapped %d/%d stations, %d candidates total",
+              len(candidates), len(hop_station_ids), total_candidates)
+
+    extra_junctions = {c.node for cands in candidates.values() for c in cands}
+    graph = build_graph(ways, node_locs, extra_junctions=extra_junctions)
+    paths, hop_failures = assemble_paths(hops, candidates, graph, stations_by_id)
     write_outputs(out_dir, paths, snap_failures, hop_failures)

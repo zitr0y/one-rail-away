@@ -5,10 +5,15 @@ import osmium.osm.mutable as osmium_mutable
 
 from pipeline.railpaths import (
     GEOFABRIK_REGION,
+    MIN_COMPONENT_NODES,
+    RAIL_RAILWAY_VALUES,
+    SNAP_MAX_M,
     RailWay,
+    SnapCandidate,
     assemble_paths,
     build_graph,
     collect_hops,
+    connected_components,
     download_extracts,
     filter_rail_extract,
     needed_countries,
@@ -112,15 +117,72 @@ def test_build_graph_skips_way_with_missing_node():
     assert graph.edges == []
 
 
-def test_snap_stations():
-    stations = [
-        {"id": "s:near", "lon": 0.0101, "lat": 0.0001},  # ~15 m from node 2
-        {"id": "s:far", "lon": 1.0, "lat": 1.0},         # ~150 km from anything
-    ]
-    snapped, failures = snap_stations(stations, NODES)
-    assert snapped == {"s:near": 2}
-    assert [f["station"] for f in failures] == ["s:far"]
+def test_connected_components_groups_and_separates():
+    way_a = RailWay(refs=(1, 2), speed_kmh=100.0)
+    way_b = RailWay(refs=(2, 3), speed_kmh=100.0)  # shares node 2 with way_a
+    way_c = RailWay(refs=(10, 11), speed_kmh=100.0)  # disjoint
+    components = connected_components([way_a, way_b, way_c])
+    assert components[1] == components[2] == components[3]
+    assert components[10] == components[11]
+    assert components[1] != components[10]
+
+
+def _big_component(ids, lon0, lat, comp_id, step=0.0001):
+    """A component with >= MIN_COMPONENT_NODES nodes, spaced along a line."""
+    node_locs = {n: (lon0 + i * step, lat) for i, n in enumerate(ids)}
+    components = {n: comp_id for n in ids}
+    return node_locs, components
+
+
+def test_snap_stations_ignores_small_component():
+    big_ids = range(100, 100 + MIN_COMPONENT_NODES)
+    node_locs, components = _big_component(big_ids, 0.0, 0.0, comp_id=1)
+    # A 2-node stub sits closer to the station than anything in the big
+    # component, but must be ignored: its component is below the threshold.
+    node_locs[900] = (0.00001, 0.0)
+    node_locs[901] = (0.00002, 0.0)
+    components[900] = components[901] = 2
+
+    station = {"id": "s:a", "lon": 0.0, "lat": 0.0}
+    candidates, failures = snap_stations([station], node_locs, components)
+
+    assert failures == []
+    cands = candidates["s:a"]
+    assert all(c.component == 1 for c in cands)
+    assert cands[0].node == 100  # nearest node in the big component (distance 0)
+
+
+def test_snap_stations_two_networks_each_get_one_candidate():
+    # Simulates an interchange like Chur, served by both a standard-gauge and
+    # a metre-gauge network: one candidate per component, nearest first.
+    ids_a = range(200, 200 + MIN_COMPONENT_NODES)
+    ids_b = range(300, 300 + MIN_COMPONENT_NODES)
+    node_locs_a, components_a = _big_component(ids_a, 0.0, 0.0, comp_id=10)
+    node_locs_b, components_b = _big_component(ids_b, 0.0, 0.0002, comp_id=20)
+    node_locs = {**node_locs_a, **node_locs_b}
+    components = {**components_a, **components_b}
+
+    station = {"id": "s:interchange", "lon": 0.0, "lat": 0.0001}
+    candidates, failures = snap_stations([station], node_locs, components)
+
+    assert failures == []
+    cands = candidates["s:interchange"]
+    assert {c.component for c in cands} == {10, 20}
+    assert len(cands) == 2
+    assert cands[0].distance_m <= cands[1].distance_m
+
+
+def test_snap_stations_reports_nearest_m_beyond_radius():
+    big_ids = range(400, 400 + MIN_COMPONENT_NODES)
+    node_locs, components = _big_component(big_ids, 0.5, 0.0, comp_id=30)
+    station = {"id": "s:far", "lon": 0.0, "lat": 0.0}
+
+    candidates, failures = snap_stations([station], node_locs, components)
+
+    assert candidates == {}
+    assert failures[0]["station"] == "s:far"
     assert failures[0]["reason"] == "no_rail_within_snap_radius"
+    assert failures[0]["nearest_m"] > SNAP_MAX_M
 
 
 def _routed_graph():
@@ -147,9 +209,12 @@ def test_assemble_paths_orientation_endpoints_and_failures():
         "s:y": {"id": "s:y", "lon": 0.0299, "lat": 0.0},   # snaps to node 4
         "s:far": {"id": "s:far", "lon": 1.0, "lat": 1.0},  # unsnappable
     }
-    snapped = {"s:x": 1, "s:y": 4}
+    candidates = {
+        "s:x": [SnapCandidate(node=1, distance_m=10.0, component=1)],
+        "s:y": [SnapCandidate(node=4, distance_m=10.0, component=1)],
+    }
     hops = {("s:x", "s:y"), ("s:far", "s:x")}
-    paths, failures = assemble_paths(hops, snapped, graph, stations)
+    paths, failures = assemble_paths(hops, candidates, graph, stations)
     assert set(paths) == {"s:x|s:y"}
     coords = paths["s:x|s:y"]
     # Stitched to exact station coords at both ends, oriented s:x → s:y.
@@ -158,6 +223,50 @@ def test_assemble_paths_orientation_endpoints_and_failures():
     # Interior follows the fast bypass through node 5.
     assert [0.015, 0.005] in coords
     assert failures == [{"hop": "s:far|s:x", "reason": "endpoint_not_snapped"}]
+
+
+def test_assemble_paths_no_shared_component():
+    graph = _routed_graph()
+    stations = {
+        "s:p": {"id": "s:p", "lon": 0.0001, "lat": 0.0},
+        "s:q": {"id": "s:q", "lon": 0.0299, "lat": 0.0},
+    }
+    candidates = {
+        "s:p": [SnapCandidate(node=1, distance_m=10.0, component=1)],
+        "s:q": [SnapCandidate(node=4, distance_m=10.0, component=2)],
+    }
+    hops = {("s:p", "s:q")}
+    paths, failures = assemble_paths(hops, candidates, graph, stations)
+    assert paths == {}
+    assert failures == [{"hop": "s:p|s:q", "reason": "no_shared_rail_component"}]
+
+
+def test_assemble_paths_tries_shared_components_by_ascending_distance():
+    # Component 2 has the smaller combined snap distance but its candidate
+    # nodes aren't connected to anything in the graph, so routing must fall
+    # back to component 1 (the real, routable, network).
+    extra_nodes = {**NODES, 20: (9.0, 9.0), 21: (9.01, 9.0)}
+    graph = build_graph([SLOW, FAST], extra_nodes, extra_junctions=set())
+    stations = {
+        "s:x": {"id": "s:x", "lon": 0.0001, "lat": 0.0},
+        "s:y": {"id": "s:y", "lon": 0.0299, "lat": 0.0},
+    }
+    candidates = {
+        "s:x": [
+            SnapCandidate(node=20, distance_m=1.0, component=2),
+            SnapCandidate(node=1, distance_m=50.0, component=1),
+        ],
+        "s:y": [
+            SnapCandidate(node=21, distance_m=1.0, component=2),
+            SnapCandidate(node=4, distance_m=50.0, component=1),
+        ],
+    }
+    hops = {("s:x", "s:y")}
+    paths, failures = assemble_paths(hops, candidates, graph, stations)
+    assert failures == []
+    coords = paths["s:x|s:y"]
+    assert coords[0] == [0.0001, 0.0]
+    assert coords[-1] == [0.0299, 0.0]
 
 
 def test_write_outputs(tmp_path):
@@ -205,8 +314,9 @@ def test_download_extracts_skips_cached(tmp_path):
 
 
 def _write_osm_fixture(path):
-    """A tiny OSM PBF: one railway=rail way, one highway=residential way,
-    and the two nodes each of them reference."""
+    """A tiny OSM PBF covering every railway value we care about: rail,
+    narrow_gauge (e.g. Rhaetian Railway), light_rail, plus a subway (must be
+    excluded) and a highway (must be excluded), each with its own nodes."""
     writer = osmium.SimpleWriter(str(path))
     common = {
         "version": 1, "visible": True, "changeset": 1,
@@ -216,10 +326,19 @@ def _write_osm_fixture(path):
     writer.add_node(osmium_mutable.Node(id=2, location=(10.01, 47.0), tags={}, **common))
     writer.add_node(osmium_mutable.Node(id=3, location=(11.0, 48.0), tags={}, **common))
     writer.add_node(osmium_mutable.Node(id=4, location=(11.01, 48.0), tags={}, **common))
+    writer.add_node(osmium_mutable.Node(id=5, location=(12.0, 46.0), tags={}, **common))
+    writer.add_node(osmium_mutable.Node(id=6, location=(12.01, 46.0), tags={}, **common))
+    writer.add_node(osmium_mutable.Node(id=7, location=(13.0, 45.0), tags={}, **common))
+    writer.add_node(osmium_mutable.Node(id=8, location=(13.01, 45.0), tags={}, **common))
     writer.add_way(osmium_mutable.Way(
         id=100, nodes=[1, 2], tags={"railway": "rail"}, **common))
     writer.add_way(osmium_mutable.Way(
         id=200, nodes=[3, 4], tags={"highway": "residential"}, **common))
+    writer.add_way(osmium_mutable.Way(
+        id=300, nodes=[5, 6], tags={"railway": "narrow_gauge", "gauge": "1000"},
+        **common))
+    writer.add_way(osmium_mutable.Way(
+        id=400, nodes=[7, 8], tags={"railway": "subway"}, **common))
     writer.close()
 
 
@@ -234,9 +353,17 @@ def test_filter_rail_extract_keeps_only_rail_ways_and_their_nodes(tmp_path):
     assert dst.exists()
     assert not dst.with_suffix(".part").exists()
     ways, node_locs = read_rail_network([dst])
-    assert len(ways) == 1
-    assert ways[0].refs == (1, 2)
-    assert node_locs == {1: (10.0, 47.0), 2: (10.01, 47.0)}
+    assert {w.refs for w in ways} == {(1, 2), (5, 6)}
+    assert node_locs == {
+        1: (10.0, 47.0), 2: (10.01, 47.0),
+        5: (12.0, 46.0), 6: (12.01, 46.0),
+    }
+
+
+def test_rail_railway_values_excludes_subway_and_tram():
+    assert RAIL_RAILWAY_VALUES == ("rail", "narrow_gauge", "light_rail")
+    assert "subway" not in RAIL_RAILWAY_VALUES
+    assert "tram" not in RAIL_RAILWAY_VALUES
 
 
 def test_prepare_extracts_uses_cached_rail_file(tmp_path, monkeypatch):
