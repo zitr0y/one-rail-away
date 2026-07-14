@@ -26,6 +26,9 @@ def main() -> None:
                    help="feed-loading process count (default: one per CPU)")
     c = sub.add_parser("compute")
     c.add_argument("--workers", type=int, default=None, help="process count (default: one per CPU)")
+    p = sub.add_parser("paths", help="derive real rail geometry for reach-line hops")
+    p.add_argument("--force-download", action="store_true",
+                   help="re-download cached OSM extracts")
     args = parser.parse_args()
 
     if args.cmd == "fetch":
@@ -64,3 +67,7 @@ def main() -> None:
         from pipeline.compute import compute_all
 
         compute_all(GRAPH, OUT, args.workers)
+    elif args.cmd == "paths":
+        from pipeline.railpaths import build_rail_paths
+
+        build_rail_paths(OUT, Path("data/osm"), force_download=args.force_download)

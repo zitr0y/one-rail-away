@@ -15,6 +15,7 @@ import itertools
 import json
 import logging
 import re
+import urllib.request
 from dataclasses import dataclass, field
 from pathlib import Path
 
@@ -253,3 +254,122 @@ def write_outputs(
     }, indent=1), encoding="utf-8")
     log.info("rail paths: %d written, %d snap failures, %d hop failures",
              len(paths), len(snap_failures), len(hop_failures))
+
+
+GEOFABRIK_REGION = {
+    "AT": "europe/austria", "BE": "europe/belgium", "CH": "europe/switzerland",
+    "CZ": "europe/czech-republic", "DE": "europe/germany", "DK": "europe/denmark",
+    "ES": "europe/spain", "FR": "europe/france", "GB": "europe/great-britain",
+    "HR": "europe/croatia", "HU": "europe/hungary", "IT": "europe/italy",
+    "LI": "europe/liechtenstein", "LT": "europe/lithuania",
+    "LU": "europe/luxembourg", "NL": "europe/netherlands", "PL": "europe/poland",
+    "PT": "europe/portugal", "RO": "europe/romania", "SI": "europe/slovenia",
+    "SK": "europe/slovakia", "UA": "europe/ukraine",
+}
+
+
+def needed_countries(
+    hops: set[tuple[str, str]], stations_by_id: dict[str, dict],
+) -> tuple[list[str], list[str]]:
+    """Countries of every station participating in a hop; unmapped codes reported."""
+    codes = {
+        stations_by_id[sid]["country"]
+        for pair in hops for sid in pair if sid in stations_by_id
+    }
+    return (sorted(c for c in codes if c in GEOFABRIK_REGION),
+            sorted(c for c in codes if c not in GEOFABRIK_REGION))
+
+
+def download_extracts(countries: list[str], osm_dir: Path, force: bool) -> list[Path]:
+    osm_dir.mkdir(parents=True, exist_ok=True)
+    paths = []
+    for code in countries:
+        region = GEOFABRIK_REGION[code]
+        filename = region.rsplit("/", 1)[-1] + "-latest.osm.pbf"
+        target = osm_dir / filename
+        if target.exists() and not force:
+            paths.append(target)
+            continue
+        url = f"https://download.geofabrik.de/{region}-latest.osm.pbf"
+        log.info("downloading %s", url)
+        part = target.with_suffix(".part")
+        with urllib.request.urlopen(url) as response, part.open("wb") as out:
+            expected = int(response.headers.get("Content-Length", 0))
+            written = 0
+            while chunk := response.read(1 << 20):
+                out.write(chunk)
+                written += len(chunk)
+        if expected and written != expected:
+            part.unlink()
+            raise RuntimeError(
+                f"{url}: truncated download ({written} of {expected} bytes)")
+        part.rename(target)
+        paths.append(target)
+    return paths
+
+
+def read_rail_network(
+    pbf_paths: list[Path],
+) -> tuple[list[RailWay], dict[int, tuple[float, float]]]:
+    """Two-pass read: rail ways first, then only their node locations.
+
+    Keeps memory bounded by the RAIL subset, not the full extract. Ways are
+    deduped by OSM way id — border-crossing ways appear in both extracts.
+    """
+    import osmium
+
+    class WayCollector(osmium.SimpleHandler):
+        def __init__(self) -> None:
+            super().__init__()
+            self.ways: dict[int, RailWay] = {}
+
+        def way(self, w) -> None:  # noqa: ANN001 - osmium type
+            if w.tags.get("railway") == "rail":
+                self.ways[w.id] = RailWay(
+                    refs=tuple(n.ref for n in w.nodes),
+                    speed_kmh=parse_maxspeed(w.tags.get("maxspeed")),
+                )
+
+    class NodeCollector(osmium.SimpleHandler):
+        def __init__(self, wanted: set[int]) -> None:
+            super().__init__()
+            self.wanted = wanted
+            self.locs: dict[int, tuple[float, float]] = {}
+
+        def node(self, n) -> None:  # noqa: ANN001 - osmium type
+            if n.id in self.wanted:
+                self.locs[n.id] = (n.location.lon, n.location.lat)
+
+    way_collector = WayCollector()
+    for path in pbf_paths:
+        log.info("reading rail ways from %s", path.name)
+        way_collector.apply_file(str(path))
+    ways = list(way_collector.ways.values())
+    wanted = {ref for way in ways for ref in way.refs}
+    node_collector = NodeCollector(wanted)
+    for path in pbf_paths:
+        log.info("reading node locations from %s", path.name)
+        node_collector.apply_file(str(path))
+    log.info("rail network: %d ways, %d nodes", len(ways), len(node_collector.locs))
+    return ways, node_collector.locs
+
+
+def build_rail_paths(out_dir: Path, osm_dir: Path, force_download: bool = False) -> None:
+    stations_by_id = {
+        s["id"]: s
+        for s in json.loads((out_dir / "stations.json").read_text(encoding="utf-8"))["stations"]
+    }
+    hops = collect_hops(out_dir)
+    log.info("collected %d unique hops", len(hops))
+    countries, unmapped = needed_countries(hops, stations_by_id)
+    if unmapped:
+        log.warning("no Geofabrik region mapped for countries: %s", unmapped)
+    pbf_paths = download_extracts(countries, osm_dir, force_download)
+    ways, node_locs = read_rail_network(pbf_paths)
+    hop_station_ids = sorted(
+        {sid for pair in hops for sid in pair if sid in stations_by_id})
+    snapped, snap_failures = snap_stations(
+        [stations_by_id[sid] for sid in hop_station_ids], node_locs)
+    graph = build_graph(ways, node_locs, extra_junctions=set(snapped.values()))
+    paths, hop_failures = assemble_paths(hops, snapped, graph, stations_by_id)
+    write_outputs(out_dir, paths, snap_failures, hop_failures)

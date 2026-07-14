@@ -1,10 +1,13 @@
 import json
 
 from pipeline.railpaths import (
+    GEOFABRIK_REGION,
     RailWay,
     assemble_paths,
     build_graph,
     collect_hops,
+    download_extracts,
+    needed_countries,
     parse_maxspeed,
     route,
     snap_stations,
@@ -162,3 +165,34 @@ def test_write_outputs(tmp_path):
     assert report["summary"] == {"paths": 1, "snap_failures": 1, "hop_failures": 1}
     assert report["snap_failures"][0]["station"] == "s"
     assert report["hop_failures"][0]["hop"] == "h"
+
+
+ALL_DATA_COUNTRIES = {
+    "AT", "BE", "CH", "CZ", "DE", "DK", "ES", "FR", "GB", "HR", "HU", "IT",
+    "LI", "LT", "LU", "NL", "PL", "PT", "RO", "SI", "SK", "UA",
+}
+
+
+def test_geofabrik_region_covers_all_data_countries():
+    assert ALL_DATA_COUNTRIES <= set(GEOFABRIK_REGION)
+
+
+def test_needed_countries_from_hop_stations():
+    stations = {
+        "s:a": {"id": "s:a", "country": "DE"},
+        "s:b": {"id": "s:b", "country": "FR"},
+        "s:c": {"id": "s:c", "country": "XX"},   # unmapped
+        "s:d": {"id": "s:d", "country": "PL"},   # not in any hop
+    }
+    hops = {("s:a", "s:b"), ("s:a", "s:c")}
+    countries, unmapped = needed_countries(hops, stations)
+    assert countries == ["DE", "FR"]
+    assert unmapped == ["XX"]
+
+
+def test_download_extracts_skips_cached(tmp_path):
+    cached = tmp_path / "germany-latest.osm.pbf"
+    cached.write_bytes(b"cached")
+    paths = download_extracts(["DE"], tmp_path, force=False)
+    assert paths == [cached]
+    assert cached.read_bytes() == b"cached"  # untouched, no network call

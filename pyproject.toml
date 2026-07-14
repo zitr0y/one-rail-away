@@ -9,6 +9,7 @@ dependencies = [
     "httpx>=0.27",
     "pydantic>=2.8",
     "shapely>=2.0",
+    "osmium>=3.7",
 ]
 
 [dependency-groups]

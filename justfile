@@ -6,7 +6,7 @@ lint:
     uv run ruff check .
 
 pipeline:
-    uv run ose fetch && uv run ose build && uv run ose compute
+    uv run ose fetch && uv run ose build && uv run ose compute && uv run ose paths
 
 # Run API and web dev servers together (Ctrl-C stops both)
 dev:
