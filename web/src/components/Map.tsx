@@ -34,6 +34,10 @@ const CLICK_LAYERS = ["reach-dots", "capital-stars", "all-stations"];
 const CLICK_TOLERANCE_PX = 6;
 
 const EMPTY = { type: "FeatureCollection", features: [] } as const;
+/** One credit per timetable source in feeds.toml. Keep in step with that file. */
+const TIMETABLE_ATTRIBUTION =
+  "Timetables: DB · SNCF · ÖBB · SBB · NS · Rejseplanen · FlixTrain · " +
+  "CP – Comboios de Portugal · Trenitalia · Renfe · PKP PLK";
 const bucketColor = ["to-color", ["at", ["get", "bucket"], ["literal", BUCKET_COLORS]]];
 
 interface Props {
@@ -70,7 +74,14 @@ export default function MapView(props: Props) {
       const tokens = themeTokens(propsRef.current.theme);
       m.addSource("all-stations", { type: "geojson", data: EMPTY as never });
       m.addSource("reach-lines", { type: "geojson", data: EMPTY as never });
-      m.addSource("reach-segments", { type: "geojson", data: EMPTY as never });
+      // Timetable credits ride on the source that draws the reach lines, so
+      // MapLibre lists them in the attribution control. Several feeds (CP,
+      // Trenitalia, Renfe, Rejseplanen) are "no licence / public-sector reuse"
+      // sources where attribution is the CONDITION OF USE, not a courtesy —
+      // see docs/data-sources.md before removing or trimming this.
+      m.addSource("reach-segments", {
+        type: "geojson", data: EMPTY as never, attribution: TIMETABLE_ATTRIBUTION,
+      });
       m.addSource("transfer-points", { type: "geojson", data: EMPTY as never });
       m.addSource("reach-dots", { type: "geojson", data: EMPTY as never });
       m.addSource("coverage", { type: "geojson", data: EMPTY as never });
