@@ -34,6 +34,28 @@ national feeds remain ongoing; next candidates and research verdicts live in
 two-tier veil). Competitor note: Ouigo España publishes GTFS on
 nap.transportes.gob.es; iryo does not.
 
+**Norway verdict (2026-07-14 — not shipped):** Entur's official national
+aggregated GTFS is available at
+`https://storage.googleapis.com/marduk-production/outbound/gtfs/rb_norway-aggregated-gtfs.zip`.
+It is a stable, anonymous 610,292,215-byte download (checked 2026-07-14;
+Last-Modified 2026-07-13). Entur documents NLOD reuse for its published data:
+commercial use is allowed with the attribution “Data made available by Entur”.
+The inspected all-mode archive covers 71 agencies and 4,089 route rows, but has
+usable narrow national rail labels: F1 (Oslo--Stockholm international), F4
+(Oslo--Bergen), F5 (Sørlandet), F6 (Dovre) and F7 (Nordland). The feed keeps
+route type 100 on those five rows, but the GTFS models rail-replacement buses
+inside them with no trip-level mode that this pipeline can filter: on the
+inspected day F5 produced 69 trips and stops such as Harebakken bussterminal, Grenstøl
+bussterminal and Krossmoen. Shipping it would therefore draw bus diversions as
+train corridors. Its internal `NSR:StopPlace:` /
+`NSR:Quay:` IDs are not UIC; all 142,347 stops have coordinates, 90,936 quays
+have a parent station, and Norwegian names retain diacritics. The published
+calendar evidence spans 2019-04-13 through 2029-07-12. Do not ingest the
+aggregate until Entur exposes a stable rail-only GTFS or a documented trip-level
+marker that reliably excludes replacement buses; then retain only
+F1/F4/F5/F6/F7 and place the feed after existing feeds so foreign canonical
+station names remain owned at home.
+
 **Ouigo España verdict (2026-07-14 — not shipped):** Spain's official National
 Access Point lists the official Ouigo high-speed GTFS dataset at
 `https://nap.transportes.gob.es/Files/Detail/1515`: one operator (OUIGO España),
