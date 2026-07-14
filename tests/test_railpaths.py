@@ -1,6 +1,15 @@
 import json
 
-from pipeline.railpaths import collect_hops, parse_maxspeed
+from pipeline.railpaths import (
+    RailWay,
+    assemble_paths,
+    build_graph,
+    collect_hops,
+    parse_maxspeed,
+    route,
+    snap_stations,
+    write_outputs,
+)
 
 
 def _write_reach(tmp_path, origin, destinations):
@@ -54,8 +63,6 @@ def test_parse_maxspeed():
     assert parse_maxspeed("400") == 320.0  # clamped down
 
 
-from pipeline.railpaths import RailWay, build_graph, snap_stations
-
 # A tiny synthetic network in lon/lat. 0.01° lon at lat 0 ≈ 1.11 km.
 #   1 --- 2 --- 3 --- 4    slow line, 100 km/h (nodes 2,3 are degree-2)
 #   1 --------- 5 ---- 4   fast bypass, 300 km/h
@@ -105,3 +112,53 @@ def test_snap_stations():
     assert snapped == {"s:near": 2}
     assert [f["station"] for f in failures] == ["s:far"]
     assert failures[0]["reason"] == "no_rail_within_snap_radius"
+
+
+def _routed_graph():
+    return build_graph([SLOW, FAST], NODES, extra_junctions=set())
+
+
+def test_route_prefers_fast_bypass():
+    graph = _routed_graph()
+    coords = route(graph, 1, 4)
+    assert coords == [NODES[1], NODES[5], NODES[4]]
+
+
+def test_route_unreachable_returns_none():
+    graph = build_graph([SLOW, RailWay(refs=(10, 11), speed_kmh=100.0)],
+                        {**NODES, 10: (5.0, 5.0), 11: (5.01, 5.0)},
+                        extra_junctions=set())
+    assert route(graph, 1, 10) is None
+
+
+def test_assemble_paths_orientation_endpoints_and_failures():
+    graph = _routed_graph()
+    stations = {
+        "s:x": {"id": "s:x", "lon": 0.0001, "lat": 0.0},   # snaps to node 1
+        "s:y": {"id": "s:y", "lon": 0.0299, "lat": 0.0},   # snaps to node 4
+        "s:far": {"id": "s:far", "lon": 1.0, "lat": 1.0},  # unsnappable
+    }
+    snapped = {"s:x": 1, "s:y": 4}
+    hops = {("s:x", "s:y"), ("s:far", "s:x")}
+    paths, failures = assemble_paths(hops, snapped, graph, stations)
+    assert set(paths) == {"s:x|s:y"}
+    coords = paths["s:x|s:y"]
+    # Stitched to exact station coords at both ends, oriented s:x → s:y.
+    assert coords[0] == [0.0001, 0.0]
+    assert coords[-1] == [0.0299, 0.0]
+    # Interior follows the fast bypass through node 5.
+    assert [0.015, 0.005] in coords
+    assert failures == [{"hop": "s:far|s:x", "reason": "endpoint_not_snapped"}]
+
+
+def test_write_outputs(tmp_path):
+    write_outputs(tmp_path, {"a|b": [[0.0, 0.0], [1.0, 1.0]]},
+                  snap_failures=[{"station": "s", "reason": "r", "nearest_m": 9}],
+                  hop_failures=[{"hop": "h", "reason": "r"}])
+    data = json.loads((tmp_path / "rail_paths.json").read_text(encoding="utf-8"))
+    assert "OpenStreetMap" in data["attribution"]
+    assert data["paths"] == {"a|b": [[0.0, 0.0], [1.0, 1.0]]}
+    report = json.loads((tmp_path / "rail_paths_report.json").read_text(encoding="utf-8"))
+    assert report["summary"] == {"paths": 1, "snap_failures": 1, "hop_failures": 1}
+    assert report["snap_failures"][0]["station"] == "s"
+    assert report["hop_failures"][0]["hop"] == "h"

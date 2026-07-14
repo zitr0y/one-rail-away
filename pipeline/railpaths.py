@@ -10,6 +10,7 @@ back to straight lines for anything missing.
 
 from __future__ import annotations
 
+import heapq
 import itertools
 import json
 import logging
@@ -17,7 +18,7 @@ import re
 from dataclasses import dataclass, field
 from pathlib import Path
 
-from shapely.geometry import Point
+from shapely.geometry import LineString, Point
 from shapely.strtree import STRtree
 
 from pipeline.geo import _haversine_m
@@ -156,3 +157,99 @@ def snap_stations(
                 "nearest_m": round(distance_m),
             })
     return snapped, failures
+
+
+SIMPLIFY_TOLERANCE_DEG = 0.0003  # ~30 m; TUNING POINT
+
+
+def _heuristic_h(graph: RailGraph, node: int, goal: int) -> float:
+    a, b = graph.node_locs[node], graph.node_locs[goal]
+    return _haversine_m(a[1], a[0], b[1], b[0]) / 1000.0 / MAX_SPEED_KMH
+
+
+def route(graph: RailGraph, start: int, goal: int) -> list[tuple[float, float]] | None:
+    """A* over the contracted graph; returns the full polyline start→goal."""
+    if start == goal:
+        return None
+    best_g: dict[int, float] = {start: 0.0}
+    # parent[vertex] = (previous vertex, edge index used to arrive)
+    parent: dict[int, tuple[int, int]] = {}
+    open_heap: list[tuple[float, int]] = [(_heuristic_h(graph, start, goal), start)]
+    closed: set[int] = set()
+    while open_heap:
+        _, vertex = heapq.heappop(open_heap)
+        if vertex == goal:
+            break
+        if vertex in closed:
+            continue
+        closed.add(vertex)
+        for edge_index in graph.adjacency.get(vertex, []):
+            edge = graph.edges[edge_index]
+            neighbor = edge.b if edge.a == vertex else edge.a
+            candidate = best_g[vertex] + edge.cost_h
+            if candidate < best_g.get(neighbor, float("inf")):
+                best_g[neighbor] = candidate
+                parent[neighbor] = (vertex, edge_index)
+                heapq.heappush(
+                    open_heap,
+                    (candidate + _heuristic_h(graph, neighbor, goal), neighbor),
+                )
+    if goal not in parent:
+        return None
+    coords: list[tuple[float, float]] = []
+    vertex = goal
+    while vertex != start:
+        previous, edge_index = parent[vertex]
+        edge = graph.edges[edge_index]
+        piece = edge.coords if edge.b == vertex else list(reversed(edge.coords))
+        # piece[:-1] drops the duplicated joint vertex between consecutive edges.
+        coords = piece if not coords else piece[:-1] + coords
+        vertex = previous
+    return coords
+
+
+def assemble_paths(
+    hops: set[tuple[str, str]], snapped: dict[str, int], graph: RailGraph,
+    stations_by_id: dict[str, dict],
+) -> tuple[dict[str, list[list[float]]], list[dict]]:
+    paths: dict[str, list[list[float]]] = {}
+    failures: list[dict] = []
+    for a_id, b_id in sorted(hops):
+        key = f"{a_id}|{b_id}"
+        node_a, node_b = snapped.get(a_id), snapped.get(b_id)
+        if node_a is None or node_b is None:
+            failures.append({"hop": key, "reason": "endpoint_not_snapped"})
+            continue
+        coords = route(graph, node_a, node_b)
+        if coords is None:
+            failures.append({"hop": key, "reason": "no_rail_path"})
+            continue
+        simplified = list(LineString(coords).simplify(SIMPLIFY_TOLERANCE_DEG).coords)
+        station_a, station_b = stations_by_id[a_id], stations_by_id[b_id]
+        points = [[round(lon, 5), round(lat, 5)] for lon, lat in simplified]
+        full = [[station_a["lon"], station_a["lat"]], *points,
+                [station_b["lon"], station_b["lat"]]]
+        deduped = [p for i, p in enumerate(full) if i == 0 or p != full[i - 1]]
+        paths[key] = deduped
+    return paths, failures
+
+
+def write_outputs(
+    out_dir: Path, paths: dict[str, list[list[float]]],
+    snap_failures: list[dict], hop_failures: list[dict],
+) -> None:
+    (out_dir / "rail_paths.json").write_text(json.dumps({
+        "attribution": "© OpenStreetMap contributors (ODbL)",
+        "paths": paths,
+    }, separators=(",", ":")), encoding="utf-8")
+    (out_dir / "rail_paths_report.json").write_text(json.dumps({
+        "summary": {
+            "paths": len(paths),
+            "snap_failures": len(snap_failures),
+            "hop_failures": len(hop_failures),
+        },
+        "snap_failures": snap_failures,
+        "hop_failures": hop_failures,
+    }, indent=1), encoding="utf-8")
+    log.info("rail paths: %d written, %d snap failures, %d hop failures",
+             len(paths), len(snap_failures), len(hop_failures))
