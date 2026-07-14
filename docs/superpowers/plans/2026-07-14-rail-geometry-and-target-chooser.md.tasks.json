@@ -1,0 +1,65 @@
+{
+  "planPath": "docs/superpowers/plans/2026-07-14-rail-geometry-and-target-chooser.md",
+  "tasks": [
+    {
+      "id": 1,
+      "subject": "Task 1: railpaths core — hop collection + maxspeed parsing",
+      "status": "pending",
+      "description": "**Goal:** New pipeline/railpaths.py with collect_hops and parse_maxspeed.\n\n```json:metadata\n{\"files\": [\"pipeline/railpaths.py\", \"tests/test_railpaths.py\"], \"verifyCommand\": \"uv run pytest tests/test_railpaths.py -q\", \"acceptanceCriteria\": [\"collect_hops dedupes and normalizes direction, skips self-pairs\", \"parse_maxspeed defaults/converts/clamps\", \"no live station ids in tests\"]}\n```"
+    },
+    {
+      "id": 2,
+      "subject": "Task 2: rail graph — junctions, contraction, snapping",
+      "status": "pending",
+      "blockedBy": [1],
+      "description": "**Goal:** build_graph (contraction, speed-weighted cost) and snap_stations (STRtree, 1 km max).\n\n```json:metadata\n{\"files\": [\"pipeline/railpaths.py\", \"tests/test_railpaths.py\"], \"verifyCommand\": \"uv run pytest tests/test_railpaths.py -q\", \"acceptanceCriteria\": [\"contraction keeps full polylines\", \"extra_junctions split edges\", \"speed weights cost\", \"snap failures reported\"]}\n```"
+    },
+    {
+      "id": 3,
+      "subject": "Task 3: A* routing, path assembly, report outputs",
+      "status": "pending",
+      "blockedBy": [2],
+      "description": "**Goal:** route() A*, assemble_paths (orientation, simplify, stitching), write_outputs (paths + report).\n\n```json:metadata\n{\"files\": [\"pipeline/railpaths.py\", \"tests/test_railpaths.py\"], \"verifyCommand\": \"uv run pytest tests/test_railpaths.py -q\", \"acceptanceCriteria\": [\"speed-weighted route picks bypass\", \"paths oriented idA→idB with station endpoints\", \"failures + summary in report\"]}\n```"
+    },
+    {
+      "id": 4,
+      "subject": "Task 4: OSM I/O — Geofabrik download, pyosmium reader, CLI",
+      "status": "pending",
+      "blockedBy": [3],
+      "description": "**Goal:** GEOFABRIK_REGION, needed_countries, download_extracts (cache + Content-Length check), read_rail_network (two-pass pyosmium), build_rail_paths, `ose paths` CLI, osmium dep, justfile.\n\n```json:metadata\n{\"files\": [\"pipeline/railpaths.py\", \"pipeline/cli.py\", \"pyproject.toml\", \"justfile\", \"tests/test_railpaths.py\"], \"verifyCommand\": \"uv run pytest tests/test_railpaths.py -q && uv run ruff check .\", \"acceptanceCriteria\": [\"region map covers all data countries\", \"cached extracts skipped\", \"truncated downloads rejected\", \"CLI subcommand wired\"]}\n```"
+    },
+    {
+      "id": 5,
+      "subject": "Task 5: server — /api/rail-paths endpoint",
+      "status": "pending",
+      "description": "**Goal:** GET /api/rail-paths serves rail_paths.json, 404 when missing.\n\n```json:metadata\n{\"files\": [\"server/app.py\", \"tests/test_server.py\"], \"verifyCommand\": \"uv run pytest tests/test_server.py -q\", \"acceptanceCriteria\": [\"serves file content\", \"404 when absent\"]}\n```"
+    },
+    {
+      "id": 6,
+      "subject": "Task 6: web — geojson rail-path lookup, delete corridors+chaikin",
+      "status": "pending",
+      "description": "**Goal:** legSegments et al. take RailPathLookup | null; oriented idA→idB with non-mutating reversal; straight fallback; corridors + chaikin deleted. Full web build red until Task 7.\n\n```json:metadata\n{\"files\": [\"web/src/lib/geojson.ts\", \"web/src/lib/geojson.test.ts\", \"web/src/lib/corridors.ts\", \"web/src/lib/corridors.test.ts\"], \"verifyCommand\": \"cd web && npx vitest run src/lib/geojson.test.ts\", \"acceptanceCriteria\": [\"lookup used when present\", \"reversal non-mutating\", \"straight fallback\", \"corridors and chaikin gone\"]}\n```"
+    },
+    {
+      "id": 7,
+      "subject": "Task 7: web — fetch + thread rail paths (types/api/App/Map)",
+      "status": "pending",
+      "blockedBy": [6],
+      "description": "**Goal:** api.getRailPaths, App state (null on error), MapView railPaths prop, syncData + rider effect deps.\n\n```json:metadata\n{\"files\": [\"web/src/lib/types.ts\", \"web/src/lib/api.ts\", \"web/src/App.tsx\", \"web/src/components/Map.tsx\"], \"verifyCommand\": \"cd web && npx vitest run && npm run build\", \"acceptanceCriteria\": [\"fetched once, null on error\", \"lines/rider re-render when lookup arrives\", \"full suite + build green\"]}\n```"
+    },
+    {
+      "id": 8,
+      "subject": "Task 8: AE — target chooser ranking, no city entries",
+      "status": "pending",
+      "description": "**Goal:** reachableMinTrains (fewest trains within both filters) + rankTargetChoices; target mode: no city buttons, unreachable last/muted/clickable; origin mode unchanged; CSS.\n\n```json:metadata\n{\"files\": [\"web/src/lib/overlap.ts\", \"web/src/components/Map.tsx\", \"web/src/index.css\", \"web/src/lib/overlap.test.ts\"], \"verifyCommand\": \"cd web && npx vitest run && npm run build\", \"acceptanceCriteria\": [\"fewest-trains not fastest-journey\", \"unreachable last + muted + clickable\", \"no city buttons in target mode\", \"origin mode unchanged\"]}\n```"
+    },
+    {
+      "id": 9,
+      "subject": "Task 9: end-to-end — real ose paths run + full verification",
+      "status": "pending",
+      "blockedBy": [4, 5, 7, 8],
+      "description": "**Goal:** Real ose paths run (background, big download), gitignore data/osm/, report + size check (>~8 MB → flag polyline follow-up), all suites, server smoke, user visual pass incl. OSM attribution.\n\n```json:metadata\n{\"files\": [\".gitignore\"], \"verifyCommand\": \"uv run pytest -q && uv run ruff check .\", \"acceptanceCriteria\": [\"ose paths completes\", \"report paths >> failures\", \"all suites green\", \"user eyeball requested\"]}\n```"
+    }
+  ],
+  "lastUpdated": "2026-07-14T00:00:00Z"
+}
