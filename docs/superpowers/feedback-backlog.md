@@ -652,3 +652,21 @@ pin branches.
   sources where attribution is the condition of use — plus Rejseplanen. Needs a
   credits/about surface listing the data sources (see `docs/data-sources.md`).
   **Do before showing the site publicly.**
+
+- **AL — `ose paths` must fit in <5 GB RAM (blocks full recompute on the server).**
+  The production box (aaronbussche.eu) has **7 GB RAM total / ~5 GB free** and a
+  95%-full disk. `ose paths` peaks at **5.9 GB RSS** and needs several GB of
+  transient disk for the largest Geofabrik extract, so it cannot run there: the
+  weekly cron does `fetch → build → compute` only, and `rail_paths.json` is built
+  on a workstation and committed to the repo as an artifact (see
+  `run-trains-pipeline.sh` and `trains/pipeline.Dockerfile` on the server).
+  Goal: get the whole stage under **5 GB RAM at all times** so the server can do a
+  genuine full recompute and the committed artifact can go away.
+  Where the memory goes: `read_rail_network` holds every rail way + all 8.6M node
+  locations for ALL of Europe in Python dicts at once, then `build_graph` and the
+  STRtree add more. Ideas: stream per-country and merge only border-crossing ways;
+  store node coords in numpy arrays / a compact array keyed by index rather than
+  `dict[int, tuple[float, float]]`; drop node locations once the contracted edges
+  hold their polylines; route hops in batches. Also worth re-checking the disk
+  floor (extracts are already downloaded/filtered/deleted one country at a time,
+  so peak disk is ~one extract, not 24 GB).
