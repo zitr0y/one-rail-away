@@ -34,6 +34,24 @@ national feeds remain ongoing; next candidates and research verdicts live in
 two-tier veil). Competitor note: Ouigo España publishes GTFS on
 nap.transportes.gob.es; iryo does not.
 
+**Czechia verdict (2026-07-14 — not shipped):** the best official source is the
+Ministry of Transport's CIS JŘ national-rail CZPTT NeTEx publication,
+`https://portal.cisjr.cz/pub/netex/NeTEx_GVD2026.zip`. It is directly downloadable
+without registration (HTTP 200; 63,762,539 bytes, last modified 2026-01-02), and the
+Ministry explicitly says CIS JŘ data are publicly available for commercial and
+non-commercial use. The inspected 13,252-file archive covers 2025-12-14 through
+2026-12-12 and carries ČD, RegioJet, Leo Express, Arriva, DB, ÖBB, PKP and other
+operators, including foreign services. It cannot safely be integrated yet: each
+per-train NeTEx document has named `StopPlace`/`ScheduledStopPoint` records but no
+latitude or longitude and no parent-stop hierarchy; all `TrainType` values are `1`,
+while the only service classification is an undocumented numeric
+`CommercialTrafficType` (84, 157, 122, 209, 50, 9004, etc.). Thus it has neither
+the station geometry required by the map nor a verified way to retain only
+long-distance/intercity/international products. The official Prague PID GTFS is
+urban/regional and deliberately out of scope. Revisit when CIS JŘ publishes station
+coordinates plus a documented passenger-product-code mapping, or when an equally
+official, registration-free national GTFS includes them.
+
 ## B. Service-week sampling / seasonal services (user item 6) — SHIPPED 2026-07-14
 
 The pipeline selects one deterministic consecutive service week per feed

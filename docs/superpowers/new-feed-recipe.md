@@ -89,5 +89,5 @@ review before continuing.
 | Denmark | Rejseplanen official GTFS | MEDIUM | direct URL open (HEAD 200, 57.5 MB, 2026-07-11); big all-modes zip needs aggressive filtering |
 | Portugal | CP | HARD | Rolling 7-10-day calendar |
 | Italy | Trenitalia NAP NeTEx L1 | DONE (caveated) | Direct validated gz:xml, registration-free; “No licence – No contract”, attribution required; Italo absent |
-| Czechia | ČD | HARD | NeTEx/CZPTT official, GTFS only Prague-regional |
+| Czechia | Ministry of Transport / CIS JŘ CZPTT NeTEx | UNFIT (verified 2026-07-14) | Official, registration-free and commercially reusable, but the national-rail archive has no coordinates or station hierarchy and no usable passenger-product labels. Do not ingest until an official coordinate source and a documented product-code mapping are available. |
 | Hungary | MÁV | MEDIUM-HARD | GTFS behind corporate registration |
