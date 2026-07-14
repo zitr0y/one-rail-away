@@ -71,6 +71,29 @@ or if the official NAP exposes the same data registration-free with terms permit
 commercial reuse; then inspect the real archive for station geometry, coverage, and
 verifiable IC/EC/EN/fast-train product filtering before integration.
 
+**Belgium verdict (2026-07-14 — not shipped):** SNCB-NMBS's current official
+Belgian Mobility Open Data catalogue identifies a daily-updated, public GTFS
+static ZIP for the national railway network at
+`https://api-management-discovery-production.azure-api.net/api/gtfs/feed/nmbssncb/static`.
+The portal terms apply CC BY 4.0 unless stated otherwise, explicitly permit
+commercial reuse with attribution, and describe an anonymous (no-registration)
+tier. However, the advertised current URL returned HTTP 500 when fetched on
+2026-07-14. The formerly documented official endpoint,
+`https://api-management-opendata-production.azure-api.net/api/gtfs/feed/nmbssncb/static/`,
+returned HTTP 403 `Quota Exceeded` for the shared anonymous tier (with a
+`Retry-After` of about 23h36m); the no-trailing-slash variant returned 404.
+Consequently no current official archive could be inspected for its agency and
+operator scope, route-product values (needed to distinguish IC/EC/Eurostar from
+local S/L/P services), stop coordinates/parent hierarchy, calendar horizon, or
+foreign stops. `gtfs.irail.be` exposes a downloadable mirror, but it is not an
+official substitute and must not be ingested. Do not add a feed entry or use a
+scraped journey API. Revisit when the catalogue URL yields an actual current ZIP
+to an anonymous request (HTTP 200); inspect the real archive and only integrate
+if its product labels support a narrow long-distance/intercity/international
+filter and its stops supply usable geometry and hierarchy. Primary evidence:
+SNCB's Public Data page and the Belgian Mobility catalogue/terms, inspected
+2026-07-14.
+
 ## B. Service-week sampling / seasonal services (user item 6) — SHIPPED 2026-07-14
 
 The pipeline selects one deterministic consecutive service week per feed
