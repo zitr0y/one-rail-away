@@ -65,6 +65,41 @@ function bearingDeg(a: [number, number], b: [number, number]): number {
   return (Math.atan2(dx, dy) * 180) / Math.PI;
 }
 
+/** Index i such that km falls within (cumKm[i-1], cumKm[i]] — the segment to
+ *  interpolate within. km must already be clamped to [0, cumKm[last]]. */
+function segmentIndexAt(cumKm: number[], km: number): number {
+  let i = 1;
+  while (i < cumKm.length - 1 && cumKm[i] < km) i++;
+  return i;
+}
+
+/** Interpolates a point at arc-length `km` along `path` (whose cumulative
+ *  per-vertex distances are `cumKm`), clamped to both ends of the polyline.
+ *  Single code path shared by position lookup and the heading look-ahead. */
+export function positionAtKm(
+  path: [number, number][],
+  cumKm: number[],
+  km: number,
+): [number, number] {
+  const totalKm = cumKm[cumKm.length - 1];
+  const target = Math.min(Math.max(km, 0), totalKm);
+  const i = segmentIndexAt(cumKm, target);
+  const a = path[i - 1];
+  const b = path[i];
+  const segLen = cumKm[i] - cumKm[i - 1];
+  const g = segLen === 0 ? 0 : (target - cumKm[i - 1]) / segLen;
+  return [a[0] + (b[0] - a[0]) * g, a[1] + (b[1] - a[1]) * g];
+}
+
+/** Heading look-ahead window (km, each side of the current position). Real
+ *  OSM track geometry has thousands of sub-50m segments and short sideways
+ *  "station stub" segments that make the raw per-segment bearing snap all
+ *  over the place; sampling the bearing across ~700m of track (350m each
+ *  way) averages out that jitter while still turning smoothly on genuine
+ *  curves. TUNING POINT: raise it if hairpin-ish curves still look jittery,
+ *  lower it if the rider visibly "cuts corners" on sharp real curves. */
+export const BEARING_WINDOW_KM = 0.35;
+
 export interface RideOptions {
   traverseMs?: number;
   transferPauseMs?: number;
@@ -126,25 +161,69 @@ export function rideStateAt(timeline: RideTimeline, tMs: number): RideState {
   }
   const f = easeInOut((t - phase.startMs) / (phase.endMs - phase.startMs));
   const target = f * phase.totalKm;
-  let i = 1;
-  while (i < phase.cumKm.length - 1 && phase.cumKm[i] < target) i++;
-  const a = phase.path[i - 1];
-  const b = phase.path[i];
-  const segLen = phase.cumKm[i] - phase.cumKm[i - 1];
-  const g = segLen === 0 ? 0 : (target - phase.cumKm[i - 1]) / segLen;
-  return {
-    lng: a[0] + (b[0] - a[0]) * g,
-    lat: a[1] + (b[1] - a[1]) * g,
-    bearingDeg: bearingDeg(a, b),
-    moving: true,
-  };
+  const [lng, lat] = positionAtKm(phase.path, phase.cumKm, target);
+
+  // Look-ahead heading: bearing between points BEARING_WINDOW_KM behind and
+  // ahead of the current position, clamped to the leg's extent, so sub-50m
+  // jitter and sideways station stubs (a few tens of metres) can't dominate.
+  const lo = Math.max(0, target - BEARING_WINDOW_KM);
+  const hi = Math.min(phase.totalKm, target + BEARING_WINDOW_KM);
+  const behind = positionAtKm(phase.path, phase.cumKm, lo);
+  const ahead = positionAtKm(phase.path, phase.cumKm, hi);
+  const degenerate = behind[0] === ahead[0] && behind[1] === ahead[1];
+  let heading: number;
+  if (degenerate) {
+    const i = segmentIndexAt(phase.cumKm, Math.min(Math.max(target, 0), phase.totalKm));
+    heading = bearingDeg(phase.path[i - 1], phase.path[i]);
+  } else {
+    heading = bearingDeg(behind, ahead);
+  }
+
+  return { lng, lat, bearingDeg: heading, moving: true };
 }
+
+/** Margin (degrees) around each mirror boundary (180°, and 0°/360°) within
+ *  which the previous mirror state is kept rather than recomputed. Real
+ *  track geometry crosses these boundaries thousands of times per journey;
+ *  without hysteresis the sprite flips horizontally back and forth. */
+export const MIRROR_HYSTERESIS_DEG = 12;
 
 /** The rider SVG faces east. Marker rotation is bearing−90; for westward
  *  headings we mirror horizontally (inner scaleX(-1), rotation bearing−270)
- *  so the train never rides upside down. Due north/south never mirror. */
-export function riderTransform(bearing: number): { rotateDeg: number; mirror: boolean } {
+ *  so the train never rides upside down. Due north/south never mirror.
+ *  `prevMirror` is held near either boundary (180°, and 0°/360°) so a
+ *  heading hovering right at the edge can't flap the sprite every frame. */
+export function riderTransform(
+  bearing: number,
+  prevMirror = false,
+): { rotateDeg: number; mirror: boolean } {
   const b = ((bearing % 360) + 360) % 360;
-  const mirror = b > 180;
+  const nearBoundary =
+    (b > 180 - MIRROR_HYSTERESIS_DEG && b < 180 + MIRROR_HYSTERESIS_DEG) ||
+    b > 360 - MIRROR_HYSTERESIS_DEG ||
+    b < MIRROR_HYSTERESIS_DEG;
+  const mirror = nearBoundary ? prevMirror : b > 180;
   return { rotateDeg: mirror ? b - 270 : b - 90, mirror };
+}
+
+/** Exponentially approaches `target` (degrees) from `prev` along the
+ *  shortest angular arc — so 350° → 10° turns forward through 360/0, never
+ *  backwards through 180. `tauMs` is the time constant: after `dtMs` the
+ *  remaining gap shrinks by a factor of exp(-dtMs/tauMs). `prev === null`
+ *  (no prior heading — e.g. the first animation frame of a new journey)
+ *  returns `target` immediately rather than spinning up from nothing.
+ *  Result is normalized to [0, 360). */
+export function smoothBearing(
+  prev: number | null,
+  target: number,
+  dtMs: number,
+  tauMs = 140,
+): number {
+  const norm = (x: number) => ((x % 360) + 360) % 360;
+  const t = norm(target);
+  if (prev === null) return t;
+  const p = norm(prev);
+  const diff = (((t - p + 180) % 360) + 360) % 360 - 180; // shortest arc, (-180, 180]
+  const alpha = 1 - Math.exp(-dtMs / tauMs);
+  return norm(p + diff * alpha);
 }

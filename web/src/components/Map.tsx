@@ -4,7 +4,7 @@ import {
   destinationsGeoJSON, linesGeoJSON, segmentsGeoJSON, bestJourney, journeyLegPaths,
   transferPoints, type MaxTrains, type RailPathLookup,
 } from "../lib/geojson";
-import { buildRideTimeline, rideStateAt, riderTransform } from "../lib/ride";
+import { buildRideTimeline, rideStateAt, riderTransform, smoothBearing } from "../lib/ride";
 import { riderSvg } from "../lib/ridersvg";
 import { BUCKET_COLORS, themeTokens } from "../lib/colors";
 import { mergeCustomStyle } from "../lib/themeswap";
@@ -507,25 +507,38 @@ export default function MapView(props: Props) {
       element: el, rotationAlignment: "map", pitchAlignment: "map",
     });
 
-    function apply(tMs: number) {
+    // Displayed heading is smoothed frame-to-frame (not just look-ahead in
+    // space) to kill any remaining flutter, and the mirror flag carries
+    // hysteresis across frames; both are fresh per rider so a new journey
+    // never inherits a stale heading.
+    let prevBearing: number | null = null;
+    let prevMirror = false;
+    let lastFrameNow = performance.now();
+
+    function apply(tMs: number, now: number) {
       const s = rideStateAt(timeline!, tMs);
-      const tf = riderTransform(s.bearingDeg);
+      const dtMs = now - lastFrameNow;
+      lastFrameNow = now;
+      const bearing = smoothBearing(prevBearing, s.bearingDeg, dtMs);
+      prevBearing = bearing;
+      const tf = riderTransform(bearing, prevMirror);
+      prevMirror = tf.mirror;
       marker.setLngLat([s.lng, s.lat]);
       marker.setRotation(tf.rotateDeg);
       inner.style.transform = tf.mirror ? "scaleX(-1)" : "";
     }
 
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      apply(timeline.totalMs - 1); // park at the destination, no animation
+      apply(timeline.totalMs - 1, lastFrameNow); // park at the destination, no animation
       marker.addTo(m);
       rider.current = { marker, raf: 0 };
       return;
     }
-    apply(0);
+    apply(0, lastFrameNow);
     marker.addTo(m);
     const start = performance.now();
     const frame = (now: number) => {
-      apply(now - start);
+      apply(now - start, now);
       if (rider.current) rider.current.raf = requestAnimationFrame(frame);
     };
     rider.current = { marker, raf: requestAnimationFrame(frame) };
