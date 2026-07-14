@@ -133,7 +133,9 @@ def test_compute_all_sets_is_capital(tmp_path):
     raw = tmp_path / "raw"
     cfgs = make_fixture_feeds(raw)
     countries_toml, names_toml = empty_overrides(tmp_path)
-    countries_toml.write_text('[countries]\n1111111 = "LA"\n')
+    countries_toml.write_text(
+        '[[override]]\nname = "Alpha Hbf"\nlat = 50.0\nlon = 8.0\ncountry = "LA"\n'
+    )
     feeds_toml = _write_feeds_toml(tmp_path, cfgs)
     build(
         raw,

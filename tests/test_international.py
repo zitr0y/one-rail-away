@@ -26,13 +26,13 @@ pytestmark = pytest.mark.skipif(
 
 # Canonical ids from the 2026-07 build (db_fern ids are stable internal ids; the
 # alias table depends on the same stability, see feeds.toml).
-WIEN = "x:db_fern:54514"
+WIEN = "x:db_fern:457154"
 BUDAPEST_KELETI = "x:oebb:Phu:14216:27001535"
 VENEZIA_SL = "x:oebb:it:22099:110:51:1"
-VILLACH = "x:db_fern:527208"
-BERLIN = "x:db_fern:569849"
+VILLACH = "x:db_fern:331858"
+BERLIN = "x:db_fern:414176"
 PRAHA = "x:db_fern:549400"
-WARSZAWA = "x:db_fern:419347"
+WARSZAWA = "x:db_fern:31353"
 
 
 def _trips():
