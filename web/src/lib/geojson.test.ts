@@ -1,9 +1,9 @@
 import { describe, expect, it } from "vitest";
 import {
-  bestJourney, chaikin, destinationsGeoJSON, frequencyClass, journeyLegPaths, linesGeoJSON, segmentsGeoJSON,
-  timeBucket, transferPoints,
+  bestJourney, destinationsGeoJSON, frequencyClass, journeyLegPaths, legSegments, linesGeoJSON,
+  segmentsGeoJSON, timeBucket, transferPoints, type RailPathLookup,
 } from "./geojson";
-import type { Journey, ReachFile, Station } from "./types";
+import type { Journey, Leg, ReachFile, Station } from "./types";
 
 const S = (id: string, lon: number): Station =>
   ({ id, name: id, lat: 50, lon, country: "XX", has_reach: true });
@@ -97,7 +97,7 @@ describe("geojson builders", () => {
     expect(fc.features.map((f) => f.properties.id)).toEqual(["C"]);
   });
   it("lines pass through via and transfer stations", () => {
-    const fc = linesGeoJSON(reach, stationsById, 3, Infinity);
+    const fc = linesGeoJSON(reach, stationsById, 3, Infinity, null);
     const d = fc.features.find((f) => f.properties.id === "D")!;
     const lons = (d.geometry.coordinates as [number, number][]).map(([lon]) => lon);
     expect(lons[0]).toBe(8);                       // origin A preserved
@@ -106,21 +106,11 @@ describe("geojson builders", () => {
   });
 });
 
-describe("chaikin", () => {
-  it("preserves endpoints and adds points", () => {
-    const input: [number, number][] = [[0, 0], [1, 1], [2, 0]];
-    const out = chaikin(input, 2);
-    expect(out[0]).toEqual([0, 0]);
-    expect(out[out.length - 1]).toEqual([2, 0]);
-    expect(out.length).toBeGreaterThan(input.length);
-  });
-});
-
-describe("linesGeoJSON per-leg smoothing", () => {
+describe("linesGeoJSON per-leg splitting", () => {
   // Barcelona(A) -> Paris(B) -> Sens(C), where leg 2 doubles back near A: whole-line
-  // chaikin rounds the Paris corner into a U-curve whose apex lands ~100km short of
-  // Paris, over empty countryside near Auxerre (user report 2026-07-09). Smoothing
-  // each leg separately keeps B a sharp vertex the line visibly passes through.
+  // smoothing used to round the Paris corner into a U-curve whose apex landed ~100km
+  // short of Paris, over empty countryside near Auxerre (user report 2026-07-09).
+  // Handling each leg separately keeps B a sharp vertex the line visibly passes through.
   const hairpinStations = new Map<string, Station>([
     ["A", { id: "A", name: "A", lat: 41, lon: 2, country: "XX", has_reach: true }],
     ["B", { id: "B", name: "B", lat: 49, lon: 2.3, country: "XX", has_reach: true }],
@@ -137,7 +127,7 @@ describe("linesGeoJSON per-leg smoothing", () => {
   };
 
   it("keeps the transfer station as an exact vertex and preserves line endpoints", () => {
-    const fc = linesGeoJSON(hairpinReach, hairpinStations, 3, Infinity);
+    const fc = linesGeoJSON(hairpinReach, hairpinStations, 3, Infinity, null);
     const feature = fc.features.find((f) => f.properties.id === "C")!;
     const coords = feature.geometry.coordinates as [number, number][];
     const b = hairpinStations.get("B")!;
@@ -149,9 +139,9 @@ describe("linesGeoJSON per-leg smoothing", () => {
   });
 
   it("keeps every served stop as an exact vertex — no corner cutting (backlog X)", () => {
-    // Chaikin used to round the corner at via stop B differently per destination,
+    // Smoothing used to round the corner at via stop B differently per destination,
     // splaying identical trunks into a fan (Nijmegen report 2026-07-13).
-    const fc = linesGeoJSON(reach, stationsById, 1, Infinity);
+    const fc = linesGeoJSON(reach, stationsById, 1, Infinity, null);
     const feature = fc.features.find((f) => f.properties.id === "C")!;
     const a = stationsById.get("A")!;
     const b = stationsById.get("B")!;
@@ -173,7 +163,7 @@ describe("linesGeoJSON per-leg smoothing", () => {
             { train: "IC 1", dep: "08:00", arr: "09:00", from: "A", to: "D", via: ["B", "C"] } ] } ] },
       ],
     };
-    const fc = linesGeoJSON(splayReach, stationsById, 3, Infinity);
+    const fc = linesGeoJSON(splayReach, stationsById, 3, Infinity, null);
     const toB = fc.features.find((f) => f.properties.id === "B")!.geometry.coordinates;
     const toD = fc.features.find((f) => f.properties.id === "D")!.geometry.coordinates;
     expect(toD.slice(0, toB.length)).toEqual(toB); // same trunk, point for point
@@ -184,7 +174,7 @@ describe("segmentsGeoJSON", () => {
   it("draws each physical stop-to-stop segment exactly once (backlog X)", () => {
     // reach has A→C via B (120 min) and A→C via B then C→D (240 min): the shared
     // A–B and B–C hops must appear once, tagged with the fastest/most-direct user.
-    const fc = segmentsGeoJSON(reach, stationsById, 3, Infinity);
+    const fc = segmentsGeoJSON(reach, stationsById, 3, Infinity, null);
     expect(fc.features.map((f) => f.properties.id).sort()).toEqual(["A|B", "B|C", "C|D"]);
     const ab = fc.features.find((f) => f.properties.id === "A|B")!;
     expect(ab.properties.bucket).toBe(timeBucket(120)); // fastest journey through it
@@ -195,9 +185,9 @@ describe("segmentsGeoJSON", () => {
   });
 
   it("respects the train budget and max-minutes filters like linesGeoJSON", () => {
-    const fc = segmentsGeoJSON(reach, stationsById, 1, Infinity);
+    const fc = segmentsGeoJSON(reach, stationsById, 1, Infinity, null);
     expect(fc.features.map((f) => f.properties.id).sort()).toEqual(["A|B", "B|C"]);
-    expect(segmentsGeoJSON(reach, stationsById, 3, 60).features).toEqual([]);
+    expect(segmentsGeoJSON(reach, stationsById, 3, 60, null).features).toEqual([]);
   });
 });
 
@@ -215,58 +205,58 @@ describe("journeyLegPaths", () => {
     ],
   };
 
-  it("returns one chaikin(2)-smoothed path per leg", () => {
-    const paths = journeyLegPaths(journey, stations);
-    expect(paths).toHaveLength(2);
-    expect(paths[0]).toEqual(chaikin([[0, 0], [1, 0]], 2));
-    expect(paths[1]).toEqual(chaikin([[1, 0], [1, 1]], 2));
-  });
-
   it("is exactly the geometry linesGeoJSON renders", () => {
     const reachData = {
       origin: "a", computed_at: "", sample_date: "",
       destinations: [{ id: "c", direct_per_day: 0, journeys: [journey] }],
     };
-    const line = linesGeoJSON(reachData, stations, 3, 1440).features[0];
-    const paths = journeyLegPaths(journey, stations);
+    const line = linesGeoJSON(reachData, stations, 3, 1440, null).features[0];
+    const paths = journeyLegPaths(journey, stations, null);
     const flattened = paths.flatMap((c, i) => (i === 0 ? c : c.slice(1)));
     expect(line.geometry.coordinates).toEqual(flattened);
   });
+});
 
-  it("routes a direct Paris to Marseille leg through the curated corridor", () => {
-    const paris = { lon: 2.373481, lat: 48.844945 };
-    const lyon = { lon: 4.859409, lat: 45.760596 };
-    const valence = { lon: 4.978652, lat: 44.991907 };
-    const avignon = { lon: 4.786136, lat: 43.92194 };
-    const marseille = { lon: 5.380407, lat: 43.302666 };
-    const corridorStations = new Map([
-      ["paris", { id: "paris", name: "Paris", ...paris, country: "FR", has_reach: true }],
-      [
-        "marseille",
-        { id: "marseille", name: "Marseille", ...marseille, country: "FR", has_reach: true },
-      ],
-    ]);
-    const directJourney = {
-      trains: 1,
-      duration_min: 190,
-      legs: [{
-        train: "TGV 6103",
-        dep: "07:00",
-        arr: "10:10",
-        from: "paris",
-        to: "marseille",
-        via: [],
-      }],
-    };
+const mkStation = (id: string, lon: number, lat: number): [string, Station] =>
+  [id, { id, name: id, lon, lat, country: "XX", has_reach: true }];
+const railStationsById = new Map<string, Station>([
+  mkStation("a", 0, 0), mkStation("b", 1, 0), mkStation("c", 2, 0),
+]);
+const railLeg = (from: string, to: string, via: string[]): Leg =>
+  ({ train: "T", dep: "", arr: "", from, to, via });
 
-    expect(journeyLegPaths(directJourney, corridorStations)).toEqual([
-      chaikin([
-        [paris.lon, paris.lat],
-        [lyon.lon, lyon.lat],
-        [valence.lon, valence.lat],
-        [avignon.lon, avignon.lat],
-        [marseille.lon, marseille.lat],
-      ], 2),
-    ]);
+describe("legSegments with rail paths", () => {
+  const railPaths: RailPathLookup = new Map([
+    ["a|b", [[0, 0], [0.5, 0.4], [1, 0]]],
+  ]);
+
+  it("uses lookup geometry for a hop when present", () => {
+    expect(legSegments(railLeg("a", "b", []), railStationsById, railPaths)[0].coords)
+      .toEqual([[0, 0], [0.5, 0.4], [1, 0]]);
+  });
+
+  it("reverses geometry when the hop travels against key order", () => {
+    expect(legSegments(railLeg("b", "a", []), railStationsById, railPaths)[0].coords)
+      .toEqual([[1, 0], [0.5, 0.4], [0, 0]]);
+    // Original lookup entry must not be mutated by the reversal.
+    expect(railPaths.get("a|b")![0]).toEqual([0, 0]);
+  });
+
+  it("falls back to a straight line for hops without geometry", () => {
+    expect(legSegments(railLeg("b", "c", []), railStationsById, railPaths)[0].coords)
+      .toEqual([[1, 0], [2, 0]]);
+  });
+
+  it("splits a via-leg into per-hop segments, each with its own lookup", () => {
+    const segments = legSegments(railLeg("a", "c", ["b"]), railStationsById, railPaths);
+    expect(segments.map((s) => s.key)).toEqual(["a|b", "b|c"]);
+    expect(segments[0].coords).toEqual([[0, 0], [0.5, 0.4], [1, 0]]);
+    expect(segments[1].coords).toEqual([[1, 0], [2, 0]]);
+  });
+
+  it("journeyLegPaths threads geometry and keeps stops as exact vertices", () => {
+    const journey = { trains: 1, duration_min: 60, legs: [railLeg("a", "c", ["b"])] };
+    expect(journeyLegPaths(journey, railStationsById, railPaths))
+      .toEqual([[[0, 0], [0.5, 0.4], [1, 0], [2, 0]]]);
   });
 });

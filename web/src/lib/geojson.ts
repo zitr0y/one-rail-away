@@ -1,4 +1,3 @@
-import { CORRIDORS, corridorPath } from "./corridors";
 import type { Destination, Journey, Leg, ReachFile, Station } from "./types";
 
 export type MaxTrains = 1 | 2 | 3;
@@ -33,23 +32,6 @@ export function transferPoints(
   });
 }
 
-export function chaikin(coords: [number, number][], iterations: number): [number, number][] {
-  let pts = coords;
-  for (let it = 0; it < iterations; it++) {
-    if (pts.length < 3) break;
-    const next: [number, number][] = [pts[0]];
-    for (let i = 0; i < pts.length - 1; i++) {
-      const [ax, ay] = pts[i];
-      const [bx, by] = pts[i + 1];
-      next.push([ax * 0.75 + bx * 0.25, ay * 0.75 + by * 0.25]);
-      next.push([ax * 0.25 + bx * 0.75, ay * 0.25 + by * 0.75]);
-    }
-    next.push(pts[pts.length - 1]);
-    pts = next;
-  }
-  return pts;
-}
-
 type FC<G> = { type: "FeatureCollection"; features: Feature<G>[] };
 type Feature<G> = { type: "Feature"; geometry: G; properties: Record<string, unknown> & { id: string } };
 type Point = { type: "Point"; coordinates: [number, number] };
@@ -82,74 +64,76 @@ export function destinationsGeoJSON(
   return { type: "FeatureCollection", features };
 }
 
-/** One physical piece of a leg: a stop-to-stop hop, or a whole nonstop leg
- *  (corridor-routed when one matches). `key` is direction-normalized so the
- *  same track traversed by many journeys collapses to one drawn segment. */
+/** One physical piece of a leg: a stop-to-stop hop. `key` is
+ *  direction-normalized so the same track traversed by many journeys
+ *  collapses to one drawn segment. */
 export interface LegSegment { key: string; coords: [number, number][] }
 
 function segmentKey(a: string, b: string): string {
   return a < b ? `${a}|${b}` : `${b}|${a}`;
 }
 
-export function legSegments(leg: Leg, stationsById: Map<string, Station>): LegSegment[] {
+/** Precomputed real-track geometry per physical hop, keyed by segmentKey and
+ *  stored oriented idA→idB (idA < idB). Built by `ose paths` (backlog I). */
+export type RailPathLookup = Map<string, [number, number][]>;
+
+function hopCoords(
+  a: { id: string; station: Station }, b: { id: string; station: Station },
+  railPaths: RailPathLookup | null,
+): [number, number][] {
+  const geometry = railPaths?.get(segmentKey(a.id, b.id));
+  if (geometry && geometry.length >= 2) {
+    return a.id < b.id ? geometry : [...geometry].reverse();
+  }
+  return [[a.station.lon, a.station.lat], [b.station.lon, b.station.lat]];
+}
+
+export function legSegments(
+  leg: Leg, stationsById: Map<string, Station>, railPaths: RailPathLookup | null,
+): LegSegment[] {
   const stops = [leg.from, ...leg.via, leg.to]
     .map((id) => ({ id, station: stationsById.get(id) }))
     .filter((x): x is { id: string; station: Station } => x.station !== undefined);
   if (stops.length < 2) return [];
-
-  if (leg.via.length === 0) {
-    const [from, to] = stops;
-    const corridor = corridorPath(from.station, to.station, CORRIDORS);
-    const coords = corridor
-      ? chaikin(corridor.map(({ lon, lat }): [number, number] => [lon, lat]), 2)
-      : stops.map(({ station }): [number, number] => [station.lon, station.lat]);
-    return [{ key: segmentKey(from.id, to.id), coords }];
-  }
-
   const segments: LegSegment[] = [];
   for (let i = 0; i < stops.length - 1; i++) {
     const a = stops[i];
     const b = stops[i + 1];
-    segments.push({
-      key: segmentKey(a.id, b.id),
-      coords: [[a.station.lon, a.station.lat], [b.station.lon, b.station.lat]],
-    });
+    segments.push({ key: segmentKey(a.id, b.id), coords: hopCoords(a, b, railPaths) });
   }
   return segments;
 }
 
 /** Per-leg coordinate paths for a journey — shared by linesGeoJSON and the
  *  mascot rider (ride.ts) so the two can never drift. Served stops are EXACT
- *  vertices: smoothing must never cut a stop's corner, otherwise journeys
- *  sharing a trunk round it differently per destination and the overlapping
- *  trunks splay into a fan (backlog X, user report 2026-07-13). Nonstop legs
- *  still follow curated corridors, chaikin-smoothed — corridor waypoints are
- *  shape points, not served stops. Paths stay per leg so transfer corners
- *  stay sharp (user report 2026-07-09). */
+ *  vertices: real-track geometry must never cut a stop's corner, otherwise
+ *  journeys sharing a trunk round it differently per destination and the
+ *  overlapping trunks splay into a fan (backlog X, user report 2026-07-13).
+ *  Paths stay per leg so transfer corners stay sharp (user report 2026-07-09). */
 export function journeyLegPaths(
-  j: Journey, stationsById: Map<string, Station>,
+  j: Journey, stationsById: Map<string, Station>, railPaths: RailPathLookup | null,
 ): [number, number][][] {
   return j.legs
-    .map((leg) => legSegments(leg, stationsById))
+    .map((leg) => legSegments(leg, stationsById, railPaths))
     .filter((segments) => segments.length > 0)
     .map((segments) => segments.flatMap((s, i) => (i === 0 ? s.coords : s.coords.slice(1))));
 }
 
 /** Deduplicated physical segments across all shown journeys — feeds the base
- *  reach-lines layer (backlog X). Each stop-to-stop hop (or nonstop corridor
- *  leg) is drawn exactly once, so a multi-stop train reads as one trunk
- *  threading its stops instead of a per-destination fan. A shared segment
- *  takes the bucket of the fastest journey through it and the width class
- *  (trains) of the most direct one. */
+ *  reach-lines layer (backlog X). Each stop-to-stop hop is drawn exactly once,
+ *  so a multi-stop train reads as one trunk threading its stops instead of a
+ *  per-destination fan. A shared segment takes the bucket of the fastest
+ *  journey through it and the width class (trains) of the most direct one. */
 export function segmentsGeoJSON(
   reach: ReachFile, stationsById: Map<string, Station>, maxTrains: MaxTrains, maxMinutes: number,
+  railPaths: RailPathLookup | null,
 ): FC<LineString> {
   const best = new Map<string, {
     coords: [number, number][]; duration_min: number; trains: number; frequency_class: string;
   }>();
   for (const { d, j } of shown(reach, maxTrains, maxMinutes)) {
     for (const leg of j.legs) {
-      for (const segment of legSegments(leg, stationsById)) {
+      for (const segment of legSegments(leg, stationsById, railPaths)) {
         const prev = best.get(segment.key);
         if (!prev) {
           best.set(segment.key, {
@@ -183,10 +167,11 @@ export function segmentsGeoJSON(
  *  highlight layer; the base layer draws segmentsGeoJSON. */
 export function linesGeoJSON(
   reach: ReachFile, stationsById: Map<string, Station>, maxTrains: MaxTrains, maxMinutes: number,
+  railPaths: RailPathLookup | null,
 ): FC<LineString> {
   const features: Feature<LineString>[] = [];
   for (const { d, j } of shown(reach, maxTrains, maxMinutes)) {
-    const coords = journeyLegPaths(j, stationsById)
+    const coords = journeyLegPaths(j, stationsById, railPaths)
       .flatMap((c, i) => (i === 0 ? c : c.slice(1)));
     if (coords.length < 2) continue;
     features.push({
