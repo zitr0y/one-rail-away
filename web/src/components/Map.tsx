@@ -94,8 +94,10 @@ export default function MapView(props: Props) {
           "line-color": bucketColor as never,
           "line-width": ["case", ["==", ["get", "trains"], 1], 2.5, 1.5] as never,
           "line-opacity": baseLineOpacity(false),
+          // Dash patterns must be ["literal", …]: a bare array reads as an
+          // expression, and MapLibre rejects the whole layer at addLayer time.
           "line-dasharray": ["case", ["==", ["get", "frequency_class"], "infrequent"],
-            [1.2, 1.8], [1, 0.01]] as never,
+            ["literal", [1.2, 1.8]], ["literal", [1, 0.01]]] as never,
         },
       });
       m.addLayer({
@@ -106,8 +108,10 @@ export default function MapView(props: Props) {
           "line-color": bucketColor as never,
           "line-width": 6.5,
           "line-opacity": 1,
+          // Dash patterns must be ["literal", …]: a bare array reads as an
+          // expression, and MapLibre rejects the whole layer at addLayer time.
           "line-dasharray": ["case", ["==", ["get", "frequency_class"], "infrequent"],
-            [1.2, 1.8], [1, 0.01]] as never,
+            ["literal", [1.2, 1.8]], ["literal", [1, 0.01]]] as never,
         },
       });
       m.addLayer({
