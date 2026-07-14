@@ -52,6 +52,25 @@ urban/regional and deliberately out of scope. Revisit when CIS JŘ publishes sta
 coordinates plus a documented passenger-product-code mapping, or when an equally
 official, registration-free national GTFS includes them.
 
+**Hungary verdict (2026-07-14 — not shipped):** the only verified national
+long-distance candidate is MÁV's own GTFS service at
+`https://www.mavcsoport.hu/gtfs-igenybejelento`. The live official page presents
+GTFS as a regularly refreshed, free platform for rail-application development, but
+does not publish a feed URL, archive, licence, product table, calendar, or station
+data. Instead it requires a CAPTCHA-protected request form with mandatory applicant
+or company name, address, contact name, phone number, email, and a rail/bus/both
+selection. The Hungarian National Access Point is not a registration-free fallback:
+its public page says metadata may be browsed without an account but dataset access
+requires registration. Therefore the actual national dataset, its operators/products,
+coordinates/hierarchy, calendar coverage, and a safe long-distance filter cannot be
+inspected or automatically refreshed under this project's registration-free-source
+requirement; MÁV's marketing description alone is not evidence of commercial reuse
+rights. Do not ingest an unofficial mirror or scrape a booking API. Revisit if MÁV
+publishes a stable registration-free static GTFS/NeTEx URL with explicit reuse terms,
+or if the official NAP exposes the same data registration-free with terms permitting
+commercial reuse; then inspect the real archive for station geometry, coverage, and
+verifiable IC/EC/EN/fast-train product filtering before integration.
+
 ## B. Service-week sampling / seasonal services (user item 6) — SHIPPED 2026-07-14
 
 The pipeline selects one deterministic consecutive service week per feed
@@ -402,6 +421,18 @@ plus all 8 anchor-side `.maplibregl-popup-tip` border colours. Verified computed
 styles in dark mode (#0B1533 surface, #E8ECF7 text, tip matches). NOTE: local
 `data/out` subset has no coverage.json, so the real veil can't render locally —
 verified via injected popup markup instead.
+
+## AC. Keep serving good map data when upstream feeds break (added 2026-07-14)
+
+Upstream feed changes must not take the whole website down. A DB/SNCF change to
+three station ids made the live-feed build abort and silently returned the site to
+the five-stop example fallback with no paths (the immediate id changes were fixed in
+`9d99eea`). Make the pipeline and deployment degrade gracefully when feeds change
+ids, drop stations, or ship malformed data: keep serving the last known-good dataset,
+quarantine or skip only the affected feed/stations with a loud build warning, and
+fail the build only when the resulting output would be substantially degraded. The
+precise design is open, but another isolated upstream change must not replace the
+working site with example data. Relates to Q (persistent unfit-data reporting).
 
 ## AB. all-stations fade/pin opacity expression is invalid — SHIPPED 2026-07-13
 

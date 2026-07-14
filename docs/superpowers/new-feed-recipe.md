@@ -90,4 +90,4 @@ review before continuing.
 | Portugal | CP | HARD | Rolling 7-10-day calendar |
 | Italy | Trenitalia NAP NeTEx L1 | DONE (caveated) | Direct validated gz:xml, registration-free; “No licence – No contract”, attribution required; Italo absent |
 | Czechia | Ministry of Transport / CIS JŘ CZPTT NeTEx | UNFIT (verified 2026-07-14) | Official, registration-free and commercially reusable, but the national-rail archive has no coordinates or station hierarchy and no usable passenger-product labels. Do not ingest until an official coordinate source and a documented product-code mapping are available. |
-| Hungary | MÁV | MEDIUM-HARD | GTFS behind corporate registration |
+| Hungary | MÁV | UNFIT (verified 2026-07-14) | MÁV's official GTFS page is a CAPTCHA-protected request form requiring applicant/company identity, address, contact phone and email; it exposes no downloadable archive or explicit reuse licence. The official NAP likewise requires registration for dataset access. Do not ingest until an official, stable registration-free static feed has explicit commercial-reuse terms; then inspect its geometry, calendar and documented long-distance products. |
