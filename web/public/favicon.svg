@@ -1,7 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 200 100" preserveAspectRatio="none">
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 200 200">
+  <rect width="200" height="200" fill="#ffcc00"/>
   <!-- Existing train contour, simplified for small-size legibility. -->
-  <path d="M38 83 V46 Q38 36 48 36 H118 Q136 36 146 50 L156 68 Q160 76 152 80 V83 Z"
-        fill="#003399"/>
-  <!-- Gold star accent. -->
-  <text x="60" y="74" font-size="30" fill="#ffcc00">★</text>
+  <g transform="translate(-49.5 10.75) scale(1.5)">
+    <path d="M38 83 V46 Q38 36 48 36 H118 Q136 36 146 50 L156 68 Q160 76 152 83 Z"
+          fill="#003399"/>
+    <!-- Gold star accent, scaled with the train. -->
+    <text x="70" y="78" font-size="60" fill="#ffcc00">★</text>
+  </g>
 </svg>
