@@ -42,6 +42,7 @@ import csv
 import io
 import logging
 import re
+import sys
 import zipfile
 from collections.abc import Iterable, Iterator
 from dataclasses import dataclass, field
@@ -146,8 +147,17 @@ def _require(row: list[str], col: dict[str, int], name: str) -> str:
 class _Calendar:
     # (service_id, start_date, end_date, [monday..sunday flags]) per calendar.txt row
     calendar_rows: list[tuple[str, str, str, list[str]]] = field(default_factory=list)
-    # (service_id, date, exception_type) per calendar_dates.txt row, in file order
-    exception_rows: list[tuple[str, str, str]] = field(default_factory=list)
+    # calendar_dates.txt grouped by date: date -> (service ids in file order,
+    # parallel add-flags: 1 = exception_type "1" (added), 0 = removed). Only one
+    # date's rows ever apply to a given day and in-date file order is preserved,
+    # so replaying a date's (id, flag) pairs is exactly the old flat-list scan.
+    # This layout exists for scale: service ids are interned (shared, not
+    # per-row copies) and flags are one byte per row. The previous flat list of
+    # 3-string tuples cost ~2 GB on SBB's 9.26M-row calendar_dates.txt and
+    # OOM-killed the production build (2026-07-15).
+    exceptions_by_date: dict[str, tuple[list[str], bytes]] = field(default_factory=dict)
+    # distinct service ids across all exception rows (absent-from-week math)
+    exception_ids: set[str] = field(default_factory=set)
 
 
 def _parse_calendar(zf: zipfile.ZipFile) -> _Calendar:
@@ -158,24 +168,25 @@ def _parse_calendar(zf: zipfile.ZipFile) -> _Calendar:
         for row in rows:
             calendar_rows.append(
                 (
-                    _require(row, col, "service_id"),
+                    sys.intern(_require(row, col, "service_id")),
                     _require(row, col, "start_date"),
                     _require(row, col, "end_date"),
                     [_require(row, col, day_col) for day_col in WEEKDAY_COLS],
                 )
             )
-    exception_rows: list[tuple[str, str, str]] = []
+    grouped: dict[str, tuple[list[str], bytearray]] = {}
+    exception_ids: set[str] = set()
     col, rows = _row_reader(zf, "calendar_dates.txt")
     if col is not None:
         for row in rows:
-            exception_rows.append(
-                (
-                    _require(row, col, "service_id"),
-                    _require(row, col, "date"),
-                    _require(row, col, "exception_type"),
-                )
-            )
-    return _Calendar(calendar_rows, exception_rows)
+            service_id = sys.intern(_require(row, col, "service_id"))
+            exc_date = sys.intern(_require(row, col, "date"))
+            ids, flags = grouped.setdefault(exc_date, ([], bytearray()))
+            ids.append(service_id)
+            flags.append(1 if _require(row, col, "exception_type") == "1" else 0)
+            exception_ids.add(service_id)
+    exceptions_by_date = {d: (ids, bytes(flags)) for d, (ids, flags) in grouped.items()}
+    return _Calendar(calendar_rows, exceptions_by_date, exception_ids)
 
 
 def load_calendar(zip_path: Path) -> _Calendar:
@@ -193,12 +204,12 @@ def calendar_active_services(cal: _Calendar, day: date) -> set[str]:
     for service_id, start, end, flags in cal.calendar_rows:
         if start <= ymd <= end and flags[day.weekday()] == "1":
             active.add(service_id)
-    for service_id, exc_date, exception_type in cal.exception_rows:
-        if exc_date == ymd:
-            if exception_type == "1":
-                active.add(service_id)
-            else:
-                active.discard(service_id)
+    ids, add_flags = cal.exceptions_by_date.get(ymd, ((), b""))
+    for service_id, is_add in zip(ids, add_flags):
+        if is_add:
+            active.add(service_id)
+        else:
+            active.discard(service_id)
     return active
 
 
@@ -208,8 +219,7 @@ def calendar_window(cal: _Calendar) -> tuple[str, str] | None:
     bounds: list[str] = []
     for _service_id, start, end, _flags in cal.calendar_rows:
         bounds.extend((start, end))
-    for _service_id, exc_date, _exception_type in cal.exception_rows:
-        bounds.append(exc_date)
+    bounds.extend(cal.exceptions_by_date)
     return (min(bounds), max(bounds)) if bounds else None
 
 
@@ -219,10 +229,8 @@ def calendar_absent_from_week(cal: _Calendar, sample_dates: list[date]) -> set[s
     window = calendar_window(cal)
     if window is None:
         return set()
-    all_ids: set[str] = set()
+    all_ids: set[str] = set(cal.exception_ids)
     for service_id, _start, _end, _flags in cal.calendar_rows:
-        all_ids.add(service_id)
-    for service_id, _exc_date, _exception_type in cal.exception_rows:
         all_ids.add(service_id)
     active_in_week: set[str] = set()
     for day in sample_dates:
