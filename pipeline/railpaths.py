@@ -14,20 +14,22 @@ import heapq
 import itertools
 import json
 import logging
+import math
 import re
 import urllib.request
 from dataclasses import dataclass, field
 from pathlib import Path
 
-from shapely.geometry import LineString, Point, box
-from shapely.strtree import STRtree
+from shapely.geometry import LineString
 
+from pipeline.artifacts import write_json_with_gzip
 from pipeline.geo import _haversine_m
 
 log = logging.getLogger(__name__)
 
 SNAP_MAX_M = 1000.0
-# Bounding-box half-width used to pre-filter STRtree candidates before exact
+# Bounding-box half-width (and grid cell size for station bucketing, see
+# snap_stations) used to pre-filter candidate rail nodes before exact
 # haversine distance checks. 0.02 deg comfortably exceeds 1 km (SNAP_MAX_M)
 # at European latitudes.
 SNAP_QUERY_DEG = 0.02
@@ -158,6 +160,11 @@ def connected_components(ways: list[RailWay]) -> dict[int, int]:
 
     Iterative (no recursion) with path compression and union by size, so it
     stays efficient at real scale: ~1M ways / ~8.6M nodes.
+
+    Returns `parent` itself (fully path-compressed in place, so every value
+    is the ultimate root) rather than materialising a second node_id ->
+    component_id dict of the same size: at ~8.6M nodes that second dict was
+    a multi-hundred-MB transient allocation for no benefit.
     """
     parent: dict[int, int] = {}
     size: dict[int, int] = {}
@@ -187,7 +194,9 @@ def connected_components(ways: list[RailWay]) -> dict[int, int]:
         for a, b in itertools.pairwise(way.refs):
             union(a, b)
 
-    return {node: find(node) for node in parent}
+    for node in parent:
+        parent[node] = find(node)
+    return parent
 
 
 @dataclass(frozen=True)
@@ -197,61 +206,100 @@ class SnapCandidate:
     component: int
 
 
+def _is_eligible(
+    node_id: int, components: dict[int, int], component_sizes: dict[int, int],
+) -> int | None:
+    """The node's component id if it's on a component big enough to snap to,
+    else None."""
+    comp = components.get(node_id)
+    if comp is None or component_sizes.get(comp, 0) < MIN_COMPONENT_NODES:
+        return None
+    return comp
+
+
+def _nearest_eligible_m(
+    lon: float, lat: float, node_locs: dict[int, tuple[float, float]],
+    components: dict[int, int], component_sizes: dict[int, int],
+) -> float | None:
+    """True nearest-eligible-node distance, for the (rare) stations that get
+    zero snap candidates. Diagnostic only (reported in
+    rail_paths_report.json, never used for path assembly), so a plain linear
+    scan is fine: real runs see only a handful of these."""
+    best = None
+    for node_id, (node_lon, node_lat) in node_locs.items():
+        if _is_eligible(node_id, components, component_sizes) is None:
+            continue
+        distance_m = _haversine_m(lat, lon, node_lat, node_lon)
+        if best is None or distance_m < best:
+            best = distance_m
+    return best
+
+
 def snap_stations(
     stations: list[dict], node_locs: dict[int, tuple[float, float]],
-    components: dict[int, int],
+    components: dict[int, int], component_sizes: dict[int, int],
 ) -> tuple[dict[str, list[SnapCandidate]], list[dict]]:
     """For each station, the nearest rail node per eligible connected
     component within SNAP_MAX_M, sorted nearest-first. A station can get
     multiple candidates (e.g. an interchange served by both a standard-gauge
     and a metre-gauge network); nodes on components below MIN_COMPONENT_NODES
     (isolated stubs/yards) are never considered.
-    """
-    component_sizes: dict[int, int] = {}
-    for comp in components.values():
-        component_sizes[comp] = component_sizes.get(comp, 0) + 1
 
-    eligible_ids = [
-        n for n in node_locs
-        if n in components and component_sizes[components[n]] >= MIN_COMPONENT_NODES
-    ]
-    # shapely.strtree.STRtree.query_nearest gives only the single nearest
-    # node, which isn't enough here (we need one candidate per component), so
-    # we query a bounding box around each station and filter by exact
-    # haversine distance instead.
-    tree = STRtree([Point(*node_locs[n]) for n in eligible_ids])
+    Rather than building a spatial index over nearly all rail nodes (one
+    shapely Point per node — multiple GB at real scale — to answer ~1,500
+    station box queries), this inverts the query: bucket the (few) stations
+    into a SNAP_QUERY_DEG grid, then make one pass over node_locs, checking
+    each node only against the tiny handful of stations whose box shares its
+    grid cell.
+    """
+    cell = SNAP_QUERY_DEG
+
+    def cells_for_box(lon: float, lat: float) -> list[tuple[int, int]]:
+        gx0 = math.floor((lon - cell) / cell)
+        gx1 = math.floor((lon + cell) / cell)
+        gy0 = math.floor((lat - cell) / cell)
+        gy1 = math.floor((lat + cell) / cell)
+        return [(gx, gy) for gx in range(gx0, gx1 + 1) for gy in range(gy0, gy1 + 1)]
+
+    station_buckets: dict[tuple[int, int], list[dict]] = {}
+    for station in stations:
+        for key in cells_for_box(station["lon"], station["lat"]):
+            station_buckets.setdefault(key, []).append(station)
+
+    best_by_station: dict[str, dict[int, SnapCandidate]] = {
+        station["id"]: {} for station in stations
+    }
+    for node_id, (node_lon, node_lat) in node_locs.items():
+        comp = _is_eligible(node_id, components, component_sizes)
+        if comp is None:
+            continue
+        bucket = station_buckets.get(
+            (math.floor(node_lon / cell), math.floor(node_lat / cell)))
+        if not bucket:
+            continue
+        for station in bucket:
+            lon, lat = station["lon"], station["lat"]
+            if abs(node_lon - lon) > SNAP_QUERY_DEG or abs(node_lat - lat) > SNAP_QUERY_DEG:
+                continue
+            distance_m = _haversine_m(lat, lon, node_lat, node_lon)
+            if distance_m > SNAP_MAX_M:
+                continue
+            by_component = best_by_station[station["id"]]
+            existing = by_component.get(comp)
+            if existing is None or distance_m < existing.distance_m:
+                by_component[comp] = SnapCandidate(
+                    node=node_id, distance_m=distance_m, component=comp)
 
     candidates: dict[str, list[SnapCandidate]] = {}
     failures: list[dict] = []
     for station in stations:
-        lon, lat = station["lon"], station["lat"]
-        query_box = box(
-            lon - SNAP_QUERY_DEG, lat - SNAP_QUERY_DEG,
-            lon + SNAP_QUERY_DEG, lat + SNAP_QUERY_DEG,
-        )
-        best_by_component: dict[int, SnapCandidate] = {}
-        for index in tree.query(query_box):
-            node_id = eligible_ids[index]
-            node_lon, node_lat = node_locs[node_id]
-            distance_m = _haversine_m(lat, lon, node_lat, node_lon)
-            if distance_m > SNAP_MAX_M:
-                continue
-            comp = components[node_id]
-            existing = best_by_component.get(comp)
-            if existing is None or distance_m < existing.distance_m:
-                best_by_component[comp] = SnapCandidate(
-                    node=node_id, distance_m=distance_m, component=comp)
+        best_by_component = best_by_station[station["id"]]
         if best_by_component:
             candidates[station["id"]] = sorted(
                 best_by_component.values(), key=lambda c: c.distance_m)
             continue
-        nearest_m = None
-        if eligible_ids:
-            nearest_index = tree.nearest(Point(lon, lat))
-            if nearest_index is not None:
-                node_id = eligible_ids[nearest_index]
-                node_lon, node_lat = node_locs[node_id]
-                nearest_m = _haversine_m(lat, lon, node_lat, node_lon)
+        nearest_m = _nearest_eligible_m(
+            station["lon"], station["lat"], node_locs, components, component_sizes)
         failures.append({
             "station": station["id"], "reason": "no_rail_within_snap_radius",
             "nearest_m": round(nearest_m) if nearest_m is not None else None,
@@ -353,10 +401,11 @@ def write_outputs(
     out_dir: Path, paths: dict[str, list[list[float]]],
     snap_failures: list[dict], hop_failures: list[dict],
 ) -> None:
-    (out_dir / "rail_paths.json").write_text(json.dumps({
+    write_json_with_gzip(out_dir / "rail_paths.json", json.dumps({
         "attribution": "© OpenStreetMap contributors (ODbL)",
         "paths": paths,
-    }, separators=(",", ":")), encoding="utf-8")
+    }, separators=(",", ":")))
+    # Not served (diagnostics only), so no .gz sibling.
     (out_dir / "rail_paths_report.json").write_text(json.dumps({
         "summary": {
             "paths": len(paths),
@@ -558,7 +607,9 @@ def build_rail_paths(out_dir: Path, osm_dir: Path, force_download: bool = False)
     hop_station_ids = sorted(
         {sid for pair in hops for sid in pair if sid in stations_by_id})
     candidates, snap_failures = snap_stations(
-        [stations_by_id[sid] for sid in hop_station_ids], node_locs, components)
+        [stations_by_id[sid] for sid in hop_station_ids], node_locs, components,
+        component_sizes)
+    del components  # last use was snap_stations; ~8.6M-entry dict at real scale
     total_candidates = sum(len(v) for v in candidates.values())
     log.info("snapped %d/%d stations, %d candidates total",
               len(candidates), len(hop_station_ids), total_candidates)

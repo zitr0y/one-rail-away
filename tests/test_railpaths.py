@@ -1,3 +1,4 @@
+import gzip
 import json
 
 import osmium
@@ -130,8 +131,15 @@ def test_connected_components_groups_and_separates():
 def _big_component(ids, lon0, lat, comp_id, step=0.0001):
     """A component with >= MIN_COMPONENT_NODES nodes, spaced along a line."""
     node_locs = {n: (lon0 + i * step, lat) for i, n in enumerate(ids)}
-    components = {n: comp_id for n in ids}
+    components = dict.fromkeys(ids, comp_id)
     return node_locs, components
+
+
+def _component_sizes(components):
+    sizes = {}
+    for comp in components.values():
+        sizes[comp] = sizes.get(comp, 0) + 1
+    return sizes
 
 
 def test_snap_stations_ignores_small_component():
@@ -144,7 +152,8 @@ def test_snap_stations_ignores_small_component():
     components[900] = components[901] = 2
 
     station = {"id": "s:a", "lon": 0.0, "lat": 0.0}
-    candidates, failures = snap_stations([station], node_locs, components)
+    candidates, failures = snap_stations(
+        [station], node_locs, components, _component_sizes(components))
 
     assert failures == []
     cands = candidates["s:a"]
@@ -163,7 +172,8 @@ def test_snap_stations_two_networks_each_get_one_candidate():
     components = {**components_a, **components_b}
 
     station = {"id": "s:interchange", "lon": 0.0, "lat": 0.0001}
-    candidates, failures = snap_stations([station], node_locs, components)
+    candidates, failures = snap_stations(
+        [station], node_locs, components, _component_sizes(components))
 
     assert failures == []
     cands = candidates["s:interchange"]
@@ -177,7 +187,8 @@ def test_snap_stations_reports_nearest_m_beyond_radius():
     node_locs, components = _big_component(big_ids, 0.5, 0.0, comp_id=30)
     station = {"id": "s:far", "lon": 0.0, "lat": 0.0}
 
-    candidates, failures = snap_stations([station], node_locs, components)
+    candidates, failures = snap_stations(
+        [station], node_locs, components, _component_sizes(components))
 
     assert candidates == {}
     assert failures[0]["station"] == "s:far"
@@ -281,6 +292,15 @@ def test_write_outputs(tmp_path):
     assert report["snap_failures"][0]["station"] == "s"
     assert report["hop_failures"][0]["hop"] == "h"
 
+    # rail_paths.json is served verbatim (server/app.py), so it gets a
+    # pre-gzipped sibling the pipeline writes at the same time; the report is
+    # diagnostics only and is never served, so it doesn't.
+    plain = tmp_path / "rail_paths.json"
+    gz = tmp_path / "rail_paths.json.gz"
+    assert gzip.decompress(gz.read_bytes()) == plain.read_bytes()
+    assert gz.stat().st_mtime >= plain.stat().st_mtime
+    assert not (tmp_path / "rail_paths_report.json.gz").exists()
+
 
 ALL_DATA_COUNTRIES = {
     "AT", "BE", "CH", "CZ", "DE", "DK", "ES", "FR", "GB", "HR", "HU", "IT",
@@ -289,7 +309,7 @@ ALL_DATA_COUNTRIES = {
 
 
 def test_geofabrik_region_covers_all_data_countries():
-    assert ALL_DATA_COUNTRIES <= set(GEOFABRIK_REGION)
+    assert set(GEOFABRIK_REGION) >= ALL_DATA_COUNTRIES
 
 
 def test_needed_countries_from_hop_stations():

@@ -3,6 +3,7 @@ import json
 import pytest
 from fastapi.testclient import TestClient
 
+from pipeline.artifacts import write_json_with_gzip
 from server.app import create_app, normalize
 
 
@@ -114,7 +115,9 @@ def test_search_only_returns_stations_with_reach_file_on_disk(tmp_path):
     (tmp_path / "stations.json").write_text(json.dumps({"stations": stations}))
     # Only station "1" has a reach file on disk; "2" and "5" are flagged
     # has_reach=True in stations.json but have no file (the fresh-clone case).
-    (tmp_path / "reach_1.json").write_text(json.dumps({"origin": "1"}))
+    # Written with its .gz sibling since /api/reach requires one when the
+    # client accepts gzip (TestClient does by default) -- see server/app.py.
+    write_json_with_gzip(tmp_path / "reach_1.json", json.dumps({"origin": "1"}))
     client = TestClient(create_app(tmp_path))
 
     got = client.get("/api/stations/search", params={"q": "munchen"}).json()["stations"]

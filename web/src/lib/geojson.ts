@@ -37,17 +37,22 @@ type Feature<G> = { type: "Feature"; geometry: G; properties: Record<string, unk
 type Point = { type: "Point"; coordinates: [number, number] };
 type LineString = { type: "LineString"; coordinates: [number, number][] };
 
-function shown(reach: ReachFile, maxTrains: MaxTrains, maxMinutes: number) {
+export interface ShownEntry { d: Destination; j: Journey }
+
+/** Which destinations are within the current train/time filter — computed
+ *  once per update (backlog AU) and threaded into the builders below instead
+ *  of each one recomputing it from scratch. */
+export function shown(reach: ReachFile, maxTrains: MaxTrains, maxMinutes: number): ShownEntry[] {
   return reach.destinations
     .map((d) => ({ d, j: bestJourney(d, maxTrains) }))
-    .filter((x): x is { d: Destination; j: Journey } => x.j !== null && x.j.duration_min <= maxMinutes);
+    .filter((x): x is ShownEntry => x.j !== null && x.j.duration_min <= maxMinutes);
 }
 
 export function destinationsGeoJSON(
-  reach: ReachFile, stationsById: Map<string, Station>, maxTrains: MaxTrains, maxMinutes: number,
+  shownList: ShownEntry[], stationsById: Map<string, Station>,
 ): FC<Point> {
   const features: Feature<Point>[] = [];
-  for (const { d, j } of shown(reach, maxTrains, maxMinutes)) {
+  for (const { d, j } of shownList) {
     const s = stationsById.get(d.id);
     if (!s) continue;
     features.push({
@@ -73,17 +78,32 @@ function segmentKey(a: string, b: string): string {
   return a < b ? `${a}|${b}` : `${b}|${a}`;
 }
 
-/** Precomputed real-track geometry per physical hop, keyed by segmentKey and
- *  stored oriented idA→idB (idA < idB). Built by `ose paths` (backlog I). */
-export type RailPathLookup = Map<string, [number, number][]>;
+/** Both traversal orientations of one physical hop's geometry: `fwd` runs
+ *  idA→idB (idA < idB), `rev` is the same points reversed. Precomputed once
+ *  (backlog AU) so per-hop lookups never allocate a `.reverse()` copy. */
+export interface HopGeometry { fwd: [number, number][]; rev: [number, number][] }
+
+/** Precomputed real-track geometry per physical hop, keyed by segmentKey.
+ *  Built by `ose paths` (backlog I). */
+export type RailPathLookup = Map<string, HopGeometry>;
+
+/** Builds the lookup from the raw `{segmentKey: coords}` payload the API
+ *  serves — the one place both orientations get materialized (backlog AU). */
+export function buildRailPathLookup(paths: Record<string, [number, number][]>): RailPathLookup {
+  const lookup: RailPathLookup = new Map();
+  for (const [key, coords] of Object.entries(paths)) {
+    lookup.set(key, { fwd: coords, rev: [...coords].reverse() });
+  }
+  return lookup;
+}
 
 function hopCoords(
   a: { id: string; station: Station }, b: { id: string; station: Station },
   railPaths: RailPathLookup | null,
 ): [number, number][] {
   const geometry = railPaths?.get(segmentKey(a.id, b.id));
-  if (geometry && geometry.length >= 2) {
-    return a.id < b.id ? geometry : [...geometry].reverse();
+  if (geometry && geometry.fwd.length >= 2) {
+    return a.id < b.id ? geometry.fwd : geometry.rev;
   }
   return [[a.station.lon, a.station.lat], [b.station.lon, b.station.lat]];
 }
@@ -125,13 +145,13 @@ export function journeyLegPaths(
  *  per-destination fan. A shared segment takes the bucket of the fastest
  *  journey through it and the width class (trains) of the most direct one. */
 export function segmentsGeoJSON(
-  reach: ReachFile, stationsById: Map<string, Station>, maxTrains: MaxTrains, maxMinutes: number,
+  shownList: ShownEntry[], stationsById: Map<string, Station>,
   railPaths: RailPathLookup | null,
 ): FC<LineString> {
   const best = new Map<string, {
     coords: [number, number][]; duration_min: number; trains: number; frequency_class: string;
   }>();
-  for (const { d, j } of shown(reach, maxTrains, maxMinutes)) {
+  for (const { d, j } of shownList) {
     for (const leg of j.legs) {
       for (const segment of legSegments(leg, stationsById, railPaths)) {
         const prev = best.get(segment.key);
@@ -184,4 +204,35 @@ export function linesGeoJSON(
     });
   }
   return { type: "FeatureCollection", features };
+}
+
+/** The single feature `linesGeoJSON` would have produced for `selectedDest` —
+ *  the "reach-lines-selected" layer only ever draws one destination's line, so
+ *  building all ~1,178 (backlog AU) to throw away everything but one is waste.
+ *  Byte-for-byte the same geometry/properties as `linesGeoJSON(...).features`
+ *  filtered to that id — proven by test, not just by inspection. */
+export function selectedLineGeoJSON(
+  reach: ReachFile | null, selectedDest: string | null, stationsById: Map<string, Station>,
+  maxTrains: MaxTrains, maxMinutes: number, railPaths: RailPathLookup | null,
+): FC<LineString> {
+  const empty: FC<LineString> = { type: "FeatureCollection", features: [] };
+  if (!reach || !selectedDest) return empty;
+  const d = reach.destinations.find((x) => x.id === selectedDest);
+  if (!d) return empty;
+  const j = bestJourney(d, maxTrains);
+  if (!j || j.duration_min > maxMinutes) return empty;
+  const coords = journeyLegPaths(j, stationsById, railPaths)
+    .flatMap((c, i) => (i === 0 ? c : c.slice(1)));
+  if (coords.length < 2) return empty;
+  return {
+    type: "FeatureCollection",
+    features: [{
+      type: "Feature",
+      geometry: { type: "LineString", coordinates: coords },
+      properties: {
+        id: d.id, bucket: timeBucket(j.duration_min), trains: j.trains,
+        frequency_class: frequencyClass(d),
+      },
+    }],
+  };
 }

@@ -89,7 +89,7 @@ def join_through_services(trips: list[Trip]) -> list[Trip]:
         skip = _ambiguous(cands, trips)
         touched: set[int] = set()
         absorbed: set[int] = set()
-        for gap, i, j in cands:
+        for _gap, i, j in cands:
             if (i, j) in skip or i in touched or j in touched:
                 continue
             a, b = trips[i], trips[j]

@@ -1,13 +1,13 @@
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { clearOriginAction, emptyClickAction, swapDest } from "./lib/selection";
 import { armedTarget, routeMapClick, type ActiveField } from "./lib/mapclick";
 import MapView from "./components/Map";
 import JourneyPlanner from "./components/JourneyPlanner";
 import { TIME_MAX } from "./components/TimeSlider";
-import { api } from "./lib/api";
+import { api, latestOnly } from "./lib/api";
 import { buildCityLookup } from "./lib/cities";
 import { unionReach } from "./lib/cityunion";
-import type { MaxTrains, RailPathLookup } from "./lib/geojson";
+import { buildRailPathLookup, type MaxTrains, type RailPathLookup } from "./lib/geojson";
 import type { FeaturePick } from "./lib/pickfeature";
 import type { CityGroups, ReachFile, Station } from "./lib/types";
 import { useTheme } from "./lib/theme";
@@ -23,51 +23,54 @@ export default function App() {
   const [maxMinutes, setMaxMinutes] = useState(TIME_MAX); // start at "max" (no cap)
   const [selectedDest, setSelectedDest] = useState<string | null>(null);
   const [activeField, setActiveField] = useState<ActiveField>(null);
-  const [hint, setHint] = useState<string | null>(null);
-  const [error, setError] = useState<string | null>(null);
   const [theme, toggleTheme] = useTheme();
 
   const stationsById = useMemo(() => new Map(stations.map((s) => [s.id, s])), [stations]);
   const cities = useMemo(() => buildCityLookup(cityGroups), [cityGroups]);
 
   useEffect(() => {
-    api.getStations().then((r) => setStations(r.stations)).catch((e) => setError(String(e)));
+    api.getStations().then((r) => setStations(r.stations)).catch(console.error);
     api.getCities().then(setCityGroups).catch(() => setCityGroups({}));
     api.getRailPaths()
-      .then((r) => setRailPaths(new Map(Object.entries(r.paths))))
+      .then((r) => setRailPaths(buildRailPathLookup(r.paths)))
       .catch(() => setRailPaths(null)); // straight-line fallback, by design
   }, []);
+
+  // Shared by every reach-fetching handler below so only the latest selection's
+  // result is ever applied, even if an older fetch resolves after a newer one
+  // (AX) — covers re-clicks, the city fan-out, promote-on-clear, and swap.
+  const reachGuard = useRef(latestOnly<ReachFile>());
 
   const selectOrigin = useCallback((id: string) => {
     setCityOrigin(null);
     setSelectedDest(null);
-    setHint(null);
     setActiveField("to"); // auto-advance arming to To
-    api.getReach(id).then(setReach).catch((e) => setError(String(e)));
+    reachGuard.current(api.getReach(id))
+      .then((r) => { if (r) setReach(r); })
+      .catch(console.error);
   }, []);
 
-  const selectCityOrigin = useCallback(async (city: string, memberIds: string[]) => {
+  const selectCityOrigin = useCallback((city: string, memberIds: string[]) => {
     setCityOrigin({ city, memberIds });
     setSelectedDest(null);
-    setHint(null);
     setActiveField("to");
-    try {
+    const fetchUnion = async (): Promise<ReachFile> => {
       const results = await Promise.allSettled(memberIds.map((id) => api.getReach(id)));
       const reaches = results.flatMap((result) =>
         result.status === "fulfilled" ? [result.value] : [],
       );
       if (reaches.length === 0) throw new Error(`No reach data for ${city}`);
-      setReach(unionReach(reaches));
-    } catch (e) {
-      setError(String(e));
-    }
+      return unionReach(reaches);
+    };
+    reachGuard.current(fetchUnion())
+      .then((r) => { if (r) setReach(r); })
+      .catch(console.error);
   }, []);
 
   const clearSelection = useCallback(() => {
     setCityOrigin(null);
     setReach(null);
     setSelectedDest(null);
-    setHint(null);
     setActiveField(null);
   }, []);
 
@@ -81,9 +84,10 @@ export default function App() {
     const promoteId = action.promote;
     setCityOrigin(null);
     setSelectedDest(null);
-    setHint(null);
     setActiveField("to");
-    api.getReach(promoteId).then(setReach).catch((e) => setError(String(e)));
+    reachGuard.current(api.getReach(promoteId))
+      .then((r) => { if (r) setReach(r); })
+      .catch(console.error);
   }, [selectedDest, clearSelection]);
 
   const selectDest = useCallback((id: string) => {
@@ -98,7 +102,6 @@ export default function App() {
         setMaxTrains((cur) => (need > cur ? need : cur));
       }
     }
-    setHint(null);
     setSelectedDest(id);
   }, [reach, maxMinutes]);
 
@@ -108,10 +111,11 @@ export default function App() {
     setCityOrigin(null);
     const prevOrigin = reach.origin;
     setSelectedDest(null);
-    api.getReach(destId).then((newReach) => {
+    reachGuard.current(api.getReach(destId)).then((newReach) => {
+      if (!newReach) return;
       setReach(newReach);
       setSelectedDest(swapDest(newReach.destinations, prevOrigin));
-    }).catch((e) => setError(String(e)));
+    }).catch(console.error);
   }, [selectedDest, reach]);
 
   // At the top of the slider ("max") there is no upper time limit.
@@ -128,8 +132,8 @@ export default function App() {
     const routed = routeMapClick(pick, target);
     if (routed.action === "origin") selectOrigin(routed.id);
     else if (routed.action === "dest") selectDest(routed.id);
-    else setHint(`Not reachable from ${origin?.name ?? "the origin"} within your filters.`);
-  }, [activeField, reach, origin, selectOrigin, selectDest]);
+    // else: not reachable within the filters — the click is ignored.
+  }, [activeField, reach, selectOrigin, selectDest]);
 
   const onEmptyClick = useCallback(() => {
     const action = emptyClickAction(selectedDest !== null, reach !== null);
@@ -172,14 +176,14 @@ export default function App() {
         cities={cities} cityGroups={cityGroups} originLabel={cityOrigin?.city}
         origin={origin} destination={destination} dest={dest}
         maxTrains={maxTrains} maxMinutes={maxMinutes} filterMinutes={filterMinutes}
-        armed={armed} error={error} hint={hint}
+        armed={armed}
         onSetOrigin={(option) => {
           if (option.kind === "city") selectCityOrigin(option.city, option.memberIds);
           else selectOrigin(option.station.id);
         }}
         onClearOrigin={onClearOrigin}
         onSetDest={(s) => selectDest(s.id)}
-        onClearDest={() => { setSelectedDest(null); setHint(null); }}
+        onClearDest={() => setSelectedDest(null)}
         onSwap={swapSelection}
         onArm={setActiveField}
         onMaxTrains={setMaxTrains}

@@ -16,24 +16,32 @@ from concurrent.futures import ProcessPoolExecutor
 from datetime import UTC, datetime
 from pathlib import Path
 
+from pipeline.artifacts import write_json_with_gzip
 from pipeline.capitals import load_capitals
 from pipeline.cities import load_cities
 from pipeline.coverage import build_coverage, covered_from_feeds
 from pipeline.models import Destination, Frequency, Journey, ReachFile, Station, Trip
-from pipeline.raptor import compute_reachability
+from pipeline.raptor import _index, compute_reachability
 
 
 def _direct_counts(trips: list[Trip], origin: str) -> Counter:
     """Count, per destination, the number of distinct trips that serve `origin`
     and then later serve that destination in stop order (mid-route boarding
-    counts; boarding must strictly precede the destination stop)."""
+    counts; boarding must strictly precede the destination stop).
+
+    Trips never calling at `origin` cannot contribute (they fail the
+    `seen_origin` test at every stop), so we reuse raptor's cached per-day
+    index and scan only `by_station[origin]` -- a subsequence, in the same
+    ascending order a full scan would visit them, of the trip list. Counter
+    sums are order-independent, so this is exact, not an approximation."""
     counts: Counter = Counter()
-    for t in trips:
+    trip_stops, by_station = _index(trips)
+    for ti in by_station.get(origin, ()):
         seen_origin = False
-        for s in t.stops:
+        for station, _arr, _dep in trip_stops[ti]:
             if seen_origin:
-                counts[s.station] += 1
-            if s.station == origin:
+                counts[station] += 1
+            if station == origin:
                 seen_origin = True
     return counts
 
@@ -188,7 +196,7 @@ def _write_reach(
         sample_date=sample_date,
         destinations=destinations,
     )
-    (out_dir / f"reach_{station_id}.json").write_text(rf.model_dump_json(by_alias=True))
+    write_json_with_gzip(out_dir / f"reach_{station_id}.json", rf.model_dump_json(by_alias=True))
     return len(destinations)
 
 
@@ -199,13 +207,21 @@ _worker_feed_validity_by_date: dict[str, dict[str, dict[str, object]]] = {}
 _worker_extra_trips: list[Trip] = []
 
 
+def _load_trips_json(graph_dir: Path) -> tuple[
+    dict[str, list[Trip]], dict[str, dict[str, dict[str, object]]], list[Trip]
+]:
+    raw = json.loads((graph_dir / "trips.json").read_text())
+    by_date = raw.get("trips_by_date") or {"legacy": raw["trips"]}
+    trips_by_date = {day: [Trip(**t) for t in trips] for day, trips in by_date.items()}
+    extra_trips = [Trip(**trip) for trip in raw.get("extra_trips", [])]
+    return trips_by_date, raw.get("feed_validity_by_date", {}), extra_trips
+
+
 def _worker_init(graph_dir_str: str) -> None:
     global _worker_trips_by_date, _worker_feed_validity_by_date, _worker_extra_trips
-    raw = json.loads((Path(graph_dir_str) / "trips.json").read_text())
-    by_date = raw.get("trips_by_date") or {"legacy": raw["trips"]}
-    _worker_trips_by_date = {day: [Trip(**t) for t in trips] for day, trips in by_date.items()}
-    _worker_feed_validity_by_date = raw.get("feed_validity_by_date", {})
-    _worker_extra_trips = [Trip(**trip) for trip in raw.get("extra_trips", [])]
+    _worker_trips_by_date, _worker_feed_validity_by_date, _worker_extra_trips = (
+        _load_trips_json(Path(graph_dir_str))
+    )
 
 
 def _compute_one(args: tuple[str, str, str, str]) -> tuple[str, int]:
@@ -263,11 +279,7 @@ def compute_all(
 
     results: dict[str, int] = {}
     if workers == 1:
-        raw_trips = json.loads((graph_dir / "trips.json").read_text())
-        by_date = raw_trips.get("trips_by_date") or {"legacy": raw_trips["trips"]}
-        trips_by_date = {day: [Trip(**t) for t in trips] for day, trips in by_date.items()}
-        feed_validity_by_date = raw_trips.get("feed_validity_by_date", {})
-        extra_trips = [Trip(**trip) for trip in raw_trips.get("extra_trips", [])]
+        trips_by_date, feed_validity_by_date, extra_trips = _load_trips_json(graph_dir)
         for station in stations:
             results[station.id] = _write_reach(
                 trips_by_date, station.id, out_dir, sample_date, now, feed_validity_by_date,
@@ -305,17 +317,24 @@ def compute_all(
     for path in out_dir.glob("reach_*.json"):
         if path.name not in written:
             path.unlink()
+            gz_path = path.with_name(path.name + ".gz")
+            if gz_path.exists():
+                gz_path.unlink()
             print(f"pruned stale {path.name}")
 
+    # stations.json has no .gz sibling: the server merges it with a live
+    # has_reach set per request, so it's never served verbatim (see
+    # server/app.py's _cached_stations).
     (out_dir / "stations.json").write_text(
         json.dumps({"stations": [s.model_dump() for s in stations]}, ensure_ascii=False)
     )
 
-    (out_dir / "cities.json").write_text(json.dumps(city_groups, ensure_ascii=False))
+    write_json_with_gzip(out_dir / "cities.json", json.dumps(city_groups, ensure_ascii=False))
 
     fetch_meta_path = Path("data/raw/fetch_meta.json")
     feeds_meta = json.loads(fetch_meta_path.read_text()) if fetch_meta_path.exists() else {}
-    (out_dir / "meta.json").write_text(
+    write_json_with_gzip(
+        out_dir / "meta.json",
         json.dumps(
             {
                 "computed_at": now,
@@ -323,11 +342,11 @@ def compute_all(
                 "sample_dates": graph.get("sample_dates", [sample_date]),
                 "feeds": feeds_meta,
             }
-        )
+        ),
     )
 
     covered = covered_from_feeds(feeds_path) if feeds_path.exists() else set()
     reachable = {s.country for s in stations} - covered
-    (out_dir / "coverage.json").write_text(
-        json.dumps(build_coverage(covered, reachable), ensure_ascii=False)
+    write_json_with_gzip(
+        out_dir / "coverage.json", json.dumps(build_coverage(covered, reachable), ensure_ascii=False)
     )

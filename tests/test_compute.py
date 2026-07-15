@@ -1,3 +1,4 @@
+import gzip
 import json
 from datetime import date
 
@@ -42,6 +43,38 @@ def test_compute_all_writes_reach_files(tmp_path):
     assert meta["sample_date"] == "2026-07-14" and "computed_at" in meta
 
 
+def test_compute_all_writes_gzip_siblings(tmp_path):
+    # rail-paths, coverage, reach, cities, meta are served verbatim by
+    # server/app.py, so the pipeline writes a `.json.gz` sibling for each,
+    # byte-identical (once decompressed) to the plain file and no staler.
+    # stations.json is merged with a live has_reach set per request, so it's
+    # never served verbatim and gets no sibling.
+    raw = tmp_path / "raw"
+    cfgs = make_fixture_feeds(raw)
+    countries_toml, names_toml = empty_overrides(tmp_path)
+    feeds_toml = _write_feeds_toml(tmp_path, cfgs)
+    build(
+        raw,
+        tmp_path / "graph",
+        feeds_toml,
+        None,
+        SAMPLE,
+        station_names_path=names_toml,
+        station_countries_path=countries_toml,
+    )
+    out = tmp_path / "out"
+    compute_all(tmp_path / "graph", out, feeds_path=feeds_toml)
+
+    for name in ("reach_1111111.json", "meta.json", "cities.json", "coverage.json"):
+        plain = out / name
+        gz = out / f"{name}.gz"
+        assert gz.exists(), f"missing {gz}"
+        assert gzip.decompress(gz.read_bytes()) == plain.read_bytes()
+        assert gz.stat().st_mtime >= plain.stat().st_mtime
+
+    assert not (out / "stations.json.gz").exists()
+
+
 def test_compute_all_prunes_stale_reach_files(tmp_path):
     # A station whose canonical id changed between runs (Konstanz alias, 2026-07-09)
     # leaves its old reach file behind; the server derives has_reach from files on
@@ -63,9 +96,13 @@ def test_compute_all_prunes_stale_reach_files(tmp_path):
     out.mkdir()
     stale = out / "reach_9999999.json"
     stale.write_text("{}")
+    stale_gz = out / "reach_9999999.json.gz"
+    stale_gz.write_bytes(gzip.compress(b"{}"))
     compute_all(tmp_path / "graph", out, workers=1, feeds_path=feeds_toml)
     assert not stale.exists()
+    assert not stale_gz.exists()  # gz sibling pruned alongside the stale plain file
     assert (out / "reach_1111111.json").exists()  # fresh files kept
+    assert (out / "reach_1111111.json.gz").exists()
 
 
 def test_compute_all_parallel_matches_serial(tmp_path):

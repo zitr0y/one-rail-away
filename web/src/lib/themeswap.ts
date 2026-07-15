@@ -2,7 +2,7 @@ import type { LayerSpecification, StyleSpecification } from "maplibre-gl";
 import { themeTokens, type ThemeTokens } from "./colors";
 import type { Theme } from "./theme";
 
-export const CUSTOM_SOURCE_IDS =
+const CUSTOM_SOURCE_IDS =
   ["all-stations", "reach-lines", "reach-segments", "transfer-points",
     "reach-dots", "coverage", "capitals"] as const;
 

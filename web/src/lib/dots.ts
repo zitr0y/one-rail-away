@@ -91,11 +91,48 @@ export function starSizeExpression(): ExpressionSpecification {
   ] as ExpressionSpecification;
 }
 
+function insidePolygon(x: number, y: number, poly: [number, number][]): boolean {
+  let odd = false;
+  for (let i = 0, j = poly.length - 1; i < poly.length; j = i++) {
+    const [xi, yi] = poly[i];
+    const [xj, yj] = poly[j];
+    if (yi > y !== yj > y && x < ((xj - xi) * (y - yi)) / (yj - yi) + xi) odd = !odd;
+  }
+  return odd;
+}
+
 /**
- * Rasterize a 5-point star for map.addImage() as {width, height, data} —
- * one of addImage's accepted shapes (a raw canvas element is NOT: passing one
- * throws and aborts the whole map load handler). Pure math, no DOM/canvas, so
- * it behaves identically in the browser and in tests.
+ * Rasterize an icon for map.addImage() as {width, height, data} — one of
+ * addImage's accepted shapes (a raw canvas element is NOT: passing one throws
+ * and aborts the whole map load handler). Pixels outside `rim` stay
+ * transparent; the rest get the colour `colorAt` picks for the pixel centre.
+ * Pure math, no DOM/canvas, so it behaves identically in the browser and in
+ * tests.
+ */
+function rasterizeIcon(
+  size: number,
+  rim: [number, number][],
+  colorAt: (px: number, py: number) => [number, number, number],
+): { width: number; height: number; data: Uint8ClampedArray } {
+  const data = new Uint8ClampedArray(size * size * 4);
+  for (let y = 0; y < size; y++) {
+    for (let x = 0; x < size; x++) {
+      const px = x + 0.5;
+      const py = y + 0.5;
+      if (!insidePolygon(px, py, rim)) continue;
+      const o = (y * size + x) * 4;
+      const [r, g, b] = colorAt(px, py);
+      data[o] = r;
+      data[o + 1] = g;
+      data[o + 2] = b;
+      data[o + 3] = 255;
+    }
+  }
+  return { width: size, height: size, data };
+}
+
+/**
+ * Rasterize a 5-point star for map.addImage().
  * Brand-gold fill (#FFCC00) with a navy rim (#003399): the EU star, readable on
  * both the warm-paper land and the pale water.
  */
@@ -113,42 +150,19 @@ export function drawStarIcon(size: number): { width: number; height: number; dat
     return pts;
   }
 
-  function inside(x: number, y: number, poly: [number, number][]): boolean {
-    let odd = false;
-    for (let i = 0, j = poly.length - 1; i < poly.length; j = i++) {
-      const [xi, yi] = poly[i];
-      const [xj, yj] = poly[j];
-      if (yi > y !== yj > y && x < ((xj - xi) * (y - yi)) / (yj - yi) + xi) odd = !odd;
-    }
-    return odd;
-  }
-
   const rim = starVertices(size / 2 - 0.5);
   const fill = starVertices((size / 2 - 0.5) * 0.8);
-  const data = new Uint8ClampedArray(size * size * 4);
-  for (let y = 0; y < size; y++) {
-    for (let x = 0; x < size; x++) {
-      const px = x + 0.5;
-      const py = y + 0.5;
-      if (!inside(px, py, rim)) continue;
-      const o = (y * size + x) * 4;
-      const gold = inside(px, py, fill);
-      data[o] = gold ? 255 : 0;
-      data[o + 1] = gold ? 204 : 51;
-      data[o + 2] = gold ? 0 : 153;
-      data[o + 3] = 255;
-    }
-  }
-  return { width: size, height: size, data };
+  return rasterizeIcon(size, rim, (px, py) =>
+    insidePolygon(px, py, fill) ? [255, 204, 0] : [0, 51, 153],
+  );
 }
 
 /**
- * Rasterize a red octagonal stop sign for map.addImage(), same {width,height,
- * data} shape as drawStarIcon. Marks a transfer on the selected route — the
- * "stop" where you change trains. Fixed stop-red (#C1121F) with a white rim,
- * legible on both the warm-paper and deep-night basemaps, so it is
- * theme-independent (never retinted, like the capital star). Pure math, no
- * DOM/canvas, so it behaves identically in the browser and in tests.
+ * Rasterize a red octagonal stop sign for map.addImage(). Marks a transfer on
+ * the selected route — the "stop" where you change trains. Fixed stop-red
+ * (#C1121F) with a white rim, legible on both the warm-paper and deep-night
+ * basemaps, so it is theme-independent (never retinted, like the capital
+ * star).
  */
 export function drawStopSignIcon(size: number): { width: number; height: number; data: Uint8ClampedArray } {
   const cx = size / 2;
@@ -163,33 +177,13 @@ export function drawStopSignIcon(size: number): { width: number; height: number;
     return pts;
   }
 
-  function inside(x: number, y: number, poly: [number, number][]): boolean {
-    let odd = false;
-    for (let i = 0, j = poly.length - 1; i < poly.length; j = i++) {
-      const [xi, yi] = poly[i];
-      const [xj, yj] = poly[j];
-      if (yi > y !== yj > y && x < ((xj - xi) * (y - yi)) / (yj - yi) + xi) odd = !odd;
-    }
-    return odd;
-  }
-
   const rim = octagonVertices(size / 2 - 0.5);
   const fill = octagonVertices((size / 2 - 0.5) * 0.82);
   const stripeHalf = size * 0.12; // white horizontal bar through the middle
-  const data = new Uint8ClampedArray(size * size * 4);
-  for (let y = 0; y < size; y++) {
-    for (let x = 0; x < size; x++) {
-      const px = x + 0.5;
-      const py = y + 0.5;
-      if (!inside(px, py, rim)) continue;
-      const o = (y * size + x) * 4;
-      // Red field inside a white rim, crossed by a white centre stripe.
-      const red = inside(px, py, fill) && Math.abs(py - cy) > stripeHalf;
-      data[o] = red ? 193 : 255; // #C1121F red / white
-      data[o + 1] = red ? 18 : 255;
-      data[o + 2] = red ? 31 : 255;
-      data[o + 3] = 255;
-    }
-  }
-  return { width: size, height: size, data };
+  // Red field inside a white rim, crossed by a white centre stripe.
+  return rasterizeIcon(size, rim, (px, py) =>
+    insidePolygon(px, py, fill) && Math.abs(py - cy) > stripeHalf
+      ? [193, 18, 31]
+      : [255, 255, 255],
+  );
 }

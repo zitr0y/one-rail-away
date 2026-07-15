@@ -1,7 +1,8 @@
 import { describe, expect, it } from "vitest";
 import {
-  bestJourney, destinationsGeoJSON, frequencyClass, journeyLegPaths, legSegments, linesGeoJSON,
-  segmentsGeoJSON, timeBucket, transferPoints, type RailPathLookup,
+  bestJourney, buildRailPathLookup, destinationsGeoJSON, frequencyClass, journeyLegPaths,
+  legSegments, linesGeoJSON, segmentsGeoJSON, selectedLineGeoJSON, shown, timeBucket,
+  transferPoints, type RailPathLookup,
 } from "./geojson";
 import type { Journey, Leg, ReachFile, Station } from "./types";
 
@@ -92,15 +93,15 @@ describe("transferPoints", () => {
 
 describe("geojson builders", () => {
   it("nonstop view hides multi-train destinations", () => {
-    const fc = destinationsGeoJSON(reach, stationsById, 1, Infinity);
+    const fc = destinationsGeoJSON(shown(reach, 1, Infinity), stationsById);
     expect(fc.features.map((f) => f.properties.id)).toEqual(["C"]);
   });
   it("carries n_routes for reach-dot sizing, defaulting to 0", () => {
-    const fc = destinationsGeoJSON(reach, stationsById, 3, Infinity);
+    const fc = destinationsGeoJSON(shown(reach, 3, Infinity), stationsById);
     for (const f of fc.features) expect(f.properties.n_routes).toBe(0);
   });
   it("max-minutes filter applies", () => {
-    const fc = destinationsGeoJSON(reach, stationsById, 3, 130);
+    const fc = destinationsGeoJSON(shown(reach, 3, 130), stationsById);
     expect(fc.features.map((f) => f.properties.id)).toEqual(["C"]);
   });
   it("lines pass through via and transfer stations", () => {
@@ -181,7 +182,7 @@ describe("segmentsGeoJSON", () => {
   it("draws each physical stop-to-stop segment exactly once (backlog X)", () => {
     // reach has A→C via B (120 min) and A→C via B then C→D (240 min): the shared
     // A–B and B–C hops must appear once, tagged with the fastest/most-direct user.
-    const fc = segmentsGeoJSON(reach, stationsById, 3, Infinity, null);
+    const fc = segmentsGeoJSON(shown(reach, 3, Infinity), stationsById, null);
     expect(fc.features.map((f) => f.properties.id).sort()).toEqual(["A|B", "B|C", "C|D"]);
     const ab = fc.features.find((f) => f.properties.id === "A|B")!;
     expect(ab.properties.bucket).toBe(timeBucket(120)); // fastest journey through it
@@ -192,9 +193,52 @@ describe("segmentsGeoJSON", () => {
   });
 
   it("respects the train budget and max-minutes filters like linesGeoJSON", () => {
-    const fc = segmentsGeoJSON(reach, stationsById, 1, Infinity, null);
+    const fc = segmentsGeoJSON(shown(reach, 1, Infinity), stationsById, null);
     expect(fc.features.map((f) => f.properties.id).sort()).toEqual(["A|B", "B|C"]);
-    expect(segmentsGeoJSON(reach, stationsById, 3, 60, null).features).toEqual([]);
+    expect(segmentsGeoJSON(shown(reach, 3, 60), stationsById, null).features).toEqual([]);
+  });
+});
+
+describe("shown", () => {
+  it("matches the filter linesGeoJSON/destinationsGeoJSON used to apply internally", () => {
+    expect(shown(reach, 1, Infinity).map((x) => x.d.id)).toEqual(["C"]);
+    expect(shown(reach, 3, Infinity).map((x) => x.d.id)).toEqual(["C", "D"]);
+    expect(shown(reach, 3, 60)).toEqual([]);
+  });
+});
+
+describe("selectedLineGeoJSON (backlog AU)", () => {
+  it("is empty when nothing is selected or reach is missing", () => {
+    expect(selectedLineGeoJSON(reach, null, stationsById, 3, Infinity, null).features).toEqual([]);
+    expect(selectedLineGeoJSON(null, "C", stationsById, 3, Infinity, null).features).toEqual([]);
+  });
+
+  it("is empty for an unknown destination id", () => {
+    expect(selectedLineGeoJSON(reach, "ZZZ", stationsById, 3, Infinity, null).features).toEqual([]);
+  });
+
+  it("is empty when the selected destination is filtered out (train budget / minutes)", () => {
+    // D needs 2 trains / 240 min; both filters below exclude it.
+    expect(selectedLineGeoJSON(reach, "D", stationsById, 1, Infinity, null).features).toEqual([]);
+    expect(selectedLineGeoJSON(reach, "D", stationsById, 3, 60, null).features).toEqual([]);
+  });
+
+  for (const id of ["C", "D"]) {
+    it(`equals the old linesGeoJSON's feature for id=${id} (identity, backlog AU)`, () => {
+      const old = linesGeoJSON(reach, stationsById, 3, Infinity, null)
+        .features.find((f) => f.properties.id === id)!;
+      const next = selectedLineGeoJSON(reach, id, stationsById, 3, Infinity, null).features;
+      expect(next).toHaveLength(1);
+      expect(next[0]).toEqual(old);
+    });
+  }
+
+  it("equals the old linesGeoJSON output with rail-path geometry threaded through", () => {
+    const railPaths = buildRailPathLookup({ "A|B": [[8, 50], [8.5, 50.2], [9, 50]] });
+    const old = linesGeoJSON(reach, stationsById, 3, Infinity, railPaths)
+      .features.find((f) => f.properties.id === "D")!;
+    const next = selectedLineGeoJSON(reach, "D", stationsById, 3, Infinity, railPaths).features[0];
+    expect(next).toEqual(old);
   });
 });
 
@@ -233,9 +277,9 @@ const railLeg = (from: string, to: string, via: string[]): Leg =>
   ({ train: "T", dep: "", arr: "", from, to, via });
 
 describe("legSegments with rail paths", () => {
-  const railPaths: RailPathLookup = new Map([
-    ["a|b", [[0, 0], [0.5, 0.4], [1, 0]]],
-  ]);
+  const railPaths: RailPathLookup = buildRailPathLookup({
+    "a|b": [[0, 0], [0.5, 0.4], [1, 0]],
+  });
 
   it("uses lookup geometry for a hop when present", () => {
     expect(legSegments(railLeg("a", "b", []), railStationsById, railPaths)[0].coords)
@@ -245,8 +289,8 @@ describe("legSegments with rail paths", () => {
   it("reverses geometry when the hop travels against key order", () => {
     expect(legSegments(railLeg("b", "a", []), railStationsById, railPaths)[0].coords)
       .toEqual([[1, 0], [0.5, 0.4], [0, 0]]);
-    // Original lookup entry must not be mutated by the reversal.
-    expect(railPaths.get("a|b")![0]).toEqual([0, 0]);
+    // Original forward entry must not be mutated by the reversal.
+    expect(railPaths.get("a|b")!.fwd[0]).toEqual([0, 0]);
   });
 
   it("falls back to a straight line for hops without geometry", () => {

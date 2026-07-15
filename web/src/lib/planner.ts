@@ -12,7 +12,7 @@ export function norm(s: string): string {
 
 export type DestGroup = "local transit" | "Nonstop" | "One stop" | "Two stops" | "Not reachable";
 const GROUP_BY_TRAINS: DestGroup[] = ["Nonstop", "One stop", "Two stops"];
-export const GROUP_ORDER: DestGroup[] = [
+const GROUP_ORDER: DestGroup[] = [
   "local transit", "Nonstop", "One stop", "Two stops", "Not reachable",
 ];
 

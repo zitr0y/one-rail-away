@@ -23,8 +23,6 @@ interface Props {
   maxMinutes: number;
   filterMinutes: number; // effective time cap (Infinity at "max") for To results
   armed: "from" | "to"; // which field the next map click fills — always highlighted
-  error: string | null;
-  hint: string | null;
   onSetOrigin: (option: FieldOption) => void;
   onClearOrigin: () => void;
   onSetDest: (s: Station) => void;

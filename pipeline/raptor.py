@@ -61,7 +61,7 @@ def _raptor(trips, origin, dep_floor, max_trains, transfer_min):
 
     parent[(k, station)] = (trip, board_station, board_dep, alight_arr,
     board_idx, alight_idx). Board/alight indices are indices into trip.stops and
-    are used by `_reconstruct` to slice the via list.
+    are used by `_build_legs` to slice the via list.
 
     Only trips calling at a station reached in round k-1 are scanned. A trip
     touching no such station fails the boarding test at every stop, so it can
@@ -112,20 +112,48 @@ def _raptor(trips, origin, dep_floor, max_trains, transfer_min):
     return arr, parent
 
 
-def _reconstruct(parent, k, dest, origin):
-    """Walk parent pointers back to the origin.
+def _walk(parent, k, dest, origin):
+    """Walk parent pointers back to the origin, allocation-free (no Leg/Journey
+    objects, just dict lookups and tuple unpacking).
 
-    Returns (legs, first_dep_minutes) or None. Legs are ordered origin-first;
-    each leg's `to` equals the next leg's boarding station; via lists exclude the
-    two endpoints.
+    Returns (trains, first_dep_minutes) or None if the chain is broken/short.
+    `trains` is the true leg count (may be < k: a station reached with fewer
+    trains still carries its parent pointer forward, see `_raptor`). The last
+    pointer walked (deepest in the loop, since we walk dest->origin) is the
+    first leg; its board_dep is the true origin departure -- recovered
+    unwrapped from the parent chain rather than re-parsing a wrapped "HH:MM"
+    string, so duration stays exact for post-midnight departures.
     """
-    legs: list[Leg] = []
     st, kk = dest, k
+    trains = 0
+    first_dep = None
     while st != origin:
         p = parent.get((kk, st))
         if p is None:
             return None
-        trip, b_st, b_dep, a_arr, bi, ai = p
+        _, b_st, b_dep, _, _, _ = p
+        first_dep = b_dep
+        st, kk = b_st, kk - 1
+        trains += 1
+        if kk < 0:
+            return None
+    return trains, first_dep
+
+
+def _build_legs(parent, k, dest, origin):
+    """Walk parent pointers back to the origin, materializing `Leg` objects.
+
+    Only called once a candidate is already known to win its (dest, trains)
+    tier (see `compute_reachability`), so the earlier allocation-free `_walk`
+    is not wasted work for the many candidates that don't. Legs are ordered
+    origin-first; each leg's `to` equals the next leg's boarding station; via
+    lists exclude the two endpoints. Assumes the chain is valid -- callers
+    must have already confirmed this via `_walk`.
+    """
+    legs: list[Leg] = []
+    st, kk = dest, k
+    while st != origin:
+        trip, b_st, b_dep, a_arr, bi, ai = parent[(kk, st)]
         legs.append(
             Leg(
                 train=trip.train,
@@ -139,26 +167,8 @@ def _reconstruct(parent, k, dest, origin):
         )
         # Step back to the station we boarded this leg at, one fewer train.
         st, kk = b_st, kk - 1
-        if kk < 0:
-            return None
     legs.reverse()
-    # The last pointer we walked (deepest in the loop) is the first leg; its
-    # board_dep is the true origin departure. Recover it unwrapped from the
-    # parent chain rather than re-parsing the wrapped "HH:MM" string, so
-    # duration stays exact for post-midnight departures.
-    first_dep = _origin_dep_minutes(parent, dest, k, origin)
-    return legs, first_dep
-
-
-def _origin_dep_minutes(parent, dest, k, origin):
-    """Recover the origin departure minute (unwrapped) by walking to the origin."""
-    st, kk = dest, k
-    dep = None
-    while st != origin:
-        _, b_st, b_dep, _, _, _ = parent[(kk, st)]
-        dep = b_dep
-        st, kk = b_st, kk - 1
-    return dep
+    return legs
 
 
 def compute_reachability(
@@ -206,14 +216,20 @@ def compute_reachability(
             for dest, t in arr[k].items():
                 if dest == origin:
                     continue
-                rec = _reconstruct(parent, k, dest, origin)
+                rec = _walk(parent, k, dest, origin)
                 if rec is None:
                     continue
-                legs, first_dep = rec
-                journey = Journey(trains=len(legs), duration_min=t - first_dep, legs=legs)
-                key = (dest, journey.trains)
-                if key not in best or journey.duration_min < best[key].duration_min:
-                    best[key] = journey
+                trains, first_dep = rec
+                duration = t - first_dep
+                key = (dest, trains)
+                current = best.get(key)
+                # Only materialize Leg/Journey pydantic objects for a candidate
+                # that is actually going to win its (dest, trains) tier -- most
+                # aren't (see backlog AW): same strict-`<` tie-break, so the
+                # winner is unchanged.
+                if current is None or duration < current.duration_min:
+                    legs = _build_legs(parent, k, dest, origin)
+                    best[key] = Journey(trains=trains, duration_min=duration, legs=legs)
 
     out: dict[str, list[Journey]] = {}
     dests = {d for d, _ in best}

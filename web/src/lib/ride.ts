@@ -98,7 +98,7 @@ export function positionAtKm(
  *  way) averages out that jitter while still turning smoothly on genuine
  *  curves. TUNING POINT: raise it if hairpin-ish curves still look jittery,
  *  lower it if the rider visibly "cuts corners" on sharp real curves. */
-export const BEARING_WINDOW_KM = 0.35;
+const BEARING_WINDOW_KM = 0.35;
 
 export interface RideOptions {
   traverseMs?: number;
@@ -186,7 +186,7 @@ export function rideStateAt(timeline: RideTimeline, tMs: number): RideState {
  *  which the previous mirror state is kept rather than recomputed. Real
  *  track geometry crosses these boundaries thousands of times per journey;
  *  without hysteresis the sprite flips horizontally back and forth. */
-export const MIRROR_HYSTERESIS_DEG = 12;
+const MIRROR_HYSTERESIS_DEG = 12;
 
 /** The rider SVG faces east. Marker rotation is bearing−90; for westward
  *  headings we mirror horizontally (inner scaleX(-1), rotation bearing−270)

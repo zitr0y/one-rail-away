@@ -17,7 +17,6 @@ export interface Destination {
 export interface ReachFile {
   origin: string; computed_at: string; sample_date: string; destinations: Destination[];
 }
-export interface Meta { computed_at: string; sample_date: string; sample_dates?: string[] }
 export type CityGroups = Record<string, string[]>;
 
 export interface CoverageFeature {

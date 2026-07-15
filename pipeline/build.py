@@ -4,6 +4,7 @@ write the graph JSON files consumed by the rest of the pipeline
 (`data/graph/stations.json`, `data/graph/trips.json`).
 """
 
+import itertools
 import json
 import logging
 import os
@@ -15,32 +16,50 @@ from pathlib import Path
 from pipeline import netex
 from pipeline.config import FeedConfig, load_feeds
 from pipeline.geo import ASSET, assign_countries, load_countries
-from pipeline.gtfs import feed_validity_window, load_feed, services_absent_from_week
+from pipeline.gtfs import (
+    calendar_absent_from_week,
+    calendar_active_services,
+    calendar_window,
+    load_calendar,
+    load_feed_days,
+)
 from pipeline.merge import _dist_m, _norm, merge_stations
 from pipeline.models import CountryOverride, Station, Trip
 from pipeline.through import join_through_services
 
 logger = logging.getLogger(__name__)
 
+# Sentinel key for the "services absent from the sampled week" extra probe (see
+# `services_absent_from_week`): a destination reached only by such a service
+# must still appear on the map, so one extra sample is loaded alongside the
+# regular per-day ones. Never a real `date.isoformat()` value.
+_ABSENT_PROBE = "_absent_probe"
+
 
 def _load_feed_samples(
-    task: tuple[str, Path, FeedConfig, list[date], set[str]],
+    task: tuple[str, Path, FeedConfig, list[date], dict[str, set[str]]],
 ) -> tuple[str, dict[str, tuple[list, list[Trip]]], tuple[list, list[Trip]] | None]:
     """Load all in-coverage probes for one feed in an isolated process.
 
     One task owns one zip, so workers never share mutable GTFS objects or write
     output.  The parent merges the returned data in feed/date order, which
     keeps graph JSON and console output deterministic.
+
+    GTFS feeds are parsed exactly ONCE here regardless of how many dates are
+    requested (backlog AT): the parent process already parsed each feed's
+    calendar once and precomputed every requested day's (and the absent-probe's)
+    active-service-id set into `day_service_ids`, so `load_feed_days` never
+    re-reads calendar.txt/calendar_dates.txt and only opens the zip once for
+    routes/trips/stop_times/stops.txt too. NeTEx feeds have no per-day
+    active-service-id concept (day-bitmap checks are evaluated per journey
+    instead), so they use `days` directly via `netex.load_feed_days`.
     """
-    name, zip_path, cfg, days, absent_ids = task
-    loader = netex.load_feed if cfg.format == "netex" else load_feed
+    name, zip_path, cfg, days, day_service_ids = task
     if cfg.format == "netex":
-        return name, {day.isoformat(): loader(zip_path, cfg, day) for day in days}, None
-    return (
-        name,
-        {day.isoformat(): loader(zip_path, cfg, day) for day in days},
-        loader(zip_path, cfg, days[0], service_ids=absent_ids) if absent_ids else None,
-    )
+        return name, netex.load_feed_days(zip_path, cfg, days), None
+    loaded = load_feed_days(zip_path, cfg, day_service_ids)
+    extra = loaded.pop(_ABSENT_PROBE, None)
+    return name, loaded, extra
 
 
 def remap_trips(
@@ -96,7 +115,7 @@ def validate(stations: list[Station], trips: list[Trip]) -> list[str]:
         if abs(s.lat) < 0.01 and abs(s.lon) < 0.01:
             problems.append(f"station {s.id} ({s.name}) sits at 0,0")
     for t in trips:
-        for a, b in zip(t.stops, t.stops[1:]):
+        for a, b in itertools.pairwise(t.stops):
             if b.arr < a.dep:
                 problems.append(f"trip {t.trip_id} ({t.train}) has non-increasing times")
                 break
@@ -116,6 +135,17 @@ def validate(stations: list[Station], trips: list[Trip]) -> list[str]:
                 problems.append(f"unmerged duplicate: {a.id} / {b.id} ({a.name})")
         seen_by_norm[norm] = start
     return problems
+
+
+def _union_feed_stops(
+    per_feed: dict[str, tuple[list, object]], name: str, cfg: object, stops: list
+) -> None:
+    """merge_stations wants each feed's stops once; union all sampled stops by
+    feed-local id so an out-of-week-only stop is retained."""
+    if name not in per_feed:
+        per_feed[name] = ([], cfg)
+    known = {s.stop_id for s in per_feed[name][0]}
+    per_feed[name][0].extend(s for s in stops if s.stop_id not in known)
 
 
 def build(
@@ -171,13 +201,25 @@ def build(
     per_feed: dict[str, tuple[list, object]] = {}
     feed_trips_by_date: dict[str, dict[str, list[Trip]]] = {}
     feed_validity_by_date: dict[str, dict[str, dict[str, object]]] = {}
-    feed_windows = {
-        name: (netex.feed_validity_window if cfg.format == "netex" else feed_validity_window)(
-            raw_dir / f"{name}.zip"
-        )
-        for name, cfg in feeds.items()
-        if (raw_dir / f"{name}.zip").exists()
-    }
+
+    # Calendar files are parsed exactly ONCE per GTFS feed here (backlog AT):
+    # `cal` is reused below for the coverage window, the "absent from week"
+    # probe, and every requested day's active-service-id set, with zero
+    # further calendar.txt/calendar_dates.txt reads. NeTEx feeds have no GTFS
+    # calendar; their window comes from the UIC operating periods instead and
+    # they get no absent-service probe (unsupported for that format today).
+    feed_calendars: dict[str, object] = {}
+    feed_windows: dict[str, tuple[str, str] | None] = {}
+    for name, cfg in feeds.items():
+        zip_path = raw_dir / f"{name}.zip"
+        if not zip_path.exists():
+            continue
+        if cfg.format == "netex":
+            feed_windows[name] = netex.feed_validity_window(zip_path)
+        else:
+            cal = load_calendar(zip_path)
+            feed_calendars[name] = cal
+            feed_windows[name] = calendar_window(cal)
 
     # The caller normally supplies per-feed weeks.  Keep this coverage filter
     # for explicit debug dates, where an out-of-horizon date is not zero-service
@@ -203,15 +245,26 @@ def build(
                 ", ".join(day.isoformat() for day in skipped),
             )
 
-    absent_services: dict[str, set[str]] = {
-        name: services_absent_from_week(raw_dir / f"{name}.zip", feed_days[name])
-        for name, cfg in feeds.items()
-        if cfg.format != "netex" and (raw_dir / f"{name}.zip").exists() and feed_days[name]
-    }
+    # Per-day active-service-id sets, precomputed here (in memory, from the
+    # already-parsed `cal`) so worker processes never touch calendar.txt /
+    # calendar_dates.txt at all -- see `_load_feed_samples`.
+    absent_services: dict[str, set[str]] = {}
+    day_service_ids: dict[str, dict[str, set[str]]] = {}
+    for name, cfg in feeds.items():
+        if cfg.format == "netex" or not feed_days.get(name):
+            continue
+        cal = feed_calendars[name]
+        absent = calendar_absent_from_week(cal, feed_days[name])
+        per_day = {day.isoformat(): calendar_active_services(cal, day) for day in feed_days[name]}
+        if absent:
+            absent_services[name] = absent
+            per_day[_ABSENT_PROBE] = absent
+        day_service_ids[name] = per_day
+
     tasks = [
         (
             name, raw_dir / f"{name}.zip", cfg, feed_days[name],
-            absent_services.get(name, set()),
+            day_service_ids.get(name, {}),
         )
         for name, cfg in feeds.items()
         if (raw_dir / f"{name}.zip").exists() and feed_days[name]
@@ -263,12 +316,7 @@ def build(
             stops, trips = loaded
             for trip in trips:
                 trip.feeds = [name]
-            # merge_stations wants each feed's stops once; union all sampled
-            # stops by feed-local id so an out-of-week-only stop is retained.
-            if name not in per_feed:
-                per_feed[name] = ([], cfg)
-            known = {s.stop_id for s in per_feed[name][0]}
-            per_feed[name][0].extend(s for s in stops if s.stop_id not in known)
+            _union_feed_stops(per_feed, name, cfg, stops)
             feed_trips[name] = trips
             print(f"{day.isoformat()} {name}: {len(stops)} stops, {len(trips)} long-distance trips")
         feed_trips_by_date[day.isoformat()] = feed_trips
@@ -280,10 +328,7 @@ def build(
     for name, (stops, _trips) in extra_by_feed.items():
         for trip in _trips:
             trip.feeds = [name]
-        if name not in per_feed:
-            per_feed[name] = ([], feeds[name])
-        known = {s.stop_id for s in per_feed[name][0]}
-        per_feed[name][0].extend(s for s in stops if s.stop_id not in known)
+        _union_feed_stops(per_feed, name, feeds[name], stops)
 
     stations, mapping = merge_stations(per_feed, aliases)
     for line in assign_countries(stations, load_countries(ASSET), country_overrides):

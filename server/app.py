@@ -1,16 +1,115 @@
 import json
 import unicodedata
+from email.utils import parsedate
 from pathlib import Path
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.middleware.gzip import GZipMiddleware
+from starlette.responses import FileResponse, Response
+
+# 6h: data only changes at the Monday 04:30 cron, but a modest max-age keeps
+# a botched deploy recoverable without waiting out a long cache lifetime.
+CACHE_CONTROL = "public, max-age=21600"
+
+# Headers a 304 should carry, mirroring starlette.staticfiles.NotModifiedResponse
+# (representation metadata only - no Content-Encoding/Content-Length, there's no body).
+_NOT_MODIFIED_HEADERS = (
+    "cache-control", "content-location", "date", "etag", "expires", "last-modified", "vary",
+)
 
 
-def _read(path: Path) -> dict:
+def _is_not_modified(response_headers, request_headers) -> bool:
+    """Mirrors starlette.staticfiles.StaticFiles.is_not_modified: FileResponse
+    itself sets ETag/Last-Modified but does not evaluate conditional request
+    headers, so this is done by hand for the manually-built FileResponses
+    below."""
+    if_none_match = request_headers.get("if-none-match")
+    if if_none_match:
+        etag = response_headers.get("etag")
+        return etag in [tag.strip().removeprefix("W/") for tag in if_none_match.split(",")]
+    if_modified_since_raw = request_headers.get("if-modified-since")
+    last_modified_raw = response_headers.get("last-modified")
+    if if_modified_since_raw and last_modified_raw:
+        if_modified_since = parsedate(if_modified_since_raw)
+        last_modified = parsedate(last_modified_raw)
+        if if_modified_since is not None and last_modified is not None and if_modified_since >= last_modified:
+            return True
+    return False
+
+
+def _artifact_response(request: Request, path: Path, missing_status: int, missing_detail: str) -> Response:
+    """Serve a pipeline-written JSON artifact plus its pre-gzipped `.json.gz`
+    sibling (see pipeline/artifacts.py) with ETag/Last-Modified/Cache-Control,
+    honouring If-None-Match / If-Modified-Since with a 304.
+
+    Deploys wipe `data/out` and rebuild it from scratch, so the pipeline
+    always writes the plain file and its `.gz` sibling together: a present
+    `.json` with a missing or stale `.gz` means something is broken and is
+    surfaced loudly (500), never silently served from the plain file.
+    Absence of the plain file itself (pipeline never ran / nothing to serve)
+    keeps the caller's existing 404/503 status.
+    """
+    if not path.exists():
+        raise HTTPException(status_code=missing_status, detail=missing_detail)
+
+    headers = {"Cache-Control": CACHE_CONTROL, "Vary": "Accept-Encoding"}
+    serve_path = path
+    if "gzip" in request.headers.get("accept-encoding", ""):
+        gz_path = path.with_name(path.name + ".gz")
+        gz_stat = gz_path.stat() if gz_path.exists() else None
+        if gz_stat is None or gz_stat.st_mtime < path.stat().st_mtime:
+            raise HTTPException(
+                status_code=500,
+                detail=f"pipeline artifact {gz_path.name} missing or stale",
+            )
+        serve_path = gz_path
+        headers["Content-Encoding"] = "gzip"
+
+    response = FileResponse(
+        serve_path, media_type="application/json", stat_result=serve_path.stat(), headers=headers,
+    )
+    if _is_not_modified(response.headers, request.headers):
+        return Response(
+            status_code=304,
+            headers={k: v for k, v in response.headers.items() if k.lower() in _NOT_MODIFIED_HEADERS},
+        )
+    return response
+
+
+_stations_cache: dict[Path, tuple[float, list[dict]]] = {}
+
+
+def _cached_stations(data_dir: Path) -> list[dict]:
+    """Parsed `stations.json["stations"]`, re-parsed only when the file's
+    mtime changes (the per-keystroke search path used to re-read+re-parse it
+    on every call)."""
+    path = data_dir / "stations.json"
     if not path.exists():
         raise HTTPException(status_code=503, detail="Pipeline has never run - no data available")
-    return json.loads(path.read_text(encoding="utf-8"))
+    mtime = path.stat().st_mtime
+    cached = _stations_cache.get(path)
+    if cached is None or cached[0] != mtime:
+        stations = json.loads(path.read_text(encoding="utf-8"))["stations"]
+        _stations_cache[path] = (mtime, stations)
+    return _stations_cache[path][1]
+
+
+_reach_ids_cache: dict[Path, tuple[float, set[str]]] = {}
+
+
+def _cached_reach_ids(data_dir: Path) -> set[str]:
+    """Wraps `_reach_ids_on_disk`, re-globbing only when `data_dir`'s own
+    mtime changes -- adding/removing a `reach_*.json` entry (pipeline write
+    or stale-file prune) bumps a directory's mtime on POSIX filesystems, so
+    this stays correct without re-globbing on every search keystroke."""
+    if not data_dir.is_dir():
+        return set()
+    mtime = data_dir.stat().st_mtime
+    cached = _reach_ids_cache.get(data_dir)
+    if cached is None or cached[0] != mtime:
+        _reach_ids_cache[data_dir] = (mtime, _reach_ids_on_disk(data_dir))
+    return _reach_ids_cache[data_dir][1]
 
 
 def normalize(s: str) -> str:
@@ -137,20 +236,20 @@ def _with_disk_has_reach(stations: list[dict], reach_ids: set[str]) -> list[dict
 def create_app(data_dir: Path) -> FastAPI:
     app = FastAPI(title="onestopeurope")
     app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"])
-    app.add_middleware(GZipMiddleware, minimum_size=1024)
+    app.add_middleware(GZipMiddleware, minimum_size=1024, compresslevel=6)
 
     @app.get("/api/stations")
     def stations() -> dict:
-        data = _read(data_dir / "stations.json")
-        reach_ids = _reach_ids_on_disk(data_dir)
-        return {"stations": _with_disk_has_reach(data["stations"], reach_ids)}
+        all_stations = _cached_stations(data_dir)
+        reach_ids = _cached_reach_ids(data_dir)
+        return {"stations": _with_disk_has_reach(all_stations, reach_ids)}
 
     @app.get("/api/stations/search")
     def search(q: str, limit: int = 10) -> dict:
         variants = _query_variants(normalize(q))
-        reach_ids = _reach_ids_on_disk(data_dir)
+        reach_ids = _cached_reach_ids(data_dir)
         scored = []
-        for s in _read(data_dir / "stations.json")["stations"]:
+        for s in _cached_stations(data_dir):
             if s["id"] not in reach_ids:
                 continue
             name = normalize(s["name"])
@@ -175,36 +274,30 @@ def create_app(data_dir: Path) -> FastAPI:
         return {"stations": [{**s, "has_reach": True} for _, s in scored[:limit]]}
 
     @app.get("/api/reach/{station_id}")
-    def reach(station_id: str) -> dict:
-        path = data_dir / f"reach_{station_id}.json"
-        if not path.exists():
-            raise HTTPException(status_code=404, detail=f"No data for station {station_id}")
-        return json.loads(path.read_text(encoding="utf-8"))
+    def reach(request: Request, station_id: str) -> Response:
+        return _artifact_response(
+            request, data_dir / f"reach_{station_id}.json",
+            404, f"No data for station {station_id}",
+        )
 
     @app.get("/api/meta")
-    def meta() -> dict:
-        return _read(data_dir / "meta.json")
+    def meta(request: Request) -> Response:
+        return _artifact_response(
+            request, data_dir / "meta.json",
+            503, "Pipeline has never run - no data available",
+        )
 
     @app.get("/api/coverage")
-    def coverage() -> dict:
-        path = data_dir / "coverage.json"
-        if not path.exists():
-            raise HTTPException(status_code=404, detail="No coverage data")
-        return json.loads(path.read_text(encoding="utf-8"))
+    def coverage(request: Request) -> Response:
+        return _artifact_response(request, data_dir / "coverage.json", 404, "No coverage data")
 
     @app.get("/api/cities")
-    def cities() -> dict:
-        path = data_dir / "cities.json"
-        if not path.exists():
-            raise HTTPException(status_code=404, detail="No cities data")
-        return json.loads(path.read_text(encoding="utf-8"))
+    def cities(request: Request) -> Response:
+        return _artifact_response(request, data_dir / "cities.json", 404, "No cities data")
 
     @app.get("/api/rail-paths")
-    def rail_paths() -> dict:
-        path = data_dir / "rail_paths.json"
-        if not path.exists():
-            raise HTTPException(status_code=404, detail="No rail path data")
-        return json.loads(path.read_text(encoding="utf-8"))
+    def rail_paths(request: Request) -> Response:
+        return _artifact_response(request, data_dir / "rail_paths.json", 404, "No rail path data")
 
     return app
 

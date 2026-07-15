@@ -1,7 +1,7 @@
 import maplibregl from "maplibre-gl";
 import { useEffect, useRef } from "react";
 import {
-  destinationsGeoJSON, linesGeoJSON, segmentsGeoJSON, bestJourney, journeyLegPaths,
+  destinationsGeoJSON, segmentsGeoJSON, selectedLineGeoJSON, shown, bestJourney, journeyLegPaths,
   transferPoints, type MaxTrains, type RailPathLookup,
 } from "../lib/geojson";
 import { buildRideTimeline, rideStateAt, riderTransform, smoothBearing } from "../lib/ride";
@@ -351,6 +351,29 @@ export default function MapView(props: Props) {
     if (!m) return;
     const { stations, reach, maxTrains, maxMinutes, railPaths } = propsRef.current;
     const byId = new Map(stations.map((s) => [s.id, s]));
+    const shownList = reach ? shown(reach, maxTrains, maxMinutes) : [];
+
+    (m.getSource("reach-segments") as maplibregl.GeoJSONSource).setData(
+      reach
+        ? (segmentsGeoJSON(shownList, byId, railPaths) as never)
+        : (EMPTY as never));
+    (m.getSource("reach-dots") as maplibregl.GeoJSONSource).setData(
+      reach ? (destinationsGeoJSON(shownList, byId) as never) : (EMPTY as never));
+    const origin = reach && byId.get(reach.origin);
+    if (origin) m.easeTo({ center: [origin.lon, origin.lat], zoom: 5 });
+  }
+
+  useEffect(syncData, [
+    props.stations, props.reach, props.maxTrains, props.maxMinutes, props.railPaths,
+  ]);
+
+  // Static per-station sources: depend only on `stations`, not the slider —
+  // splitting them out of syncData stops a byte-identical re-tile on every
+  // maxTrains/maxMinutes tick (backlog AU).
+  function syncStations() {
+    const m = map.current;
+    if (!m) return;
+    const { stations } = propsRef.current;
 
     const nonCapitals = stations.filter((s) => s.has_reach && !s.is_capital);
     (m.getSource("all-stations") as maplibregl.GeoJSONSource).setData({
@@ -371,21 +394,25 @@ export default function MapView(props: Props) {
         properties: { id: s.id, name: s.name, n_routes: s.n_routes },
       })),
     });
-
-    (m.getSource("reach-lines") as maplibregl.GeoJSONSource).setData(
-      reach ? (linesGeoJSON(reach, byId, maxTrains, maxMinutes, railPaths) as never) : (EMPTY as never));
-    (m.getSource("reach-segments") as maplibregl.GeoJSONSource).setData(
-      reach
-        ? (segmentsGeoJSON(reach, byId, maxTrains, maxMinutes, railPaths) as never)
-        : (EMPTY as never));
-    (m.getSource("reach-dots") as maplibregl.GeoJSONSource).setData(
-      reach ? (destinationsGeoJSON(reach, byId, maxTrains, maxMinutes) as never) : (EMPTY as never));
-    const origin = reach && byId.get(reach.origin);
-    if (origin) m.easeTo({ center: [origin.lon, origin.lat], zoom: 5 });
   }
 
-  useEffect(syncData, [
-    props.stations, props.reach, props.maxTrains, props.maxMinutes, props.railPaths,
+  useEffect(syncStations, [props.stations]);
+
+  // Only the "reach-lines-selected" layer draws from "reach-lines", and it is
+  // always filtered to a single destination id — so build just that one line
+  // instead of all ~1,178 (backlog AU).
+  function syncSelectedLine() {
+    const m = map.current;
+    if (!m) return;
+    const { stations, reach, selectedDest, maxTrains, maxMinutes, railPaths } = propsRef.current;
+    const byId = new Map(stations.map((s) => [s.id, s]));
+    (m.getSource("reach-lines") as maplibregl.GeoJSONSource).setData(
+      selectedLineGeoJSON(reach, selectedDest, byId, maxTrains, maxMinutes, railPaths) as never);
+  }
+
+  useEffect(syncSelectedLine, [
+    props.selectedDest, props.reach, props.maxTrains, props.maxMinutes,
+    props.stations, props.railPaths,
   ]);
 
   function syncTransfers() {
@@ -421,7 +448,7 @@ export default function MapView(props: Props) {
   function syncHighlight() {
     const m = map.current;
     if (!m) return;
-    const { selectedDest, reach, maxTrains, maxMinutes, stations } = propsRef.current;
+    const { selectedDest, reach, maxTrains, maxMinutes } = propsRef.current;
     m.setFilter("reach-lines-selected", selectedLineFilter(selectedDest) as never);
     m.setPaintProperty("reach-lines", "line-opacity", baseLineOpacity(selectedDest !== null));
 
@@ -468,16 +495,14 @@ export default function MapView(props: Props) {
     if (selectedStationIds) {
       starOpacity = stationOpacityExpression(selectedStationIds, 1.0);
     } else if (reach) {
-      const byId = new Map(stations.map((s) => [s.id, s]));
-      const reachableIds = destinationsGeoJSON(reach, byId, maxTrains, maxMinutes)
-        .features.map((f) => f.properties.id);
+      const reachableIds = shown(reach, maxTrains, maxMinutes).map((x) => x.d.id);
       starOpacity = stationOpacityExpression(reachableIds, 1.0, 0.4);
     }
     m.setPaintProperty("capital-stars", "icon-opacity", starOpacity as never);
   }
 
   useEffect(syncHighlight, [
-    props.selectedDest, props.reach, props.maxTrains, props.maxMinutes, props.stations,
+    props.selectedDest, props.reach, props.maxTrains, props.maxMinutes,
   ]);
 
   const rider = useRef<{ marker: maplibregl.Marker; raf: number } | null>(null);

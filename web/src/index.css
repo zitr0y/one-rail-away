@@ -144,39 +144,10 @@ body { margin: 0; font-family: "Barlow", system-ui, sans-serif; color: var(--tex
 .time-slider .time-scale {
   display: flex; justify-content: space-between; font-size: 11px; color: var(--text-subtle);
 }
-.hint, .error { font-size: 13px; color: var(--text-muted); margin: 0; }
-.error { color: #dc2626; }
+.hint { font-size: 13px; color: var(--text-muted); margin: 0; }
 
-.city-origin-map-popup .maplibregl-popup-content {
-  padding: 6px;
-  background: var(--surface);
-  color: var(--text);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  box-shadow: var(--shadow-small);
-}
-.city-origin-map-popup .maplibregl-popup-tip {
-  border-top-color: var(--surface);
-  border-bottom-color: var(--surface);
-  border-left-color: var(--surface);
-  border-right-color: var(--surface);
-}
-.city-origin-popup { display: grid; gap: 4px; min-width: 180px; }
-.city-origin-popup button {
-  min-height: 40px;
-  padding: 8px 10px;
-  border: 1px solid var(--border);
-  border-radius: 7px;
-  background: var(--surface);
-  color: var(--text);
-  font: inherit;
-  font-weight: 600;
-  text-align: left;
-  cursor: pointer;
-}
-.city-origin-popup button:hover { background: var(--surface-hover); }
-.city-origin-popup button:focus-visible { outline: 2px solid var(--text); outline-offset: 2px; }
-
+/* The city-origin and overlap-station map popups share one look. */
+.city-origin-map-popup .maplibregl-popup-content,
 .overlap-station-map-popup .maplibregl-popup-content {
   padding: 6px;
   background: var(--surface);
@@ -185,13 +156,15 @@ body { margin: 0; font-family: "Barlow", system-ui, sans-serif; color: var(--tex
   border-radius: 10px;
   box-shadow: var(--shadow-small);
 }
+.city-origin-map-popup .maplibregl-popup-tip,
 .overlap-station-map-popup .maplibregl-popup-tip {
   border-top-color: var(--surface);
   border-bottom-color: var(--surface);
   border-left-color: var(--surface);
   border-right-color: var(--surface);
 }
-.overlap-station-popup { display: grid; gap: 4px; min-width: 180px; }
+.city-origin-popup, .overlap-station-popup { display: grid; gap: 4px; min-width: 180px; }
+.city-origin-popup button,
 .overlap-station-popup button {
   min-height: 40px;
   padding: 8px 10px;
@@ -204,13 +177,14 @@ body { margin: 0; font-family: "Barlow", system-ui, sans-serif; color: var(--tex
   text-align: left;
   cursor: pointer;
 }
+.city-origin-popup button:hover,
+.overlap-station-popup button:hover { background: var(--surface-hover); }
+.city-origin-popup button:focus-visible,
+.overlap-station-popup button:focus-visible { outline: 2px solid var(--text); outline-offset: 2px; }
 
 .overlap-station-popup .overlap-station-popup-city {
   font-weight: 700;
 }
-.overlap-station-popup button:hover { background: var(--surface-hover); }
-.overlap-station-popup button:focus-visible { outline: 2px solid var(--text); outline-offset: 2px; }
-
 .overlap-station-popup button.unreachable { opacity: 0.55; }
 .overlap-station-popup .overlap-unreachable-hint {
   font-size: 0.8em; font-style: italic; opacity: 0.8; margin-left: 0.4em;
