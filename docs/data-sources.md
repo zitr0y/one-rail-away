@@ -5,8 +5,8 @@ Everything this project ingests, and everything we wanted but could not get.
 - **Timetable config is `feeds.toml`** — that file is the source of truth and carries
   the full per-feed forensics (route filters, stop-id quirks, licence caveats). This
   page is the human index; don't duplicate detail here, link to it.
-- Per-feed research verdicts live in `docs/superpowers/feedback-backlog.md`; the
-  process for adding a feed is `docs/superpowers/new-feed-recipe.md`.
+- Per-feed research verdicts and the process for adding a feed live in
+  `docs/superpowers/new-feed-recipe.md`.
 
 ## In use — timetable feeds
 
@@ -87,7 +87,7 @@ Multi-operator sources, for contrast: `pkp` (PKP IC + Leo Express + RegioJet pat
 
 ### Researched and rejected (with reasons)
 
-Full verdicts in `docs/superpowers/feedback-backlog.md`.
+Full verdicts in the table at the end of `docs/superpowers/new-feed-recipe.md`.
 
 - **Norway (Entur)** — *blocked, not licence.* The national aggregated GTFS is freely
   available under NLOD (commercial use OK with attribution). But it models
@@ -95,7 +95,7 @@ Full verdicts in `docs/superpowers/feedback-backlog.md`.
   can filter on, so shipping it would draw bus diversions as train corridors.
   Revisit if Entur exposes a rail-only feed or a usable trip-level marker.
 - **Czechia**, **Hungary**, **Belgium** — researched 2026-07-14, each rejected for
-  source-specific reasons; see the backlog verdicts.
+  source-specific reasons; see the recipe's verdict table.
 - **Ouigo España** — GTFS exists on the Spanish NAP; not yet integrated.
 - **iryo** (ES) — publishes no public GTFS. No scraping or proprietary APIs attempted.
 

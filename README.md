@@ -14,7 +14,9 @@ or three trains — colored by travel time — and click through to book.
 
     just pipeline     # fetch -> build graph -> compute reachability -> rail geometry
 
-Runs weekly by hand for now. Feeds are declared in `feeds.toml`; station-merge
+Runs weekly via cron on the production host (fetch → build → compute; see
+`docs/superpowers/feedback-backlog.md` item AL for why `ose paths` runs on a
+workstation instead). Feeds are declared in `feeds.toml`; station-merge
 overrides live in `station_aliases.toml`. Everything lands in `data/out/`, which is
 gitignored apart from a handful of committed sample files — **a fresh clone has only
 those samples, so a host must run this pipeline** (or be given a populated
@@ -42,11 +44,14 @@ train reaches them. Full inventory and known gaps: [`docs/data-sources.md`](docs
 
 - `pipeline/` downloads national long-distance GTFS feeds, merges stations
   across feeds (UIC codes, proximity + normalized names, aliases), and runs a
-  RAPTOR search (max 3 trains, 10-min minimum transfer) independently for eight
-  deterministic probes: Tuesday + Saturday in January, April, July, and October.
-  The best sampled route is retained and reach JSON reports cautious availability
-  evidence only for probes covered by every GTFS feed used by that route; "per
-  week" is a rounded direct-service sample estimate, not a timetable promise.
+  RAPTOR search (max 3 trains, 10-min minimum transfer) independently for each
+  day of one deterministic consecutive service week per feed, chosen inside that
+  feed's published calendar horizon. The best sampled route is retained and reach
+  JSON reports cautious availability evidence only for days covered by every GTFS
+  feed used by that route; "per week" is a rounded direct-service sample
+  estimate, not a timetable promise. Services absent from the selected week are
+  still retained so destinations only they serve stay on the map, without
+  counting toward sampled-week frequency.
 - `server/` is a thin FastAPI that serves the precomputed JSON in `data/out/`.
 - `web/` is Vite + React + MapLibre GL (OpenFreeMap tiles).
 

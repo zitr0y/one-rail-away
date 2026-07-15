@@ -1,691 +1,327 @@
-# User feedback backlog (2026-07-09 testing session)
+# Feedback backlog — OPEN items only
 
-The user's first hands-on testing round produced 9 feedback items. Items 1, 3, 5, 9
-(plus a wrong-country bug found while investigating) are being fixed by
-`docs/superpowers/plans/2026-07-09-feedback-bug-batch.md`. **Everything below is NOT
-yet addressed and must not get lost.** Each needs brainstorming with the user before
-implementation (established process convention).
+Living backlog of user-testing feedback and deferred work. Convention: shipped or
+rejected items are **deleted** (git history keeps them), never tombstoned. Each item
+needs brainstorming with the user before implementation unless marked otherwise.
+Feed research verdicts (Norway, Czechia, Hungary, Belgium, Ouigo España, …) live in
+the verdict table of [`new-feed-recipe.md`](new-feed-recipe.md).
 
-## Investigation findings that inform these items (2026-07-09, this session)
+Letters are stable ids; the highest used so far is AS.
 
-- Feeds model international trains as separate per-country trips; the bug batch joins
-  them (`pipeline/through.py`).
-- The EC 95 Berlin↔Warszawa German half (Rzepin→Berlin Gesundbrunnen) runs **0×** on
-  the sampled Tuesday 2026-07-14 (construction; feed replaces it with Rzepin↔
-  Frankfurt(Oder) shuttles). One sampled day silently loses whole corridors → item B.
-- Coverage truth: only DB/SNCF/ÖBB/SBB/NS are ingested. Stations in PL/CZ/IT/HU/ES
-  exist only as cross-border "leaks" from those feeds. Madrid, Porto, all of Renfe/CP/
-  Trenitalia/PKP/ČD/MÁV interiors simply don't exist in the data → items A and E.
-- Station `country` was assigned from the feed, not geography (Praha tagged "DE") —
-  fixed in the bug batch; item E (greying) builds on the corrected field.
+## A. Add more national feeds — ongoing
 
-## A. Add more national feeds — ongoing (Renfe + PKP + Denmark/DSB + FlixTrain + Portugal/CP shipped)
+Shipped so far: DB long-distance, SNCF, ÖBB, SBB, NS, Rejseplanen (DK), FlixTrain,
+CP (PT), Trenitalia (IT), Renfe (ES), PKP (PL). Current inventory and gaps:
+`docs/data-sources.md`. Next candidates and researched verdicts:
+[`new-feed-recipe.md`](new-feed-recipe.md) (Norway/Czechia/Hungary/Belgium/Ouigo
+España all verified UNFIT 2026-07-14 with revisit conditions). Each new feed
+un-greys a country (two-tier veil). Competitor note: iryo publishes no GTFS.
 
-Denmark is now covered by the Rejseplanen DSB feed: IC, ICL, ECE, RJ, and RE
-(including regional RE after the 2026-07-13 filter correction). FlixTrain and the
-official CP Portugal feed are also shipped. CP is a direct, registration-free GTFS
-download from `publico.cp.pt`; it includes AP, IC, IR, and R services and carries a
-rolling publication horizon, which the per-feed coverage-aware sampler excludes from
-out-of-horizon denominators. Italy is now covered by the official Trenitalia Italian
-NAP NeTEx L1 publication: FR/FA/FB/EC/IC/ICN/EN/EXP, with the source’s explicit
-“No licence – No contract” metadata retained as a commercial-reuse caveat. Further
-national feeds remain ongoing; next candidates and research verdicts live in
-`docs/superpowers/new-feed-recipe.md`. Each new feed un-greys a country (see the
-two-tier veil). Competitor note: Ouigo España publishes GTFS on
-nap.transportes.gob.es; iryo does not.
+## D. Branding — open tuning + Phase 3
 
-**Norway verdict (2026-07-14 — not shipped):** Entur's official national
-aggregated GTFS is available at
-`https://storage.googleapis.com/marduk-production/outbound/gtfs/rb_norway-aggregated-gtfs.zip`.
-It is a stable, anonymous 610,292,215-byte download (checked 2026-07-14;
-Last-Modified 2026-07-13). Entur documents NLOD reuse for its published data:
-commercial use is allowed with the attribution “Data made available by Entur”.
-The inspected all-mode archive covers 71 agencies and 4,089 route rows, but has
-usable narrow national rail labels: F1 (Oslo--Stockholm international), F4
-(Oslo--Bergen), F5 (Sørlandet), F6 (Dovre) and F7 (Nordland). The feed keeps
-route type 100 on those five rows, but the GTFS models rail-replacement buses
-inside them with no trip-level mode that this pipeline can filter: on the
-inspected day F5 produced 69 trips and stops such as Harebakken bussterminal, Grenstøl
-bussterminal and Krossmoen. Shipping it would therefore draw bus diversions as
-train corridors. Its internal `NSR:StopPlace:` /
-`NSR:Quay:` IDs are not UIC; all 142,347 stops have coordinates, 90,936 quays
-have a parent station, and Norwegian names retain diacritics. The published
-calendar evidence spans 2019-04-13 through 2029-07-12. Do not ingest the
-aggregate until Entur exposes a stable rail-only GTFS or a documented trip-level
-marker that reliably excludes replacement buses; then retain only
-F1/F4/F5/F6/F7 and place the feed after existing feeds so foreign canonical
-station names remain owned at home.
+Phases 1+2 (light identity, dark mode, mascot rider, road de-emphasis) are shipped.
+Still open:
 
-**Ouigo España verdict (2026-07-14 — not shipped):** Spain's official National
-Access Point lists the official Ouigo high-speed GTFS dataset at
-`https://nap.transportes.gob.es/Files/Detail/1515`: one operator (OUIGO España),
-11 routes, 69 trips and 16 stops, valid 2026-06-26 through 2026-12-12, last
-updated 2026-07-02. The record says it includes route geometry and labels its
-terms “Licence and Free of charge”, pointing to the Ministry's open-data licence.
-That licence permits commercial and non-commercial reuse with attribution, but
-also makes the original source's stricter terms prevail. Crucially, the record's
-two download links explicitly say “Inicia sesión para descargar”; an anonymous
-`HEAD` and `GET` of its official asset endpoint
-`https://nap.transportes.gob.es/api/Fichero/download/1766` returned HTTP 401 on
-2026-07-14. Thus the actual archive is registration-gated and cannot be
-inspected for its GTFS agency row, exact route-product table, stop-id scheme,
-parent hierarchy, station coordinates, names, or foreign stops; nor can it be
-automatically refreshed under this project's registration-free-source rule. Do
-not ingest a mirror, use a guessed endpoint, or add a feed entry. Revisit only
-when the NAP provides an anonymous HTTP 200 download of the official ZIP (and
-the source-specific terms remain commercially compatible); then inspect the
-real archive and require usable station geometry plus a verified narrow Ouigo
-passenger-rail filter before integration.
+- **User-judged tuning, awaiting visual calibration pass** (all easy to nudge):
+  dark-theme hexes (`themeTokens("dark")` in `web/src/lib/colors.ts` +
+  `[data-theme="dark"]` CSS block), mascot traverse speed (`TRAVERSE_MS = 7000` in
+  `web/src/lib/ride.ts`; fallback ~5–10 s length-scaled), mascot rotation sign
+  (`riderTransform`), Phase-1 bucket-0 yellow on cream.
+- **Phase 3:** mascot bends along the actual route geometry / logo draw-itself
+  animation. Shares ground with items I and W.
+- Road labels/shields (z12+) were not faded in the road de-emphasis — revisit if
+  they shout at street zoom.
 
-**Czechia verdict (2026-07-14 — not shipped):** the best official source is the
-Ministry of Transport's CIS JŘ national-rail CZPTT NeTEx publication,
-`https://portal.cisjr.cz/pub/netex/NeTEx_GVD2026.zip`. It is directly downloadable
-without registration (HTTP 200; 63,762,539 bytes, last modified 2026-01-02), and the
-Ministry explicitly says CIS JŘ data are publicly available for commercial and
-non-commercial use. The inspected 13,252-file archive covers 2025-12-14 through
-2026-12-12 and carries ČD, RegioJet, Leo Express, Arriva, DB, ÖBB, PKP and other
-operators, including foreign services. It cannot safely be integrated yet: each
-per-train NeTEx document has named `StopPlace`/`ScheduledStopPoint` records but no
-latitude or longitude and no parent-stop hierarchy; all `TrainType` values are `1`,
-while the only service classification is an undocumented numeric
-`CommercialTrafficType` (84, 157, 122, 209, 50, 9004, etc.). Thus it has neither
-the station geometry required by the map nor a verified way to retain only
-long-distance/intercity/international products. The official Prague PID GTFS is
-urban/regional and deliberately out of scope. Revisit when CIS JŘ publishes station
-coordinates plus a documented passenger-product-code mapping, or when an equally
-official, registration-free national GTFS includes them.
+## I. Reach-line geometry — direction reopened (2026-07-15 feedback)
 
-**Hungary verdict (2026-07-14 — not shipped):** the only verified national
-long-distance candidate is MÁV's own GTFS service at
-`https://www.mavcsoport.hu/gtfs-igenybejelento`. The live official page presents
-GTFS as a regularly refreshed, free platform for rail-application development, but
-does not publish a feed URL, archive, licence, product table, calendar, or station
-data. Instead it requires a CAPTCHA-protected request form with mandatory applicant
-or company name, address, contact name, phone number, email, and a rail/bus/both
-selection. The Hungarian National Access Point is not a registration-free fallback:
-its public page says metadata may be browsed without an account but dataset access
-requires registration. Therefore the actual national dataset, its operators/products,
-coordinates/hierarchy, calendar coverage, and a safe long-distance filter cannot be
-inspected or automatically refreshed under this project's registration-free-source
-requirement; MÁV's marketing description alone is not evidence of commercial reuse
-rights. Do not ingest an unofficial mirror or scrape a booking API. Revisit if MÁV
-publishes a stable registration-free static GTFS/NeTEx URL with explicit reuse terms,
-or if the official NAP exposes the same data registration-free with terms permitting
-commercial reuse; then inspect the real archive for station geometry, coverage, and
-verifiable IC/EC/EN/fast-train product filtering before integration.
+**History:** straight per-destination lines → X trunk-merge (shared stop-sequence
+segments deduped via `segmentsGeoJSON`, shipped 2026-07-13) → real OSM rail geometry
+(`ose paths` → `rail_paths.json`, shipped 2026-07-14).
 
-**Belgium verdict (2026-07-14 — not shipped):** SNCB-NMBS's current official
-Belgian Mobility Open Data catalogue identifies a daily-updated, public GTFS
-static ZIP for the national railway network at
-`https://api-management-discovery-production.azure-api.net/api/gtfs/feed/nmbssncb/static`.
-The portal terms apply CC BY 4.0 unless stated otherwise, explicitly permit
-commercial reuse with attribution, and describe an anonymous (no-registration)
-tier. However, the advertised current URL returned HTTP 500 when fetched on
-2026-07-14. The formerly documented official endpoint,
-`https://api-management-opendata-production.azure-api.net/api/gtfs/feed/nmbssncb/static/`,
-returned HTTP 403 `Quota Exceeded` for the shared anonymous tier (with a
-`Retry-After` of about 23h36m); the no-trailing-slash variant returned 404.
-Consequently no current official archive could be inspected for its agency and
-operator scope, route-product values (needed to distinguish IC/EC/Eurostar from
-local S/L/P services), stop coordinates/parent hierarchy, calendar horizon, or
-foreign stops. `gtfs.irail.be` exposes a downloadable mirror, but it is not an
-official substitute and must not be ingested. Do not add a feed entry or use a
-scraped journey API. Revisit when the catalogue URL yields an actual current ZIP
-to an anonymous request (HTTP 200); inspect the real archive and only integrate
-if its product labels support a narrow long-distance/intercity/international
-filter and its stops supply usable geometry and hierarchy. Primary evidence:
-SNCB's Public Data page and the Belgian Mobility catalogue/terms, inspected
-2026-07-14.
+**New feedback (train-nerd round, 2026-07-15): the OSM-routed paths are not good
+enough.** Some hops render as straight lines even though neighbouring hops on
+practically the same line follow track; subtler cases route along the WRONG rails —
+around Düsseldorf-Holthausen trains follow the subway or the cargo-yard tracks
+instead of the passenger line. Root causes: OSM connectivity/classification is
+imperfect and chasing per-corridor correctness for train nerds is a treadmill.
 
-## B. Service-week sampling / seasonal services (user item 6) — SHIPPED 2026-07-14
+**Direction to brainstorm:** possibly go BACK to smoothed "subway map style" lines —
+but properly drawn as line trees (a→b→c as one polyline through the served stops,
+not independent a→b and a→c fans). The X segment-dedup already provides the shared
+trunks, so smoothing must respect shared segments (smooth the tree, not each
+journey). That should give clean curves without straight-line fallback. Decision
+needed with the user: fix OSM routing (better rail filtering, penalize
+subway/freight tags, connectivity repair) vs. smoothed trees vs. hybrid (OSM where
+confident, smoothed otherwise). Note the earlier "paths not rendering" report is
+superseded — paths render now; the issue is quality.
 
-The pipeline selects one deterministic consecutive service week per feed
-(normally seven days), fully inside that feed's published calendar horizon.
-Each date retains its own graph and RAPTOR result, so routes never join legs
-from different dates. Frequency denominators use only the relevant feed's own
-selected week; feeds with a short rolling horizon use its complete shorter
-span. The planner reports cautious direct-train-per-day/week samples.
+Related: AL (paths RAM budget), AJ (rider steering off geometry stubs).
 
-Calendar rows whose declared range is narrower than their feed's publication
-horizon (plus exception-only services) are retained as explicit seasonal/limited
-evidence. This includes services absent from the selected week: they remain on
-the map and in the planner with a seasonal label and dashed line, but do not
-inflate the selected-week frequency. The calendar is evidence of a limited
-service, not a promise of exact operating dates.
+## K. Alternative / supplementary data sources
 
-**Follow-up fix 2026-07-14:** coverage is now checked independently for every
-feed before parsing a requested day: out-of-horizon dates are logged once per feed and
-skipped, never treated as zero-service evidence. Frequency denominators retain
-only the relevant route feeds' usable probes, even when other feeds cover a
-different horizon. Independent feed loading now runs in separate processes;
-the parent merges results in a fixed order for deterministic output.
-
-**Performance follow-up 2026-07-14:** profiling showed `ose compute` already
-keeps its reachability work in worker processes; its parent-only tail is about
-2 seconds. The reported long single-core interval after feed sampling was in
-`ose build`: station merge and duplicate validation repeatedly scanned all
-stations. Both now index stations by normalized name while preserving insertion
-and report order. On the 2,442-station production graph, validation fell from
-43.467 seconds to 0.018 seconds (~2,400×), and merge profiles at 0.080 seconds.
-
-The original concern was that a single Tuesday hid weekend-only trains and could
-silently lose corridors during construction. The selected-week design above supersedes
-that proposal while keeping the cautious weekly-frequency presentation.
-
-**Seasonal / part-year trains (added 2026-07-09):** resolved by the calendar-derived
-limited-service evidence described above. The UI deliberately says “seasonal service”
-rather than inferring or promising a precise operating season.
-
-## C. Dot sizing / clustering / city grouping (user item 4) — C1 DONE, C2 tried+rejected, remainder SHIPPED
-
-C1 (dots sized by n_dest) + capital stars shipped 2026-07-11
-(spec 2026-07-11-dots-clustering-design.md). C2 clustering shipped and was
-removed same day (killed the density picture). C3 city-union and the remaining
-click-disambiguation work are shipped; neither changes the density picture.
-
-Station dots are tiny and hard to click. Progress:
-- bigger dots for stations with more connections / capitals — **C1 SHIPPED**.
-- multiple stations of one city selectable by **city name** showing the **union**
-  of their connections — **C3 SHIPPED 2026-07-13** (curated `cities.toml` →
-  `data/out/cities.json`, 15 cities; `cityunion.ts::unionReach` merges by
-  destination keeping fewest-trains-then-shortest-duration; `/api/cities`). Nit
-  DEFERRED: a city-union origin pins only ONE member dot visible at low zoom, so
-  sibling termini can fade — thread member ids into the map's always-visible set.
-- intra-city **"local transit"** label for same-city siblings with no direct reach
-  entry — **SHIPPED 2026-07-13** (`planner.ts::destOptions`).
-- **hide small dots at low zoom** (declutter) — **SHIPPED 2026-07-13**
-  (`dots.ts::stationDotOpacityByZoom`; n_dest≥150@z4 … all@z9, TUNING POINTS).
-- stations too close together now present a quiet, name-sorted station chooser on
-  click when several visible dots overlap (with a small click tolerance); hits
-  are deduplicated by station id and a lone station still selects directly —
-  **SHIPPED 2026-07-14**.
-
-## D. Branding / map styling (user item 7) — PHASE 1 + PHASE 2 SHIPPED
-
-Phase 1 spec: `docs/superpowers/specs/2026-07-11-branding-design.md`.
-Phase 2 spec: `docs/superpowers/specs/2026-07-12-branding-phase2-design.md`,
-plan `docs/superpowers/plans/2026-07-12-branding-phase2.md`.
-
-- Phase 1 (light identity) + calibration shipped 2026-07-11.
-- **Phase 2 (dark mode + mascot rider) shipped 2026-07-12** (commits
-  de6ffa8..e236fb2, Flash-executed, controller-reviewed, 89 web tests green,
-  NOT yet pushed). Deep-night basemap + theme toggle (`prefers-color-scheme`
-  + persisted `ose-theme`), per-theme overlay tokens, CSS-var panel chrome;
-  C0 mascot loops the selected journey line (rotate+flip, transfer pauses,
-  reduced-motion parks at destination).
-
-Open user-judged tuning (all AWAITING the user's visual calibration pass —
-none auto-resolved, all easy to nudge):
-- **Dark starting hexes** — `themeTokens("dark")` in `web/src/lib/colors.ts`
-  (stationDot `#5B7FDB`, veil `#6B7590`, rider cream) and the
-  `[data-theme="dark"]` CSS block (panel `#0B1533` etc.) are starting points.
-- **Mascot traverse speed** — `TRAVERSE_MS = 7000` in `web/src/lib/ride.ts`
-  is a flagged TUNING POINT; user unsure fixed-vs-length-scaled ("we shall
-  find out"). Fallback (documented): ~5–10 s clamped scaling.
-- **Mascot rotation sign** — `riderTransform` math is tested but only visual
-  check confirms MapLibre's rotation direction; a wrong sign is a one-line fix.
-- Open from Phase 1: bucket-0 yellow on cream (spec TUNING POINT) — not yet
-  objected to.
-
-- **Phase 3 (still out of scope):** mascot bends along the actual route
-  geometry / logo draw-itself animation. Shares ground with item I.
-User's sketch: EU-train theme, cute EU train in the logo that could "bend along the
-chosen route if exists". Map style should follow the identity (OpenFreeMap styles can
-be customized). Tagline is fixed: "nonstopeurope with onestopeurope".
-
-**De-emphasise roads + surface railways/borders — SHIPPED 2026-07-13, user-calibrated
-(2 rounds):** all `highway_*`/`tunnel_*` line layers carry flat `line-opacity`
-**0.25 light / 0.2 dark**. The basemap `railway` layer (real OSM rail) now starts at
-**z8** (was 13; tiles carry no rail below ~z8) with width ramp 0.75@z8→7@z20,
-colored to outrank roads: `#B0A99B` light / `#4C639A` dark, opacity 0.9. Country +
-state boundary colors strengthened (`#A9A294`/`#B3AC9E` light, `#55689C`/`#49598A`
-dark). All TUNING POINTS. Road labels/shields (z12+) not faded — revisit if they
-shout at street zoom.
-
-## I. Corridor bundling for reach lines (added 2026-07-10)
-
-**Direction agreed with user (2026-07-13, after the X trunk-merge):** route reach
-lines along REAL rail geometry (OpenRailwayMap/OSM rail extract — see item S),
-not a spline through stops; synthetic curves that don't follow track are exactly
-what the user dislikes. The X fix helps here: the base layer now draws deduped
-per-hop segments (`segmentsGeoJSON`), so real geometry can be attached per
-physical hop (station-pair → track path lookup) instead of per journey. Curated
-`corridors.ts` becomes a stopgap to retire.
-
-User: Paris shows ~15 separate straight lines fanning over southern France; "I feel like
-they all go via Lyon or Vichy and should be just 2-4 lines with breakouts." Data check
-confirms the trains are genuinely direct (Paris→Valence TGV 16×/day NONSTOP, Mâcon-Loché
-6×, Le Creusot 3× — all via=[]), so each polyline is a single straight segment; the trains
-physically share the LGV corridor but our lines don't. Fix directions to brainstorm:
-(a) route along real rail geometry (GTFS shapes.txt if the feeds carry it, or OSM rail),
-(b) algorithmic edge bundling, (c) force lines through nearest corridor waypoints. Big
-visual win, medium-to-large effort. Related to D (map styling).
-
-**Paths not rendering (user report 2026-07-14):** after the id-change fix and full
-rebuild, the user reports reach paths still do NOT show on the map. Per user
-decision, do not chase this separately — it will be addressed together with this
-item's move to proper track-following geometry (real rail paths). When item I is
-implemented, verify rendering end-to-end with human eyes.
-
-## K. Alternative / supplementary data sources (added 2026-07-11)
-
-User pointer via chronotrains' attribution: "data from the Deutsche Bahn through
-Direkt Bahn Guru … Night train data from Back On Track." Research candidates:
-- **FlixTrain / FlixBus** — Flix publishes open GTFS; FlixTrain would add real
-  long-distance coverage in DE, FlixBus could be a separate (bus) layer or out
-  of scope — decide product-wise first.
-- **Direkt Bahn Guru** (direct-connection dataset derived from DB) — possible
-  cross-check or gap-filler for direct connections.
-- **Back On Track** night-train data — could tag/add night trains (relates to
-  the seasonal-trains discussion in item B).
+FlixTrain is shipped (see A). Remaining candidates:
+- **FlixBus** — separate (bus) overlay or out of scope; product decision first.
+  If added, mode filtering policy is item AS, seller handoff is item S.
+- **Direkt Bahn Guru** (direct-connection dataset derived from DB) — cross-check /
+  gap-filler for direct connections.
+- **Back On Track** night-train data — tag/add night trains.
 Research first (licensing, format, freshness), then per-source brainstorm.
 
-## N. Trainline booking handoff — landing-page fallback shipped (2026-07-13)
+## N. Trainline booking handoff — affiliate integration pending
 
-The old `trainline.eu/search/{origin}/{destination}/{date}/` path is not a
-reliable live search handoff. The CTA now opens the ordinary Trainline landing
-page, intentionally without claiming to prefill the selected journey or date.
-
-The full investigation and the required future Partnerize/affiliate/widget
-work are recorded in
+The CTA currently opens the plain Trainline landing page (deliberate fallback, no
+prefill claims). The real integration (Partnerize affiliate / widget / approved
+deep-link format) is future work; investigation and requirements in
 [`research/2026-07-13-trainline-booking-handoff.md`](research/2026-07-13-trainline-booking-handoff.md).
 Do not reintroduce query parameters or an affiliate code until Trainline has
-provided an approved integration format.
+provided an approved format. Alternatives: item S (Rail Europe, Flix).
 
-## O. Reachability previews on hover (added 2026-07-13)
+## O. Reachability previews on hover
 
-Consider a lightweight hover preview for a station: reveal its reachable area or
-connection summary before committing it as the origin, so exploratory map use feels
-faster. Design the preview to stay visually quiet and avoid competing with selected
-journeys or the planner panel.
+Lightweight hover preview for a station: reveal its reachable area or connection
+summary before committing it as origin, so exploratory use feels faster. Must stay
+visually quiet next to selected journeys and the planner. Constraint from P: no
+expensive per-pointer computation.
 
-## P. Performance optimisation pass (added 2026-07-13)
+## P. Performance optimisation pass
 
-Reserve a dedicated optimisation pass as the map and feed coverage grow. Profile the
-full interaction path (initial data load, map layers, hover/select updates, search,
-reach-file fetching, and route rendering), then prioritise the largest measured
-bottlenecks. The work should keep the app responsive with substantially more stations
-and connections. It is needed regardless of whether hover previews are built; any
-future hover preview must simply avoid adding an expensive per-pointer computation.
+Reserve a dedicated pass as map and coverage grow: profile initial load, map
+layers, hover/select updates, search, reach-file fetching, route rendering;
+prioritise measured bottlenecks. Needed regardless of O.
 
-## Q. Log unfit / dropped data during build (observability) (added 2026-07-13)
+## Q. Log unfit / dropped data during build (observability)
 
-Trains and feeds change constantly, so the pipeline must SURFACE anything it
-can't place instead of silently dropping it. Whenever build/merge/filter drops
-a trip (<2 stops, stub, filtered by route_allow), can't merge a station
-(near-duplicate with a different name — the validator blind spot), can't
-geo-assign a country (the "no polygon match" warnings seen adding Denmark
-2026-07-13; Fredericia retained feed country DE), or a new feed introduces an
-unrecognised route category / stop-id shape, it should LOG it to a structured,
-persistent place (e.g. `data/out/unfit.json` or a build report), not just a
-transient stderr warning. Goal: a standing "here is what today's feeds threw at
-us that we didn't model" list we can review and adapt to. Builds on the existing
-validator-blind-spot and meta.json-under-reports notes below.
+Whenever build/merge/filter drops a trip (<2 stops, stub, route_allow), can't merge
+a near-duplicate station with a different name (validator blind spot), can't
+geo-assign a country, or a feed introduces an unrecognised route category /
+stop-id shape, LOG it to a structured persistent place (e.g. `data/out/unfit.json`
+or a build report), not transient stderr. Goal: a standing "what today's feeds
+threw at us that we didn't model" review list. Relates to AC/AD hardening and AP.
 
-## R. Future-proof for EU mandatory mobility data APIs (added 2026-07-13)
+## R. Future-proof for EU mandatory mobility-data APIs
 
-The EU is moving toward mandatory operator data/APIs; user flagged
-https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng as the pointer. NOTE: verify
-the actual instrument — 2024/1689 is the AI Act; the mobility-data mandate is
-more likely the ITS Directive revision / Multimodal Travel Information Services
-delegated regulation or the proposed Multimodal Digital Mobility Services (MDMS)
-regulation. Research which regulation actually mandates what (real-time +
-booking data via national access points), timelines, and whether it unlocks
-cleaner official feeds than the current national-GTFS patchwork. The rule also
-pushes **single-seller through-ticketing** — buy a whole multi-leg journey from
-one seller with start-to-end / missed-connection money-back guarantees. That
-"buy all tickets from one seller" model is an appealing product direction for
-onestopeurope's booking handoff (relates to N and S): if such sellers/APIs
-emerge, prefer one that covers the whole planned journey with a guarantee.
-Relates to K (data sources) and Q (adapting to new data shapes).
+Research which EU instrument actually mandates operator data/APIs (user pointer was
+2024/1689, but that's the AI Act — likely the ITS Directive MMTIS delegated
+regulation or the MDMS proposal): what's mandated (real-time + booking via national
+access points), timelines, whether it unlocks cleaner official feeds. The
+single-seller through-ticketing push (whole journey from one seller with
+missed-connection guarantees) is an appealing booking-handoff direction (relates N,
+S). Relates K, Q.
 
-## S. Rail Europe (ticket seller + API) & OpenRailwayMap (added 2026-07-13)
+## S. Booking/seller + rail-data ecosystem research
 
-- **Rail Europe** — evaluate as (a) a booking handoff / ticket seller,
-  alternative or complement to Trainline (item N), and (b) a data API more
-  generally (coverage, fares, connections). Research their partner/affiliate
-  and API terms; compare booking-handoff quality to the current Trainline
-  landing-page fallback.
-- **Flix as ticket seller** — if/when FlixBus is added (F2 bus overlay), we will
-  likely need Flix's own booking/seller handoff for those tickets (Trainline/Rail
-  Europe may not resell FlixBus). Unclear whether FlixTrain also needs it or is
-  resold elsewhere — verify. Booking-handoff item, relates to N.
-- **OpenRailwayMap** (OSM-based rail data) — use to fill MISSING railway
-  station locations / cross-check station coordinates, and as the OSM-rail
-  geometry source floated in item I (corridor bundling) if we ever route lines
-  along real track. Research licensing (ODbL) and extract format (Overpass /
-  planet rail layer). Relates to I and to the coverage gaps in A/K.
+- **Rail Europe** — evaluate as booking handoff / ticket seller (alternative or
+  complement to Trainline, item N) and as a data API (coverage, fares,
+  connections). Research partner/affiliate + API terms.
+- **Flix as ticket seller** — if FlixBus ships (K), its tickets likely need Flix's
+  own handoff (Trainline/Rail Europe may not resell FlixBus); verify whether
+  FlixTrain is resold elsewhere.
+- **OpenRailwayMap / OSM rail** — partly consumed already (`ose paths`). Still
+  useful to fill MISSING station locations / cross-check coordinates (relates AP).
 
-## U. C3 testing round 2 — reverts + reworks (2026-07-13)
+## U. City-union follow-ups
 
-Second browser test after the C3 fix batch. Two fixes REVERTED (didn't achieve
-the goal), two kept, plus reworks:
-- **Local transit — REVERTED** (revert of 90e967a). Label-only doesn't help:
-  selecting a same-city sibling still routes the absurd real journey (Paris Gare
-  de Lyon → Paris Austerlitz = 14h via Montpellier night train). PROPER FIX (user
-  decision): add **fake intra-city transfer connections in the pipeline data** —
-  short hops (~every few min) between same-city stations (from cities.toml groups)
-  injected as transfer edges so RAPTOR routes through them cleanly. This ALSO fixes
-  the Lille→Forbach detour (Paris Nord→Est transfer). Pipeline change + recompute.
-- **Zoom declutter — REVERTED to near-inert** (revert of ba79538; original
-  150/50/10 restored, effectively invisible). User dislikes that ES/FR empty out
-  while DE/AT/PL stay overfull — uneven station density. REWORK: make it
-  **density-aware** (normalise by local/country density, not a global n_dest
-  threshold). Disabled for now; bundle with a density calc.
-- **City exonyms — KEPT (d24160b), needs more:** works for EN (Brussels, Vienna…)
-  but the CITY "all stations" option doesn't match other-language exonyms — e.g.
-  German **"Warschau"** finds the Warsaw stations but not "Warszawa (all stations)".
-  Add multilingual exonyms (DE/FR/IT/ES/... → native) to the city-option matcher.
-  (The "Paris (All stations)" relabel shipped 2026-07-13 with item T Unit 3.)
-- **Corridor bundling — KEPT (e81c086) but insufficient:** Paris–Lyon region still
-  a clusterfuck; only marginally better. Rework: many lines converge Paris→Lyon;
-  needs better bundling (more corridors, or a real edge-bundling/geometry approach,
-  possibly density-aware). See item I.
+- **Intra-city transfers (user decision, 2026-07-13):** label-only "local transit"
+  was reverted; the PROPER fix is fake intra-city transfer edges in the pipeline —
+  short hops between same-city stations (from `cities.toml` groups) injected as
+  transfer edges so RAPTOR routes through them (also fixes Lille→Forbach via the
+  Paris Nord→Est transfer). Pipeline change + recompute.
+- **Multilingual city exonyms:** the city "all stations" option matches EN exonyms
+  but not others — German "Warschau" finds Warsaw stations but not "Warszawa (all
+  stations)". Add DE/FR/IT/ES/… exonyms to the city-option matcher
+  (`server/app.py::EXONYMS` is extensible).
+- Nit: a city-union origin pins only ONE member dot visible at low zoom, so sibling
+  termini can fade — thread member ids into the map's always-visible set.
 
-## W. Logo drive-off animation (2026-07-13)
+## V. Default-stops parameter + domain routing
 
-Hovering/clicking the header logo triggers a playful animation (relates to D
-Phase 3 — the inline lockup SVG in `web/src/App.tsx`):
-- the **train logo only** (NOT the wordmark text) **winks**, then **drives off
-  screen to the right and reappears from the left**;
-- the **rail tracks expand ahead of it** (extend forward as it drives);
-- the **stop circle** (the endstop after the text) **fades out** when the
-  animation triggers.
-CSS/SVG animation on the lockup sub-elements; respect prefers-reduced-motion.
+URL parameter for the default number of trains (1/2/3) preselected on load.
+**nonstopeurope.eu** (user owns it) forwards with nonstop (1 train) preselected;
+**onestopeurope.eu** defaults to onestop. Frontend URL/param handling.
 
-## V. Default-stops parameter + domain routing (2026-07-13)
+## W. Logo drive-off animation
 
-Add a parameter for the default number of stops (1/2/3 trains) preselected on load.
-Domain routing: **nonstopeurope.eu** forwards to onestopeurope with **nonstop
-(1 train)** preselected; **onestopeurope.eu** defaults to **onestop**. (User owns
-nonstopeurope.eu.) Frontend URL/param handling.
+On header-logo hover/click: the train (NOT the wordmark) winks, drives off screen
+right, reappears from the left; rails extend ahead of it; the endstop circle fades
+out. CSS/SVG on the inline lockup in `web/src/App.tsx`; respect
+prefers-reduced-motion. Relates D Phase 3.
 
-## T. Search & planner UX polish — SHIPPED 2026-07-13
+## Z. Station naming + city groups sweep
 
-All four sub-features shipped (commit dc208e6; spec + plan 2026-07-13-planner-
-search-ux-polish). Follow-on/adjacent work lives in items Y (search ranking by
-importance — "rome" still surfaces Romanshorn over Roma), X (reach-line splay),
-and U (multilingual city exonyms). Curated exonyms are extensible in
-`server/app.py::EXONYMS`; the transfer-ring style and the city-choice popup are
-flagged tuning points awaiting the user's visual calibration.
+- **"Ostbahnhof"** (`x:db_fern:226810`) is München Ostbahnhof with the city prefix
+  stripped — rename via `pipeline/station_names.toml` (user-confirmed 2026-07-13).
+  Beware `Graz Ostbahnhof` is a different station. (Id may have churned — see AM;
+  key the override accordingly.)
+- **München city group** (Hbf + Ostbahnhof + Pasing if present) in `cities.toml`.
+- **Sweep for other ungrouped multi-station cities**: Prague (≥4 stations), Hamburg,
+  Frankfurt, Köln, Wien, Milano, … Same C3 mechanism. Rome is item AG.
 
-## X. Reach lines splay one polyline per stop instead of one shared trunk — SHIPPED 2026-07-13
+## AC. Keep serving good data when upstream feeds break
 
-Fixed as diagnosed below, both halves (no user brainstorm — explicit "just do it"):
-- `journeyLegPaths` keeps served stops as EXACT vertices (chaikin no longer cuts
-  the corner at a via stop, which was what splayed identical trunks). Nonstop
-  legs still follow curated corridors, chaikin-smoothed.
-- New `geojson.ts::segmentsGeoJSON` + `legSegments`: the base line layer now
-  draws direction-normalized, deduped stop-to-stop segments (new map source
-  `reach-segments`) — each physical hop drawn once, bucket = fastest journey
-  through it, width class = most direct. Per-destination `linesGeoJSON` remains
-  only for the selected-journey highlight (filter-by-id) and the rider, which
-  share geometry with the segments by construction.
-- Verified on Berlin Hbf reach: trunks collapse to a tree with per-segment color
-  progression outward. Item I (genuinely-direct Paris fan) remains open — that
-  half needs corridor geometry, see NOTE below.
+A DB/SNCF station-id change made the live build abort and silently fall back to the
+five-stop example dataset. Degrade gracefully: keep serving the last known-good
+dataset, quarantine/skip only the affected feed with a loud warning, fail the build
+only when output would be substantially degraded. Relates Q, AD.
 
-### Original report (kept for context)
+## AD. Harden against station-id churn — no hardcoded live ids
 
-User report: a single train that stops at many stations renders as a SEPARATE
-"offspring" line from the origin per stop, not as one line threading through the
-stops it serves. From Nijmegen you see one line ending at Arnhem, another
-"going around Arnhem" to Dieren, another to Zutphen, another to Deventer — all
-the same physical train. Looks bad and is likely part of the southern-France
-mess (relates to item I).
+Tests must not hardcode live feed ids (use synthetic fixtures or match on stable
+properties); the pipeline should treat id churn as normal — stable internal ids
+keyed on name+geo with feed ids as volatile aliases, so an upstream renumber is
+absorbed. User explicitly rejected id-chasing (the 036a1fb test "fix"). Consider
+doing AD + AC as one hardening pass. Relates AM.
 
-**Data is NOT the cause (verified 2026-07-13).** Nijmegen's `reach_*.json`
-journeys carry correct `via` lists: Dieren `via=[Arnhem]`, Zutphen
-`via=[Arnhem, Dieren]`, Deventer `via=[Arnhem, Dieren, Zutphen]`. The stop
-sequence is right in the data.
+## AE. Target chooser in click-disambiguation changes the ORIGIN (bug)
 
-**It's a RENDERING problem** in `web/src/lib/geojson.ts::linesGeoJSON`: it emits
-ONE independent LineString per destination and `journeyLegPaths` chaikin-smooths
-each separately. So the shared trunk (Nijmegen→Arnhem) is drawn once per
-downstream destination, and per-line smoothing rounds the Arnhem corner
-differently each time, so overlapping trunks splay into a fan instead of
-collapsing to a single trunk. Fix directions to brainstorm:
-- **Merge into a tree**: group reach journeys by shared stop-sequence prefix and
-  draw each physical segment (A→B) exactly once; destinations become endpoints on
-  the shared trunk. Biggest, cleanest win.
-- Or dedupe/snap overlapping segments before rendering.
-- Reconsider per-line smoothing so shared segments can't diverge.
+When bunched dots open the station chooser while picking a **target**, selecting
+"City (all stations)" changes the start. Agreed direction (2026-07-14): target
+chooser drops the city entry entirely; sort by trains-to-reach from the current
+origin, then by connection count. Origin chooser unchanged.
 
-NOTE this differs from item I's Paris case: there the trains are genuinely direct
-(`via=[]`), so there is no shared stop-sequence in the data to merge — that needs
-real rail geometry / edge bundling. Same "too many lines" symptom, two mechanisms.
-Do both under one brainstorm; a tree-merge here plus corridor geometry there.
+## AF. Seasonal services: currently detect NOTHING — needs a trustworthy replacement
 
-## Y. Search ranking by station importance — SHIPPED 2026-07-13
+The original GTFS-calendar heuristic flagged 64% of Dortmund's destinations
+seasonal (incl. Dortmund→München, 122 trains/week) because DB defines services per
+timetable period; it was **dropped entirely** (bb2d23b), so today nothing is
+called seasonal. Real seasonal services (some Nightjets, Alpine/summer routes) do
+exist. Replacement directions: derive from OBSERVED operating days (union
+day-of-week flags × date range + calendar_dates exceptions, flag only when that
+union covers a small share of the feed window), and/or a short **curated**
+seasonal list outside the feeds (see `docs/data-sources.md` "no source for").
+Do NOT resurrect a calendar-span-vs-horizon constant. Feeds into AO's
+presentation rework.
 
-Sort key is now `(prefix-before-substring, capitals-first, -n_dest, name-length)`
-(commit b42de81). Fixed "barce"→Barcelona and "rome"→Roma; capitals-on-top is a
-general win. NOTE: `n_dest` alone would have ranked Romanshorn ABOVE Roma (it has
-more reach), so `is_capital` carries the Roma case — which fully resolves anyway
-once Italian data lands.
+## AG. Rome needs a city grouping
 
-## Z. "Ostbahnhof" is München Ostbahnhof; add a München city option (added 2026-07-13)
+Termini, Tiburtina, … are ungrouped. Same mechanism as Z sweep.
 
-Two parts:
-- **Naming/merge:** the station shown as bare **"Ostbahnhof"** (`x:db_fern:226810`,
-  48.128, 11.605) is **München Ostbahnhof** with its city prefix stripped — it sits
-  right beside `München Hbf` (`x:db_fern:127002`, 48.14, 11.56). **Rename it to
-  "München Ostbahnhof"** (user-confirmed 2026-07-13) so it's findable/groupable (fix
-  via `pipeline/station_names.toml` override keyed on `x:db_fern:226810`), and if a
-  second feed carries the same station under another name/id they
-  should merge (validator blind spot: different names, <500 m — see the note below and
-  item Q observability). Watch out: `Graz Ostbahnhof` (AT) is a DIFFERENT station.
-- **City option:** add **München** to `pipeline/cities.toml` grouping München Hbf +
-  München Ostbahnhof (and München-Pasing etc. if present) so the C3 city-union works
-  for Munich like it does for Paris. Relates to C3 (`cities.toml` → `cities.json`) and
-  item T Unit 4 (map city-selection popup).
-- **More multi-station cities need groups (added 2026-07-13):** the 15-city
-  `cities.toml` is missing obvious multi-station cities. **Prague** has ≥4 (Praha hl.n.,
-  Praha-Holešovice, Praha-Podbaba, Praha-Libeň) and needs a group too. Do a sweep for
-  other ungrouped multi-station cities (Hamburg, Frankfurt, Köln, Wien, Milano, etc.)
-  and add the clear ones. Same C3 mechanism.
+## AH. Lisbon and Copenhagen are missing capital stars
 
-## AA. Dark-mode veil tooltip unreadable — SHIPPED 2026-07-13
+Both render without the `capital-stars` marker (`is_capital` presumably unset).
 
-Fixed as sketched: the popup gets `className: "veil-popup"`; `index.css` themes
-`.veil-popup .maplibregl-popup-content` (background/color/shadow via theme vars)
-plus all 8 anchor-side `.maplibregl-popup-tip` border colours. Verified computed
-styles in dark mode (#0B1533 surface, #E8ECF7 text, tip matches). NOTE: local
-`data/out` subset has no coverage.json, so the real veil can't render locally —
-verified via injected popup markup instead.
+## AI. Density-aware station hiding on zoom
 
-## AC. Keep serving good map data when upstream feeds break (added 2026-07-14)
+Portugal/Denmark expose essentially every regional stop → clutter. Current zoom
+declutter is global-threshold and was reverted to near-inert (2026-07-13) because
+ES/FR emptied out while DE/AT/PL stayed overfull. Rework must normalise by local
+station density (hide low-importance stops where density is high, reveal on
+zoom-in), not a global n_dest threshold. Will get MORE urgent if regional trains
+land (AR).
 
-Upstream feed changes must not take the whole website down. A DB/SNCF change to
-three station ids made the live-feed build abort and silently returned the site to
-the five-stop example fallback with no paths (the immediate id changes were fixed in
-`9d99eea`). Make the pipeline and deployment degrade gracefully when feeds change
-ids, drop stations, or ship malformed data: keep serving the last known-good dataset,
-quarantine or skip only the affected feed/stations with a loud build warning, and
-fail the build only when the resulting output would be substantially degraded. The
-precise design is open, but another isolated upstream change must not replace the
-working site with example data. Relates to Q (persistent unfit-data reporting).
+## AJ. Rider still swings near stations (low priority)
 
-## AD. Harden against station-id churn — no hardcoded live ids (added 2026-07-14)
+Station-approach stubs (median 14 m) point sideways off the running line and the
+~350 m `BEARING_WINDOW_KM` look-ahead still sees them near stops. Options: widen
+the window near leg ends, damp rotation in the dwell approach, or steer by track
+while drawing to the station. User: "not too bad".
 
-User is explicitly skeptical of the 036a1fb approach: the 6 failing tests were
-"fixed" by swapping in the NEW live DB station ids — but upstream ids demonstrably
-change (that's what broke the site, see AC), so the next id churn breaks the same
-tests again. Hardening, not id-chasing:
-- **Tests must not hardcode live feed ids.** Use synthetic fixtures, or derive
-  expected ids from the fixture input, or match on stable properties (name +
-  coordinates) instead of raw `x:db_fern:NNNNNN` literals.
-- **Pipeline:** treat id churn as a normal, expected upstream event. Extend the
-  9d99eea merge-changed-ids logic into a general mechanism (stable internal ids
-  keyed on name+geo, with feed ids as volatile aliases), so an upstream renumber
-  is absorbed instead of propagating through data files, reach caches, and tests.
-- Relates directly to AC (graceful degradation) and Q (surface what changed);
-  consider doing AD and AC as one hardening pass.
+## AL. `ose paths` must fit in <5 GB RAM
 
-## AE. Target chooser in click-disambiguation changes the ORIGIN (bug, added 2026-07-14)
+Production box has 7 GB total / ~5 GB free; `ose paths` peaks at 5.9 GB RSS, so
+`rail_paths.json` is built on a workstation and committed as an artifact. Goal:
+whole stage under 5 GB so the server cron can do a genuine full recompute and the
+committed artifact goes away. Memory sinks: `read_rail_network` holds all 8.6M node
+locations in Python dicts; ideas: stream per-country and merge border-crossing
+ways, numpy/compact arrays for coords, drop node locations once contracted edges
+hold polylines, batch hop routing.
 
-When bunched dots trigger the station chooser while picking a **target**, selecting
-"City (all stations)" changes the **start** instead of the target. To avoid
-re-wiring the targeting, agreed direction (user, 2026-07-14):
-- **Target chooser:** drop the "City (all stations)" entry entirely; sort stations
-  by **number of steps/trains to reach from the current origin** (primary), then by
-  **size (connection count)** (secondary).
-- **Origin chooser:** keep the current ranking unchanged (bold "City (all
-  stations)" first, rest by connections — b43faec).
-Relates to C (click disambiguation) and the shipped popup-ranking note below.
+## AM. Station ids are not stable across feed refreshes (breaks every shared link)
 
-## AB. all-stations fade/pin opacity expression is invalid — SHIPPED 2026-07-13
+`x:db_fern:569849` was Berlin Hbf in one build and an unrelated minor station in
+the next (Berlin Hbf became `x:db_fern:414176`). Every shared/bookmarked URL
+silently points at a DIFFERENT station after a refresh; committed sample reach
+files go stale; any future saved state is unsafe. Fix direction: canonical ids from
+stable keys (UIC where present, else hash of normalized name + rounded coords) plus
+a `station_id_aliases` map so retired ids keep resolving. The merge step already
+reconciles identity; it's just not what the public id is keyed on.
+**Do before inviting people to share links.** Relates AD.
 
-`allStationOpacityExpression` now keeps `zoom` as the input of the outer
-`interpolate`; each zoom-stop output uses a zoom-free id `match`. This retains
-the established zoom decluttering, fades non-pinned stations during reach and
-journey views, and pins the origin plus journey stations at 0.7. Focused tests
-assert the generated expression has no nested `zoom` and retains both fade and
-pin branches.
+---
+
+# Train-nerd feedback round (dad, 2026-07-15)
+
+Seven items; the path-routing one is folded into item I above.
+
+## AN. Mobile layout
+
+The site is not adjusted to phones at all. Direction to brainstorm: on mobile,
+hide the UI by default except the ACTIVE box (start or target), with a
+handle/arrow to pull the full panel up (bottom-sheet pattern). Needs a design
+round; touch targets and the click-disambiguation popup (AE) are affected too.
+
+## AO. Frequency info is not understandable — visualise it
+
+"6/7 sampled days", "available on every sampled day", "24.9 trains per day" are
+not straightforward to a first-time reader. Idea (dad's wish): a compact,
+colourful visualisation of how many connections run per sampled day, and within
+each day split into morning / afternoon / evening. Clicking it expands the full
+connection tables — available, but never in your face (overload). Data check
+needed: reach files currently carry counts + a best journey, not per-departure
+buckets — the pipeline likely needs to emit departure-time histograms per
+destination. Relates AQ (same data), AF (seasonal wording), B's cautious-sampling
+language (the design constraint "evidence, not promise" still holds).
+
+## AP. Auto-flag / auto-merge station near-duplicates (Stuttgart case)
+
+Stuttgart shows 4 stations of which 3 are just platforms — on the LIVE map, so the
+existing merge machinery didn't catch them. Wanted: automatic flagging of suspect
+near-duplicates (different names <100 m, platform-like names, same-name clusters)
+surfaced for decisions, and/or auto-merging where safe. Builds on the validator
+blind spot note below and Q (persistent build report). Cross-feed aliasing exists
+(`station_aliases.toml`); this is about SAME-feed platform granularity and about
+surfacing rather than silently passing validation.
+
+## AQ. Departure-time filter
+
+A scale/slider to restrict shown connections to certain starting times (e.g. only
+morning departures). Requires per-journey departure times in the reach data
+(currently only the best sampled journey is retained per destination) — likely the
+same pipeline change AO needs. UI: fits the planner panel; consider interaction
+with the 1/2/3-trains selector and V (URL params).
+
+## AR. Regional trains (feasibility research first)
+
+Dad wants regional trains. Reality check needed before any brainstorm:
+- **Scale:** in DE alone this multiplies stations and trips massively (gtfs.de
+  regional feed vs the current long-distance one); compute cost for RAPTOR ×
+  stations × sampled week, reach-file count/size, AL's 5 GB server budget, AI's
+  clutter problem.
+- **Consistency:** other countries ALREADY include regional-ish products (DK RE,
+  PT R/IR, PL); in some networks there is no clean long-distance/regional split.
+- **Product:** should be a toggle if it ships, not a default.
+Deliverable: a sizing/feasibility research doc, then decide.
+
+## AS. Mode/route dominance policy (FlixBus 8 h vs train 3 h)
+
+If a bus (or a slow alternative train route) takes 8 h where a train takes 3 h,
+what do we show and what do we filter? Needs an explicit dominance/filtering
+policy: e.g. drop options slower than k× the fastest, or per-mode toggles, or show
+the fastest per mode. Applies today to alternative train routes and becomes acute
+if FlixBus (K) or regional trains (AR) land. Product decision with the user.
+
+---
 
 ## Smaller deferred notes
 
-- **Click-disambiguation popup ranking — SHIPPED 2026-07-14:** when clicking
-  bunched-up station dots, put the "City (all stations)" entry first and in
-  **bold** when one exists, then sort the remaining stations by connection count
-  (with stable name/id ties), matching the ranking already used by search.
-
-- **Pre-existing flaky compute test on Python 3.14 (found 2026-07-13):**
-  `tests/test_compute.py::test_compute_all_sets_is_capital` FAILS on `main`
-  (independent of any recent change) with `capitals.toml: no station matches
-  LA='Alpha Hbf'`. Cause: the test does `os.chdir(tmp_path)` then runs
-  `compute_all`, but Python 3.14 no longer defaults `multiprocessing` to `fork`,
-  so worker processes don't inherit the changed cwd and read the wrong (or no)
-  `capitals.toml`. codex also saw compute tests fail under a sandboxed
-  forkserver. Fix by passing an explicit path into the capitals loader (don't
-  rely on cwd) or setting the mp start method in the test. Not caused by search
-  or the item-T work.
-
-- **Outdated logo/brand assets cleanup (added 2026-07-12):** several brand files
-  linger unused after the logo went inline in `web/src/App.tsx`. `web/public/
-  logo-mascot.svg` and `logo-mascot-light.svg` are referenced nowhere;
-  `logo-train-light.svg` and `logo-lockup.svg` were already deleted. Audit
-  `web/public/*` + `design/logo/*` and drop what nothing imports (keep the
-  Inkscape source `onestopeurope-lockup-A1.svg` and `favicon.svg`). The header
-  logo needs a real ExtraBold: ship `barlow-…-800.woff2` (only 400/600/700 are
-  bundled) so the wordmark can use weight 800 instead of falling back to 700.
-
-- **Ł-norm fix (from PL ingestion review 2026-07-11):** NFKD cannot decompose
-  stroke letters (ł/Ł, also ø, đ), so `_norm` drops them — "Główny" →
-  "gowny" never matches "Glowny". 33 of 44 PKP aliases exist ONLY for this.
-  Mapping ł→l (etc.) in `_norm`, guarded by the existing <500 m rule, would
-  auto-merge most and shrink the alias block. Document beside the ue/oe/ae
-  limitation in `_norm`'s docstring when done.
-- **Validator blind spot (renfe T3 + review 2026-07-11):** `validate()` only
-  flags <500 m duplicates whose names normalize EQUAL; the renfe French stops
-  ("Marseille St Charles" vs "Saint-Charles") passed a "clean" build and were
-  caught only by a manual any-name scan. Consider a <100 m any-name cross-feed
-  warning in validation.
-- **meta.json under-reports feeds:** `data/out/meta.json` lists only the five
-  original feeds — renfe/pkp were curl'd targeted (per recipe) and never enter
+- **Flaky compute test on Python 3.14:**
+  `tests/test_compute.py::test_compute_all_sets_is_capital` fails on `main` —
+  `os.chdir(tmp_path)` + no-fork multiprocessing means workers read the wrong
+  `capitals.toml`. Fix: pass an explicit path into the capitals loader or set the
+  mp start method in the test.
+- **Ł-norm fix:** NFKD can't decompose stroke letters (ł/Ł, ø, đ) so `_norm` drops
+  them ("Główny" → "gowny"); 33 of 44 PKP aliases exist only for this. Map ł→l
+  (etc.) in `_norm`, guarded by the <500 m rule; document beside the ue/oe/ae note.
+- **Validator blind spot:** `validate()` only flags <500 m duplicates whose names
+  normalize EQUAL ("Marseille St Charles" vs "Saint-Charles" passed clean).
+  Consider a <100 m any-name cross-feed warning. Now largely subsumed by AP.
+- **meta.json under-reports feeds:** targeted-curl'd feeds never enter
   `fetch_meta.json`, which compute copies. Fix when meta drives any UI.
-- Search only finds stations that have reach files (`has_reach` gate in
-  `server/app.py::search`) — fine today, revisit when coverage grows.
-- Cross-feed duplicate trains observed (ICE 82 Paris–Frankfurt appears in both SNCF
-  and DB feeds as separate trips) — may double-count `direct_per_day`; worth checking
-  when touching compute.
-- Pre-existing deferred minors from the build ledger still open: `remap_trips` in-place
-  mutation trap, dead `uic_regex` comment, O(n²) validate check, search `limit`
-  validation, map `easeTo` re-centering on every filter change.
-- Final-review note (sncf-labels): document near through.py that SNCF ICE numbers
-  (95xx) are disjoint from db_fern ICE numbers — a future feed refresh with a shared
-  number would silently start joining.
-
-## 2026-07-14 (user session: rail geometry)
-
-- **AF — Seasonal detection is broken (false positives everywhere).** User report:
-  Dortmund–Munich is labelled seasonal but obviously isn't. Confirmed from the
-  live data: Dortmund→München Hbf has direct trains on all 7 sampled days,
-  122 direct trips/week (17.4/day), and is still `seasonal: true` /
-  `availability: "seasonal_or_limited"`. **64% of Dortmund's 1558 destinations
-  are flagged seasonal** — a rule that fires on two-thirds of everything is not
-  detecting seasonality.
-  Cause: `pipeline/gtfs.py::limited_seasonal_services` flags a service when its
-  GTFS calendar span is `>= LIMITED_SERVICE_SHORTFALL_DAYS` (28) shorter than the
-  feed's whole validity window. DB publishes a long horizon but defines services
-  per timetable period, so almost every ordinary service looks "short". The rule
-  measures the length of a calendar row, not whether the train only runs in
-  summer. Flows to the dashed "infrequent" line style via
-  `Destination.frequency.seasonal` → `web/src/lib/geojson.ts::frequencyClass`.
-  Fix direction: derive seasonality from OBSERVED operating days — union the
-  operating days (calendar day-of-week flags x date range, plus calendar_dates
-  exceptions) of every trip serving a destination, and only call it limited when
-  that union covers a small share of the feed window. Do NOT just retune the
-  28-day constant; that only moves the false-positive line.
-  Related: `active_months` is similarly misleading (it reports `["Jul"]` merely
-  because we sample one week in July, not because service stops in August).
-
-- **AG — Rome needs a city grouping.** Rome's stations (Termini, Tiburtina, ...)
-  are not grouped into a city union the way other multi-station cities are.
-  See `pipeline`/`cities` grouping + `web/src/lib/cities.ts`.
-
-- **AH — Lisbon and Copenhagen are missing capital stars.** Both are capitals but
-  render without the `capital-stars` marker (`is_capital` presumably unset).
-
-- **AI — Density-aware station hiding on zoom.** Some countries expose a LOT of
-  small stations (Portugal, Denmark — essentially every regional stop), which
-  clutters the map. Current `stationDotOpacityByZoom` / `dotRadiusExpression`
-  fade by zoom alone; a density-aware rule (hide low-importance stops where
-  station density is high, reveal on zoom-in) would address it without
-  hardcoding per-country rules.
-
-- **AJ — Rider still swings near stations.** User (2026-07-14): mostly good on the
-  open track now, but the rider still turns oddly right at stations. Cause is real
-  geometry, not the smoothing: station approach tracks genuinely enter the city at
-  sharp angles, and each hop is stitched to the exact station coordinate via a short
-  stub (median 14 m, p90 38 m) that points sideways off the running line. The
-  ~350 m look-ahead window (`BEARING_WINDOW_KM` in `web/src/lib/ride.ts`) averages
-  the open-track case but still sees the stub near a stop. Options: widen the window
-  near leg ends, damp rotation rate while inside the dwell approach, or drop the
-  stub from the rider's path (draw to the station, but steer by the track). Low
-  priority — user says "not too bad".
-
-- **AK — No timetable-operator attribution in the UI.** We credit OpenStreetMap
-  (ODbL, in the map attribution control) but credit NO feed operator. `feeds.toml`
-  explicitly requires retaining attribution for CP ("CP - Comboios de Portugal"),
-  Trenitalia, and Renfe — all "No licence – No contract" / public-sector-reuse
-  sources where attribution is the condition of use — plus Rejseplanen. Needs a
-  credits/about surface listing the data sources (see `docs/data-sources.md`).
-  **Do before showing the site publicly.**
-
-- **AL — `ose paths` must fit in <5 GB RAM (blocks full recompute on the server).**
-  The production box (aaronbussche.eu) has **7 GB RAM total / ~5 GB free** and a
-  95%-full disk. `ose paths` peaks at **5.9 GB RSS** and needs several GB of
-  transient disk for the largest Geofabrik extract, so it cannot run there: the
-  weekly cron does `fetch → build → compute` only, and `rail_paths.json` is built
-  on a workstation and committed to the repo as an artifact (see
-  `run-trains-pipeline.sh` and `trains/pipeline.Dockerfile` on the server).
-  Goal: get the whole stage under **5 GB RAM at all times** so the server can do a
-  genuine full recompute and the committed artifact can go away.
-  Where the memory goes: `read_rail_network` holds every rail way + all 8.6M node
-  locations for ALL of Europe in Python dicts at once, then `build_graph` and the
-  STRtree add more. Ideas: stream per-country and merge only border-crossing ways;
-  store node coords in numpy arrays / a compact array keyed by index rather than
-  `dict[int, tuple[float, float]]`; drop node locations once the contracted edges
-  hold their polylines; route hops in batches. Also worth re-checking the disk
-  floor (extracts are already downloaded/filtered/deleted one country at a time,
-  so peak disk is ~one extract, not 24 GB).
-
-- **AM — `db_fern` station ids are not stable across feed refreshes (breaks every
-  shared link).** The gtfs.de feed reissues its stop ids, so a canonical station id
-  changes identity from one weekly run to the next. Concretely, on 2026-07-14:
-  `x:db_fern:569849` was **Berlin Hbf** in the live data set (1248 destinations),
-  and in the very next build the same id is an unrelated minor station (152
-  destinations) while Berlin Hbf has become `x:db_fern:414176` (1472 destinations).
-  Consequences: (1) every URL a user has shared or bookmarked silently points at a
-  *different station* after a refresh — worse than 404, it looks like real data;
-  (2) reach files force-added as repo samples (`data/out/reach_x:db_fern:*.json`)
-  are keyed by ids that no longer exist; (3) any future user-facing state (saved
-  trips, favourites) built on these ids is unsafe.
-  Fix direction: stop deriving canonical ids from a feed's stop id. Prefer a stable
-  key — UIC code where we have one, else a hash of (normalized name, rounded
-  coordinates) — and keep a `station_id_aliases` map from retired feed ids to the
-  canonical id so old links keep resolving. The merge step already reconciles
-  stations across feeds by UIC/proximity/name, so the stable identity largely
-  exists; it just is not what we key the public id on.
-  **Do before inviting people to share links.**
+- Search only finds stations with reach files (`has_reach` gate in
+  `server/app.py::search`) — revisit when coverage grows.
+- **Cross-feed duplicate trains** (ICE 82 Paris–Frankfurt in both SNCF and DB
+  feeds) may double-count `direct_per_day` — check when touching compute.
+- Deferred minors from the build ledger: `remap_trips` in-place mutation trap, dead
+  `uic_regex` comment, O(n²) validate check, search `limit` validation, map
+  `easeTo` re-centering on every filter change.
+- Document near `through.py` that SNCF ICE numbers (95xx) are disjoint from
+  db_fern ICE numbers — a future refresh with a shared number would silently join.
