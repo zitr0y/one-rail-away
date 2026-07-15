@@ -203,63 +203,64 @@ def build(
     feed_validity_by_date: dict[str, dict[str, dict[str, object]]] = {}
 
     # Calendar files are parsed exactly ONCE per GTFS feed here (backlog AT):
-    # `cal` is reused below for the coverage window, the "absent from week"
-    # probe, and every requested day's active-service-id set, with zero
-    # further calendar.txt/calendar_dates.txt reads. NeTEx feeds have no GTFS
-    # calendar; their window comes from the UIC operating periods instead and
-    # they get no absent-service probe (unsupported for that format today).
-    feed_calendars: dict[str, object] = {}
+    # `cal` is reused for the coverage window, the "absent from week" probe,
+    # and every requested day's active-service-id set, with zero further
+    # calendar.txt/calendar_dates.txt reads. NeTEx feeds have no GTFS calendar;
+    # their window comes from the UIC operating periods instead and they get no
+    # absent-service probe (unsupported for that format today).
+    #
+    # One feed's calendar is resident at a time: `cal` is rebound (freed) each
+    # iteration. Holding every feed's parsed calendar simultaneously OOM-killed
+    # the production build (2026-07-15) -- all-transit feeds carry millions of
+    # calendar_dates rows each.
+    #
+    # The coverage filter keeps explicit debug dates in check: an out-of-horizon
+    # date is not zero-service evidence and should not trigger a large
+    # stop_times parse. Per-day active-service-id sets are precomputed here so
+    # worker processes never touch calendar files at all -- see
+    # `_load_feed_samples`.
     feed_windows: dict[str, tuple[str, str] | None] = {}
+    feed_days: dict[str, list[date]] = {}
+    absent_services: dict[str, set[str]] = {}
+    day_service_ids: dict[str, dict[str, set[str]]] = {}
     for name, cfg in feeds.items():
         zip_path = raw_dir / f"{name}.zip"
-        if not zip_path.exists():
-            continue
-        if cfg.format == "netex":
-            feed_windows[name] = netex.feed_validity_window(zip_path)
-        else:
-            cal = load_calendar(zip_path)
-            feed_calendars[name] = cal
-            feed_windows[name] = calendar_window(cal)
-
-    # The caller normally supplies per-feed weeks.  Keep this coverage filter
-    # for explicit debug dates, where an out-of-horizon date is not zero-service
-    # evidence and should not trigger a large stop_times parse.
-    feed_days: dict[str, list[date]] = {}
-    for name in feeds:
+        cal = None
+        if zip_path.exists():
+            if cfg.format == "netex":
+                feed_windows[name] = netex.feed_validity_window(zip_path)
+            else:
+                cal = load_calendar(zip_path)
+                feed_windows[name] = calendar_window(cal)
         window = feed_windows.get(name)
         requested = (feed_sample_dates or {}).get(name, dates)
         if window is None:
             feed_days[name] = list(requested)
-            continue
-        usable = [day for day in requested if window[0] <= day.strftime("%Y%m%d") <= window[1]]
-        feed_days[name] = usable
-        skipped = [day for day in requested if day not in usable]
-        if skipped:
-            logger.warning(
-                "feed %s: skipping %d/%d probes outside published GTFS coverage %s..%s (%s)",
-                name,
-                len(skipped),
-                len(requested),
-                window[0],
-                window[1],
-                ", ".join(day.isoformat() for day in skipped),
-            )
-
-    # Per-day active-service-id sets, precomputed here (in memory, from the
-    # already-parsed `cal`) so worker processes never touch calendar.txt /
-    # calendar_dates.txt at all -- see `_load_feed_samples`.
-    absent_services: dict[str, set[str]] = {}
-    day_service_ids: dict[str, dict[str, set[str]]] = {}
-    for name, cfg in feeds.items():
-        if cfg.format == "netex" or not feed_days.get(name):
-            continue
-        cal = feed_calendars[name]
-        absent = calendar_absent_from_week(cal, feed_days[name])
-        per_day = {day.isoformat(): calendar_active_services(cal, day) for day in feed_days[name]}
-        if absent:
-            absent_services[name] = absent
-            per_day[_ABSENT_PROBE] = absent
-        day_service_ids[name] = per_day
+        else:
+            usable = [
+                day for day in requested if window[0] <= day.strftime("%Y%m%d") <= window[1]
+            ]
+            feed_days[name] = usable
+            skipped = [day for day in requested if day not in usable]
+            if skipped:
+                logger.warning(
+                    "feed %s: skipping %d/%d probes outside published GTFS coverage %s..%s (%s)",
+                    name,
+                    len(skipped),
+                    len(requested),
+                    window[0],
+                    window[1],
+                    ", ".join(day.isoformat() for day in skipped),
+                )
+        if cal is not None and feed_days[name]:
+            absent = calendar_absent_from_week(cal, feed_days[name])
+            per_day = {
+                day.isoformat(): calendar_active_services(cal, day) for day in feed_days[name]
+            }
+            if absent:
+                absent_services[name] = absent
+                per_day[_ABSENT_PROBE] = absent
+            day_service_ids[name] = per_day
 
     tasks = [
         (
