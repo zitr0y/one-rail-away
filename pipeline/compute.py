@@ -11,7 +11,6 @@ on disk, so a stale file for a renamed canonical id (Konstanz alias,
 
 import json
 import os
-from collections import Counter
 from concurrent.futures import ProcessPoolExecutor
 from datetime import UTC, datetime
 from pathlib import Path
@@ -21,29 +20,7 @@ from pipeline.capitals import load_capitals
 from pipeline.cities import ResolvedTransfer, load_cities, load_transfers
 from pipeline.coverage import build_coverage, covered_from_feeds
 from pipeline.models import Destination, Frequency, Journey, Leg, ReachFile, Station, Trip
-from pipeline.raptor import _index, compute_reachability
-
-
-def _direct_counts(trips: list[Trip], origin: str) -> Counter:
-    """Count, per destination, the number of distinct trips that serve `origin`
-    and then later serve that destination in stop order (mid-route boarding
-    counts; boarding must strictly precede the destination stop).
-
-    Trips never calling at `origin` cannot contribute (they fail the
-    `seen_origin` test at every stop), so we reuse raptor's cached per-day
-    index and scan only `by_station[origin]` -- a subsequence, in the same
-    ascending order a full scan would visit them, of the trip list. Counter
-    sums are order-independent, so this is exact, not an approximation."""
-    counts: Counter = Counter()
-    trip_stops, by_station = _index(trips)
-    for ti in by_station.get(origin, ()):
-        seen_origin = False
-        for station, _arr, _dep in trip_stops[ti]:
-            if seen_origin:
-                counts[station] += 1
-            if station == origin:
-                seen_origin = True
-    return counts
+from pipeline.raptor import compute_departure_evidence, compute_reachability
 
 
 MONTH_NAMES = ("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
@@ -103,13 +80,22 @@ def _aggregate_reach(
     sample_dates = list(trips_by_date)
     evidence: dict[str, dict[str, list[Journey]]] = {}
     directs: dict[str, dict[str, int]] = {}
+    histograms: dict[str, dict[str, list[int]]] = {}
     for day, trips in trips_by_date.items():
         for dest, journeys in compute_reachability(
             trips, station_id, footpaths=footpaths
         ).items():
             evidence.setdefault(dest, {})[day] = journeys
-        for dest, n in _direct_counts(trips, station_id).items():
-            directs.setdefault(dest, {})[day] = n
+        departure_evidence = compute_departure_evidence(trips, station_id, footpaths=footpaths)
+        for dest, departures in departure_evidence.items():
+            direct_count = sum(item.direct for item in departures)
+            if direct_count:
+                directs.setdefault(dest, {})[day] = direct_count
+            bins = [0] * 24
+            for item in departures:
+                bins[item.departure_min // 60 % 24] += 1
+            if any(bins):
+                histograms.setdefault(dest, {})[day] = bins
     # `extra_trips` is the one extra probe loaded for services absent from
     # every sampled date (see services_absent_from_week / build.py), purely so
     # a destination reached only by them still shows up here. Keyed under a
@@ -172,12 +158,18 @@ def _aggregate_reach(
         # Legacy field remains present.  On a multi-day run it is the rounded
         # average on observed direct days; consumers should prefer frequency.
         direct_per_day = round(freq.direct_per_active_day or 0)
+        zero_row = [0] * 24
+        histogram = {
+            day: histograms.get(dest, {}).get(day, zero_row).copy()
+            for day in sample_dates
+        }
         destinations.append(
             Destination(
                 id=dest,
                 direct_per_day=direct_per_day,
                 journeys=tiers,
                 frequency=freq,
+                histogram=histogram,
             )
         )
     return destinations

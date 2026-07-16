@@ -81,6 +81,214 @@ def _write_transfer_graph(tmp_path, include_transfer):
     return graph, cities_path
 
 
+def _write_two_date_graph(tmp_path, trips_by_date, extra_trips=None, include_transfer=False):
+    graph = tmp_path / "graph"
+    graph.mkdir()
+    stations = [
+        {"id": "origin", "name": "Origin", "lat": 50, "lon": 8, "country": "XX"},
+        {
+            "id": "junction",
+            "name": "Junction",
+            "lat": 50.1,
+            "lon": 8.1,
+            "country": "XX",
+        },
+        {
+            "id": "south",
+            "name": "South Terminal",
+            "lat": 50.2,
+            "lon": 8.2,
+            "country": "XX",
+        },
+        {
+            "id": "north",
+            "name": "North Terminal",
+            "lat": 50.3,
+            "lon": 8.3,
+            "country": "XX",
+        },
+        {
+            "id": "destination",
+            "name": "Destination",
+            "lat": 51,
+            "lon": 9,
+            "country": "XX",
+        },
+    ]
+    sample_dates = list(trips_by_date)
+    graph.joinpath("stations.json").write_text(
+        json.dumps({"sample_date": sample_dates[0], "stations": stations})
+    )
+    graph.joinpath("trips.json").write_text(
+        json.dumps(
+            {
+                "trips": [
+                    trip.model_dump()
+                    for trips in trips_by_date.values()
+                    for trip in trips
+                ],
+                "trips_by_date": {
+                    day: [trip.model_dump() for trip in trips]
+                    for day, trips in trips_by_date.items()
+                },
+                "extra_trips": [trip.model_dump() for trip in extra_trips or []],
+            }
+        )
+    )
+    cities_path = tmp_path / "cities.toml"
+    cities_path.write_text(
+        '[cities]\nMetroville = ["South Terminal", "North Terminal"]\n'
+        + (
+            '\n[transfers]\nMetroville = [["South Terminal", "North Terminal", "metro", 20]]\n'
+            if include_transfer
+            else ""
+        )
+    )
+    return graph, cities_path
+
+
+def test_compute_writes_exact_two_date_hourly_histogram_without_changing_frequency(tmp_path):
+    trips_by_date = {
+        "2026-07-14": [
+            Trip(
+                trip_id="tuesday-midnight",
+                train="Tuesday Midnight",
+                stops=[
+                    StopTime(station="origin", arr=15, dep=15),
+                    StopTime(station="destination", arr=75, dep=75),
+                ],
+            ),
+            Trip(
+                trip_id="tuesday-morning",
+                train="Tuesday Morning",
+                stops=[
+                    StopTime(station="origin", arr=705, dep=705),
+                    StopTime(station="destination", arr=765, dep=765),
+                ],
+            ),
+            Trip(
+                trip_id="tuesday-afternoon",
+                train="Tuesday Afternoon",
+                stops=[
+                    StopTime(station="origin", arr=725, dep=725),
+                    StopTime(station="destination", arr=785, dep=785),
+                ],
+            ),
+        ],
+        "2026-07-15": [
+            Trip(
+                trip_id="wednesday-evening",
+                train="Wednesday Evening",
+                stops=[
+                    StopTime(station="origin", arr=1110, dep=1110),
+                    StopTime(station="destination", arr=1170, dep=1170),
+                ],
+            ),
+        ],
+    }
+    graph, cities_path = _write_two_date_graph(tmp_path, trips_by_date)
+
+    compute_all(
+        graph,
+        tmp_path / "out",
+        workers=1,
+        feeds_path=tmp_path / "no-feeds.toml",
+        cities_path=cities_path,
+    )
+
+    reach = json.loads((tmp_path / "out" / "reach_origin.json").read_text())
+    destination = next(d for d in reach["destinations"] if d["id"] == "destination")
+    histogram = destination["histogram"]
+    assert list(histogram) == ["2026-07-14", "2026-07-15"]
+    assert all(len(row) == 24 for row in histogram.values())
+    assert histogram == {
+        "2026-07-14": [1 if hour in {0, 11, 12} else 0 for hour in range(24)],
+        "2026-07-15": [1 if hour == 18 else 0 for hour in range(24)],
+    }
+    assert destination["direct_per_day"] == 2
+    assert destination["frequency"]["direct_trips"] == 4
+    assert destination["frequency"]["direct_days"] == 2
+    assert destination["frequency"]["direct_per_active_day"] == 2.0
+
+
+def test_compute_histogram_counts_a_routed_footpath_departure_once(tmp_path):
+    trips_by_date = {
+        "2026-07-14": [
+            Trip(
+                trip_id="to-south",
+                train="To South",
+                stops=[
+                    StopTime(station="origin", arr=480, dep=480),
+                    StopTime(station="south", arr=600, dep=600),
+                ],
+            ),
+            Trip(
+                trip_id="first-onward",
+                train="First Onward",
+                stops=[
+                    StopTime(station="north", arr=630, dep=630),
+                    StopTime(station="destination", arr=690, dep=690),
+                ],
+            ),
+            Trip(
+                trip_id="second-onward",
+                train="Second Onward",
+                stops=[
+                    StopTime(station="north", arr=640, dep=640),
+                    StopTime(station="destination", arr=700, dep=700),
+                ],
+            ),
+        ]
+    }
+    graph, cities_path = _write_two_date_graph(
+        tmp_path, trips_by_date, include_transfer=True
+    )
+
+    compute_all(
+        graph,
+        tmp_path / "out",
+        workers=1,
+        feeds_path=tmp_path / "no-feeds.toml",
+        cities_path=cities_path,
+    )
+
+    reach = json.loads((tmp_path / "out" / "reach_origin.json").read_text())
+    destination = next(d for d in reach["destinations"] if d["id"] == "destination")
+    assert sum(destination["histogram"]["2026-07-14"]) == 1
+    assert destination["histogram"]["2026-07-14"][8] == 1
+    assert destination["direct_per_day"] == 0
+    assert destination["frequency"]["direct_trips"] == 0
+    assert destination["journeys"][0]["trains"] == 2
+
+
+def test_compute_omits_histogram_for_extra_only_destination(tmp_path):
+    trips_by_date = {"2026-07-14": [], "2026-07-15": []}
+    extra_trips = [
+        Trip(
+            trip_id="extra-direct",
+            train="Extra Direct",
+            stops=[
+                StopTime(station="origin", arr=480, dep=480),
+                StopTime(station="destination", arr=540, dep=540),
+            ],
+        )
+    ]
+    graph, cities_path = _write_two_date_graph(tmp_path, trips_by_date, extra_trips)
+
+    compute_all(
+        graph,
+        tmp_path / "out",
+        workers=1,
+        feeds_path=tmp_path / "no-feeds.toml",
+        cities_path=cities_path,
+    )
+
+    reach = json.loads((tmp_path / "out" / "reach_origin.json").read_text())
+    destination = next(d for d in reach["destinations"] if d["id"] == "destination")
+    assert destination["direct_per_day"] == 0
+    assert "histogram" not in destination
+
+
 def test_compute_all_writes_two_train_journey_with_transfer_leg(tmp_path):
     graph, no_transfer_path = _write_transfer_graph(tmp_path, include_transfer=False)
     compute_all(
