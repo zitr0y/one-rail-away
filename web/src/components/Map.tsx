@@ -324,7 +324,12 @@ export default function MapView(props: Props) {
         .catch(() => {
           // Veil is decorative; a missing coverage.json (404) just means no veil.
         });
+      // Every sync* runs here: their effects no-op while map.current is null,
+      // and props that already arrived (stations resolve before remote tiles
+      // on a warm cache) never re-fire those effects after load.
       syncData();
+      syncStations();
+      syncSelectedLine();
       syncHighlight();
       syncTransfers();
       syncRider();
