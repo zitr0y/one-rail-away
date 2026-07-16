@@ -78,7 +78,9 @@ export function destinationsGeoJSON(
  *  collapses to one drawn segment. */
 export interface LegSegment { key: string; coords: [number, number][] }
 
-function segmentKey(a: string, b: string): string {
+/** Direction-normalized hop key ("idA|idB", ids sorted) — shared with
+ *  smoothPaths.ts, which builds its lookup under the same keys. */
+export function segmentKey(a: string, b: string): string {
   return a < b ? `${a}|${b}` : `${b}|${a}`;
 }
 
@@ -87,14 +89,14 @@ function segmentKey(a: string, b: string): string {
  *  (backlog AU) so per-hop lookups never allocate a `.reverse()` copy. */
 export interface HopGeometry { fwd: [number, number][]; rev: [number, number][] }
 
-/** Precomputed real-track geometry per physical hop, keyed by segmentKey.
- *  Built by `ose paths` (backlog I). */
-export type RailPathLookup = Map<string, HopGeometry>;
+/** Precomputed smoothed geometry per physical hop, keyed by segmentKey.
+ *  Built client-side by smoothPaths.ts (backlog I). */
+export type HopGeometryLookup = Map<string, HopGeometry>;
 
 /** Builds the lookup from the raw `{segmentKey: coords}` payload the API
  *  serves — the one place both orientations get materialized (backlog AU). */
-export function buildRailPathLookup(paths: Record<string, [number, number][]>): RailPathLookup {
-  const lookup: RailPathLookup = new Map();
+export function buildRailPathLookup(paths: Record<string, [number, number][]>): HopGeometryLookup {
+  const lookup: HopGeometryLookup = new Map();
   for (const [key, coords] of Object.entries(paths)) {
     lookup.set(key, { fwd: coords, rev: [...coords].reverse() });
   }
@@ -103,9 +105,9 @@ export function buildRailPathLookup(paths: Record<string, [number, number][]>): 
 
 function hopCoords(
   a: { id: string; station: Station }, b: { id: string; station: Station },
-  railPaths: RailPathLookup | null,
+  hopGeometry: HopGeometryLookup | null,
 ): [number, number][] {
-  const geometry = railPaths?.get(segmentKey(a.id, b.id));
+  const geometry = hopGeometry?.get(segmentKey(a.id, b.id));
   if (geometry && geometry.fwd.length >= 2) {
     return a.id < b.id ? geometry.fwd : geometry.rev;
   }
@@ -113,7 +115,7 @@ function hopCoords(
 }
 
 export function legSegments(
-  leg: Leg, stationsById: Map<string, Station>, railPaths: RailPathLookup | null,
+  leg: Leg, stationsById: Map<string, Station>, hopGeometry: HopGeometryLookup | null,
 ): LegSegment[] {
   const stops = [leg.from, ...leg.via, leg.to]
     .map((id) => ({ id, station: stationsById.get(id) }))
@@ -123,23 +125,23 @@ export function legSegments(
   for (let i = 0; i < stops.length - 1; i++) {
     const a = stops[i];
     const b = stops[i + 1];
-    segments.push({ key: segmentKey(a.id, b.id), coords: hopCoords(a, b, railPaths) });
+    segments.push({ key: segmentKey(a.id, b.id), coords: hopCoords(a, b, hopGeometry) });
   }
   return segments;
 }
 
 /** Per-leg coordinate paths for a journey — shared by linesGeoJSON and the
  *  mascot rider (ride.ts) so the two can never drift. Served stops are EXACT
- *  vertices: real-track geometry must never cut a stop's corner, otherwise
+ *  vertices: hop geometry must never cut a stop's corner, otherwise
  *  journeys sharing a trunk round it differently per destination and the
  *  overlapping trunks splay into a fan (backlog X, user report 2026-07-13).
  *  Paths stay per leg so transfer corners stay sharp (user report 2026-07-09). */
 export function journeyLegPaths(
-  j: Journey, stationsById: Map<string, Station>, railPaths: RailPathLookup | null,
+  j: Journey, stationsById: Map<string, Station>, hopGeometry: HopGeometryLookup | null,
 ): [number, number][][] {
   return j.legs
     .filter(isTrainLeg)
-    .map((leg) => legSegments(leg, stationsById, railPaths))
+    .map((leg) => legSegments(leg, stationsById, hopGeometry))
     .filter((segments) => segments.length > 0)
     .map((segments) => segments.flatMap((s, i) => (i === 0 ? s.coords : s.coords.slice(1))));
 }
@@ -151,7 +153,7 @@ export function journeyLegPaths(
  *  journey through it and the width class (trains) of the most direct one. */
 export function segmentsGeoJSON(
   shownList: ShownEntry[], stationsById: Map<string, Station>,
-  railPaths: RailPathLookup | null,
+  hopGeometry: HopGeometryLookup | null,
 ): FC<LineString> {
   const best = new Map<string, {
     coords: [number, number][]; duration_min: number; trains: number; frequency_class: string;
@@ -159,7 +161,7 @@ export function segmentsGeoJSON(
   for (const { d, j } of shownList) {
     for (const leg of j.legs) {
       if (!isTrainLeg(leg)) continue;
-      for (const segment of legSegments(leg, stationsById, railPaths)) {
+      for (const segment of legSegments(leg, stationsById, hopGeometry)) {
         const prev = best.get(segment.key);
         if (!prev) {
           best.set(segment.key, {
@@ -193,11 +195,11 @@ export function segmentsGeoJSON(
  *  highlight layer; the base layer draws segmentsGeoJSON. */
 export function linesGeoJSON(
   reach: ReachFile, stationsById: Map<string, Station>, maxTrains: MaxTrains, maxMinutes: number,
-  railPaths: RailPathLookup | null,
+  hopGeometry: HopGeometryLookup | null,
 ): FC<LineString> {
   const features: Feature<LineString>[] = [];
   for (const { d, j } of shown(reach, maxTrains, maxMinutes)) {
-    const coords = journeyLegPaths(j, stationsById, railPaths)
+    const coords = journeyLegPaths(j, stationsById, hopGeometry)
       .flatMap((c, i) => (i === 0 ? c : c.slice(1)));
     if (coords.length < 2) continue;
     features.push({
@@ -219,7 +221,7 @@ export function linesGeoJSON(
  *  filtered to that id — proven by test, not just by inspection. */
 export function selectedLineGeoJSON(
   reach: ReachFile | null, selectedDest: string | null, stationsById: Map<string, Station>,
-  maxTrains: MaxTrains, maxMinutes: number, railPaths: RailPathLookup | null,
+  maxTrains: MaxTrains, maxMinutes: number, hopGeometry: HopGeometryLookup | null,
 ): FC<LineString> {
   const empty: FC<LineString> = { type: "FeatureCollection", features: [] };
   if (!reach || !selectedDest) return empty;
@@ -227,7 +229,7 @@ export function selectedLineGeoJSON(
   if (!d) return empty;
   const j = bestJourney(d, maxTrains);
   if (!j || j.duration_min > maxMinutes) return empty;
-  const coords = journeyLegPaths(j, stationsById, railPaths)
+  const coords = journeyLegPaths(j, stationsById, hopGeometry)
     .flatMap((c, i) => (i === 0 ? c : c.slice(1)));
   if (coords.length < 2) return empty;
   return {

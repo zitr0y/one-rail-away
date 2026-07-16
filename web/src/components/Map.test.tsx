@@ -88,7 +88,7 @@ function renderMap(props: Partial<ComponentProps<typeof MapView>> = {}): Root {
     root.render(
       <MapView stations={stations} reach={null} maxTrains={1} maxMinutes={Infinity}
                selectedDest={null} theme="light" cityGroups={{}} armed="from"
-               railPaths={null} onStationClick={() => {}}
+               hopGeometry={null} onStationClick={() => {}}
                onSelectCityOrigin={() => {}} onEmptyClick={() => {}}
                mobile={false} sheetState="collapsed" sheetHasContext={false} {...props} />,
     );
@@ -140,7 +140,7 @@ describe("MapView station sources", () => {
       root.render(
         <MapView stations={stations} reach={null} maxTrains={1} maxMinutes={Infinity}
                  selectedDest={null} theme="light" cityGroups={{}} armed="from"
-                 railPaths={null} onStationClick={onStationClick}
+                 hopGeometry={null} onStationClick={onStationClick}
                  onSelectCityOrigin={onSelectCityOrigin} onEmptyClick={onEmptyClick}
                  mobile={false} sheetState="collapsed" sheetHasContext={false} />,
       );
@@ -154,7 +154,7 @@ describe("MapView station sources", () => {
       root.render(
         <MapView stations={stations} reach={reachA} maxTrains={1} maxMinutes={Infinity}
                  selectedDest={null} theme="light" cityGroups={{}} armed="from"
-                 railPaths={null} onStationClick={onStationClick}
+                 hopGeometry={null} onStationClick={onStationClick}
                  onSelectCityOrigin={onSelectCityOrigin} onEmptyClick={onEmptyClick}
                  mobile={false} sheetState="collapsed" sheetHasContext={false} />,
       );
@@ -168,7 +168,7 @@ describe("MapView station sources", () => {
       root.render(
         <MapView stations={stations} reach={reachA} maxTrains={2} maxMinutes={120}
                  selectedDest={null} theme="light" cityGroups={{}} armed="from"
-                 railPaths={null} onStationClick={onStationClick}
+                 hopGeometry={null} onStationClick={onStationClick}
                  onSelectCityOrigin={onSelectCityOrigin} onEmptyClick={onEmptyClick}
                  mobile={false} sheetState="collapsed" sheetHasContext={false} />,
       );
@@ -180,7 +180,7 @@ describe("MapView station sources", () => {
       root.render(
         <MapView stations={stations} reach={null} maxTrains={2} maxMinutes={120}
                  selectedDest={null} theme="light" cityGroups={{}} armed="from"
-                 railPaths={null} onStationClick={onStationClick}
+                 hopGeometry={null} onStationClick={onStationClick}
                  onSelectCityOrigin={onSelectCityOrigin} onEmptyClick={onEmptyClick}
                  mobile={false} sheetState="collapsed" sheetHasContext={false} />,
       );
@@ -193,7 +193,7 @@ describe("MapView station sources", () => {
       root.render(
         <MapView stations={stations} reach={reachA} maxTrains={2} maxMinutes={120}
                  selectedDest={null} theme="light" cityGroups={{}} armed="from"
-                 railPaths={null} onStationClick={onStationClick}
+                 hopGeometry={null} onStationClick={onStationClick}
                  onSelectCityOrigin={onSelectCityOrigin} onEmptyClick={onEmptyClick}
                  mobile={false} sheetState="collapsed" sheetHasContext={false} />,
       );
@@ -208,7 +208,7 @@ describe("MapView station sources", () => {
       root.render(
         <MapView stations={stations} reach={reachB} maxTrains={2} maxMinutes={120}
                  selectedDest={null} theme="light" cityGroups={{}} armed="from"
-                 railPaths={null} onStationClick={onStationClick}
+                 hopGeometry={null} onStationClick={onStationClick}
                  onSelectCityOrigin={onSelectCityOrigin} onEmptyClick={onEmptyClick}
                  mobile={false} sheetState="collapsed" sheetHasContext={false} />,
       );
@@ -247,7 +247,7 @@ describe("MapView station sources", () => {
     const commonProps = {
       stations, reach: null, maxTrains: 1 as const, maxMinutes: Infinity,
       selectedDest: null, theme: "light" as const, cityGroups: {}, armed: "from" as const,
-      railPaths: null, onStationClick: () => {}, onSelectCityOrigin: () => {}, onEmptyClick: () => {},
+      hopGeometry: null, onStationClick: () => {}, onSelectCityOrigin: () => {}, onEmptyClick: () => {},
     };
 
     act(() => {

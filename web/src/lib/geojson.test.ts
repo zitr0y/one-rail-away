@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import {
   bestJourney, buildRailPathLookup, destinationsGeoJSON, frequencyClass, journeyLegPaths,
   legSegments, linesGeoJSON, segmentsGeoJSON, selectedLineGeoJSON, shown, timeBucket,
-  transferPoints, type RailPathLookup, initialMaxTrains,
+  transferPoints, type HopGeometryLookup, initialMaxTrains,
 } from "./geojson";
 import type { Journey, Leg, ReachFile, Station } from "./types";
 
@@ -300,7 +300,7 @@ const railLeg = (from: string, to: string, via: string[]): Leg =>
   ({ train: "T", dep: "", arr: "", from, to, via });
 
 describe("legSegments with rail paths", () => {
-  const railPaths: RailPathLookup = buildRailPathLookup({
+  const railPaths: HopGeometryLookup = buildRailPathLookup({
     "a|b": [[0, 0], [0.5, 0.4], [1, 0]],
   });
 

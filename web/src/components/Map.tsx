@@ -2,7 +2,7 @@ import maplibregl from "maplibre-gl";
 import { useEffect, useRef } from "react";
 import {
   destinationsGeoJSON, segmentsGeoJSON, selectedLineGeoJSON, shown, bestJourney, journeyLegPaths,
-  transferPoints, type MaxTrains, type RailPathLookup,
+  transferPoints, type MaxTrains, type HopGeometryLookup,
 } from "../lib/geojson";
 import { buildRideTimeline, rideStateAt, riderTransform, smoothBearing } from "../lib/ride";
 import { riderSvg } from "../lib/ridersvg";
@@ -50,7 +50,7 @@ interface Props {
   theme: Theme;
   cityGroups: CityGroups;
   armed: "from" | "to";
-  railPaths: RailPathLookup | null;
+  hopGeometry: HopGeometryLookup | null;
   onStationClick: (pick: FeaturePick) => void;
   onSelectCityOrigin: (city: string, memberIds: string[]) => void;
   onEmptyClick: () => void;
@@ -369,13 +369,13 @@ export default function MapView(props: Props) {
   function syncData() {
     const m = map.current;
     if (!m) return;
-    const { stations, reach, maxTrains, maxMinutes, railPaths } = propsRef.current;
+    const { stations, reach, maxTrains, maxMinutes, hopGeometry } = propsRef.current;
     const byId = new Map(stations.map((s) => [s.id, s]));
     const shownList = reach ? shown(reach, maxTrains, maxMinutes) : [];
 
     (m.getSource("reach-segments") as maplibregl.GeoJSONSource).setData(
       reach
-        ? (segmentsGeoJSON(shownList, byId, railPaths) as never)
+        ? (segmentsGeoJSON(shownList, byId, hopGeometry) as never)
         : (EMPTY as never));
     (m.getSource("reach-dots") as maplibregl.GeoJSONSource).setData(
       reach ? (destinationsGeoJSON(shownList, byId) as never) : (EMPTY as never));
@@ -392,7 +392,7 @@ export default function MapView(props: Props) {
   }
 
   useEffect(syncData, [
-    props.stations, props.reach, props.maxTrains, props.maxMinutes, props.railPaths,
+    props.stations, props.reach, props.maxTrains, props.maxMinutes, props.hopGeometry,
   ]);
 
   // Static per-station sources: depend only on `stations`, not the slider —
@@ -432,15 +432,15 @@ export default function MapView(props: Props) {
   function syncSelectedLine() {
     const m = map.current;
     if (!m) return;
-    const { stations, reach, selectedDest, maxTrains, maxMinutes, railPaths } = propsRef.current;
+    const { stations, reach, selectedDest, maxTrains, maxMinutes, hopGeometry } = propsRef.current;
     const byId = new Map(stations.map((s) => [s.id, s]));
     (m.getSource("reach-lines") as maplibregl.GeoJSONSource).setData(
-      selectedLineGeoJSON(reach, selectedDest, byId, maxTrains, maxMinutes, railPaths) as never);
+      selectedLineGeoJSON(reach, selectedDest, byId, maxTrains, maxMinutes, hopGeometry) as never);
   }
 
   useEffect(syncSelectedLine, [
     props.selectedDest, props.reach, props.maxTrains, props.maxMinutes,
-    props.stations, props.railPaths,
+    props.stations, props.hopGeometry,
   ]);
 
   function syncTransfers() {
@@ -556,7 +556,7 @@ export default function MapView(props: Props) {
     // Mirror shown()'s cutoff: no rider for a journey the line layer won't draw.
     if (!journey || journey.duration_min > maxMinutes) return;
     const byId = new Map(stations.map((s) => [s.id, s]));
-    const timeline = buildRideTimeline(journeyLegPaths(journey, byId, propsRef.current.railPaths));
+    const timeline = buildRideTimeline(journeyLegPaths(journey, byId, propsRef.current.hopGeometry));
     if (!timeline) return;
 
     const tokens = themeTokens(theme);
@@ -613,7 +613,7 @@ export default function MapView(props: Props) {
 
   useEffect(syncRider, [
     props.selectedDest, props.reach, props.maxTrains, props.maxMinutes,
-    props.stations, props.theme, props.railPaths,
+    props.stations, props.theme, props.hopGeometry,
   ]);
 
   const appliedTheme = useRef(props.theme);

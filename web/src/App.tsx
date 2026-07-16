@@ -7,7 +7,7 @@ import { TIME_MAX } from "./components/TimeSlider";
 import { api, latestOnly } from "./lib/api";
 import { buildCityLookup } from "./lib/cities";
 import { unionReach } from "./lib/cityunion";
-import { buildRailPathLookup, initialMaxTrains, type MaxTrains, type RailPathLookup } from "./lib/geojson";
+import { buildRailPathLookup, initialMaxTrains, type HopGeometryLookup, type MaxTrains } from "./lib/geojson";
 import type { FeaturePick } from "./lib/pickfeature";
 import type { CityGroups, ReachFile, Station } from "./lib/types";
 import { useTheme } from "./lib/theme";
@@ -19,7 +19,7 @@ export default function App() {
   const [cityGroups, setCityGroups] = useState<CityGroups>({});
   const [cityOrigin, setCityOrigin] = useState<{ city: string; memberIds: string[] } | null>(null);
   const [reach, setReach] = useState<ReachFile | null>(null);
-  const [railPaths, setRailPaths] = useState<RailPathLookup | null>(null);
+  const [hopGeometry, setHopGeometry] = useState<HopGeometryLookup | null>(null);
   const [maxTrains, setMaxTrains] = useState<MaxTrains>(
     () => initialMaxTrains(window.location.search, window.location.hostname));
   const [maxMinutes, setMaxMinutes] = useState(TIME_MAX); // start at "max" (no cap)
@@ -37,8 +37,8 @@ export default function App() {
     api.getStations().then((r) => setStations(r.stations)).catch(console.error);
     api.getCities().then(setCityGroups).catch(() => setCityGroups({}));
     api.getRailPaths()
-      .then((r) => setRailPaths(buildRailPathLookup(r.paths)))
-      .catch(() => setRailPaths(null)); // straight-line fallback, by design
+      .then((r) => setHopGeometry(buildRailPathLookup(r.paths)))
+      .catch(() => setHopGeometry(null)); // straight-line fallback, by design
   }, []);
 
   // Shared by every reach-fetching handler below so only the latest selection's
@@ -169,7 +169,7 @@ export default function App() {
     <div className={appLayoutClassName(mobile, sheetState, hasContext)}>
       <MapView stations={stations} reach={reach} maxTrains={maxTrains} maxMinutes={filterMinutes}
                selectedDest={selectedDest} theme={theme}
-               cityGroups={cityGroups} armed={armed} railPaths={railPaths}
+               cityGroups={cityGroups} armed={armed} hopGeometry={hopGeometry}
                onStationClick={onStationClick} onSelectCityOrigin={selectCityOrigin}
                onEmptyClick={onEmptyClick} mobile={mobile}
                sheetState={sheetState} sheetHasContext={hasContext} />
