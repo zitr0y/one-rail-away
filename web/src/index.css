@@ -242,6 +242,8 @@ body { margin: 0; font-family: "Barlow", system-ui, sans-serif; color: var(--tex
 .trip-details h2 { margin: 0 0 4px; font-size: 16px; }
 .trip-details .duration { margin: 0 0 8px; color: var(--text-strong); }
 .trip-details .legs { margin: 0 0 12px; padding-left: 18px; font-size: 13px; }
+.trip-details .legs .transfer-leg { color: var(--text-muted); }
+.trip-details .legs .transfer-icon { display: inline-block; width: 1.25em; text-align: center; }
 .trip-details .book {
   display: block; text-align: center; background: #003399; color: #fff;
   padding: 10px; border-radius: 8px; text-decoration: none; font-weight: 600;

@@ -1,7 +1,8 @@
 import { renderToStaticMarkup } from "react-dom/server";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import TripDetails from "./TripDetails";
-import { frequencyLabel } from "./TripDetails";
+import { frequencyLabel, transferModeIcon } from "./TripDetails";
+import type { Destination, TransferMode } from "../lib/types";
 
 const origin = { id: "A", name: "Amsterdam Centraal", lat: 52.4, lon: 4.9, country: "NL", has_reach: true };
 const destination = { id: "B", name: "Paris Nord", lat: 48.9, lon: 2.4, country: "FR", has_reach: true };
@@ -43,6 +44,41 @@ describe("TripDetails booking date", () => {
                    maxTrains={1} stationsById={stationsById} />,
     );
     expect(markup).not.toContain('type="date"');
+  });
+
+  it("renders an explicit transfer line with icon and approximate minutes", () => {
+    const transferStationsById = new Map([
+      ...stationsById,
+      ["south", { ...origin, id: "south", name: "South Terminal" }],
+      ["north", { ...destination, id: "north", name: "North Terminal" }],
+    ]);
+    const transferDest: Destination = {
+      ...dest,
+      journeys: [{ trains: 2, duration_min: 240, legs: [
+        { train: "ICE 1", dep: "08:00", arr: "10:00", from: "A", to: "south", via: [] },
+        { type: "transfer", mode: "metro", minutes: 20, from_id: "south", to_id: "north" },
+        { train: "TGV 2", dep: "10:20", arr: "12:00", from: "north", to: "B", via: [] },
+      ] }],
+    };
+    const markup = renderToStaticMarkup(
+      <TripDetails origin={origin} destination={destination} dest={transferDest}
+                   maxTrains={2} stationsById={transferStationsById} />,
+    );
+    expect(markup).toContain("~20 min metro to North Terminal");
+    expect(markup).toContain('aria-hidden="true">🚇</span>');
+    expect(markup).toContain("ICE 1");
+    expect(markup).toContain("TGV 2");
+    expect(markup).toContain('class="transfer-leg"');
+    expect(markup).not.toContain("undefined");
+  });
+
+  it("provides an icon for every configured transfer mode", () => {
+    const modes: TransferMode[] = [
+      "walk", "metro", "tram", "cercanias", "rer", "train-shuttle", "bus",
+    ];
+    for (const mode of modes) {
+      expect(transferModeIcon(mode)).not.toBe("");
+    }
   });
 });
 

@@ -1,7 +1,21 @@
 import { useEffect, useRef, useState } from "react";
 import { bookingUrl, friendlyDateLabel, localDate, shiftDate } from "../lib/booking";
 import { bestJourney, type MaxTrains } from "../lib/geojson";
-import type { Destination, Station } from "../lib/types";
+import type { Destination, Station, TransferMode } from "../lib/types";
+
+const TRANSFER_MODE_ICONS: Record<TransferMode, string> = {
+  walk: "🚶",
+  metro: "🚇",
+  tram: "🚋",
+  cercanias: "🚆",
+  rer: "🚆",
+  "train-shuttle": "🚆",
+  bus: "🚌",
+};
+
+export function transferModeIcon(mode: TransferMode): string {
+  return TRANSFER_MODE_ICONS[mode];
+}
 
 export function frequencyLabel(dest: Destination): string {
   const f = dest.frequency;
@@ -60,7 +74,13 @@ export default function TripDetails(
         ? `nonstop · ${frequencyLabel(dest)}`
         : `${journey.trains} trains · ${frequencyLabel(dest)}`}</p>
       <ol className="legs">
-        {journey.legs.map((leg) => (
+        {journey.legs.map((leg) => leg.type === "transfer" ? (
+          <li className="transfer-leg" key={`transfer-${leg.from_id}-${leg.to_id}`}>
+            <span className="transfer-icon" aria-hidden="true">{transferModeIcon(leg.mode)}</span>
+            {" "}~{leg.minutes} min {leg.mode} to{" "}
+            {stationsById.get(leg.to_id)?.name ?? leg.to_id}
+          </li>
+        ) : (
           <li key={`${leg.train}-${leg.to}`}>
             <strong>{leg.train}</strong> {stationsById.get(leg.from)?.name ?? leg.from}
             {" → "} {stationsById.get(leg.to)?.name ?? leg.to}
