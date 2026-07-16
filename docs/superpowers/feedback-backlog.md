@@ -125,13 +125,13 @@ S). Relates K, Q.
 
 ## U. City-union follow-ups
 
-- **Intra-city transfers:** research done 2026-07-16 —
-  [`research/2026-07-16-intra-city-transfer-candidates.md`](research/2026-07-16-intra-city-transfer-candidates.md).
-  Warszawa needs nothing (135–139 real direct/day between all pairs); Paris is
-  critical (six terminals, 0/0); shortlist Madrid, Milano, Budapest, València,
-  Lille (+ medium: Jena, Avignon TGV, Massy, Medina del Campo). NEXT: design
-  round with the user, then inject transfer edges in the pipeline (from
-  `cities.toml` groups) so RAPTOR routes through them, and recompute.
+Intra-city transfer edges shipped 2026-07-16 (35 curated pairs, 17 cities;
+spec `specs/2026-07-16-intra-city-transfers-design.md`). Remaining:
+
+- **Needs a server recompute to go live** — reach files only carry transfers
+  after the pipeline reruns (Monday cron or manual run). After that, verify a
+  through-Paris journey on prod; Milano/Lisboa/Porto entries stay dormant
+  until Trenitalia/CP are in a build (they warn-and-skip today).
 - Nit: a city-union origin pins only ONE member dot visible at low zoom, so sibling
   termini can fade — thread member ids into the map's always-visible set.
 
