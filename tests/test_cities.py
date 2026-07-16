@@ -167,7 +167,8 @@ def test_rome_city_group_resolves():
     groups, warnings = load_cities(cities_path, stations_all)
     assert groups["Roma"] == ["roma-t", "roma-tib", "roma-o", "roma-obb"]
 
-    # Case B: only ÖBB leak duplicate station exists (fewer than 2 matched, should skip Roma group with warning)
+    # Case B: only ÖBB leak duplicate station exists (fewer than 2 matched,
+    # should skip Roma group with warning)
     stations_partial = [
         _station("roma-obb", "Roma, Stazione di Roma Tiburtina"),
     ]
