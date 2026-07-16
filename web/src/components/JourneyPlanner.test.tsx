@@ -3,6 +3,7 @@ import { useState, type ReactNode } from "react";
 import { cleanup, fireEvent, render, screen, within } from "@testing-library/react";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import JourneyPlanner from "./JourneyPlanner";
+import { buildCityLookup } from "../lib/cities";
 import type { SheetState } from "../lib/mobileLayout";
 
 vi.mock("../lib/api", () => ({
@@ -40,7 +41,7 @@ function Harness({
   return (
     <JourneyPlanner
       reach={selected ? { origin: "A", computed_at: "", sample_date: "", destinations: [dest] } : null}
-      stationsById={stationsById} cities={{}} cityGroups={{}}
+      stationsById={stationsById} cities={buildCityLookup({})} cityGroups={{}}
       origin={selected ? origin : undefined}
       destination={selected ? destination : undefined}
       dest={selected ? dest : undefined}
