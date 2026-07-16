@@ -11,6 +11,7 @@ import { buildRailPathLookup, initialMaxTrains, type MaxTrains, type RailPathLoo
 import type { FeaturePick } from "./lib/pickfeature";
 import type { CityGroups, ReachFile, Station } from "./lib/types";
 import { useTheme } from "./lib/theme";
+import { appLayoutClassName, collapsedJourneySummary, type SheetState, useMobileLayout } from "./lib/mobileLayout";
 import headerLogo from "./assets/header-logo.svg?raw";
 
 export default function App() {
@@ -25,6 +26,9 @@ export default function App() {
   const [selectedDest, setSelectedDest] = useState<string | null>(null);
   const [activeField, setActiveField] = useState<ActiveField>(null);
   const [theme, toggleTheme] = useTheme();
+  const mobile = useMobileLayout();
+  const [sheetState, setSheetState] = useState<SheetState>("collapsed");
+  const previousMobile = useRef(mobile);
 
   const stationsById = useMemo(() => new Map(stations.map((s) => [s.id, s])), [stations]);
   const cities = useMemo(() => buildCityLookup(cityGroups), [cityGroups]);
@@ -127,6 +131,13 @@ export default function App() {
   const dest = selectedDest && reach
     ? reach.destinations.find((d) => d.id === selectedDest) : undefined;
   const destination = dest ? stationsById.get(dest.id) : undefined;
+  const collapsedSummary = collapsedJourneySummary(dest, maxTrains);
+  const hasContext = collapsedSummary !== null;
+
+  useEffect(() => {
+    if (!previousMobile.current && mobile) setSheetState("collapsed");
+    previousMobile.current = mobile;
+  }, [mobile]);
 
   const onStationClick = useCallback((pick: FeaturePick) => {
     const target = armedTarget(activeField, reach !== null);
@@ -155,29 +166,30 @@ export default function App() {
   }, [reach, selectedDest, clearSelection]);
 
   return (
-    <div className="app">
+    <div className={appLayoutClassName(mobile, sheetState, hasContext)}>
       <MapView stations={stations} reach={reach} maxTrains={maxTrains} maxMinutes={filterMinutes}
                selectedDest={selectedDest} theme={theme}
                cityGroups={cityGroups} armed={armed} railPaths={railPaths}
                onStationClick={onStationClick} onSelectCityOrigin={selectCityOrigin}
                onEmptyClick={onEmptyClick} />
-      <header className="header-bar">
-        {/* Brand lockup — edit web/src/assets/header-logo.svg in Inkscape; it is
-            inlined here (Vite ?raw) so the wordmark uses the page's Barlow font. */}
-        <span className="header-logo" role="img" aria-label="onestopeurope"
-              dangerouslySetInnerHTML={{ __html: headerLogo }} />
-        <span className="header-tagline">nonstopeurope with onestopeurope</span>
-        <button className="theme-toggle" onClick={toggleTheme}
-                aria-label={theme === "light" ? "Switch to dark mode" : "Switch to light mode"}>
-          {theme === "light" ? "🌙" : "☀️"}
-        </button>
-      </header>
       <JourneyPlanner
         reach={reach} stationsById={stationsById}
         cities={cities} cityGroups={cityGroups} originLabel={cityOrigin?.city}
         origin={origin} destination={destination} dest={dest}
         maxTrains={maxTrains} maxMinutes={maxMinutes} filterMinutes={filterMinutes}
-        armed={armed}
+        armed={armed} mobile={mobile} sheetState={sheetState}
+        collapsedSummary={collapsedSummary} onSheetStateChange={setSheetState}
+        header={<header className="header-bar">
+          {/* Brand lockup — edit web/src/assets/header-logo.svg in Inkscape; it is
+              inlined here (Vite ?raw) so the wordmark uses the page's Barlow font. */}
+          <span className="header-logo" role="img" aria-label="onestopeurope"
+                dangerouslySetInnerHTML={{ __html: headerLogo }} />
+          <span className="header-tagline">nonstopeurope with onestopeurope</span>
+          <button className="theme-toggle" onClick={toggleTheme}
+                  aria-label={theme === "light" ? "Switch to dark mode" : "Switch to light mode"}>
+            {theme === "light" ? "🌙" : "☀️"}
+          </button>
+        </header>}
         onSetOrigin={(option) => {
           if (option.kind === "city") selectCityOrigin(option.city, option.memberIds);
           else selectOrigin(option.station.id);
