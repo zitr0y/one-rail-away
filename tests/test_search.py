@@ -203,6 +203,22 @@ def _exonym_client(tmp_path):
             "country": "PL",
             "has_reach": True,
         },
+        {
+            "id": "wa1",
+            "name": "Warszawa Centralna",
+            "lat": 52.23,
+            "lon": 21.01,
+            "country": "PL",
+            "has_reach": True,
+        },
+        {
+            "id": "m1",
+            "name": "München Hbf",
+            "lat": 48.14,
+            "lon": 11.56,
+            "country": "DE",
+            "has_reach": True,
+        },
     ]
     (tmp_path / "stations.json").write_text(json.dumps({"stations": stations}))
     for s in stations:
@@ -233,6 +249,8 @@ def test_search_german_exonym_and_transliteration(tmp_path):
     assert _ids(c.get("/api/stations/search", params={"q": "prag"})) == ["p1"]
     assert _ids(c.get("/api/stations/search", params={"q": "cologne"})) == ["k1"]
     assert _ids(c.get("/api/stations/search", params={"q": "koeln"})) == ["k1"]
+    assert _ids(c.get("/api/stations/search", params={"q": "warschau"})) == ["wa1"]
+    assert _ids(c.get("/api/stations/search", params={"q": "munich"})) == ["m1"]
 
 
 def test_search_exonym_prefix_while_typing(tmp_path):
@@ -249,6 +267,34 @@ def test_search_exonym_prefix_while_typing(tmp_path):
     ("lodz", "l1"),
 ])
 def test_search_new_english_exonyms(tmp_path, query, station_id):
+    c = _exonym_client(tmp_path)
+    assert _ids(c.get("/api/stations/search", params={"q": query})) == [station_id]
+
+
+@pytest.mark.parametrize(("query", "station_id"), [
+    ("varsovie", "wa1"),
+    ("varsavia", "wa1"),
+    ("varsovia", "wa1"),
+    ("monaco di baviera", "m1"),
+    ("muenchen", "m1"),
+    ("colonia", "k1"),
+    ("keulen", "k1"),
+    ("wenen", "w1"),
+    ("vienne", "w1"),
+    ("viena", "w1"),
+    ("kopenhagen", "c1"),
+    ("copenhague", "c1"),
+    ("copenaghen", "c1"),
+    ("kobenhavn", "c1"),
+    ("la haye", "h1"),
+    ("la haya", "h1"),
+    ("l'aia", "h1"),
+    ("sgravenhage", "h1"),
+    ("'s-gravenhage", "h1"),
+    ("bukarest", "bu1"),
+    ("boekarest", "bu1"),
+])
+def test_search_multilingual_exonyms(tmp_path, query, station_id):
     c = _exonym_client(tmp_path)
     assert _ids(c.get("/api/stations/search", params={"q": query})) == [station_id]
 
