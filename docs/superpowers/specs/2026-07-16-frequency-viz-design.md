@@ -53,10 +53,9 @@ connection tables — informative but never in your face.
 
 ## 2. Web UI
 
-- Dayparts: morning = hours 5–11, afternoon = 12–17, evening = 18–23
-  (0–4 counts into evening of the previous day? No — keep 0–4 in morning
-  bucket of the same day for v1 simplicity; night trains are a curiosity here,
-  not a correctness case).
+- Dayparts: morning = hours 0–11, afternoon = 12–17, evening = 18–23
+  (night-owl 0–4 departures count as morning of their service date for v1
+  simplicity; night trains are a curiosity here, not a correctness case).
 - The heat strip replaces the raw "6/7 sampled days" line in the destination
   details: 7 day-rows (or however many sampled days exist) × 3 cells, colour
   scale from theme tokens (respect dark mode), a11y: each cell gets an
