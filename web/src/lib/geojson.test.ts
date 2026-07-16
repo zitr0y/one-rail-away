@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import {
   bestJourney, buildRailPathLookup, destinationsGeoJSON, frequencyClass, journeyLegPaths,
   legSegments, linesGeoJSON, segmentsGeoJSON, selectedLineGeoJSON, shown, timeBucket,
-  transferPoints, type RailPathLookup,
+  transferPoints, type RailPathLookup, initialMaxTrains,
 } from "./geojson";
 import type { Journey, Leg, ReachFile, Station } from "./types";
 
@@ -311,3 +311,39 @@ describe("legSegments with rail paths", () => {
       .toEqual([[[0, 0], [0.5, 0.4], [1, 0], [2, 0]]]);
   });
 });
+
+describe("initialMaxTrains", () => {
+  it("resolves from trains URL param when valid", () => {
+    expect(initialMaxTrains("?trains=1", "localhost")).toBe(1);
+    expect(initialMaxTrains("?trains=2", "localhost")).toBe(2);
+    expect(initialMaxTrains("?trains=3", "localhost")).toBe(3);
+  });
+
+  it("ignores invalid trains URL params and falls back to default", () => {
+    expect(initialMaxTrains("?trains=4", "localhost")).toBe(1);
+    expect(initialMaxTrains("?trains=x", "localhost")).toBe(1);
+    expect(initialMaxTrains("?trains=", "localhost")).toBe(1);
+    expect(initialMaxTrains("", "localhost")).toBe(1);
+  });
+
+  it("defaults to 1 for nonstop domains when no URL param is present", () => {
+    expect(initialMaxTrains("", "nonstopeurope.eu")).toBe(1);
+    expect(initialMaxTrains("", "www.nonstopeurope.eu")).toBe(1);
+  });
+
+  it("prioritizes URL param over nonstop domains", () => {
+    expect(initialMaxTrains("?trains=2", "nonstopeurope.eu")).toBe(2);
+    expect(initialMaxTrains("?trains=3", "www.nonstopeurope.eu")).toBe(3);
+  });
+
+  it("defaults to onestop (2 trains) on onestopeurope domains", () => {
+    expect(initialMaxTrains("", "onestopeurope.eu")).toBe(2);
+    expect(initialMaxTrains("", "www.onestopeurope.eu")).toBe(2);
+    expect(initialMaxTrains("?trains=1", "onestopeurope.eu")).toBe(1);
+  });
+
+  it("keeps default for other hostnames", () => {
+    expect(initialMaxTrains("", "google.com")).toBe(1);
+  });
+});
+

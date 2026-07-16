@@ -236,3 +236,18 @@ export function selectedLineGeoJSON(
     }],
   };
 }
+
+/** Initial 1/2/3-trains selection (backlog V): ?trains= wins, then the domain
+ *  pun — nonstopeurope.eu preselects nonstop (1 train), onestopeurope.eu
+ *  onestop (2 trains) — and any other host keeps the plain default. */
+export function initialMaxTrains(search: string, hostname: string): MaxTrains {
+  const trainsParam = new URLSearchParams(search).get("trains");
+  if (trainsParam === "1" || trainsParam === "2" || trainsParam === "3") {
+    return Number(trainsParam) as MaxTrains;
+  }
+  const host = hostname.replace(/^www\./, "");
+  if (host === "nonstopeurope.eu") return 1;
+  if (host === "onestopeurope.eu") return 2;
+  return 1;
+}
+

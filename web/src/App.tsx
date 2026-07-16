@@ -7,7 +7,7 @@ import { TIME_MAX } from "./components/TimeSlider";
 import { api, latestOnly } from "./lib/api";
 import { buildCityLookup } from "./lib/cities";
 import { unionReach } from "./lib/cityunion";
-import { buildRailPathLookup, type MaxTrains, type RailPathLookup } from "./lib/geojson";
+import { buildRailPathLookup, initialMaxTrains, type MaxTrains, type RailPathLookup } from "./lib/geojson";
 import type { FeaturePick } from "./lib/pickfeature";
 import type { CityGroups, ReachFile, Station } from "./lib/types";
 import { useTheme } from "./lib/theme";
@@ -19,7 +19,8 @@ export default function App() {
   const [cityOrigin, setCityOrigin] = useState<{ city: string; memberIds: string[] } | null>(null);
   const [reach, setReach] = useState<ReachFile | null>(null);
   const [railPaths, setRailPaths] = useState<RailPathLookup | null>(null);
-  const [maxTrains, setMaxTrains] = useState<MaxTrains>(1);
+  const [maxTrains, setMaxTrains] = useState<MaxTrains>(
+    () => initialMaxTrains(window.location.search, window.location.hostname));
   const [maxMinutes, setMaxMinutes] = useState(TIME_MAX); // start at "max" (no cap)
   const [selectedDest, setSelectedDest] = useState<string | null>(null);
   const [activeField, setActiveField] = useState<ActiveField>(null);
