@@ -2,7 +2,7 @@ from datetime import date
 
 from pipeline.gtfs import load_feed
 from pipeline.merge import merge_stations
-from pipeline.models import StopTime, Trip
+from pipeline.models import Leg, StopTime, TransferLeg, Trip
 from pipeline.raptor import compute_reachability, fmt
 from tests.fixtures import make_fixture_feeds
 
@@ -188,3 +188,106 @@ def test_genuine_tie_drops_slower_train_count_tier():
     assert [j.trains for j in dest] == [1]
     assert dest[0].trains == 1
     assert dest[0].duration_min == 120
+
+
+def test_bidirectional_footpath_connects_two_train_rounds_and_emits_leg():
+    forward = [
+        Trip(
+            trip_id="to-south",
+            train="To South",
+            stops=[_stop("origin", 500, 500), _stop("south", 600, 600)],
+        ),
+        Trip(
+            trip_id="from-north",
+            train="From North",
+            stops=[_stop("north", 630, 630), _stop("destination", 700, 700)],
+        ),
+    ]
+    footpaths = [("south", "north", 20 * 60, "metro")]
+
+    assert "destination" not in compute_reachability(forward, "origin")
+
+    reach = compute_reachability(forward, "origin", footpaths=footpaths)
+    journey = reach["destination"][-1]
+    assert journey.trains == 2
+    assert journey.duration_min == 200
+    assert [type(leg) for leg in journey.legs] == [Leg, TransferLeg, Leg]
+    assert journey.legs[1] == TransferLeg(
+        mode="metro", minutes=20, from_id="south", to_id="north"
+    )
+
+    reverse = [
+        Trip(
+            trip_id="to-north",
+            train="To North",
+            stops=[_stop("origin", 500, 500), _stop("north", 600, 600)],
+        ),
+        Trip(
+            trip_id="from-south",
+            train="From South",
+            stops=[_stop("south", 630, 630), _stop("destination", 700, 700)],
+        ),
+    ]
+    reverse_reach = compute_reachability(reverse, "origin", footpaths=footpaths)
+    assert reverse_reach["destination"][-1].legs[1] == TransferLeg(
+        mode="metro", minutes=20, from_id="north", to_id="south"
+    )
+
+
+def test_footpath_is_never_first_or_last_leg():
+    first_leg = [
+        Trip(
+            trip_id="from-terminal",
+            train="From Terminal",
+            stops=[_stop("terminal", 630, 630), _stop("destination", 700, 700)],
+        )
+    ]
+    assert (
+        "destination"
+        not in compute_reachability(
+            first_leg, "origin", footpaths=[("origin", "terminal", 20 * 60, "walk")]
+        )
+    )
+
+    last_leg = [
+        Trip(
+            trip_id="to-terminal",
+            train="To Terminal",
+            stops=[_stop("origin", 500, 500), _stop("terminal", 600, 600)],
+        )
+    ]
+    reach = compute_reachability(
+        last_leg, "origin", footpaths=[("terminal", "destination", 20 * 60, "walk")]
+    )
+    assert "terminal" in reach
+    assert "destination" not in reach
+
+
+def test_footpaths_do_not_chain_within_one_round_boundary():
+    trips = [
+        Trip(
+            trip_id="to-a",
+            train="To A",
+            stops=[_stop("origin", 500, 500), _stop("a", 600, 600)],
+        ),
+        Trip(
+            trip_id="from-b",
+            train="From B",
+            stops=[_stop("b", 630, 630), _stop("b-destination", 700, 700)],
+        ),
+        Trip(
+            trip_id="from-c",
+            train="From C",
+            stops=[_stop("c", 650, 650), _stop("c-destination", 720, 720)],
+        ),
+    ]
+    reach = compute_reachability(
+        trips,
+        "origin",
+        footpaths=[
+            ("a", "b", 20 * 60, "walk"),
+            ("b", "c", 20 * 60, "walk"),
+        ],
+    )
+    assert "b-destination" in reach
+    assert "c-destination" not in reach

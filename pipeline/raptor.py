@@ -11,8 +11,10 @@ All times are minutes since midnight of the sample date and MAY exceed 1440
 """
 
 from bisect import bisect_left
+from typing import NamedTuple
 
-from pipeline.models import Journey, Leg, Trip
+from pipeline.cities import ResolvedTransfer
+from pipeline.models import Journey, Leg, TransferLeg, Trip
 
 INF = 10**9
 
@@ -23,6 +25,17 @@ def fmt(minutes: int) -> str:
 
 
 _INDEX_CACHE: dict[int, tuple[list, list, dict[str, list[int]]]] = {}
+
+
+class Parent(NamedTuple):
+    trip: Trip
+    previous_station: str
+    board_station: str
+    board_dep: int
+    alight_arr: int
+    board_idx: int
+    alight_idx: int
+    footpath: ResolvedTransfer | None
 
 
 def _index(trips):
@@ -55,13 +68,13 @@ def _index(trips):
     return trip_stops, by_station
 
 
-def _raptor(trips, origin, dep_floor, max_trains, transfer_min):
+def _raptor(trips, origin, dep_floor, max_trains, transfer_min, footpaths):
     """Round k = earliest arrival using <= k trains, departing origin no earlier
     than dep_floor.
 
-    parent[(k, station)] = (trip, board_station, board_dep, alight_arr,
-    board_idx, alight_idx). Board/alight indices are indices into trip.stops and
-    are used by `_build_legs` to slice the via list.
+    parent[(k, station)] records the train used to reach a station. Board/alight
+    indices are indices into trip.stops and are used by `_build_legs` to slice
+    the via list.
 
     Only trips calling at a station reached in round k-1 are scanned. A trip
     touching no such station fails the boarding test at every stop, so it can
@@ -72,7 +85,7 @@ def _raptor(trips, origin, dep_floor, max_trains, transfer_min):
     """
     trip_stops, by_station = _index(trips)
     arr: list[dict[str, int]] = [{origin: dep_floor}]
-    parent: dict[tuple[int, str], tuple] = {}
+    parent: dict[tuple[int, str], Parent] = {}
     n_trips = len(trips)
     for k in range(1, max_trains + 1):
         prev = arr[k - 1]
@@ -83,31 +96,57 @@ def _raptor(trips, origin, dep_floor, max_trains, transfer_min):
             if (k - 1, st) in parent:
                 parent[(k, st)] = parent[(k - 1, st)]
 
-        # Only trips calling somewhere we already stand can ever be boarded.
+        ready: dict[str, tuple[int, str, ResolvedTransfer | None]] = {
+            station: (
+                arrival + (0 if station == origin else transfer_min),
+                station,
+                None,
+            )
+            for station, arrival in prev.items()
+        }
+        if k > 1:
+            for a, b, seconds, mode in footpaths:
+                for source, target in ((a, b), (b, a)):
+                    if (k - 1, source) not in parent:
+                        continue
+                    candidate = prev.get(source, INF) + seconds // 60
+                    existing = ready.get(target)
+                    if existing is None or candidate < existing[0]:
+                        ready[target] = (
+                            candidate,
+                            source,
+                            (source, target, seconds, mode),
+                        )
+
+        # Only trips calling somewhere we are ready to board can ever be scanned.
         candidates: set[int] = set()
-        for st in prev:
+        for st in ready:
             hits = by_station.get(st)
             if hits:
                 candidates.update(hits)
         scan = range(n_trips) if len(candidates) == n_trips else sorted(candidates)
 
-        prev_get, cur_get = prev.get, cur.get
+        ready_get, cur_get = (
+            lambda station: ready.get(station, (INF, "", None))[0],
+            cur.get,
+        )
         for ti in scan:
-            board = None  # (station, dep, idx)
+            board = None  # (station, dep, idx, previous_station, footpath)
             for i, (station, s_arr, s_dep) in enumerate(trip_stops[ti]):
                 if board is not None:
                     if s_arr < cur_get(station, INF):
                         cur[station] = s_arr
-                        parent[(k, station)] = (
-                            trips[ti], board[0], board[1], s_arr, board[2], i
+                        parent[(k, station)] = Parent(
+                            trips[ti], board[3], board[0], board[1], s_arr,
+                            board[2], i, board[4],
                         )
                 # Consider boarding here if we are not already aboard AND we were
-                # here (via <= k-1 trains) early enough to make the departure.
-                # Buffer is 0 at the origin (no transfer), transfer_min elsewhere.
+                # ready to board here early enough to make the departure.
                 # Mid-route boarding is allowed: this runs at every stop, not just
                 # the first.
-                elif prev_get(station, INF) + (0 if station == origin else transfer_min) <= s_dep:
-                    board = (station, s_dep, i)
+                elif ready_get(station) <= s_dep:
+                    _, previous_station, footpath = ready[station]
+                    board = (station, s_dep, i, previous_station, footpath)
         arr.append(cur)
     return arr, parent
 
@@ -131,9 +170,8 @@ def _walk(parent, k, dest, origin):
         p = parent.get((kk, st))
         if p is None:
             return None
-        _, b_st, b_dep, _, _, _ = p
-        first_dep = b_dep
-        st, kk = b_st, kk - 1
+        first_dep = p.board_dep
+        st, kk = p.previous_station, kk - 1
         trains += 1
         if kk < 0:
             return None
@@ -150,29 +188,43 @@ def _build_legs(parent, k, dest, origin):
     lists exclude the two endpoints. Assumes the chain is valid -- callers
     must have already confirmed this via `_walk`.
     """
-    legs: list[Leg] = []
+    legs: list[Leg | TransferLeg] = []
     st, kk = dest, k
     while st != origin:
-        trip, b_st, b_dep, a_arr, bi, ai = parent[(kk, st)]
+        p = parent[(kk, st)]
         legs.append(
             Leg(
-                train=trip.train,
-                dep=fmt(b_dep),
-                arr=fmt(a_arr),
-                **{"from": b_st},
+                train=p.trip.train,
+                dep=fmt(p.board_dep),
+                arr=fmt(p.alight_arr),
+                **{"from": p.board_station},
                 to=st,
-                via=[x.station for x in trip.stops[bi + 1 : ai]],
-                feeds=trip.feeds,
+                via=[x.station for x in p.trip.stops[p.board_idx + 1 : p.alight_idx]],
+                feeds=p.trip.feeds,
             )
         )
+        if p.footpath is not None:
+            from_id, to_id, seconds, mode = p.footpath
+            legs.append(
+                TransferLeg(
+                    mode=mode,
+                    minutes=seconds // 60,
+                    from_id=from_id,
+                    to_id=to_id,
+                )
+            )
         # Step back to the station we boarded this leg at, one fewer train.
-        st, kk = b_st, kk - 1
+        st, kk = p.previous_station, kk - 1
     legs.reverse()
     return legs
 
 
 def compute_reachability(
-    trips: list[Trip], origin: str, max_trains: int = 3, transfer_min: int = 10
+    trips: list[Trip],
+    origin: str,
+    max_trains: int = 3,
+    transfer_min: int = 10,
+    footpaths: list[ResolvedTransfer] | None = None,
 ) -> dict[str, list[Journey]]:
     """Best journey per (destination, train-count) tier, minimized over hourly
     departure floors 05:00-20:00, then collapsed to strictly-improving tiers.
@@ -211,7 +263,9 @@ def compute_reachability(
         floors.setdefault(origin_deps[i], dep_floor)
 
     for dep_floor in floors.values():
-        arr, parent = _raptor(trips, origin, dep_floor, max_trains, transfer_min)
+        arr, parent = _raptor(
+            trips, origin, dep_floor, max_trains, transfer_min, footpaths or []
+        )
         for k in range(1, max_trains + 1):
             for dest, t in arr[k].items():
                 if dest == origin:
