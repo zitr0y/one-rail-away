@@ -30,8 +30,93 @@
 "Warszawa" = ["Warszawa Centralna", "Warszawa Zachodnia", "Warszawa Wschodnia"]
 "Praha" = ["Praha hl.n.", "Praha-Libeň", "Praha-Holesovice"]
 "København" = ["København H", "København Syd St."]
-"Madrid" = ["Madrid-Puerta de Atocha-Almudena Grandes", "Madrid-Chamartín-Clara Campoamor"]
 "München" = ["München Hbf", "München Ostbahnhof"]
 # Roma: all-caps names come from the Trenitalia NeTEx feed (verified live 2026-07-16).
 # 'Roma, Stazione di Roma Tiburtina' is an unmerged ÖBB duplicate of ROMA TIBURTINA (backlog AP) included so the union covers it.
 "Roma" = ["ROMA TERMINI", "ROMA TIBURTINA", "ROMA OSTIENSE", "Roma, Stazione di Roma Tiburtina"]
+
+# --- additions to [cities] ---
+"Madrid" = ["Madrid-Puerta de Atocha-Almudena Grandes", "Madrid-Chamartín-Clara Campoamor", "Madrid-Atocha Cercanías"]
+"Budapest" = ["Budapest-Keleti", "Budapest-Nyugati"]
+"Montpellier" = ["Montpellier Saint-Roch", "Montpellier Sud de France"]
+"Lille" = ["Lille Europe", "Lille Flandres"]
+"València" = ["València-Estació del Nord", "València-Joaquín Sorolla"]
+"Valence" = ["Valence Ville", "Valence TGV Rhône-Alpes Sud"]
+"Reims" = ["Reims", "Champagne-Ardenne TGV"]
+"Mâcon" = ["Mâcon", "Mâcon - Loché TGV"]
+"Lyon" = ["Lyon Part Dieu", "Lyon Perrache", "Lyon Saint-Exupéry TGV"]
+"Milano" = ["Milano Centrale", "MILANO PORTA GARIBALDI"]
+"Lisboa" = ["Lisboa Santa Apolónia", "Lisboa Oriente"]          # dormant: awaiting CP feed
+"Porto" = ["Porto Campanhã", "Porto São Bento"]                 # dormant: awaiting CP feed
+
+# --- new [transfers] table ---
+[transfers]
+"Paris" = [
+  ["Paris Gare de Lyon Hall 1 - 2", "Paris Est", "metro", 45],
+  ["Paris Gare de Lyon Hall 1 - 2", "Paris Gare du Nord", "rer", 40],
+  ["Paris Gare de Lyon Hall 1 - 2", "Paris Austerlitz", "walk", 15],
+  ["Paris Gare de Lyon Hall 1 - 2", "Paris Montparnasse Hall 1 - 2", "metro", 45],
+  ["Paris Gare de Lyon Hall 1 - 2", "Paris Bercy Bourg. Pays d'Auv.", "walk", 20],
+  ["Paris Est", "Paris Gare du Nord", "walk", 15],
+  ["Paris Est", "Paris Austerlitz", "metro", 35],
+  ["Paris Est", "Paris Montparnasse Hall 1 - 2", "metro", 55],
+  ["Paris Est", "Paris Bercy Bourg. Pays d'Auv.", "metro", 50],
+  ["Paris Gare du Nord", "Paris Austerlitz", "metro", 35],
+  ["Paris Gare du Nord", "Paris Montparnasse Hall 1 - 2", "metro", 55],
+  ["Paris Gare du Nord", "Paris Bercy Bourg. Pays d'Auv.", "metro", 50],
+  ["Paris Austerlitz", "Paris Montparnasse Hall 1 - 2", "metro", 45],
+  ["Paris Austerlitz", "Paris Bercy Bourg. Pays d'Auv.", "walk", 25],
+  ["Paris Montparnasse Hall 1 - 2", "Paris Bercy Bourg. Pays d'Auv.", "metro", 45],
+]
+"Köln" = [
+  ["Köln Hbf", "Köln Messe/Deutz", "walk", 15],
+]
+"Amsterdam" = [
+  ["Amsterdam Centraal", "Amsterdam Zuid", "metro", 25],
+  ["Amsterdam Sloterdijk", "Amsterdam Zuid", "metro", 25],
+  ["Amsterdam Zuid", "Amsterdam Amstel", "metro", 25],
+]
+"Madrid" = [
+  ["Madrid-Puerta de Atocha-Almudena Grandes", "Madrid-Atocha Cercanías", "walk", 15],
+]
+"Berlin" = [
+  ["Berlin Ostkreuz", "Berlin Hbf", "rer", 30],
+]
+"Frankfurt" = [
+  ["Frankfurt(Main)Süd", "Frankfurt(Main)West", "rer", 30],
+  ["Frankfurt(Main)Süd", "Frankfurt(Main)Hbf", "metro", 25],
+]
+"Budapest" = [
+  ["Budapest-Keleti", "Budapest-Nyugati", "metro", 35],
+]
+"Montpellier" = [
+  ["Montpellier Saint-Roch", "Montpellier Sud de France", "tram", 50],
+]
+"Lille" = [
+  ["Lille Europe", "Lille Flandres", "walk", 15],
+]
+"València" = [
+  ["València-Estació del Nord", "València-Joaquín Sorolla", "walk", 20],
+]
+"Valence" = [
+  ["Valence Ville", "Valence TGV Rhône-Alpes Sud", "train-shuttle", 25],
+]
+"Reims" = [
+  ["Reims", "Champagne-Ardenne TGV", "train-shuttle", 25],
+]
+"Mâcon" = [
+  ["Mâcon", "Mâcon - Loché TGV", "bus", 40],
+]
+"Lyon" = [
+  ["Lyon Part Dieu", "Lyon Saint-Exupéry TGV", "tram", 50],
+  ["Lyon Perrache", "Lyon Saint-Exupéry TGV", "tram", 60],
+]
+"Milano" = [
+  ["Milano Centrale", "MILANO PORTA GARIBALDI", "metro", 25],   # dormant: awaiting Trenitalia in build
+]
+"Lisboa" = [
+  ["Lisboa Santa Apolónia", "Lisboa Oriente", "train-shuttle", 20],   # dormant: awaiting CP feed
+]
+"Porto" = [
+  ["Porto Campanhã", "Porto São Bento", "train-shuttle", 15],   # dormant: awaiting CP feed
+]

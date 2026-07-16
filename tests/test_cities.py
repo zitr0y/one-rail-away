@@ -1,4 +1,5 @@
 import logging
+from pathlib import Path
 
 from pipeline.cities import load_cities, load_transfers
 from pipeline.models import Station
@@ -122,6 +123,16 @@ def test_load_transfers_missing_file_is_empty(tmp_path):
     transfers, warnings = load_transfers(tmp_path / "missing.toml", [])
 
     assert (transfers, warnings) == ([], [])
+
+
+def test_shipped_transfer_config_matches_approved_appendix_verbatim():
+    repo = Path(__file__).parent.parent
+    spec = repo.joinpath(
+        "docs/superpowers/specs/2026-07-16-intra-city-transfers-design.md"
+    ).read_text(encoding="utf-8")
+    approved = spec.split("```toml\n", 1)[1].split("\n```", 1)[0]
+    shipped = repo.joinpath("cities.toml").read_text(encoding="utf-8")
+    assert approved in shipped
 
 
 def test_munchen_city_group_resolves():
