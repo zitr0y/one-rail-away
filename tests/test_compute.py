@@ -201,6 +201,50 @@ def test_compute_all_sets_is_capital(tmp_path):
     assert beta["is_capital"] is False
 
 
+def test_compute_all_sets_is_capital_for_dk_and_pt(tmp_path):
+    """Proves a Lisboa-like and a København-like synthetic station now gets is_capital=true."""
+    raw = tmp_path / "raw"
+    cfgs = make_fixture_feeds(raw)
+    countries_toml, names_toml = empty_overrides(tmp_path)
+    # Map 'st:1111111' to name 'København H' and country 'DK'
+    # Map 'st:2222222' to name 'Lisboa Oriente' and country 'PT'
+    countries_toml.write_text(
+        '[[override]]\nname = "København H"\nlat = 50.0\nlon = 8.0\ncountry = "DK"\n\n'
+        '[[override]]\nname = "Lisboa Oriente"\nlat = 50.0\nlon = 9.0\ncountry = "PT"\n'
+    )
+    names_toml.write_text(
+        '[names]\n"1111111" = "København H"\n"2222222" = "Lisboa Oriente"\n'
+    )
+    feeds_toml = _write_feeds_toml(tmp_path, cfgs)
+    build(
+        raw,
+        tmp_path / "graph",
+        feeds_toml,
+        None,
+        SAMPLE,
+        station_names_path=names_toml,
+        station_countries_path=countries_toml,
+    )
+    # Write a capitals.toml with the DK and PT entries
+    (tmp_path / "capitals.toml").write_text(
+        '[capitals]\nDK = "København H"\nPT = "Lisboa Oriente"\n'
+    )
+    import os
+
+    old_cwd = os.getcwd()
+    os.chdir(tmp_path)
+    try:
+        compute_all(tmp_path / "graph", tmp_path / "out", feeds_path=feeds_toml)
+    finally:
+        os.chdir(old_cwd)
+
+    stations = json.loads((tmp_path / "out" / "stations.json").read_text())
+    kobenhavn = next(s for s in stations["stations"] if s["name"] == "København H")
+    lisboa = next(s for s in stations["stations"] if s["name"] == "Lisboa Oriente")
+    assert kobenhavn["is_capital"] is True
+    assert lisboa["is_capital"] is True
+
+
 def test_load_capitals_warns_on_unmatched(tmp_path):
     """An entry in capitals.toml that matches no station produces a warning, not an error."""
     from pipeline.models import Station
