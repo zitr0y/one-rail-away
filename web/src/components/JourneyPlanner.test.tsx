@@ -82,7 +82,7 @@ describe("JourneyPlanner mobile sheet", () => {
     render(<Harness armed="from" />);
     expect(screen.getByPlaceholderText("Start from…")).toBeTruthy();
     expect(screen.getByPlaceholderText("To… (or click the map)")
-      .closest(".station-field")?.hidden).toBe(true);
+      .closest<HTMLElement>(".station-field")?.hidden).toBe(true);
     expect(screen.queryByRole("group", { name: "Maximum trains" })).toBeNull();
     expect(screen.queryByRole("slider")).toBeNull();
     expect(screen.queryByRole("heading", { name: "Amsterdam Centraal → Paris Nord" })).toBeNull();
