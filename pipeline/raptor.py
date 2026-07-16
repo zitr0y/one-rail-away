@@ -38,6 +38,11 @@ class Parent(NamedTuple):
     footpath: ResolvedTransfer | None
 
 
+class DepartureEvidence(NamedTuple):
+    departure_min: int
+    direct: bool
+
+
 def _index(trips):
     """Per-day scan index, built once and reused across every departure floor and
     every origin: the same `trips` list object is handed to us 16 times per
@@ -66,6 +71,78 @@ def _index(trips):
                 lst.append(ti)
     _INDEX_CACHE[id(trips)] = (trips, trip_stops, by_station)
     return trip_stops, by_station
+
+
+def compute_departure_evidence(
+    trips: list[Trip],
+    origin: str,
+    max_trains: int = 3,
+    transfer_min: int = 10,
+    footpaths: list[ResolvedTransfer] | None = None,
+) -> dict[str, list[DepartureEvidence]]:
+    """One entry per distinct first train departure that can reach each destination."""
+    trip_stops, by_station = _index(trips)
+    records: dict[tuple[int, int], dict[str, bool]] = {}
+
+    for ti in by_station.get(origin, ()):
+        stops = trip_stops[ti]
+        board_idx = next(i for i, (station, _, _) in enumerate(stops) if station == origin)
+        label = (ti, board_idx)
+        departure_min = stops[board_idx][2]
+        reached: dict[str, bool] = {}
+        prev: dict[str, int] = {}
+
+        for station, arrival, _ in stops[board_idx + 1 :]:
+            if station == origin:
+                continue
+            if arrival < prev.get(station, INF):
+                prev[station] = arrival
+            reached[station] = True
+
+        for _ in range(2, max_trains + 1):
+            ready = {
+                station: arrival + transfer_min for station, arrival in prev.items()
+            }
+            for a, b, seconds, _mode in footpaths or []:
+                for source, target in ((a, b), (b, a)):
+                    if source not in prev:
+                        continue
+                    candidate = prev[source] + seconds // 60
+                    if candidate < ready.get(target, INF):
+                        ready[target] = candidate
+
+            candidates: set[int] = set()
+            for station in ready:
+                hits = by_station.get(station)
+                if hits:
+                    candidates.update(hits)
+
+            cur = dict(prev)
+            new_arrival = False
+            for next_ti in sorted(candidates):
+                board = False
+                for station, arrival, departure in trip_stops[next_ti]:
+                    if board:
+                        if arrival < cur.get(station, INF):
+                            cur[station] = arrival
+                            if station != origin:
+                                reached.setdefault(station, False)
+                            new_arrival = True
+                    elif ready.get(station, INF) <= departure:
+                        board = True
+
+            if not new_arrival:
+                break
+            prev = cur
+
+        records[label] = reached
+
+    out: dict[str, list[DepartureEvidence]] = {}
+    for (ti, board_idx), reached in records.items():
+        departure_min = trip_stops[ti][board_idx][2]
+        for destination, direct in reached.items():
+            out.setdefault(destination, []).append(DepartureEvidence(departure_min, direct))
+    return out
 
 
 def _raptor(trips, origin, dep_floor, max_trains, transfer_min, footpaths):

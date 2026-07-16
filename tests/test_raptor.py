@@ -3,7 +3,7 @@ from datetime import date
 from pipeline.gtfs import load_feed
 from pipeline.merge import merge_stations
 from pipeline.models import Leg, StopTime, TransferLeg, Trip
-from pipeline.raptor import compute_reachability, fmt
+from pipeline.raptor import DepartureEvidence, compute_departure_evidence, compute_reachability, fmt
 from tests.fixtures import make_fixture_feeds
 
 SAMPLE = date(2026, 7, 14)
@@ -291,3 +291,80 @@ def test_footpaths_do_not_chain_within_one_round_boundary():
     )
     assert "b-destination" in reach
     assert "c-destination" not in reach
+
+
+def test_departure_evidence_keeps_distinct_direct_trips_at_the_same_minute():
+    trips = [
+        Trip(
+            trip_id="first",
+            train="First",
+            stops=[_stop("origin", 480, 480), _stop("destination", 540, 540)],
+        ),
+        Trip(
+            trip_id="second",
+            train="Second",
+            stops=[_stop("origin", 480, 480), _stop("destination", 525, 525)],
+        ),
+        Trip(
+            trip_id="third",
+            train="Third",
+            stops=[_stop("origin", 795, 795), _stop("destination", 850, 850)],
+        ),
+    ]
+
+    assert compute_departure_evidence(trips, "origin")["destination"] == [
+        DepartureEvidence(480, True),
+        DepartureEvidence(480, True),
+        DepartureEvidence(795, True),
+    ]
+    assert compute_reachability(trips, "origin")["destination"][0].legs[0].train == "Second"
+
+
+def test_departure_evidence_counts_one_origin_departure_once_across_onward_options():
+    trips = [
+        Trip(
+            trip_id="first",
+            train="First",
+            stops=[_stop("origin", 480, 480), _stop("junction", 540, 540)],
+        ),
+        Trip(
+            trip_id="fast-onward",
+            train="Fast onward",
+            stops=[_stop("junction", 550, 550), _stop("destination", 600, 600)],
+        ),
+        Trip(
+            trip_id="slow-onward",
+            train="Slow onward",
+            stops=[_stop("junction", 560, 560), _stop("destination", 700, 700)],
+        ),
+    ]
+
+    evidence = compute_departure_evidence(trips, "origin")
+    assert evidence["destination"] == [DepartureEvidence(480, False)]
+    assert evidence["junction"] == [DepartureEvidence(480, True)]
+
+
+def test_departure_evidence_footpath_reaches_but_never_duplicates_a_departure():
+    trips = [
+        Trip(
+            trip_id="to-south",
+            train="To South",
+            stops=[_stop("origin", 1435, 1435), _stop("south", 1500, 1500)],
+        ),
+        Trip(
+            trip_id="fast-onward",
+            train="Fast onward",
+            stops=[_stop("north", 1520, 1520), _stop("destination", 1580, 1580)],
+        ),
+        Trip(
+            trip_id="slow-onward",
+            train="Slow onward",
+            stops=[_stop("north", 1530, 1530), _stop("destination", 1600, 1600)],
+        ),
+    ]
+    footpaths = [("south", "north", 20 * 60, "metro")]
+
+    assert "destination" not in compute_departure_evidence(trips, "origin")
+    assert compute_departure_evidence(trips, "origin", footpaths=footpaths)[
+        "destination"
+    ] == [DepartureEvidence(1435, False)]
