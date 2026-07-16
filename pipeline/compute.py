@@ -18,9 +18,9 @@ from pathlib import Path
 
 from pipeline.artifacts import write_json_with_gzip
 from pipeline.capitals import load_capitals
-from pipeline.cities import load_cities
+from pipeline.cities import ResolvedTransfer, load_cities, load_transfers
 from pipeline.coverage import build_coverage, covered_from_feeds
-from pipeline.models import Destination, Frequency, Journey, ReachFile, Station, Trip
+from pipeline.models import Destination, Frequency, Journey, Leg, ReachFile, Station, Trip
 from pipeline.raptor import _index, compute_reachability
 
 
@@ -97,13 +97,16 @@ def _aggregate_reach(
     station_id: str,
     feed_validity_by_date: dict[str, dict[str, dict[str, object]]] | None = None,
     extra_trips: list[Trip] | None = None,
+    footpaths: list[ResolvedTransfer] | None = None,
 ) -> list[Destination]:
     """Keep each date's routes independent, then select the best tier per dest."""
     sample_dates = list(trips_by_date)
     evidence: dict[str, dict[str, list[Journey]]] = {}
     directs: dict[str, dict[str, int]] = {}
     for day, trips in trips_by_date.items():
-        for dest, journeys in compute_reachability(trips, station_id).items():
+        for dest, journeys in compute_reachability(
+            trips, station_id, footpaths=footpaths
+        ).items():
             evidence.setdefault(dest, {})[day] = journeys
         for dest, n in _direct_counts(trips, station_id).items():
             directs.setdefault(dest, {})[day] = n
@@ -113,7 +116,9 @@ def _aggregate_reach(
     # pseudo-date outside `sample_dates` so it never counts as sampled-week
     # evidence: such a destination naturally lands in "coverage_limited" or
     # "limited" below, not a fabricated year-round claim.
-    extra_evidence = compute_reachability(extra_trips or [], station_id)
+    extra_evidence = compute_reachability(
+        extra_trips or [], station_id, footpaths=footpaths
+    )
     for dest, journeys in extra_evidence.items():
         evidence.setdefault(dest, {})["extra"] = journeys
 
@@ -136,7 +141,12 @@ def _aggregate_reach(
         # distinguishes expired GTFS from no service; ``sampled`` prevents a
         # different feed's week inflating this feed's frequency denominator.
         feed_sets = {
-            frozenset(feed for leg in journey.legs for feed in leg.feeds)
+            frozenset(
+                feed
+                for leg in journey.legs
+                if isinstance(leg, Leg)
+                for feed in leg.feeds
+            )
             for journeys in evidence[dest].values()
             for journey in journeys
         }
@@ -181,12 +191,13 @@ def _write_reach(
     now: str,
     feed_validity_by_date: dict[str, dict[str, dict[str, object]]] | None = None,
     extra_trips: list[Trip] | None = None,
+    footpaths: list[ResolvedTransfer] | None = None,
 ) -> int:
     """Compute one origin's reachability and write its reach file.
 
     Returns the destination count (0 = nothing reachable, no file written)."""
     destinations = _aggregate_reach(
-        trips_by_date, station_id, feed_validity_by_date, extra_trips
+        trips_by_date, station_id, feed_validity_by_date, extra_trips, footpaths
     )
     if not destinations:
         return 0
@@ -205,6 +216,7 @@ def _write_reach(
 _worker_trips_by_date: dict[str, list[Trip]] = {}
 _worker_feed_validity_by_date: dict[str, dict[str, dict[str, object]]] = {}
 _worker_extra_trips: list[Trip] = []
+_worker_footpaths: list[ResolvedTransfer] = []
 
 
 def _load_trips_json(graph_dir: Path) -> tuple[
@@ -217,11 +229,13 @@ def _load_trips_json(graph_dir: Path) -> tuple[
     return trips_by_date, raw.get("feed_validity_by_date", {}), extra_trips
 
 
-def _worker_init(graph_dir_str: str) -> None:
-    global _worker_trips_by_date, _worker_feed_validity_by_date, _worker_extra_trips
+def _worker_init(graph_dir_str: str, footpaths: list[ResolvedTransfer]) -> None:
+    global _worker_trips_by_date, _worker_feed_validity_by_date
+    global _worker_extra_trips, _worker_footpaths
     _worker_trips_by_date, _worker_feed_validity_by_date, _worker_extra_trips = (
         _load_trips_json(Path(graph_dir_str))
     )
+    _worker_footpaths = footpaths
 
 
 def _compute_one(args: tuple[str, str, str, str]) -> tuple[str, int]:
@@ -234,6 +248,7 @@ def _compute_one(args: tuple[str, str, str, str]) -> tuple[str, int]:
         now,
         _worker_feed_validity_by_date,
         _worker_extra_trips,
+        _worker_footpaths,
     )
 
 
@@ -262,6 +277,7 @@ def compute_all(
     out_dir: Path,
     workers: int | None = None,
     feeds_path: Path = Path("feeds.toml"),
+    cities_path: Path = Path("cities.toml"),
 ) -> None:
     """For each station in the graph, compute reachability and, if any
     destination is reached, write `out_dir/reach_<id>.json`. Always writes
@@ -273,6 +289,10 @@ def compute_all(
     graph = json.loads((graph_dir / "stations.json").read_text())
     sample_date = graph["sample_date"]
     stations = [Station(**s) for s in graph["stations"]]
+    city_groups, city_warnings = load_cities(cities_path, stations)
+    footpaths, transfer_warnings = load_transfers(cities_path, stations)
+    for warning in [*city_warnings, *transfer_warnings]:
+        print(warning)
     out_dir.mkdir(parents=True, exist_ok=True)
     now = datetime.now(UTC).isoformat().replace("+00:00", "Z")
     workers = workers or os.process_cpu_count() or 1
@@ -283,11 +303,13 @@ def compute_all(
         for station in stations:
             results[station.id] = _write_reach(
                 trips_by_date, station.id, out_dir, sample_date, now, feed_validity_by_date,
-                extra_trips,
+                extra_trips, footpaths,
             )
     else:
         with ProcessPoolExecutor(
-            max_workers=workers, initializer=_worker_init, initargs=(str(graph_dir),)
+            max_workers=workers,
+            initializer=_worker_init,
+            initargs=(str(graph_dir), footpaths),
         ) as pool:
             tasks = [(s.id, str(out_dir), sample_date, now) for s in stations]
             for station_id, n in pool.map(_compute_one, tasks, chunksize=8):
@@ -295,10 +317,6 @@ def compute_all(
 
     capital_ids, cap_warnings = load_capitals(Path("capitals.toml"), stations)
     for w in cap_warnings:
-        print(w)
-
-    city_groups, city_warnings = load_cities(Path("cities.toml"), stations)
-    for w in city_warnings:
         print(w)
 
     n_routes = route_counts(graph_dir / "trips.json")
@@ -348,5 +366,6 @@ def compute_all(
     covered = covered_from_feeds(feeds_path) if feeds_path.exists() else set()
     reachable = {s.country for s in stations} - covered
     write_json_with_gzip(
-        out_dir / "coverage.json", json.dumps(build_coverage(covered, reachable), ensure_ascii=False)
+        out_dir / "coverage.json",
+        json.dumps(build_coverage(covered, reachable), ensure_ascii=False),
     )

@@ -13,6 +13,137 @@ from tests.test_build import _write_feeds_toml, empty_overrides
 SAMPLE = date(2026, 7, 14)
 
 
+def _write_transfer_graph(tmp_path, include_transfer):
+    graph = tmp_path / "graph"
+    graph.mkdir(exist_ok=True)
+    stations = [
+        {"id": "origin", "name": "Origin", "lat": 50, "lon": 8, "country": "XX"},
+        {
+            "id": "south",
+            "name": "South Terminal",
+            "lat": 50.1,
+            "lon": 8.1,
+            "country": "XX",
+        },
+        {
+            "id": "north",
+            "name": "North Terminal",
+            "lat": 50.2,
+            "lon": 8.2,
+            "country": "XX",
+        },
+        {
+            "id": "destination",
+            "name": "Destination",
+            "lat": 51,
+            "lon": 9,
+            "country": "XX",
+        },
+    ]
+    graph.joinpath("stations.json").write_text(
+        json.dumps({"sample_date": "2026-07-14", "stations": stations})
+    )
+    trips = [
+        Trip(
+            trip_id="to-south",
+            train="IC South",
+            stops=[
+                StopTime(station="origin", arr=480, dep=480),
+                StopTime(station="south", arr=600, dep=600),
+            ],
+        ),
+        Trip(
+            trip_id="from-north",
+            train="IC North",
+            stops=[
+                StopTime(station="north", arr=630, dep=630),
+                StopTime(station="destination", arr=690, dep=690),
+            ],
+        ),
+    ]
+    graph.joinpath("trips.json").write_text(
+        json.dumps(
+            {
+                "trips": [trip.model_dump() for trip in trips],
+                "trips_by_date": {"2026-07-14": [trip.model_dump() for trip in trips]},
+            }
+        )
+    )
+    cities_path = tmp_path / ("with-transfer.toml" if include_transfer else "no-transfer.toml")
+    cities_path.write_text(
+        '[cities]\nMetroville = ["South Terminal", "North Terminal"]\n'
+        + (
+            '\n[transfers]\nMetroville = [["South Terminal", "North Terminal", "metro", 20]]\n'
+            if include_transfer
+            else ""
+        )
+    )
+    return graph, cities_path
+
+
+def test_compute_all_writes_two_train_journey_with_transfer_leg(tmp_path):
+    graph, no_transfer_path = _write_transfer_graph(tmp_path, include_transfer=False)
+    compute_all(
+        graph,
+        tmp_path / "without-transfer",
+        workers=1,
+        feeds_path=tmp_path / "no-feeds.toml",
+        cities_path=no_transfer_path,
+    )
+    without = tmp_path / "without-transfer" / "reach_origin.json"
+    assert not without.exists() or all(
+        destination["id"] != "destination"
+        for destination in json.loads(without.read_text())["destinations"]
+    )
+
+    _, transfer_path = _write_transfer_graph(tmp_path, include_transfer=True)
+    compute_all(
+        graph,
+        tmp_path / "with-transfer",
+        workers=1,
+        feeds_path=tmp_path / "no-feeds.toml",
+        cities_path=transfer_path,
+    )
+    reach = json.loads((tmp_path / "with-transfer" / "reach_origin.json").read_text())
+    destination = next(d for d in reach["destinations"] if d["id"] == "destination")
+    journey = destination["journeys"][0]
+    assert journey["trains"] == 2
+    assert journey["duration_min"] == 210
+    assert journey["legs"][1] == {
+        "type": "transfer",
+        "mode": "metro",
+        "minutes": 20,
+        "from_id": "south",
+        "to_id": "north",
+    }
+    assert len(journey["legs"]) == 3
+    assert all(
+        set(leg) == {"train", "dep", "arr", "from", "to", "via"}
+        for leg in (journey["legs"][0], journey["legs"][2])
+    )
+    assert destination["direct_per_day"] == 0
+    assert destination["frequency"]["direct_trips"] == 0
+
+
+def test_compute_all_transfer_route_matches_in_parallel(tmp_path):
+    graph, cities_path = _write_transfer_graph(tmp_path, include_transfer=True)
+    common = {"feeds_path": tmp_path / "no-feeds.toml", "cities_path": cities_path}
+    compute_all(graph, tmp_path / "serial", workers=1, **common)
+    compute_all(graph, tmp_path / "parallel", workers=2, **common)
+
+    def reach_files(out_dir):
+        return {
+            path.name: {
+                key: value
+                for key, value in json.loads(path.read_text()).items()
+                if key != "computed_at"
+            }
+            for path in out_dir.glob("reach_*.json")
+        }
+
+    assert reach_files(tmp_path / "serial") == reach_files(tmp_path / "parallel")
+
+
 def test_compute_all_writes_reach_files(tmp_path):
     raw = tmp_path / "raw"
     cfgs = make_fixture_feeds(raw)
