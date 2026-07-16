@@ -11,6 +11,8 @@ import type { Station } from "../lib/types";
 
 (globalThis as { IS_REACT_ACT_ENVIRONMENT?: boolean }).IS_REACT_ACT_ENVIRONMENT = true;
 
+const mockEaseTo = vi.fn();
+
 const handlers: Record<string, () => void> = {};
 const sources = new Map<string, { setData: ReturnType<typeof vi.fn> }>();
 
@@ -30,7 +32,7 @@ vi.mock("maplibre-gl", () => {
     setFilter() {}
     setPaintProperty() {}
     setStyle() {}
-    easeTo() {}
+    easeTo(options: any) { mockEaseTo(options); }
     getCanvas() { return { style: {} }; }
     queryRenderedFeatures() { return []; }
     remove() {}
@@ -82,6 +84,7 @@ function renderMap(): Root {
 describe("MapView station sources", () => {
   afterEach(() => {
     sources.clear();
+    mockEaseTo.mockClear();
     for (const key of Object.keys(handlers)) delete handlers[key];
   });
 
@@ -99,6 +102,94 @@ describe("MapView station sources", () => {
     const stars = starCalls.at(-1)![0] as { features: unknown[] };
     expect(dots.features).toHaveLength(1); // non-capital with reach
     expect(stars.features).toHaveLength(1); // the capital
+
+    act(() => root.unmount());
+  });
+
+  it("only calls easeTo when origin actually changes", () => {
+    mockEaseTo.mockClear();
+    const container = document.createElement("div");
+    document.body.appendChild(container);
+    const root = createRoot(container);
+
+    const onStationClick = vi.fn();
+    const onSelectCityOrigin = vi.fn();
+    const onEmptyClick = vi.fn();
+
+    // 1. Initial render with reach = null
+    act(() => {
+      root.render(
+        <MapView stations={stations} reach={null} maxTrains={1} maxMinutes={Infinity}
+                 selectedDest={null} theme="light" cityGroups={{}} armed="from"
+                 railPaths={null} onStationClick={onStationClick}
+                 onSelectCityOrigin={onSelectCityOrigin} onEmptyClick={onEmptyClick} />,
+      );
+    });
+    act(() => handlers["load"]());
+    expect(mockEaseTo).not.toHaveBeenCalled();
+
+    // 2. Select origin A
+    const reachA = { origin: "A", destinations: [] } as any;
+    act(() => {
+      root.render(
+        <MapView stations={stations} reach={reachA} maxTrains={1} maxMinutes={Infinity}
+                 selectedDest={null} theme="light" cityGroups={{}} armed="from"
+                 railPaths={null} onStationClick={onStationClick}
+                 onSelectCityOrigin={onSelectCityOrigin} onEmptyClick={onEmptyClick} />,
+      );
+    });
+    expect(mockEaseTo).toHaveBeenCalledTimes(1);
+    expect(mockEaseTo).toHaveBeenLastCalledWith({ center: [6.1, 50.8], zoom: 5 });
+
+    // 3. Change filter (maxTrains or maxMinutes) with same origin
+    mockEaseTo.mockClear();
+    act(() => {
+      root.render(
+        <MapView stations={stations} reach={reachA} maxTrains={2} maxMinutes={120}
+                 selectedDest={null} theme="light" cityGroups={{}} armed="from"
+                 railPaths={null} onStationClick={onStationClick}
+                 onSelectCityOrigin={onSelectCityOrigin} onEmptyClick={onEmptyClick} />,
+      );
+    });
+    expect(mockEaseTo).not.toHaveBeenCalled();
+
+    // 4. Clear origin (reach = null)
+    act(() => {
+      root.render(
+        <MapView stations={stations} reach={null} maxTrains={2} maxMinutes={120}
+                 selectedDest={null} theme="light" cityGroups={{}} armed="from"
+                 railPaths={null} onStationClick={onStationClick}
+                 onSelectCityOrigin={onSelectCityOrigin} onEmptyClick={onEmptyClick} />,
+      );
+    });
+    expect(mockEaseTo).not.toHaveBeenCalled();
+
+    // 5. Select origin A again (should recenter)
+    mockEaseTo.mockClear();
+    act(() => {
+      root.render(
+        <MapView stations={stations} reach={reachA} maxTrains={2} maxMinutes={120}
+                 selectedDest={null} theme="light" cityGroups={{}} armed="from"
+                 railPaths={null} onStationClick={onStationClick}
+                 onSelectCityOrigin={onSelectCityOrigin} onEmptyClick={onEmptyClick} />,
+      );
+    });
+    expect(mockEaseTo).toHaveBeenCalledTimes(1);
+    expect(mockEaseTo).toHaveBeenLastCalledWith({ center: [6.1, 50.8], zoom: 5 });
+
+    // 6. Select origin B
+    const reachB = { origin: "B", destinations: [] } as any;
+    mockEaseTo.mockClear();
+    act(() => {
+      root.render(
+        <MapView stations={stations} reach={reachB} maxTrains={2} maxMinutes={120}
+                 selectedDest={null} theme="light" cityGroups={{}} armed="from"
+                 railPaths={null} onStationClick={onStationClick}
+                 onSelectCityOrigin={onSelectCityOrigin} onEmptyClick={onEmptyClick} />,
+      );
+    });
+    expect(mockEaseTo).toHaveBeenCalledTimes(1);
+    expect(mockEaseTo).toHaveBeenLastCalledWith({ center: [13.4, 52.5], zoom: 5 });
 
     act(() => root.unmount());
   });

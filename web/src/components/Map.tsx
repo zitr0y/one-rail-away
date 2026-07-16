@@ -61,6 +61,7 @@ export default function MapView(props: Props) {
   const cityPopup = useRef<maplibregl.Popup | null>(null);
   const propsRef = useRef(props);
   propsRef.current = props;
+  const lastEasedOriginId = useRef<string | null>(null);
 
   useEffect(() => {
     const coveragePromise = api.getCoverage();
@@ -325,8 +326,16 @@ export default function MapView(props: Props) {
         : (EMPTY as never));
     (m.getSource("reach-dots") as maplibregl.GeoJSONSource).setData(
       reach ? (destinationsGeoJSON(shownList, byId) as never) : (EMPTY as never));
-    const origin = reach && byId.get(reach.origin);
-    if (origin) m.easeTo({ center: [origin.lon, origin.lat], zoom: 5 });
+    
+    if (!reach) {
+      lastEasedOriginId.current = null;
+    } else if (reach.origin !== lastEasedOriginId.current) {
+      const origin = byId.get(reach.origin);
+      if (origin) {
+        m.easeTo({ center: [origin.lon, origin.lat], zoom: 5 });
+        lastEasedOriginId.current = reach.origin;
+      }
+    }
   }
 
   useEffect(syncData, [
