@@ -12,7 +12,7 @@
  *  Pure functions — no map or React dependency. Never throws: malformed input
  *  degrades to an empty lookup, and hopCoords (geojson.ts) falls back to
  *  straight lines for anything missing. */
-import { isTrainLeg, segmentKey } from "./geojson";
+import { isTrainLeg, segmentKey, type HopGeometryLookup } from "./geojson";
 import type { ReachFile, Station } from "./types";
 
 /** Tunable curvature factor for smoothed hop control points. */
@@ -120,4 +120,125 @@ export function stationTangents(
   const tangents = new Map<string, Vec>();
   for (const [id, list] of incident) tangents.set(id, dominantTangent(list));
   return tangents;
+}
+
+/** Control points never exceed this fraction of the hop length (self-
+ *  intersection guard if CURVINESS is ever tuned up)... */
+const MAX_CONTROL_FRACTION = 0.4;
+/** ...nor this absolute distance, so short hops in dense areas don't
+ *  overshoot into neighbouring stations. */
+const MAX_CONTROL_KM = 30;
+
+const KM_PER_DEG = 111.32; // per degree of latitude; lon scaled by cos(lat)
+
+// Sampling: points per curve scale with hop length between these bounds.
+const MIN_POINTS = 8;
+const MAX_POINTS = 40;
+const KM_PER_POINT = 12;
+
+function hopLengthKm(a: Station, b: Station): number {
+  const midLat = ((a.lat + b.lat) / 2) * (Math.PI / 180);
+  const dx = (b.lon - a.lon) * Math.cos(midLat) * KM_PER_DEG;
+  const dy = (b.lat - a.lat) * KM_PER_DEG;
+  return Math.hypot(dx, dy);
+}
+
+/** Flip `t` if needed so it points along `dir` (non-negative dot). */
+function flipAlong(t: Vec, dir: Vec): Vec {
+  return t[0] * dir[0] + t[1] * dir[1] >= 0 ? t : [-t[0], -t[1]];
+}
+
+/** The point `km` kilometres from station `s` along planar unit vector `v`,
+ *  back in [lon, lat] degrees (lon un-scaled by cos of the station's lat). */
+function offsetKm(s: Station, v: Vec, km: number): Vec {
+  const cosLat = Math.cos(s.lat * (Math.PI / 180));
+  return [s.lon + (km * v[0]) / (KM_PER_DEG * cosLat), s.lat + (km * v[1]) / KM_PER_DEG];
+}
+
+function cubic(p0: Vec, p1: Vec, p2: Vec, p3: Vec, t: number): [number, number] {
+  const u = 1 - t;
+  const c0 = u * u * u;
+  const c1 = 3 * u * u * t;
+  const c2 = 3 * u * t * t;
+  const c3 = t * t * t;
+  return [
+    c0 * p0[0] + c1 * p1[0] + c2 * p2[0] + c3 * p3[0],
+    c0 * p0[1] + c1 * p1[1] + c2 * p2[1] + c3 * p3[1],
+  ];
+}
+
+function dedupeConsecutive(coords: [number, number][]): [number, number][] {
+  const out: [number, number][] = [];
+  for (const c of coords) {
+    const last = out[out.length - 1];
+    if (last && last[0] === c[0] && last[1] === c[1]) continue;
+    out.push(c);
+  }
+  return out;
+}
+
+/** One hop's cubic Bézier, oriented a→b, sampled to a polyline. First/last
+ *  vertices are EXACTLY the station coordinates (assigned, not computed — no
+ *  float drift). `ta`/`tb` are the stations' tangents, sign-corrected here to
+ *  point along the a→b travel direction. */
+function hopCurve(a: Station, b: Station, ta: Vec, tb: Vec): [number, number][] {
+  const lengthKm = hopLengthKm(a, b);
+  if (lengthKm === 0) return [[a.lon, a.lat], [b.lon, b.lat]];
+  const dirAB = direction(a, b);
+  const sa = flipAlong(ta, dirAB);
+  const sb = flipAlong(tb, dirAB);
+  const d = Math.min(CURVINESS * lengthKm, MAX_CONTROL_FRACTION * lengthKm, MAX_CONTROL_KM);
+  const p0: Vec = [a.lon, a.lat];
+  const p3: Vec = [b.lon, b.lat];
+  const p1 = offsetKm(a, sa, d);
+  const p2 = offsetKm(b, sb, -d);
+  const points = Math.min(MAX_POINTS, Math.max(MIN_POINTS, Math.round(lengthKm / KM_PER_POINT)));
+  const out: [number, number][] = [];
+  for (let i = 0; i < points; i++) out.push(cubic(p0, p1, p2, p3, i / (points - 1)));
+  out[0] = [a.lon, a.lat];
+  out[out.length - 1] = [b.lon, b.lat];
+  return dedupeConsecutive(out);
+}
+
+/** The smoothed lookup for a reach file: one HopGeometry per train hop, keyed
+ *  by segmentKey, `fwd` oriented idA→idB (idA < idB). MUST be built from the
+ *  FULL reach file — filters (1/2/3 trains, time slider) hide lines but never
+ *  reshape them. Never throws: malformed input yields an empty lookup and the
+ *  render side falls back to straight lines. */
+export function buildSmoothedLookup(
+  reach: ReachFile, byId: Map<string, Station>,
+): HopGeometryLookup {
+  try {
+    const hops = expandHops(reach);
+    const tangents = stationTangents(hops, byId);
+    const lookup: HopGeometryLookup = new Map();
+    for (const key of [...hops.keys()].sort()) {
+      const hop = hops.get(key)!;
+      const a = byId.get(hop.a);
+      const b = byId.get(hop.b);
+      if (!a || !b) continue; // stale reach vs stations.json → straight fallback
+      const dirAB = direction(a, b);
+      const fwd = hopCurve(a, b, tangents.get(hop.a) ?? dirAB, tangents.get(hop.b) ?? dirAB);
+      if (fwd.length < 2) continue; // co-located stations degenerate away
+      lookup.set(key, { fwd, rev: [...fwd].reverse() });
+    }
+    return lookup;
+  } catch {
+    return new Map();
+  }
+}
+
+/** Memoized per reach-file identity (and stations identity) so filter and
+ *  selection churn never recomputes — a full reach file is ~4k hops worst
+ *  case, target <10 ms, but once is still better than every render. */
+const memo = new WeakMap<ReachFile, { byId: Map<string, Station>; lookup: HopGeometryLookup }>();
+
+export function smoothedLookupFor(
+  reach: ReachFile, byId: Map<string, Station>,
+): HopGeometryLookup {
+  const hit = memo.get(reach);
+  if (hit && hit.byId === byId) return hit.lookup;
+  const lookup = buildSmoothedLookup(reach, byId);
+  memo.set(reach, { byId, lookup });
+  return lookup;
 }
