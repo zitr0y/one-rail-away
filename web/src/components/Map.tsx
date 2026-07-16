@@ -28,6 +28,7 @@ import {
   drawStopSignIcon,
 } from "../lib/dots";
 import { styleUrl } from "../lib/mapstyle";
+import { sheetBottomInsetPx, type SheetState } from "../lib/mobileLayout";
 import type { CityGroups, ReachFile, Station } from "../lib/types";
 
 const CLICK_LAYERS = ["reach-dots", "capital-stars", "all-stations"];
@@ -53,11 +54,16 @@ interface Props {
   onStationClick: (pick: FeaturePick) => void;
   onSelectCityOrigin: (city: string, memberIds: string[]) => void;
   onEmptyClick: () => void;
+  mobile: boolean;
+  sheetState: SheetState;
+  sheetHasContext: boolean;
 }
 
 export default function MapView(props: Props) {
   const container = useRef<HTMLDivElement>(null);
   const map = useRef<maplibregl.Map | null>(null);
+  const navigationControl = useRef<maplibregl.NavigationControl | null>(null);
+  const mobileLayoutListenerCleanup = useRef<(() => void) | null>(null);
   const cityPopup = useRef<maplibregl.Popup | null>(null);
   const propsRef = useRef(props);
   propsRef.current = props;
@@ -277,6 +283,7 @@ export default function MapView(props: Props) {
       });
       m.on("mouseleave", "coverage-veil", () => veilPopup.remove());
       map.current = m;
+      syncMobileLayout();
       // DEV-only handle for headless diagnostics (never set in production builds).
       if (import.meta.env.DEV) (window as unknown as { __map?: maplibregl.Map }).__map = m;
       coveragePromise
@@ -299,6 +306,11 @@ export default function MapView(props: Props) {
     return () => {
       stopRider();
       removeCityPopup();
+      mobileLayoutListenerCleanup.current?.();
+      if (navigationControl.current) {
+        m.removeControl(navigationControl.current);
+        navigationControl.current = null;
+      }
       m.remove();
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -308,6 +320,47 @@ export default function MapView(props: Props) {
     cityPopup.current?.remove();
     cityPopup.current = null;
   }
+
+  function syncMobileLayout() {
+    const m = map.current;
+    if (!m) return;
+    const { mobile, sheetState, sheetHasContext } = propsRef.current;
+    if (mobile && !navigationControl.current) {
+      navigationControl.current = new maplibregl.NavigationControl();
+      m.addControl(navigationControl.current, "bottom-right");
+    } else if (!mobile && navigationControl.current) {
+      m.removeControl(navigationControl.current);
+      navigationControl.current = null;
+    }
+    const bottom = mobile
+      ? sheetBottomInsetPx(window.innerHeight, sheetState, sheetHasContext)
+      : 0;
+    m.setPadding({ top: 0, right: 0, bottom, left: 0 });
+  }
+
+  useEffect(syncMobileLayout, [props.mobile, props.sheetState, props.sheetHasContext]);
+
+  useEffect(() => {
+    mobileLayoutListenerCleanup.current?.();
+    mobileLayoutListenerCleanup.current = null;
+    if (!props.mobile) return;
+
+    const onViewportHeightChange = () => syncMobileLayout();
+    const visualViewport = window.visualViewport;
+    window.addEventListener("resize", onViewportHeightChange);
+    visualViewport?.addEventListener("resize", onViewportHeightChange);
+    const cleanup = () => {
+      window.removeEventListener("resize", onViewportHeightChange);
+      visualViewport?.removeEventListener("resize", onViewportHeightChange);
+    };
+    mobileLayoutListenerCleanup.current = cleanup;
+    return () => {
+      cleanup();
+      if (mobileLayoutListenerCleanup.current === cleanup) {
+        mobileLayoutListenerCleanup.current = null;
+      }
+    };
+  }, [props.mobile]);
 
   useEffect(() => {
     if (props.armed !== "from") removeCityPopup();

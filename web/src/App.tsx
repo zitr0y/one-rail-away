@@ -171,7 +171,8 @@ export default function App() {
                selectedDest={selectedDest} theme={theme}
                cityGroups={cityGroups} armed={armed} railPaths={railPaths}
                onStationClick={onStationClick} onSelectCityOrigin={selectCityOrigin}
-               onEmptyClick={onEmptyClick} />
+               onEmptyClick={onEmptyClick} mobile={mobile}
+               sheetState={sheetState} sheetHasContext={hasContext} />
       <JourneyPlanner
         reach={reach} stationsById={stationsById}
         cities={cities} cityGroups={cityGroups} originLabel={cityOrigin?.city}
