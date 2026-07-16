@@ -53,10 +53,21 @@ class Leg(BaseModel):
     feeds: list[str] = Field(default_factory=list, exclude=True)
 
 
+class TransferLeg(BaseModel):
+    type: Literal["transfer"] = "transfer"
+    mode: TransferMode
+    minutes: int
+    from_id: str
+    to_id: str
+
+
+JourneyLeg = Leg | TransferLeg
+
+
 class Journey(BaseModel):
     trains: int
     duration_min: int
-    legs: list[Leg]
+    legs: list[JourneyLeg]
 
 
 class Destination(BaseModel):
