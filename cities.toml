@@ -32,3 +32,6 @@
 "København" = ["København H", "København Syd St."]
 "Madrid" = ["Madrid-Puerta de Atocha-Almudena Grandes", "Madrid-Chamartín-Clara Campoamor"]
 "München" = ["München Hbf", "München Ostbahnhof"]
+# Roma: all-caps names come from the Trenitalia NeTEx feed (verified live 2026-07-16).
+# 'Roma, Stazione di Roma Tiburtina' is an unmerged ÖBB duplicate of ROMA TIBURTINA (backlog AP) included so the union covers it.
+"Roma" = ["ROMA TERMINI", "ROMA TIBURTINA", "ROMA OSTIENSE", "Roma, Stazione di Roma Tiburtina"]
