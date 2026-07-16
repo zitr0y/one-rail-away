@@ -265,6 +265,28 @@ def test_norm_equates_german_station_words():
     assert _norm("München Ostbahnhof") == _norm("München Ost") == "munchenost"
 
 
+def test_norm_stroke_letters():
+    # Poland's 'Główny' -> 'glowny' (instead of dropping 'ł' to 'gowny')
+    assert _norm("Główny") == "glowny"
+    assert _norm("GŁÓWNY") == "glowny"
+
+    # ø and đ examples
+    assert _norm("Rødekro") == "rodekro"
+    assert _norm("RØDEKRO") == "rodekro"
+    assert _norm("Đurđevac") == "durdevac"
+    assert _norm("ĐURĐEVAC") == "durdevac"
+
+    # œ and æ examples
+    assert _norm("Gare de l'Est-œst") == "garedelestoest"
+    assert _norm("Ærøskøbing") == "aeroskobing"
+
+    # Existing ue/oe/ae behavior is unchanged (digraphs are NOT converted to umlauts,
+    # and umlauts normalize to their single-character base under NFKD)
+    assert _norm("München") == "munchen"
+    assert _norm("Muenchen") == "muenchen"
+    assert _norm("München") != _norm("Muenchen")
+
+
 # --- accent transliteration: umlaut vs ASCII spelling must still proximity-merge ---
 
 
