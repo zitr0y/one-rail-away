@@ -284,6 +284,10 @@ if FlixBus (K) or regional trains (AR) land. Product decision with the user.
 
 # Smaller deferred notes
 
+- **Medina del Campo AV coordinates wrong:** placed 21 m from the classic
+  station in our data; really ~3.3 km away (found in the 2026-07-16 U sweep).
+  Fix source coords / merge logic; also a platform-duplicate lookalike for AP.
+
 - **Flaky compute test on Python 3.14:**
   `tests/test_compute.py::test_compute_all_sets_is_capital` fails on `main` —
   `os.chdir(tmp_path)` + no-fork multiprocessing means workers read the wrong
