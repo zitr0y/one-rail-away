@@ -1,6 +1,10 @@
-import type { Destination, Journey, Leg, ReachFile, Station } from "./types";
+import type { Destination, Journey, JourneyLeg, Leg, ReachFile, Station } from "./types";
 
 export type MaxTrains = 1 | 2 | 3;
+
+export function isTrainLeg(leg: JourneyLeg): leg is Leg {
+  return leg.type !== "transfer";
+}
 
 export function bestJourney(d: Destination, maxTrains: MaxTrains): Journey | null {
   const eligible = d.journeys.filter((j) => j.trains <= maxTrains);
@@ -26,7 +30,7 @@ export function timeBucket(min: number): 0 | 1 | 2 | 3 {
 export function transferPoints(
   journey: Journey, stationsById: Map<string, Station>,
 ): [number, number][] {
-  return journey.legs.slice(0, -1).flatMap((leg) => {
+  return journey.legs.filter(isTrainLeg).slice(0, -1).flatMap((leg) => {
     const station = stationsById.get(leg.to);
     return station ? [[station.lon, station.lat] as [number, number]] : [];
   });
@@ -134,6 +138,7 @@ export function journeyLegPaths(
   j: Journey, stationsById: Map<string, Station>, railPaths: RailPathLookup | null,
 ): [number, number][][] {
   return j.legs
+    .filter(isTrainLeg)
     .map((leg) => legSegments(leg, stationsById, railPaths))
     .filter((segments) => segments.length > 0)
     .map((segments) => segments.flatMap((s, i) => (i === 0 ? s.coords : s.coords.slice(1))));
@@ -153,6 +158,7 @@ export function segmentsGeoJSON(
   }>();
   for (const { d, j } of shownList) {
     for (const leg of j.legs) {
+      if (!isTrainLeg(leg)) continue;
       for (const segment of legSegments(leg, stationsById, railPaths)) {
         const prev = best.get(segment.key);
         if (!prev) {
@@ -250,4 +256,3 @@ export function initialMaxTrains(search: string, hostname: string): MaxTrains {
   if (host === "onestopeurope.eu") return 2;
   return 1;
 }
-

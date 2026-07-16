@@ -435,9 +435,12 @@ export default function MapView(props: Props) {
         const ids = new Set<string>();
         ids.add(reach.origin);
         for (const leg of journey.legs) {
-          ids.add(leg.from);
-          ids.add(leg.to);
-          if (leg.via) {
+          if (leg.type === "transfer") {
+            ids.add(leg.from_id);
+            ids.add(leg.to_id);
+          } else {
+            ids.add(leg.from);
+            ids.add(leg.to);
             for (const v of leg.via) {
               ids.add(v);
             }

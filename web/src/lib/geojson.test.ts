@@ -32,6 +32,7 @@ describe("bestJourney / timeBucket", () => {
   });
 });
 
+
 describe("frequency styling", () => {
   it("marks limited evidence infrequent and keeps legacy files frequent", () => {
     expect(frequencyClass(reach.destinations[0])).toBe("frequent");
@@ -266,6 +267,28 @@ describe("journeyLegPaths", () => {
     const flattened = paths.flatMap((c, i) => (i === 0 ? c : c.slice(1)));
     expect(line.geometry.coordinates).toEqual(flattened);
   });
+
+  it("keeps transfer legs out of rail-path geometry", () => {
+    const transferJourney: Journey = {
+      trains: 2, duration_min: 100,
+      legs: [
+        { train: "ICE 1", dep: "08:00", arr: "09:00", from: "a", to: "b", via: [] },
+        { type: "transfer", mode: "walk", minutes: 10, from_id: "b", to_id: "c" },
+        { train: "ICE 2", dep: "09:10", arr: "10:00", from: "c", to: "d", via: [] },
+      ],
+    };
+    const transferStations = new Map([
+      ["a", { id: "a", name: "A", lat: 0, lon: 0, country: "DE", has_reach: true }],
+      ["b", { id: "b", name: "B", lat: 0, lon: 1, country: "DE", has_reach: true }],
+      ["c", { id: "c", name: "C", lat: 1, lon: 1, country: "DE", has_reach: true }],
+      ["d", { id: "d", name: "D", lat: 1, lon: 2, country: "DE", has_reach: true }],
+    ]);
+
+    expect(journeyLegPaths(transferJourney, transferStations, null)).toEqual([
+      [[0, 0], [1, 0]],
+      [[1, 1], [2, 1]],
+    ]);
+  });
 });
 
 const mkStation = (id: string, lon: number, lat: number): [string, Station] =>
@@ -346,4 +369,3 @@ describe("initialMaxTrains", () => {
     expect(initialMaxTrains("", "google.com")).toBe(1);
   });
 });
-
