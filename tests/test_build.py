@@ -267,3 +267,23 @@ def test_station_countries_unmatched_override_warns_not_aborts(tmp_path, capsys)
     ) in output
     assert (graph / "stations.json").exists()
     assert (graph / "trips.json").exists()
+
+
+def test_munchen_ostbahnhof_rename_does_not_affect_graz():
+    from pathlib import Path
+    import tomllib
+    from pipeline.models import Station
+
+    names_path = Path(__file__).parent.parent / "pipeline" / "station_names.toml"
+    assert names_path.exists()
+    name_overrides = tomllib.loads(names_path.read_text()).get("names", {})
+
+    m_ost = Station(id="x:db_fern:226810", name="Ostbahnhof", lat=48.12, lon=11.60, country="DE")
+    g_ost = Station(id="x:oebb:Pat:46:3038", name="Graz Ostbahnhof", lat=47.05, lon=15.44, country="AT")
+
+    for s in [m_ost, g_ost]:
+        if s.id in name_overrides:
+            s.name = name_overrides[s.id]
+
+    assert m_ost.name == "München Ostbahnhof"
+    assert g_ost.name == "Graz Ostbahnhof"

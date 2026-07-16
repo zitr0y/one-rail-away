@@ -38,3 +38,6 @@
 # (backlog B) brings the FLX20/30 service days into the build.
 # Erfurt: db_fern's canonical is the context-free "Hauptbahnhof"; include city.
 "x:db_fern:338323" = "Erfurt Hbf"
+# München Ostbahnhof: DB feed strips the city prefix (leaving "Ostbahnhof").
+# The id is volatile (backlog AM). Verified still current 2026-07-16.
+"x:db_fern:226810" = "München Ostbahnhof"
