@@ -6,7 +6,11 @@ lint:
     uv run ruff check .
 
 pipeline:
-    uv run ose fetch && uv run ose build && uv run ose compute && uv run ose paths
+    uv run ose all
+
+# Skip earlier stages, e.g. `just pipeline-from compute` after backend changes
+pipeline-from stage:
+    uv run ose all --from {{stage}}
 
 # Run API and web dev servers together (Ctrl-C stops both)
 dev:
