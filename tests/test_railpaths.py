@@ -61,6 +61,16 @@ def test_collect_hops_normalizes_direction_and_dedupes(tmp_path):
     assert collect_hops(tmp_path) == {("s:a", "s:b")}
 
 
+def test_collect_hops_skips_transfer_legs(tmp_path):
+    _write_reach(tmp_path, "s:a", [{"id": "s:c", "direct_per_day": 0, "journeys": [
+        {"trains": 2, "duration_min": 90, "legs": [
+            {"train": "T", "dep": "", "arr": "", "from": "s:a", "to": "s:b", "via": []},
+            {"type": "transfer", "mode": "rer", "minutes": 30,
+             "from_id": "s:b", "to_id": "s:c"},
+        ]}]}])
+    assert collect_hops(tmp_path) == {("s:a", "s:b")}
+
+
 def test_collect_hops_skips_self_pairs(tmp_path):
     _write_reach(tmp_path, "s:a", [{"id": "s:b", "direct_per_day": 1, "journeys": [
         {"trains": 1, "duration_min": 10, "legs": [

@@ -60,6 +60,8 @@ def collect_hops(out_dir: Path) -> set[tuple[str, str]]:
         for dest in reach["destinations"]:
             for journey in dest["journeys"]:
                 for leg in journey["legs"]:
+                    if leg.get("type") == "transfer":
+                        continue  # footpath/RER transfer, not a rail hop
                     stops = [leg["from"], *leg["via"], leg["to"]]
                     for a, b in itertools.pairwise(stops):
                         if a != b:
