@@ -47,6 +47,11 @@
   --border: #d1d5db;
   --shadow: 0 4px 16px rgb(0 0 0 / 0.15);
   --shadow-small: 0 1px 4px rgb(0 0 0 / 0.2);
+  --frequency-heat-0: #f3f4f6;
+  --frequency-heat-1: #dbeafe;
+  --frequency-heat-2: #93c5fd;
+  --frequency-heat-3: #3b82f6;
+  --frequency-heat-4: #1d4ed8;
 }
 /* Dark starting values (spec §Panel/chrome CSS) — user-calibrated later.
    Brand navy stays navy in both themes; navy-on-navy active buttons are a
@@ -61,6 +66,11 @@
   --border: #2A3A66;
   --shadow: 0 4px 16px rgb(0 0 0 / 0.5);
   --shadow-small: 0 1px 4px rgb(0 0 0 / 0.6);
+  --frequency-heat-0: #1a2a55;
+  --frequency-heat-1: #243b6b;
+  --frequency-heat-2: #28559a;
+  --frequency-heat-3: #3478cf;
+  --frequency-heat-4: #60a5fa;
 }
 body { margin: 0; font-family: "Barlow", system-ui, sans-serif; color: var(--text); }
 .app { position: fixed; inset: 0; }
@@ -241,6 +251,23 @@ body { margin: 0; font-family: "Barlow", system-ui, sans-serif; color: var(--tex
 .planner-divider { height: 1px; background: var(--border); margin: 2px 0; }
 .trip-details h2 { margin: 0 0 4px; font-size: 16px; }
 .trip-details .duration { margin: 0 0 8px; color: var(--text-strong); }
+.trip-details .frequency-heat-strip {
+  width: 100%; margin: 0; padding: 8px; border: 1px solid var(--border); border-radius: 8px;
+  background: var(--surface); color: var(--text); cursor: pointer; font: inherit; text-align: left;
+}
+.trip-details .frequency-heat-strip:focus-visible { outline: 2px solid var(--text); outline-offset: 2px; }
+.trip-details .frequency-heat-row {
+  display: grid; grid-template-columns: 32px repeat(3, minmax(0, 1fr)); gap: 4px; align-items: center;
+}
+.trip-details .frequency-heat-row + .frequency-heat-row { margin-top: 4px; }
+.trip-details .frequency-heat-weekday { font-size: 12px; font-weight: 600; }
+.trip-details .frequency-heat-cell { min-height: 20px; border-radius: 3px; }
+.trip-details .frequency-heat-level-0 { background: var(--frequency-heat-0); }
+.trip-details .frequency-heat-level-1 { background: var(--frequency-heat-1); }
+.trip-details .frequency-heat-level-2 { background: var(--frequency-heat-2); }
+.trip-details .frequency-heat-level-3 { background: var(--frequency-heat-3); }
+.trip-details .frequency-heat-level-4 { background: var(--frequency-heat-4); }
+.trip-details .frequency-heat-note { margin: 4px 0 8px; color: var(--text-muted); font-size: 12px; }
 .trip-details .legs { margin: 0 0 12px; padding-left: 18px; font-size: 13px; }
 .trip-details .legs .transfer-leg { color: var(--text-muted); }
 .trip-details .legs .transfer-icon { display: inline-block; width: 1.25em; text-align: center; }

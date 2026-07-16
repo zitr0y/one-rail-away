@@ -22,8 +22,10 @@ export interface Frequency {
   direct_per_active_day?: number | null; weekly_direct_estimate?: number | null;
   availability: "year_round" | "limited" | "coverage_limited"; active_months: string[];
 }
+export type HourlyHistogram = Record<string, number[]>;
 export interface Destination {
   id: string; direct_per_day: number; journeys: Journey[]; frequency?: Frequency | null;
+  histogram?: HourlyHistogram;
 }
 export interface ReachFile {
   origin: string; computed_at: string; sample_date: string; destinations: Destination[];
