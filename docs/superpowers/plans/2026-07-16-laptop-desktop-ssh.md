@@ -25,7 +25,7 @@
 **Interfaces:**
 - Produces: TCP port 22 open on `linux.local`, sshd enabled at boot.
 
-- [ ] **Step 1: User runs on the desktop** (ask the user to run this at the desktop, or paste it to them; distro unknown, so both variants):
+- [x] **Step 1: User runs on the desktop** (ask the user to run this at the desktop, or paste it to them; distro unknown, so both variants):
 
 ```bash
 # systemd distros (Fedora/Arch/openSUSE — service name "sshd"):
@@ -39,7 +39,7 @@ sudo ufw allow ssh                                                              
 # (If neither is installed, there is likely no host firewall — skip.)
 ```
 
-- [ ] **Step 2: Verify from the laptop**
+- [x] **Step 2: Verify from the laptop**
 
 Run: `nc -zv -w 3 linux.local 22`
 Expected: `Connected to ... :22` (previously this timed out).
@@ -54,7 +54,7 @@ If it still times out, the desktop firewall is still blocking — re-check Step 
 - Consumes: open port 22 on `linux.local` (Task 1).
 - Produces: `ssh desktop <cmd>` works without password; later tasks use exactly the alias name `desktop`.
 
-- [ ] **Step 1: Append the alias to laptop `~/.ssh/config`**
+- [x] **Step 1: Append the alias to laptop `~/.ssh/config`**
 
 ```
 Host desktop
@@ -63,7 +63,7 @@ Host desktop
     IdentityFile ~/.ssh/id_ed25519
 ```
 
-- [ ] **Step 2: Install the laptop's existing key on the desktop (interactive — ONE password entry)**
+- [x] **Step 2: Install the laptop's existing key on the desktop (interactive — ONE password entry)**
 
 The user runs in the Claude Code prompt (the `!` prefix runs it interactively in-session):
 
@@ -73,12 +73,12 @@ The user runs in the Claude Code prompt (the `!` prefix runs it interactively in
 
 Expected: prompts for `aaron@linux.local`'s password once, then `Number of key(s) added: 1`.
 
-- [ ] **Step 3: Verify passwordless**
+- [x] **Step 3: Verify passwordless**
 
 Run: `ssh -o BatchMode=yes desktop true && echo OK`
 Expected: `OK` (no password prompt; BatchMode makes any prompt a hard failure).
 
-- [ ] **Step 4: Verify sshd is enabled on the desktop (reboot survival)**
+- [x] **Step 4: Verify sshd is enabled on the desktop (reboot survival)**
 
 Run: `ssh desktop 'systemctl is-enabled sshd 2>/dev/null || systemctl is-enabled ssh'`
 Expected: `enabled`. If `disabled`, run `ssh -t desktop 'sudo systemctl enable sshd || sudo systemctl enable ssh'` (interactive sudo — use `!` prefix).
@@ -90,7 +90,7 @@ Expected: `enabled`. If `disabled`, run `ssh -t desktop 'sudo systemctl enable s
 **Interfaces:**
 - Produces: TCP port 22 open on `aaron-yoga-linux.local`, sshd enabled at boot.
 
-- [ ] **Step 1: Enable and open firewall (Fedora: firewalld; needs sudo — run interactively via `!` if sudo prompts)**
+- [x] **Step 1: Enable and open firewall (Fedora: firewalld; needs sudo — run interactively via `!` if sudo prompts)**
 
 ```bash
 sudo systemctl enable --now sshd
@@ -98,12 +98,12 @@ sudo firewall-cmd --permanent --add-service=ssh
 sudo firewall-cmd --reload
 ```
 
-- [ ] **Step 2: Verify locally**
+- [x] **Step 2: Verify locally**
 
 Run: `systemctl is-enabled sshd && systemctl is-active sshd && nc -zv -w 3 localhost 22`
 Expected: `enabled`, `active`, `Connected`.
 
-- [ ] **Step 3: Verify reachable from the LAN side (from the desktop, over the Task-2 link)**
+- [x] **Step 3: Verify reachable from the LAN side (from the desktop, over the Task-2 link)**
 
 Run: `ssh desktop 'nc -zv -w 3 aaron-yoga-linux.local 22 2>&1 || true'`
 Expected: output contains `Connected`. (If `nc` is missing on the desktop, use `ssh desktop 'timeout 3 bash -c "</dev/tcp/aaron-yoga-linux.local/22" && echo Connected'`.)
@@ -118,13 +118,13 @@ Expected: output contains `Connected`. (If `nc` is missing on the desktop, use `
 - Consumes: `desktop` alias (Task 2), laptop sshd (Task 3).
 - Produces: `ssh laptop <cmd>` works from the desktop without password.
 
-- [ ] **Step 1: Ensure the desktop has an ed25519 key (create only if absent)**
+- [x] **Step 1: Ensure the desktop has an ed25519 key (create only if absent)**
 
 ```bash
 ssh desktop '[ -f ~/.ssh/id_ed25519 ] || ssh-keygen -t ed25519 -N "" -f ~/.ssh/id_ed25519'
 ```
 
-- [ ] **Step 2: Authorize it on the laptop (append, dedup, correct perms)**
+- [x] **Step 2: Authorize it on the laptop (append, dedup, correct perms)**
 
 ```bash
 PUB=$(ssh desktop 'cat ~/.ssh/id_ed25519.pub')
@@ -133,7 +133,7 @@ grep -qxF "$PUB" ~/.ssh/authorized_keys || echo "$PUB" >> ~/.ssh/authorized_keys
 chmod 700 ~/.ssh && chmod 600 ~/.ssh/authorized_keys
 ```
 
-- [ ] **Step 3: Add the `laptop` alias on the desktop**
+- [x] **Step 3: Add the `laptop` alias on the desktop**
 
 ```bash
 ssh desktop 'mkdir -p ~/.ssh && chmod 700 ~/.ssh && touch ~/.ssh/config && chmod 600 ~/.ssh/config
@@ -146,7 +146,7 @@ Host laptop
 EOF'
 ```
 
-- [ ] **Step 4: Verify passwordless desktop → laptop**
+- [x] **Step 4: Verify passwordless desktop → laptop**
 
 Run: `ssh desktop 'ssh -o BatchMode=yes -o StrictHostKeyChecking=accept-new laptop true && echo OK'`
 Expected: `OK`.
@@ -160,12 +160,12 @@ Expected: `OK`.
 - Consumes: `desktop` alias (Task 2).
 - Produces: `on-desktop <cmd...>` runs `<cmd...>` inside the desktop's repo clone; `on-desktop` with no args opens an interactive shell there.
 
-- [ ] **Step 1: Locate the repo clone on the desktop**
+- [x] **Step 1: Locate the repo clone on the desktop**
 
 Run: `ssh desktop 'for d in ~/Projects/personal/de-trains-speed-map ~/Projects/de-trains-speed-map ~/de-trains-speed-map; do [ -d "$d/.git" ] && echo "$d" && exit; done; find ~ -maxdepth 4 -type d -name de-trains-speed-map 2>/dev/null | head -1'`
 Expected: one absolute path. Use it as `REPO_PATH` in Step 2. If empty, ask the user where the clone lives.
 
-- [ ] **Step 2: Write the helper (substitute the real `REPO_PATH`)**
+- [x] **Step 2: Write the helper (substitute the real `REPO_PATH`)**
 
 ```bash
 #!/usr/bin/env bash
@@ -181,12 +181,12 @@ exec ssh desktop "cd '$REPO_PATH' && $*"
 
 Then: `chmod +x ~/.local/bin/on-desktop`
 
-- [ ] **Step 3: Verify the helper (spec success criterion)**
+- [x] **Step 3: Verify the helper (spec success criterion)**
 
 Run: `on-desktop git status | head -3`
 Expected: branch/status output from the desktop clone, no password prompt.
 
-- [ ] **Step 4: Verify the full success-criteria list from the spec**
+- [x] **Step 4: Verify the full success-criteria list from the spec**
 
 ```bash
 ssh -o BatchMode=yes desktop true && echo "laptop→desktop OK"
@@ -197,7 +197,7 @@ systemctl is-enabled sshd
 
 Expected: both `OK` lines, `enabled` twice.
 
-- [ ] **Step 5: Commit the plan checkboxes + any doc updates**
+- [x] **Step 5: Commit the plan checkboxes + any doc updates**
 
 ```bash
 git add docs/superpowers/plans/2026-07-16-laptop-desktop-ssh.md
