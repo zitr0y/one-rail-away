@@ -1,6 +1,6 @@
-from typing import Literal
+from typing import Annotated, Literal
 
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import BaseModel, ConfigDict, Field, field_validator
 
 TransferMode = Literal[
     "walk", "metro", "tram", "cercanias", "rer", "train-shuttle", "bus"
@@ -69,11 +69,26 @@ class Journey(BaseModel):
     legs: list[JourneyLeg]
 
 
+HourlyCount = Annotated[int, Field(ge=0)]
+HourlyBins = Annotated[list[HourlyCount], Field(min_length=24, max_length=24)]
+
+
 class Destination(BaseModel):
     id: str
     direct_per_day: int
     journeys: list[Journey]  # ascending trains; each strictly faster than previous
     frequency: "Frequency | None" = None
+    histogram: dict[str, HourlyBins] | None = Field(
+        default=None,
+        exclude_if=lambda value: value is None,
+    )
+
+    @field_validator("histogram", mode="after")
+    @classmethod
+    def omit_empty_histogram(cls, value):
+        if not value or not any(count for row in value.values() for count in row):
+            return None
+        return value
 
 
 class Frequency(BaseModel):
