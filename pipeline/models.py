@@ -3,6 +3,11 @@ from typing import Literal
 from pydantic import BaseModel, ConfigDict, Field
 
 
+TransferMode = Literal[
+    "walk", "metro", "tram", "cercanias", "rer", "train-shuttle", "bus"
+]
+
+
 class CountryOverride(BaseModel):
     name: str
     lat: float
