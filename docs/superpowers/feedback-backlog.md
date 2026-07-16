@@ -6,7 +6,7 @@ needs brainstorming with the user before implementation unless marked otherwise.
 Feed research verdicts (Norway, Czechia, Hungary, Belgium, Ouigo España, …) live in
 the verdict table of [`new-feed-recipe.md`](new-feed-recipe.md).
 
-Letters are stable ids; the highest used so far is AX.
+Letters are stable ids; the highest used so far is AY.
 
 ## A. Add more national feeds — ongoing
 
@@ -45,15 +45,15 @@ around Düsseldorf-Holthausen trains follow the subway or the cargo-yard tracks
 instead of the passenger line. Root causes: OSM connectivity/classification is
 imperfect and chasing per-corridor correctness for train nerds is a treadmill.
 
-**Direction to brainstorm:** possibly go BACK to smoothed "subway map style" lines —
-but properly drawn as line trees (a→b→c as one polyline through the served stops,
-not independent a→b and a→c fans). The X segment-dedup already provides the shared
+**DECIDED (user, 2026-07-16): smoothed paths, drop the real OSM paths** ("the
+smoothed paths instead of real paths is important — fuck the real paths"). Build
+them properly as line trees (a→b→c as one polyline through the served stops, not
+independent a→b and a→c fans). The X segment-dedup already provides the shared
 trunks, so smoothing must respect shared segments (smooth the tree, not each
-journey). That should give clean curves without straight-line fallback. Decision
-needed with the user: fix OSM routing (better rail filtering, penalize
-subway/freight tags, connectivity repair) vs. smoothed trees vs. hybrid (OSM where
-confident, smoothed otherwise). Note the earlier "paths not rendering" report is
-superseded — paths render now; the issue is quality.
+journey). That should give clean curves without straight-line fallback. Still
+needs a brainstorm/spec for the smoothing itself; the OSM-vs-smoothed-vs-hybrid
+question is closed. Side benefit: likely retires AL (`ose paths` RAM budget) and
+the committed `rail_paths.json` artifact.
 
 Related: AL (paths RAM budget), AJ (rider steering off geometry stubs).
 
@@ -126,12 +126,13 @@ S). Relates K, Q.
 ## U. City-union follow-ups
 
 Intra-city transfer edges shipped 2026-07-16 (35 curated pairs, 17 cities;
-spec `specs/2026-07-16-intra-city-transfers-design.md`). Remaining:
+spec `specs/2026-07-16-intra-city-transfers-design.md`). **Confirmed working
+mid-journey in user testing 2026-07-16** (Agen → Dunkerque correctly shows
+"~55 min metro to Paris Gare du Nord" between the two TGVs). Remaining:
 
-- **Needs a server recompute to go live** — reach files only carry transfers
-  after the pipeline reruns (Monday cron or manual run). After that, verify a
-  through-Paris journey on prod; Milano/Lisboa/Porto entries stay dormant
-  until Trenitalia/CP are in a build (they warn-and-skip today).
+- Milano/Lisboa/Porto entries stay dormant until Trenitalia/CP are in a build
+  (they warn-and-skip today).
+- Same-city origin→destination queries are absurd — split out as AY.
 - Nit: a city-union origin pins only ONE member dot visible at low zoom, so sibling
   termini can fade — thread member ids into the map's always-visible set.
 
@@ -225,18 +226,32 @@ Seven items; the path-routing one is folded into item I above.
 
 ## AN. Mobile layout — shipped 2026-07-16, awaiting phone calibration
 
-Bottom sheet shipped (spec `specs/2026-07-16-mobile-layout-design.md`). Open:
-the user's real-phone visual pass. All dimensions are centralized constants in
-`web/src/lib/mobileLayout.ts` (collapsed 112/136 px, expanded 88dvh, swipe
-threshold 32 px) — calibration is a one-line change each.
+Bottom sheet shipped (spec `specs/2026-07-16-mobile-layout-design.md`). All
+dimensions are centralized constants in `web/src/lib/mobileLayout.ts` (collapsed
+112/136 px, expanded 88dvh, swipe threshold 32 px) — calibration is a one-line
+change each.
+
+**Real-phone pass (2026-07-16) verdict: needs work**, not just calibration:
+- The arrow is disliked (the expand/collapse chevron). **Direction (2026-07-17):**
+  the drag handle should contain a centered button that fits the app's style —
+  handle and open/close control become one element.
+- Minimized sheet is supposed to show only the relevant field, but while
+  choosing a target it shows BOTH start and target.
+- The swap-start/target button sits between the two fields and eats vertical
+  space — move or shrink it.
 
 ## AO. Frequency heat strip — shipped 2026-07-16, live after recompute
 
 7×3 day×daypart heat strip + day×hour histograms in reach files (spec
-`specs/2026-07-16-frequency-viz-design.md`). Needs the server recompute (same
-as U's edges) to show real data; old reach files fall back to the text line.
-Open: user-judged colour/size tuning (`--frequency-heat-*` tokens). Evidence
+`specs/2026-07-16-frequency-viz-design.md`). Live and seen by the user. Evidence
 pass roughly doubles compute-stage time — watch under P.
+
+**User verdict (2026-07-16): rework the layout.** "I like the viz but":
+- Make it **horizontal** (days along the x-axis?) — "makes more sense in my mind".
+- The three dayparts must be **clearly labeled morning / afternoon / evening**,
+  not implied.
+- The **colours must make their meaning obvious** (what does dark vs light
+  encode?) — legend, scale, or self-evident encoding; more than token tuning.
 
 ## AP. Auto-flag / auto-merge station near-duplicates (Stuttgart case)
 
@@ -279,6 +294,23 @@ the fastest per mode. Applies today to alternative train routes and becomes acut
 if FlixBus (K) or regional trains (AR) land. Product decision with the user.
 
 ---
+
+# Self-test feedback round (aaron, 2026-07-16)
+
+Three items: heat-strip layout folded into AO, smoothed-paths decision folded
+into I, plus:
+
+## AY. Same-city origin→destination journeys are absurd
+
+Paris Gare du Nord → Paris Montparnasse renders as a 4 h 11 min, 3-TGV loop via
+Lille Flandres and Massy TGV instead of "take the metro ~25 min" (or being
+suppressed entirely). The intra-city transfer edges (U) work fine as
+*mid-journey* legs; the failure is when origin and destination are in the same
+city union — RAPTOR happily finds a train-only route and never considers the
+walk/metro edge as the whole answer. Decide with the user: show the transfer
+edge as the journey, or treat same-union queries as degenerate (message instead
+of route). Relates U, AS (dominance policy — a 4 h train loop is dominated by a
+55 min metro).
 
 # Smaller deferred notes
 
