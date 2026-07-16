@@ -13,7 +13,7 @@ import { cityForStation } from "../lib/cities";
 import { baseLineOpacity, selectedLineFilter, stationOpacityExpression } from "../lib/highlight";
 import type { FeaturePick } from "../lib/pickfeature";
 import {
-  overlapStationChoices, rankTargetChoices, reachableMinTrains,
+  overlapStationChoices, rankTargetChoices, reachableMinTrains, rawMinTrains,
   type StationChoice, type TargetChoice,
 } from "../lib/overlap";
 import { veilTooltip, showVeilTooltip } from "../lib/coverage";
@@ -232,64 +232,25 @@ export default function MapView(props: Props) {
       function showOverlapChoice(
         choices: ReturnType<typeof overlapStationChoices>, lngLat: maplibregl.LngLat,
       ) {
-        const content = document.createElement("div");
-        content.className = "overlap-station-popup";
-        content.setAttribute("role", "group");
-        content.setAttribute("aria-label", "Choose a station");
-        const targeting = propsRef.current.armed === "to";
-        if (!targeting) {
-          // Origin mode keeps city union entries (bug AE: these buttons set the
-          // ORIGIN, so they must never render while picking a target).
-          const cityChoices = new Map<string, string[]>();
-          for (const choice of choices) {
-            const city = cityForStation(choice.pick.id, propsRef.current.cityGroups);
-            if (city) cityChoices.set(city.city, city.memberIds);
-          }
-          for (const [city, memberIds] of [...cityChoices].sort(([a], [b]) => a.localeCompare(b))) {
-            const button = document.createElement("button");
-            button.type = "button";
-            button.className = "overlap-station-popup-city";
-            button.textContent = `${city} (all stations)`;
-            button.setAttribute("aria-label", `Select all ${city} stations`);
-            button.addEventListener("click", (event) => {
-              event.stopPropagation();
-              popup.remove();
-              if (cityPopup.current === popup) cityPopup.current = null;
-              propsRef.current.onSelectCityOrigin(city, memberIds);
-            });
-            content.append(button);
-          }
-        }
-        const ordered: (StationChoice | TargetChoice)[] = targeting
-          ? rankTargetChoices(choices, reachableMinTrains(
-              propsRef.current.reach, propsRef.current.maxTrains,
-              propsRef.current.maxMinutes))
-          : choices;
-        for (const choice of ordered) {
-          const button = document.createElement("button");
-          button.type = "button";
-          button.textContent = choice.name;
-          button.setAttribute("aria-label", `Select ${choice.name}`);
-          if (targeting && (choice as TargetChoice).minTrains === null) {
-            button.classList.add("unreachable");
-            button.setAttribute("aria-label",
-              `Select ${choice.name} (not reachable with current filters)`);
-            const hint = document.createElement("span");
-            hint.className = "overlap-unreachable-hint";
-            hint.textContent = "not reachable";
-            button.append(hint);
-          }
-          button.addEventListener("click", (event) => {
-            event.stopPropagation();
-            popup.remove();
-            if (cityPopup.current === popup) cityPopup.current = null;
-            selectStation(choice.pick);
-          });
-          content.append(button);
-        }
         const popup = new maplibregl.Popup({
           closeButton: false, closeOnClick: false, className: "overlap-station-map-popup",
-        })
+        });
+        const closePopup = () => {
+          popup.remove();
+          if (cityPopup.current === popup) cityPopup.current = null;
+        };
+        const content = buildOverlapPopupContent(
+          choices,
+          propsRef.current.armed,
+          propsRef.current.cityGroups,
+          propsRef.current.reach,
+          propsRef.current.maxTrains,
+          propsRef.current.maxMinutes,
+          propsRef.current.onSelectCityOrigin,
+          selectStation,
+          closePopup
+        );
+        popup
           .setLngLat(lngLat)
           .setDOMContent(content)
           .addTo(m);
@@ -606,4 +567,75 @@ export default function MapView(props: Props) {
   }, [props.theme]);
 
   return <div ref={container} style={{ position: "absolute", inset: 0 }} />;
+}
+
+/** Exported helper for creating the DOM content of the overlap station popup.
+ *  This allows component testing in jsdom without WebGL. */
+export function buildOverlapPopupContent(
+  choices: StationChoice[],
+  armed: "from" | "to",
+  cityGroups: CityGroups,
+  reach: ReachFile | null,
+  maxTrains: MaxTrains,
+  maxMinutes: number,
+  onSelectCityOrigin: (city: string, memberIds: string[]) => void,
+  onStationClick: (pick: FeaturePick) => void,
+  closePopup: () => void,
+): HTMLDivElement {
+  const content = document.createElement("div");
+  content.className = "overlap-station-popup";
+  content.setAttribute("role", "group");
+  content.setAttribute("aria-label", "Choose a station");
+  const targeting = armed === "to";
+  if (!targeting) {
+    // Origin mode keeps city union entries (bug AE: these buttons set the
+    // ORIGIN, so they must never render while picking a target).
+    const cityChoices = new Map<string, string[]>();
+    for (const choice of choices) {
+      const city = cityForStation(choice.pick.id, cityGroups);
+      if (city) cityChoices.set(city.city, city.memberIds);
+    }
+    for (const [city, memberIds] of [...cityChoices].sort(([a], [b]) => a.localeCompare(b))) {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "overlap-station-popup-city";
+      button.textContent = `${city} (all stations)`;
+      button.setAttribute("aria-label", `Select all ${city} stations`);
+      button.addEventListener("click", (event) => {
+        event.stopPropagation();
+        closePopup();
+        onSelectCityOrigin(city, memberIds);
+      });
+      content.append(button);
+    }
+  }
+  const ordered: (StationChoice | TargetChoice)[] = targeting
+    ? rankTargetChoices(
+        choices,
+        reachableMinTrains(reach, maxTrains, maxMinutes),
+        rawMinTrains(reach)
+      )
+    : choices;
+  for (const choice of ordered) {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.textContent = choice.name;
+    button.setAttribute("aria-label", `Select ${choice.name}`);
+    if (targeting && (choice as TargetChoice).minTrains === null) {
+      button.classList.add("unreachable");
+      button.setAttribute("aria-label",
+        `Select ${choice.name} (not reachable with current filters)`);
+      const hint = document.createElement("span");
+      hint.className = "overlap-unreachable-hint";
+      hint.textContent = "not reachable";
+      button.append(hint);
+    }
+    button.addEventListener("click", (event) => {
+      event.stopPropagation();
+      closePopup();
+      onStationClick(choice.pick);
+    });
+    content.append(button);
+  }
+  return content;
 }
