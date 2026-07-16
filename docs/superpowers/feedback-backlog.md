@@ -223,24 +223,20 @@ reconciles identity; it's just not what the public id is keyed on.
 
 Seven items; the path-routing one is folded into item I above.
 
-## AN. Mobile layout
+## AN. Mobile layout — shipped 2026-07-16, awaiting phone calibration
 
-The site is not adjusted to phones at all. Direction to brainstorm: on mobile,
-hide the UI by default except the ACTIVE box (start or target), with a
-handle/arrow to pull the full panel up (bottom-sheet pattern). Needs a design
-round; touch targets and the click-disambiguation popup (AE) are affected too.
+Bottom sheet shipped (spec `specs/2026-07-16-mobile-layout-design.md`). Open:
+the user's real-phone visual pass. All dimensions are centralized constants in
+`web/src/lib/mobileLayout.ts` (collapsed 112/136 px, expanded 88dvh, swipe
+threshold 32 px) — calibration is a one-line change each.
 
-## AO. Frequency info is not understandable — visualise it
+## AO. Frequency heat strip — shipped 2026-07-16, live after recompute
 
-"6/7 sampled days", "available on every sampled day", "24.9 trains per day" are
-not straightforward to a first-time reader. Idea (dad's wish): a compact,
-colourful visualisation of how many connections run per sampled day, and within
-each day split into morning / afternoon / evening. Clicking it expands the full
-connection tables — available, but never in your face (overload). Data check
-needed: reach files currently carry counts + a best journey, not per-departure
-buckets — the pipeline likely needs to emit departure-time histograms per
-destination. Relates AQ (same data), AF (seasonal wording), B's cautious-sampling
-language (the design constraint "evidence, not promise" still holds).
+7×3 day×daypart heat strip + day×hour histograms in reach files (spec
+`specs/2026-07-16-frequency-viz-design.md`). Needs the server recompute (same
+as U's edges) to show real data; old reach files fall back to the text line.
+Open: user-judged colour/size tuning (`--frequency-heat-*` tokens). Evidence
+pass roughly doubles compute-stage time — watch under P.
 
 ## AP. Auto-flag / auto-merge station near-duplicates (Stuttgart case)
 
@@ -255,10 +251,12 @@ surfacing rather than silently passing validation.
 ## AQ. Departure-time filter
 
 A scale/slider to restrict shown connections to certain starting times (e.g. only
-morning departures). Requires per-journey departure times in the reach data
-(currently only the best sampled journey is retained per destination) — likely the
-same pipeline change AO needs. UI: fits the planner panel; consider interaction
-with the 1/2/3-trains selector and V (URL params).
+morning departures). Groundwork shipped with AO (2026-07-16): reach files now
+carry day×hour departure histograms, enough for an hour-granular COUNT filter.
+A filter that recomputes the *best journey* per time window would need the full
+departure list instead (+77% reach-file size, see AO spec decision 1). UI: fits
+the planner panel; consider interaction with the 1/2/3-trains selector and V
+(URL params).
 
 ## AR. Regional trains (feasibility research first)
 
