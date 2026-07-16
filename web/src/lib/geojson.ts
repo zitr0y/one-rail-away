@@ -1,6 +1,10 @@
-import type { Destination, Journey, Leg, ReachFile, Station } from "./types";
+import type { Destination, Journey, JourneyLeg, Leg, ReachFile, Station } from "./types";
 
 export type MaxTrains = 1 | 2 | 3;
+
+export function isTrainLeg(leg: JourneyLeg): leg is Leg {
+  return leg.type !== "transfer";
+}
 
 export function bestJourney(d: Destination, maxTrains: MaxTrains): Journey | null {
   const eligible = d.journeys.filter((j) => j.trains <= maxTrains);
@@ -26,7 +30,7 @@ export function timeBucket(min: number): 0 | 1 | 2 | 3 {
 export function transferPoints(
   journey: Journey, stationsById: Map<string, Station>,
 ): [number, number][] {
-  return journey.legs.slice(0, -1).flatMap((leg) => {
+  return journey.legs.filter(isTrainLeg).slice(0, -1).flatMap((leg) => {
     const station = stationsById.get(leg.to);
     return station ? [[station.lon, station.lat] as [number, number]] : [];
   });
@@ -134,6 +138,7 @@ export function journeyLegPaths(
   j: Journey, stationsById: Map<string, Station>, railPaths: RailPathLookup | null,
 ): [number, number][][] {
   return j.legs
+    .filter(isTrainLeg)
     .map((leg) => legSegments(leg, stationsById, railPaths))
     .filter((segments) => segments.length > 0)
     .map((segments) => segments.flatMap((s, i) => (i === 0 ? s.coords : s.coords.slice(1))));
@@ -153,6 +158,7 @@ export function segmentsGeoJSON(
   }>();
   for (const { d, j } of shownList) {
     for (const leg of j.legs) {
+      if (!isTrainLeg(leg)) continue;
       for (const segment of legSegments(leg, stationsById, railPaths)) {
         const prev = best.get(segment.key);
         if (!prev) {
@@ -235,4 +241,18 @@ export function selectedLineGeoJSON(
       },
     }],
   };
+}
+
+/** Initial 1/2/3-trains selection (backlog V): ?trains= wins, then the domain
+ *  pun — nonstopeurope.eu preselects nonstop (1 train), onestopeurope.eu
+ *  onestop (2 trains) — and any other host keeps the plain default. */
+export function initialMaxTrains(search: string, hostname: string): MaxTrains {
+  const trainsParam = new URLSearchParams(search).get("trains");
+  if (trainsParam === "1" || trainsParam === "2" || trainsParam === "3") {
+    return Number(trainsParam) as MaxTrains;
+  }
+  const host = hostname.replace(/^www\./, "");
+  if (host === "nonstopeurope.eu") return 1;
+  if (host === "onestopeurope.eu") return 2;
+  return 1;
 }

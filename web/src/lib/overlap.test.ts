@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import {
-  overlapStationChoices, rankTargetChoices, reachableMinTrains, type StationChoice,
+  overlapStationChoices, rankTargetChoices, reachableMinTrains, rawMinTrains, type StationChoice,
 } from "./overlap";
 import type { ReachFile, Station } from "./types";
 
@@ -70,22 +70,53 @@ describe("reachableMinTrains", () => {
   });
 });
 
+describe("rawMinTrains", () => {
+  const reach = {
+    origin: "o", computed_at: "", sample_date: "",
+    destinations: [
+      { id: "d1", direct_per_day: 1, journeys: [
+        { trains: 2, duration_min: 100, legs: [] },
+        { trains: 3, duration_min: 80, legs: [] },
+      ]},
+      { id: "d2", direct_per_day: 1, journeys: [
+        { trains: 1, duration_min: 999, legs: [] },
+      ]},
+    ],
+  } as ReachFile;
+
+  it("returns the raw fewest trains regardless of filters", () => {
+    const raw = rawMinTrains(reach);
+    expect(raw.get("d1")).toBe(2);
+    expect(raw.get("d2")).toBe(1);
+  });
+
+  it("is empty without a reach", () => {
+    expect(rawMinTrains(null).size).toBe(0);
+  });
+});
+
 describe("rankTargetChoices", () => {
-  it("orders reachable by fewest trains, then size; unreachable last", () => {
+  it("orders by raw trains; unreachable under current filters is still sorted by raw but keeps minTrains=null for display", () => {
     const ranked = rankTargetChoices(
       [choice("far", "Far", 90), choice("near", "Near", 10),
        choice("none", "None", 99), choice("big", "Big", 80)],
-      new Map([["far", 2], ["near", 1], ["big", 1]]),
+      new Map([["near", 1], ["big", 1]]), // far is filtered out under active filters
+      new Map([["far", 2], ["near", 1], ["big", 1]]), // far is still present in raw reach
     );
     expect(ranked.map((c) => c.pick.id)).toEqual(["big", "near", "far", "none"]);
-    expect(ranked[3].minTrains).toBeNull();
+    expect(ranked[0].minTrains).toBe(1);
+    expect(ranked[1].minTrains).toBe(1);
+    expect(ranked[2].minTrains).toBeNull(); // far is unreachable under current filters
+    expect(ranked[3].minTrains).toBeNull(); // none is absent entirely
   });
 
   it("breaks full ties by name then id", () => {
     const ranked = rankTargetChoices(
       [choice("b", "Same", 5), choice("a", "Same", 5)],
       new Map([["a", 1], ["b", 1]]),
+      new Map([["a", 1], ["b", 1]]),
     );
     expect(ranked.map((c) => c.pick.id)).toEqual(["a", "b"]);
   });
 });
+

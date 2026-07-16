@@ -13,7 +13,7 @@ import { cityForStation } from "../lib/cities";
 import { baseLineOpacity, selectedLineFilter, stationOpacityExpression } from "../lib/highlight";
 import type { FeaturePick } from "../lib/pickfeature";
 import {
-  overlapStationChoices, rankTargetChoices, reachableMinTrains,
+  overlapStationChoices, rankTargetChoices, reachableMinTrains, rawMinTrains,
   type StationChoice, type TargetChoice,
 } from "../lib/overlap";
 import { veilTooltip, showVeilTooltip } from "../lib/coverage";
@@ -28,6 +28,7 @@ import {
   drawStopSignIcon,
 } from "../lib/dots";
 import { styleUrl } from "../lib/mapstyle";
+import { sheetBottomInsetPx, type SheetState } from "../lib/mobileLayout";
 import type { CityGroups, ReachFile, Station } from "../lib/types";
 
 const CLICK_LAYERS = ["reach-dots", "capital-stars", "all-stations"];
@@ -53,14 +54,20 @@ interface Props {
   onStationClick: (pick: FeaturePick) => void;
   onSelectCityOrigin: (city: string, memberIds: string[]) => void;
   onEmptyClick: () => void;
+  mobile: boolean;
+  sheetState: SheetState;
+  sheetHasContext: boolean;
 }
 
 export default function MapView(props: Props) {
   const container = useRef<HTMLDivElement>(null);
   const map = useRef<maplibregl.Map | null>(null);
+  const navigationControl = useRef<maplibregl.NavigationControl | null>(null);
+  const mobileLayoutListenerCleanup = useRef<(() => void) | null>(null);
   const cityPopup = useRef<maplibregl.Popup | null>(null);
   const propsRef = useRef(props);
   propsRef.current = props;
+  const lastEasedOriginId = useRef<string | null>(null);
 
   useEffect(() => {
     const coveragePromise = api.getCoverage();
@@ -232,64 +239,25 @@ export default function MapView(props: Props) {
       function showOverlapChoice(
         choices: ReturnType<typeof overlapStationChoices>, lngLat: maplibregl.LngLat,
       ) {
-        const content = document.createElement("div");
-        content.className = "overlap-station-popup";
-        content.setAttribute("role", "group");
-        content.setAttribute("aria-label", "Choose a station");
-        const targeting = propsRef.current.armed === "to";
-        if (!targeting) {
-          // Origin mode keeps city union entries (bug AE: these buttons set the
-          // ORIGIN, so they must never render while picking a target).
-          const cityChoices = new Map<string, string[]>();
-          for (const choice of choices) {
-            const city = cityForStation(choice.pick.id, propsRef.current.cityGroups);
-            if (city) cityChoices.set(city.city, city.memberIds);
-          }
-          for (const [city, memberIds] of [...cityChoices].sort(([a], [b]) => a.localeCompare(b))) {
-            const button = document.createElement("button");
-            button.type = "button";
-            button.className = "overlap-station-popup-city";
-            button.textContent = `${city} (all stations)`;
-            button.setAttribute("aria-label", `Select all ${city} stations`);
-            button.addEventListener("click", (event) => {
-              event.stopPropagation();
-              popup.remove();
-              if (cityPopup.current === popup) cityPopup.current = null;
-              propsRef.current.onSelectCityOrigin(city, memberIds);
-            });
-            content.append(button);
-          }
-        }
-        const ordered: (StationChoice | TargetChoice)[] = targeting
-          ? rankTargetChoices(choices, reachableMinTrains(
-              propsRef.current.reach, propsRef.current.maxTrains,
-              propsRef.current.maxMinutes))
-          : choices;
-        for (const choice of ordered) {
-          const button = document.createElement("button");
-          button.type = "button";
-          button.textContent = choice.name;
-          button.setAttribute("aria-label", `Select ${choice.name}`);
-          if (targeting && (choice as TargetChoice).minTrains === null) {
-            button.classList.add("unreachable");
-            button.setAttribute("aria-label",
-              `Select ${choice.name} (not reachable with current filters)`);
-            const hint = document.createElement("span");
-            hint.className = "overlap-unreachable-hint";
-            hint.textContent = "not reachable";
-            button.append(hint);
-          }
-          button.addEventListener("click", (event) => {
-            event.stopPropagation();
-            popup.remove();
-            if (cityPopup.current === popup) cityPopup.current = null;
-            selectStation(choice.pick);
-          });
-          content.append(button);
-        }
         const popup = new maplibregl.Popup({
           closeButton: false, closeOnClick: false, className: "overlap-station-map-popup",
-        })
+        });
+        const closePopup = () => {
+          popup.remove();
+          if (cityPopup.current === popup) cityPopup.current = null;
+        };
+        const content = buildOverlapPopupContent(
+          choices,
+          propsRef.current.armed,
+          propsRef.current.cityGroups,
+          propsRef.current.reach,
+          propsRef.current.maxTrains,
+          propsRef.current.maxMinutes,
+          propsRef.current.onSelectCityOrigin,
+          selectStation,
+          closePopup
+        );
+        popup
           .setLngLat(lngLat)
           .setDOMContent(content)
           .addTo(m);
@@ -315,6 +283,7 @@ export default function MapView(props: Props) {
       });
       m.on("mouseleave", "coverage-veil", () => veilPopup.remove());
       map.current = m;
+      syncMobileLayout();
       // DEV-only handle for headless diagnostics (never set in production builds).
       if (import.meta.env.DEV) (window as unknown as { __map?: maplibregl.Map }).__map = m;
       coveragePromise
@@ -337,6 +306,11 @@ export default function MapView(props: Props) {
     return () => {
       stopRider();
       removeCityPopup();
+      mobileLayoutListenerCleanup.current?.();
+      if (navigationControl.current) {
+        m.removeControl(navigationControl.current);
+        navigationControl.current = null;
+      }
       m.remove();
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -346,6 +320,47 @@ export default function MapView(props: Props) {
     cityPopup.current?.remove();
     cityPopup.current = null;
   }
+
+  function syncMobileLayout() {
+    const m = map.current;
+    if (!m) return;
+    const { mobile, sheetState, sheetHasContext } = propsRef.current;
+    if (mobile && !navigationControl.current) {
+      navigationControl.current = new maplibregl.NavigationControl();
+      m.addControl(navigationControl.current, "bottom-right");
+    } else if (!mobile && navigationControl.current) {
+      m.removeControl(navigationControl.current);
+      navigationControl.current = null;
+    }
+    const bottom = mobile
+      ? sheetBottomInsetPx(window.innerHeight, sheetState, sheetHasContext)
+      : 0;
+    m.setPadding({ top: 0, right: 0, bottom, left: 0 });
+  }
+
+  useEffect(syncMobileLayout, [props.mobile, props.sheetState, props.sheetHasContext]);
+
+  useEffect(() => {
+    mobileLayoutListenerCleanup.current?.();
+    mobileLayoutListenerCleanup.current = null;
+    if (!props.mobile) return;
+
+    const onViewportHeightChange = () => syncMobileLayout();
+    const visualViewport = window.visualViewport;
+    window.addEventListener("resize", onViewportHeightChange);
+    visualViewport?.addEventListener("resize", onViewportHeightChange);
+    const cleanup = () => {
+      window.removeEventListener("resize", onViewportHeightChange);
+      visualViewport?.removeEventListener("resize", onViewportHeightChange);
+    };
+    mobileLayoutListenerCleanup.current = cleanup;
+    return () => {
+      cleanup();
+      if (mobileLayoutListenerCleanup.current === cleanup) {
+        mobileLayoutListenerCleanup.current = null;
+      }
+    };
+  }, [props.mobile]);
 
   useEffect(() => {
     if (props.armed !== "from") removeCityPopup();
@@ -364,8 +379,16 @@ export default function MapView(props: Props) {
         : (EMPTY as never));
     (m.getSource("reach-dots") as maplibregl.GeoJSONSource).setData(
       reach ? (destinationsGeoJSON(shownList, byId) as never) : (EMPTY as never));
-    const origin = reach && byId.get(reach.origin);
-    if (origin) m.easeTo({ center: [origin.lon, origin.lat], zoom: 5 });
+    
+    if (!reach) {
+      lastEasedOriginId.current = null;
+    } else if (reach.origin !== lastEasedOriginId.current) {
+      const origin = byId.get(reach.origin);
+      if (origin) {
+        m.easeTo({ center: [origin.lon, origin.lat], zoom: 5 });
+        lastEasedOriginId.current = reach.origin;
+      }
+    }
   }
 
   useEffect(syncData, [
@@ -465,9 +488,12 @@ export default function MapView(props: Props) {
         const ids = new Set<string>();
         ids.add(reach.origin);
         for (const leg of journey.legs) {
-          ids.add(leg.from);
-          ids.add(leg.to);
-          if (leg.via) {
+          if (leg.type === "transfer") {
+            ids.add(leg.from_id);
+            ids.add(leg.to_id);
+          } else {
+            ids.add(leg.from);
+            ids.add(leg.to);
             for (const v of leg.via) {
               ids.add(v);
             }
@@ -606,4 +632,75 @@ export default function MapView(props: Props) {
   }, [props.theme]);
 
   return <div ref={container} style={{ position: "absolute", inset: 0 }} />;
+}
+
+/** Exported helper for creating the DOM content of the overlap station popup.
+ *  This allows component testing in jsdom without WebGL. */
+export function buildOverlapPopupContent(
+  choices: StationChoice[],
+  armed: "from" | "to",
+  cityGroups: CityGroups,
+  reach: ReachFile | null,
+  maxTrains: MaxTrains,
+  maxMinutes: number,
+  onSelectCityOrigin: (city: string, memberIds: string[]) => void,
+  onStationClick: (pick: FeaturePick) => void,
+  closePopup: () => void,
+): HTMLDivElement {
+  const content = document.createElement("div");
+  content.className = "overlap-station-popup";
+  content.setAttribute("role", "group");
+  content.setAttribute("aria-label", "Choose a station");
+  const targeting = armed === "to";
+  if (!targeting) {
+    // Origin mode keeps city union entries (bug AE: these buttons set the
+    // ORIGIN, so they must never render while picking a target).
+    const cityChoices = new Map<string, string[]>();
+    for (const choice of choices) {
+      const city = cityForStation(choice.pick.id, cityGroups);
+      if (city) cityChoices.set(city.city, city.memberIds);
+    }
+    for (const [city, memberIds] of [...cityChoices].sort(([a], [b]) => a.localeCompare(b))) {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "overlap-station-popup-city";
+      button.textContent = `${city} (all stations)`;
+      button.setAttribute("aria-label", `Select all ${city} stations`);
+      button.addEventListener("click", (event) => {
+        event.stopPropagation();
+        closePopup();
+        onSelectCityOrigin(city, memberIds);
+      });
+      content.append(button);
+    }
+  }
+  const ordered: (StationChoice | TargetChoice)[] = targeting
+    ? rankTargetChoices(
+        choices,
+        reachableMinTrains(reach, maxTrains, maxMinutes),
+        rawMinTrains(reach)
+      )
+    : choices;
+  for (const choice of ordered) {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.textContent = choice.name;
+    button.setAttribute("aria-label", `Select ${choice.name}`);
+    if (targeting && (choice as TargetChoice).minTrains === null) {
+      button.classList.add("unreachable");
+      button.setAttribute("aria-label",
+        `Select ${choice.name} (not reachable with current filters)`);
+      const hint = document.createElement("span");
+      hint.className = "overlap-unreachable-hint";
+      hint.textContent = "not reachable";
+      button.append(hint);
+    }
+    button.addEventListener("click", (event) => {
+      event.stopPropagation();
+      closePopup();
+      onStationClick(choice.pick);
+    });
+    content.append(button);
+  }
+  return content;
 }

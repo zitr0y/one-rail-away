@@ -132,66 +132,240 @@ def normalize(s: str) -> str:
 # vlissingen=2, warszawa=4, wien=7, wroclaw=2, wurzburg=1, zagreb=1,
 # zaragoza=1, zurich=5, łodz=6. No entries dropped.
 EXONYMS = {
-    "prague": "praha",
-    "prag": "praha",
-    "vienna": "wien",
+    # --- Cities with groups in cities.toml & major capitals ---
+
+    # Warszawa
     "warsaw": "warszawa",
     "warschau": "warszawa",
-    "venice": "venezia",
-    "venedig": "venezia",
-    "milan": "milano",
-    "mailand": "milano",
+    "varsovie": "warszawa",
+    "varsavia": "warszawa",
+    "varsovia": "warszawa",
+
+    # Praha
+    "prague": "praha",
+    "prag": "praha",
+    "praga": "praha",
+    "praag": "praha",
+
+    # Wien
+    "vienna": "wien",
+    "vienne": "wien",
+    "viena": "wien",
+    "wenen": "wien",
+
+    # München
     "munich": "munchen",
     "muenchen": "munchen",
+    "monaco di baviera": "munchen",
+
+    # Köln
     "cologne": "koln",
     "koeln": "koln",
+    "colonia": "koln",
+    "keulen": "koln",
+
+    # Bruxelles
+    "brussels": "bruxelles",
+    "brussel": "bruxelles",
+    "bruessel": "bruxelles",
+    "bruselas": "bruxelles",
+
+    # København
+    "copenhagen": "københavn",
+    "kopenhagen": "københavn",
+    "copenhague": "københavn",
+    "copenaghen": "københavn",
+    "kobenhavn": "københavn",
+
+    # Roma
+    "rome": "roma",
+    "rom": "roma",
+
+    # Milano
+    "milan": "milano",
+    "mailand": "milano",
+    "milaan": "milano",
+
+    # Firenze
+    "florence": "firenze",
+    "florenz": "firenze",
+    "florencia": "firenze",
+
+    # Venezia
+    "venice": "venezia",
+    "venedig": "venezia",
+    "venise": "venezia",
+    "venecia": "venezia",
+    "venetie": "venezia",
+
+    # Lisboa
+    "lisbon": "lisboa",
+    "lissabon": "lisboa",
+    "lisbonne": "lisboa",
+    "lisbona": "lisboa",
+
+    # Paris
+    "parigi": "paris",
+
+    # Berlin
+    "berlijn": "berlin",
+
+    # Zürich
+    "zuerich": "zurich",
+    "zurigo": "zurich",
+
+    # Frankfurt
+    "francfort": "frankfurt",
+
+    # Hamburg
+    "hambourg": "hamburg",
+    "hamburgo": "hamburg",
+    "amburgo": "hamburg",
+
+    # Den Haag
+    "the hague": "den haag",
+    "la haye": "den haag",
+    "la haya": "den haag",
+    "l'aia": "den haag",
+    "sgravenhage": "den haag",
+    "'s-gravenhage": "den haag",
+
+    # --- Other Capitals ---
+
+    # Bern
+    "berne": "bern",
+    "berna": "bern",
+
+    # London
+    "londres": "london",
+    "londra": "london",
+    "londen": "london",
+
+    # Kyjiw
+    "kyiv": "kyjiw",
+    "kiev": "kyjiw",
+
+    # București
+    "bucharest": "bucuresti",
+    "bukarest": "bucuresti",
+    "bucarest": "bucuresti",
+    "boekarest": "bucuresti",
+
+    # Luxembourg
+    "luxemburg": "luxembourg",
+    "lussemburgo": "luxembourg",
+    "luxemburgo": "luxembourg",
+
+    # Ljubljana
+    "laibach": "ljubljana",
+    "lubiana": "ljubljana",
+
+    # Zagreb
+    "agram": "zagreb",
+    "zagabria": "zagreb",
+
+    # Bratislava
+    "pressburg": "bratislava",
+    "presburgo": "bratislava",
+
+    # --- Other Cities / Towns ---
+
+    # Nürnberg
     "nuremberg": "nurnberg",
     "nuernberg": "nurnberg",
+
+    # Würzburg
     "wuerzburg": "wurzburg",
+
+    # Düsseldorf
     "duesseldorf": "dusseldorf",
-    "zuerich": "zurich",
+
+    # Genève
     "geneva": "geneve",
     "genf": "geneve",
-    # Flipped 2026-07-10: station renamed Barcelona-Sants (pipeline/station_names.toml
-    # override); French spelling "barcelone" now finds the Spanish-named station.
-    # Match count: barcelone still matches 1 station after rename (verified).
+
+    # Barcelona
     "barcelone": "barcelona",
-    "brussels": "bruxelles",
-    "bruessel": "bruxelles",
-    "rome": "roma",
+
+    # Antwerpen
     "antwerp": "antwerpen",
-    "the hague": "den haag",
-    "copenhagen": "københavn",
+
+    # Lyon
     "lyons": "lyon",
+
+    # Marseille
     "marseilles": "marseille",
+
+    # Sevilla
     "seville": "sevilla",
+
+    # Aachen
     "aix-la-chapelle": "aachen",
+
+    # Regensburg
     "ratisbon": "regensburg",
+
+    # Braunschweig
     "brunswick": "braunschweig",
+
+    # Hannover
     "hanover": "hannover",
+
+    # Koblenz
     "coblenz": "koblenz",
+
+    # Mainz
     "mayence": "mainz",
-    "francfort": "frankfurt",
+
+    # Strasbourg
     "strassburg": "strasbourg",
+
+    # Basel
     "bale": "basel",
+
+    # Luzern
     "lucerne": "luzern",
-    "berne": "bern",
-    "bucharest": "bucuresti",
+
+    # Gdańsk
     "danzig": "gdansk",
+
+    # Wrocław
     "breslau": "wroclaw",
+
+    # Szczecin
     "stettin": "szczecin",
+
+    # Poznań
     "posen": "poznan",
+
+    # Kraków
     "cracow": "krakow",
+
+    # Łódź
     "lodz": "łodz",
+
+    # Zaragoza
     "saragossa": "zaragoza",
+
+    # Girona
     "gerona": "girona",
+
+    # Lleida
     "lerida": "lleida",
+
+    # A Coruña
     "corunna": "a coruna",
+
+    # 's-Hertogenbosch
     "bois-le-duc": "s-hertogenbosch",
+
+    # Vlissingen
     "flushing": "vlissingen",
-    "pressburg": "bratislava",
+
+    # Lviv
     "lemberg": "lviv",
-    "zagabria": "zagreb",
+
+    # Rijeka
     "fiume": "rijeka",
 }
 

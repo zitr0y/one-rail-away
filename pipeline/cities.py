@@ -15,10 +15,23 @@ curated table is the only reliable grouping key.
 import logging
 import tomllib
 from pathlib import Path
+from typing import cast
 
-from pipeline.models import Station
+from pipeline.models import Station, TransferMode
 
 log = logging.getLogger(__name__)
+
+ResolvedTransfer = tuple[str, str, int, TransferMode]
+
+TRANSFER_MODES = {
+    "walk",
+    "metro",
+    "tram",
+    "cercanias",
+    "rer",
+    "train-shuttle",
+    "bus",
+}
 
 
 def load_cities(
@@ -62,3 +75,87 @@ def load_cities(
             warnings.append(msg)
 
     return groups, warnings
+
+
+def load_transfers(
+    path: Path, stations: list[Station]
+) -> tuple[list[ResolvedTransfer], list[str]]:
+    """Resolve valid configured pairs against an already-merged station list."""
+    if not path.exists():
+        return [], []
+
+    raw = tomllib.loads(path.read_text(encoding="utf-8"))
+    table = raw.get("transfers", {})
+    city_groups = raw.get("cities", {})
+
+    by_name: dict[str, list[str]] = {}
+    for s in stations:
+        by_name.setdefault(s.name, []).append(s.id)
+
+    transfers: list[ResolvedTransfer] = []
+    warnings: list[str] = []
+
+    def warn(message: str) -> None:
+        log.warning(message)
+        warnings.append(message)
+
+    for city, entries in table.items():
+        for entry in entries:
+            if not isinstance(entry, list) or len(entry) != 4:
+                warn(f"cities.toml: invalid transfer entry for {city!r}: {entry!r}")
+                continue
+
+            a, b, mode, minutes = entry
+            if (
+                not isinstance(a, str)
+                or not isinstance(b, str)
+                or not isinstance(mode, str)
+                or not isinstance(minutes, int)
+                or isinstance(minutes, bool)
+                or minutes <= 0
+            ):
+                warn(f"cities.toml: invalid transfer entry for {city!r}: {entry!r}")
+                continue
+
+            if mode not in TRANSFER_MODES:
+                warn(f"cities.toml: unsupported transfer mode for {city!r}: {mode!r}")
+                continue
+
+            if (
+                city not in city_groups
+                or a not in city_groups[city]
+                or b not in city_groups[city]
+            ):
+                warn(
+                    f"cities.toml: transfer {city!r} pair {a!r} -> {b!r} "
+                    "does not share that [cities] group"
+                )
+                continue
+
+            ids_a = by_name.get(a)
+            if not ids_a:
+                warn(f"cities.toml: no station matches transfer {city!r} endpoint {a!r}")
+                continue
+            if len(ids_a) != 1:
+                warn(
+                    f"cities.toml: transfer {city!r} endpoint {a!r} is ambiguous "
+                    "after merge, skipping"
+                )
+                continue
+
+            ids_b = by_name.get(b)
+            if not ids_b:
+                warn(f"cities.toml: no station matches transfer {city!r} endpoint {b!r}")
+                continue
+            if len(ids_b) != 1:
+                warn(
+                    f"cities.toml: transfer {city!r} endpoint {b!r} is ambiguous "
+                    "after merge, skipping"
+                )
+                continue
+
+            transfers.append(
+                (ids_a[0], ids_b[0], minutes * 60, cast(TransferMode, mode))
+            )
+
+    return transfers, warnings

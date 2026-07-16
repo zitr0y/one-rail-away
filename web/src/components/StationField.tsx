@@ -5,6 +5,7 @@ import type { FieldOption } from "../lib/planner";
 interface Props {
   placeholder: string;
   disabled?: boolean;
+  hidden?: boolean;
   armed?: boolean; // this is the armed field — the next map click fills it
   value: string; // selected station name, or "" when none
   search: (q: string) => FieldOption[] | Promise<FieldOption[]>;
@@ -14,7 +15,7 @@ interface Props {
 }
 
 export default function StationField(
-  { placeholder, disabled, armed, value, search, onPick, onClear, onFocusField }: Props,
+  { placeholder, disabled, hidden, armed, value, search, onPick, onClear, onFocusField }: Props,
 ) {
   const [q, setQ] = useState("");
   const [results, setResults] = useState<FieldOption[]>([]);
@@ -85,7 +86,7 @@ export default function StationField(
 
   if (value && !editing) {
     return (
-      <div className={`station-field filled${armed ? " active" : ""}`}>
+      <div className={`station-field filled${armed ? " active" : ""}`} hidden={hidden}>
         <button className="field-value" onClick={beginEdit} disabled={disabled}>{value}</button>
         <button className="field-clear" onClick={onClear} aria-label="Clear">×</button>
       </div>
@@ -97,7 +98,7 @@ export default function StationField(
   let prevGroup: string | null = null;
   let selIndex = -1;
   return (
-    <div className={`station-field${armed ? " active" : ""}`}>
+    <div className={`station-field${armed ? " active" : ""}`} hidden={hidden}>
       <input
         ref={inputRef}
         placeholder={placeholder}

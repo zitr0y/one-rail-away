@@ -55,22 +55,40 @@ export function reachableMinTrains(
   return result;
 }
 
+/** Fewest trains per destination among journeys in the raw reach data (without filter constraints). */
+export function rawMinTrains(reach: ReachFile | null): Map<string, number> {
+  const result = new Map<string, number>();
+  if (!reach) return result;
+  for (const d of reach.destinations) {
+    if (d.journeys.length) {
+      result.set(d.id, Math.min(...d.journeys.map((j) => j.trains)));
+    }
+  }
+  return result;
+}
+
 /** Target-mode ordering (backlog AE): reachable first by fewest trains, then
  *  connection count; unreachable last, muted but still selectable. */
 export function rankTargetChoices(
-  choices: StationChoice[], minTrainsById: Map<string, number>,
+  choices: StationChoice[],
+  minTrainsFiltered: Map<string, number>,
+  minTrainsRaw: Map<string, number>,
 ): TargetChoice[] {
   return choices
-    .map((c) => ({ ...c, minTrains: minTrainsById.get(c.pick.id) ?? null }))
+    .map((c) => ({ ...c, minTrains: minTrainsFiltered.get(c.pick.id) ?? null }))
     .sort((a, b) => {
-      if ((a.minTrains === null) !== (b.minTrains === null)) {
-        return a.minTrains === null ? 1 : -1;
+      const aRawTrains = minTrainsRaw.get(a.pick.id) ?? null;
+      const bRawTrains = minTrainsRaw.get(b.pick.id) ?? null;
+
+      if ((aRawTrains === null) !== (bRawTrains === null)) {
+        return aRawTrains === null ? 1 : -1;
       }
-      if (a.minTrains !== null && b.minTrains !== null && a.minTrains !== b.minTrains) {
-        return a.minTrains - b.minTrains;
+      if (aRawTrains !== null && bRawTrains !== null && aRawTrains !== bRawTrains) {
+        return aRawTrains - bRawTrains;
       }
       return b.nDest - a.nDest
         || a.name.localeCompare(b.name, undefined, { sensitivity: "base" })
         || a.pick.id.localeCompare(b.pick.id);
     });
 }
+

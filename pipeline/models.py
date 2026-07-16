@@ -1,6 +1,10 @@
-from typing import Literal
+from typing import Annotated, Literal
 
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import BaseModel, ConfigDict, Field, field_validator
+
+TransferMode = Literal[
+    "walk", "metro", "tram", "cercanias", "rer", "train-shuttle", "bus"
+]
 
 
 class CountryOverride(BaseModel):
@@ -48,10 +52,25 @@ class Leg(BaseModel):
     feeds: list[str] = Field(default_factory=list, exclude=True)
 
 
+class TransferLeg(BaseModel):
+    type: Literal["transfer"] = "transfer"
+    mode: TransferMode
+    minutes: int
+    from_id: str
+    to_id: str
+
+
+JourneyLeg = Leg | TransferLeg
+
+
 class Journey(BaseModel):
     trains: int
     duration_min: int
-    legs: list[Leg]
+    legs: list[JourneyLeg]
+
+
+HourlyCount = Annotated[int, Field(ge=0)]
+HourlyBins = Annotated[list[HourlyCount], Field(min_length=24, max_length=24)]
 
 
 class Destination(BaseModel):
@@ -59,6 +78,17 @@ class Destination(BaseModel):
     direct_per_day: int
     journeys: list[Journey]  # ascending trains; each strictly faster than previous
     frequency: "Frequency | None" = None
+    histogram: dict[str, HourlyBins] | None = Field(
+        default=None,
+        exclude_if=lambda value: value is None,
+    )
+
+    @field_validator("histogram", mode="after")
+    @classmethod
+    def omit_empty_histogram(cls, value):
+        if not value or not any(count for row in value.values() for count in row):
+            return None
+        return value
 
 
 class Frequency(BaseModel):

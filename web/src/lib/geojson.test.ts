@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import {
   bestJourney, buildRailPathLookup, destinationsGeoJSON, frequencyClass, journeyLegPaths,
   legSegments, linesGeoJSON, segmentsGeoJSON, selectedLineGeoJSON, shown, timeBucket,
-  transferPoints, type RailPathLookup,
+  transferPoints, type RailPathLookup, initialMaxTrains,
 } from "./geojson";
 import type { Journey, Leg, ReachFile, Station } from "./types";
 
@@ -31,6 +31,7 @@ describe("bestJourney / timeBucket", () => {
     expect([timeBucket(100), timeBucket(200), timeBucket(400), timeBucket(700)]).toEqual([0, 1, 2, 3]);
   });
 });
+
 
 describe("frequency styling", () => {
   it("marks limited evidence infrequent and keeps legacy files frequent", () => {
@@ -266,6 +267,28 @@ describe("journeyLegPaths", () => {
     const flattened = paths.flatMap((c, i) => (i === 0 ? c : c.slice(1)));
     expect(line.geometry.coordinates).toEqual(flattened);
   });
+
+  it("keeps transfer legs out of rail-path geometry", () => {
+    const transferJourney: Journey = {
+      trains: 2, duration_min: 100,
+      legs: [
+        { train: "ICE 1", dep: "08:00", arr: "09:00", from: "a", to: "b", via: [] },
+        { type: "transfer", mode: "walk", minutes: 10, from_id: "b", to_id: "c" },
+        { train: "ICE 2", dep: "09:10", arr: "10:00", from: "c", to: "d", via: [] },
+      ],
+    };
+    const transferStations = new Map([
+      ["a", { id: "a", name: "A", lat: 0, lon: 0, country: "DE", has_reach: true }],
+      ["b", { id: "b", name: "B", lat: 0, lon: 1, country: "DE", has_reach: true }],
+      ["c", { id: "c", name: "C", lat: 1, lon: 1, country: "DE", has_reach: true }],
+      ["d", { id: "d", name: "D", lat: 1, lon: 2, country: "DE", has_reach: true }],
+    ]);
+
+    expect(journeyLegPaths(transferJourney, transferStations, null)).toEqual([
+      [[0, 0], [1, 0]],
+      [[1, 1], [2, 1]],
+    ]);
+  });
 });
 
 const mkStation = (id: string, lon: number, lat: number): [string, Station] =>
@@ -309,5 +332,40 @@ describe("legSegments with rail paths", () => {
     const journey = { trains: 1, duration_min: 60, legs: [railLeg("a", "c", ["b"])] };
     expect(journeyLegPaths(journey, railStationsById, railPaths))
       .toEqual([[[0, 0], [0.5, 0.4], [1, 0], [2, 0]]]);
+  });
+});
+
+describe("initialMaxTrains", () => {
+  it("resolves from trains URL param when valid", () => {
+    expect(initialMaxTrains("?trains=1", "localhost")).toBe(1);
+    expect(initialMaxTrains("?trains=2", "localhost")).toBe(2);
+    expect(initialMaxTrains("?trains=3", "localhost")).toBe(3);
+  });
+
+  it("ignores invalid trains URL params and falls back to default", () => {
+    expect(initialMaxTrains("?trains=4", "localhost")).toBe(1);
+    expect(initialMaxTrains("?trains=x", "localhost")).toBe(1);
+    expect(initialMaxTrains("?trains=", "localhost")).toBe(1);
+    expect(initialMaxTrains("", "localhost")).toBe(1);
+  });
+
+  it("defaults to 1 for nonstop domains when no URL param is present", () => {
+    expect(initialMaxTrains("", "nonstopeurope.eu")).toBe(1);
+    expect(initialMaxTrains("", "www.nonstopeurope.eu")).toBe(1);
+  });
+
+  it("prioritizes URL param over nonstop domains", () => {
+    expect(initialMaxTrains("?trains=2", "nonstopeurope.eu")).toBe(2);
+    expect(initialMaxTrains("?trains=3", "www.nonstopeurope.eu")).toBe(3);
+  });
+
+  it("defaults to onestop (2 trains) on onestopeurope domains", () => {
+    expect(initialMaxTrains("", "onestopeurope.eu")).toBe(2);
+    expect(initialMaxTrains("", "www.onestopeurope.eu")).toBe(2);
+    expect(initialMaxTrains("?trains=1", "onestopeurope.eu")).toBe(1);
+  });
+
+  it("keeps default for other hostnames", () => {
+    expect(initialMaxTrains("", "google.com")).toBe(1);
   });
 });

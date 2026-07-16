@@ -14,8 +14,10 @@ BE = "Bruxelles Midi"
 CZ = "Praha hl.n."
 # Cross-border "leak" capitals — in the data only via foreign feeds (user
 # report 2026-07-11: London/Roma had no star). Names exactly as leaked.
-# Vilnius/København/Lisboa/Stockholm/Oslo are in NO ingested feed yet
+# Vilnius/Stockholm/Oslo are in NO ingested feed yet
 # (backlog item A); add them here when their feeds land.
+DK = "København H"
+PT = "Lisboa Oriente"
 GB = "London St. Pancras Int."
 UA = "Kyjiw-Passaschyrskyj"
 RO = "București Nord Gara A"

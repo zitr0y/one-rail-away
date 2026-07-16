@@ -4,12 +4,18 @@
 // style + glyphs + tiles), so the stations effect no-ops on a null map — the
 // load handler must then run the station sync itself or the all-stations and
 // capitals sources stay empty forever.
-import { act } from "react";
+import { act, type ComponentProps } from "react";
 import { createRoot, type Root } from "react-dom/client";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import type { Station } from "../lib/types";
 
 (globalThis as { IS_REACT_ACT_ENVIRONMENT?: boolean }).IS_REACT_ACT_ENVIRONMENT = true;
+
+const mockEaseTo = vi.fn();
+const mockAddControl = vi.fn();
+const mockRemoveControl = vi.fn();
+const mockSetPadding = vi.fn();
+const mockNavigationControl = vi.fn();
 
 const handlers: Record<string, () => void> = {};
 const sources = new Map<string, { setData: ReturnType<typeof vi.fn> }>();
@@ -30,7 +36,10 @@ vi.mock("maplibre-gl", () => {
     setFilter() {}
     setPaintProperty() {}
     setStyle() {}
-    easeTo() {}
+    easeTo(options: any) { mockEaseTo(options); }
+    addControl(control: unknown, position: string) { mockAddControl(control, position); }
+    removeControl(control: unknown) { mockRemoveControl(control); }
+    setPadding(padding: unknown) { mockSetPadding(padding); }
     getCanvas() { return { style: {} }; }
     queryRenderedFeatures() { return []; }
     remove() {}
@@ -48,7 +57,14 @@ vi.mock("maplibre-gl", () => {
     addTo() { return this; }
     remove() { return this; }
   }
-  return { default: { Map: FakeMap, Popup: FakePopup, Marker: FakeMarker } };
+  class FakeNavigationControl {
+    constructor() { mockNavigationControl(); }
+  }
+  return {
+    default: {
+      Map: FakeMap, Popup: FakePopup, Marker: FakeMarker, NavigationControl: FakeNavigationControl,
+    },
+  };
 });
 
 vi.mock("../lib/api", () => ({
@@ -64,7 +80,7 @@ const stations: Station[] = [
     has_reach: true, is_capital: true, n_dest: 400, n_routes: 60 },
 ] as never;
 
-function renderMap(): Root {
+function renderMap(props: Partial<ComponentProps<typeof MapView>> = {}): Root {
   const container = document.createElement("div");
   document.body.appendChild(container);
   const root = createRoot(container);
@@ -73,7 +89,8 @@ function renderMap(): Root {
       <MapView stations={stations} reach={null} maxTrains={1} maxMinutes={Infinity}
                selectedDest={null} theme="light" cityGroups={{}} armed="from"
                railPaths={null} onStationClick={() => {}}
-               onSelectCityOrigin={() => {}} onEmptyClick={() => {}} />,
+               onSelectCityOrigin={() => {}} onEmptyClick={() => {}}
+               mobile={false} sheetState="collapsed" sheetHasContext={false} {...props} />,
     );
   });
   return root;
@@ -82,6 +99,11 @@ function renderMap(): Root {
 describe("MapView station sources", () => {
   afterEach(() => {
     sources.clear();
+    mockEaseTo.mockClear();
+    mockAddControl.mockClear();
+    mockRemoveControl.mockClear();
+    mockSetPadding.mockClear();
+    mockNavigationControl.mockClear();
     for (const key of Object.keys(handlers)) delete handlers[key];
   });
 
@@ -100,6 +122,150 @@ describe("MapView station sources", () => {
     expect(dots.features).toHaveLength(1); // non-capital with reach
     expect(stars.features).toHaveLength(1); // the capital
 
+    act(() => root.unmount());
+  });
+
+  it("only calls easeTo when origin actually changes", () => {
+    mockEaseTo.mockClear();
+    const container = document.createElement("div");
+    document.body.appendChild(container);
+    const root = createRoot(container);
+
+    const onStationClick = vi.fn();
+    const onSelectCityOrigin = vi.fn();
+    const onEmptyClick = vi.fn();
+
+    // 1. Initial render with reach = null
+    act(() => {
+      root.render(
+        <MapView stations={stations} reach={null} maxTrains={1} maxMinutes={Infinity}
+                 selectedDest={null} theme="light" cityGroups={{}} armed="from"
+                 railPaths={null} onStationClick={onStationClick}
+                 onSelectCityOrigin={onSelectCityOrigin} onEmptyClick={onEmptyClick}
+                 mobile={false} sheetState="collapsed" sheetHasContext={false} />,
+      );
+    });
+    act(() => handlers["load"]());
+    expect(mockEaseTo).not.toHaveBeenCalled();
+
+    // 2. Select origin A
+    const reachA = { origin: "A", destinations: [] } as any;
+    act(() => {
+      root.render(
+        <MapView stations={stations} reach={reachA} maxTrains={1} maxMinutes={Infinity}
+                 selectedDest={null} theme="light" cityGroups={{}} armed="from"
+                 railPaths={null} onStationClick={onStationClick}
+                 onSelectCityOrigin={onSelectCityOrigin} onEmptyClick={onEmptyClick}
+                 mobile={false} sheetState="collapsed" sheetHasContext={false} />,
+      );
+    });
+    expect(mockEaseTo).toHaveBeenCalledTimes(1);
+    expect(mockEaseTo).toHaveBeenLastCalledWith({ center: [6.1, 50.8], zoom: 5 });
+
+    // 3. Change filter (maxTrains or maxMinutes) with same origin
+    mockEaseTo.mockClear();
+    act(() => {
+      root.render(
+        <MapView stations={stations} reach={reachA} maxTrains={2} maxMinutes={120}
+                 selectedDest={null} theme="light" cityGroups={{}} armed="from"
+                 railPaths={null} onStationClick={onStationClick}
+                 onSelectCityOrigin={onSelectCityOrigin} onEmptyClick={onEmptyClick}
+                 mobile={false} sheetState="collapsed" sheetHasContext={false} />,
+      );
+    });
+    expect(mockEaseTo).not.toHaveBeenCalled();
+
+    // 4. Clear origin (reach = null)
+    act(() => {
+      root.render(
+        <MapView stations={stations} reach={null} maxTrains={2} maxMinutes={120}
+                 selectedDest={null} theme="light" cityGroups={{}} armed="from"
+                 railPaths={null} onStationClick={onStationClick}
+                 onSelectCityOrigin={onSelectCityOrigin} onEmptyClick={onEmptyClick}
+                 mobile={false} sheetState="collapsed" sheetHasContext={false} />,
+      );
+    });
+    expect(mockEaseTo).not.toHaveBeenCalled();
+
+    // 5. Select origin A again (should recenter)
+    mockEaseTo.mockClear();
+    act(() => {
+      root.render(
+        <MapView stations={stations} reach={reachA} maxTrains={2} maxMinutes={120}
+                 selectedDest={null} theme="light" cityGroups={{}} armed="from"
+                 railPaths={null} onStationClick={onStationClick}
+                 onSelectCityOrigin={onSelectCityOrigin} onEmptyClick={onEmptyClick}
+                 mobile={false} sheetState="collapsed" sheetHasContext={false} />,
+      );
+    });
+    expect(mockEaseTo).toHaveBeenCalledTimes(1);
+    expect(mockEaseTo).toHaveBeenLastCalledWith({ center: [6.1, 50.8], zoom: 5 });
+
+    // 6. Select origin B
+    const reachB = { origin: "B", destinations: [] } as any;
+    mockEaseTo.mockClear();
+    act(() => {
+      root.render(
+        <MapView stations={stations} reach={reachB} maxTrains={2} maxMinutes={120}
+                 selectedDest={null} theme="light" cityGroups={{}} armed="from"
+                 railPaths={null} onStationClick={onStationClick}
+                 onSelectCityOrigin={onSelectCityOrigin} onEmptyClick={onEmptyClick}
+                 mobile={false} sheetState="collapsed" sheetHasContext={false} />,
+      );
+    });
+    expect(mockEaseTo).toHaveBeenCalledTimes(1);
+    expect(mockEaseTo).toHaveBeenLastCalledWith({ center: [13.4, 52.5], zoom: 5 });
+
+    act(() => root.unmount());
+  });
+
+  it("adds_navigation_control_and_collapsed_padding_only_in_mobile_layout", () => {
+    Object.defineProperty(window, "innerHeight", { configurable: true, value: 800 });
+    const root = renderMap({ mobile: true, sheetState: "collapsed", sheetHasContext: false });
+    act(() => handlers["load"]());
+
+    expect(mockNavigationControl).toHaveBeenCalledTimes(1);
+    expect(mockAddControl).toHaveBeenLastCalledWith(expect.anything(), "bottom-right");
+    expect(mockSetPadding).toHaveBeenLastCalledWith({ top: 0, right: 0, bottom: 112, left: 0 });
+    act(() => root.unmount());
+    mockNavigationControl.mockClear();
+    mockAddControl.mockClear();
+
+    const desktopRoot = renderMap();
+    act(() => handlers["load"]());
+    expect(mockNavigationControl).not.toHaveBeenCalled();
+    expect(mockAddControl).not.toHaveBeenCalled();
+    expect(mockSetPadding).toHaveBeenLastCalledWith({ top: 0, right: 0, bottom: 0, left: 0 });
+    act(() => desktopRoot.unmount());
+  });
+
+  it("updates_camera_padding_for_expanded_sheet_and_restores_zero_on_desktop", () => {
+    Object.defineProperty(window, "innerHeight", { configurable: true, value: 800 });
+    const container = document.createElement("div");
+    document.body.appendChild(container);
+    const root = createRoot(container);
+    const commonProps = {
+      stations, reach: null, maxTrains: 1 as const, maxMinutes: Infinity,
+      selectedDest: null, theme: "light" as const, cityGroups: {}, armed: "from" as const,
+      railPaths: null, onStationClick: () => {}, onSelectCityOrigin: () => {}, onEmptyClick: () => {},
+    };
+
+    act(() => {
+      root.render(<MapView {...commonProps} mobile sheetState="collapsed" sheetHasContext />);
+    });
+    act(() => handlers["load"]());
+    expect(mockSetPadding).toHaveBeenLastCalledWith({ top: 0, right: 0, bottom: 136, left: 0 });
+
+    act(() => {
+      root.render(<MapView {...commonProps} mobile sheetState="expanded" sheetHasContext />);
+    });
+    expect(mockSetPadding).toHaveBeenLastCalledWith({ top: 0, right: 0, bottom: 704, left: 0 });
+
+    act(() => {
+      root.render(<MapView {...commonProps} mobile={false} sheetState="expanded" sheetHasContext />);
+    });
+    expect(mockRemoveControl).toHaveBeenCalledTimes(1);
+    expect(mockSetPadding).toHaveBeenLastCalledWith({ top: 0, right: 0, bottom: 0, left: 0 });
     act(() => root.unmount());
   });
 });

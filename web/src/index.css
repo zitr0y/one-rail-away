@@ -47,6 +47,11 @@
   --border: #d1d5db;
   --shadow: 0 4px 16px rgb(0 0 0 / 0.15);
   --shadow-small: 0 1px 4px rgb(0 0 0 / 0.2);
+  --frequency-heat-0: #f3f4f6;
+  --frequency-heat-1: #dbeafe;
+  --frequency-heat-2: #93c5fd;
+  --frequency-heat-3: #3b82f6;
+  --frequency-heat-4: #1d4ed8;
 }
 /* Dark starting values (spec §Panel/chrome CSS) — user-calibrated later.
    Brand navy stays navy in both themes; navy-on-navy active buttons are a
@@ -61,11 +66,16 @@
   --border: #2A3A66;
   --shadow: 0 4px 16px rgb(0 0 0 / 0.5);
   --shadow-small: 0 1px 4px rgb(0 0 0 / 0.6);
+  --frequency-heat-0: #1a2a55;
+  --frequency-heat-1: #243b6b;
+  --frequency-heat-2: #28559a;
+  --frequency-heat-3: #3478cf;
+  --frequency-heat-4: #60a5fa;
 }
 body { margin: 0; font-family: "Barlow", system-ui, sans-serif; color: var(--text); }
 .app { position: fixed; inset: 0; }
 .header-bar {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -75,6 +85,8 @@ body { margin: 0; font-family: "Barlow", system-ui, sans-serif; color: var(--tex
   display: flex;
   align-items: center;
 }
+.sheet-header { display: contents; }
+.sheet-header[hidden] { display: none; }
 /* Brand lockup — inlined SVG from web/src/assets/header-logo.svg. CSS sizes the
    inner <svg> so Inkscape's width/height attrs don't matter. */
 .header-logo { display: inline-flex; }
@@ -241,7 +253,26 @@ body { margin: 0; font-family: "Barlow", system-ui, sans-serif; color: var(--tex
 .planner-divider { height: 1px; background: var(--border); margin: 2px 0; }
 .trip-details h2 { margin: 0 0 4px; font-size: 16px; }
 .trip-details .duration { margin: 0 0 8px; color: var(--text-strong); }
+.trip-details .frequency-heat-strip {
+  width: 100%; margin: 0; padding: 8px; border: 1px solid var(--border); border-radius: 8px;
+  background: var(--surface); color: var(--text); cursor: pointer; font: inherit; text-align: left;
+}
+.trip-details .frequency-heat-strip:focus-visible { outline: 2px solid var(--text); outline-offset: 2px; }
+.trip-details .frequency-heat-row {
+  display: grid; grid-template-columns: 32px repeat(3, minmax(0, 1fr)); gap: 4px; align-items: center;
+}
+.trip-details .frequency-heat-row + .frequency-heat-row { margin-top: 4px; }
+.trip-details .frequency-heat-weekday { font-size: 12px; font-weight: 600; }
+.trip-details .frequency-heat-cell { min-height: 20px; border-radius: 3px; }
+.trip-details .frequency-heat-level-0 { background: var(--frequency-heat-0); }
+.trip-details .frequency-heat-level-1 { background: var(--frequency-heat-1); }
+.trip-details .frequency-heat-level-2 { background: var(--frequency-heat-2); }
+.trip-details .frequency-heat-level-3 { background: var(--frequency-heat-3); }
+.trip-details .frequency-heat-level-4 { background: var(--frequency-heat-4); }
+.trip-details .frequency-heat-note { margin: 4px 0 8px; color: var(--text-muted); font-size: 12px; }
 .trip-details .legs { margin: 0 0 12px; padding-left: 18px; font-size: 13px; }
+.trip-details .legs .transfer-leg { color: var(--text-muted); }
+.trip-details .legs .transfer-icon { display: inline-block; width: 1.25em; text-align: center; }
 .trip-details .book {
   display: block; text-align: center; background: #003399; color: #fff;
   padding: 10px; border-radius: 8px; text-decoration: none; font-weight: 600;
@@ -261,4 +292,144 @@ body { margin: 0; font-family: "Barlow", system-ui, sans-serif; color: var(--tex
 .trip-details .booking-date-picker button:disabled { cursor: default; opacity: 0.45; }
 .trip-details .booking-date-native {
   position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none;
+}
+
+/* Mobile bottom-sheet dimensions mirror mobileLayout.ts; TypeScript supplies
+   the equivalent camera insets while CSS uses these values for presentation. */
+.mobile-layout {
+  --sheet-collapsed-height: 112px;
+  --sheet-collapsed-context-height: 136px;
+  --sheet-expanded-height: 88dvh;
+  --sheet-visible-height: var(--sheet-collapsed-height);
+}
+.mobile-layout.sheet-has-context {
+  --sheet-visible-height: var(--sheet-collapsed-context-height);
+}
+.mobile-layout.sheet-expanded {
+  --sheet-visible-height: var(--sheet-expanded-height);
+}
+
+.mobile-layout .panel {
+  position: fixed;
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 30;
+  width: 100%;
+  height: var(--sheet-expanded-height);
+  padding: 0 0 env(safe-area-inset-bottom);
+  overflow: hidden;
+  border-radius: 16px 16px 0 0;
+  transition: transform 220ms ease;
+}
+.mobile-layout .panel.sheet-expanded { transform: translateY(0); }
+.mobile-layout .panel.sheet-collapsed {
+  transform: translateY(calc(100% - var(--sheet-visible-height)));
+}
+.mobile-layout .sheet-handle {
+  display: grid;
+  position: relative;
+  width: 100%;
+  min-height: 44px;
+  padding: 0;
+  border: 0;
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+  place-items: center;
+}
+.mobile-layout .sheet-handle:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: -4px;
+}
+.mobile-layout .sheet-handle-pill {
+  width: 36px;
+  height: 4px;
+  border-radius: 999px;
+  background: var(--text-subtle);
+}
+.mobile-layout .sheet-handle-arrow {
+  position: absolute;
+  right: 16px;
+  color: var(--text-muted);
+  font-size: 18px;
+  line-height: 1;
+  transition: transform 220ms ease;
+}
+.mobile-layout .sheet-expanded .sheet-handle-arrow { transform: rotate(180deg); }
+.mobile-layout .sheet-expanded .header-bar {
+  position: static;
+  min-width: 0;
+  padding: 8px 16px;
+  flex-shrink: 0;
+}
+.mobile-layout .sheet-expanded .header-logo svg { height: 32px; }
+.mobile-layout .sheet-expanded .header-tagline {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.mobile-layout .planner-fields {
+  display: block;
+  padding: 0 16px 10px;
+}
+.mobile-layout .planner-fields .station-field + .swap-btn,
+.mobile-layout .planner-fields .swap-btn + .station-field { margin-top: 8px; }
+.mobile-layout .planner .swap-btn { width: 44px; height: 44px; }
+.mobile-layout .sheet-context {
+  margin: 0;
+  padding: 0 16px 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: var(--text-muted);
+}
+.mobile-layout #planner-sheet-content {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 16px 16px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.mobile-layout .panel.sheet-expanded { display: flex; }
+
+/* Touch targets are mobile-only so desktop keeps its current compact density. */
+.mobile-layout .station-field input,
+.mobile-layout .station-field .field-value,
+.mobile-layout .station-field .field-clear,
+.mobile-layout .stop-toggle button,
+.mobile-layout .station-field li button,
+.mobile-layout .station-field li.opt-row.disabled,
+.mobile-layout .city-origin-popup button,
+.mobile-layout .overlap-station-popup button,
+.mobile-layout .theme-toggle {
+  min-height: 44px;
+}
+.mobile-layout .station-field .field-clear,
+.mobile-layout .theme-toggle { min-width: 44px; }
+
+.mobile-layout .maplibregl-ctrl-bottom-left,
+.mobile-layout .maplibregl-ctrl-bottom-right {
+  bottom: calc(var(--sheet-visible-height) + env(safe-area-inset-bottom) + 8px);
+  transition: bottom 220ms ease;
+}
+.mobile-layout .city-origin-map-popup .maplibregl-popup-content,
+.mobile-layout .overlap-station-map-popup .maplibregl-popup-content {
+  max-width: calc(100vw - 24px);
+  max-height: calc(100dvh - var(--sheet-visible-height) - env(safe-area-inset-bottom) - 24px);
+  overflow-y: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mobile-layout .panel,
+  .mobile-layout .sheet-handle-arrow,
+  .mobile-layout .maplibregl-ctrl-bottom-left,
+  .mobile-layout .maplibregl-ctrl-bottom-right {
+    transition-duration: 0.01ms;
+  }
 }

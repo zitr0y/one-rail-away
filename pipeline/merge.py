@@ -76,6 +76,15 @@ def _dist_m(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
     return math.hypot(x, y) * 6_371_000
 
 
+_STROKE_MAP = str.maketrans({
+    "ł": "l", "Ł": "L",
+    "ø": "o", "Ø": "O",
+    "đ": "d", "Đ": "D",
+    "œ": "oe", "Œ": "Oe",
+    "æ": "ae", "Æ": "Ae",
+})
+
+
 def _norm(name: str) -> str:
     """Normalize a station name for comparison: transliterate accents, lowercase,
     alphanumeric only.
@@ -98,9 +107,14 @@ def _norm(name: str) -> str:
     equivalent to their umlaut form ("München") under this normalization --
     "muenchenhbf" != "munchenhbf". Those variants need an explicit
     station_aliases.toml entry.
+
+    Unlike German ue/oe/ae digraphs, stroke letters (ł/Ł, ø/Ø, đ/Đ, œ/Œ, æ/Æ)
+    do not decompose under NFKD and are mapped explicitly beforehand.
+    This is safe because proximity merging is guarded by the <500 m distance rule.
     """
     if name.lower().startswith("s+u "):
         name = name[4:]
+    name = name.translate(_STROKE_MAP)
     decomposed = unicodedata.normalize("NFKD", name)
     ascii_only = "".join(c for c in decomposed if not unicodedata.combining(c))
     collapsed = re.sub(r"[^a-z0-9]", "", ascii_only.lower())
