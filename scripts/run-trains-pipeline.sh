@@ -55,6 +55,9 @@ mkdir -p "$DATA/$next"
 # Writes ONLY into the idle slot (bind-mounted over /app/data/out). The
 # fetch stage uses the image's default CMD; later stages override the
 # command with the same nice/ionice + uv invocation minus earlier stages.
+# The explicit failure branch matters: under `set -e` a failing compose run
+# would otherwise kill the script with NO log line at all (2026-07-17: three
+# runs died silently on a fatal build validation and looked like crashes).
 case "$STAGE" in
   fetch)
     docker compose run --rm -v "$DATA/$next:/app/data/out" trains-pipeline
@@ -67,7 +70,7 @@ case "$STAGE" in
     docker compose run --rm -v "$DATA/$next:/app/data/out" trains-pipeline \
       sh -c "nice -n 19 ionice -c 3 sh -c 'uv sync --frozen --no-dev && uv run --frozen --no-dev ose compute'"
     ;;
-esac
+esac || { echo "ABORT: pipeline container failed (stage $STAGE). Keeping $active live."; exit 1; }
 
 test -s "$DATA/$next/stations.json" || { echo "ABORT: no stations.json"; exit 1; }
 n=$(find "$DATA/$next" -maxdepth 1 -name "reach_*.json" | wc -l)

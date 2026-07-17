@@ -191,6 +191,7 @@ def merge_stations(
     mapping: dict[tuple[str, str], str] = {}
     stubs: list[tuple[str, str, str, FeedConfig]] = []  # (feed, stop_id, name, cfg)
     uic_aliases: dict[str, str] = {}  # UIC code -> canonical, from fallback merges (#7)
+    done_feeds: set[str] = set()  # feeds fully processed -> their x: ids are settled
 
     # Pass 1: real (coordinate-bearing) stops. Stubs (lat/lon None) are deferred so
     # they can only resolve ONTO settled real stations, never seed one themselves.
@@ -201,6 +202,20 @@ def merge_stations(
                 stubs.append((feed, stop.stop_id, stop.name, cfg))
                 continue
             canonical = aliases.get(f"{feed}:{stop.stop_id}")
+            if canonical is not None and canonical not in registry:
+                # Alias targets embed volatile feed ids (x:db_fern:<id> churns
+                # on every DB export). When the target's own feed has already
+                # been fully processed and the id never registered, the alias
+                # is provably stale: prefer a co-located same-name station over
+                # minting a ghost under the dead id (2026-07-17: 32 doubled
+                # Polish stations aborted the build). Non-x: targets and
+                # forward references to later feeds keep the alias verbatim --
+                # an explicit override must still beat proximity (rule 1).
+                target_feed = re.match(r"x:([^:]+):", canonical)
+                if target_feed is not None and target_feed.group(1) in done_feeds:
+                    near = _proximity_match(registry, by_norm, stop.name, stop.lat, stop.lon)
+                    if near is not None:
+                        canonical = near
             if canonical is None:
                 code = _uic_match(uic_re, stop.stop_id)
                 if code is not None:
@@ -228,6 +243,7 @@ def merge_stations(
                 )
                 by_norm.setdefault(_norm(stop.name), []).append(canonical)
             mapping[(feed, stop.stop_id)] = canonical
+        done_feeds.add(feed)
 
     # Pass 2: coordinate-less stubs. An explicit alias wins; otherwise resolve by an
     # UNAMBIGUOUS normalized-name match onto a real station. A stub NEVER creates a

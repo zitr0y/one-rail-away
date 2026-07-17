@@ -54,6 +54,39 @@ def test_alias_override_wins():
     assert mapping[("a", "odd")] == "1234567"
 
 
+def test_stale_alias_target_falls_back_to_proximity():
+    """A rotated feed id leaves an alias pointing at a ghost canonical; the
+    aliased stop must merge onto the co-located same-name station instead of
+    minting a duplicate under the stale id (db_fern id churn, 2026-07-17:
+    32 Polish stations doubled and the build's validate() aborted the run)."""
+    per_feed = {
+        "db_fern": (
+            [RawStop("570853", "Chelm", 51.141197, 23.494036)],
+            _cfg(country="DE", uic_regex=r"(\d{7})"),
+        ),
+        "pkp": (
+            [RawStop("50906", "Chełm", 51.14124, 23.493263)],
+            _cfg(country="PL"),
+        ),
+    }
+    stations, mapping = merge_stations(per_feed, {"pkp:50906": "x:db_fern:461849"})
+    assert len(stations) == 1
+    assert mapping[("pkp", "50906")] == mapping[("db_fern", "570853")]
+
+
+def test_forward_alias_to_unprocessed_feed_still_mints():
+    """An alias whose x:-target names a feed NOT yet processed is a forward
+    reference, not a stale id -- it must mint under the alias id even with a
+    same-name station nearby (the stale-alias fallback must stay narrow)."""
+    per_feed = {
+        "a": ([RawStop("s1", "Same Place", 50.0, 10.0)], _cfg()),
+        "b": ([RawStop("s2", "Same Place", 50.0001, 10.0001)], _cfg()),
+    }
+    stations, mapping = merge_stations(per_feed, {"b:s2": "x:c:zzz"})
+    assert mapping[("b", "s2")] == "x:c:zzz"
+    assert len(stations) == 2
+
+
 def test_production_aliases_merge_current_duplicate_validation_pairs():
     """Keep feed-id churn from making the full production build abort."""
     aliases = tomllib.loads(Path("station_aliases.toml").read_text())["aliases"]
