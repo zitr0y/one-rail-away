@@ -183,7 +183,7 @@ function dedupeConsecutive(coords: [number, number][]): [number, number][] {
  *  point along the a→b travel direction. */
 function hopCurve(a: Station, b: Station, ta: Vec, tb: Vec): [number, number][] {
   const lengthKm = hopLengthKm(a, b);
-  if (lengthKm === 0) return [[a.lon, a.lat], [b.lon, b.lat]];
+  if (lengthKm === 0) return dedupeConsecutive([[a.lon, a.lat], [b.lon, b.lat]]);
   const dirAB = direction(a, b);
   const sa = flipAlong(ta, dirAB);
   const sb = flipAlong(tb, dirAB);

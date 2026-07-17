@@ -180,6 +180,13 @@ describe("buildSmoothedLookup", () => {
     expect(lookup.has("B|C")).toBe(false);
   });
 
+  it("distinct station ids at identical coordinates are dropped (straight fallback)", () => {
+    const stations = new Map([S("A", 0, 0), S("B", 1, 0), S("B2", 1, 0)]); // B2 co-located with B
+    const lookup = buildSmoothedLookup(reachOf([journey(leg("A", "B2", ["B"]))]), stations);
+    expect(lookup.has("A|B")).toBe(true);
+    expect(lookup.has("B|B2")).toBe(false);
+  });
+
   it("malformed reach file yields an empty lookup, never a throw", () => {
     expect(buildSmoothedLookup({} as ReachFile, new Map()).size).toBe(0);
   });
