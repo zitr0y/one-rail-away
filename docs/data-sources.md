@@ -37,12 +37,11 @@ metro, tram, bus and ferry.
 
 | Source | Used for | Licence |
 |---|---|---|
-| **OpenStreetMap** via Geofabrik per-country extracts | Real rail geometry (`ose paths` → `rail_paths.json`). Cached rail-only in `data/osm/` | ODbL — **attribution required**, rendered in the map's attribution control |
 | **OpenFreeMap** planet vector tiles (OpenMapTiles schema, OSM data) | Basemap | ODbL (OSM) |
 | **Natural Earth II** shaded relief raster (served by OpenFreeMap) | Terrain shading | Public domain |
 
 Everything in `data/out/` (`stations.json`, `reach_*.json`, `cities.json`,
-`coverage.json`, `rail_paths.json`) is **derived by our own pipeline**, not ingested.
+`coverage.json`) is **derived by our own pipeline**, not ingested.
 
 ## Wanted — not obtained
 
@@ -106,12 +105,6 @@ Full verdicts in the table at the end of `docs/superpowers/new-feed-recipe.md`.
   Dortmund–Munich (17 trains/day) as seasonal. Real seasonal services — some
   Nightjets, Alpine and summer-only routes — are a short list that needs to be
   **curated from outside our feeds**. No feed we have expresses this reliably.
-- **Which physical track a train actually uses.** Feeds give calling points, never
-  track. `ose paths` *infers* the route (speed-weighted A* over OSM rail), which is
-  right almost always but can pick a high-speed line where a slower service really
-  takes the classic route. The legs' `dep`/`arr` times could disambiguate this and
-  nobody has to give us the data — see the note in `pipeline/railpaths.py`.
-
 ---
 
 *Adding a feed? Follow `docs/superpowers/new-feed-recipe.md`, then update this page

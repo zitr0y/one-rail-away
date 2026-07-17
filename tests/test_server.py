@@ -1,4 +1,3 @@
-import gzip
 import json
 import os
 from datetime import date
@@ -32,13 +31,6 @@ def client(tmp_path_factory):
     )
     out_dir = tmp / "out"
     compute_all(tmp / "graph", out_dir, feeds_path=feeds_toml)
-    # rail_paths.json is written by a separate pipeline step (pipeline/railpaths.py,
-    # not exercised by build()+compute_all()); hand-write it here so the
-    # /api/rail-paths tests below have something to serve.
-    write_json_with_gzip(out_dir / "rail_paths.json", json.dumps({
-        "attribution": "© OpenStreetMap contributors (ODbL)",
-        "paths": {"1111111|2222222": [[0.0, 0.0], [1.0, 1.0]]},
-    }))
     test_client = TestClient(create_app(out_dir))
     test_client.data_dir = out_dir  # stashed for tests that need the on-disk files
     return test_client
@@ -98,25 +90,9 @@ def test_cities_endpoint_and_404_when_absent(tmp_path):
     assert empty.get("/api/cities").status_code == 404
 
 
-def test_rail_paths_served(tmp_path):
-    write_json_with_gzip(
-        tmp_path / "rail_paths.json",
-        '{"attribution": "© OpenStreetMap contributors (ODbL)", '
-        '"paths": {"a|b": [[0, 0], [1, 1]]}}')
-    client = TestClient(create_app(tmp_path))
-    body = client.get("/api/rail-paths").json()
-    assert body["paths"]["a|b"] == [[0, 0], [1, 1]]
-
-
-def test_rail_paths_404_when_missing(tmp_path):
-    client = TestClient(create_app(tmp_path))
-    assert client.get("/api/rail-paths").status_code == 404
-
-
 # --- AV: pre-gzipped static artifacts + HTTP caching -----------------------
 
 ARTIFACT_ENDPOINTS = {
-    "/api/rail-paths": "rail_paths.json",
     "/api/coverage": "coverage.json",
     "/api/cities": "cities.json",
     "/api/meta": "meta.json",

@@ -383,7 +383,7 @@ def test_compute_all_writes_reach_files(tmp_path):
 
 
 def test_compute_all_writes_gzip_siblings(tmp_path):
-    # rail-paths, coverage, reach, cities, meta are served verbatim by
+    # coverage, reach, cities, meta are served verbatim by
     # server/app.py, so the pipeline writes a `.json.gz` sibling for each,
     # byte-identical (once decompressed) to the plain file and no staler.
     # stations.json is merged with a live has_reach set per request, so it's

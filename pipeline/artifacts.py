@@ -1,12 +1,10 @@
 """Shared helper for writing a JSON artifact alongside a pre-gzipped sibling.
 
-Five endpoint families (`rail-paths`, `coverage`, `reach`, `cities`, `meta`)
-are served verbatim by `server/app.py` -- byte-identical on every request, so
-gzipping them once at pipeline-write time (instead of on every request) turns
-~1.7s of server CPU per page view into a `sendfile`. The plain `.json` stays
-the source of truth (other pipeline steps read it back, e.g.
-`railpaths.collect_hops` globs `reach_*.json`); the `.json.gz` is purely a
-serving optimisation.
+Four endpoint families (`coverage`, `reach`, `cities`, `meta`) are served
+verbatim by `server/app.py` -- byte-identical on every request, so gzipping
+them once at pipeline-write time (instead of on every request) turns ~1.7s
+of server CPU per page view into a `sendfile`. The plain `.json` stays the
+source of truth; the `.json.gz` is purely a serving optimisation.
 
 `stations.json` deliberately has no `.gz` sibling: the server merges it with
 a live `has_reach` set on every request (see `server/app._cached_stations`),

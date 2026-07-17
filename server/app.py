@@ -469,10 +469,6 @@ def create_app(data_dir: Path) -> FastAPI:
     def cities(request: Request) -> Response:
         return _artifact_response(request, data_dir / "cities.json", 404, "No cities data")
 
-    @app.get("/api/rail-paths")
-    def rail_paths(request: Request) -> Response:
-        return _artifact_response(request, data_dir / "rail_paths.json", 404, "No rail path data")
-
     return app
 
 

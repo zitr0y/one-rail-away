@@ -1,4 +1,4 @@
-import type { CityGroups, CoverageCollection, RailPathsFile, ReachFile, Station } from "./types";
+import type { CityGroups, CoverageCollection, ReachFile, Station } from "./types";
 
 async function get<T>(path: string): Promise<T> {
   const res = await fetch(path);
@@ -34,7 +34,6 @@ export const api = {
     get<{ stations: Station[] }>(`/api/stations/search?q=${encodeURIComponent(q)}`),
   getCoverage: () => get<CoverageCollection>("/api/coverage"),
   getCities: () => get<CityGroups>("/api/cities"),
-  getRailPaths: () => get<RailPathsFile>("/api/rail-paths"),
 };
 
 /**

@@ -11,7 +11,7 @@ from pipeline.sampling import service_week_dates
 
 RAW, GRAPH, OUT = Path("data/raw"), Path("data/graph"), Path("data/out")
 
-STAGES = ["fetch", "build", "compute", "paths"]
+STAGES = ["fetch", "build", "compute"]
 
 
 def stages_from(start: str) -> list[str]:
@@ -31,11 +31,6 @@ def _add_build_args(parser: argparse.ArgumentParser) -> None:
 def _add_workers_arg(parser: argparse.ArgumentParser) -> None:
     parser.add_argument("--workers", type=int, default=None,
                         help="process count (default: one per CPU)")
-
-
-def _add_paths_args(parser: argparse.ArgumentParser) -> None:
-    parser.add_argument("--force-download", action="store_true",
-                        help="re-download cached OSM extracts")
 
 
 def _run_fetch(args: argparse.Namespace) -> None:
@@ -81,13 +76,7 @@ def _run_compute(args: argparse.Namespace) -> None:
     compute_all(GRAPH, OUT, args.workers)
 
 
-def _run_paths(args: argparse.Namespace) -> None:
-    from pipeline.railpaths import build_rail_paths
-
-    build_rail_paths(OUT, Path("data/osm"), force_download=args.force_download)
-
-
-_RUNNERS = {"fetch": _run_fetch, "build": _run_build, "compute": _run_compute, "paths": _run_paths}
+_RUNNERS = {"fetch": _run_fetch, "build": _run_build, "compute": _run_compute}
 
 
 def main() -> None:
@@ -100,14 +89,11 @@ def main() -> None:
     _add_workers_arg(b)
     c = sub.add_parser("compute")
     _add_workers_arg(c)
-    p = sub.add_parser("paths", help="derive real rail geometry for reach-line hops")
-    _add_paths_args(p)
     a = sub.add_parser("all", help="run pipeline stages in order, optionally starting mid-pipeline")
     a.add_argument("--from", dest="start", choices=STAGES, default="fetch",
                    help="first stage to run; later stages always follow (default: fetch)")
     _add_build_args(a)
     _add_workers_arg(a)
-    _add_paths_args(a)
     args = parser.parse_args()
 
     if args.cmd == "all":
