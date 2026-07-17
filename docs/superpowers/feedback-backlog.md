@@ -169,6 +169,16 @@ files go stale; any future saved state is unsafe. Fix direction: canonical ids f
 stable keys (UIC where present, else hash of normalized name + rounded coords) plus
 a `station_id_aliases` map so retired ids keep resolving. The merge step already
 reconciles identity; it's just not what the public id is keyed on.
+
+2026-07-17 escalation: an id rotation left 32 station_aliases.toml targets
+(`pkp:* -> x:db_fern:<dead id>`) pointing at ghosts; the aliased pkp stops
+minted duplicate stations and the sharpened `_norm` made `validate()` abort
+every pipeline run. Mitigated in `merge.py` (stale x:-alias targets fall back
+to proximity when the target feed is already processed), but alias pairs whose
+names DON'T normalize equal (Kyiv/Lviv Cyrillic-vs-Latin, translated exonyms)
+still silently split into doubled stations when their target id rotates —
+invisible to validation. The real fix remains stable canonical ids; until
+then, stale alias targets should be re-audited after each db_fern refresh.
 **Do before inviting people to share links.** Relates AD.
 
 ---
