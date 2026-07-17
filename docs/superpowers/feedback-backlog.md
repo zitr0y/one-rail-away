@@ -196,15 +196,14 @@ change each.
 ## AO. Frequency heat strip — shipped 2026-07-16, live after recompute
 
 7×3 day×daypart heat strip + day×hour histograms in reach files (spec
-`specs/2026-07-16-frequency-viz-design.md`). Live and seen by the user. Evidence
-pass roughly doubles compute-stage time — watch under P.
+`specs/2026-07-16-frequency-viz-design.md`). Evidence pass roughly doubles
+compute-stage time — watch under P.
 
-**User verdict (2026-07-16): rework the layout.** "I like the viz but":
-- Make it **horizontal** (days along the x-axis?) — "makes more sense in my mind".
-- The three dayparts must be **clearly labeled morning / afternoon / evening**,
-  not implied.
-- The **colours must make their meaning obvious** (what does dark vs light
-  encode?) — legend, scale, or self-evident encoding; more than token tuning.
+**Layout rework shipped 2026-07-17** (spec
+`specs/2026-07-17-frequency-heat-strip-redesign-design.md`): transposed grid
+(days on x-axis), sunrise/sun/moon daypart icons with words on desktop (hidden
+on the mobile sheet), 0→max legend, validated brand-blue ramp, per-cell
+tooltips. Awaiting user visual calibration on desktop + phone.
 
 ## AP. Auto-flag / auto-merge station near-duplicates (Stuttgart case)
 
