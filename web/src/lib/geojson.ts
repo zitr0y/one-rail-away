@@ -93,16 +93,6 @@ export interface HopGeometry { fwd: [number, number][]; rev: [number, number][] 
  *  Built client-side by smoothPaths.ts (backlog I). */
 export type HopGeometryLookup = Map<string, HopGeometry>;
 
-/** Builds the lookup from the raw `{segmentKey: coords}` payload the API
- *  serves — the one place both orientations get materialized (backlog AU). */
-export function buildRailPathLookup(paths: Record<string, [number, number][]>): HopGeometryLookup {
-  const lookup: HopGeometryLookup = new Map();
-  for (const [key, coords] of Object.entries(paths)) {
-    lookup.set(key, { fwd: coords, rev: [...coords].reverse() });
-  }
-  return lookup;
-}
-
 function hopCoords(
   a: { id: string; station: Station }, b: { id: string; station: Station },
   hopGeometry: HopGeometryLookup | null,

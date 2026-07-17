@@ -7,7 +7,8 @@ import { TIME_MAX } from "./components/TimeSlider";
 import { api, latestOnly } from "./lib/api";
 import { buildCityLookup } from "./lib/cities";
 import { unionReach } from "./lib/cityunion";
-import { buildRailPathLookup, initialMaxTrains, type HopGeometryLookup, type MaxTrains } from "./lib/geojson";
+import { initialMaxTrains, type MaxTrains } from "./lib/geojson";
+import { smoothedLookupFor } from "./lib/smoothPaths";
 import type { FeaturePick } from "./lib/pickfeature";
 import type { CityGroups, ReachFile, Station } from "./lib/types";
 import { useTheme } from "./lib/theme";
@@ -19,7 +20,6 @@ export default function App() {
   const [cityGroups, setCityGroups] = useState<CityGroups>({});
   const [cityOrigin, setCityOrigin] = useState<{ city: string; memberIds: string[] } | null>(null);
   const [reach, setReach] = useState<ReachFile | null>(null);
-  const [hopGeometry, setHopGeometry] = useState<HopGeometryLookup | null>(null);
   const [maxTrains, setMaxTrains] = useState<MaxTrains>(
     () => initialMaxTrains(window.location.search, window.location.hostname));
   const [maxMinutes, setMaxMinutes] = useState(TIME_MAX); // start at "max" (no cap)
@@ -33,12 +33,19 @@ export default function App() {
   const stationsById = useMemo(() => new Map(stations.map((s) => [s.id, s])), [stations]);
   const cities = useMemo(() => buildCityLookup(cityGroups), [cityGroups]);
 
+  // Smoothed hop geometry (backlog I): derived from the FULL reach file so
+  // the 1/2/3-trains and time filters hide lines but never reshape them.
+  // Memoized per reach identity (useMemo here + WeakMap in smoothedLookupFor)
+  // so filter/selection churn never recomputes. Never throws — a malformed
+  // reach file degrades to straight lines.
+  const hopGeometry = useMemo(
+    () => (reach ? smoothedLookupFor(reach, stationsById) : null),
+    [reach, stationsById],
+  );
+
   useEffect(() => {
     api.getStations().then((r) => setStations(r.stations)).catch(console.error);
     api.getCities().then(setCityGroups).catch(() => setCityGroups({}));
-    api.getRailPaths()
-      .then((r) => setHopGeometry(buildRailPathLookup(r.paths)))
-      .catch(() => setHopGeometry(null)); // straight-line fallback, by design
   }, []);
 
   // Shared by every reach-fetching handler below so only the latest selection's

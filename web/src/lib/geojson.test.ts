@@ -1,9 +1,10 @@
 import { describe, expect, it } from "vitest";
 import {
-  bestJourney, buildRailPathLookup, destinationsGeoJSON, frequencyClass, journeyLegPaths,
+  bestJourney, destinationsGeoJSON, frequencyClass, journeyLegPaths,
   legSegments, linesGeoJSON, segmentsGeoJSON, selectedLineGeoJSON, shown, timeBucket,
   transferPoints, type HopGeometryLookup, initialMaxTrains,
 } from "./geojson";
+import { buildSmoothedLookup } from "./smoothPaths";
 import type { Journey, Leg, ReachFile, Station } from "./types";
 
 const S = (id: string, lon: number): Station =>
@@ -21,6 +22,10 @@ const reach: ReachFile = {
         { train: "TGV 10", dep: "10:30", arr: "12:00", from: "C", to: "D", via: [] } ] } ] },
   ],
 };
+
+/** Hand-built lookup entry — both orientations, like buildSmoothedLookup emits. */
+const hopGeom = (coords: [number, number][]) =>
+  ({ fwd: coords, rev: [...coords].reverse() });
 
 describe("bestJourney / timeBucket", () => {
   it("respects the train budget", () => {
@@ -234,11 +239,12 @@ describe("selectedLineGeoJSON (backlog AU)", () => {
     });
   }
 
-  it("equals the old linesGeoJSON output with rail-path geometry threaded through", () => {
-    const railPaths = buildRailPathLookup({ "A|B": [[8, 50], [8.5, 50.2], [9, 50]] });
-    const old = linesGeoJSON(reach, stationsById, 3, Infinity, railPaths)
+  it("equals the old linesGeoJSON output with hop geometry threaded through", () => {
+    const hopGeometry: HopGeometryLookup =
+      new Map([["A|B", hopGeom([[8, 50], [8.5, 50.2], [9, 50]])]]);
+    const old = linesGeoJSON(reach, stationsById, 3, Infinity, hopGeometry)
       .features.find((f) => f.properties.id === "D")!;
-    const next = selectedLineGeoJSON(reach, "D", stationsById, 3, Infinity, railPaths).features[0];
+    const next = selectedLineGeoJSON(reach, "D", stationsById, 3, Infinity, hopGeometry).features[0];
     expect(next).toEqual(old);
   });
 });
@@ -299,30 +305,30 @@ const railStationsById = new Map<string, Station>([
 const railLeg = (from: string, to: string, via: string[]): Leg =>
   ({ train: "T", dep: "", arr: "", from, to, via });
 
-describe("legSegments with rail paths", () => {
-  const railPaths: HopGeometryLookup = buildRailPathLookup({
-    "a|b": [[0, 0], [0.5, 0.4], [1, 0]],
-  });
+describe("legSegments with hop geometry", () => {
+  const hopGeometry: HopGeometryLookup = new Map([
+    ["a|b", hopGeom([[0, 0], [0.5, 0.4], [1, 0]])],
+  ]);
 
   it("uses lookup geometry for a hop when present", () => {
-    expect(legSegments(railLeg("a", "b", []), railStationsById, railPaths)[0].coords)
+    expect(legSegments(railLeg("a", "b", []), railStationsById, hopGeometry)[0].coords)
       .toEqual([[0, 0], [0.5, 0.4], [1, 0]]);
   });
 
   it("reverses geometry when the hop travels against key order", () => {
-    expect(legSegments(railLeg("b", "a", []), railStationsById, railPaths)[0].coords)
+    expect(legSegments(railLeg("b", "a", []), railStationsById, hopGeometry)[0].coords)
       .toEqual([[1, 0], [0.5, 0.4], [0, 0]]);
     // Original forward entry must not be mutated by the reversal.
-    expect(railPaths.get("a|b")!.fwd[0]).toEqual([0, 0]);
+    expect(hopGeometry.get("a|b")!.fwd[0]).toEqual([0, 0]);
   });
 
   it("falls back to a straight line for hops without geometry", () => {
-    expect(legSegments(railLeg("b", "c", []), railStationsById, railPaths)[0].coords)
+    expect(legSegments(railLeg("b", "c", []), railStationsById, hopGeometry)[0].coords)
       .toEqual([[1, 0], [2, 0]]);
   });
 
   it("splits a via-leg into per-hop segments, each with its own lookup", () => {
-    const segments = legSegments(railLeg("a", "c", ["b"]), railStationsById, railPaths);
+    const segments = legSegments(railLeg("a", "c", ["b"]), railStationsById, hopGeometry);
     expect(segments.map((s) => s.key)).toEqual(["a|b", "b|c"]);
     expect(segments[0].coords).toEqual([[0, 0], [0.5, 0.4], [1, 0]]);
     expect(segments[1].coords).toEqual([[1, 0], [2, 0]]);
@@ -330,8 +336,44 @@ describe("legSegments with rail paths", () => {
 
   it("journeyLegPaths threads geometry and keeps stops as exact vertices", () => {
     const journey = { trains: 1, duration_min: 60, legs: [railLeg("a", "c", ["b"])] };
-    expect(journeyLegPaths(journey, railStationsById, railPaths))
+    expect(journeyLegPaths(journey, railStationsById, hopGeometry))
       .toEqual([[[0, 0], [0.5, 0.4], [1, 0], [2, 0]]]);
+  });
+});
+
+describe("smoothed geometry integration (backlog I)", () => {
+  // The lookup is built ONCE from the full reach file; filters must only
+  // hide lines, never reshape them.
+  const lookup = buildSmoothedLookup(reach, stationsById);
+
+  it("stations stay exact vertices with smoothed geometry threaded through", () => {
+    const fc = linesGeoJSON(reach, stationsById, 1, Infinity, lookup);
+    const coords = fc.features.find((f) => f.properties.id === "C")!
+      .geometry.coordinates as [number, number][];
+    const a = stationsById.get("A")!;
+    const b = stationsById.get("B")!;
+    const c = stationsById.get("C")!;
+    expect(coords[0]).toEqual([a.lon, a.lat]);
+    expect(coords[coords.length - 1]).toEqual([c.lon, c.lat]);
+    expect(coords).toContainEqual([b.lon, b.lat]);
+  });
+
+  it("filters never reshape geometry: same hop, same coords at 1 and 3 trains", () => {
+    const at1 = segmentsGeoJSON(shown(reach, 1, Infinity), stationsById, lookup);
+    const at3 = segmentsGeoJSON(shown(reach, 3, Infinity), stationsById, lookup);
+    const ab1 = at1.features.find((f) => f.properties.id === "A|B")!;
+    const ab3 = at3.features.find((f) => f.properties.id === "A|B")!;
+    expect(ab1.geometry.coordinates).toEqual(ab3.geometry.coordinates);
+    expect(ab3.geometry.coordinates).toEqual(lookup.get("A|B")!.fwd);
+  });
+
+  it("journeys sharing a trunk keep identical smoothed trunk coords (backlog X)", () => {
+    const fc = linesGeoJSON(reach, stationsById, 3, Infinity, lookup);
+    const toC = fc.features.find((f) => f.properties.id === "C")!
+      .geometry.coordinates as [number, number][];
+    const toD = fc.features.find((f) => f.properties.id === "D")!
+      .geometry.coordinates as [number, number][];
+    expect(toD.slice(0, toC.length)).toEqual(toC);
   });
 });
 
