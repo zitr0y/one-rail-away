@@ -2,6 +2,7 @@ import { useEffect, useId, useRef, useState } from "react";
 import { bookingUrl, friendlyDateLabel, localDate, shiftDate } from "../lib/booking";
 import { bestJourney, type MaxTrains } from "../lib/geojson";
 import type { Destination, Station, TransferMode } from "../lib/types";
+import FrequencyHeatStrip, { histogramRows } from "./FrequencyHeatStrip";
 
 const TRANSFER_MODE_ICONS: Record<TransferMode, string> = {
   walk: "🚶",
@@ -12,32 +13,6 @@ const TRANSFER_MODE_ICONS: Record<TransferMode, string> = {
   "train-shuttle": "🚆",
   bus: "🚌",
 };
-
-const DAYPARTS = [
-  { name: "morning", start: 0, end: 12 },
-  { name: "afternoon", start: 12, end: 18 },
-  { name: "evening", start: 18, end: 24 },
-] as const;
-const WEEKDAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"] as const;
-
-interface HistogramRow {
-  date: string;
-  weekday: string;
-  dayparts: number[];
-}
-
-function histogramRows(histogram: Destination["histogram"]): HistogramRow[] | null {
-  if (!histogram) return null;
-  const entries = Object.entries(histogram).sort(([left], [right]) => left.localeCompare(right));
-  if (!entries.length || entries.some(([, bins]) => !Array.isArray(bins) || bins.length !== 24
-    || bins.some((count) => !Number.isFinite(count) || count < 0))) return null;
-  return entries.map(([date, bins]) => ({
-    date,
-    weekday: WEEKDAYS[new Date(`${date}T00:00:00Z`).getUTCDay()],
-    dayparts: DAYPARTS.map(({ start, end }) => bins.slice(start, end)
-      .reduce((total, count) => total + count, 0)),
-  }));
-}
 
 export function transferModeIcon(mode: TransferMode): string {
   return TRANSFER_MODE_ICONS[mode];
@@ -77,7 +52,6 @@ export default function TripDetails(
   const legsId = useId();
   const today = localDate();
   const rows = histogramRows(dest.histogram);
-  const maximum = rows ? Math.max(...rows.flatMap((row) => row.dayparts)) : 0;
 
   useEffect(() => {
     setBookingDate(localDate(1));
@@ -104,24 +78,10 @@ export default function TripDetails(
       <p className="duration">{h} h {m ? `${m} min` : ""} · {journey.trains === 1
         ? "nonstop"
         : `${journey.trains} trains`}{!rows && ` · ${frequencyLabel(dest)}`}</p>
-      {rows && <>
-        <button type="button" className="frequency-heat-strip"
-                aria-label="Toggle connection details" aria-expanded={detailsExpanded}
-                aria-controls={legsId} onClick={() => setDetailsExpanded((expanded) => !expanded)}>
-          {rows.map((row) => (
-            <span className="frequency-heat-row" key={row.date}>
-              <span className="frequency-heat-weekday">{row.weekday}</span>
-              {row.dayparts.map((count, index) => {
-                const level = count === 0 ? 0 : Math.max(1, Math.ceil(count / maximum * 4));
-                return <span className={`frequency-heat-cell frequency-heat-level-${level}`}
-                             aria-label={`${row.weekday} ${DAYPARTS[index].name}: ${count} connections`}
-                             key={DAYPARTS[index].name} />;
-              })}
-            </span>
-          ))}
-        </button>
-        <p className="frequency-heat-note">Sampled timetable evidence, not a promise.</p>
-      </>}
+      {rows && (
+        <FrequencyHeatStrip rows={rows} expanded={detailsExpanded} legsId={legsId}
+                            onToggle={() => setDetailsExpanded((expanded) => !expanded)} />
+      )}
       <ol id={legsId} className="legs" hidden={rows ? !detailsExpanded : undefined}>
         {journey.legs.map((leg) => leg.type === "transfer" ? (
           <li className="transfer-leg" key={`transfer-${leg.from_id}-${leg.to_id}`}>

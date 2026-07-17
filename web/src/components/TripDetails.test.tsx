@@ -124,12 +124,12 @@ describe("TripDetails frequency histogram", () => {
       <TripDetails origin={origin} destination={destination} dest={histogramDest}
                    maxTrains={2} stationsById={stationsById} />,
     );
-    expect(markup).toContain('aria-label="Tue morning: 4 connections"');
-    expect(markup).toContain('aria-label="Tue afternoon: 5 connections"');
-    expect(markup).toContain('aria-label="Tue evening: 6 connections"');
-    expect(markup).toContain('aria-label="Wed morning: 0 connections"');
-    expect(markup).toContain('aria-label="Wed afternoon: 2 connections"');
-    expect(markup).toContain('aria-label="Wed evening: 2 connections"');
+    expect(markup).toContain('aria-label="Tue morning: 4 direct trains"');
+    expect(markup).toContain('aria-label="Tue afternoon: 5 direct trains"');
+    expect(markup).toContain('aria-label="Tue evening: 6 direct trains"');
+    expect(markup).toContain('aria-label="Wed morning: 0 direct trains"');
+    expect(markup).toContain('aria-label="Wed afternoon: 2 direct trains"');
+    expect(markup).toContain('aria-label="Wed evening: 2 direct trains"');
     expect(markup.indexOf(">Tue<")).toBeLessThan(markup.indexOf(">Wed<"));
     expect(markup).toContain("Sampled timetable evidence");
     expect(markup).toContain("not a promise");
