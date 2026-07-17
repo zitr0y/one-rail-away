@@ -48,10 +48,10 @@
   --shadow: 0 4px 16px rgb(0 0 0 / 0.15);
   --shadow-small: 0 1px 4px rgb(0 0 0 / 0.2);
   --frequency-heat-0: #f3f4f6;
-  --frequency-heat-1: #dbeafe;
-  --frequency-heat-2: #93c5fd;
-  --frequency-heat-3: #3b82f6;
-  --frequency-heat-4: #1d4ed8;
+  --frequency-heat-1: #9DB2E5;
+  --frequency-heat-2: #7089D3;
+  --frequency-heat-3: #3B5CB9;
+  --frequency-heat-4: #003399;
 }
 /* Dark starting values (spec §Panel/chrome CSS) — user-calibrated later.
    Brand navy stays navy in both themes; navy-on-navy active buttons are a
@@ -67,10 +67,10 @@
   --shadow: 0 4px 16px rgb(0 0 0 / 0.5);
   --shadow-small: 0 1px 4px rgb(0 0 0 / 0.6);
   --frequency-heat-0: #1a2a55;
-  --frequency-heat-1: #243b6b;
-  --frequency-heat-2: #28559a;
-  --frequency-heat-3: #3478cf;
-  --frequency-heat-4: #60a5fa;
+  --frequency-heat-1: #3A5495;
+  --frequency-heat-2: #5C79BE;
+  --frequency-heat-3: #85A2DF;
+  --frequency-heat-4: #B4C8F4;
 }
 body { margin: 0; font-family: "Barlow", system-ui, sans-serif; color: var(--text); }
 .app { position: fixed; inset: 0; }
@@ -258,12 +258,28 @@ body { margin: 0; font-family: "Barlow", system-ui, sans-serif; color: var(--tex
   background: var(--surface); color: var(--text); cursor: pointer; font: inherit; text-align: left;
 }
 .trip-details .frequency-heat-strip:focus-visible { outline: 2px solid var(--text); outline-offset: 2px; }
-.trip-details .frequency-heat-row {
-  display: grid; grid-template-columns: 32px repeat(3, minmax(0, 1fr)); gap: 4px; align-items: center;
+.trip-details .frequency-heat-grid {
+  display: grid;
+  grid-template-columns: auto repeat(var(--heat-days, 7), minmax(0, 1fr));
+  gap: 2px;
+  align-items: center;
 }
-.trip-details .frequency-heat-row + .frequency-heat-row { margin-top: 4px; }
-.trip-details .frequency-heat-weekday { font-size: 12px; font-weight: 600; }
-.trip-details .frequency-heat-cell { min-height: 20px; border-radius: 3px; }
+.trip-details .frequency-heat-day {
+  font-size: 11px; font-weight: 600; text-align: center; color: var(--text-strong);
+}
+.trip-details .frequency-heat-daypart {
+  display: flex; align-items: center; gap: 4px; padding-right: 4px; color: var(--text-muted);
+}
+.trip-details .frequency-daypart-icon { width: 14px; height: 14px; flex: none; opacity: 0.8; }
+.trip-details .frequency-daypart-word { font-size: 11px; }
+.mobile-layout .trip-details .frequency-daypart-word { display: none; }
+.trip-details .frequency-heat-cell { min-height: 18px; border-radius: 3px; }
+.trip-details .frequency-heat-legend {
+  display: flex; align-items: center; gap: 3px; margin-top: 6px;
+  font-size: 11px; color: var(--text-muted);
+}
+.trip-details .frequency-heat-swatch { width: 14px; height: 8px; border-radius: 2px; }
+.trip-details .frequency-heat-legend-caption { margin-left: 4px; }
 .trip-details .frequency-heat-level-0 { background: var(--frequency-heat-0); }
 .trip-details .frequency-heat-level-1 { background: var(--frequency-heat-1); }
 .trip-details .frequency-heat-level-2 { background: var(--frequency-heat-2); }
