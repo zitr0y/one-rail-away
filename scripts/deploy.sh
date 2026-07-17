@@ -43,11 +43,12 @@ rebuild_service() {  # $1 = service name, $2 = changed yes|no; echoes result
   else
     q="-> $1 unchanged: rebuild anyway? [y/N]"; d=n
   fi
-  if prompt_yn "$q" "$d"; then
-    (cd "$COMPOSE_DIR" && docker compose build "$1" && docker compose up -d "$1") >&2
+  if ! prompt_yn "$q" "$d"; then
+    echo skipped
+  elif (cd "$COMPOSE_DIR" && docker compose build "$1" && docker compose up -d "$1") >&2; then
     echo rebuilt
   else
-    echo skipped
+    echo "REBUILD FAILED"
   fi
 }
 
