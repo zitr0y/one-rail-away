@@ -37,6 +37,11 @@ else
   exec >> "$LOG" 2>&1
 fi
 
+# Never allow two runs to race for the same idle slot (double-launch incident
+# 2026-07-17: two runs 19s apart both built into out-a).
+exec 9>/home/aaron/logs/trains-pipeline.lock
+flock -n 9 || { echo "ABORT: another pipeline run is already active"; exit 1; }
+
 echo "=== pipeline run started $(date -Is) (stage: $STAGE) ==="
 cd /home/aaron/docker
 
