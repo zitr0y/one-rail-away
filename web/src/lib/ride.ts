@@ -91,13 +91,11 @@ export function positionAtKm(
   return [a[0] + (b[0] - a[0]) * g, a[1] + (b[1] - a[1]) * g];
 }
 
-/** Heading look-ahead window (km, each side of the current position). Real
- *  OSM track geometry has thousands of sub-50m segments and short sideways
- *  "station stub" segments that make the raw per-segment bearing snap all
- *  over the place; sampling the bearing across ~700m of track (350m each
- *  way) averages out that jitter while still turning smoothly on genuine
- *  curves. TUNING POINT: raise it if hairpin-ish curves still look jittery,
- *  lower it if the rider visibly "cuts corners" on sharp real curves. */
+/** Heading look-ahead window (km, each side of the current position).
+ *  Geometry is now smoothly sampled Béziers (smoothPaths.ts), so per-segment
+ *  bearings are already tame; the window just keeps rotation gentle across
+ *  sample-point boundaries. TUNING POINT: lower it if the rider visibly
+ *  "cuts corners" on tight curves. */
 const BEARING_WINDOW_KM = 0.35;
 
 export interface RideOptions {

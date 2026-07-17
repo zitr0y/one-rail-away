@@ -28,34 +28,9 @@ Still open:
   `web/src/lib/ride.ts`; fallback ~5–10 s length-scaled), mascot rotation sign
   (`riderTransform`), Phase-1 bucket-0 yellow on cream.
 - **Phase 3:** mascot bends along the actual route geometry / logo draw-itself
-  animation. Shares ground with items I and W.
+  animation. Shares ground with item W.
 - Road labels/shields (z12+) were not faded in the road de-emphasis — revisit if
   they shout at street zoom.
-
-## I. Reach-line geometry — direction reopened (2026-07-15 feedback)
-
-**History:** straight per-destination lines → X trunk-merge (shared stop-sequence
-segments deduped via `segmentsGeoJSON`, shipped 2026-07-13) → real OSM rail geometry
-(`ose paths` → `rail_paths.json`, shipped 2026-07-14).
-
-**New feedback (train-nerd round, 2026-07-15): the OSM-routed paths are not good
-enough.** Some hops render as straight lines even though neighbouring hops on
-practically the same line follow track; subtler cases route along the WRONG rails —
-around Düsseldorf-Holthausen trains follow the subway or the cargo-yard tracks
-instead of the passenger line. Root causes: OSM connectivity/classification is
-imperfect and chasing per-corridor correctness for train nerds is a treadmill.
-
-**DECIDED (user, 2026-07-16): smoothed paths, drop the real OSM paths** ("the
-smoothed paths instead of real paths is important — fuck the real paths"). Build
-them properly as line trees (a→b→c as one polyline through the served stops, not
-independent a→b and a→c fans). The X segment-dedup already provides the shared
-trunks, so smoothing must respect shared segments (smooth the tree, not each
-journey). That should give clean curves without straight-line fallback. Still
-needs a brainstorm/spec for the smoothing itself; the OSM-vs-smoothed-vs-hybrid
-question is closed. Side benefit: likely retires AL (`ose paths` RAM budget) and
-the committed `rail_paths.json` artifact.
-
-Related: AL (paths RAM budget), AJ (rider steering off geometry stubs).
 
 ## K. Alternative / supplementary data sources
 
@@ -85,7 +60,7 @@ expensive per-pointer computation.
 
 ## P. Performance optimisation pass
 
-The 2026-07-15 static audit items (AT–AX + AL RAM fixes) are shipped. If the
+The 2026-07-15 static audit items (AT–AX) are shipped. If the
 post-AT build is still slow, the next lever is polars `scan_csv` + semi-join on
 active trip ids for the stop_times parse (trap: polars doesn't `.strip()` cell
 whitespace — replicate strip semantics or output identity breaks).
@@ -120,8 +95,7 @@ S). Relates K, Q.
 - **Flix as ticket seller** — if FlixBus ships (K), its tickets likely need Flix's
   own handoff (Trainline/Rail Europe may not resell FlixBus); verify whether
   FlixTrain is resold elsewhere.
-- **OpenRailwayMap / OSM rail** — partly consumed already (`ose paths`). Still
-  useful to fill MISSING station locations / cross-check coordinates (relates AP).
+- **OpenRailwayMap / OSM rail** — still useful to fill MISSING station locations / cross-check coordinates (relates AP).
 
 ## U. City-union follow-ups
 
@@ -186,27 +160,6 @@ station density (hide low-importance stops where density is high, reveal on
 zoom-in), not a global n_dest threshold. Will get MORE urgent if regional trains
 land (AR).
 
-## AJ. Rider still swings near stations (low priority)
-
-Station-approach stubs (median 14 m) point sideways off the running line and the
-~350 m `BEARING_WINDOW_KM` look-ahead still sees them near stops. Options: widen
-the window near leg ends, damp rotation in the dwell approach, or steer by track
-while drawing to the station. User: "not too bad".
-
-## AL. `ose paths` must fit in <5 GB RAM
-
-Production box has 7 GB total / ~5 GB free; `ose paths` peaks at 5.9 GB RSS, so
-`rail_paths.json` is built on a workstation and committed as an artifact. Goal:
-whole stage under 5 GB so the server cron can do a genuine full recompute and the
-committed artifact goes away. Memory sinks: `read_rail_network` holds all 8.6M node
-locations in Python dicts; ideas: stream per-country and merge border-crossing
-ways, numpy/compact arrays for coords, drop node locations once contracted edges
-hold polylines, batch hop routing.
-
-The audit's concrete fixes (snap_stations grid prefilter, in-place union-find
-path compression) shipped 2026-07-15 in cf2e077; the <5 GB target is NOT yet
-re-measured on the server — do that before deleting this item.
-
 ## AM. Station ids are not stable across feed refreshes (breaks every shared link)
 
 `x:db_fern:569849` was Berlin Hbf in one build and an unrelated minor station in
@@ -222,7 +175,7 @@ reconciles identity; it's just not what the public id is keyed on.
 
 # Train-nerd feedback round (dad, 2026-07-15)
 
-Seven items; the path-routing one is folded into item I above.
+Seven items; the path-routing one shipped as smoothed line trees 2026-07-17.
 
 ## AN. Mobile layout — shipped 2026-07-16, awaiting phone calibration
 

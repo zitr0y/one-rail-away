@@ -15,8 +15,10 @@
 import { isTrainLeg, segmentKey, type HopGeometryLookup } from "./geojson";
 import type { ReachFile, Station } from "./types";
 
-/** Tunable curvature factor for smoothed hop control points. */
-export const CURVINESS = 0.25;
+/** Tunable curvature factor for smoothed hop control points.
+ *  0.25 read as barely-curved; 0.35 chosen with the user 2026-07-17.
+ *  MAX_CONTROL_FRACTION (0.4) is the self-intersection ceiling. */
+export const CURVINESS = 0.35;
 
 /** Planar direction/position vector: [x (east), y (north)]. */
 export type Vec = [number, number];
