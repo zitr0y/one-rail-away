@@ -145,6 +145,24 @@ def test_remap_strips_stops_absent_from_mapping(caplog):
     assert any("stub" in r.message for r in caplog.records)
 
 
+def test_remap_never_mutates_input_trips():
+    # build() remaps the same mapping over per-day trip lists; nothing guards
+    # against a caller passing the same Trip object twice, so remapping must
+    # return fresh instances (a mutated input would re-remap canonical ids to
+    # None and strip every stop on the second pass).
+    trip = Trip(
+        trip_id="T",
+        train="ICE 1",
+        stops=[StopTime(station="a1", arr=0, dep=0), StopTime(station="a2", arr=60, dep=60)],
+    )
+    mapping = {("de", "a1"): "111", ("de", "a2"): "222"}
+    first = remap_trips({"de": [trip]}, mapping)
+    assert [s.station for s in trip.stops] == ["a1", "a2"]  # input untouched
+    second = remap_trips({"de": [trip]}, mapping)
+    assert [s.station for s in second[0].stops] == ["111", "222"]
+    assert first[0].stops is not trip.stops
+
+
 def test_remap_drops_trip_left_with_fewer_than_two_stops(caplog):
     trip = Trip(
         trip_id="T",

@@ -24,7 +24,7 @@ from pipeline.gtfs import (
     load_feed_days,
 )
 from pipeline.merge import _dist_m, _norm, merge_stations
-from pipeline.models import CountryOverride, Station, Trip
+from pipeline.models import CountryOverride, Station, StopTime, Trip
 from pipeline.through import join_through_services
 
 logger = logging.getLogger(__name__)
@@ -71,6 +71,8 @@ def remap_trips(
     the merge stage dropped (a coordinate-less foreign stop that could not be
     matched onto a real station); it is STRIPPED from the trip with a warning.
     Trips left with fewer than 2 stops afterwards are dropped with a warning.
+    Inputs are never mutated: remapping the same Trip object twice (e.g. one
+    shared across per-day lists) must not re-remap already-canonical ids.
     """
     kept: list[Trip] = []
     for feed, trips in feed_trips.items():
@@ -87,11 +89,11 @@ def remap_trips(
                         feed,
                     )
                     continue
-                s.station = canonical
-                remapped.append(s)
-            t.stops = remapped
-            if len(t.stops) >= 2:
-                kept.append(t)
+                remapped.append(StopTime(station=canonical, arr=s.arr, dep=s.dep))
+            if len(remapped) >= 2:
+                kept.append(
+                    Trip(trip_id=t.trip_id, train=t.train, stops=remapped, feeds=list(t.feeds))
+                )
             else:
                 logger.warning(
                     "dropping trip %s (%s) in %s: fewer than 2 stops after stub strip",
