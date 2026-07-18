@@ -466,6 +466,30 @@ body { margin: 0; font-family: "Barlow", system-ui, sans-serif; color: var(--tex
 .mobile-layout .station-field .field-clear,
 .mobile-layout .theme-toggle { min-width: 44px; }
 
+/* iOS Safari auto-zooms on focus when the input's font is under 16px, and the
+   zoomed/panned viewport then misaligns every later tap. Form controls don't
+   inherit fonts, so these sat at the ~13px UA default. */
+.mobile-layout .station-field input,
+.mobile-layout .station-field .field-value {
+  font-family: inherit;
+  font-size: 16px;
+}
+/* Kill the double-tap-zoom gesture (and its tap delay) on tappable controls. */
+.mobile-layout button,
+.mobile-layout input {
+  touch-action: manipulation;
+}
+/* The desktop 16px slider thumb is far below finger size. */
+.mobile-layout .time-slider input[type="range"] { height: 14px; }
+.mobile-layout .time-slider input[type="range"]::-webkit-slider-thumb {
+  width: 28px;
+  height: 28px;
+}
+.mobile-layout .time-slider input[type="range"]::-moz-range-thumb {
+  width: 28px;
+  height: 28px;
+}
+
 .mobile-layout .maplibregl-ctrl-bottom-left,
 .mobile-layout .maplibregl-ctrl-bottom-right {
   bottom: calc(var(--sheet-visible-height) + env(safe-area-inset-bottom) + 8px);
