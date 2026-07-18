@@ -114,7 +114,7 @@ export default function JourneyPlanner(props: Props) {
           <button type="button" className="sheet-route-part" onClick={() => openField("from")}>
             {originLabel ?? origin.name}
           </button>
-          {" → "}
+          <span className="sheet-route-arrow" aria-hidden="true">→</span>
           <button type="button" className="sheet-route-part" onClick={() => openField("to")}>
             {destination.name}
           </button>

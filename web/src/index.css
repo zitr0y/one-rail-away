@@ -406,10 +406,12 @@ body { margin: 0; font-family: "Barlow", system-ui, sans-serif; color: var(--tex
   margin: 0;
   padding: 0 16px 4px;
   font-weight: 600;
-  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 6px;
   white-space: nowrap;
-  text-overflow: ellipsis;
 }
+.mobile-layout .sheet-route-arrow { flex-shrink: 0; }
 /* Each side of the route line is tappable: expands the sheet with that
    field's entry box open. Brand-blue chips echo the armed field outline so
    they read as tappable. */
@@ -420,11 +422,10 @@ body { margin: 0; font-family: "Barlow", system-ui, sans-serif; color: var(--tex
   padding: 1px 8px;
   font: inherit;
   color: #003399;
-  max-width: 45%;
+  min-width: 0;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  vertical-align: middle;
 }
 [data-theme="dark"] .mobile-layout .sheet-route-part {
   border-color: #85A2DF;
