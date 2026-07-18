@@ -6,7 +6,7 @@ needs brainstorming with the user before implementation unless marked otherwise.
 Feed research verdicts (Norway, Czechia, Hungary, Belgium, Ouigo España, …) live in
 the verdict table of [`new-feed-recipe.md`](new-feed-recipe.md).
 
-Letters are stable ids; the highest used so far is AY.
+Letters are stable ids; the highest used so far is BA.
 
 ## A. Add more national feeds — ongoing
 
@@ -290,6 +290,20 @@ walk/metro edge as the whole answer. Decide with the user: show the transfer
 edge as the journey, or treat same-union queries as degenerate (message instead
 of route). Relates U, AS (dominance policy — a 4 h train loop is dominated by a
 55 min metro).
+
+# Phone-testing feedback round (aaron, 2026-07-18)
+
+## AZ. "Book now" button should be more visible on mobile
+
+On the mobile sheet the booking CTA is easy to miss. Make it stand out
+(placement, size, contrast) without shouting over the trip details. Relates N
+(what the button links to).
+
+## BA. Explanation / mission page ("why this exists")
+
+Add a short page explaining what the map is for and why it exists, linked
+somewhere quiet in the UI (header or attribution area). Scope with the user:
+tone, content, whether it doubles as an about/credits page.
 
 # Smaller deferred notes
 
