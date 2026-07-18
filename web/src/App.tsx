@@ -28,9 +28,6 @@ export default function App() {
   const [theme, toggleTheme] = useTheme();
   const mobile = useMobileLayout();
   const [sheetState, setSheetState] = useState<SheetState>("collapsed");
-  // Mobile header starts expanded (branding visible on load) and collapses to a
-  // pill on the first map gesture or sheet expansion; tapping the pill reopens it.
-  const [headerCollapsed, setHeaderCollapsed] = useState(false);
   const previousMobile = useRef(mobile);
 
   const stationsById = useMemo(() => new Map(stations.map((s) => [s.id, s])), [stations]);
@@ -149,13 +146,6 @@ export default function App() {
     previousMobile.current = mobile;
   }, [mobile]);
 
-  useEffect(() => {
-    if (mobile && sheetState === "expanded") setHeaderCollapsed(true);
-  }, [mobile, sheetState]);
-
-  const onUserMapInteraction = useCallback(() => {
-    if (mobile) setHeaderCollapsed(true);
-  }, [mobile]);
 
   const onStationClick = useCallback((pick: FeaturePick) => {
     const target = armedTarget(activeField, reach !== null);
@@ -183,22 +173,15 @@ export default function App() {
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [reach, selectedDest, clearSelection]);
 
-  const pill = mobile && headerCollapsed;
   return (
     <div className={appLayoutClassName(mobile, sheetState, hasContext)}>
       <MapView stations={stations} reach={reach} maxTrains={maxTrains} maxMinutes={filterMinutes}
                selectedDest={selectedDest} theme={theme}
                cityGroups={cityGroups} armed={armed} hopGeometry={hopGeometry}
                onStationClick={onStationClick} onSelectCityOrigin={selectCityOrigin}
-               onEmptyClick={onEmptyClick} onUserInteraction={onUserMapInteraction}
-               mobile={mobile} sheetState={sheetState} sheetHasContext={hasContext} />
-      <header className={`header-bar${pill ? " header-collapsed" : ""}`}
-              role={pill ? "button" : undefined} tabIndex={pill ? 0 : undefined}
-              aria-label={pill ? "Show onestopeurope header" : undefined}
-              onClick={pill ? () => setHeaderCollapsed(false) : undefined}
-              onKeyDown={pill ? (e) => {
-                if (e.key === "Enter" || e.key === " ") setHeaderCollapsed(false);
-              } : undefined}>
+               onEmptyClick={onEmptyClick} mobile={mobile}
+               sheetState={sheetState} sheetHasContext={hasContext} />
+      <header className="header-bar">
         {/* Brand lockup — edit web/src/assets/header-logo.svg in Inkscape; it is
             inlined here (Vite ?raw) so the wordmark uses the page's Barlow font. */}
         <span className="header-logo" role="img" aria-label="onestopeurope"

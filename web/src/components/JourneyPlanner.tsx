@@ -92,6 +92,13 @@ export default function JourneyPlanner(props: Props) {
           </span>
         </button>
       )}
+      {/* Minimized with a full journey chosen: the fields make no sense — show
+          "from → to" instead (expanded keeps the normal fields). */}
+      {collapsed && origin && destination ? (
+        <p className="sheet-route" title={`${originLabel ?? origin.name} → ${destination.name}`}>
+          {originLabel ?? origin.name} → {destination.name}
+        </p>
+      ) : (
       <div className="planner-fields">
         <span className="fields-gutter" aria-hidden="true" hidden={collapsed} />
         <StationField
@@ -121,6 +128,7 @@ export default function JourneyPlanner(props: Props) {
           hidden={collapsed && armed !== "to"}
         />
       </div>
+      )}
 
       {collapsed && props.collapsedSummary && (
         <p role="status" className="sheet-context" title={props.collapsedSummary}>

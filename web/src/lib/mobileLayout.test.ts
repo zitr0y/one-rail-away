@@ -77,8 +77,8 @@ describe("mobile layout contracts", () => {
   });
 
   it("computes_sheet_bottom_insets_for_collapsed_context_and_expanded_states", () => {
-    expect(sheetBottomInsetPx(800, "collapsed", false)).toBe(112);
-    expect(sheetBottomInsetPx(800, "collapsed", true)).toBe(136);
+    expect(sheetBottomInsetPx(800, "collapsed", false)).toBe(92);
+    expect(sheetBottomInsetPx(800, "collapsed", true)).toBe(100);
     expect(sheetBottomInsetPx(800, "expanded", false)).toBe(704);
   });
 });

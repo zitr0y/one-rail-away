@@ -6,8 +6,8 @@ export type SheetState = "collapsed" | "expanded";
 
 export const MOBILE_MAX_WIDTH = 768;
 export const COARSE_SMALL_MAX_WIDTH = 1024;
-export const COLLAPSED_SHEET_PX = 112;
-export const COLLAPSED_SHEET_WITH_CONTEXT_PX = 136;
+export const COLLAPSED_SHEET_PX = 92;
+export const COLLAPSED_SHEET_WITH_CONTEXT_PX = 100;
 export const EXPANDED_SHEET_VIEWPORT_FRACTION = 0.88;
 
 const SWIPE_THRESHOLD_PX = 32;

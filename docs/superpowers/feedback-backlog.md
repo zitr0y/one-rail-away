@@ -195,10 +195,12 @@ dimensions are centralized constants in `web/src/lib/mobileLayout.ts` (collapsed
 change each.
 
 2026-07-18 rework (deployed to production, user verifies on phone): handle +
-open/close merged into one capsule (chevron gone); minimized sheet shows only
-the armed field (root cause was author CSS beating `[hidden]`); swap button
-overlays the fields' right edge; header floats over the map and collapses to a
-logo pill on first map gesture / sheet expand (tap to reopen); attribution
+open/close merged into one small capsule (chevron gone, row slimmed to 32px,
+collapsed heights 92/100); minimized sheet shows only the armed field — or a
+"from → to" route line once both are chosen (root cause of the both-fields bug
+was author CSS beating `[hidden]`); swap button overlays the fields' right
+edge; header is a permanent slim bar (logo + theme toggle, no tagline — the
+collapse-to-pill first cut cropped the logo and was scrapped); attribution
 starts compact (ⓘ); example-connection legs always visible in trip details.
 
 ## AO. Frequency heat strip — shipped 2026-07-16, live after recompute

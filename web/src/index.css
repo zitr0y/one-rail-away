@@ -313,8 +313,8 @@ body { margin: 0; font-family: "Barlow", system-ui, sans-serif; color: var(--tex
 /* Mobile bottom-sheet dimensions mirror mobileLayout.ts; TypeScript supplies
    the equivalent camera insets while CSS uses these values for presentation. */
 .mobile-layout {
-  --sheet-collapsed-height: 112px;
-  --sheet-collapsed-context-height: 136px;
+  --sheet-collapsed-height: 92px;
+  --sheet-collapsed-context-height: 100px;
   --sheet-expanded-height: 88dvh;
   --sheet-visible-height: var(--sheet-collapsed-height);
 }
@@ -347,7 +347,7 @@ body { margin: 0; font-family: "Barlow", system-ui, sans-serif; color: var(--tex
   display: grid;
   position: relative;
   width: 100%;
-  min-height: 44px;
+  min-height: 32px;
   padding: 0;
   border: 0;
   background: var(--surface);
@@ -364,8 +364,8 @@ body { margin: 0; font-family: "Barlow", system-ui, sans-serif; color: var(--tex
 .mobile-layout .sheet-handle-capsule {
   display: grid;
   place-items: center;
-  width: 72px;
-  height: 26px;
+  width: 64px;
+  height: 22px;
   border: 1px solid var(--border);
   border-radius: 999px;
   background: var(--surface);
@@ -373,39 +373,16 @@ body { margin: 0; font-family: "Barlow", system-ui, sans-serif; color: var(--tex
 .mobile-layout .sheet-handle:hover .sheet-handle-capsule,
 .mobile-layout .sheet-handle:active .sheet-handle-capsule { background: var(--surface-hover); }
 .mobile-layout .sheet-handle-pill {
-  width: 36px;
+  width: 32px;
   height: 4px;
   border-radius: 999px;
   background: var(--text-subtle);
 }
-/* Mobile header floats over the map and collapses to a logo pill after the
-   first map gesture or sheet expansion (backlog AN); tap the pill to reopen. */
-.mobile-layout .header-bar {
-  top: 8px;
-  left: 8px;
-  right: 8px;
-  max-width: 640px;
-  border-radius: 999px;
-  padding: 8px 16px;
-  box-shadow: var(--shadow-small);
-  overflow: hidden;
-  transition: max-width 220ms ease;
-}
-.mobile-layout .header-logo svg { height: 28px; }
-.mobile-layout .header-tagline {
-  min-width: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.mobile-layout .header-bar.header-collapsed {
-  max-width: 180px;
-  padding: 6px 14px;
-  cursor: pointer;
-}
-.mobile-layout .header-bar.header-collapsed .header-logo svg { height: 20px; }
-.mobile-layout .header-bar.header-collapsed .header-tagline,
-.mobile-layout .header-bar.header-collapsed .theme-toggle { display: none; }
+/* Mobile header is a permanent slim bar: logo + theme toggle, no tagline. */
+.mobile-layout .header-bar { padding: 2px 12px; }
+.mobile-layout .header-logo svg { height: 22px; }
+.mobile-layout .header-tagline { display: none; }
+.mobile-layout .theme-toggle { margin-left: auto; }
 .mobile-layout .planner-fields {
   position: relative;
   display: block;
@@ -423,6 +400,15 @@ body { margin: 0; font-family: "Barlow", system-ui, sans-serif; color: var(--tex
   width: 44px;
   height: 44px;
   box-shadow: var(--shadow-small);
+}
+/* Minimized drawer with a chosen journey: "from → to" line above the summary. */
+.mobile-layout .sheet-route {
+  margin: 0;
+  padding: 0 16px 4px;
+  font-weight: 600;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .mobile-layout .sheet-context {
   margin: 0;
@@ -473,7 +459,6 @@ body { margin: 0; font-family: "Barlow", system-ui, sans-serif; color: var(--tex
 
 @media (prefers-reduced-motion: reduce) {
   .mobile-layout .panel,
-  .mobile-layout .header-bar,
   .mobile-layout .maplibregl-ctrl-bottom-left,
   .mobile-layout .maplibregl-ctrl-bottom-right {
     transition-duration: 0.01ms;

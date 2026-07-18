@@ -88,18 +88,19 @@ describe("JourneyPlanner mobile sheet", () => {
     expect(screen.queryByRole("status")).toBeNull();
   });
 
-  it("collapsed_bar_shows_the_active_destination_chooser_and_one_journey_summary", () => {
+  it("collapsed_bar_with_full_journey_shows_route_line_and_summary_instead_of_fields", () => {
     render(<Harness armed="to" selected />);
     expect(screen.queryByRole("button", { name: "Amsterdam Centraal" })).toBeNull();
-    expect(screen.getByRole("button", { name: "Paris Nord" })).toBeTruthy();
+    expect(screen.queryByRole("button", { name: "Paris Nord" })).toBeNull();
+    expect(document.querySelector(".sheet-route")?.textContent).toBe("Amsterdam Centraal → Paris Nord");
     expect(screen.getAllByRole("status")).toHaveLength(1);
     expect(screen.getByRole("status").textContent).toContain("4 h · 2 trains");
   });
 
-  it("collapsed_bar_keeps_one_summary_when_the_origin_chooser_is_rearmed", () => {
+  it("collapsed_bar_shows_route_line_even_when_the_origin_chooser_is_rearmed", () => {
     render(<Harness armed="from" selected />);
-    expect(screen.getByRole("button", { name: "Amsterdam Centraal" })).toBeTruthy();
-    expect(screen.queryByRole("button", { name: "Paris Nord" })).toBeNull();
+    expect(screen.queryByRole("button", { name: "Amsterdam Centraal" })).toBeNull();
+    expect(document.querySelector(".sheet-route")?.textContent).toBe("Amsterdam Centraal → Paris Nord");
     expect(screen.getAllByRole("status")).toHaveLength(1);
   });
 
