@@ -411,18 +411,24 @@ body { margin: 0; font-family: "Barlow", system-ui, sans-serif; color: var(--tex
   text-overflow: ellipsis;
 }
 /* Each side of the route line is tappable: expands the sheet with that
-   field's entry box open. Styled as plain text within the line. */
+   field's entry box open. Brand-blue chips echo the armed field outline so
+   they read as tappable. */
 .mobile-layout .sheet-route-part {
-  background: none;
-  border: none;
-  padding: 0;
+  background: var(--surface);
+  border: 1px solid #003399;
+  border-radius: 8px;
+  padding: 1px 8px;
   font: inherit;
-  color: inherit;
+  color: #003399;
   max-width: 45%;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  vertical-align: bottom;
+  vertical-align: middle;
+}
+[data-theme="dark"] .mobile-layout .sheet-route-part {
+  border-color: #85A2DF;
+  color: #B4C8F4;
 }
 .mobile-layout .sheet-context {
   margin: 0;
