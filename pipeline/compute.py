@@ -269,6 +269,7 @@ def compute_all(
     workers: int | None = None,
     feeds_path: Path = Path("feeds.toml"),
     cities_path: Path = Path("cities.toml"),
+    capitals_path: Path = Path("capitals.toml"),
 ) -> None:
     """For each station in the graph, compute reachability and, if any
     destination is reached, write `out_dir/reach_<id>.json`. Always writes
@@ -306,7 +307,7 @@ def compute_all(
             for station_id, n in pool.map(_compute_one, tasks, chunksize=8):
                 results[station_id] = n
 
-    capital_ids, cap_warnings = load_capitals(Path("capitals.toml"), stations)
+    capital_ids, cap_warnings = load_capitals(capitals_path, stations)
     for w in cap_warnings:
         print(w)
 

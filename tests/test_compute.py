@@ -523,15 +523,12 @@ def test_compute_all_sets_is_capital(tmp_path):
         station_countries_path=countries_toml,
     )
     # Write a capitals.toml that matches Alpha Hbf in Landia (country=LA)
-    (tmp_path / "capitals.toml").write_text('[capitals]\nLA = "Alpha Hbf"\n')
-    import os
-
-    old_cwd = os.getcwd()
-    os.chdir(tmp_path)
-    try:
-        compute_all(tmp_path / "graph", tmp_path / "out", feeds_path=feeds_toml)
-    finally:
-        os.chdir(old_cwd)
+    capitals_toml = tmp_path / "capitals.toml"
+    capitals_toml.write_text('[capitals]\nLA = "Alpha Hbf"\n')
+    compute_all(
+        tmp_path / "graph", tmp_path / "out", feeds_path=feeds_toml,
+        capitals_path=capitals_toml,
+    )
 
     stations = json.loads((tmp_path / "out" / "stations.json").read_text())
     alpha = next(s for s in stations["stations"] if s["id"] == "1111111")
@@ -565,17 +562,14 @@ def test_compute_all_sets_is_capital_for_dk_and_pt(tmp_path):
         station_countries_path=countries_toml,
     )
     # Write a capitals.toml with the DK and PT entries
-    (tmp_path / "capitals.toml").write_text(
+    capitals_toml = tmp_path / "capitals.toml"
+    capitals_toml.write_text(
         '[capitals]\nDK = "København H"\nPT = "Lisboa Oriente"\n'
     )
-    import os
-
-    old_cwd = os.getcwd()
-    os.chdir(tmp_path)
-    try:
-        compute_all(tmp_path / "graph", tmp_path / "out", feeds_path=feeds_toml)
-    finally:
-        os.chdir(old_cwd)
+    compute_all(
+        tmp_path / "graph", tmp_path / "out", feeds_path=feeds_toml,
+        capitals_path=capitals_toml,
+    )
 
     stations = json.loads((tmp_path / "out" / "stations.json").read_text())
     kobenhavn = next(s for s in stations["stations"] if s["name"] == "København H")

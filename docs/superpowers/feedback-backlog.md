@@ -136,7 +136,10 @@ Tests must not hardcode live feed ids (use synthetic fixtures or match on stable
 properties); the pipeline should treat id churn as normal — stable internal ids
 keyed on name+geo with feed ids as volatile aliases, so an upstream renumber is
 absorbed. User explicitly rejected id-chasing (the 036a1fb test "fix"). Consider
-doing AD + AC as one hardening pass. Relates AM.
+doing AD + AC as one hardening pass. Relates AM. Live instance 2026-07-18:
+`tests/test_international.py` hardcodes 2026-07-build ids and 4 tests fail
+against a newer local `data/graph` (`x:db_fern:31353` Warszawa is gone) —
+left failing deliberately as the AD/AM reproducer.
 
 ## AF. Seasonal services: currently detect NOTHING — needs a trustworthy replacement
 
@@ -287,12 +290,6 @@ of route). Relates U, AS (dominance policy — a 4 h train loop is dominated by 
 - **Medina del Campo AV coordinates wrong:** placed 21 m from the classic
   station in our data; really ~3.3 km away (found in the 2026-07-16 U sweep).
   Fix source coords / merge logic; also a platform-duplicate lookalike for AP.
-
-- **Flaky compute test on Python 3.14:**
-  `tests/test_compute.py::test_compute_all_sets_is_capital` fails on `main` —
-  `os.chdir(tmp_path)` + no-fork multiprocessing means workers read the wrong
-  `capitals.toml`. Fix: pass an explicit path into the capitals loader or set the
-  mp start method in the test.
 - **Validator blind spot:** `validate()` only flags <500 m duplicates whose names
   normalize EQUAL ("Marseille St Charles" vs "Saint-Charles" passed clean).
   Consider a <100 m any-name cross-feed warning. Now largely subsumed by AP.
