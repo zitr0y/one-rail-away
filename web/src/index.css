@@ -410,6 +410,20 @@ body { margin: 0; font-family: "Barlow", system-ui, sans-serif; color: var(--tex
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+/* Each side of the route line is tappable: expands the sheet with that
+   field's entry box open. Styled as plain text within the line. */
+.mobile-layout .sheet-route-part {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  max-width: 45%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  vertical-align: bottom;
+}
 .mobile-layout .sheet-context {
   margin: 0;
   padding: 0 16px 10px;

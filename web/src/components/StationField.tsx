@@ -12,10 +12,13 @@ interface Props {
   onPick: (option: FieldOption) => void;
   onClear: () => void;
   onFocusField: () => void;
+  autoEdit?: boolean; // parent wants the entry box opened (e.g. tapped collapsed route line)
+  onAutoEditDone?: () => void;
 }
 
 export default function StationField(
-  { placeholder, disabled, hidden, armed, value, search, onPick, onClear, onFocusField }: Props,
+  { placeholder, disabled, hidden, armed, value, search, onPick, onClear, onFocusField,
+    autoEdit, onAutoEditDone }: Props,
 ) {
   const [q, setQ] = useState("");
   const [results, setResults] = useState<FieldOption[]>([]);
@@ -53,6 +56,15 @@ export default function StationField(
       clearTimeout(t);
     };
   }, [q, editing, search]);
+
+  useEffect(() => {
+    if (!autoEdit || disabled) return;
+    setEditing(true);
+    setQ("");
+    setResults([]);
+    requestAnimationFrame(() => inputRef.current?.focus());
+    onAutoEditDone?.();
+  }, [autoEdit, disabled, onAutoEditDone]);
 
   function beginEdit() {
     if (disabled) return;

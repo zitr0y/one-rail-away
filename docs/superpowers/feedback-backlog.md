@@ -197,6 +197,17 @@ dimensions are centralized constants in `web/src/lib/mobileLayout.ts` (collapsed
 112/136 px, expanded 88dvh, swipe threshold 32 px) — calibration is a one-line
 change each.
 
+Phone verification 2026-07-18: "much improved". Two open follow-ups:
+
+1. **Collapsed route line should be tappable per field** — when both start and
+   target are chosen, tapping either one in the minimized "from → to" line
+   should expand the sheet with that field's entry box focused.
+2. **Autosuggestions unusable on mobile with the sheet minimized** — the
+   suggestion list renders below/behind and the soft keyboard eats the space.
+   Directions discussed: render suggestions ABOVE the input, or auto-expand /
+   raise the sheet while a field is focused (likely needs `visualViewport` to
+   size around the keyboard).
+
 2026-07-18 rework (deployed to production, user verifies on phone): handle +
 open/close merged into one small capsule (chevron gone, row slimmed to 32px,
 collapsed heights 92/100); minimized sheet shows only the armed field — or a

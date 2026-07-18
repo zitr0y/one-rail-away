@@ -1,4 +1,4 @@
-import { useCallback, useRef } from "react";
+import { useCallback, useRef, useState } from "react";
 import StationField from "./StationField";
 import TripDetails from "./TripDetails";
 import StopToggle from "./StopToggle";
@@ -46,6 +46,21 @@ export default function JourneyPlanner(props: Props) {
   const gestureStartY = useRef<number | null>(null);
   const suppressClick = useRef(false);
   const collapsed = props.mobile && props.sheetState === "collapsed";
+  // Set when the collapsed "from → to" line is tapped: expand the sheet and
+  // open that field's entry box once it mounts.
+  const [pendingEdit, setPendingEdit] = useState<"from" | "to" | null>(null);
+  const clearPendingEdit = useCallback(() => setPendingEdit(null), []);
+
+  const openField = (field: "from" | "to") => {
+    props.onArm(field);
+    setPendingEdit(field);
+    props.onSheetStateChange("expanded");
+  };
+  // Focusing a field while the sheet is minimized: the suggestions have no
+  // room under the input there, so expand first.
+  const expandIfCollapsed = () => {
+    if (collapsed) props.onSheetStateChange("expanded");
+  };
 
   const searchFrom = useCallback(
     (q: string) => api.searchStations(q).then((r) => [
@@ -96,7 +111,13 @@ export default function JourneyPlanner(props: Props) {
           "from → to" instead (expanded keeps the normal fields). */}
       {collapsed && origin && destination ? (
         <p className="sheet-route" title={`${originLabel ?? origin.name} → ${destination.name}`}>
-          {originLabel ?? origin.name} → {destination.name}
+          <button type="button" className="sheet-route-part" onClick={() => openField("from")}>
+            {originLabel ?? origin.name}
+          </button>
+          {" → "}
+          <button type="button" className="sheet-route-part" onClick={() => openField("to")}>
+            {destination.name}
+          </button>
         </p>
       ) : (
       <div className="planner-fields">
@@ -108,8 +129,13 @@ export default function JourneyPlanner(props: Props) {
           search={searchFrom}
           onPick={props.onSetOrigin}
           onClear={props.onClearOrigin}
-          onFocusField={() => props.onArm("from")}
+          onFocusField={() => {
+            props.onArm("from");
+            expandIfCollapsed();
+          }}
           hidden={collapsed && armed !== "from"}
+          autoEdit={pendingEdit === "from"}
+          onAutoEditDone={clearPendingEdit}
         />
         <button className="swap-btn" onClick={props.onSwap}
                 disabled={!swapEnabled(!!origin, !!destination)}
@@ -124,8 +150,13 @@ export default function JourneyPlanner(props: Props) {
             if (option.kind === "station") props.onSetDest(option.station);
           }}
           onClear={props.onClearDest}
-          onFocusField={() => props.onArm("to")}
+          onFocusField={() => {
+            props.onArm("to");
+            expandIfCollapsed();
+          }}
           hidden={collapsed && armed !== "to"}
+          autoEdit={pendingEdit === "to"}
+          onAutoEditDone={clearPendingEdit}
         />
       </div>
       )}
