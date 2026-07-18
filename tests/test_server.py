@@ -111,7 +111,8 @@ def test_artifact_body_is_byte_identical_to_disk(client, url, filename):
 def test_reach_body_is_byte_identical_to_disk(client):
     on_disk = (client.data_dir / "reach_1111111.json").read_bytes()
     assert client.get("/api/reach/1111111").content == on_disk
-    assert client.get("/api/reach/1111111", headers={"Accept-Encoding": "identity"}).content == on_disk
+    identity = client.get("/api/reach/1111111", headers={"Accept-Encoding": "identity"})
+    assert identity.content == on_disk
 
 
 @pytest.mark.parametrize("url", [*ARTIFACT_ENDPOINTS, "/api/reach/1111111"])
