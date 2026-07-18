@@ -211,6 +211,48 @@ def test_compute_writes_exact_two_date_hourly_histogram_without_changing_frequen
     assert destination["frequency"]["direct_per_active_day"] == 2.0
 
 
+def test_compute_localizes_display_times_for_wet_stations(tmp_path):
+    # Trip times are on the reference clock (CET). A Portuguese origin's
+    # histogram hours and leg dep string must be WET wall time (-60 min);
+    # the CET destination's arr string stays on the reference clock.
+    trips_by_date = {
+        "2026-07-14": [
+            Trip(
+                trip_id="t",
+                train="IC 1",
+                stops=[
+                    StopTime(station="origin", arr=705, dep=705),  # 11:45 CET = 10:45 WET
+                    StopTime(station="destination", arr=765, dep=765),
+                ],
+            ),
+        ],
+    }
+    graph, cities_path = _write_two_date_graph(tmp_path, trips_by_date)
+    stations_path = graph / "stations.json"
+    payload = json.loads(stations_path.read_text())
+    for s in payload["stations"]:
+        if s["id"] == "origin":
+            s["country"] = "PT"
+    stations_path.write_text(json.dumps(payload))
+
+    compute_all(
+        graph,
+        tmp_path / "out",
+        workers=1,
+        feeds_path=tmp_path / "no-feeds.toml",
+        cities_path=cities_path,
+    )
+
+    reach = json.loads((tmp_path / "out" / "reach_origin.json").read_text())
+    destination = next(d for d in reach["destinations"] if d["id"] == "destination")
+    assert destination["histogram"]["2026-07-14"] == [
+        1 if hour == 10 else 0 for hour in range(24)
+    ]
+    leg = destination["journeys"][0]["legs"][0]
+    assert leg["dep"] == "10:45" and leg["arr"] == "12:45"
+    assert destination["journeys"][0]["duration_min"] == 60
+
+
 def test_compute_histogram_counts_a_routed_footpath_departure_once(tmp_path):
     trips_by_date = {
         "2026-07-14": [

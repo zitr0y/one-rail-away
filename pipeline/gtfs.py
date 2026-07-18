@@ -3,6 +3,9 @@
 Behavior notes:
 - Times are minutes since midnight of the service day and may exceed 1440
   ("26:15:00" -> 1575); no modulo is ever applied.
+- Times are normalized from the feed's agency_timezone onto one shared
+  reference clock (CET/CEST, see `REF_TZ` / `_agency_shift_min`) so cross-feed
+  arithmetic is consistent; display localizes back per station downstream.
 - stop_times rows with BOTH arrival_time and departure_time empty are skipped
   with a logged warning naming the trip and stop (GTFS allows untimed
   intermediate stops; downstream reachability math needs concrete times).
@@ -33,9 +36,9 @@ Performance notes (backlog AT, 2026-07-15 efficiency audit):
 - CRITICAL: every `Trip`/`StopTime` returned to a caller (from `load_feed` or
   `load_feed_days`) is a FRESH pydantic instance built from immutable cached
   primitives (str/int tuples). Nothing pydantic is ever shared or reused
-  across two dates: `pipeline.build.remap_trips` mutates `StopTime.station`
-  in place and `build.py` sets `trip.feeds` per day, so sharing objects
-  across dates would silently corrupt one date's data with another's.
+  across two dates: `build.py` sets `trip.feeds` per day, so sharing objects
+  across dates would cross-contaminate provenance. (`remap_trips` no longer
+  mutates its inputs, but the freshness guarantee stays load-bearing.)
 """
 
 import csv
@@ -46,8 +49,9 @@ import sys
 import zipfile
 from collections.abc import Iterable, Iterator
 from dataclasses import dataclass, field
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 from pipeline.config import FeedConfig
 from pipeline.models import StopTime, Trip
@@ -75,6 +79,50 @@ def _minutes(hms: str) -> int:
     """Parse "HH:MM:SS" to minutes since midnight; hours may exceed 23 (no wraparound)."""
     h, m, _s = hms.strip().split(":")
     return int(h) * 60 + int(m)
+
+
+# Every trip time leaves this module on ONE shared clock (CET/CEST) so that
+# cross-feed arithmetic -- transfers, durations, through-joins -- is consistent.
+# GTFS stop_times are in the feed's agency_timezone (even for stops across a
+# border), so each feed is shifted by a single constant. Display converts back
+# to station-local time downstream (see compute.STATION_UTC_OFFSET_FROM_REF_MIN).
+REF_TZ = ZoneInfo("Europe/Berlin")
+
+
+def _agency_shift_min(zf: zipfile.ZipFile, zip_path: Path) -> int:
+    """Minutes to ADD to this feed's times to express them on the REF_TZ clock.
+
+    EU and UK DST transitions are simultaneous, so the shift between two such
+    zones is constant year-round and any probe date works; both a winter and a
+    summer probe are checked so a zone with a diverging DST schedule is caught
+    loudly instead of being silently off for half the year.
+    """
+    col, rows = _row_reader(zf, "agency.txt")
+    if col is None or "agency_timezone" not in col:
+        return 0
+    row = next(iter(rows), None)
+    tz_name = _get(row, col, "agency_timezone") if row else ""
+    if not tz_name:
+        return 0
+    try:
+        tz = ZoneInfo(tz_name)
+    except KeyError:
+        logger.warning("%s: unknown agency_timezone %r, assuming reference clock",
+                       zip_path.name, tz_name)
+        return 0
+    shifts = []
+    for month in (1, 7):
+        probe = datetime(2026, month, 15, 12, 0)
+        ref_off = probe.replace(tzinfo=REF_TZ).utcoffset()
+        feed_off = probe.replace(tzinfo=tz).utcoffset()
+        shifts.append(int((ref_off - feed_off).total_seconds()) // 60)
+    if shifts[0] != shifts[1]:
+        logger.warning(
+            "%s: %s has a DST schedule diverging from %s (winter shift %d min, "
+            "summer %d min); using the winter shift",
+            zip_path.name, tz_name, REF_TZ.key, shifts[0], shifts[1],
+        )
+    return shifts[0]
 
 
 def _rows_from_open_reader(f: zipfile.ZipExtFile, reader: "csv._reader") -> Iterator[list[str]]:
@@ -368,6 +416,7 @@ def _parse_feed_once(
             if brand_patterns is not None and tid in trip_train:
                 trip_headsign[tid] = _get(row, col, "trip_headsign")
 
+    tz_shift = _agency_shift_min(zf, zip_path)
     stop_times: dict[str, list[tuple[int, str, int, int]]] = {}
     col, rows = _row_reader(zf, "stop_times.txt")
     if col is not None:
@@ -390,8 +439,8 @@ def _parse_feed_once(
             entry = (
                 int(_require(row, col, "stop_sequence")),
                 _require(row, col, "stop_id"),
-                _minutes(arr),
-                _minutes(dep),
+                _minutes(arr) + tz_shift,
+                _minutes(dep) + tz_shift,
             )
             stop_times.setdefault(tid, []).append(entry)
 

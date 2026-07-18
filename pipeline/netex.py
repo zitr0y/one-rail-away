@@ -14,8 +14,12 @@ only the per-`ServiceJourney` day-bitmap check (`_runs`) varies by date.
 shared, day-independent parse. As with `pipeline.gtfs`, every `Trip`/
 `StopTime` handed to a caller is a FRESH instance built from cached
 primitives -- never shared across dates (see `pipeline.gtfs`'s module
-docstring for why that matters: `remap_trips`/`build.py` mutate them in
-place per date).
+docstring for why that matters: `build.py` sets `trip.feeds` per date).
+
+Timezone: journey times are assumed to be on `pipeline.gtfs.REF_TZ`'s clock
+(CET/CEST) -- true for Trenitalia (Europe/Rome), which is the only NeTEx feed.
+If a non-CET NeTEx feed ever lands, normalize here like `_agency_shift_min`
+does for GTFS.
 """
 
 import gzip

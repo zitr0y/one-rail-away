@@ -75,6 +75,24 @@ def test_load_feed_filters_regional_and_parses_times(tmp_path):
     assert {s.stop_id for s in stops} == {"st:1111111", "st:2222222", "st:3333333"}
 
 
+def test_agency_timezone_normalizes_times_to_reference_clock(tmp_path):
+    # GTFS times are in agency_timezone. A WET (Europe/Lisbon) feed's 08:00 is
+    # 09:00 on the reference clock (CET) all trip times are normalized to, so
+    # cross-feed arithmetic (transfers, durations, through-joins) is consistent.
+    from tests.fixtures import LANDIA, _zip
+
+    files = dict(LANDIA)
+    files["agency.txt"] = (
+        "agency_id,agency_name,agency_url,agency_timezone\n"
+        "L,Landia,https://l.example,Europe/Lisbon\n"
+    )
+    (tmp_path / "wet.zip").write_bytes(_zip(files))
+    cfgs = make_fixture_feeds(tmp_path)
+    _, trips = load_feed(tmp_path / "wet.zip", cfgs["landia"], SAMPLE)
+    t100 = next(t for t in trips if t.train == "IC 100")
+    assert t100.stops[0].dep == 9 * 60 and t100.stops[2].arr == 11 * 60
+
+
 def test_load_feed_respects_calendar(tmp_path):
     cfgs = make_fixture_feeds(tmp_path)
     _, trips = load_feed(tmp_path / "landia.zip", cfgs["landia"], date(2027, 1, 1))

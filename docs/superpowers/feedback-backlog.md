@@ -282,11 +282,6 @@ of route). Relates U, AS (dominance policy — a 4 h train loop is dominated by 
 
 # Smaller deferred notes
 
-- **Timezone bug — cross-timezone journey times off by 1 h:** GTFS times are
-  parsed as local minutes-since-midnight with no timezone normalization
-  (`pipeline/gtfs.py:74-77`), so ES↔PT (CET vs WET) itineraries are wrong by
-  an hour. Found during AO data research 2026-07-16. Affects any
-  cross-timezone leg; fix before trusting durations near Iberia's border.
 - **Medina del Campo AV coordinates wrong:** placed 21 m from the classic
   station in our data; really ~3.3 km away (found in the 2026-07-16 U sweep).
   Fix source coords / merge logic; also a platform-duplicate lookalike for AP.

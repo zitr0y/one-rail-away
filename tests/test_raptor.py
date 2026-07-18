@@ -55,6 +55,60 @@ def test_two_trains_cross_border(tmp_path):
     assert delta[0].legs[0].via == [BETA]  # via-station for the polyline
 
 
+def test_cross_timezone_transfer_duration_uses_one_clock(tmp_path):
+    # Borderia moved to WET (Europe/Lisbon): TT10's 10:30 -> 12:00 is local
+    # time, i.e. 11:30 -> 13:00 on the reference clock. Alpha -> Delta is then
+    # 08:00 -> 13:00 CET = 300 min, not the naive 240 the raw feed times give.
+    from tests.fixtures import BORDERIA, _zip
+
+    cfgs = make_fixture_feeds(tmp_path)
+    files = dict(BORDERIA)
+    files["agency.txt"] = (
+        "agency_id,agency_name,agency_url,agency_timezone\n"
+        "B,Borderia,https://b.example,Europe/Lisbon\n"
+    )
+    (tmp_path / "borderia.zip").write_bytes(_zip(files))  # _world would rewrite it
+    per_feed, all_trips = {}, []
+    for name in cfgs:
+        stops, trips = load_feed(tmp_path / f"{name}.zip", cfgs[name], SAMPLE)
+        per_feed[name] = (stops, cfgs[name])
+        all_trips.append((name, trips))
+    _, mapping = merge_stations(per_feed, {})
+    world = []
+    for name, ts in all_trips:
+        for t in ts:
+            for s in t.stops:
+                s.station = mapping[(name, s.station)]
+            world.append(t)
+    reach = compute_reachability(world, ALPHA)
+    assert reach[DELTA][0].duration_min == 300
+
+
+def test_display_offsets_localize_leg_times_and_floor_window():
+    # All times below are on the reference (CET) clock; both stations sit in a
+    # WET country (display offset -60).
+    offsets = {"o": -60, "d": -60}
+    early = Trip(
+        trip_id="E",
+        train="IC 1",
+        # 05:30 ref = 04:30 local -- before the 05:00 local floor window opens,
+        # so it must not be boardable even though it clears the 05:00 REF floor.
+        stops=[StopTime(station="o", arr=330, dep=330), StopTime(station="d", arr=390, dep=390)],
+    )
+    later = Trip(
+        trip_id="L",
+        train="IC 2",
+        stops=[StopTime(station="o", arr=700, dep=700), StopTime(station="d", arr=760, dep=760)],
+    )
+    reach = compute_reachability([early, later], "o", display_offsets=offsets)
+    (journey,) = reach["d"]
+    assert journey.duration_min == 60
+    leg = journey.legs[0]
+    assert leg.dep == "10:40" and leg.arr == "11:40"  # 700/760 ref -> local
+    # Without offsets the early trip wins (dep floor 05:00 ref catches 05:30).
+    assert compute_reachability([early, later], "o")["d"][0].legs[0].dep == "05:30"
+
+
 def test_unreachable_station_absent(tmp_path):
     reach = compute_reachability(_world(tmp_path), DELTA)
     assert ALPHA not in reach  # no trains run backwards in the fixture

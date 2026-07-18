@@ -24,6 +24,27 @@ from pipeline.raptor import compute_departure_evidence, compute_reachability
 
 MONTH_NAMES = ("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
 
+# Station-local wall clock minus the reference clock (CET/CEST) all trip times
+# are normalized to at parse (see gtfs.REF_TZ), in minutes, by country. EU/UK
+# DST transitions are simultaneous, so these are constant year-round. Countries
+# absent here share the reference clock. Used to localize the displayed leg
+# times and departure histograms; all journey arithmetic stays on the
+# reference clock.
+STATION_UTC_OFFSET_FROM_REF_MIN = {
+    "PT": -60, "GB": -60, "IE": -60,  # WET
+    "BG": 60, "CY": 60, "EE": 60, "FI": 60, "GR": 60, "LT": 60, "LV": 60,  # EET
+    "MD": 60, "RO": 60, "UA": 60,
+}
+
+
+def station_display_offsets(stations: list[Station]) -> dict[str, int]:
+    """Nonzero display offsets keyed by station id (compact: most stations are CET)."""
+    return {
+        s.id: off
+        for s in stations
+        if (off := STATION_UTC_OFFSET_FROM_REF_MIN.get(s.country or "", 0))
+    }
+
 
 def _frequency(
     requested_dates: list[str],
@@ -74,15 +95,17 @@ def _aggregate_reach(
     feed_validity_by_date: dict[str, dict[str, dict[str, object]]] | None = None,
     extra_trips: list[Trip] | None = None,
     footpaths: list[ResolvedTransfer] | None = None,
+    display_offsets: dict[str, int] | None = None,
 ) -> list[Destination]:
     """Keep each date's routes independent, then select the best tier per dest."""
     sample_dates = list(trips_by_date)
+    origin_off = (display_offsets or {}).get(station_id, 0)
     evidence: dict[str, dict[str, list[Journey]]] = {}
     directs: dict[str, dict[str, int]] = {}
     histograms: dict[str, dict[str, list[int]]] = {}
     for day, trips in trips_by_date.items():
         for dest, journeys in compute_reachability(
-            trips, station_id, footpaths=footpaths
+            trips, station_id, footpaths=footpaths, display_offsets=display_offsets
         ).items():
             evidence.setdefault(dest, {})[day] = journeys
         departure_evidence = compute_departure_evidence(trips, station_id, footpaths=footpaths)
@@ -92,7 +115,8 @@ def _aggregate_reach(
                 directs.setdefault(dest, {})[day] = direct_count
             bins = [0] * 24
             for item in departures:
-                bins[item.departure_min // 60 % 24] += 1
+                # Histogram hours are origin wall-clock time.
+                bins[(item.departure_min + origin_off) // 60 % 24] += 1
             if any(bins):
                 histograms.setdefault(dest, {})[day] = bins
     # `extra_trips` is the one extra probe loaded for services absent from
@@ -102,7 +126,7 @@ def _aggregate_reach(
     # evidence: such a destination naturally lands in "coverage_limited" or
     # "limited" below, not a fabricated year-round claim.
     extra_evidence = compute_reachability(
-        extra_trips or [], station_id, footpaths=footpaths
+        extra_trips or [], station_id, footpaths=footpaths, display_offsets=display_offsets
     )
     for dest, journeys in extra_evidence.items():
         evidence.setdefault(dest, {})["extra"] = journeys
@@ -183,12 +207,14 @@ def _write_reach(
     feed_validity_by_date: dict[str, dict[str, dict[str, object]]] | None = None,
     extra_trips: list[Trip] | None = None,
     footpaths: list[ResolvedTransfer] | None = None,
+    display_offsets: dict[str, int] | None = None,
 ) -> int:
     """Compute one origin's reachability and write its reach file.
 
     Returns the destination count (0 = nothing reachable, no file written)."""
     destinations = _aggregate_reach(
-        trips_by_date, station_id, feed_validity_by_date, extra_trips, footpaths
+        trips_by_date, station_id, feed_validity_by_date, extra_trips, footpaths,
+        display_offsets,
     )
     if not destinations:
         return 0
@@ -208,6 +234,7 @@ _worker_trips_by_date: dict[str, list[Trip]] = {}
 _worker_feed_validity_by_date: dict[str, dict[str, dict[str, object]]] = {}
 _worker_extra_trips: list[Trip] = []
 _worker_footpaths: list[ResolvedTransfer] = []
+_worker_display_offsets: dict[str, int] = {}
 
 
 def _load_trips_json(graph_dir: Path) -> tuple[
@@ -220,13 +247,18 @@ def _load_trips_json(graph_dir: Path) -> tuple[
     return trips_by_date, raw.get("feed_validity_by_date", {}), extra_trips
 
 
-def _worker_init(graph_dir_str: str, footpaths: list[ResolvedTransfer]) -> None:
+def _worker_init(
+    graph_dir_str: str,
+    footpaths: list[ResolvedTransfer],
+    display_offsets: dict[str, int],
+) -> None:
     global _worker_trips_by_date, _worker_feed_validity_by_date
-    global _worker_extra_trips, _worker_footpaths
+    global _worker_extra_trips, _worker_footpaths, _worker_display_offsets
     _worker_trips_by_date, _worker_feed_validity_by_date, _worker_extra_trips = (
         _load_trips_json(Path(graph_dir_str))
     )
     _worker_footpaths = footpaths
+    _worker_display_offsets = display_offsets
 
 
 def _compute_one(args: tuple[str, str, str, str]) -> tuple[str, int]:
@@ -240,6 +272,7 @@ def _compute_one(args: tuple[str, str, str, str]) -> tuple[str, int]:
         _worker_feed_validity_by_date,
         _worker_extra_trips,
         _worker_footpaths,
+        _worker_display_offsets,
     )
 
 
@@ -289,19 +322,20 @@ def compute_all(
     now = datetime.now(UTC).isoformat().replace("+00:00", "Z")
     workers = workers or os.process_cpu_count() or 1
 
+    display_offsets = station_display_offsets(stations)
     results: dict[str, int] = {}
     if workers == 1:
         trips_by_date, feed_validity_by_date, extra_trips = _load_trips_json(graph_dir)
         for station in stations:
             results[station.id] = _write_reach(
                 trips_by_date, station.id, out_dir, sample_date, now, feed_validity_by_date,
-                extra_trips, footpaths,
+                extra_trips, footpaths, display_offsets,
             )
     else:
         with ProcessPoolExecutor(
             max_workers=workers,
             initializer=_worker_init,
-            initargs=(str(graph_dir), footpaths),
+            initargs=(str(graph_dir), footpaths, display_offsets),
         ) as pool:
             tasks = [(s.id, str(out_dir), sample_date, now) for s in stations]
             for station_id, n in pool.map(_compute_one, tasks, chunksize=8):

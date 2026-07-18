@@ -255,7 +255,7 @@ def _walk(parent, k, dest, origin):
     return trains, first_dep
 
 
-def _build_legs(parent, k, dest, origin):
+def _build_legs(parent, k, dest, origin, display_offsets):
     """Walk parent pointers back to the origin, materializing `Leg` objects.
 
     Only called once a candidate is already known to win its (dest, trains)
@@ -264,7 +264,12 @@ def _build_legs(parent, k, dest, origin):
     origin-first; each leg's `to` equals the next leg's boarding station; via
     lists exclude the two endpoints. Assumes the chain is valid -- callers
     must have already confirmed this via `_walk`.
+
+    `display_offsets` converts the shared reference clock back to each
+    station's local wall clock for the dep/arr strings (rail convention:
+    every printed time is local to its station).
     """
+    off = display_offsets.get
     legs: list[Leg | TransferLeg] = []
     st, kk = dest, k
     while st != origin:
@@ -272,8 +277,8 @@ def _build_legs(parent, k, dest, origin):
         legs.append(
             Leg(
                 train=p.trip.train,
-                dep=fmt(p.board_dep),
-                arr=fmt(p.alight_arr),
+                dep=fmt(p.board_dep + off(p.board_station, 0)),
+                arr=fmt(p.alight_arr + off(st, 0)),
                 **{"from": p.board_station},
                 to=st,
                 via=[x.station for x in p.trip.stops[p.board_idx + 1 : p.alight_idx]],
@@ -302,9 +307,17 @@ def compute_reachability(
     max_trains: int = 3,
     transfer_min: int = 10,
     footpaths: list[ResolvedTransfer] | None = None,
+    display_offsets: dict[str, int] | None = None,
 ) -> dict[str, list[Journey]]:
     """Best journey per (destination, train-count) tier, minimized over hourly
-    departure floors 05:00-20:00, then collapsed to strictly-improving tiers.
+    departure floors 05:00-20:00 LOCAL to the origin, then collapsed to
+    strictly-improving tiers.
+
+    Trip times arrive on one shared reference clock (see gtfs.REF_TZ);
+    `display_offsets` maps station id -> minutes from that clock to the
+    station's local clock (absent = 0). It shifts the floor window to origin
+    wall time and localizes the dep/arr strings on materialized legs; all
+    arithmetic stays on the reference clock, so durations are exact.
 
     Floors are deduplicated first. `dep_floor` reaches the search in exactly one
     way: a trip is boardable at the origin iff its departure there is >= the
@@ -322,6 +335,8 @@ def compute_reachability(
     best: dict[tuple[str, int], Journey] = {}
     if not trips:
         return {}
+    display_offsets = display_offsets or {}
+    origin_off = display_offsets.get(origin, 0)
     trip_stops, by_station = _index(trips)
     origin_deps = sorted(
         {
@@ -333,7 +348,7 @@ def compute_reachability(
     )
 
     floors: dict[int, int] = {}  # earliest reachable origin departure -> a floor
-    for dep_floor in range(5 * 60, 21 * 60, 60):
+    for dep_floor in range(5 * 60 - origin_off, 21 * 60 - origin_off, 60):
         i = bisect_left(origin_deps, dep_floor)
         if i == len(origin_deps):
             continue  # nothing left to board today; this floor reaches nothing
@@ -359,7 +374,7 @@ def compute_reachability(
                 # aren't (see backlog AW): same strict-`<` tie-break, so the
                 # winner is unchanged.
                 if current is None or duration < current.duration_min:
-                    legs = _build_legs(parent, k, dest, origin)
+                    legs = _build_legs(parent, k, dest, origin, display_offsets)
                     best[key] = Journey(trains=trains, duration_min=duration, legs=legs)
 
     out: dict[str, list[Journey]] = {}
