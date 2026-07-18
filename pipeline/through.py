@@ -10,7 +10,11 @@ map's "1 train" view beyond the border stop.
 Join rules — all must hold, deliberately conservative because train labels are
 LINE labels shared by every run of the line and by both directions:
 - both trips carry the same label and the label contains a digit ("RJX 134");
-  unnumbered labels ("EC", "RJ") are too ambiguous to join,
+  unnumbered labels ("EC", "RJ") are too ambiguous to join. Caveat: labels are
+  only unique per feed by convention — in the 2026-07 build SNCF ICE numbers
+  (95xx) happen to be disjoint from db_fern ICE numbers, and a future refresh
+  where the ranges overlap would silently join unrelated cross-feed trips if
+  the other rules line up,
 - trip A ends at the exact canonical station where trip B starts,
 - B departs 0..MAX_GAP_MIN minutes after A arrives (border dwell: loco/crew
   change),

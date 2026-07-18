@@ -311,5 +311,3 @@ of route). Relates U, AS (dominance policy — a 4 h train loop is dominated by 
   deps even when the resolved journey is unchanged — caveat: dedupe-by-identity
   also stops the (likely unintended) visible animation restart on filter ticks,
   technically a visible change.
-- Document near `through.py` that SNCF ICE numbers (95xx) are disjoint from
-  db_fern ICE numbers — a future refresh with a shared number would silently join.
