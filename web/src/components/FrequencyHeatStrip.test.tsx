@@ -1,6 +1,6 @@
 // @vitest-environment jsdom
-import { cleanup, fireEvent, render } from "@testing-library/react";
-import { afterEach, describe, expect, it, vi } from "vitest";
+import { cleanup, render } from "@testing-library/react";
+import { afterEach, describe, expect, it } from "vitest";
 import FrequencyHeatStrip, { histogramRows } from "./FrequencyHeatStrip";
 
 afterEach(cleanup);
@@ -33,8 +33,7 @@ describe("FrequencyHeatStrip", () => {
     "2026-07-21": bins({ 8: 1, 14: 2 }),
   })!;
 
-  const renderStrip = (onToggle = vi.fn()) =>
-    render(<FrequencyHeatStrip rows={rows} expanded={false} legsId="legs" onToggle={onToggle} />);
+  const renderStrip = () => render(<FrequencyHeatStrip rows={rows} />);
 
   it("renders days as column headers and dayparts as icon-labelled rows", () => {
     const { container } = renderStrip();
@@ -70,14 +69,11 @@ describe("FrequencyHeatStrip", () => {
     expect(legend.textContent).toContain("direct trains / daypart");
   });
 
-  it("fires onToggle and wires aria expansion state", () => {
-    const onToggle = vi.fn();
-    const { container } = renderStrip(onToggle);
-    const button = container.querySelector<HTMLButtonElement>(".frequency-heat-strip")!;
-    expect(button.getAttribute("aria-expanded")).toBe("false");
-    expect(button.getAttribute("aria-controls")).toBe("legs");
-    fireEvent.click(button);
-    expect(onToggle).toHaveBeenCalledOnce();
+  it("is a plain display, not a toggle button", () => {
+    const { container } = renderStrip();
+    const strip = container.querySelector(".frequency-heat-strip")!;
+    expect(strip.tagName).not.toBe("BUTTON");
+    expect(strip.getAttribute("aria-expanded")).toBeNull();
   });
 
   it("keeps the sampling note beneath the strip", () => {

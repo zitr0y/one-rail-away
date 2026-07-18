@@ -1,5 +1,5 @@
 // @vitest-environment jsdom
-import { useState, type ReactNode } from "react";
+import { useState } from "react";
 import { cleanup, fireEvent, render, screen, within } from "@testing-library/react";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import JourneyPlanner from "./JourneyPlanner";
@@ -27,7 +27,6 @@ interface HarnessProps {
   initialSheetState?: SheetState;
   armed?: "from" | "to";
   selected?: boolean;
-  header?: ReactNode;
 }
 
 function Harness({
@@ -35,7 +34,6 @@ function Harness({
   initialSheetState = "collapsed",
   armed = "from",
   selected = false,
-  header = <div>Planner header</div>,
 }: HarnessProps) {
   const [sheetState, setSheetState] = useState(initialSheetState);
   return (
@@ -48,7 +46,7 @@ function Harness({
       maxTrains={2} maxMinutes={960} filterMinutes={Infinity} armed={armed}
       mobile={mobile} sheetState={sheetState}
       collapsedSummary={selected ? "4 h · 2 trains" : null}
-      header={header} onSheetStateChange={setSheetState}
+      onSheetStateChange={setSheetState}
       onSetOrigin={vi.fn()} onClearOrigin={vi.fn()} onSetDest={vi.fn()}
       onClearDest={vi.fn()} onSwap={vi.fn()} onArm={vi.fn()}
       onMaxTrains={vi.fn()} onMaxMinutes={vi.fn()}
@@ -105,16 +103,14 @@ describe("JourneyPlanner mobile sheet", () => {
     expect(screen.getAllByRole("status")).toHaveLength(1);
   });
 
-  it("expanded_sheet_reveals_the_existing_header_selector_slider_and_trip_details_in_order", () => {
+  it("expanded_sheet_reveals_the_selector_slider_and_trip_details_in_order", () => {
     render(<Harness initialSheetState="expanded" selected />);
-    const header = screen.getByText("Planner header");
     const from = screen.getByRole("button", { name: "Amsterdam Centraal" });
     const to = screen.getByRole("button", { name: "Paris Nord" });
     const selector = screen.getByRole("group", { name: "Maximum trains" });
     const slider = screen.getByText("Max travel time:").closest("label")!;
     const heading = screen.getByRole("heading", { name: "Amsterdam Centraal → Paris Nord" });
     expect(within(document.body).getByRole("button", { name: "Collapse journey planner" })).toBeTruthy();
-    expect(header.compareDocumentPosition(from) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
     expect(from.compareDocumentPosition(to) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
     expect(to.compareDocumentPosition(selector) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
     expect(selector.compareDocumentPosition(slider) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();

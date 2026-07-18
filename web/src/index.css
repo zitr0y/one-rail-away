@@ -37,6 +37,9 @@
 }
 
 * { box-sizing: border-box; }
+/* Author display rules (e.g. .station-field { display: flex }) silently beat the
+   UA's [hidden] { display: none } — this keeps the hidden attribute meaningful. */
+[hidden] { display: none !important; }
 :root {
   --surface: #fff;
   --surface-hover: #f3f4f6;
@@ -85,8 +88,6 @@ body { margin: 0; font-family: "Barlow", system-ui, sans-serif; color: var(--tex
   display: flex;
   align-items: center;
 }
-.sheet-header { display: contents; }
-.sheet-header[hidden] { display: none; }
 /* Brand lockup — inlined SVG from web/src/assets/header-logo.svg. CSS sizes the
    inner <svg> so Inkscape's width/height attrs don't matter. */
 .header-logo { display: inline-flex; }
@@ -255,9 +256,8 @@ body { margin: 0; font-family: "Barlow", system-ui, sans-serif; color: var(--tex
 .trip-details .duration { margin: 0 0 8px; color: var(--text-strong); }
 .trip-details .frequency-heat-strip {
   width: 100%; margin: 0; padding: 8px; border: 1px solid var(--border); border-radius: 8px;
-  background: var(--surface); color: var(--text); cursor: pointer; font: inherit; text-align: left;
+  background: var(--surface); color: var(--text);
 }
-.trip-details .frequency-heat-strip:focus-visible { outline: 2px solid var(--text); outline-offset: 2px; }
 .trip-details .frequency-heat-grid {
   display: grid;
   grid-template-columns: auto repeat(var(--heat-days, 7), minmax(0, 1fr));
@@ -359,41 +359,71 @@ body { margin: 0; font-family: "Barlow", system-ui, sans-serif; color: var(--tex
   outline: 2px solid var(--text);
   outline-offset: -4px;
 }
+/* Handle and open/close control are ONE element (AN direction 2026-07-17): a
+   centered capsule button in the app's button style, grabber bar inside. */
+.mobile-layout .sheet-handle-capsule {
+  display: grid;
+  place-items: center;
+  width: 72px;
+  height: 26px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+}
+.mobile-layout .sheet-handle:hover .sheet-handle-capsule,
+.mobile-layout .sheet-handle:active .sheet-handle-capsule { background: var(--surface-hover); }
 .mobile-layout .sheet-handle-pill {
   width: 36px;
   height: 4px;
   border-radius: 999px;
   background: var(--text-subtle);
 }
-.mobile-layout .sheet-handle-arrow {
-  position: absolute;
-  right: 16px;
-  color: var(--text-muted);
-  font-size: 18px;
-  line-height: 1;
-  transition: transform 220ms ease;
-}
-.mobile-layout .sheet-expanded .sheet-handle-arrow { transform: rotate(180deg); }
-.mobile-layout .sheet-expanded .header-bar {
-  position: static;
-  min-width: 0;
+/* Mobile header floats over the map and collapses to a logo pill after the
+   first map gesture or sheet expansion (backlog AN); tap the pill to reopen. */
+.mobile-layout .header-bar {
+  top: 8px;
+  left: 8px;
+  right: 8px;
+  max-width: 640px;
+  border-radius: 999px;
   padding: 8px 16px;
-  flex-shrink: 0;
+  box-shadow: var(--shadow-small);
+  overflow: hidden;
+  transition: max-width 220ms ease;
 }
-.mobile-layout .sheet-expanded .header-logo svg { height: 32px; }
-.mobile-layout .sheet-expanded .header-tagline {
+.mobile-layout .header-logo svg { height: 28px; }
+.mobile-layout .header-tagline {
   min-width: 0;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+.mobile-layout .header-bar.header-collapsed {
+  max-width: 180px;
+  padding: 6px 14px;
+  cursor: pointer;
+}
+.mobile-layout .header-bar.header-collapsed .header-logo svg { height: 20px; }
+.mobile-layout .header-bar.header-collapsed .header-tagline,
+.mobile-layout .header-bar.header-collapsed .theme-toggle { display: none; }
 .mobile-layout .planner-fields {
+  position: relative;
   display: block;
   padding: 0 16px 10px;
 }
-.mobile-layout .planner-fields .station-field + .swap-btn,
-.mobile-layout .planner-fields .swap-btn + .station-field { margin-top: 8px; }
-.mobile-layout .planner .swap-btn { width: 44px; height: 44px; }
+.mobile-layout .planner-fields .station-field ~ .station-field { margin-top: 8px; }
+/* Swap no longer takes its own row (AN): it overlays the right edge, vertically
+   centered across the two stacked fields, which end 52px early to make room. */
+.mobile-layout .sheet-expanded .planner-fields .station-field { margin-right: 52px; }
+.mobile-layout .planner .swap-btn {
+  position: absolute;
+  top: calc(50% - 5px);
+  right: 16px;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  box-shadow: var(--shadow-small);
+}
 .mobile-layout .sheet-context {
   margin: 0;
   padding: 0 16px 10px;
@@ -443,7 +473,7 @@ body { margin: 0; font-family: "Barlow", system-ui, sans-serif; color: var(--tex
 
 @media (prefers-reduced-motion: reduce) {
   .mobile-layout .panel,
-  .mobile-layout .sheet-handle-arrow,
+  .mobile-layout .header-bar,
   .mobile-layout .maplibregl-ctrl-bottom-left,
   .mobile-layout .maplibregl-ctrl-bottom-right {
     transition-duration: 0.01ms;

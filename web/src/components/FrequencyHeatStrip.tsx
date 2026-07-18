@@ -73,18 +73,13 @@ function DaypartIcon({ part }: { part: (typeof DAYPARTS)[number]["name"] }) {
 
 interface Props {
   rows: HistogramRow[];
-  expanded: boolean;
-  legsId: string;
-  onToggle: () => void;
 }
 
-export default function FrequencyHeatStrip({ rows, expanded, legsId, onToggle }: Props) {
+export default function FrequencyHeatStrip({ rows }: Props) {
   const maximum = Math.max(...rows.flatMap((row) => row.dayparts));
   return (
     <>
-      <button type="button" className="frequency-heat-strip"
-              aria-label="Toggle connection details" aria-expanded={expanded}
-              aria-controls={legsId} onClick={onToggle}>
+      <div className="frequency-heat-strip">
         <span className="frequency-heat-grid"
               style={{ "--heat-days": rows.length } as CSSProperties}>
           <span className="frequency-heat-corner" aria-hidden="true" />
@@ -117,7 +112,7 @@ export default function FrequencyHeatStrip({ rows, expanded, legsId, onToggle }:
           <span className="frequency-heat-legend-count">{maximum}</span>
           <span className="frequency-heat-legend-caption">direct trains / daypart</span>
         </span>
-      </button>
+      </div>
       <p className="frequency-heat-note">Sampled timetable evidence, not a promise.</p>
     </>
   );

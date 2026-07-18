@@ -1,4 +1,4 @@
-import { useCallback, useRef, type ReactNode } from "react";
+import { useCallback, useRef } from "react";
 import StationField from "./StationField";
 import TripDetails from "./TripDetails";
 import StopToggle from "./StopToggle";
@@ -35,7 +35,6 @@ interface Props {
   mobile: boolean;
   sheetState: SheetState;
   collapsedSummary: string | null;
-  header: ReactNode;
   onSheetStateChange: (state: SheetState) => void;
 }
 
@@ -88,11 +87,11 @@ export default function JourneyPlanner(props: Props) {
             props.onSheetStateChange(props.sheetState === "collapsed" ? "expanded" : "collapsed");
           }}
         >
-          <span className="sheet-handle-pill" aria-hidden="true" />
-          <span className="sheet-handle-arrow" aria-hidden="true">⌃</span>
+          <span className="sheet-handle-capsule" aria-hidden="true">
+            <span className="sheet-handle-pill" />
+          </span>
         </button>
       )}
-      <div className="sheet-header" hidden={collapsed}>{props.header}</div>
       <div className="planner-fields">
         <span className="fields-gutter" aria-hidden="true" hidden={collapsed} />
         <StationField

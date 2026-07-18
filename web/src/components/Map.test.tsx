@@ -89,7 +89,7 @@ function renderMap(props: Partial<ComponentProps<typeof MapView>> = {}): Root {
       <MapView stations={stations} reach={null} maxTrains={1} maxMinutes={Infinity}
                selectedDest={null} theme="light" cityGroups={{}} armed="from"
                hopGeometry={null} onStationClick={() => {}}
-               onSelectCityOrigin={() => {}} onEmptyClick={() => {}}
+               onSelectCityOrigin={() => {}} onEmptyClick={() => {}} onUserInteraction={() => {}}
                mobile={false} sheetState="collapsed" sheetHasContext={false} {...props} />,
     );
   });
@@ -141,7 +141,7 @@ describe("MapView station sources", () => {
         <MapView stations={stations} reach={null} maxTrains={1} maxMinutes={Infinity}
                  selectedDest={null} theme="light" cityGroups={{}} armed="from"
                  hopGeometry={null} onStationClick={onStationClick}
-                 onSelectCityOrigin={onSelectCityOrigin} onEmptyClick={onEmptyClick}
+                 onSelectCityOrigin={onSelectCityOrigin} onEmptyClick={onEmptyClick} onUserInteraction={() => {}}
                  mobile={false} sheetState="collapsed" sheetHasContext={false} />,
       );
     });
@@ -155,7 +155,7 @@ describe("MapView station sources", () => {
         <MapView stations={stations} reach={reachA} maxTrains={1} maxMinutes={Infinity}
                  selectedDest={null} theme="light" cityGroups={{}} armed="from"
                  hopGeometry={null} onStationClick={onStationClick}
-                 onSelectCityOrigin={onSelectCityOrigin} onEmptyClick={onEmptyClick}
+                 onSelectCityOrigin={onSelectCityOrigin} onEmptyClick={onEmptyClick} onUserInteraction={() => {}}
                  mobile={false} sheetState="collapsed" sheetHasContext={false} />,
       );
     });
@@ -169,7 +169,7 @@ describe("MapView station sources", () => {
         <MapView stations={stations} reach={reachA} maxTrains={2} maxMinutes={120}
                  selectedDest={null} theme="light" cityGroups={{}} armed="from"
                  hopGeometry={null} onStationClick={onStationClick}
-                 onSelectCityOrigin={onSelectCityOrigin} onEmptyClick={onEmptyClick}
+                 onSelectCityOrigin={onSelectCityOrigin} onEmptyClick={onEmptyClick} onUserInteraction={() => {}}
                  mobile={false} sheetState="collapsed" sheetHasContext={false} />,
       );
     });
@@ -181,7 +181,7 @@ describe("MapView station sources", () => {
         <MapView stations={stations} reach={null} maxTrains={2} maxMinutes={120}
                  selectedDest={null} theme="light" cityGroups={{}} armed="from"
                  hopGeometry={null} onStationClick={onStationClick}
-                 onSelectCityOrigin={onSelectCityOrigin} onEmptyClick={onEmptyClick}
+                 onSelectCityOrigin={onSelectCityOrigin} onEmptyClick={onEmptyClick} onUserInteraction={() => {}}
                  mobile={false} sheetState="collapsed" sheetHasContext={false} />,
       );
     });
@@ -194,7 +194,7 @@ describe("MapView station sources", () => {
         <MapView stations={stations} reach={reachA} maxTrains={2} maxMinutes={120}
                  selectedDest={null} theme="light" cityGroups={{}} armed="from"
                  hopGeometry={null} onStationClick={onStationClick}
-                 onSelectCityOrigin={onSelectCityOrigin} onEmptyClick={onEmptyClick}
+                 onSelectCityOrigin={onSelectCityOrigin} onEmptyClick={onEmptyClick} onUserInteraction={() => {}}
                  mobile={false} sheetState="collapsed" sheetHasContext={false} />,
       );
     });
@@ -209,7 +209,7 @@ describe("MapView station sources", () => {
         <MapView stations={stations} reach={reachB} maxTrains={2} maxMinutes={120}
                  selectedDest={null} theme="light" cityGroups={{}} armed="from"
                  hopGeometry={null} onStationClick={onStationClick}
-                 onSelectCityOrigin={onSelectCityOrigin} onEmptyClick={onEmptyClick}
+                 onSelectCityOrigin={onSelectCityOrigin} onEmptyClick={onEmptyClick} onUserInteraction={() => {}}
                  mobile={false} sheetState="collapsed" sheetHasContext={false} />,
       );
     });
@@ -248,6 +248,7 @@ describe("MapView station sources", () => {
       stations, reach: null, maxTrains: 1 as const, maxMinutes: Infinity,
       selectedDest: null, theme: "light" as const, cityGroups: {}, armed: "from" as const,
       hopGeometry: null, onStationClick: () => {}, onSelectCityOrigin: () => {}, onEmptyClick: () => {},
+      onUserInteraction: () => {},
     };
 
     act(() => {

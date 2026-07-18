@@ -187,21 +187,19 @@ then, stale alias targets should be re-audited after each db_fern refresh.
 
 Seven items; the path-routing one shipped as smoothed line trees 2026-07-17.
 
-## AN. Mobile layout — shipped 2026-07-16, awaiting phone calibration
+## AN. Mobile layout — rework shipped 2026-07-18, awaiting phone verification
 
 Bottom sheet shipped (spec `specs/2026-07-16-mobile-layout-design.md`). All
 dimensions are centralized constants in `web/src/lib/mobileLayout.ts` (collapsed
 112/136 px, expanded 88dvh, swipe threshold 32 px) — calibration is a one-line
 change each.
 
-**Real-phone pass (2026-07-16) verdict: needs work**, not just calibration:
-- The arrow is disliked (the expand/collapse chevron). **Direction (2026-07-17):**
-  the drag handle should contain a centered button that fits the app's style —
-  handle and open/close control become one element.
-- Minimized sheet is supposed to show only the relevant field, but while
-  choosing a target it shows BOTH start and target.
-- The swap-start/target button sits between the two fields and eats vertical
-  space — move or shrink it.
+2026-07-18 rework (deployed to production, user verifies on phone): handle +
+open/close merged into one capsule (chevron gone); minimized sheet shows only
+the armed field (root cause was author CSS beating `[hidden]`); swap button
+overlays the fields' right edge; header floats over the map and collapses to a
+logo pill on first map gesture / sheet expand (tap to reopen); attribution
+starts compact (ⓘ); example-connection legs always visible in trip details.
 
 ## AO. Frequency heat strip — shipped 2026-07-16, live after recompute
 

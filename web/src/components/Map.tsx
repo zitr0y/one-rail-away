@@ -54,6 +54,7 @@ interface Props {
   onStationClick: (pick: FeaturePick) => void;
   onSelectCityOrigin: (city: string, memberIds: string[]) => void;
   onEmptyClick: () => void;
+  onUserInteraction: () => void;
   mobile: boolean;
   sheetState: SheetState;
   sheetHasContext: boolean;
@@ -76,6 +77,14 @@ export default function MapView(props: Props) {
       style: styleUrl(props.theme),
       center: [8, 50],
       zoom: 4.5,
+      // Attribution starts collapsed to the ⓘ button; the timetable credits
+      // (condition of use, see below) stay one tap away.
+      attributionControl: { compact: true },
+    });
+    // originalEvent filters out our own easeTo/setPadding moves — only real
+    // user gestures (drag, pinch, wheel) count as interaction.
+    m.on("movestart", (e) => {
+      if (e.originalEvent) propsRef.current.onUserInteraction();
     });
     m.on("load", () => {
       const tokens = themeTokens(propsRef.current.theme);

@@ -1,4 +1,4 @@
-import { useEffect, useId, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { bookingUrl, friendlyDateLabel, localDate, shiftDate } from "../lib/booking";
 import { bestJourney, type MaxTrains } from "../lib/geojson";
 import type { Destination, Station, TransferMode } from "../lib/types";
@@ -47,15 +47,12 @@ export default function TripDetails(
   { origin, destination, dest, maxTrains, stationsById }: Props,
 ) {
   const [bookingDate, setBookingDate] = useState(() => localDate(1));
-  const [detailsExpanded, setDetailsExpanded] = useState(false);
   const dateInputRef = useRef<HTMLInputElement>(null);
-  const legsId = useId();
   const today = localDate();
   const rows = histogramRows(dest.histogram);
 
   useEffect(() => {
     setBookingDate(localDate(1));
-    setDetailsExpanded(false);
   }, [origin.id, destination.id]);
 
   const openCalendar = () => {
@@ -78,11 +75,7 @@ export default function TripDetails(
       <p className="duration">{h} h {m ? `${m} min` : ""} · {journey.trains === 1
         ? "nonstop"
         : `${journey.trains} trains`}{!rows && ` · ${frequencyLabel(dest)}`}</p>
-      {rows && (
-        <FrequencyHeatStrip rows={rows} expanded={detailsExpanded} legsId={legsId}
-                            onToggle={() => setDetailsExpanded((expanded) => !expanded)} />
-      )}
-      <ol id={legsId} className="legs" hidden={rows ? !detailsExpanded : undefined}>
+      <ol className="legs">
         {journey.legs.map((leg) => leg.type === "transfer" ? (
           <li className="transfer-leg" key={`transfer-${leg.from_id}-${leg.to_id}`}>
             <span className="transfer-icon" aria-hidden="true">{transferModeIcon(leg.mode)}</span>
@@ -96,6 +89,7 @@ export default function TripDetails(
           </li>
         ))}
       </ol>
+      {rows && <FrequencyHeatStrip rows={rows} />}
       <div className="booking-date-picker">
         <input ref={dateInputRef} className="booking-date-native" type="date"
                value={bookingDate} min={today} tabIndex={-1}

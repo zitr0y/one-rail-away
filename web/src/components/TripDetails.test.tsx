@@ -154,7 +154,7 @@ describe("TripDetails frequency histogram", () => {
     expect(markup).not.toContain("background:");
   });
 
-  it("clicking the heat strip toggles the existing connection list", () => {
+  it("shows the example connection legs before the heat strip, always visible", () => {
     const container = document.createElement("div");
     const root = createRoot(container);
     const histogramDest: Destination = {
@@ -165,17 +165,11 @@ describe("TripDetails frequency histogram", () => {
       root.render(<TripDetails origin={origin} destination={destination} dest={histogramDest}
                                maxTrains={2} stationsById={stationsById} />);
     });
-    const strip = container.querySelector<HTMLButtonElement>(".frequency-heat-strip")!;
+    const strip = container.querySelector<HTMLElement>(".frequency-heat-strip")!;
     const legs = container.querySelector<HTMLOListElement>(".legs")!;
-    expect(strip.getAttribute("aria-expanded")).toBe("false");
-    expect(strip.getAttribute("aria-controls")).toBe(legs.id);
-    expect(legs.hidden).toBe(true);
-    act(() => strip.click());
-    expect(strip.getAttribute("aria-expanded")).toBe("true");
     expect(legs.hidden).toBe(false);
     expect(legs.textContent).toContain("ICE 1");
-    act(() => strip.click());
-    expect(legs.hidden).toBe(true);
+    expect(legs.compareDocumentPosition(strip) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
     act(() => root.unmount());
   });
 

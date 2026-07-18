@@ -28,6 +28,9 @@ export default function App() {
   const [theme, toggleTheme] = useTheme();
   const mobile = useMobileLayout();
   const [sheetState, setSheetState] = useState<SheetState>("collapsed");
+  // Mobile header starts expanded (branding visible on load) and collapses to a
+  // pill on the first map gesture or sheet expansion; tapping the pill reopens it.
+  const [headerCollapsed, setHeaderCollapsed] = useState(false);
   const previousMobile = useRef(mobile);
 
   const stationsById = useMemo(() => new Map(stations.map((s) => [s.id, s])), [stations]);
@@ -146,6 +149,14 @@ export default function App() {
     previousMobile.current = mobile;
   }, [mobile]);
 
+  useEffect(() => {
+    if (mobile && sheetState === "expanded") setHeaderCollapsed(true);
+  }, [mobile, sheetState]);
+
+  const onUserMapInteraction = useCallback(() => {
+    if (mobile) setHeaderCollapsed(true);
+  }, [mobile]);
+
   const onStationClick = useCallback((pick: FeaturePick) => {
     const target = armedTarget(activeField, reach !== null);
     const routed = routeMapClick(pick, target);
@@ -172,14 +183,32 @@ export default function App() {
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [reach, selectedDest, clearSelection]);
 
+  const pill = mobile && headerCollapsed;
   return (
     <div className={appLayoutClassName(mobile, sheetState, hasContext)}>
       <MapView stations={stations} reach={reach} maxTrains={maxTrains} maxMinutes={filterMinutes}
                selectedDest={selectedDest} theme={theme}
                cityGroups={cityGroups} armed={armed} hopGeometry={hopGeometry}
                onStationClick={onStationClick} onSelectCityOrigin={selectCityOrigin}
-               onEmptyClick={onEmptyClick} mobile={mobile}
-               sheetState={sheetState} sheetHasContext={hasContext} />
+               onEmptyClick={onEmptyClick} onUserInteraction={onUserMapInteraction}
+               mobile={mobile} sheetState={sheetState} sheetHasContext={hasContext} />
+      <header className={`header-bar${pill ? " header-collapsed" : ""}`}
+              role={pill ? "button" : undefined} tabIndex={pill ? 0 : undefined}
+              aria-label={pill ? "Show onestopeurope header" : undefined}
+              onClick={pill ? () => setHeaderCollapsed(false) : undefined}
+              onKeyDown={pill ? (e) => {
+                if (e.key === "Enter" || e.key === " ") setHeaderCollapsed(false);
+              } : undefined}>
+        {/* Brand lockup — edit web/src/assets/header-logo.svg in Inkscape; it is
+            inlined here (Vite ?raw) so the wordmark uses the page's Barlow font. */}
+        <span className="header-logo" role="img" aria-label="onestopeurope"
+              dangerouslySetInnerHTML={{ __html: headerLogo }} />
+        <span className="header-tagline">nonstopeurope with onestopeurope</span>
+        <button className="theme-toggle" onClick={toggleTheme}
+                aria-label={theme === "light" ? "Switch to dark mode" : "Switch to light mode"}>
+          {theme === "light" ? "🌙" : "☀️"}
+        </button>
+      </header>
       <JourneyPlanner
         reach={reach} stationsById={stationsById}
         cities={cities} cityGroups={cityGroups} originLabel={cityOrigin?.city}
@@ -187,17 +216,6 @@ export default function App() {
         maxTrains={maxTrains} maxMinutes={maxMinutes} filterMinutes={filterMinutes}
         armed={armed} mobile={mobile} sheetState={sheetState}
         collapsedSummary={collapsedSummary} onSheetStateChange={setSheetState}
-        header={<header className="header-bar">
-          {/* Brand lockup — edit web/src/assets/header-logo.svg in Inkscape; it is
-              inlined here (Vite ?raw) so the wordmark uses the page's Barlow font. */}
-          <span className="header-logo" role="img" aria-label="onestopeurope"
-                dangerouslySetInnerHTML={{ __html: headerLogo }} />
-          <span className="header-tagline">nonstopeurope with onestopeurope</span>
-          <button className="theme-toggle" onClick={toggleTheme}
-                  aria-label={theme === "light" ? "Switch to dark mode" : "Switch to light mode"}>
-            {theme === "light" ? "🌙" : "☀️"}
-          </button>
-        </header>}
         onSetOrigin={(option) => {
           if (option.kind === "city") selectCityOrigin(option.city, option.memberIds);
           else selectOrigin(option.station.id);
