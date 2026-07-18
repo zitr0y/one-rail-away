@@ -219,22 +219,18 @@ describe("MapView station sources", () => {
     act(() => root.unmount());
   });
 
-  it("adds_navigation_control_and_collapsed_padding_only_in_mobile_layout", () => {
+  it("applies_collapsed_padding_and_no_navigation_control_in_mobile_layout", () => {
     Object.defineProperty(window, "innerHeight", { configurable: true, value: 800 });
     const root = renderMap({ mobile: true, sheetState: "collapsed", sheetHasContext: false });
     act(() => handlers["load"]());
 
-    expect(mockNavigationControl).toHaveBeenCalledTimes(1);
-    expect(mockAddControl).toHaveBeenLastCalledWith(expect.anything(), "bottom-right");
+    expect(mockNavigationControl).not.toHaveBeenCalled();
+    expect(mockAddControl).not.toHaveBeenCalled();
     expect(mockSetPadding).toHaveBeenLastCalledWith({ top: 0, right: 0, bottom: 92, left: 0 });
     act(() => root.unmount());
-    mockNavigationControl.mockClear();
-    mockAddControl.mockClear();
 
     const desktopRoot = renderMap();
     act(() => handlers["load"]());
-    expect(mockNavigationControl).not.toHaveBeenCalled();
-    expect(mockAddControl).not.toHaveBeenCalled();
     expect(mockSetPadding).toHaveBeenLastCalledWith({ top: 0, right: 0, bottom: 0, left: 0 });
     act(() => desktopRoot.unmount());
   });
@@ -264,7 +260,7 @@ describe("MapView station sources", () => {
     act(() => {
       root.render(<MapView {...commonProps} mobile={false} sheetState="expanded" sheetHasContext />);
     });
-    expect(mockRemoveControl).toHaveBeenCalledTimes(1);
+    expect(mockRemoveControl).not.toHaveBeenCalled();
     expect(mockSetPadding).toHaveBeenLastCalledWith({ top: 0, right: 0, bottom: 0, left: 0 });
     act(() => root.unmount());
   });

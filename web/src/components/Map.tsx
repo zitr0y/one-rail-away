@@ -62,7 +62,6 @@ interface Props {
 export default function MapView(props: Props) {
   const container = useRef<HTMLDivElement>(null);
   const map = useRef<maplibregl.Map | null>(null);
-  const navigationControl = useRef<maplibregl.NavigationControl | null>(null);
   const mobileLayoutListenerCleanup = useRef<(() => void) | null>(null);
   const cityPopup = useRef<maplibregl.Popup | null>(null);
   const propsRef = useRef(props);
@@ -285,6 +284,11 @@ export default function MapView(props: Props) {
         veilPopup.setLngLat(e.lngLat).setText(veilTooltip(tier)).addTo(m);
       });
       m.on("mouseleave", "coverage-veil", () => veilPopup.remove());
+      // The compact attribution <details> starts expanded until the first map
+      // interaction — collapse it from the start; the ⓘ button reopens it.
+      const attrib = container.current?.querySelector<HTMLDetailsElement>(".maplibregl-ctrl-attrib");
+      attrib?.classList.remove("maplibregl-compact-show");
+      attrib?.removeAttribute("open");
       map.current = m;
       syncMobileLayout();
       // DEV-only handle for headless diagnostics (never set in production builds).
@@ -310,10 +314,6 @@ export default function MapView(props: Props) {
       stopRider();
       removeCityPopup();
       mobileLayoutListenerCleanup.current?.();
-      if (navigationControl.current) {
-        m.removeControl(navigationControl.current);
-        navigationControl.current = null;
-      }
       m.remove();
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -328,13 +328,6 @@ export default function MapView(props: Props) {
     const m = map.current;
     if (!m) return;
     const { mobile, sheetState, sheetHasContext } = propsRef.current;
-    if (mobile && !navigationControl.current) {
-      navigationControl.current = new maplibregl.NavigationControl();
-      m.addControl(navigationControl.current, "bottom-right");
-    } else if (!mobile && navigationControl.current) {
-      m.removeControl(navigationControl.current);
-      navigationControl.current = null;
-    }
     const bottom = mobile
       ? sheetBottomInsetPx(window.innerHeight, sheetState, sheetHasContext)
       : 0;

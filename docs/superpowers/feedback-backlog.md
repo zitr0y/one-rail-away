@@ -201,7 +201,10 @@ collapsed heights 92/100); minimized sheet shows only the armed field — or a
 was author CSS beating `[hidden]`); swap button overlays the fields' right
 edge; header is a permanent slim bar (logo + theme toggle, no tagline — the
 collapse-to-pill first cut cropped the logo and was scrapped); attribution
-starts compact (ⓘ); example-connection legs always visible in trip details.
+starts compact (ⓘ) AND collapsed from the very start (MapLibre's compact
+control opens until first interaction — forced shut on load); mobile zoom
+buttons (NavigationControl) removed; example-connection legs always visible
+in trip details.
 
 ## AO. Frequency heat strip — shipped 2026-07-16, live after recompute
 
