@@ -41,6 +41,21 @@ const TIMETABLE_ATTRIBUTION =
   "CP – Comboios de Portugal · Trenitalia · Renfe · PKP PLK";
 const bucketColor = ["to-color", ["at", ["get", "bucket"], ["literal", BUCKET_COLORS]]];
 
+/**
+ * Stock AttributionControl auto-expands (adds "maplibregl-compact-show") from
+ * onAdd, from every attribution change (tile sources can arrive AFTER map
+ * load), and from every map resize — so a one-shot removal at load kept
+ * reopening on iPhone. Overriding _updateCompact leaves the open/closed state
+ * solely to the user's ⓘ taps (_toggleAttribution). Deliberately does NOT
+ * touch "maplibregl-compact-show" here: removing it would slam the panel shut
+ * under a user who opened it whenever tiles load.
+ */
+class CollapsedAttributionControl extends maplibregl.AttributionControl {
+  override _updateCompact = () => {
+    this._container?.classList.add("maplibregl-compact");
+  };
+}
+
 interface Props {
   stations: Station[];
   reach: ReachFile | null;
@@ -75,10 +90,12 @@ export default function MapView(props: Props) {
       style: styleUrl(props.theme),
       center: [8, 50],
       zoom: 4.5,
-      // Attribution starts collapsed to the ⓘ button; the timetable credits
+      // Attribution is added below as CollapsedAttributionControl: always the
+      // compact ⓘ button, never auto-expanded; the timetable credits
       // (condition of use, see below) stay one tap away.
-      attributionControl: { compact: true },
+      attributionControl: false,
     });
+    m.addControl(new CollapsedAttributionControl({ compact: true }));
     m.on("load", () => {
       const tokens = themeTokens(propsRef.current.theme);
       m.addSource("all-stations", { type: "geojson", data: EMPTY as never });
@@ -284,11 +301,6 @@ export default function MapView(props: Props) {
         veilPopup.setLngLat(e.lngLat).setText(veilTooltip(tier)).addTo(m);
       });
       m.on("mouseleave", "coverage-veil", () => veilPopup.remove());
-      // The compact attribution <details> starts expanded until the first map
-      // interaction — collapse it from the start; the ⓘ button reopens it.
-      const attrib = container.current?.querySelector<HTMLDetailsElement>(".maplibregl-ctrl-attrib");
-      attrib?.classList.remove("maplibregl-compact-show");
-      attrib?.removeAttribute("open");
       map.current = m;
       syncMobileLayout();
       // DEV-only handle for headless diagnostics (never set in production builds).

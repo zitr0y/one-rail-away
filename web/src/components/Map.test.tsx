@@ -16,6 +16,7 @@ const mockAddControl = vi.fn();
 const mockRemoveControl = vi.fn();
 const mockSetPadding = vi.fn();
 const mockNavigationControl = vi.fn();
+const mockAttributionControl = vi.fn();
 
 const handlers: Record<string, () => void> = {};
 const sources = new Map<string, { setData: ReturnType<typeof vi.fn> }>();
@@ -60,9 +61,14 @@ vi.mock("maplibre-gl", () => {
   class FakeNavigationControl {
     constructor() { mockNavigationControl(); }
   }
+  class FakeAttributionControl {
+    _container?: HTMLElement;
+    constructor(options: unknown) { mockAttributionControl(options); }
+  }
   return {
     default: {
       Map: FakeMap, Popup: FakePopup, Marker: FakeMarker, NavigationControl: FakeNavigationControl,
+      AttributionControl: FakeAttributionControl,
     },
   };
 });
@@ -104,6 +110,7 @@ describe("MapView station sources", () => {
     mockRemoveControl.mockClear();
     mockSetPadding.mockClear();
     mockNavigationControl.mockClear();
+    mockAttributionControl.mockClear();
     for (const key of Object.keys(handlers)) delete handlers[key];
   });
 
@@ -225,7 +232,9 @@ describe("MapView station sources", () => {
     act(() => handlers["load"]());
 
     expect(mockNavigationControl).not.toHaveBeenCalled();
-    expect(mockAddControl).not.toHaveBeenCalled();
+    // The always-collapsed compact attribution is the ONLY control on mobile.
+    expect(mockAttributionControl).toHaveBeenCalledWith({ compact: true });
+    expect(mockAddControl).toHaveBeenCalledTimes(1);
     expect(mockSetPadding).toHaveBeenLastCalledWith({ top: 0, right: 0, bottom: 92, left: 0 });
     act(() => root.unmount());
 
