@@ -299,8 +299,10 @@ of route). Relates U, AS (dominance policy — a 4 h train loop is dominated by 
   `server/app.py::search`) — revisit when coverage grows.
 - **Cross-feed duplicate trains** (ICE 82 Paris–Frankfurt in both SNCF and DB
   feeds) may double-count `direct_per_day` — check when touching compute.
-- Deferred minors from the build ledger: `remap_trips` in-place mutation trap, dead
-  `uic_regex` comment, O(n²) validate check, search `limit` validation.
+- Deferred minors from the build ledger: `remap_trips` in-place mutation trap,
+  O(n²) validate check. (2026-07-18: search `limit` validation shipped; the "dead
+  `uic_regex` comment" could not be located — all current uic_regex comments were
+  audited against the code and are accurate, note dropped as stale.)
 - **Rider animation micro-waste** (2026-07-15 audit; low at current data scale):
   `ride.ts:70-74` `segmentIndexAt` linear-walks `cumKm` from index 1, called 3×
   per frame via `positionAtKm` (`ride.ts:164,171-172`) plus `phases.find`

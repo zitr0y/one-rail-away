@@ -3,7 +3,7 @@ import unicodedata
 from email.utils import parsedate
 from pathlib import Path
 
-from fastapi import FastAPI, HTTPException, Request
+from fastapi import FastAPI, HTTPException, Query, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.middleware.gzip import GZipMiddleware
 from starlette.responses import FileResponse, Response
@@ -33,12 +33,18 @@ def _is_not_modified(response_headers, request_headers) -> bool:
     if if_modified_since_raw and last_modified_raw:
         if_modified_since = parsedate(if_modified_since_raw)
         last_modified = parsedate(last_modified_raw)
-        if if_modified_since is not None and last_modified is not None and if_modified_since >= last_modified:
+        if (
+            if_modified_since is not None
+            and last_modified is not None
+            and if_modified_since >= last_modified
+        ):
             return True
     return False
 
 
-def _artifact_response(request: Request, path: Path, missing_status: int, missing_detail: str) -> Response:
+def _artifact_response(
+    request: Request, path: Path, missing_status: int, missing_detail: str
+) -> Response:
     """Serve a pipeline-written JSON artifact plus its pre-gzipped `.json.gz`
     sibling (see pipeline/artifacts.py) with ETag/Last-Modified/Cache-Control,
     honouring If-None-Match / If-Modified-Since with a 304.
@@ -72,7 +78,9 @@ def _artifact_response(request: Request, path: Path, missing_status: int, missin
     if _is_not_modified(response.headers, request.headers):
         return Response(
             status_code=304,
-            headers={k: v for k, v in response.headers.items() if k.lower() in _NOT_MODIFIED_HEADERS},
+            headers={
+                k: v for k, v in response.headers.items() if k.lower() in _NOT_MODIFIED_HEADERS
+            },
         )
     return response
 
@@ -419,7 +427,7 @@ def create_app(data_dir: Path) -> FastAPI:
         return {"stations": _with_disk_has_reach(all_stations, reach_ids)}
 
     @app.get("/api/stations/search")
-    def search(q: str, limit: int = 10) -> dict:
+    def search(q: str, limit: int = Query(10, ge=1, le=50)) -> dict:
         variants = _query_variants(normalize(q))
         reach_ids = _cached_reach_ids(data_dir)
         scored = []

@@ -70,6 +70,16 @@ def test_search_prefix_beats_substring_and_skips_no_reach(tmp_path):
     assert all(s["id"] != "4" for s in got)  # has_reach=False excluded
 
 
+def test_search_limit_is_validated(tmp_path):
+    client = _client(tmp_path)
+    got = client.get("/api/stations/search", params={"q": "munchen", "limit": 2})
+    assert len(got.json()["stations"]) == 2
+    for bad in (0, -1, 51):
+        assert client.get(
+            "/api/stations/search", params={"q": "munchen", "limit": bad}
+        ).status_code == 422
+
+
 def test_search_tier_tie_break_prefers_shorter_name_even_when_inserted_later(tmp_path):
     # "München" is appended after two longer tier-0 (prefix) matches of equal length
     # ("München Hbf", "München Ost" both normalize to 11 chars). A stable sort on
