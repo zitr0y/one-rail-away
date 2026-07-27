@@ -20,3 +20,5 @@ data/raw/
 data/graph/
 data/out/
 .superpowers/
+.playwright-mcp/
+data/osm/
