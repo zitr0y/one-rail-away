@@ -485,6 +485,8 @@ def test_compute_all_writes_reach_files(tmp_path):
 
     meta = json.loads((tmp_path / "out" / "meta.json").read_text())
     assert meta["sample_date"] == "2026-07-14" and "computed_at" in meta
+    issues = json.loads((tmp_path / "out" / "build_issues.json").read_text())
+    assert issues == {"issues": []}
 
 
 def test_compute_all_writes_gzip_siblings(tmp_path):

@@ -88,14 +88,15 @@ def test_forward_alias_to_unprocessed_feed_still_mints():
 
 
 def test_production_aliases_merge_current_duplicate_validation_pairs():
-    """Keep feed-id churn from making the full production build abort."""
+    """The 2026-09 refresh aborted on these pairs after db_fern ids rotated;
+    name-keyed aliases must merge them whatever ids db_fern hands out."""
     aliases = tomllib.loads(Path("station_aliases.toml").read_text())["aliases"]
     per_feed = {
         "db_fern": (
             [
-                RawStop("464324", "Dornbirn", 47.414, 9.742),
-                RawStop("335019", "Feldkirch", 47.238, 9.603),
-                RawStop("338323", "Erfurt Hbf", 50.972, 11.038),
+                RawStop("304445", "Dornbirn", 47.41769, 9.738808),
+                RawStop("398447", "Feldkirch", 47.24098, 9.604102),
+                RawStop("688349", "Hauptbahnhof", 50.972057, 11.037305),
             ],
             _cfg(country="DE", uic_regex=r"(\d{7})"),
         ),
@@ -110,18 +111,126 @@ def test_production_aliases_merge_current_duplicate_validation_pairs():
             ],
             _cfg(country="AT", uic_regex=r"(\d{7})"),
         ),
+        "pkp": (
+            [RawStop("145422", "Erfurt Hauptbahnhof", 50.9722, 11.0379)],
+            _cfg(country="PL"),
+        ),
     }
 
     stations, mapping = merge_stations(per_feed, aliases)
 
     assert len(stations) == 3
-    assert mapping[("db_fern", "464324")] == mapping[("oebb", "8102329")] == "8102329"
-    assert mapping[("db_fern", "335019")] == mapping[("oebb", "8101236")] == "8101236"
+    assert mapping[("db_fern", "304445")] == mapping[("oebb", "8102329")] == "8102329"
+    assert mapping[("db_fern", "398447")] == mapping[("oebb", "8101236")] == "8101236"
     assert (
         mapping[("sncf", "StopArea:OCE80160432")]
-        == mapping[("db_fern", "338323")]
-        == "x:db_fern:338323"
+        == mapping[("pkp", "145422")]
+        == mapping[("db_fern", "688349")]
     )
+
+
+def test_production_aliases_carry_no_volatile_db_fern_ids():
+    """db_fern stop ids rotate with every export; entries must use names."""
+    text = Path("station_aliases.toml").read_text()
+    assert "db_fern:" not in text.split("[aliases]", 1)[1]
+
+
+# --- name-keyed references ("<feed>@<stop name>") ---------------------------
+
+
+def test_name_keyed_alias_key_matches_normalized_stop_name():
+    per_feed = {"a": ([RawStop("rotating-17", "Gamma Hbf", 50.0, 10.0)], _cfg())}
+    issues: list[str] = []
+    _, mapping = merge_stations(per_feed, {"a@Gamma-Hbf": "9999999"}, issues)
+    assert mapping[("a", "rotating-17")] == "9999999"
+    assert issues == []
+
+
+def test_name_keyed_alias_target_follows_the_named_stop():
+    """A target naming an earlier feed's stop lands on whatever canonical that
+    stop got -- different name, far away, no shared id needed."""
+    per_feed = {
+        "a": ([RawStop("rotating-17", "Alpha Hbf", 50.0, 10.0)], _cfg()),
+        "b": ([RawStop("s2", "Alfa Centrale", 50.2, 10.2)], _cfg()),
+    }
+    issues: list[str] = []
+    stations, mapping = merge_stations(per_feed, {"b:s2": "a@Alpha Hbf"}, issues)
+    assert mapping[("b", "s2")] == mapping[("a", "rotating-17")] == "x:a:rotating-17"
+    assert len(stations) == 1
+    assert issues == []
+
+
+def test_name_keyed_alias_target_resolves_for_a_stub():
+    per_feed = {
+        "a": ([RawStop("rotating-17", "Alpha Hbf", 50.0, 10.0)], _cfg()),
+        "b": ([RawStop("s2", "Alfa Centrale", None, None)], _cfg()),
+    }
+    _, mapping = merge_stations(per_feed, {"b:s2": "a@Alpha Hbf"})
+    assert mapping[("b", "s2")] == "x:a:rotating-17"
+
+
+def test_unresolved_name_target_reports_and_falls_back_to_proximity():
+    per_feed = {
+        "a": ([RawStop("1", "Same Place", 50.0, 10.0)], _cfg()),
+        "b": ([RawStop("2", "Same Place", 50.0001, 10.0001)], _cfg()),
+    }
+    issues: list[str] = []
+    stations, mapping = merge_stations(per_feed, {"b:2": "a@Renamed Place"}, issues)
+    assert mapping[("b", "2")] == "x:a:1"
+    assert len(stations) == 1
+    assert issues == ["alias target 'a@Renamed Place' (for b:2) matches no stop"]
+
+
+def test_ambiguous_name_target_reports_and_uses_the_first_stop():
+    per_feed = {
+        "a": (
+            [RawStop("1", "Hauptbahnhof", 50.0, 10.0), RawStop("2", "Hauptbahnhof", 52.0, 13.0)],
+            _cfg(),
+        ),
+        "b": ([RawStop("3", "Erfurt Hbf", 50.0, 10.0)], _cfg()),
+    }
+    issues: list[str] = []
+    _, mapping = merge_stations(per_feed, {"b:3": "a@Hauptbahnhof"}, issues)
+    assert mapping[("b", "3")] == "x:a:1"
+    assert issues == [
+        "alias target 'a@Hauptbahnhof' (for b:3) is ambiguous: x:a:1, x:a:2"
+    ]
+
+
+def test_location_hint_rejects_a_same_named_stop_elsewhere():
+    """Erfurt's db_fern stop is the bare "Hauptbahnhof": if it is renamed and
+    another "Hauptbahnhof" remains, the hint must stop a silent mis-merge."""
+    per_feed = {
+        "a": ([RawStop("2", "Hauptbahnhof", 52.0, 13.0)], _cfg()),
+        "b": ([RawStop("3", "Erfurt Hbf", 50.0, 10.0)], _cfg()),
+    }
+    issues: list[str] = []
+    _, mapping = merge_stations(per_feed, {"b:3": "a@Hauptbahnhof~50.0,10.0"}, issues)
+    assert mapping[("b", "3")] == "x:b:3"
+    assert issues == [
+        "alias target 'a@Hauptbahnhof~50.0,10.0' (for b:3) matches no stop"
+    ]
+
+
+def test_location_hint_picks_the_nearby_stop_among_namesakes():
+    per_feed = {
+        "a": (
+            [RawStop("1", "Hauptbahnhof", 52.0, 13.0), RawStop("2", "Hauptbahnhof", 50.0, 10.0)],
+            _cfg(),
+        ),
+        "b": ([RawStop("3", "Erfurt Hbf", 50.0, 10.0)], _cfg()),
+    }
+    issues: list[str] = []
+    _, mapping = merge_stations(per_feed, {"b:3": "a@Hauptbahnhof~50.0,10.0"}, issues)
+    assert mapping[("b", "3")] == "x:a:2"
+    assert issues == []
+
+
+def test_unused_name_keyed_alias_is_reported():
+    per_feed = {"a": ([RawStop("1", "Alpha", 50.0, 10.0)], _cfg())}
+    issues: list[str] = []
+    merge_stations(per_feed, {"a@Gone Station": "9999999"}, issues)
+    assert issues == ["alias key 'a@Gone Station' matches no stop"]
 
 
 # --- #1 precedence: alias must beat a MATCHING UIC regex ---------------------

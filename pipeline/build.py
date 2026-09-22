@@ -23,7 +23,7 @@ from pipeline.gtfs import (
     load_calendar,
     load_feed_days,
 )
-from pipeline.merge import _dist_m, _norm, merge_stations
+from pipeline.merge import _dist_m, _name_ref, _near_hint, _norm, merge_stations
 from pipeline.models import CountryOverride, Station, StopTime, Trip
 from pipeline.through import join_through_services
 
@@ -107,10 +107,10 @@ def remap_trips(
 def validate(stations: list[Station], trips: list[Trip]) -> list[str]:
     """Human-readable sanity checks over the assembled graph.
 
-    Flags: a station sitting at (0,0) (missing-coordinate default, not a real
-    place); a trip whose stop times are non-increasing (arrival before the
-    previous departure); two stations within 500m of each other with the same
-    normalized name (a merge that should have happened but didn't).
+    Fatal flags: a station sitting at (0,0) (missing-coordinate default, not a
+    real place); a trip whose stop times are non-increasing (arrival before the
+    previous departure). Missed merges are `unmerged_duplicates`, reported but
+    not fatal.
     """
     problems: list[str] = []
     for s in stations:
@@ -121,6 +121,18 @@ def validate(stations: list[Station], trips: list[Trip]) -> list[str]:
             if b.arr < a.dep:
                 problems.append(f"trip {t.trip_id} ({t.train}) has non-increasing times")
                 break
+    return problems
+
+
+def unmerged_duplicates(stations: list[Station]) -> list[str]:
+    """Two stations within 500m of each other with the same normalized name: a
+    merge that should have happened but didn't.
+
+    Not fatal (2026-09-22): three such pairs, caused by db_fern id churn, froze
+    the weekly refresh for two months. A doubled station is a far smaller harm
+    than stale timetables, so these land in build_issues.json instead.
+    """
+    problems: list[str] = []
     # Preserve the original station-order report order, but only compare pairs
     # that can possibly match.  The former all-pairs loop dominated the serial
     # tail after feed sampling on the production graph.
@@ -134,7 +146,7 @@ def validate(stations: list[Station], trips: list[Trip]) -> list[str]:
         start = seen_by_norm.get(norm, 0) + 1
         for b in peers[start:]:
             if _dist_m(a.lat, a.lon, b.lat, b.lon) < 500:
-                problems.append(f"unmerged duplicate: {a.id} / {b.id} ({a.name})")
+                problems.append(f"{a.id} / {b.id} ({a.name})")
         seen_by_norm[norm] = start
     return problems
 
@@ -173,6 +185,9 @@ def build(
     should not abort the whole build). Trips left with fewer than 2 stops after
     remapping (e.g. all-but-one stop dropped by an earlier stage) are dropped.
     Raises SystemExit(1) if `validate` finds any problems in the assembled graph.
+    Recoverable problems -- unresolved alias or name-override references, missed
+    merges -- are printed and written to ``graph_dir/build_issues.json``; they
+    never abort, so one renamed stop cannot freeze the weekly refresh.
     """
     feeds = load_feeds(feeds_path)
     aliases: dict[str, str] = {}
@@ -333,7 +348,9 @@ def build(
             trip.feeds = [name]
         _union_feed_stops(per_feed, name, feeds[name], stops)
 
-    stations, mapping = merge_stations(per_feed, aliases)
+    alias_issues: list[str] = []
+    stations, mapping = merge_stations(per_feed, aliases, alias_issues)
+    issues = [{"kind": "alias", "detail": detail} for detail in alias_issues]
     for line in assign_countries(stations, load_countries(ASSET), country_overrides):
         print(f"country: {line}")
     trips_by_date = {
@@ -350,27 +367,54 @@ def build(
     all_trips = [trip for trips in trips_by_date.values() for trip in trips]
 
     # Country overrides are coordinate-keyed; unmatched entries already warn in
-    # assign_countries. Display-name overrides remain id-keyed and stale ids abort.
+    # assign_countries. Display-name overrides are keyed by canonical id or by
+    # "<feed>@<stop name>" (volatile db_fern ids); a key matching no station is
+    # reported, never fatal.
     station_ids = {s.id for s in stations}
-    stale = [
-        f"station_names.toml: stale key {sid!r}" for sid in name_overrides if sid not in station_ids
-    ]
-    if stale:
-        for msg in stale:
-            print(f"OVERRIDE STALE: {msg}")
-        raise SystemExit(1)
+    by_id = {s.id: s for s in stations}
+    canon_by_name: dict[tuple[str, str], list[str]] = {}
+    for feed, (stops, _cfg) in per_feed.items():
+        for stop in stops:
+            canonical = mapping.get((feed, stop.stop_id))
+            hits = canon_by_name.setdefault((feed, _norm(stop.name)), [])
+            if canonical is not None and canonical not in hits:
+                hits.append(canonical)
+    new_names: dict[str, str] = {}
+    for key, new_name in name_overrides.items():
+        ref = _name_ref(key)
+        ids = canon_by_name.get(ref, []) if ref else [key] if key in station_ids else []
+        if ref:
+            ids = _near_hint(key, ids, lambda h: (by_id[h].lat, by_id[h].lon))
+        if not ids:
+            issues.append({
+                "kind": "stale_override",
+                "detail": f"station_names.toml key {key!r} matches no station",
+            })
+            continue
+        if len(ids) > 1:
+            issues.append({
+                "kind": "stale_override",
+                "detail": f"station_names.toml key {key!r} is ambiguous: {', '.join(ids)}",
+            })
+        new_names[ids[0]] = new_name
 
     # Apply display-name overrides (after merge + country, before serialization).
     for s in stations:
-        if s.id in name_overrides:
-            print(f"name: {s.id} ({s.name}) -> {name_overrides[s.id]}")
-            s.name = name_overrides[s.id]
+        if s.id in new_names:
+            print(f"name: {s.id} ({s.name}) -> {new_names[s.id]}")
+            s.name = new_names[s.id]
 
     problems = validate(stations, all_trips)
     if problems:
         for p in problems:
             print(f"VALIDATION: {p}")
         raise SystemExit(1)
+    issues += [
+        {"kind": "unmerged_duplicate", "detail": detail}
+        for detail in unmerged_duplicates(stations)
+    ]
+    for issue in issues:
+        print(f"ISSUE {issue['kind']}: {issue['detail']}")
 
     graph_dir.mkdir(parents=True, exist_ok=True)
     (graph_dir / "stations.json").write_text(
@@ -397,4 +441,10 @@ def build(
             ensure_ascii=False,
         )
     )
+    # Picked up by compute into the published slot, so every run's recoverable
+    # problems stay inspectable after the log rotates.
+    (graph_dir / "build_issues.json").write_text(
+        json.dumps({"issues": issues}, ensure_ascii=False, indent=1)
+    )
     print(f"graph: {len(stations)} stations, {len(all_trips)} trips -> {graph_dir}")
+    print(f"build issues: {len(issues)} (details in build_issues.json)")

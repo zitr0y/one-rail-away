@@ -4,12 +4,13 @@
 # assignment. Mechanism mirrors station_countries.toml exactly: lives in
 # pipeline/ next to the code (same loading-trap comment — deriving from
 # feeds_path.parent silently loaded no overrides at all, 2026-07-09), keyed
-# by canonical station id.
+# by canonical station id -- or, for db_fern stops (ids rotate with every
+# export, backlog AM), by "db_fern@<stop name>" like station_aliases.toml.
 #
 # Every entry needs an evidence comment: real station name, why the merged
 # name is wrong (e.g. French spelling, SHOUTY caps, abbreviation). A key
-# whose id doesn't exist in the station registry fails the build (loud,
-# not silent — the Konstanz staleness trap).
+# that matches no station is reported in build_issues.json (the Konstanz
+# staleness trap); since 2026-09-22 it no longer aborts the build.
 #
 # This file intentionally lives here, next to build.py, not at repo root next
 # to feeds.toml -- deriving the path from feeds_path.parent silently loaded no
@@ -37,7 +38,6 @@
 # those trains run). Re-add these display names when multi-day sampling
 # (backlog B) brings the FLX20/30 service days into the build.
 # Erfurt: db_fern's canonical is the context-free "Hauptbahnhof"; include city.
-"x:db_fern:338323" = "Erfurt Hbf"
+"db_fern@Hauptbahnhof~50.972,11.037" = "Erfurt Hbf"
 # München Ostbahnhof: DB feed strips the city prefix (leaving "Ostbahnhof").
-# The id is volatile (backlog AM). Verified still current 2026-07-16.
-"x:db_fern:226810" = "München Ostbahnhof"
+"db_fern@Ostbahnhof~48.127,11.604" = "München Ostbahnhof"

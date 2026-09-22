@@ -2,8 +2,6 @@ import json
 import logging
 from datetime import date
 
-import pytest
-
 from pipeline.build import build, remap_trips, validate
 from pipeline.models import Station, StopTime, Trip
 from tests.fixtures import LANDIA, _zip, make_fixture_feeds
@@ -227,28 +225,64 @@ def test_station_names_override_applied(tmp_path):
     assert gamma["name"] == "Gamma Zentral"
 
 
-def test_station_names_stale_id_fails_build(tmp_path):
-    """A station_names.toml key not matching any station id must fail the build."""
+def _build_fixture(tmp_path, *, names="", aliases=""):
     raw = tmp_path / "raw"
     cfgs = make_fixture_feeds(raw)
     feeds_toml = _write_feeds_toml(tmp_path, cfgs)
-
     names_toml = tmp_path / "station_names.toml"
-    names_toml.write_text('[names]\n"GHOST_ID" = "Phantom"\n')
-
+    names_toml.write_text("[names]\n" + names)
+    aliases_toml = tmp_path / "station_aliases.toml"
+    aliases_toml.write_text("[aliases]\n" + aliases)
     countries_toml, _ = empty_overrides(tmp_path)
-
     graph = tmp_path / "graph"
-    with pytest.raises(SystemExit):
-        build(
-            raw,
-            graph,
-            feeds_toml,
-            aliases_path=None,
-            sample_date=SAMPLE,
-            station_names_path=names_toml,
-            station_countries_path=countries_toml,
-        )
+    build(
+        raw,
+        graph,
+        feeds_toml,
+        aliases_path=aliases_toml,
+        sample_date=SAMPLE,
+        station_names_path=names_toml,
+        station_countries_path=countries_toml,
+    )
+    stations = json.loads((graph / "stations.json").read_text())["stations"]
+    issues = json.loads((graph / "build_issues.json").read_text())
+    return stations, issues
+
+
+def test_station_names_stale_key_is_reported_not_fatal(tmp_path):
+    """A stale key must not freeze the weekly refresh; it lands in build_issues."""
+    stations, issues = _build_fixture(tmp_path, names='"GHOST_ID" = "Phantom"\n')
+    assert "Phantom" not in {s["name"] for s in stations}
+    assert issues["issues"] == [
+        {"kind": "stale_override", "detail": "station_names.toml key 'GHOST_ID' matches no station"}
+    ]
+
+
+def test_station_names_name_keyed_override_follows_the_feed_stop(tmp_path):
+    stations, issues = _build_fixture(tmp_path, names='"borderia@Delta Gare" = "Delta Zentrum"\n')
+    assert "Delta Zentrum" in {s["name"] for s in stations}
+    assert issues["issues"] == []
+
+
+def test_unmerged_duplicate_is_reported_and_build_still_publishes(tmp_path):
+    """Force a same-name twin: alias borderia's Gamma off the UIC merge, then
+    rename it to landia's name. Validation must report, not abort."""
+    stations, issues = _build_fixture(
+        tmp_path,
+        aliases='"borderia:bs-3333333" = "GHOST"\n',
+        names='"GHOST" = "Gamma Hbf"\n',
+    )
+    assert [s["name"] for s in stations].count("Gamma Hbf") == 2
+    assert issues["issues"] == [
+        {"kind": "unmerged_duplicate", "detail": "3333333 / GHOST (Gamma Hbf)"}
+    ]
+
+
+def test_unresolved_alias_reference_is_reported(tmp_path):
+    _, issues = _build_fixture(tmp_path, aliases='"borderia@Renamed Station" = "3333333"\n')
+    assert issues["issues"] == [
+        {"kind": "alias", "detail": "alias key 'borderia@Renamed Station' matches no stop"}
+    ]
 
 
 def test_station_countries_unmatched_override_warns_not_aborts(tmp_path, capsys):
@@ -291,20 +325,13 @@ def test_munchen_ostbahnhof_rename_does_not_affect_graz():
     import tomllib
     from pathlib import Path
 
-    from pipeline.models import Station
+    from pipeline.merge import _name_ref, _norm
 
     names_path = Path(__file__).parent.parent / "pipeline" / "station_names.toml"
-    assert names_path.exists()
     name_overrides = tomllib.loads(names_path.read_text()).get("names", {})
+    key = next(k for k, v in name_overrides.items() if v == "München Ostbahnhof")
 
-    m_ost = Station(id="x:db_fern:226810", name="Ostbahnhof", lat=48.12, lon=11.60, country="DE")
-    g_ost = Station(
-        id="x:oebb:Pat:46:3038", name="Graz Ostbahnhof", lat=47.05, lon=15.44, country="AT"
-    )
-
-    for s in [m_ost, g_ost]:
-        if s.id in name_overrides:
-            s.name = name_overrides[s.id]
-
-    assert m_ost.name == "München Ostbahnhof"
-    assert g_ost.name == "Graz Ostbahnhof"
+    # Feed-scoped and normalized-name keyed: db_fern's bare "Ostbahnhof" only.
+    assert _name_ref(key) == ("db_fern", _norm("Ostbahnhof"))  # "~lat,lon" hint ignored
+    assert _name_ref(key) != ("oebb", _norm("Graz Ostbahnhof"))
+    assert _norm("Graz Ostbahnhof") != _norm("Ostbahnhof")

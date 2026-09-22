@@ -407,17 +407,23 @@ def compute_all(
         if n:
             station.has_reach = True
             written.add(f"reach_{station.id}.json")
-            print(f"reach_{station.id}.json: {n} destinations")
         if station.id in capital_ids:
             station.is_capital = True
 
+    pruned = 0
     for path in out_dir.glob("reach_*.json"):
         if path.name not in written:
             path.unlink()
             gz_path = path.with_name(path.name + ".gz")
             if gz_path.exists():
                 gz_path.unlink()
-            print(f"pruned stale {path.name}")
+            pruned += 1
+    print(f"wrote {len(written)} reach files, pruned {pruned} stale")
+
+    # The build's recoverable problems ship with the data set they describe.
+    issues_path = graph_dir / "build_issues.json"
+    if issues_path.exists():
+        (out_dir / "build_issues.json").write_text(issues_path.read_text())
 
     # stations.json has no .gz sibling: the server merges it with a live
     # has_reach set per request, so it's never served verbatim (see

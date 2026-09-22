@@ -5,7 +5,8 @@ slightly offset coordinates. `merge_stations` assigns each (feed, stop_id) a can
 station id, building one `Station` registry shared by the router.
 
 Canonical id precedence (first match wins):
-  1. alias override  -- explicit "<feed>:<stop_id>" -> canonical id in `aliases`
+  1. alias override  -- explicit "<feed>:<stop_id>" or "<feed>@<stop name>" ->
+                        canonical id or "<feed>@<stop name>" reference in `aliases`
   2. UIC regex       -- cfg.uic_regex extracts a UIC code from the stop_id; a
                         known code merges onto its station, an UNKNOWN code first
                         falls back to the rule-3 proximity check (#7)
@@ -52,6 +53,16 @@ The fallback may merge onto a DIFFERENT UIC canonical (dual-code border
 stations; symmetric with rule 3 -- user decision 2026-07-10). Cross-language
 name twins ("Sarrebruck" vs "Saarbruecken Hbf") do not normalize equal and
 still need explicit aliases.
+
+Name-keyed references (2026-09-22): db_fern stop ids rotate with EVERY export,
+so an alias written against them breaks on the next refresh (it aborted the
+weekly build for two months) or silently mints a ghost twin under the dead
+id. "<feed>@<stop name>" names a stop by its normalized (`_norm`) name
+instead, as a key (which stops the alias applies to) or as a target (the
+canonical station that feed's stop landed on; the feed must be processed
+first). A reference that matches nothing, or a target that matches several
+stations, is reported through ``issues`` and never aborts: an unresolved
+target falls through to rules 2-4, an ambiguous one takes the first match.
 """
 
 import math
@@ -172,13 +183,44 @@ def _proximity_match(
     )
 
 
+def _name_ref(ref: str) -> tuple[str, str] | None:
+    """Split a "<feed>@<stop name>" reference into (feed, normalized name).
+
+    None for id forms: "<feed>:<stop_id>" keys and plain canonical ids. A feed
+    name never contains ':', so an '@' inside a stop id cannot misparse.
+    """
+    feed, sep, name = ref.partition("@")
+    if not sep or not feed or not name or ":" in feed:
+        return None
+    return feed, _norm(name.partition("~")[0])
+
+
+HINT_M = 2000
+
+
+def _near_hint(ref: str, hits: list[str], coords) -> list[str]:
+    """Keep only hits within HINT_M of an optional "~lat,lon" suffix on ``ref``.
+
+    Context-free names ("Hauptbahnhof") need the hint: without it a second
+    same-named stop elsewhere would be matched silently once the intended one
+    is renamed. ``coords(canonical)`` returns (lat, lon).
+    """
+    hint = ref.partition("~")[2]
+    if not hint:
+        return hits
+    lat, lon = (float(v) for v in hint.split(","))
+    return [h for h in hits if _dist_m(lat, lon, *coords(h)) < HINT_M]
+
+
 def merge_stations(
     per_feed: dict[str, tuple[list[RawStop], FeedConfig]],
     aliases: dict[str, str],
+    issues: list[str] | None = None,
 ) -> tuple[list[Station], dict[tuple[str, str], str]]:
     """Merge stops from many feeds into one canonical station registry.
 
     See module docstring for the id precedence rules and determinism guarantees.
+    Unresolvable name-keyed references are appended to ``issues`` (if given).
 
     Returns:
         (stations, mapping) where `stations` is the deduplicated registry and
@@ -192,6 +234,34 @@ def merge_stations(
     stubs: list[tuple[str, str, str, FeedConfig]] = []  # (feed, stop_id, name, cfg)
     uic_aliases: dict[str, str] = {}  # UIC code -> canonical, from fallback merges (#7)
     done_feeds: set[str] = set()  # feeds fully processed -> their x: ids are settled
+    found: list[str] = []
+    # Keys match by name alone; a "~lat,lon" hint on a key is not supported.
+    name_aliases = {ref: target for key, target in aliases.items() if (ref := _name_ref(key))}
+    used_name_keys: set[tuple[str, str]] = set()
+    # (feed, normalized stop name) -> canonicals its stops landed on, in order.
+    canon_by_name: dict[tuple[str, str], list[str]] = {}
+
+    def alias_for(feed: str, stop_id: str, name: str) -> str | None:
+        target = aliases.get(f"{feed}:{stop_id}")
+        if target is None:
+            key = (feed, _norm(name))
+            target = name_aliases.get(key)
+            if target is not None:
+                used_name_keys.add(key)
+        if target is None or (ref := _name_ref(target)) is None:
+            return target
+        hits = _near_hint(
+            target, canon_by_name.get(ref, []), lambda h: (registry[h].lat, registry[h].lon)
+        )
+        if not hits:
+            found.append(f"alias target {target!r} (for {feed}:{stop_id}) matches no stop")
+            return None
+        if len(hits) > 1:
+            found.append(
+                f"alias target {target!r} (for {feed}:{stop_id}) is ambiguous: "
+                + ", ".join(hits)
+            )
+        return hits[0]
 
     # Pass 1: real (coordinate-bearing) stops. Stubs (lat/lon None) are deferred so
     # they can only resolve ONTO settled real stations, never seed one themselves.
@@ -201,7 +271,7 @@ def merge_stations(
             if stop.lat is None or stop.lon is None:
                 stubs.append((feed, stop.stop_id, stop.name, cfg))
                 continue
-            canonical = aliases.get(f"{feed}:{stop.stop_id}")
+            canonical = alias_for(feed, stop.stop_id, stop.name)
             if canonical is not None and canonical not in registry:
                 # Alias targets embed volatile feed ids (x:db_fern:<id> churns
                 # on every DB export). When the target's own feed has already
@@ -243,6 +313,9 @@ def merge_stations(
                 )
                 by_norm.setdefault(_norm(stop.name), []).append(canonical)
             mapping[(feed, stop.stop_id)] = canonical
+            hits = canon_by_name.setdefault((feed, _norm(stop.name)), [])
+            if canonical not in hits:
+                hits.append(canonical)
         done_feeds.add(feed)
 
     # Pass 2: coordinate-less stubs. An explicit alias wins; otherwise resolve by an
@@ -253,7 +326,7 @@ def merge_stations(
     for sid, s in registry.items():
         by_norm.setdefault(_norm(s.name), []).append(sid)
     for feed, stop_id, name, _cfg in stubs:
-        alias = aliases.get(f"{feed}:{stop_id}")
+        alias = alias_for(feed, stop_id, name)
         if alias is not None and alias in registry:
             mapping[(feed, stop_id)] = alias
             continue
@@ -262,4 +335,10 @@ def merge_stations(
             mapping[(feed, stop_id)] = candidates[0]
         # else: unmatched (0 candidates) or ambiguous (>1) -> dropped
 
+    for key in aliases:
+        ref = _name_ref(key)
+        if ref is not None and ref not in used_name_keys:
+            found.append(f"alias key {key!r} matches no stop")
+    if issues is not None:
+        issues.extend(dict.fromkeys(found))
     return list(registry.values()), mapping

@@ -141,6 +141,17 @@ doing AD + AC as one hardening pass. Relates AM. Live instance 2026-07-18:
 against a newer local `data/graph` (`x:db_fern:31353` Warszawa is gone) —
 left failing deliberately as the AD/AM reproducer.
 
+**Config half shipped 2026-09-22:** station_aliases.toml / station_names.toml
+reference db_fern stops as `"db_fern@<stop name>"` (optional `~lat,lon` hint
+for context-free names like Erfurt's bare "Hauptbahnhof"), resolved per build;
+no db_fern ids remain in config. Unresolved references, stale name overrides
+and unmerged duplicates no longer abort the build: they are printed as
+`ISSUE ...` lines and written to `build_issues.json` (graph dir, copied into
+the published slot) -- review that file after refreshes. Also healed live
+ghost twins (FlixTrain "Berlin Central Station", SNCF "Munich", ...) that
+stale `x:db_fern:` targets had minted since July. Still open: stable PUBLIC
+ids (AM) and the hardcoded ids in tests/test_international.py.
+
 ## AF. Seasonal services: currently detect NOTHING — needs a trustworthy replacement
 
 The original GTFS-calendar heuristic flagged 64% of Dortmund's destinations

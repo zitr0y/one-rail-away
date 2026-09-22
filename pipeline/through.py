@@ -21,13 +21,15 @@ LINE labels shared by every run of the line and by both directions:
 - no station revisit: the joined path never visits a station twice, which
   rejects out+return pairs meeting at a terminus,
 - the pairing is unambiguous: equal-gap ties for the same predecessor or
-  successor are skipped with a warning.
+  successor are skipped, summarized in ONE log line per call (per-pair
+  warnings were ~11M lines per production build, 2026-09).
 
 Passes repeat until stable so 3+ segment chains collapse fully.
 """
 
 import logging
 import re
+from collections import Counter
 
 from pipeline.models import StopTime, Trip
 
@@ -65,7 +67,7 @@ def _candidates(trips: list[Trip]) -> list[tuple[int, int, int]]:
     return sorted(out)
 
 
-def _ambiguous(cands: list[tuple[int, int, int]], trips: list[Trip]) -> set[tuple[int, int]]:
+def _ambiguous(cands: list[tuple[int, int, int]]) -> set[tuple[int, int]]:
     """Pairs that tie at the same gap for the same predecessor or successor."""
     skip: set[tuple[int, int]] = set()
     for k, (gap, i, j) in enumerate(cands):
@@ -75,12 +77,6 @@ def _ambiguous(cands: list[tuple[int, int, int]], trips: list[Trip]) -> set[tupl
             if i2 == i or j2 == j:
                 skip.add((i, j))
                 skip.add((i2, j2))
-                logger.warning(
-                    "ambiguous through-join for %s at %s (gap %d min): skipping",
-                    trips[i].train,
-                    trips[i].stops[-1].station,
-                    gap,
-                )
     return skip
 
 
@@ -88,9 +84,11 @@ def join_through_services(trips: list[Trip]) -> list[Trip]:
     """Return a new trip list with border-split segments joined. Inputs unmutated."""
     trips = list(trips)
     total = 0
+    skipped: Counter[str] = Counter()
     for _ in range(_MAX_PASSES):
         cands = _candidates(trips)
-        skip = _ambiguous(cands, trips)
+        skip = _ambiguous(cands)
+        skipped.update(trips[i].train for i, _j in skip)
         touched: set[int] = set()
         absorbed: set[int] = set()
         for _gap, i, j in cands:
@@ -116,4 +114,10 @@ def join_through_services(trips: list[Trip]) -> list[Trip]:
         logger.warning("through-join did not stabilize after %d passes", _MAX_PASSES)
     if total:
         logger.info("joined %d border-split trip segments", total)
+    if skipped:
+        logger.info(
+            "skipped %d ambiguous through-join pairs; most: %s",
+            skipped.total(),
+            ", ".join(f"{label} x{n}" for label, n in skipped.most_common(5)),
+        )
     return trips
