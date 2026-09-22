@@ -20,7 +20,12 @@ from pipeline.capitals import load_capitals
 from pipeline.cities import ResolvedTransfer, load_cities, load_transfers
 from pipeline.coverage import build_coverage, covered_from_feeds
 from pipeline.models import Destination, Frequency, Journey, Leg, ReachFile, Station, Trip
-from pipeline.raptor import compute_departure_evidence, compute_reachability
+from pipeline.raptor import (
+    INF,
+    DepartureEvidence,
+    compute_departure_evidence,
+    compute_reachability,
+)
 
 MONTH_NAMES = ("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
 
@@ -89,6 +94,55 @@ def _frequency(
     )
 
 
+HISTOGRAM_TIERS = (1, 2, 3)
+
+
+def _useful_tiers(departures: list[DepartureEvidence]) -> list[int | None]:
+    """Fewest trains at which each first departure is a useful connection.
+
+    Every direct train counts. A connection with changes counts unless another
+    departs no earlier, arrives no later and uses no more trains -- so a
+    feeder that only catches the same onward train as a later feeder drops
+    out. None: never useful.
+    """
+    # (departure, trains, arrival, index) for each tier that improves arrival.
+    points = [
+        (item.departure_min, k + 1, arrival, i)
+        for i, item in enumerate(departures)
+        for k, arrival in enumerate(item.arrivals)
+        if arrival < INF and (k == 0 or arrival < item.arrivals[k - 1])
+    ]
+    # Sweep latest departure first; within a departure, fewer trains and
+    # earlier arrival first, so everything already seen with <= trains
+    # dominates the current point iff it arrives no later.
+    points.sort(key=lambda p: (-p[0], p[1], p[2], p[3]))
+    best = [INF] * (len(HISTOGRAM_TIERS) + 1)  # best[t]: min arrival, <= t trains
+    useful: list[int | None] = [None] * len(departures)
+    for _, trains, arrival, i in points:
+        if trains == 1 or arrival < best[trains]:
+            if useful[i] is None or trains < useful[i]:
+                useful[i] = trains
+        for t in range(trains, len(best)):
+            best[t] = min(best[t], arrival)
+    return useful
+
+
+def _tiered_histogram(
+    by_day: dict[str, dict[int, list[int]]], sample_dates: list[str]
+) -> dict[str, dict[str, list[int]]]:
+    """Per-tier {date: bins}; a tier identical to the one below is omitted."""
+    out: dict[str, dict[str, list[int]]] = {}
+    below = None
+    for tier in HISTOGRAM_TIERS:
+        rows = {
+            day: by_day.get(day, {}).get(tier, [0] * 24).copy() for day in sample_dates
+        }
+        if rows != below:
+            out[str(tier)] = rows
+            below = rows
+    return out
+
+
 def _aggregate_reach(
     trips_by_date: dict[str, list[Trip]],
     station_id: str,
@@ -102,7 +156,7 @@ def _aggregate_reach(
     origin_off = (display_offsets or {}).get(station_id, 0)
     evidence: dict[str, dict[str, list[Journey]]] = {}
     directs: dict[str, dict[str, int]] = {}
-    histograms: dict[str, dict[str, list[int]]] = {}
+    histograms: dict[str, dict[str, dict[int, list[int]]]] = {}
     for day, trips in trips_by_date.items():
         for dest, journeys in compute_reachability(
             trips, station_id, footpaths=footpaths, display_offsets=display_offsets
@@ -113,12 +167,15 @@ def _aggregate_reach(
             direct_count = sum(item.direct for item in departures)
             if direct_count:
                 directs.setdefault(dest, {})[day] = direct_count
-            bins = [0] * 24
-            for item in departures:
+            bins = {tier: [0] * 24 for tier in HISTOGRAM_TIERS}
+            for item, useful in zip(departures, _useful_tiers(departures)):
+                if useful is None:
+                    continue
                 # Histogram hours are origin wall-clock time.
-                bins[(item.departure_min + origin_off) // 60 % 24] += 1
-            if any(bins):
-                histograms.setdefault(dest, {})[day] = bins
+                hour = (item.departure_min + origin_off) // 60 % 24
+                for tier in HISTOGRAM_TIERS[useful - 1 :]:
+                    bins[tier][hour] += 1
+            histograms.setdefault(dest, {})[day] = bins
     # `extra_trips` is the one extra probe loaded for services absent from
     # every sampled date (see services_absent_from_week / build.py), purely so
     # a destination reached only by them still shows up here. Keyed under a
@@ -181,18 +238,14 @@ def _aggregate_reach(
         # Legacy field remains present.  On a multi-day run it is the rounded
         # average on observed direct days; consumers should prefer frequency.
         direct_per_day = round(freq.direct_per_active_day or 0)
-        zero_row = [0] * 24
-        histogram = {
-            day: histograms.get(dest, {}).get(day, zero_row).copy()
-            for day in sample_dates
-        }
+        histogram_by_trains = _tiered_histogram(histograms.get(dest, {}), sample_dates)
         destinations.append(
             Destination(
                 id=dest,
                 direct_per_day=direct_per_day,
                 journeys=tiers,
                 frequency=freq,
-                histogram=histogram,
+                histogram_by_trains=histogram_by_trains,
             )
         )
     return destinations

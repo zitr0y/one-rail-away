@@ -71,6 +71,8 @@ class Journey(BaseModel):
 
 HourlyCount = Annotated[int, Field(ge=0)]
 HourlyBins = Annotated[list[HourlyCount], Field(min_length=24, max_length=24)]
+# Max trains per journey, matching the web's direct / 1-change / 2-change filter.
+TrainsTier = Literal["1", "2", "3"]
 
 
 class Destination(BaseModel):
@@ -78,17 +80,22 @@ class Destination(BaseModel):
     direct_per_day: int
     journeys: list[Journey]  # ascending trains; each strictly faster than previous
     frequency: "Frequency | None" = None
-    histogram: dict[str, HourlyBins] | None = Field(
+    # Per trains tier: {date: 24 origin-hour bins} of useful departures. A tier
+    # equal to the next lower one is omitted; readers fall back downwards.
+    histogram_by_trains: dict[TrainsTier, dict[str, HourlyBins]] | None = Field(
         default=None,
         exclude_if=lambda value: value is None,
     )
 
-    @field_validator("histogram", mode="after")
+    @field_validator("histogram_by_trains", mode="after")
     @classmethod
-    def omit_empty_histogram(cls, value):
-        if not value or not any(count for row in value.values() for count in row):
-            return None
-        return value
+    def omit_empty_histograms(cls, value):
+        kept = {
+            tier: days
+            for tier, days in (value or {}).items()
+            if any(count for row in days.values() for count in row)
+        }
+        return kept or None
 
 
 class Frequency(BaseModel):

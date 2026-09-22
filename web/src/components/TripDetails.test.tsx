@@ -15,6 +15,7 @@ const dest = {
     { train: "ICE 1", dep: "08:00", arr: "10:00", from: "A", to: "B", via: [] },
   ] }],
 };
+const directDest = { ...dest, journeys: [{ ...dest.journeys[0], trains: 1 }] };
 const stationsById = new Map([[origin.id, origin], [destination.id, destination]]);
 
 describe("TripDetails booking date", () => {
@@ -114,15 +115,15 @@ describe("frequencyLabel", () => {
 describe("TripDetails frequency histogram", () => {
   it("renders feed-local histogram hours in the three exact dayparts", () => {
     const histogramDest: Destination = {
-      ...dest,
-      histogram: {
+      ...directDest,
+      histogram_by_trains: { "1": {
         "2026-07-14": [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 2, 0, 0, 0, 0, 3, 2, 0, 0, 0, 0, 4],
         "2026-07-15": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 2],
-      },
+      } },
     };
     const markup = renderToStaticMarkup(
       <TripDetails origin={origin} destination={destination} dest={histogramDest}
-                   maxTrains={2} stationsById={stationsById} />,
+                   maxTrains={1} stationsById={stationsById} />,
     );
     expect(markup).toContain('aria-label="Tue morning: 4 direct trains"');
     expect(markup).toContain('aria-label="Tue afternoon: 5 direct trains"');
@@ -138,10 +139,10 @@ describe("TripDetails frequency histogram", () => {
   it("assigns zero-to-four heat levels relative to the busiest daypart", () => {
     const histogramDest: Destination = {
       ...dest,
-      histogram: {
+      histogram_by_trains: { "1": {
         "2026-07-14": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0],
         "2026-07-15": [4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-      },
+      } },
     };
     const markup = renderToStaticMarkup(
       <TripDetails origin={origin} destination={destination} dest={histogramDest}
@@ -159,7 +160,9 @@ describe("TripDetails frequency histogram", () => {
     const root = createRoot(container);
     const histogramDest: Destination = {
       ...dest,
-      histogram: { "2026-07-14": Array.from({ length: 24 }, (_, hour) => hour === 8 ? 1 : 0) },
+      histogram_by_trains: {
+        "1": { "2026-07-14": Array.from({ length: 24 }, (_, hour) => hour === 8 ? 1 : 0) },
+      },
     };
     act(() => {
       root.render(<TripDetails origin={origin} destination={destination} dest={histogramDest}
@@ -171,6 +174,35 @@ describe("TripDetails frequency histogram", () => {
     expect(legs.textContent).toContain("ICE 1");
     expect(legs.compareDocumentPosition(strip) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
     act(() => root.unmount());
+  });
+
+  it("shows the histogram tier for the selected trains filter", () => {
+    const hour8 = (count: number) => Array.from({ length: 24 }, (_, hour) => hour === 8 ? count : 0);
+    const tieredDest: Destination = {
+      ...directDest,
+      histogram_by_trains: { "1": { "2026-07-14": hour8(1) }, "2": { "2026-07-14": hour8(5) } },
+    };
+    const markupFor = (maxTrains: 1 | 2 | 3) => renderToStaticMarkup(
+      <TripDetails origin={origin} destination={destination} dest={tieredDest}
+                   maxTrains={maxTrains} stationsById={stationsById} />,
+    );
+    expect(markupFor(1)).toContain('aria-label="Tue morning: 1 direct trains"');
+    expect(markupFor(2)).toContain('aria-label="Tue morning: 5 connections (≤1 change)"');
+    expect(markupFor(3)).toContain('aria-label="Tue morning: 5 connections (≤2 changes)"');
+  });
+
+  it("hides the strip when the filter excludes every counted connection", () => {
+    const changeOnlyDest: Destination = {
+      ...directDest,
+      histogram_by_trains: {
+        "2": { "2026-07-14": Array.from({ length: 24 }, (_, hour) => hour === 8 ? 1 : 0) },
+      },
+    };
+    const markup = renderToStaticMarkup(
+      <TripDetails origin={origin} destination={destination} dest={changeOnlyDest}
+                   maxTrains={1} stationsById={stationsById} />,
+    );
+    expect(markup).not.toContain("frequency-heat-strip");
   });
 
   it("falls back to current frequency text and expanded connections without a histogram", () => {

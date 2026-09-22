@@ -40,7 +40,13 @@ class Parent(NamedTuple):
 
 class DepartureEvidence(NamedTuple):
     departure_min: int
-    direct: bool
+    # arrivals[k] = earliest arrival using <= k+1 trains (INF when unreachable);
+    # non-increasing in k.
+    arrivals: tuple[int, ...]
+
+    @property
+    def direct(self) -> bool:
+        return self.arrivals[0] < INF
 
 
 def _index(trips):
@@ -80,16 +86,16 @@ def compute_departure_evidence(
     transfer_min: int = 10,
     footpaths: list[ResolvedTransfer] | None = None,
 ) -> dict[str, list[DepartureEvidence]]:
-    """One entry per distinct first train departure that can reach each destination."""
+    """One entry per distinct first train departure that can reach each destination,
+    with its earliest arrival there per train-count tier."""
     trip_stops, by_station = _index(trips)
-    records: dict[tuple[int, int], dict[str, bool]] = {}
+    records: dict[tuple[int, int], dict[str, list[int]]] = {}
 
     for ti in by_station.get(origin, ()):
         stops = trip_stops[ti]
         board_idx = next(i for i, (station, _, _) in enumerate(stops) if station == origin)
         label = (ti, board_idx)
         departure_min = stops[board_idx][2]
-        reached: dict[str, bool] = {}
         prev: dict[str, int] = {}
 
         for station, arrival, _ in stops[board_idx + 1 :]:
@@ -97,9 +103,9 @@ def compute_departure_evidence(
                 continue
             if arrival < prev.get(station, INF):
                 prev[station] = arrival
-            reached[station] = True
+        reached = {station: [arrival] * max_trains for station, arrival in prev.items()}
 
-        for _ in range(2, max_trains + 1):
+        for tier in range(1, max_trains):
             ready = {
                 station: arrival + transfer_min for station, arrival in prev.items()
             }
@@ -126,7 +132,9 @@ def compute_departure_evidence(
                         if arrival < cur.get(station, INF):
                             cur[station] = arrival
                             if station != origin:
-                                reached.setdefault(station, False)
+                                tiers = reached.setdefault(station, [INF] * max_trains)
+                                for k in range(tier, max_trains):
+                                    tiers[k] = arrival
                             new_arrival = True
                     elif ready.get(station, INF) <= departure:
                         board = True
@@ -140,8 +148,10 @@ def compute_departure_evidence(
     out: dict[str, list[DepartureEvidence]] = {}
     for (ti, board_idx), reached in records.items():
         departure_min = trip_stops[ti][board_idx][2]
-        for destination, direct in reached.items():
-            out.setdefault(destination, []).append(DepartureEvidence(departure_min, direct))
+        for destination, arrivals in reached.items():
+            out.setdefault(destination, []).append(
+                DepartureEvidence(departure_min, tuple(arrivals))
+            )
     return out
 
 

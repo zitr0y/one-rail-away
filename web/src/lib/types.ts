@@ -23,9 +23,11 @@ export interface Frequency {
   availability: "year_round" | "limited" | "coverage_limited"; active_months: string[];
 }
 export type HourlyHistogram = Record<string, number[]>;
+/** Keyed by max trains; a tier equal to the one below is omitted (fall back downwards). */
+export type HistogramByTrains = Partial<Record<"1" | "2" | "3", HourlyHistogram>>;
 export interface Destination {
   id: string; direct_per_day: number; journeys: Journey[]; frequency?: Frequency | null;
-  histogram?: HourlyHistogram;
+  histogram_by_trains?: HistogramByTrains;
 }
 export interface ReachFile {
   origin: string; computed_at: string; sample_date: string; destinations: Destination[];

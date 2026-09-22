@@ -110,18 +110,24 @@ def test_reach_file_round_trip_with_train_and_transfer_legs():
 
 
 def test_destination_histogram_serializes_and_round_trips_exact_schema():
-    histogram = {
-        "2026-07-14": [1 if hour in {0, 11, 12} else 0 for hour in range(24)],
-        "2026-07-15": [1 if hour in {17, 18, 23} else 0 for hour in range(24)],
+    histogram_by_trains = {
+        "1": {
+            "2026-07-14": [1 if hour in {0, 11, 12} else 0 for hour in range(24)],
+            "2026-07-15": [1 if hour in {17, 18, 23} else 0 for hour in range(24)],
+        },
+        "2": {
+            "2026-07-14": [2 if hour in {0, 11, 12} else 0 for hour in range(24)],
+            "2026-07-15": [1 if hour in {17, 18, 23} else 0 for hour in range(24)],
+        },
     }
     destination = Destination(
         id="destination",
         direct_per_day=3,
         journeys=[],
-        histogram=histogram,
+        histogram_by_trains=histogram_by_trains,
     )
 
-    assert destination.model_dump(by_alias=True)["histogram"] == histogram
+    assert destination.model_dump(by_alias=True)["histogram_by_trains"] == histogram_by_trains
 
     reach_file = ReachFile(
         origin="origin",
@@ -130,7 +136,8 @@ def test_destination_histogram_serializes_and_round_trips_exact_schema():
         destinations=[destination],
     )
     again = ReachFile.model_validate_json(reach_file.model_dump_json(by_alias=True))
-    assert again.destinations[0].model_dump(by_alias=True)["histogram"] == histogram
+    dumped = again.destinations[0].model_dump(by_alias=True)
+    assert dumped["histogram_by_trains"] == histogram_by_trains
 
 
 def test_destination_omits_absent_and_all_zero_histogram():
@@ -139,14 +146,23 @@ def test_destination_omits_absent_and_all_zero_histogram():
         id="all-zero",
         direct_per_day=0,
         journeys=[],
-        histogram={
-            "2026-07-14": [0] * 24,
-            "2026-07-15": [0] * 24,
+        histogram_by_trains={
+            "1": {"2026-07-14": [0] * 24, "2026-07-15": [0] * 24},
+        },
+    )
+    partly_zero = Destination(
+        id="partly-zero",
+        direct_per_day=0,
+        journeys=[],
+        histogram_by_trains={
+            "1": {"2026-07-14": [0] * 24},
+            "2": {"2026-07-14": [1] + [0] * 23},
         },
     )
 
-    assert "histogram" not in absent.model_dump(by_alias=True)
-    assert "histogram" not in all_zero.model_dump(by_alias=True)
+    assert "histogram_by_trains" not in absent.model_dump(by_alias=True)
+    assert "histogram_by_trains" not in all_zero.model_dump(by_alias=True)
+    assert list(partly_zero.model_dump(by_alias=True)["histogram_by_trains"]) == ["2"]
 
 
 def test_destination_histogram_rejects_wrong_length_or_negative_bins():
@@ -155,7 +171,7 @@ def test_destination_histogram_rejects_wrong_length_or_negative_bins():
             id="destination",
             direct_per_day=0,
             journeys=[],
-            histogram={"2026-07-14": [0] * 23},
+            histogram_by_trains={"1": {"2026-07-14": [0] * 23}},
         )
 
     with pytest.raises(ValidationError):
@@ -163,7 +179,7 @@ def test_destination_histogram_rejects_wrong_length_or_negative_bins():
             id="destination",
             direct_per_day=0,
             journeys=[],
-            histogram={"2026-07-14": [0] * 25},
+            histogram_by_trains={"1": {"2026-07-14": [0] * 25}},
         )
 
     with pytest.raises(ValidationError):
@@ -171,5 +187,13 @@ def test_destination_histogram_rejects_wrong_length_or_negative_bins():
             id="destination",
             direct_per_day=0,
             journeys=[],
-            histogram={"2026-07-14": [0] * 23 + [-1]},
+            histogram_by_trains={"1": {"2026-07-14": [0] * 23 + [-1]}},
+        )
+
+    with pytest.raises(ValidationError):
+        Destination(
+            id="destination",
+            direct_per_day=0,
+            journeys=[],
+            histogram_by_trains={"4": {"2026-07-14": [0] * 24}},
         )

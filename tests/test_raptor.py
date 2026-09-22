@@ -3,7 +3,13 @@ from datetime import date
 from pipeline.gtfs import load_feed
 from pipeline.merge import merge_stations
 from pipeline.models import Leg, StopTime, TransferLeg, Trip
-from pipeline.raptor import DepartureEvidence, compute_departure_evidence, compute_reachability, fmt
+from pipeline.raptor import (
+    INF,
+    DepartureEvidence,
+    compute_departure_evidence,
+    compute_reachability,
+    fmt,
+)
 from tests.fixtures import make_fixture_feeds
 
 SAMPLE = date(2026, 7, 14)
@@ -367,9 +373,9 @@ def test_departure_evidence_keeps_distinct_direct_trips_at_the_same_minute():
     ]
 
     assert compute_departure_evidence(trips, "origin")["destination"] == [
-        DepartureEvidence(480, True),
-        DepartureEvidence(480, True),
-        DepartureEvidence(795, True),
+        DepartureEvidence(480, (540, 540, 540)),
+        DepartureEvidence(480, (525, 525, 525)),
+        DepartureEvidence(795, (850, 850, 850)),
     ]
     assert compute_reachability(trips, "origin")["destination"][0].legs[0].train == "Second"
 
@@ -394,8 +400,12 @@ def test_departure_evidence_counts_one_origin_departure_once_across_onward_optio
     ]
 
     evidence = compute_departure_evidence(trips, "origin")
-    assert evidence["destination"] == [DepartureEvidence(480, False)]
-    assert evidence["junction"] == [DepartureEvidence(480, True)]
+    # Earliest arrival per tier (<= 1, 2, 3 trains): no direct train, the
+    # fast onward train from the 2-train tier on.
+    assert evidence["destination"] == [DepartureEvidence(480, (INF, 600, 600))]
+    assert not evidence["destination"][0].direct
+    assert evidence["junction"] == [DepartureEvidence(480, (540, 540, 540))]
+    assert evidence["junction"][0].direct
 
 
 def test_departure_evidence_footpath_reaches_but_never_duplicates_a_departure():
@@ -421,4 +431,4 @@ def test_departure_evidence_footpath_reaches_but_never_duplicates_a_departure():
     assert "destination" not in compute_departure_evidence(trips, "origin")
     assert compute_departure_evidence(trips, "origin", footpaths=footpaths)[
         "destination"
-    ] == [DepartureEvidence(1435, False)]
+    ] == [DepartureEvidence(1435, (INF, 1580, 1580))]

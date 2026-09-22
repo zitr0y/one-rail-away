@@ -1,5 +1,6 @@
 import { Fragment, type CSSProperties } from "react";
-import type { Destination } from "../lib/types";
+import type { MaxTrains } from "../lib/geojson";
+import type { HistogramByTrains, HourlyHistogram } from "../lib/types";
 
 const DAYPARTS = [
   { name: "morning", label: "Morning", start: 0, end: 12 },
@@ -7,6 +8,22 @@ const DAYPARTS = [
   { name: "evening", label: "Evening", start: 18, end: 24 },
 ] as const;
 const WEEKDAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"] as const;
+const COUNTED: Record<MaxTrains, string> = {
+  1: "direct trains",
+  2: "connections (≤1 change)",
+  3: "connections (≤2 changes)",
+};
+
+/** The histogram for a trains filter: the highest tier present at or below it. */
+export function histogramForTrains(
+  byTrains: HistogramByTrains | undefined, maxTrains: MaxTrains,
+): HourlyHistogram | undefined {
+  for (let tier = maxTrains; tier >= 1; tier--) {
+    const histogram = byTrains?.[String(tier) as keyof HistogramByTrains];
+    if (histogram) return histogram;
+  }
+  return undefined;
+}
 
 export interface HistogramRow {
   date: string;
@@ -14,7 +31,7 @@ export interface HistogramRow {
   dayparts: number[];
 }
 
-export function histogramRows(histogram: Destination["histogram"]): HistogramRow[] | null {
+export function histogramRows(histogram: HourlyHistogram | undefined): HistogramRow[] | null {
   if (!histogram) return null;
   const entries = Object.entries(histogram).sort(([left], [right]) => left.localeCompare(right));
   if (!entries.length || entries.some(([, bins]) => !Array.isArray(bins) || bins.length !== 24
@@ -73,9 +90,11 @@ function DaypartIcon({ part }: { part: (typeof DAYPARTS)[number]["name"] }) {
 
 interface Props {
   rows: HistogramRow[];
+  maxTrains: MaxTrains;
 }
 
-export default function FrequencyHeatStrip({ rows }: Props) {
+export default function FrequencyHeatStrip({ rows, maxTrains }: Props) {
+  const counted = COUNTED[maxTrains];
   const maximum = Math.max(...rows.flatMap((row) => row.dayparts));
   return (
     <>
@@ -96,7 +115,7 @@ export default function FrequencyHeatStrip({ rows }: Props) {
               {rows.map((row) => {
                 const count = row.dayparts[index];
                 const level = count === 0 ? 0 : Math.max(1, Math.ceil(count / maximum * 4));
-                const detail = `${row.weekday} ${daypart.name}: ${count} direct trains`;
+                const detail = `${row.weekday} ${daypart.name}: ${count} ${counted}`;
                 return <span className={`frequency-heat-cell frequency-heat-level-${level}`}
                              title={detail} aria-label={detail} key={row.date} />;
               })}
@@ -110,7 +129,7 @@ export default function FrequencyHeatStrip({ rows }: Props) {
                   aria-hidden="true" key={level} />
           ))}
           <span className="frequency-heat-legend-count">{maximum}</span>
-          <span className="frequency-heat-legend-caption">direct trains / daypart</span>
+          <span className="frequency-heat-legend-caption">{counted} / daypart</span>
         </span>
       </div>
       <p className="frequency-heat-note">Sampled timetable evidence, not a promise.</p>

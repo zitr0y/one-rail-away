@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { bookingUrl, friendlyDateLabel, localDate, shiftDate } from "../lib/booking";
 import { bestJourney, type MaxTrains } from "../lib/geojson";
 import type { Destination, Station, TransferMode } from "../lib/types";
-import FrequencyHeatStrip, { histogramRows } from "./FrequencyHeatStrip";
+import FrequencyHeatStrip, { histogramForTrains, histogramRows } from "./FrequencyHeatStrip";
 
 const TRANSFER_MODE_ICONS: Record<TransferMode, string> = {
   walk: "🚶",
@@ -49,7 +49,7 @@ export default function TripDetails(
   const [bookingDate, setBookingDate] = useState(() => localDate(1));
   const dateInputRef = useRef<HTMLInputElement>(null);
   const today = localDate();
-  const rows = histogramRows(dest.histogram);
+  const rows = histogramRows(histogramForTrains(dest.histogram_by_trains, maxTrains));
 
   useEffect(() => {
     setBookingDate(localDate(1));
@@ -89,7 +89,7 @@ export default function TripDetails(
           </li>
         ))}
       </ol>
-      {rows && <FrequencyHeatStrip rows={rows} />}
+      {rows && <FrequencyHeatStrip rows={rows} maxTrains={maxTrains} />}
       <div className="booking-date-picker">
         <input ref={dateInputRef} className="booking-date-native" type="date"
                value={bookingDate} min={today} tabIndex={-1}

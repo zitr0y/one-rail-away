@@ -198,7 +198,9 @@ def test_compute_writes_exact_two_date_hourly_histogram_without_changing_frequen
 
     reach = json.loads((tmp_path / "out" / "reach_origin.json").read_text())
     destination = next(d for d in reach["destinations"] if d["id"] == "destination")
-    histogram = destination["histogram"]
+    # Direct-only service: the 2- and 3-train tiers equal tier 1 and are omitted.
+    assert list(destination["histogram_by_trains"]) == ["1"]
+    histogram = destination["histogram_by_trains"]["1"]
     assert list(histogram) == ["2026-07-14", "2026-07-15"]
     assert all(len(row) == 24 for row in histogram.values())
     assert histogram == {
@@ -245,7 +247,7 @@ def test_compute_localizes_display_times_for_wet_stations(tmp_path):
 
     reach = json.loads((tmp_path / "out" / "reach_origin.json").read_text())
     destination = next(d for d in reach["destinations"] if d["id"] == "destination")
-    assert destination["histogram"]["2026-07-14"] == [
+    assert destination["histogram_by_trains"]["1"]["2026-07-14"] == [
         1 if hour == 10 else 0 for hour in range(24)
     ]
     leg = destination["journeys"][0]["legs"][0]
@@ -296,8 +298,11 @@ def test_compute_histogram_counts_a_routed_footpath_departure_once(tmp_path):
 
     reach = json.loads((tmp_path / "out" / "reach_origin.json").read_text())
     destination = next(d for d in reach["destinations"] if d["id"] == "destination")
-    assert sum(destination["histogram"]["2026-07-14"]) == 1
-    assert destination["histogram"]["2026-07-14"][8] == 1
+    # One first departure, two onward options: counted once, and only from
+    # the 2-train tier on (no direct service, so tier 1 is omitted).
+    assert destination["histogram_by_trains"] == {
+        "2": {"2026-07-14": [1 if hour == 8 else 0 for hour in range(24)]}
+    }
     assert destination["direct_per_day"] == 0
     assert destination["frequency"]["direct_trips"] == 0
     assert destination["journeys"][0]["trains"] == 2
@@ -328,7 +333,65 @@ def test_compute_omits_histogram_for_extra_only_destination(tmp_path):
     reach = json.loads((tmp_path / "out" / "reach_origin.json").read_text())
     destination = next(d for d in reach["destinations"] if d["id"] == "destination")
     assert destination["direct_per_day"] == 0
-    assert "histogram" not in destination
+    assert "histogram_by_trains" not in destination
+
+
+def test_compute_histogram_tiers_count_only_useful_connections(tmp_path):
+    trips_by_date = {
+        "2026-07-14": [
+            Trip(
+                trip_id="slow-direct",
+                train="Slow Direct",
+                stops=[
+                    StopTime(station="origin", arr=470, dep=470),
+                    StopTime(station="destination", arr=1000, dep=1000),
+                ],
+            ),
+            Trip(
+                trip_id="early-feeder",
+                train="Early Feeder",
+                stops=[
+                    StopTime(station="origin", arr=480, dep=480),
+                    StopTime(station="junction", arr=540, dep=540),
+                ],
+            ),
+            Trip(
+                trip_id="late-feeder",
+                train="Late Feeder",
+                stops=[
+                    StopTime(station="origin", arr=510, dep=510),
+                    StopTime(station="junction", arr=560, dep=560),
+                ],
+            ),
+            Trip(
+                trip_id="onward",
+                train="Onward",
+                stops=[
+                    StopTime(station="junction", arr=600, dep=600),
+                    StopTime(station="destination", arr=660, dep=660),
+                ],
+            ),
+        ]
+    }
+    graph, cities_path = _write_two_date_graph(tmp_path, trips_by_date)
+
+    compute_all(
+        graph,
+        tmp_path / "out",
+        workers=1,
+        feeds_path=tmp_path / "no-feeds.toml",
+        cities_path=cities_path,
+    )
+
+    reach = json.loads((tmp_path / "out" / "reach_origin.json").read_text())
+    destination = next(d for d in reach["destinations"] if d["id"] == "destination")
+    # Tier 1: the direct train counts even though a transfer beats it.
+    # Tier 2: + the 08:30 feeder; the 08:00 feeder catches the same onward
+    # train, so the later departure dominates it. Tier 3 equals tier 2.
+    assert destination["histogram_by_trains"] == {
+        "1": {"2026-07-14": [1 if hour == 7 else 0 for hour in range(24)]},
+        "2": {"2026-07-14": [1 if hour in {7, 8} else 0 for hour in range(24)]},
+    }
 
 
 def test_compute_all_writes_two_train_journey_with_transfer_leg(tmp_path):

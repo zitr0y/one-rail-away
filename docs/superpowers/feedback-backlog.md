@@ -232,6 +232,15 @@ compute-stage time — watch under P.
 on the mobile sheet), 0→max legend, validated brand-blue ramp, per-cell
 tooltips. Awaiting user visual calibration on desktop + phone.
 
+**Count fix 2026-09-22:** the strip counted every origin departure that could
+reach the destination within 3 trains, however roundabout (hub origins showed
+~48/daypart everywhere) while labelled "direct trains". Reach files now carry
+`histogram_by_trains` (tiers "1"/"2"/"3", a tier equal to the one below is
+omitted) and the strip follows the trains filter: all direct trains, plus
+connections with changes that no other departs-no-earlier / arrives-no-later /
+no-more-trains connection beats. Live after the next recompute; until then
+the strip is hidden (old `histogram` field no longer read).
+
 ## AP. Auto-flag / auto-merge station near-duplicates (Stuttgart case)
 
 Stuttgart shows 4 stations of which 3 are just platforms — on the LIVE map, so the

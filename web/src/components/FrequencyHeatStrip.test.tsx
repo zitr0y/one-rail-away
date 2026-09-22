@@ -1,7 +1,7 @@
 // @vitest-environment jsdom
 import { cleanup, render } from "@testing-library/react";
 import { afterEach, describe, expect, it } from "vitest";
-import FrequencyHeatStrip, { histogramRows } from "./FrequencyHeatStrip";
+import FrequencyHeatStrip, { histogramForTrains, histogramRows } from "./FrequencyHeatStrip";
 
 afterEach(cleanup);
 
@@ -27,13 +27,34 @@ describe("histogramRows", () => {
   });
 });
 
+describe("histogramForTrains", () => {
+  const direct = { "2026-07-20": bins({ 8: 1 }) };
+  const oneChange = { "2026-07-20": bins({ 8: 3 }) };
+
+  it("picks the tier matching the trains filter", () => {
+    const byTrains = { "1": direct, "2": oneChange };
+    expect(histogramForTrains(byTrains, 1)).toBe(direct);
+    expect(histogramForTrains(byTrains, 2)).toBe(oneChange);
+  });
+
+  it("falls back to the highest lower tier (omitted tiers equal the one below)", () => {
+    expect(histogramForTrains({ "1": direct, "2": oneChange }, 3)).toBe(oneChange);
+    expect(histogramForTrains({ "1": direct }, 3)).toBe(direct);
+  });
+
+  it("finds nothing when only higher tiers exist or there is no histogram", () => {
+    expect(histogramForTrains({ "2": oneChange }, 1)).toBeUndefined();
+    expect(histogramForTrains(undefined, 3)).toBeUndefined();
+  });
+});
+
 describe("FrequencyHeatStrip", () => {
   const rows = histogramRows({
     "2026-07-20": bins({ 8: 4 }),
     "2026-07-21": bins({ 8: 1, 14: 2 }),
   })!;
 
-  const renderStrip = () => render(<FrequencyHeatStrip rows={rows} />);
+  const renderStrip = () => render(<FrequencyHeatStrip rows={rows} maxTrains={1} />);
 
   it("renders days as column headers and dayparts as icon-labelled rows", () => {
     const { container } = renderStrip();
@@ -67,6 +88,18 @@ describe("FrequencyHeatStrip", () => {
     const counts = [...legend.querySelectorAll(".frequency-heat-legend-count")].map((el) => el.textContent);
     expect(counts).toEqual(["0", "4"]);
     expect(legend.textContent).toContain("direct trains / daypart");
+  });
+
+  it("names what it counts after the trains filter", () => {
+    const { container } = render(<FrequencyHeatStrip rows={rows} maxTrains={2} />);
+    const cells = [...container.querySelectorAll(".frequency-heat-cell")];
+    expect(cells[0].getAttribute("title")).toBe("Mon morning: 4 connections (≤1 change)");
+    expect(container.querySelector(".frequency-heat-legend")!.textContent)
+      .toContain("connections (≤1 change) / daypart");
+    cleanup();
+    const three = render(<FrequencyHeatStrip rows={rows} maxTrains={3} />).container;
+    expect(three.querySelector(".frequency-heat-legend")!.textContent)
+      .toContain("connections (≤2 changes) / daypart");
   });
 
   it("is a plain display, not a toggle button", () => {
