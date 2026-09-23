@@ -1,9 +1,10 @@
-// web/src/legalPages.test.ts
-import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
+// ?raw (not node:fs): `npm run build` type-checks tests without @types/node.
+import legalHtml from "../public/legal.html?raw";
+import privacyHtml from "../public/privacy.html?raw";
 
-const page = (name: string) =>
-  readFileSync(new URL(`../public/${name}`, import.meta.url), "utf8");
+const pages: Record<string, string> = { "legal.html": legalHtml, "privacy.html": privacyHtml };
+const page = (name: string) => pages[name];
 
 const ENCODED_EMAIL =
   "&#99;&#111;&#110;&#116;&#97;&#99;&#116;&#64;&#111;&#110;&#101;&#115;&#116;&#111;&#112;&#101;&#117;&#114;&#111;&#112;&#101;&#46;&#101;&#117;";
