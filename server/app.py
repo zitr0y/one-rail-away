@@ -1,12 +1,17 @@
 import json
+import os
 import unicodedata
+from datetime import datetime
 from email.utils import parsedate
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 from fastapi import FastAPI, HTTPException, Query, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.middleware.gzip import GZipMiddleware
-from starlette.responses import FileResponse, Response
+from starlette.responses import FileResponse, RedirectResponse, Response
+
+from server.booking import booking_target
 
 # 6h: data only changes at the Monday 04:30 cron, but a modest max-age keeps
 # a botched deploy recoverable without waiting out a long cache lifetime.
@@ -101,6 +106,23 @@ def _cached_stations(data_dir: Path) -> list[dict]:
         stations = json.loads(path.read_text(encoding="utf-8"))["stations"]
         _stations_cache[path] = (mtime, stations)
     return _stations_cache[path][1]
+
+
+_trainline_ids_cache: dict[Path, tuple[tuple[int, int], dict[str, str]]] = {}
+
+
+def _cached_trainline_ids(data_dir: Path) -> dict[str, str]:
+    """`trainline_ids.json` for the live slot; {} if the pipeline hasn't written one."""
+    path = data_dir / "trainline_ids.json"
+    try:
+        stat = path.stat()
+    except FileNotFoundError:
+        return {}
+    key = (stat.st_mtime_ns, stat.st_size)
+    cached = _trainline_ids_cache.get(path)
+    if cached is None or cached[0] != key:
+        _trainline_ids_cache[path] = (key, json.loads(path.read_text(encoding="utf-8")))
+    return _trainline_ids_cache[path][1]
 
 
 _reach_ids_cache: dict[Path, tuple[float, set[str]]] = {}
@@ -476,6 +498,23 @@ def create_app(data_dir: Path) -> FastAPI:
     @app.get("/api/cities")
     def cities(request: Request) -> Response:
         return _artifact_response(request, data_dir / "cities.json", 404, "No cities data")
+
+    @app.get("/api/book")
+    def book(
+        from_id: str = Query("", alias="from"),
+        to_id: str = Query("", alias="to"),
+        date: str = "",
+    ) -> RedirectResponse:
+        today = datetime.now(ZoneInfo("Europe/Berlin")).date()
+        url, matched = booking_target(
+            from_id, to_id, date, _cached_trainline_ids(data_dir), today,
+            os.environ.get("TRAINLINE_LINK_PREFIX", ""),
+        )
+        # Click log (grep BOOK in `docker logs`): the traffic figure affiliate
+        # programmes ask for.
+        print(f"BOOK from={from_id} to={to_id} date={date} matched={str(matched).lower()}",
+              flush=True)
+        return RedirectResponse(url, status_code=302)
 
     return app
 

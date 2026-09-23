@@ -208,3 +208,38 @@ def test_stations_and_search_mtime_cache_invalidation(tmp_path):
 
     search_hit = client.get("/api/stations/search", params={"q": "gam"}).json()["stations"]
     assert [s["id"] for s in search_hit] == ["3"]
+
+
+def test_book_redirects_matched_pair_to_results(client, capsys):
+    stations = client.get("/api/stations").json()["stations"]
+    a, b = stations[0]["id"], stations[1]["id"]
+    (client.data_dir / "trainline_ids.json").write_text(json.dumps({a: "7630", b: "7480"}))
+    resp = client.get("/api/book", params={"from": a, "to": b, "date": "2099-01-05"},
+                      follow_redirects=False)
+    assert resp.status_code == 302
+    assert "urn%3Atrainline%3Ageneric%3Aloc%3A7630" in resp.headers["location"]
+    assert "outwardDate=2099-01-05T06%3A00%3A00" in resp.headers["location"]
+    assert f"BOOK from={a} to={b} date=2099-01-05 matched=true" in capsys.readouterr().out
+
+
+def test_book_unmatched_goes_to_homepage(client):
+    (client.data_dir / "trainline_ids.json").write_text("{}")
+    resp = client.get("/api/book", params={"from": "a", "to": "b", "date": "2099-01-05"},
+                      follow_redirects=False)
+    assert resp.status_code == 302
+    assert resp.headers["location"] == "https://www.thetrainline.com/"
+
+
+def test_book_without_mapping_file_goes_to_homepage(client):
+    (client.data_dir / "trainline_ids.json").unlink(missing_ok=True)
+    resp = client.get("/api/book", params={"from": "a", "to": "b", "date": "2099-01-05"},
+                      follow_redirects=False)
+    assert resp.headers["location"] == "https://www.thetrainline.com/"
+
+
+def test_book_applies_link_prefix(client, monkeypatch):
+    monkeypatch.setenv("TRAINLINE_LINK_PREFIX", "https://prf.hn/click/camref:ABC/destination:")
+    (client.data_dir / "trainline_ids.json").write_text("{}")
+    resp = client.get("/api/book", params={"from": "a", "to": "b", "date": "2099-01-05"},
+                      follow_redirects=False)
+    assert resp.headers["location"].startswith("https://prf.hn/click/camref:ABC/destination:https%3A")
