@@ -259,3 +259,15 @@ def test_book_applies_link_prefix(client, monkeypatch, ids_file):
     resp = client.get("/api/book", params={"from": "a", "to": "b", "date": "2099-01-05"},
                       follow_redirects=False)
     assert resp.headers["location"].startswith("https://prf.hn/click/camref:ABC/destination:https%3A")
+
+
+def test_config_reports_affiliate_links_off(client, monkeypatch):
+    monkeypatch.delenv("TRAINLINE_LINK_PREFIX", raising=False)
+    resp = client.get("/api/config")
+    assert resp.json() == {"affiliate_links": False}
+    assert resp.headers["cache-control"] == "no-cache"
+
+
+def test_config_reports_affiliate_links_on(client, monkeypatch):
+    monkeypatch.setenv("TRAINLINE_LINK_PREFIX", "https://prf.hn/click/camref:ABC/destination:")
+    assert client.get("/api/config").json() == {"affiliate_links": True}

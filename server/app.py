@@ -516,6 +516,12 @@ def create_app(data_dir: Path) -> FastAPI:
               flush=True)
         return RedirectResponse(url, status_code=302)
 
+    @app.get("/api/config")
+    def config(response: Response) -> dict:
+        # Read per request so an env change needs only a container restart.
+        response.headers["Cache-Control"] = "no-cache"
+        return {"affiliate_links": bool(os.environ.get("TRAINLINE_LINK_PREFIX"))}
+
     return app
 
 
