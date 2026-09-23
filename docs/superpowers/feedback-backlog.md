@@ -42,14 +42,15 @@ FlixTrain is shipped (see A). Remaining candidates:
 - **Back On Track** night-train data — tag/add night trains.
 Research first (licensing, format, freshness), then per-source brainstorm.
 
-## N. Trainline booking handoff — affiliate integration pending
+## N. Trainline booking handoff — results-page deep link (in progress)
 
-The CTA currently opens the plain Trainline landing page (deliberate fallback, no
-prefill claims). The real integration (Partnerize affiliate / widget / approved
-deep-link format) is future work; investigation and requirements in
-[`research/2026-07-13-trainline-booking-handoff.md`](research/2026-07-13-trainline-booking-handoff.md).
-Do not reintroduce query parameters or an affiliate code until Trainline has
-provided an approved format. Alternatives: item S (Rail Europe, Flix).
+2026-09-23: Book now goes through `/api/book`, which redirects to Trainline's
+search results for the chosen stations and date, using Trainline's open station
+ids. Spec: [`specs/2026-09-23-trainline-results-handoff-design.md`](specs/2026-09-23-trainline-results-handoff-design.md).
+The URL format is verified but not officially documented. Affiliate tracking
+plugs in via `TRAINLINE_LINK_PREFIX` once Partnerize approves (checklist in
+[`research/2026-07-13-trainline-booking-handoff.md`](research/2026-07-13-trainline-booking-handoff.md)).
+Next seller: Rail Europe (item S).
 
 ## O. Reachability previews on hover
 
@@ -349,3 +350,14 @@ tone, content, whether it doubles as an about/credits page.
   deps even when the resolved journey is unchanged — caveat: dedupe-by-identity
   also stops the (likely unintended) visible animation restart on filter ticks,
   technically a visible change.
+
+## BB. Use Trainline's open stations dataset more widely
+
+<https://github.com/trainline-eu/stations> (ODbL, maintained, pushed
+2026-09-21) has per-station UIC codes plus operator ids (`db_id`, `obb_id`,
+`cff_id`, `trenitalia_id`, `renfe_id`, `flixbus_id`, …), vetted coordinates,
+names in 18 languages, and parent/city grouping. Candidate uses: stable public
+ids from UIC (AM), coordinate cross-check / missing locations (AP, the Praha
+duplicate), multilingual search ("Munich", "Vienna"), seeding `cities.toml`,
+operator ids for other sellers' deep links (S). ODbL: attribution, and a
+published derived database must stay ODbL.
