@@ -35,9 +35,10 @@ def _add_workers_arg(parser: argparse.ArgumentParser) -> None:
 
 def _run_fetch(args: argparse.Namespace) -> None:
     from pipeline.config import load_feeds
-    from pipeline.fetch import fetch_all
+    from pipeline.fetch import fetch_all, fetch_trainline_stations
 
     fetch_all(load_feeds(Path("feeds.toml")), RAW)
+    fetch_trainline_stations(RAW)
 
 
 def _run_build(args: argparse.Namespace) -> None:

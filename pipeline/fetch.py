@@ -48,3 +48,33 @@ def fetch_all(
             client.close()
     (raw_dir / "fetch_meta.json").write_text(json.dumps(meta, indent=2))
     return results
+
+
+TRAINLINE_STATIONS_URL = (
+    "https://raw.githubusercontent.com/trainline-eu/stations/master/stations.csv"
+)
+
+
+def fetch_trainline_stations(raw_dir: Path, client: httpx.Client | None = None) -> bool:
+    """Download Trainline's open stations.csv (ODbL) to raw_dir/trainline_stations.csv.
+
+    Used only to map stations to Trainline ids for the booking handoff. On
+    failure the previous copy (if any) is kept and the run continues.
+    """
+    raw_dir.mkdir(parents=True, exist_ok=True)
+    own_client = client is None
+    client = client or httpx.Client(timeout=120, follow_redirects=True)
+    try:
+        resp = client.get(TRAINLINE_STATIONS_URL)
+        resp.raise_for_status()
+        tmp = raw_dir / "trainline_stations.csv.tmp"
+        tmp.write_bytes(resp.content)
+        tmp.replace(raw_dir / "trainline_stations.csv")
+        logger.info("fetched trainline stations (%d bytes)", len(resp.content))
+        return True
+    except Exception as exc:  # never abort the pipeline over the booking lookup
+        logger.error("failed to fetch trainline stations: %s", exc)
+        return False
+    finally:
+        if own_client:
+            client.close()
