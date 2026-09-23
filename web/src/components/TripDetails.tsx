@@ -104,7 +104,7 @@ export default function TripDetails(
         <button type="button" className="booking-date-step" aria-label="Next day"
                 onClick={() => setBookingDate(shiftDate(bookingDate, 1))}>›</button>
       </div>
-      <a className="book" href={bookingUrl()}
+      <a className="book" href={bookingUrl(origin.id, destination.id, bookingDate)}
          target="_blank" rel="noopener noreferrer">
         Search on Trainline
       </a>

@@ -38,7 +38,8 @@ const EMPTY = { type: "FeatureCollection", features: [] } as const;
 /** One credit per timetable source in feeds.toml. Keep in step with that file. */
 const TIMETABLE_ATTRIBUTION =
   "Timetables: DB · SNCF · ÖBB · SBB · NS · Rejseplanen · FlixTrain · " +
-  "CP – Comboios de Portugal · Trenitalia · Renfe · PKP PLK";
+  "CP – Comboios de Portugal · Trenitalia · Renfe · PKP PLK · " +
+  "Stations: Trainline EU (ODbL)";
 const bucketColor = ["to-color", ["at", ["get", "bucket"], ["literal", BUCKET_COLORS]]];
 
 /**

@@ -2,8 +2,9 @@ import { describe, expect, it } from "vitest";
 import { bookingUrl, friendlyDateLabel, localDate, shiftDate } from "./booking";
 
 describe("bookingUrl", () => {
-  it("uses Trainline's reliable public landing page", () => {
-    expect(bookingUrl()).toBe("https://www.thetrainline.com/");
+  it("links to the server-side Trainline redirect with ids and date", () => {
+    expect(bookingUrl("x:db_fern:1", "B", "2026-07-13"))
+      .toBe("/api/book?from=x%3Adb_fern%3A1&to=B&date=2026-07-13");
   });
 
   it("formats local calendar dates without a UTC rollover", () => {

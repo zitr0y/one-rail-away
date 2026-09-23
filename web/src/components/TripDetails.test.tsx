@@ -37,9 +37,24 @@ describe("TripDetails booking date", () => {
     expect(markup).toContain('type="date"');
     expect(markup).toContain('value="2026-07-13"');
     expect(markup).toContain('min="2026-07-12"');
-    expect(markup).toContain('href="https://www.thetrainline.com/"');
+    expect(markup).toContain('href="/api/book?from=A&amp;to=B&amp;date=2026-07-13"');
     expect(markup).toContain(">Search on Trainline</a>");
     expect(markup).not.toContain("Pick your time at checkout");
+  });
+
+  it("carries the picked date into the booking link", () => {
+    const container = document.createElement("div");
+    const root = createRoot(container);
+    act(() => {
+      root.render(<TripDetails origin={origin} destination={destination} dest={dest}
+                               maxTrains={2} stationsById={stationsById} />);
+    });
+    act(() => {
+      container.querySelector<HTMLButtonElement>('[aria-label="Next day"]')!.click();
+    });
+    expect(container.querySelector<HTMLAnchorElement>("a.book")!.getAttribute("href"))
+      .toBe("/api/book?from=A&to=B&date=2026-07-14");
+    act(() => root.unmount());
   });
 
   it("does not render a date input without an eligible journey", () => {

@@ -39,6 +39,7 @@ metro, tram, bus and ferry.
 |---|---|---|
 | **OpenFreeMap** planet vector tiles (OpenMapTiles schema, OSM data) | Basemap | ODbL (OSM) |
 | **Natural Earth II** shaded relief raster (served by OpenFreeMap) | Terrain shading | Public domain |
+| **Trainline EU stations** (`github.com/trainline-eu/stations`, `stations.csv`) | Mapping our stations to Trainline ids for the Book button (`trainline_ids.json`) | ODbL 1.0 — attribution in the map credits |
 
 Everything in `data/out/` (`stations.json`, `reach_*.json`, `cities.json`,
 `coverage.json`) is **derived by our own pipeline**, not ingested.

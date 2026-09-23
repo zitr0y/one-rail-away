@@ -24,6 +24,8 @@ export function friendlyDateLabel(date: string, today = localDate()): string {
     .format(new Date(`${date}T12:00:00`)).replace(",", "");
 }
 
-export function bookingUrl(): string {
-  return "https://www.thetrainline.com/";
+// The server resolves our station ids to Trainline ids and redirects to the
+// search results (or the Trainline homepage when it can't). See /api/book.
+export function bookingUrl(fromId: string, toId: string, date: string): string {
+  return `/api/book?${new URLSearchParams({ from: fromId, to: toId, date })}`;
 }
