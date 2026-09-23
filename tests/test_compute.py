@@ -930,3 +930,38 @@ def test_compute_marks_year_round_when_reachable_every_sampled_date(tmp_path):
     frequency = reach["destinations"][0]["frequency"]
     assert frequency["availability"] == "year_round"
     assert frequency["direct_trips"] == 7
+
+
+def _built_graph(tmp):
+    raw = tmp / "raw"
+    cfgs = make_fixture_feeds(raw)
+    countries_toml, names_toml = empty_overrides(tmp)
+    feeds_toml = _write_feeds_toml(tmp, cfgs)
+    build(raw, tmp / "graph", feeds_toml, None, date(2026, 7, 14),
+          station_names_path=names_toml, station_countries_path=countries_toml)
+    return tmp / "graph", feeds_toml
+
+
+def test_compute_writes_trainline_ids(tmp_path, capsys):
+    graph_dir, feeds_toml = _built_graph(tmp_path)
+    stations = json.loads((graph_dir / "stations.json").read_text())["stations"]
+    first = stations[0]
+    csv_path = tmp_path / "trainline_stations.csv"
+    csv_path.write_text(
+        "id;name;latitude;longitude;is_suggestable\n"
+        f"4242;{first['name']};{first['lat']};{first['lon']};t\n",
+        encoding="utf-8",
+    )
+    out_dir = tmp_path / "out"
+    compute_all(graph_dir, out_dir, workers=1, feeds_path=feeds_toml, trainline_csv=csv_path)
+    ids = json.loads((out_dir / "trainline_ids.json").read_text())
+    assert ids[first["id"]] == "4242"
+    assert "trainline: matched" in capsys.readouterr().out
+
+
+def test_compute_trainline_ids_empty_without_csv(tmp_path):
+    graph_dir, feeds_toml = _built_graph(tmp_path)
+    out_dir = tmp_path / "out"
+    compute_all(graph_dir, out_dir, workers=1, feeds_path=feeds_toml,
+                trainline_csv=tmp_path / "missing.csv")
+    assert json.loads((out_dir / "trainline_ids.json").read_text()) == {}

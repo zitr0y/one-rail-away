@@ -26,6 +26,7 @@ from pipeline.raptor import (
     compute_departure_evidence,
     compute_reachability,
 )
+from pipeline.trainline import load_candidates, match_stations
 
 MONTH_NAMES = ("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
 
@@ -356,6 +357,7 @@ def compute_all(
     feeds_path: Path = Path("feeds.toml"),
     cities_path: Path = Path("cities.toml"),
     capitals_path: Path = Path("capitals.toml"),
+    trainline_csv: Path = Path("data/raw/trainline_stations.csv"),
 ) -> None:
     """For each station in the graph, compute reachability and, if any
     destination is reached, write `out_dir/reach_<id>.json`. Always writes
@@ -431,6 +433,18 @@ def compute_all(
     (out_dir / "stations.json").write_text(
         json.dumps({"stations": [s.model_dump() for s in stations]}, ensure_ascii=False)
     )
+
+    # Booking handoff (backlog N): our ids -> Trainline location ids, per slot,
+    # so it always agrees with this slot's station ids.
+    candidates = load_candidates(trainline_csv)
+    if not candidates:
+        print(
+            f"WARNING trainline: no candidates in {trainline_csv}; "
+            "Book falls back to the homepage"
+        )
+    trainline_ids = match_stations([(s.id, s.name, s.lat, s.lon) for s in stations], candidates)
+    print(f"trainline: matched {len(trainline_ids)}/{len(stations)} stations")
+    (out_dir / "trainline_ids.json").write_text(json.dumps(trainline_ids))
 
     write_json_with_gzip(out_dir / "cities.json", json.dumps(city_groups, ensure_ascii=False))
 
