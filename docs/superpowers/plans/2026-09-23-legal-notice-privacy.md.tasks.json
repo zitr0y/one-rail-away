@@ -4,19 +4,19 @@
     {
       "id": 0,
       "subject": "Task 1: Static legal + privacy pages",
-      "status": "pending",
+      "status": "completed",
       "description": "See plan section 'Task 1: Static legal + privacy pages'.\n\n```json:metadata\n{\"files\": [\"web/public/legal.html\", \"web/public/privacy.html\", \"web/src/legalPages.test.ts\"], \"verifyCommand\": \"cd web && npx vitest run src/legalPages.test.ts\"}\n```"
     },
     {
       "id": 1,
       "subject": "Task 2: GET /api/config",
-      "status": "pending",
+      "status": "completed",
       "description": "See plan section 'Task 2: GET /api/config'.\n\n```json:metadata\n{\"files\": [\"server/app.py\", \"tests/test_server.py\"], \"verifyCommand\": \"uv run pytest tests/test_server.py -q -k config\"}\n```"
     },
     {
       "id": 2,
       "subject": "Task 3: Web links + affiliate note",
-      "status": "pending",
+      "status": "completed",
       "description": "See plan section 'Task 3: Web links + affiliate note'.\n\n```json:metadata\n{\"files\": [\"web/src/lib/api.ts\", \"web/src/components/TripDetails.tsx\", \"web/src/App.tsx\", \"web/src/components/Map.tsx\", \"web/src/index.css\"], \"verifyCommand\": \"cd web && npx vitest run && npx tsc --noEmit\"}\n```",
       "blockedBy": [
         1
@@ -34,5 +34,5 @@
       ]
     }
   ],
-  "lastUpdated": "2026-09-23T10:30:00Z"
+  "lastUpdated": "2026-09-23T10:50:00Z"
 }
