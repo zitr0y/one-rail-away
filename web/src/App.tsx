@@ -3,6 +3,7 @@ import { clearOriginAction, emptyClickAction, swapDest } from "./lib/selection";
 import { armedTarget, routeMapClick, type ActiveField } from "./lib/mapclick";
 import MapView from "./components/Map";
 import JourneyPlanner from "./components/JourneyPlanner";
+import AboutDialog from "./components/AboutDialog";
 import { TIME_MAX } from "./components/TimeSlider";
 import { api, latestOnly } from "./lib/api";
 import { buildCityLookup } from "./lib/cities";
@@ -29,6 +30,12 @@ export default function App() {
   const mobile = useMobileLayout();
   const [sheetState, setSheetState] = useState<SheetState>("collapsed");
   const previousMobile = useRef(mobile);
+  const [aboutOpen, setAboutOpen] = useState(false);
+  const aboutButtonRef = useRef<HTMLButtonElement>(null);
+  const closeAbout = useCallback(() => {
+    setAboutOpen(false);
+    aboutButtonRef.current?.focus();
+  }, []);
 
   const stationsById = useMemo(() => new Map(stations.map((s) => [s.id, s])), [stations]);
   const cities = useMemo(() => buildCityLookup(cityGroups), [cityGroups]);
@@ -164,6 +171,7 @@ export default function App() {
   useEffect(() => {
     function onKeyDown(e: KeyboardEvent) {
       if (e.key !== "Escape") return;
+      if (aboutOpen) return; // the About dialog handles its own Escape
       const t = e.target as HTMLElement | null;
       if (t && (t.tagName === "INPUT" || t.tagName === "TEXTAREA")) return;
       if (selectedDest) setSelectedDest(null);
@@ -171,7 +179,7 @@ export default function App() {
     }
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
-  }, [reach, selectedDest, clearSelection]);
+  }, [aboutOpen, reach, selectedDest, clearSelection]);
 
   return (
     <div className={appLayoutClassName(mobile, sheetState, hasContext)}>
@@ -187,7 +195,9 @@ export default function App() {
         <span className="header-logo" role="img" aria-label="onestopeurope"
               dangerouslySetInnerHTML={{ __html: headerLogo }} />
         <span className="header-tagline">nonstopeurope with onestopeurope</span>
-        <a className="header-legal" href="/legal.html">Legal</a>
+        <button ref={aboutButtonRef} type="button" className="about-toggle"
+                aria-label="About & legal" title="About & legal" aria-haspopup="dialog"
+                onClick={() => setAboutOpen(true)}>?</button>
         <button className="theme-toggle" onClick={toggleTheme}
                 aria-label={theme === "light" ? "Switch to dark mode" : "Switch to light mode"}>
           {theme === "light" ? "🌙" : "☀️"}
@@ -212,6 +222,7 @@ export default function App() {
         onMaxTrains={setMaxTrains}
         onMaxMinutes={setMaxMinutes}
       />
+      {aboutOpen && <AboutDialog onClose={closeAbout} />}
     </div>
   );
 }

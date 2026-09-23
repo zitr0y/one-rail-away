@@ -8,13 +8,13 @@ import { IN_USE, WANTED_COUNTRIES, WANTED_OPERATORS, DATA_SOURCES_URL } from "./
 
 let container: HTMLDivElement;
 let root: Root;
-let onClose: ReturnType<typeof vi.fn>;
+let onClose: ReturnType<typeof vi.fn<() => void>>;
 
 beforeEach(() => {
   container = document.createElement("div");
   document.body.appendChild(container);
   root = createRoot(container);
-  onClose = vi.fn();
+  onClose = vi.fn<() => void>();
   act(() => root.render(<AboutDialog onClose={onClose} />));
 });
 

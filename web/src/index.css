@@ -109,10 +109,11 @@ body { margin: 0; font-family: "Barlow", system-ui, sans-serif; color: var(--tex
   border-radius: 6px;
 }
 .theme-toggle:hover { background: rgb(255 255 255 / 0.12); }
-.header-legal {
-  margin-left: 12px; color: #fff; opacity: 0.85; font-size: 13px; text-decoration: none;
+.about-toggle {
+  margin-left: 12px; border: 0; background: none; cursor: pointer; color: #fff;
+  font: 700 16px/1 "Barlow", system-ui, sans-serif; padding: 4px 8px; border-radius: 6px;
 }
-.header-legal:hover { opacity: 1; text-decoration: underline; }
+.about-toggle:hover { background: rgb(255 255 255 / 0.12); }
 .panel {
   position: absolute;
   top: 64px;       /* below the header bar */
@@ -391,9 +392,7 @@ body { margin: 0; font-family: "Barlow", system-ui, sans-serif; color: var(--tex
 .mobile-layout .header-bar { padding: 2px 12px; }
 .mobile-layout .header-logo svg { height: 22px; }
 .mobile-layout .header-tagline { display: none; }
-.mobile-layout .header-legal {
-  margin-left: auto; display: inline-flex; align-items: center; min-height: 44px; padding: 0 8px;
-}
+.mobile-layout .about-toggle { margin-left: auto; min-width: 44px; min-height: 44px; }
 .mobile-layout .theme-toggle { margin-left: 0; }
 .mobile-layout .planner-fields {
   position: relative;
