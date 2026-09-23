@@ -99,7 +99,10 @@ export default function MapView(props: Props) {
       // (condition of use, see below) stay one tap away.
       attributionControl: false,
     });
-    m.addControl(new CollapsedAttributionControl({ compact: true }));
+    m.addControl(new CollapsedAttributionControl({
+      compact: true,
+      customAttribution: '<a href="/legal.html">Legal</a> · <a href="/privacy.html">Privacy</a>',
+    }));
     m.on("load", () => {
       const tokens = themeTokens(propsRef.current.theme);
       m.addSource("all-stations", { type: "geojson", data: EMPTY as never });

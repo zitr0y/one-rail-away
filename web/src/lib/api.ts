@@ -27,6 +27,21 @@ export function __clearReachCacheForTests(): void {
   reachCache.clear();
 }
 
+export interface SiteConfig { affiliate_links: boolean }
+
+// Fetched once per session; any failure means "no affiliate label", never an error.
+let configPromise: Promise<SiteConfig> | null = null;
+
+function getConfigCached(): Promise<SiteConfig> {
+  configPromise ??= get<SiteConfig>("/api/config").catch(() => ({ affiliate_links: false }));
+  return configPromise;
+}
+
+/** Test-only escape hatch for the config cache. */
+export function __clearConfigCacheForTests(): void {
+  configPromise = null;
+}
+
 export const api = {
   getStations: () => get<{ stations: Station[] }>("/api/stations"),
   getReach: getReachCached,
@@ -34,6 +49,7 @@ export const api = {
     get<{ stations: Station[] }>(`/api/stations/search?q=${encodeURIComponent(q)}`),
   getCoverage: () => get<CoverageCollection>("/api/coverage"),
   getCities: () => get<CityGroups>("/api/cities"),
+  getConfig: getConfigCached,
 };
 
 /**

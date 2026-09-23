@@ -7,7 +7,7 @@ import { buildCityLookup } from "../lib/cities";
 import type { SheetState } from "../lib/mobileLayout";
 
 vi.mock("../lib/api", () => ({
-  api: { searchStations: vi.fn() },
+  api: { searchStations: vi.fn(), getConfig: vi.fn(() => Promise.resolve({ affiliate_links: false })) },
 }));
 
 afterEach(cleanup);

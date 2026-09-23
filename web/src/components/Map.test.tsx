@@ -233,7 +233,10 @@ describe("MapView station sources", () => {
 
     expect(mockNavigationControl).not.toHaveBeenCalled();
     // The always-collapsed compact attribution is the ONLY control on mobile.
-    expect(mockAttributionControl).toHaveBeenCalledWith({ compact: true });
+    expect(mockAttributionControl).toHaveBeenCalledWith(expect.objectContaining({ compact: true }));
+    const options = mockAttributionControl.mock.calls[0][0] as { customAttribution: string };
+    expect(options.customAttribution).toContain('href="/legal.html"');
+    expect(options.customAttribution).toContain('href="/privacy.html"');
     expect(mockAddControl).toHaveBeenCalledTimes(1);
     expect(mockSetPadding).toHaveBeenLastCalledWith({ top: 0, right: 0, bottom: 92, left: 0 });
     act(() => root.unmount());

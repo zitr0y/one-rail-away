@@ -187,6 +187,7 @@ export default function App() {
         <span className="header-logo" role="img" aria-label="onestopeurope"
               dangerouslySetInnerHTML={{ __html: headerLogo }} />
         <span className="header-tagline">nonstopeurope with onestopeurope</span>
+        <a className="header-legal" href="/legal.html">Legal</a>
         <button className="theme-toggle" onClick={toggleTheme}
                 aria-label={theme === "light" ? "Switch to dark mode" : "Switch to light mode"}>
           {theme === "light" ? "🌙" : "☀️"}

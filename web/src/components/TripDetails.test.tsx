@@ -6,6 +6,7 @@ import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import TripDetails from "./TripDetails";
 import { frequencyLabel, transferModeIcon } from "./TripDetails";
 import type { Destination, TransferMode } from "../lib/types";
+import { api, __clearConfigCacheForTests } from "../lib/api";
 
 const origin = { id: "A", name: "Amsterdam Centraal", lat: 52.4, lon: 4.9, country: "NL", has_reach: true };
 const destination = { id: "B", name: "Paris Nord", lat: 48.9, lon: 2.4, country: "FR", has_reach: true };
@@ -98,6 +99,36 @@ describe("TripDetails booking date", () => {
     for (const mode of modes) {
       expect(transferModeIcon(mode)).not.toBe("");
     }
+  });
+
+  it("labels the Book button as an affiliate link when affiliate links are on", async () => {
+    __clearConfigCacheForTests();
+    const spy = vi.spyOn(api, "getConfig").mockResolvedValue({ affiliate_links: true });
+    const container = document.createElement("div");
+    const root = createRoot(container);
+    await act(async () => {
+      root.render(<TripDetails origin={origin} destination={destination} dest={dest}
+                               maxTrains={2} stationsById={stationsById} />);
+    });
+    const note = container.querySelector<HTMLAnchorElement>("a.affiliate-note");
+    expect(note?.getAttribute("href")).toBe("/legal.html#affiliate-links");
+    expect(note?.textContent).toBe("Affiliate link");
+    act(() => root.unmount());
+    spy.mockRestore();
+  });
+
+  it("shows no affiliate note when affiliate links are off", async () => {
+    __clearConfigCacheForTests();
+    const spy = vi.spyOn(api, "getConfig").mockResolvedValue({ affiliate_links: false });
+    const container = document.createElement("div");
+    const root = createRoot(container);
+    await act(async () => {
+      root.render(<TripDetails origin={origin} destination={destination} dest={dest}
+                               maxTrains={2} stationsById={stationsById} />);
+    });
+    expect(container.querySelector("a.affiliate-note")).toBeNull();
+    act(() => root.unmount());
+    spy.mockRestore();
   });
 });
 

@@ -109,6 +109,10 @@ body { margin: 0; font-family: "Barlow", system-ui, sans-serif; color: var(--tex
   border-radius: 6px;
 }
 .theme-toggle:hover { background: rgb(255 255 255 / 0.12); }
+.header-legal {
+  margin-left: 12px; color: #fff; opacity: 0.85; font-size: 13px; text-decoration: none;
+}
+.header-legal:hover { opacity: 1; text-decoration: underline; }
 .panel {
   position: absolute;
   top: 64px;       /* below the header bar */
@@ -293,6 +297,11 @@ body { margin: 0; font-family: "Barlow", system-ui, sans-serif; color: var(--tex
   display: block; text-align: center; background: #003399; color: #fff;
   padding: 10px; border-radius: 8px; text-decoration: none; font-weight: 600;
 }
+.trip-details .affiliate-note {
+  display: block; margin-top: 4px; text-align: center; font-size: 11px;
+  color: var(--text-muted); text-decoration: none;
+}
+.trip-details .affiliate-note:hover { text-decoration: underline; }
 .trip-details .booking-date-picker {
   position: relative; display: grid; grid-template-columns: 52px minmax(0, 1fr) 52px;
   gap: 6px; margin: 0 0 10px;
@@ -382,7 +391,10 @@ body { margin: 0; font-family: "Barlow", system-ui, sans-serif; color: var(--tex
 .mobile-layout .header-bar { padding: 2px 12px; }
 .mobile-layout .header-logo svg { height: 22px; }
 .mobile-layout .header-tagline { display: none; }
-.mobile-layout .theme-toggle { margin-left: auto; }
+.mobile-layout .header-legal {
+  margin-left: auto; display: inline-flex; align-items: center; min-height: 44px; padding: 0 8px;
+}
+.mobile-layout .theme-toggle { margin-left: 0; }
 .mobile-layout .planner-fields {
   position: relative;
   display: block;

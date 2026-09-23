@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { api } from "../lib/api";
 import { bookingUrl, friendlyDateLabel, localDate, shiftDate } from "../lib/booking";
 import { bestJourney, type MaxTrains } from "../lib/geojson";
 import type { Destination, Station, TransferMode } from "../lib/types";
@@ -55,6 +56,13 @@ export default function TripDetails(
     setBookingDate(localDate(1));
   }, [origin.id, destination.id]);
 
+  const [affiliateLinks, setAffiliateLinks] = useState(false);
+  useEffect(() => {
+    let live = true;
+    api.getConfig().then((config) => { if (live) setAffiliateLinks(config.affiliate_links); });
+    return () => { live = false; };
+  }, []);
+
   const openCalendar = () => {
     const input = dateInputRef.current;
     if (!input) return;
@@ -108,6 +116,9 @@ export default function TripDetails(
          target="_blank" rel="noopener noreferrer">
         Search on Trainline
       </a>
+      {affiliateLinks && (
+        <a className="affiliate-note" href="/legal.html#affiliate-links">Affiliate link</a>
+      )}
     </div>
   );
 }
