@@ -1,0 +1,58 @@
+{
+  "planPath": "docs/superpowers/plans/2026-09-23-trainline-results-handoff.md",
+  "tasks": [
+    {
+      "id": 0,
+      "subject": "Task 1: Station matcher (pipeline/trainline.py)",
+      "status": "pending",
+      "description": "See plan section 'Task 1: Station matcher (pipeline/trainline.py)'.\n\n```json:metadata\n{\"files\": [\"pipeline/trainline.py\", \"tests/test_trainline.py\"], \"verifyCommand\": \"uv run pytest tests/test_trainline.py -q\"}\n```"
+    },
+    {
+      "id": 1,
+      "subject": "Task 2: Fetch Trainline stations.csv",
+      "status": "pending",
+      "description": "See plan section 'Task 2: Fetch Trainline stations.csv'.\n\n```json:metadata\n{\"files\": [\"pipeline/fetch.py\", \"pipeline/cli.py\", \"tests/test_fetch.py\"], \"verifyCommand\": \"uv run pytest tests/test_fetch.py tests/test_cli.py -q\"}\n```"
+    },
+    {
+      "id": 2,
+      "subject": "Task 3: Write out/trainline_ids.json in compute",
+      "status": "pending",
+      "description": "See plan section 'Task 3: Write out/trainline_ids.json in compute'.\n\n```json:metadata\n{\"files\": [\"pipeline/compute.py\", \"tests/test_compute.py\"], \"verifyCommand\": \"uv run pytest tests/test_compute.py -q\"}\n```",
+      "blockedBy": [
+        0
+      ]
+    },
+    {
+      "id": 3,
+      "subject": "Task 4: /api/book redirect",
+      "status": "pending",
+      "description": "See plan section 'Task 4: /api/book redirect'.\n\n```json:metadata\n{\"files\": [\"server/booking.py\", \"server/app.py\", \"tests/test_booking.py\", \"tests/test_server.py\"], \"verifyCommand\": \"uv run pytest tests/test_booking.py tests/test_server.py -q\"}\n```",
+      "blockedBy": [
+        2
+      ]
+    },
+    {
+      "id": 4,
+      "subject": "Task 5: Web link + Trainline credit",
+      "status": "pending",
+      "description": "See plan section 'Task 5: Web link + Trainline credit'.\n\n```json:metadata\n{\"files\": [\"web/src/lib/booking.ts\", \"web/src/components/TripDetails.tsx\", \"web/src/components/Map.tsx\", \"docs/data-sources.md\"], \"verifyCommand\": \"cd web && npx vitest run && npx tsc --noEmit\"}\n```",
+      "blockedBy": [
+        3
+      ]
+    },
+    {
+      "id": 5,
+      "subject": "Task 6: Full suite, local e2e, deploy (ask user before deploy)",
+      "status": "pending",
+      "description": "See plan section 'Task 6: Full suite, local e2e, deploy (ask user before deploy)'.\n\n```json:metadata\n{\"files\": [], \"verifyCommand\": \"uv run pytest -q\"}\n```",
+      "blockedBy": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  ],
+  "lastUpdated": "2026-09-23T09:30:00Z"
+}
