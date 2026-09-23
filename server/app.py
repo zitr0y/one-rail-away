@@ -108,7 +108,7 @@ def _cached_stations(data_dir: Path) -> list[dict]:
     return _stations_cache[path][1]
 
 
-_trainline_ids_cache: dict[Path, tuple[tuple[int, int], dict[str, str]]] = {}
+_trainline_ids_cache: dict[Path, tuple[tuple[int, int, int], dict[str, str]]] = {}
 
 
 def _cached_trainline_ids(data_dir: Path) -> dict[str, str]:
@@ -118,7 +118,7 @@ def _cached_trainline_ids(data_dir: Path) -> dict[str, str]:
         stat = path.stat()
     except FileNotFoundError:
         return {}
-    key = (stat.st_mtime_ns, stat.st_size)
+    key = (stat.st_ino, stat.st_mtime_ns, stat.st_size)
     cached = _trainline_ids_cache.get(path)
     if cached is None or cached[0] != key:
         _trainline_ids_cache[path] = (key, json.loads(path.read_text(encoding="utf-8")))
@@ -511,8 +511,8 @@ def create_app(data_dir: Path) -> FastAPI:
             os.environ.get("TRAINLINE_LINK_PREFIX", ""),
         )
         # Click log (grep BOOK in `docker logs`): the traffic figure affiliate
-        # programmes ask for.
-        print(f"BOOK from={from_id} to={to_id} date={date} matched={str(matched).lower()}",
+        # programmes ask for. !r escapes control chars so a query can't forge lines.
+        print(f"BOOK from={from_id!r} to={to_id!r} date={date!r} matched={str(matched).lower()}",
               flush=True)
         return RedirectResponse(url, status_code=302)
 

@@ -442,8 +442,14 @@ def compute_all(
             f"WARNING trainline: no candidates in {trainline_csv}; "
             "Book falls back to the homepage"
         )
-    trainline_ids = match_stations([(s.id, s.name, s.lat, s.lon) for s in stations], candidates)
-    print(f"trainline: matched {len(trainline_ids)}/{len(stations)} stations")
+    tl_stats: dict[str, int] = {}
+    trainline_ids = match_stations(
+        [(s.id, s.name, s.lat, s.lon) for s in stations], candidates, stats=tl_stats
+    )
+    print(
+        f"trainline: matched {len(trainline_ids)}/{len(stations)} stations "
+        f"(name {tl_stats['name']}, coord {tl_stats['coord']}, border {tl_stats['border']})"
+    )
     (out_dir / "trainline_ids.json").write_text(json.dumps(trainline_ids))
 
     write_json_with_gzip(out_dir / "cities.json", json.dumps(city_groups, ensure_ascii=False))

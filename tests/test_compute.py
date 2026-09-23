@@ -956,7 +956,9 @@ def test_compute_writes_trainline_ids(tmp_path, capsys):
     compute_all(graph_dir, out_dir, workers=1, feeds_path=feeds_toml, trainline_csv=csv_path)
     ids = json.loads((out_dir / "trainline_ids.json").read_text())
     assert ids[first["id"]] == "4242"
-    assert "trainline: matched" in capsys.readouterr().out
+    out = capsys.readouterr().out
+    assert "trainline: matched" in out
+    assert "(name 1, coord 0, border " in out
 
 
 def test_compute_trainline_ids_empty_without_csv(tmp_path):

@@ -6,12 +6,15 @@ Trainline search-results URL.
 """
 
 import csv
+import logging
 import math
 import re
 import unicodedata
 from collections import defaultdict
 from dataclasses import dataclass
 from pathlib import Path
+
+log = logging.getLogger(__name__)
 
 NAME_RADIUS_KM = 5.0
 COORD_RADIUS_KM = 0.5
@@ -27,21 +30,36 @@ class Candidate:
     lon: float
 
 
+# Letters NFKD leaves whole (so `encode("ascii", "ignore")` would drop them):
+# "Główny" must fold to "glowny", not "gowny".
+_FOLD = str.maketrans({
+    "ł": "l", "Ł": "L", "ø": "o", "Ø": "O", "đ": "d", "Đ": "D", "ß": "ss",
+    "æ": "ae", "Æ": "AE", "œ": "oe", "Œ": "OE", "ı": "i",
+})
+
+
 def normalize_name(name: str) -> str:
-    ascii_name = unicodedata.normalize("NFKD", name).encode("ascii", "ignore").decode()
+    folded = unicodedata.normalize("NFKD", name.translate(_FOLD))
+    ascii_name = folded.encode("ascii", "ignore").decode()
     return re.sub(r"[^a-z0-9]", "", ascii_name.lower())
 
 
 def load_candidates(path: Path) -> list[Candidate]:
-    """Searchable Trainline stations with coordinates; [] if the file is missing."""
+    """Searchable Trainline stations with coordinates; [] if the file is missing
+    or unparsable (booking then falls back to the homepage; compute carries on)."""
     if not path.exists():
         return []
     out = []
-    with path.open(encoding="utf-8", newline="") as f:
-        for row in csv.DictReader(f, delimiter=";"):
-            if row.get("is_suggestable") != "t" or not row.get("latitude") or not row.get("longitude"):
-                continue
-            out.append(Candidate(row["id"], row["name"], float(row["latitude"]), float(row["longitude"])))
+    try:
+        with path.open(encoding="utf-8", newline="") as f:
+            for row in csv.DictReader(f, delimiter=";"):
+                lat, lon = row.get("latitude"), row.get("longitude")
+                if row.get("is_suggestable") != "t" or not lat or not lon:
+                    continue
+                out.append(Candidate(row["id"], row["name"], float(lat), float(lon)))
+    except (ValueError, KeyError, UnicodeDecodeError, csv.Error) as exc:
+        log.warning("trainline: cannot parse %s (%r); no candidates", path, exc)
+        return []
     return out
 
 
@@ -55,18 +73,24 @@ def _cell(lat: float, lon: float) -> tuple[int, int]:
     return (math.floor(lat / _CELL), math.floor(lon / _CELL))
 
 
-def _names_match(ours: str, theirs: str) -> bool:
-    if ours == theirs:
-        return True
+def _contains(ours: str, theirs: str) -> bool:
     if min(len(ours), len(theirs)) < MIN_CONTAINS_LEN:
         return False
     return ours in theirs or theirs in ours
 
 
 def match_stations(
-    stations: list[tuple[str, str, float, float]], candidates: list[Candidate]
+    stations: list[tuple[str, str, float, float]],
+    candidates: list[Candidate],
+    stats: dict[str, int] | None = None,
 ) -> dict[str, str]:
-    """{our id: trainline id} for `(id, name, lat, lon)` stations that match."""
+    """{our id: trainline id} for `(id, name, lat, lon)` stations that match.
+
+    Within 5 km an exact normalised name beats containment, nearest first in
+    each tier; failing both, the nearest candidate within 500 m. If `stats` is
+    given it receives counts: `name`, `coord` matches and skipped `border` points.
+    """
+    counts = {"name": 0, "coord": 0, "border": 0}
     grid: dict[tuple[int, int], list[Candidate]] = defaultdict(list)
     for c in candidates:
         grid[_cell(c.lat, c.lon)].append(c)
@@ -75,6 +99,7 @@ def match_stations(
     ids: dict[str, str] = {}
     for sid, name, lat, lon in stations:
         if "(Gr)" in name:
+            counts["border"] += 1
             continue
         ci, cj = _cell(lat, lon)
         nearby = sorted(
@@ -83,9 +108,16 @@ def match_stations(
             key=lambda t: t[0],
         )
         ours = normalize_name(name)
-        named = [c for d, c in nearby if d <= NAME_RADIUS_KM and _names_match(ours, normalized[c.id])]
+        close = [c for d, c in nearby if d <= NAME_RADIUS_KM]
+        named = [c for c in close if normalized[c.id] == ours] or [
+            c for c in close if _contains(ours, normalized[c.id])
+        ]
         if named:
             ids[sid] = named[0].id
+            counts["name"] += 1
         elif nearby and nearby[0][0] <= COORD_RADIUS_KM:
             ids[sid] = nearby[0][1].id
+            counts["coord"] += 1
+    if stats is not None:
+        stats.update(counts)
     return ids

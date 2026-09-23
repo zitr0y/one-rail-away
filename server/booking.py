@@ -6,7 +6,7 @@ tracking is a prefix supplied via env once Partnerize approves us; nothing
 affiliate-related is hardcoded here.
 """
 
-from datetime import date
+from datetime import date, timedelta
 from urllib.parse import quote, urlencode
 
 HOMEPAGE = "https://www.thetrainline.com/"
@@ -22,7 +22,9 @@ def booking_target(
         travel = date.fromisoformat(date_str)
     except ValueError:
         travel = None
-    matched = bool(origin and destination and travel and travel >= today)
+    # One day of slack: `today` is Berlin's, and a user west of it picking their
+    # local today late in the evening is already on Berlin's tomorrow.
+    matched = bool(origin and destination and travel and travel >= today - timedelta(days=1))
     if matched:
         target = RESULTS + "?" + urlencode({
             "journeySearchType": "single",

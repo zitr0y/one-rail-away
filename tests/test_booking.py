@@ -32,8 +32,13 @@ def test_unmatched_station_falls_back_to_homepage():
     assert result == (HOMEPAGE, False)
 
 
+def test_yesterday_is_allowed_for_timezone_slack():
+    _, matched = booking_target("x:berlin", "x:munich", "2026-09-22", IDS, TODAY, "")
+    assert matched is True
+
+
 def test_past_date_falls_back_to_homepage():
-    assert booking_target("x:berlin", "x:munich", "2026-09-22", IDS, TODAY, "") == (HOMEPAGE, False)
+    assert booking_target("x:berlin", "x:munich", "2026-09-21", IDS, TODAY, "") == (HOMEPAGE, False)
 
 
 def test_malformed_date_falls_back_to_homepage():
