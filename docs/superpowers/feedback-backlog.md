@@ -365,3 +365,19 @@ ids from UIC (AM), coordinate cross-check / missing locations (AP, the Praha
 duplicate), multilingual search ("Munich", "Vienna"), seeding `cities.toml`,
 operator ids for other sellers' deep links (S). ODbL: attribution, and a
 published derived database must stay ODbL.
+
+## BC. Licence follow-ups before affiliate links go live
+
+Research (2026-09-23): [`research/2026-09-23-feed-licences-commercial-use.md`](research/2026-09-23-feed-licences-commercial-use.md).
+None blocks commercial use, but:
+- **Code:** credit DB as "Timetable data: DELFI e.V. via GTFS.DE, CC BY 4.0
+  (modified)" in the map attribution; show "Timetables as of <date>" (from
+  `meta.json`) in the About dialog — MMTIS Art. 8 wants source + last update.
+  Record the verdicts in `docs/data-sources.md`.
+- **Operator:** email CP (institucional@cp.pt) and Trenitalia / Italian NAP to
+  confirm "No licence – No contract" allows commercial reuse; submit
+  Rejseplanen's data-access form.
+- **Neutrality:** results must never be ranked by what Trainline can sell
+  (currently fine — affiliate only changes the Book target).
+- **Bonus:** Italo publishes NeTEx L1 on the Italian NAP (dataset 1813935) →
+  candidate new feed (needs its own spec).
