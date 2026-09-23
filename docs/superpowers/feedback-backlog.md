@@ -323,11 +323,12 @@ On the mobile sheet the booking CTA is easy to miss. Make it stand out
 (placement, size, contrast) without shouting over the trip details. Relates N
 (what the button links to).
 
-## BA. Explanation / mission page ("why this exists")
+## BA. Explanation / mission page ("why this exists") — shipped 2026-09-23
 
-Add a short page explaining what the map is for and why it exists, linked
-somewhere quiet in the UI (header or attribution area). Scope with the user:
-tone, content, whether it doubles as an about/credits page.
+"?" in the header opens an About dialog: mission, how to read the map, data in
+use + wanted (hand-synced from `docs/data-sources.md` in
+`web/src/components/aboutContent.ts`), legal notice / privacy links. Spec:
+[`specs/2026-09-23-about-dialog-design.md`](specs/2026-09-23-about-dialog-design.md).
 
 # Smaller deferred notes
 
