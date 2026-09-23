@@ -42,7 +42,7 @@ FlixTrain is shipped (see A). Remaining candidates:
 - **Back On Track** night-train data — tag/add night trains.
 Research first (licensing, format, freshness), then per-source brainstorm.
 
-## N. Trainline booking handoff — results-page deep link (in progress)
+## N. Trainline booking handoff — results-page deep link (shipped 2026-09-23)
 
 2026-09-23: Book now goes through `/api/book`, which redirects to Trainline's
 search results for the chosen stations and date, using Trainline's open station
@@ -50,7 +50,10 @@ ids. Spec: [`specs/2026-09-23-trainline-results-handoff-design.md`](specs/2026-0
 The URL format is verified but not officially documented. Affiliate tracking
 plugs in via `TRAINLINE_LINK_PREFIX` once Partnerize approves (checklist in
 [`research/2026-07-13-trainline-booking-handoff.md`](research/2026-07-13-trainline-booking-handoff.md)).
-Next seller: Rail Europe (item S).
+Live: 2114/2626 stations matched (unmatched: mostly small PL/CZ stops → homepage).
+Verified on 8 app routes (Berlin–Wien, München–Zürich, Paris–Milano, Amsterdam–Köln,
+Kraków–Praha, København–Hamburg, Wien–Budapest, Bad Gastein–Salzburg). Clicks:
+`docker logs aaron-trains-api | grep -c BOOK`. Next seller: Rail Europe (item S).
 
 ## O. Reachability previews on hover
 
